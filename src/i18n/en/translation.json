@@ -1,0 +1,25 @@
+{
+  "title": "Poké Corpus α",
+  "language": "Language:",
+  "mode": "Colorscheme:",
+  "modeSystem": "System",
+  "modeLight": "Light",
+  "modeDark": "Dark",
+  "query": "Query:",
+  "regex": "Regex",
+  "caseInsensitive": "Case insensitive",
+  "search": "Search",
+  "common": "Common",
+  "script": "Script",
+  "selectAll": "Select All",
+  "deselectAll": "Deselect All",
+  "status": {
+    "initial": "Click \"Search\" to begin.",
+    "waiting": "Please wait...",
+    "loading": "Loading... ({{filename}})",
+    "processing": "Processing... ({{filename}})",
+    "processingDone": "Processing done! ({{filename}})",
+    "done": "Done!",
+    "error": "An error occurred"
+  }
+}

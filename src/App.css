@@ -1,38 +1,183 @@
+/* Colorschemes */
+
+:root {
+  --background-light: #dde;
+  --highlight-light: #eef;
+  --text-light: #111;
+  --background-dark: #112;
+  --highlight-dark: #224;
+  --text-dark: #eee;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--background-light);
+    --highlight: var(--highlight-light);
+    --text: var(--text-light);
+  }
+}
+
+.App-mode-light {
+  --background: var(--background-light);
+  --highlight: var(--highlight-light);
+  --text: var(--text-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--background-dark);
+    --highlight: var(--highlight-dark);
+    --text: var(--text-dark);
+  }
+}
+
+.App-mode-dark {
+  --background: var(--background-dark);
+  --highlight: var(--highlight-dark);
+  --text: var(--text-dark);
+}
+
+
+/* Styling */
+
+* {
+  box-sizing: border-box;
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  height: 100vh;
+  width: 100vw;
+  padding: 1rem;
+  background: var(--background);
+  color: var(--text);
+}
+
+h1 {
+  float: left;
+  margin: 0;
+}
+
+.App-header-logo {
+  height: 1.25em;
+  margin-bottom: 0.25em;
+  vertical-align: middle;
+}
+
+.App-header-options {
+  float: right;
+  display: grid;
+  gap: 0.25rem;
+  grid-template-columns: repeat(2, auto);
+}
+
+.App-results-status {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App-results {
+  width: 100%;
+  min-height: 8em;
+  overflow: scroll;
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--text);
+  background-color: var(--highlight);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 0.5em;
+}
+
+.App-results-table {
+  border-collapse: collapse;
+  white-space: pre;
+}
+
+th, td {
+  padding: 1px 0.25em;
+  border: 1px solid var(--text);
+  background-color: var(--highlight);
+}
+
+.App-search {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.App-search-bar {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 0.5em;
 }
 
-.App-link {
-  color: #61dafb;
+.App-search-bar-group {
+  display: flex;
+  gap: 0.25em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-search-button-group {
+  display: flex;
+  gap: 0.25em;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-search-filters {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  gap: 0.5em;
+}
+
+.App-search-filters-divider {
+  background-color: var(--text);
+  grid-row: span 2;
+}
+
+input[type=text], select, input[type=submit], input[type=button], button {
+  background: var(--highlight);
+  border: 1px solid var(--text);
+  color: var(--text);
+  border-radius: 3px;
+  padding: 2px 4px;
+}
+
+input[type=submit] {
+  margin: 0 0.25rem;
+}
+
+.App-search-collections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
+  justify-content: start;
+}
+
+.App-search-collection {
+  overflow: hidden;
+  white-space: nowrap;
+  /* text-overflow: ellipsis; */
+  text-align: left;
+}
+
+.App-search-collection label {
+  display: inline-block;
+  transform-origin: left center;
+}
+
+.App-search-languages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+  justify-content: start;
+}
+
+.App-search-language {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
