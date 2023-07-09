@@ -12,5 +12,15 @@
   "common": "コモン",
   "script": "スクリプト",
   "selectAll": "すべて選択",
-  "deselectAll": "すべて解除"
+  "deselectAll": "すべて解除",
+  "status": {
+    "initial": "Click \"Search\" to begin.",
+    "waiting": "Please wait...",
+    "loading": "Loading... ({{filename}})",
+    "processing": "Processing... ({{filename}})",
+    "processingDone": "Processing done! ({{filename}})",
+    "done": "Done!",
+    "error": "An error occurred"
+  },
+  "tableHeader": "{{collection}}の{{file}}データ"
 }

@@ -1,28 +1,106 @@
 {
-  "RedGreen": "RG",
-  "RedBlue": "RB",
-  "Yellow": "Y",
-  "GoldSilver": "GS",
-  "Crystal": "C",
-  "RubySapphire": "RS",
-  "FireRedLeafGreen": "FRLG",
-  "Emerald": "E",
-  "DiamondPearl": "DP",
-  "Platinum": "Pt",
-  "HeartGoldSoulSilver": "HGSS",
-  "BlackWhite": "BW",
-  "Black2White2": "B2W2",
-  "XY": "XY",
-  "OmegaRubyAlphaSapphire": "ORAS",
-  "SunMoon": "SM",
-  "UltraSunUltraMoon": "USUM",
-  "LetsGoPikachuLetsGoEevee": "LGPE",
-  "SwordShield": "SwSh",
-  "BrilliantDiamondShiningPearl": "BDSP",
-  "LegendsArceus": "LA",
-  "ScarletViolet": "SV",
-  "Colosseum": "Colo.",
-  "XD": "XD",
-  "Bank": "Bank",
-  "HOME": "HOME"
+  "RedGreen": {
+    "name": "Red/Green",
+    "short": "RG"
+  },
+  "RedBlue": {
+    "name": "Red/Blue",
+    "short": "RB"
+  },
+  "Yellow": {
+    "name": "Yellow",
+    "short": "Y"
+  },
+  "GoldSilver": {
+    "name": "Gold/Silver",
+    "short": "GS"
+  },
+  "Crystal": {
+    "name": "Crystal",
+    "short": "C"
+  },
+  "RubySapphire": {
+    "name": "Ruby/Sapphire",
+    "short": "RS"
+  },
+  "FireRedLeafGreen": {
+    "name": "FireRed/LeafGreen",
+    "short": "FRLG"
+  },
+  "Emerald": {
+    "name": "Emerald",
+    "short": "E"
+  },
+  "DiamondPearl": {
+    "name": "Diamond/Pearl",
+    "short": "DP"
+  },
+  "Platinum": {
+    "name": "Platinum",
+    "short": "Pt"
+  },
+  "HeartGoldSoulSilver": {
+    "name": "HeartGold/SoulSilver",
+    "short": "HGSS"
+  },
+  "BlackWhite": {
+    "name": "Black/White",
+    "short": "BW"
+  },
+  "Black2White2": {
+    "name": "Black 2/White 2",
+    "short": "B2W2"
+  },
+  "XY": {
+    "name": "X/Y",
+    "short": "XY"
+  },
+  "OmegaRubyAlphaSapphire": {
+    "name": "Omega Ruby/Alpha Sapphire",
+    "short": "ORAS"
+  },
+  "SunMoon": {
+    "name": "Sun/Moon",
+    "short": "SM"
+  },
+  "UltraSunUltraMoon": {
+    "name": "Ultra Sun/Ultra Moon",
+    "short": "USUM"
+  },
+  "LetsGoPikachuLetsGoEevee": {
+    "name": "Let's Go, Pikachu!/Let's Go, Eevee!",
+    "short": "LGPE"
+  },
+  "SwordShield": {
+    "name": "Sword/Shield",
+    "short": "SwSh"
+  },
+  "BrilliantDiamondShiningPearl": {
+    "name": "Brilliant Diamond/Shining Pearl",
+    "short": "BDSP"
+  },
+  "LegendsArceus": {
+    "name": "Pokémon Legends: Arceus",
+    "short": "LA"
+  },
+  "ScarletViolet": {
+    "name": "Scarlet/Violet",
+    "short": "SV"
+  },
+  "Colosseum": {
+    "name": "Colosseum",
+    "short": "Colo."
+  },
+  "XD": {
+    "name": "XD",
+    "short": "XD"
+  },
+  "Bank": {
+    "name": "Bank",
+    "short": "Bank"
+  },
+  "HOME": {
+    "name": "HOME",
+    "short": "HOME"
+  }
 }

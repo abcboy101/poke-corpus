@@ -55,7 +55,7 @@
   color: var(--text);
 }
 
-h1 {
+h1, h2 {
   float: left;
   margin: 0;
 }
@@ -85,6 +85,12 @@ h1 {
   padding: 0.5rem;
   border: 1px solid var(--text);
   background-color: var(--highlight);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.App-results-table-container {
   display: flex;
   flex-direction: column;
   gap: 0.5em;

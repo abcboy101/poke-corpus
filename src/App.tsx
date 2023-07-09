@@ -8,23 +8,35 @@ import supportedLngs from './i18n/supportedLngs.json'
 import corpus from './i18n/corpus.json'
 import { SearchResults } from './searchWorker';
 
-function Results({status, filename, resultsLanguages, results}: {status: string, filename: string, resultsLanguages: string[][], results: string[][][]}) {
+function Results({status, filename, resultsLanguages, results}: {status: string, filename: string, resultsLanguages: string[][], results: [string, string, string[][]][]}) {
   const { t } = useTranslation();
   return (
     <>
       <div className="App-results-status">{t(`status.${status}`, {filename: filename})}</div>
       <div className="App-results">
-        {resultsLanguages.map((collectionLangs, k) => (
-          results[k].length === 0 ? null :
-          <table key={`table${k}`} className="App-results-table">
-            <thead>
-              <tr>{collectionLangs.map((lang) => <th key={lang}>{t(`languages:${lang}.code`)}</th>)}</tr>
-            </thead>
-            <tbody>
-              {results[k].map((row, i) => <tr key={`row${i}`}>{row.map((s, j) => <td key={`row${i}-${collectionLangs[j]}`} lang={collectionLangs[j]}>{s}</td>)}</tr>)}
-            </tbody>
-          </table>
-        ))}
+        {resultsLanguages.map((collectionLangs, k) => {
+          const [collectionKey, fileKey, fileResults] = results[k];
+          if (fileResults.length === 0) {
+            return null;
+          }
+          return (
+            <div key={`table${k}`} className='App-results-table-container'>
+              <h2>{t('tableHeader', {collection: t(`collections:${collectionKey}.name`), file: fileKey, interpolation: {escapeValue: false}})}</h2>
+              <table className="App-results-table">
+                <thead>
+                  <tr>{collectionLangs.map((lang) => <th key={lang}>{t(`languages:${lang}.code`)}</th>)}</tr>
+                </thead>
+                <tbody>
+                  {fileResults.map((row, i) =>
+                  <tr key={`row${i}`}>
+                    {row.map((s, j) => <td key={`row${i}-${collectionLangs[j]}`} lang={collectionLangs[j]}>{s}</td>)}
+                  </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          );
+        })}
       </div>
     </>
   );
@@ -49,7 +61,7 @@ function SearchCollections({collections, setCollections}: {collections: string[]
                   setCollections(collections.filter((value) => value !== key));
                 }
               }}/>
-              <label htmlFor={`collection-${key}`} style={{transform: (((i18next.language.startsWith('ja') || i18next.language.startsWith('zh')) && t(`collections:${key}`).length > 4) ? `scaleX(${4 / t(`collections:${key}`).length})` : 'none')}}>{t(`collections:${key}`)}</label>
+              <label htmlFor={`collection-${key}`} style={{transform: (((i18next.language.startsWith('ja') || i18next.language.startsWith('zh')) && t(`collections:${key}.short`).length > 4) ? `scaleX(${4 / t(`collections:${key}.short`).length})` : 'none')}}>{t(`collections:${key}.short`)}</label>
             </div>
           )
         }
@@ -111,7 +123,7 @@ function Search() {
   );
   const [status, setStatus] = useState("initial");
   const [filename, setFilename] = useState('');
-  const [results, setResults] = useState([] as string[][][]);
+  const [results, setResults] = useState([] as [string, string, string[][]][]);
   const [resultsLanguages, setResultsLanguages] = useState([] as string[][]);
 
   window.addEventListener('hashchange', () => {

@@ -15,7 +15,7 @@ export type SearchResults = {
   status: string,
   filename: string,
   resultsLanguages: string[][],
-  results: string[][][]
+  results: [string, string, string[][]][]
 };
 
 function postProcess(s: string) {
@@ -27,7 +27,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
   const params = message.data;
   const re = params.regex ? new RegExp(params.query, params.caseInsensitive ? 'ui' : 'u') : null;
 
-  let corpusPromises: Promise<[string[], Set<number>, string[][]]>[] = [];
+  let corpusPromises: Promise<[[string, string], string[], Set<number>, string[][]]>[] = [];
 
   params.collections.forEach((collectionKey) => {
     const collection = corpus.collections[collectionKey as keyof typeof corpus.collections];
@@ -111,21 +111,21 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
           fileData.push(linesResult);
         })
 
-        return [languageKeys, lineKeys, fileData];
+        return [[collectionKey, fileKey], languageKeys, lineKeys, fileData];
       }));
     });
   });
 
   let resultsLanguages: string[][] = [];
-  let results: string[][][] = [];
-  Promise.all(corpusPromises).then((corpusResults) => corpusResults.forEach(([languageKeys, lineKeys, fileData]) => {
+  let results: [string, string, string[][]][] = [];
+  Promise.all(corpusPromises).then((corpusResults) => corpusResults.forEach(([[collectionKey, fileKey], languageKeys, lineKeys, fileData]) => {
     let fileResults: string[][] = [];
     Array.from(lineKeys).sort().forEach((i) => {
       const lineResults = fileData.map((lines) => postProcess(lines[i] ?? ''));
       fileResults.push(lineResults);
     });
     resultsLanguages.push(languageKeys);
-    results.push(fileResults);
+    results.push([collectionKey, fileKey, fileResults]);
   })).then(() =>
     postMessage({
       complete: true,

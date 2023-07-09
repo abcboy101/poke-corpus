@@ -1,28 +1,106 @@
 {
-  "RedGreen": "赤緑",
-  "RedBlue": "青",
-  "Yellow": "ピカチュウ",
-  "GoldSilver": "金銀",
-  "Crystal": "クリスタル",
-  "RubySapphire": "ルビサファ",
-  "FireRedLeafGreen": "FRLG",
-  "Emerald": "エメラルド",
-  "DiamondPearl": "ダイパ",
-  "Platinum": "プラチナ",
-  "HeartGoldSoulSilver": "HGSS",
-  "BlackWhite": "BW",
-  "Black2White2": "BW2",
-  "XY": "XY",
-  "OmegaRubyAlphaSapphire": "ORAS",
-  "SunMoon": "SM",
-  "UltraSunUltraMoon": "USUM",
-  "LetsGoPikachuLetsGoEevee": "ピカブイ",
-  "SwordShield": "剣盾",
-  "BrilliantDiamondShiningPearl": "BDSP",
-  "LegendsArceus": "アルセウス",
-  "ScarletViolet": "SV",
-  "Colosseum": "コロシアム",
-  "XD": "XD",
-  "Bank": "バンク",
-  "HOME": "HOME"
+  "RedGreen": {
+    "name": "赤・緑",
+    "short": "赤緑"
+  },
+  "RedBlue": {
+    "name": "青",
+    "short": "青"
+  },
+  "Yellow": {
+    "name": "ピカチュウ",
+    "short": "ピカチュウ"
+  },
+  "GoldSilver": {
+    "name": "金・銀",
+    "short": "金銀"
+  },
+  "Crystal": {
+    "name": "クリスタル",
+    "short": "クリスタル"
+  },
+  "RubySapphire": {
+    "name": "ルビー・サファイア",
+    "short": "ルビサファ"
+  },
+  "FireRedLeafGreen": {
+    "name": "ファイアレッド・リーフグリーン",
+    "short": "FRLG"
+  },
+  "Emerald": {
+    "name": "エメラルド",
+    "short": "エメラルド"
+  },
+  "DiamondPearl": {
+    "name": "ダイヤモンド・パール",
+    "short": "ダイパ"
+  },
+  "Platinum": {
+    "name": "プラチナ",
+    "short": "プラチナ"
+  },
+  "HeartGoldSoulSilver": {
+    "name": "ハートゴールド・ソウルシルバー",
+    "short": "HGSS"
+  },
+  "BlackWhite": {
+    "name": "ブラック・ホワイト",
+    "short": "BW"
+  },
+  "Black2White2": {
+    "name": "ブラック２・ホワイト２",
+    "short": "BW2"
+  },
+  "XY": {
+    "name": "Ｘ・Ｙ",
+    "short": "XY"
+  },
+  "OmegaRubyAlphaSapphire": {
+    "name": "オメガルビー・アルファサファイア",
+    "short": "ORAS"
+  },
+  "SunMoon": {
+    "name": "サン・ムーン",
+    "short": "SM"
+  },
+  "UltraSunUltraMoon": {
+    "name": "ウルトラサン・ウルトラムーン",
+    "short": "USUM"
+  },
+  "LetsGoPikachuLetsGoEevee": {
+    "name": "Let's Go! ピカチュウ・Let's Go! イーブイ",
+    "short": "ピカブイ"
+  },
+  "SwordShield": {
+    "name": "ソード・シールド",
+    "short": "剣盾"
+  },
+  "BrilliantDiamondShiningPearl": {
+    "name": "ブリリアントダイヤモンド・シャイニングパール",
+    "short": "BDSP"
+  },
+  "LegendsArceus": {
+    "name": "Pokémon LEGENDS アルセウス",
+    "short": "アルセウス"
+  },
+  "ScarletViolet": {
+    "name": "スカーレット・バイオレット",
+    "short": "SV"
+  },
+  "Colosseum": {
+    "name": "コロシアム",
+    "short": "コロシアム"
+  },
+  "XD": {
+    "name": "ＸＤ",
+    "short": "XD"
+  },
+  "Bank": {
+    "name": "バンク",
+    "short": "バンク"
+  },
+  "HOME": {
+    "name": "HOME",
+    "short": "HOME"
+  }
 }
