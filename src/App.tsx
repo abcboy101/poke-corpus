@@ -99,7 +99,7 @@ function Search() {
   const params: URLSearchParams = new URLSearchParams(window.location.hash.substring(1));
   const [query, setQuery] = useState(params.get('query') ?? '');
   const [regex, setRegex] = useState(params.get('regex') === 'true');
-  const [caseInsensitive, setCaseInsensitive] = useState(params.get('caseInsensitive') === 'true');
+  const [caseInsensitive, setCaseInsensitive] = useState(params.get('caseInsensitive') !== 'false');
   const [common, setCommon] = useState(params.get('common') !== 'false');
   const [script, setScript] = useState(params.get('script') !== 'false');
   const [collections, setCollections] = useState((params.get('collections') ?? Object.keys(corpus.collections).filter((value) => corpus.collections[value as keyof typeof corpus.collections].structured).join('|')).split('|'))
@@ -118,7 +118,7 @@ function Search() {
     const params: URLSearchParams = new URLSearchParams(window.location.hash.substring(1));
     setQuery(params.get('query') ?? '');
     setRegex(params.get('regex') === 'true');
-    setCaseInsensitive(params.get('caseInsensitive') === 'true');
+    setCaseInsensitive(params.get('caseInsensitive') !== 'false');
     setCommon(params.get('common') !== 'false');
     setScript(params.get('script') !== 'false');
     setCollections((params.get('collections') ?? '').split('|'));
