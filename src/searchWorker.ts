@@ -19,7 +19,11 @@ export type SearchResults = {
 };
 
 function postProcess(s: string) {
-  return s.replaceAll(/\\r\\n|\\c\\n|\\n/g, '\n').replaceAll(/\\r|\\c|\\l|\\x25BD/g, '\n').trimStart();
+  return s.replaceAll('<', '&lt;').replaceAll('>', '&gt;')
+    .replaceAll(/\\r\\n|\\c\\n|\\n/g, '<br>')
+    .replaceAll(/\\r|\\c|\\l|\\x25BD/g, '<br>')
+    .replaceAll(/\{([^|}]+)\|([^|}]+)\}/g, '<ruby>$1<rp>(</rp><rt>$2</rt><rp>)</rp></ruby>')
+    .trimStart();
 }
 
 /* eslint-disable no-restricted-globals */

@@ -29,7 +29,7 @@ function Results({status, filename, resultsLanguages, results}: {status: string,
                 <tbody>
                   {fileResults.map((row, i) =>
                   <tr key={`row${i}`}>
-                    {row.map((s, j) => <td key={`row${i}-${collectionLangs[j]}`} lang={collectionLangs[j]}>{s}</td>)}
+                    {row.map((s, j) => <td key={`row${i}-${collectionLangs[j]}`} lang={collectionLangs[j]} dangerouslySetInnerHTML={{__html: s}}></td>)}
                   </tr>
                   )}
                 </tbody>
