@@ -31,6 +31,9 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
 
   params.collections.forEach((collectionKey) => {
     const collection = corpus.collections[collectionKey as keyof typeof corpus.collections];
+    if (params.languages.every((languageKey) => !collection.languages.includes(languageKey))) {
+      return;
+    }
     collection.files.forEach((fileKey) => {
       postMessage({
         complete: false,
@@ -57,7 +60,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
           results: []
         });
 
-        const url = `/poke-corpus/corpus/${collectionKey}/${languageKey}_${fileKey}.txt`;
+        const url = process.env.PUBLIC_URL + `/corpus/${collectionKey}/${languageKey}_${fileKey}.txt`;
         collectionPromises.push(
           caches.open("v1")
           .then((cache) => cache.match(url)

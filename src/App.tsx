@@ -127,7 +127,6 @@ function Search() {
 
   const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
-    setStatus('waiting');
     setResultsLanguages([]);
     setResults([]);
 
@@ -141,7 +140,8 @@ function Search() {
       languages: languages.filter((value) => value !== '').join('|'),
     }).toString();
 
-    if (window.Worker) {
+    if (query.length > 0 && collections.length > 0 && languages.length > 0 && window.Worker) {
+      setStatus('waiting');
       worker.postMessage({
         query: query,
         regex: regex,
