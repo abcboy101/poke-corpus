@@ -14,13 +14,13 @@
   "selectAll": "すべて選択",
   "deselectAll": "すべて解除",
   "status": {
-    "initial": "Click \"Search\" to begin.",
-    "waiting": "Please wait...",
-    "loading": "Loading... ({{filename}})",
-    "processing": "Processing... ({{filename}})",
-    "processingDone": "Processing done! ({{filename}})",
-    "done": "Done!",
-    "error": "An error occurred"
+    "initial": "「検索」をクリックしてください",
+    "waiting": "しばらくお待ちください…",
+    "loading": "読み込み中… ({{filename}})",
+    "processing": "処理中… ({{filename}})",
+    "processingDone": "処理完了！ ({{filename}})",
+    "done": "完了！",
+    "error": "エラーが発生しました"
   },
   "tableHeader": "{{collection}}の{{file}}データ"
 }

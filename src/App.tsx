@@ -61,7 +61,7 @@ function SearchCollections({collections, setCollections}: {collections: string[]
                   setCollections(collections.filter((value) => value !== key));
                 }
               }}/>
-              <label htmlFor={`collection-${key}`} style={{transform: (((i18next.language.startsWith('ja') || i18next.language.startsWith('zh')) && t(`collections:${key}.short`).length > 4) ? `scaleX(${4 / t(`collections:${key}.short`).length})` : 'none')}}>{t(`collections:${key}.short`)}</label>
+              <label htmlFor={`collection-${key}`} style={{transform: (((i18next.language.startsWith('ja') || i18next.language.startsWith('ko') || i18next.language.startsWith('zh')) && t(`collections:${key}.short`).length > 4) ? `scaleX(${4 / t(`collections:${key}.short`).length})` : 'none')}}>{t(`collections:${key}.short`)}</label>
             </div>
           )
         }

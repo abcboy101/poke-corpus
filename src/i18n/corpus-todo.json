@@ -14,37 +14,16 @@
   ],
   "collections": {
     "RedGreen": {
-      "name": {
-        "ja-JP": "赤・緑",
-        "en-US": "Red/Green",
-        "fr-FR": "Rouge/Vert",
-        "it-IT": "Rosso/Verde",
-        "de-DE": "Rot/Grün",
-        "es-ES": "Rojo/Verde",
-        "ko-KR": "레드·그린",
-        "zh-CN": "红／绿",
-        "zh-TW": "紅／綠"
-      },
       "languages": [
         "ja-Hrkt-JP"
       ],
       "structured": false,
+      "version": null,
       "files": [
         "data"
       ]
     },
     "RedBlue": {
-      "name": {
-        "ja-JP": "青",
-        "en-US": "Red/Blue",
-        "fr-FR": "Rouge/Bleu",
-        "it-IT": "Rosso/Blu",
-        "de-DE": "Rot/Blau",
-        "es-ES": "Rojo/Azul",
-        "ko-KR": "블루",
-        "zh-CN": "蓝",
-        "zh-TW": "藍"
-      },
       "languages": [
         "ja-Hrkt-JP",
         "en-US",
@@ -54,22 +33,12 @@
         "es-ES"
       ],
       "structured": false,
+      "version": null,
       "files": [
         "data"
       ]
     },
     "Yellow": {
-      "name": {
-        "ja-JP": "ピカチュウ",
-        "en-US": "Yellow",
-        "fr-FR": "Jaune",
-        "it-IT": "Giallo",
-        "de-DE": "Gelb",
-        "es-ES": "Amarillo",
-        "ko-KR": "피카츄",
-        "zh-CN": "皮卡丘",
-        "zh-TW": "皮卡丘"
-      },
       "languages": [
         "ja-Hrkt-JP",
         "en-US",
@@ -79,22 +48,12 @@
         "es-ES"
       ],
       "structured": false,
+      "version": null,
       "files": [
         "data"
       ]
     },
     "GoldSilver": {
-      "name": {
-        "ja-JP": "金・銀",
-        "en-US": "Gold/Silver",
-        "fr-FR": "Or/Argent",
-        "it-IT": "Oro/Argento",
-        "de-DE": "Gold/Silber",
-        "es-ES": "Oro/Plata",
-        "ko-KR": "금·은",
-        "zh-CN": "金／银",
-        "zh-TW": "金／銀"
-      },
       "languages": [
         "ja-Hrkt-JP",
         "en-US",
@@ -105,22 +64,12 @@
         "ko-KR"
       ],
       "structured": false,
+      "version": null,
       "files": [
         "data"
       ]
     },
     "Crystal": {
-      "name": {
-        "ja-JP": "クリスタル",
-        "en-US": "Crystal",
-        "fr-FR": "Cristal",
-        "it-IT": "Cristallo",
-        "de-DE": "Kristall",
-        "es-ES": "Cristal",
-        "ko-KR": "크리스탈",
-        "zh-CN": "水晶",
-        "zh-TW": "水晶"
-      },
       "languages": [
         "ja-Hrkt-JP",
         "en-US",
@@ -130,22 +79,12 @@
         "es-ES"
       ],
       "structured": false,
+      "version": null,
       "files": [
         "data"
       ]
     },
     "RubySapphire": {
-      "name": {
-        "ja-JP": "ルビー・サファイア",
-        "en-US": "Ruby/Sapphire",
-        "fr-FR": "Rubis/Saphir",
-        "it-IT": "Rubino/Zaffiro",
-        "de-DE": "Rubin/Saphir",
-        "es-ES": "Rubí/Zafiro",
-        "ko-KR": "루비·사파이어",
-        "zh-CN": "红宝石／蓝宝石",
-        "zh-TW": "紅寶石／藍寶石"
-      },
       "languages": [
         "ja-Hrkt-JP",
         "en-US",
@@ -155,22 +94,12 @@
         "es-ES"
       ],
       "structured": false,
+      "version": null,
       "files": [
         "data"
       ]
     },
     "FireRedLeafGreen": {
-      "name": {
-        "ja-JP": "ファイアレッド・リーフグリーン",
-        "en-US": "FireRed/LeafGreen",
-        "fr-FR": "Rouge Feu/Vert Feuille",
-        "it-IT": "Rosso Fuoco/Verde Foglia",
-        "de-DE": "Feuerrot/Blattgrün",
-        "es-ES": "Rojo Fuego/Verde Hoja",
-        "ko-KR": "파이어레드·리프그린",
-        "zh-CN": "火红／叶绿",
-        "zh-TW": "火紅／葉綠"
-      },
       "languages": [
         "ja-Hrkt-JP",
         "en-US",
@@ -180,22 +109,12 @@
         "es-ES"
       ],
       "structured": false,
+      "version": null,
       "files": [
         "data"
       ]
     },
     "Emerald": {
-      "name": {
-        "ja-JP": "エメラルド",
-        "en-US": "Emerald",
-        "fr-FR": "Émeraude",
-        "it-IT": "Smeraldo",
-        "de-DE": "Smaragd",
-        "es-ES": "Esmeralda",
-        "ko-KR": "에메랄드",
-        "zh-CN": "绿宝石",
-        "zh-TW": "綠寶石"
-      },
       "languages": [
         "ja-Hrkt-JP",
         "en-US",
@@ -205,44 +124,24 @@
         "es-ES"
       ],
       "structured": false,
+      "version": null,
       "files": [
         "data"
       ]
     },
     "BlackWhite": {
-      "name": {
-        "ja-JP": "ブラック・ホワイト",
-        "en-US": "Black/White",
-        "fr-FR": "Noir/Blanc",
-        "it-IT": "Nero/Bianco",
-        "de-DE": "Schwarz/Weiß",
-        "es-ES": "Negro/Blanco",
-        "ko-KR": "블랙·화이트",
-        "zh-CN": "黑／白",
-        "zh-TW": "黑／白"
-      },
       "languages": [
         "ja-Hrkt-JP",
         "ja-JP"
       ],
       "structured": true,
+      "version": null,
       "files": [
         "common",
         "script"
       ]
     },
     "BrilliantDiamondShiningPearl": {
-      "name": {
-        "ja-JP": "ブリリアントダイヤモンド・シャイニングパール",
-        "en-US": "Brilliant Diamond/Shining Pearl",
-        "fr-FR": "Diamant Étincelant/Perle Scintillante",
-        "it-IT": "Diamante Lucente/Perla Splendente",
-        "de-DE": "Strahlender Diamant/Leuchtende Perle",
-        "es-ES": "Diamante Brillante/Perla Reluciente",
-        "ko-KR": "브릴리언트 다이아몬드·샤이닝 펄",
-        "zh-CN": "晶灿钻石／明亮珍珠",
-        "zh-TW": "晶燦鑽石／明亮珍珠"
-      },
       "languages": [
         "ja-Hrkt-JP",
         "ja-JP",
@@ -256,23 +155,13 @@
         "zh-TW"
       ],
       "structured": true,
+      "version": null,
       "files": [
         "common",
         "script"
       ]
     },
     "Colosseum": {
-      "name": {
-        "ja-JP": "コロシアム",
-        "en-US": "Colosseum",
-        "fr-FR": "Colosseum",
-        "it-IT": "Colosseum",
-        "de-DE": "Colosseum",
-        "es-ES": "Colosseum",
-        "ko-KR": "콜로세움",
-        "zh-CN": "圆形竞技场",
-        "zh-TW": "圓形競技場"
-      },
       "languages": [
         "ja-JP",
         "en-US",
@@ -283,22 +172,12 @@
         "es-ES"
       ],
       "structured": true,
+      "version": null,
       "files": [
         "msg"
       ]
     },
     "XD": {
-      "name": {
-        "ja-JP": "ＸＤ",
-        "en-US": "XD",
-        "fr-FR": "XD",
-        "it-IT": "XD",
-        "de-DE": "XD",
-        "es-ES": "XD",
-        "ko-KR": "XD",
-        "zh-CN": "ＸＤ",
-        "zh-TW": "ＸＤ"
-      },
       "languages": [
         "ja-JP",
         "en-US",
@@ -309,6 +188,7 @@
         "es-ES"
       ],
       "structured": true,
+      "version": null,
       "files": [
         "msg"
       ]
