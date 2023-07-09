@@ -1,0 +1,447 @@
+{
+  "languages": [
+    "ja-Hrkt-JP",
+    "ja-JP",
+    "en-US",
+    "en-GB",
+    "fr-FR",
+    "it-IT",
+    "de-DE",
+    "es-ES",
+    "ko-KR",
+    "zh-CN",
+    "zh-TW"
+  ],
+  "collections": {
+    "DiamondPearl": {
+      "name": {
+        "ja-JP": "ダイヤモンド・パール",
+        "en-US": "Diamond/Pearl",
+        "fr-FR": "Diamant/Perle",
+        "it-IT": "Diamante/Perla",
+        "de-DE": "Diamant/Perl",
+        "es-ES": "Diamante/Perla",
+        "ko-KR": "DP 디아루가·펄기아",
+        "zh-CN": "钻石／珍珠",
+        "zh-TW": "鑽石／珍珠"
+      },
+      "languages": [
+        "ja-Hrkt-JP",
+        "en-US",
+        "en-GB",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES",
+        "ko-KR"
+      ],
+      "structured": true,
+      "files": [
+        "msg"
+      ]
+    },
+    "Platinum": {
+      "name": {
+        "ja-JP": "プラチナ",
+        "en-US": "Platinum",
+        "fr-FR": "Platine",
+        "it-IT": "Platino",
+        "de-DE": "Platin",
+        "es-ES": "Platino",
+        "ko-KR": "Pt 기라티나",
+        "zh-CN": "白金",
+        "zh-TW": "白金"
+      },
+      "languages": [
+        "ja-Hrkt-JP",
+        "en-US",
+        "en-GB",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES",
+        "ko-KR"
+      ],
+      "structured": true,
+      "files": [
+        "msg"
+      ]
+    },
+    "HeartGoldSoulSilver": {
+      "name": {
+        "ja-JP": "ハートゴールド・ソウルシルバー",
+        "en-US": "HeartGold/SoulSilver",
+        "fr-FR": "Or HeartGold/Argent SoulSilver",
+        "it-IT": "Oro HeartGold/Argento SoulSilver",
+        "de-DE": "HeartGold/SoulSilver",
+        "es-ES": "Oro HeartGold/Plata SoulSilver",
+        "ko-KR": "하트골드·소울실버",
+        "zh-CN": "心金／魂银",
+        "zh-TW": "心金／魂銀"
+      },
+      "languages": [
+        "ja-Hrkt-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES",
+        "ko-KR"
+      ],
+      "structured": true,
+      "files": [
+        "msg"
+      ]
+    },
+    "BlackWhite": {
+      "name": {
+        "ja-JP": "ブラック・ホワイト",
+        "en-US": "Black/White",
+        "fr-FR": "Noir/Blanc",
+        "it-IT": "Nero/Bianco",
+        "de-DE": "Schwarz/Weiß",
+        "es-ES": "Negro/Blanco",
+        "ko-KR": "블랙·화이트",
+        "zh-CN": "黑／白",
+        "zh-TW": "黑／白"
+      },
+      "languages": [
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES",
+        "ko-KR"
+      ],
+      "structured": true,
+      "files": [
+        "common",
+        "script"
+      ]
+    },
+    "Black2White2": {
+      "name": {
+        "ja-JP": "ブラック２・ホワイト２",
+        "en-US": "Black 2/White 2",
+        "fr-FR": "Noir 2/Blanc 2",
+        "it-IT": "Nero 2/Bianco 2",
+        "de-DE": "Schwarz 2/Weiß 2",
+        "es-ES": "Negro 2/Blanco 2",
+        "ko-KR": "블랙2·화이트2",
+        "zh-CN": "黑２／白２",
+        "zh-TW": "黑２／白２"
+      },
+      "languages": [
+        "ja-Hrkt-JP",
+        "ja-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES",
+        "ko-KR"
+      ],
+      "structured": true,
+      "files": [
+        "common",
+        "script"
+      ]
+    },
+    "XY": {
+      "name": {
+        "ja-JP": "Ｘ・Ｙ",
+        "en-US": "X/Y",
+        "fr-FR": "X/Y",
+        "it-IT": "X/Y",
+        "de-DE": "X/Y",
+        "es-ES": "X/Y",
+        "ko-KR": "X·Y",
+        "zh-CN": "Ｘ／Ｙ",
+        "zh-TW": "Ｘ／Ｙ"
+      },
+      "languages": [
+        "ja-Hrkt-JP",
+        "ja-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES",
+        "ko-KR"
+      ],
+      "structured": true,
+      "files": [
+        "common",
+        "script"
+      ]
+    },
+    "OmegaRubyAlphaSapphire": {
+      "name": {
+        "ja-JP": "オメガルビー・アルファサファイア",
+        "en-US": "Omega Ruby/Alpha Sapphire",
+        "fr-FR": "Rubis Oméga/Saphir Alpha",
+        "it-IT": "Rubino Omega/Zaffiro Alpha",
+        "de-DE": "Omega Rubin/Alpha Saphir",
+        "es-ES": "Rubí Omega/Zafiro Alfa",
+        "ko-KR": "오메가루비·알파사파이어",
+        "zh-CN": "欧米伽红宝石／阿尔法蓝宝石",
+        "zh-TW": "歐米加紅寶石／阿爾法藍寶石"
+      },
+      "languages": [
+        "ja-Hrkt-JP",
+        "ja-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES",
+        "ko-KR"
+      ],
+      "structured": true,
+      "files": [
+        "common",
+        "script"
+      ]
+    },
+    "SunMoon": {
+      "name": {
+        "ja-JP": "サン・ムーン",
+        "en-US": "Sun/Moon",
+        "fr-FR": "Soleil/Lune",
+        "it-IT": "Sole/Luna",
+        "de-DE": "Sonne/Mond",
+        "es-ES": "Sol/Luna",
+        "ko-KR": "썬·문",
+        "zh-CN": "太阳／月亮",
+        "zh-TW": "太陽／月亮"
+      },
+      "languages": [
+        "ja-Hrkt-JP",
+        "ja-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES",
+        "ko-KR",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "structured": true,
+      "files": [
+        "common",
+        "script"
+      ]
+    },
+    "UltraSunUltraMoon": {
+      "name": {
+        "ja-JP": "ウルトラサン・ウルトラムーン",
+        "en-US": "Ultra Sun/Ultra Moon",
+        "fr-FR": "Ultra-Soleil/Ultra-Lune",
+        "it-IT": "Ultrasole/Ultraluna",
+        "de-DE": "Ultrasonne/Ultramond",
+        "es-ES": "Ultrasol/Ultraluna",
+        "ko-KR": "울트라썬·울트라문",
+        "zh-CN": "究极之日／究极之月",
+        "zh-TW": "究極之日／究極之月"
+      },
+      "languages": [
+        "ja-Hrkt-JP",
+        "ja-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES",
+        "ko-KR",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "structured": true,
+      "files": [
+        "common",
+        "script"
+      ]
+    },
+    "LetsGoPikachuLetsGoEevee": {
+      "name": {
+        "ja-JP": "Let's Go! ピカチュウ・Let's Go! イーブイ",
+        "en-US": "Let's Go, Pikachu!/Let's Go, Eevee!",
+        "fr-FR": "Let's Go, Pikachu/Let's Go, Évoli",
+        "it-IT": "Let's Go, Pikachu!/Let's Go, Eevee!",
+        "de-DE": "Let's Go, Pikachu!/Let's Go, Evoli!",
+        "es-ES": "Let's Go, Pikachu!/Let's Go, Eevee!",
+        "ko-KR": "레츠고! 피카츄·레츠고! 이브이",
+        "zh-CN": "Let's Go! 皮卡丘／Let's Go! 伊布",
+        "zh-TW": "Let's Go！皮卡丘／Let's Go！伊布"
+      },
+      "languages": [
+        "ja-Hrkt-JP",
+        "ja-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES",
+        "ko-KR",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "structured": true,
+      "files": [
+        "common",
+        "script"
+      ]
+    },
+    "SwordShield": {
+      "name": {
+        "ja-JP": "ソード・シールド",
+        "en-US": "Sword/Shield",
+        "fr-FR": "Épée/Bouclier",
+        "it-IT": "Spada/Scudo",
+        "de-DE": "Schwert/Schild",
+        "es-ES": "Espada/Escudo",
+        "ko-KR": "소드·실드",
+        "zh-CN": "剑／盾",
+        "zh-TW": "劍／盾"
+      },
+      "languages": [
+        "ja-Hrkt-JP",
+        "ja-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES",
+        "ko-KR",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "structured": true,
+      "files": [
+        "common",
+        "script"
+      ],
+      "version": "1.3.0"
+    },
+    "LegendsArceus": {
+      "name": {
+        "ja-JP": "Pokémon LEGENDS アルセウス",
+        "en-US": "Pokémon Legends: Arceus",
+        "fr-FR": "Légendes Pokémon : Arceus",
+        "it-IT": "Leggende Pokémon: Arceus",
+        "de-DE": "Pokémon-Legenden: Arceus",
+        "es-ES": "Leyendas Pokémon: Arceus",
+        "ko-KR": "Pokémon LEGENDS 아르세우스",
+        "zh-CN": "宝可梦传说 阿尔宙斯",
+        "zh-TW": "寶可夢傳說 阿爾宙斯"
+      },
+      "languages": [
+        "ja-Hrkt-JP",
+        "ja-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES",
+        "ko-KR",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "structured": true,
+      "files": [
+        "common",
+        "script"
+      ],
+      "version": "1.1.0"
+    },
+    "ScarletViolet": {
+      "name": {
+        "ja-JP": "スカーレット・バイオレット",
+        "en-US": "Scarlet/Violet",
+        "fr-FR": "Écarlate/Violet",
+        "it-IT": "Scarlatto/Violetto",
+        "de-DE": "Karmesin/Purpur",
+        "es-ES": "Escarlata/Púrpura",
+        "ko-KR": "스칼렛·바이올렛",
+        "zh-CN": "朱／紫",
+        "zh-TW": "朱／紫"
+      },
+      "languages": [
+        "ja-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES",
+        "ko-KR",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "structured": true,
+      "files": [
+        "common",
+        "script"
+      ],
+      "version": "1.3.2"
+    },
+    "Bank": {
+      "name": {
+        "ja-JP": "バンク",
+        "en-US": "Bank",
+        "fr-FR": "Banque",
+        "it-IT": "Banca",
+        "de-DE": "Bank",
+        "es-ES": "Banco",
+        "ko-KR": "뱅크",
+        "zh-CN": "虚拟银行",
+        "zh-TW": "虛擬銀行"
+      },
+      "languages": [
+        "ja-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES",
+        "ko-KR",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "structured": true,
+      "files": [
+        "common"
+      ],
+      "version": "1.4"
+    },
+    "HOME": {
+      "name": {
+        "ja-JP": "HOME",
+        "en-US": "HOME",
+        "fr-FR": "HOME",
+        "it-IT": "HOME",
+        "de-DE": "HOME",
+        "es-ES": "HOME",
+        "ko-KR": "HOME",
+        "zh-CN": "HOME",
+        "zh-TW": "HOME"
+      },
+      "languages": [
+        "ja-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES",
+        "ko-KR",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "structured": true,
+      "files": [
+        "common"
+      ],
+      "version": "3.0.0"
+    }
+  }
+}
