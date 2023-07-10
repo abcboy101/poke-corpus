@@ -7,6 +7,8 @@
   --background-dark: #112;
   --highlight-dark: #224;
   --text-dark: #eee;
+  --progress-bar-color-light: limegreen;
+  --progress-bar-color-dark: green;
 }
 
 @media (prefers-color-scheme: light) {
@@ -14,6 +16,9 @@
     --background: var(--background-light);
     --highlight: var(--highlight-light);
     --text: var(--text-light);
+    --progress-bar-background: var(--highlight);
+    --progress-bar-border: var(--text);
+    --progress-bar-color: var(--progress-bar-color-light);
   }
 }
 
@@ -21,6 +26,9 @@
   --background: var(--background-light);
   --highlight: var(--highlight-light);
   --text: var(--text-light);
+  --progress-bar-background: var(--highlight);
+  --progress-bar-border: var(--text);
+  --progress-bar-color: var(--progress-bar-color-light);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,6 +36,9 @@
     --background: var(--background-dark);
     --highlight: var(--highlight-dark);
     --text: var(--text-dark);
+    --progress-bar-background: var(--highlight);
+    --progress-bar-border: var(--text);
+    --progress-bar-color: var(--progress-bar-color-dark);
   }
 }
 
@@ -35,6 +46,9 @@
   --background: var(--background-dark);
   --highlight: var(--highlight-dark);
   --text: var(--text-dark);
+  --progress-bar-background: var(--highlight);
+  --progress-bar-border: var(--text);
+  --progress-bar-color: var(--progress-bar-color-dark);
 }
 
 
@@ -53,6 +67,7 @@
   padding: 1rem;
   background: var(--background);
   color: var(--text);
+  overflow: auto;
 }
 
 h1, h2 {
@@ -69,17 +84,25 @@ h1, h2 {
 .App-header-options {
   float: right;
   display: grid;
-  gap: 0.25rem;
+  gap: 0.25rem 0.5rem;
   grid-template-columns: repeat(2, auto);
 }
 
+.App-header-options label {
+  text-align: right;
+}
+
 .App-results-status {
+  display: grid;
+  grid-template-columns: minmax(12em, 1fr) 1em 2fr;
+  align-items: center;
   text-align: center;
+  gap: 0.25em;
 }
 
 .App-results {
   width: 100%;
-  min-height: 8em;
+  min-height: max(8em, 25vh);
   overflow: scroll;
   flex: 1;
   padding: 0.5rem;
@@ -124,6 +147,8 @@ th, td {
 .App-search-bar-group {
   display: flex;
   gap: 0.25em;
+  flex-wrap: wrap;
+  white-space: nowrap;
 }
 
 .App-search-button-group {
@@ -158,17 +183,23 @@ input[type=submit] {
   margin: 0 0.25rem;
 }
 
-.App-search-collections {
+.App-search-collections, .App-search-languages {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
   justify-content: start;
+  align-content: start;
 }
 
-.App-search-collection {
+.App-search-collections {
+  grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
+}
+
+.App-search-languages {
+  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+}
+
+.App-search-collection, .App-search-language {
   overflow: hidden;
   white-space: nowrap;
-  /* text-overflow: ellipsis; */
-  text-align: left;
 }
 
 .App-search-collection label {
@@ -176,14 +207,6 @@ input[type=submit] {
   transform-origin: left center;
 }
 
-.App-search-languages {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
-  justify-content: start;
-}
-
 .App-search-language {
-  overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
 }

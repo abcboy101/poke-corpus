@@ -13,7 +13,7 @@ export type SearchParams = {
 export type SearchResults = {
   complete: boolean,
   status: string,
-  filename: string,
+  progress: number,
   resultsLanguages: string[][],
   results: [string, string, string[][]][]
 };
@@ -26,27 +26,39 @@ function postProcess(s: string) {
     .trimStart();
 }
 
+const progressPortionLoading = 0.1;
+const progressPortionProcessing = 0.8;
+const progressPortionCollecting = 0.1;
+
 /* eslint-disable no-restricted-globals */
 self.onmessage = (message: MessageEvent<SearchParams>) => {
   const params = message.data;
   const re = params.regex ? new RegExp(params.query, params.caseInsensitive ? 'ui' : 'u') : null;
 
   let corpusPromises: Promise<[[string, string], string[], Set<number>, string[][]]>[] = [];
+  let loadedCount = 0;
+  const loadedTotal = params.collections.length;
+  let processedCount = 0;
+  const processedTotal = Object.entries(corpus.collections)
+    .filter(([key, _]) => params.collections.includes(key))
+    .map(([_, val]) => val.languages.length * val.files.length)
+    .reduce((a, b) => a + b, 0);
 
   params.collections.forEach((collectionKey) => {
     const collection = corpus.collections[collectionKey as keyof typeof corpus.collections];
+    loadedCount++;
+    postMessage({
+      complete: false,
+      status: 'loading',
+      progress: loadedCount/loadedTotal * progressPortionLoading,
+      resultsLanguages: [],
+      results: []
+    });
+
     if (params.languages.every((languageKey) => !collection.languages.includes(languageKey))) {
       return;
     }
     collection.files.forEach((fileKey) => {
-      postMessage({
-        complete: false,
-        status: 'loading',
-        filename: `${collectionKey}_${fileKey}`,
-        resultsLanguages: [],
-        results: []
-      });
-
       if (fileKey === 'common' && !params.common) {
         return;
       }
@@ -56,13 +68,13 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
 
       let collectionPromises: Promise<[[string, string[]], number[]]>[] = [];
       collection.languages.forEach((languageKey) => {
-        postMessage({
-          complete: false,
-          status: 'loading',
-          filename: `${collectionKey}_${languageKey}_${fileKey}`,
-          resultsLanguages: [],
-          results: []
-        });
+        // postMessage({
+        //   complete: false,
+        //   status: 'loading',
+        //   filename: `${collectionKey}_${languageKey}_${fileKey}`,
+        //   resultsLanguages: [],
+        //   results: []
+        // });
 
         const url = process.env.PUBLIC_URL + `/corpus/${collectionKey}/${languageKey}_${fileKey}.txt`;
         collectionPromises.push(
@@ -75,10 +87,11 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
             const lines = data.split(/\r\n|\n/);
             let lineKeys: number[] = [];
 
+            processedCount++;
             postMessage({
               complete: false,
               status: 'processing',
-              filename: `${collectionKey}_${languageKey}_${fileKey}`,
+              progress: progressPortionLoading + processedCount/processedTotal * progressPortionProcessing,
               resultsLanguages: [],
               results: []
             });
@@ -92,14 +105,6 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
                 }
               });
             }
-
-            postMessage({
-              complete: false,
-              status: `processingDone`,
-              filename: `${collectionKey}_${languageKey}_${fileKey}`,
-              resultsLanguages: [],
-              results: []
-            });
 
             return [[languageKey, lines], lineKeys];
           }));
@@ -122,19 +127,34 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
 
   let resultsLanguages: string[][] = [];
   let results: [string, string, string[][]][] = [];
-  Promise.all(corpusPromises).then((corpusResults) => corpusResults.forEach(([[collectionKey, fileKey], languageKeys, lineKeys, fileData]) => {
-    let fileResults: string[][] = [];
-    Array.from(lineKeys).sort().forEach((i) => {
-      const lineResults = fileData.map((lines) => postProcess(lines[i] ?? ''));
-      fileResults.push(lineResults);
-    });
-    resultsLanguages.push(languageKeys);
-    results.push([collectionKey, fileKey, fileResults]);
-  })).then(() =>
+  let collectedCount = 0;
+  Promise.all(corpusPromises).then((corpusResults) => {
+    return corpusResults;
+  }).then((corpusResults) =>
+    corpusResults.forEach(([[collectionKey, fileKey], languageKeys, lineKeys, fileData]) => {
+      let fileResults: string[][] = [];
+
+      collectedCount++;
+      postMessage({
+        complete: false,
+        status: "collecting",
+        progress: (progressPortionLoading + progressPortionProcessing) + collectedCount/corpusResults.length * progressPortionCollecting,
+        resultsLanguages: [],
+        results: []
+      });
+
+      Array.from(lineKeys).sort().forEach((i) => {
+        const lineResults = fileData.map((lines) => postProcess(lines[i] ?? ''));
+        fileResults.push(lineResults);
+      });
+      resultsLanguages.push(languageKeys);
+      results.push([collectionKey, fileKey, fileResults]);
+    })
+  ).then(() =>
     postMessage({
       complete: true,
       status: "done",
-      filename: '',
+      progress: 1.0,
       resultsLanguages: resultsLanguages,
       results: results
     })
@@ -143,7 +163,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
     postMessage({
       complete: true,
       status: "error",
-      filename: '',
+      progress: 1.0,
       resultsLanguages: [],
       results: []
     });

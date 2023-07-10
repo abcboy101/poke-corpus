@@ -16,9 +16,9 @@
   "status": {
     "initial": "Click \"Search\" to begin.",
     "waiting": "Please wait...",
-    "loading": "Loading... ({{filename}})",
-    "processing": "Processing... ({{filename}})",
-    "processingDone": "Processing done! ({{filename}})",
+    "loading": "Loading...",
+    "processing": "Processing...",
+    "collecting": "Gathering results...",
     "done": "Done!",
     "error": "An error occurred"
   },

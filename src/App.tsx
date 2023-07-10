@@ -7,12 +7,18 @@ import { useTranslation } from 'react-i18next';
 import supportedLngs from './i18n/supportedLngs.json'
 import corpus from './i18n/corpus.json'
 import { SearchResults } from './searchWorker';
+import Spinner from './Spinner';
+import ProgressBar from './ProgressBar';
 
-function Results({status, filename, resultsLanguages, results}: {status: string, filename: string, resultsLanguages: string[][], results: [string, string, string[][]][]}) {
+function Results({status, progress, resultsLanguages, results}: {status: string, progress: number, resultsLanguages: string[][], results: [string, string, string[][]][]}) {
   const { t } = useTranslation();
   return (
     <>
-      <div className="App-results-status">{t(`status.${status}`, {filename: filename})}</div>
+      <div className="App-results-status">
+        <div>{t(`status.${status}`)}</div>
+        {['initial', 'done', 'error'].includes(status) ? <div></div> : <Spinner />}
+        <ProgressBar progress={progress} />
+      </div>
       <div className="App-results">
         {resultsLanguages.map((collectionLangs, k) => {
           const [collectionKey, fileKey, fileResults] = results[k];
@@ -122,7 +128,7 @@ function Search() {
     []
   );
   const [status, setStatus] = useState("initial");
-  const [filename, setFilename] = useState('');
+  const [progress, setProgress] = useState(0.0);
   const [results, setResults] = useState([] as [string, string, string[][]][]);
   const [resultsLanguages, setResultsLanguages] = useState([] as string[][]);
 
@@ -170,7 +176,7 @@ function Search() {
     if (window.Worker) {
       worker.onmessage = (e: MessageEvent<SearchResults>) => {
         setStatus(e.data.status);
-        setFilename(e.data.filename);
+        setProgress(e.data.progress);
         if (e.data.complete) {
           setResultsLanguages(e.data.resultsLanguages);
           setResults(e.data.results);
@@ -213,7 +219,7 @@ function Search() {
           <SearchLanguages languages={languages} setLanguages={setLanguages}/>
         </div>
       </form>
-      <Results status={status} filename={filename} resultsLanguages={resultsLanguages} results={results}/>
+      <Results status={status} progress={progress} resultsLanguages={resultsLanguages} results={results}/>
     </>
   );
 }

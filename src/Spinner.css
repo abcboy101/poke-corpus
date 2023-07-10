@@ -1,0 +1,17 @@
+.spinner {
+  display: inline-block;
+  background: url('./logo.svg');
+  background-size: contain;
+  width: 1em;
+  height: 1em;
+  animation: Spinner-spin infinite 0.5s linear;
+}
+
+@keyframes Spinner-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
