@@ -1,4 +1,4 @@
-import { Dispatch, FormEventHandler, SetStateAction, useEffect, useMemo, useState } from 'react';
+import { Dispatch, FormEventHandler, MutableRefObject, SetStateAction, useRef, useState } from 'react';
 import './App.css';
 import logo from './logo.svg';
 import './i18n/config';
@@ -112,21 +112,21 @@ function SearchLanguages({languages, setLanguages}: {languages: string[], setLan
   )
 }
 
+const defaultCollections = Object.keys(corpus.collections).filter((value) => corpus.collections[value as keyof typeof corpus.collections].structured).join(',');
+const defaultLanguages = corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0])).join(',');
+
 function Search() {
   const { t } = useTranslation();
+  const workerRef: MutableRefObject<Worker | null> = useRef(null);
   const params: URLSearchParams = new URLSearchParams(window.location.hash.substring(1));
   const [query, setQuery] = useState(params.get('query') ?? '');
   const [regex, setRegex] = useState(params.get('regex') === 'true');
   const [caseInsensitive, setCaseInsensitive] = useState(params.get('caseInsensitive') !== 'false');
   const [common, setCommon] = useState(params.get('common') !== 'false');
   const [script, setScript] = useState(params.get('script') !== 'false');
-  const [collections, setCollections] = useState((params.get('collections') ?? Object.keys(corpus.collections).filter((value) => corpus.collections[value as keyof typeof corpus.collections].structured).join('|')).split('|').filter((value) => value !== ''))
-  const [languages, setLanguages] = useState((params.get('languages') ?? corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0])).join('|')).split('|').filter((value) => value !== ''))
+  const [collections, setCollections] = useState((params.get('collections') ?? defaultCollections).split(',').filter((value) => Object.keys(corpus.collections).includes(value)))
+  const [languages, setLanguages] = useState((params.get('languages') ?? defaultLanguages).split(',').filter((value) => corpus.languages.includes(value)))
 
-  const worker: Worker = useMemo(
-    () => new Worker(new URL("./searchWorker.ts", import.meta.url)),
-    []
-  );
   const [status, setStatus] = useState("initial");
   const [progress, setProgress] = useState(0.0);
   const [results, setResults] = useState([] as [string, string, string[][]][]);
@@ -139,9 +139,28 @@ function Search() {
     setCaseInsensitive(params.get('caseInsensitive') !== 'false');
     setCommon(params.get('common') !== 'false');
     setScript(params.get('script') !== 'false');
-    setCollections((params.get('collections') ?? '').split('|').filter((value) => value !== ''));
-    setLanguages((params.get('languages') ?? '').split('|').filter((value) => value !== ''));
+    setCollections((params.get('collections') ?? '').split(',').filter((value) => Object.keys(corpus.collections).includes(value)));
+    setLanguages((params.get('languages') ?? '').split(',').filter((value) => corpus.languages.includes(value)));
   });
+
+  const onMessage = (e: MessageEvent<SearchResults>) => {
+    if (e.data.complete) {
+      window.requestAnimationFrame(() => {
+        // use requestAnimationFrame to ensure that the browser has displayed the 'rendering' status before the results start being rendered
+        setStatus('rendering');
+        window.requestAnimationFrame(() => {
+          setStatus(e.data.status);
+          setProgress(e.data.progress);
+          setResultsLanguages(e.data.resultsLanguages);
+          setResults(e.data.results);
+        });
+      });
+    }
+    else {
+      setStatus(e.data.status);
+      setProgress(e.data.progress);
+    }
+  };
 
   const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
@@ -154,22 +173,25 @@ function Search() {
       caseInsensitive: caseInsensitive.toString(),
       common: common.toString(),
       script: script.toString(),
-      collections: collections.join('|'),
-      languages: languages.join('|'),
+      collections: collections.join(','),
+      languages: languages.join(','),
     }).toString();
 
-    if (query.length > 0 && collections.length > 0 && languages.length > 0 && window.Worker) {
+    if (workerRef.current !== null && status !== 'initial' && status !== 'done') {
+      console.log('Terminating worker!');
+      workerRef.current.terminate();
+      workerRef.current = null;
+      setStatus('initial');
+      setProgress(0.0);
+    }
+    else if (query.length > 0 && collections.length > 0 && languages.length > 0) {
+      if (workerRef.current === null) {
+        workerRef.current = new Worker(new URL("./searchWorker.ts", import.meta.url));
+        workerRef.current.onmessage = onMessage;
+      }
       setStatus('waiting');
-      // console.log({
-      //   query: query,
-      //   regex: regex,
-      //   caseInsensitive: caseInsensitive,
-      //   common: common,
-      //   script: script,
-      //   collections: collections,
-      //   languages: languages,
-      // });
-      worker.postMessage({
+      setProgress(0.0);
+      const message = {
         query: query,
         regex: regex,
         caseInsensitive: caseInsensitive,
@@ -177,31 +199,26 @@ function Search() {
         script: script,
         collections: collections,
         languages: languages,
-      });
+      };
+      if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+        console.log(message);
+      }
+      workerRef.current.postMessage(message);
     }
   };
-
-  useEffect(() => {
-    if (window.Worker) {
-      worker.onmessage = (e: MessageEvent<SearchResults>) => {
-        setStatus(e.data.status);
-        setProgress(e.data.progress);
-        if (e.data.complete) {
-          setResultsLanguages(e.data.resultsLanguages);
-          setResults(e.data.results);
-        }
-      };
-    }
-  });
 
   return (
     <>
       <form className="App-search" onSubmit={onSubmit}>
         <div className="App-search-bar">
-          <div>
-            <label htmlFor="query">{t('query')} </label>
-            <input type="text" name="query" id="query" value={query} onChange={e => setQuery(e.target.value)}/>
-            <input type="submit" value={t('search')} disabled={collections.length === 0 || languages.length === 0}/>
+          <div className="App-search-bar-group">
+            <div>
+              <label htmlFor="query">{t('query')} </label>
+              <input type="text" name="query" id="query" value={query} onChange={e => setQuery(e.target.value)}/>
+            </div>
+            <div>
+              <input type="submit" value={(status !== 'initial' && status !== 'done' && status !== 'rendering') ? t('cancel') : t('search')} disabled={!(status !== 'initial' && status !== 'done' && status !== 'rendering') && (collections.length === 0 || languages.length === 0)}/>
+            </div>
           </div>
           <div className="App-search-bar-group">
             <div>

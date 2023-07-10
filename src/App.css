@@ -68,6 +68,12 @@
   background: var(--background);
   color: var(--text);
   overflow: auto;
+  line-height: 1.5;
+  text-size-adjust: none;
+}
+
+ruby > rt {
+  font-size: 50%;
 }
 
 h1, h2 {
@@ -177,6 +183,7 @@ input[type=text], select, input[type=submit], input[type=button], button {
   color: var(--text);
   border-radius: 3px;
   padding: 2px 4px;
+  height: 2em;
 }
 
 input[type=text]:disabled, select:disabled, input[type=submit]:disabled, input[type=button]:disabled, button:disabled {
@@ -184,7 +191,7 @@ input[type=text]:disabled, select:disabled, input[type=submit]:disabled, input[t
 }
 
 input[type=submit] {
-  margin: 0 0.25rem;
+  min-width: 4em;
 }
 
 .App-search-collections, .App-search-languages {
