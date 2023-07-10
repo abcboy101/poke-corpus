@@ -10,6 +10,9 @@ import { SearchResults } from './searchWorker';
 import Spinner from './Spinner';
 import ProgressBar from './ProgressBar';
 
+const codeId = "qid-ZZ";
+const langId = "en-JP";
+
 function Results({status, progress, resultsLanguages, results}: {status: string, progress: number, resultsLanguages: string[][], results: [string, string, string[][]][]}) {
   const { t } = useTranslation();
   return (
@@ -35,7 +38,7 @@ function Results({status, progress, resultsLanguages, results}: {status: string,
                 <tbody>
                   {fileResults.map((row, i) =>
                   <tr key={`row${i}`}>
-                    {row.map((s, j) => <td key={`row${i}-${collectionLangs[j]}`} lang={collectionLangs[j]} dangerouslySetInnerHTML={{__html: s}}></td>)}
+                    {row.map((s, j) => <td key={`row${i}-${collectionLangs[j]}`} lang={collectionLangs[j] === codeId ? langId : collectionLangs[j]} dangerouslySetInnerHTML={{__html: s}}></td>)}
                   </tr>
                   )}
                 </tbody>

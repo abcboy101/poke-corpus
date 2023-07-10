@@ -149,7 +149,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
       });
 
       const fileResults: string[][] = [];
-      Array.from(lineKeysSet).sort().forEach((i) => fileResults.push(fileData.map((lines) => convertStringToHTML(lines[i] ?? ''))));
+      Array.from(lineKeysSet).sort((a, b) => a - b).forEach((i) => fileResults.push(fileData.map((lines) => convertStringToHTML(lines[i] ?? ''))));
       return [collectionKey, fileKey, languageKeys, fileResults];
     });
   });
