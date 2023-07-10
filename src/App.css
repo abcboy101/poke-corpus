@@ -102,7 +102,7 @@ h1, h2 {
 
 .App-results {
   width: 100%;
-  min-height: max(8em, 25vh);
+  min-height: max(12em, 25vh);
   overflow: scroll;
   flex: 1;
   padding: 0.5rem;
@@ -177,6 +177,10 @@ input[type=text], select, input[type=submit], input[type=button], button {
   color: var(--text);
   border-radius: 3px;
   padding: 2px 4px;
+}
+
+input[type=text]:disabled, select:disabled, input[type=submit]:disabled, input[type=button]:disabled, button:disabled {
+  opacity: 0.7;
 }
 
 input[type=submit] {

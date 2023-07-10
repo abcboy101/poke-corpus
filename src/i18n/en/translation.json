@@ -11,6 +11,7 @@
   "search": "Search",
   "common": "Common",
   "script": "Script",
+  "clearCache": "Clear Cache",
   "selectAll": "Select All",
   "deselectAll": "Deselect All",
   "status": {
@@ -18,7 +19,8 @@
     "waiting": "Please wait...",
     "loading": "Loading...",
     "processing": "Processing...",
-    "collecting": "Gathering results...",
+    "collecting": "Collecting results...",
+    "rendering": "Rendering...",
     "done": "Done!",
     "error": "An error occurred"
   },

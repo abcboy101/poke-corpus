@@ -73,8 +73,8 @@ function SearchCollections({collections, setCollections}: {collections: string[]
         }
       </div>
       <div className="App-search-button-group">
-        <button onClick={(e) => { e.preventDefault(); setCollections(Object.keys(corpus.collections)); }}>{t('selectAll')}</button>
-        <button onClick={(e) => { e.preventDefault(); setCollections([]); }}>{t('deselectAll')}</button>
+        <button disabled={collections.length === Object.keys(corpus.collections).length} onClick={(e) => { e.preventDefault(); setCollections(Object.keys(corpus.collections)); }}>{t('selectAll')}</button>
+        <button disabled={collections.length === 0} onClick={(e) => { e.preventDefault(); setCollections([]); }}>{t('deselectAll')}</button>
       </div>
     </>
   )
@@ -105,8 +105,8 @@ function SearchLanguages({languages, setLanguages}: {languages: string[], setLan
         }
       </div>
       <div className="App-search-button-group">
-        <button onClick={(e) => { e.preventDefault(); setLanguages(corpus.languages); }}>{t('selectAll')}</button>
-        <button onClick={(e) => { e.preventDefault(); setLanguages([]); }}>{t('deselectAll')}</button>
+        <button disabled={languages.length === Object.keys(corpus.languages).length} onClick={(e) => { e.preventDefault(); setLanguages(corpus.languages); }}>{t('selectAll')}</button>
+        <button disabled={languages.length === 0} onClick={(e) => { e.preventDefault(); setLanguages([]); }}>{t('deselectAll')}</button>
       </div>
     </>
   )
@@ -120,8 +120,8 @@ function Search() {
   const [caseInsensitive, setCaseInsensitive] = useState(params.get('caseInsensitive') !== 'false');
   const [common, setCommon] = useState(params.get('common') !== 'false');
   const [script, setScript] = useState(params.get('script') !== 'false');
-  const [collections, setCollections] = useState((params.get('collections') ?? Object.keys(corpus.collections).filter((value) => corpus.collections[value as keyof typeof corpus.collections].structured).join('|')).split('|'))
-  const [languages, setLanguages] = useState((params.get('languages') ?? corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0])).join('|')).split('|'))
+  const [collections, setCollections] = useState((params.get('collections') ?? Object.keys(corpus.collections).filter((value) => corpus.collections[value as keyof typeof corpus.collections].structured).join('|')).split('|').filter((value) => value !== ''))
+  const [languages, setLanguages] = useState((params.get('languages') ?? corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0])).join('|')).split('|').filter((value) => value !== ''))
 
   const worker: Worker = useMemo(
     () => new Worker(new URL("./searchWorker.ts", import.meta.url)),
@@ -139,8 +139,8 @@ function Search() {
     setCaseInsensitive(params.get('caseInsensitive') !== 'false');
     setCommon(params.get('common') !== 'false');
     setScript(params.get('script') !== 'false');
-    setCollections((params.get('collections') ?? '').split('|'));
-    setLanguages((params.get('languages') ?? '').split('|'));
+    setCollections((params.get('collections') ?? '').split('|').filter((value) => value !== ''));
+    setLanguages((params.get('languages') ?? '').split('|').filter((value) => value !== ''));
   });
 
   const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
@@ -154,12 +154,21 @@ function Search() {
       caseInsensitive: caseInsensitive.toString(),
       common: common.toString(),
       script: script.toString(),
-      collections: collections.filter((value) => value !== '').join('|'),
-      languages: languages.filter((value) => value !== '').join('|'),
+      collections: collections.join('|'),
+      languages: languages.join('|'),
     }).toString();
 
     if (query.length > 0 && collections.length > 0 && languages.length > 0 && window.Worker) {
       setStatus('waiting');
+      // console.log({
+      //   query: query,
+      //   regex: regex,
+      //   caseInsensitive: caseInsensitive,
+      //   common: common,
+      //   script: script,
+      //   collections: collections,
+      //   languages: languages,
+      // });
       worker.postMessage({
         query: query,
         regex: regex,
@@ -192,7 +201,7 @@ function Search() {
           <div>
             <label htmlFor="query">{t('query')} </label>
             <input type="text" name="query" id="query" value={query} onChange={e => setQuery(e.target.value)}/>
-            <input type="submit" value={t('search')}/>
+            <input type="submit" value={t('search')} disabled={collections.length === 0 || languages.length === 0}/>
           </div>
           <div className="App-search-bar-group">
             <div>
@@ -211,6 +220,9 @@ function Search() {
               <input type="checkbox" name="script" id="script" checked={script} onChange={e => setScript(e.target.checked)}/>
               <label htmlFor="script">{t('script')}</label>
             </div>
+          </div>
+          <div>
+            <button onClick={(e) => {e.preventDefault(); caches.keys().then((keyList) => Promise.all(keyList.map((key) => caches.delete(key))));}}>{t('clearCache')}</button>
           </div>
         </div>
         <div className="App-search-filters">
