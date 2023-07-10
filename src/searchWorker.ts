@@ -49,7 +49,20 @@ function convertStringToHTML(s: string) {
   return s.replaceAll('<', '&lt;').replaceAll('>', '&gt;')
     .replaceAll(/\\r\\n|\\c\\n|\\n/g, '<br>')
     .replaceAll(/\\r|\\c|\\l|\\x25BD/g, '<br>')
-    .replaceAll(/\{([^|}]+)\|([^|}]+)\}/g, '<ruby>$1<rp>(</rp><rt>$2</rt><rp>)</rp></ruby>')
+    .replaceAll('\u2469', 'ᵉʳ') // Gen 5 superscript er
+    .replaceAll('\u246A', 'ʳᵉ') // Gen 5 superscript re
+    .replaceAll('\u246B', 'ʳ') // Gen 5 superscript r
+    .replaceAll('\u2485', 'ᵉ') // Gen 5 superscript e
+    .replaceAll('\u2486', '<sup>P</sup><sub>K</sub>') // Gen 5 PK
+    .replaceAll('\u2487', '<sup>M</sup><sub>N</sub>') // Gen 5 MN
+    .replaceAll('\uE07F', '\u202F') // 3DS narrow no-break space (French)
+    .replaceAll('\uE08A', 'ᵉʳ') // 3DS superscript er
+    .replaceAll('\uE08B', 'ʳᵉ') // 3DS superscript re
+    .replaceAll('\uE08C', 'ʳ') // 3DS superscript r
+    .replaceAll('\uE0A6', 'ᵉ') // 3DS superscript e
+    .replaceAll('\uE0A7', '<sup>P</sup><sub>K</sub>') // 3DS PK
+    .replaceAll('\uE0A8', '<sup>M</sup><sub>N</sub>') // 3DS MN
+    .replaceAll(/\{([^|}]+)\|([^|}]+)\}/g, '<ruby>$1<rp>(</rp><rt>$2</rt><rp>)</rp></ruby>') // Switch furigana
     .trimStart();
 }
 
