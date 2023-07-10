@@ -260,7 +260,7 @@ function LanguageSelect() {
   const { t } = useTranslation();
   return (
     <>
-      <label htmlFor="language">{t('language')} </label>
+      <label htmlFor="language">{t('language')}</label>
       <select name="language" id="language" onChange={(e) => i18next.changeLanguage(e.target.value)} defaultValue={i18next.language}>
         {supportedLngs.map((lang) => <option key={lang.code} value={lang.code} lang={lang.code}>{lang.name}</option>)}
       </select>
@@ -280,7 +280,7 @@ function App() {
         </h1>
         <div className="App-header-options">
           <LanguageSelect/>
-          <label htmlFor="mode">{t('mode')} </label>
+          <label htmlFor="mode">{t('mode')}</label>
           <select name="mode" id="mode" onChange={(e) => { setMode(e.target.value); localStorage.setItem('mode', e.target.value); }} defaultValue={mode}>
             <option value='system'>{t('modeSystem')}</option>
             <option value='light'>{t('modeLight')}</option>
