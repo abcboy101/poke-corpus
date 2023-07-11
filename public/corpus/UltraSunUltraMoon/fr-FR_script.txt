@@ -450,7 +450,7 @@ Bienvenue dans notre modeste échoppe, Maître.\nIl est maintenant [VAR NUM2(000
 ~~~~~~~~~~~~~~~
 Text File : 7
 ~~~~~~~~~~~~~~~
-Deoxys réagit à la météorite\c\nVoulez-vous approcher votre Deoxys\nde la météorite ?
+Deoxys réagit à la météorite…\c\nVoulez-vous approcher votre Deoxys\nde la météorite ?
 Quel Deoxys voulez-vous approcher\nde la météorite ?
 Ce Pokémon ne réagit pas à la météorite.
 Un Œuf ne peut pas réagir à la météorite.
@@ -480,7 +480,7 @@ Aucun
 [VAR PKNICK(0000)] veut apprendre\n[VAR MOVE(0001)].\c\nMais un Pokémon ne peut pas connaître\nplus de quatre capacités à la fois.\c\nVoulez-vous remplacer une capacité par\n[VAR MOVE(0001)] ?
 Voulez-vous arrêter d’apprendre\n[VAR MOVE(0001)] ?
 [VAR PKNICK(0000)] n’a pas appris\n[VAR MOVE(0001)].\c\nIl sort du moteur.
-1[WAIT 20], 2[WAIT 20], [WAIT 20] [WAIT 20] Tadaaa ![VAR BE05(0003)][VAR BE05(0006)]\c\n[VAR PKNICK(0000)] oublie [VAR MOVE(0002)].\c\nEt
+1[WAIT 20], 2[WAIT 20], [WAIT 20]… [WAIT 20]… Tadaaa ![VAR BE05(0003)][VAR BE05(0006)]\c\n[VAR PKNICK(0000)] oublie [VAR MOVE(0002)].\c\nEt…
 [VAR PKNICK(0000)] apprend [VAR MOVE(0001)] !
 [VAR PKNICK(0000)] a oublié [VAR MOVE(0002)].
 [VAR PKNICK(0000)] est déjà entré dans ce moteur.
@@ -903,7 +903,7 @@ Text File : 22
 ~~~~~~~~~~~~~~~
 Bienvenue à la Loterie ID !\c\nIl vous suffit de venir nous rendre visite pour\ngagner automatiquement le droit de participer\r\nà notre tirage !\c\nUn merveilleux prix vous sera offert si vous tirez\nun numéro similaire à l’ID d’un de vos Pokémon !\c\nVoulez-vous tenter votre chance ?
 Je vous en prie, servez-vous !\nBonne chance !
-[WAIT 10] [WAIT 10]
+…[WAIT 10] …[WAIT 10]
 Le voici, le voilà !\nVous avez tiré le [VAR NUM5(0000,E07F)] !\c\nVérifions si ces chiffres correspondent au moins\nen partie à l’ID d’un de vos Pokémon...
 Félicitations !\c\nAu moins un chiffre du tirage est présent dans\nl’ID d’un membre de votre équipe :\r\n[VAR PKNICK(0001)] !
 Félicitations !\c\nAu moins un chiffre du tirage est présent dans\nl’ID d’un Pokémon de vos Boîtes PC :\r\n[VAR PKNICK(0001)] !
@@ -4998,7 +4998,7 @@ Qu’entends-je ? Tu poursuis la Team Skull ?\nEt tu vas donc à Kokohio, o�
 Qu’entends-je ? Tu vas à Kokohio ?\nLa ville occupée par la Team Skull ?[VAR 0114(0015)]
 Ces vils individus, que dis-je ? ces bons à rien\npassent leur temps à maltraiter les Pokémon !\r\nIls sont ingérables ![VAR 0114(0015)]
 Alors que moi, c’est tout l’inverse !\c\nJe sillonne Alola, je m’investis personnellement\npour m’assurer du bien-être des Pokémon.\c\nNe suis-je pas le seul, ici bas, à me préoccuper\ndes problèmes liés à Necrozma ?\c\nC’est moi qui devrais être à la tête de\nla fondation, ne trouves-tu pas ?[VAR 0114(0015)]
-Enfin, je suppose qu’un[VAR GENDBR(00FF,0100)]e petit[VAR GENDBR(00FF,0100)]e morveu\nEuh, qu’un[VAR GENDBR(00FF,0100)]e enfant de ton âge n’y connaît rien.\c\nEn tout cas, méfie-toi de la Team Skull.\nTu ne pourras pas dire que je ne t’ai pas\r\nprévenu[VAR GENDBR(00FF,0100)]e...[VAR 0114(0015)]
+Enfin, je suppose qu’un[VAR GENDBR(00FF,0100)]e petit[VAR GENDBR(00FF,0100)]e morveu…\nEuh, qu’un[VAR GENDBR(00FF,0100)]e enfant de ton âge n’y connaît rien.\c\nEn tout cas, méfie-toi de la Team Skull.\nTu ne pourras pas dire que je ne t’ai pas\r\nprévenu[VAR GENDBR(00FF,0100)]e...[VAR 0114(0015)]
 [~ 8]
 [~ 9]
 [~ 10]
@@ -8702,7 +8702,7 @@ C’est votre choix, mais sachez que la Pikazélite\npermet de changer Électacl
 Un Pikachu qui utilise la Force Z est un Pikachu\nheureux !
 Choisissez une capacité à oublier pour faire\nplace à [VAR MOVE(0000)].
 [VAR PKNICK(0000)] apprend\n[VAR MOVE(0001)] ![VAR BE05(0004)][VAR BE05(0001)]
-1[WAIT 20], 2[WAIT 20], [WAIT 20] [WAIT 20] Tadaaa ![VAR BE05(0003)][VAR BE05(0000)]\c\n[VAR PKNICK(0000)] oublie\n[VAR MOVE(0001)].\c\nEt\c\nIl apprend [VAR MOVE(0002)] ![VAR BE05(0004)][VAR BE05(0001)]
+1[WAIT 20], 2[WAIT 20], [WAIT 20]… [WAIT 20]… Tadaaa ![VAR BE05(0003)][VAR BE05(0000)]\c\n[VAR PKNICK(0000)] oublie\n[VAR MOVE(0001)].\c\nEt…\c\nIl apprend [VAR MOVE(0002)] ![VAR BE05(0004)][VAR BE05(0001)]
 [VAR PKNICK(0000)] n’a pas appris\n[VAR MOVE(0001)].
 ~~~~~~~~~~~~~~~
 Text File : 499
@@ -8720,7 +8720,7 @@ Veux-tu que j’enseigne la capacité\n[VAR MOVE(0001)] à [VAR PKNAME(0000)] 
 Mes Pokémon préférés, ce sont tous ceux\nqu’on peut recevoir d’un Professeur Pokémon\r\nou d’un Doyen, et toutes leurs évolutions !\c\nJe les aime tellement que j’ai décidé de\nleur enseigner des capacités spéciales :\r\nles capacités fusion !\c\nNe me remercie pas, ça me fait plaisir !
 Choisissez une capacité à oublier pour faire\nplace à [VAR MOVE(0000)].
 [VAR PKNICK(0000)] apprend\n[VAR MOVE(0001)] ![VAR BE05(0004)][VAR BE05(0001)]
-1[WAIT 20], 2[WAIT 20], [WAIT 20] [WAIT 20] Tadaaa ![VAR BE05(0003)][VAR BE05(0000)]\c\n[VAR PKNICK(0000)] oublie\n[VAR MOVE(0001)].\c\nEt\c\nIl apprend [VAR MOVE(0002)] ![VAR BE05(0004)][VAR BE05(0001)]
+1[WAIT 20], 2[WAIT 20], [WAIT 20]… [WAIT 20]… Tadaaa ![VAR BE05(0003)][VAR BE05(0000)]\c\n[VAR PKNICK(0000)] oublie\n[VAR MOVE(0001)].\c\nEt…\c\nIl apprend [VAR MOVE(0002)] ![VAR BE05(0004)][VAR BE05(0001)]
 [VAR PKNICK(0000)] n’a pas appris\n[VAR MOVE(0001)].
 ~~~~~~~~~~~~~~~
 Text File : 500
@@ -8736,7 +8736,7 @@ Non, ce Poookémon connaît déééjà\nDraco Météore !
 Tu l’auras devinééé, Draco Météore est la plus\npuissaaante des attaques de type Draaagon !\c\nMais prudeeence ! L’Attaque Spéciale de ton\nPoookémon baissera beaucouuup après\r\nchaque utilisatiooon !
 Choisissez une capacité à oublier pour faire\nplace à [VAR MOVE(0000)].
 [VAR PKNICK(0000)] apprend\n[VAR MOVE(0001)] ![VAR BE05(0004)][VAR BE05(0001)]
-1[WAIT 20], 2[WAIT 20], [WAIT 20] [WAIT 20] Tadaaa ![VAR BE05(0003)][VAR BE05(0000)]\c\n[VAR PKNICK(0000)] oublie\n[VAR MOVE(0001)].\c\nEt\c\nIl apprend [VAR MOVE(0002)] ![VAR BE05(0004)][VAR BE05(0001)]
+1[WAIT 20], 2[WAIT 20], [WAIT 20]… [WAIT 20]… Tadaaa ![VAR BE05(0003)][VAR BE05(0000)]\c\n[VAR PKNICK(0000)] oublie\n[VAR MOVE(0001)].\c\nEt…\c\nIl apprend [VAR MOVE(0002)] ![VAR BE05(0004)][VAR BE05(0001)]
 [VAR PKNICK(0000)] n’a pas appris\n[VAR MOVE(0001)].
 ~~~~~~~~~~~~~~~
 Text File : 501
@@ -8752,7 +8752,7 @@ Tu veux que j’enseigne Draco Ascension à\n[VAR PKNAME(0000)] ?
 Draco Ascension est une capacité sans pareille,\nque seul Rayquaza peut apprendre.\c\nOn dit qu’elle est capable de réduire en\npoussière une météorite en plein vol !
 Choisissez une capacité à oublier pour faire\nplace à [VAR MOVE(0000)].
 [VAR PKNICK(0000)] apprend\n[VAR MOVE(0001)] ![VAR BE05(0004)][VAR BE05(0001)]
-1[WAIT 20], 2[WAIT 20], [WAIT 20] [WAIT 20] Tadaaa ![VAR BE05(0003)][VAR BE05(0000)]\c\n[VAR PKNICK(0000)] oublie\n[VAR MOVE(0001)].\c\nEt\c\nIl apprend [VAR MOVE(0002)] ![VAR BE05(0004)][VAR BE05(0001)]
+1[WAIT 20], 2[WAIT 20], [WAIT 20]… [WAIT 20]… Tadaaa ![VAR BE05(0003)][VAR BE05(0000)]\c\n[VAR PKNICK(0000)] oublie\n[VAR MOVE(0001)].\c\nEt…\c\nIl apprend [VAR MOVE(0002)] ![VAR BE05(0004)][VAR BE05(0001)]
 [VAR PKNICK(0000)] n’a pas appris\n[VAR MOVE(0001)].
 ~~~~~~~~~~~~~~~
 Text File : 502
@@ -8771,7 +8771,7 @@ Oulah ! Ton pauv’ Pokémon n’est pas vraiment\nen état d’apprendre quoi
 [VAR PKNICK(0000)], avec cet Aspect Décidé,\na plus que jamais l’air de vouloir en découdre !
 Choisissez une capacité à oublier pour faire\nplace à [VAR MOVE(0000)].
 [VAR PKNICK(0000)] apprend\n[VAR MOVE(0001)] ![VAR BE05(0004)][VAR BE05(0001)]
-1[WAIT 20], 2[WAIT 20], [WAIT 20] [WAIT 20] Tadaaa ![VAR BE05(0003)][VAR BE05(0000)]\c\n[VAR PKNICK(0000)] oublie\n[VAR MOVE(0001)].\c\nEt\c\nIl apprend [VAR MOVE(0002)] ![VAR BE05(0004)][VAR BE05(0001)]
+1[WAIT 20], 2[WAIT 20], [WAIT 20]… [WAIT 20]… Tadaaa ![VAR BE05(0003)][VAR BE05(0000)]\c\n[VAR PKNICK(0000)] oublie\n[VAR MOVE(0001)].\c\nEt…\c\nIl apprend [VAR MOVE(0002)] ![VAR BE05(0004)][VAR BE05(0001)]
 [VAR PKNICK(0000)] n’a pas appris\n[VAR MOVE(0001)].
 Alors, je l’enseigne à quel Pokémon,\ncette capacité ?
 ~~~~~~~~~~~~~~~
@@ -8790,7 +8790,7 @@ Veux-tu que j’enseigne [VAR MOVE(0001)]\nà [VAR PKNAME(0000)] ?
 Voici la liste des Pokémon aptes à apprendre\nles capacités ultimes.\c\n- Pokémon Feu : Dracaufeu, Typhlosion,\nBraségali, Simiabraz, Roitiflam, Goupelin,\nFélinferno\c\n- Pokémon Eau : Tortank, Aligatueur, Laggron,\nPingoléon, Clamiral, Amphinobi, Oratoria\c\n- Pokémon Plante : Florizarre, Méganium,\nJungko, Torterra, Majaspic, Blindépique,\nArchéduc
 Choisissez une capacité à oublier pour faire\nplace à [VAR MOVE(0000)].
 [VAR PKNICK(0000)] apprend\n[VAR MOVE(0001)] ![VAR BE05(0004)][VAR BE05(0001)]
-1[WAIT 20], 2[WAIT 20], [WAIT 20] [WAIT 20] Tadaaa ![VAR BE05(0003)][VAR BE05(0000)]\c\n[VAR PKNICK(0000)] oublie\n[VAR MOVE(0001)].\c\nEt\c\nIl apprend [VAR MOVE(0002)] ![VAR BE05(0004)][VAR BE05(0001)]
+1[WAIT 20], 2[WAIT 20], [WAIT 20]… [WAIT 20]… Tadaaa ![VAR BE05(0003)][VAR BE05(0000)]\c\n[VAR PKNICK(0000)] oublie\n[VAR MOVE(0001)].\c\nEt…\c\nIl apprend [VAR MOVE(0002)] ![VAR BE05(0004)][VAR BE05(0001)]
 [VAR PKNICK(0000)] n’a pas appris\n[VAR MOVE(0001)].
 ~~~~~~~~~~~~~~~
 Text File : 504

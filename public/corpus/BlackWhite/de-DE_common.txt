@@ -899,8 +899,8 @@ ZURÜCK
 BEUTEL
 GEBEN
 BEWEGEN
-⑭
-⑮
+♂
+♀
 [VAR 0106(0000)]
 [VAR 0108(0000)]
 [VAR 0109(0000)]
@@ -1297,8 +1297,8 @@ Text File : 12
 [VAR 0107(0000)]
 AP
 [VAR 0201(0000)]/[VAR 0201(0001)]
-[VAR 0102(0000)]⑭
-[VAR 0102(0000)]⑮
+[VAR 0102(0000)]♂
+[VAR 0102(0000)]♀
 [VAR 0102(0000)]
 [VAR 0202(0000)]
 /
@@ -4456,8 +4456,8 @@ L[VAR 0202(0000)]
 
 AP
 TAUSCH
-⑭
-⑮
+♂
+♀
 BERICHT
 ATTACKEN
 KAMPFUNFÄHIG
@@ -7985,10 +7985,10 @@ Pikachu
 Raichu
 Sandan
 Sandamer
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Piepi
@@ -9801,8 +9801,8 @@ Es können nur maximal vier Ziffern\neingegeben werden!
 
 Shiro*
 Kuro*
-⑭
-⑮
+♂
+♀
 ~~~~~~~~~~~~~~~
 Text File : 82
 ~~~~~~~~~~~~~~~
@@ -9835,8 +9835,8 @@ Kampfbox
 Zurück
 Möchtest du die Pokémon aus deinem Team\noder aus der Kampfbox einsetzen?
 L[VAR 0202(0000)]
-[VAR FF00(0002)]⑭[VAR FF00(0000)]
-[VAR FF00(0001)]⑮[VAR FF00(0000)]
+[VAR FF00(0002)]♂[VAR FF00(0000)]
+[VAR FF00(0001)]♀[VAR FF00(0000)]
 ~~~~~~~~~~~~~~~
 Text File : 85
 ~~~~~~~~~~~~~~~
@@ -9846,8 +9846,8 @@ Ruhmeshalle Nr. [VAR BD00(0005,0006,0000)][VAR 0203(0000)][VAR BD00(0001,0002,00
 /
 [VAR 0201(0000)]
 [VAR 0101(0000)]
-⑭
-⑮
+♂
+♀
 [VAR 0202(0000)]
 NAME: [VAR 0102(0000)]
 FINDER: [VAR 0100(0000)]
@@ -13783,8 +13783,8 @@ L[VAR 0202(0000)]
 [VAR 0202(0000)]
 [VAR 0202(0000)]
 /
-⑭
-⑮
+♂
+♀
 Wähle ein Pokémon.
 
 An wessen Stelle setzen?
@@ -13960,8 +13960,8 @@ Du hast kein weiteres Exemplar des\nItems [VAR 0109(0000)] zur Verfügung.
 Text File : 158
 ~~~~~~~~~~~~~~~
 [VAR 0102(0000)]
-⑭
-⑮
+♂
+♀
 Lv. [VAR 0202(0000)]
 ITEM
 [VAR 0109(0000)]
@@ -14203,8 +14203,8 @@ FÄHIGK.
 [VAR 0109(0000)]
 ATTACKEN
 [VAR 0107(0000)]
-⑭
-⑮
+♂
+♀
 [VAR 0100(0000)] versandte [VAR 0102(0001)].
 Kümmere dich gut um [VAR 0102(0001)]!
 Datenübertragung läuft.\nBitte warten...
@@ -23623,8 +23623,8 @@ YZ
 
 
 EGAL
-⑭
-⑮
+♂
+♀
 [VAR BD02]ZURÜCK
 EGAL
 BIS LV. 9
@@ -23867,8 +23867,8 @@ Willst du mit Pokémon aus deinem Team\noder aus deiner Kampfbox antreten?
 Du lehnst das Angebot ab.
 Dein Freund ist ausgestiegen.
 L[VAR 0202(0000)]
-[VAR FF00(0002)]⑭[VAR FF00(0000)]
-[VAR FF00(0001)]⑮[VAR FF00(0000)]
+[VAR FF00(0002)]♂[VAR FF00(0000)]
+[VAR FF00(0001)]♀[VAR FF00(0000)]
 Möchtest du mit [VAR 0100(0000)]\nweiterspielen?
 
 Zum Tauschen musst du mindestens\n2 Pokémon bei dir haben.
@@ -35112,10 +35112,10 @@ Pikachu
 Raichu
 Sandshrew
 Sandslash
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Clefairy
@@ -35609,10 +35609,10 @@ Pikachu
 Raichu
 Sabelette
 Sablaireau
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Mélofée
@@ -36106,10 +36106,10 @@ Pikachu
 Raichu
 Sandan
 Sandamer
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Piepi
@@ -36603,10 +36603,10 @@ Pikachu
 Raichu
 Sandshrew
 Sandslash
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Clefairy
@@ -37597,10 +37597,10 @@ Text File : 258
 라이츄
 모래두지
 고지
-니드런⑮
+니드런♀
 니드리나
 니드퀸
-니드런⑭
+니드런♂
 니드리노
 니드킹
 삐삐
@@ -38094,10 +38094,10 @@ Pikachu
 Raichu
 Sandshrew
 Sandslash
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Clefairy
@@ -49363,10 +49363,10 @@ PIKACHU
 RAICHU
 SANDAN
 SANDAMER
-NIDORAN⑮
+NIDORAN♀
 NIDORINA
 NIDOQUEEN
-NIDORAN⑭
+NIDORAN♂
 NIDORINO
 NIDOKING
 PIEPI

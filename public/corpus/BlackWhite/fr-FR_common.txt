@@ -899,8 +899,8 @@ RETOUR
 RANGER
 DONNER
 DÉPLACER
-⑭
-⑮
+♂
+♀
 [VAR 0106(0000)]
 [VAR 0108(0000)]
 [VAR 0109(0000)]
@@ -1297,8 +1297,8 @@ Text File : 12
 [VAR 0107(0000)]
 PP 
 [VAR 0201(0000)]/[VAR 0201(0001)]
-[VAR 0102(0000)]⑭
-[VAR 0102(0000)]⑮
+[VAR 0102(0000)]♂
+[VAR 0102(0000)]♀
 [VAR 0102(0000)]
 [VAR 0202(0000)]
 /
@@ -4456,8 +4456,8 @@ L[VAR 0202(0000)]
 
 PP
 ÉCHANGER
-⑭
-⑮
+♂
+♀
 RÉSUMÉ
 CAPACITÉS
 K.O.
@@ -7985,10 +7985,10 @@ Pikachu
 Raichu
 Sabelette
 Sablaireau
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Mélofée
@@ -9801,8 +9801,8 @@ Vous ne pouvez entrer que 4 chiffres.
 
 Shiro*
 Kuro*
-⑭
-⑮
+♂
+♀
 ~~~~~~~~~~~~~~~
 Text File : 82
 ~~~~~~~~~~~~~~~
@@ -9835,8 +9835,8 @@ BOÎTE COMBAT
 RETOUR
 Allez-vous utiliser les Pokémon de votre\néquipe ou ceux de votre Boîte Combat?
 L[VAR 0202(0000)]
-[VAR FF00(0002)]⑭[VAR FF00(0000)]
-[VAR FF00(0001)]⑮[VAR FF00(0000)]
+[VAR FF00(0002)]♂[VAR FF00(0000)]
+[VAR FF00(0001)]♀[VAR FF00(0000)]
 ~~~~~~~~~~~~~~~
 Text File : 85
 ~~~~~~~~~~~~~~~
@@ -9846,8 +9846,8 @@ PANTHÉON Nº [VAR BD00(0005,0006,0000)][VAR 0203(0000)][VAR BD00(0001,0002,0000
 /
 [VAR 0201(0000)]
 [VAR 0101(0000)]
-⑭
-⑮
+♂
+♀
 [VAR 0202(0000)]
 NOM: [VAR 0102(0000)]
 DRESSEUR D'ORIGINE: [VAR 0100(0000)]
@@ -13783,8 +13783,8 @@ L[VAR 0202(0000)]
 [VAR 0202(0000)]
 [VAR 0202(0000)]
 /
-⑭
-⑮
+♂
+♀
 Veuillez choisir un Pokémon.
 
 Où voulez-vous le mettre?
@@ -13960,8 +13960,8 @@ NON
 Text File : 158
 ~~~~~~~~~~~~~~~
 [VAR 0102(0000)]
-⑭
-⑮
+♂
+♀
 N. [VAR 0202(0000)]
 OBJET
 [VAR 0109(0000)]
@@ -14203,8 +14203,8 @@ CAP SPÉ
 [VAR 0109(0000)]
 CAPACITÉS
 [VAR 0107(0000)]
-⑭
-⑮
+♂
+♀
 [VAR 0100(0000)] a envoyé\n[VAR 0102(0001)].
 Prends bien soin de [VAR 0102(0001)]!
 Communication en cours...\nVeuillez patienter.
@@ -23623,8 +23623,8 @@ YZ
 
 
 PEU IMPORTE
-⑭
-⑮
+♂
+♀
 [VAR BD02]RETOUR
 PEU IMPORTE
 N. 9 et moins
@@ -23867,8 +23867,8 @@ Choisissez vos Pokémon parmi votre\néquipe ou ceux de la Boîte Combat.
 Vous avez décliné l'offre.
 Votre ami(e) a abandonné.
 L[VAR 0202(0000)]
-[VAR FF00(0002)]⑭[VAR FF00(0000)]
-[VAR FF00(0001)]⑮[VAR FF00(0000)]
+[VAR FF00(0002)]♂[VAR FF00(0000)]
+[VAR FF00(0001)]♀[VAR FF00(0000)]
 Voulez-vous jouer avec [VAR 0100(0000)]\nune nouvelle fois?
 
 Vous devez posséder au moins deux\nPokémon pour faire un échange!
@@ -35112,10 +35112,10 @@ Pikachu
 Raichu
 Sandshrew
 Sandslash
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Clefairy
@@ -35609,10 +35609,10 @@ Pikachu
 Raichu
 Sabelette
 Sablaireau
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Mélofée
@@ -36106,10 +36106,10 @@ Pikachu
 Raichu
 Sandan
 Sandamer
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Piepi
@@ -36603,10 +36603,10 @@ Pikachu
 Raichu
 Sandshrew
 Sandslash
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Clefairy
@@ -37597,10 +37597,10 @@ Text File : 258
 라이츄
 모래두지
 고지
-니드런⑮
+니드런♀
 니드리나
 니드퀸
-니드런⑭
+니드런♂
 니드리노
 니드킹
 삐삐
@@ -38094,10 +38094,10 @@ Pikachu
 Raichu
 Sandshrew
 Sandslash
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Clefairy

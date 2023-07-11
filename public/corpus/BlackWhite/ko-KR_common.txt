@@ -899,8 +899,8 @@ Text File : 9
 가방으로
 건네준다
 이동한다
-⑭
-⑮
+♂
+♀
 [VAR 0106(0000,0000)]
 [VAR 0108(0000,0000)]
 [VAR 0109(0000,0000)]
@@ -1297,8 +1297,8 @@ Text File : 12
 [VAR 0107(0000,0000)]
 PP
 [VAR 0201(0000,0000)]/[VAR 0201(0001,0000)]
-[VAR 0102(0000,0000)]⑭
-[VAR 0102(0000,0000)]⑮
+[VAR 0102(0000,0000)]♂
+[VAR 0102(0000,0000)]♀
 [VAR 0102(0000,0000)]
 [VAR 0202(0000,0000)]
 /
@@ -4456,8 +4456,8 @@ L[VAR 0202(0000,0000)]
 
 PP
 교체한다
-⑭
-⑮
+♂
+♀
 능력치를 본다
 기술을 본다
 싸울 수 없다
@@ -7985,10 +7985,10 @@ Text File : 70
 라이츄
 모래두지
 고지
-니드런⑮
+니드런♀
 니드리나
 니드퀸
-니드런⑭
+니드런♂
 니드리노
 니드킹
 삐삐
@@ -9801,8 +9801,8 @@ Text File : 81
 
 화이트.
 블랙.
-⑭
-⑮
+♂
+♀
 ~~~~~~~~~~~~~~~
 Text File : 82
 ~~~~~~~~~~~~~~~
@@ -9835,8 +9835,8 @@ Text File : 84
 취소
 지닌 포켓몬과 배틀박스 중\n어느 쪽을 사용할지 선택해 주십시오
 L[VAR 0202(0000,0000)]
-[VAR FF00(0002)]⑭[VAR FF00(0000)]
-[VAR FF00(0001)]⑮[VAR FF00(0000)]
+[VAR FF00(0002)]♂[VAR FF00(0000)]
+[VAR FF00(0001)]♀[VAR FF00(0000)]
 ~~~~~~~~~~~~~~~
 Text File : 85
 ~~~~~~~~~~~~~~~
@@ -9846,8 +9846,8 @@ Text File : 85
 /
 [VAR 0201(0000,0000)]
 [VAR 0101(0000,0000)]
-⑭
-⑮
+♂
+♀
 [VAR 0202(0000,0000)]
 이름: [VAR 0102(0000,0000)]
 어버이: [VAR 0100(0000,0000)]
@@ -10634,8 +10634,8 @@ Text File : 102
 ㄴㅠㅅㅡ
 ㄴㅡㄱㄱㅗㄹㄹㅏ
 ㄴㅡㅍㅉㅏㅇㅇㅣ
-ㄴㅣㄷㅡㄹㅓㄴ⑮
-ㄴㅣㄷㅡㄹㅓㄴ⑭
+ㄴㅣㄷㅡㄹㅓㄴ♀
+ㄴㅣㄷㅡㄹㅓㄴ♂
 ㄴㅣㄷㅡㄹㅣㄴㅏ
 ㄴㅣㄷㅡㄹㅣㄴㅗ
 ㄴㅣㄷㅡㅋㅜㅣㄴ
@@ -13783,8 +13783,8 @@ L[VAR 0202(0000,0000)]
 [VAR 0202(0000,0000)]
 [VAR 0202(0000,0000)]
 /
-⑭
-⑮
+♂
+♀
 포켓몬을 선택해 주십시오
 
 어디로 이동할까?
@@ -13960,8 +13960,8 @@ SELECT TIME
 Text File : 158
 ~~~~~~~~~~~~~~~
 [VAR 0102(0000,0000)]
-⑭
-⑮
+♂
+♀
 Lv.[VAR 0202(0000,0000)]
 지닌물건
 [VAR 0109(0000,0000)]
@@ -14203,8 +14203,8 @@ HP
 [VAR 0109(0000,0000)]
 배운 기술
 [VAR 0107(0000,0000)]
-⑭
-⑮
+♂
+♀
 [VAR 0100(0000,0005)]로부터\n[VAR 0102(0001,0003)] 전송됐다!
 [VAR 0102(0001,0002)]\n귀여워해 줘!
 통신하고 있습니다\n잠시 기다려 주십시오
@@ -23623,8 +23623,8 @@ Lv.[VAR 0202(0003,0000)]
 ㅍ
 ㅎ
 상관없다
-⑭
-⑮
+♂
+♀
 [VAR BD02]취소
 상관없다
 Lv.10 미만
@@ -23867,8 +23867,8 @@ Text File : 209
 초대를 사양했습니다
 친구는 같이 하기\n어려운 상태인 것 같습니다
 L[VAR 0202(0000,0000)]
-[VAR FF00(0002)]⑭[VAR FF00(0000)]
-[VAR FF00(0001)]⑮[VAR FF00(0000)]
+[VAR FF00(0002)]♂[VAR FF00(0000)]
+[VAR FF00(0001)]♀[VAR FF00(0000)]
 [VAR 0100(0000,0000)]님과\n계속 즐기겠습니까?
 
 교환하려면 지닌 포켓몬이\n2마리 이상 필요합니다
@@ -35112,10 +35112,10 @@ Pikachu
 Raichu
 Sandshrew
 Sandslash
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Clefairy
@@ -35609,10 +35609,10 @@ Pikachu
 Raichu
 Sabelette
 Sablaireau
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Mélofée
@@ -36106,10 +36106,10 @@ Pikachu
 Raichu
 Sandan
 Sandamer
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Piepi
@@ -36603,10 +36603,10 @@ Pikachu
 Raichu
 Sandshrew
 Sandslash
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Clefairy
@@ -37597,10 +37597,10 @@ Text File : 258
 라이츄
 모래두지
 고지
-니드런⑮
+니드런♀
 니드리나
 니드퀸
-니드런⑭
+니드런♂
 니드리노
 니드킹
 삐삐
@@ -38094,10 +38094,10 @@ Pikachu
 Raichu
 Sandshrew
 Sandslash
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Clefairy
