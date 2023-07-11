@@ -217,6 +217,7 @@ Du hast wohl Angst davor,\ndass mir das Glück hold ist!
 Pah! Dann hatte ich heute\neben mal kein Glück!
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 8
 ~~~~~~~~~~~~~~~
@@ -229,6 +230,7 @@ Das ist ja vollgestopft mit\nPokémon-Artikeln.
 Das scheint hier randvoll\nmit Pokémon-Artikeln zu sein!
 Hier sind allerlei Gegenstände\nwohlgeordnet untergebracht.
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 9
 ~~~~~~~~~~~~~~~
@@ -821,6 +823,10 @@ Hallo, du! Trainer! Kennst du eigentlich\nein Pokémon namens Ohrdoch?\c\nDas Be
 Die Knochen im Museum von Septerna City\nhat man beim Wendelberg gefunden.\c\nJemand namens Turner hat sie angeblich\ndem Museum vermacht.
 Was man so alles Interessantes erfährt,\nwenn man am PC im Pokémon-Center\r\n„Hilfe aufrufen“ auswählt! Wow!\r\nMan lernt eben nie aus!
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 27
 ~~~~~~~~~~~~~~~
 Ein Tag, ohne Gitarre zu spielen, ist ein\nverlorener Tag. Dasselbe gilt aber auch\r\nfür Pokémon-Kämpfe! Beides steht also\r\ntäglich bei mir auf dem Programm!
@@ -1053,6 +1059,7 @@ Die Spezialität von Stratos City:\nStratos-Eis\c\nIm Winter kein Verkauf!
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 39
 ~~~~~~~~~~~~~~~
@@ -1084,6 +1091,7 @@ Ah, genau zur richtigen Zeit!\nDas Schiff legt nämlich bald ab.\r\nBitte geh sc
 Melde dich einfach wieder bei mir, wenn\ndu doch zum Freiheitsgarten möchtest!\c
 Geht es zum Freiheitsgarten?
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 42
 ~~~~~~~~~~~~~~~
@@ -1852,6 +1860,11 @@ Artie: Also dann, [VAR 0100(0000)]!\nIch warte bei der Arena.\c
 Artie: Also dann, [VAR 0100(0000)]!\nIch warte bei der Arena.\c
 
 
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 63
 ~~~~~~~~~~~~~~~
@@ -1888,6 +1901,7 @@ Eiszapforden
 Legendenorden
 Zurück
 Wenn ich von hier oben auf die Stadt\nunter uns hinabschaue, beginne ich\r\nförmlich zu zittern.\c\nNa ja, ist bei meiner Höhenangst\nauch nicht weiter verwunderlich...
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 65
 ~~~~~~~~~~~~~~~
@@ -2110,6 +2124,7 @@ Speichervorgang...\nBitte das System nicht ausschalten.
 Der Kampf von [VAR 0100(0000)] wurde\nals Kampfvideo gespeichert.
 Möchtest du deinen letzten Kampf\nals Kampfvideo speichern?
 Bereit für Übertragung...
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 81
 ~~~~~~~~~~~~~~~
@@ -3097,6 +3112,7 @@ Lysander: Was würde wohl passieren,\nwenn Menschen und Pokémon\r\ngetrennt von
 Lilia: Menschen, Pokémon... alle kommen\ngut miteinander aus und sind glücklich!
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 129
 ~~~~~~~~~~~~~~~
@@ -3120,6 +3136,10 @@ Willkommen im Haus des Reihumkampfs!\c\nWie der Name schon sagt, kannst du\nhier
 Soll ich dir erklären, worum es\nbei einem Reihumkampf geht?
 Beim Reihumkampf treten auf jeder Seite\ndrei Pokémon an!\c\nVorn steht eins und die anderen beiden\nstehen hinter ihm.\c\nUnd jede Runde kannst du die Pokémon\ndurchwechseln, das ist der Clou daran!
 Was, kein Interesse?!\c\nEs macht aber wirklich Spaß, hör dir\ndoch wenigstens die Erklärung an!
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 132
 ~~~~~~~~~~~~~~~
@@ -3228,10 +3248,15 @@ In die Statue ist folgende Inschrift\neingemeißelt:\c\n„Die Pokémon Liga ist
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 143
 ~~~~~~~~~~~~~~~
 Da rührt sich nichts! Du musst wohl\ngewinnen, um zurückkehren zu können.
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 145
 ~~~~~~~~~~~~~~~
@@ -3505,6 +3530,10 @@ Hierbleiben
 [VAR 0100(0007)]: ...\c\nWie? Was? Entschuldige, ich war etwas\nin Gedanken versunken. Mein Hobby?\c\nIch würde sagen, [VAR 0128(000A)]!\c\nUnd deins, [VAR 0100(0003)]?\c\nHey, rate mal, mit Trainern aus wie vielen\nOrten ich schon Pokémon getauscht habe!\r\nNa, [VAR 0202(0008)]!!\c\nUnd endlich war einer dabei,\nder dasselbe Hobby hat wie ich!\r\nDas hat mich echt riesig gefreut.\c\nIch will bald wieder tauschen. Lass uns\nalso mal wieder treffen, [VAR 0100(0003)]!
 [VAR 0100(0007)]: Oh, [VAR 0100(0003)]!\nGuten Tag!\c\nDie Tatsache, dass ich dich jetzt hier\nantreffe, kann nur bedeuten, dass du\r\ninzwischen mit vielen Trainern aus aller\r\nWelt Pokémon getauscht hast!\c\nHehe! Die eigenen Pokémon sind schon\nsüß, aber die, die man von anderen\r\nTrainern geschenkt bekommen hat,\r\nhaben ihren ganz eigenen Charme!\c\nRate mal, mit Trainern aus wie vielen\nOrten ich schon Pokémon getauscht habe!\r\nNa, [VAR 0202(0008)]!!\c\nAber da geht noch mehr!\c\nSchließlich gibt es Trainer, deren Hobby\nauch [VAR 0128(000A)] ist!\c\nMit anderen Trainern zu plaudern,\nmacht mir inzwischen Riesenspaß!\c\nLass uns bald mal wieder tauschen,\n[VAR 0100(0003)]!
 [VAR 0100(0007)]: Oh, du bist's, [VAR 0100(0003)]!\nHör mal her!\c\nRate mal, mit Trainern aus wie vielen\nOrten ich schon Pokémon getauscht habe!\r\nNa, [VAR 0202(0008)]!!\c\nIch bin stolz auf mich, hihi!\nAber ich will noch mehr tauschen!\c\nWie? Was mein Hobby ist? Also...\n[VAR 0128(000A)]! Das macht Spaß!\c\nDu, [VAR 0100(0003)]! Grüß doch bitte\ndas [VAR 0102(0009)] von mir, ja?\r\nDu hast diesen Wonneproppen von mir,\r\nalso sei auch immer lieb zu ihm!
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 156
 ~~~~~~~~~~~~~~~
@@ -3795,18 +3824,22 @@ Text File : 169
 ~~~~~~~~~~~~~~~
 Viridus: Meister G-Cis will es so.\c\nEs gilt nun herauszufinden,\nwie stark du wirklich bist.\c\nDann zeig mal, ob du das Zeug dazu hast,\nTeam Plasma zu schlagen!
 Viridus: Los! Lass dich durch den\nTreibsand nach unten fallen!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 170
 ~~~~~~~~~~~~~~~
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 171
 ~~~~~~~~~~~~~~~
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 172
 ~~~~~~~~~~~~~~~
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 173
 ~~~~~~~~~~~~~~~
@@ -3842,6 +3875,59 @@ Team Plasma: Viridus, einer der Sieben\nWeisen, sucht hier im Alten Palast ein\r
 
 
 
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 189
 ~~~~~~~~~~~~~~~
@@ -3858,6 +3944,38 @@ Text File : 190
 ~~~~~~~~~~~~~~~
 Suriiisuuur!
 Das Pokémon ist leise auf und davon\ngeflogen...
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 199
 ~~~~~~~~~~~~~~~
@@ -3885,6 +4003,7 @@ Du kannst hier gern ein bisschen\nherumtollen, aber sei bitte vorsichtig.\c\nDer
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 201
 ~~~~~~~~~~~~~~~
@@ -4038,6 +4157,10 @@ Der Wendelberg liegt in\neiner schönen Gegend!\c\nBesonders toll ist es, wenn m
 Also dann, Kinderchen!\c\nHoffentlich bringt euch mein Berg\nauch als Trainer weiter!\c
 Cheren: Puh! Und ich dachte schon,\ner drückt uns wieder irgendwas auf!\c\n[VAR 0100(0000)]!\nIch werde schon mal vorausgehen!\c
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 210
 ~~~~~~~~~~~~~~~
 Team Plasma: Uff, bist du stark!\c\nAber im Grunde bezieht ihr Trainer eure\nStärke doch auch nur daraus, dass ihr\r\ndie Pokémon unterjocht und ausnutzt!\c
@@ -4055,6 +4178,10 @@ Morgen finde ich bestimmt noch ein Fossil.\nKomm ruhig wieder vorbei, wenn du wi
 Text File : 211
 ~~~~~~~~~~~~~~~
 Berührst du einen mit einer Eisschicht\nüberzogenen Felsen, erstarrst du\r\nselbst zu Eis.
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 213
 ~~~~~~~~~~~~~~~
@@ -4123,6 +4250,10 @@ Text File : 216
 Cheren: [VAR 0100(0000)]!\c
 Die umgestürzten Säulen hier können\nauch als Weg dienen!\c\nAlso, ich folge dann mal Team Plasma!\c
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 218
 ~~~~~~~~~~~~~~~
 Sandro: [VAR 0100(0000)]!\c\nIch werde sie aufhalten!\c\nLos, geh du vor!\c
@@ -4137,6 +4268,10 @@ Team Plasma: Du hast keine Ahnung,\nwas wir hier zu erreichen versuchen!\c\nDenn
 Team Plasma: Dieses lästige Gör!
 Team Plasma: Richtig! Ich habe gegen\neinen Arenaleiter verloren...
 Team Plasma: Seine Majestät ist bereits\noben in der Turmspitze angekommen...\c\nUnd es gibt nichts, was du dagegen\nunternehmen könntest!
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 220
 ~~~~~~~~~~~~~~~
@@ -4188,6 +4323,58 @@ Ohne mich!! Das ist mir viel zu gefährlich!\nDa muss ich leider passen!!\c
 Ohne mich!! Das ist mir viel zu gefährlich!\nDa muss ich leider passen!!
 Dort unten scheint ein Item zu liegen...\c\nAber der Abhang ist wirklich furchtbar\nsteil. Schon bei dem Gedanken, da\r\nhinunterzurutschen, wird mir schlecht...
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 236
 ~~~~~~~~~~~~~~~
 Cheren: [VAR 0100(0000)], es ist nicht einfach,\nsich selbst kritisch zu betrachten.\c\nDabei fallen einem viele unangenehme\nDinge ins Auge, die einen stören und\r\nvor Scham erröten lassen.\c
@@ -4206,9 +4393,21 @@ Text File : 237
 Guooor!
 Das Pokémon ist in der Düsternis\ndes Höhleninneren verschwunden...
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 240
 ~~~~~~~~~~~~~~~
 Kyukyuuu!!
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 242
 ~~~~~~~~~~~~~~~
@@ -4250,6 +4449,7 @@ Nun...\c\nMit dem Umstand, dass Victini als einzigem\nPokémon die Ehre zuteilwu
 Prof. Esche! Wir haben die Übeltäter in\nSicherheitsgewahrsam genommen und\r\nin unser Streifenboot verfrachtet.\c\nWir machen uns nun schleunigst auf den\nRückweg nach Stratos City.\c\nProf. Esche, ich müsste Sie bitten, auch\nan Bord zu gehen und uns zu begleiten!\c
 Prof. Esche: Vielen Dank!\nIch komme sofort!\c
 Es will mir einfach nicht in den Kopf, wie\neinen die unvorstellbaren Kräfte der\r\nPokémon derart um den Verstand bringen\r\nkönnen, dass man danach trachtet, sich\r\neben diese Kräfte zunutze zu machen, um\r\nallerlei Schandtaten anzurichten...\c\nNur wenn wir den Pokémon mit reinem,\nehrlichem Herzen gegenübertreten, wird\r\nes uns gelingen, die Voraussetzungen\r\nfür eine leuchtende Zukunft zu schaffen!\c
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 244
 ~~~~~~~~~~~~~~~
@@ -4268,6 +4468,10 @@ Mit Victini zu leben, bedeutet, sein\ngrausames Schicksal mit ihm zu teilen.\c\n
 Victini ist noch ganz in der Nähe und\nbeobachtet dich ungeduldig.\c\nEs wird gewiss zurückkehren,\nwenn du die Kammer verlässt...
 Kirkirirk!!
 Victini ist aus der unterirdischen\nKammer verschwunden...\c
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 247
 ~~~~~~~~~~~~~~~
@@ -4289,6 +4493,26 @@ Du möchtest also gegen mich antreten?!
 Ich habe dir alle Module überreicht!\nMach damit, was du willst...
 Neben dem Computerbildschirm\nist eine Nachricht angebracht.\c\nMöchtest du sie lesen?
 N missbilligt meine Forschung zutiefst.\c\nDennoch wäre es Team Plasma durch sie\nmöglich, seine Visionen in die Tat\r\numzusetzen!\c\nUm das allerstärkste Pokémon in der\nGeschichte zu erschaffen, braucht man\r\nnämlich nichts weiter zu tun, als...\c\nDen Rest der Nachricht kann man\nleider nicht mehr lesen, da der Zettel\r\nan dieser Stelle abgerissen ist!
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 253
 ~~~~~~~~~~~~~~~
@@ -4385,6 +4609,7 @@ Text File : 258
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 259
 ~~~~~~~~~~~~~~~
@@ -4394,6 +4619,7 @@ Text File : 259
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 260
 ~~~~~~~~~~~~~~~
@@ -4412,6 +4638,10 @@ EG
 46S
 54S
 In welches Stockwerk möchtest du?
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 263
 ~~~~~~~~~~~~~~~
@@ -4457,6 +4687,10 @@ Text File : 265
 Diese Kurve hier ist echt die beste!\nEinfach unvergleichlich!
 Mann! Wenn du wüsstest, wie lang ich\nschon versuche rauszufinden, wo exakt\r\ndie Mitte der Himmelspfeilbrücke ist.
 Wow... das ist es also...\nDas Häusermeer von Stratos City...
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 267
 ~~~~~~~~~~~~~~~
@@ -4645,6 +4879,10 @@ Text File : 277
 ~~~~~~~~~~~~~~~
 Du und dein Pokémon-Team, ihr strotzt ja\nregelrecht vor Gesundheit.\c\nSprich mich ruhig an, wenn ihr erschöpft\nseid. Dann könnt ihr euch bei mir erholen!
 Ach du liebes bisschen! Dein Pokémon-Team\nsieht ja völlig entkräftet aus!\c\nJetzt bloß kein falscher Stolz! Kommt\nund ruht euch erst einmal richtig aus!\c
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 279
 ~~~~~~~~~~~~~~~
@@ -5237,6 +5475,42 @@ Oh, prima! Du hast deine Mission erfüllt!\nIch bin wirklich beeindruckt!\c\nDie
 Hm, du hast bei deiner Mission versagt.\nAber das ist ja kein Beinbruch!\c\nÜberquere die Brücke einfach noch mal\nund versuche es erneut!\c\nStudiere die Karte ganz genau,\num den Trainer zu finden!
 Oh! Du hast eine Transferkraft erhalten!\nBravo, wirklich sehr beachtlich!\c\nMit dieser Kraft kannst du Trainern\nhelfen, mit denen sich deine Wege\r\ngekreuzt haben.\c\nWirf doch nachher einfach einen Blick\nin dein Passierlogbuch!\c\n...\c\nDamit habe ich dir jetzt alles gesagt.\c\nHilf vielen Trainern in der Kontaktebene\nund sammele ganz viel Glück!\c\n...\c\nDie Energie der Kontaktebene gehört\nganz allein dir.\c\nSammele ganz viel Glück und nimm die\nganze Energie in Empfang!
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 313
 ~~~~~~~~~~~~~~~
 Hey! Eine Trainer so fantastic wie du\nwill mik dok bestimmt unterstutzen bei\r\neine wahrlik epokale Experiment!\c\nUm die Poképorter einzusetzen,\nyou will need zwei Nintendo DS!\c\nDu braukst also nok eine Nintendo DS.\nIst das okay fur dik?
@@ -5320,6 +5594,7 @@ Sieh dir an, in welcher Besetzung du\nin die Ruhmeshalle eingezogen bist.
 Das Pokémon-Lagerungssystem verlassen.
 Verbindung mit Prof. Esches PC.\c
 Verbindung mit dem Hilfesystem.\c
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 315
 ~~~~~~~~~~~~~~~
@@ -5354,30 +5629,35 @@ Text File : 317
 Meine Suche nach einem Transferorb\nhat mich hierher geführt.\c\nMan findet sie nämlich oft am\nEingang eines Pokémon-Centers.
 Nanu?! Jetzt bin ich ja auf einmal\nein waschechter Baseballer!\r\nW-was ist denn bloß geschehen?!\c\nAber was mache ich jetzt nur?!\nImmerhin muss ich doch in die Schule!
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 318
 ~~~~~~~~~~~~~~~
 Unter dem Hinweisschild der Stadt\nliegen des Öfteren Transferorbs.\r\nHuch?! Wo bin ich denn hier bloß?\c\nIch bin lediglich unter dem Schild\nhindurch und auf einmal waren alle weg!
 Es heißt, Transferorbs seien Items,\ndie menschliche Dankbarkeit bündeln.\c\nGerüchten zufolge erscheinen sie,\nwenn man jemandem hilft!
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 319
 ~~~~~~~~~~~~~~~
 Huch? Nanu? Wo zum Kuckuck...\nWo sind denn auf einmal alle hin?\c\nWir sind doch zusammen hergekommen,\num uns die Flugzeuge anzusehen!\c\nWarum ist denn jetzt keiner mehr da?\nHey, Leute, wo seid ihr?!
 Huch! Ich bin ja auf einmal ein Pilot!\nDas war schon immer mein Traum!
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 320
 ~~~~~~~~~~~~~~~
 Also eigentlich bin ich ja ein Junge,\ndaran besteht überhaupt kein Zweifel!\c\nAber als ich eben in den Spiegel schaute,\nmochte ich meinen Augen kaum trauen!\c\nIch bin ja gar nicht wiederzuerkennen!\nOb dies auch mit der Kraft der\r\nKontaktebene zusammenhängt?
 Nanu? Ich bin ja wieder hier gelandet.\nIch müsste eigentlich friedlich in meinem\r\nBett liegen und tief und fest schlafen.\c\nHierbei muss es sich wohl um einen\nTraum handeln, denn schließlich ist\r\ndie Welt in Träumen stets schwarz-weiß.
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 321
 ~~~~~~~~~~~~~~~
 Ich habe mich gefragt, ob es Gründe für\ndie ovale Anordnung der Städte und\r\nRouten in Einalls Zentrum gibt.\c\nUnd als ich mich daran machte, allerorten\nNachforschungen anzustellen, um dieser\r\nFrage auf den Grund zu gehen, fand ich\r\nmich unversehens hier wieder.\c\nWo mag ich mich hier nur befinden?!
 Es scheint, dass der Kontaktbaum früher\nnoch größer gewesen ist und man dank ihm\r\nviele unterschiedliche Transferkräfte\r\neinsetzen konnte.
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 322
 ~~~~~~~~~~~~~~~
@@ -6345,18 +6625,101 @@ Text File : 323
 
 
 
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 344
 ~~~~~~~~~~~~~~~
 Ich bin der festen Überzeugung, dass es\nsich bei den Transferkräften um die\r\nGedanken und Träume der Menschen von\r\nEinall handelt.\c\nSo als ob jene in die Mitte eines\ngewaltigen Soges geraten und dort\r\ngebündelt worden wären, um schließlich\r\nihre endgültige Gestalt anzunehmen.
 Womöglich haben die Bewohner Einalls\nihre Städte und Straßenzüge einst\r\nganz bewusst so angelegt, um\r\ndie Transferkräfte nutzen zu können...
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 345
 ~~~~~~~~~~~~~~~
 Die Überreste hier in der Kontaktebene\nsind die steinernen Zeugen einer Zeit,\r\nbevor wir Menschen begannen,\r\nzusammen mit den Pokémon zu leben.\c\nDie Kraft, die von diesem Ort ausgeht,\nist älter als das Menschengeschlecht.\c\nDer bloße Gedanke daran jagt mir einen\nSchauer von Ehrfurcht über den Rücken!
 Nanu?!\nWo sind denn auf einmal alle hin?\c\nEben waren doch noch alle hier und haben\nsich zusammen mit mir am Meer vergnügt...
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 346
 ~~~~~~~~~~~~~~~
@@ -6385,6 +6748,36 @@ Ich bin untröstlich, aber noch kannst\ndu den Konnex-Klub nicht betreten.\c
 Du hast mindestens ein Pokémon,\ndas nicht ausgewählt werden kann.\c
 Übrigens, der Titel auf deinem\nTrainerpass lautet nach wie vor\r\n„Pokémon-Trainer“.\c\nWenn du den Titel änderst, dann sieht man\ndich im Konnex-Klub mit anderen Augen!\c\nAlso, wähle doch mal einen anderen Titel\nfür dich aus, das macht Spaß!\c\nWie wär's z. B. mit „[VAR 010E(0000)]“?\c\nAber fühl dich nicht gezwungen, ich wollte\ndich nur darauf aufmerksam machen!\c\nUnd wenn dir der Titel nicht gefällt,\ndann berühre und ändere ihn einfach!\c
 Der Bereich steht dir leider noch nicht\nzur Verfügung.
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 347
 ~~~~~~~~~~~~~~~
@@ -6576,6 +6969,7 @@ Route 3
 
 Tipps für Trainer!\c\n\nDas Pokémon links oben in deiner\nPokémon-Liste ist besonders wichtig!\c\nDenn dies ist das Pokémon, welches\nim Pokémon-Kampf als Erstes antritt!
 Pokémon-Pension\c\n\nHier sind die Pokémon in guten Händen
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 354
 ~~~~~~~~~~~~~~~
@@ -6612,6 +7006,10 @@ Team Plasma: Das Pokémon könnt ihr\nwiederhaben.\c\nAber es kann einem nur lei
 Team Plasma: Eines Tages werdet\nihr eure eigene Dummheit erkennen.\c
 Cheren: Die Trainer bringen das Beste\nin den Pokémon zum Vorschein.\c\nDie Pokémon vertrauen ihren Trainern\nund wachsen so über sich hinaus.\c\nIch verstehe nicht, wieso einem\ndie Pokémon leidtun sollten!\c
 Also, [VAR 0100(0000)]...\nIch bringe ihr das Pokémon zurück!\c
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 358
 ~~~~~~~~~~~~~~~
@@ -6700,6 +7098,10 @@ Marea-Zugbrücke
 
 Tipps für Trainer\c\n\nDein Beutel hat für jeden Item-Typ\neine Tasche.\c\nJe nach Typ landen die Items\nautomatisch in der richtigen Tasche.\c\nDie Namen der Taschen verraten dir,\nwo das gewünschte Item ist.
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 363
 ~~~~~~~~~~~~~~~
 Die Panaero-Höhle hier auf Route 6...\c\nDort soll ein sagenhaftes Pokémon leben,\ndas einst alle Pokémon der Einall-Region\r\nvor den Flammen bewahrt hat.\c\nFalls du die Attacke Surfer hast,\ndie dir erlaubt, übers Wasser zu gleiten,\r\ntriffst du besagtes Kobalium womöglich!
@@ -6741,6 +7143,14 @@ Die Temperatur auf Route 6: [VAR 0201(0000)] Grad
 Die Temperatur auf Route 6: [VAR 0201(0000)] Grad
 Die Temperatur auf Route 6: [VAR 0201(0000)] Grad
 Die Temperatur auf Route 6: -[VAR 0200(0000)] Grad
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 367
 ~~~~~~~~~~~~~~~
@@ -6793,6 +7203,18 @@ Text File : 370
 ~~~~~~~~~~~~~~~
 Dies ist der Turm des Himmels...\c\nWo die Seelen der Verstorbenen\nihre ewige Ruhe finden...
 Die Glocke auf der Turmspitze...\c\nEs heißt, die hier ruhenden Seelen\nfrohlockten, wenn man sie erklingen\r\nlasse.
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 374
 ~~~~~~~~~~~~~~~
@@ -6900,6 +7322,7 @@ Wenn du möchtest, dass Keldeo diese\nAttacke erlernt, musst du mit Kobalium,\r\
 Üppige Vegetation und klares Wasser...\nFür die Pokémon ist dieser Wald\r\nein Paradies.\c\nAuch für die Menschen ist er\nein wichtiges Stück Natur.\c\nDarum möchte ich, dass er\nimmer gut behandelt wird.
 Möchtest du Keldeo die Attacke\nerneut beibringen?
 Wenn man etwas nicht zu Ende bringt,\nwird einen das auf ewig verfolgen!\c
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 379
 ~~~~~~~~~~~~~~~
@@ -6953,6 +7376,18 @@ Text File : 383
 ~~~~~~~~~~~~~~~
 Jetzt türmen sich die Pappkartons hier\nschon mannshoch...\c\nDarin befinden sich allerlei veraltete\nElektrohaushaltsgeräte, die sich nicht\r\nmehr zu Geld machen lassen.\c\nWas für eine Verschwendung, sie hier\neinfach so vor sich hin rosten zu lassen!\c\nEs muss doch möglich sein,\nsie anderweitig zu verwenden!
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 387
 ~~~~~~~~~~~~~~~
 Cheren: [VAR 0100(0000)]!\c\nHalt!\c
@@ -6990,6 +7425,7 @@ Halte ein!\c\nDer Schlüssel, der dieses verschlossene\nTor öffnet, ist der Gru
 
 Träger des Grundordens!\c\nErweise dich als würdig,\nindem du das Wissen anwendest,\r\ndas du erlangt hast!
 Als Erstes musst du dir den Grundorden\naus der Pokémon-Arena von Septerna City\r\naneignen!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 390
 ~~~~~~~~~~~~~~~
@@ -6997,6 +7433,7 @@ Halte ein!\c\nDer Schlüssel, der dieses verschlossene\nTor öffnet, ist der Kä
 
 Träger des Käferordens!\c\nErweise dich als würdig, indem du\nso tapfer kämpfst wie ein Käfer!
 Als Erstes musst du dir den Käferorden\naus der Pokémon-Arena von Stratos City\r\naneignen!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 391
 ~~~~~~~~~~~~~~~
@@ -7004,6 +7441,7 @@ Halte ein!\c\nDer Schlüssel, der dieses verschlossene\nTor öffnet, ist der Vol
 
 Träger des Voltordens!\c\nErweise dich als würdig, indem du\neinen elektrisierenden Kampf führst!
 Als Erstes musst du dir den Voltorden\naus der Pokémon-Arena von Rayono City\r\naneignen!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 392
 ~~~~~~~~~~~~~~~
@@ -7020,6 +7458,7 @@ Halte ein!\c\nDer Schlüssel, der dieses verschlossene\nTor öffnet, ist der Jet
 
 Träger des Jetordens!\c\nErweise dich als würdig,\nindem du geschwind voranschreitest!
 Als Erstes musst du dir den Jetorden\naus der Pokémon-Arena von Panaero City\r\naneignen!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 394
 ~~~~~~~~~~~~~~~
@@ -7027,6 +7466,7 @@ Halte ein!\c\nDer Schlüssel, der dieses verschlossene\nTor öffnet, ist der Eis
 
 Träger des Eiszapfordens!\c\nErweise dich als würdig, indem du dich\nso kalt wie ein Eiszapfen gibst!
 Als Erstes musst du dir den Eiszapforden\naus der Pokémon-Arena von Nevaio City\r\naneignen!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 395
 ~~~~~~~~~~~~~~~
@@ -7034,6 +7474,11 @@ Halte ein!\c\nDer Schlüssel, der dieses verschlossene\nTor öffnet, ist der Leg
 
 Träger des Legendenordens!\c\nErweise dich als würdig, indem du\ndie Siegesstraße überwindest,\r\ndich zur Pokémon Liga aufmachst\r\nund dort von dir reden machst!
 Zuerst musst du dir den Legendenorden\naus der Pokémon-Arena von\r\nTwindrake City aneignen!
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 397
 ~~~~~~~~~~~~~~~
@@ -7182,6 +7627,10 @@ Der Reihumkampf ist eine neue Form\ndes Kampfes mit drei Pokémon!\c\nAlso mach 
 Als Trainer solltest du solche\nGelegenheiten beim Schopfe packen!
 Probier den Reihumkampf doch\nauch mal mit Freunden aus!
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 414
 ~~~~~~~~~~~~~~~
 Sag mal, hast du etwa schon ein\n[VAR 0101(0000)] eingefangen? Ja?\c\nWürdest du dein [VAR 0101(0000)] vielleicht\ngegen mein [VAR 0101(0001)] tauschen?\c\nDamit würdest du mir eine\nRiesenfreude bereiten!
@@ -7234,6 +7683,7 @@ LeBelle: Hab Dank!\c\nAbgesehen von G-Cis beträgt die Anzahl\nder Mitglieder de
 LeBelle: Hab Dank!\c\nAlso, [VAR 0100(0000)],\nich muss dir etwas mitteilen.\c\nAn einem weit, weit entfernten Ort wurde\neine Person, die aussah wie N, zusammen\r\nmit einem Drachen-Pokémon gesichtet.\c\nIch habe vor, den Wahrheitsgehalt dieser\nInformation höchstpersönlich zu prüfen.\c\nAlso dann, auf dass wir uns eines Tages\nwiedersehen!\c
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 420
 ~~~~~~~~~~~~~~~
@@ -7733,6 +8183,7 @@ Die Pokémon setzen sich stets mit\nLeibeskräften für uns Menschen ein.\c\nIm 
 Was für ein wunderbarer Ausblick!\nUnd erst dieser schöne Klang...\c\nIm Nu sind alle Sorgen vergessen!\nIch liebe diesen Ort einfach!
 Gewiss gibt es viele wilde Pokémon, die\neinen im hohen Gras angreifen,\r\naber wenn es gelingt, sie zu verstehen,\r\nkönnen sie zu guten Freunden werden!
 Gavina\c\n\nDie Stadt, in der die üppig wachsende\nRanke ein Zeichen des Wohlstandes ist
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 437
 ~~~~~~~~~~~~~~~
@@ -7959,6 +8410,7 @@ Schon schön, so eine Schönschuppe!\c\nEs lohnt sich bestimmt, wenn du sie\nein
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 453
 ~~~~~~~~~~~~~~~
@@ -8638,6 +9090,7 @@ Oh, verstehe... aber aufgeschoben ist ja\nnicht aufgehoben, nicht wahr?
 Bei einem Dreierkampf muss man vieles\ngleichzeitig im Auge behalten.\r\nAber gerade das macht seinen Reiz aus!
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 469
 ~~~~~~~~~~~~~~~
@@ -8750,6 +9203,7 @@ Zurück
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 471
 ~~~~~~~~~~~~~~~

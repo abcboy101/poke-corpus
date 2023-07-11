@@ -217,6 +217,7 @@ Scared of how lucky I am, huh?
 Hmmmph. I only lost today because\nI got unlucky.
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 8
 ~~~~~~~~~~~~~~~
@@ -229,6 +230,7 @@ The shelves are jammed with vibrant\nPokémon goods.
 It looks like a cabinet full of\nPokémon goods.
 Goods are arranged on the shelves in a\nvery orderly fashion.
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 9
 ~~~~~~~~~~~~~~~
@@ -821,6 +823,10 @@ Hi, Trainer! Do you know a Pokémon\ncalled Audino?\c\nIt's a Pokémon that I so
 I heard that the Fossils in the museum\nwere found in Twist Mountain.\c\nThen, a person called Clay apparently\ndonated them to the museum.
 When you choose “HELP"\nat the PC at a Pokémon Center,\r\nyou can learn many things. It's so cool!
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 27
 ~~~~~~~~~~~~~~~
 I play the guitar and have\nPokémon battles every day.\c\nI keep doing that 'cause I enjoy it!
@@ -1053,6 +1059,7 @@ Castelia's Famous Casteliacone\nClosed during Winter
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 39
 ~~~~~~~~~~~~~~~
@@ -1084,6 +1091,7 @@ Your timing is perfect.\nThe ship is about to leave.\r\nPlease get aboard ship a
 If you'd like to go to Liberty Garden,\nplease let me know.\c
 Would you like to go to Liberty Garden?
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 42
 ~~~~~~~~~~~~~~~
@@ -1852,6 +1860,11 @@ Burgh: Well, then, [VAR 0100(0000)].\nI'll be waiting in the Gym.\c
 Burgh: Well, then, [VAR 0100(0000)].\nI'll be waiting in the Gym.\c
 
 
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 63
 ~~~~~~~~~~~~~~~
@@ -1888,6 +1901,7 @@ Freeze Badge
 Legend Badge
 Cancel
 When I gaze down at the city from a\ntall building, I tremble.\c\nBecause...\nI-I-I'm scared of heights...
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 65
 ~~~~~~~~~~~~~~~
@@ -2110,6 +2124,7 @@ Saving your Battle Video...\nDon't turn off the power.
 [VAR 0100(0000)]'s battle has been saved as a\nBattle Video.
 Would you like to save the last battle as\nyour Battle Video?
 Communicating. Please stand by...
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 81
 ~~~~~~~~~~~~~~~
@@ -3097,6 +3112,7 @@ Drayden: What will it accomplish\nto separate the worlds of people\r\nand Pokém
 Iris: Everyone, people and Pokémon can\nget along and be happy. That's awesome!
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 129
 ~~~~~~~~~~~~~~~
@@ -3120,6 +3136,10 @@ Welcome! Glad to see you here at the\nRotation Battle House.\c\nAs the name sugg
 May I explain how Rotation Battles work?
 Rotation Battle is a battle format in\nwhich each side uses three Pokémon.\c\nOne Pokémon takes the lead position, and\nthe other two stand off to the sides.\c\nBut this position will change every turn!
 Don't you want to know more? It's fun.\nPlease allow me to explain how it works.
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 132
 ~~~~~~~~~~~~~~~
@@ -3228,10 +3248,15 @@ Words are engraved on the statue:\c\n“Four great warriors form\n this Pokémon
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 143
 ~~~~~~~~~~~~~~~
 Nothing happens!\nIt seems you can't go back until you win.
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 145
 ~~~~~~~~~~~~~~~
@@ -3505,6 +3530,10 @@ Cancel
 [VAR 0100(0007)]: ...\c\n...\c\nHuh? What?\nSorry, I was spacing out.\c\nMy hobby. Weeeelll.\n...[VAR 0128(000A)], I guess?\r\nHow about you, [VAR 0100(0003)]?\c\nSpeaking of hobbies,\nI've traded Pokémon with people\r\nfrom this many places: [VAR 0202(0008)]. And I finally\c\nfound a person with the same hobby.\nHa ha!\r\nThose things make me happy.\r\nI want to trade again, now.\c\n[VAR 0100(0003)], let's trade again\nsometime!
 [VAR 0100(0007)]: Why, [VAR 0100(0003)]!\nHello!\c\nAre you here because you've\ntraded Pokémon with\r\npeople living far away?\c\nHee hee!\nMy Pokémon are cute, but there is a\r\nspecial cuteness about Pokémon\r\nyou've traded with other people.\c\nI've traded Pokémon with people\nfrom this many places: [VAR 0202(0008)].\r\nI want to trade with still more people.\c\nYou see, there are lots of people\nwho like [VAR 0128(000A)], too.\c\nTalking to Trainers has become\nquite a bit of fun.\c\nHey, [VAR 0100(0003)].\c\nLet's trade again sometime, OK?\nPromise!
 [VAR 0100(0007)]: Oh! [VAR 0100(0003)]! Hi!\c\nKnow what?! Know what?!\nI've traded Pokémon with people\r\nin this many places: [VAR 0202(0008)].\r\nNot bad, eh? Hee hee!\r\nAnd I'm going to keep trading!\c\nHm? My hobby?\nWell...\r\nUmmm...\c\n[VAR 0128(000A)], I guess! It's fun!\c\nHey, [VAR 0100(0003)],\ntake care of [VAR 0102(0009)].\c\nIt's very sweet, so be sure\nto take extra good care of it!
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 156
 ~~~~~~~~~~~~~~~
@@ -3795,18 +3824,22 @@ Text File : 169
 ~~~~~~~~~~~~~~~
 Ryoku: Ghetsis told us that once again\nwe should test how much power you have.\c\nWe will see if you can defeat Team Plasma!
 Ryoku: Go!\nHurry and fall through the flowing sands!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 170
 ~~~~~~~~~~~~~~~
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 171
 ~~~~~~~~~~~~~~~
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 172
 ~~~~~~~~~~~~~~~
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 173
 ~~~~~~~~~~~~~~~
@@ -3842,6 +3875,59 @@ Team Plasma: Ryoku of the Seven Sages is\nlooking for a Pokémon inside Relic Ca
 
 
 
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 189
 ~~~~~~~~~~~~~~~
@@ -3858,6 +3944,38 @@ Text File : 190
 ~~~~~~~~~~~~~~~
 Vraahhbrbrbr!
 The Pokémon quietly\nflew away and disappeared...
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 199
 ~~~~~~~~~~~~~~~
@@ -3885,6 +4003,7 @@ When you walk through the containers,\nsome places are frozen, so you go\r\nslid
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 201
 ~~~~~~~~~~~~~~~
@@ -4038,6 +4157,10 @@ Twist Mountain's a fine place\nto explore!\c\nYou'll have some fun if you just l
 Be seein' ya, sprouts!\c\nFeel free to train yerselves on my\nmountain fer as long's ya like.\c
 Cheren: I thought he was going to get us\ninvolved in all that bother again, so I\r\nwas bracing myself before I knew it.\c\nI'm going in first, but I'll be seeing you.\c
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 210
 ~~~~~~~~~~~~~~~
 Team Plasma: Huh. Pretty strong...\c\nBut you're only strong because you\nTrainers are controlling Pokémon!\c
@@ -4055,6 +4178,10 @@ If you come again tomorrow, you might be\nable to find a Fossil of your own.\r\n
 Text File : 211
 ~~~~~~~~~~~~~~~
 It's a rock covered with ice.\nTouching it could make you freeze.
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 213
 ~~~~~~~~~~~~~~~
@@ -4123,6 +4250,10 @@ Text File : 216
 Cheren: [VAR 0100(0000)]!\c
 You can walk on the fallen columns, too.\c\nI'm going after Team Plasma!\c
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 218
 ~~~~~~~~~~~~~~~
 Brycen: [VAR 0100(0000)]!\nWe'll hold them here!\c\nYou go on ahead!\c
@@ -4137,6 +4268,10 @@ Team Plasma: Why do you get in our way\neven though you don't understand\r\nour 
 Team Plasma: So young, but so tough!
 Team Plasma: Yeah, all right. If I have\nto lose, at least it's to the Gym Leader.
 Team Plasma: Right now,\nour king is upstairs...\c\nThere's nothing you can do!
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 220
 ~~~~~~~~~~~~~~~
@@ -4188,6 +4323,58 @@ Aiiieee! That's a long way down!\nI can't do it!\c
 Aiiieee! That's a long way down!\nI can't do it!
 It looks like there's an item\ndown there...\c\nBut it's such a long way!\nDo you have the courage?
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 236
 ~~~~~~~~~~~~~~~
 Cheren: [VAR 0100(0000)], it's difficult,\nisn't it?\c\nWhen you confront yourself, you have\nto notice things about yourself that\r\naren't too flattering...\c
@@ -4206,9 +4393,21 @@ Text File : 237
 Gurooooohhh!
 The Pokémon vanished into\nthe darkness of the cave...
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 240
 ~~~~~~~~~~~~~~~
 Haaahraaan!
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 242
 ~~~~~~~~~~~~~~~
@@ -4250,6 +4449,7 @@ Also...\c\nIn the Unova Pokédex, Victini was\nassigned a special number: zero.\
 Professor Juniper!\c\nWe cornered the crooks with our\nhigh-speed police boat!\c\nWe will return to Castelia City!\nPlease come on board, too!\c
 Professor Juniper: Thank you!\nI'll be right there!\c
 I can't believe it when people are led\nastray by Pokémon's astounding abilities\r\nand try to misuse them...\c\nBut it's only when we face Pokémon with a\ngood heart that we can make a\r\nbrighter future!\c
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 244
 ~~~~~~~~~~~~~~~
@@ -4268,6 +4468,10 @@ Living with Victini means accepting\nVictini's cruel destiny...\c\nSomeday we wi
 Victini is still close by and watching\nyour movements...\c\nIf you exit this room and come back, it\nmight return...
 Ta-ta-ta-tah!
 Victini vanished from the\nunderground room...\c
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 247
 ~~~~~~~~~~~~~~~
@@ -4289,6 +4493,26 @@ So you want to battle me?!
 I've given you all of the Drives.\nUse them how you wish...
 There is a memo stuck to the\nside of the monitor.\c\nRead it?
 My lord N apparently rejected\nmy research...\c\nBut my research is necessary for\nTeam Plasma to reach its goal...\r\nThe strongest Pokémon...\c\nThe rest of the memo is torn and\nimpossible to read.
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 253
 ~~~~~~~~~~~~~~~
@@ -4385,6 +4609,7 @@ Text File : 258
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 259
 ~~~~~~~~~~~~~~~
@@ -4394,6 +4619,7 @@ Text File : 259
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 260
 ~~~~~~~~~~~~~~~
@@ -4412,6 +4638,10 @@ Cancel
 47F
 55F
 Which floor would you like to go to?
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 263
 ~~~~~~~~~~~~~~~
@@ -4457,6 +4687,10 @@ Text File : 265
 The way the bridge curves right here...\nI've never seen anything like it!
 Hm! I'm searching for the exact\ncenterpoint of Skyarrow Bridge!
 Wooow... That's...\nThat's the Castelia City skyline!
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 267
 ~~~~~~~~~~~~~~~
@@ -4645,6 +4879,10 @@ Text File : 277
 ~~~~~~~~~~~~~~~
 Both you and your Pokémon are healthy\nand energetic!\c\nIf you get tired, please talk to me.\nI'll let you take a nice long rest.
 Oh, your Pokémon look pretty tired.\nDon't be shy. Take a nice long rest!\c
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 279
 ~~~~~~~~~~~~~~~
@@ -5237,6 +5475,42 @@ Wonderful! You accomplished the mission!\nI didn't expect you to make it this fa
 Oh, it seems you've failed in the mission.\nWell, nobody's perfect.\c\nPlease cross the bridge and try it again!\c\nThe tip is to look at the map closely and\nfind the adventurer.
 Oooooh! You've received a Pass Power!\nIt's wonderful! Really wonderful!\c\nPass Power can help people who\npassed by.\c\nCheck the Tag Log in your\nC-Gear later.\c\n...Well, that's really all I can\nteach you.\c\nThe power of this Entralink is all yours.\c\nHelp a lot of adventurers via the\nEntralink, and collect a lot of happiness.\c\nCollect a lot of happiness, and get\nall the powers!
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 313
 ~~~~~~~~~~~~~~~
 Hey, le Trainer fantastique! Want to be\npart of the experiment of the century?\c\nYou need two DS systems to play with\nPoké Transfer!\c\nDo you have a second DS system that you\ncan use?
@@ -5320,6 +5594,7 @@ You can see the members at the time\nwhen you entered the Hall of Fame.
 Log out of the Record System.
 Accessed Professor Juniper's PC.\c
 Accessed the Help System.\c
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 315
 ~~~~~~~~~~~~~~~
@@ -5354,30 +5629,35 @@ Text File : 317
 Oh! I was looking for a Pass Orb, and I\nsomehow ended up here.\c\nThey are often found at the entrance of\na Pokémon Center, though.
 Hey! When I looked at myself, I noticed\nI've become an Infielder!\r\nHow did this happen?!\c\nWhatever shall I do?\nI have to go to school soon!
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 318
 ~~~~~~~~~~~~~~~
 Pass Orbs are often found under\nsignboards of cities or towns!\r\n...But where am I?\c\nWhen I passed under a signboard,\neverybody disappeared.
 People say Pass Orbs are created by\nfeelings of gratitude!\c\nThey say the orbs will pour out if you\nhelp someone!
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 319
 ~~~~~~~~~~~~~~~
 W-what? We came here to watch\nthe airplanes.\c\nWhy did everyone disappear?\nYoo-hoo, anybody here?
 Wow! I've become a Pilot!\nIt was my dream to be a Pilot!
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 320
 ~~~~~~~~~~~~~~~
 Back home, I'm a boy.\nBut when I looked at a mirror earlier...\c\nWhy? Why did I become like this?!\nIs this also a power of the Entralink?
 Hmmm. I came back here again.\nI was fast asleep until a while ago.\c\nMaybe this is a dream world.\nA dream world is always black and white.
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 321
 ~~~~~~~~~~~~~~~
 There must be a reason why the\nlandscape of Unova forms a circle!\c\nI was researching each area thinking\nabout that, and I ended up here.\c\nWhere am I?
 People say the Entree Forest was much\nbigger in the past, and people were able\r\nto use various Pass Powers.
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 322
 ~~~~~~~~~~~~~~~
@@ -6345,18 +6625,101 @@ Text File : 323
 
 
 
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 344
 ~~~~~~~~~~~~~~~
 It is believed that dreams and desires of\npeople and Pokémon in Unova swirled into\r\nthe center and were formed into\r\nPass Power.
 Maybe people in the past created the\nlandscape of Unova that looks like a\r\nswirl in order to use Pass Power...
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 345
 ~~~~~~~~~~~~~~~
 People say the ruins of the Entralink\nhave existed since long before we\r\nstarted living with Pokémon.\c\nIt's unbelievable that this power has\nexisted for such a long time.
 Huh? Where did everybody go?\c\nI came to the sea with other people, and\nI was playing with them...
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 346
 ~~~~~~~~~~~~~~~
@@ -6385,6 +6748,36 @@ I am sorry...\nYou can't enter the Union Room yet.\c
 You have at least one Pokémon\nthat can't be taken in.\c
 Wait, Trainer!\c\nYour title on your Trainer Card\nis still just “Pokémon Trainer," isn't it?\c\nIf you change your title, you can easily\nproject your image to others when you\r\ngreet them in the Union Room.\c\nLet's see...\nHow about [VAR 010E(0000)]?\r\nWhat do you think?\c\nThat is the impression I got from you.\nFirst, let's change your title.\c\nIf you don't like the new one, you can\nchange it by selecting your Trainer Card.\c
 It seems you can't use it yet.
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 347
 ~~~~~~~~~~~~~~~
@@ -6576,6 +6969,7 @@ Route 3
 
 Trainer Tips!\c\n\nThe Pokémon placed in the upper\nleft of the Pokémon list is important!\c\nThe Pokémon set there is the first\nout when a Pokémon battle starts!
 Pokémon Day Care\nWe Take Care of Your Precious Pokémon
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 354
 ~~~~~~~~~~~~~~~
@@ -6612,6 +7006,10 @@ Team Plasma: We'll give you back\nthe Pokémon...\c\nBut be aware of how this Po
 Team Plasma: Someday, open your eyes\nto your own complicity.\c
 Cheren: Trainers bring out\ntheir Pokémon's strength.\c\nPokémon believe in their\nTrainers and respond to that.\c\nI don't understand what about\nthat makes Pokémon suffer!\c
 OK, [VAR 0100(0000)],\nI'll return the Pokémon.\c
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 358
 ~~~~~~~~~~~~~~~
@@ -6700,6 +7098,10 @@ Driftveil Drawbridge
 
 Trainer Tips!\c\n\nThere are different Cases\nfor each type of item.\c\nItems are placed automatically in\nthe correct Case by their type.\c\nThe name of the Case tells you\nwhat type of items will be kept there.
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 363
 ~~~~~~~~~~~~~~~
 Here on Route 6, there's a place called\nMistralton Cave.\c\nSupposedly, deep in that cave you can\nfind an amazing Pokémon called Cobalion,\r\nwho was said to have protected Pokémon\r\nfrom a sea of fire in ancient Unova.\c\nIf you can use a move called Surf\nthat lets you move over the water's\r\nsurface, maybe you can see Cobalion.
@@ -6741,6 +7143,14 @@ Route 6's temperature [VAR 0201(0000)] °C
 Route 6's temperature [VAR 0201(0000)] °C
 Route 6's temperature [VAR 0201(0000)] °C
 Route 6's temperature -[VAR 0200(0000)] °C
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 367
 ~~~~~~~~~~~~~~~
@@ -6793,6 +7203,18 @@ Text File : 370
 ~~~~~~~~~~~~~~~
 This is Celestial Tower, where Pokémon\nare laid to rest...
 They say that when you ring the bell\non top of this Tower, it pleases\r\nthe resting spirits.
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 374
 ~~~~~~~~~~~~~~~
@@ -6900,6 +7322,7 @@ When you want to teach Keldeo this move,\nyou must bring Cobalion, Terrakion,\r\
 A verdant forest and clear water... For\nPokémon, this forest is like a paradise.\c\nIt's also very important for people,\nso I want to take good care of it!
 Would you like to teach Keldeo this\nmove again?
 If you don't get to do something you\nwanted to do, it sure stays with you.\c
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 379
 ~~~~~~~~~~~~~~~
@@ -6953,6 +7376,18 @@ Text File : 383
 ~~~~~~~~~~~~~~~
 This mountain of cardboard...\c\nThey're all full of electronics we can't\nsell anymore.\c\nThey're just going to waste. I wonder if\nsomeone could put them to good use?
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 387
 ~~~~~~~~~~~~~~~
 Cheren: Stop!\c\n[VAR 0100(0000)]!\c
@@ -6990,6 +7425,7 @@ Halt! The key to open this gate\nis the Basic Badge!\c
 
 Oh, holder of the Basic Badge!\nShow the knowledge you've obtained!
 First, obtain the Basic Badge\nfrom the Nacrene Pokémon Gym!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 390
 ~~~~~~~~~~~~~~~
@@ -6997,6 +7433,7 @@ Halt! The key to open this gate\nis the Insect Badge!\c
 
 Oh, holder of the Insect Badge!\nFight valiantly like an insect!
 First, obtain the Insect Badge\nfrom the Castelia Pokémon Gym!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 391
 ~~~~~~~~~~~~~~~
@@ -7004,6 +7441,7 @@ Halt! The key to open this gate\nis the Bolt Badge!\c
 
 Oh, holder of the Bolt Badge!\nUnfurl a shocking battle!
 First, obtain the Bolt Badge\nfrom the Nimbasa Pokémon Gym!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 392
 ~~~~~~~~~~~~~~~
@@ -7020,6 +7458,7 @@ Halt! The key to open this gate\nis the Jet Badge!\c
 
 Oh, holder of the Jet Badge!\nBlast ahead with tremendous force!
 First, obtain the Jet Badge\nfrom the Mistralton Pokémon Gym!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 394
 ~~~~~~~~~~~~~~~
@@ -7027,6 +7466,7 @@ Halt! The key to open this gate\nis the Freeze Badge!\c
 
 Oh, holder of the Freeze Badge!\nShow the sharp edge of an icicle!
 First, obtain the Freeze Badge\nfrom the Icirrus Pokémon Gym!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 395
 ~~~~~~~~~~~~~~~
@@ -7034,6 +7474,11 @@ Halt! The key to open this gate\nis the Legend Badge!\c
 
 Oh, holder of the Legend Badge!\c\nPass through Victory Road,\nwhich lies beyond here, and head for\r\nthe Pokémon League.\c\nProve that you, too, can be a legend!
 First, obtain the Legend Badge\nfrom the Opelucid Pokémon Gym!
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 397
 ~~~~~~~~~~~~~~~
@@ -7182,6 +7627,10 @@ A Rotation Battle is a new kind of battle\nthat uses three Pokémon.\c\nPlease p
 If you're a Trainer, you should be\nmore aggressive.
 Now you can have Rotation Battles with\nyour friends!
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 414
 ~~~~~~~~~~~~~~~
 By any chance, have you caught a\nPokémon called [VAR 0101(0000)]?\c\nI would be very happy if you would trade\nmy [VAR 0101(0001)] for your [VAR 0101(0000)].
@@ -7234,6 +7683,7 @@ Looker: Many thanks!\c\nNow, Ghetsis notwithstanding,\nthere yet remains but [VA
 Looker: Thank you a lot!\c\nEh, [VAR 0100(0000)]...\nOn a topic I must speak to you.\c\nHaving received such a report, of\nsomeone far from here, who has seen\r\na person like N and...a dragon Pokémon.\c\nI am on my way to verify the veracity\nof this information.\r\nWe will meet again one day!\c
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 420
 ~~~~~~~~~~~~~~~
@@ -7733,6 +8183,7 @@ Pokémon do everything in\ntheir power for people.\c\nPeople treat these Pokémo
 Beautiful scenery and relaxing sounds...\c\nOh, man. I sure do loooove this place.\nSure makes me feel happy.
 Some wild Pokémon jump out of the\ntall grass and attack...\c\nBut you can make friends with those\nPokémon if you reach out to them!
 Accumula Town\nThe Fast-Growing Town!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 437
 ~~~~~~~~~~~~~~~
@@ -7959,6 +8410,7 @@ Isn't the Prism Scale beautiful?\nIt may be good to let a Pokémon hold it.
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 453
 ~~~~~~~~~~~~~~~
@@ -8638,6 +9090,7 @@ Oh...\nI hope I'll get to see them another time!
 There are so many things to consider,\nbut that is part of the fun of\r\nTriple Battles!
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 469
 ~~~~~~~~~~~~~~~
@@ -8750,6 +9203,7 @@ Cancel
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 471
 ~~~~~~~~~~~~~~~
