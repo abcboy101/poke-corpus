@@ -58,6 +58,45 @@
   box-sizing: border-box;
 }
 
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+ruby > rt {
+  font-size: 50%;
+}
+
+h1, h2 {
+  float: left;
+  margin: 0;
+}
+
+input[type=text], select, input[type=submit], input[type=button], button {
+  background: var(--highlight);
+  border: 1px solid var(--text);
+  color: var(--text);
+  border-radius: 3px;
+  padding: 2px 4px;
+  height: 2em;
+}
+
+input[type=text]:disabled, select:disabled, input[type=submit]:disabled, input[type=button]:disabled, button:disabled {
+  opacity: 0.7;
+}
+
+input[type=submit] {
+  min-width: 4em;
+}
+
+footer {
+  text-align: center;
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -70,15 +109,6 @@
   overflow: auto;
   line-height: 1.5;
   text-size-adjust: none;
-}
-
-ruby > rt {
-  font-size: 50%;
-}
-
-h1, h2 {
-  float: left;
-  margin: 0;
 }
 
 .App-header-logo {
@@ -130,7 +160,7 @@ h1, h2 {
   white-space: pre;
 }
 
-th, td {
+.App-results-table th, .App-results-table td {
   padding: 1px 0.25em;
   border: 1px solid var(--text);
   background-color: var(--highlight);
@@ -175,23 +205,6 @@ th, td {
 .App-search-filters-divider {
   background-color: var(--text);
   grid-row: span 2;
-}
-
-input[type=text], select, input[type=submit], input[type=button], button {
-  background: var(--highlight);
-  border: 1px solid var(--text);
-  color: var(--text);
-  border-radius: 3px;
-  padding: 2px 4px;
-  height: 2em;
-}
-
-input[type=text]:disabled, select:disabled, input[type=submit]:disabled, input[type=button]:disabled, button:disabled {
-  opacity: 0.7;
-}
-
-input[type=submit] {
-  min-width: 4em;
 }
 
 .App-search-collections, .App-search-languages {

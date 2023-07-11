@@ -22,14 +22,14 @@ function Results({status, progress, resultsLanguages, results}: {status: string,
         {['initial', 'done', 'error'].includes(status) ? <div></div> : <Spinner />}
         <ProgressBar progress={progress} />
       </div>
-      <div className="App-results">
+      <main className="App-results">
         {resultsLanguages.map((collectionLangs, k) => {
           const [collectionKey, fileKey, fileResults] = results[k];
           if (fileResults.length === 0) {
             return null;
           }
           return (
-            <div key={`table${k}`} className='App-results-table-container'>
+            <section key={`section${k}`} className='App-results-table-container'>
               <h2>{t('tableHeader', {collection: t(`collections:${collectionKey}.name`), file: fileKey, interpolation: {escapeValue: false}})}</h2>
               <table className="App-results-table">
                 <thead>
@@ -43,10 +43,10 @@ function Results({status, progress, resultsLanguages, results}: {status: string,
                   )}
                 </tbody>
               </table>
-            </div>
+            </section>
           );
         })}
-      </div>
+      </main>
     </>
   );
 };
@@ -70,7 +70,9 @@ function SearchCollections({collections, setCollections}: {collections: string[]
                   setCollections(collections.filter((value) => value !== key));
                 }
               }}/>
-              <label htmlFor={`collection-${key}`} style={{transform: (((i18next.language.startsWith('ja') || i18next.language.startsWith('ko') || i18next.language.startsWith('zh')) && t(`collections:${key}.short`).length > 4) ? `scaleX(${4 / t(`collections:${key}.short`).length})` : 'none')}}>{t(`collections:${key}.short`)}</label>
+              <label htmlFor={`collection-${key}`} style={{transform: (((i18next.language.startsWith('ja') || i18next.language.startsWith('ko') || i18next.language.startsWith('zh')) && t(`collections:${key}.short`).length > 4) ? `scaleX(${4 / t(`collections:${key}.short`).length})` : 'none')}}>
+                <abbr title={t(`collections:${key}.name`)}>{t(`collections:${key}.short`)}</abbr>
+              </label>
             </div>
           )
         }
@@ -212,45 +214,47 @@ function Search() {
 
   return (
     <>
-      <form className="App-search" onSubmit={onSubmit}>
-        <div className="App-search-bar">
-          <div className="App-search-bar-group">
-            <div>
-              <label htmlFor="query">{t('query')} </label>
-              <input type="text" name="query" id="query" value={query} onChange={e => setQuery(e.target.value)}/>
+      <search>
+        <form className="App-search" onSubmit={onSubmit}>
+          <div className="App-search-bar">
+            <div className="App-search-bar-group">
+              <div>
+                <label htmlFor="query">{t('query')} </label>
+                <input type="text" name="query" id="query" value={query} onChange={e => setQuery(e.target.value)}/>
+              </div>
+              <div>
+                <input type="submit" value={(status !== 'initial' && status !== 'done' && status !== 'rendering') ? t('cancel') : t('search')} disabled={!(status !== 'initial' && status !== 'done' && status !== 'rendering') && (collections.length === 0 || languages.length === 0)}/>
+              </div>
+            </div>
+            <div className="App-search-bar-group">
+              <div>
+                <input type="checkbox" name="regex" id="regex" checked={regex} onChange={e => setRegex(e.target.checked)}/>
+                <label htmlFor="regex">{t('regex')}</label>
+              </div>
+              <div>
+                <input type="checkbox" name="caseInsensitive" id="caseInsensitive" checked={caseInsensitive} onChange={e => setCaseInsensitive(e.target.checked)}/>
+                <label htmlFor="caseInsensitive">{t('caseInsensitive')}</label>
+              </div>
+              <div>
+                <input type="checkbox" name="common" id="common" checked={common} onChange={e => setCommon(e.target.checked)}/>
+                <label htmlFor="common">{t('common')}</label>
+              </div>
+              <div>
+                <input type="checkbox" name="script" id="script" checked={script} onChange={e => setScript(e.target.checked)}/>
+                <label htmlFor="script">{t('script')}</label>
+              </div>
             </div>
             <div>
-              <input type="submit" value={(status !== 'initial' && status !== 'done' && status !== 'rendering') ? t('cancel') : t('search')} disabled={!(status !== 'initial' && status !== 'done' && status !== 'rendering') && (collections.length === 0 || languages.length === 0)}/>
+              <button onClick={(e) => {e.preventDefault(); caches.keys().then((keyList) => Promise.all(keyList.map((key) => caches.delete(key))));}}>{t('clearCache')}</button>
             </div>
           </div>
-          <div className="App-search-bar-group">
-            <div>
-              <input type="checkbox" name="regex" id="regex" checked={regex} onChange={e => setRegex(e.target.checked)}/>
-              <label htmlFor="regex">{t('regex')}</label>
-            </div>
-            <div>
-              <input type="checkbox" name="caseInsensitive" id="caseInsensitive" checked={caseInsensitive} onChange={e => setCaseInsensitive(e.target.checked)}/>
-              <label htmlFor="caseInsensitive">{t('caseInsensitive')}</label>
-            </div>
-            <div>
-              <input type="checkbox" name="common" id="common" checked={common} onChange={e => setCommon(e.target.checked)}/>
-              <label htmlFor="common">{t('common')}</label>
-            </div>
-            <div>
-              <input type="checkbox" name="script" id="script" checked={script} onChange={e => setScript(e.target.checked)}/>
-              <label htmlFor="script">{t('script')}</label>
-            </div>
+          <div className="App-search-filters">
+            <SearchCollections collections={collections} setCollections={setCollections}/>
+            <div className="App-search-filters-divider"></div>
+            <SearchLanguages languages={languages} setLanguages={setLanguages}/>
           </div>
-          <div>
-            <button onClick={(e) => {e.preventDefault(); caches.keys().then((keyList) => Promise.all(keyList.map((key) => caches.delete(key))));}}>{t('clearCache')}</button>
-          </div>
-        </div>
-        <div className="App-search-filters">
-          <SearchCollections collections={collections} setCollections={setCollections}/>
-          <div className="App-search-filters-divider"></div>
-          <SearchLanguages languages={languages} setLanguages={setLanguages}/>
-        </div>
-      </form>
+        </form>
+      </search>
       <Results status={status} progress={progress} resultsLanguages={resultsLanguages} results={results}/>
     </>
   );
@@ -274,9 +278,11 @@ function App() {
 
   return (
     <div className={`App App-mode-${mode}`} lang={i18next.language}>
-      <div className="App-header">
+      <header className="App-header">
         <h1>
-          <img className="App-header-logo" src={logo} alt="" height="40" width="40" /> {t('title')}
+          <a href="/poke-corpus">
+            <img className="App-header-logo" src={logo} alt="" height="40" width="40" /> {t('title')}
+          </a>
         </h1>
         <div className="App-header-options">
           <LanguageSelect/>
@@ -287,8 +293,11 @@ function App() {
             <option value='dark'>{t('modeDark')}</option>
           </select>
         </div>
-      </div>
+      </header>
       <Search/>
+      <footer>
+        {t('tagline')} | {t('footerText')} | <a href="https://github.com/abcboy101/poke-corpus">{t('github')}</a>
+      </footer>
     </div>
   );
 }
