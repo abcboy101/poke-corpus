@@ -217,6 +217,7 @@ Tu as peur de ma chance, hein?
 Aujourd'hui, la chance n'était pas\navec moi...
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 8
 ~~~~~~~~~~~~~~~
@@ -229,6 +230,7 @@ C'est plein d'objets Pokémon colorés.
 Une commode qui doit sûrement contenir\nplein d'objets Pokémon.
 Il y a plein d'objets bien rangés\nlà-dedans.
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 9
 ~~~~~~~~~~~~~~~
@@ -821,6 +823,10 @@ Dis, tu connais un Pokémon qui s'appelle\nNanméouïe?\c\nParfois, en marchant,
 Les ossements du musée auraient tous\nété trouvés au Mont Foré.\c\nCe serait un certain Bardane qui en\naurait fait don.
 En utilisant la fonction AIDE sur le PC\ndes Centres Pokémon, on peut avoir\r\ndes tas d'explications!
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 27
 ~~~~~~~~~~~~~~~
 Chaque jour, je joue de la guitare,\net je fais des combats de Pokémon.\r\nJe ne m'en lasse pas!
@@ -1053,6 +1059,7 @@ Glace Sensas - Glace Volute\nNon vendue en hiver à cause du froid
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 39
 ~~~~~~~~~~~~~~~
@@ -1084,6 +1091,7 @@ Vous tombez à pic.\nNous allions partir.\c\nSi vous voulez bien vous donner\nla
 Si vous voulez partir pour l'Île Liberté,\nil suffit de revenir me parler!\c
 Vous voulez partir sur l'Île Liberté?
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 42
 ~~~~~~~~~~~~~~~
@@ -1852,6 +1860,11 @@ Artie: Très bien, [VAR 0100(0000)]!\c\nL'heure est à l'art!\nJe t'attends dans
 Artie: Très bien, [VAR 0100(0000)]!\c\nL'heure est à l'art!\nJe t'attends dans mon Arène.\c
 
 
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 63
 ~~~~~~~~~~~~~~~
@@ -1888,6 +1901,7 @@ Badge Stalactite
 Badge Mythe
 Quitter
 Quand je regarde la ville en contrebas,\nça me donne la chair de poule...\c\nBen quoi? J'ai le vertige!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 65
 ~~~~~~~~~~~~~~~
@@ -2110,6 +2124,7 @@ Sauvegarde de la Vidéo en cours...\nNe pas éteindre!
 La Vidéo de combat de [VAR 0100(0000)]\na été sauvegardée.
 Voulez-vous enregistrer la vidéo du\ndernier combat sur le Magnéto VS?
 Communication en cours...
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 81
 ~~~~~~~~~~~~~~~
@@ -3097,6 +3112,7 @@ Watson: Qu'adviendrait-il si humains\net Pokémon vivaient isolés\r\nles uns de
 Iris: Les gens et les Pokémon, ils vivent\nensemble et sont heureux. C'est super!
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 129
 ~~~~~~~~~~~~~~~
@@ -3120,6 +3136,10 @@ Bienvenue au Manoir de Combat!\nLe paradis du Combat Rotatif!\c\nComme le nom l'
 Voulez-vous en savoir plus sur\nle Combat Rotatif?
 Dans un Combat Rotatif, chaque\nparticipant utilise 3 Pokémon\r\nen même temps.\c\nLes Pokémon sont positionnés selon\nla formation suivante: un à l'avant,\r\nles deux autres à l'arrière.\c\nMais attention! Leur place respective\npeut changer à chaque tour!
 Cela ne vous intéresse pas?\nJe ne peux pas y croire!\c\nMais si vous écoutiez d'abord les\nexplications, pour voir?
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 132
 ~~~~~~~~~~~~~~~
@@ -3228,10 +3248,15 @@ Des inscriptions sont gravées\nsur la statue.\c\n“La Ligue est le séjour du\
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 143
 ~~~~~~~~~~~~~~~
 Il ne répond pas! Impossible de revenir\nen arrière! Il faut que vous gagniez!
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 145
 ~~~~~~~~~~~~~~~
@@ -3505,6 +3530,10 @@ Rester ici
 [VAR 0100(0007)]: ... ...\n... ...\c\nHein, quoi? Ah, mon hobby à moi?\nJe dirais [VAR 0128(000A)], je crois.\r\nEt toi, [VAR 0100(0003)], le tien, c'est...?\c\nEn parlant de ça d'ailleurs, t'as échangé\ndes Pokémon de combien d'endroits\r\ndifférents? Moi, [VAR 0202(0008)], et j'ai ENFIN\r\ntrouvé quelqu'un partageant mes goûts!\c\nHé hé hé! Je suis plutôt contente...\nJ'ai bien envie de refaire des échanges.\r\nAvec toi aussi, si tu veux, hein!
 [VAR 0100(0007)]: Tiens donc, [VAR 0100(0003)]!\nBonjour, toi. Ça va?\c\nSi tu es ici, c'est que toi aussi, tu as\nfait des échanges de Pokémon avec des\r\ngens venus de très loin, n'est-ce pas?\c\nOui, je comprends. Les Pokémon que l'on\na élevés sont attachants, mais ceux que\r\nl'on a reçus d'autres personnes\r\nont leur charme aussi.\c\nJ'ai déjà échangé des Pokémon\nprovenant d'endroits différents,\r\n[VAR 0202(0008)] pour être exacte,\r\nmais j'ai bien envie de continuer.\c\nJe trouve souvent des gens avec la même\npassion que moi, [VAR 0128(000A)],\c\nalors nous pouvons discuter\npendant des heures.\c\nAu fait, [VAR 0100(0003)], il faut absolument\nque l'on s'échange encore des Pokémon.\r\nTu me le promets?
 [VAR 0100(0007)]: Eh, mais c'est [VAR 0100(0003)]!\c\nJ'ai échangé des Pokémon venant de\ncombien d'endroits différents à ton avis?\r\n[VAR 0202(0008)]!\c\nMais je ne vais pas m'arrêter\nen si bon chemin!\c\nComment? Mon hobby? Hmmm... Eh bien...\nAh, [VAR 0128(000A)]! C'est sympa!\c\nEh, [VAR 0100(0003)], prends bien soin de\nmon [VAR 0102(0009)], d'accord?\c\nIl est très sage et très gentil, alors\nsois sympa avec lui, hein?
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 156
 ~~~~~~~~~~~~~~~
@@ -3795,18 +3824,22 @@ Text File : 169
 ~~~~~~~~~~~~~~~
 Glaucus: Ainsi que Maître Ghetis\nnous l'a ordonné...\c\nÉprouvons ta force, sans plus attendre!\c\nEssaye donc de vaincre la Team Plasma...\nsi tu le peux!!!
 Glaucus: Allez!\nSombre dans ces sables mouvants!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 170
 ~~~~~~~~~~~~~~~
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 171
 ~~~~~~~~~~~~~~~
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 172
 ~~~~~~~~~~~~~~~
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 173
 ~~~~~~~~~~~~~~~
@@ -3842,6 +3875,59 @@ Team Plasma: Maître Glaucus est venu\nchercher un Pokémon dans ce château.\c\
 
 
 
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 189
 ~~~~~~~~~~~~~~~
@@ -3858,6 +3944,38 @@ Text File : 190
 ~~~~~~~~~~~~~~~
 PYYYRRR!
 Le Pokémon s'est envolé en silence et\na disparu...
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 199
 ~~~~~~~~~~~~~~~
@@ -3885,6 +4003,7 @@ C'est bien de s'amuser dans le\nHangar Frigorifique.\c\nMais comme certains endr
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 201
 ~~~~~~~~~~~~~~~
@@ -4038,6 +4157,10 @@ Le Mont Foré, c'est fin chouette\ncomme endroit!\c\nJ'aime bien c'te chemin, l�
 Allez la jeunesse!\c\nEntraînez-vous bien dans ma\nmontagne!\c
 Tcheren: Ouf! Je pensais qu'il allait\nencore nous impliquer dans une histoire\r\npénible...\r\nBon, [VAR 0100(0000)], je pars devant!\c
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 210
 ~~~~~~~~~~~~~~~
 Team Plasma: ... T'as de la force!\c\nMais les Dresseurs comme toi\nasservissent les Pokémon!\c\nCe n'est pas ça, la vraie force!\c
@@ -4055,6 +4178,10 @@ Je devrais bien pouvoir trouver au moins\nun nouveau fossile demain.\r\nReviens 
 Text File : 211
 ~~~~~~~~~~~~~~~
 Le rocher est couvert de glace.\nLe toucher en est frigorifiant!
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 213
 ~~~~~~~~~~~~~~~
@@ -4123,6 +4250,10 @@ Text File : 216
 Tcheren: [VAR 0100(0000)]!\c
 On dirait qu'il est possible de passer\nsur les piliers effondrés.\c\nBien, je continue de poursuivre\nla Team Plasma!\c
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 218
 ~~~~~~~~~~~~~~~
 Zhu: [VAR 0100(0000)]?\c\nNous les retenons! File!\c
@@ -4137,6 +4268,10 @@ Team Plasma: Vous ne pouvez pas\ncomprendre la noblesse de notre but!\r\nAlors, 
 Team Plasma: Cette espèce de\nsale mioche!
 Team Plasma: J'ai perdu...\ncontre un Champion d'Arène!
 Team Plasma: Notre Roi doit déjà être au\nsommet de la tour.\c\nTu ne peux plus rien faire!
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 220
 ~~~~~~~~~~~~~~~
@@ -4188,6 +4323,58 @@ J'ai... j'ai TROP peur!\nJE PEUX PAS!!!\c
 J'ai... j'ai TROP peur!\nJE PEUX PAS!!!
 On dirait qu'il y a un objet en contrebas.\nMais cette falaise est vraiment escarpée.\c\nJe défaille à l'idée de la dévaler.
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 236
 ~~~~~~~~~~~~~~~
 Tcheren: [VAR 0100(0000)]...\c\nC'est difficile, n'est-ce pas?\nDe devoir se regarder dans la glace.\c\nDe voir toutes ces choses déplaisantes,\ntoutes celles dont on a honte...\c
@@ -4206,9 +4393,21 @@ Text File : 237
 TRRRAAA!!!
 Le Pokémon s'est fondu dans les ténèbres\nde la grotte et a disparu!
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 240
 ~~~~~~~~~~~~~~~
 RRREEEMMM!!!
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 242
 ~~~~~~~~~~~~~~~
@@ -4250,6 +4449,7 @@ Au fait...\c\nLe numéro de Victini dans le Pokédex\nest 0, car il est très sp
 Professeur!\c\nLes malfaiteurs ont été embarqués à\nbord de la vedette de patrouille!\c\nNous rentrons à Volucité!\nSi vous pouviez monter vous aussi...\c
 Keteleeria: Merci. Je file, bye-bye!\c
 Le pouvoir des Pokémon...\c\nIl peut troubler le jugement et motiver\ndes actes malfaisants.\c\nMais c'est en y faisant face avec un\ncœur serein qu'humains et Pokémon\r\nauront des lendemains qui chantent.\r\nElle est pas belle, la vie?\c
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 244
 ~~~~~~~~~~~~~~~
@@ -4268,6 +4468,10 @@ Vivre avec Victini à ses côtés, ça veut\ndire partager son cruel destin.\c\n
 Victini n'est pas parti loin. Il continue\nde t'observer.\c\nJe parie qu'il reviendrait si tu quittais\nla pièce...
 Viiiiiiiii!
 Victini a disparu de la\nchambre souterraine.\c
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 247
 ~~~~~~~~~~~~~~~
@@ -4289,6 +4493,26 @@ Tu veux te battre contre moi?!
 Je t'ai donné tous mes Modules.\nSers-t'en comme bon te plaira...
 Il y a une note accrochée sur\nl'écran du PC.\c\nVoulez-vous la lire?
 “Mes recherches déplaisent au\nSeigneur N.\c\nElles permettraient pourtant à la\nTeam Plasma de réaliser ses rêves!\c\nPour obtenir le plus puissant des\nPokémon, il suffirait de..."\c\nImpossible de lire la suite.\nLe reste de la note est déchiré!
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 253
 ~~~~~~~~~~~~~~~
@@ -4385,6 +4609,7 @@ Text File : 258
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 259
 ~~~~~~~~~~~~~~~
@@ -4394,6 +4619,7 @@ Text File : 259
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 260
 ~~~~~~~~~~~~~~~
@@ -4412,6 +4638,10 @@ RC
 46⒅
 54⒅
 À quel étage désirez-vous vous rendre?
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 263
 ~~~~~~~~~~~~~~~
@@ -4457,6 +4687,10 @@ Text File : 265
 La courbe juste là, elle est trop\ngéante!!!
 Je me demande où se trouve exactement\nle milieu du Pont Sagiciel.
 Wouah! C'est...\nles buildings de Volucité qu'on voit!
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 267
 ~~~~~~~~~~~~~~~
@@ -4645,6 +4879,10 @@ Text File : 277
 ~~~~~~~~~~~~~~~
 Ton équipe et toi pétez la forme!\nSi vous étiez fatigués, venez me voir!
 Oh, ton équipe m'a l'air en petite forme.\nAllez, pas de chichis! Reposez-vous!\c
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 279
 ~~~~~~~~~~~~~~~
@@ -5237,6 +5475,42 @@ Oh?!\nTu as accompli une mission?!\c\nFélicitations!\nJ'aurais jamais cru que t
 Oh... Ta mission a échoué?!\nÇa arrive à tout le monde...\r\n... même aux meilleurs!\c\nTraverse le pont encore une fois\net retente le coup!\c\nLe truc, c'est de bien regarder la carte\npour trouver le Dresseur!
 Oh?!\nTu as mis la main sur une Offri-Aura?!\c\nTu es vraiment incroyable!\nBravo!\r\nC'est magnifique!\c\nHem... (tousse)\c\nAvec l'Offri-Aura, tu peux aider les\npersonnes que tu croises.\r\nRegarde dans ton Listing Contact.\c\n... ... ... ... ... ...\n... ... ... ... (tousse)\c\nBon, maintenant, y'a plus à tricoter!\c\nUtilise le Heylink pour aller aider plein\nde gens et générer plein de bonheur!\c\n... ... ... ... ... ...\n... ... ... ... (tousse)\c\nLe Heylink n'a plus de secret pour toi!\c\nAccumule du bonheur et obtiens\ntous les pouvoirs!
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 313
 ~~~~~~~~~~~~~~~
 Hey you! The fantastic Dresseur! Tu veux\nparticiper à une incredible expérience?\c\nPour utiliser le Poké Fret, il te faut 2\nNintendo DS, two!\c\nTu en as une 2⒅ sous la main?\nTout est prêt, t'es ready?
@@ -5320,6 +5594,7 @@ Voir l'équipe utilisée lors de\nvotre entrée au Panthéon.
 Fermer le système de données.
 Accès au PC du Professeur Keteleeria.\c
 Accès au système d'aide.\c
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 315
 ~~~~~~~~~~~~~~~
@@ -5354,30 +5629,35 @@ Text File : 317
 Je cherchais des Offrisphères, et v'là\nt'y pas que j'me retrouve ici.\c\nY'en a souvent devant l'entrée\ndu Centre Pokémon.
 Hein?! Me v'là transformé en\njoueur de baseball!\r\nTrop trop chelou!\c\nComment j'vais faire?! J'ai école, moi!
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 318
 ~~~~~~~~~~~~~~~
 Y'a souvent des Offrisphères qui\ntraînent sous ce panneau...\r\nMais on est où, ici?\c\nJ'suis passé sous l'panneau\net paf, plus personne!
 Les Offrisphères sont des objets qui\nconcentrent de la gratitude.\c\nIl paraît qu'elles apparaissent\nquand on aide quelqu'un!
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 319
 ~~~~~~~~~~~~~~~
 Euh... Hein?!\nTous les gens qui sont v'nus\r\nvoir les avions?\c\nY sont passés où?!\nYôôôho!
 Waouh! Me v'là pilote! Trop bien!\nC'était mon rêve!
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 320
 ~~~~~~~~~~~~~~~
 J'suis un garçon, sans contrefaçon!\c\nMais avant, j'me suis regardé dans le\nmiroir, et... Qu'est-ce qui m'arrive?!\c\nÇa aussi, c'est un effet du Heylink?
 Me revoilà ici?\nPourtant, j'dormais peinard...\c\nC'est le monde des rêves, ici?\nC'est toujours en noir et blanc...
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 321
 ~~~~~~~~~~~~~~~
 Il y a sûrement une raison qui fait\nqu'Unys est en forme de spirale!\c\nEn essayant de percer ce mystère,\nje me suis retrouvé ici!\c\nOn est où, là?!
 Il paraît qu'à l'époque, le Heyrable\nétait plus grand, et qu'on pouvait\r\nutiliser davantage d'Offri-Auras.
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 322
 ~~~~~~~~~~~~~~~
@@ -6345,18 +6625,101 @@ Text File : 323
 
 
 
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 344
 ~~~~~~~~~~~~~~~
 Je pense que les Offri-Auras sont en\nquelque sorte la matérialisation\r\ndes rêves et des pensées des\r\ngens et des Pokémon d'Unys,\c\nsous une forme condensée, comme\nau centre d'un tourbillon.
 Peut-être que si les gens de l'ancien\ntemps ont disposé les villes d'Unys\r\nselon une structure en spirale,\c\nc'était justement pour pouvoir\nutiliser les Offri-Auras...
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 345
 ~~~~~~~~~~~~~~~
 Paraît que les ruines du Heylink datent\nd'avant l'époque où les hommes ont\r\ncommencé à vivre avec les Pokémon!\c\nDifficile de croire qu'un tel pouvoir\nexistait déjà y'a si longtemps...
 Ben... Où y sont tous passés?\c\nY'avait plein de gens juste avant, qui\nprofitaient d'la mer et du soleil!
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 346
 ~~~~~~~~~~~~~~~
@@ -6385,6 +6748,36 @@ Désolée, mais vous ne pouvez pas encore\nentrer dans la Salle Union.\c
 Au moins un de vos Pokémon ne peut pas\nêtre pris.\c
 Au fait, il y a toujours écrit “Dresseur"\nsur votre Carte de Dresseur!\c\nVous pouvez changer votre Titre pour\nque vos amis puissent le voir\r\ndans la Salle Union.\c\nPar exemple...\nPour vous, je pense que [VAR 010E(0000)]\r\nconviendrait bien, non?\c\nC'est juste mon impression personnelle.\nAlors, changeons votre Titre.\c\nSi celui-ci ne vous convient pas,\nvous pourrez toujours le modifier\c\nen touchant le Titre sur votre\nCarte de Dresseur!\c
 Ceci ne peut pas encore être utilisé.
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 347
 ~~~~~~~~~~~~~~~
@@ -6576,6 +6969,7 @@ Route 3
 
 Conseils aux Dresseurs!\c\n\nLe Pokémon placé en haut à gauche de\nla liste Pokémon est très important!\c\nC'est lui qui est sélectionné en\npremier lors d'un combat de Pokémon.
 Pension Pokémon\nNous prenons soin de vos Pokémon
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 354
 ~~~~~~~~~~~~~~~
@@ -6612,6 +7006,10 @@ Team Plasma: On vous rend le Pokémon.\c\nMais il va redevenir le jouet d'un hum
 Team Plasma: Un jour ou l'autre, vous\nréaliserez la folie de vos actes.\c
 Tcheren: Les Dresseurs utilisent les\ncapacités de leurs Pokémon.\c\nLes Pokémon ont confiance en leurs\nDresseurs et leur obéissent.\c\nJe ne vois pas où est le gâchis, ni en\nquoi les Pokémon seraient à plaindre.\c
 Bon, [VAR 0100(0000)].\c\nJe vais m'occuper de rendre le Pokémon\nà sa propriétaire.\c
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 358
 ~~~~~~~~~~~~~~~
@@ -6700,6 +7098,10 @@ Pont Yoneuve
 
 Conseils aux Dresseurs!\c\n\nLes objets sont rangés dans le Sac\ndans différentes poches.\c\nLe tri se fait automatiquement.\c\nEn regardant le nom de la poche, on\nsait tout de suite où chercher!
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 363
 ~~~~~~~~~~~~~~~
 Au fond de la Grotte Parsemille,\nsur la Route 6...\c\nvivrait, selon la légende, un Pokémon qui\na empêché Unys d'être engloutie dans un\r\nocéan de flammes il y a très longtemps.\c\nCobaltium, c'est son nom.\c\nSi tu pouvais utiliser la capacité Surf,\ntu pourrais peut-être le rencontrer,\r\nqui sait?
@@ -6741,6 +7143,14 @@ Température sur la Route 6: [VAR 0201(0000)] degrés.
 Température sur la Route 6: [VAR 0201(0000)] degrés.
 Température sur la Route 6: [VAR 0201(0000)] degrés.
 Température sur la Route 6: -[VAR 0200(0000)] degrés.
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 367
 ~~~~~~~~~~~~~~~
@@ -6793,6 +7203,18 @@ Text File : 370
 ~~~~~~~~~~~~~~~
 Voici la Tour des Cieux.\nLe séjour du repos éternel...
 On dit que faire sonner la cloche\nau sommet de la tour réjouit\r\nl'âme des disparus endormis...
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 374
 ~~~~~~~~~~~~~~~
@@ -6900,6 +7322,7 @@ Pour que Keldeo apprenne sa\ncapacité, il faut aussi faire venir\r\nCobaltium, 
 Ici, la forêt est luxuriante, et l'eau\nd'une rare pureté.\c\nC'est un véritable paradis pour\nles Pokémon!\c\nEt pour les humains aussi.\nIl faut en prendre soin.
 Tu veux à nouveau apprendre sa capacité\nà Keldeo?
 Tu n'aimes pas que certaines choses\nrestent en suspens, on dirait.\c
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 379
 ~~~~~~~~~~~~~~~
@@ -6953,6 +7376,18 @@ Text File : 383
 ~~~~~~~~~~~~~~~
 Tous ces cartons...\c\nIls sont remplis d'appareils\nélectroménagers obsolètes.\c\nC'est vraiment du gâchis...\c\nSi seulement quelqu'un pouvait\nen faire quelque chose...
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 387
 ~~~~~~~~~~~~~~~
 Tcheren: [VAR 0100(0000)]!\c\nPlus un pas!\c
@@ -6990,6 +7425,7 @@ Halte! La clé pour ouvrir cette\nporte est le Badge Basique!\c
 
 Tu portes le Badge Basique. Alors,\nutilise ton savoir à bon escient!
 Il faut d'abord obtenir le Badge Basique\nà l'Arène de Maillard.
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 390
 ~~~~~~~~~~~~~~~
@@ -6997,6 +7433,7 @@ Halte! La clé pour ouvrir cette\nporte est le Badge Élytre!\c
 
 Tu portes le Badge Élytre. Alors,\nmontre-toi digne des Pokémon Insecte!
 Il faut d'abord obtenir le Badge Élytre\nà l'Arène de Volucité.
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 391
 ~~~~~~~~~~~~~~~
@@ -7004,6 +7441,7 @@ Halte! La clé pour ouvrir cette\nporte est le Badge Volt!\c
 
 Tu portes le Badge Volt. Alors,\nélectrise tes ennemis au combat!
 Il faut d'abord obtenir le Badge\nVolt à l'Arène de Méanville.
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 392
 ~~~~~~~~~~~~~~~
@@ -7020,6 +7458,7 @@ Halte! La clé pour ouvrir cette\nporte est le Badge Jet!\c
 
 Tu portes le Badge Jet. Alors, fais\ntoi aussi jaillir ta puissance!
 Il faut d'abord obtenir le Badge\nJet à l'Arène de Parsemille.
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 394
 ~~~~~~~~~~~~~~~
@@ -7027,6 +7466,7 @@ Halte! La clé pour ouvrir cette\nporte est le Badge Stalactite!\c
 
 Tu portes le Badge Stalactite. Alors,\nsois aussi tranchant que la glace!
 Il faut d'abord obtenir le Badge\nStalactite à l'Arène de Flocombe.
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 395
 ~~~~~~~~~~~~~~~
@@ -7034,6 +7474,11 @@ Halte! La clé pour ouvrir cette\nporte est le Badge Mythe!\c
 
 Tu portes le Badge Mythe.\c\nTu vas arriver sur la Route Victoire.\c\nFranchis-la pour atteindre la\nLigue Pokémon!\r\nProuve ta valeur!
 Il faut d'abord obtenir le Badge Mythe\nà l'Arène de Janusia.
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 397
 ~~~~~~~~~~~~~~~
@@ -7182,6 +7627,10 @@ Le Combat Rotatif, c'est un nouveau\nstyle de combat Pokémon!\c\nEt ça se fait
 En tant que Dresseur, tu devrais avoir\nplus d'allant!
 Essaye le Combat Rotatif avec\ntes connaissances!
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 414
 ~~~~~~~~~~~~~~~
 Dis-moi... Aurais-tu capturé un Pokémon\nrépondant au nom de [VAR 0101(0000)]?\c\nSi tu le voulais bien, j'aurais aimé\nl'échanger contre mon [VAR 0101(0001)].
@@ -7234,6 +7683,7 @@ Beladonis: Merci pour tout!\c\nEn omettant Ghetis, le nombre\nde Sages encore da
 Beladonis: Merci pour tout!\c\n[VAR 0100(0000)], j'ai \nune information à te transmettre.\c\nDans un endroit, loin, très loin\nd'ici, un individu ressemblant à N\r\naurait été aperçu en compagnie\r\nd'un Pokémon Dragon.\r\nDixit le dernier rapport reçu.\c\nJe vais devoir aller vérifier\nsur place!\c\nÀ très vite, j'espère!\c
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 420
 ~~~~~~~~~~~~~~~
@@ -7733,6 +8183,7 @@ Les Pokémon donnent tout ce qu'ils ont\npour les humains.\c\nEt les humains en 
 Quel paysage!\nEt cette musique...\c\nJ'adore cet endroit, ça me rend\neuphorique.
 Les Pokémon sauvages nous attaquent\ndans les hautes herbes...\c\nMais bon, si on arrive à les comprendre,\non peut devenir leurs amis!
 Arabelle\nSa prospérité se voit dans ses vignes!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 437
 ~~~~~~~~~~~~~~~
@@ -7959,6 +8410,7 @@ Magnifique, cette Bel'Écaille,\nn'est-ce pas?\r\nEt si tu la faisais tenir à u
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 453
 ~~~~~~~~~~~~~~~
@@ -8638,6 +9090,7 @@ Ah... J'espère que tu me les\nprésenteras un jour.
 Il y a tellement de choses à garder à\nl'esprit dans un Combat Trio...\r\nC'est ce qui en fait tout le charme!
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 469
 ~~~~~~~~~~~~~~~
@@ -8750,6 +9203,7 @@ RETOUR
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 471
 ~~~~~~~~~~~~~~~

@@ -165,7 +165,7 @@ CT activée ![VAR BE05(0002)][VAR BE05(0000)]
 [VAR PKNICK(0000)] connaît déjà\n[VAR MOVE(0001)].
 Choisissez une capacité à oublier pour faire\nplace à [VAR MOVE(0000)].
 [VAR PKNICK(0000)] apprend\n[VAR MOVE(0001)] ![VAR BE05(0004)][VAR BE05(0001)]
-1[WAIT 20], 2[WAIT 20], [WAIT 20] [WAIT 20] Tadaaa ![VAR BE05(0003)][VAR BE05(0000)]\c\n[VAR PKNICK(0000)] oublie\n[VAR MOVE(0001)].\c\nEt\c\nIl apprend [VAR MOVE(0002)] ![VAR BE05(0004)][VAR BE05(0001)]
+1[WAIT 20], 2[WAIT 20], [WAIT 20]… [WAIT 20]… Tadaaa ![VAR BE05(0003)][VAR BE05(0000)]\c\n[VAR PKNICK(0000)] oublie\n[VAR MOVE(0001)].\c\nEt…\c\nIl apprend [VAR MOVE(0002)] ![VAR BE05(0004)][VAR BE05(0001)]
 [VAR PKNICK(0000)] n’a pas appris\n[VAR MOVE(0001)].
 [VAR PKNICK(0000)] veut apprendre\n[VAR MOVE(0001)].\c\nVoulez-vous remplacer une capacité par\n[VAR MOVE(0001)] ?
 Sur quel Pokémon utiliser\ncet objet ?
@@ -346,7 +346,7 @@ Mode Rang.\nVeuillez choisir un type de combat.
 Voulez-vous autoriser le transfert automatique\ndes Vidéos de Combat ?
 Pour prendre part à un combat en mode Rang,\nvous devez vous inscrire sur le site Internet\r\ndu Pokémon Global Link :\r\n[VAR COLOR(0002)]http://www.pokemon-gl.com/[VAR COLOR(0000)]\c
 Communication en cours...\nVeuillez patienter.
-Vérification de la carte SD\nNe pas éteindre la console.
+Vérification de la carte SD…\nNe pas éteindre la console.
 Mise à jour des règles effectuée.\c
 Les données des règles sont défectueuses.\nVeuillez reprendre depuis le début.\c
 Les données des règles défectueuses ont été\nrécupérées.\c
@@ -354,10 +354,10 @@ La carte SD est pleine.\nImpossible de sauvegarder les règles.\c
 Le serveur est en cours de maintenance.\nVeuillez réessayer ultérieurement.\c
 La saison est terminée.\c
 Voulez-vous enregistrer votre console pour\nparticiper aux combats en mode Rang ?
-Enregistrement de la console
+Enregistrement de la console…
 Enregistrement de la console effectué.\c\nATTENTION : Si vous prenez part à des combats\nen mode Rang avec une console différente,\r\nvos résultats seront remis à zéro.\c\n
 Vous êtes sur le point de prendre part à un\ncombat en mode Rang avec une console\r\ndifférente.\c\nTous vos résultats vont être remis à zéro.\nVoulez-vous continuer ?
-Réinitialisation des résultats et enregistrement\nde votre console
+Réinitialisation des résultats et enregistrement\nde votre console…
 Résultats réinitialisés et enregistrement de\nvotre console effectué.\c
 Recherche d’un adversaire en cours...\nVeuillez patienter.
 Adversaire trouvé !\nLe combat va commencer.
@@ -374,7 +374,7 @@ Impossible de participer à cette Compétition.\c
 Si vous déclarez forfait, vous ne pourrez plus\nparticiper à cette Compétition.\c\nVoulez-vous abandonner la Compétition :\n« [VAR 01AF(0000)] » ?
 Attention : Tout abandon est définitif !\c\nVoulez-vous vraiment abandonner la\nCompétition :\r\n« [VAR 01AF(0000)] » ?
 La Compétition a été abandonnée.\nVotre Équipe Combat est déverrouillée.\c
-Téléchargement de la Licence Numérique
+Téléchargement de la Licence Numérique…
 Téléchargement de la Licence Numérique\nterminé.\c
 Choisissez l’Équipe Combat qui participera\nà la Compétition.
 La Compétition à laquelle vous vous êtes inscrit\nn’a pas encore commencé.\c\nVeuillez consulter le site du Pokémon Global Link\npour savoir quand elle commencera :\r\n[VAR COLOR(0002)]http://www.pokemon-gl.com/[VAR COLOR(0000)]\c
@@ -6874,9 +6874,9 @@ Text File : 15
 [VAR BD06(0000)]Ce n’est pas très efficace sur les [VAR PKNICK(0000)]\net [VAR PKNICK(0001)] ennemis...
 [VAR BD06(0000)]Ce n’est pas très efficace sur [VAR 1002][VAR 1400(0000)][VAR PKNICK(0000)] Dominant\net [VAR PKNICK(0001)]...
 [VAR BD06(0000)]Ce n’est pas très efficace sur [VAR PKNICK(0000)],\nni sur [VAR PKNICK(0001)], ni sur [VAR PKNICK(0002)]...
-[VAR BD06(0000)]Ce n’est pas très efficace sur les [VAR PKNICK(0000)],\n[VAR PKNICK(0001)] et [VAR PKNICK(0002)] sauvages
-[VAR BD06(0000)]Ce n’est pas très efficace sur les [VAR PKNICK(0000)],\n[VAR PKNICK(0001)] et [VAR PKNICK(0002)] ennemis
-[VAR BD06(0000)]Ce n’est pas très efficace sur [VAR 1002][VAR 1400(0000)][VAR PKNICK(0000)] Dominant,\n[VAR PKNICK(0001)] et [VAR PKNICK(0002)]
+[VAR BD06(0000)]Ce n’est pas très efficace sur les [VAR PKNICK(0000)],\n[VAR PKNICK(0001)] et [VAR PKNICK(0002)] sauvages…
+[VAR BD06(0000)]Ce n’est pas très efficace sur les [VAR PKNICK(0000)],\n[VAR PKNICK(0001)] et [VAR PKNICK(0002)] ennemis…
+[VAR BD06(0000)]Ce n’est pas très efficace sur [VAR 1002][VAR 1400(0000)][VAR PKNICK(0000)] Dominant,\n[VAR PKNICK(0001)] et [VAR PKNICK(0002)]…
 [VAR BD06(0000)]Mais cela échoue sur [VAR PKNICK(0000)] !
 [VAR BD06(0000)]Mais cela échoue sur [VAR 1002][VAR 1400(0000)][VAR PKNICK(0000)] sauvage !
 [VAR BD06(0000)]Mais cela échoue sur [VAR 1002][VAR 1400(0000)][VAR PKNICK(0000)] ennemi !
@@ -8964,7 +8964,7 @@ Un [VAR PKNAME(0000)] sauvage apparaît !
 Oh ! Un [VAR PKNAME(0000)] sauvage vous bondit dessus !
 Un [VAR PKNAME(0000)] sauvage apparaît !
 Un [VAR PKNAME(0000)] sauvage apparaît !
-Oh ! Votre monture a failli écraser un [VAR PKNAME(0000)]\nIl vous attaque !
+Oh ! Votre monture a failli écraser un [VAR PKNAME(0000)]…\nIl vous attaque !
 [VAR PKNAME(0000)] apparaît !
 Oh ! Une horde de Pokémon sauvages apparaît !
 [VAR 1002][VAR 1401(0000)][VAR PKNAME(0000)] Dominant veut se battre !
@@ -9007,7 +9007,7 @@ Touché [VAR NUM1(0000)] fois !
 [VAR BD06(0000)][VAR 010C(0000)] a gagné un total de\n[VAR NUM7(0001,E07F)] Point[VAR NUMBRNCH(0001,0100)]s Exp. !
 Le reste de votre équipe a gagné des Points Exp.\ngrâce au Multi Exp !
 [VAR 010C(0000)] veut apprendre\n[VAR MOVE(0001)].\c\nVoulez-vous remplacer une capacité par\n[VAR MOVE(0001)] ?
-1[WAIT 20], 2[WAIT 20], [WAIT 20] [WAIT 20] Tadaaa ![VAR BE05(0003)][VAR BE05(0006)]\c\n[VAR 010C(0000)] oublie [VAR MOVE(0001)].\c\nEt...
+1[WAIT 20], 2[WAIT 20], [WAIT 20]… [WAIT 20]… Tadaaa ![VAR BE05(0003)][VAR BE05(0006)]\c\n[VAR 010C(0000)] oublie [VAR MOVE(0001)].\c\nEt...
 Il apprend [VAR MOVE(0001)] !
 [VAR 010C(0000)] n’a pas appris\n[VAR MOVE(0001)].\c
 [VAR BD06(0000)]Vous avez battu\n[VAR 019E(0000)] !
@@ -9025,7 +9025,7 @@ Vous avez battu [VAR 1400(0000)][VAR PKNAME(0000)] Dominant !\c
 [VAR TRNAME(0000)] n’a plus de Pokémon en forme !\c
 Dans la panique, [VAR TRNAME(0000)] fait tomber [VAR NUM5(0001,E07F)] $ !
 [VAR TRNAME(0000)] donne [VAR NUM5(0001,E07F)] $ au vainqueur.
-\n\c\n[VAR TRNAME(0000)] est hors jeu !
+…\n…\c\n[VAR TRNAME(0000)] est hors jeu !
 [VAR TRNAME(0000)] remporte [VAR NUM6(0001,E07F)] $ !\c
 [VAR TRNAME(0000)] obtient [VAR NUM5(0001,E07F)] $ !
 [VAR 010C(0000)] monte au N. [VAR NUM3(0001)] !
@@ -9178,11 +9178,11 @@ Mais cet objet n’est pas utilisable sur cette cible !
 [VAR 010C(0000)] est en Chute Libre !\nCette action est impossible !
 Le combat se termine par un forfait.
 Un beau gazon pousse sur le terrain !
-Le gazon disparaît
+Le gazon disparaît…
 Le terrain se couvre de brume !
-La brume qui recouvrait le terrain se dissipe
+La brume qui recouvrait le terrain se dissipe…
 De l’électricité parcourt le terrain !
-L’électricité parcourant le terrain s’est dissipée
+L’électricité parcourant le terrain s’est dissipée…
 Votre équipe est protégée par la capacité Vigilance !
 L’équipe ennemie est protégée par la capacité Vigilance !
 [VAR BD06(0000)]La capacité [VAR MOVE(0000)] a été bloquée par\nun tatami !
@@ -9218,7 +9218,7 @@ Impossible d’utiliser cette capacité sans avoir mangé\nde Baie !
 Vas-y, [VAR 010C(0000)] ! J’ai confiance en toi !
 [VAR 010C(0000)], on change !\nJe suis fi[VAR GENDBR(00FF,0302)]erère de toi !
 Bravo !
-[VAR 010C(0000)] n’est pas en bonne posture.\nIl a l’air désespéré
+[VAR 010C(0000)] n’est pas en bonne posture.\nIl a l’air désespéré…
 [VAR 010C(0000)] est très reconnaissant !
 Zzz...
 [~ 262]
@@ -9241,11 +9241,11 @@ Oh ! Un [VAR PKNAME(0000)] sauvage surgit de la poubelle !
 Félicitations, [VAR TRNAME(0000)] !
 Quelle honte ce serait, de s’enfuir pendant une Épreuve !
 Une pluie battante s’abat soudainement !
-La pluie battante s’est arrêtée
+La pluie battante s’est arrêtée…
 Les rayons du soleil s’intensifient !
 Les rayons du soleil s’affaiblissent !
 Un vent mystérieux enveloppe les Pokémon\nde type Vol !
-Le vent mystérieux s’est dissipé
+Le vent mystérieux s’est dissipé…
 La pluie battante empêche toute attaque de type Feu !
 Le soleil brille si intensément que toute attaque de type\nEau s’évapore !
 Impossible de dissiper une telle pluie !
@@ -18301,7 +18301,7 @@ Sandales Vacances
 ~~~~~~~~~~~~~~~
 Text File : 55
 ~~~~~~~~~~~~~~~
-\nCréation des données additionnelles\nnécessaires au démarrage en cours\n\nNe pas éteindre la console ni retirer\nla carte SD.
+\nCréation des données additionnelles\nnécessaires au démarrage en cours…\n\nNe pas éteindre la console ni retirer\nla carte SD.
 Choisissez votre langue avec la manette +.\nConfirmez avec le bouton A.\n\n[VAR COLOR(0001)]Attention : Une fois la langue confirmée,\nvous ne pourrez plus la changer.[VAR COLOR(0000)]\n\nSi vous ne savez pas quoi faire,\ndemandez à un adulte de vous aider.
 \n\nVoulez-vous jouer dans cette langue ?\n\n\n[VAR COLOR(0001)]Attention : Une fois la langue confirmée,\nvous ne pourrez plus la changer.[VAR COLOR(0000)]
 \n\nVoulez-vous jouer dans cette langue ?\n\n\n[VAR COLOR(0001)]Attention : Une fois la langue confirmée,\nvous ne pourrez plus la changer.\n\n[VAR COLOR(0000)]Vous pouvez alterner entre hiragana et kanji\ndans le menu Options.
@@ -18326,7 +18326,7 @@ Les données de sauvegarde sont corrompues.\n\nPour plus de renseignements, veui
 Les données additionnelles présentes sur\nla carte SD sont corrompues.\n\nAppuyez sur le bouton A pour effacer ces\ndonnées.
 Impossible de reconnaître la carte SD.\n\nRelancez le jeu et réessayez.
 Cette sauvegarde ne correspond pas à votre\ndernière session de jeu enregistrée.\nImpossible d’utiliser ces données.\n\nPour plus de renseignements, veuillez consulter\nle mode d’emploi via le menu HOME.
-Rétablissement de la sauvegarde\n\nNe pas éteindre la console.
+Rétablissement de la sauvegarde…\n\nNe pas éteindre la console.
 Il n’y a pas suffisamment d’espace libre sur\nla carte SD.\nImpossible de commencer une partie.
 ~~~~~~~~~~~~~~~
 Text File : 56
@@ -19331,7 +19331,7 @@ La réception du cadeau a échoué.\c
 [~ 6]
 Attention !\c\nSi votre console s’éteint ou que la connexion\ns’interrompt pendant la réception d’un cadeau\r\nvia un code ou un mot de passe, il est possible\r\nque ce cadeau ne puisse plus être réceptionné\r\npar la suite.\c\nVeuillez donc vérifier l’état de votre batterie\net de votre connexion.\c\nVoulez-vous recevoir un cadeau associé\nà un code ou mot de passe ?
 Voulez-vous vous connecter à Internet ?
-Connexion en cours\nVeuillez patienter.
+Connexion en cours…\nVeuillez patienter.
 Vous avez plusieurs fois saisi un code ou\nmot de passe incorrect.\c\nLa fonction est momentanément désactivée.\nVeuillez réessayer ultérieurement.\c
 Veuillez saisir votre code ou mot de passe.\c
 Vérification du code en cours...\nNe pas éteindre la console.
@@ -21134,7 +21134,7 @@ Permet de déplacer l’objet tenu par un\nPokémon.
 [VAR PKNICK(0000)] vous a remis\n[VAR 1400(0001)][VAR ITEM2(0001)] !
 Vous ne pouvez pas porter plus d’exemplaires\nde cet objet.
 C’est inutilisable sur ce Pokémon.
-Pas assez de PV
+Pas assez de PV…
 [VAR PKNAME(0000)] a changé de forme !
 Impossible ici.
 [~ 45]
@@ -21265,7 +21265,7 @@ Non
 [VAR 0187(0000)]\n[VAR 0188(0001)]
 Penche la tête vers la gauche !
 Penche la tête vers la droite !
-Prends un air sérieux
+Prends un air sérieux…
 Un tout petit sourire ?
 Un sourire satisfait !
 Un sourire radieux !!!
@@ -23722,7 +23722,7 @@ Quoi ?\n[VAR PKNICK(0000)] évolue !
 Hein ?\n[VAR PKNICK(0000)] n’évolue plus !
 Félicitations !\n[VAR PKNICK(0000)] évolue en [VAR PKNAME(0001)] !
 [VAR PKNICK(0000)] apprend\n[VAR MOVE(0001)] ![VAR BE05(0004)][VAR BE05(0001)]
-1[WAIT 20], 2[WAIT 20], [WAIT 20] [WAIT 20] Tadaaa ![VAR BE05(0003)][VAR BE05(0000)]\c\n[VAR PKNICK(0000)] oublie\n[VAR MOVE(0001)].\c\nEt\c\nIl apprend [VAR MOVE(0002)] ![VAR BE05(0004)][VAR BE05(0001)]
+1[WAIT 20], 2[WAIT 20], [WAIT 20]… [WAIT 20]… Tadaaa ![VAR BE05(0003)][VAR BE05(0000)]\c\n[VAR PKNICK(0000)] oublie\n[VAR MOVE(0001)].\c\nEt…\c\nIl apprend [VAR MOVE(0002)] ![VAR BE05(0004)][VAR BE05(0001)]
 [VAR PKNICK(0000)] n’a pas appris\n[VAR MOVE(0001)].
 [VAR PKNICK(0000)] veut apprendre\n[VAR MOVE(0001)].\c\nVoulez-vous remplacer une capacité par\n[VAR MOVE(0001)] ?
 Oublier une capacité
@@ -23808,7 +23808,7 @@ Accumulez des PCo et revenez me voir !
 À quel Pokémon voulez-vous l’apprendre ?
 Veuillez choisir une capacité à oublier pour\napprendre [VAR MOVE(0001)].
 [VAR PKNICK(0000)] n’a pas appris\n[VAR MOVE(0001)] !
-1[WAIT 20], 2[WAIT 20], [WAIT 20] [WAIT 20] Tadaa ![VAR BE05(0003)][VAR BE05(0005)]\c\n[VAR PKNICK(0000)] oublie\n[VAR MOVE(0002)]. Et
+1[WAIT 20], 2[WAIT 20], [WAIT 20]… [WAIT 20]… Tadaa ![VAR BE05(0003)][VAR BE05(0005)]\c\n[VAR PKNICK(0000)] oublie\n[VAR MOVE(0002)]. Et…
 [VAR PKNICK(0000)] apprend\n[VAR MOVE(0001)] ![VAR BE05(0004)][VAR BE05(0001)]
 Dois-je enseigner d’autres capacités à\nun Pokémon ?
 Ah ! Ce Pokémon a l’air de déjà connaître\ncette capacité.
@@ -29011,7 +29011,7 @@ Non
 [VAR PKNICK(0000)] doit-il renoncer à se souvenir\nd’une capacité ?
 [VAR PKNICK(0000)] se souvient de la capacité\n[VAR MOVE(0001)] ![VAR BE05(0004)][VAR BE05(0006)]
 Choisissez une capacité à oublier pour faire\nplace à [VAR MOVE(0000)].
-1[WAIT 20], 2[WAIT 20], [WAIT 20] [WAIT 20] Tadaaa ![VAR BE05(0003)][VAR BE05(0005)]\c\n[VAR PKNICK(0000)] oublie [VAR MOVE(0002)].\c\nEt\c\nIl se souvient de la capacité\n[VAR MOVE(0001)] ![VAR BE05(0004)][VAR BE05(0006)]
+1[WAIT 20], 2[WAIT 20], [WAIT 20]… [WAIT 20]… Tadaaa ![VAR BE05(0003)][VAR BE05(0005)]\c\n[VAR PKNICK(0000)] oublie [VAR MOVE(0002)].\c\nEt…\c\nIl se souvient de la capacité\n[VAR MOVE(0001)] ![VAR BE05(0004)][VAR BE05(0006)]
 [~ 25]
 ~~~~~~~~~~~~~~~
 Text File : 116

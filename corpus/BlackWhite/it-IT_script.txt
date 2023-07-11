@@ -217,6 +217,7 @@ Hai paura della mia fortuna sfacciata, eh?
 Pfui! Oggi non è il mio giorno fortunato!
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 8
 ~~~~~~~~~~~~~~~
@@ -229,6 +230,7 @@ Gli scaffali sono pieni di oggetti per\ni Pokémon.
 Un armadietto che sembra contenere\ntanti oggetti per i Pokémon.
 Gli oggetti sono sistemati all'interno del\nmobile, in perfetto ordine.
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 9
 ~~~~~~~~~~~~~~~
@@ -821,6 +823,10 @@ Ehi, Allenatore!\nHai mai sentito parlare di Audino?\c\nLo trovi ogni tanto sul 
 Lo scheletro al Museo di Zefiropoli è\nstato rinvenuto sul Monte Vite e\r\ndonato al museo da un certo Rafan.
 Scegli “Aiuto" dal PC di un Centro\nPokémon e avrai tante informazioni utili!
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 27
 ~~~~~~~~~~~~~~~
 Suono la chitarra e lotto ogni giorno!\nE così continuerò per sempre,\r\nsenza mai stancarmi!
@@ -1053,6 +1059,7 @@ Il famoso Conostropoli non è in\nvendita nei freddi mesi invernali
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 39
 ~~~~~~~~~~~~~~~
@@ -1084,6 +1091,7 @@ Arrivi proprio al momento giusto! Stiamo\nper partire.\c\nPrego, aspetta pure a 
 Quando vuoi andare sull'Isola Libertà,\ntorna pure a parlare con me.\c
 Vuoi andare sull'Isola Libertà?
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 42
 ~~~~~~~~~~~~~~~
@@ -1852,6 +1860,11 @@ Artemisio: Allora, [VAR 0100(0000)], ti aspetto\nalla Palestra.\c
 Artemisio: Allora, [VAR 0100(0000)], ti aspetto\nalla Palestra.\c
 
 
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 63
 ~~~~~~~~~~~~~~~
@@ -1888,6 +1901,7 @@ Medaglia Stalattite
 Medaglia Leggenda
 Esci
 Quando guardo il panorama della città\ndall'alto mi tremano le gambe.\c\nEbbene sì, soffro di vertigini...
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 65
 ~~~~~~~~~~~~~~~
@@ -2110,6 +2124,7 @@ Registrazione del Video Lotta in corso.\nNon spegnere la console.
 La lotta di [VAR 0100(0000)] è stata\nsalvata come Video Lotta.
 Vuoi salvare questa lotta e farla\ndiventare un Video Lotta?
 In attesa di collegamento...
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 81
 ~~~~~~~~~~~~~~~
@@ -3097,6 +3112,7 @@ Aristide: Non ha senso separare il mondo\ndegli umani da quello dei Pokémon.\c\
 Iris: Com'è bello che Pokémon e umani\nvadano d'amore e d'accordo!
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 129
 ~~~~~~~~~~~~~~~
@@ -3120,6 +3136,10 @@ Salve!\c\nQuesta è la Casa della Lotta a Rotazione.\c\nCome dice il nome stesso
 Posso spiegarti che cos'è una Lotta\na Rotazione?
 Nella Lotta a Rotazione i partecipanti\nmandano in campo tre Pokémon!\c\nUn Pokémon è in prima fila e gli altri due\nin seconda, ma ad ogni turno l'Allenatore\r\npuò cambiarne posizione. Per questo\r\nmotivo si chiama “Lotta a Rotazione"!
 Non ti interessa?!\c\nMa come?! È davvero uno spasso, invece!\nDai, lascia almeno che ti spieghi.
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 132
 ~~~~~~~~~~~~~~~
@@ -3228,10 +3248,15 @@ Ci sono delle iscrizioni sulla statua...\c\n“Quattro sono i potenti Allenatori
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 143
 ~~~~~~~~~~~~~~~
 Non si apre! Non puoi andartene senza\naver vinto!
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 145
 ~~~~~~~~~~~~~~~
@@ -3505,6 +3530,10 @@ RIMANI SU QUESTO PIANO
 [VAR 0100(0007)]: ...\n...\c\nMh? Cosa hai detto?\nScusa, ero sovrappensiero.\c\nQual è il mio hobby?\nMmh... [VAR 0128(000A)]?\r\nE il tuo, [VAR 0100(0003)]?\c\nA proposito di hobby...\c\nHo scambiato Pokémon con Allenatori di\nvari posti. Fino ad ora [VAR 0202(0008)]! Finalmente ho\r\ntrovato qualcuno con il mio stesso hobby!\c\nSapessi che felicità! Adesso non vedo\nl'ora di fare altri scambi!\r\nTorna a far scambio se ti va, ok?
 [VAR 0100(0007)]: Oh, [VAR 0100(0003)]!\nCiao!\c\nSe sei qui significa che anche tu hai\nscambiato Pokémon con Allenatori\r\ndi altre località!\c\nHu hu!\nOgni Allenatore considera il proprio\r\nPokémon il più carino di tutti, ma sono\r\nbelli anche quelli ricevuti da altri, vero?\c\nIo ho scambiato Pokémon con Allenatori\ndi vari posti... fino ad ora [VAR 0202(0008)], ma non\r\nne ho ancora abbastanza!\c\nÈ troppo bello parlare con altri\nAllenatori a cui piace\r\n[VAR 0128(000A)] come a me!\c\nTorna quando hai voglia di fare altri\nscambi!
 [VAR 0100(0007)]: Toh, guarda! [VAR 0100(0003)]!\c\nSenti un po' qua! Ho fatto scambio di\nPokémon con Allenatori di vari posti.\r\nFino ad ora [VAR 0202(0008)]!\c\nSono o non sono bravissima? Eh eh eh!\c\nEh? Il mio hobby preferito?\nDunque...\r\nMmh...\c\nDirei [VAR 0128(000A)]...\nMi raccomando, [VAR 0100(0003)], prenditi\r\ncura di [VAR 0102(0009)]!\c\nÈ veramente un tesoro, dagli tutto il tuo\naffetto!
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 156
 ~~~~~~~~~~~~~~~
@@ -3795,18 +3824,22 @@ Text File : 169
 ~~~~~~~~~~~~~~~
 Verdanio: Ghecis mi ha avvertito di quanto\ntu sia forte.\c\nOra vedremo se aveva ragione.\nProva a sconfiggere noi del Team Plasma!
 Verdanio: E allora forza, dentro alle\nsabbie mobili!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 170
 ~~~~~~~~~~~~~~~
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 171
 ~~~~~~~~~~~~~~~
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 172
 ~~~~~~~~~~~~~~~
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 173
 ~~~~~~~~~~~~~~~
@@ -3842,6 +3875,59 @@ Seguace Plasma: Stavo facendo la guardia\nper evitare che degli scocciatori come
 
 
 
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 189
 ~~~~~~~~~~~~~~~
@@ -3858,6 +3944,38 @@ Text File : 190
 ~~~~~~~~~~~~~~~
 Fuiiiiimp!
 Il Pokémon ha silenziosamente preso\nil volo e si è dileguato.
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 199
 ~~~~~~~~~~~~~~~
@@ -3885,6 +4003,7 @@ Se vuoi giocare nel Deposito Frigo, fai\npure.\c\nMa fai attenzione, perché in 
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 201
 ~~~~~~~~~~~~~~~
@@ -4038,6 +4157,10 @@ Il Monte Vite è eccezionale!\c\nIl mio posto preferito si trova proprio\ndopo q
 Vi saluto, ragazzi!\c\nAh, e se volete, allenatevi pure sulla\nmia montagna!\c
 Komor: Ero pronto ad affrontare qualche\naltra scocciatura, ma ci è andata bene.\c\nAllora, [VAR 0100(0000)], io proseguo.\nCi vediamo!\c
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 210
 ~~~~~~~~~~~~~~~
 Seguace Plasma: Accidenti, che forza!\c\nMa è una forza che voi Allenatori\nottenete sfruttando i Pokémon!\c
@@ -4055,6 +4178,10 @@ Domani potrei trovarne un altro. Se vuoi,\ntorna ancora qui da me!
 Text File : 211
 ~~~~~~~~~~~~~~~
 Questa roccia ricoperta di ghiaccio può\ncongelare chiunque la tocchi.
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 213
 ~~~~~~~~~~~~~~~
@@ -4123,6 +4250,10 @@ Text File : 216
 Komor: [VAR 0100(0000)]!\c
 A quanto pare, è possibile camminare\nanche sopra le colonne cadute!\c\nIo mi rimetto all'inseguimento del Team\nPlasma. A dopo!\c
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 218
 ~~~~~~~~~~~~~~~
 Silvestro: [VAR 0100(0000)]!\c\nCi penso io a questi!\c\nTu vai pure avanti!\c
@@ -4137,6 +4268,10 @@ Seguace Plasma: Come ti permetti di\nintrometterti! Tu, che non puoi nemmeno\r\n
 Seguace Plasma: Ma cosa pensi di fare?\nChe speranze hai contro noi adulti?
 Seguace Plasma: Sì, il Capopalestra mi ha\nsconfitto.
 Seguace Plasma: Ormai il nostro sovrano\ndovrebbe essere giunto in cima...\c\nNon c'è più nulla che tu possa fare!
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 220
 ~~~~~~~~~~~~~~~
@@ -4188,6 +4323,58 @@ Che paura! No, no, non fa per me!\c
 Che paura! No, no, non fa per me!
 C'è uno strumento qua sotto!\c\nQuesta parete scoscesa, però, è troppo\nripida! Non me la sento di scivolare giù.
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 236
 ~~~~~~~~~~~~~~~
 Komor: [VAR 0100(0000)]...\c\nNon è facile fare i conti con se stessi,\nvero?\c\nSi tende a notare quello che non ci piace\ndi noi o che proprio non sopportiamo.\c
@@ -4206,9 +4393,21 @@ Text File : 237
 Groaaaang!
 Un Pokémon è scomparso nell'oscurità\ndella grotta.
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 240
 ~~~~~~~~~~~~~~~
 Fruuulaaaà!
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 242
 ~~~~~~~~~~~~~~~
@@ -4250,6 +4449,7 @@ Victini è il numero 0 del Pokédex di Unima.\c\nSembra che dal Pokédex la sua 
 Prof.ssa Aralia!\c\nAbbiamo rinchiuso quei mascalzoni nella\nmotovedetta!\c\nNoi torniamo ad Austropoli. Salga a bordo\nanche lei!\c
 Aralia: Grazie. Vengo subito!\c
 Non riesco a credere che si possa essere\ntalmente attratti dal potere dei Pokémon\r\nda volerlo impiegare per dei fini malvagi!\c\nSolo avvicinandoci ai Pokémon con cuore\npuro possiamo sperare in un futuro\r\nradioso!\c
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 244
 ~~~~~~~~~~~~~~~
@@ -4268,6 +4468,10 @@ Vivere con Victini significa anche\ncondividerne il tremendo destino...\c\nSpero
 Victini è ancora qui intorno e sta\nosservando i tuoi movimenti.\c\nScommetto che ritornerà non appena tu\nuscirai da questa stanza.
 Chiu chiuwaaaagn!
 Victini se n'è andato dalla stanza\nsotterranea.\c
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 247
 ~~~~~~~~~~~~~~~
@@ -4289,6 +4493,26 @@ Vuoi lottare contro di me?
 Ti ho dato tutti i moduli che avevo. Puoi\nfarne ciò che vuoi.
 C'è un'annotazione di fianco al monitor\ndel PC.\c\nVuoi leggerla?
 N è contrario alle mie ricerche.\c\nMa il mio lavoro è necessario per poter\nrealizzare gli scopi del Team Plasma.\c\nPer creare il Pokémon più potente della\nstoria, basterebbe...\c\nIl resto dell'annotazione è strappato,\nimpossibile leggere oltre!
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 253
 ~~~~~~~~~~~~~~~
@@ -4385,6 +4609,7 @@ Text File : 258
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 259
 ~~~~~~~~~~~~~~~
@@ -4394,6 +4619,7 @@ Text File : 259
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 260
 ~~~~~~~~~~~~~~~
@@ -4412,6 +4638,10 @@ Piano terra
 46° piano
 54° piano
 A che piano vuoi andare?
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 263
 ~~~~~~~~~~~~~~~
@@ -4457,6 +4687,10 @@ Text File : 265
 Questa curva è straordinaria!
 Secondo te, dove si trova il centro del\nPonte Freccialuce?
 Wow! Quelli là in fondo sono i grattacieli\ndi Austropoli.
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 267
 ~~~~~~~~~~~~~~~
@@ -4645,6 +4879,10 @@ Text File : 277
 ~~~~~~~~~~~~~~~
 Ora siete in ottima forma!\c\nQuando vi sentite stanchi, venite da me.\nVi farò riposare in tutta calma.
 Oh, la tua squadra è un po' affaticata.\c\nRiposatevi pure, senza fare complimenti!\c
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 279
 ~~~~~~~~~~~~~~~
@@ -5237,6 +5475,42 @@ Fantastico! Hai completato la missione!\nHai del talento, giovane Allenatore!\c\
 Mmh... hai fallito la tua missione.\c\nNon preoccuparti, è sbagliando che si\nimpara!\c\nSe vuoi metterti ancora alla prova, non\ndevi far altro che attraversare di nuovo\r\nil ponte!\c\nIl segreto è guardare bene la mappa e\ntrovare l'Allenatore di quel mondo!
 Oooh... hai ricevuto un Passapotere!\c\nNiente male, davvero niente male!\nComplimenti! Ben fatto!\c\nCon questo Passapotere potrai aiutare\ngli Allenatori intorno a te!\c\nPiù tardi prova a dare un'occhiata al\nLog Contatti del tuo C-Gear.\c\n...\c\nBene, ormai ti ho insegnato tutto quello\nche so.\c\nAiuta tutti gli Allenatori che puoi e rendi\nl'Intramondo un luogo sempre più felice!\c\n...\c\nIl potere di questo luogo è tuo!\c\nAccumula quanta più felicità riesci e\nraccogli tutti i Passapoteri!
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 313
 ~~~~~~~~~~~~~~~
 Ehi, Allenatore! Ti va di partecipare\nall'esperimento del secolo?\c\nPer giocare col Pokétrasporto servono\ndue console Nintendo DS!\c\nHai una seconda console Nintendo DS\na disposizione?
@@ -5320,6 +5594,7 @@ Guarda i Pokémon con cui hai varcato la\nSala d'Onore.
 Esci dall'archivio record.
 Accesso al PC della Prof.ssa Aralia.\c
 Accesso al sistema di aiuto.\c
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 315
 ~~~~~~~~~~~~~~~
@@ -5354,30 +5629,35 @@ Text File : 317
 Stavo cercando delle Passabilie e\nguarda un po' dove le ho trovate!\c\nProprio davanti all'entrata di un Centro\nPokémon! Questa sì che è una sorpresa!
 Ma come?! Sono diventato un giocatore\ndi baseball!\r\nNon capisco... cos'è successo?!\c\nNon posso mica andare a scuola in queste\ncondizioni!
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 318
 ~~~~~~~~~~~~~~~
 E come ci è finita una Passabilia sotto\nl'insegna della città?!\r\nEh? Ma questo che posto è?\c\nSono passato sotto l'insegna e... dove\nsono spariti tutti?
 Si dice che le Passabilie contengano\nla gratitudine della gente!\c\nE quindi se ne trovano a bizzeffe proprio\nnei posti dove si è aiutato qualcuno!
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 319
 ~~~~~~~~~~~~~~~
 Eh? Ma dove sono andati a finire tutti?\nSiamo venuti qui assieme a vedere gli\r\naerei, ma...\c\nEhi! Dove siete spariti?!
 Cosa?! Sono diventato Pilota! È sempre\nstato il mio sogno!
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 320
 ~~~~~~~~~~~~~~~
 Io in realtà sono un ragazzo...\c\nMi sono guardato allo specchio poco fa\ne non riuscivo a credere ai miei occhi!\c\nCos'è successo? Sarà un'altra magia\ndell'Intramondo?
 Eccomi di nuovo qui... eppure, giusto\nun attimo fa dormivo come un sasso!\c\nChe sia soltanto un sogno? I sogni sono\nsempre in bianco e nero...
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 321
 ~~~~~~~~~~~~~~~
 Ho sempre trovato strano che le città e\ni Percorsi di Unima sembrino disegnare\r\nun cerchio concentrico...\c\nStavo giusto facendo delle ricerche per\ncercare di capirlo, quando di colpo mi\r\nsono ritrovata qui.\c\nMa che posto è questo?!
 Si dice che un tempo l'Intralbero fosse\nmolto più grande e che si potessero\r\nusare molti Passapoteri diversi.
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 322
 ~~~~~~~~~~~~~~~
@@ -6345,18 +6625,101 @@ Text File : 323
 
 
 
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 344
 ~~~~~~~~~~~~~~~
 Io credo che i Passapoteri prendano\nforma dai sogni e dai pensieri della gente\r\ne dei Pokémon di Unima...\c\nSogni e pensieri che si condensano come\nal centro di un turbine.
 Forse la gente del passato ha costruito\nla regione di Unima con una struttura a\r\nspirale proprio per poter convogliare\r\ni Passapoteri verso il centro...
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 345
 ~~~~~~~~~~~~~~~
 Si dice che le rovine dell'Intramondo\nesistano da ancor prima che gli umani\r\niniziassero a vivere assieme ai Pokémon.\c\nLe forze che dimorano in questo luogo\nsono antichissime! È incredibile!
 Eh? Dove sono finiti tutti? Fino a pochi\nminuti fa ero al mare, a divertirmi con\r\ni miei amici...
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 346
 ~~~~~~~~~~~~~~~
@@ -6385,6 +6748,36 @@ Sono spiacente, ma non puoi ancora\nentrare nella Sala Contatto.\c
 Hai almeno un Pokémon che non può essere\nusato.\c
 A proposito...\c\nNella tua Scheda Allenatore appare\nancora scritto solo “Allenatore"\r\nnella sezione del titolo, vero?\c\nSe lo cambi, è più facile dare una certa\nimmagine di te quando incontri qualcuno\r\nnella Sala Contatto.\c\nPer esempio, che ne dici di [VAR 010E(0000)]?\c\nÈ solo la mia opinione personale, ma\nintanto prova a cambiarlo.\c\nSe poi non è di tuo gradimento, fai sempre\nin tempo a toccare il riquadro e cambiarlo\r\ndi nuovo.\c
 Sembra che non si possa ancora usare.
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 347
 ~~~~~~~~~~~~~~~
@@ -6576,6 +6969,7 @@ Percorso 3
 
 Consigli utili\c\n\nÈ importante scegliere bene il Pokémon\nche metti in alto a sinistra nella Lista\r\nPokémon! Sarà lanciato in campo per\nprimo all'inizio di ogni lotta!
 Pensione Pokémon\nCi prendiamo cura dei tuoi Pokémon!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 354
 ~~~~~~~~~~~~~~~
@@ -6612,6 +7006,10 @@ Seguace Plasma: Ok, vi ridò il Pokémon...\c\nPerò immaginate come debba esser
 Seguace Plasma: Un giorno capirete\nla vostra stupidità.\c
 Komor: Gli Allenatori fanno emergere\nle capacità innate dei Pokémon.\c\nE i Pokémon obbediscono agli Allenatori\nperché si fidano di loro.\c\nNon capisco proprio come tutto questo\npossa rendere tristi i Pokémon!\c
 Allora, [VAR 0100(0000)]. Io vado a restituire\nil Pokémon.\c
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 358
 ~~~~~~~~~~~~~~~
@@ -6700,6 +7098,10 @@ Ponte di Libecciopoli
 
 Consigli utili\c\n\nNella Borsa ci sono diverse Tasche,\r\nper tenere i vari tipi di strumenti.\c\nOgni nuovo strumento viene inserito\nautomaticamente nella Tasca giusta.\c\nBasati sul nome delle Tasche, quando\nvuoi usare uno strumento.
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 363
 ~~~~~~~~~~~~~~~
 Senti, a proposito della Cava Ponentopoli\nche si trova lungo il Percorso 6...\c\nSi dice che nel suo fondo viva un Pokémon\nincredibile che nell'antichità ha protetto\r\ni Pokémon di Unima da un mare di fuoco.\c\nIl suo nome è Cobalion.\c\nSe sei capace di solcare le acque con la\nmossa Surf, forse avrai l'occasione di\r\nincontrarlo.
@@ -6741,6 +7143,14 @@ Temperatura del Percorso 6: [VAR 0201(0000)]°.
 Temperatura del Percorso 6: [VAR 0201(0000)]°.
 Temperatura del Percorso 6: [VAR 0201(0000)]°.
 Temperatura del Percorso 6: -[VAR 0200(0000)]°.
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 367
 ~~~~~~~~~~~~~~~
@@ -6793,6 +7203,18 @@ Text File : 370
 ~~~~~~~~~~~~~~~
 Questa è la Torre Cielo, un luogo dove\nriposano gli spiriti dei Pokémon.
 Sulla cima c'è una campana...\c\nSi dice che gli spiriti che riposano si\nrallegrino quando ne sentono i rintocchi.
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 374
 ~~~~~~~~~~~~~~~
@@ -6900,6 +7322,7 @@ Per insegnare la mossa a Keldeo, bisogna\nche siano presenti anche Cobalion,\r\n
 Natura rigogliosa e acqua pura... per\ni Pokémon questo bosco è un vero\r\nparadiso terrestre.\c\nE naturalmente sta a cuore anche agli\nuomini. Dobbiamo averne molta cura.
 Desideri insegnare di nuovo a Keldeo\nla stessa mossa?
 Non fa piacere a nessuno lasciare le cose\nin sospeso.\c
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 379
 ~~~~~~~~~~~~~~~
@@ -6953,6 +7376,18 @@ Text File : 383
 ~~~~~~~~~~~~~~~
 Tutti questi scatoloni...\c\nSono pieni di apparecchiature elettriche\nrimaste invendute.\c\nÈ un vero peccato. Se solo qualcuno\npotesse farne buon uso!
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 387
 ~~~~~~~~~~~~~~~
 Komor: Stop!\c\n[VAR 0100(0000)]!\c
@@ -6990,6 +7425,7 @@ Fermati! La chiave che ti aprirà questo\nportale è la Medaglia Base!\c
 
 Tu che possiedi la Medaglia Base, dimostra\nil sapere che hai acquisito!
 Ma devi prima conquistarla nella Palestra\ndi Zefiropoli!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 390
 ~~~~~~~~~~~~~~~
@@ -6997,6 +7433,7 @@ Fermati! La chiave che ti aprirà questo\nportale è la Medaglia Scarabeo!\c
 
 Tu che possiedi la Medaglia Scarabeo,\neguaglia le doti dei Pokémon coleottero!
 Ma prima devi conquistarla nella Palestra\ndi Austropoli!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 391
 ~~~~~~~~~~~~~~~
@@ -7004,6 +7441,7 @@ Fermati! La chiave che ti aprirà questo\nportale è la Medaglia Volt!\c
 
 Tu che possiedi la Medaglia Volt,\nelettrizza i tuoi nemici nella lotta!
 Ma devi prima conquistarla nella Palestra\ndi Sciroccopoli!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 392
 ~~~~~~~~~~~~~~~
@@ -7020,6 +7458,7 @@ Fermati! La chiave che ti aprirà questo\nportale è la Medaglia Jet!\c
 
 Tu che possiedi la Medaglia Jet, procedi\nsenza arrestare il tuo impeto!
 Ma devi prima conquistarla nella Palestra\ndi Ponentopoli!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 394
 ~~~~~~~~~~~~~~~
@@ -7027,6 +7466,7 @@ Fermati! La chiave che ti aprirà questo\nportale è la Medaglia Stalattite!\c
 
 Tu che possiedi la Medaglia Stalattite,\ndimostra di avere il rigore del ghiaccio!
 Ma devi prima conquistarla nella Palestra\ndi Mistralopoli!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 395
 ~~~~~~~~~~~~~~~
@@ -7034,6 +7474,11 @@ Fermati! La chiave che ti aprirà questo\nportale è la Medaglia Leggenda!\c
 
 Tu che possiedi la Medaglia Leggenda,\nsuperata la Via Vittoria, dirigiti verso\r\nla Lega Pokémon e rivela il tuo valore!
 Ma prima devi conquistarla nella Palestra\ndi Boreduopoli!
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 397
 ~~~~~~~~~~~~~~~
@@ -7182,6 +7627,10 @@ La Lotta a Rotazione è un nuovo tipo di\nsfida in cui ciascuno manda in campo t
 Un buon Allenatore dovrebbe avere più\nspirito d'iniziativa.
 Se ti va, prova a coinvolgere i tuoi amici\nin una Lotta a Rotazione!
 ~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+~~~~~~~~~~~~~~~
 Text File : 414
 ~~~~~~~~~~~~~~~
 Oh, ciao! Senti, non è che per caso hai\ngià catturato [VAR 0101(0000)]?\c\nIo ho [VAR 0101(0001)], vorresti fare uno\nscambio?
@@ -7234,6 +7683,7 @@ Bellocchio: Grazie!\c\nAllora, escludendo Ghecis, vediamo un po'\nquanti Saggi r
 Bellocchio: Grazie!\c\nSenti, [VAR 0100(0000)], ho un'informazione\nda darti.\c\nMi è giunta voce che una persona dalle\nsembianze di N è stata avvistata in un\r\nluogo molto lontano da qui, in compagnia\r\ndi un Pokémon drago.\c\nIo vado ad accertarmi della veridicità\ndell'informazione. Spero di rivederti\r\npresto!\c
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 420
 ~~~~~~~~~~~~~~~
@@ -7419,8 +7869,8 @@ Consegna
 Ritira
 Esci
 
-[VAR 0101(0000)]⑭   L. [VAR 0202(0001)]
-[VAR 0101(0000)]⑮   L. [VAR 0202(0001)]
+[VAR 0101(0000)]♂   L. [VAR 0202(0001)]
+[VAR 0101(0000)]♀   L. [VAR 0202(0001)]
 [VAR 0101(0000)]   L. [VAR 0202(0001)]
 ~~~~~~~~~~~~~~~
 Text File : 427
@@ -7733,6 +8183,7 @@ I Pokémon farebbero qualsiasi cosa per\naiutare le persone.\c\nE le persone li 
 Che splendida vista! E che musica\nmeravigliosa!\c\nQui si può essere davvero felici. Adoro\nquesto posto.
 I Pokémon selvatici sbucano fuori\ndall'erba alta e si lanciano all'attacco,\r\nma basta far capire loro i propri\r\nsentimenti e diventeranno più amichevoli!
 Quattroventi\nFresche arie di musica e pace
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 437
 ~~~~~~~~~~~~~~~
@@ -7959,6 +8410,7 @@ Stupenda la Squama Bella, no? Prova\na darla a uno dei tuoi Pokémon!
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 453
 ~~~~~~~~~~~~~~~
@@ -8638,6 +9090,7 @@ Vabbè... sarà per la prossima volta!
 Durante una Lotta in Triplo ci sono un\nsacco di cose a cui pensare, ma è proprio\r\nquello il bello!
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 469
 ~~~~~~~~~~~~~~~
@@ -8750,6 +9203,7 @@ Esci
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 471
 ~~~~~~~~~~~~~~~

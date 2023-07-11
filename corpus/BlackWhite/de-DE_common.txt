@@ -706,6 +706,7 @@ Text File : 6
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 7
 ~~~~~~~~~~~~~~~
@@ -899,8 +900,8 @@ ZURÜCK
 BEUTEL
 GEBEN
 BEWEGEN
-⑭
-⑮
+♂
+♀
 [VAR 0106(0000)]
 [VAR 0108(0000)]
 [VAR 0109(0000)]
@@ -1297,8 +1298,8 @@ Text File : 12
 [VAR 0107(0000)]
 AP
 [VAR 0201(0000)]/[VAR 0201(0001)]
-[VAR 0102(0000)]⑭
-[VAR 0102(0000)]⑮
+[VAR 0102(0000)]♂
+[VAR 0102(0000)]♀
 [VAR 0102(0000)]
 [VAR 0202(0000)]
 /
@@ -4456,8 +4457,8 @@ L[VAR 0202(0000)]
 
 AP
 TAUSCH
-⑭
-⑮
+♂
+♀
 BERICHT
 ATTACKEN
 KAMPFUNFÄHIG
@@ -4720,6 +4721,7 @@ Text File : 26
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 27
 ~~~~~~~~~~~~~~~
@@ -4783,6 +4785,7 @@ Text File : 28
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 29
 ~~~~~~~~~~~~~~~
@@ -4822,6 +4825,7 @@ Es existieren bereits andere Speicherdaten.\nÄnderung nicht möglich.\c
 Änderungen vornehmen?
 JA
 NEIN
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 30
 ~~~~~~~~~~~~~~~
@@ -4877,6 +4881,7 @@ Text File : 31
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 32
 ~~~~~~~~~~~~~~~
@@ -4923,6 +4928,7 @@ OPTIONEN
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 35
 ~~~~~~~~~~~~~~~
@@ -4951,6 +4957,7 @@ Lilo
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 36
 ~~~~~~~~~~~~~~~
@@ -5372,6 +5379,7 @@ Hör mir gut zu, [VAR 0100(0000)]!\c\nVon dem Augenblick an, an dem du dich für
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 45
 ~~~~~~~~~~~~~~~
@@ -5557,6 +5565,7 @@ Text File : 48
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 49
 ~~~~~~~~~~~~~~~
@@ -5571,6 +5580,7 @@ RANGLISTE EINSEHEN
 ZURÜCK
 ABBRECHEN
 HARMONIETEST
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 50
 ~~~~~~~~~~~~~~~
@@ -5615,6 +5625,7 @@ Die Verbindung wurde unterbrochen.\nBitte stelle eine Infrarotverbindung her.
 RHYTHMUSTEST
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 53
 ~~~~~~~~~~~~~~~
@@ -6987,6 +6998,7 @@ Worüber möchtest du etwas wissen?
 [VAR 0200(0000)]/[VAR 0200(0001)]
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 62
 ~~~~~~~~~~~~~~~
@@ -7445,6 +7457,7 @@ Verstecke das Item [VAR 0109(0000)] zwischen\ndem Strand und dem Festland auf Ro
 Verstecke das Item [VAR 0109(0000)] vor\ndem Abfalleimer auf Route 15!
 Verstecke das Item [VAR 0109(0000)] in einer\nLücke zwischen den Zäunen auf Route 16!
 Verkaufe [VAR 0100(0000)] das Item\n[VAR 0109(0001)] zu einem Sonderpreis!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 67
 ~~~~~~~~~~~~~~~
@@ -7531,6 +7544,7 @@ Verstecke das Item [VAR 0109(0000)]\nzw. Strand und Festland auf Route 14!\n(Neu
 Verstecke das Item [VAR 0109(0000)] vor\ndem Mülleimer auf Route 15!\n(Neustart, wenn du angesprochen wirst)\n\n\nZeitbegrenzung: [VAR 0202(0002)] Sekunden\n\nBelohnung: [VAR 0201(0003)] Transferorb(s)
 Verstecke das Item [VAR 0109(0000)] in der\nLücke zwischen den Zäunen auf Route 16!\n(Neustart, wenn du angesprochen wirst)\n\n\nZeitbegrenzung: [VAR 0202(0002)] Sekunden\n\nBelohnung: [VAR 0201(0003)] Transferorb(s)
 Verkaufe [VAR 0100(0000)] das Item\n[VAR 0109(0001)] zu einem Sonderpreis!\n(Mission scheitert, wenn Partner ablehnt)\n\n\nZeitbegrenzung: [VAR 0202(0002)] Sekunden\n\nBelohnung: [VAR 0201(0003)] Transferorb(s)
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 68
 ~~~~~~~~~~~~~~~
@@ -7907,6 +7921,7 @@ Oh, entschuldige... fast hätte ich\nzugeschlagen, aber ich merke gerade,\r\ndas
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 69
 ~~~~~~~~~~~~~~~
@@ -7985,10 +8000,10 @@ Pikachu
 Raichu
 Sandan
 Sandamer
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Piepi
@@ -8695,6 +8710,7 @@ Text File : 73
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 74
 ~~~~~~~~~~~~~~~
@@ -8708,6 +8724,7 @@ Text File : 74
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 75
 ~~~~~~~~~~~~~~~
@@ -9801,8 +9818,8 @@ Es können nur maximal vier Ziffern\neingegeben werden!
 
 Shiro*
 Kuro*
-⑭
-⑮
+♂
+♀
 ~~~~~~~~~~~~~~~
 Text File : 82
 ~~~~~~~~~~~~~~~
@@ -9835,8 +9852,8 @@ Kampfbox
 Zurück
 Möchtest du die Pokémon aus deinem Team\noder aus der Kampfbox einsetzen?
 L[VAR 0202(0000)]
-[VAR FF00(0002)]⑭[VAR FF00(0000)]
-[VAR FF00(0001)]⑮[VAR FF00(0000)]
+[VAR FF00(0002)]♂[VAR FF00(0000)]
+[VAR FF00(0001)]♀[VAR FF00(0000)]
 ~~~~~~~~~~~~~~~
 Text File : 85
 ~~~~~~~~~~~~~~~
@@ -9846,8 +9863,8 @@ Ruhmeshalle Nr. [VAR BD00(0005,0006,0000)][VAR 0203(0000)][VAR BD00(0001,0002,00
 /
 [VAR 0201(0000)]
 [VAR 0101(0000)]
-⑭
-⑮
+♂
+♀
 [VAR 0202(0000)]
 NAME: [VAR 0102(0000)]
 FINDER: [VAR 0100(0000)]
@@ -10255,6 +10272,7 @@ Bitte bringe dies ([VAR 011C(0000)])\nhierhin: [VAR 011C(0001)].
 Text File : 97
 ~~~~~~~~~~~~~~~
 [VAR 011C(0000)]
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 98
 ~~~~~~~~~~~~~~~
@@ -13054,6 +13072,7 @@ UNTERRICHT
 URLAUB
 URSARING
 URTEILSKRAFT
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 121
 ~~~~~~~~~~~~~~~
@@ -13209,6 +13228,22 @@ Text File : 123
 ~~~~~~~~~~~~~~~
 XATU
 [NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 124
 ~~~~~~~~~~~~~~~
@@ -13268,6 +13303,73 @@ ZWIRRKLOP
 ZWIRRLICHT
 ZWOTTRONIN
 ZYTOMEGA
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 126
 ~~~~~~~~~~~~~~~
@@ -13284,6 +13386,624 @@ Text File : 126
 絵_KLASSE♪
 絵_SOEINSPAS
 絵_VERZEIHUNG
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 145
 ~~~~~~~~~~~~~~~
@@ -13301,6 +14021,7 @@ SPEZIAL
 CONNECTION
 ÄUSSERUNGEN
 ???
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 146
 ~~~~~~~~~~~~~~~
@@ -13337,6 +14058,7 @@ Text File : 147
 ~~~~~~~~~~~~~~~
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 148
 ~~~~~~~~~~~~~~~
@@ -13783,8 +14505,8 @@ L[VAR 0202(0000)]
 [VAR 0202(0000)]
 [VAR 0202(0000)]
 /
-⑭
-⑮
+♂
+♀
 Wähle ein Pokémon.
 
 An wessen Stelle setzen?
@@ -13960,8 +14682,8 @@ Du hast kein weiteres Exemplar des\nItems [VAR 0109(0000)] zur Verfügung.
 Text File : 158
 ~~~~~~~~~~~~~~~
 [VAR 0102(0000)]
-⑭
-⑮
+♂
+♀
 Lv. [VAR 0202(0000)]
 ITEM
 [VAR 0109(0000)]
@@ -14154,6 +14876,7 @@ Diese Attacke ist sehr wichtig! Sie\nkann jetzt nicht vergessen werden!
 
 Vergessen!
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 159
 ~~~~~~~~~~~~~~~
@@ -14203,8 +14926,8 @@ FÄHIGK.
 [VAR 0109(0000)]
 ATTACKEN
 [VAR 0107(0000)]
-⑭
-⑮
+♂
+♀
 [VAR 0100(0000)] versandte [VAR 0102(0001)].
 Kümmere dich gut um [VAR 0102(0001)]!
 Datenübertragung läuft.\nBitte warten...
@@ -14370,6 +15093,7 @@ EP-Kraft MAX
 Kaufkraft MAX
 Fangkraft MAX
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 161
 ~~~~~~~~~~~~~~~
@@ -14420,6 +15144,7 @@ Erhöht die Anzahl der nach einem Kampf\nerhaltenen E.-Punkte drastisch.\nDie Wi
 Erhöht das nach einem Kampf\nerhaltene Preisgeld drastisch.\nDie Wirkung hält 60 Minuten an.
 Erhöht die Wahrscheinlichkeit,\nein Pokémon zu fangen, drastisch.\nDie Wirkung hält 60 Minuten an.
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 162
 ~~~~~~~~~~~~~~~
@@ -14428,6 +15153,7 @@ Text File : 162
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 163
 ~~~~~~~~~~~~~~~
@@ -14562,6 +15288,7 @@ Text File : 167
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 168
 ~~~~~~~~~~~~~~~
@@ -14780,12 +15507,14 @@ Text File : 171
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 172
 ~~~~~~~~~~~~~~~
 Nanu?\n[VAR 0102(0000)] entwickelt sich!
 Hm? Die Entwicklung\nwurde abgebrochen!
 Glückwunsch! Dein [VAR 0102(0000)]\nwurde zu einem [VAR 0101(0001)]!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 173
 ~~~~~~~~~~~~~~~
@@ -16912,26 +17641,26 @@ Text File : 175
 Text File : 176
 ~~~~~~~~~~~~~~~
 [VAR 0100(0000)]
-\cCheren
-\cBell
-\cMaik
-\cColin
-\cBenny
-\cAloe
-\cArtie
-\cKamilla
-\cTurner
-\cGéraldine
-\cSandro
-\cLilia
-\cLysander
-\cAnissa
-\cAstor
-\cEugen
-\cKattlea
-\cLauro
-\cN
-\cG-Cis
+[COMP]Cheren
+[COMP]Bell
+[COMP]Maik
+[COMP]Colin
+[COMP]Benny
+[COMP]Aloe
+[COMP]Artie
+[COMP]Kamilla
+[COMP]Turner
+[COMP]Géraldine
+[COMP]Sandro
+[COMP]Lilia
+[COMP]Lysander
+[COMP]Anissa
+[COMP]Astor
+[COMP]Eugen
+[COMP]Kattlea
+[COMP]Lauro
+[COMP]N
+[COMP]G-Cis
 ~~~~~~~~~~~~~~~
 Text File : 177
 ~~~~~~~~~~~~~~~
@@ -17624,6 +18353,7 @@ Text File : 178
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 179
 ~~~~~~~~~~~~~~~
@@ -17674,10 +18404,12 @@ Sp. Ang.
 Sp. Ver.
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 181
 ~~~~~~~~~~~~~~~
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 182
 ~~~~~~~~~~~~~~~
@@ -19115,6 +19847,7 @@ Text File : 186
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 187
 ~~~~~~~~~~~~~~~
@@ -21091,497 +21824,497 @@ Der Kampf ist vorbei, mein Herz erfrischt...\c\nWachse an diesem Kampf und errei
 ~~~~~~~~~~~~~~~
 Text File : 190
 ~~~~~~~~~~~~~~~
-\c-
-\cEdmund
-\cMali
-\cFritzchen
-\cLeni
-\cSteffi
-\cBruce
-\cJulian
-\cInka
-\cGianluca
-\cDorota
-\cMaik
-\cBenny
-\cColin
-\cMeinhardis
-\cJadwiga
-\cFinn
-\cAmadeus
-\cEva&Ute
-\cMassimo
-\cOdile
-\cAloe
-\cArtie
-\cKamilla
-\cTurner
-\cGéraldine
-\cMatthieu
-\cIlaria
-\cKhanwali
-\cIvanka
-\cAntal
-\cSinéad
-\cVivi&Bibi
-\cLogan
-\cJo
-\cScott
-\cFibio
-\cZeljko
-\cDejan
-\cAlvar
-\cSvenja
-\cMarlon
-\cBalint
-\cMary-Joe
-\cBalazs
-\cKaro
-\cFelix
-\cAndro
-\cGuglielmo
-\cIgnaz
-\cElse
-\cUmberto
-\cMontserrat
-\cCheren
-\cCheren
-\cCheren
-\cCheren
-\cCheren
-\cCheren
+[COMP]-
+[COMP]Edmund
+[COMP]Mali
+[COMP]Fritzchen
+[COMP]Leni
+[COMP]Steffi
+[COMP]Bruce
+[COMP]Julian
+[COMP]Inka
+[COMP]Gianluca
+[COMP]Dorota
+[COMP]Maik
+[COMP]Benny
+[COMP]Colin
+[COMP]Meinhardis
+[COMP]Jadwiga
+[COMP]Finn
+[COMP]Amadeus
+[COMP]Eva&Ute
+[COMP]Massimo
+[COMP]Odile
+[COMP]Aloe
+[COMP]Artie
+[COMP]Kamilla
+[COMP]Turner
+[COMP]Géraldine
+[COMP]Matthieu
+[COMP]Ilaria
+[COMP]Khanwali
+[COMP]Ivanka
+[COMP]Antal
+[COMP]Sinéad
+[COMP]Vivi&Bibi
+[COMP]Logan
+[COMP]Jo
+[COMP]Scott
+[COMP]Fibio
+[COMP]Zeljko
+[COMP]Dejan
+[COMP]Alvar
+[COMP]Svenja
+[COMP]Marlon
+[COMP]Balint
+[COMP]Mary-Joe
+[COMP]Balazs
+[COMP]Karo
+[COMP]Felix
+[COMP]Andro
+[COMP]Guglielmo
+[COMP]Ignaz
+[COMP]Else
+[COMP]Umberto
+[COMP]Montserrat
+[COMP]Cheren
+[COMP]Cheren
+[COMP]Cheren
+[COMP]Cheren
+[COMP]Cheren
+[COMP]Cheren
 Bell
 Bell
 Bell
-\cRüpel
-\cRüpel
-\cN
-\cN
-\cArnd
-\cStelian
-\cArantxa
-\cColette
-\cPatrick
-\cDarius
-\cTyson
-\cMladen
-\cIsaak
-\cQuirin
-\cKuno
-\cSami
-\cZdravko
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]N
+[COMP]N
+[COMP]Arnd
+[COMP]Stelian
+[COMP]Arantxa
+[COMP]Colette
+[COMP]Patrick
+[COMP]Darius
+[COMP]Tyson
+[COMP]Mladen
+[COMP]Isaak
+[COMP]Quirin
+[COMP]Kuno
+[COMP]Sami
+[COMP]Zdravko
 
 
-\cRüpel
-\cJay-Jay
-\cJohn
-\cAlbin
-\cErwin
-\cErnst
-\cLinda
-\cCindy
-\cN
-\cCheren
-\cCheren
-\cCheren
-\cElfi
-\cPiera
-\cIldiko
-\cEnikö
-\cJoao
-\cKinga
-\cCarmen
-\cAngélique
-\cAva
-\cDea
-\cLiam
-\cNaoto
-\cRainier
-\cArnar
-\cAbigail
-\cAnselm
-\cEduard
-\cIsmael
-\cJayden
-\cWilhelm
-\cMilos
-\cGregor
-\cCameron
-\cFriederike
-\cTina
-\cKyle
-\cMarkus
-\cErin
-\cBrooke
-\cGerrit
-\cSean
-\cShane
-\cCooper
+[COMP]Rüpel
+[COMP]Jay-Jay
+[COMP]John
+[COMP]Albin
+[COMP]Erwin
+[COMP]Ernst
+[COMP]Linda
+[COMP]Cindy
+[COMP]N
+[COMP]Cheren
+[COMP]Cheren
+[COMP]Cheren
+[COMP]Elfi
+[COMP]Piera
+[COMP]Ildiko
+[COMP]Enikö
+[COMP]Joao
+[COMP]Kinga
+[COMP]Carmen
+[COMP]Angélique
+[COMP]Ava
+[COMP]Dea
+[COMP]Liam
+[COMP]Naoto
+[COMP]Rainier
+[COMP]Arnar
+[COMP]Abigail
+[COMP]Anselm
+[COMP]Eduard
+[COMP]Ismael
+[COMP]Jayden
+[COMP]Wilhelm
+[COMP]Milos
+[COMP]Gregor
+[COMP]Cameron
+[COMP]Friederike
+[COMP]Tina
+[COMP]Kyle
+[COMP]Markus
+[COMP]Erin
+[COMP]Brooke
+[COMP]Gerrit
+[COMP]Sean
+[COMP]Shane
+[COMP]Cooper
 
-\cEthan
-\cAdam
-\cMesut
-\cMehmet
-\cSandro
-\cLilia
-\cLysander
-\cDylan
-\cHarry
-\cFridolin
-\cRasmus
-\cIoannis
-\cJuliane
-\cNiels
-\cOlaf
-\cDietrich
-\cBogdan
-\cMatthew
-\cHamish
-\cLeo
-\cNico
-\cVito
-\cMagnus
-\cOndrej
-\cTheodor
-\cHelga
-\cIgor
-\cEnzo
-\cRuth
-\cManon
-\cBob&Rob
-\cChiara
-\cShannon
-\cLee
-\cAstrid
-\cConchita
-\cElke
-\cLjudmila
-\cAlessio
-\cJohannes
-\cEwald
-\cTakao
-\cBennet
-\cGreg
-\cPanagiotis
-\cAl&Kay
-\cLuis&Gill
-\cPhil&Ron
-\cNiki&Leti
-\cShana&Raya
-\cTiago
-\cSpyridon
-\cKlara
-\cArtjom
-\cEgidius
-\cRui
-\cFloyd
-\cArmin
-\cVojtek
-\cMerwe
-\cRosario
-\cIsmene
-\cSigrun
-\cHeike
-\cPerry
-\cRyan
-\cWieland
-\cUrban
-\cMelvin
-\cFilippo
+[COMP]Ethan
+[COMP]Adam
+[COMP]Mesut
+[COMP]Mehmet
+[COMP]Sandro
+[COMP]Lilia
+[COMP]Lysander
+[COMP]Dylan
+[COMP]Harry
+[COMP]Fridolin
+[COMP]Rasmus
+[COMP]Ioannis
+[COMP]Juliane
+[COMP]Niels
+[COMP]Olaf
+[COMP]Dietrich
+[COMP]Bogdan
+[COMP]Matthew
+[COMP]Hamish
+[COMP]Leo
+[COMP]Nico
+[COMP]Vito
+[COMP]Magnus
+[COMP]Ondrej
+[COMP]Theodor
+[COMP]Helga
+[COMP]Igor
+[COMP]Enzo
+[COMP]Ruth
+[COMP]Manon
+[COMP]Bob&Rob
+[COMP]Chiara
+[COMP]Shannon
+[COMP]Lee
+[COMP]Astrid
+[COMP]Conchita
+[COMP]Elke
+[COMP]Ljudmila
+[COMP]Alessio
+[COMP]Johannes
+[COMP]Ewald
+[COMP]Takao
+[COMP]Bennet
+[COMP]Greg
+[COMP]Panagiotis
+[COMP]Al&Kay
+[COMP]Luis&Gill
+[COMP]Phil&Ron
+[COMP]Niki&Leti
+[COMP]Shana&Raya
+[COMP]Tiago
+[COMP]Spyridon
+[COMP]Klara
+[COMP]Artjom
+[COMP]Egidius
+[COMP]Rui
+[COMP]Floyd
+[COMP]Armin
+[COMP]Vojtek
+[COMP]Merwe
+[COMP]Rosario
+[COMP]Ismene
+[COMP]Sigrun
+[COMP]Heike
+[COMP]Perry
+[COMP]Ryan
+[COMP]Wieland
+[COMP]Urban
+[COMP]Melvin
+[COMP]Filippo
 
-\cArnulf
-\cGiacobbe
-\cThore
-\cKieran
-\cTjaard
-\cHinnerk
+[COMP]Arnulf
+[COMP]Giacobbe
+[COMP]Thore
+[COMP]Kieran
+[COMP]Tjaard
+[COMP]Hinnerk
 
-\cSunhild
-\cZach
-\cRicarda
-\cUgo
-\cInken
-\cHenriette
-\cReese
-\cSatsuki
-\cElena
-\cSolveig
-\cElliot
-\cJannis
-\cBrandon
-\cN
-
-
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cAnissa
-\cEugen
-\cAstor
-\cKattlea
-\cG-Cis
-\cQuint
-\cMorgan
-\cKora
-\cMatthias
-\cRudolf
-\cAnette
-\cKäte
-\cGenadi
-\cBlake
-\cHelge
-\cPepe
-\cOkka
-\cBettina
-\cElert
-\cMarcel
-\cEwan
-\cWinfried
-\cJost
-\cIlona
-\cArkadi
-\cEvelin
-\cXiao Zhu
-\cRandalf
-\cBernward
-\cXavier
-\cEdna
-\cFriedl
-\cMadison
-\cIrmgard
-\cReemt
-\cAldona
-\cAline
-\cPhoebe
-\cHarriet
-\cScarlett
-
-\cKouji
-\cNorman
-\cElmar
-\cConor
-
-\cKarel
-\cFeodora
-\cRüpel
-
-\cRüpel
-\cRüpel
-
-\cHernán
+[COMP]Sunhild
+[COMP]Zach
+[COMP]Ricarda
+[COMP]Ugo
+[COMP]Inken
+[COMP]Henriette
+[COMP]Reese
+[COMP]Satsuki
+[COMP]Elena
+[COMP]Solveig
+[COMP]Elliot
+[COMP]Jannis
+[COMP]Brandon
+[COMP]N
 
 
-\cDouglas
-\cGeorgia
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Anissa
+[COMP]Eugen
+[COMP]Astor
+[COMP]Kattlea
+[COMP]G-Cis
+[COMP]Quint
+[COMP]Morgan
+[COMP]Kora
+[COMP]Matthias
+[COMP]Rudolf
+[COMP]Anette
+[COMP]Käte
+[COMP]Genadi
+[COMP]Blake
+[COMP]Helge
+[COMP]Pepe
+[COMP]Okka
+[COMP]Bettina
+[COMP]Elert
+[COMP]Marcel
+[COMP]Ewan
+[COMP]Winfried
+[COMP]Jost
+[COMP]Ilona
+[COMP]Arkadi
+[COMP]Evelin
+[COMP]Xiao Zhu
+[COMP]Randalf
+[COMP]Bernward
+[COMP]Xavier
+[COMP]Edna
+[COMP]Friedl
+[COMP]Madison
+[COMP]Irmgard
+[COMP]Reemt
+[COMP]Aldona
+[COMP]Aline
+[COMP]Phoebe
+[COMP]Harriet
+[COMP]Scarlett
 
-\cCheren
-\cCheren
-\cCheren
-\cAivars
-\cVyacheslav
-\cGudrun
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cSerena
-\cSteffi
-\cSteffi
-\cSteffi
-\cMary-Joe
-\cMarco
-\cPerry
-\cPerry
-\cPerry
-\cRyan
-\cLothar
-\cMesut
-\cMesut
-\cMesut
-\cMehmet
-\cAnsgar
-\cBruce
-\cBruce
-\cBruce
-\cTiago
-\cErich
-\cJay-Jay
-\cJay-Jay
-\cJay-Jay
-\cJohn
-\cAl&Kay
-\cAl&Kay
-\cLuis&Gill
-\cLuis&Gill
-\cPhil&Ron
-\cPhil&Ron
-\cZac&Jen
-\cLes&Sal
-\cNiki&Leti
-\cNiki&Leti
-\cShana&Raya
-\cShana&Raya
-\cLúa&Lía
-\cKimber&Agi
-\cTia&Phae
-\cRosemarie
-\cHolger
-\cSkye
-\cLucinda
-\cPavel
-\cTiziano
-\cLucille
-\cFrieder
-\cNina
-\cEmre
-\cNanab
-\cHeiner
-\cNadeshda
-\cSophia
-\cAlfred
-\cEmilia
-\cHide
-\cJeff
-\cYukina
-\cWolfram
-\cDaphne
-\cWendelin
-\cKnut
-\cAnnemarie
-\cLieselotte
-\cLéon
-\cAimée
-\cHenryk
-\cNilüfer
-\cHüseyin
-\cFrank
-\cGesine
-\cLoic
-\cApollonia
-\cJaime
-\cMaxwell
-\cSusi
-\cDavide
-\cVadim
-\cRuslan
-\cErasmus
-\cGeoffrey
-\cAnnalena
-\cAngi
-\cBurkard
-\cClarissa
-\cTimmi
-\cTabea
-\cMichi
-\cCheren
-\cCheren
-\cCheren
+[COMP]Kouji
+[COMP]Norman
+[COMP]Elmar
+[COMP]Conor
+
+[COMP]Karel
+[COMP]Feodora
+[COMP]Rüpel
+
+[COMP]Rüpel
+[COMP]Rüpel
+
+[COMP]Hernán
+
+
+[COMP]Douglas
+[COMP]Georgia
+
+[COMP]Cheren
+[COMP]Cheren
+[COMP]Cheren
+[COMP]Aivars
+[COMP]Vyacheslav
+[COMP]Gudrun
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Serena
+[COMP]Steffi
+[COMP]Steffi
+[COMP]Steffi
+[COMP]Mary-Joe
+[COMP]Marco
+[COMP]Perry
+[COMP]Perry
+[COMP]Perry
+[COMP]Ryan
+[COMP]Lothar
+[COMP]Mesut
+[COMP]Mesut
+[COMP]Mesut
+[COMP]Mehmet
+[COMP]Ansgar
+[COMP]Bruce
+[COMP]Bruce
+[COMP]Bruce
+[COMP]Tiago
+[COMP]Erich
+[COMP]Jay-Jay
+[COMP]Jay-Jay
+[COMP]Jay-Jay
+[COMP]John
+[COMP]Al&Kay
+[COMP]Al&Kay
+[COMP]Luis&Gill
+[COMP]Luis&Gill
+[COMP]Phil&Ron
+[COMP]Phil&Ron
+[COMP]Zac&Jen
+[COMP]Les&Sal
+[COMP]Niki&Leti
+[COMP]Niki&Leti
+[COMP]Shana&Raya
+[COMP]Shana&Raya
+[COMP]Lúa&Lía
+[COMP]Kimber&Agi
+[COMP]Tia&Phae
+[COMP]Rosemarie
+[COMP]Holger
+[COMP]Skye
+[COMP]Lucinda
+[COMP]Pavel
+[COMP]Tiziano
+[COMP]Lucille
+[COMP]Frieder
+[COMP]Nina
+[COMP]Emre
+[COMP]Nanab
+[COMP]Heiner
+[COMP]Nadeshda
+[COMP]Sophia
+[COMP]Alfred
+[COMP]Emilia
+[COMP]Hide
+[COMP]Jeff
+[COMP]Yukina
+[COMP]Wolfram
+[COMP]Daphne
+[COMP]Wendelin
+[COMP]Knut
+[COMP]Annemarie
+[COMP]Lieselotte
+[COMP]Léon
+[COMP]Aimée
+[COMP]Henryk
+[COMP]Nilüfer
+[COMP]Hüseyin
+[COMP]Frank
+[COMP]Gesine
+[COMP]Loic
+[COMP]Apollonia
+[COMP]Jaime
+[COMP]Maxwell
+[COMP]Susi
+[COMP]Davide
+[COMP]Vadim
+[COMP]Ruslan
+[COMP]Erasmus
+[COMP]Geoffrey
+[COMP]Annalena
+[COMP]Angi
+[COMP]Burkard
+[COMP]Clarissa
+[COMP]Timmi
+[COMP]Tabea
+[COMP]Michi
+[COMP]Cheren
+[COMP]Cheren
+[COMP]Cheren
 Hin
-\cLauro
-\cLesley
-\cAntje
-\cWilhelmine
-\cWesley
-\cDaniel
-\cYevgeny
-\cWolfgang
-\cArmand
-\cAkira
-\cJoelle
-\cChun Lu
-\cCharley
-\cHenry
-\cIdris
-\cSelina
-\cEnrique
-\cBastian
-\cAlexis
-\cGisela
-\cNiclas
-\cSemra
-\cKilian
-\cTarek
-\cKarl
-\cHamilkar
-\cBertrand
-\cJacques
-\cHassan
-\cKonstantin
-\cTanja
-\cRuxandra
-\cClaire
-\cJon
-\cGeronimo
-\cOtis
-\cWilliam
-\cThekla
-\cSylvia
-\cElisabeta
-\cAnne
-\cLine&Fey
-\cEmy&Lin
-\cHayley
-\cPercy
-\cCarlotta
-\cJutta
-\cGwendolyn
-\cHiro
-\cMick
-\cSvantje
-\cTaylor
-\cLeigh
-\cOrlando
-\cAndrea
-\cCara
-\cJekaterina
-\cJoe
-\cIphigenie
-\cThomas
-\cYu
-\cDwain
-\cSwetlana
-\cAlejandro
-\cOttmar
-\cHerbert
-\cManfred
-\cSybille
-\cSelim
-\cBerno
-\cAnke
-\cNanette
-\cFernando
-\cShoya
-\cMira
-\cKajsa
-\cGerd
-\cFrieda
-\cElias
-\cGordana
-\cArnold
-\cHildegard
-\cMoya
-\cGoro
+[COMP]Lauro
+[COMP]Lesley
+[COMP]Antje
+[COMP]Wilhelmine
+[COMP]Wesley
+[COMP]Daniel
+[COMP]Yevgeny
+[COMP]Wolfgang
+[COMP]Armand
+[COMP]Akira
+[COMP]Joelle
+[COMP]Chun Lu
+[COMP]Charley
+[COMP]Henry
+[COMP]Idris
+[COMP]Selina
+[COMP]Enrique
+[COMP]Bastian
+[COMP]Alexis
+[COMP]Gisela
+[COMP]Niclas
+[COMP]Semra
+[COMP]Kilian
+[COMP]Tarek
+[COMP]Karl
+[COMP]Hamilkar
+[COMP]Bertrand
+[COMP]Jacques
+[COMP]Hassan
+[COMP]Konstantin
+[COMP]Tanja
+[COMP]Ruxandra
+[COMP]Claire
+[COMP]Jon
+[COMP]Geronimo
+[COMP]Otis
+[COMP]William
+[COMP]Thekla
+[COMP]Sylvia
+[COMP]Elisabeta
+[COMP]Anne
+[COMP]Line&Fey
+[COMP]Emy&Lin
+[COMP]Hayley
+[COMP]Percy
+[COMP]Carlotta
+[COMP]Jutta
+[COMP]Gwendolyn
+[COMP]Hiro
+[COMP]Mick
+[COMP]Svantje
+[COMP]Taylor
+[COMP]Leigh
+[COMP]Orlando
+[COMP]Andrea
+[COMP]Cara
+[COMP]Jekaterina
+[COMP]Joe
+[COMP]Iphigenie
+[COMP]Thomas
+[COMP]Yu
+[COMP]Dwain
+[COMP]Swetlana
+[COMP]Alejandro
+[COMP]Ottmar
+[COMP]Herbert
+[COMP]Manfred
+[COMP]Sybille
+[COMP]Selim
+[COMP]Berno
+[COMP]Anke
+[COMP]Nanette
+[COMP]Fernando
+[COMP]Shoya
+[COMP]Mira
+[COMP]Kajsa
+[COMP]Gerd
+[COMP]Frieda
+[COMP]Elias
+[COMP]Gordana
+[COMP]Arnold
+[COMP]Hildegard
+[COMP]Moya
+[COMP]Goro
 Bell
 Bell
 Bell
@@ -21592,121 +22325,121 @@ Bell
 Bell
 Bell
 Bell
-\cGretchen
-\cMäxchen
-\cRumborak
-\cLorenz
-\cShirley
-\cCharles
+[COMP]Gretchen
+[COMP]Mäxchen
+[COMP]Rumborak
+[COMP]Lorenz
+[COMP]Shirley
+[COMP]Charles
 Bell
 Bell
 Bell
 
 
 
-\cOphelia
-\cLaurent
-\cChester
-\cDenise
-\cDenise
-\cAudrey
-\cFred
-\cDrake
+[COMP]Ophelia
+[COMP]Laurent
+[COMP]Chester
+[COMP]Denise
+[COMP]Denise
+[COMP]Audrey
+[COMP]Fred
+[COMP]Drake
 
 
-\cTrish
-\cEulalia
-\cClifford
-\cFlavio
+[COMP]Trish
+[COMP]Eulalia
+[COMP]Clifford
+[COMP]Flavio
 
-\cLeif
-\cAmon
-\cHelene
-\cAnnike
-\cGirolamo
-\cEgidio
+[COMP]Leif
+[COMP]Amon
+[COMP]Helene
+[COMP]Annike
+[COMP]Girolamo
+[COMP]Egidio
 
-\cTomke
-\cMeret
-\cPrimo
-\cMarisol
-\cCheren
-\cCheren
-\cCheren
-\cMorimoto
-\cNicole
-\cDuncan
-\cOliver
-\cKathleen
-\cLudovike
-\cHieronymus
-\cAuguste
-\cDirk
-\cMarleen
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-\cRüpel
-
-
+[COMP]Tomke
+[COMP]Meret
+[COMP]Primo
+[COMP]Marisol
+[COMP]Cheren
+[COMP]Cheren
+[COMP]Cheren
+[COMP]Morimoto
+[COMP]Nicole
+[COMP]Duncan
+[COMP]Oliver
+[COMP]Kathleen
+[COMP]Ludovike
+[COMP]Hieronymus
+[COMP]Auguste
+[COMP]Dirk
+[COMP]Marleen
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
 
 
 
-\cAnissa
-\cEugen
-\cAstor
-\cKattlea
-\cCynthia
-\cAlexei
-\cSwjatoslaw
-\cFjodor
-\cGesche
-\cJosefine
-\cBerenice
-\cGöntje
-\cGustel
-\cOkko
-\cFamke
-\cTobit
-\cRosi
-\cFranziska
-\cGabriele
-\cGönke
-\cHenning
-\cKrischan
-\cNaomi
-\cN
-\cN
-\cCheren
-\cCheren
-\cCheren
-\cCheren
-\cCheren
-\cCheren
+
+
+[COMP]Anissa
+[COMP]Eugen
+[COMP]Astor
+[COMP]Kattlea
+[COMP]Cynthia
+[COMP]Alexei
+[COMP]Swjatoslaw
+[COMP]Fjodor
+[COMP]Gesche
+[COMP]Josefine
+[COMP]Berenice
+[COMP]Göntje
+[COMP]Gustel
+[COMP]Okko
+[COMP]Famke
+[COMP]Tobit
+[COMP]Rosi
+[COMP]Franziska
+[COMP]Gabriele
+[COMP]Gönke
+[COMP]Henning
+[COMP]Krischan
+[COMP]Naomi
+[COMP]N
+[COMP]N
+[COMP]Cheren
+[COMP]Cheren
+[COMP]Cheren
+[COMP]Cheren
+[COMP]Cheren
+[COMP]Cheren
 Bell
 Bell
 Bell
-\cRüpel
-\cRüpel
-\cRüpel
-\cPaco
-\cRaymond
-\cEdmondo
-\cCharles
-\cOphelia
-\cLaurent
-\cTill
-\cTill
-\cNaho
-\cNaho
-\cRüpel
-\cRüpel
-\cRüpel
-\cSigmund
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Paco
+[COMP]Raymond
+[COMP]Edmondo
+[COMP]Charles
+[COMP]Ophelia
+[COMP]Laurent
+[COMP]Till
+[COMP]Till
+[COMP]Naho
+[COMP]Naho
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Rüpel
+[COMP]Sigmund
 Her
-\cChuck
+[COMP]Chuck
 ~~~~~~~~~~~~~~~
 Text File : 191
 ~~~~~~~~~~~~~~~
@@ -23623,8 +24356,8 @@ YZ
 
 
 EGAL
-⑭
-⑮
+♂
+♀
 [VAR BD02]ZURÜCK
 EGAL
 BIS LV. 9
@@ -23867,8 +24600,8 @@ Willst du mit Pokémon aus deinem Team\noder aus deiner Kampfbox antreten?
 Du lehnst das Angebot ab.
 Dein Freund ist ausgestiegen.
 L[VAR 0202(0000)]
-[VAR FF00(0002)]⑭[VAR FF00(0000)]
-[VAR FF00(0001)]⑮[VAR FF00(0000)]
+[VAR FF00(0002)]♂[VAR FF00(0000)]
+[VAR FF00(0001)]♀[VAR FF00(0000)]
 Möchtest du mit [VAR 0100(0000)]\nweiterspielen?
 
 Zum Tauschen musst du mindestens\n2 Pokémon bei dir haben.
@@ -30857,6 +31590,7 @@ Tanzform
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 245
 ~~~~~~~~~~~~~~~
@@ -35112,10 +35846,10 @@ Pikachu
 Raichu
 Sandshrew
 Sandslash
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Clefairy
@@ -35609,10 +36343,10 @@ Pikachu
 Raichu
 Sabelette
 Sablaireau
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Mélofée
@@ -36106,10 +36840,10 @@ Pikachu
 Raichu
 Sandan
 Sandamer
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Piepi
@@ -36603,10 +37337,10 @@ Pikachu
 Raichu
 Sandshrew
 Sandslash
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Clefairy
@@ -37597,10 +38331,10 @@ Text File : 258
 라이츄
 모래두지
 고지
-니드런⑮
+니드런♀
 니드리나
 니드퀸
-니드런⑭
+니드런♂
 니드리노
 니드킹
 삐삐
@@ -38094,10 +38828,10 @@ Pikachu
 Raichu
 Sandshrew
 Sandslash
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Clefairy
@@ -49363,10 +50097,10 @@ PIKACHU
 RAICHU
 SANDAN
 SANDAMER
-NIDORAN⑮
+NIDORAN♀
 NIDORINA
 NIDOQUEEN
-NIDORAN⑭
+NIDORAN♂
 NIDORINO
 NIDOKING
 PIEPI

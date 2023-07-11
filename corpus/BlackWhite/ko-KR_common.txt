@@ -706,6 +706,7 @@ Text File : 6
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 7
 ~~~~~~~~~~~~~~~
@@ -899,8 +900,8 @@ Text File : 9
 가방으로
 건네준다
 이동한다
-⑭
-⑮
+♂
+♀
 [VAR 0106(0000,0000)]
 [VAR 0108(0000,0000)]
 [VAR 0109(0000,0000)]
@@ -1297,8 +1298,8 @@ Text File : 12
 [VAR 0107(0000,0000)]
 PP
 [VAR 0201(0000,0000)]/[VAR 0201(0001,0000)]
-[VAR 0102(0000,0000)]⑭
-[VAR 0102(0000,0000)]⑮
+[VAR 0102(0000,0000)]♂
+[VAR 0102(0000,0000)]♀
 [VAR 0102(0000,0000)]
 [VAR 0202(0000,0000)]
 /
@@ -4456,8 +4457,8 @@ L[VAR 0202(0000,0000)]
 
 PP
 교체한다
-⑭
-⑮
+♂
+♀
 능력치를 본다
 기술을 본다
 싸울 수 없다
@@ -4720,6 +4721,7 @@ Text File : 26
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 27
 ~~~~~~~~~~~~~~~
@@ -4783,6 +4785,7 @@ Text File : 28
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 29
 ~~~~~~~~~~~~~~~
@@ -4822,6 +4825,7 @@ C기어의 적외선 통신을 하기 전에\n리포트를 기록할지 말지 �
 선택한 설정으로 변경하겠습니까?
 예
 아니오
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 30
 ~~~~~~~~~~~~~~~
@@ -4877,6 +4881,7 @@ Text File : 31
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 32
 ~~~~~~~~~~~~~~~
@@ -4923,6 +4928,7 @@ Text File : 34
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 35
 ~~~~~~~~~~~~~~~
@@ -4951,6 +4957,7 @@ Text File : 35
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 36
 ~~~~~~~~~~~~~~~
@@ -5372,6 +5379,7 @@ Text File : 44
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 45
 ~~~~~~~~~~~~~~~
@@ -5557,6 +5565,7 @@ Text File : 48
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 49
 ~~~~~~~~~~~~~~~
@@ -5571,6 +5580,7 @@ Text File : 49
 돌아간다
 취소
 필링체크
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 50
 ~~~~~~~~~~~~~~~
@@ -5615,6 +5625,7 @@ Text File : 52
 리듬 체크
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 53
 ~~~~~~~~~~~~~~~
@@ -6987,6 +6998,7 @@ Text File : 61
 [VAR 0200(0000,0000)]/[VAR 0200(0001,0000)]
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 62
 ~~~~~~~~~~~~~~~
@@ -7445,6 +7457,7 @@ Text File : 66
 [VAR 0109(0000,0002)] 15번도로의\n쓰레기통 바로 앞에 숨겨라!
 [VAR 0109(0000,0002)] 16번도로에서\n울타리가 끊어져 있는 곳에 숨겨라!
 [VAR 0100(0000,0000)]에게 [VAR 0109(0001,0002)]\n싸게 팔아라!!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 67
 ~~~~~~~~~~~~~~~
@@ -7531,6 +7544,7 @@ Text File : 67
 [VAR 0109(0000,0002)] 15번도로의\n쓰레기통 바로 앞에 숨겨라!\n(말을 걸어오면 다시!)\n\n\n제한 시간 [VAR 0202(0002,0000)]초\n\n포상: 딜구슬 [VAR 0201(0003,0000)]개
 [VAR 0109(0000,0002)] 16번도로에서\n울타리가 끊어져 있는 곳에 숨겨라!\n(말을 걸어오면 다시!)\n\n\n제한 시간 [VAR 0202(0002,0000)]초\n\n포상: 딜구슬 [VAR 0201(0003,0000)]개
 [VAR 0100(0000,0000)]에게 [VAR 0109(0001,0002)]\n싸게 팔아라!!\n(거절당하면 실패!)\n\n\n제한 시간 [VAR 0202(0002,0000)]초\n\n포상: 딜구슬 [VAR 0201(0003,0000)]개
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 68
 ~~~~~~~~~~~~~~~
@@ -7907,6 +7921,7 @@ Text File : 68
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 69
 ~~~~~~~~~~~~~~~
@@ -7985,10 +8000,10 @@ Text File : 70
 라이츄
 모래두지
 고지
-니드런⑮
+니드런♀
 니드리나
 니드퀸
-니드런⑭
+니드런♂
 니드리노
 니드킹
 삐삐
@@ -8695,6 +8710,7 @@ Text File : 73
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 74
 ~~~~~~~~~~~~~~~
@@ -8708,6 +8724,7 @@ Text File : 74
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 75
 ~~~~~~~~~~~~~~~
@@ -9801,8 +9818,8 @@ Text File : 81
 
 화이트.
 블랙.
-⑭
-⑮
+♂
+♀
 ~~~~~~~~~~~~~~~
 Text File : 82
 ~~~~~~~~~~~~~~~
@@ -9835,8 +9852,8 @@ Text File : 84
 취소
 지닌 포켓몬과 배틀박스 중\n어느 쪽을 사용할지 선택해 주십시오
 L[VAR 0202(0000,0000)]
-[VAR FF00(0002)]⑭[VAR FF00(0000)]
-[VAR FF00(0001)]⑮[VAR FF00(0000)]
+[VAR FF00(0002)]♂[VAR FF00(0000)]
+[VAR FF00(0001)]♀[VAR FF00(0000)]
 ~~~~~~~~~~~~~~~
 Text File : 85
 ~~~~~~~~~~~~~~~
@@ -9846,8 +9863,8 @@ Text File : 85
 /
 [VAR 0201(0000,0000)]
 [VAR 0101(0000,0000)]
-⑭
-⑮
+♂
+♀
 [VAR 0202(0000,0000)]
 이름: [VAR 0102(0000,0000)]
 어버이: [VAR 0100(0000,0000)]
@@ -10255,6 +10272,7 @@ Text File : 96
 Text File : 97
 ~~~~~~~~~~~~~~~
 [VAR 011C(0000,0000)]
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 98
 ~~~~~~~~~~~~~~~
@@ -10634,8 +10652,8 @@ Text File : 102
 ㄴㅠㅅㅡ
 ㄴㅡㄱㄱㅗㄹㄹㅏ
 ㄴㅡㅍㅉㅏㅇㅇㅣ
-ㄴㅣㄷㅡㄹㅓㄴ⑮
-ㄴㅣㄷㅡㄹㅓㄴ⑭
+ㄴㅣㄷㅡㄹㅓㄴ♀
+ㄴㅣㄷㅡㄹㅓㄴ♂
 ㄴㅣㄷㅡㄹㅣㄴㅏ
 ㄴㅣㄷㅡㄹㅣㄴㅗ
 ㄴㅣㄷㅡㅋㅜㅣㄴ
@@ -13054,6 +13072,7 @@ Text File : NULL
 [NULL]
 [NULL]
 [NULL]
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : NULL
 ~~~~~~~~~~~~~~~
@@ -13209,49 +13228,6 @@ Text File : NULL
 ~~~~~~~~~~~~~~~
 [NULL]
 [NULL]
-~~~~~~~~~~~~~~~
-Text File : NULL
-~~~~~~~~~~~~~~~
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-~~~~~~~~~~~~~~~
-Text File : NULL
-~~~~~~~~~~~~~~~
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
-[NULL]
 [NULL]
 [NULL]
 [NULL]
@@ -13271,6 +13247,750 @@ Text File : NULL
 ~~~~~~~~~~~~~~~
 Text File : NULL
 ~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
 [NULL]
 [NULL]
 [NULL]
@@ -13301,6 +14021,7 @@ Text File : 145
 통신
 목소리
 ???
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 146
 ~~~~~~~~~~~~~~~
@@ -13337,6 +14058,7 @@ Text File : 147
 ~~~~~~~~~~~~~~~
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 148
 ~~~~~~~~~~~~~~~
@@ -13783,8 +14505,8 @@ L[VAR 0202(0000,0000)]
 [VAR 0202(0000,0000)]
 [VAR 0202(0000,0000)]
 /
-⑭
-⑮
+♂
+♀
 포켓몬을 선택해 주십시오
 
 어디로 이동할까?
@@ -13960,8 +14682,8 @@ SELECT TIME
 Text File : 158
 ~~~~~~~~~~~~~~~
 [VAR 0102(0000,0000)]
-⑭
-⑮
+♂
+♀
 Lv.[VAR 0202(0000,0000)]
 지닌물건
 [VAR 0109(0000,0000)]
@@ -14154,6 +14876,7 @@ PP
 
 [VAR BD02]잊게 한다!
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 159
 ~~~~~~~~~~~~~~~
@@ -14203,8 +14926,8 @@ HP
 [VAR 0109(0000,0000)]
 배운 기술
 [VAR 0107(0000,0000)]
-⑭
-⑮
+♂
+♀
 [VAR 0100(0000,0005)]로부터\n[VAR 0102(0001,0003)] 전송됐다!
 [VAR 0102(0001,0002)]\n귀여워해 줘!
 통신하고 있습니다\n잠시 기다려 주십시오
@@ -14370,6 +15093,7 @@ PP회복파워+++
 용돈파워MAX
 잡기파워MAX
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 161
 ~~~~~~~~~~~~~~~
@@ -14420,6 +15144,7 @@ Text File : 161
 배틀한 뒤에 받는 용돈이\n상당히 많아집니다\n효과는 60분입니다
 포켓몬을 잡을 확률이\n상당히 올라갑니다\n효과는 60분입니다
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 162
 ~~~~~~~~~~~~~~~
@@ -14428,6 +15153,7 @@ Text File : 162
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 163
 ~~~~~~~~~~~~~~~
@@ -14562,6 +15288,7 @@ Text File : 167
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 168
 ~~~~~~~~~~~~~~~
@@ -14780,12 +15507,14 @@ Text File : 171
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 172
 ~~~~~~~~~~~~~~~
 ...오잉!?\n[VAR 0102(0000,0000)]의 모습이...!
 얼라리...?\n[VAR 0102(0000,0000)]의 변화가 멈췄다!
 축하합니다! [VAR 0102(0000,0001)]\n[VAR 0101(0001,0005)]로 진화했습니다!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 173
 ~~~~~~~~~~~~~~~
@@ -17624,6 +18353,7 @@ Text File : 178
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 179
 ~~~~~~~~~~~~~~~
@@ -17674,10 +18404,12 @@ HP
 특수방어
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 181
 ~~~~~~~~~~~~~~~
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 182
 ~~~~~~~~~~~~~~~
@@ -19115,6 +19847,7 @@ Text File : 186
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 187
 ~~~~~~~~~~~~~~~
@@ -23623,8 +24356,8 @@ Lv.[VAR 0202(0003,0000)]
 ㅍ
 ㅎ
 상관없다
-⑭
-⑮
+♂
+♀
 [VAR BD02]취소
 상관없다
 Lv.10 미만
@@ -23867,8 +24600,8 @@ Text File : 209
 초대를 사양했습니다
 친구는 같이 하기\n어려운 상태인 것 같습니다
 L[VAR 0202(0000,0000)]
-[VAR FF00(0002)]⑭[VAR FF00(0000)]
-[VAR FF00(0001)]⑮[VAR FF00(0000)]
+[VAR FF00(0002)]♂[VAR FF00(0000)]
+[VAR FF00(0001)]♀[VAR FF00(0000)]
 [VAR 0100(0000,0000)]님과\n계속 즐기겠습니까?
 
 교환하려면 지닌 포켓몬이\n2마리 이상 필요합니다
@@ -30857,6 +31590,7 @@ Text File : 244
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 245
 ~~~~~~~~~~~~~~~
@@ -35112,10 +35846,10 @@ Pikachu
 Raichu
 Sandshrew
 Sandslash
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Clefairy
@@ -35609,10 +36343,10 @@ Pikachu
 Raichu
 Sabelette
 Sablaireau
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Mélofée
@@ -36106,10 +36840,10 @@ Pikachu
 Raichu
 Sandan
 Sandamer
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Piepi
@@ -36603,10 +37337,10 @@ Pikachu
 Raichu
 Sandshrew
 Sandslash
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Clefairy
@@ -37597,10 +38331,10 @@ Text File : 258
 라이츄
 모래두지
 고지
-니드런⑮
+니드런♀
 니드리나
 니드퀸
-니드런⑭
+니드런♂
 니드리노
 니드킹
 삐삐
@@ -38094,10 +38828,10 @@ Pikachu
 Raichu
 Sandshrew
 Sandslash
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Clefairy

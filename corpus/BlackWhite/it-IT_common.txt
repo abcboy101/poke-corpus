@@ -706,6 +706,7 @@ Text File : 6
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 7
 ~~~~~~~~~~~~~~~
@@ -899,8 +900,8 @@ ESCI
 IN BORSA
 DAI
 SPOSTA
-⑭
-⑮
+♂
+♀
 [VAR 0106(0000)]
 [VAR 0108(0000)]
 [VAR 0109(0000)]
@@ -1297,8 +1298,8 @@ Text File : 12
 [VAR 0107(0000)]
 PP
 [VAR 0201(0000)]/[VAR 0201(0001)]
-[VAR 0102(0000)]⑭
-[VAR 0102(0000)]⑮
+[VAR 0102(0000)]♂
+[VAR 0102(0000)]♀
 [VAR 0102(0000)]
 [VAR 0202(0000)]
 /
@@ -4456,8 +4457,8 @@ L[VAR 0202(0000)]
 
 PP
 Scambia
-⑭
-⑮
+♂
+♀
 INFO
 MOSTRA MOSSE
 Non adesso...
@@ -4720,6 +4721,7 @@ Text File : 26
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 27
 ~~~~~~~~~~~~~~~
@@ -4783,6 +4785,7 @@ Text File : 28
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 29
 ~~~~~~~~~~~~~~~
@@ -4822,6 +4825,7 @@ Sono presenti altri dati di gioco salvati.\nImpossibile cambiare le impostazioni
 Vuoi salvare le modifiche?
 SÌ
 NO
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 30
 ~~~~~~~~~~~~~~~
@@ -4877,6 +4881,7 @@ Text File : 31
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 32
 ~~~~~~~~~~~~~~~
@@ -4923,6 +4928,7 @@ OPZIONI
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 35
 ~~~~~~~~~~~~~~~
@@ -4951,6 +4957,7 @@ Luna
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 36
 ~~~~~~~~~~~~~~~
@@ -5372,6 +5379,7 @@ Bene, ragazzi, allora conto su voi tre!\c\nPer questo voglio affidare a ciascuno
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 45
 ~~~~~~~~~~~~~~~
@@ -5557,6 +5565,7 @@ Text File : 48
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 49
 ~~~~~~~~~~~~~~~
@@ -5571,6 +5580,7 @@ CLASSIFICA
 INDIETRO
 ESCI
 CONTROLLO AFFINITÀ
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 50
 ~~~~~~~~~~~~~~~
@@ -5615,6 +5625,7 @@ Il collegamento a infrarossi è stato\ninterrotto. Riprova.
 CONTROLLO RITMO
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 53
 ~~~~~~~~~~~~~~~
@@ -6987,6 +6998,7 @@ Scegli un soggetto.
 [VAR 0200(0000)]/[VAR 0200(0001)]
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 62
 ~~~~~~~~~~~~~~~
@@ -7445,6 +7457,7 @@ Nascondi [VAR 0109(0000)] tra la spiaggia e\nla terraferma sul Percorso 14!
 Nascondi [VAR 0109(0000)] davanti al cestino\ndel Percorso 15!
 Nascondi [VAR 0109(0000)] dove manca\nil recinto sul Percorso 16!
 Vendi [VAR 0109(0001)] a [VAR 0100(0000)] a un\nprezzo di favore!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 67
 ~~~~~~~~~~~~~~~
@@ -7531,6 +7544,7 @@ Nascondi [VAR 0109(0000)] tra la spiaggia\ne la terraferma sul Percorso 14.\nSe 
 Nascondi [VAR 0109(0000)] davanti al cestino\ndel Percorso 15.\nSe qualcuno ti parla, devi ricominciare!\n\n\nLimite di tempo: [VAR 0202(0002)] secondi\n\nPassabilie in premio: [VAR 0201(0003)]
 Nascondi [VAR 0109(0000)] dove manca\nil recinto sul Percorso 16.\nSe qualcuno ti parla, devi ricominciare!\n\n\nLimite di tempo: [VAR 0202(0002)] secondi\n\nPassabilie in premio: [VAR 0201(0003)]
 Vendi [VAR 0109(0001)] a [VAR 0100(0000)] a un\nprezzo di favore.\nSe rifiuta, la missione fallisce!\n\n\nLimite di tempo: [VAR 0202(0002)] secondi\n\nPassabilie in premio: [VAR 0201(0003)]
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 68
 ~~~~~~~~~~~~~~~
@@ -7907,6 +7921,7 @@ Ah! Scusa... mi ero decisa per l'acquisto,\nma purtroppo ho la Borsa piena!\c\nT
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 69
 ~~~~~~~~~~~~~~~
@@ -7985,10 +8000,10 @@ Pikachu
 Raichu
 Sandshrew
 Sandslash
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Clefairy
@@ -8695,6 +8710,7 @@ Text File : 73
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 74
 ~~~~~~~~~~~~~~~
@@ -8708,6 +8724,7 @@ Text File : 74
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 75
 ~~~~~~~~~~~~~~~
@@ -9801,8 +9818,8 @@ Puoi inserire al massimo quattro numeri.
 
 Shiro*
 Kuro*
-⑭
-⑮
+♂
+♀
 ~~~~~~~~~~~~~~~
 Text File : 82
 ~~~~~~~~~~~~~~~
@@ -9835,8 +9852,8 @@ BOX LOTTA
 ESCI
 Scegli se usare la tua squadra di Pokémon\noppure l'assortimento del tuo Box Lotta.
 L[VAR 0202(0000)]
-[VAR FF00(0002)]⑭[VAR FF00(0000)]
-[VAR FF00(0001)]⑮[VAR FF00(0000)]
+[VAR FF00(0002)]♂[VAR FF00(0000)]
+[VAR FF00(0001)]♀[VAR FF00(0000)]
 ~~~~~~~~~~~~~~~
 Text File : 85
 ~~~~~~~~~~~~~~~
@@ -9846,8 +9863,8 @@ PRIMO COMPLETAMENTO:
 /
 [VAR 0201(0000)]
 [VAR 0101(0000)]
-⑭
-⑮
+♂
+♀
 [VAR 0202(0000)]
 Nome: [VAR 0102(0000)]
 Allenatore originale: [VAR 0100(0000)]
@@ -10255,6 +10272,7 @@ Fa' che [VAR 011C(0001)] riceva\n[VAR 011C(0000)]!
 Text File : 97
 ~~~~~~~~~~~~~~~
 [VAR 011C(0000)]
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 98
 ~~~~~~~~~~~~~~~
@@ -13054,6 +13072,7 @@ UXIE
 [NULL]
 [NULL]
 [NULL]
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 121
 ~~~~~~~~~~~~~~~
@@ -13209,6 +13228,22 @@ Text File : 123
 ~~~~~~~~~~~~~~~
 XATU
 [NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 124
 ~~~~~~~~~~~~~~~
@@ -13268,6 +13303,73 @@ ZWEILOUS
 [NULL]
 [NULL]
 [NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 126
 ~~~~~~~~~~~~~~~
@@ -13284,6 +13386,624 @@ Text File : 126
 絵_SCUSA
 絵_TVTB
 絵_VAAAI
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : NULL
+~~~~~~~~~~~~~~~
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 145
 ~~~~~~~~~~~~~~~
@@ -13301,6 +14021,7 @@ TERMINOLOGIA
 CONNECTION
 VOCE
 ???
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 146
 ~~~~~~~~~~~~~~~
@@ -13337,6 +14058,7 @@ Text File : 147
 ~~~~~~~~~~~~~~~
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 148
 ~~~~~~~~~~~~~~~
@@ -13783,8 +14505,8 @@ L[VAR 0202(0000)]
 [VAR 0202(0000)]
 [VAR 0202(0000)]
 /
-⑭
-⑮
+♂
+♀
 Scegli un Pokémon.
 
 Dove vuoi spostarlo?
@@ -13960,8 +14682,8 @@ Non hai più [VAR 0109(0000)]!
 Text File : 158
 ~~~~~~~~~~~~~~~
 [VAR 0102(0000)]
-⑭
-⑮
+♂
+♀
 L. [VAR 0202(0000)]
 Strumento
 [VAR 0109(0000)]
@@ -14154,6 +14876,7 @@ Categoria
 
 Dimentica!
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 159
 ~~~~~~~~~~~~~~~
@@ -14203,8 +14926,8 @@ ABILITÀ
 [VAR 0109(0000)]
 MOSSE
 [VAR 0107(0000)]
-⑭
-⑮
+♂
+♀
 [VAR 0100(0000)] ha inviato [VAR 0102(0001)]. 
 Abbi cura di [VAR 0102(0001)]!
 Collegamento in corso.\nAttendi...
@@ -14370,6 +15093,7 @@ Potere esperienza MAX
 Potere compenso MAX
 Potere cattura MAX
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 161
 ~~~~~~~~~~~~~~~
@@ -14420,6 +15144,7 @@ Aumenta enormemente la quantità di\nPunti Esperienza ottenuti dopo ogni\nlotta.
 Aumenta enormemente la quantità di soldi\nottenuti dopo ogni lotta. L'effetto dura\n60 minuti.
 Aumenta enormemente le probabilità\ndi catturare i Pokémon. L'effetto dura\n60 minuti.
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 162
 ~~~~~~~~~~~~~~~
@@ -14428,6 +15153,7 @@ Text File : 162
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 163
 ~~~~~~~~~~~~~~~
@@ -14562,6 +15288,7 @@ Text File : 167
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 168
 ~~~~~~~~~~~~~~~
@@ -14780,12 +15507,14 @@ Text File : 171
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 172
 ~~~~~~~~~~~~~~~
 Cosa? [VAR 0102(0000)] si sta evolvendo!
 Cosa? L'evoluzione di [VAR 0102(0000)] è stata\nbloccata!
 Congratulazioni! Il tuo [VAR 0102(0000)] si è\nevoluto in [VAR 0101(0001)]!
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 173
 ~~~~~~~~~~~~~~~
@@ -16912,26 +17641,26 @@ Text File : 175
 Text File : 176
 ~~~~~~~~~~~~~~~
 [VAR 0100(0000)]
-\cKomor
-\cBelle
-\cChicco
-\cMaisello
-\cSpighetto
-\cAloé
-\cArtemisio
-\cCamelia
-\cRafan
-\cAnemone
-\cSilvestro
-\cIris
-\cAristide
-\cAntemia
-\cMirton
-\cMarzio
-\cCatlina
-\cNardo
-\cN
-\cGhecis
+[COMP]Komor
+[COMP]Belle
+[COMP]Chicco
+[COMP]Maisello
+[COMP]Spighetto
+[COMP]Aloé
+[COMP]Artemisio
+[COMP]Camelia
+[COMP]Rafan
+[COMP]Anemone
+[COMP]Silvestro
+[COMP]Iris
+[COMP]Aristide
+[COMP]Antemia
+[COMP]Mirton
+[COMP]Marzio
+[COMP]Catlina
+[COMP]Nardo
+[COMP]N
+[COMP]Ghecis
 ~~~~~~~~~~~~~~~
 Text File : 177
 ~~~~~~~~~~~~~~~
@@ -17624,6 +18353,7 @@ Text File : 178
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 179
 ~~~~~~~~~~~~~~~
@@ -17674,10 +18404,12 @@ Att. Sp.
 Dif. Sp.
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 181
 ~~~~~~~~~~~~~~~
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 182
 ~~~~~~~~~~~~~~~
@@ -19115,6 +19847,7 @@ Text File : 186
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 187
 ~~~~~~~~~~~~~~~
@@ -21091,497 +21824,497 @@ Ora che la lotta è finita, nel mio cuore\nsoffia una placida brezza...\c\nPasso
 ~~~~~~~~~~~~~~~
 Text File : 190
 ~~~~~~~~~~~~~~~
-\c--
-\cFernando
-\cPaolina
-\cMilo
-\cMartina
-\cElena
-\cDan
-\cGennaro
-\cErina
-\cPierre
-\cUrsula
-\cChicco
-\cSpighetto
-\cMaisello
-\cAlida
-\cAngelina
-\cLotti
-\cCris
-\cAmi & Mimi
-\cCarmelo
-\cDalia
-\cAloé
-\cArtemisio
-\cCamelia
-\cRafan
-\cAnemone
-\cIacopo
-\cEvelina
-\cMiguel
-\cGiusy
-\cDario
-\cClelia
-\cMay & Mya
-\cLodovico
-\cPina
-\cWilly
-\cBartolo
-\cAnton
-\cLapo
-\cCristoforo
-\cClara
-\cRuggero
-\cNoele
-\cGrazia
-\cQuinto
-\cRosella
-\cAmadeo
-\cFiore
-\cMoreno
-\cPablo
-\cPiera
-\cFloris
-\cIlaria
-\cKomor
-\cKomor
-\cKomor
-\cKomor
-\cKomor
-\cKomor
+[COMP]--
+[COMP]Fernando
+[COMP]Paolina
+[COMP]Milo
+[COMP]Martina
+[COMP]Elena
+[COMP]Dan
+[COMP]Gennaro
+[COMP]Erina
+[COMP]Pierre
+[COMP]Ursula
+[COMP]Chicco
+[COMP]Spighetto
+[COMP]Maisello
+[COMP]Alida
+[COMP]Angelina
+[COMP]Lotti
+[COMP]Cris
+[COMP]Ami & Mimi
+[COMP]Carmelo
+[COMP]Dalia
+[COMP]Aloé
+[COMP]Artemisio
+[COMP]Camelia
+[COMP]Rafan
+[COMP]Anemone
+[COMP]Iacopo
+[COMP]Evelina
+[COMP]Miguel
+[COMP]Giusy
+[COMP]Dario
+[COMP]Clelia
+[COMP]May & Mya
+[COMP]Lodovico
+[COMP]Pina
+[COMP]Willy
+[COMP]Bartolo
+[COMP]Anton
+[COMP]Lapo
+[COMP]Cristoforo
+[COMP]Clara
+[COMP]Ruggero
+[COMP]Noele
+[COMP]Grazia
+[COMP]Quinto
+[COMP]Rosella
+[COMP]Amadeo
+[COMP]Fiore
+[COMP]Moreno
+[COMP]Pablo
+[COMP]Piera
+[COMP]Floris
+[COMP]Ilaria
+[COMP]Komor
+[COMP]Komor
+[COMP]Komor
+[COMP]Komor
+[COMP]Komor
+[COMP]Komor
 Belle
 Belle
 Belle
-\cSeguace
-\cSeguace
-\cN
-\cN
-\cMiro
-\cRolando
-\cBelinda
-\cColette
-\cVincenzo
-\cRico
-\cGuglielmo
-\cCarmine
-\cAmedeo
-\cAlberto
-\cElia
-\cFilippo
-\cRaffaele
+[COMP]Seguace
+[COMP]Seguace
+[COMP]N
+[COMP]N
+[COMP]Miro
+[COMP]Rolando
+[COMP]Belinda
+[COMP]Colette
+[COMP]Vincenzo
+[COMP]Rico
+[COMP]Guglielmo
+[COMP]Carmine
+[COMP]Amedeo
+[COMP]Alberto
+[COMP]Elia
+[COMP]Filippo
+[COMP]Raffaele
 
 
-\cSeguace
-\cCosimo
-\cTobia
-\cFelice
-\cErasmo
-\cGermano
-\cBenedetta
-\cZoe
-\cN
-\cKomor
-\cKomor
-\cKomor
-\cPaola
-\cFranca
-\cAssunta
-\cNunzia
-\cLupo
-\cAngiolina
-\cAsami
-\cStella
-\cClizia
-\cTeresa
-\cNicola
-\cNaot
-\cGiampaolo
-\cPatrizio
-\cDaria
-\cBoris
-\cRick
-\cManfredi
-\cEnnio
-\cWilliam
-\cRandi
-\cDuilio
-\cEzio
-\cBrigida
-\cDiletta
-\cIppolito
-\cLegi
-\cTea
-\cRin
-\cPontino
-\cAccio
-\cKurt
-\cGolia
+[COMP]Seguace
+[COMP]Cosimo
+[COMP]Tobia
+[COMP]Felice
+[COMP]Erasmo
+[COMP]Germano
+[COMP]Benedetta
+[COMP]Zoe
+[COMP]N
+[COMP]Komor
+[COMP]Komor
+[COMP]Komor
+[COMP]Paola
+[COMP]Franca
+[COMP]Assunta
+[COMP]Nunzia
+[COMP]Lupo
+[COMP]Angiolina
+[COMP]Asami
+[COMP]Stella
+[COMP]Clizia
+[COMP]Teresa
+[COMP]Nicola
+[COMP]Naot
+[COMP]Giampaolo
+[COMP]Patrizio
+[COMP]Daria
+[COMP]Boris
+[COMP]Rick
+[COMP]Manfredi
+[COMP]Ennio
+[COMP]William
+[COMP]Randi
+[COMP]Duilio
+[COMP]Ezio
+[COMP]Brigida
+[COMP]Diletta
+[COMP]Ippolito
+[COMP]Legi
+[COMP]Tea
+[COMP]Rin
+[COMP]Pontino
+[COMP]Accio
+[COMP]Kurt
+[COMP]Golia
 
-\cGiusto
-\cDavide
-\cTony
-\cRoberto
-\cSilvestro
-\cIris
-\cAristide
-\cFloriano
-\cGaio
-\cPorzio
-\cDanilo
-\cUbaldo
-\cAdele
-\cVinicio
-\cMatthew
-\cDennis
-\cPaco
-\cSalvo
-\cSebastiano
-\cCostanzo
-\cKevin
-\cEdoardo
-\cGastone
-\cDr. Mailo
-\cDr. Mino
-\cLisa
-\cGaspare
-\cGregorio
-\cOsvalda
-\cLena
-\cBo & Brian
-\cCostanza
-\cGaia
-\cAlia
-\cSara
-\cTania
-\cPatrizia
-\cBea
-\cMarcus
-\cBruto
-\cDanio
-\cRenzo
-\cRomolo
-\cSamuele
-\cPasquale
-\cAl & Kay
-\cPim & Pam
-\cJo & Pat
-\cOta & Nari
-\cTery & Tia
-\cSalvio
-\cZeno
-\cBeniamina
-\cFederico
-\cAntelmo
-\cSaul
-\cAlberigo
-\cOtto
-\cAlan
-\cGlenda
-\cPasqualina
-\cNiva
-\cAmbra
-\cViola
-\cAlex
-\cUccio
-\cDacio
-\cDurante
-\cLidio
-\cVlad
+[COMP]Giusto
+[COMP]Davide
+[COMP]Tony
+[COMP]Roberto
+[COMP]Silvestro
+[COMP]Iris
+[COMP]Aristide
+[COMP]Floriano
+[COMP]Gaio
+[COMP]Porzio
+[COMP]Danilo
+[COMP]Ubaldo
+[COMP]Adele
+[COMP]Vinicio
+[COMP]Matthew
+[COMP]Dennis
+[COMP]Paco
+[COMP]Salvo
+[COMP]Sebastiano
+[COMP]Costanzo
+[COMP]Kevin
+[COMP]Edoardo
+[COMP]Gastone
+[COMP]Dr. Mailo
+[COMP]Dr. Mino
+[COMP]Lisa
+[COMP]Gaspare
+[COMP]Gregorio
+[COMP]Osvalda
+[COMP]Lena
+[COMP]Bo & Brian
+[COMP]Costanza
+[COMP]Gaia
+[COMP]Alia
+[COMP]Sara
+[COMP]Tania
+[COMP]Patrizia
+[COMP]Bea
+[COMP]Marcus
+[COMP]Bruto
+[COMP]Danio
+[COMP]Renzo
+[COMP]Romolo
+[COMP]Samuele
+[COMP]Pasquale
+[COMP]Al & Kay
+[COMP]Pim & Pam
+[COMP]Jo & Pat
+[COMP]Ota & Nari
+[COMP]Tery & Tia
+[COMP]Salvio
+[COMP]Zeno
+[COMP]Beniamina
+[COMP]Federico
+[COMP]Antelmo
+[COMP]Saul
+[COMP]Alberigo
+[COMP]Otto
+[COMP]Alan
+[COMP]Glenda
+[COMP]Pasqualina
+[COMP]Niva
+[COMP]Ambra
+[COMP]Viola
+[COMP]Alex
+[COMP]Uccio
+[COMP]Dacio
+[COMP]Durante
+[COMP]Lidio
+[COMP]Vlad
 
-\cAlbertino
-\cBerto
-\cLionello
-\cDuccio
-\cCristiano
-\cNinni
+[COMP]Albertino
+[COMP]Berto
+[COMP]Lionello
+[COMP]Duccio
+[COMP]Cristiano
+[COMP]Ninni
 
-\cClotilde
-\cBen
-\cLina
-\cTerence
-\cIlenia
-\cMagda
-\cLoris
-\cLuciana
-\cClorinda
-\cIrina
-\cEmiliano
-\cGaetano
-\cTerenzio
-\cN
-
-
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cAntemia
-\cMarzio
-\cMirton
-\cCatlina
-\cGhecis
-\cGeraldo
-\cPomino
-\cGibi
-\cLorino
-\cAleandro
-\cLiz
-\cNella
-\cFabiolo
-\cTizio
-\cMariano
-\cRinaldo
-\cAzzurra
-\cBrigitta
-\cCorso
-\cNunzio
-\cLuigi
-\cDr. Otto
-\cGiacomo
-\cZita
-\cLuke
-\cViviana
-\cDiana
-\cRiccardo
-\cSid
-\cDante
-\cLuigia
-\cDevis
-\cCarmen
-\cFlora
-\cReno
-\cAdelaide
-\cTamia
-\cBeata
-\cBruna
-\cCatherine
-
-\cLio
-\cLiberio
-\cEpifanio
-\cSettimio
-
-\cMat
-\cKim
-\cSeguace
-
-\cSeguace
-\cSeguace
-
-\cRodolfo
+[COMP]Clotilde
+[COMP]Ben
+[COMP]Lina
+[COMP]Terence
+[COMP]Ilenia
+[COMP]Magda
+[COMP]Loris
+[COMP]Luciana
+[COMP]Clorinda
+[COMP]Irina
+[COMP]Emiliano
+[COMP]Gaetano
+[COMP]Terenzio
+[COMP]N
 
 
-\cValentino
-\cTitta
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Antemia
+[COMP]Marzio
+[COMP]Mirton
+[COMP]Catlina
+[COMP]Ghecis
+[COMP]Geraldo
+[COMP]Pomino
+[COMP]Gibi
+[COMP]Lorino
+[COMP]Aleandro
+[COMP]Liz
+[COMP]Nella
+[COMP]Fabiolo
+[COMP]Tizio
+[COMP]Mariano
+[COMP]Rinaldo
+[COMP]Azzurra
+[COMP]Brigitta
+[COMP]Corso
+[COMP]Nunzio
+[COMP]Luigi
+[COMP]Dr. Otto
+[COMP]Giacomo
+[COMP]Zita
+[COMP]Luke
+[COMP]Viviana
+[COMP]Diana
+[COMP]Riccardo
+[COMP]Sid
+[COMP]Dante
+[COMP]Luigia
+[COMP]Devis
+[COMP]Carmen
+[COMP]Flora
+[COMP]Reno
+[COMP]Adelaide
+[COMP]Tamia
+[COMP]Beata
+[COMP]Bruna
+[COMP]Catherine
 
-\cKomor
-\cKomor
-\cKomor
-\cAgostino
-\cRonaldo
-\cGina
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cFlavia
-\cElena
-\cElena
-\cElena
-\cGrazia
-\cJames
-\cAlex
-\cAlex
-\cAlex
-\cUccio
-\cMarco
-\cTony
-\cTony
-\cTony
-\cRoberto
-\cLibero
-\cDan
-\cDan
-\cDan
-\cSalvio
-\cRamon
-\cCosimo
-\cCosimo
-\cCosimo
-\cTobia
-\cAl & Kay
-\cAl & Kay
-\cPim & Pam
-\cPim & Pam
-\cJo & Pat
-\cJo & Pat
-\cZac & Jen
-\cCip & Lip
-\cOta & Nari
-\cOta & Nari
-\cTery & Tia
-\cTery & Tia
-\cJo & Gia
-\cAna & Ina
-\cMeg & Peg
-\cDanila
-\cSonio
-\cPriscilla
-\cJessica
-\cCiccio
-\cSirio
-\cAnette
-\cGiuseppe
-\cDebora
-\cMarino
-\cLuana
-\cJonah
-\cCiccina
-\cSofia
-\cIvano
-\cRebecca
-\cGiampiero
-\cLeone
-\cDafne
-\cArturo
-\cDora
-\cLeo
-\cIgnazio
-\cGisella
-\cCarol
-\cDonato
-\cGabriella
-\cTullio
-\cPatty
-\cAlexander
-\cDr. Pilù
-\cVincenza
-\cNuccio
-\cGreta
-\cJosh
-\cEnrico
-\cJessy
-\cUmberto
-\cRufo
-\cAmerigo
-\cVictor
-\cLorenzo
-\cFelicia
-\cUccia
-\cIvo
-\cDaniela
-\cPoldo
-\cMila
-\cMichelino
-\cKomor
-\cKomor
-\cKomor
+[COMP]Lio
+[COMP]Liberio
+[COMP]Epifanio
+[COMP]Settimio
+
+[COMP]Mat
+[COMP]Kim
+[COMP]Seguace
+
+[COMP]Seguace
+[COMP]Seguace
+
+[COMP]Rodolfo
+
+
+[COMP]Valentino
+[COMP]Titta
+
+[COMP]Komor
+[COMP]Komor
+[COMP]Komor
+[COMP]Agostino
+[COMP]Ronaldo
+[COMP]Gina
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Flavia
+[COMP]Elena
+[COMP]Elena
+[COMP]Elena
+[COMP]Grazia
+[COMP]James
+[COMP]Alex
+[COMP]Alex
+[COMP]Alex
+[COMP]Uccio
+[COMP]Marco
+[COMP]Tony
+[COMP]Tony
+[COMP]Tony
+[COMP]Roberto
+[COMP]Libero
+[COMP]Dan
+[COMP]Dan
+[COMP]Dan
+[COMP]Salvio
+[COMP]Ramon
+[COMP]Cosimo
+[COMP]Cosimo
+[COMP]Cosimo
+[COMP]Tobia
+[COMP]Al & Kay
+[COMP]Al & Kay
+[COMP]Pim & Pam
+[COMP]Pim & Pam
+[COMP]Jo & Pat
+[COMP]Jo & Pat
+[COMP]Zac & Jen
+[COMP]Cip & Lip
+[COMP]Ota & Nari
+[COMP]Ota & Nari
+[COMP]Tery & Tia
+[COMP]Tery & Tia
+[COMP]Jo & Gia
+[COMP]Ana & Ina
+[COMP]Meg & Peg
+[COMP]Danila
+[COMP]Sonio
+[COMP]Priscilla
+[COMP]Jessica
+[COMP]Ciccio
+[COMP]Sirio
+[COMP]Anette
+[COMP]Giuseppe
+[COMP]Debora
+[COMP]Marino
+[COMP]Luana
+[COMP]Jonah
+[COMP]Ciccina
+[COMP]Sofia
+[COMP]Ivano
+[COMP]Rebecca
+[COMP]Giampiero
+[COMP]Leone
+[COMP]Dafne
+[COMP]Arturo
+[COMP]Dora
+[COMP]Leo
+[COMP]Ignazio
+[COMP]Gisella
+[COMP]Carol
+[COMP]Donato
+[COMP]Gabriella
+[COMP]Tullio
+[COMP]Patty
+[COMP]Alexander
+[COMP]Dr. Pilù
+[COMP]Vincenza
+[COMP]Nuccio
+[COMP]Greta
+[COMP]Josh
+[COMP]Enrico
+[COMP]Jessy
+[COMP]Umberto
+[COMP]Rufo
+[COMP]Amerigo
+[COMP]Victor
+[COMP]Lorenzo
+[COMP]Felicia
+[COMP]Uccia
+[COMP]Ivo
+[COMP]Daniela
+[COMP]Poldo
+[COMP]Mila
+[COMP]Michelino
+[COMP]Komor
+[COMP]Komor
+[COMP]Komor
 Andy
-\cNardo
-\cAle
-\cDorina
-\cLaura
-\cVanni
-\cOrazio
-\cBarto
-\cTom
-\cDarian
-\cLeonardo
-\cPamela
-\cDelfina
-\cEmilio
-\cMatteo
-\cOttarino
-\cFutura
-\cGerry
-\cItalo
-\cSandro
-\cAdalgisa
-\cCarletto
-\cDelia
-\cElio
-\cGlauco
-\cNeo
-\cAurelio
-\cCarpone
-\cSpadone
-\cGustavo
-\cCamillo
-\cCecilia
-\cSusanna
-\cGiudi
-\cMario
-\cGioele
-\cPeter
-\cLudovico
-\cSusi
-\cDeby
-\cTamara
-\cCarola
-\cEmma & Lil
-\cEri & Chin
-\cDavid
-\cMirko
-\cDoriana
-\cVale
-\cSabina
-\cRicky
-\cVasco
-\cLinda
-\cPatrick
-\cCaio
-\cStanley
-\cTullia
-\cIumi
-\cBetta
-\cEric
-\cEduarda
-\cUlrico
-\cMaurizio
-\cGalileo
-\cGigliola
-\cBilly
-\cMimmo
-\cZaro
-\cPierino
-\cElsa
-\cMuzio
-\cPiero
-\cFelicita
-\cLara
-\cCarlos
-\cUto
-\cKelly
-\cRosy
-\cNico
-\cAntonietta
-\cCostantino
-\cClaudia
-\cPeppe
-\cMorgana
-\cEva
-\cUgo
+[COMP]Nardo
+[COMP]Ale
+[COMP]Dorina
+[COMP]Laura
+[COMP]Vanni
+[COMP]Orazio
+[COMP]Barto
+[COMP]Tom
+[COMP]Darian
+[COMP]Leonardo
+[COMP]Pamela
+[COMP]Delfina
+[COMP]Emilio
+[COMP]Matteo
+[COMP]Ottarino
+[COMP]Futura
+[COMP]Gerry
+[COMP]Italo
+[COMP]Sandro
+[COMP]Adalgisa
+[COMP]Carletto
+[COMP]Delia
+[COMP]Elio
+[COMP]Glauco
+[COMP]Neo
+[COMP]Aurelio
+[COMP]Carpone
+[COMP]Spadone
+[COMP]Gustavo
+[COMP]Camillo
+[COMP]Cecilia
+[COMP]Susanna
+[COMP]Giudi
+[COMP]Mario
+[COMP]Gioele
+[COMP]Peter
+[COMP]Ludovico
+[COMP]Susi
+[COMP]Deby
+[COMP]Tamara
+[COMP]Carola
+[COMP]Emma & Lil
+[COMP]Eri & Chin
+[COMP]David
+[COMP]Mirko
+[COMP]Doriana
+[COMP]Vale
+[COMP]Sabina
+[COMP]Ricky
+[COMP]Vasco
+[COMP]Linda
+[COMP]Patrick
+[COMP]Caio
+[COMP]Stanley
+[COMP]Tullia
+[COMP]Iumi
+[COMP]Betta
+[COMP]Eric
+[COMP]Eduarda
+[COMP]Ulrico
+[COMP]Maurizio
+[COMP]Galileo
+[COMP]Gigliola
+[COMP]Billy
+[COMP]Mimmo
+[COMP]Zaro
+[COMP]Pierino
+[COMP]Elsa
+[COMP]Muzio
+[COMP]Piero
+[COMP]Felicita
+[COMP]Lara
+[COMP]Carlos
+[COMP]Uto
+[COMP]Kelly
+[COMP]Rosy
+[COMP]Nico
+[COMP]Antonietta
+[COMP]Costantino
+[COMP]Claudia
+[COMP]Peppe
+[COMP]Morgana
+[COMP]Eva
+[COMP]Ugo
 Belle
 Belle
 Belle
@@ -21592,121 +22325,121 @@ Belle
 Belle
 Belle
 Belle
-\cSaretta
-\cGinetto
-\cErnesto
-\cGiorgio
-\cVittoria
-\cCharles
+[COMP]Saretta
+[COMP]Ginetto
+[COMP]Ernesto
+[COMP]Giorgio
+[COMP]Vittoria
+[COMP]Charles
 Belle
 Belle
 Belle
 
 
 
-\cMaya
-\cCasimiro
-\cAldo
-\cBettina
-\cBettina
-\cCarole
-\cJake
-\cManuelino
+[COMP]Maya
+[COMP]Casimiro
+[COMP]Aldo
+[COMP]Bettina
+[COMP]Bettina
+[COMP]Carole
+[COMP]Jake
+[COMP]Manuelino
 
 
-\cAmelia
-\cMatilde
-\cGirolamo
-\cFiorenzo
+[COMP]Amelia
+[COMP]Matilde
+[COMP]Girolamo
+[COMP]Fiorenzo
 
-\cTorquato
-\cSven
-\cAida
-\cMara
-\cEgidio
-\cPeppino
+[COMP]Torquato
+[COMP]Sven
+[COMP]Aida
+[COMP]Mara
+[COMP]Egidio
+[COMP]Peppino
 
-\cBasilio
-\cElina
-\cPrimo
-\cMiriana
-\cKomor
-\cKomor
-\cKomor
-\cMorimoto
-\cDevota
-\cGaudenzio
-\cDorino
-\cNoemi
-\cSerena
-\cMiglio
-\cNeve
-\cMicky
-\cLetizia
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-\cSeguace
-
-
+[COMP]Basilio
+[COMP]Elina
+[COMP]Primo
+[COMP]Miriana
+[COMP]Komor
+[COMP]Komor
+[COMP]Komor
+[COMP]Morimoto
+[COMP]Devota
+[COMP]Gaudenzio
+[COMP]Dorino
+[COMP]Noemi
+[COMP]Serena
+[COMP]Miglio
+[COMP]Neve
+[COMP]Micky
+[COMP]Letizia
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
 
 
 
-\cAntemia
-\cMarzio
-\cMirton
-\cCatlina
-\cCamilla
-\cElmo
-\cEttore
-\cGeremia
-\cGiulia
-\cBerenice
-\cCarla
-\cRomina
-\cEmanuele
-\cPaolo
-\cMimma
-\cMauro
-\cLola
-\cSantina
-\cCaterina
-\cAntonella
-\cGiulio
-\cGerlando
-\cNaomi
-\cN
-\cN
-\cKomor
-\cKomor
-\cKomor
-\cKomor
-\cKomor
-\cKomor
+
+
+[COMP]Antemia
+[COMP]Marzio
+[COMP]Mirton
+[COMP]Catlina
+[COMP]Camilla
+[COMP]Elmo
+[COMP]Ettore
+[COMP]Geremia
+[COMP]Giulia
+[COMP]Berenice
+[COMP]Carla
+[COMP]Romina
+[COMP]Emanuele
+[COMP]Paolo
+[COMP]Mimma
+[COMP]Mauro
+[COMP]Lola
+[COMP]Santina
+[COMP]Caterina
+[COMP]Antonella
+[COMP]Giulio
+[COMP]Gerlando
+[COMP]Naomi
+[COMP]N
+[COMP]N
+[COMP]Komor
+[COMP]Komor
+[COMP]Komor
+[COMP]Komor
+[COMP]Komor
+[COMP]Komor
 Belle
 Belle
 Belle
-\cSeguace
-\cSeguace
-\cSeguace
-\cBrunetto
-\cRaimondo
-\cEdmondo
-\cCharles
-\cMaya
-\cCasimiro
-\cGill
-\cGill
-\cSandrina
-\cSandrina
-\cSeguace
-\cSeguace
-\cSeguace
-\cDr. Piero
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Brunetto
+[COMP]Raimondo
+[COMP]Edmondo
+[COMP]Charles
+[COMP]Maya
+[COMP]Casimiro
+[COMP]Gill
+[COMP]Gill
+[COMP]Sandrina
+[COMP]Sandrina
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Seguace
+[COMP]Dr. Piero
 Torn
-\cLorico
+[COMP]Lorico
 ~~~~~~~~~~~~~~~
 Text File : 191
 ~~~~~~~~~~~~~~~
@@ -23623,8 +24356,8 @@ YZ
 
 
 QUALSIASI
-⑭
-⑮
+♂
+♀
 [VAR BD02]INDIETRO
 QUALSIASI
 Da L. 9 in giù
@@ -23867,8 +24600,8 @@ Scegli se usare i Pokémon che hai in\nsquadra o quelli del Box Lotta.
 Hai rifiutato l'offerta.
 L'altro giocatore ha abbandonato.
 L[VAR 0202(0000)]
-[VAR FF00(0002)]⑭[VAR FF00(0000)]
-[VAR FF00(0001)]⑮[VAR FF00(0000)]
+[VAR FF00(0002)]♂[VAR FF00(0000)]
+[VAR FF00(0001)]♀[VAR FF00(0000)]
 Vuoi giocare di nuovo con [VAR 0100(0000)]?
 
 Per fare uno scambio ti servono almeno\ndue Pokémon!
@@ -30857,6 +31590,7 @@ Forma Danza
 
 
 
+[NULL]
 ~~~~~~~~~~~~~~~
 Text File : 245
 ~~~~~~~~~~~~~~~
@@ -35112,10 +35846,10 @@ Pikachu
 Raichu
 Sandshrew
 Sandslash
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Clefairy
@@ -35609,10 +36343,10 @@ Pikachu
 Raichu
 Sabelette
 Sablaireau
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Mélofée
@@ -36106,10 +36840,10 @@ Pikachu
 Raichu
 Sandan
 Sandamer
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Piepi
@@ -36603,10 +37337,10 @@ Pikachu
 Raichu
 Sandshrew
 Sandslash
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Clefairy
@@ -37597,10 +38331,10 @@ Text File : 258
 라이츄
 모래두지
 고지
-니드런⑮
+니드런♀
 니드리나
 니드퀸
-니드런⑭
+니드런♂
 니드리노
 니드킹
 삐삐
@@ -38094,10 +38828,10 @@ Pikachu
 Raichu
 Sandshrew
 Sandslash
-Nidoran⑮
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran⑭
+Nidoran♂
 Nidorino
 Nidoking
 Clefairy
@@ -49363,10 +50097,10 @@ PIKACHU
 RAICHU
 SANDSHREW
 SANDSLASH
-NIDORAN⑮
+NIDORAN♀
 NIDORINA
 NIDOQUEEN
-NIDORAN⑭
+NIDORAN♂
 NIDORINO
 NIDOKING
 CLEFAIRY
