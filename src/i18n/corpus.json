@@ -267,6 +267,8 @@
     },
     "Bank": {
       "languages": [
+        "qid-ZZ",
+        "ja-Hrkt-JP",
         "ja-JP",
         "en-US",
         "fr-FR",
@@ -280,11 +282,13 @@
       "structured": true,
       "version": "1.4",
       "files": [
-        "common"
+        "turtle"
       ]
     },
     "HOME": {
       "languages": [
+        "qid-ZZ",
+        "ja-Hrkt-JP",
         "ja-JP",
         "en-US",
         "fr-FR",
@@ -298,7 +302,7 @@
       "structured": true,
       "version": "3.0.0",
       "files": [
-        "common"
+        "megaturtle"
       ]
     }
   }
