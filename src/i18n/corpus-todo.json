@@ -94,7 +94,14 @@
         "es-ES"
       ],
       "structured": false,
-      "version": null,
+      "version": {
+        "ja-JP": "1.0",
+        "en-US": "1.1/1.2",
+        "fr-FR": "1.0/1.1",
+        "it-IT": "1.0/1.1",
+        "de-DE": "1.0/1.1",
+        "es-ES": "1.0/1.1"
+      },
       "files": [
         "data"
       ]
@@ -109,7 +116,14 @@
         "es-ES"
       ],
       "structured": false,
-      "version": null,
+      "version": {
+        "ja-JP": "1.0",
+        "en-US": "1.1",
+        "fr-FR": "1.0",
+        "it-IT": "1.0",
+        "de-DE": "1.0",
+        "es-ES": "1.0"
+      },
       "files": [
         "data"
       ]
@@ -124,21 +138,9 @@
         "es-ES"
       ],
       "structured": false,
-      "version": null,
+      "version": "1.0",
       "files": [
         "data"
-      ]
-    },
-    "BlackWhite": {
-      "languages": [
-        "ja-Hrkt-JP",
-        "ja-JP"
-      ],
-      "structured": true,
-      "version": null,
-      "files": [
-        "common",
-        "script"
       ]
     },
     "BrilliantDiamondShiningPearl": {
