@@ -4,9 +4,11 @@
   --background-light: #dde;
   --highlight-light: #eef;
   --text-light: #111;
+  --text-gray-light: #888;
   --background-dark: #112;
   --highlight-dark: #224;
   --text-dark: #eee;
+  --text-gray-dark: #888;
   --progress-bar-color-light: limegreen;
   --progress-bar-color-dark: green;
 }
@@ -16,6 +18,7 @@
     --background: var(--background-light);
     --highlight: var(--highlight-light);
     --text: var(--text-light);
+    --text-gray: var(--text-gray-light);
     --progress-bar-background: var(--highlight);
     --progress-bar-border: var(--text);
     --progress-bar-color: var(--progress-bar-color-light);
@@ -26,6 +29,7 @@
   --background: var(--background-light);
   --highlight: var(--highlight-light);
   --text: var(--text-light);
+  --text-gray: var(--text-gray-light);
   --progress-bar-background: var(--highlight);
   --progress-bar-border: var(--text);
   --progress-bar-color: var(--progress-bar-color-light);
@@ -36,6 +40,7 @@
     --background: var(--background-dark);
     --highlight: var(--highlight-dark);
     --text: var(--text-dark);
+    --text-gray: var(--text-gray-dark);
     --progress-bar-background: var(--highlight);
     --progress-bar-border: var(--text);
     --progress-bar-color: var(--progress-bar-color-dark);
@@ -46,6 +51,7 @@
   --background: var(--background-dark);
   --highlight: var(--highlight-dark);
   --text: var(--text-dark);
+  --text-gray: var(--text-gray-dark);
   --progress-bar-background: var(--highlight);
   --progress-bar-border: var(--text);
   --progress-bar-color: var(--progress-bar-color-dark);
@@ -56,6 +62,7 @@
 
 * {
   box-sizing: border-box;
+  font-variant-emoji: text;
 }
 
 a {
@@ -69,6 +76,19 @@ abbr {
 
 ruby > rt {
   font-size: 50%;
+}
+
+.var, .wait, .unused, .null, .compressed {
+  color: var(--text-gray);
+}
+
+.r, .c, .n {
+  display: none;
+  color: var(--text-gray);
+}
+
+.whitespace {
+  background-color: teal;
 }
 
 h1, h2 {
