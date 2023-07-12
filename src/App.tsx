@@ -276,6 +276,20 @@ function LanguageSelect() {
   );
 }
 
+function ModeSelect({mode, setMode}: {mode: string, setMode: Dispatch<SetStateAction<string>>}) {
+  const { t } = useTranslation();
+  return (
+    <>
+      <label htmlFor="mode">{t('mode')}</label>
+      <select name="mode" id="mode" onChange={(e) => { setMode(e.target.value); localStorage.setItem('mode', e.target.value); }} defaultValue={mode}>
+        <option value='system'>{t('modeSystem')}</option>
+        <option value='light'>{t('modeLight')}</option>
+        <option value='dark'>{t('modeDark')}</option>
+      </select>
+    </>
+  );
+}
+
 function App() {
   const { t } = useTranslation();
   const [mode, setMode] = useState(localStorage.getItem('mode') ?? 'system');
@@ -290,12 +304,7 @@ function App() {
         </h1>
         <div className="App-header-options">
           <LanguageSelect/>
-          <label htmlFor="mode">{t('mode')}</label>
-          <select name="mode" id="mode" onChange={(e) => { setMode(e.target.value); localStorage.setItem('mode', e.target.value); }} defaultValue={mode}>
-            <option value='system'>{t('modeSystem')}</option>
-            <option value='light'>{t('modeLight')}</option>
-            <option value='dark'>{t('modeDark')}</option>
-          </select>
+          <ModeSelect mode={mode} setMode={setMode}/>
         </div>
       </header>
       <Search/>
