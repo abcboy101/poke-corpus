@@ -160,12 +160,40 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
   }
 
   /**
-   * Converts private use characters to the corresponding Unicode characters.
+   * Appends additional metadata to each string:
+   * - For strings with ruby, appends copies of the strings with the ruby text converted to kana/kanji so that they can be searched.
+   *   These copies are separated by `U+F0000` and `U+F0001` so that they can be stripped before display.
+   *
+   * Returns the resulting string.
+   */
+  const preprocessMetadata = (s: string) => {
+    return s.search(/\{[^|}]+\|[^|}]+\}/u) === -1 ? s : (
+      s.replaceAll(/^.*\{[^|}]+\|[^|}]+\}.*$/gum, (line) => {
+        const lineKanji = line.replaceAll(/\{([^|}]+)\|[^|}]+\}/gu, '$1');
+        const lineKana = line.replaceAll(/\{[^|}]+\|([^|}]+)\}/gu, '$1');
+        return [line, '\u{F0000}', lineKanji, '\u{F0001}', lineKana].join('');
+      })
+    );
+  }
+
+  /**
+   * Converts private use characters to the corresponding Unicode characters,
+   * and adds additional searchable metadata.
    *
    * Returns the resulting string.
    */
   const preprocessString = (s: string) => {
-    return remapSwitchSpecialCharacters(remap3DSSpecialCharacters(remapNDSSpecialCharacters(s)));
+    return preprocessMetadata(remapSwitchSpecialCharacters(remap3DSSpecialCharacters(remapNDSSpecialCharacters(s))));
+  }
+
+  /**
+   * Strips additional metadata from each string:
+   * - Converted ruby text marked with `U+F0000` and `U+F0001`
+   *
+   * Returns the resulting string.
+   */
+  const postprocessMetadata = (s: string) => {
+    return s.split('\u{F0000}')[0];
   }
 
   /**
@@ -176,7 +204,8 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
    * Returns the resulting HTML string.
    */
   const postprocessString = (s: string) => {
-    return (s.replaceAll('<', '&lt;').replaceAll('>', '&gt;')
+    return (postprocessMetadata(s)
+      .replaceAll('<', '&lt;').replaceAll('>', '&gt;')
       .replaceAll('\u2486', '<sup>P</sup><sub>K</sub>') // Gen 5 PK
       .replaceAll('\u2487', '<sup>M</sup><sub>N</sub>') // Gen 5 MN
       .replaceAll('\uE0A7', '<sup>P</sup><sub>K</sub>') // 3DS PK
