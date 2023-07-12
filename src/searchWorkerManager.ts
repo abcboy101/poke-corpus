@@ -59,9 +59,9 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
       // Load all files in all languages in the collection
       collection.files
       .filter((fileKey) => !((fileKey === 'common' && !params.common) || (fileKey === 'script' && !params.script)))
-      .forEach((fileKey, i) => {
+      .forEach((fileKey) => {
         taskList.push({
-          index: i,
+          index: taskCount,
           params: params,
           collectionKey: collectionKey,
           fileKey: fileKey,
