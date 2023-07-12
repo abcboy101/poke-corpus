@@ -1,5 +1,3 @@
-import corpus from './i18n/corpus.json'
-
 export type SearchParams = {
   query: string,
   regex: boolean,
@@ -10,18 +8,26 @@ export type SearchParams = {
   languages: string[]
 };
 
-export type SearchResults = {
-  complete: boolean,
+export type SearchTask = {
+  index: number,
+  params: SearchParams,
+  collectionKey: string,
+  fileKey: string,
+  languages: string[]
+}
+
+export type SearchTaskResult = {
+  index: number,
   status: string,
-  progress: number,
-  resultsLanguages: string[][],
-  results: [string, string, string[][]][]
-};
+  resultLanguages?: string[],
+  result?: [string, string, string[][]]
+}
+
+export const cacheVersion = "v1";
 
 /* eslint-disable no-restricted-globals */
-self.onmessage = (message: MessageEvent<SearchParams>) => {
-  const cacheVersion = "v1";
-
+self.onmessage = (task: MessageEvent<SearchTask>) => {
+  //#region Helper functions
   /**
    * Attempts the following, in order:
    * - Retrieving the file from the cache
@@ -225,63 +231,23 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
       .replaceAll(/^(\s+)$/gu, '<span class="whitespace">$1</span>')
     );
   };
+  //#endregion
 
-  const progressPortionLoading = 0.49;
-  const progressPortionProcessing = 0.49;
-  const progressPortionCollecting = 0.01; // 0.01 for rendering
-
-  const updateStatusInProgress = (status: string, loadingProgress: number, processingProgress: number, collectingProgress: number) => {
-    const progress = loadingProgress * progressPortionLoading + processingProgress * progressPortionProcessing + collectingProgress * progressPortionCollecting;
-    const message: SearchResults = {
-      complete: false,
+  const {index, params, collectionKey, fileKey, languages} = task.data;
+  const notify = (status: string, resultLanguages?: string[], result?: [string, string, string[][]]) => {
+    const message: SearchTaskResult = {
+      index: index,
       status: status,
-      progress: progress,
-      resultsLanguages: [],
-      results: []
-    };
+      resultLanguages: resultLanguages,
+      result: result
+    }
     postMessage(message);
-  };
-
-  const updateStatusComplete = (status: string, resultsLanguages: string[][] = [], results: [string, string, string[][]][] = []) => {
-    const message: SearchResults = {
-      complete: true,
-      status: status,
-      progress: 1.0,
-      resultsLanguages: resultsLanguages,
-      results: results
-    };
-    postMessage(message);
-  };
+  }
 
   try {
-    const params = message.data;
-    updateStatusInProgress('loading', 0, 0, 0);
-
-    // Clear old caches
-    caches.keys().then((keyList) => Promise.all(keyList.filter((key) => key !== cacheVersion).map((key) => caches.delete(key))));
-
-
     // Load files
-    const loadingPromises: [string, string, Promise<[string, string]>[]][] = [];
-    const loadingPromisesIndividual: Promise<[string, string]>[] = []; // for progress bar
-    Object.keys(corpus.collections).filter((collectionKey) => params.collections.includes(collectionKey)).forEach((collectionKey) => {
-      const collection = corpus.collections[collectionKey as keyof typeof corpus.collections];
-
-      // Do not process collection if it does not include any language being searched
-      if (params.languages.every((languageKey) => !collection.languages.includes(languageKey))) {
-        return;
-      }
-
-      // Load all files in all languages in the collection
-      collection.files
-      .filter((fileKey) => !((fileKey === 'common' && !params.common) || (fileKey === 'script' && !params.script)))
-      .forEach((fileKey) => {
-        const loadingFilePromises = collection.languages.map((languageKey) => getFileFromCache(collectionKey, languageKey, fileKey).then((data) => [languageKey, data] as [string, string]));
-        loadingFilePromises.forEach((promise) => loadingPromisesIndividual.push(promise)); // for progress bar
-        loadingPromises.push([collectionKey, fileKey, loadingFilePromises] as [string, string, Promise<[string, string]>[]]);
-      });
-    });
-
+    const filePromises = languages.map((languageKey) => getFileFromCache(collectionKey, languageKey, fileKey).then((data) => [languageKey, data] as [string, string]));
+    filePromises.forEach((promise) => promise.then(() => notify('loading'))); // for progress bar
 
     // Process files
     const re = params.regex ? new RegExp(params.query, params.caseInsensitive ? 'ui' : 'u') : null;
@@ -291,93 +257,40 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
         || (!params.regex && params.caseInsensitive && (line.toLowerCase().includes(params.query.toLowerCase()) || line.toUpperCase().includes(params.query.toUpperCase())));
     }
 
-    const processingPromisesIndividual: Promise<[string, number[], string[]]>[] = []; // for progress bar
-    const processingPromises: Promise<[string, string, string[], string[][]]>[] = loadingPromises.map(([collectionKey, fileKey, filePromises]) => {
-      // Check selected languages for lines that satisfy the query
-      const processingFilePromises = filePromises.map((promise) => promise.then(([languageKey, data]) => {
-        const lines = data.split(/\r\n|\n/);
-        const lineKeys: number[] = [];
-        if (params.languages.includes(languageKey)) {
-          lines.forEach((line, i) => {
-            if (matchCondition(line)) {
-              lineKeys.push(i);
-            }
-          });
-        }
-        return [languageKey, lineKeys, lines] as [string, number[], string[]];
-      }));
-      processingFilePromises.forEach((promise) => processingPromisesIndividual.push(promise)); // for progress bar
-
-      // Filter only the lines that matched
-      return Promise.all(processingFilePromises).then((processedFiles) => {
-        const languageKeys: string[] = [];
-        const lineKeysSet: Set<number> = new Set();
-        const fileData: string[][] = [];
-
-        processedFiles.forEach(([languageKey, lineKeys, lines]) => {
-          languageKeys.push(languageKey);
-          lineKeys.forEach((i) => lineKeysSet.add(i));
-          fileData.push(lines);
+    // Check selected languages for lines that satisfy the query
+    const processingFilePromises = filePromises.map((promise) => promise.then(([languageKey, data]) => {
+      const lines = data.split(/\r\n|\n/);
+      const lineKeys: number[] = [];
+      if (params.languages.includes(languageKey)) {
+        lines.forEach((line, i) => {
+          if (matchCondition(line)) {
+            lineKeys.push(i);
+          }
         });
+      }
+      return [languageKey, lineKeys, lines] as [string, number[], string[]];
+    }));
+    processingFilePromises.forEach((promise) => promise.then(() => notify('processing'))); // for progress bar
 
-        const fileResults: string[][] = [];
-        Array.from(lineKeysSet).sort((a, b) => a - b).forEach((i) => fileResults.push(fileData.map((lines) => postprocessString(lines[i] ?? ''))));
-        return [collectionKey, fileKey, languageKeys, fileResults];
+    // Filter only the lines that matched
+    Promise.all(processingFilePromises).then((processedFiles) => {
+      const languageKeys: string[] = [];
+      const lineKeysSet: Set<number> = new Set();
+      const fileData: string[][] = [];
+
+      processedFiles.forEach(([languageKey, lineKeys, lines]) => {
+        languageKeys.push(languageKey);
+        lineKeys.forEach((i) => lineKeysSet.add(i));
+        fileData.push(lines);
       });
-    });
 
-
-    // Update progress bar as each file is loaded/processed
-    let loadedCount = 0;
-    let processedCount = 0;
-    let collectedCount = 0;
-
-    loadingPromisesIndividual.forEach((promise) => {
-      promise.then(() => {
-        loadedCount++;
-        updateStatusInProgress('loading', loadedCount/loadingPromisesIndividual.length, processedCount/processingPromisesIndividual.length, collectedCount/processingPromises.length);
-        if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-          console.log(`Loaded ${loadedCount}/${loadingPromisesIndividual.length}`);
-        }
-      });
-    })
-
-    processingPromisesIndividual.forEach((promise) => {
-      promise.then(() => {
-        processedCount++;
-        updateStatusInProgress('processing', loadedCount/loadingPromisesIndividual.length, processedCount/processingPromisesIndividual.length, collectedCount/processingPromises.length);
-        if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-          console.log(`Processed ${processedCount}/${processingPromisesIndividual.length}`);
-        }
-      });
-    })
-
-
-    // Collect results
-    Promise.all(processingPromises).then((processingResults) => {
-      const resultsLanguages: string[][] = [];
-      const results: [string, string, string[][]][] = [];
-      processingResults.forEach(([collectionKey, fileKey, languageKeys, fileResults], collectedCount) => {
-        resultsLanguages.push(languageKeys);
-        results.push([collectionKey, fileKey, fileResults]);
-        collectedCount++;
-        updateStatusInProgress('collecting', loadedCount/loadingPromisesIndividual.length, processedCount/processingPromisesIndividual.length, collectedCount/processingPromises.length);
-        if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-          console.log(`Collected ${collectedCount}/${processingPromises.length}`);
-        }
-      });
-      updateStatusComplete('done', resultsLanguages, results);
-      self.close();
-    })
-    .catch((err) => {
-      console.error(err);
-      updateStatusComplete('error');
-      self.close();
+      const fileResults: string[][] = [];
+      Array.from(lineKeysSet).sort((a, b) => a - b).forEach((i) => fileResults.push(fileData.map((lines) => postprocessString(lines[i] ?? ''))));
+      notify('done', languageKeys, [collectionKey, fileKey, fileResults]);
     });
   }
   catch (err) {
     console.error(err);
-    updateStatusComplete('error');
-    self.close();
+    notify('error');
   }
 };

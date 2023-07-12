@@ -6,7 +6,7 @@ import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 import supportedLngs from './i18n/supportedLngs.json'
 import corpus from './i18n/corpus.json'
-import { SearchResults } from './searchWorker';
+import { SearchResults } from './searchWorkerManager';
 import Spinner from './Spinner';
 import ProgressBar from './ProgressBar';
 
@@ -158,7 +158,6 @@ function Search() {
   const onMessage = (e: MessageEvent<SearchResults>) => {
     if (e.data.complete) {
       // use requestAnimationFrame to ensure that the browser has displayed the 'rendering' status before the results start being rendered
-      workerRef.current = null;
       setStatus('rendering');
       window.requestAnimationFrame(() => {
         setStatus(e.data.status);
@@ -197,7 +196,8 @@ function Search() {
     }
     else if (query.length > 0 && collections.length > 0 && languages.length > 0) {
       if (workerRef.current === null) {
-        workerRef.current = new Worker(new URL("./searchWorker.ts", import.meta.url));
+        console.log('Creating new worker...');
+        workerRef.current = new Worker(new URL("./searchWorkerManager.ts", import.meta.url));
         workerRef.current.addEventListener("message", onMessage);
       }
       setStatus('waiting');
