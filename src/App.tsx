@@ -142,23 +142,29 @@ function Search() {
     setQuery(params.get('query') ?? '');
     setRegex(params.get('regex') === 'true');
     setCaseInsensitive(params.get('caseInsensitive') !== 'false');
-    setCommon(params.get('common') !== 'false');
     setScript(params.get('script') !== 'false');
-    setCollections((params.get('collections') ?? '').split(',').filter((value) => Object.keys(corpus.collections).includes(value)));
-    setLanguages((params.get('languages') ?? '').split(',').filter((value) => corpus.languages.includes(value)));
+
+    const newCollections = (params.get('collections') ?? '').split(',').filter((value) => Object.keys(corpus.collections).includes(value));
+    if (collections.length !== newCollections.length || collections.some((value, i) => value !== newCollections[i])) {
+      setCollections(newCollections);
+    }
+
+    const newLanguages = (params.get('languages') ?? '').split(',').filter((value) => corpus.languages.includes(value));
+    if (languages.length !== newLanguages.length || languages.some((value, i) => value !== newLanguages[i])) {
+      setLanguages(newLanguages);
+    }
   });
 
   const onMessage = (e: MessageEvent<SearchResults>) => {
     if (e.data.complete) {
+      // use requestAnimationFrame to ensure that the browser has displayed the 'rendering' status before the results start being rendered
+      workerRef.current = null;
+      setStatus('rendering');
       window.requestAnimationFrame(() => {
-        // use requestAnimationFrame to ensure that the browser has displayed the 'rendering' status before the results start being rendered
-        setStatus('rendering');
-        window.requestAnimationFrame(() => {
-          setStatus(e.data.status);
-          setProgress(e.data.progress);
-          setResultsLanguages(e.data.resultsLanguages);
-          setResults(e.data.results);
-        });
+        setStatus(e.data.status);
+        setProgress(e.data.progress);
+        setResultsLanguages(e.data.resultsLanguages);
+        setResults(e.data.results);
       });
     }
     else {
@@ -182,7 +188,7 @@ function Search() {
       languages: languages.join(','),
     }).toString();
 
-    if (workerRef.current !== null && status !== 'initial' && status !== 'done') {
+    if ((workerRef.current !== null && status !== 'initial' && status !== 'done')) {
       console.log('Terminating worker!');
       workerRef.current.terminate();
       workerRef.current = null;
@@ -192,7 +198,7 @@ function Search() {
     else if (query.length > 0 && collections.length > 0 && languages.length > 0) {
       if (workerRef.current === null) {
         workerRef.current = new Worker(new URL("./searchWorker.ts", import.meta.url));
-        workerRef.current.onmessage = onMessage;
+        workerRef.current.addEventListener("message", onMessage);
       }
       setStatus('waiting');
       setProgress(0.0);
@@ -214,47 +220,45 @@ function Search() {
 
   return (
     <>
-      <search>
-        <form className="App-search" onSubmit={onSubmit}>
-          <div className="App-search-bar">
-            <div className="App-search-bar-group">
-              <div>
-                <label htmlFor="query">{t('query')} </label>
-                <input type="text" name="query" id="query" value={query} onChange={e => setQuery(e.target.value)}/>
-              </div>
-              <div>
-                <input type="submit" value={(status !== 'initial' && status !== 'done' && status !== 'rendering') ? t('cancel') : t('search')} disabled={!(status !== 'initial' && status !== 'done' && status !== 'rendering') && (collections.length === 0 || languages.length === 0)}/>
-              </div>
-            </div>
-            <div className="App-search-bar-group">
-              <div>
-                <input type="checkbox" name="regex" id="regex" checked={regex} onChange={e => setRegex(e.target.checked)}/>
-                <label htmlFor="regex">{t('regex')}</label>
-              </div>
-              <div>
-                <input type="checkbox" name="caseInsensitive" id="caseInsensitive" checked={caseInsensitive} onChange={e => setCaseInsensitive(e.target.checked)}/>
-                <label htmlFor="caseInsensitive">{t('caseInsensitive')}</label>
-              </div>
-              <div>
-                <input type="checkbox" name="common" id="common" checked={common} onChange={e => setCommon(e.target.checked)}/>
-                <label htmlFor="common">{t('common')}</label>
-              </div>
-              <div>
-                <input type="checkbox" name="script" id="script" checked={script} onChange={e => setScript(e.target.checked)}/>
-                <label htmlFor="script">{t('script')}</label>
-              </div>
+      <form className="App-search" onSubmit={onSubmit}>
+        <div className="App-search-bar">
+          <div className="App-search-bar-group">
+            <div>
+              <label htmlFor="query">{t('query')} </label>
+              <input type="text" name="query" id="query" value={query} onChange={e => setQuery(e.target.value)}/>
             </div>
             <div>
-              <button onClick={(e) => {e.preventDefault(); caches.keys().then((keyList) => Promise.all(keyList.map((key) => caches.delete(key))));}}>{t('clearCache')}</button>
+              <input type="submit" value={(status !== 'initial' && status !== 'done' && status !== 'rendering') ? t('cancel') : t('search')} disabled={!(status !== 'initial' && status !== 'done' && status !== 'rendering') && (collections.length === 0 || languages.length === 0)}/>
             </div>
           </div>
-          <div className="App-search-filters">
-            <SearchCollections collections={collections} setCollections={setCollections}/>
-            <div className="App-search-filters-divider"></div>
-            <SearchLanguages languages={languages} setLanguages={setLanguages}/>
+          <div className="App-search-bar-group">
+            <div>
+              <input type="checkbox" name="regex" id="regex" checked={regex} onChange={e => setRegex(e.target.checked)}/>
+              <label htmlFor="regex">{t('regex')}</label>
+            </div>
+            <div>
+              <input type="checkbox" name="caseInsensitive" id="caseInsensitive" checked={caseInsensitive} onChange={e => setCaseInsensitive(e.target.checked)}/>
+              <label htmlFor="caseInsensitive">{t('caseInsensitive')}</label>
+            </div>
+            <div>
+              <input type="checkbox" name="common" id="common" checked={common} onChange={e => setCommon(e.target.checked)}/>
+              <label htmlFor="common">{t('common')}</label>
+            </div>
+            <div>
+              <input type="checkbox" name="script" id="script" checked={script} onChange={e => setScript(e.target.checked)}/>
+              <label htmlFor="script">{t('script')}</label>
+            </div>
           </div>
-        </form>
-      </search>
+          <div>
+            <button onClick={(e) => {e.preventDefault(); caches.keys().then((keyList) => Promise.all(keyList.map((key) => caches.delete(key))));}}>{t('clearCache')}</button>
+          </div>
+        </div>
+        <div className="App-search-filters">
+          <SearchCollections collections={collections} setCollections={setCollections}/>
+          <div className="App-search-filters-divider"></div>
+          <SearchLanguages languages={languages} setLanguages={setLanguages}/>
+        </div>
+      </form>
       <Results status={status} progress={progress} resultsLanguages={resultsLanguages} results={results}/>
     </>
   );
