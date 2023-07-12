@@ -1,7 +1,7 @@
 import './Spinner.css';
 
-function Spinner() {
-  return <div className="spinner"></div>
+function Spinner({src}: {src: string}) {
+  return <img className="spinner" src={src} alt=""/>
 }
 
 export default Spinner;

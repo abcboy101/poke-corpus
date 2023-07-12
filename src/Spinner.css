@@ -1,7 +1,5 @@
 .spinner {
   display: inline-block;
-  background: url('./logo.svg');
-  background-size: contain;
   width: 1em;
   height: 1em;
   animation: Spinner-spin infinite 0.5s linear;
