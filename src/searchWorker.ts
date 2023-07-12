@@ -43,7 +43,12 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       ?? cache.add(url).then(() => cache.match(url)).then(res => res
         ?? fetch(url))))
     .catch(() => fetch(url))
-    .then((res) => res.text())
+    .catch((err) => {
+      console.error(err);
+      notify('network');
+      return null;
+    })
+    .then((res) => res === null ? '' : res.text())
     .then(preprocessString);
   }
 
@@ -244,23 +249,35 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
     postMessage(message);
   }
 
+  let re: RegExp | null = null;
+  try {
+    if (params.regex) {
+      re = new RegExp(params.query, params.caseInsensitive ? 'ui' : 'u');
+    }
+  }
+  catch (err) {
+    console.error(err);
+    notify('regex');
+    return;
+  }
+
+  const matchCondition = (line: string): boolean => {
+    return (params.regex && re !== null && line.match(re) !== null)
+      || (!params.regex && !params.caseInsensitive && line.includes(params.query))
+      || (!params.regex && params.caseInsensitive && (line.toLowerCase().includes(params.query.toLowerCase()) || line.toUpperCase().includes(params.query.toUpperCase())));
+  };
+
   try {
     // Load files
     const filePromises = languages.map((languageKey) => getFileFromCache(collectionKey, languageKey, fileKey).then((data) => [languageKey, data] as [string, string]));
     filePromises.forEach((promise) => promise.then(() => notify('loading'))); // for progress bar
 
     // Process files
-    const re = params.regex ? new RegExp(params.query, params.caseInsensitive ? 'ui' : 'u') : null;
-    const matchCondition = (line: string): boolean => {
-      return (params.regex && re !== null && line.match(re) !== null)
-        || (!params.regex && !params.caseInsensitive && line.includes(params.query))
-        || (!params.regex && params.caseInsensitive && (line.toLowerCase().includes(params.query.toLowerCase()) || line.toUpperCase().includes(params.query.toUpperCase())));
-    }
-
-    // Check selected languages for lines that satisfy the query
     const processingFilePromises = filePromises.map((promise) => promise.then(([languageKey, data]) => {
       const lines = data.split(/\r\n|\n/);
       const lineKeys: number[] = [];
+
+      // Check selected languages for lines that satisfy the query
       if (params.languages.includes(languageKey)) {
         lines.forEach((line, i) => {
           if (matchCondition(line)) {
@@ -287,6 +304,10 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       const fileResults: string[][] = [];
       Array.from(lineKeysSet).sort((a, b) => a - b).forEach((i) => fileResults.push(fileData.map((lines) => postprocessString(lines[i] ?? ''))));
       notify('done', languageKeys, [collectionKey, fileKey, fileResults]);
+    })
+    .catch((err) => {
+      console.error(err);
+      notify('error');
     });
   }
   catch (err) {

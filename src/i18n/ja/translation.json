@@ -23,7 +23,9 @@
     "collecting": "収集中…",
     "rendering": "レンダリング中…",
     "done": "完了！",
-    "error": "エラーが発生しました"
+    "error": "エラーが発生しました",
+    "network": "ネットワークエラー",
+    "regex": "不正な正規表現"
   },
   "tableHeader": "{{collection}}の{{file}}データ",
   "tagline": "ポケモンのコーパスを検索するツール",

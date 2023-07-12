@@ -116,11 +116,13 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
           helpers.forEach((helper) => helper.terminate());
         }
       }
-      else if (result.status === 'error') {
-        updateStatusComplete('error');
+      else { // error
+        updateStatusComplete(result.status);
         helpers.forEach((helper) => helper.terminate());
       }
     }
+
+    // Start helpers
     const numWorkers = Math.min(taskList.length, (navigator.hardwareConcurrency - 2) || 4);
     for (let i = 0; i < numWorkers; i++) {
       const helper = new Worker(new URL("./searchWorker.ts", import.meta.url));
@@ -129,7 +131,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
     }
     taskList.forEach((task, i) => {
       helpers[i % helpers.length].postMessage(task);
-    })
+    });
   }
   catch (err) {
     console.error(err);

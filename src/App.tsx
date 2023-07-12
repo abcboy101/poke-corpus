@@ -19,7 +19,7 @@ function Results({status, progress, resultsLanguages, results}: {status: string,
     <>
       <div className="App-results-status">
         <div>{t(`status.${status}`)}</div>
-        {['initial', 'done', 'error'].includes(status) ? <div></div> : <Spinner src={logo}/>}
+        {['waiting', 'loading', 'processing', 'collecting', 'rendering'].includes(status) ? <Spinner src={logo}/> : <div></div>}
         <ProgressBar progress={progress} />
       </div>
       <main className="App-results">
