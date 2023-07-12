@@ -11,6 +11,8 @@
   --text-gray-dark: #888;
   --progress-bar-color-light: limegreen;
   --progress-bar-color-dark: green;
+  --whitespace-background-light: skyblue;
+  --whitespace-background-dark: teal;
 }
 
 @media (prefers-color-scheme: light) {
@@ -22,6 +24,7 @@
     --progress-bar-background: var(--highlight);
     --progress-bar-border: var(--text);
     --progress-bar-color: var(--progress-bar-color-light);
+    --whitespace-background: var(--whitespace-background-light);
   }
 }
 
@@ -33,6 +36,7 @@
   --progress-bar-background: var(--highlight);
   --progress-bar-border: var(--text);
   --progress-bar-color: var(--progress-bar-color-light);
+  --whitespace-background: var(--whitespace-background-light);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,6 +48,7 @@
     --progress-bar-background: var(--highlight);
     --progress-bar-border: var(--text);
     --progress-bar-color: var(--progress-bar-color-dark);
+    --whitespace-background: var(--whitespace-background-dark);
   }
 }
 
@@ -55,6 +60,7 @@
   --progress-bar-background: var(--highlight);
   --progress-bar-border: var(--text);
   --progress-bar-color: var(--progress-bar-color-dark);
+  --whitespace-background: var(--whitespace-background-dark);
 }
 
 
@@ -88,7 +94,7 @@ ruby > rt {
 }
 
 .whitespace {
-  background-color: teal;
+  background-color: var(--whitespace-background);
 }
 
 h1, h2 {
