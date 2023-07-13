@@ -42,9 +42,6 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
     const params = message.data;
     updateStatusInProgress('loading', 0, 0, 0);
 
-    // Clear old caches
-    caches.keys().then((keyList) => Promise.all(keyList.filter((key) => key !== cacheVersion).map((key) => caches.delete(key))));
-
     // Load files
     let taskCount = 0;
     const taskList: SearchTask[] = [];
