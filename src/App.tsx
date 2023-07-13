@@ -244,6 +244,14 @@ function Search() {
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.ready.then(registration => registration.unregister());
     }
+    if (indexedDB){
+      try {
+        indexedDB.databases().then(databases => databases.filter((db) => db.name !== undefined).forEach((db) => indexedDB.deleteDatabase(db.name as string)));
+      }
+      catch (err) {
+        indexedDB.deleteDatabase('workbox-expiration');
+      }
+    }
     if (caches) {
       caches.keys().then((keyList) => {
         Promise.all(keyList.map((key) => caches.delete(key)))
