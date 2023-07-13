@@ -1,4 +1,4 @@
-import { Dispatch, FormEventHandler, MutableRefObject, SetStateAction, useRef, useState } from 'react';
+import { Dispatch, FormEventHandler, MutableRefObject, SetStateAction, useEffect, useRef, useState } from 'react';
 import './App.css';
 import logo from './logo.svg';
 import './i18n/config';
@@ -137,23 +137,29 @@ function Search() {
   const [results, setResults] = useState([] as [string, string, string[][]][]);
   const [resultsLanguages, setResultsLanguages] = useState([] as string[][]);
 
-  window.addEventListener('hashchange', () => {
-    const params: URLSearchParams = new URLSearchParams(window.location.hash.substring(1));
-    setQuery(params.get('query') ?? '');
-    setRegex(params.get('regex') === 'true');
-    setCaseInsensitive(params.get('caseInsensitive') !== 'false');
-    setScript(params.get('script') !== 'false');
+  useEffect(() => {
+    const onHashChange = () => {
+      const params: URLSearchParams = new URLSearchParams(window.location.hash.substring(1));
+      setQuery(params.get('query') ?? '');
+      setRegex(params.get('regex') === 'true');
+      setCaseInsensitive(params.get('caseInsensitive') !== 'false');
+      setScript(params.get('script') !== 'false');
 
-    const newCollections = (params.get('collections') ?? '').split(',').filter((value) => Object.keys(corpus.collections).includes(value));
-    if (collections.length !== newCollections.length || collections.some((value, i) => value !== newCollections[i])) {
-      setCollections(newCollections);
-    }
+      const newCollections = (params.get('collections') ?? '').split(',').filter((value) => Object.keys(corpus.collections).includes(value));
+      if (collections.length !== newCollections.length || collections.some((value, i) => value !== newCollections[i])) {
+        setCollections(newCollections);
+      }
 
-    const newLanguages = (params.get('languages') ?? '').split(',').filter((value) => corpus.languages.includes(value));
-    if (languages.length !== newLanguages.length || languages.some((value, i) => value !== newLanguages[i])) {
-      setLanguages(newLanguages);
-    }
-  });
+      const newLanguages = (params.get('languages') ?? '').split(',').filter((value) => corpus.languages.includes(value));
+      if (languages.length !== newLanguages.length || languages.some((value, i) => value !== newLanguages[i])) {
+        setLanguages(newLanguages);
+      }
+    };
+    window.addEventListener('hashchange', onHashChange);
+    return () => {
+      window.removeEventListener('hashchange', onHashChange);
+    };
+  }, [collections, languages]);
 
   const onMessage = (e: MessageEvent<SearchResults>) => {
     if (e.data.complete) {
