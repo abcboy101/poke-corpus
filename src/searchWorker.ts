@@ -1,3 +1,5 @@
+import 'compression-streams-polyfill';
+
 export type SearchParams = {
   query: string,
   regex: boolean,
@@ -37,7 +39,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
    * Returns a promise of the text of the file.
    */
   const getFileFromCache = (collectionKey: string, languageKey: string, fileKey: string) => {
-    const url = process.env.PUBLIC_URL + `/corpus/${collectionKey}/${languageKey}_${fileKey}.txt`;
+    const url = process.env.PUBLIC_URL + `/corpus/${collectionKey}/${languageKey}_${fileKey}.txt.gz`;
     return caches.open(cacheVersion)
     .then((cache) => cache.match(url).then(res => res
       ?? cache.add(url).then(() => cache.match(url)).then(res => res
@@ -48,7 +50,8 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       notify('network');
       return null;
     })
-    .then((res) => res === null ? '' : res.text())
+    .then((res) => res === null ? '' :
+      res.blob().then((blob) => new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text()))
     .then(preprocessString);
   }
 
