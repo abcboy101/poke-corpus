@@ -1,4 +1,4 @@
-import { Dispatch, FormEventHandler, MutableRefObject, SetStateAction, useEffect, useRef, useState } from 'react';
+import { Dispatch, FormEventHandler, MouseEventHandler, MutableRefObject, SetStateAction, useEffect, useRef, useState } from 'react';
 import './App.css';
 import logo from './logo.svg';
 import './i18n/config';
@@ -239,6 +239,18 @@ function Search() {
     }
   };
 
+  const clearCache: MouseEventHandler<HTMLButtonElement> = (e) => {
+    e.preventDefault();
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.ready.then(registration => registration.unregister());
+    }
+    if (caches) {
+      caches.keys().then((keyList) => {
+        Promise.all(keyList.map((key) => caches.delete(key)))
+      });
+    }
+  };
+
   return (
     <>
       <form className="App-search" onSubmit={onSubmit}>
@@ -271,7 +283,7 @@ function Search() {
             </div>
           </div>
           <div>
-            <button onClick={(e) => {e.preventDefault(); caches.keys().then((keyList) => Promise.all(keyList.map((key) => caches.delete(key))));}}>{t('clearCache')}</button>
+            <button onClick={clearCache}>{t('clearCache')}</button>
           </div>
         </div>
         <div className="App-search-filters">
