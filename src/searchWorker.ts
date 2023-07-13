@@ -227,15 +227,27 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       .replaceAll('\u2487', '<sup>M</sup><sub>N</sub>') // Gen 5 MN
       .replaceAll('\uE0A7', '<sup>P</sup><sub>K</sub>') // 3DS PK
       .replaceAll('\uE0A8', '<sup>M</sup><sub>N</sub>') // 3DS MN
+      .replaceAll(/\[VAR FF01\(FF43\)\]\[VAR FF01\(30B3\)\]/gu, '')
+      .replaceAll(/\[VAR FF01\(FF43\)\](.+?)(?:\[VAR FF01\(30B3\)\]|\\r|\\c|\\n|$)/gu, '<span class="line-font-size-200"><span class="text-font-size-200">$1</span></span>')
+      .replaceAll('[VAR FF01(30B3)]', '')
+      .replaceAll(/\[VAR 0205\](.*?(?:\\r|\\c|\\n|$)+)/gu, '<span class="line-align-center">$1</span>')
+      .replaceAll(/\[VAR 0206\](.*?(?:\\r|\\c|\\n|$)+)/gu, '<span class="line-align-right">$1</span>')
+
+      // Line breaks
+      .replaceAll('[VAR 0207]\\n', '<span class="c">&#91;VAR 0207&#93;</span><span class="n">&#92;n</span><br>')
+      .replaceAll('[VAR 0208]\\n', '<span class="r">&#91;VAR 0208&#93;</span><span class="n">&#92;n</span><br>')
       .replaceAll('\\r\\n', '<span class="r">&#92;r</span><span class="n">&#92;n</span><br>')
       .replaceAll('\\c\\n', '<span class="c">&#92;c</span><span class="n">&#92;n</span><br>')
+      .replaceAll('[VAR 0207]', '<span class="c">[VAR 0207]</span>')
+      .replaceAll('[VAR 0208]', '<span class="r">[VAR 0208]</span>')
       .replaceAll('\\r', '<span class="r">&#92;r</span><br>')
       .replaceAll('\\c', '<span class="c">&#92;c</span><br>')
       .replaceAll('\\n', '<span class="n">&#92;n</span><br>')
+
       .replaceAll('\t', '<span class="tab">\t</span>')
       .replaceAll('[NULL]', '<span class="null">[NULL]</span>')
       .replaceAll('[COMP]', '<span class="compressed">[COMP]</span>')
-      .replaceAll(/(\[VAR [0-9A-F]{4}(?:\([0-9A-F]{4}(?:,[0-9A-F]{4})*\))\])/gu, '<span class="var">$1</span>')
+      .replaceAll(/(\[VAR [^\]]+?\])/gu, '<span class="var">$1</span>')
       .replaceAll(/(\[WAIT \d+\])/gu, '<span class="wait">$1</span>')
       .replaceAll(/(\[~ \d+\])/gu, '<span class="unused">$1</span>')
       .replaceAll(/\{([^|}]+)\|([^|}]+)\}/gu, '<ruby>$1<rp>(</rp><rt>$2</rt><rp>)</rp></ruby>') // Switch furigana
@@ -276,7 +288,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
   try {
     // Load files
     const filePromises = languages.map((languageKey) => getFileFromCache(collectionKey, languageKey, fileKey).then((data) => [languageKey, data] as [string, string]));
-    filePromises.forEach((promise) => promise.then(() => notify('loading'))); // for progress bar
+    filePromises.forEach((promise) => promise.then(() => notify('loading')).catch(() => {})); // for progress bar
 
     // Process files
     const processingFilePromises = filePromises.map((promise) => promise.then(([languageKey, data]) => {
@@ -293,7 +305,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       }
       return [languageKey, lineKeys, lines] as [string, number[], string[]];
     }));
-    processingFilePromises.forEach((promise) => promise.then(() => notify('processing'))); // for progress bar
+    processingFilePromises.forEach((promise) => promise.then(() => notify('processing')).catch(() => {})); // for progress bar
 
     // Filter only the lines that matched
     Promise.all(processingFilePromises).then((processedFiles) => {

@@ -13,6 +13,7 @@
   --progress-bar-color-dark: green;
   --whitespace-background-light: skyblue;
   --whitespace-background-dark: teal;
+  --line-height: 1.5;
 }
 
 @media (prefers-color-scheme: light) {
@@ -97,9 +98,31 @@ ruby > rt {
   background-color: var(--whitespace-background);
 }
 
+.line-font-size-200 {
+  line-height: calc(2 * var(--line-height));
+}
+
+.text-font-size-200 {
+  display: inline-block;
+  transform: scaleY(2);
+  line-height: var(--line-height);
+}
+
+.line-align-center {
+  display: block;
+  text-align: center;
+}
+
+.line-align-right {
+  display: block;
+  text-align: right;
+}
+
 h1, h2 {
   float: left;
   margin: 0;
+  max-width: 100%;
+  white-space: nowrap;
 }
 
 input[type=text], select, input[type=submit], input[type=button], button {
@@ -108,7 +131,7 @@ input[type=text], select, input[type=submit], input[type=button], button {
   color: var(--text);
   border-radius: 3px;
   padding: 2px 4px;
-  height: 2em;
+  min-height: 2em;
 }
 
 input[type=text]:disabled, select:disabled, input[type=submit]:disabled, input[type=button]:disabled, button:disabled {
@@ -133,7 +156,7 @@ footer {
   background: var(--background);
   color: var(--text);
   overflow: auto;
-  line-height: 1.5;
+  line-height: var(--line-height);
   text-size-adjust: none;
 }
 
@@ -146,6 +169,7 @@ footer {
 .App-header-options {
   float: right;
   display: grid;
+  max-width: 100%;
   gap: 0.25rem 0.5rem;
   grid-template-columns: repeat(2, auto);
 }
@@ -206,16 +230,11 @@ footer {
   gap: 0.5em;
 }
 
-.App-search-bar-group {
+.App-search-bar-group, .App-search-button-group {
   display: flex;
   gap: 0.25em;
   flex-wrap: wrap;
   white-space: nowrap;
-}
-
-.App-search-button-group {
-  display: flex;
-  gap: 0.25em;
   justify-content: center;
   align-items: center;
 }
@@ -240,23 +259,49 @@ footer {
 }
 
 .App-search-collections {
-  grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(5.5em, 1fr));
 }
 
 .App-search-languages {
-  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
 }
 
 .App-search-collection, .App-search-language {
+  display: flex;
+  align-items: center;
   overflow: hidden;
-  white-space: nowrap;
 }
 
 .App-search-collection label {
-  display: inline-block;
-  transform-origin: left center;
+  display: block;
 }
 
-.App-search-language {
+.App-search-language-code {
+  white-space: nowrap;
+}
+
+.App-search-language-name {
+  display: inline-block;
   text-overflow: ellipsis;
+  line-height: 1.25;
+}
+
+@media (max-width: 767.98px) {
+  .App-search-languages {
+    grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
+  }
+
+  .App-search-filters {
+    grid-template-columns: 2fr 1px 1.25fr;
+  }
+
+  .App-search-language-name {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .App-search-language-code {
+    display: none;
+  }
 }

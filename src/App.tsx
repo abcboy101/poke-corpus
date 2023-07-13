@@ -77,7 +77,11 @@ function SearchCollections({collections, setCollections}: {collections: string[]
                   setCollections(collections.filter((value) => value !== key));
                 }
               }}/>
-              <label htmlFor={`collection-${key}`} style={{transform: (((i18next.language.startsWith('ja') || i18next.language.startsWith('ko') || i18next.language.startsWith('zh')) && t(`collections:${key}.short`).length > 4) ? `scaleX(${4 / t(`collections:${key}.short`).length})` : 'none')}}>
+              <label htmlFor={`collection-${key}`} style={
+                    ((i18next.language.startsWith('ja') || i18next.language.startsWith('ko') || i18next.language.startsWith('zh')) && t(`collections:${key}.short`).length > 4)
+                    ? {fontSize: `${400 / t(`collections:${key}.short`).length}%`, transform: `scaleY(${t(`collections:${key}.short`).length / 4})`, whiteSpace: 'nowrap'}
+                    : undefined
+                  }>
                 <abbr title={t(`collections:${key}.name`)}>{t(`collections:${key}.short`)}</abbr>
               </label>
             </div>
@@ -111,7 +115,10 @@ function SearchLanguages({languages, setLanguages}: {languages: string[], setLan
                   setLanguages(languages.filter((value) => value !== key));
                 }
               }}/>
-              <label htmlFor={`language-${key}`}>{t(`languages:${key}.name`)}</label>
+              <label htmlFor={`language-${key}`}>
+                <span className="App-search-language-code"><abbr title={t(`languages:${key}.name`)}>{t(`languages:${key}.code`)}</abbr></span>
+                <span className="App-search-language-name">{t(`languages:${key}.name`)}</span>
+              </label>
             </div>
           )
         }
@@ -172,7 +179,6 @@ function Search() {
     const onBlur = () => {
       if (workerRef.current !== null && ['done', 'error'].includes(status)) {
         console.log('Terminating worker!');
-        console.log(status);
         workerRef.current.terminate();
         workerRef.current = null;
       }
@@ -276,7 +282,7 @@ function Search() {
               <input type="text" name="query" id="query" value={query} onChange={e => setQuery(e.target.value)}/>
             </div>
             <div>
-              <input type="submit" value={['initial', 'rendering', 'done'].includes(status) ? t('search') : t('cancel')} disabled={['initial', 'rendering', 'done'].includes(status) && (collections.length === 0 || languages.length === 0)}/>
+              <input type="submit" value={['initial', 'rendering', 'done'].includes(status) ? t('search') : t('cancel')} disabled={['initial', 'rendering', 'done'].includes(status) && (query.length === 0 || collections.length === 0 || languages.length === 0)}/>
             </div>
           </div>
           <div className="App-search-bar-group">
