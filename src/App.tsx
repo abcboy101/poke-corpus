@@ -1,25 +1,32 @@
 import { Dispatch, FormEventHandler, MouseEventHandler, MutableRefObject, SetStateAction, useEffect, useRef, useState } from 'react';
-import './App.css';
-import logo from './logo.svg';
-import './i18n/config';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
-import supportedLngs from './i18n/supportedLngs.json'
-import corpus from './i18n/corpus.json'
-import { SearchResults } from './searchWorkerManager';
+
+import { SearchResults, SearchResultsInProgress, SearchResultsComplete } from './searchWorkerManager';
 import Spinner from './Spinner';
 import ProgressBar from './ProgressBar';
+
+import './App.css';
+import logo from './logo.svg';
+import supportedLngs from './i18n/supportedLngs.json'
+import corpus from './i18n/corpus.json'
+import './i18n/config';
+
+type StatusInProgress = 'waiting' | SearchResultsInProgress | 'rendering';
+type StatusComplete = 'initial' | SearchResultsComplete;
+type Status = StatusInProgress | StatusComplete;
+const statusInProgress: StatusInProgress[] = ['waiting', 'loading', 'processing', 'collecting', 'rendering'];
 
 const codeId = "qid-ZZ";
 const langId = "en-JP";
 
-function Results({status, progress, resultsLanguages, results}: {status: string, progress: number, resultsLanguages: string[][], results: [string, string, string[][]][]}) {
+function Results({status, progress, resultsLanguages, results}: {status: Status, progress: number, resultsLanguages: string[][], results: [string, string, string[][]][]}) {
   const { t } = useTranslation();
   return (
     <>
       <div className="App-results-status">
         <div>{t(`status.${status}`)}</div>
-        {['waiting', 'loading', 'processing', 'collecting', 'rendering'].includes(status) ? <Spinner src={logo}/> : <div></div>}
+        {(statusInProgress as Status[]).includes(status) ? <Spinner src={logo}/> : <div></div>}
         <ProgressBar progress={progress} />
       </div>
       <main className="App-results">
@@ -132,7 +139,7 @@ function Search() {
   const [collections, setCollections] = useState((params.get('collections') ?? defaultCollections).split(',').filter((value) => Object.keys(corpus.collections).includes(value)))
   const [languages, setLanguages] = useState((params.get('languages') ?? defaultLanguages).split(',').filter((value) => corpus.languages.includes(value)))
 
-  const [status, setStatus] = useState("initial");
+  const [status, setStatus]: [Status, Dispatch<SetStateAction<Status>>] = useState("initial" as Status);
   const [progress, setProgress] = useState(0.0);
   const [results, setResults] = useState([] as [string, string, string[][]][]);
   const [resultsLanguages, setResultsLanguages] = useState([] as string[][]);
@@ -208,7 +215,7 @@ function Search() {
       languages: languages.join(','),
     }).toString();
 
-    if ((workerRef.current !== null && status !== 'initial' && status !== 'done')) {
+    if ((workerRef.current !== null && !['initial', 'done'].includes(status))) {
       console.log('Terminating worker!');
       workerRef.current.terminate();
       workerRef.current = null;
@@ -269,7 +276,7 @@ function Search() {
               <input type="text" name="query" id="query" value={query} onChange={e => setQuery(e.target.value)}/>
             </div>
             <div>
-              <input type="submit" value={(status !== 'initial' && status !== 'done' && status !== 'rendering') ? t('cancel') : t('search')} disabled={!(status !== 'initial' && status !== 'done' && status !== 'rendering') && (collections.length === 0 || languages.length === 0)}/>
+              <input type="submit" value={['initial', 'rendering', 'done'].includes(status) ? t('search') : t('cancel')} disabled={['initial', 'rendering', 'done'].includes(status) && (collections.length === 0 || languages.length === 0)}/>
             </div>
           </div>
           <div className="App-search-bar-group">

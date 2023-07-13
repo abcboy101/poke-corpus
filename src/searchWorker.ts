@@ -1,6 +1,6 @@
 import 'compression-streams-polyfill';
 
-export type SearchParams = {
+export interface SearchParams {
   query: string,
   regex: boolean,
   caseInsensitive: boolean,
@@ -10,7 +10,7 @@ export type SearchParams = {
   languages: string[]
 };
 
-export type SearchTask = {
+export interface SearchTask {
   index: number,
   params: SearchParams,
   collectionKey: string,
@@ -18,9 +18,12 @@ export type SearchTask = {
   languages: string[]
 }
 
-export type SearchTaskResult = {
+export type SearchTaskResultError = 'error' | 'regex' | 'network';
+export type SearchTaskResultStatus = 'loading' | 'processing' | 'done' | SearchTaskResultError;
+
+export interface SearchTaskResult {
   index: number,
-  status: string,
+  status: SearchTaskResultStatus,
   resultLanguages?: string[],
   result?: [string, string, string[][]]
 }
@@ -242,7 +245,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
   //#endregion
 
   const {index, params, collectionKey, fileKey, languages} = task.data;
-  const notify = (status: string, resultLanguages?: string[], result?: [string, string, string[][]]) => {
+  const notify = (status: SearchTaskResultStatus, resultLanguages?: string[], result?: [string, string, string[][]]) => {
     const message: SearchTaskResult = {
       index: index,
       status: status,

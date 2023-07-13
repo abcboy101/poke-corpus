@@ -1,9 +1,13 @@
 import corpus from './i18n/corpus.json'
-import { SearchParams, SearchTask, SearchTaskResult, cacheVersion } from './searchWorker';
+import { SearchParams, SearchTask, SearchTaskResult, SearchTaskResultError } from './searchWorker';
 
-export type SearchResults = {
+export type SearchResultsInProgress = 'loading' | 'processing' | 'collecting';
+export type SearchResultsComplete = 'done' | SearchTaskResultError;
+export type SearchResultsStatus = SearchResultsInProgress | SearchResultsComplete;
+
+export interface SearchResults {
   complete: boolean,
-  status: string,
+  status: SearchResultsStatus,
   progress: number,
   resultsLanguages: string[][],
   results: [string, string, string[][]][]
@@ -15,7 +19,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
   const progressPortionProcessing = 0.49;
   const progressPortionCollecting = 0.01; // 0.01 for rendering
 
-  const updateStatusInProgress = (status: string, loadingProgress: number, processingProgress: number, collectingProgress: number) => {
+  const updateStatusInProgress = (status: SearchResultsInProgress, loadingProgress: number, processingProgress: number, collectingProgress: number) => {
     const progress = loadingProgress * progressPortionLoading + processingProgress * progressPortionProcessing + collectingProgress * progressPortionCollecting;
     const message: SearchResults = {
       complete: false,
@@ -27,7 +31,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
     postMessage(message);
   };
 
-  const updateStatusComplete = (status: string, resultsLanguages: string[][] = [], results: [string, string, string[][]][] = []) => {
+  const updateStatusComplete = (status: SearchResultsComplete, resultsLanguages: string[][] = [], results: [string, string, string[][]][] = []) => {
     const message: SearchResults = {
       complete: true,
       status: status,
