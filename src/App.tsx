@@ -161,6 +161,21 @@ function Search() {
     };
   }, [collections, languages]);
 
+  useEffect(() => {
+    const onBlur = () => {
+      if (workerRef.current !== null && ['done', 'error'].includes(status)) {
+        console.log('Terminating worker!');
+        console.log(status);
+        workerRef.current.terminate();
+        workerRef.current = null;
+      }
+    };
+    window.addEventListener('blur', onBlur);
+    return () => {
+      window.removeEventListener('blur', onBlur);
+    };
+  }, [status]);
+
   const onMessage = (e: MessageEvent<SearchResults>) => {
     if (e.data.complete) {
       // use requestAnimationFrame to ensure that the browser has displayed the 'rendering' status before the results start being rendered
