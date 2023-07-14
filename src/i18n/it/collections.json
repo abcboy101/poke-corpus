@@ -1,23 +1,31 @@
 {
-  "RedGreen": {
-    "name": "Rosso/Verde",
-    "short": "RV"
+  "Red": {
+    "name": "Rosso",
+    "short": "Rosso"
   },
-  "RedBlue": {
-    "name": "Rosso/Blu",
-    "short": "RB"
+  "Green": {
+    "name": "Verde",
+    "short": "Verde"
+  },
+  "Blue": {
+    "name": "Blu",
+    "short": "Blu"
   },
   "Yellow": {
     "name": "Giallo",
-    "short": "G"
+    "short": "Giallo"
   },
-  "GoldSilver": {
-    "name": "Oro/Argento",
-    "short": "OA"
+  "Gold": {
+    "name": "Oro",
+    "short": "Oro"
+  },
+  "Silver": {
+    "name": "Argento",
+    "short": "Argento"
   },
   "Crystal": {
     "name": "Cristallo",
-    "short": "C"
+    "short": "Cristallo"
   },
   "RubySapphire": {
     "name": "Rubino/Zaffiro",

@@ -20,7 +20,7 @@ const statusInProgress: StatusInProgress[] = ['waiting', 'loading', 'processing'
 const codeId = "qid-ZZ";
 const langId = "en-JP";
 
-function Results({status, progress, resultsLanguages, results}: {status: Status, progress: number, resultsLanguages: string[][], results: [string, string, string[][]][]}) {
+function Results({status, progress, resultsLanguages, results}: {status: Status, progress: number, resultsLanguages: string[][], results: [string, string, string[][], boolean][]}) {
   const { t } = useTranslation();
   return (
     <>
@@ -31,13 +31,13 @@ function Results({status, progress, resultsLanguages, results}: {status: Status,
       </div>
       <main className="App-results">
         {resultsLanguages.map((collectionLangs, k) => {
-          const [collectionKey, fileKey, fileResults] = results[k];
+          const [collectionKey, fileKey, fileResults, displayHeader] = results[k];
           if (fileResults.length === 0) {
             return null;
           }
           return (
             <section key={`section${k}`} className='App-results-table-container'>
-              <h2>{t('tableHeader', {collection: t(`collections:${collectionKey}.name`), file: fileKey, interpolation: {escapeValue: false}})}</h2>
+              <h2 className={displayHeader ? undefined : 'd-none'}>{t('tableHeader', {collection: t(`collections:${collectionKey}.name`), file: fileKey, interpolation: {escapeValue: false}})}</h2>
               <table className="App-results-table">
                 <thead>
                   <tr>{collectionLangs.map((lang) => <th key={lang}>{t(`languages:${lang}.code`)}</th>)}</tr>
@@ -148,7 +148,7 @@ function Search() {
 
   const [status, setStatus]: [Status, Dispatch<SetStateAction<Status>>] = useState("initial" as Status);
   const [progress, setProgress] = useState(0.0);
-  const [results, setResults] = useState([] as [string, string, string[][]][]);
+  const [results, setResults] = useState([] as [string, string, string[][], boolean][]);
   const [resultsLanguages, setResultsLanguages] = useState([] as string[][]);
 
   useEffect(() => {

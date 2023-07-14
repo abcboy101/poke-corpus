@@ -10,7 +10,7 @@ export interface SearchResults {
   status: SearchResultsStatus,
   progress: number,
   resultsLanguages: string[][],
-  results: [string, string, string[][]][]
+  results: [string, string, string[][], boolean][]
 };
 
 /* eslint-disable no-restricted-globals */
@@ -31,7 +31,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
     postMessage(message);
   };
 
-  const updateStatusComplete = (status: SearchResultsComplete, resultsLanguages: string[][] = [], results: [string, string, string[][]][] = []) => {
+  const updateStatusComplete = (status: SearchResultsComplete, resultsLanguages: string[][] = [], results: [string, string, string[][], boolean][] = []) => {
     const message: SearchResults = {
       complete: true,
       status: status,
@@ -61,14 +61,28 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
       collection.files
       .filter((fileKey) => !((fileKey === 'common' && !params.common) || (fileKey === 'script' && !params.script)))
       .forEach((fileKey) => {
-        taskList.push({
-          index: taskCount,
-          params: params,
-          collectionKey: collectionKey,
-          fileKey: fileKey,
-          languages: collection.languages
-        })
-        taskCount += collection.languages.length;
+        const languages = collection.structured ? collection.languages : collection.languages.filter((languageKey) => params.languages.includes(languageKey));
+        if (!collection.structured) {
+          languages.forEach((languageKey) => {
+            taskList.push({
+              index: taskCount,
+              params: params,
+              collectionKey: collectionKey,
+              fileKey: fileKey,
+              languages: [languageKey]
+            });
+          });
+        }
+        else {
+          taskList.push({
+            index: taskCount,
+            params: params,
+            collectionKey: collectionKey,
+            fileKey: fileKey,
+            languages: languages
+          });
+        }
+        taskCount += languages.length;
       });
     });
 
@@ -105,14 +119,21 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
         // Send results
         if (collectedCount === taskList.length) {
           const resultsLanguages: string[][] = [];
-          const results: [string, string, string[][]][] = [];
+          const results: [string, string, string[][], boolean][] = [];
           taskResults.sort((a, b) => a.index - b.index);
+          let lastCollectionKey = '';
+          let lastFileKey = '';
           taskResults.forEach((taskResult) => {
             if (taskResult.resultLanguages !== undefined && taskResult.result !== undefined) {
+              const [collectionKey, fileKey, fileResults] = taskResult.result;
+              const displayHeader = collectionKey !== lastCollectionKey || fileKey !== lastFileKey;
               resultsLanguages.push(taskResult.resultLanguages);
-              results.push(taskResult.result);
+              results.push([collectionKey, fileKey, fileResults, displayHeader]);
+              lastCollectionKey = collectionKey;
+              lastFileKey = fileKey;
             }
           });
+
           updateStatusComplete('done', resultsLanguages, results);
           helpers.forEach((helper) => helper.terminate());
         }

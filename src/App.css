@@ -118,6 +118,10 @@ ruby > rt {
   text-align: right;
 }
 
+.d-none {
+  display: none;
+}
+
 h1, h2 {
   float: left;
   margin: 0;

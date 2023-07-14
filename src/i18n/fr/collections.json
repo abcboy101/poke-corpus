@@ -1,23 +1,31 @@
 {
-  "RedGreen": {
-    "name": "Rouge/Vert",
-    "short": "RV"
+  "Red": {
+    "name": "Rouge",
+    "short": "Rouge"
   },
-  "RedBlue": {
-    "name": "Rouge/Bleu",
-    "short": "RB"
+  "Green": {
+    "name": "Vert",
+    "short": "Vert"
+  },
+  "Blue": {
+    "name": "Bleu",
+    "short": "Bleu"
   },
   "Yellow": {
     "name": "Jaune",
-    "short": "J"
+    "short": "Jaune"
   },
-  "GoldSilver": {
-    "name": "Or/Argent",
-    "short": "OA"
+  "Gold": {
+    "name": "Or",
+    "short": "Or"
+  },
+  "Silver": {
+    "name": "Argent",
+    "short": "Argent"
   },
   "Crystal": {
     "name": "Cristal",
-    "short": "C"
+    "short": "Cristal"
   },
   "RubySapphire": {
     "name": "Rubis/Saphir",

@@ -14,6 +14,167 @@
     "zh-TW"
   ],
   "collections": {
+    "Red": {
+      "languages": [
+        "ja-Hrkt-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES"
+      ],
+      "structured": false,
+      "version": null,
+      "files": [
+        "data"
+      ]
+    },
+    "Green": {
+      "languages": [
+        "ja-Hrkt-JP"
+      ],
+      "structured": false,
+      "version": null,
+      "files": [
+        "data"
+      ]
+    },
+    "Blue": {
+      "languages": [
+        "ja-Hrkt-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES"
+      ],
+      "structured": false,
+      "version": null,
+      "files": [
+        "data"
+      ]
+    },
+    "Yellow": {
+      "languages": [
+        "ja-Hrkt-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES"
+      ],
+      "structured": false,
+      "version": null,
+      "files": [
+        "data"
+      ]
+    },
+    "Gold": {
+      "languages": [
+        "ja-Hrkt-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES",
+        "ko-KR"
+      ],
+      "structured": false,
+      "version": null,
+      "files": [
+        "data"
+      ]
+    },
+    "Silver": {
+      "languages": [
+        "ja-Hrkt-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES",
+        "ko-KR"
+      ],
+      "structured": false,
+      "version": null,
+      "files": [
+        "data"
+      ]
+    },
+    "Crystal": {
+      "languages": [
+        "ja-Hrkt-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES"
+      ],
+      "structured": false,
+      "version": null,
+      "files": [
+        "data"
+      ]
+    },
+    "RubySapphire": {
+      "languages": [
+        "ja-Hrkt-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES"
+      ],
+      "structured": false,
+      "version": {
+        "ja-JP": "Ruby 1.0",
+        "en-US": "Ruby 1.1/1.2",
+        "fr-FR": "Ruby 1.0/1.1",
+        "it-IT": "Ruby 1.0/1.1",
+        "de-DE": "Ruby 1.0/1.1",
+        "es-ES": "Ruby 1.0/1.1"
+      },
+      "files": [
+        "data"
+      ]
+    },
+    "FireRedLeafGreen": {
+      "languages": [
+        "ja-Hrkt-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES"
+      ],
+      "structured": false,
+      "version": {
+        "ja-JP": "FireRed 1.0",
+        "en-US": "FireRed 1.1",
+        "fr-FR": "FireRed 1.0",
+        "it-IT": "FireRed 1.0",
+        "de-DE": "FireRed 1.0",
+        "es-ES": "FireRed 1.0"
+      },
+      "files": [
+        "data"
+      ]
+    },
+    "Emerald": {
+      "languages": [
+        "ja-Hrkt-JP",
+        "en-US",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES"
+      ],
+      "structured": false,
+      "version": "1.0",
+      "files": [
+        "data"
+      ]
+    },
     "DiamondPearl": {
       "languages": [
         "qid-ZZ",
