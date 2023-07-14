@@ -145,7 +145,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
     }
 
     // Start helpers
-    const numWorkers = Math.min(taskList.length, (navigator.hardwareConcurrency - 2) || 4);
+    const numWorkers = Math.max(1, Math.min(taskList.length, (navigator.hardwareConcurrency || 4) - 2));
     for (let i = 0; i < numWorkers; i++) {
       const helper = new Worker(new URL("./searchWorker.ts", import.meta.url));
       helper.onmessage = helperOnMessage;
