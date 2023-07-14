@@ -25,8 +25,8 @@ function Results({status, progress, resultsLanguages, results}: {status: Status,
   return (
     <>
       <div className="App-results-status">
-        <div>{t(`status.${status}`)}</div>
-        {(statusInProgress as Status[]).includes(status) ? <Spinner src={logo}/> : <div></div>}
+        <div className="App-results-status-text">{t(`status.${status}`)}</div>
+        <Spinner src={logo} active={(statusInProgress as Status[]).includes(status)}/>
         <ProgressBar progress={progress} />
       </div>
       <main className="App-results">
@@ -79,7 +79,7 @@ function SearchCollections({collections, setCollections}: {collections: string[]
               }}/>
               <label htmlFor={`collection-${key}`} style={
                     ((i18next.language.startsWith('ja') || i18next.language.startsWith('ko') || i18next.language.startsWith('zh')) && t(`collections:${key}.short`).length > 4)
-                    ? {fontSize: `${400 / t(`collections:${key}.short`).length}%`, transform: `scaleY(${t(`collections:${key}.short`).length / 4})`, whiteSpace: 'nowrap'}
+                    ? {fontSize: `${400 / t(`collections:${key}.short`).length}%`, scale: `1 ${t(`collections:${key}.short`).length / 4}`, whiteSpace: 'nowrap'}
                     : undefined
                   }>
                 <abbr title={t(`collections:${key}.name`)}>{t(`collections:${key}.short`)}</abbr>
@@ -276,35 +276,33 @@ function Search() {
     <>
       <form className="App-search" onSubmit={onSubmit}>
         <div className="App-search-bar">
-          <div className="App-search-bar-group">
-            <div>
-              <label htmlFor="query">{t('query')} </label>
-              <input type="text" name="query" id="query" value={query} onChange={e => setQuery(e.target.value)}/>
-            </div>
-            <div>
-              <input type="submit" value={['initial', 'rendering', 'done'].includes(status) ? t('search') : t('cancel')} disabled={['initial', 'rendering', 'done'].includes(status) && (query.length === 0 || collections.length === 0 || languages.length === 0)}/>
-            </div>
+          <div className="App-search-bar-query">
+            <label htmlFor="query">{t('query')} </label>
+            <input type="text" name="query" id="query" value={query} onChange={e => setQuery(e.target.value)}/>
+            <input type="submit" value={['initial', 'rendering', 'done'].includes(status) ? t('search') : t('cancel')} disabled={['initial', 'rendering', 'done'].includes(status) && (query.length === 0 || collections.length === 0 || languages.length === 0)}/>
           </div>
           <div className="App-search-bar-group">
-            <div>
-              <input type="checkbox" name="regex" id="regex" checked={regex} onChange={e => setRegex(e.target.checked)}/>
-              <label htmlFor="regex">{t('regex')}</label>
+            <div className="App-search-options">
+              <div>
+                <input type="checkbox" name="regex" id="regex" checked={regex} onChange={e => setRegex(e.target.checked)}/>
+                <label htmlFor="regex">{t('regex')}</label>
+              </div>
+              <div>
+                <input type="checkbox" name="caseInsensitive" id="caseInsensitive" checked={caseInsensitive} onChange={e => setCaseInsensitive(e.target.checked)}/>
+                <label htmlFor="caseInsensitive">{t('caseInsensitive')}</label>
+              </div>
+              <div>
+                <input type="checkbox" name="common" id="common" checked={common} onChange={e => setCommon(e.target.checked)}/>
+                <label htmlFor="common">{t('common')}</label>
+              </div>
+              <div>
+                <input type="checkbox" name="script" id="script" checked={script} onChange={e => setScript(e.target.checked)}/>
+                <label htmlFor="script">{t('script')}</label>
+              </div>
             </div>
             <div>
-              <input type="checkbox" name="caseInsensitive" id="caseInsensitive" checked={caseInsensitive} onChange={e => setCaseInsensitive(e.target.checked)}/>
-              <label htmlFor="caseInsensitive">{t('caseInsensitive')}</label>
+              <button onClick={clearCache}>{t('clearCache')}</button>
             </div>
-            <div>
-              <input type="checkbox" name="common" id="common" checked={common} onChange={e => setCommon(e.target.checked)}/>
-              <label htmlFor="common">{t('common')}</label>
-            </div>
-            <div>
-              <input type="checkbox" name="script" id="script" checked={script} onChange={e => setScript(e.target.checked)}/>
-              <label htmlFor="script">{t('script')}</label>
-            </div>
-          </div>
-          <div>
-            <button onClick={clearCache}>{t('clearCache')}</button>
           </div>
         </div>
         <div className="App-search-filters">

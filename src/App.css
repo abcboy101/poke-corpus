@@ -104,7 +104,7 @@ ruby > rt {
 
 .text-font-size-200 {
   display: inline-block;
-  transform: scaleY(2);
+  scale: 1 2;
   line-height: var(--line-height);
 }
 
@@ -180,11 +180,12 @@ footer {
 
 .App-header-options label {
   text-align: right;
+  white-space: nowrap;
 }
 
 .App-results-status {
   display: grid;
-  grid-template-columns: minmax(12em, 1fr) 1em 2fr;
+  grid-template-columns: minmax(15em, 1fr) 1em 2fr;
   align-items: center;
   text-align: center;
   gap: 0.25em;
@@ -228,17 +229,38 @@ footer {
 
 .App-search-bar {
   display: flex;
+  margin: auto;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 0.5em;
 }
 
+.App-search-bar-query {
+  display: grid;
+  gap: 0 0.5em;
+  grid-template-columns: auto auto auto;
+}
+
+#query {
+  width: 100%;
+}
+
 .App-search-bar-group, .App-search-button-group {
   display: flex;
-  gap: 0.25em;
+  gap: 0.5em;
   flex-wrap: wrap;
   white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-search-options {
+  display: flex;
+  gap: 0 0.5em;
+  flex-wrap: wrap;
+  /* grid-template-columns: repeat(4, auto); */
+  /* max-width: 100%; */
   justify-content: center;
   align-items: center;
 }
@@ -246,7 +268,7 @@ footer {
 .App-search-filters {
   display: grid;
   grid-template-columns: 1fr 1px 1fr;
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: auto auto;
   grid-auto-flow: column;
   gap: 0.5em;
 }
@@ -267,7 +289,11 @@ footer {
 }
 
 .App-search-languages {
-  grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+}
+
+.App-search-language-code {
+  display: none;
 }
 
 .App-search-collection, .App-search-language {
@@ -290,22 +316,51 @@ footer {
   line-height: 1.25;
 }
 
+@media (max-width: 575.98px) {
+  .App-search-options {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .App-search-filters {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto 1px auto auto;
+  }
+
+  .App-search-filters-divider {
+    grid-row: inherit;
+  }
+
+  .App-results-status {
+    grid-template-columns: 1em 1fr;
+  }
+
+  .App-results-status-text {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .App-search-filters {
+    grid-template-columns: 2fr 1px 1.5fr;
+  }
+}
+
 @media (max-width: 767.98px) {
   .App-search-languages {
     grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
   }
 
-  .App-search-filters {
-    grid-template-columns: 2fr 1px 1.25fr;
-  }
-
   .App-search-language-name {
     display: none;
   }
+
+  .App-search-language-code {
+    display: inherit;
+  }
 }
 
-@media (min-width: 768px) {
-  .App-search-language-code {
-    display: none;
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .App-search-languages {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
