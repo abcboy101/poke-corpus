@@ -19,13 +19,23 @@ export interface SearchTask {
 }
 
 export type SearchTaskResultError = 'error' | 'regex' | 'network';
-export type SearchTaskResultStatus = 'loading' | 'processing' | 'done' | SearchTaskResultError;
-
+export type SearchTaskResultDone = 'done';
+export type SearchTaskResultStatus = 'loading' | 'processing' | SearchTaskResultDone | SearchTaskResultError;
+export interface SearchTaskResultLines {
+  collection: string,
+  file: string,
+  languages: string[],
+  lines: string[][]
+}
 export interface SearchTaskResult {
   index: number,
   status: SearchTaskResultStatus,
-  resultLanguages?: string[],
-  result?: [string, string, string[][]]
+  result?: SearchTaskResultLines
+}
+export interface SearchTaskResultComplete {
+  index: number,
+  status: SearchTaskResultDone,
+  result: SearchTaskResultLines
 }
 
 export const cacheVersion = "v1";
@@ -257,11 +267,10 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
   //#endregion
 
   const {index, params, collectionKey, fileKey, languages} = task.data;
-  const notify = (status: SearchTaskResultStatus, resultLanguages?: string[], result?: [string, string, string[][]]) => {
+  const notify = (status: SearchTaskResultStatus, result?: SearchTaskResultLines) => {
     const message: SearchTaskResult = {
       index: index,
       status: status,
-      resultLanguages: resultLanguages,
       result: result
     }
     postMessage(message);
@@ -321,7 +330,12 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
 
       const fileResults: string[][] = [];
       Array.from(lineKeysSet).sort((a, b) => a - b).forEach((i) => fileResults.push(fileData.map((lines) => postprocessString(lines[i] ?? ''))));
-      notify('done', languageKeys, [collectionKey, fileKey, fileResults]);
+      notify('done', {
+        collection: collectionKey,
+        file: fileKey,
+        languages: languageKeys,
+        lines: fileResults,
+      });
     })
     .catch((err) => {
       console.error(err);

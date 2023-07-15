@@ -2,7 +2,8 @@ import { Dispatch, FormEventHandler, MouseEventHandler, MutableRefObject, SetSta
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { SearchResults, SearchResultsInProgress, SearchResultsComplete } from './searchWorkerManager';
+import { SearchParams } from './searchWorker';
+import { SearchResults, SearchResultsInProgress, SearchResultsComplete, SearchResultLines } from './searchWorkerManager';
 import Spinner from './Spinner';
 import ProgressBar from './ProgressBar';
 
@@ -20,7 +21,7 @@ const statusInProgress: StatusInProgress[] = ['waiting', 'loading', 'processing'
 const codeId = "qid-ZZ";
 const langId = "en-JP";
 
-function Results({status, progress, resultsLanguages, results}: {status: Status, progress: number, resultsLanguages: string[][], results: [string, string, string[][], boolean][]}) {
+function Results({status, progress, results}: {status: Status, progress: number, results: SearchResultLines[]}) {
   const { t } = useTranslation();
   return (
     <>
@@ -30,22 +31,24 @@ function Results({status, progress, resultsLanguages, results}: {status: Status,
         <ProgressBar progress={progress} />
       </div>
       <main className="App-results">
-        {resultsLanguages.map((collectionLangs, k) => {
-          const [collectionKey, fileKey, fileResults, displayHeader] = results[k];
-          if (fileResults.length === 0) {
+        {results.map(({collection, file, languages, lines, displayHeader}, k) => {
+          if (lines.length === 0) {
             return null;
           }
+          const displayLanguages = languages.map((lang) => lang === codeId ? langId : lang);
+          const displayDirs = displayLanguages.map((lang) => i18next.dir(lang));
+          const sameDir = displayDirs.every((dir) => dir === displayDirs[0]);
           return (
             <section key={`section${k}`} className='App-results-table-container'>
-              <h2 className={displayHeader ? undefined : 'd-none'}>{t('tableHeader', {collection: t(`collections:${collectionKey}.name`), file: fileKey, interpolation: {escapeValue: false}})}</h2>
+              <h2 className={displayHeader ? undefined : 'd-none'}>{t('tableHeader', {collection: t(`collections:${collection}.name`), file: file, interpolation: {escapeValue: false}})}</h2>
               <table className="App-results-table">
                 <thead>
-                  <tr>{collectionLangs.map((lang) => <th key={lang}>{t(`languages:${lang}.code`)}</th>)}</tr>
+                  <tr>{languages.map((lang) => <th key={lang}>{t(`languages:${lang}.code`)}</th>)}</tr>
                 </thead>
-                <tbody>
-                  {fileResults.map((row, i) =>
+                <tbody dir={sameDir && displayDirs[0] !== i18next.dir() ? displayDirs[0] : undefined}>
+                  {lines.map((row, i) =>
                   <tr key={`row${i}`}>
-                    {row.map((s, j) => <td key={`row${i}-${collectionLangs[j]}`} lang={collectionLangs[j] === codeId ? langId : collectionLangs[j]} dir={i18next.dir(collectionLangs[j] === codeId ? langId : collectionLangs[j])} dangerouslySetInnerHTML={{__html: s}}></td>)}
+                    {row.map((s, j) => <td key={`row${i}-${languages[j]}`} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]} dangerouslySetInnerHTML={{__html: s}}></td>)}
                   </tr>
                   )}
                 </tbody>
@@ -148,8 +151,7 @@ function Search() {
 
   const [status, setStatus]: [Status, Dispatch<SetStateAction<Status>>] = useState("initial" as Status);
   const [progress, setProgress] = useState(0.0);
-  const [results, setResults] = useState([] as [string, string, string[][], boolean][]);
-  const [resultsLanguages, setResultsLanguages] = useState([] as string[][]);
+  const [results, setResults] = useState([] as SearchResultLines[]);
 
   useEffect(() => {
     const onHashChange = () => {
@@ -196,7 +198,6 @@ function Search() {
       window.requestAnimationFrame(() => {
         setStatus(e.data.status);
         setProgress(e.data.progress);
-        setResultsLanguages(e.data.resultsLanguages);
         setResults(e.data.results);
       });
     }
@@ -208,7 +209,6 @@ function Search() {
 
   const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
-    setResultsLanguages([]);
     setResults([]);
 
     window.location.hash = new URLSearchParams({
@@ -236,7 +236,7 @@ function Search() {
       }
       setStatus('waiting');
       setProgress(0.0);
-      const message = {
+      const message: SearchParams = {
         query: query,
         regex: regex,
         caseInsensitive: caseInsensitive,
@@ -311,7 +311,7 @@ function Search() {
           <SearchLanguages languages={languages} setLanguages={setLanguages}/>
         </div>
       </form>
-      <Results status={status} progress={progress} resultsLanguages={resultsLanguages} results={results}/>
+      <Results status={status} progress={progress} results={results}/>
     </>
   );
 }

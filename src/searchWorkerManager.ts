@@ -1,16 +1,21 @@
 import corpus from './i18n/corpus.json'
-import { SearchParams, SearchTask, SearchTaskResult, SearchTaskResultError } from './searchWorker';
+import { SearchParams, SearchTask, SearchTaskResult, SearchTaskResultComplete, SearchTaskResultError } from './searchWorker';
 
 export type SearchResultsInProgress = 'loading' | 'processing' | 'collecting';
 export type SearchResultsComplete = 'done' | SearchTaskResultError;
 export type SearchResultsStatus = SearchResultsInProgress | SearchResultsComplete;
-
+export interface SearchResultLines {
+  collection: string,
+  file: string,
+  languages: string[],
+  lines: string[][],
+  displayHeader: boolean
+};
 export interface SearchResults {
   complete: boolean,
   status: SearchResultsStatus,
   progress: number,
-  resultsLanguages: string[][],
-  results: [string, string, string[][], boolean][]
+  results: SearchResultLines[]
 };
 
 /* eslint-disable no-restricted-globals */
@@ -25,18 +30,16 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
       complete: false,
       status: status,
       progress: progress,
-      resultsLanguages: [],
       results: []
     };
     postMessage(message);
   };
 
-  const updateStatusComplete = (status: SearchResultsComplete, resultsLanguages: string[][] = [], results: [string, string, string[][], boolean][] = []) => {
+  const updateStatusComplete = (status: SearchResultsComplete, results: SearchResultLines[] = []) => {
     const message: SearchResults = {
       complete: true,
       status: status,
       progress: 1.0,
-      resultsLanguages: resultsLanguages,
       results: results
     };
     postMessage(message);
@@ -90,7 +93,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
     let loadedCount = 0;
     let processedCount = 0;
     let collectedCount = 0;
-    const taskResults: SearchTaskResult[] = [];
+    const taskResults: SearchTaskResultComplete[] = [];
     const helpers: Worker[] = [];
     const helperOnMessage = (e: MessageEvent<SearchTaskResult>) => {
       const result = e.data;
@@ -109,7 +112,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
         }
       }
       else if (result.status === 'done') {
-        taskResults.push(result);
+        taskResults.push(result as SearchTaskResultComplete);
         collectedCount++;
         updateStatusInProgress('collecting', loadedCount/taskCount, processedCount/taskCount, collectedCount/taskList.length);
         if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
@@ -118,23 +121,17 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
 
         // Send results
         if (collectedCount === taskList.length) {
-          const resultsLanguages: string[][] = [];
-          const results: [string, string, string[][], boolean][] = [];
+          const results: SearchResultLines[] = [];
           taskResults.sort((a, b) => a.index - b.index);
-          let lastCollectionKey = '';
-          let lastFileKey = '';
-          taskResults.forEach((taskResult) => {
-            if (taskResult.resultLanguages !== undefined && taskResult.result !== undefined) {
-              const [collectionKey, fileKey, fileResults] = taskResult.result;
-              const displayHeader = collectionKey !== lastCollectionKey || fileKey !== lastFileKey;
-              resultsLanguages.push(taskResult.resultLanguages);
-              results.push([collectionKey, fileKey, fileResults, displayHeader]);
-              lastCollectionKey = collectionKey;
-              lastFileKey = fileKey;
-            }
+          let lastCollection = '';
+          let lastFile = '';
+          taskResults.map((taskResults) => taskResults.result).forEach((result) => {
+            results.push({...result, displayHeader: result.collection !== lastCollection || result.file !== lastFile});
+            lastCollection = result.collection;
+            lastFile = result.file;
           });
 
-          updateStatusComplete('done', resultsLanguages, results);
+          updateStatusComplete('done', results);
           helpers.forEach((helper) => helper.terminate());
         }
       }
