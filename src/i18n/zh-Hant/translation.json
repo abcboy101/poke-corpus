@@ -4,5 +4,31 @@
   "mode": "色調：",
   "modeSystem": "系統",
   "modeLight": "淺色",
-  "modeDark": "深色"
+  "modeDark": "深色",
+  "query": "查詢：",
+  "regex": "正則表達式",
+  "caseInsensitive": "不區分大小寫",
+  "search": "搜索",
+  "cancel": "停止",
+  "common": "通用",
+  "script": "腳本",
+  "selectAll": "全部選擇",
+  "deselectAll": "全部取消",
+  "clearCache": "清除緩存",
+  "status": {
+    "initial": "點擊「搜索」",
+    "waiting": "請稍候…",
+    "loading": "加載中…",
+    "processing": "處理中…",
+    "collecting": "收集中…",
+    "rendering": "渲染中…",
+    "done": "完成！",
+    "error": "錯誤",
+    "network": "網絡錯誤",
+    "regex": "正則表達式無效"
+  },
+  "tableHeader": "{{collection}} {{file}}",
+  "tagline": "寶可夢語料庫查詢工具",
+  "footerText": "Created by abcboy",
+  "github": "GitHub"
 }

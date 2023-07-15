@@ -6,6 +6,7 @@ import translationEN from './en/translation.json';
 import translationENGB from './en-GB/translation.json';
 import translationJA from './ja/translation.json';
 import translationFR from './fr/translation.json';
+import translationFRCA from './fr-CA/translation.json';
 import translationIT from './it/translation.json';
 import translationDE from './de/translation.json';
 import translationES from './es/translation.json';
@@ -59,6 +60,9 @@ i18next.use(LanguageDetector)
         translation: translationFR,
         collections: collectionsFR,
         languages: languagesFR,
+      },
+      'fr-CA': {
+        translation: translationFRCA,
       },
       'it': {
         translation: translationIT,

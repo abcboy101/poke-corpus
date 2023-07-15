@@ -45,7 +45,7 @@ function Results({status, progress, resultsLanguages, results}: {status: Status,
                 <tbody>
                   {fileResults.map((row, i) =>
                   <tr key={`row${i}`}>
-                    {row.map((s, j) => <td key={`row${i}-${collectionLangs[j]}`} lang={collectionLangs[j] === codeId ? langId : collectionLangs[j]} dangerouslySetInnerHTML={{__html: s}}></td>)}
+                    {row.map((s, j) => <td key={`row${i}-${collectionLangs[j]}`} lang={collectionLangs[j] === codeId ? langId : collectionLangs[j]} dir={i18next.dir(collectionLangs[j] === codeId ? langId : collectionLangs[j])} dangerouslySetInnerHTML={{__html: s}}></td>)}
                   </tr>
                   )}
                 </tbody>
@@ -132,7 +132,7 @@ function SearchLanguages({languages, setLanguages}: {languages: string[], setLan
 }
 
 const defaultCollections = Object.keys(corpus.collections).filter((value) => corpus.collections[value as keyof typeof corpus.collections].structured).join(',');
-const defaultLanguages = corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0])).join(',');
+const defaultLanguages = corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0])).join(',') || corpus.languages.filter((value) => value.startsWith('en')).join(',');
 
 function Search() {
   const { t } = useTranslation();
@@ -347,7 +347,7 @@ function App() {
   const [mode, setMode] = useState(localStorage.getItem('mode') ?? 'system');
 
   return (
-    <div className={`App App-mode-${mode}`} lang={i18next.language}>
+    <div className={`App App-mode-${mode}`} lang={i18next.language} dir={i18next.dir()}>
       <header className="App-header">
         <h1>
           <a href="/poke-corpus">

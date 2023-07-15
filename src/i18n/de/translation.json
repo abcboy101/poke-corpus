@@ -4,5 +4,31 @@
   "mode": "Farbschema:",
   "modeSystem": "System",
   "modeLight": "Hell",
-  "modeDark": "Dunkel"
+  "modeDark": "Dunkel",
+  "query": "Abfrage:",
+  "regex": "Regex",
+  "caseInsensitive": "Groß-/Kleinschreibung nicht beachten",
+  "search": "Suche",
+  "cancel": "Abbrechen",
+  "common": "Gemeinsam",
+  "script": "Skript",
+  "clearCache": "Cache löschen",
+  "selectAll": "Alle auswählen",
+  "deselectAll": "Alle abwählen",
+  "status": {
+    "initial": "Klicken Sie auf „Suche“.",
+    "waiting": "Bitte warten...",
+    "loading": "Lädt...",
+    "processing": "Verarbeitet...",
+    "collecting": "Sammelt...",
+    "rendering": "Rendert...",
+    "done": "Fertig!",
+    "error": "Es ist ein Fehler aufgetreten",
+    "network": "Netzwerkfehler",
+    "regex": "Ungültige Regex"
+  },
+  "tableHeader": "{{collection}} {{file}}",
+  "tagline": "Ein Werkzeug zur Abfrage des Pokémon-Korpus",
+  "footerText": "Erstellt von abcboy",
+  "github": "GitHub"
 }

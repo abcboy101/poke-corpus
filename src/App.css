@@ -122,8 +122,15 @@ ruby > rt {
   display: none;
 }
 
-h1, h2 {
+*[dir=ltr] h1, *[dir=ltr] h2 {
   float: left;
+}
+
+*[dir=rtl] h1, *[dir=rtl] h2 {
+  float: right;
+}
+
+h1, h2 {
   margin: 0;
   max-width: 100%;
   white-space: nowrap;
@@ -170,8 +177,15 @@ footer {
   vertical-align: middle;
 }
 
-.App-header-options {
+*[dir=ltr] .App-header-options, *[dir=ltr] .App-header-options {
   float: right;
+}
+
+*[dir=rtl] .App-header-options, *[dir=rtl] .App-header-options {
+  float: left;
+}
+
+.App-header-options {
   display: grid;
   max-width: 100%;
   gap: 0.25rem 0.5rem;
@@ -179,13 +193,13 @@ footer {
 }
 
 .App-header-options label {
-  text-align: right;
+  text-align: end;
   white-space: nowrap;
 }
 
 .App-results-status {
   display: grid;
-  grid-template-columns: minmax(15em, 1fr) 1em 2fr;
+  grid-template-columns: minmax(20em, 1fr) 1em 2fr;
   align-items: center;
   text-align: center;
   gap: 0.25em;

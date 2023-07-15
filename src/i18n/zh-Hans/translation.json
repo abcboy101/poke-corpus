@@ -4,5 +4,31 @@
   "mode": "色调：",
   "modeSystem": "系统",
   "modeLight": "浅色",
-  "modeDark": "深色"
+  "modeDark": "深色",
+  "query": "查询：",
+  "regex": "正则表达式",
+  "caseInsensitive": "不区分大小写",
+  "search": "搜索",
+  "cancel": "停止",
+  "common": "通用",
+  "script": "脚本",
+  "selectAll": "全部选择",
+  "deselectAll": "全部取消",
+  "clearCache": "清除缓存",
+  "status": {
+    "initial": "点击“搜索”",
+    "waiting": "请稍候…",
+    "loading": "加载中…",
+    "processing": "处理中…",
+    "collecting": "收集中…",
+    "rendering": "渲染中…",
+    "done": "完成！",
+    "error": "错误",
+    "network": "网络错误",
+    "regex": "正则表达式无效"
+  },
+  "tableHeader": "{{collection}} {{file}}",
+  "tagline": "宝可梦语料库查询工具",
+  "footerText": "Created by abcboy",
+  "github": "GitHub"
 }

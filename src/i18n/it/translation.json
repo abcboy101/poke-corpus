@@ -4,5 +4,31 @@
   "mode": "Colori:",
   "modeSystem": "Sistema",
   "modeLight": "Chiaro",
-  "modeDark": "Scuro"
+  "modeDark": "Scuro",
+  "query": "Richiesta:",
+  "regex": "Espressione regolare",
+  "caseInsensitive": "Insensibile alle maiuscole e minuscole",
+  "search": "Cerca",
+  "cancel": "Annulla",
+  "common": "Comune",
+  "script": "Sceneggiatura",
+  "clearCache": "Cancella cache",
+  "selectAll": "Seleziona tutto",
+  "deselectAll": "Deseleziona tutto",
+  "status": {
+    "initial": "Fare clic su \"Cerca\" per iniziare.",
+    "waiting": "Attendere prego...",
+    "loading": "Caricamento in corso...",
+    "processing": "Elaborazione in corso...",
+    "collecting": "Raccolta in corso...",
+    "rendering": "Renderizzazione in corso...",
+    "done": "Finito!",
+    "error": "Si è verificato un errore",
+    "network": "Errore di rete",
+    "regex": "L'espressione regolare non è valida"
+  },
+  "tableHeader": "{{collection}} {{file}}",
+  "tagline": "Uno strumento per cercare il corpus Pokémon",
+  "footerText": "Creato da abcboy",
+  "github": "GitHub"
 }
