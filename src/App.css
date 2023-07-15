@@ -257,12 +257,8 @@ footer {
 
 .App-search-options {
   display: flex;
-  gap: 0 0.5em;
+  gap: 0.5em;
   flex-wrap: wrap;
-  /* grid-template-columns: repeat(4, auto); */
-  /* max-width: 100%; */
-  justify-content: center;
-  align-items: center;
 }
 
 .App-search-filters {
@@ -296,7 +292,7 @@ footer {
   display: none;
 }
 
-.App-search-collection, .App-search-language {
+.App-search-collection, .App-search-language, .App-search-option {
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -304,6 +300,12 @@ footer {
 
 .App-search-collection label {
   display: block;
+}
+
+.App-search-option label {
+  display: inline-block;
+  white-space: wrap;
+  line-height: 1.25;
 }
 
 .App-search-language-code {

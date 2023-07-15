@@ -283,19 +283,19 @@ function Search() {
           </div>
           <div className="App-search-bar-group">
             <div className="App-search-options">
-              <div>
+              <div className="App-search-option">
                 <input type="checkbox" name="regex" id="regex" checked={regex} onChange={e => setRegex(e.target.checked)}/>
                 <label htmlFor="regex">{t('regex')}</label>
               </div>
-              <div>
+              <div className="App-search-option">
                 <input type="checkbox" name="caseInsensitive" id="caseInsensitive" checked={caseInsensitive} onChange={e => setCaseInsensitive(e.target.checked)}/>
                 <label htmlFor="caseInsensitive">{t('caseInsensitive')}</label>
               </div>
-              <div>
+              <div className="App-search-option">
                 <input type="checkbox" name="common" id="common" checked={common} onChange={e => setCommon(e.target.checked)}/>
                 <label htmlFor="common">{t('common')}</label>
               </div>
-              <div>
+              <div className="App-search-option">
                 <input type="checkbox" name="script" id="script" checked={script} onChange={e => setScript(e.target.checked)}/>
                 <label htmlFor="script">{t('script')}</label>
               </div>
