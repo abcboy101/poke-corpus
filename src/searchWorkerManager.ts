@@ -106,14 +106,14 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
         loadedCount++;
         updateStatusInProgress('loading', loadedCount/taskCount, processedCount/taskCount, collectedCount/taskList.length);
         if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-          console.log(`Loaded ${loadedCount}/${taskCount}`);
+          console.debug(`Loaded ${loadedCount}/${taskCount}`);
         }
       }
       else if (result.status === 'processing') {
         processedCount++;
         updateStatusInProgress('processing', loadedCount/taskCount, processedCount/taskCount, collectedCount/taskList.length);
         if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-          console.log(`Processed ${processedCount}/${taskCount}`);
+          console.debug(`Processed ${processedCount}/${taskCount}`);
         }
       }
       else if (result.status === 'done') {
@@ -121,7 +121,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
         collectedCount++;
         updateStatusInProgress('collecting', loadedCount/taskCount, processedCount/taskCount, collectedCount/taskList.length);
         if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-          console.log(`Collected ${collectedCount}/${taskList.length}`);
+          console.debug(`Collected ${collectedCount}/${taskList.length}`);
         }
 
         // Send results
