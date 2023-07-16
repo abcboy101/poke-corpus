@@ -85,7 +85,7 @@ ruby > rt {
   font-size: 50%;
 }
 
-.var, .wait, .unused, .null, .compressed {
+.var, .wait, .sfx, .unused, .null, .compressed {
   color: var(--text-gray);
 }
 

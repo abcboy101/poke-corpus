@@ -266,7 +266,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       .replaceAll('[COMP]', '<span class="compressed">[COMP]</span>')
       .replaceAll(/(\[VAR [^\]]+?\])/gu, '<span class="var">$1</span>')
       .replaceAll(/(\[WAIT [\d.]+\])/gu, '<span class="wait">$1</span>')
-      .replaceAll(/(\[SFX [\d.]+\])/gu, '<span class="wait">$1</span>')
+      .replaceAll(/(\[SFX [\d.]+\])/gu, '<span class="sfx">$1</span>')
       .replaceAll(/(\[~ \d+\])/gu, '<span class="unused">$1</span>')
       .replaceAll(/\{([^|}]+)\|([^|}]+)\}/gu, '<ruby>$1<rp>(</rp><rt>$2</rt><rp>)</rp></ruby>') // Switch furigana
       .replaceAll(/^(\s+)$/gu, '<span class="whitespace">$1</span>')
