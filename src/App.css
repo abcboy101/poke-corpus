@@ -27,6 +27,10 @@
     --progress-bar-color: var(--progress-bar-color-light);
     --whitespace-background: var(--whitespace-background-light);
   }
+
+  body:has(.App-mode-system) {
+    background: var(--background-light);
+  }
 }
 
 .App-mode-light {
@@ -40,6 +44,10 @@
   --whitespace-background: var(--whitespace-background-light);
 }
 
+body:has(.App-mode-light) {
+  background: var(--background-light);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: var(--background-dark);
@@ -50,6 +58,10 @@
     --progress-bar-border: var(--text);
     --progress-bar-color: var(--progress-bar-color-dark);
     --whitespace-background: var(--whitespace-background-dark);
+  }
+
+  body:has(.App-mode-system) {
+    background: var(--background-dark);
   }
 }
 
@@ -62,6 +74,10 @@
   --progress-bar-border: var(--text);
   --progress-bar-color: var(--progress-bar-color-dark);
   --whitespace-background: var(--whitespace-background-dark);
+}
+
+body:has(.App-mode-dark) {
+  background: var(--background-dark);
 }
 
 
