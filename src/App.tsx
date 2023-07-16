@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next';
 
 import { SearchParams } from './searchWorker';
 import { SearchResults, SearchResultsInProgress, SearchResultsComplete, SearchResultLines } from './searchWorkerManager';
-import Spinner from './Spinner';
-import ProgressBar from './ProgressBar';
+import Spinner from './components/Spinner';
+import ProgressBar from './components/ProgressBar';
 
 import './App.css';
 import logo from './logo.svg';
