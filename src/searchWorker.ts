@@ -233,15 +233,22 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
   const postprocessString = (s: string) => {
     return (postprocessMetadata(s)
       .replaceAll('<', '&lt;').replaceAll('>', '&gt;')
+
+      // BDSP
+      .replaceAll(/&lt;color=(.*?)&gt;(.*?)&lt;\/color&gt;/gu, '<span style="color: $1">$2</span>')
+      .replaceAll(/&lt;size=(.*?)&gt;(.*?)&lt;\/size&gt;/gu, '<span style="font-size: $1">$2</span>')
+      .replaceAll(/((?<=^|\\r|\\c|\\n).*?)&lt;pos=(.*?)&gt;(.*?(?:\\r|\\c|\\n|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>')
+      .replaceAll(/((?<=^|\\r|\\c|\\n).*?)&lt;line-indent=(.*?)&gt;(.*?(?:\\r|\\c|\\n|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>')
+
       .replaceAll('\u2486', '<sup>P</sup><sub>K</sub>') // Gen 5 PK
       .replaceAll('\u2487', '<sup>M</sup><sub>N</sub>') // Gen 5 MN
       .replaceAll('\uE0A7', '<sup>P</sup><sub>K</sub>') // 3DS PK
       .replaceAll('\uE0A8', '<sup>M</sup><sub>N</sub>') // 3DS MN
-      .replaceAll(/\[VAR FF01\(FF43\)\]\[VAR FF01\(30B3\)\]/gu, '')
+      .replaceAll(/\[VAR FF01\(FF43\)\]\[VAR FF01\(30B3\)\]/gu, '') // Gen 4 font size
       .replaceAll(/\[VAR FF01\(FF43\)\](.+?)(?:\[VAR FF01\(30B3\)\]|\\r|\\c|\\n|$)/gu, '<span class="line-font-size-200"><span class="text-font-size-200">$1</span></span>')
       .replaceAll('[VAR FF01(30B3)]', '')
-      .replaceAll(/\[VAR 0205\](.*?(?:\\r|\\c|\\n|$)+)/gu, '<span class="line-align-center">$1</span>')
-      .replaceAll(/\[VAR 0206\](.*?(?:\\r|\\c|\\n|$)+)/gu, '<span class="line-align-right">$1</span>')
+      .replaceAll(/\[VAR 0205\](.*?(?:\\r|\\c|\\n|$)+)/gu, '<span class="line-align-center">$1</span>') // HGSS
+      .replaceAll(/\[VAR 0206\](.*?(?:\\r|\\c|\\n|$)+)/gu, '<span class="line-align-right">$1</span>') // HGSS
 
       // Line breaks
       .replaceAll('[VAR 0207]\\n', '<span class="c">&#91;VAR 0207&#93;</span><span class="n">&#92;n</span><br>')
@@ -258,7 +265,8 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       .replaceAll('[NULL]', '<span class="null">[NULL]</span>')
       .replaceAll('[COMP]', '<span class="compressed">[COMP]</span>')
       .replaceAll(/(\[VAR [^\]]+?\])/gu, '<span class="var">$1</span>')
-      .replaceAll(/(\[WAIT \d+\])/gu, '<span class="wait">$1</span>')
+      .replaceAll(/(\[WAIT [\d.]+\])/gu, '<span class="wait">$1</span>')
+      .replaceAll(/(\[SFX [\d.]+\])/gu, '<span class="wait">$1</span>')
       .replaceAll(/(\[~ \d+\])/gu, '<span class="unused">$1</span>')
       .replaceAll(/\{([^|}]+)\|([^|}]+)\}/gu, '<ruby>$1<rp>(</rp><rt>$2</rt><rp>)</rp></ruby>') // Switch furigana
       .replaceAll(/^(\s+)$/gu, '<span class="whitespace">$1</span>')
