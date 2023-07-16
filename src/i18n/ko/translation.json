@@ -25,8 +25,10 @@
     "done": "완료!",
     "error": "오류가 발생했습니다",
     "network": "네트워크 오류",
-    "regex": "잘못된 정규식"
+    "regex": "잘못된 정규식",
+    "noMatch": "해당 파일이 없습니다"
   },
+  "jumpTo": "이동...",
   "tableHeader": "{{collection}}의 {{file}} 데이터",
   "tagline": "포켓몬의 말뭉치를 검색하는 도구",
   "footerText": "Created by abcboy",

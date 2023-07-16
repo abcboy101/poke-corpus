@@ -25,8 +25,10 @@
     "done": "完了！",
     "error": "エラーが発生しました",
     "network": "ネットワークエラー",
-    "regex": "不正な正規表現"
+    "regex": "不正な正規表現",
+    "noMatch": "該当するファイルはありません"
   },
+  "jumpTo": "移動…",
   "tableHeader": "{{collection}}の{{file}}データ",
   "tagline": "ポケモンのコーパスを検索するツール",
   "footerText": "Created by abcboy",

@@ -21,17 +21,40 @@ const statusInProgress: StatusInProgress[] = ['waiting', 'loading', 'processing'
 const codeId = "qid-ZZ";
 const langId = "en-JP";
 
+function JumpTo({headers}: {headers: string[]}) {
+  const { t } = useTranslation();
+  const jumpTo = (k: number) => {
+    const results = document.getElementById("App-results");
+    const section0 = document.getElementById(`App-results-section0`);
+    const sectionk = document.getElementById(`App-results-section${k}`);
+    if (results && section0 && sectionk) {
+      results.scrollTop = sectionk.offsetTop - section0.offsetTop;
+    }
+  };
+  return <nav className="App-results-jump">
+    <select name="mode" id="mode" onChange={(e) => jumpTo(parseInt(e.target.value, 10))} value="" disabled={headers.length === 0}>
+      <option value="" disabled>{t('jumpTo')}</option>
+      {headers.map((header, k) => <option key={k} value={k}>{header}</option>)}
+    </select>
+  </nav>
+}
+
 function Results({status, progress, results}: {status: Status, progress: number, results: SearchResultLines[]}) {
   const { t } = useTranslation();
+  results = results.filter(({lines}) => lines.length > 0);
+  const headers = results.map(({collection, file}) => t('tableHeader', {collection: t(`collections:${collection}.name`), file: file, interpolation: {escapeValue: false}}));
   return (
     <>
       <div className="App-results-status">
-        <div className="App-results-status-text">{t(`status.${status}`)}</div>
+        {
+          status === 'done' ? <JumpTo headers={headers} /> :
+          <div className="App-results-status-text">{t(`status.${status}`)}</div>
+        }
         <Spinner src={logo} active={(statusInProgress as Status[]).includes(status)}/>
         <ProgressBar progress={progress} />
       </div>
-      <main className="App-results">
-        {results.map(({collection, file, languages, lines, displayHeader}, k) => {
+      <main id="App-results" className="App-results">
+        {results.map(({languages, lines, displayHeader}, k) => {
           if (lines.length === 0) {
             return null;
           }
@@ -39,16 +62,16 @@ function Results({status, progress, results}: {status: Status, progress: number,
           const displayDirs = displayLanguages.map((lang) => i18next.dir(lang));
           const sameDir = displayDirs.every((dir) => dir === displayDirs[0]);
           return (
-            <section key={`section${k}`} className='App-results-table-container'>
-              <h2 className={displayHeader ? undefined : 'd-none'}>{t('tableHeader', {collection: t(`collections:${collection}.name`), file: file, interpolation: {escapeValue: false}})}</h2>
+            <section id={`App-results-section${k}`} key={k} className='App-results-table-container'>
+              <h2 className={displayHeader ? undefined : 'd-none'}>{headers[k]}</h2>
               <table className="App-results-table">
                 <thead>
                   <tr>{languages.map((lang) => <th key={lang}>{t(`languages:${lang}.code`)}</th>)}</tr>
                 </thead>
                 <tbody dir={sameDir && displayDirs[0] !== i18next.dir() ? displayDirs[0] : undefined}>
                   {lines.map((row, i) =>
-                  <tr key={`row${i}`}>
-                    {row.map((s, j) => <td key={`row${i}-${languages[j]}`} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]} dangerouslySetInnerHTML={{__html: s}}></td>)}
+                  <tr key={i}>
+                    {row.map((s, j) => <td key={j} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]} dangerouslySetInnerHTML={{__html: s}}></td>)}
                   </tr>
                   )}
                 </tbody>

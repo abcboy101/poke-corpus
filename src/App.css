@@ -169,6 +169,10 @@ input[type=submit] {
   min-width: 4em;
 }
 
+select {
+  width: 100%;
+}
+
 footer {
   text-align: center;
 }
@@ -221,10 +225,14 @@ footer {
   gap: 0.25em;
 }
 
+.App-results-jump, .App-results-status-text {
+  min-height: 1.75em;
+}
+
 .App-results {
   width: 100%;
   min-height: max(12em, 25vh);
-  overflow: scroll;
+  overflow: auto;
   flex: 1;
   padding: 0.5rem;
   border: 1px solid var(--text);
@@ -366,7 +374,7 @@ footer {
     grid-template-columns: 1em 1fr;
   }
 
-  .App-results-status-text {
+  .App-results-jump, .App-results-status-text {
     grid-column: span 2;
   }
 }

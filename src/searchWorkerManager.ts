@@ -2,7 +2,8 @@ import corpus from './i18n/corpus.json'
 import { SearchParams, SearchTask, SearchTaskResult, SearchTaskResultComplete, SearchTaskResultError } from './searchWorker';
 
 export type SearchResultsInProgress = 'loading' | 'processing' | 'collecting';
-export type SearchResultsComplete = 'done' | SearchTaskResultError;
+export type SearchResultsError = SearchTaskResultError | 'noMatch';
+export type SearchResultsComplete = 'done' | SearchResultsError;
 export type SearchResultsStatus = SearchResultsInProgress | SearchResultsComplete;
 export interface SearchResultLines {
   collection: string,
@@ -88,6 +89,10 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
         taskCount += languages.length;
       });
     });
+    if (taskList.length === 0) {
+      updateStatusComplete('noMatch');
+      return;
+    }
 
     // Initialize helpers
     let loadedCount = 0;
