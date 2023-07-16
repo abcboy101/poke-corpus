@@ -1,41 +1,41 @@
 import 'compression-streams-polyfill';
 
 export interface SearchParams {
-  query: string,
-  regex: boolean,
-  caseInsensitive: boolean,
-  common: boolean,
-  script: boolean,
-  collections: string[],
-  languages: string[]
+  readonly query: string,
+  readonly regex: boolean,
+  readonly caseInsensitive: boolean,
+  readonly common: boolean,
+  readonly script: boolean,
+  readonly collections: readonly string[],
+  readonly languages: readonly string[]
 };
 
 export interface SearchTask {
-  index: number,
-  params: SearchParams,
-  collectionKey: string,
-  fileKey: string,
-  languages: string[]
+  readonly index: number,
+  readonly params: SearchParams,
+  readonly collectionKey: string,
+  readonly fileKey: string,
+  readonly languages: readonly string[]
 }
 
 export type SearchTaskResultError = 'error' | 'regex' | 'network';
 export type SearchTaskResultDone = 'done';
 export type SearchTaskResultStatus = 'loading' | 'processing' | SearchTaskResultDone | SearchTaskResultError;
 export interface SearchTaskResultLines {
-  collection: string,
-  file: string,
-  languages: string[],
-  lines: string[][]
+  readonly collection: string,
+  readonly file: string,
+  readonly languages: readonly string[],
+  readonly lines: readonly string[][]
 }
 export interface SearchTaskResult {
-  index: number,
-  status: SearchTaskResultStatus,
-  result?: SearchTaskResultLines
+  readonly index: number,
+  readonly status: SearchTaskResultStatus,
+  readonly result?: SearchTaskResultLines
 }
 export interface SearchTaskResultComplete {
-  index: number,
-  status: SearchTaskResultDone,
-  result: SearchTaskResultLines
+  readonly index: number,
+  readonly status: SearchTaskResultDone,
+  readonly result: SearchTaskResultLines
 }
 
 export const cacheVersion = "v1";

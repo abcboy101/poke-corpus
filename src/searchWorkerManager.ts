@@ -6,17 +6,17 @@ export type SearchResultsError = SearchTaskResultError | 'noMatch';
 export type SearchResultsComplete = 'done' | SearchResultsError;
 export type SearchResultsStatus = SearchResultsInProgress | SearchResultsComplete;
 export interface SearchResultLines {
-  collection: string,
-  file: string,
-  languages: string[],
-  lines: string[][],
-  displayHeader: boolean
+  readonly collection: string,
+  readonly file: string,
+  readonly languages: readonly string[],
+  readonly lines: readonly string[][],
+  readonly displayHeader: boolean
 };
 export interface SearchResults {
-  complete: boolean,
-  status: SearchResultsStatus,
-  progress: number,
-  results: SearchResultLines[]
+  readonly complete: boolean,
+  readonly status: SearchResultsStatus,
+  readonly progress: number,
+  readonly results: readonly SearchResultLines[]
 };
 
 /* eslint-disable no-restricted-globals */

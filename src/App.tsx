@@ -16,12 +16,12 @@ import './i18n/config';
 type StatusInProgress = 'waiting' | SearchResultsInProgress | 'rendering';
 type StatusComplete = 'initial' | SearchResultsComplete;
 type Status = StatusInProgress | StatusComplete;
-const statusInProgress: StatusInProgress[] = ['waiting', 'loading', 'processing', 'collecting', 'rendering'];
+const statusInProgress: readonly StatusInProgress[] = ['waiting', 'loading', 'processing', 'collecting', 'rendering'];
 
 const codeId = "qid-ZZ";
 const langId = "en-JP";
 
-function JumpTo({headers}: {headers: string[]}) {
+function JumpTo({headers}: {headers: readonly string[]}) {
   const { t } = useTranslation();
   const jumpTo = (k: number) => {
     const results = document.getElementById("App-results");
@@ -39,10 +39,10 @@ function JumpTo({headers}: {headers: string[]}) {
   </nav>
 }
 
-function Results({status, progress, results}: {status: Status, progress: number, results: SearchResultLines[]}) {
+function Results({status, progress, results}: {status: Status, progress: number, results: readonly SearchResultLines[]}) {
   const { t } = useTranslation();
-  results = results.filter(({lines}) => lines.length > 0);
-  const headers = results.map(({collection, file}) => t('tableHeader', {collection: t(`collections:${collection}.name`), file: file, interpolation: {escapeValue: false}}));
+  const filteredResults = results.filter(({lines}) => lines.length > 0);
+  const headers = filteredResults.map(({collection, file}) => t('tableHeader', {collection: t(`collections:${collection}.name`), file: file, interpolation: {escapeValue: false}}));
   return (
     <>
       <div className="App-results-status">
@@ -54,7 +54,7 @@ function Results({status, progress, results}: {status: Status, progress: number,
         <ProgressBar progress={progress} />
       </div>
       <main id="App-results" className="App-results">
-        {results.map(({languages, lines, displayHeader}, k) => {
+        {filteredResults.map(({languages, lines, displayHeader}, k) => {
           if (lines.length === 0) {
             return null;
           }
@@ -84,7 +84,7 @@ function Results({status, progress, results}: {status: Status, progress: number,
   );
 };
 
-function SearchCollections({collections, setCollections}: {collections: string[], setCollections: Dispatch<SetStateAction<string[]>>}) {
+function SearchCollections({collections, setCollections}: {collections: readonly string[], setCollections: Dispatch<SetStateAction<readonly string[]>>}) {
   const { t } = useTranslation();
   return (
     <>
@@ -122,7 +122,7 @@ function SearchCollections({collections, setCollections}: {collections: string[]
   )
 }
 
-function SearchLanguages({languages, setLanguages}: {languages: string[], setLanguages: Dispatch<SetStateAction<string[]>>}) {
+function SearchLanguages({languages, setLanguages}: {languages: readonly string[], setLanguages: Dispatch<SetStateAction<readonly string[]>>}) {
   const { t } = useTranslation();
   return (
     <>
@@ -169,12 +169,12 @@ function Search() {
   const [caseInsensitive, setCaseInsensitive] = useState(params.get('caseInsensitive') !== 'false');
   const [common, setCommon] = useState(params.get('common') !== 'false');
   const [script, setScript] = useState(params.get('script') !== 'false');
-  const [collections, setCollections] = useState((params.get('collections') ?? defaultCollections).split(',').filter((value) => Object.keys(corpus.collections).includes(value)))
-  const [languages, setLanguages] = useState((params.get('languages') ?? defaultLanguages).split(',').filter((value) => corpus.languages.includes(value)))
+  const [collections, setCollections] = useState((params.get('collections') ?? defaultCollections).split(',').filter((value) => Object.keys(corpus.collections).includes(value)) as readonly string[])
+  const [languages, setLanguages] = useState((params.get('languages') ?? defaultLanguages).split(',').filter((value) => corpus.languages.includes(value)) as readonly string[])
 
-  const [status, setStatus]: [Status, Dispatch<SetStateAction<Status>>] = useState("initial" as Status);
+  const [status, setStatus]: [Status, Dispatch<SetStateAction<Status>>] = useState('initial' as Status);
   const [progress, setProgress] = useState(0.0);
-  const [results, setResults] = useState([] as SearchResultLines[]);
+  const [results, setResults] = useState([] as readonly SearchResultLines[]);
 
   useEffect(() => {
     const onHashChange = () => {
