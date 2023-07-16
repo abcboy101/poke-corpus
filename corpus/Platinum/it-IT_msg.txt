@@ -1640,8 +1640,8 @@ Operazione\ncompletata.
                                          
 Non puoi scendere dalla Bici qui.
 I tuoi Gettoni: [VAR 0136(0000,0000)]
-Estratta una MT.[VAR 0202(3042)][VAR 0202(3043)]
-Estratta una MN.[VAR 0202(3042)][VAR 0202(3043)]
+Estratta una MT.[VAR 0202(0003)][VAR 0202(0004)]
+Estratta una MN.[VAR 0202(0003)][VAR 0202(0004)]
 Contiene [VAR 0106(0000,0000)]!\cVuoi insegnare [VAR 0106(0000,0000)]\nad un Pokémon?
 [VAR 0103(0000,0000)] usa\n[VAR 0108(0001,0000)]!
 È ancora attivo il Repellente usato\nprima.
@@ -4691,7 +4691,7 @@ Eh?\cNon credi che sia difficile per un Uovo\nimparare una mossa?
                          
                       
                                                                             
-In cambio [VAR 0103(3042,0000)] consegna\nla [VAR 0108(3043,0000)].
+In cambio [VAR 0103(0003,0000)] consegna\nla [VAR 0108(0004,0000)].
 Spesso vado a Flemminia per conto del\nmio fratellone.\cIl giornale locale mi regala delle Squame\nCuore in cambio di alcune commissioni.
 ~~~~~~~~~~~~~~~
 Text File : 141
@@ -5145,8 +5145,8 @@ A cominciare da domani, aspetterò che\ntu venga a raccontarmi dei tuoi viaggi!
 Giulietta: Oggi è lunedì!\cÈ il momento di cominciare\nuna nuova settimana.\cC’è qualche storia che potrebbe\naiutarmi a riprendermi?\cForse potresti raccontarmi\ndi qualche scherzo con l’acqua...
 [VAR 011C(0000,0000)]...\nBello scherzo con l’acqua!\cSembra proprio... rinfrescante!\nQuesta storia mi ha risvegliata!\c
 Grazie!\nDai questo al tuo Pokémon.\c
-[VAR 0103(0002,0000)] riceve\nil [VAR 0127(3042,0000)].\c
-[VAR 0103(0002,0000)] mette\nil [VAR 0127(3042,0000)]\csu [VAR 0100(0001,0000)].\c
+[VAR 0103(0002,0000)] riceve\nil [VAR 0127(0003,0000)].\c
+[VAR 0103(0002,0000)] mette\nil [VAR 0127(0003,0000)]\csu [VAR 0100(0001,0000)].\c
 Giulietta: Ti aspetto anche domani\nper farmi raccontare un’altra storia!
 Giulietta: Oh, ciao!\cOh, questo è [VAR 0100(0001,0000)].\nGli ho già dato questo Fiocco.\cPerò io ho tantissimi Fiocchi.\nPerché non mi porti altri Pokémon?
 Giulietta: Oh...\nNon ti è venuto in mente niente?
@@ -5594,8 +5594,8 @@ Vuoi aumentare il tuo grado\nin cambio di [VAR 0134(0000,0000)] PM?
   
    
 Non ti bastano i PM.
-[VAR 0103(3044,0000)] ottiene l’abilità\ndi ripristinare PP!
-[VAR 0103(3044,0000)] ottiene l’abilità di\nripristinare PS e PP!
+[VAR 0103(0005,0000)] ottiene l’abilità\ndi ripristinare PP!
+[VAR 0103(0005,0000)] ottiene l’abilità di\nripristinare PS e PP!
 BACCHE
 STRUMENTI
 GRADO +1
@@ -5620,8 +5620,8 @@ Vuoi scambiare i due strumenti?
   
    
           
-[VAR 0103(3044,0000)] ottiene l’abilità\ndi affittare strumenti!
-[VAR 0103(3044,0000)] ha ora una scelta più\nvasta di Bacche e strumenti in affitto!
+[VAR 0103(0005,0000)] ottiene l’abilità\ndi affittare strumenti!
+[VAR 0103(0005,0000)] ha ora una scelta più\nvasta di Bacche e strumenti in affitto!
 Strumento
 [VAR FF00(0002)][VAR 0108(0000,0000)][VAR FF00(0000)]
 Natura
@@ -5643,8 +5643,8 @@ Velocità
 [VAR 0106(0000,0000)]
 [VAR 0106(0001,0000)]
 [VAR 0106(0002,0000)]
-[VAR 0106(3042,0000)]
-[VAR FF00(0002)][VAR 0133(3043,0000)][VAR FF00(0000)]/[VAR FF00(0002)][VAR 0133(3044,0000)][VAR FF00(0000)]
+[VAR 0106(0003,0000)]
+[VAR FF00(0002)][VAR 0133(0004,0000)][VAR FF00(0000)]/[VAR FF00(0002)][VAR 0133(0005,0000)][VAR FF00(0000)]
 ~~~~~~~~~~~~~~~
 Text File : 200
 ~~~~~~~~~~~~~~~
@@ -5783,13 +5783,13 @@ Hai acquisito la lista delle mosse\ndel Pokémon.
 [VAR 0106(0000,0000)]
 [VAR 0106(0001,0000)]
 [VAR 0106(0002,0000)]
-[VAR 0106(3042,0000)]
-[VAR FF00(0002)][VAR 0133(3043,0000)][VAR FF00(0000)]/[VAR FF00(0002)][VAR 0133(3044,0000)][VAR FF00(0000)]
+[VAR 0106(0003,0000)]
+[VAR FF00(0002)][VAR 0133(0004,0000)][VAR FF00(0000)]/[VAR FF00(0002)][VAR 0133(0005,0000)][VAR FF00(0000)]
 Vuoi salire di grado per [VAR 0134(0000,0000)] PM?
   
    
           
-[VAR 0103(3044,0000)] ottiene l’abilità di acqui-\nsire la lista mosse dell’avversario.
+[VAR 0103(0005,0000)] ottiene l’abilità di acqui-\nsire la lista mosse dell’avversario.
 ~~~~~~~~~~~~~~~
 Text File : 202
 ~~~~~~~~~~~~~~~
@@ -5923,7 +5923,7 @@ Per [VAR 0103(0001,0000)] [VAR 0101(0000,0000)]\nesegue [VAR 0106(0002,0000)]!\c
 Oh, no! Qualcuno si è già\nesibito per quel Giudice!\c
     
 [VAR 0103(0000,0000)] trova\nottima l’esibizione\cdi [VAR 0101(0001,0000)] e\n[VAR 0101(0002,0000)]! [VAR FF00(0001)]+2[VAR FF00(0000)]!\c
-[VAR 0103(0000,0000)] ha una\nbuona impressione di\c[VAR 0101(0001,0000)], [VAR 0101(0002,0000)]\ne [VAR 0101(3042,0000)]! [VAR FF00(0001)]+1[VAR FF00(0000)]!\c
+[VAR 0103(0000,0000)] ha una\nbuona impressione di\c[VAR 0101(0001,0000)], [VAR 0101(0002,0000)]\ne [VAR 0101(0003,0000)]! [VAR FF00(0001)]+1[VAR FF00(0000)]!\c
 Tutti si sono esibiti per\n[VAR 0103(0000,0000)]...\cE hanno smorzato\nl’entusiasmo del Giudice.\c
 [VAR 0103(0000,0000)] trova\nfenomenale l’esibizione\cdi [VAR 0101(0001,0000)]! [VAR FF00(0001)]+3[VAR FF00(0000)]!\c
     
@@ -7969,22 +7969,22 @@ Ohohoh... Non hai spazio a sufficienza\nper altri oggetti decorativi.\cFai spazi
 Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere\nstrumenti diversi. Le Uova non\csono ammesse.\cTorna a trovarci quando hai i requisiti.
 Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova e [VAR 0100(0001,0000)] non sono ammessi.\cTorna a trovarci quando hai i requisiti.
 Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)] e [VAR 0100(0002,0000)] non\nsono ammessi.\cTorna a trovarci quando hai i requisiti.
-Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)] e\n[VAR 0100(3042,0000)] non sono ammessi.\cTorna a trovarci quando hai i requisiti.
-Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)] e [VAR 0100(3043,0000)]\cnon sono ammessi.\cTorna a trovarci quando hai i requisiti.
-Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)] e\c[VAR 0100(3044,0000)] non sono ammessi.\cTorna a trovarci quando hai i requisiti.
-Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)] e [VAR 0100(3045,0000)]\nnon sono ammessi.\cTorna a trovarci quando hai i requisiti.
-Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)] e\n[VAR 0100(3046,0000)] non sono ammessi.\cTorna a trovarci quando hai i requisiti.
-Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\n[VAR 0100(3046,0000)] e [VAR 0100(3047,0000)]\cnon sono ammessi.\cTorna a trovarci quando hai i requisiti.
-Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\n[VAR 0100(3046,0000)], [VAR 0100(3047,0000)]\ce [VAR 0100(3048,0000)] non sono ammessi.\cTorna a trovarci quando hai i requisiti.
-Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\n[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)] e [VAR 0100(3049,0000)]\nnon sono ammessi.\cTorna a trovarci quando hai i requisiti.
-Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\n[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)]\ne [VAR 0100(304A,0000)] non sono ammessi.\cTorna a trovarci quando hai i requisiti.
-Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\n[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\n[VAR 0100(304A,0000)] e [VAR 0100(304B,0000)]\cnon sono ammessi.\cTorna a trovarci quando hai i requisiti.
-Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\n[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\n[VAR 0100(304A,0000)], [VAR 0100(304B,0000)]\ce [VAR 0100(304C,0000)] non sono ammessi.\cTorna a trovarci quando hai i requisiti.
-Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\n[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\n[VAR 0100(304A,0000)], [VAR 0100(304B,0000)],\c[VAR 0100(304C,0000)] e [VAR 0100(304D,0000)]\nnon sono ammessi.\cTorna a trovarci quando hai i requisiti.
-Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\n[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\n[VAR 0100(304A,0000)], [VAR 0100(304B,0000)],\c[VAR 0100(304C,0000)], [VAR 0100(304D,0000)]\ne [VAR 0100(304E,0000)] non sono ammessi.\cTorna a trovarci quando hai i requisiti.
-Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\n[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\n[VAR 0100(304A,0000)], [VAR 0100(304B,0000)],\c[VAR 0100(304C,0000)], [VAR 0100(304D,0000)],\n[VAR 0100(304E,0000)] e [VAR 0100(304F,0000)]\cnon sono ammessi.\cTorna a trovarci quando hai i requisiti.
-Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\n[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\n[VAR 0100(304A,0000)], [VAR 0100(304B,0000)],\c[VAR 0100(304C,0000)], [VAR 0100(304D,0000)],\n[VAR 0100(304E,0000)], [VAR 0100(304F,0000)]\ce [VAR 0100(3050,0000)] non sono ammessi.\cTorna a trovarci quando hai i requisiti.
-Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\n[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\n[VAR 0100(304A,0000)], [VAR 0100(304B,0000)],\c[VAR 0100(304C,0000)], [VAR 0100(304D,0000)],\n[VAR 0100(304E,0000)], [VAR 0100(304F,0000)],\c[VAR 0100(3050,0000)] e [VAR 0100(3051,0000)]\nnon sono ammessi.\cTorna a trovarci quando hai i requisiti.
+Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)] e\n[VAR 0100(0003,0000)] non sono ammessi.\cTorna a trovarci quando hai i requisiti.
+Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)] e [VAR 0100(0004,0000)]\cnon sono ammessi.\cTorna a trovarci quando hai i requisiti.
+Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)] e\c[VAR 0100(0005,0000)] non sono ammessi.\cTorna a trovarci quando hai i requisiti.
+Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)] e [VAR 0100(0006,0000)]\nnon sono ammessi.\cTorna a trovarci quando hai i requisiti.
+Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)] e\n[VAR 0100(0007,0000)] non sono ammessi.\cTorna a trovarci quando hai i requisiti.
+Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\n[VAR 0100(0007,0000)] e [VAR 0100(0008,0000)]\cnon sono ammessi.\cTorna a trovarci quando hai i requisiti.
+Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\n[VAR 0100(0007,0000)], [VAR 0100(0008,0000)]\ce [VAR 0100(0009,0000)] non sono ammessi.\cTorna a trovarci quando hai i requisiti.
+Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\n[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)] e [VAR 0100(000A,0000)]\nnon sono ammessi.\cTorna a trovarci quando hai i requisiti.
+Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\n[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)]\ne [VAR 0100(000B,0000)] non sono ammessi.\cTorna a trovarci quando hai i requisiti.
+Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\n[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\n[VAR 0100(000B,0000)] e [VAR 0100(000C,0000)]\cnon sono ammessi.\cTorna a trovarci quando hai i requisiti.
+Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\n[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\n[VAR 0100(000B,0000)], [VAR 0100(000C,0000)]\ce [VAR 0100(000D,0000)] non sono ammessi.\cTorna a trovarci quando hai i requisiti.
+Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\n[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\n[VAR 0100(000B,0000)], [VAR 0100(000C,0000)],\c[VAR 0100(000D,0000)] e [VAR 0100(000E,0000)]\nnon sono ammessi.\cTorna a trovarci quando hai i requisiti.
+Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\n[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\n[VAR 0100(000B,0000)], [VAR 0100(000C,0000)],\c[VAR 0100(000D,0000)], [VAR 0100(000E,0000)]\ne [VAR 0100(000F,0000)] non sono ammessi.\cTorna a trovarci quando hai i requisiti.
+Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\n[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\n[VAR 0100(000B,0000)], [VAR 0100(000C,0000)],\c[VAR 0100(000D,0000)], [VAR 0100(000E,0000)],\n[VAR 0100(000F,0000)] e [VAR 0100(0010,0000)]\cnon sono ammessi.\cTorna a trovarci quando hai i requisiti.
+Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\n[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\n[VAR 0100(000B,0000)], [VAR 0100(000C,0000)],\c[VAR 0100(000D,0000)], [VAR 0100(000E,0000)],\n[VAR 0100(000F,0000)], [VAR 0100(0010,0000)]\ce [VAR 0100(0011,0000)] non sono ammessi.\cTorna a trovarci quando hai i requisiti.
+Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con tutti\ni requisiti.\cDevi avere [VAR 0132(0000,0000)] Pokémon diversi per\npartecipare.\cInoltre, i Pokémon devono tenere \nstrumenti diversi.\cUova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\n[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\n[VAR 0100(000B,0000)], [VAR 0100(000C,0000)],\c[VAR 0100(000D,0000)], [VAR 0100(000E,0000)],\n[VAR 0100(000F,0000)], [VAR 0100(0010,0000)],\c[VAR 0100(0011,0000)] e [VAR 0100(0012,0000)]\nnon sono ammessi.\cTorna a trovarci quando hai i requisiti.
 Grazie per aver partecipato!\nTorna a farci visita!
 Sembra non esserci ancora\nnessun dato...
 La comunicazione wireless DS\nverrà attivata.
@@ -8060,19 +8060,19 @@ Text File : 307
 Scegli un Allenatore con cui formare\nuna squadra fra quelli presenti.\c
 [VAR 0103(0000,0000)], non hai trovato\nun compagno di squadra.\cVuoi smettere di cercare e tornare\nal banco di accettazione?
 Ti ringrazio della tua scelta.\cOra possiamo recarci alla\nSala Lotta Multipla.\c
-Marisio: I compagni che ho adesso?\cBeh, il mio [VAR 0100(0000,0000)] è tosto\ncon [VAR 0106(0001,0000)]!\cEd ecco il mio [VAR 0100(0002,0000)], che è\nmolto sicuro di sé con [VAR 0106(3042,0000)]!\cVuoi formare una squadra con me?
+Marisio: I compagni che ho adesso?\cBeh, il mio [VAR 0100(0000,0000)] è tosto\ncon [VAR 0106(0001,0000)]!\cEd ecco il mio [VAR 0100(0002,0000)], che è\nmolto sicuro di sé con [VAR 0106(0003,0000)]!\cVuoi formare una squadra con me?
 Marisio: Oh, è così?\nPeccato...
 Marisio: Ahahah, grazie.\nTi aspetto.\c
-Demetra: Ho un esemplare di\n[VAR 0100(0000,0000)] molto bravo con\c[VAR 0106(0001,0000)]!\cE uno di [VAR 0100(0002,0000)] che adora\nmostrare [VAR 0106(3042,0000)]!\cVuoi formare una squadra con me?
+Demetra: Ho un esemplare di\n[VAR 0100(0000,0000)] molto bravo con\c[VAR 0106(0001,0000)]!\cE uno di [VAR 0100(0002,0000)] che adora\nmostrare [VAR 0106(0003,0000)]!\cVuoi formare una squadra con me?
 Demetra: Oh...\nPeccato...
 Demetra: Allora andrò avanti.\c
-Chicco: Ehi, stai cercando di formare\nuna squadra? Allora ti dico cos’ho.\cIl mio [VAR 0100(0000,0000)] è fortissimo\ncon [VAR 0106(0001,0000)]!\cE il mio [VAR 0100(0002,0000)] è imbattibile\nquando usa [VAR 0106(3042,0000)]!\cVuoi stare in squadra con me, vero?
+Chicco: Ehi, stai cercando di formare\nuna squadra? Allora ti dico cos’ho.\cIl mio [VAR 0100(0000,0000)] è fortissimo\ncon [VAR 0106(0001,0000)]!\cE il mio [VAR 0100(0002,0000)] è imbattibile\nquando usa [VAR 0106(0003,0000)]!\cVuoi stare in squadra con me, vero?
 Chicco: Eh? Cosa?\nAccipicchia, che freddezza!
 Chicco: Ehehehe! Ottima scelta! Non\navrai problemi quando ci sono io in giro!\c
-Risetta: Il mio [VAR 0100(0000,0000)]\nusa bene [VAR 0106(0001,0000)]!\cE il mio [VAR 0100(0002,0000)] adora\nusare [VAR 0106(3042,0000)]!\cAllora?\nPosso venire con te?
+Risetta: Il mio [VAR 0100(0000,0000)]\nusa bene [VAR 0106(0001,0000)]!\cE il mio [VAR 0100(0002,0000)] adora\nusare [VAR 0106(0003,0000)]!\cAllora?\nPosso venire con te?
 Risetta: Non importa...
 Risetta: Andrò avanti...\c
-Matilde: Ciao!\nIo sono con il mio [VAR 0100(0000,0000)]!\cÈ veramente bravo con [VAR 0106(0001,0000)]!\cPoi c’è [VAR 0100(0002,0000)]!\nÈ un fenomeno con [VAR 0106(3042,0000)]!\c[VAR 0103(3043,0000)], vuoi venire con me?
+Matilde: Ciao!\nIo sono con il mio [VAR 0100(0000,0000)]!\cÈ veramente bravo con [VAR 0106(0001,0000)]!\cPoi c’è [VAR 0100(0002,0000)]!\nÈ un fenomeno con [VAR 0106(0003,0000)]!\c[VAR 0103(0004,0000)], vuoi venire con me?
 Matilde: Oh, OK.\nAndiamo un’altra volta!
 Matilde: OK! Ti aspetterò!\n[VAR 0103(0000,0000)], non metterci tanto!\c
 ~~~~~~~~~~~~~~~
@@ -8229,22 +8229,22 @@ Mi dispiace!\cPer le Lotte in Doppio devi avere due\nPokémon della stessa speci
 Inoltre, le Uova non possiedono i\nrequisiti necessari per partecipare.\c
 Uova e [VAR 0100(0001,0000)] non sono\nammessi.\c
 Uova, [VAR 0100(0001,0000)] e [VAR 0100(0002,0000)]\nnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)]\ne [VAR 0100(3042,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)] e [VAR 0100(3043,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)] e\c[VAR 0100(3044,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)] e [VAR 0100(3045,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)] e\c[VAR 0100(3046,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)] e [VAR 0100(3047,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)] e\c[VAR 0100(3048,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)] e [VAR 0100(3049,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)] e\c[VAR 0100(304A,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)] e [VAR 0100(304B,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)], [VAR 0100(304B,0000)] e\c[VAR 0100(304C,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)], [VAR 0100(304B,0000)],\c[VAR 0100(304C,0000)] e [VAR 0100(304D,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)], [VAR 0100(304B,0000)],\c[VAR 0100(304C,0000)], [VAR 0100(304D,0000)] e\c[VAR 0100(304E,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)], [VAR 0100(304B,0000)],\c[VAR 0100(304C,0000)], [VAR 0100(304D,0000)],\c[VAR 0100(304E,0000)] e [VAR 0100(304F,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)], [VAR 0100(304B,0000)],\c[VAR 0100(304C,0000)], [VAR 0100(304D,0000)],\c[VAR 0100(304E,0000)], [VAR 0100(304F,0000)] e\c[VAR 0100(3050,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)], [VAR 0100(304B,0000)],\c[VAR 0100(304C,0000)], [VAR 0100(304D,0000)],\c[VAR 0100(304E,0000)], [VAR 0100(304F,0000)],\c[VAR 0100(3050,0000)] e [VAR 0100(3051,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)]\ne [VAR 0100(0003,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)] e [VAR 0100(0004,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)] e\c[VAR 0100(0005,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)] e [VAR 0100(0006,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)] e\c[VAR 0100(0007,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)] e [VAR 0100(0008,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)] e\c[VAR 0100(0009,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)] e [VAR 0100(000A,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)] e\c[VAR 0100(000B,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)] e [VAR 0100(000C,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)], [VAR 0100(000C,0000)] e\c[VAR 0100(000D,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)], [VAR 0100(000C,0000)],\c[VAR 0100(000D,0000)] e [VAR 0100(000E,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)], [VAR 0100(000C,0000)],\c[VAR 0100(000D,0000)], [VAR 0100(000E,0000)] e\c[VAR 0100(000F,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)], [VAR 0100(000C,0000)],\c[VAR 0100(000D,0000)], [VAR 0100(000E,0000)],\c[VAR 0100(000F,0000)] e [VAR 0100(0010,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)], [VAR 0100(000C,0000)],\c[VAR 0100(000D,0000)], [VAR 0100(000E,0000)],\c[VAR 0100(000F,0000)], [VAR 0100(0010,0000)] e\c[VAR 0100(0011,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)], [VAR 0100(000C,0000)],\c[VAR 0100(000D,0000)], [VAR 0100(000E,0000)],\c[VAR 0100(000F,0000)], [VAR 0100(0010,0000)],\c[VAR 0100(0011,0000)] e [VAR 0100(0012,0000)]\cnon sono ammessi.\c
 Torna a trovarci quando hai i requisiti.\c
 Per partecipare alla Lotta Multipla del\nPalco Lotta, entrambi gli Allenatori de-\cvono avere Pokémon della stessa specie.\cMettiti d’accordo con l’altro Allenato-\nre e scegliete dei Pokémon della stessa\cspecie.\c
        
@@ -8260,8 +8260,8 @@ Ho perso la testa per questo gioco che\nsto facendo.\cIo e il mio amico abbiamo 
 Io annoto il numero di vittorie relativo\nalla striscia vincente più lunga\cottenuta nella modalità Lotta Singola.\cIn altre parole, faccio solo la somma\ndelle strisce di vittorie consecutive più\clunghe per ogni specie di Pokémon.
 Quando la tua striscia di vittorie con-\nsecutive supera certe cifre, ottieni\cdei PL in premio.\c[VAR 0103(0000,0000)], il tuo record di vittorie\nconsecutive è attualmente\cpari a [VAR 0137(0001,0000)].\c
 Il tuo record totale di vittorie\nconsecutive ha raggiunto [VAR 0137(0002,0000)].\cEcco i tuoi PL in premio.\c
-Quando il tuo record totale di vittorie\nconsecutive raggiunge [VAR 0137(3042,0000)],\cottieni dei PL.
-[VAR 0103(0000,0000)] riceve [VAR 0135(3043,0000)] PL!
+Quando il tuo record totale di vittorie\nconsecutive raggiunge [VAR 0137(0003,0000)],\cottieni dei PL.
+[VAR 0103(0000,0000)] riceve [VAR 0135(0004,0000)] PL!
 [VAR 0103(0000,0000)], il tuo record totale di\nvittorie consecutive è pari a [VAR 0137(0001,0000)].\c
 [VAR 0103(0000,0000)], il tuo record totale di\nvittorie consecutive è pari a [VAR 0137(0001,0000)].\c... Santo cielo!\nÈ un risultato straordinario!
 Vittorio: Il Palco Lotta è un po’ noioso\nultimamente.\cÈ da un bel po’ che non si vedono\ndegli sfidanti in gamba in grado\cdi entusiasmare la folla.\cQuel tipo di sfidante che può battere\nl’Asso, insomma... Possibile che non\cce ne sia uno in giro?
@@ -8304,22 +8304,22 @@ Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con i requisiti\nnecessari.
 Inoltre, le Uova non possiedono i\nrequisiti necessari per partecipare.\c
 Uova e [VAR 0100(0001,0000)] non sono\nammessi.\c
 Uova, [VAR 0100(0001,0000)] e [VAR 0100(0002,0000)]\nnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)]\ne [VAR 0100(3042,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)] e [VAR 0100(3043,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)] e\c[VAR 0100(3044,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)] e [VAR 0100(3045,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)] e\c[VAR 0100(3046,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)] e [VAR 0100(3047,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)] e\c[VAR 0100(3048,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)] e [VAR 0100(3049,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)] e\c[VAR 0100(304A,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)] e [VAR 0100(304B,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)], [VAR 0100(304B,0000)] e\c[VAR 0100(304C,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)], [VAR 0100(304B,0000)],\c[VAR 0100(304C,0000)] e [VAR 0100(304D,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)], [VAR 0100(304B,0000)],\c[VAR 0100(304C,0000)], [VAR 0100(304D,0000)] e\c[VAR 0100(304E,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)], [VAR 0100(304B,0000)],\c[VAR 0100(304C,0000)], [VAR 0100(304D,0000)],\c[VAR 0100(304E,0000)] e [VAR 0100(304F,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)], [VAR 0100(304B,0000)],\c[VAR 0100(304C,0000)], [VAR 0100(304D,0000)],\c[VAR 0100(304E,0000)], [VAR 0100(304F,0000)] e\c[VAR 0100(3050,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)], [VAR 0100(304B,0000)],\c[VAR 0100(304C,0000)], [VAR 0100(304D,0000)],\c[VAR 0100(304E,0000)], [VAR 0100(304F,0000)],\c[VAR 0100(3050,0000)] e [VAR 0100(3051,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)]\ne [VAR 0100(0003,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)] e [VAR 0100(0004,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)] e\c[VAR 0100(0005,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)] e [VAR 0100(0006,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)] e\c[VAR 0100(0007,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)] e [VAR 0100(0008,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)] e\c[VAR 0100(0009,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)] e [VAR 0100(000A,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)] e\c[VAR 0100(000B,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)] e [VAR 0100(000C,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)], [VAR 0100(000C,0000)] e\c[VAR 0100(000D,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)], [VAR 0100(000C,0000)],\c[VAR 0100(000D,0000)] e [VAR 0100(000E,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)], [VAR 0100(000C,0000)],\c[VAR 0100(000D,0000)], [VAR 0100(000E,0000)] e\c[VAR 0100(000F,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)], [VAR 0100(000C,0000)],\c[VAR 0100(000D,0000)], [VAR 0100(000E,0000)],\c[VAR 0100(000F,0000)] e [VAR 0100(0010,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)], [VAR 0100(000C,0000)],\c[VAR 0100(000D,0000)], [VAR 0100(000E,0000)],\c[VAR 0100(000F,0000)], [VAR 0100(0010,0000)] e\c[VAR 0100(0011,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)], [VAR 0100(000C,0000)],\c[VAR 0100(000D,0000)], [VAR 0100(000E,0000)],\c[VAR 0100(000F,0000)], [VAR 0100(0010,0000)],\c[VAR 0100(0011,0000)] e [VAR 0100(0012,0000)]\cnon sono ammessi.\c
 Torna a trovarci quando hai i requisiti.\c
 Entrambi gli Allenatori hanno scelto\nil Pokémon [VAR 0100(0000,0000)]!\cMettiti d’accordo con l’altro Allenato-\nre e scegliete due Pokémon diversi.\c
 Entrambi gli Allenatori hanno scelto\ni Pokémon [VAR 0100(0000,0000)] e\c[VAR 0100(0001,0000)]!\cMettiti d’accordo con l’altro Allenato-\nre e scegliete dei Pokémon diversi.\c
@@ -8360,22 +8360,22 @@ Mi dispiace!\cNon hai [VAR 0132(0000,0000)] Pokémon con i requisiti\nnecessari.
 Inoltre, le Uova non possiedono i\nrequisiti necessari per partecipare.\c
 Uova e [VAR 0100(0001,0000)] non sono\nammessi.\c
 Uova, [VAR 0100(0001,0000)] e [VAR 0100(0002,0000)]\nnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)]\ne [VAR 0100(3042,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)] e [VAR 0100(3043,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)] e\c[VAR 0100(3044,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)] e [VAR 0100(3045,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)] e\c[VAR 0100(3046,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)] e [VAR 0100(3047,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)] e\c[VAR 0100(3048,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)] e [VAR 0100(3049,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)] e\c[VAR 0100(304A,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)] e [VAR 0100(304B,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)], [VAR 0100(304B,0000)] e\c[VAR 0100(304C,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)], [VAR 0100(304B,0000)],\c[VAR 0100(304C,0000)] e [VAR 0100(304D,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)], [VAR 0100(304B,0000)],\c[VAR 0100(304C,0000)], [VAR 0100(304D,0000)] e\c[VAR 0100(304E,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)], [VAR 0100(304B,0000)],\c[VAR 0100(304C,0000)], [VAR 0100(304D,0000)],\c[VAR 0100(304E,0000)] e [VAR 0100(304F,0000)]\cnon sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)], [VAR 0100(304B,0000)],\c[VAR 0100(304C,0000)], [VAR 0100(304D,0000)],\c[VAR 0100(304E,0000)], [VAR 0100(304F,0000)] e\c[VAR 0100(3050,0000)] non sono ammessi.\c
-Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(3042,0000)], [VAR 0100(3043,0000)],\c[VAR 0100(3044,0000)], [VAR 0100(3045,0000)],\c[VAR 0100(3046,0000)], [VAR 0100(3047,0000)],\c[VAR 0100(3048,0000)], [VAR 0100(3049,0000)],\c[VAR 0100(304A,0000)], [VAR 0100(304B,0000)],\c[VAR 0100(304C,0000)], [VAR 0100(304D,0000)],\c[VAR 0100(304E,0000)], [VAR 0100(304F,0000)],\c[VAR 0100(3050,0000)] e [VAR 0100(3051,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)]\ne [VAR 0100(0003,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)] e [VAR 0100(0004,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)] e\c[VAR 0100(0005,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)] e [VAR 0100(0006,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)] e\c[VAR 0100(0007,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)] e [VAR 0100(0008,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)] e\c[VAR 0100(0009,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)] e [VAR 0100(000A,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)] e\c[VAR 0100(000B,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)] e [VAR 0100(000C,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)], [VAR 0100(000C,0000)] e\c[VAR 0100(000D,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)], [VAR 0100(000C,0000)],\c[VAR 0100(000D,0000)] e [VAR 0100(000E,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)], [VAR 0100(000C,0000)],\c[VAR 0100(000D,0000)], [VAR 0100(000E,0000)] e\c[VAR 0100(000F,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)], [VAR 0100(000C,0000)],\c[VAR 0100(000D,0000)], [VAR 0100(000E,0000)],\c[VAR 0100(000F,0000)] e [VAR 0100(0010,0000)]\cnon sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)], [VAR 0100(000C,0000)],\c[VAR 0100(000D,0000)], [VAR 0100(000E,0000)],\c[VAR 0100(000F,0000)], [VAR 0100(0010,0000)] e\c[VAR 0100(0011,0000)] non sono ammessi.\c
+Uova, [VAR 0100(0001,0000)], [VAR 0100(0002,0000)],\n[VAR 0100(0003,0000)], [VAR 0100(0004,0000)],\c[VAR 0100(0005,0000)], [VAR 0100(0006,0000)],\c[VAR 0100(0007,0000)], [VAR 0100(0008,0000)],\c[VAR 0100(0009,0000)], [VAR 0100(000A,0000)],\c[VAR 0100(000B,0000)], [VAR 0100(000C,0000)],\c[VAR 0100(000D,0000)], [VAR 0100(000E,0000)],\c[VAR 0100(000F,0000)], [VAR 0100(0010,0000)],\c[VAR 0100(0011,0000)] e [VAR 0100(0012,0000)]\cnon sono ammessi.\c
 Torna a trovarci quando hai i requisiti.\c
 Entrambi gli Allenatori hanno scelto\nil Pokémon [VAR 0100(0000,0000)]!\cMettiti d’accordo con l’altro Allenato-\nre e scegliete due Pokémon diversi.\c
 Entrambi gli Allenatori hanno scelto\ni Pokémon [VAR 0100(0000,0000)] e\c[VAR 0100(0001,0000)]!\cMettiti d’accordo con l’altro Allenato-\nre e scegliete dei Pokémon diversi.\c
@@ -8928,7 +8928,7 @@ Distortion World
 ~~~~~~~~~~~~~~~
 Text File : 329
 ~~~~~~~~~~~~~~~
-Target [VAR 0132(3042,0000)]
+Target [VAR 0132(0003,0000)]
 Effect No. [VAR 0134(0000,0000)]
 Effect name [VAR 0106(0001,0000)]
 No. of turns [VAR 0133(0002,0000)]
@@ -9721,7 +9721,7 @@ Turn back: hours
 Advance: minutes
 Turn back: Minutes
 Cancel
-[VAR 0133(0000,0000)]/[VAR 0133(0001,0000)]\n[VAR 0133(0002,0000)]:[VAR 0133(3042,0000)] [VAR 0133(3043,0000)]sec.
+[VAR 0133(0000,0000)]/[VAR 0133(0001,0000)]\n[VAR 0133(0002,0000)]:[VAR 0133(0003,0000)] [VAR 0133(0004,0000)]sec.
 ~~~~~~~~~~~~~~~
 Text File : 341
 ~~~~~~~~~~~~~~~
@@ -9846,7 +9846,7 @@ Wi-Fi Test
 Trainer graphics
 Save data corrupted
 Modify RTC
-[VAR 014A(0000,0000)] [VAR 0133(0001,0000)] Time: [VAR 0133(0002,0000)]:[VAR 0133(3042,0000)]
+[VAR 014A(0000,0000)] [VAR 0133(0001,0000)] Time: [VAR 0133(0002,0000)]:[VAR 0133(0003,0000)]
 Animation Editor
 Ball Capsule Editor
 Contest
@@ -10025,11 +10025,11 @@ Point 01
 Point 02
 Point 03
 CHANP
-Horizontal Rotation　A up down　value:[VAR 013B(0000,0000)]\n　　　　　　　　　　　　　　　angle:[VAR 013B(3044,0000)]
-Vertical Rotation　B up down　value:[VAR 013B(0001,0000)]\n　　　　　　　　　　　　　　　angle:[VAR 013B(3045,0000)]
+Horizontal Rotation　A up down　value:[VAR 013B(0000,0000)]\n　　　　　　　　　　　　　　　angle:[VAR 013B(0005,0000)]
+Vertical Rotation　B up down　value:[VAR 013B(0001,0000)]\n　　　　　　　　　　　　　　　angle:[VAR 013B(0006,0000)]
 Overall Slope　Y up down　value:[VAR 013B(0002,0000)]\n                              angle:[VAR 013B(0000,0000)]
-Camera Distance A up down　value:[VAR 013B(3042,0000)]
-Camera Target　B up down　value:[VAR 013B(3043,0000)]
+Camera Distance A up down　value:[VAR 013B(0003,0000)]
+Camera Target　B up down　value:[VAR 013B(0004,0000)]
 Stop Timer: START　Switch Control: R\nStop Operation: X  End: L   Start drawing: right
 Camera Angle　Y up down value:[VAR 013B(0000,0000)]
 Poition　Y up down value:[VAR 013B(0000,0000)]
@@ -10062,7 +10062,7 @@ Records (player)
 Questionnaire [VAR 0132(0000,0000)] (another player)
 Observation [VAR 0132(0000,0000)] (another player)
 Records [VAR 0132(0000,0000)] (another player)
-Id[VAR 0133(0000,0000)]　Preview[VAR 0132(0001,0000)] [VAR 0133(0002,0000)]/[VAR 0133(3042,0000)]/[VAR 0133(3043,0000)] CRC [VAR 0136(3044,0000)]
+Id[VAR 0133(0000,0000)]　Preview[VAR 0132(0001,0000)] [VAR 0133(0002,0000)]/[VAR 0133(0003,0000)]/[VAR 0133(0004,0000)] CRC [VAR 0136(0005,0000)]
 No data
 ID: [VAR 0136(0000,0000)] [VAR 0103(0001,0000)] Country: [VAR 0133(0002,0000)]
 ~~~~~~~~~~~~~~~
@@ -10195,11 +10195,11 @@ Arrivato dalla regione di\nHoenn.
 Arrivato da una terra\nlontana.
 Ottenuto in un’occasione\nspeciale.
 Campione Lega Pokémon! Congratulazioni!
-Nº ID di [VAR 0103(0000,0000)]: [VAR 0136(0001,0000)] Tempo: [VAR 0134(0002,0000)]:[VAR 0133(3042,0000)]
+Nº ID di [VAR 0103(0000,0000)]: [VAR 0136(0001,0000)] Tempo: [VAR 0134(0002,0000)]:[VAR 0133(0003,0000)]
 ~~~~~~~~~~~~~~~
 Text File : 352
 ~~~~~~~~~~~~~~~
-SALA d’ONORE nº [VAR 0135(0000,0000)], [VAR 0133(3042,0000)] [VAR 014A(0002,0000)] [VAR 0135(0001,0000)]
+SALA d’ONORE nº [VAR 0135(0000,0000)], [VAR 0133(0003,0000)] [VAR 014A(0002,0000)] [VAR 0135(0001,0000)]
 L. [VAR 0134(0000,0000)]
 AO/
 [VAR FF00(0002)]♂[VAR FF00(0000)]
@@ -10338,17 +10338,17 @@ ESCI
 [VAR 0103(0000,0000)]
 [VAR 0103(0001,0000)]
 [VAR 0101(0002,0000)]
-[VAR 0101(3042,0000)]
-[VAR 0101(3043,0000)]
-[VAR 0101(3044,0000)]
-[VAR 0101(3045,0000)]
-[VAR 0101(3046,0000)]
-[VAR 0101(3047,0000)]
-[VAR 0101(3048,0000)]
-[VAR 0101(3049,0000)]
-[VAR 0101(304A,0000)]
-[VAR 0101(304B,0000)]
-[VAR 0101(304C,0000)]
+[VAR 0101(0003,0000)]
+[VAR 0101(0004,0000)]
+[VAR 0101(0005,0000)]
+[VAR 0101(0006,0000)]
+[VAR 0101(0007,0000)]
+[VAR 0101(0008,0000)]
+[VAR 0101(0009,0000)]
+[VAR 0101(000A,0000)]
+[VAR 0101(000B,0000)]
+[VAR 0101(000C,0000)]
+[VAR 0101(000D,0000)]
 Scegli un Pokémon.
 Hai selezionato:\n[VAR 0101(0000,0000)].
 INFO
@@ -10380,9 +10380,9 @@ STRUM.
 [VAR 0101(0000,0000)]
 [VAR 0134(0001,0000)]
 [VAR 0108(0002,0000)]
-[VAR 0101(3042,0000)]
-[VAR 0134(3043,0000)]
-[VAR 0108(3044,0000)]
+[VAR 0101(0003,0000)]
+[VAR 0134(0004,0000)]
+[VAR 0108(0005,0000)]
 Nessuno
 Esci
 ~~~~~~~~~~~~~~~
@@ -10458,7 +10458,7 @@ Inserisci la password di 4 cifre.
 Per conferma, inserisci\ndi nuovo il codice Wii.\c
 Questo codice Wii non corrisponde.\nInseriscilo di nuovo.\c
 Questa password non è corretta.\nInseriscila di nuovo.\c
-Il tuo codice Wii è:\n[VAR 0135(0000,0000)] [VAR 0135(0001,0000)] [VAR 0135(0002,0000)] [VAR 0135(3042,0000)]\c
+Il tuo codice Wii è:\n[VAR 0135(0000,0000)] [VAR 0135(0001,0000)] [VAR 0135(0002,0000)] [VAR 0135(0003,0000)]\c
 Non registrare
 Registra
 [VAR FF00(0001)]Registrazione del codice Wii[VAR FF00(0000)]\n\nSe hai registrato il codice Wii,\nriceverai una notifica tramite\nmessaggio Wii quando va in porto\nuno scambio alla GTS.\n\nPer maggiori dettagli, consulta il\nmanuale di istruzioni.\n\nVuoi registrare il tuo codice Wii?
@@ -10484,7 +10484,7 @@ Text File : 359
 Text File : 360
 ~~~~~~~~~~~~~~~
 Guarda! Queste sono delle Poké\nBall! In ciascuna c’è un Pokémon!\c
-[VAR FF00(3042)]Pokémon Fogliolina TURTWIG[VAR FF00(0000)]!\nVuoi prendere questo Pokémon?
+[VAR FF00(0003)]Pokémon Fogliolina TURTWIG[VAR FF00(0000)]!\nVuoi prendere questo Pokémon?
 [VAR FF00(0001)]Pokémon Scimpanzé CHIMCHAR[VAR FF00(0000)]!\nVuoi prendere questo Pokémon?
 [VAR FF00(0002)]Pokémon Pinguino PIPLUP[VAR FF00(0000)]!\nVuoi prendere questo Pokémon?
                         
@@ -10547,7 +10547,7 @@ LOTTA
 [VAR 0103(0000,0000)]
 [VAR 0103(0001,0000)]
 [VAR 0103(0002,0000)]
-[VAR 0103(3042,0000)]
+[VAR 0103(0003,0000)]
 CONCIMA
 PIANTA BACCA
 DISEGNA
@@ -10860,13 +10860,13 @@ Congratulazioni, hai superato la tua\nsettima sfida nell’Azienda Lotta!\cVista
 Ti restituiamo i tuoi Pokémon in cambio di\nquelli che ti abbiamo dato a nolo.\c
 Salvataggio in corso.\nNon spegnere la console.
                                                 
-Ho fatto qualche ricerca sul tuo\nprossimo avversario.\cSi presenterà con [VAR 0100(0001,0000)],\n[VAR 0100(3042,0000)] e [VAR 0100(3044,0000)]!\c
-Ho fatto qualche ricerca sul tuo\nprossimo avversario.\cSi presenterà con [VAR 0100(0001,0000)]\ne [VAR 0100(3042,0000)]!\c
+Ho fatto qualche ricerca sul tuo\nprossimo avversario.\cSi presenterà con [VAR 0100(0001,0000)],\n[VAR 0100(0003,0000)] e [VAR 0100(0005,0000)]!\c
+Ho fatto qualche ricerca sul tuo\nprossimo avversario.\cSi presenterà con [VAR 0100(0001,0000)]\ne [VAR 0100(0003,0000)]!\c
 Ho fatto qualche ricerca sul tuo\nprossimo avversario.\cIl primo a scendere in campo\nsarà [VAR 0100(0001,0000)], un Pokémon molto\ctosto che usa [VAR 0106(0000,0000)]!\c
 Ho fatto qualche ricerca sul tuo\nprossimo avversario.\cIl primo a scendere in campo sarà un\nPokémon con la mossa [VAR 0106(0000,0000)]!\c
 Ho fatto qualche ricerca sul tuo\nprossimo avversario.\cL’avversario sembra cavarsela bene con\nil tipo [VAR 010F(0000,0000)]!\c
 Ho fatto qualche ricerca sul tuo\nprossimo avversario.\cL’avversario non sembra interessato\nai tipi dei Pokémon.\c
-Ho fatto qualche ricerca sui tuoi\nprossimi avversari.\cSi presenteranno con [VAR 0100(0001,0000)],\n[VAR 0100(0002,0000)], [VAR 0100(3042,0000)] e\c[VAR 0100(3043,0000)]!\c
+Ho fatto qualche ricerca sui tuoi\nprossimi avversari.\cSi presenteranno con [VAR 0100(0001,0000)],\n[VAR 0100(0002,0000)], [VAR 0100(0003,0000)] e\c[VAR 0100(0004,0000)]!\c
 Ho fatto qualche ricerca sui tuoi\nprossimi avversari.\cPer primi vedrai [VAR 0100(0001,0000)]\ne [VAR 0100(0002,0000)]!\c
 Ho fatto qualche ricerca sui tuoi\nprossimi avversari.\cI primi Pokémon a scendere\nin campo usano le mosse\c[VAR 0106(0000,0000)] e [VAR 0106(0001,0000)]!\c
 Ho fatto qualche ricerca sul tuo\nprossimo avversario.\cIl primo a scendere in campo sarà un\nPokémon con la mossa [VAR 0106(0000,0000)]!\c
@@ -10875,8 +10875,8 @@ REGISTRA
 RIPOSA
 ABBANDONA
 Congratulazioni, Allenatore!\cVista la tua eccezionale abilità, il\nnostro Asso del Parco ha chiesto\cdi poterti sfidare.\cAllora, la tua prossima sfida\nsarà contro il Boss Azienda!\cNon ti puoi rifiutare!\cSei d’accordo?\c
-Spino: Bziiiiip!\cOps, scusa, non farci caso.\cQuesta è una mia invenzione.\nÈ la mia macchina analizzadati.\cMi dice che Pokémon hai preso \na nolo per questa sfida.\cAh! Hai preso [VAR 0100(0000,0000)],\n[VAR 0100(0001,0000)] e [VAR 0100(0002,0000)]!\cNon c’è che dire, bella squadra.\nMmm, direi un buon [VAR 0133(3042,0000)]%?\cAh, bando ai numeri e alle percentuali!\cIniziamo!\c
-Spino: Bziiiiip!\cVediamo cosa posso sapere di te\ncon la mia macchina analizzadati...\cAh, quindi quali Pokémon hai preso\na nolo per questa sfida...?\cAh! Hai preso [VAR 0100(0000,0000)],\n[VAR 0100(0001,0000)] e [VAR 0100(0002,0000)]!\cDevo ammetterlo, ottima scelta.\cÈ una sapiente combinazione di\namicizia e cooperazione.\cMmm... direi un buon [VAR 0133(3042,0000)]%...\cAh, bando ai numeri e alle percentuali!\cD’accordo, iniziamo!\nQuesta volta non perderò!\c
+Spino: Bziiiiip!\cOps, scusa, non farci caso.\cQuesta è una mia invenzione.\nÈ la mia macchina analizzadati.\cMi dice che Pokémon hai preso \na nolo per questa sfida.\cAh! Hai preso [VAR 0100(0000,0000)],\n[VAR 0100(0001,0000)] e [VAR 0100(0002,0000)]!\cNon c’è che dire, bella squadra.\nMmm, direi un buon [VAR 0133(0003,0000)]%?\cAh, bando ai numeri e alle percentuali!\cIniziamo!\c
+Spino: Bziiiiip!\cVediamo cosa posso sapere di te\ncon la mia macchina analizzadati...\cAh, quindi quali Pokémon hai preso\na nolo per questa sfida...?\cAh! Hai preso [VAR 0100(0000,0000)],\n[VAR 0100(0001,0000)] e [VAR 0100(0002,0000)]!\cDevo ammetterlo, ottima scelta.\cÈ una sapiente combinazione di\namicizia e cooperazione.\cMmm... direi un buon [VAR 0133(0003,0000)]%...\cAh, bando ai numeri e alle percentuali!\cD’accordo, iniziamo!\nQuesta volta non perderò!\c
 Spino: Mmm...\nDevo ammettere la sconfitta.\cPerdere non mi rende felice, per niente.\nMa anche se non sono contento, ho\craccolto dati molto interessanti.\cPer questo sono felice di\naverti sfidato.\cAllora, ti sono piaciuti i Pokémon\nche hai noleggiato?\cIn qualità di Boss Azienda, ne\nsarei molto felice.\cLa prossima volta, torna con Pokémon\na nolo diversi.\c
 Spino: Mmm...\nHo perso di nuovo.\cNon mi rende affatto contento.\nIn realtà, sono molto affranto.\cCredo di aver imparato molto sui\nPokémon attraverso queste sconfitte.\cMa non importa.\nSi impara vincendo...\cma si impara anche quando si perde.\cSpero che continuerai a noleggiare\ni Pokémon e mi darai la\cpossibilità di rifarmi!\c
 ~~~~~~~~~~~~~~~
@@ -11006,8 +11006,8 @@ Text File : 368
         
 [VAR 0101(0000,0000)] riceve\n[VAR 0136(0001,0000)] Punti Esp.!\c
 [VAR 0101(0000,0000)] riceve la bellezza di\n[VAR 0136(0001,0000)] Punti Esp.!\c
-[VAR 0101(0000,0000)] sale al L. [VAR 0134(0001,0000)]![VAR 0202(3044)][VAR 0202(0002)]\c
-[VAR 0101(0000,0000)] impara [VAR 0106(0001,0000)]![VAR 0202(3044)][VAR 0202(0002)]\c
+[VAR 0101(0000,0000)] sale al L. [VAR 0134(0001,0000)]![VAR 0202(0005)][VAR 0202(0002)]\c
+[VAR 0101(0000,0000)] impara [VAR 0106(0001,0000)]![VAR 0202(0005)][VAR 0202(0002)]\c
 [VAR 0101(0000,0000)] sta cercando di imparare\n[VAR 0106(0001,0000)]!\c
 Ma [VAR 0101(0000,0000)] non può conoscere\npiù di quattro mosse.\c
 Vuoi cancellare una mossa per\nfar posto a [VAR 0106(0001,0000)]?\c
@@ -11519,13 +11519,13 @@ Lo stato di [VAR 0101(0000,0000)] nemico\ntorna normale!
 [VAR 0101(0000,0000)] ottiene\n[VAR 0108(0001,0000)]!
 [VAR 0101(0000,0000)] selvatico ottiene\n[VAR 0108(0001,0000)]!
 [VAR 0101(0000,0000)] nemico ottiene\n[VAR 0108(0001,0000)]!
-[VAR 0101(0000,0000)] ottiene\n[VAR 0108(0001,0000)]!\c[VAR 0101(0002,0000)] ottiene\n[VAR 0108(3042,0000)]!
-[VAR 0101(0000,0000)] ottiene\n[VAR 0108(0001,0000)]!\c[VAR 0101(0002,0000)] selvatico ottiene\n[VAR 0108(3042,0000)]!\c
-[VAR 0101(0000,0000)] ottiene\n[VAR 0108(0001,0000)]!\c[VAR 0101(0002,0000)] nemico ottiene\n[VAR 0108(3042,0000)]!\c
-[VAR 0101(0000,0000)] selvatico ottiene\n[VAR 0108(0001,0000)]!\c[VAR 0101(0002,0000)] ottiene\n[VAR 0108(3042,0000)]!\c
-[VAR 0101(0000,0000)] selvatico ottiene\n[VAR 0108(0001,0000)]!\c[VAR 0101(0002,0000)] selvatico ottiene\n[VAR 0108(3042,0000)]!\c
-[VAR 0101(0000,0000)] nemico ottiene\n[VAR 0108(0001,0000)]!\c[VAR 0101(0002,0000)] ottiene\n[VAR 0108(3042,0000)]!\c
-[VAR 0101(0000,0000)] nemico ottiene\n[VAR 0108(0001,0000)]!\c[VAR 0101(0002,0000)] nemico ottiene\n[VAR 0108(3042,0000)]!\c
+[VAR 0101(0000,0000)] ottiene\n[VAR 0108(0001,0000)]!\c[VAR 0101(0002,0000)] ottiene\n[VAR 0108(0003,0000)]!
+[VAR 0101(0000,0000)] ottiene\n[VAR 0108(0001,0000)]!\c[VAR 0101(0002,0000)] selvatico ottiene\n[VAR 0108(0003,0000)]!\c
+[VAR 0101(0000,0000)] ottiene\n[VAR 0108(0001,0000)]!\c[VAR 0101(0002,0000)] nemico ottiene\n[VAR 0108(0003,0000)]!\c
+[VAR 0101(0000,0000)] selvatico ottiene\n[VAR 0108(0001,0000)]!\c[VAR 0101(0002,0000)] ottiene\n[VAR 0108(0003,0000)]!\c
+[VAR 0101(0000,0000)] selvatico ottiene\n[VAR 0108(0001,0000)]!\c[VAR 0101(0002,0000)] selvatico ottiene\n[VAR 0108(0003,0000)]!\c
+[VAR 0101(0000,0000)] nemico ottiene\n[VAR 0108(0001,0000)]!\c[VAR 0101(0002,0000)] ottiene\n[VAR 0108(0003,0000)]!\c
+[VAR 0101(0000,0000)] nemico ottiene\n[VAR 0108(0001,0000)]!\c[VAR 0101(0002,0000)] nemico ottiene\n[VAR 0108(0003,0000)]!\c
 [VAR 0101(0000,0000)] copia\n[VAR 0105(0002,0000)] di\c[VAR 0101(0001,0000)]!
 [VAR 0101(0000,0000)] copia\n[VAR 0105(0002,0000)] di\c[VAR 0101(0001,0000)] selvatico!
 [VAR 0101(0000,0000)] copia\n[VAR 0105(0002,0000)] di\c[VAR 0101(0001,0000)] nemico!
@@ -11631,13 +11631,13 @@ A causa di Inibitore, [VAR 0106(0001,0000)]\ndi [VAR 0101(0000,0000)] nemico è 
 [VAR 0101(0000,0000)] è protetto\nda [VAR 0105(0001,0000)]!
 [VAR 0101(0000,0000)] selvatico è protetto\nda [VAR 0105(0001,0000)]!
 [VAR 0101(0000,0000)] nemico è protetto\nda [VAR 0105(0001,0000)]!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nimpedisce a [VAR 0101(0002,0000)]\cdi usare [VAR 0106(3042,0000)]!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nimpedisce a [VAR 0101(0002,0000)] selvatico\cdi usare [VAR 0106(3042,0000)]!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nimpedisce a [VAR 0101(0002,0000)] nemico\cdi usare [VAR 0106(3042,0000)]!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nselvatico impedisce a [VAR 0101(0002,0000)]\cdi usare [VAR 0106(3042,0000)]!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nselvatico impedisce a [VAR 0101(0002,0000)]\cselvatico di usare [VAR 0106(3042,0000)]!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)] nemico\nimpedisce a [VAR 0101(0002,0000)]\cdi usare [VAR 0106(3042,0000)]!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)] nemico\nimpedisce a [VAR 0101(0002,0000)] nemico\cdi usare [VAR 0106(3042,0000)]!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nimpedisce a [VAR 0101(0002,0000)]\cdi usare [VAR 0106(0003,0000)]!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nimpedisce a [VAR 0101(0002,0000)] selvatico\cdi usare [VAR 0106(0003,0000)]!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nimpedisce a [VAR 0101(0002,0000)] nemico\cdi usare [VAR 0106(0003,0000)]!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nselvatico impedisce a [VAR 0101(0002,0000)]\cdi usare [VAR 0106(0003,0000)]!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nselvatico impedisce a [VAR 0101(0002,0000)]\cselvatico di usare [VAR 0106(0003,0000)]!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)] nemico\nimpedisce a [VAR 0101(0002,0000)]\cdi usare [VAR 0106(0003,0000)]!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)] nemico\nimpedisce a [VAR 0101(0002,0000)] nemico\cdi usare [VAR 0106(0003,0000)]!
 [VAR 0101(0000,0000)] ricarica PS\nusando [VAR 0105(0001,0000)]!
 [VAR 0101(0000,0000)] selvatico ricarica PS\nusando [VAR 0105(0001,0000)]!
 [VAR 0101(0000,0000)] nemico ricarica PS\nusando [VAR 0105(0001,0000)]!
@@ -11665,13 +11665,13 @@ A causa di Inibitore, [VAR 0106(0001,0000)]\ndi [VAR 0101(0000,0000)] nemico è 
 [VAR 0101(0000,0000)] è ancorato\nal suolo grazie a [VAR 0105(0001,0000)]!
 [VAR 0101(0000,0000)] selvatico è ancorato\nal suolo grazie a [VAR 0105(0001,0000)]!
 [VAR 0101(0000,0000)] nemico è ancorato\nal suolo grazie a [VAR 0105(0001,0000)]!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nriduce [VAR 010D(3042,0000)] di [VAR 0101(0002,0000)]!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nriduce [VAR 010D(3042,0000)] di [VAR 0101(0002,0000)]\cselvatico!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nriduce [VAR 010D(3042,0000)] di\c[VAR 0101(0002,0000)] nemico!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nselvatico riduce [VAR 010D(3042,0000)]\cdi [VAR 0101(0002,0000)]!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nselvatico riduce [VAR 010D(3042,0000)]\cdi [VAR 0101(0002,0000)] selvatico!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)] nemico\nriduce [VAR 010D(3042,0000)] di [VAR 0101(0002,0000)]!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)] nemico\nriduce [VAR 010D(3042,0000)] di [VAR 0101(0002,0000)]\cnemico!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nriduce [VAR 010D(0003,0000)] di [VAR 0101(0002,0000)]!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nriduce [VAR 010D(0003,0000)] di [VAR 0101(0002,0000)]\cselvatico!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nriduce [VAR 010D(0003,0000)] di\c[VAR 0101(0002,0000)] nemico!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nselvatico riduce [VAR 010D(0003,0000)]\cdi [VAR 0101(0002,0000)]!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nselvatico riduce [VAR 010D(0003,0000)]\cdi [VAR 0101(0002,0000)] selvatico!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)] nemico\nriduce [VAR 010D(0003,0000)] di [VAR 0101(0002,0000)]!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)] nemico\nriduce [VAR 010D(0003,0000)] di [VAR 0101(0002,0000)]\cnemico!
 [VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nevita il calo delle statistiche!
 [VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nselvatico evita il calo\cdelle statistiche!
 [VAR 0105(0001,0000)] di [VAR 0101(0000,0000)] nemico\nevita il calo delle statistiche!
@@ -11730,13 +11730,13 @@ Succhia la Melma!
 [VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nriceve l’attacco!
 [VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nselvatico riceve l’attacco!
 [VAR 0105(0001,0000)] di [VAR 0101(0000,0000)] nemico\nriceve l’attacco!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nblocca [VAR 0105(3042,0000)]\cdi [VAR 0101(0002,0000)]!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nblocca [VAR 0105(3042,0000)]\cdi [VAR 0101(0002,0000)] selvatico!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nblocca [VAR 0105(3042,0000)]\cdi [VAR 0101(0002,0000)] nemico!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nselvatico blocca [VAR 0105(3042,0000)]\cdi [VAR 0101(0002,0000)]!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nselvatico blocca [VAR 0105(3042,0000)]\cdi [VAR 0101(0002,0000)] selvatico!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)] nemico\nblocca [VAR 0105(3042,0000)]\cdi [VAR 0101(0002,0000)]!
-[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)] nemico\nblocca [VAR 0105(3042,0000)]\cdi [VAR 0101(0002,0000)] nemico!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nblocca [VAR 0105(0003,0000)]\cdi [VAR 0101(0002,0000)]!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nblocca [VAR 0105(0003,0000)]\cdi [VAR 0101(0002,0000)] selvatico!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nblocca [VAR 0105(0003,0000)]\cdi [VAR 0101(0002,0000)] nemico!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nselvatico blocca [VAR 0105(0003,0000)]\cdi [VAR 0101(0002,0000)]!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nselvatico blocca [VAR 0105(0003,0000)]\cdi [VAR 0101(0002,0000)] selvatico!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)] nemico\nblocca [VAR 0105(0003,0000)]\cdi [VAR 0101(0002,0000)]!
+[VAR 0105(0001,0000)] di [VAR 0101(0000,0000)] nemico\nblocca [VAR 0105(0003,0000)]\cdi [VAR 0101(0002,0000)] nemico!
 [VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nl’ha neutralizzato!
 [VAR 0105(0001,0000)] di [VAR 0101(0000,0000)]\nselvatico l’ha neutralizzato!
 [VAR 0105(0001,0000)] di [VAR 0101(0000,0000)] nemico\nl’ha neutralizzato!
@@ -11870,7 +11870,7 @@ Oh, no!\nIl Pokémon si è liberato!
 Ah! Sembrava preso,\neh? E invece no!
 Grrr!\nPer un pelo!
 Nooo!\nEra così vicino!
-[VAR 0202(3042)]Preso!\n[VAR 0101(0000,0000)] è stato catturato![VAR 0202(0002)]\c
+[VAR 0202(0003)]Preso!\n[VAR 0101(0000,0000)] è stato catturato![VAR 0202(0002)]\c
 Vuoi dare un soprannome\na [VAR 0101(0000,0000)]?[VAR 0200(0000)]
 [VAR 0101(0000,0000)] è stato inviato\nal PC di ???.
 [VAR 0101(0000,0000)] è stato inviato\nal PC di Bebe.
@@ -11921,7 +11921,7 @@ Imperversa una tempesta di sabbia.
 Cosa?\n[VAR 0101(0000,0000)] si sta evolvendo!
 Cosa?[VAR 0200(0002)]\c
 [VAR 0101(0000,0000)] si sta evolvendo!
-[VAR 0202(3042)]Complimenti! Il tuo [VAR 0101(0000,0000)]\nsi è evoluto in [VAR 0101(0001,0000)]![VAR 0202(0002)]\c
+[VAR 0202(0003)]Complimenti! Il tuo [VAR 0101(0000,0000)]\nsi è evoluto in [VAR 0101(0001,0000)]![VAR 0202(0002)]\c
 Bloccata evoluzione\ndi [VAR 0101(0000,0000)]!\c
 ... ...?\c
 Cosa deve fare\n[VAR 0101(0000,0000)]?[VAR 0200(0000)]
@@ -11956,7 +11956,7 @@ Vuoi uscire dalla lotta?[VAR 0200(0000)]
 SAFARI BALL
 Quantità: [VAR 0133(0000,0000)]
  
-Hai avuto la meglio su\n[VAR 0103(0001,0000)], [VAR 010E(0000,0000)], e\c[VAR 0103(3042,0000)], [VAR 010E(0002,0000)]!\c
+Hai avuto la meglio su\n[VAR 0103(0001,0000)], [VAR 010E(0000,0000)], e\c[VAR 0103(0003,0000)], [VAR 010E(0002,0000)]!\c
         
 Vuoi rinunciare all’incontro e\nuscire ora?[VAR 0200(0000)]
 [VAR 0103(0000,0000)] lascia l’incontro!
@@ -11965,8 +11965,8 @@ Vuoi rinunciare all’incontro e\nuscire ora?[VAR 0200(0000)]
 [VAR 0103(0001,0000)], [VAR 010E(0000,0000)], se l’è\ndata a gambe!
 La sfida è vinta da\n[VAR 0103(0001,0000)], [VAR 010E(0000,0000)]!
 La sfida contro [VAR 0103(0001,0000)],\n[VAR 010E(0000,0000)], si è conclusa\cin parità!
-[VAR 0101(0000,0000)][VAR FF00(3042)]♂[VAR FF00(0000)]
-[VAR 0101(0000,0000)][VAR FF00(3043)]♀[VAR FF00(0000)]
+[VAR 0101(0000,0000)][VAR FF00(0003)]♂[VAR FF00(0000)]
+[VAR 0101(0000,0000)][VAR FF00(0004)]♀[VAR FF00(0000)]
 [VAR 0101(0000,0000)]
 Appare [VAR 0101(0000,0000)] selvatico!\c
 Appare [VAR 0101(0000,0000)] selvatico!\c
@@ -11976,10 +11976,10 @@ Parte la sfida di\n[VAR 0103(0001,0000)], [VAR 010E(0000,0000)]!\c
 Parte la sfida di\n[VAR 0103(0000,0000)]!\c
 Parte la sfida di\n[VAR 0103(0000,0000)] e [VAR 0103(0001,0000)]!\c
 Turno di [VAR 0101(0002,0000)], mandato in campo\nda [VAR 0103(0001,0000)], [VAR 010E(0000,0000)]!
-Ecco [VAR 0101(0002,0000)] e [VAR 0101(3042,0000)],\nmandati in campo da\c[VAR 0103(0001,0000)], [VAR 010E(0000,0000)]!
+Ecco [VAR 0101(0002,0000)] e [VAR 0101(0003,0000)],\nmandati in campo da\c[VAR 0103(0001,0000)], [VAR 010E(0000,0000)]!
 [VAR 0103(0000,0000)] manda\nin campo [VAR 0101(0001,0000)]!
 [VAR 0103(0000,0000)] manda in campo\n[VAR 0101(0001,0000)] e [VAR 0101(0002,0000)]!
-[VAR 0103(0000,0000)] manda in campo\n[VAR 0101(0001,0000)]!\c[VAR 0103(0002,0000)] manda in campo\c[VAR 0101(3042,0000)]!
+[VAR 0103(0000,0000)] manda in campo\n[VAR 0101(0001,0000)]!\c[VAR 0103(0002,0000)] manda in campo\c[VAR 0101(0003,0000)]!
 [VAR 0103(0000,0000)] manda in campo\n[VAR 0101(0001,0000)]!\cVai, [VAR 0101(0002,0000)]!
 Avanti, [VAR 0101(0000,0000)] e\n[VAR 0101(0001,0000)]!
 Vai, [VAR 0101(0000,0000)]!
@@ -11994,9 +11994,9 @@ Ancora un piccolo sforzo!\nResisti, [VAR 0101(0000,0000)]!
 [VAR 0101(0000,0000)], bene!\nRientra!
 [VAR 0101(0002,0000)] è ritirato dalla lotta\nda [VAR 0103(0001,0000)], [VAR 010E(0000,0000)]!
 [VAR 0103(0000,0000)] ritira\n[VAR 0101(0001,0000)]!
-Turno di [VAR 0101(0002,0000)], mandato in campo\nda [VAR 0103(0001,0000)], [VAR 010E(0000,0000)]!\cTurno di [VAR 0101(3044,0000)], mandato in campo\nda [VAR 0103(3043,0000)], [VAR 010E(3042,0000)]!\c
-Parte la sfida di \n[VAR 0103(0001,0000)], [VAR 010E(0000,0000)], e\c[VAR 0103(3042,0000)], [VAR 010E(0002,0000)]!\c
-Turno di [VAR 0101(0002,0000)], mandato in campo\nda [VAR 0103(0001,0000)], [VAR 010E(0000,0000)]!\cVai, [VAR 0101(3042,0000)]!
+Turno di [VAR 0101(0002,0000)], mandato in campo\nda [VAR 0103(0001,0000)], [VAR 010E(0000,0000)]!\cTurno di [VAR 0101(0005,0000)], mandato in campo\nda [VAR 0103(0004,0000)], [VAR 010E(0003,0000)]!\c
+Parte la sfida di \n[VAR 0103(0001,0000)], [VAR 010E(0000,0000)], e\c[VAR 0103(0003,0000)], [VAR 010E(0002,0000)]!\c
+Turno di [VAR 0101(0002,0000)], mandato in campo\nda [VAR 0103(0001,0000)], [VAR 010E(0000,0000)]!\cVai, [VAR 0101(0003,0000)]!
 Finito l’effetto di Accumulo\ndi [VAR 0101(0000,0000)]!
 Finito l’effetto di Accumulo\ndi [VAR 0101(0000,0000)] selvatico!
 Finito l’effetto di Accumulo\ndi [VAR 0101(0000,0000)] nemico!
@@ -12192,20 +12192,20 @@ Vuoi bloccare l’apprendimento di\nquesta nuova mossa?[VAR 0200(0000)]
 Blocca [VAR 0106(0000,0000)]!
 Non bloccare [VAR 0106(0000,0000)]!
 [VAR 0101(0000,0000)] non ha imparato\n[VAR 0106(0001,0000)]!\c
-1[VAR 0201(3053)], 2[VAR 0201(3053)] e[VAR 0201(3053)]... [VAR 0201(3053)]... [VAR 0201(3053)]... [VAR 0202(3043)]puf!\c
+1[VAR 0201(3053)], 2[VAR 0201(3053)] e[VAR 0201(3053)]... [VAR 0201(3053)]... [VAR 0201(3053)]... [VAR 0202(0004)]puf!\c
 [VAR 0101(0000,0000)] scorda [VAR 0106(0001,0000)]!\c
 Al suo posto...\c
-[VAR 0101(0000,0000)] impara\n[VAR 0106(0001,0000)]![VAR 0202(3044)][VAR 0202(0002)]\c
+[VAR 0101(0000,0000)] impara\n[VAR 0106(0001,0000)]![VAR 0202(0005)][VAR 0202(0002)]\c
 [VAR 0101(0000,0000)] sta cercando di imparare\n[VAR 0106(0001,0000)]!\c
 Ma [VAR 0101(0000,0000)] non può conoscere\npiù di quattro mosse.\c
 Vuoi cancellare una mossa?
 Quale mossa vuoi che dimentichi?\c
 Vuoi bloccare l’apprendimento\ndi [VAR 0106(0000,0000)]?
 [VAR 0101(0000,0000)] non ha imparato\n[VAR 0106(0001,0000)]!\c
-1[VAR 0201(3053)], 2[VAR 0201(3053)] e[VAR 0201(3053)]... [VAR 0201(3053)]... [VAR 0201(3053)]... [VAR 0202(3043)]puf!\c
+1[VAR 0201(3053)], 2[VAR 0201(3053)] e[VAR 0201(3053)]... [VAR 0201(3053)]... [VAR 0201(3053)]... [VAR 0202(0004)]puf!\c
 [VAR 0101(0000,0000)] scorda [VAR 0106(0001,0000)]!\c
 Al suo posto...\c
-[VAR 0101(0000,0000)] impara \n[VAR 0106(0001,0000)]![VAR 0202(3044)][VAR 0202(0002)]\c
+[VAR 0101(0000,0000)] impara \n[VAR 0106(0001,0000)]![VAR 0202(0005)][VAR 0202(0002)]\c
 Ehi, [VAR 010D(0001,0000)] di\n[VAR 0101(0000,0000)] sale!
 La tua squadra è avvolta\nda una foschia bianca!
 [VAR 0101(0000,0000)] si gonfia!
@@ -12323,7 +12323,7 @@ lampadario
 Text File : 372
 ~~~~~~~~~~~~~~~
 CHIUNQUE FELICE\nWi-Fi CONNECTION
-[VAR 011C(0000,0000)] [VAR 011C(0001,0000)]\n[VAR 011C(0002,0000)] [VAR 011C(3042,0000)]
+[VAR 011C(0000,0000)] [VAR 011C(0001,0000)]\n[VAR 011C(0002,0000)] [VAR 011C(0003,0000)]
 ~~~~~~~~~~~~~~~
 Text File : 373
 ~~~~~~~~~~~~~~~
@@ -12353,8 +12353,8 @@ ESCI
 [VAR 013D(0000,0000)]
 [VAR 013D(0001,0000)]
 [VAR 013D(0002,0000)]
-[VAR 013D(3042,0000)]
-[VAR 013D(3043,0000)]
+[VAR 013D(0003,0000)]
+[VAR 013D(0004,0000)]
 ESCI
 Quel gruppo?\nNon l’aveva già creato [VAR 0103(0000,0000)]?
 Non esiste già un gruppo con quel nome?
@@ -12552,7 +12552,7 @@ Text File : 384
 Please touch the bottom screen.[VAR 0200(0000)]
 Please look at the bottom screen.[VAR 0200(0001)]
 Please operate the top screen.[VAR 0200(0002)]
-Please look at the top screen.[VAR 0200(3042)]
+Please look at the top screen.[VAR 0200(0003)]
 ~~~~~~~~~~~~~~~
 Text File : 385
 ~~~~~~~~~~~~~~~
@@ -12600,7 +12600,7 @@ Bene, questa volta il tema è...\n“La Distensione”!\c
 Hai a disposizione 60 secondi!\nAccessori disponibili: [VAR 0133(0000,0000)].\cOgni Accessorio deve essere messo\ncon cura. Comincia ora!\c
 Hai a disposizione 60 secondi!\nAccessori disponibili: [VAR 0133(0000,0000)].\cVediamo se hai buon gusto.\nComincia ora!\c
 [VAR 0122(0000,0000)] [VAR 0123(0001,0000)]
-[VAR 0101(3043,0000)] di [VAR 0103(3042,0000)]
+[VAR 0101(0004,0000)] di [VAR 0103(0003,0000)]
 [VAR 011C(0000,0000)]
 Comunicazione in corso. Attendi...
 Puoi vedere gli Accessori disponibili\na sinistra sul touch screen.\cTocca un Accessorio, trascinalo sul\nPokémon sulla destra e mettiglielo\ccon cura.\cPuoi mettere fino a dieci Accessori,\nquindi cerca quelli giusti con i pulsanti\ca forma di freccia.\cPer cambiare lo sfondo tocca il pulsante\nquadrato in mezzo a destra.\cHai capito? Allora cominciamo!
@@ -15287,7 +15287,7 @@ NO
 [VAR 0103(0000,0000)] non raccoglie\nnessuna [VAR 0108(0001,0000)].
 Hai raccolto [VAR 0133(0001,0000)] [VAR 0108(0000,0000)].\c
 La tua Borsa è piena. Non puoi\nraccogliere altre [VAR 0108(0000,0000)].
-[VAR 0103(0000,0000)] mette tutto nella Tasca\n[VAR 0112(3042,0000)] della Borsa.\cIl terreno è ritornato\nsoffice e fertile.
+[VAR 0103(0000,0000)] mette tutto nella Tasca\n[VAR 0112(0003,0000)] della Borsa.\cIl terreno è ritornato\nsoffice e fertile.
 Un terreno soffice e fertile!
 Qui è stato messo del [VAR 0108(0000,0000)].
 È stato usato del [VAR 0108(0000,0000)]\nsul terreno.
@@ -16713,15 +16713,15 @@ Text File : 415
                                                                                                                                                                                                                                                                                                                                                               
 DJ: Ehi!\cQuesto è l’“Angolo della Torre Lotta”\nper i fanatici di tutto il mondo!\cOggi daremo un’occhiata a [VAR 0103(0001,0000)]\nche ha collezionato [VAR 0134(0000,0000)]\cvittorie consecutive alla Torre Lotta!\cSentiamo ora il commento del nostro\nbravissimo Allenatore.\cEcco [VAR 0103(0001,0000)]!\c“[VAR 011C(0002,0000)]”.\cEhi! Bravo!\cTrasmette tutto l’entusiasmo per le\n[VAR 0134(0000,0000)] vittorie consecutive!\cAllora, ragazzi! Tutti alla Torre\nLotta! E buon divertimento!\cFateci sognare! Sìììì!
 DJ: Ehi!\cQuesto è l’“Angolo della Torre Lotta”\nper i fanatici di tutto il mondo!\cOggi daremo un’occhiata a [VAR 0103(0001,0000)]\nche non ha conseguito [VAR 0134(0000,0000)]\cvittorie consecutive alla Torre Lotta!\cSentiamo ora il commento di questo\namareggiatissimo Allenatore...\cEcco [VAR 0103(0001,0000)]!\c“[VAR 011C(0002,0000)]”.\cChe delusione!\cLa dura realtà della lotta è stata\nmessa in evidenza e non è piacevole!\cAllora, ragazzi! Tutti alla Torre\nLotta! E buon divertimento!\cFateci sognare! Sìììì!
-Presentatore: Benvenuti all’“Angolo\ndel tuo Pokémon”!\cOggi ci occuperemo dell’amato\n[VAR 0100(0001,0000)] [VAR 0101(0002,0000)] di\c[VAR 0103(0000,0000)].\cPer [VAR 0103(0000,0000)], [VAR 0101(0002,0000)] è\n“[VAR 011C(3042,0000)]”.\cCari ascoltatori, continuate a\nmostrarci i Pokémon che sono la\cvostra gioia e il vostro orgoglio!\cA presto!
-Presentatore: “L’Angolo del tuo\nPokémon”... Benvenuti!\cOggi ci occuperemo dell’amato\n[VAR 0100(0001,0000)] di [VAR 0103(0000,0000)].\cPer [VAR 0103(0000,0000)], [VAR 0100(0001,0000)] è\n“[VAR 011C(3042,0000)]”.\cCari ascoltatori, continuate a\nmostrarci i Pokémon che sono la\cvostra gioia e il vostro orgoglio!\cA presto!
+Presentatore: Benvenuti all’“Angolo\ndel tuo Pokémon”!\cOggi ci occuperemo dell’amato\n[VAR 0100(0001,0000)] [VAR 0101(0002,0000)] di\c[VAR 0103(0000,0000)].\cPer [VAR 0103(0000,0000)], [VAR 0101(0002,0000)] è\n“[VAR 011C(0003,0000)]”.\cCari ascoltatori, continuate a\nmostrarci i Pokémon che sono la\cvostra gioia e il vostro orgoglio!\cA presto!
+Presentatore: “L’Angolo del tuo\nPokémon”... Benvenuti!\cOggi ci occuperemo dell’amato\n[VAR 0100(0001,0000)] di [VAR 0103(0000,0000)].\cPer [VAR 0103(0000,0000)], [VAR 0100(0001,0000)] è\n“[VAR 011C(0003,0000)]”.\cCari ascoltatori, continuate a\nmostrarci i Pokémon che sono la\cvostra gioia e il vostro orgoglio!\cA presto!
                                                                                                                                                                                              
                                                                                                                                                                                            
                                                                                                                                                                                                  
                                                                                                                                                                                                          
 Presentatore: Scusate se vi ho fatto\nattendere.\cEcco a voi “Orologio PokéKron”!\cOggi analizzeremo il software di\nPokéKron preferito da [VAR 0103(0000,0000)].\cIl software che [VAR 0103(0000,0000)]\npreferisce è [VAR 0118(0001,0000)].\cAlla domanda perché amasse tanto\nquesto software, l’Allenatore\cha risposto: “[VAR 011C(0002,0000)]”.\cTanto di cappello, [VAR 0103(0000,0000)].\nLa tua è una scelta davvero calcolata.\cPerché non fai come [VAR 0103(0000,0000)] e non\nfai vedere anche tu quanto sei abile con\cil software [VAR 0118(0001,0000)]?\cAlla prossima, cari ascoltatori...
-Inviato speciale: Siamo in diretta\ncon l’Arena delle Virtù!\cL’atmosfera è carica dell’entusiasmo\ndegli Allenatori, che ripongono tante\csperanze nei loro preziosi Pokémon!\cOh! Ecco alcuni sfidanti!\nHanno appena finito la Gara!\cAndiamogli incontro per strappargli\nun’intervista su due piedi!\cInviato speciale: Salve! Siamo di Giubilo\nTV! Questo [VAR 0100(0000,0000)] ha partecipato\cad una Gara?\cOh, avete partecipato a una\n[VAR 0122(0001,0000)] di\c[VAR 0123(0002,0000)]?\cE come vi siete classificati?\nAlla posizione numero [VAR 0132(3042,0000)]?\cUn commento a caldo sul risultato?\c[VAR 0103(3043,0000)]: “[VAR 011C(3044,0000)]”.\cInviato speciale: Benissimo!\nGrazie per la gentile collaborazione!\cÈ tutto per oggi dall’Arena delle Virtù!
-Inviato speciale: Siamo in diretta\ncon l’Arena delle Virtù!\cL’atmosfera è carica dell’entusiasmo\ndegli Allenatori, che ripongono tante\csperanze nei loro preziosi Pokémon!\cOh! Ecco alcuni sfidanti!\nHanno appena finito la Gara!\cOh, wow! C’è anche il vincitore\ndi questa Gara!\cAndiamogli incontro per strappargli\nun’intervista su due piedi!\cInviato speciale: Salve! Siamo di Giubilo\nTV! Congratulazioni per la vittoria!\cQuesto [VAR 0100(0000,0000)] ha vinto la\n[VAR 0122(0001,0000)] di\c[VAR 0123(0002,0000)]?\cUn commento sul risultato ottenuto?\c[VAR 0103(3043,0000)]: “[VAR 011C(3044,0000)]”.\cInviato speciale: Benissimo!\nGrazie per la gentile collaborazione!\cÈ tutto per oggi dall’Arena delle Virtù!
+Inviato speciale: Siamo in diretta\ncon l’Arena delle Virtù!\cL’atmosfera è carica dell’entusiasmo\ndegli Allenatori, che ripongono tante\csperanze nei loro preziosi Pokémon!\cOh! Ecco alcuni sfidanti!\nHanno appena finito la Gara!\cAndiamogli incontro per strappargli\nun’intervista su due piedi!\cInviato speciale: Salve! Siamo di Giubilo\nTV! Questo [VAR 0100(0000,0000)] ha partecipato\cad una Gara?\cOh, avete partecipato a una\n[VAR 0122(0001,0000)] di\c[VAR 0123(0002,0000)]?\cE come vi siete classificati?\nAlla posizione numero [VAR 0132(0003,0000)]?\cUn commento a caldo sul risultato?\c[VAR 0103(0004,0000)]: “[VAR 011C(0005,0000)]”.\cInviato speciale: Benissimo!\nGrazie per la gentile collaborazione!\cÈ tutto per oggi dall’Arena delle Virtù!
+Inviato speciale: Siamo in diretta\ncon l’Arena delle Virtù!\cL’atmosfera è carica dell’entusiasmo\ndegli Allenatori, che ripongono tante\csperanze nei loro preziosi Pokémon!\cOh! Ecco alcuni sfidanti!\nHanno appena finito la Gara!\cOh, wow! C’è anche il vincitore\ndi questa Gara!\cAndiamogli incontro per strappargli\nun’intervista su due piedi!\cInviato speciale: Salve! Siamo di Giubilo\nTV! Congratulazioni per la vittoria!\cQuesto [VAR 0100(0000,0000)] ha vinto la\n[VAR 0122(0001,0000)] di\c[VAR 0123(0002,0000)]?\cUn commento sul risultato ottenuto?\c[VAR 0103(0004,0000)]: “[VAR 011C(0005,0000)]”.\cInviato speciale: Benissimo!\nGrazie per la gentile collaborazione!\cÈ tutto per oggi dall’Arena delle Virtù!
                                                                                                                                                                                                                                                    
 Presentatore: Grazie per essere con\nnoi all’“Angolo della Foto Eccellente”!\cPubblico: Eccellente!\cPresentatore: La foto di oggi presenta\n[VAR 0100(0001,0000)] di [VAR 0103(0000,0000)].\cCom’è? Vi piace?\cPubblico: Eccellente!\cPresentatore: Eccola!\nLa foto di [VAR 0103(0000,0000)]!\cPubblico: Eccellente!\cPresentatore: Sono d’accordo con voi!\nQuesta è una foto bellissima!\cCattura l’essenza del fascino\nirresistibile di [VAR 0100(0001,0000)].\cPubblico: Eccellente!\cPresentatore: Abbiamo anche l’opinione\ndi [VAR 0103(0000,0000)] riguardo alla foto.\cL’Allenatore ha detto:\n“[VAR 011C(0002,0000)]”.\cPubblico: Ooooooh!\cPresentatore: Se qualcuno propone\nun’altra foto, vorrei mostrarla\cin questo programma.\cChe ne dite, gentile pubblico?\cPubblico: Eccellente!
 Annunciatore: Benvenuti al nostro\nprogramma “Osservatorio Allenatori”!\c[VAR 0103(0000,0000)] è l’Allenatore di cui\nci occuperemo oggi.\cNell’intervista, l’Allenatore ha\ndetto di preferire il tipo Normale.\cQuali sono le caratteristiche degli\nAllenatori che amano i Pokémon\cdi tipo Normale?\cI nostri esperti dicono che si tratta\ndi persone allegre, ma allo\cstesso tempo abbastanza timide.\cTendono ad essere sfrenati e amano\ndivertirsi insieme agli altri.\cMa se si trovano soli con un’altra\npersona, ammutoliscono.\cVi è sembrata buona quest’analisi?
@@ -16747,10 +16747,10 @@ Presentatore: Ecco a voi\nl’“Angolo Poffin Urrà”! Avete fame?\cAnche oggi
 Presentatore: Ecco a voi\nl’“Angolo Poffin Urrà”! Avete fame?\cAnche oggi abbiamo come nostro ospite\nd’eccezione il Golosone di Poffin.\cGolosone di Poffin: Salve a tutti!\cPresentatore: Oggi abbiamo un Poffin\nmescolato, non shakerato,\cda [VAR 0103(0000,0000)].\cGolosone di Poffin: Oh!\n[VAR 0109(0001,0000)], sì!\cPer questo evento non ho preparato\nnessun commento particolare!\cPresentatore: Dopo aver finito il\nPoffin, [VAR 0103(0000,0000)] ha dichiarato:\c“[VAR 011C(0002,0000)]”.\cGolosone di Poffin: Oh, come vorrei\nassaggiarne uno!\cPresentatore: Cari spettatori,\nprendete spunto da [VAR 0103(0000,0000)]\ce cominciate a preparare!\cCi vediamo la prossima volta con\naltri Poffin supergolosi!
 Presentatore: Ecco a voi\nl’“Angolo Poffin Urrà”! Avete fame?\cAnche oggi abbiamo come nostro ospite\nd’eccezione il Golosone di Poffin.\cGolosone di Poffin: Salve a tutti!\cPresentatore: Oggi abbiamo un Poffin\nmescolato, non shakerato,\cda [VAR 0103(0000,0000)].\cGolosone di Poffin: Oh!\n[VAR 0109(0001,0000)], sì!\cMangiarlo è come avere la Nintendo WFC\nnella bocca!\cPresentatore: Dopo aver finito il\nPoffin, [VAR 0103(0000,0000)] ha dichiarato:\c“[VAR 011C(0002,0000)]”.\cGolosone di Poffin: Oh, come vorrei\nassaggiarne uno!\cPresentatore: Cari spettatori,\nprendete spunto da [VAR 0103(0000,0000)]\ce cominciate a preparare!\cCi vediamo la prossima volta con\naltri Poffin supergolosi!
                                                                                                                                                                                                                                                   
-Presentatore: Signore e signori, mi\nauguro che siate in perfetta forma.\cGrazie per essere qui con me a\n“Diario di Parco Concordia”.\cOggi vorrei che dessimo un’occhiata\nalla passeggiata di [VAR 0103(0000,0000)].\cSono sicuro che ne apprezzerete\ni lati più avvincenti.\c[VAR 0103(0000,0000)] passeggiava con il suo\nfidato compagno di squadra\c[VAR 0100(0001,0000)].\cHanno passeggiato, passeggiato\ne ancora passeggiato...\c[VAR 0100(0001,0000)] si è divertito così tanto!\nE hanno visto oggetti bellissimi,\ccome [VAR 011F(3042,0000)].\c[VAR 0103(0000,0000)] e [VAR 0100(0001,0000)] hanno\ntrascorso ore fantastiche insieme.\c[VAR 0103(0000,0000)] ha descritto le sue\nsensazioni così: “[VAR 011C(3044,0000)]”.\cIl legame con i Pokémon...\nMi scalda il cuore.\cAlla prossima puntata! Arrivederci!
-Presentatore: Signore e signori, mi\nauguro che siate in perfetta forma.\cGrazie per essere qui con me a\n“Diario di Parco Concordia”.\cOggi vorrei che dessimo un’occhiata\nalla passeggiata di [VAR 0103(0000,0000)].\cSono sicuro che ne apprezzerete\ni lati più avvincenti.\c[VAR 0103(0000,0000)] passeggiava con il suo\nfidato compagno di squadra\c[VAR 0100(0001,0000)].\cHanno passeggiato, passeggiato\ne ancora passeggiato...\c[VAR 0103(0000,0000)] e [VAR 0100(0001,0000)] hanno\ntrascorso ore fantastiche insieme.\c[VAR 0103(0000,0000)] ha descritto le sue\nsensazioni così: “[VAR 011C(3044,0000)]”.\cIl legame con i Pokémon...\nMi scalda il cuore.\cAlla prossima puntata! Arrivederci!
-Presentatore: Signore e signori, mi\nauguro che siate in perfetta forma.\cGrazie per essere qui con me a\n“Diario di Parco Concordia”.\cOggi vorrei che dessimo un’occhiata\nalla passeggiata di [VAR 0103(0000,0000)].\cSono sicuro che ne apprezzerete\ni lati più avvincenti.\c[VAR 0103(0000,0000)] passeggiava con il suo\nfidato compagno di squadra\c[VAR 0100(0001,0000)].\cHanno passeggiato, passeggiato\ne ancora passeggiato...\c[VAR 0100(0001,0000)] si è divertito tantissimo\ne ha trovato cose gustose come\c[VAR 0108(3042,0000)] per far piacere\nall’Allenatore.\c[VAR 0103(0000,0000)] e [VAR 0100(0001,0000)] hanno\ntrascorso ore fantastiche insieme.\c[VAR 0103(0000,0000)] ha descritto le sue\nsensazioni così: “[VAR 011C(3044,0000)]”.\cIl legame con i Pokémon...\nMi scalda il cuore.\cAlla prossima puntata! Arrivederci!
-Inviato speciale: Trasmettiamo ora\nil “Notiziario dal Parco Lotta”!\cSiamo in diretta dal\nPalco Lotta.\cOggi siamo in compagnia di un Allenatore\nche ha conseguito 50 vittorie di fila!\cSi tratta di [VAR 0103(0000,0000)] con il suo\n[VAR 0100(0001,0000)] [VAR 0101(0002,0000)]!\cCongratulazioni, [VAR 0103(0000,0000)].\nSprizzi felicità da tutti i pori!\cCome credi che si senta ora\n[VAR 0101(0002,0000)]?\c[VAR 0103(0000,0000)]: [VAR 011C(3042,0000)].\cInviato speciale: ... Ah... Capisco!\nEcco cosa pensa il Pokémon\cdi un Allenatore tosto.\cSpero che [VAR 0101(0002,0000)] continui a\nvincere con forza [VAR 011C(3042,0000)]!\cE con questo è tutto!
+Presentatore: Signore e signori, mi\nauguro che siate in perfetta forma.\cGrazie per essere qui con me a\n“Diario di Parco Concordia”.\cOggi vorrei che dessimo un’occhiata\nalla passeggiata di [VAR 0103(0000,0000)].\cSono sicuro che ne apprezzerete\ni lati più avvincenti.\c[VAR 0103(0000,0000)] passeggiava con il suo\nfidato compagno di squadra\c[VAR 0100(0001,0000)].\cHanno passeggiato, passeggiato\ne ancora passeggiato...\c[VAR 0100(0001,0000)] si è divertito così tanto!\nE hanno visto oggetti bellissimi,\ccome [VAR 011F(0003,0000)].\c[VAR 0103(0000,0000)] e [VAR 0100(0001,0000)] hanno\ntrascorso ore fantastiche insieme.\c[VAR 0103(0000,0000)] ha descritto le sue\nsensazioni così: “[VAR 011C(0005,0000)]”.\cIl legame con i Pokémon...\nMi scalda il cuore.\cAlla prossima puntata! Arrivederci!
+Presentatore: Signore e signori, mi\nauguro che siate in perfetta forma.\cGrazie per essere qui con me a\n“Diario di Parco Concordia”.\cOggi vorrei che dessimo un’occhiata\nalla passeggiata di [VAR 0103(0000,0000)].\cSono sicuro che ne apprezzerete\ni lati più avvincenti.\c[VAR 0103(0000,0000)] passeggiava con il suo\nfidato compagno di squadra\c[VAR 0100(0001,0000)].\cHanno passeggiato, passeggiato\ne ancora passeggiato...\c[VAR 0103(0000,0000)] e [VAR 0100(0001,0000)] hanno\ntrascorso ore fantastiche insieme.\c[VAR 0103(0000,0000)] ha descritto le sue\nsensazioni così: “[VAR 011C(0005,0000)]”.\cIl legame con i Pokémon...\nMi scalda il cuore.\cAlla prossima puntata! Arrivederci!
+Presentatore: Signore e signori, mi\nauguro che siate in perfetta forma.\cGrazie per essere qui con me a\n“Diario di Parco Concordia”.\cOggi vorrei che dessimo un’occhiata\nalla passeggiata di [VAR 0103(0000,0000)].\cSono sicuro che ne apprezzerete\ni lati più avvincenti.\c[VAR 0103(0000,0000)] passeggiava con il suo\nfidato compagno di squadra\c[VAR 0100(0001,0000)].\cHanno passeggiato, passeggiato\ne ancora passeggiato...\c[VAR 0100(0001,0000)] si è divertito tantissimo\ne ha trovato cose gustose come\c[VAR 0108(0003,0000)] per far piacere\nall’Allenatore.\c[VAR 0103(0000,0000)] e [VAR 0100(0001,0000)] hanno\ntrascorso ore fantastiche insieme.\c[VAR 0103(0000,0000)] ha descritto le sue\nsensazioni così: “[VAR 011C(0005,0000)]”.\cIl legame con i Pokémon...\nMi scalda il cuore.\cAlla prossima puntata! Arrivederci!
+Inviato speciale: Trasmettiamo ora\nil “Notiziario dal Parco Lotta”!\cSiamo in diretta dal\nPalco Lotta.\cOggi siamo in compagnia di un Allenatore\nche ha conseguito 50 vittorie di fila!\cSi tratta di [VAR 0103(0000,0000)] con il suo\n[VAR 0100(0001,0000)] [VAR 0101(0002,0000)]!\cCongratulazioni, [VAR 0103(0000,0000)].\nSprizzi felicità da tutti i pori!\cCome credi che si senta ora\n[VAR 0101(0002,0000)]?\c[VAR 0103(0000,0000)]: [VAR 011C(0003,0000)].\cInviato speciale: ... Ah... Capisco!\nEcco cosa pensa il Pokémon\cdi un Allenatore tosto.\cSpero che [VAR 0101(0002,0000)] continui a\nvincere con forza [VAR 011C(0003,0000)]!\cE con questo è tutto!
 Inviato speciale: Ci siamo!\nBenvenuti a “Intervista Atupertù”!\cProtagonista della puntata di oggi\nè [VAR 0103(0000,0000)].\c[VAR 0103(0000,0000)], facciamo finta che tu\nsia un Capopalestra.\cCome chiameresti la tua Palestra?\c[VAR 0103(0000,0000)]: Palestra\n[VAR 011C(0001,0000)].\cInviato speciale: Wow, voi che ne dite?\nAlla prossima puntata!
 Inviato speciale: Ci siamo!\nBenvenuti a “Intervista Atupertù”!\cProtagonista della puntata di oggi\nè [VAR 0103(0000,0000)].\c[VAR 0103(0000,0000)], se dovessi paragonare\nla tua mamma a un Pokémon, quale\csarebbe?\c[VAR 0103(0000,0000)]: [VAR 011C(0001,0000)].\cInviato speciale: Wow, voi che ne dite?\nAlla prossima puntata!
 Inviato speciale: Ci siamo!\nBenvenuti a “Intervista Atupertù”!\cProtagonista della puntata di oggi\nè [VAR 0103(0000,0000)].\c[VAR 0103(0000,0000)], qual è per te la terza\ncosa più importante nella vita?\c[VAR 0103(0000,0000)]: [VAR 011C(0001,0000)].\cInviato speciale: Wow, voi che ne dite?\nAlla prossima puntata!
@@ -16763,8 +16763,8 @@ Inviato speciale: Trasmettiamo ora\nil “Notiziario dal Parco Lotta”!\cSiamo 
 ~~~~~~~~~~~~~~~
 Text File : 416
 ~~~~~~~~~~~~~~~
-DJ: Acchiappateli tutti!!! Benvenuti al\nprogramma “AcchiappaPokémon Show”!\cLasciatemi raccontare dell’Allenatore\nnoto con il nome di AcchiappaPokémon.\cL’Allenatore che ha attirato la nostra\nattenzione con un’eccellente cattura\cè nien-te-di-me-no che [VAR 0103(0000,0000)]!\cVi starete chiedendo...\nCos’avrà mai acchiappato [VAR 0103(0000,0000)]?\cUn raffinatissimo esemplare di\n[VAR 0100(0001,0000)]!\cBel colpo, [VAR 0103(0000,0000)]!\nQuesto si chiama acchiappare!\cIl Pokémon è stato preso con un\nabilissimo lancio di [VAR 0108(0002,0000)].\cVediamo... lanci effettuati... [VAR 0134(3042,0000)]!\nSenz’altro una cattura all’ultimo...\clancio!\cStiamo parlando del grandissimo\nAllenatore [VAR 0103(0000,0000)]!\cEh? Aspettate un attimo...\nHo ricevuto un aggiornamento\csen-sa-zio-na-le!\cMi hanno comunicato che [VAR 0103(0000,0000)]\nha dato un soprannome all’esemplare\cdi [VAR 0100(0001,0000)] catturato!\cL’ha chiamato [VAR 0101(3043,0000)]!\nWow, [VAR 0103(0000,0000)]!\cSei grande!\nTroppo forte!\cAscoltate, gente!\nUscite ed emulate [VAR 0103(0000,0000)]!\cAndate a catturare i Pokémon come se\noggi fosse l’ultimo giorno disponibile!
-DJ: Acchiappateli tutti!!! Benvenuti al\nprogramma “AcchiappaPokémon Show”!\cLasciatemi raccontare dell’Allenatore\nnoto con il nome di AcchiappaPokémon.\cL’Allenatore che ha attirato la nostra\nattenzione con un’eccellente cattura\cè nien-te-di-me-no che [VAR 0103(0000,0000)]!\cVi starete chiedendo...\nCos’avrà mai acchiappato [VAR 0103(0000,0000)]?\cUn raffinatissimo esemplare di\n[VAR 0100(0001,0000)]!\cBel colpo, [VAR 0103(0000,0000)]!\nQuesto si chiama acchiappare!\cIl Pokémon è stato preso con un\nabilissimo lancio di [VAR 0108(0002,0000)].\cVediamo... lanci effettuati... [VAR 0134(3042,0000)]!\nSenz’altro una cattura all’ultimo...\clancio!\cStiamo parlando del grandissimo\nAllenatore [VAR 0103(0000,0000)]!\cEh? Aspettate un attimo...\nHo ricevuto un aggiornamento\csen-sa-zio-na-le!\cMi hanno comunicato che [VAR 0103(0000,0000)] ha\ndeciso di non dare un nome all’esemplare\cdi [VAR 0100(0001,0000)] catturato!\cWow, [VAR 0103(0000,0000)]!\nÈ grandioso!\cAscoltate, gente!\nUscite ed emulate [VAR 0103(0000,0000)]!\cAndate a catturare i Pokémon come se\noggi fosse l’ultimo giorno disponibile!
+DJ: Acchiappateli tutti!!! Benvenuti al\nprogramma “AcchiappaPokémon Show”!\cLasciatemi raccontare dell’Allenatore\nnoto con il nome di AcchiappaPokémon.\cL’Allenatore che ha attirato la nostra\nattenzione con un’eccellente cattura\cè nien-te-di-me-no che [VAR 0103(0000,0000)]!\cVi starete chiedendo...\nCos’avrà mai acchiappato [VAR 0103(0000,0000)]?\cUn raffinatissimo esemplare di\n[VAR 0100(0001,0000)]!\cBel colpo, [VAR 0103(0000,0000)]!\nQuesto si chiama acchiappare!\cIl Pokémon è stato preso con un\nabilissimo lancio di [VAR 0108(0002,0000)].\cVediamo... lanci effettuati... [VAR 0134(0003,0000)]!\nSenz’altro una cattura all’ultimo...\clancio!\cStiamo parlando del grandissimo\nAllenatore [VAR 0103(0000,0000)]!\cEh? Aspettate un attimo...\nHo ricevuto un aggiornamento\csen-sa-zio-na-le!\cMi hanno comunicato che [VAR 0103(0000,0000)]\nha dato un soprannome all’esemplare\cdi [VAR 0100(0001,0000)] catturato!\cL’ha chiamato [VAR 0101(0004,0000)]!\nWow, [VAR 0103(0000,0000)]!\cSei grande!\nTroppo forte!\cAscoltate, gente!\nUscite ed emulate [VAR 0103(0000,0000)]!\cAndate a catturare i Pokémon come se\noggi fosse l’ultimo giorno disponibile!
+DJ: Acchiappateli tutti!!! Benvenuti al\nprogramma “AcchiappaPokémon Show”!\cLasciatemi raccontare dell’Allenatore\nnoto con il nome di AcchiappaPokémon.\cL’Allenatore che ha attirato la nostra\nattenzione con un’eccellente cattura\cè nien-te-di-me-no che [VAR 0103(0000,0000)]!\cVi starete chiedendo...\nCos’avrà mai acchiappato [VAR 0103(0000,0000)]?\cUn raffinatissimo esemplare di\n[VAR 0100(0001,0000)]!\cBel colpo, [VAR 0103(0000,0000)]!\nQuesto si chiama acchiappare!\cIl Pokémon è stato preso con un\nabilissimo lancio di [VAR 0108(0002,0000)].\cVediamo... lanci effettuati... [VAR 0134(0003,0000)]!\nSenz’altro una cattura all’ultimo...\clancio!\cStiamo parlando del grandissimo\nAllenatore [VAR 0103(0000,0000)]!\cEh? Aspettate un attimo...\nHo ricevuto un aggiornamento\csen-sa-zio-na-le!\cMi hanno comunicato che [VAR 0103(0000,0000)] ha\ndeciso di non dare un nome all’esemplare\cdi [VAR 0100(0001,0000)] catturato!\cWow, [VAR 0103(0000,0000)]!\nÈ grandioso!\cAscoltate, gente!\nUscite ed emulate [VAR 0103(0000,0000)]!\cAndate a catturare i Pokémon come se\noggi fosse l’ultimo giorno disponibile!
 DJ: Acchiappateli tutti!!! Benvenuti al\nprogramma “AcchiappaPokémon Show”!\cLasciatemi raccontare dell’Allenatore\nnoto con il nome di AcchiappaPokémon.\cL’Allenatore che ha attirato la nostra\nattenzione con un’eccellente cattura\cè nien-te-di-me-no che [VAR 0103(0000,0000)]!\cVi starete chiedendo...\nCos’avrà mai acchiappato [VAR 0103(0000,0000)]?\cIl Pokémon era un...\nEh? Rimanete un attimo in ascolto...\cPare che [VAR 0103(0000,0000)] non abbia\nacchiappato proprio un bel niente...\cNeanche una Ball su [VAR 0134(0001,0000)]\nè andata a segno...\cE alla fine [VAR 0103(0000,0000)] ha mandato\nil Pokémon KO...\cOh, che fiasco...\cÈ una notizia troppo tragica per essere\ntrasmessa...\c[VAR 0103(0000,0000)]!\nNon lasciarti abbattere!\cDimentica quel Pokémon!\nNon era destino che fosse tuo!\cLa regione di Sinnoh è piena zeppa di\nPokémon che aspettano di essere\cacchiappati da Allenatori come te!
 DJ: Acchiappateli tutti!!! Benvenuti al\nprogramma “AcchiappaPokémon Show”!\cLasciatemi raccontare dell’Allenatore\nnoto con il nome di AcchiappaPokémon.\cL’Allenatore che ha attirato la nostra\nattenzione con un’eccellente cattura\cè nien-te-di-me-no che [VAR 0103(0000,0000)]!\cVi starete chiedendo...\nCos’avrà mai acchiappato [VAR 0103(0000,0000)]?\cIl Pokémon era un...\nEh? Rimanete un attimo in ascolto...\cPare che [VAR 0103(0000,0000)] non abbia\nacchiappato proprio un bel niente...\cNeanche una Ball su [VAR 0134(0001,0000)]\nè andata a segno...\cOh, che fiasco...\cÈ una notizia troppo tragica per essere\ntrasmessa...\c[VAR 0103(0000,0000)]!\nNon lasciarti abbattere!\cDimentica quel Pokémon!\nNon era destino che fosse tuo!\cLa regione di Sinnoh è piena zeppa di\nPokémon che aspettano di essere\cacchiappati da Allenatori come te!
 Presentatore: Benvenuti al nostro\nusuale appuntamento con\c“Allenatori Pescatori”.\cCome al solito, oggi abbiamo come\nospite il Pescatore Eccelso.\cPescatore Eccelso: Hm!\cPresentatore: Oggi parleremo di\n[VAR 0103(0000,0000)] e dei suoi tentativi di\cpesca.\cUsando [VAR 0108(0001,0000)], [VAR 0103(0000,0000)]\nha catturato un esemplare di\c[VAR 0100(0002,0000)] alquanto aggressivo!\cPescatore Eccelso: Hm!\cPresentatore: Pescatore Eccelso, come\ngiudica l’attività di [VAR 0103(0000,0000)]?\cPescatore Eccelso: Hm! Impugna la\ncanna con sicurezza e delicatezza\callo stesso tempo!\cNon credo che serva dirlo, ma questo\nAllenatore si merita un 100 indiscusso!\cPresentatore: Un 100 di perfezione!\nCongratulazioni, [VAR 0103(0000,0000)]!\cAlla prossima!\nE continua a pescare!
@@ -16774,7 +16774,7 @@ Presentatore: Gentile pubblico,\nvi presento il programma\c“Gruppo che Passion
                                                                                                                                                                                                                                                                              
                                                                                                                                                                                                                                                                             
 Giornalista: E adesso passiamo ad una\nnotizia clamorosa.\cNei pressi di un luogo chiamato\n[VAR 0104(0000,0000)], [VAR 0103(0001,0000)] ha\cscoperto: [VAR 0108(0002,0000)].\cLa metodologia utilizzata da\n[VAR 0103(0001,0000)] è tuttavia sconosciuta.\cUn testimone ha riportato che\n[VAR 0103(0001,0000)] aveva un’aria furtiva.\cPare che [VAR 0103(0001,0000)] si scrutasse\nintorno, come se temesse che qualcuno\csi accorgesse della sua scoperta.\cE con questo si conclude la nostra\ntrasmissione. Arrivederci.
-Presentatore: Trasmettiamo ora\nl’attesissimo “Spese folli a Sinnoh”!\cL’acquirente di oggi è [VAR 0103(0002,0000)], che\nha acquistato [VAR 0108(0000,0000)].\cVolete sapere in che quantità?\nEbbene... ha acquistato [VAR 0134(0001,0000)] unità!\cOspite: [VAR 0103(0002,0000)] sa decisamente\nfare acquisti. Che meraviglia.\cEbbene, guardate un po’! Guardate con\nche destrezza maneggia il denaro.\cNotate con che rapidità [VAR 0103(0002,0000)]\nfa incetta di [VAR 0108(3042,0000)].\cSembra quasi che voglia esaurire\ntutte le scorte di [VAR 0108(0000,0000)]\cdella regione di Sinnoh.\cLa sua determinazione è davvero\nstraordinaria.\cPresentatore: Che dire... [VAR 0103(0002,0000)]\nmerita il nostro rispetto.\cCari spettatori, fatevi contagiare dalle\nspese folli di [VAR 0103(0002,0000)]!\cA presto!
+Presentatore: Trasmettiamo ora\nl’attesissimo “Spese folli a Sinnoh”!\cL’acquirente di oggi è [VAR 0103(0002,0000)], che\nha acquistato [VAR 0108(0000,0000)].\cVolete sapere in che quantità?\nEbbene... ha acquistato [VAR 0134(0001,0000)] unità!\cOspite: [VAR 0103(0002,0000)] sa decisamente\nfare acquisti. Che meraviglia.\cEbbene, guardate un po’! Guardate con\nche destrezza maneggia il denaro.\cNotate con che rapidità [VAR 0103(0002,0000)]\nfa incetta di [VAR 0108(0003,0000)].\cSembra quasi che voglia esaurire\ntutte le scorte di [VAR 0108(0000,0000)]\cdella regione di Sinnoh.\cLa sua determinazione è davvero\nstraordinaria.\cPresentatore: Che dire... [VAR 0103(0002,0000)]\nmerita il nostro rispetto.\cCari spettatori, fatevi contagiare dalle\nspese folli di [VAR 0103(0002,0000)]!\cA presto!
 Presentatore: Ed ecco a voi\nl’attesissimo “Club Uovo Giulivo”!\cL’Uovo di [VAR 0103(0000,0000)] si è schiuso nei\npressi di un luogo chiamato\c[VAR 0104(0001,0000)].\c[VAR 0103(0000,0000)] adesso ha un\npiccolo [VAR 0100(0002,0000)]!\c[VAR 0103(0000,0000)], tanti auguri a te e\nal nuovo membro della tua squadra!\cVi attendiamo ancora con noi!\nAlla prossima nascita!
                                                                                                                                                                                                                                                                                                                                       
                                                                                                                                                                                                                                                                                                                             
@@ -16808,7 +16808,7 @@ Text File : 417
 ~~~~~~~~~~~~~~~
 Berto: Ecco a voi... “Batti il Record”!\cOggi parleremo di un record stabilito\nnella Torre Lotta da un vero maestro.\cLoretta: Un maestro della Torre Lotta?\cBerto: Sì, Loretta! Stiamo parlando\ndella squadra di [VAR 0103(0000,0000)]\cguidata da [VAR 0100(0001,0000)].\cHa stabilito un nuovo record nella\nLotta in Singolo con [VAR 0135(0002,0000)] vittorie\cconsecutive!\cLoretta: Dunque amano essere al top\ndella classifica!\cBerto: No, non è come pensi!\cHanno realizzato un’impresa eroica!\nScusate, ora dobbiamo lasciarvi!
 Berto: Ecco a voi... “Batti il Record”!\cOggi parleremo di un record stabilito\nnella Torre Lotta da un vero maestro.\cLoretta: Un maestro della Torre Lotta?\cBerto: Sì, Loretta! Stiamo parlando\ndella squadra di [VAR 0103(0000,0000)]\cguidata da [VAR 0100(0001,0000)].\cHa stabilito un nuovo record nella\nLotta in Doppio con [VAR 0135(0002,0000)] vittorie\cconsecutive!\cLoretta: Forse avevano paura delle\nLotte in Singolo!\cBerto: No, non è come pensi!\cHanno realizzato un’impresa eroica!\nScusate, ora dobbiamo lasciarvi!
-Berto: Ecco a voi... “Batti il Record”!\cOggi parleremo di un Pokémon che ha\nbattuto ogni record per le sue\cdimensioni! È enorme!\cLoretta: Stai parlando di un Pokémon\nenorme?\cBerto: Esatto, Loretta! Il record è\nstato stabilito da [VAR 0103(0000,0000)].\c[VAR 0100(0001,0000)] di [VAR 0103(0000,0000)] ha\nle dimensioni record di [VAR 0134(0002,0000)],[VAR 0132(3042,0000)] cm!\cLoretta: Non ce la farò mai a tenere\nun Pokémon così in mano!\cBerto: È difficile tenere i Pokémon\nsul palmo di una mano!\c[VAR 0103(0000,0000)] ha stabilito un vero\ne proprio record!\cScusate, ora dobbiamo lasciarvi!
+Berto: Ecco a voi... “Batti il Record”!\cOggi parleremo di un Pokémon che ha\nbattuto ogni record per le sue\cdimensioni! È enorme!\cLoretta: Stai parlando di un Pokémon\nenorme?\cBerto: Esatto, Loretta! Il record è\nstato stabilito da [VAR 0103(0000,0000)].\c[VAR 0100(0001,0000)] di [VAR 0103(0000,0000)] ha\nle dimensioni record di [VAR 0134(0002,0000)],[VAR 0132(0003,0000)] cm!\cLoretta: Non ce la farò mai a tenere\nun Pokémon così in mano!\cBerto: È difficile tenere i Pokémon\nsul palmo di una mano!\c[VAR 0103(0000,0000)] ha stabilito un vero\ne proprio record!\cScusate, ora dobbiamo lasciarvi!
 
 Berto: Ecco a voi... “Batti il Record”!\cOggi parleremo di un record strabiliante\nsiglato da un asso dei Fiocchi!\cLoretta: Ooh! Hai detto Fiocchi?\nIo ne ho uno in testa!\cBerto: Eh? OK, Loretta!\nSto parlando dei Fiocchi Pokémon.\cSai, [VAR 0100(0001,0000)] di [VAR 0103(0000,0000)]\nha ottenuto il [VAR 0127(0002,0000)].\cScommetto che [VAR 0100(0001,0000)] sarà\ndecorato con molti Fiocchi!\cLoretta: Ma non è affatto alla moda!\cBerto: Ma Loretta, non fare sempre\nil bastian contrario!\cScusate, ora dobbiamo lasciarvi!
                                                                                                                                                                                                                                     
@@ -16896,7 +16896,7 @@ Voce fuori campo: Per la serie\n“Sulla Cresta dell’Onda”,\cva ora in onda 
 Casi irrisolti? Misteri da svelare?\cQuesta è una missione per il “Detective\nPokéKron”, l’Ispettore Kronnick!\cIspettore: Ho disegnato l’identikit\nusando il software Annotazioni!\c... Ma... Oh-oh!\nIl disegno non c’è più...\cÈ vuoto! La pagina è vuota!\cAh, sì! Se si usa un altro software,\nquanto annotato sparisce!\cChe cosa farà il nostro Ispettore\nKronnick? Quale sarà il nuovo caso?\cNon perdetevi il prossimo episodio,\nil Nº 111, dal titolo\c“Il PokéKron è imbattibile!”
 Casi irrisolti? Misteri da svelare?\cQuesta è una missione per il “Detective\nPokéKron”, l’Ispettore Kronnick!\cIspettore: Troverò degli indizi per\nincastrare il sospettato.\cIl mio software Ricerca Strumenti\ntroverà ogni minima prova!\cOh, no! Ho cercato ovunque, ma qui\nnon ci sono strumenti nascosti!\cChe cosa farà il nostro Ispettore\nKronnick? Quale sarà il nuovo caso?\cNon perdetevi il prossimo episodio,\nil Nº 218, dal titolo\c“Il PokéKron è intelligente!”
 Casi irrisolti? Misteri da svelare?\cQuesta è una missione per il “Detective\nPokéKron”, l’Ispettore Kronnick!\cIspettore: Userò il mio PokéKron per\nscoprire dove è fuggito il sospettato.\cIl software Testa o Croce me lo\nindicherà!\cTesta, il criminale si è diretto a\ndestra, Croce dall’altra parte.\cContinua a correre, canaglia!\nTanto ti acciufferò!\cChe cosa farà il nostro Ispettore\nKronnick? Quale sarà il nuovo caso?\cNon perdetevi il prossimo episodio,\nil Nº 999, dal titolo\c“Il PokéKron è carino!”
-DJ: Siete sintonizzati sulle note di\n“Super Classifica Sinnoh!”\cEcco la numero 3 della settimana!\n“[VAR 0100(0000,0000)] mon amour!”\cMentre al numero 2 c’è il singolo\n“[VAR 011F(0001,0000)] a crepapelle!”\cE al vertice di questa\nsettimana troviamo...\c“[VAR 0100(0002,0000)] amoroso. Un’estate di\n[VAR 0106(3042,0000)]!”
+DJ: Siete sintonizzati sulle note di\n“Super Classifica Sinnoh!”\cEcco la numero 3 della settimana!\n“[VAR 0100(0000,0000)] mon amour!”\cMentre al numero 2 c’è il singolo\n“[VAR 011F(0001,0000)] a crepapelle!”\cE al vertice di questa\nsettimana troviamo...\c“[VAR 0100(0002,0000)] amoroso. Un’estate di\n[VAR 0106(0003,0000)]!”
 Giubilo TV!\nProssimamente sul piccolo schermo...\c“Il professore si evolve otto volte”.\cLa storia di un gentleman elegante\ne raffinato che fa il professore\cdi Pokémon di giorno.\c... E il paladino della giustizia\ndi notte, insieme ai suoi amici Pokémon!\cIl temerario scienziato torna con\nil suo motto: “Anche tu ti evolvi”.\cUnisciti al professore nella\nlotta contro il Pokécrimine!\cProssimamente sui vostri schermi!
 Benvenuti a “GTS TVB”!\nLo show dedicato ai tanti fan della GTS!\cScusa, per caso hai appena\nfatto uno scambio? Puoi darci\cla tua opinione a caldo?\c... Mh? Come?\nStai parlando con me?\cMmm, sono felice di sapere che qui posso\nsempre scambiare ciò che mi va.\cMa a volte c’è una cosa che\nnon mi va giù.\cSi tratta di alcune mosse che certi\nPokémon scambiati conoscono.\cAd esempio, le mosse di questo sono\nEsplosione, Taglio, Sdoppiatore\ce Contropiede.\cCioè, è una combinazione strana.\nCi sarà un motivo particolare?\cNon è una storia fantastica? Per\nqualcuno avrà un motivo ben preciso!\cCi vediamo la prossima settimana!
 Ero una ragazza come tante finché\nun bel giorno non sono stata letteral-\cmente colpita da un Tuonoshock.\cEd è stato amore a prima vista!\nE il mio obiettivo? Un Capopalestra!\cAll’epoca non avevo nemmeno un\nPokémon, ma non era un problema per\cuna ragazza piena di risorse come me!\cLa risposta era semplice! E sappiamo\ntutti che le cose semplici\csono sempre le migliori!\cDovevo solo diventare un Allenatore.\nBastava solo quello!\c“Diario di una Pokéromantica”.\nProssimamente sul piccolo schermo!\cNon perdetevi il primo episodio:\n“Amore a prima vista!\cLe regole della mossa Attrazione!”\cA proposito, voi come avete\nottenuto il vostro primo Pokémon?
@@ -16996,7 +16996,7 @@ Non hai ancora ricevuto il tuo dono.\nVuoi eliminare questa scheda?
 Eliminazione in corso.\nNon spegnere la console.
 SÌ
 NO
-Nº ID [VAR FF00(3042)][VAR 0103(0000,0000)][VAR FF00(0000)]: [VAR 0136(0001,0000)]
+Nº ID [VAR FF00(0003)][VAR 0103(0000,0000)][VAR FF00(0000)]: [VAR 0136(0001,0000)]
           
 Nº di candidatura
 [VAR 0135(0000,0000)]-[VAR 0135(0001,0000)]
@@ -18383,7 +18383,7 @@ Dummy
 ~~~~~~~~~~~~~~~
 Text File : 452
 ~~~~~~~~~~~~~~~
-[VAR 0134(0000,0000)]　[VAR 0100(0001,0000)]　[VAR 0100(0002,0000)]　[VAR 0100(3042,0000)]
+[VAR 0134(0000,0000)]　[VAR 0100(0001,0000)]　[VAR 0100(0002,0000)]　[VAR 0100(0003,0000)]
 Male
 Female
 None
@@ -18405,7 +18405,7 @@ NO
 Ｌ７
 Ｌ８
 Ｌ９
-Ｐｏｓ（[VAR 0134(3043,0000)]、[VAR 0134(3044,0000)]）
+Ｐｏｓ（[VAR 0134(0004,0000)]、[VAR 0134(0005,0000)]）
 Play cries
 Edit front
 Edit back
@@ -18472,8 +18472,8 @@ Sì
 No
 [VAR 0101(0000,0000)] non ha imparato\n[VAR 0106(0001,0000)]!
 Quale mossa vuoi che dimentichi?
-1[VAR 0201(3053)], 2[VAR 0201(3053)] e[VAR 0201(3053)]... [VAR 0201(3053)]... [VAR 0201(3053)]... puf![VAR 0202(3042)][VAR 0202(3044)]\c[VAR 0101(0000,0000)] scorda l’uso\ndi [VAR 0106(0001,0000)]!\cAl suo posto...
-[VAR 0101(0000,0000)] impara \n[VAR 0106(0001,0000)]![VAR 0202(3043)][VAR 0202(0002)]
+1[VAR 0201(3053)], 2[VAR 0201(3053)] e[VAR 0201(3053)]... [VAR 0201(3053)]... [VAR 0201(3053)]... puf![VAR 0202(0003)][VAR 0202(0005)]\c[VAR 0101(0000,0000)] scorda l’uso\ndi [VAR 0106(0001,0000)]!\cAl suo posto...
+[VAR 0101(0000,0000)] impara \n[VAR 0106(0001,0000)]![VAR 0202(0004)][VAR 0202(0002)]
 [VAR 0101(0000,0000)] e [VAR 0106(0001,0000)]\nnon sono compatibili.\cNon può imparare [VAR 0106(0001,0000)]!
 [VAR 0101(0000,0000)] conosce già\n[VAR 0106(0001,0000)]!
 [VAR 0101(0000,0000)] ha recuperato \n[VAR 0134(0001,0000)] PS.
@@ -18605,8 +18605,8 @@ DIF. SP.
 VELOCITÀ
 + [VAR 0134(0000,0000)]
 [VAR 0134(0000,0000)]
-[VAR 0101(0000,0000)] sale al L. [VAR 0134(0001,0000)]![VAR 0202(3043)][VAR 0202(0002)]
-[VAR 0101(0000,0000)] impara \n[VAR 0106(0001,0000)]![VAR 0202(3043)][VAR 0202(0002)]
+[VAR 0101(0000,0000)] sale al L. [VAR 0134(0001,0000)]![VAR 0202(0004)][VAR 0202(0002)]
+[VAR 0101(0000,0000)] impara \n[VAR 0106(0001,0000)]![VAR 0202(0004)][VAR 0202(0002)]
 La Capsula verrà tolta. OK?
 Non puoi usare questo strumento\nquando ti accompagna qualcuno.
 Seleziona un Uovo.
@@ -18718,22 +18718,22 @@ Natura [VAR FF00(0002)]Gentile[VAR FF00(0000)].
 Natura [VAR FF00(0002)]Vivace[VAR FF00(0000)].
 Natura [VAR FF00(0002)]Cauta[VAR FF00(0000)].
 Natura [VAR FF00(0002)]Furba[VAR FF00(0000)].
-[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(3043,0000)][VAR FF00(0000)]\nOttenuto al L. [VAR 0134(3042,0000)].
-[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(3043,0000)][VAR FF00(0000)]\nProbabilmente ottenuto\nal L. [VAR 0134(3042,0000)].
-[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(3043,0000)][VAR FF00(0000)]\nArrivato al L. [VAR 0134(3042,0000)].
-[VAR 0133(3046,0000)] [VAR 014A(3045,0000)] 20[VAR 0133(3044,0000)]\n[VAR FF00(0002)][VAR 0104(3047,0000)][VAR FF00(0000)]\nUovo ottenuto.\n[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(3043,0000)][VAR FF00(0000)]\nUovo schiuso.
-[VAR 0133(3046,0000)] [VAR 014A(3045,0000)] 20[VAR 0133(3044,0000)]\n[VAR FF00(0002)][VAR 0104(3047,0000)][VAR FF00(0000)]\nUovo ottenuto.\n[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(3043,0000)][VAR FF00(0000)]\nUovo forse schiuso lì.
-[VAR 0133(3046,0000)] [VAR 014A(3045,0000)] 20[VAR 0133(3044,0000)]\n[VAR FF00(0002)][VAR 0104(3047,0000)][VAR FF00(0000)]\nUovo ricevuto.\n[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(3043,0000)][VAR FF00(0000)]\nUovo schiuso.
-[VAR 0133(3046,0000)] [VAR 014A(3045,0000)] 20[VAR 0133(3044,0000)]\n[VAR FF00(0002)][VAR 0104(3047,0000)][VAR FF00(0000)]\nUovo ricevuto.\n[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(3043,0000)][VAR FF00(0000)]\nUovo forse schiuso lì.
-[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(3043,0000)][VAR FF00(0000)]\nOttenuto in un’occasione\nspeciale al L. [VAR 0134(3042,0000)].
-[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(3043,0000)][VAR FF00(0000)]\nProbabilmente ottenuto\nin un’occasione\nspeciale al L. [VAR 0134(3042,0000)].
-[VAR 0133(3046,0000)] [VAR 014A(3045,0000)] 20[VAR 0133(3044,0000)]\n[VAR FF00(0002)][VAR 0104(3047,0000)][VAR FF00(0000)]\nUovo ottenuto.\n[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(3043,0000)][VAR FF00(0000)]\nUovo schiuso.\nOccasione speciale.
-[VAR 0133(3046,0000)] [VAR 014A(3045,0000)] 20[VAR 0133(3044,0000)]\n[VAR FF00(0002)][VAR 0104(3047,0000)][VAR FF00(0000)]\nUovo ottenuto.\n[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(3043,0000)][VAR FF00(0000)]\nUovo forse schiuso lì.\nOccasione speciale.
-[VAR 0133(3046,0000)] [VAR 014A(3045,0000)] 20[VAR 0133(3044,0000)]\n[VAR FF00(0002)][VAR 0104(3047,0000)][VAR FF00(0000)]\nUovo arrivato.\n[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(3043,0000)][VAR FF00(0000)]\nUovo schiuso.\nOccasione speciale.
-[VAR 0133(3046,0000)] [VAR 014A(3045,0000)] 20[VAR 0133(3044,0000)]\n[VAR FF00(0002)][VAR 0104(3047,0000)][VAR FF00(0000)]\nUovo arrivato.\n[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(3043,0000)][VAR FF00(0000)]\nUovo forse schiuso lì.\nOccasione speciale.
-[VAR 0133(3046,0000)] [VAR 014A(3045,0000)] 20[VAR 0133(3044,0000)]\n[VAR FF00(0002)][VAR 0104(3047,0000)][VAR FF00(0000)]\nUovo ottenuto.\n[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(3043,0000)][VAR FF00(0000)]\nUovo schiuso.\nOccasione speciale.
-[VAR 0133(3046,0000)] [VAR 014A(3045,0000)] 20[VAR 0133(3044,0000)]\n[VAR FF00(0002)][VAR 0104(3047,0000)][VAR FF00(0000)]\nUovo ottenuto.\n[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(3043,0000)][VAR FF00(0000)]\nUovo forse schiuso lì.\nOccasione speciale.
-[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(3043,0000)][VAR FF00(0000)]\nArrivato al L. [VAR 0134(3042,0000)].
+[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(0004,0000)][VAR FF00(0000)]\nOttenuto al L. [VAR 0134(0003,0000)].
+[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(0004,0000)][VAR FF00(0000)]\nProbabilmente ottenuto\nal L. [VAR 0134(0003,0000)].
+[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(0004,0000)][VAR FF00(0000)]\nArrivato al L. [VAR 0134(0003,0000)].
+[VAR 0133(0007,0000)] [VAR 014A(0006,0000)] 20[VAR 0133(0005,0000)]\n[VAR FF00(0002)][VAR 0104(0008,0000)][VAR FF00(0000)]\nUovo ottenuto.\n[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(0004,0000)][VAR FF00(0000)]\nUovo schiuso.
+[VAR 0133(0007,0000)] [VAR 014A(0006,0000)] 20[VAR 0133(0005,0000)]\n[VAR FF00(0002)][VAR 0104(0008,0000)][VAR FF00(0000)]\nUovo ottenuto.\n[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(0004,0000)][VAR FF00(0000)]\nUovo forse schiuso lì.
+[VAR 0133(0007,0000)] [VAR 014A(0006,0000)] 20[VAR 0133(0005,0000)]\n[VAR FF00(0002)][VAR 0104(0008,0000)][VAR FF00(0000)]\nUovo ricevuto.\n[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(0004,0000)][VAR FF00(0000)]\nUovo schiuso.
+[VAR 0133(0007,0000)] [VAR 014A(0006,0000)] 20[VAR 0133(0005,0000)]\n[VAR FF00(0002)][VAR 0104(0008,0000)][VAR FF00(0000)]\nUovo ricevuto.\n[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(0004,0000)][VAR FF00(0000)]\nUovo forse schiuso lì.
+[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(0004,0000)][VAR FF00(0000)]\nOttenuto in un’occasione\nspeciale al L. [VAR 0134(0003,0000)].
+[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(0004,0000)][VAR FF00(0000)]\nProbabilmente ottenuto\nin un’occasione\nspeciale al L. [VAR 0134(0003,0000)].
+[VAR 0133(0007,0000)] [VAR 014A(0006,0000)] 20[VAR 0133(0005,0000)]\n[VAR FF00(0002)][VAR 0104(0008,0000)][VAR FF00(0000)]\nUovo ottenuto.\n[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(0004,0000)][VAR FF00(0000)]\nUovo schiuso.\nOccasione speciale.
+[VAR 0133(0007,0000)] [VAR 014A(0006,0000)] 20[VAR 0133(0005,0000)]\n[VAR FF00(0002)][VAR 0104(0008,0000)][VAR FF00(0000)]\nUovo ottenuto.\n[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(0004,0000)][VAR FF00(0000)]\nUovo forse schiuso lì.\nOccasione speciale.
+[VAR 0133(0007,0000)] [VAR 014A(0006,0000)] 20[VAR 0133(0005,0000)]\n[VAR FF00(0002)][VAR 0104(0008,0000)][VAR FF00(0000)]\nUovo arrivato.\n[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(0004,0000)][VAR FF00(0000)]\nUovo schiuso.\nOccasione speciale.
+[VAR 0133(0007,0000)] [VAR 014A(0006,0000)] 20[VAR 0133(0005,0000)]\n[VAR FF00(0002)][VAR 0104(0008,0000)][VAR FF00(0000)]\nUovo arrivato.\n[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(0004,0000)][VAR FF00(0000)]\nUovo forse schiuso lì.\nOccasione speciale.
+[VAR 0133(0007,0000)] [VAR 014A(0006,0000)] 20[VAR 0133(0005,0000)]\n[VAR FF00(0002)][VAR 0104(0008,0000)][VAR FF00(0000)]\nUovo ottenuto.\n[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(0004,0000)][VAR FF00(0000)]\nUovo schiuso.\nOccasione speciale.
+[VAR 0133(0007,0000)] [VAR 014A(0006,0000)] 20[VAR 0133(0005,0000)]\n[VAR FF00(0002)][VAR 0104(0008,0000)][VAR FF00(0000)]\nUovo ottenuto.\n[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(0004,0000)][VAR FF00(0000)]\nUovo forse schiuso lì.\nOccasione speciale.
+[VAR 0133(0002,0000)] [VAR 014A(0001,0000)] 20[VAR 0133(0000,0000)]\n[VAR FF00(0002)][VAR 0104(0004,0000)][VAR FF00(0000)]\nArrivato al L. [VAR 0134(0003,0000)].
 Ama il cibo [VAR FF00(0002)]pepato[VAR FF00(0000)].
 Ama il cibo [VAR FF00(0002)]secco[VAR FF00(0000)].
 Ama il cibo [VAR FF00(0002)]dolce[VAR FF00(0000)].
@@ -18770,10 +18770,10 @@ Abbastanza superficiale.
 Molto insolente.
 Non sopporta perdere.
 Un po’ testardo.
-[VAR 0133(3046,0000)] [VAR 014A(3045,0000)] 20[VAR 0133(3044,0000)]\nUovo di Pokémon\nmisterioso ricevuto da:\n[VAR FF00(0002)][VAR 0104(3047,0000)][VAR FF00(0000)].\n
-[VAR 0133(3046,0000)] [VAR 014A(3045,0000)] 20[VAR 0133(3044,0000)]\nUovo di Pokémon\nmisterioso ottenuto a:\n[VAR FF00(0002)][VAR 0104(3047,0000)][VAR FF00(0000)].
-[VAR 0133(3046,0000)] [VAR 014A(3045,0000)] 20[VAR 0133(3044,0000)]\nUovo di Pokémon molto\nmisterioso ottenuto a:\n[VAR FF00(0001)][VAR 0104(3047,0000)][VAR FF00(0000)].\n
-[VAR 0133(3046,0000)] [VAR 014A(3045,0000)] 20[VAR 0133(3044,0000)]\nUovo di Pokémon molto\nmisterioso arrivato da:\n[VAR FF00(0002)][VAR 0104(3047,0000)][VAR FF00(0000)].\n
+[VAR 0133(0007,0000)] [VAR 014A(0006,0000)] 20[VAR 0133(0005,0000)]\nUovo di Pokémon\nmisterioso ricevuto da:\n[VAR FF00(0002)][VAR 0104(0008,0000)][VAR FF00(0000)].\n
+[VAR 0133(0007,0000)] [VAR 014A(0006,0000)] 20[VAR 0133(0005,0000)]\nUovo di Pokémon\nmisterioso ottenuto a:\n[VAR FF00(0002)][VAR 0104(0008,0000)][VAR FF00(0000)].
+[VAR 0133(0007,0000)] [VAR 014A(0006,0000)] 20[VAR 0133(0005,0000)]\nUovo di Pokémon molto\nmisterioso ottenuto a:\n[VAR FF00(0001)][VAR 0104(0008,0000)][VAR FF00(0000)].\n
+[VAR 0133(0007,0000)] [VAR 014A(0006,0000)] 20[VAR 0133(0005,0000)]\nUovo di Pokémon molto\nmisterioso arrivato da:\n[VAR FF00(0002)][VAR 0104(0008,0000)][VAR FF00(0000)].\n
 “Osservazione Uovo”\nSi sentono dei rumori\nprovenire dall’interno.\nSta per schiudersi!
 “Osservazione Uovo”\nOgni tanto si muove.\nSi schiuderà presto.
 “Osservazione Uovo”\nCosa nascerà?\nCi vorrà un po’ di tempo.
@@ -18996,10 +18996,10 @@ Quante volte è fuoriuscito:
 Quante volte si è bruciato:
 [VAR 0135(0000,0000)]
 Tipo di Poffin:
-[VAR 0109(3042,0000)]: [VAR 0133(0002,0000)] di L. [VAR 0133(0001,0000)]
+[VAR 0109(0003,0000)]: [VAR 0133(0002,0000)] di L. [VAR 0133(0001,0000)]
       
        
-[VAR 0103(0000,0000)] mette\n[VAR 0109(3042,0000)] nel Portapoffin.
+[VAR 0103(0000,0000)] mette\n[VAR 0109(0003,0000)] nel Portapoffin.
 Vuoi continuare a preparare i Poffin?
 Qualcuno si è ritirato.\nNon si può più cucinare.
 Apri la Borsa e scegli la Bacca\nche vuoi cucinare.
@@ -19718,7 +19718,7 @@ Oh, che peccato. Non hai abbastanza\nPokémon per una Prova di Cattura.\cPer par
 Molto bene, lascia che ti spieghi come\nfunzionano le cose da queste parti.\cTi leggerò alcune regole dal manuale\nsul Parco Amici.
 Getti la spugna? Peccato!\nLa prossima volta impegnati di più!\cRitirerò le Parco Ball che ti sono\nrimaste.\cSpero che la prossima volta resterai\nper catturare i sei Pokémon.
 Oh, i tuoi Box PC sono pieni. Non c’è\nspazio per altri sei Pokémon.\cAnche se li catturi non potranno\ndiventare tuoi.\cFai spazio nei tuoi Box PC prima\ndi tornare per la Prova di Cattura.
-Congratulazioni!\nHai catturato sei Pokémon!\cIl pubblico ha apprezzato senz’altro\nla tua Prova di Cattura.\cOra vediamo il punteggio che hai\nottenuto in questa prova!\c...\n...\cPunti di Cattura: [VAR 0135(0000,0000)]!\cPunti Tempo: [VAR 0135(0001,0000)]!\cPunti per Tipo: [VAR 0135(0002,0000)]!\cIl totale...\c...\n...\c[VAR 0135(3042,0000)] punti!\c
+Congratulazioni!\nHai catturato sei Pokémon!\cIl pubblico ha apprezzato senz’altro\nla tua Prova di Cattura.\cOra vediamo il punteggio che hai\nottenuto in questa prova!\c...\n...\cPunti di Cattura: [VAR 0135(0000,0000)]!\cPunti Tempo: [VAR 0135(0001,0000)]!\cPunti per Tipo: [VAR 0135(0002,0000)]!\cIl totale...\c...\n...\c[VAR 0135(0003,0000)] punti!\c
 Complimenti, che record!\nSei eccezionale!\c
 Bene! Non male come record.\nComplimenti!\c
 Vuoi mettere tutti i Pokémon catturati\nnei Box PC?
@@ -19792,7 +19792,7 @@ Ho fatto un sogno!\nEra davvero stupendo!\cHo sognato che un Allenatore mi\nport
 [VAR 0134(0000,0000)],[VAR 0132(0001,0000)] centimetri... Questo REMORAID\nè lungo [VAR 0134(0000,0000)],[VAR 0132(0001,0000)] centimetri...\cQuesta volta la realtà ha superato il\nsogno!\cVorrei farti un regalo.\c
 Grazie!\nÈ stato molto divertente.\cPenso che stanotte sognerò un\nREMORAID ancora più grande.
 [VAR 0134(0000,0000)],[VAR 0132(0001,0000)] centimetri...\nCredo di avere un dejà vu...\cRicordo chiaramente queste dimensioni!
-Un REMORAID di [VAR 0134(0000,0000)],[VAR 0132(0001,0000)] centimetri!\cConosco un genio che mi ha portato un\nREMORAID di [VAR 0134(0002,0000)],[VAR 0132(3042,0000)] centimetri...
+Un REMORAID di [VAR 0134(0000,0000)],[VAR 0132(0001,0000)] centimetri!\cConosco un genio che mi ha portato un\nREMORAID di [VAR 0134(0002,0000)],[VAR 0132(0003,0000)] centimetri...
 Co...\nCosa credi di mostrarmi?\cMa hai sentito cosa ho detto?
 La tua Borsa è piena zeppa...\nNon puoi aggiungere altro!
 Come? Perché non mi lasci misurare\nil tuo REMORAID?
@@ -19885,7 +19885,7 @@ Vuoi che dimentichi\nla mossa [VAR 0106(0001,0000)]?
 1, 2 e... ... ... puf!\c[VAR 0100(0000,0000)] scorda [VAR 0106(0001,0000)].\cAl suo posto...\n[VAR 0100(0000,0000)] impara [VAR 0106(0002,0000)].
 Bloccare l’apprendimento\ndi [VAR 0106(0001,0000)]?
 [VAR 0100(0000,0000)] non ha imparato\n[VAR 0106(0001,0000)].
-Le mosse eccelse possono essere\ninsegnate ai Pokémon qui nominati!\cI divampanti Pokémon fuoco\n[VAR 0203(3046)]CHARIZARD TYPHLOSION\c[VAR 0203(3046)]BLAZIKEN INFERNAPE\cGli irrequieti Pokémon acqua\n[VAR 0203(3046)]BLASTOISE FERALIGATR\c[VAR 0203(3046)]SWAMPERT EMPOLEON\cI tranquilli Pokémon erba\n[VAR 0203(3046)]VENUSAUR MEGANIUM\c[VAR 0203(3046)]SCEPTILE TORTERRA
+Le mosse eccelse possono essere\ninsegnate ai Pokémon qui nominati!\cI divampanti Pokémon fuoco\n[VAR 0203(0007)]CHARIZARD TYPHLOSION\c[VAR 0203(0007)]BLAZIKEN INFERNAPE\cGli irrequieti Pokémon acqua\n[VAR 0203(0007)]BLASTOISE FERALIGATR\c[VAR 0203(0007)]SWAMPERT EMPOLEON\cI tranquilli Pokémon erba\n[VAR 0203(0007)]VENUSAUR MEGANIUM\c[VAR 0203(0007)]SCEPTILE TORTERRA
 ~~~~~~~~~~~~~~~
 Text File : 530
 ~~~~~~~~~~~~~~~
@@ -19980,8 +19980,8 @@ POKéDEX:
 TEMPO:
 [VAR 0103(0001,0000)]
 [VAR 0132(0002,0000)]
-[VAR 0134(3042,0000)]
-[VAR 0134(3043,0000)]:[VAR 0133(3044,0000)]
+[VAR 0134(0003,0000)]
+[VAR 0134(0004,0000)]:[VAR 0133(0005,0000)]
 ~~~~~~~~~~~~~~~
 Text File : 535
 ~~~~~~~~~~~~~~~
@@ -20633,7 +20633,7 @@ SÌ
 NO
 Ciao! Ti interessano le\nMacchine Tecniche?
 
-[VAR 0108(0000,0000)] [VAR 0106(3042,0000)]! Allora\nne vuoi [VAR 0133(0001,0000)]? Fanno $[VAR 0137(0002,0000)]. OK?
+[VAR 0108(0000,0000)] [VAR 0106(0003,0000)]! Allora\nne vuoi [VAR 0133(0001,0000)]? Fanno $[VAR 0137(0002,0000)]. OK?
 Ciao!\nQuesto è l’Ufficio Ritiro Premi.\cVuoi cambiare i tuoi PL con dei premi?
 SÌ
 NO
@@ -20642,7 +20642,7 @@ Cerca di vincere PL e torna a trovarci.
 [VAR 0108(0000,0000)]? OK.\nIn che quantità?
 [VAR 0135(0000,0000)] PL
 [VAR 0108(0000,0000)]? Se ne vuoi [VAR 0133(0001,0000)], fanno\n[VAR 0135(0002,0000)] PL. OK?
-[VAR 0108(0000,0000)] [VAR 0106(3042,0000)]? Se ne\nvuoi [VAR 0133(0001,0000)] fanno [VAR 0135(0002,0000)] PL. OK?
+[VAR 0108(0000,0000)] [VAR 0106(0003,0000)]? Se ne\nvuoi [VAR 0133(0001,0000)] fanno [VAR 0135(0002,0000)] PL. OK?
 Mi dispiace. Non\nhai abbastanza PL.
 [VAR 0135(0000,0000)] PL
 ~~~~~~~~~~~~~~~
@@ -25530,15 +25530,15 @@ SCAMBI in LINK
 :
 --
 --:--
-$[VAR 0137(3044,0000)]
+$[VAR 0137(0005,0000)]
 [VAR 0133(0000,0000)]:[VAR 0133(0001,0000)]
 [VAR 0133(0000,0000)]  [VAR 0133(0001,0000)]
-[VAR 0133(3043,0000)] [VAR 014A(3042,0000)] 20[VAR 0133(0002,0000)]
+[VAR 0133(0004,0000)] [VAR 014A(0003,0000)] 20[VAR 0133(0002,0000)]
 V.:
 P.:
 -- --- ----
-[VAR 0134(3044,0000)]
-[VAR 0137(3044,0000)]
+[VAR 0134(0005,0000)]
+[VAR 0137(0005,0000)]
 ~~~~~~~~~~~~~~~
 Text File : 617
 ~~~~~~~~~~~~~~~
@@ -29926,15 +29926,15 @@ Text File : 628
 ~~~~~~~~~~~~~~~
 Bilia Prisma
 Bilia Prisma
-[VAR FF00(3043)]Bilia Tersa[VAR FF00(0000)]
+[VAR FF00(0004)]Bilia Tersa[VAR FF00(0000)]
 [VAR FF00(0001)]Bilia Rossa[VAR FF00(0000)]
 [VAR FF00(0002)]Bilia Blu[VAR FF00(0000)]
-[VAR FF00(3042)]Bilia Verde[VAR FF00(0000)]
+[VAR FF00(0003)]Bilia Verde[VAR FF00(0000)]
 Bilia Prisma
-[VAR FF00(3043)]Bilia Tersa[VAR FF00(0000)]
+[VAR FF00(0004)]Bilia Tersa[VAR FF00(0000)]
 [VAR FF00(0001)]Bilia Rossa[VAR FF00(0000)]
 [VAR FF00(0002)]Bilia Blu[VAR FF00(0000)]
-[VAR FF00(3042)]Bilia Verde[VAR FF00(0000)]
+[VAR FF00(0003)]Bilia Verde[VAR FF00(0000)]
 Pietraovale
 Roccianima
 Pietrasolare
@@ -30051,15 +30051,15 @@ Text File : 629
 ~~~~~~~~~~~~~~~
 [VAR FF00(25CE)]Bilia Prisma[VAR FF00(0000)]
 [VAR FF00(25CE)]Bilia Prisma[VAR FF00(0000)]
-[VAR FF00(3043)]Bilia Tersa[VAR FF00(0000)]
+[VAR FF00(0004)]Bilia Tersa[VAR FF00(0000)]
 [VAR FF00(0001)]Bilia Rossa[VAR FF00(0000)]
 [VAR FF00(0002)]Bilia Blu[VAR FF00(0000)]
-[VAR FF00(3042)]Bilia Verde[VAR FF00(0000)]
+[VAR FF00(0003)]Bilia Verde[VAR FF00(0000)]
 [VAR FF00(25CE)]Bilia Prisma[VAR FF00(0000)]
-[VAR FF00(3043)]Bilia Tersa[VAR FF00(0000)]
+[VAR FF00(0004)]Bilia Tersa[VAR FF00(0000)]
 [VAR FF00(0001)]Bilia Rossa[VAR FF00(0000)]
 [VAR FF00(0002)]Bilia Blu[VAR FF00(0000)]
-[VAR FF00(3042)]Bilia Verde[VAR FF00(0000)]
+[VAR FF00(0003)]Bilia Verde[VAR FF00(0000)]
 [VAR FF00(25CE)]Pietraovale[VAR FF00(0000)]
 [VAR FF00(25CE)]Roccianima[VAR FF00(0000)]
 [VAR FF00(25CE)]Pietrasolare[VAR FF00(0000)]
@@ -30403,7 +30403,7 @@ Grazie!\c[VAR 0103(0000,0000)] ha ricevuto da\nte [VAR 0119(0002,0000)]!
 OK, ciao!
 Mi dispiace!\nC’è stato un contrattempo!
 Hai ottenuto\n[VAR 0119(0002,0000)]!
-Per terra c’è una\n[VAR 0119(3042,0000)]!\c[VAR 0103(0001,0000)] disattiva\nla [VAR 0119(3042,0000)]!
+Per terra c’è una\n[VAR 0119(0003,0000)]!\c[VAR 0103(0001,0000)] disattiva\nla [VAR 0119(0003,0000)]!
 Sulla parete c’è una leggera sporgenza.\nVuoi provare a scavare qui?
 Che peccato!\nLa tua Borsa è piena!
 Che peccato!\nLa tua Borsa è piena!
@@ -30418,7 +30418,7 @@ Mh?\nCe l’hai già?
 Ah, capisco. Non hai spazio\nnella tua Borsa.\cAlla prossima, allora!
 OK, ecco qui!\nAbbine cura!\cHai ricevuto [VAR 0119(0002,0000)]\ndi [VAR 0103(0000,0000)]!
 OK, ci vediamo!
-Hai usato la [VAR 0119(3042,0000)]!
+Hai usato la [VAR 0119(0003,0000)]!
 Hai scavato una piccola grotta!\c
 Vuoi creare qui la\ntua Base Segreta?
 Vuoi spostare qui \nla tua Base Segreta?
@@ -30513,27 +30513,27 @@ TESORI
 [VAR 0101(0001,0000)]
 TORNA SU
 CHIUDI
-[VAR 0108(0002,0000)] [VAR 0133(3045,0000)]
+[VAR 0108(0002,0000)] [VAR 0133(0006,0000)]
 Che cosa vuoi fare\ncon [VAR 0119(0002,0000)]?
 Hai buttato [VAR 0119(0002,0000)]!
-[VAR 0119(3042,0000)] è stata messa\nper terra.
+[VAR 0119(0003,0000)] è stata messa\nper terra.
 BUTTA
 ESCI
 POSA
 METTI IN BORSA
 Come dici?\nVuoi chiedermi una cosa?
-[VAR 011D(3044,0000)]?\nFammi pensare...
+[VAR 011D(0005,0000)]?\nFammi pensare...
 Già, credo di sapere la risposta.\cTu cosa risponderesti?
 Mmm...\nChe scelta difficile.\c
-Ah, sì?\n[VAR 011E(3044,0000)]?\cBeh, io direi...\n[VAR 011E(3045,0000)]!\c
-Ah, davvero?\n[VAR 011E(3044,0000)]?\cBeh, io direi...\n[VAR 011E(3045,0000)]!\c... Oh!\nAbbiamo dato la stessa risposta!\c
+Ah, sì?\n[VAR 011E(0005,0000)]?\cBeh, io direi...\n[VAR 011E(0006,0000)]!\c
+Ah, davvero?\n[VAR 011E(0005,0000)]?\cBeh, io direi...\n[VAR 011E(0006,0000)]!\c... Oh!\nAbbiamo dato la stessa risposta!\c
 Bene...
 Ciao, posso farti una domanda?\cVediamo...\c
-Che ne dici? [VAR 011D(3044,0000)]!\nCosa scegli?
+Che ne dici? [VAR 011D(0005,0000)]!\nCosa scegli?
 Ah, non preoccuparti! Non devi\nrispondere se non ti va.\c
 Hai scelto?\cAllora vediamo...\nSe dovessi rispondere io...
-La mia risposta sarebbe\n[VAR 011E(3044,0000)].\cChe cosa hai scelto?\c...\n[VAR 011E(3045,0000)]! OK!\c
-La mia risposta sarebbe\n[VAR 011E(3044,0000)].\cChe cosa hai scelto?\c...\n[VAR 011E(3045,0000)]! OK!\cAh, ecco. La stessa cosa\nche ho scelto io!\c
+La mia risposta sarebbe\n[VAR 011E(0005,0000)].\cChe cosa hai scelto?\c...\n[VAR 011E(0006,0000)]! OK!\c
+La mia risposta sarebbe\n[VAR 011E(0005,0000)].\cChe cosa hai scelto?\c...\n[VAR 011E(0006,0000)]! OK!\cAh, ecco. La stessa cosa\nche ho scelto io!\c
 Bene...
 Grazie per aver risposto!\cAlla prossima!\c
                
@@ -30541,18 +30541,18 @@ Grazie per aver risposto!\cAlla prossima!\c
                               
                         
 Come dici? Ah, vuoi\nchiedermi qualcosa?
-[VAR 011D(3044,0000)]?\nBeh, fammi pensare...
+[VAR 011D(0005,0000)]?\nBeh, fammi pensare...
 Sì, ho deciso!\cSe dovessi decidere tu,\nche cosa sceglieresti?
 Non lo so...\nNon mi so decidere.\c
-Davvero?\n[VAR 011E(3044,0000)]?\cLa mia risposta sarebbe...\n[VAR 011E(3045,0000)]!\c
-Davvero?\n[VAR 011E(3044,0000)]?\cLa mia risposta sarebbe...\n[VAR 011E(3045,0000)]!\c... Ah!\nÈ la stessa risposta!\c
+Davvero?\n[VAR 011E(0005,0000)]?\cLa mia risposta sarebbe...\n[VAR 011E(0006,0000)]!\c
+Davvero?\n[VAR 011E(0005,0000)]?\cLa mia risposta sarebbe...\n[VAR 011E(0006,0000)]!\c... Ah!\nÈ la stessa risposta!\c
 Bene...
 Ciao, posso chiederti una cosa?\cVediamo...\c
-Che te ne pare? [VAR 011D(3044,0000)]!\nQuale risposta scegli tra queste?
+Che te ne pare? [VAR 011D(0005,0000)]!\nQuale risposta scegli tra queste?
 Non ti preoccupare! Non devi\nrispondere se non ti va.\c
 Hai deciso?\cBeh, fammi pensare...\nSe dovessi rispondere io...
-[VAR 011E(3044,0000)], magari?\cChe cosa hai scelto?\c...\n[VAR 011E(3045,0000)]! OK!\c
-[VAR 011E(3044,0000)], magari?\cChe cosa hai scelto?\c...\n[VAR 011E(3045,0000)]! OK!\cAh, bene.\nÈ quello che ho risposto anch’io!\c
+[VAR 011E(0005,0000)], magari?\cChe cosa hai scelto?\c...\n[VAR 011E(0006,0000)]! OK!\c
+[VAR 011E(0005,0000)], magari?\cChe cosa hai scelto?\c...\n[VAR 011E(0006,0000)]! OK!\cAh, bene.\nÈ quello che ho risposto anch’io!\c
 Eh sì...
 Grazie per aver risposto!\cAlla prossima!\c
 ~~~~~~~~~~~~~~~
@@ -30565,14 +30565,14 @@ Text File : 635
    
     
     
-[VAR 011C(0002,0000)][VAR 0201(304E)]\c[VAR 0103(0000,0000)] ti ha contattato.
+[VAR 011C(0002,0000)][VAR 0201(000F)]\c[VAR 0103(0000,0000)] ti ha contattato.
 Il contatto è stato interrotto.
 In attesa di risposta da [VAR 0103(0000,0000)].
 Il contatto è terminato.
 Ti è stato offerto di vedere la Teca\nAllenatore di [VAR 0103(0000,0000)].\cVuoi far vedere la tua\nTeca Allenatore?
-Questa è la Teca Allenatore di\n[VAR 0103(0000,0000)], che vive qui:\c[VAR 0125(3043,0000)],\n[VAR 0124(3042,0000)].
-Questa è la Teca Allenatore di\n[VAR 0103(0000,0000)], che vive qui:\c[VAR 0124(3042,0000)].
-Questa è la Teca Allenatore di\n[VAR 0103(0000,0000)], che vive qui:\c[VAR 0125(3043,0000)].
+Questa è la Teca Allenatore di\n[VAR 0103(0000,0000)], che vive qui:\c[VAR 0125(0004,0000)],\n[VAR 0124(0003,0000)].
+Questa è la Teca Allenatore di\n[VAR 0103(0000,0000)], che vive qui:\c[VAR 0124(0003,0000)].
+Questa è la Teca Allenatore di\n[VAR 0103(0000,0000)], che vive qui:\c[VAR 0125(0004,0000)].
 Questa è la Teca Allenatore di\n[VAR 0103(0000,0000)].
 Attendi che l’altro giocatore finisca.
 Hai rifiutato l’offerta.
@@ -30595,7 +30595,7 @@ Hai rifiutato l’offerta.
 Si gioca a Girauovo!
 Hai rifiutato l’offerta.
 Non hai un Uovo.\nL’invito è stato rifiutato.
-[VAR 011C(0002,0000)][VAR 0201(304E)]\cSono [VAR 0103(0000,0000)]! Che cosa vuoi fare?
+[VAR 011C(0002,0000)][VAR 0201(000F)]\cSono [VAR 0103(0000,0000)]! Che cosa vuoi fare?
 Scusa ma ho qualcos’altro da\nfare. Sarà per la prossima volta!
 Vuoi fare qualcos’altro?
 L’Allenatore ha da fare.
@@ -30655,7 +30655,7 @@ Giocare a Girauovo è divertentissimo!
 Ehi, fermati là!
 Il mio Uovo è favoloso!
 Sì!\nHo ottenuto l’Uovo che volevo!
-[VAR 011C(0002,0000)][VAR 0201(304E)]\cCiao, sono [VAR 0103(0000,0000)]!\nVuoi fare qualcosa?
+[VAR 011C(0002,0000)][VAR 0201(000F)]\cCiao, sono [VAR 0103(0000,0000)]!\nVuoi fare qualcosa?
 Oh, sono spiacente, ma ho altro\nda fare.\cUn’altra volta, OK?
 Vuoi fare qualcos’altro?
 L’Allenatore ha da fare.
@@ -30787,10 +30787,10 @@ Oh, aspetta un secondo!\nNon hai più posto!
 Questa non è la Bilia che ho chiesto!
 Mmm... No, questa Bilia non è\nabbastanza grande. 
 Hai ottenuto [VAR 0119(0002,0000)]!
-Hai ottenuto una [VAR 0119(0002,0000)]\ndi grandezza [VAR 0133(3045,0000)].
+Hai ottenuto una [VAR 0119(0002,0000)]\ndi grandezza [VAR 0133(0006,0000)].
 Ti serve altro?
 Ci vediamo, allora!
-Mi dai [VAR 0119(0002,0000)] in\ncambio di una [VAR 0119(3043,0000)]?
+Mi dai [VAR 0119(0002,0000)] in\ncambio di una [VAR 0119(0004,0000)]?
 Va bene!\nFacciamo lo scambio!
 Oh, aspetta un momento! Non hai\npiù spazio per altre Bilie!
 RICEVI TRAPPOLA
@@ -30805,7 +30805,7 @@ Oggetti\ndisponibili
 ESCI
 Bilia necessaria
 Bilia offerta
-[VAR 0119(0002,0000)] [VAR 0133(3045,0000)]
+[VAR 0119(0002,0000)] [VAR 0133(0006,0000)]
 NON IN VENDITA
 Hai qualche tesoro? In cambio\nti darò qualche Bilia.
 DAI TESORI
@@ -30939,10 +30939,10 @@ Individua le cose nascoste\nnei corridoi sotterranei.
 Spegni il PC.
 Base di [VAR 0101(0001,0000)]
 Bandiere ottenute: 
-[VAR 0137(3045,0000)]
+[VAR 0137(0006,0000)]
 Bandiere più recenti:
 B. di [VAR 0101(0000,0000)] 
-ID: [VAR 0136(3044,0000)]
+ID: [VAR 0136(0005,0000)]
          
          
         
@@ -30994,7 +30994,7 @@ LIVELLO
 ID
 :
 [VAR 0101(0000,0000)]
-[VAR 0136(3045,0000)]
+[VAR 0136(0006,0000)]
 PUNTEGGIO
 Nº di persone incontrate:
 Nº di oggetti dati:
@@ -31002,7 +31002,7 @@ Nº di Bandiere ottenute:
 Nº di Bilie trovate:
 Nº di Fossili trovati:
 Nº di Trappole attivate:
-[VAR 0139(3045,0000)]
+[VAR 0139(0006,0000)]
  
  
  
@@ -31021,20 +31021,20 @@ Bandiera di Platino
 Bandiera di Platino
 Bandiera di Platino
 Bandiera di Platino
-Qui c’è scritto qualcosa...\cPunteggio attuale:\n[VAR 0139(3045,0000)]
-Qui c’è scritto qualcosa...\cNumero di persone incontrate\nfinora nei Sotterranei: [VAR 0137(3045,0000)]
-Qui c’è scritto qualcosa...\cNumero di oggetti dati in\nregalo finora: [VAR 0137(3045,0000)]
-Qui c’è scritto qualcosa...\cNumero di Bandiere della\nBase Segreta ottenute finora: [VAR 0137(3045,0000)]
-Qui c’è scritto qualcosa...\cNumero di Bilie scoperte\nfinora: [VAR 0137(3045,0000)]
-Qui c’è scritto qualcosa...\cNumero di Fossili scoperti finora:\n[VAR 0137(3045,0000)]
-Qui c’è scritto qualcosa...\cNumero di volte in cui qualcuno ha\nattivato le mie Trappole: [VAR 0137(3045,0000)]
-Qui c’è scritto qualcosa...\cNumero di volte in cui ho\nattivato Trappole: [VAR 0137(3045,0000)]
-Qui c’è scritto qualcosa...\cNumero di volte in cui qualcuno mi ha\naiutato nei Sotterranei: [VAR 0137(3045,0000)]
-Qui c’è scritto qualcosa...\cNumero di doni ricevuti\nnei Sotterranei: [VAR 0137(3045,0000)]
-Qui c’è scritto qualcosa...\cQuante volte mi hanno preso la\nBandiera dalla Base Segreta: [VAR 0137(3045,0000)]
-Qui c’è scritto qualcosa...\cNumero di Bandiere recuperate:\n[VAR 0137(3045,0000)]
-Qui c’è scritto qualcosa...\cNumero di volte in cui la Base\nSegreta è stata spostata: [VAR 0137(3045,0000)]
-Qui c’è scritto qualcosa...\cNumero di Bandiere catturate\nregistrate nel PC: [VAR 0137(3045,0000)]
+Qui c’è scritto qualcosa...\cPunteggio attuale:\n[VAR 0139(0006,0000)]
+Qui c’è scritto qualcosa...\cNumero di persone incontrate\nfinora nei Sotterranei: [VAR 0137(0006,0000)]
+Qui c’è scritto qualcosa...\cNumero di oggetti dati in\nregalo finora: [VAR 0137(0006,0000)]
+Qui c’è scritto qualcosa...\cNumero di Bandiere della\nBase Segreta ottenute finora: [VAR 0137(0006,0000)]
+Qui c’è scritto qualcosa...\cNumero di Bilie scoperte\nfinora: [VAR 0137(0006,0000)]
+Qui c’è scritto qualcosa...\cNumero di Fossili scoperti finora:\n[VAR 0137(0006,0000)]
+Qui c’è scritto qualcosa...\cNumero di volte in cui qualcuno ha\nattivato le mie Trappole: [VAR 0137(0006,0000)]
+Qui c’è scritto qualcosa...\cNumero di volte in cui ho\nattivato Trappole: [VAR 0137(0006,0000)]
+Qui c’è scritto qualcosa...\cNumero di volte in cui qualcuno mi ha\naiutato nei Sotterranei: [VAR 0137(0006,0000)]
+Qui c’è scritto qualcosa...\cNumero di doni ricevuti\nnei Sotterranei: [VAR 0137(0006,0000)]
+Qui c’è scritto qualcosa...\cQuante volte mi hanno preso la\nBandiera dalla Base Segreta: [VAR 0137(0006,0000)]
+Qui c’è scritto qualcosa...\cNumero di Bandiere recuperate:\n[VAR 0137(0006,0000)]
+Qui c’è scritto qualcosa...\cNumero di volte in cui la Base\nSegreta è stata spostata: [VAR 0137(0006,0000)]
+Qui c’è scritto qualcosa...\cNumero di Bandiere catturate\nregistrate nel PC: [VAR 0137(0006,0000)]
 ~~~~~~~~~~~~~~~
 Text File : 641
 ~~~~~~~~~~~~~~~
@@ -31073,8 +31073,8 @@ Vuoi insegnare [VAR 0106(0001,0000)]?
 Vuoi rinunciare ad insegnare\nla nuova mossa a [VAR 0101(0000,0000)]?
 [VAR 0101(0000,0000)] impara \n[VAR 0106(0001,0000)]!\c
 [VAR 0101(0000,0000)] vorrebbe imparare\n[VAR 0106(0001,0000)]!\cMa [VAR 0101(0000,0000)] conosce già\nquattro mosse.\cVuoi cancellare una mossa e\nsostituirla con [VAR 0106(0001,0000)]?
-1[VAR 0201(3053)], 2[VAR 0201(3053)] e[VAR 0201(3053)]... [VAR 0201(3053)]... puf![VAR 0202(3042)][VAR 0202(3044)]\c[VAR 0101(0000,0000)] scorda\n[VAR 0106(0001,0000)]!\cAl suo posto...\c
-[VAR 0101(0000,0000)] impara\n[VAR 0106(0001,0000)]![VAR 0202(3043)][VAR 0202(0002)]\c
+1[VAR 0201(3053)], 2[VAR 0201(3053)] e[VAR 0201(3053)]... [VAR 0201(3053)]... puf![VAR 0202(0003)][VAR 0202(0005)]\c[VAR 0101(0000,0000)] scorda\n[VAR 0106(0001,0000)]!\cAl suo posto...\c
+[VAR 0101(0000,0000)] impara\n[VAR 0106(0001,0000)]![VAR 0202(0004)][VAR 0202(0002)]\c
 Vuoi bloccare l’apprendimento\ndi [VAR 0106(0001,0000)]?
 [VAR 0101(0000,0000)] non ha imparato\n[VAR 0106(0001,0000)]!\c
                               
@@ -31084,8 +31084,8 @@ La mossa da far ricordare è\n[VAR 0106(0001,0000)]?
 Vuoi rinunciare a far ricordare\nla mossa a [VAR 0101(0000,0000)]?
 [VAR 0101(0000,0000)] ricorda l’uso di\n[VAR 0106(0001,0000)] che aveva scordato!\c
 [VAR 0101(0000,0000)] vorrebbe ricordare\nl’uso di [VAR 0106(0001,0000)]!\cMa [VAR 0101(0000,0000)] conosce già\nquattro mosse.\cVuoi cancellare una mossa e\nsostituirla con [VAR 0106(0001,0000)]?
-1[VAR 0201(3053)], 2[VAR 0201(3053)] e[VAR 0201(3053)]... [VAR 0201(3053)]... puf![VAR 0202(3042)][VAR 0202(3044)]\c[VAR 0101(0000,0000)] scorda\n[VAR 0106(0001,0000)]!\cAl suo posto...\c
-[VAR 0101(0000,0000)] ricorda la mossa\n[VAR 0106(0001,0000)]![VAR 0202(3043)][VAR 0202(0002)]\c
+1[VAR 0201(3053)], 2[VAR 0201(3053)] e[VAR 0201(3053)]... [VAR 0201(3053)]... puf![VAR 0202(0003)][VAR 0202(0005)]\c[VAR 0101(0000,0000)] scorda\n[VAR 0106(0001,0000)]!\cAl suo posto...\c
+[VAR 0101(0000,0000)] ricorda la mossa\n[VAR 0106(0001,0000)]![VAR 0202(0004)][VAR 0202(0002)]\c
 Vuoi rinunciare a far ricordare\nl’uso di [VAR 0106(0001,0000)] al Pokémon?
 [VAR 0101(0000,0000)] non ricorderà l’uso di\n[VAR 0106(0001,0000)]!\c
 In cambio [VAR 0103(0002,0000)] consegna\nuna Squama Cuore.\c
@@ -32581,29 +32581,29 @@ PERSONE\nPIAZZA
 ULTIME NOTIZIE
                                                                           
 [VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: [VAR FF00(0002)][VAR 0103(0001,0000)][VAR FF00(0000)] sta cercando giocatori... C’è posto ancora per [VAR FF00(0001)][VAR 0132(0002,0000)][VAR FF00(0000)]...
-[VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: [VAR FF00(0002)] [VAR 0103(0001,0000)][VAR FF00(0000)], [VAR FF00(3042)][VAR 0103(0002,0000)][VAR FF00(0000)], [VAR FF00(3043)][VAR 0103(3042,0000)][VAR FF00(0000)] e [VAR FF00(3044)][VAR 0103(3043,0000)][VAR FF00(0000)] stanno giocando...
-[VAR FF00(0002)][VAR 0103(0000,0000)][VAR FF00(0000)] e [VAR FF00(3042)][VAR 0103(0001,0000)][VAR FF00(0000)] stanno chattando...
-[VAR FF00(0002)][VAR 0103(0000,0000)][VAR FF00(0000)] ha condiviso [VAR FF00(0001)][VAR 0602(0002,0000)][VAR FF00(0000)] con [VAR FF00(3042)][VAR 0103(0001,0000)][VAR FF00(0000)]...
+[VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: [VAR FF00(0002)] [VAR 0103(0001,0000)][VAR FF00(0000)], [VAR FF00(0003)][VAR 0103(0002,0000)][VAR FF00(0000)], [VAR FF00(0004)][VAR 0103(0003,0000)][VAR FF00(0000)] e [VAR FF00(0005)][VAR 0103(0004,0000)][VAR FF00(0000)] stanno giocando...
+[VAR FF00(0002)][VAR 0103(0000,0000)][VAR FF00(0000)] e [VAR FF00(0003)][VAR 0103(0001,0000)][VAR FF00(0000)] stanno chattando...
+[VAR FF00(0002)][VAR 0103(0000,0000)][VAR FF00(0000)] ha condiviso [VAR FF00(0001)][VAR 0602(0002,0000)][VAR FF00(0000)] con [VAR FF00(0003)][VAR 0103(0001,0000)][VAR FF00(0000)]...
 [VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: [VAR FF00(0002)][VAR 0103(0001,0000)] [VAR FF00(0000)]sta giocando... C’è ancora posto per [VAR FF00(0001)][VAR 0132(0002,0000)][VAR FF00(0000)]...
-[VAR FF00(0002)][VAR 0103(0000,0000)][VAR FF00(0000)], [VAR FF00(3042)][VAR 0103(0001,0000)][VAR FF00(0000)], [VAR FF00(3043)][VAR 0103(0002,0000)][VAR FF00(0000)] e [VAR FF00(3044)][VAR 0103(3042,0000)][VAR FF00(0000)] stanno controllando [VAR FF00(0001)][VAR 0600(3043,0000)][VAR FF00(0000)]...
-[VAR FF00(0002)][VAR 0103(0000,0000)][VAR FF00(0000)], [VAR FF00(3042)][VAR 0103(0001,0000)][VAR FF00(0000)] e [VAR FF00(3043)][VAR 0103(0002,0000)][VAR FF00(0000)] stanno controllando [VAR FF00(0001)][VAR 0600(3042,0000)][VAR FF00(0000)]...
-[VAR FF00(0002)][VAR 0103(0000,0000)][VAR FF00(0000)] e [VAR FF00(3042)][VAR 0103(0001,0000)][VAR FF00(0000)] stanno controllando [VAR FF00(0001)][VAR 0600(0002,0000)][VAR FF00(0000)]...
+[VAR FF00(0002)][VAR 0103(0000,0000)][VAR FF00(0000)], [VAR FF00(0003)][VAR 0103(0001,0000)][VAR FF00(0000)], [VAR FF00(0004)][VAR 0103(0002,0000)][VAR FF00(0000)] e [VAR FF00(0005)][VAR 0103(0003,0000)][VAR FF00(0000)] stanno controllando [VAR FF00(0001)][VAR 0600(0004,0000)][VAR FF00(0000)]...
+[VAR FF00(0002)][VAR 0103(0000,0000)][VAR FF00(0000)], [VAR FF00(0003)][VAR 0103(0001,0000)][VAR FF00(0000)] e [VAR FF00(0004)][VAR 0103(0002,0000)][VAR FF00(0000)] stanno controllando [VAR FF00(0001)][VAR 0600(0003,0000)][VAR FF00(0000)]...
+[VAR FF00(0002)][VAR 0103(0000,0000)][VAR FF00(0000)] e [VAR FF00(0003)][VAR 0103(0001,0000)][VAR FF00(0000)] stanno controllando [VAR FF00(0001)][VAR 0600(0002,0000)][VAR FF00(0000)]...
 [VAR FF00(0002)][VAR 0103(0000,0000)][VAR FF00(0000)] sta controllando [VAR FF00(0001)][VAR 0600(0001,0000)][VAR FF00(0000)]...
 [VAR FF00(0002)][VAR 0103(0000,0000)][VAR FF00(0000)] sta controllando [VAR FF00(0001)][VAR 0600(0001,0000)][VAR FF00(0000)]...
 Fra poco si svolgerà un fantastico evento: [VAR FF00(0001)][VAR 0601(0000,0000)][VAR FF00(0000)]!
 Fra poco si svolgerà un fantastico evento: [VAR FF00(0001)][VAR 0601(0000,0000)][VAR FF00(0000)]!
 La Piazza Wi-Fi sta per chiudere. Torna presto a trovarci.
-[VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: [VAR FF00(0002)][VAR 0103(0001,0000)][VAR FF00(0000)], [VAR FF00(3042)][VAR 0103(0002,0000)][VAR FF00(0000)] e [VAR FF00(3043)][VAR 0103(3042,0000)][VAR FF00(0000)] stanno giocando...
-[VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: [VAR FF00(0002)][VAR 0103(0001,0000)][VAR FF00(0000)] e [VAR FF00(3042)][VAR 0103(0002,0000)][VAR FF00(0000)] stanno giocando...
+[VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: [VAR FF00(0002)][VAR 0103(0001,0000)][VAR FF00(0000)], [VAR FF00(0003)][VAR 0103(0002,0000)][VAR FF00(0000)] e [VAR FF00(0004)][VAR 0103(0003,0000)][VAR FF00(0000)] stanno giocando...
+[VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: [VAR FF00(0002)][VAR 0103(0001,0000)][VAR FF00(0000)] e [VAR FF00(0003)][VAR 0103(0002,0000)][VAR FF00(0000)] stanno giocando...
 Fra poco si svolgerà un fantastico evento: [VAR FF00(0001)][VAR 0601(0000,0000)][VAR FF00(0000)]!
 A quanto pare nella Piazza è arrivato [VAR FF00(0001)]un visitatore molto speciale[VAR FF00(0000)]...
 [VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: ha vinto [VAR FF00(0002)][VAR 0103(0001,0000)][VAR FF00(0000)]...
-[VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: [VAR FF00(0002)][VAR 0103(0001,0000)][VAR FF00(0000)], [VAR FF00(3042)][VAR 0103(0002,0000)][VAR FF00(0000)], [VAR FF00(3043)][VAR 0103(3042,0000)][VAR FF00(0000)] e [VAR FF00(3044)][VAR 0103(3043,0000)][VAR FF00(0000)] hanno fatto scoppiare almeno dieci palloncini...
-[VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: hanno vinto [VAR FF00(0002)][VAR 0103(0001,0000)][VAR FF00(0000)] e [VAR FF00(3042)][VAR 0103(0002,0000)][VAR FF00(0000)]...
-[VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: hanno vinto [VAR FF00(0002)][VAR 0103(0001,0000)][VAR FF00(0000)], [VAR FF00(3042)][VAR 0103(0002,0000)][VAR FF00(0000)] e [VAR FF00(3043)][VAR 0103(3042,0000)][VAR FF00(0000)]...
-[VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: hanno vinto [VAR FF00(0002)][VAR 0103(0001,0000)][VAR FF00(0000)], [VAR FF00(3042)][VAR 0103(0002,0000)][VAR FF00(0000)], [VAR FF00(3043)][VAR 0103(3042,0000)][VAR FF00(0000)] e [VAR FF00(3044)][VAR 0103(3043,0000)][VAR FF00(0000)]...
-[VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: [VAR FF00(0002)][VAR 0103(0001,0000)][VAR FF00(0000)] e [VAR FF00(3042)][VAR 0103(0002,0000)][VAR FF00(0000)] hanno fatto scoppiare almeno dieci palloncini...
-[VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: [VAR FF00(0002)][VAR 0103(0001,0000)][VAR FF00(0000)], [VAR FF00(3042)][VAR 0103(0002,0000)][VAR FF00(0000)] e [VAR FF00(3043)][VAR 0103(3042,0000)][VAR FF00(0000)] hanno fatto scoppiare almeno dieci palloncini...
+[VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: [VAR FF00(0002)][VAR 0103(0001,0000)][VAR FF00(0000)], [VAR FF00(0003)][VAR 0103(0002,0000)][VAR FF00(0000)], [VAR FF00(0004)][VAR 0103(0003,0000)][VAR FF00(0000)] e [VAR FF00(0005)][VAR 0103(0004,0000)][VAR FF00(0000)] hanno fatto scoppiare almeno dieci palloncini...
+[VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: hanno vinto [VAR FF00(0002)][VAR 0103(0001,0000)][VAR FF00(0000)] e [VAR FF00(0003)][VAR 0103(0002,0000)][VAR FF00(0000)]...
+[VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: hanno vinto [VAR FF00(0002)][VAR 0103(0001,0000)][VAR FF00(0000)], [VAR FF00(0003)][VAR 0103(0002,0000)][VAR FF00(0000)] e [VAR FF00(0004)][VAR 0103(0003,0000)][VAR FF00(0000)]...
+[VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: hanno vinto [VAR FF00(0002)][VAR 0103(0001,0000)][VAR FF00(0000)], [VAR FF00(0003)][VAR 0103(0002,0000)][VAR FF00(0000)], [VAR FF00(0004)][VAR 0103(0003,0000)][VAR FF00(0000)] e [VAR FF00(0005)][VAR 0103(0004,0000)][VAR FF00(0000)]...
+[VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: [VAR FF00(0002)][VAR 0103(0001,0000)][VAR FF00(0000)] e [VAR FF00(0003)][VAR 0103(0002,0000)][VAR FF00(0000)] hanno fatto scoppiare almeno dieci palloncini...
+[VAR FF00(0001)][VAR 0600(0000,0000)][VAR FF00(0000)]: [VAR FF00(0002)][VAR 0103(0001,0000)][VAR FF00(0000)], [VAR FF00(0003)][VAR 0103(0002,0000)][VAR FF00(0000)] e [VAR FF00(0004)][VAR 0103(0003,0000)][VAR FF00(0000)] hanno fatto scoppiare almeno dieci palloncini...
 ~~~~~~~~~~~~~~~
 Text File : 654
 ~~~~~~~~~~~~~~~
@@ -33903,12 +33903,12 @@ ESCI
 [VAR 0100(0001,0000)]
 L. [VAR 0134(0002,0000)]
 STRUM.
-[VAR 0108(3042,0000)]
+[VAR 0108(0003,0000)]
 OFFERENTE
-[VAR 0103(3043,0000)]
+[VAR 0103(0004,0000)]
 POKéMON CHIESTO
-[VAR 0100(3044,0000)]
-Dal L. [VAR 0134(3045,0000)] in su
+[VAR 0100(0005,0000)]
+Dal L. [VAR 0134(0006,0000)] in su
 Qualsiasi livello
 RIPRENDI
 LASCIA
@@ -33935,8 +33935,8 @@ CHIESTO
      
      
 ORIG. ALLENATORE
-[VAR 0124(3047,0000)]
-[VAR 0125(3048,0000)]
+[VAR 0124(0008,0000)]
+[VAR 0125(0009,0000)]
         
    
      
@@ -33958,7 +33958,7 @@ CHIESTO
      
 OFFRI POKéMON
      
-L. [VAR 0134(3042,0000)]
+L. [VAR 0134(0003,0000)]
 ESCI
 ABC
 DEF
@@ -34141,7 +34141,7 @@ MOTTO DI [VAR 0103(0000,0000)]
 [VAR 011C(0000,0000)]
 [VAR 011C(0001,0000)]
 [VAR 011C(0002,0000)]
-[VAR 011C(3042,0000)]
+[VAR 011C(0003,0000)]
 Pulsante X: cambia pagina.
 Platin
 Stai per uscire dalla Piazza Wi-Fi\ne tornare al Centro Pokémon.\c
@@ -34411,13 +34411,13 @@ MINIGIOCHI PIAZZA COMPLETATI
 CODICE DI [VAR 0103(0000,0000)]
 Scambiando il codice amico\ncon altri giocatori, puoi fare\nscambi e lottare con loro\ncon la Nintendo WFC.
 Per ottenere il codice amico,\ncollegati alla Nintendo WFC.
-Verrà registrato il seguente codice:\n[VAR 0135(0001,0000)] [VAR 0135(0002,0000)] [VAR 0135(3042,0000)] [VAR 0103(0000,0000)].
-Il codice amico [VAR 0135(0001,0000)] [VAR 0135(0002,0000)] [VAR 0135(3042,0000)]\nè errato.
-[VAR 0135(0001,0000)] [VAR 0135(0002,0000)] [VAR 0135(3042,0000)]
+Verrà registrato il seguente codice:\n[VAR 0135(0001,0000)] [VAR 0135(0002,0000)] [VAR 0135(0003,0000)] [VAR 0103(0000,0000)].
+Il codice amico [VAR 0135(0001,0000)] [VAR 0135(0002,0000)] [VAR 0135(0003,0000)]\nè errato.
+[VAR 0135(0001,0000)] [VAR 0135(0002,0000)] [VAR 0135(0003,0000)]
 [VAR 0103(0000,0000)] verrà cancellato.\nConfermi?
 La tua lista amici è piena!
 Quel codice amico è già stato\nregistrato.
-Il codice amico di [VAR 0103(0000,0000)] è:\n[VAR 0135(0001,0000)] [VAR 0135(0002,0000)] [VAR 0135(3042,0000)]
+Il codice amico di [VAR 0103(0000,0000)] è:\n[VAR 0135(0001,0000)] [VAR 0135(0002,0000)] [VAR 0135(0003,0000)]
 CODICE AMICO
 Vuoi registrare [VAR 0103(0000,0000)] sul tuo\nBlocco Amici?
 La tua lista amici è piena.\nVuoi cancellare qualcuno?
