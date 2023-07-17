@@ -65,7 +65,7 @@ function remap3DSSpecialCharacters (s: string) {
       .replaceAll('\uE08A', 'ᵉʳ') // Superscript er
       .replaceAll('\uE08B', 'ʳᵉ') // Superscript re
       .replaceAll('\uE08C', 'ʳ') // Superscript r
-      .replaceAll('\uE092', '♥') // Halfwidth eighth note
+      .replaceAll('\uE092', '♥') // Halfwidth black heart suit
       .replaceAll('\uE09A', '♪') // Halfwidth eighth note
       .replaceAll('\uE0A6', 'ᵉ') // Superscript e
 
@@ -84,7 +84,8 @@ function remap3DSSpecialCharacters (s: string) {
 
 // Switch special characters
 function remapSwitchSpecialCharacters(s: string) {
-  return s.search(/[\uE300-\uE31C]/u) === -1 ? s : (s
+  return s.search(/[\uE104\uE300-\uE31C]/u) === -1 ? s : (s
+    .replaceAll('\uE104', '✨︎') // BDSP sparkles
     .replaceAll('\uE300', '$') // Pokémon Dollar
     .replaceAll('\uE301', 'A') // Unown A
     .replaceAll('\uE302', 'B') // Unown B
