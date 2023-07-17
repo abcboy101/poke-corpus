@@ -78,18 +78,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
     .then(preprocessString);
   }
 
-  let re: RegExp | null = null;
-  try {
-    if (params.regex) {
-      re = new RegExp(params.query, params.caseInsensitive ? 'ui' : 'u');
-    }
-  }
-  catch (err) {
-    console.error(err);
-    notify('regex');
-    return;
-  }
-
+  const re = params.regex ? new RegExp(params.query, params.caseInsensitive ? 'ui' : 'u') : null;
   const matchCondition = (line: string): boolean => {
     return (params.regex && re !== null && line.match(re) !== null)
       || (!params.regex && !params.caseInsensitive && line.includes(params.query))

@@ -50,6 +50,17 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
     const params = message.data;
     updateStatusInProgress('loading', 0, 0, 0);
 
+    try {
+      if (params.regex) {
+        new RegExp(params.query, params.caseInsensitive ? 'ui' : 'u');
+      }
+    }
+    catch (err) {
+      console.error(err);
+      updateStatusComplete('regex');
+      return;
+    }
+
     // Load files
     let taskCount = 0;
     const taskList: SearchTask[] = [];
