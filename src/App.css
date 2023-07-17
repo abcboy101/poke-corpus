@@ -165,7 +165,7 @@ input[type=text]:disabled, select:disabled, input[type=submit]:disabled, input[t
   opacity: 0.7;
 }
 
-input[type=submit] {
+.submit {
   min-width: 4em;
 }
 

@@ -157,52 +157,172 @@ function SearchLanguages({languages, setLanguages}: {languages: readonly string[
   )
 }
 
-const defaultCollections = Object.keys(corpus.collections).filter((value) => corpus.collections[value as keyof typeof corpus.collections].structured).join(',');
-const defaultLanguages = corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0])).join(',') || corpus.languages.filter((value) => value.startsWith('en')).join(',');
+const defaultParams: SearchParams = {
+  query: '',
+  regex: false,
+  caseInsensitive: true,
+  common: true,
+  script: true,
+  collections: Object.keys(corpus.collections).filter((value) => corpus.collections[value as keyof typeof corpus.collections].structured),
+  languages: corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0])) || corpus.languages.filter((value) => value.startsWith('en'))
+}
+
+function SearchForm({status, postToWorker, terminateWorker}: {status: Status, postToWorker: (params: SearchParams) => void, terminateWorker: () => void}) {
+  const { t } = useTranslation();
+  const [query, setQuery] = useState(defaultParams.query);
+  const [regex, setRegex] = useState(defaultParams.regex);
+  const [caseInsensitive, setCaseInsensitive] = useState(defaultParams.caseInsensitive);
+  const [common, setCommon] = useState(defaultParams.common);
+  const [script, setScript] = useState(defaultParams.script);
+  const [collections, setCollections] = useState(defaultParams.collections);
+  const [languages, setLanguages] = useState(defaultParams.languages);
+
+  const onHashChange = () => {
+    const params: URLSearchParams = new URLSearchParams(window.location.hash.substring(1));
+
+    const newQuery = params.get('query');
+    if (newQuery !== null) {
+      setQuery(newQuery);
+    }
+
+    const newRegex = params.get('regex');
+    if (newRegex !== null) {
+      setRegex(Boolean(newRegex));
+    }
+
+    const newCaseInsensitive = params.get('caseInsensitive');
+    if (newCaseInsensitive !== null) {
+      setCaseInsensitive(Boolean(newCaseInsensitive));
+    }
+
+    const newScript = params.get('script');
+    if (newScript !== null) {
+      setScript(Boolean(newScript));
+    }
+
+    const newCollections = params.get('collections');
+    if (newCollections !== null) {
+      setCollections(newCollections.split(',').filter((value) => Object.keys(corpus.collections).includes(value)));
+    }
+
+    const newLanguages = params.get('languages');
+    if (newLanguages !== null) {
+      setLanguages(newLanguages.split(',').filter((value) => corpus.languages.includes(value)));
+    }
+  };
+
+  useEffect(() => {
+    // Initial page load
+    if (window.location.hash) {
+      onHashChange();
+    }
+
+    // Changes while on page
+    window.addEventListener('hashchange', onHashChange);
+    return () => {
+      window.removeEventListener('hashchange', onHashChange);
+    };
+  }, []);
+
+  const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
+    e.preventDefault();
+    window.location.hash = new URLSearchParams({
+      query: query,
+      regex: regex.toString(),
+      caseInsensitive: caseInsensitive.toString(),
+      common: common.toString(),
+      script: script.toString(),
+      collections: collections.join(','),
+      languages: languages.join(','),
+    }).toString();
+    postToWorker({
+      query: query,
+      regex: regex,
+      caseInsensitive: caseInsensitive,
+      common: common,
+      script: script,
+      collections: collections,
+      languages: languages,
+    });
+  };
+
+  const onCancel: MouseEventHandler<HTMLButtonElement> = (e) => {
+    e.preventDefault();
+    terminateWorker();
+  };
+
+  const clearCache: MouseEventHandler<HTMLButtonElement> = (e) => {
+    e.preventDefault();
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.ready.then(registration => registration.unregister());
+    }
+    if (indexedDB){
+      try {
+        indexedDB.databases().then(databases => databases.filter((db) => db.name !== undefined).forEach((db) => indexedDB.deleteDatabase(db.name as string)));
+      }
+      catch (err) {
+        indexedDB.deleteDatabase('workbox-expiration');
+      }
+    }
+    if (caches) {
+      caches.keys().then((keyList) => {
+        Promise.all(keyList.map((key) => caches.delete(key)))
+      });
+    }
+  };
+
+  return <form className="App-search" onSubmit={onSubmit}>
+    <div className="App-search-bar">
+      <div className="App-search-bar-query">
+        <label htmlFor="query">{t('query')} </label>
+        <input type="text" name="query" id="query" value={query} onChange={e => setQuery(e.target.value)}/>
+        {
+          status !== 'rendering' && (statusInProgress as Status[]).includes(status)
+          ? <button className="submit" onClick={onCancel}>{t('cancel')}</button>
+          : <input className="submit" type="submit" value={t('search')} disabled={query.length === 0 || collections.length === 0 || languages.length === 0}/>
+        }
+      </div>
+      <div className="App-search-bar-group">
+        <div className="App-search-options">
+          <div className="App-search-option">
+            <input type="checkbox" name="regex" id="regex" checked={regex} onChange={e => setRegex(e.target.checked)}/>
+            <label htmlFor="regex">{t('regex')}</label>
+          </div>
+          <div className="App-search-option">
+            <input type="checkbox" name="caseInsensitive" id="caseInsensitive" checked={caseInsensitive} onChange={e => setCaseInsensitive(e.target.checked)}/>
+            <label htmlFor="caseInsensitive">{t('caseInsensitive')}</label>
+          </div>
+          <div className="App-search-option">
+            <input type="checkbox" name="common" id="common" checked={common} onChange={e => setCommon(e.target.checked)}/>
+            <label htmlFor="common">{t('common')}</label>
+          </div>
+          <div className="App-search-option">
+            <input type="checkbox" name="script" id="script" checked={script} onChange={e => setScript(e.target.checked)}/>
+            <label htmlFor="script">{t('script')}</label>
+          </div>
+        </div>
+        <div>
+          <button onClick={clearCache}>{t('clearCache')}</button>
+        </div>
+      </div>
+    </div>
+    <div className="App-search-filters">
+      <SearchCollections collections={collections} setCollections={setCollections}/>
+      <div className="App-search-filters-divider"></div>
+      <SearchLanguages languages={languages} setLanguages={setLanguages}/>
+    </div>
+  </form>
+}
 
 function Search() {
-  const { t } = useTranslation();
   const workerRef: MutableRefObject<Worker | null> = useRef(null);
-  const params: URLSearchParams = new URLSearchParams(window.location.hash.substring(1));
-  const [query, setQuery] = useState(params.get('query') ?? '');
-  const [regex, setRegex] = useState(params.get('regex') === 'true');
-  const [caseInsensitive, setCaseInsensitive] = useState(params.get('caseInsensitive') !== 'false');
-  const [common, setCommon] = useState(params.get('common') !== 'false');
-  const [script, setScript] = useState(params.get('script') !== 'false');
-  const [collections, setCollections] = useState((params.get('collections') ?? defaultCollections).split(',').filter((value) => Object.keys(corpus.collections).includes(value)) as readonly string[])
-  const [languages, setLanguages] = useState((params.get('languages') ?? defaultLanguages).split(',').filter((value) => corpus.languages.includes(value)) as readonly string[])
-
   const [status, setStatus]: [Status, Dispatch<SetStateAction<Status>>] = useState('initial' as Status);
   const [progress, setProgress] = useState(0.0);
   const [results, setResults] = useState([] as readonly SearchResultLines[]);
 
   useEffect(() => {
-    const onHashChange = () => {
-      const params: URLSearchParams = new URLSearchParams(window.location.hash.substring(1));
-      setQuery(params.get('query') ?? '');
-      setRegex(params.get('regex') === 'true');
-      setCaseInsensitive(params.get('caseInsensitive') !== 'false');
-      setScript(params.get('script') !== 'false');
-
-      const newCollections = (params.get('collections') ?? '').split(',').filter((value) => Object.keys(corpus.collections).includes(value));
-      if (collections.length !== newCollections.length || collections.some((value, i) => value !== newCollections[i])) {
-        setCollections(newCollections);
-      }
-
-      const newLanguages = (params.get('languages') ?? '').split(',').filter((value) => corpus.languages.includes(value));
-      if (languages.length !== newLanguages.length || languages.some((value, i) => value !== newLanguages[i])) {
-        setLanguages(newLanguages);
-      }
-    };
-    window.addEventListener('hashchange', onHashChange);
-    return () => {
-      window.removeEventListener('hashchange', onHashChange);
-    };
-  }, [collections, languages]);
-
-  useEffect(() => {
     const onBlur = () => {
-      if (workerRef.current !== null && ['done', 'error'].includes(status)) {
+      if (workerRef.current !== null && !(statusInProgress as Status[]).includes(status)) {
         console.log('Terminating worker!');
         workerRef.current.terminate();
         workerRef.current = null;
@@ -230,28 +350,19 @@ function Search() {
     }
   };
 
-  const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
-    e.preventDefault();
-    setResults([]);
-
-    window.location.hash = new URLSearchParams({
-      query: query,
-      regex: regex.toString(),
-      caseInsensitive: caseInsensitive.toString(),
-      common: common.toString(),
-      script: script.toString(),
-      collections: collections.join(','),
-      languages: languages.join(','),
-    }).toString();
-
-    if ((workerRef.current !== null && !['initial', 'done'].includes(status))) {
+  const terminateWorker = () => {
+    if (workerRef.current !== null) {
       console.log('Terminating worker!');
       workerRef.current.terminate();
       workerRef.current = null;
       setStatus('initial');
       setProgress(0.0);
     }
-    else if (query.length > 0 && collections.length > 0 && languages.length > 0) {
+  }
+
+  const postToWorker = (params: SearchParams) => {
+    setResults([]);
+    if (params.query.length > 0 && params.collections.length > 0 && params.languages.length > 0) {
       if (workerRef.current === null) {
         console.log('Creating new worker...');
         workerRef.current = new Worker(new URL("./searchWorkerManager.ts", import.meta.url));
@@ -259,82 +370,17 @@ function Search() {
       }
       setStatus('waiting');
       setProgress(0.0);
-      const message: SearchParams = {
-        query: query,
-        regex: regex,
-        caseInsensitive: caseInsensitive,
-        common: common,
-        script: script,
-        collections: collections,
-        languages: languages,
-      };
       if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-        console.log(message);
+        console.log(params);
       }
-      workerRef.current.postMessage(message);
+      workerRef.current.postMessage(params);
     }
-  };
-
-  const clearCache: MouseEventHandler<HTMLButtonElement> = (e) => {
-    e.preventDefault();
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.ready.then(registration => registration.unregister());
-    }
-    if (indexedDB){
-      try {
-        indexedDB.databases().then(databases => databases.filter((db) => db.name !== undefined).forEach((db) => indexedDB.deleteDatabase(db.name as string)));
-      }
-      catch (err) {
-        indexedDB.deleteDatabase('workbox-expiration');
-      }
-    }
-    if (caches) {
-      caches.keys().then((keyList) => {
-        Promise.all(keyList.map((key) => caches.delete(key)))
-      });
-    }
-  };
+  }
 
   return (
     <>
-      <form className="App-search" onSubmit={onSubmit}>
-        <div className="App-search-bar">
-          <div className="App-search-bar-query">
-            <label htmlFor="query">{t('query')} </label>
-            <input type="text" name="query" id="query" value={query} onChange={e => setQuery(e.target.value)}/>
-            <input type="submit" value={['initial', 'rendering', 'done'].includes(status) ? t('search') : t('cancel')} disabled={['initial', 'rendering', 'done'].includes(status) && (query.length === 0 || collections.length === 0 || languages.length === 0)}/>
-          </div>
-          <div className="App-search-bar-group">
-            <div className="App-search-options">
-              <div className="App-search-option">
-                <input type="checkbox" name="regex" id="regex" checked={regex} onChange={e => setRegex(e.target.checked)}/>
-                <label htmlFor="regex">{t('regex')}</label>
-              </div>
-              <div className="App-search-option">
-                <input type="checkbox" name="caseInsensitive" id="caseInsensitive" checked={caseInsensitive} onChange={e => setCaseInsensitive(e.target.checked)}/>
-                <label htmlFor="caseInsensitive">{t('caseInsensitive')}</label>
-              </div>
-              <div className="App-search-option">
-                <input type="checkbox" name="common" id="common" checked={common} onChange={e => setCommon(e.target.checked)}/>
-                <label htmlFor="common">{t('common')}</label>
-              </div>
-              <div className="App-search-option">
-                <input type="checkbox" name="script" id="script" checked={script} onChange={e => setScript(e.target.checked)}/>
-                <label htmlFor="script">{t('script')}</label>
-              </div>
-            </div>
-            <div>
-              <button onClick={clearCache}>{t('clearCache')}</button>
-            </div>
-          </div>
-        </div>
-        <div className="App-search-filters">
-          <SearchCollections collections={collections} setCollections={setCollections}/>
-          <div className="App-search-filters-divider"></div>
-          <SearchLanguages languages={languages} setLanguages={setLanguages}/>
-        </div>
-      </form>
-      <Results status={status} progress={progress} results={results}/>
+      <SearchForm status={status} postToWorker={postToWorker} terminateWorker={terminateWorker} />
+      <Results status={status} progress={progress} results={results} />
     </>
   );
 }
