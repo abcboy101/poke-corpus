@@ -43,6 +43,15 @@ function Results({status, progress, results}: {status: Status, progress: number,
   const { t } = useTranslation();
   const filteredResults = results.filter(({lines}) => lines.length > 0);
   const headers = filteredResults.map(({collection, file}) => t('tableHeader', {collection: t(`collections:${collection}.name`), file: t(`files:${file}`), interpolation: {escapeValue: false}}));
+  const shareWithHash: (hash: string) => MouseEventHandler<HTMLAnchorElement> = useCallback((hash) => (e) => {
+    const url = new URL(window.location.href);
+    url.hash = hash;
+    if ("share" in navigator) {
+      e.preventDefault();
+      navigator.share({url: url.toString()});
+    }
+  }, []);
+
   return (
     <>
       <div className="App-results-status">
@@ -73,12 +82,13 @@ function Results({status, progress, results}: {status: Status, progress: number,
                   </tr>
                 </thead>
                 <tbody dir={sameDir && displayDirs[0] !== i18next.dir() ? displayDirs[0] : undefined}>
-                  {lines.map((row, i) =>
-                  <tr key={i}>
-                    {idIndex !== -1 ? <td key='share'><a href={`#id=${row[idIndex]}`} rel="bookmark noreferrer" target="_blank" title={t('share')}>➥</a></td> : null}
-                    {row.map((s, j) => <td key={j} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]} dangerouslySetInnerHTML={{__html: s}}></td>)}
-                  </tr>
-                  )}
+                  {lines.map((row, i) => {
+                    const hash = `#id=${row[idIndex]}`;
+                    return <tr key={i}>
+                      {idIndex !== -1 ? <td key='share'><a href={hash} rel="bookmark noreferrer" target="_blank" title={t('share')} onClick={shareWithHash(hash)}>⮫</a></td> : null}
+                      {row.map((s, j) => <td key={j} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]} dangerouslySetInnerHTML={{__html: s}}></td>)}
+                    </tr>
+                  })}
                 </tbody>
               </table>
             </section>
