@@ -1,4 +1,4 @@
-import { Dispatch, FormEventHandler, MouseEventHandler, MutableRefObject, SetStateAction, useEffect, useRef, useState } from 'react';
+import { Dispatch, FormEventHandler, MouseEventHandler, MutableRefObject, SetStateAction, useCallback, useEffect, useRef, useState } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
@@ -23,16 +23,16 @@ const langId = "en-JP";
 
 function JumpTo({headers}: {headers: readonly string[]}) {
   const { t } = useTranslation();
-  const jumpTo = (k: number) => {
+  const jumpTo = useCallback((k: number) => {
     const results = document.getElementById("App-results");
     const section0 = document.getElementById(`App-results-section0`);
     const sectionk = document.getElementById(`App-results-section${k}`);
     if (results && section0 && sectionk) {
       results.scrollTop = sectionk.offsetTop - section0.offsetTop;
     }
-  };
+  }, []);
   return <nav className="App-results-jump">
-    <select name="mode" id="mode" onChange={(e) => jumpTo(parseInt(e.target.value, 10))} value="" disabled={headers.length === 0}>
+    <select name="mode" id="mode" onChange={(e) => jumpTo(parseInt(e.target.value, 10))} value="">
       <option value="" disabled>{t('jumpTo')}</option>
       {headers.map((header, k) => <option key={k} value={k}>{header}</option>)}
     </select>
@@ -47,7 +47,7 @@ function Results({status, progress, results}: {status: Status, progress: number,
     <>
       <div className="App-results-status">
         {
-          status === 'done' ? <JumpTo headers={headers} /> :
+          headers.length > 1 ? <JumpTo headers={headers} /> :
           <div className="App-results-status-text">{t(`status.${status}`)}</div>
         }
         <Spinner src={logo} active={(statusInProgress as Status[]).includes(status)}/>
@@ -58,6 +58,7 @@ function Results({status, progress, results}: {status: Status, progress: number,
           if (lines.length === 0) {
             return null;
           }
+          const idIndex = languages.indexOf(codeId);
           const displayLanguages = languages.map((lang) => lang === codeId ? langId : lang);
           const displayDirs = displayLanguages.map((lang) => i18next.dir(lang));
           const sameDir = displayDirs.every((dir) => dir === displayDirs[0]);
@@ -66,11 +67,15 @@ function Results({status, progress, results}: {status: Status, progress: number,
               <h2 className={displayHeader ? undefined : 'd-none'}>{headers[k]}</h2>
               <table className="App-results-table">
                 <thead>
-                  <tr>{languages.map((lang) => <th key={lang}>{t(`languages:${lang}.code`)}</th>)}</tr>
+                  <tr>
+                    {idIndex !== -1 ? <th></th> : null}
+                    {languages.map((lang) => <th key={lang}><abbr title={t(`languages:${lang}.name`)}>{t(`languages:${lang}.code`)}</abbr></th>)}
+                  </tr>
                 </thead>
                 <tbody dir={sameDir && displayDirs[0] !== i18next.dir() ? displayDirs[0] : undefined}>
                   {lines.map((row, i) =>
                   <tr key={i}>
+                    {idIndex !== -1 ? <td key='share'><a href={`#id=${row[idIndex]}`} rel="bookmark noreferrer" target="_blank" title={t('share')}>➥</a></td> : null}
                     {row.map((s, j) => <td key={j} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]} dangerouslySetInnerHTML={{__html: s}}></td>)}
                   </tr>
                   )}
@@ -169,6 +174,7 @@ const defaultParams: SearchParams = {
 
 function SearchForm({status, postToWorker, terminateWorker}: {status: Status, postToWorker: (params: SearchParams) => void, terminateWorker: () => void}) {
   const { t } = useTranslation();
+  const [id, setId] = useState('');
   const [query, setQuery] = useState(defaultParams.query);
   const [regex, setRegex] = useState(defaultParams.regex);
   const [caseInsensitive, setCaseInsensitive] = useState(defaultParams.caseInsensitive);
@@ -177,8 +183,13 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
   const [collections, setCollections] = useState(defaultParams.collections);
   const [languages, setLanguages] = useState(defaultParams.languages);
 
-  const onHashChange = () => {
+  const onHashChange = useCallback(() => {
     const params: URLSearchParams = new URLSearchParams(window.location.hash.substring(1));
+
+    const newId = params.get('id');
+    if (newId !== null) {
+      setId(newId);
+    }
 
     const newQuery = params.get('query');
     if (newQuery !== null) {
@@ -187,17 +198,17 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
 
     const newRegex = params.get('regex');
     if (newRegex !== null) {
-      setRegex(Boolean(newRegex));
+      setRegex(newRegex === 'true');
     }
 
     const newCaseInsensitive = params.get('caseInsensitive');
     if (newCaseInsensitive !== null) {
-      setCaseInsensitive(Boolean(newCaseInsensitive));
+      setCaseInsensitive(newCaseInsensitive === 'true');
     }
 
     const newScript = params.get('script');
     if (newScript !== null) {
-      setScript(Boolean(newScript));
+      setScript(newScript === 'true');
     }
 
     const newCollections = params.get('collections');
@@ -209,7 +220,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
     if (newLanguages !== null) {
       setLanguages(newLanguages.split(',').filter((value) => corpus.languages.includes(value)));
     }
-  };
+  }, []);
 
   useEffect(() => {
     // Initial page load
@@ -224,7 +235,21 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
     };
   }, []);
 
-  const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
+  useEffect(() => {
+    if (id !== '') {
+      postToWorker({
+        query: `^${id}$`,
+        regex: true,
+        caseInsensitive: false,
+        common: true,
+        script: true,
+        collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key as keyof typeof corpus.collections].id === id.split('.')[0]),
+        languages: [codeId]
+      });
+    }
+  }, [id, postToWorker]);
+
+  const onSubmit: FormEventHandler<HTMLFormElement> = useCallback((e) => {
     e.preventDefault();
     window.location.hash = new URLSearchParams({
       query: query,
@@ -235,6 +260,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       collections: collections.join(','),
       languages: languages.join(','),
     }).toString();
+    setId('');
     postToWorker({
       query: query,
       regex: regex,
@@ -244,14 +270,14 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       collections: collections,
       languages: languages,
     });
-  };
+  }, [query, regex, caseInsensitive, common, script, collections, languages, postToWorker]);
 
-  const onCancel: MouseEventHandler<HTMLButtonElement> = (e) => {
+  const onCancel: MouseEventHandler<HTMLButtonElement> = useCallback((e) => {
     e.preventDefault();
     terminateWorker();
-  };
+  }, [terminateWorker]);
 
-  const clearCache: MouseEventHandler<HTMLButtonElement> = (e) => {
+  const clearCache: MouseEventHandler<HTMLButtonElement> = useCallback((e) => {
     e.preventDefault();
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.ready.then(registration => registration.unregister());
@@ -269,7 +295,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         Promise.all(keyList.map((key) => caches.delete(key)))
       });
     }
-  };
+  }, []);
 
   return <form className="App-search" onSubmit={onSubmit}>
     <div className="App-search-bar">
@@ -334,7 +360,7 @@ function Search() {
     };
   }, [status]);
 
-  const onMessage = (e: MessageEvent<SearchResults>) => {
+  const onMessage = useCallback((e: MessageEvent<SearchResults>) => {
     if (e.data.complete) {
       // use requestAnimationFrame to ensure that the browser has displayed the 'rendering' status before the results start being rendered
       setStatus('rendering');
@@ -348,9 +374,9 @@ function Search() {
       setStatus(e.data.status);
       setProgress(e.data.progress);
     }
-  };
+  }, []);
 
-  const terminateWorker = () => {
+  const terminateWorker = useCallback(() => {
     if (workerRef.current !== null) {
       console.log('Terminating worker!');
       workerRef.current.terminate();
@@ -358,9 +384,9 @@ function Search() {
       setStatus('initial');
       setProgress(0.0);
     }
-  }
+  }, []);
 
-  const postToWorker = (params: SearchParams) => {
+  const postToWorker = useCallback((params: SearchParams) => {
     setResults([]);
     if (params.query.length > 0 && params.collections.length > 0 && params.languages.length > 0) {
       if (workerRef.current === null) {
@@ -375,7 +401,7 @@ function Search() {
       }
       workerRef.current.postMessage(params);
     }
-  }
+  }, [onMessage]);
 
   return (
     <>
