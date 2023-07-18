@@ -32,7 +32,7 @@ function JumpTo({headers}: {headers: readonly string[]}) {
     }
   }, []);
   return <nav className="App-results-jump">
-    <select name="mode" id="mode" onChange={(e) => jumpTo(parseInt(e.target.value, 10))} value="">
+    <select name="jump" id="jump" onChange={(e) => jumpTo(parseInt(e.target.value, 10))} value="">
       <option value="" disabled>{t('jumpTo')}</option>
       {headers.map((header, k) => <option key={k} value={k}>{header}</option>)}
     </select>
