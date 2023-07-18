@@ -42,7 +42,7 @@ function JumpTo({headers}: {headers: readonly string[]}) {
 function Results({status, progress, results}: {status: Status, progress: number, results: readonly SearchResultLines[]}) {
   const { t } = useTranslation();
   const filteredResults = results.filter(({lines}) => lines.length > 0);
-  const headers = filteredResults.map(({collection, file}) => t('tableHeader', {collection: t(`collections:${collection}.name`), file: file, interpolation: {escapeValue: false}}));
+  const headers = filteredResults.map(({collection, file}) => t('tableHeader', {collection: t(`collections:${collection}.name`), file: t(`files:${file}`), interpolation: {escapeValue: false}}));
   return (
     <>
       <div className="App-results-status">

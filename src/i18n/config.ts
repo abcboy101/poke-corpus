@@ -34,6 +34,10 @@ import languagesKO from './ko/languages.json';
 import languagesZHHans from './zh-Hans/languages.json';
 import languagesZHHant from './zh-Hant/languages.json';
 
+import filesEN from './en/files.json';
+import filesJA from './ja/files.json';
+import filesKO from './ko/files.json';
+
 i18next.use(LanguageDetector)
   .use(initReactI18next)
   .init({
@@ -46,7 +50,8 @@ i18next.use(LanguageDetector)
       'en': {
         translation: translationEN,
         collections: collectionsEN,
-        languages: languagesEN
+        languages: languagesEN,
+        files: filesEN,
       },
       'en-GB': {
         translation: translationENGB,
@@ -54,7 +59,8 @@ i18next.use(LanguageDetector)
       'ja': {
         translation: translationJA,
         collections: collectionsJA,
-        languages: languagesJA
+        languages: languagesJA,
+        files: filesJA,
       },
       'fr': {
         translation: translationFR,
@@ -83,6 +89,7 @@ i18next.use(LanguageDetector)
         translation: translationKO,
         collections: collectionsKO,
         languages: languagesKO,
+        files: filesKO,
       },
       'zh-Hans': {
         translation: translationZHHans,
