@@ -2,8 +2,8 @@ import { Dispatch, FormEventHandler, MouseEventHandler, MutableRefObject, SetSta
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { SearchParams } from './searchWorker';
-import { SearchResults, SearchResultsInProgress, SearchResultsComplete, SearchResultLines } from './searchWorkerManager';
+import { SearchParams } from './webWorker/searchWorker';
+import { SearchResults, SearchResultsInProgress, SearchResultsComplete, SearchResultLines } from './webWorker/searchWorkerManager';
 import Spinner from './components/Spinner';
 import ProgressBar from './components/ProgressBar';
 
@@ -243,7 +243,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
     return () => {
       window.removeEventListener('hashchange', onHashChange);
     };
-  }, []);
+  }, [onHashChange]);
 
   useEffect(() => {
     if (id !== '') {
@@ -401,7 +401,7 @@ function Search() {
     if (params.query.length > 0 && params.collections.length > 0 && params.languages.length > 0) {
       if (workerRef.current === null) {
         console.log('Creating new worker...');
-        workerRef.current = new Worker(new URL("./searchWorkerManager.ts", import.meta.url));
+        workerRef.current = new Worker(new URL("./webWorker/searchWorkerManager.ts", import.meta.url));
         workerRef.current.addEventListener("message", onMessage);
       }
       setStatus('waiting');

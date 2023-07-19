@@ -1,4 +1,4 @@
-import corpus from './i18n/corpus.json'
+import corpus from '../i18n/corpus.json'
 import { SearchParams, SearchTask, SearchTaskResult, SearchTaskResultComplete, SearchTaskResultError } from './searchWorker';
 
 export type SearchResultsInProgress = 'loading' | 'processing' | 'collecting';
