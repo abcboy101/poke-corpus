@@ -448,7 +448,7 @@ function App() {
       <header className="App-header">
         <h1>
           <a href="/poke-corpus">
-            <img className="App-header-logo" src={logo} alt="" height="40" width="40" /> {t('title')}
+            <img className="App-header-logo" src={logo} alt="" height="40" width="40" /> {t('title', {version: t('version')})}
           </a>
         </h1>
         <div className="App-header-options">
