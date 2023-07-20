@@ -4,33 +4,34 @@ import { useTranslation } from 'react-i18next';
 
 import { SearchParams } from './webWorker/searchWorker';
 import { SearchResults, SearchResultsInProgress, SearchResultsComplete, SearchResultLines } from './webWorker/searchWorkerManager';
+import Share from './components/Share';
 import Spinner from './components/Spinner';
 import ProgressBar from './components/ProgressBar';
 
 import './App.css';
-import logo from './logo.svg';
+import logo from './res/logo.svg';
+import corpus from './res/corpus.json'
 import supportedLngs from './i18n/supportedLngs.json'
-import corpus from './i18n/corpus.json'
 import './i18n/config';
 
 type StatusInProgress = 'waiting' | SearchResultsInProgress | 'rendering';
 type StatusComplete = 'initial' | SearchResultsComplete;
 type Status = StatusInProgress | StatusComplete;
-const statusInProgress: readonly StatusInProgress[] = ['waiting', 'loading', 'processing', 'collecting', 'rendering'];
+const statusInProgress: readonly Status[] & readonly StatusInProgress[] = ['waiting', 'loading', 'processing', 'collecting', 'rendering'];
 
 const codeId = "qid-ZZ";
 const langId = "en-JP";
 
 function JumpTo({headers}: {headers: readonly string[]}) {
   const { t } = useTranslation();
-  const jumpTo = useCallback((k: number) => {
+  const jumpTo = (k: number) => {
     const results = document.getElementById("App-results");
     const section0 = document.getElementById(`App-results-section0`);
     const sectionk = document.getElementById(`App-results-section${k}`);
     if (results && section0 && sectionk) {
       results.scrollTop = sectionk.offsetTop - section0.offsetTop;
     }
-  }, []);
+  };
   return <nav className="App-results-jump">
     <select name="jump" id="jump" onChange={(e) => jumpTo(parseInt(e.target.value, 10))} value="">
       <option value="" disabled>{t('jumpTo')}</option>
@@ -43,14 +44,6 @@ function Results({status, progress, results}: {status: Status, progress: number,
   const { t } = useTranslation();
   const filteredResults = results.filter(({lines}) => lines.length > 0);
   const headers = filteredResults.map(({collection, file}) => t('tableHeader', {collection: t(`collections:${collection}.name`), file: t(`files:${file}`), interpolation: {escapeValue: false}}));
-  const shareWithHash: (hash: string) => MouseEventHandler<HTMLAnchorElement> = useCallback((hash) => (e) => {
-    const url = new URL(window.location.href);
-    url.hash = hash;
-    if ("share" in navigator) {
-      e.preventDefault();
-      navigator.share({url: url.toString()});
-    }
-  }, []);
 
   return (
     <>
@@ -59,7 +52,7 @@ function Results({status, progress, results}: {status: Status, progress: number,
           headers.length > 1 ? <JumpTo headers={headers} /> :
           <div className="App-results-status-text">{t(`status.${status}`)}</div>
         }
-        <Spinner src={logo} active={(statusInProgress as Status[]).includes(status)}/>
+        <Spinner src={logo} active={statusInProgress.includes(status)}/>
         <ProgressBar progress={progress} />
       </div>
       <main id="App-results" className="App-results">
@@ -83,9 +76,8 @@ function Results({status, progress, results}: {status: Status, progress: number,
                 </thead>
                 <tbody dir={sameDir && displayDirs[0] !== i18next.dir() ? displayDirs[0] : undefined}>
                   {lines.map((row, i) => {
-                    const hash = `#id=${row[idIndex]}`;
                     return <tr key={i}>
-                      {idIndex !== -1 ? <td key='share'><a href={hash} rel="bookmark noreferrer" target="_blank" title={t('share')} onClick={shareWithHash(hash)}>⮫</a></td> : null}
+                      {idIndex !== -1 ? <td key='share'><Share hash={`#id=${row[idIndex]}`}/></td> : null}
                       {row.map((s, j) => <td key={j} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]} dangerouslySetInnerHTML={{__html: s}}></td>)}
                     </tr>
                   })}
@@ -178,7 +170,7 @@ const defaultParams: SearchParams = {
   caseInsensitive: true,
   common: true,
   script: true,
-  collections: Object.keys(corpus.collections).filter((value) => corpus.collections[value as keyof typeof corpus.collections].structured),
+  collections: (Object.keys(corpus.collections) as (keyof typeof corpus.collections)[]).filter((value) => corpus.collections[value].structured),
   languages: corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0])) || corpus.languages.filter((value) => value.startsWith('en'))
 }
 
@@ -253,13 +245,13 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         caseInsensitive: false,
         common: true,
         script: true,
-        collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key as keyof typeof corpus.collections].id === id.split('.')[0]),
+        collections: (Object.keys(corpus.collections) as (keyof typeof corpus.collections)[]).filter((key) => corpus.collections[key].id === id.split('.')[0]),
         languages: [codeId]
       });
     }
   }, [id, postToWorker]);
 
-  const onSubmit: FormEventHandler<HTMLFormElement> = useCallback((e) => {
+  const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
     window.location.hash = new URLSearchParams({
       query: query,
@@ -280,14 +272,14 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       collections: collections,
       languages: languages,
     });
-  }, [query, regex, caseInsensitive, common, script, collections, languages, postToWorker]);
+  };
 
-  const onCancel: MouseEventHandler<HTMLButtonElement> = useCallback((e) => {
+  const onCancel: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
     terminateWorker();
-  }, [terminateWorker]);
+  };
 
-  const clearCache: MouseEventHandler<HTMLButtonElement> = useCallback((e) => {
+  const clearCache: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.ready.then(registration => registration.unregister());
@@ -305,7 +297,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         Promise.all(keyList.map((key) => caches.delete(key)))
       });
     }
-  }, []);
+  };
 
   return <form className="App-search" onSubmit={onSubmit}>
     <div className="App-search-bar">
@@ -313,7 +305,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         <label htmlFor="query">{t('query')} </label>
         <input type="text" name="query" id="query" value={query} onChange={e => setQuery(e.target.value)}/>
         {
-          status !== 'rendering' && (statusInProgress as Status[]).includes(status)
+          status !== 'rendering' && statusInProgress.includes(status)
           ? <button className="submit" onClick={onCancel}>{t('cancel')}</button>
           : <input className="submit" type="submit" value={t('search')} disabled={query.length === 0 || collections.length === 0 || languages.length === 0}/>
         }
@@ -358,7 +350,7 @@ function Search() {
 
   useEffect(() => {
     const onBlur = () => {
-      if (workerRef.current !== null && !(statusInProgress as Status[]).includes(status)) {
+      if (workerRef.current !== null && !statusInProgress.includes(status)) {
         console.log('Terminating worker!');
         workerRef.current.terminate();
         workerRef.current = null;
@@ -386,7 +378,7 @@ function Search() {
     }
   }, []);
 
-  const terminateWorker = useCallback(() => {
+  const terminateWorker = () => {
     if (workerRef.current !== null) {
       console.log('Terminating worker!');
       workerRef.current.terminate();
@@ -394,7 +386,7 @@ function Search() {
       setStatus('initial');
       setProgress(0.0);
     }
-  }, []);
+  };
 
   const postToWorker = useCallback((params: SearchParams) => {
     setResults([]);
