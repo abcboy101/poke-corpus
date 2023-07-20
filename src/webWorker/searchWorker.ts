@@ -63,11 +63,11 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
    */
   const getFileFromCache = (collectionKey: string, languageKey: string, fileKey: string) => {
     const url = process.env.PUBLIC_URL + `/corpus/${collectionKey}/${languageKey}_${fileKey}.txt.gz`;
-    return caches.open(cacheVersion)
+    return ('caches' in self ? caches.open(cacheVersion)
     .then((cache) => cache.match(url).then(res => res
       ?? cache.add(url).then(() => cache.match(url)).then(res => res
         ?? fetch(url))))
-    .catch(() => fetch(url))
+    .catch(() => fetch(url)) : fetch(url))
     .catch((err) => {
       console.error(err);
       notify('network');

@@ -281,7 +281,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
 
   const clearCache: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
-    if ("serviceWorker" in navigator) {
+    if ('serviceWorker' in navigator) {
       navigator.serviceWorker.ready.then(registration => registration.unregister());
     }
     if (indexedDB){
@@ -292,9 +292,9 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         indexedDB.deleteDatabase('workbox-expiration');
       }
     }
-    if (caches) {
-      caches.keys().then((keyList) => {
-        Promise.all(keyList.map((key) => caches.delete(key)))
+    if ('caches' in window) {
+      window.caches.keys().then((keyList) => {
+        Promise.all(keyList.map((key) => window.caches.delete(key)))
       });
     }
   };
