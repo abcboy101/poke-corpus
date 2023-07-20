@@ -142,7 +142,13 @@ function preprocessMetadata(s: string) {
  * Returns the resulting string.
  */
 function preprocessString(s: string) {
-  return preprocessMetadata(remapSwitchSpecialCharacters(remap3DSSpecialCharacters(remapNDSSpecialCharacters(s))));
+  return preprocessMetadata(remapSwitchSpecialCharacters(remap3DSSpecialCharacters(remapNDSSpecialCharacters(s
+    // GCN
+    .replaceAll('[..]', '‥')
+    .replaceAll('[゛]', '゛')
+    .replaceAll('[゜]', '゜')
+    .replaceAll('[^er]', 'ᵉʳ')
+  ))));
 }
 
 /**
@@ -155,6 +161,13 @@ function postprocessMetadata(s: string) {
   return s.split('\u{F0000}')[0];
 }
 
+function multiLine(s: string) {
+  if (s.search(/[\u{F1000}\u{F1001}]/u) === -1) {
+    return s;
+  }
+  return ['<dl>', ...s.split('\u{F1000}').map((line) => line.split('\u{F1001}')).map(([location, str]) => `<dt>${location}</dt><dd>${str}</dd>`), '</dl>'].join('');
+}
+
 /**
  * Converts the provided string to HTML by escaping `<` and `>`,
  * replacing line break control characters such as  `\n` with `<br>`,
@@ -163,7 +176,7 @@ function postprocessMetadata(s: string) {
  * Returns the resulting HTML string.
  */
 function postprocessString(s: string) {
-  return (postprocessMetadata(s)
+  return multiLine(postprocessMetadata(s)
     .replaceAll('<', '&lt;').replaceAll('>', '&gt;')
 
     // BDSP
@@ -192,13 +205,36 @@ function postprocessString(s: string) {
     .replaceAll('\\r', '<span class="r">&#92;r</span><br>')
     .replaceAll('\\c', '<span class="c">&#92;c</span><br>')
     .replaceAll('\\n', '<span class="n">&#92;n</span><br>')
-
     .replaceAll('\t', '<span class="tab">\t</span>')
+
+    // GCN
+    .replaceAll(/\[unknown5_08_([0-9a-f]{2})_([0-9a-f]{2})_([0-9a-f]{2})_([0-9a-f]{2})\](.*?)(?:\[unknown5_08_ff_ff_ff_ff\]|$|(?=\u{F1000}))/gu, '<span style="color: #$1$2$3$4">$5</span>')
+    .replaceAll('[Player]', '<span class="var">[Player]</span>')
+    .replaceAll('[Player_alt]', '<span class="var">[Player_alt]</span>')
+    .replaceAll('[Rui]', '<span class="var">[Rui]</span>')
+    .replaceAll('[opp_trainer_class]', '<span class="var">[opp_trainer_class]</span>')
+    .replaceAll('[opp_trainer_name]', '<span class="var">[opp_trainer_name]</span>')
+    .replaceAll('[sent_out_pokemon_1]', '<span class="var">[sent_out_pokemon_1]</span>')
+    .replaceAll('[sent_out_pokemon_2]', '<span class="var">[sent_out_pokemon_2[]]</span>')
+    .replaceAll('[speechbubble]', '<span class="var">[speechbubble]</span>')
+    .replaceAll('[bubble_or_speaker]', '<span class="var">[bubble_or_speaker]</span>')
+    .replaceAll('[maybe_speaker_ID_toggle]', '<span class="var">[maybe_speaker_ID_toggle]</span>')
+    .replaceAll('[maybe_location]', '<span class="var">[maybe_location]</span>')
+    .replaceAll('[dialogue_end]', '<span class="var">[dialogue_end]</span>')
+    .replaceAll('[large_e]', '<span class="var">[large_e]</span>')
+    .replaceAll('[large_e+]', '<span class="var">[large_e+]</span>')
+    .replaceAll('[furi_kanji]', '<span class="var">[furi_kanji]</span>')
+    .replaceAll('[furi_kana]', '<span class="var">[furi_kana]</span>')
+    .replaceAll('[furi_close]', '<span class="var">[furi_close]</span>')
+    .replaceAll(/(\[some_[^\]]+?\])/gu, '<span class="var">$1</span>')
+    .replaceAll(/(\[unknown[^\]]+?\])/gu, '<span class="var">$1</span>')
+    .replaceAll(/(\[var_[^\]]\])/gu, '<span class="var">$1</span>')
+
     .replaceAll('[NULL]', '<span class="null">[NULL]</span>')
     .replaceAll('[COMP]', '<span class="compressed">[COMP]</span>')
     .replaceAll(/(\[VAR [^\]]+?\])/gu, '<span class="var">$1</span>')
     .replaceAll(/(\[WAIT [\d.]+\])/gu, '<span class="wait">$1</span>')
-    .replaceAll(/(\[SFX [\d.]+\])/gu, '<span class="sfx">$1</span>')
+    .replaceAll(/(\[SFX [\d.]+\])/gu, '<span class="sfx">$1</span>') // BDSP
     .replaceAll(/(\[~ \d+\])/gu, '<span class="unused">$1</span>')
     .replaceAll(/\{([^|}]+)\|([^|}]+)\}/gu, '<ruby>$1<rp>(</rp><rt>$2</rt><rp>)</rp></ruby>') // Switch furigana
     .replaceAll(/^(\s+)$/gu, '<span class="whitespace">$1</span>')
