@@ -31,6 +31,11 @@
   "jumpTo": "跳转至…",
   "share": "分享",
   "tableHeader": "{{collection}} {{file}}",
+  "tablePartial": "不显示{{count, number}}条结果",
+  "displayedRange": {
+    "long": "显示第{{start, number}}～{{end, number}}条结果，共{{count, number}}条",
+    "short": "{{start, number}}\u2013{{end, number}} (共{{count, number}}条)"
+  },
   "tagline": "宝可梦语料库查询工具",
   "footerText": "Created by abcboy",
   "github": "GitHub"

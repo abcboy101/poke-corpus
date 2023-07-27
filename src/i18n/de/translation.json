@@ -31,6 +31,13 @@
   "jumpTo": "Wechseln zu...",
   "share": "Teilen",
   "tableHeader": "{{collection}} {{file}}",
+  "tablePartial_one": "{{count, number}} Ergebnis nicht angezeigt",
+  "tablePartial_other": "{{count, number}} Ergebnisse nicht angezeigt",
+  "displayedRange": {
+    "long_one": "{{start, number}} bis {{end, number}} von {{count, number}} Ergebnis wird angezeigt",
+    "long_other": "{{start, number}} bis {{end, number}} von {{count, number}} Ergebnisse werden angezeigt",
+    "short": "{{start, number}}\u2013{{end, number}} von {{count, number}}"
+  },
   "tagline": "Ein Werkzeug zur Abfrage des Pokémon-Korpus",
   "footerText": "Erstellt von abcboy",
   "github": "GitHub"

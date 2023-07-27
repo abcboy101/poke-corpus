@@ -31,6 +31,13 @@
   "jumpTo": "Vai a...",
   "share": "Condividi",
   "tableHeader": "{{collection}} {{file}}",
+  "tablePartial_one": "{{count, number}} risultato non mostrato",
+  "tablePartial_other": "{{count, number}} risultati non mostrati",
+  "displayedRange": {
+    "long_one": "Mostra {{start, number}}-{{end, number}} di {{count, number}} risultato",
+    "long_other": "Mostra {{start, number}}-{{end, number}} di {{count, number}} risultati",
+    "short": "{{start, number}}-{{end, number}} di {{count, number}}"
+  },
   "tagline": "Uno strumento per cercare il corpus Pokémon",
   "footerText": "Creato da abcboy",
   "github": "GitHub"

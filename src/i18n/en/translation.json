@@ -32,6 +32,15 @@
   "jumpTo": "Jump to...",
   "share": "Share",
   "tableHeader": "{{collection}} {{file}}",
+  "tablePartial_one": "{{count, number}} result not shown",
+  "tablePartial_other": "{{count, number}} results not shown",
+  "displayedRange": {
+    "long_one": "Displaying {{start, number}}\u2013{{end, number}} of {{count, number}} result",
+    "long_other": "Displaying {{start, number}}\u2013{{end, number}} of {{count, number}} results",
+    "short": "{{start, number}}\u2013{{end, number}} of {{count, number}}"
+  },
+  "loadPrev": "←",
+  "loadNext": "→",
   "tagline": "A tool to query the Pokémon corpus",
   "footerText": "Created by abcboy",
   "github": "GitHub"

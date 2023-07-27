@@ -31,6 +31,11 @@
   "jumpTo": "이동...",
   "share": "공유",
   "tableHeader": "{{collection}}의 {{file}}",
+  "tablePartial": "{{count, number}}건이 표시되지 않음",
+  "displayedRange": {
+    "long": "{{count, number}}개 중 {{start, number}}~{{end, number}}개 결과 표시",
+    "short": "{{start, number}}~{{end, number}} ({{count, number}}개)"
+  },
   "tagline": "포켓몬의 말뭉치를 검색하는 도구",
   "footerText": "Created by abcboy",
   "github": "GitHub"

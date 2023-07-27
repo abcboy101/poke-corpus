@@ -31,6 +31,11 @@
   "jumpTo": "移動…",
   "share": "共有",
   "tableHeader": "{{collection}}の{{file}}",
+  "tablePartial": "{{count, number}}件が表示されない",
+  "displayedRange": {
+    "long": "全{{count, number}}件中{{start, number}}～{{end, number}}件目を表示",
+    "short": "{{start, number}}\u2013{{end, number}} (全{{count, number}}件)"
+  },
   "tagline": "ポケモンのコーパスを検索するツール",
   "footerText": "Created by abcboy",
   "github": "GitHub"
