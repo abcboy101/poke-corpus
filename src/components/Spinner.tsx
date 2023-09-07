@@ -5,7 +5,7 @@ function Spinner({src, active = true}: {src: string, active?: boolean}) {
   const ref = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    ref.current?.classList.add("stopped");
+    ref.current?.classList.add("spinner-stopped");
   }, []);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ function Spinner({src, active = true}: {src: string, active?: boolean}) {
     if (img !== null) {
       const onAnimationIteration = () => {
         if (!active) {
-          img.classList.add("stopped");
+          img.classList.add("spinner-stopped");
         }
       };
       img.addEventListener('animationiteration', onAnimationIteration);
@@ -23,7 +23,7 @@ function Spinner({src, active = true}: {src: string, active?: boolean}) {
     }
   }, [active]);
 
-  return <img ref={ref} className={`spinner ${active ? 'active' : 'inactive'}`} src={src} alt=""/>
+  return <img ref={ref} className={`spinner ${active ? 'spinner-active' : 'spinner-inactive'}`} src={src} alt=""/>
 }
 
 export default Spinner;

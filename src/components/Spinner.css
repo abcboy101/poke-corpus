@@ -5,17 +5,17 @@
   animation: Spinner-spin infinite 0.5s linear;
 }
 
-.spinner.active {
+.spinner-active {
   opacity: 1;
   transition: opacity 0.25s;
 }
 
-.spinner.inactive {
+.spinner-inactive {
   opacity: 0.5;
   transition: opacity 0.25s;
 }
 
-.spinner.stopped {
+.spinner-stopped {
   animation: none;
 }
 
