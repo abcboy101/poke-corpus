@@ -114,6 +114,10 @@ dt {
   color: var(--text-gray);
 }
 
+.variables-hide .var, .variables-hide .wait, .variables-hide .sfx, .variables-hide .unused, .variables-hide .null, .variables-hide .compressed {
+  display: none;
+}
+
 .r, .c, .n {
   color: var(--text-gray);
 }
@@ -257,6 +261,11 @@ footer {
   grid-template-columns: 1fr auto auto;
   align-items: center;
   text-align: center;
+  gap: 0.25em;
+}
+
+.App-results-toggle {
+  display: flex;
   gap: 0.25em;
 }
 

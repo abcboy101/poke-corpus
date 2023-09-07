@@ -86,6 +86,7 @@ function Results({status, progress, results, limit=1000}: {status: Status, progr
   const { t } = useTranslation();
   const filteredResults = results.filter(({lines}) => lines.length > 0);
   const headers = filteredResults.map(({collection, file}) => t('tableHeader', {collection: t(`collections:${collection}.name`), file: t(`files:${file}`), interpolation: {escapeValue: false}}));
+  const [showVariables, setShowVariables] = useState(true);
   const [showAllCharacters, setShowAllCharacters] = useState(false);
   const [offset, setOffset] = useState(0);
   useEffect(() => setOffset(0), [results]);
@@ -121,9 +122,12 @@ function Results({status, progress, results, limit=1000}: {status: Status, progr
             </div>
           ) : <ProgressBar progress={progress} />
         }
-        <button className={showAllCharacters ? 'button-square active' : 'button-square'} onClick={(e) => { e.preventDefault(); setShowAllCharacters(!showAllCharacters); }} title={t('showAllCharacters')}>{t('showAllCharactersIcon')}</button>
+        <div className="App-results-toggle">
+          <button className={showVariables ? 'button-square active' : 'button-square'} onClick={(e) => { e.preventDefault(); setShowVariables(!showVariables); }} title={t('showVariables')}>{t('showVariablesIcon')}</button>
+          <button className={showAllCharacters ? 'button-square active' : 'button-square'} onClick={(e) => { e.preventDefault(); setShowAllCharacters(!showAllCharacters); }} title={t('showAllCharacters')}>{t('showAllCharactersIcon')}</button>
+        </div>
       </div>
-      <main id="App-results" className={`App-results control-${showAllCharacters ? 'show' : 'hide'}`}>
+      <main id="App-results" className={`App-results variables-${showVariables ? 'show' : 'hide'} control-${showAllCharacters ? 'show' : 'hide'}`}>
         { resultTables }
       </main>
     </>
