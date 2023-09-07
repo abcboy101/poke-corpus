@@ -17,7 +17,7 @@ Visit at [abcboy101.github.io/poke-corpus/](https://abcboy101.github.io/poke-cor
 4. Click "Search".
 5. The search results will appear in the window.
    - If there are results from multiple games, you can jump to a particular game's results using the "Jump to..." dropdown.
-   - You can share a link to a particular line using the "⮫" icon.
+   - You can share a link to a particular line using the arrow icon.
 
 You can change your selected language and colorscheme using the dropdowns in the top right.
 
