@@ -189,7 +189,7 @@ input[type=text]:disabled, select:disabled, input[type=submit]:disabled, input[t
 .button-square {
   height: 2em;
   width: 2em;
-  padding: 2px;
+  white-space: nowrap;
 }
 
 .submit {
@@ -323,9 +323,9 @@ footer {
 }
 
 .App-search-bar-query {
-  display: grid;
+  display: flex;
+  white-space: nowrap;
   gap: 0 0.5em;
-  grid-template-columns: auto auto auto;
 }
 
 #query {
@@ -419,7 +419,7 @@ footer {
   }
 
   .App-results-status {
-    grid-template-columns: 1em 1fr 1.75em;
+    grid-template-columns: 1em 1fr auto;
   }
 
   .App-results-jump, .App-results-status-text {
