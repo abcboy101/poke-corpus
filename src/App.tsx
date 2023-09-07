@@ -86,6 +86,7 @@ function Results({status, progress, results, limit=1000}: {status: Status, progr
   const { t } = useTranslation();
   const filteredResults = results.filter(({lines}) => lines.length > 0);
   const headers = filteredResults.map(({collection, file}) => t('tableHeader', {collection: t(`collections:${collection}.name`), file: t(`files:${file}`), interpolation: {escapeValue: false}}));
+  const [showAllCharacters, setShowAllCharacters] = useState(false);
   const [offset, setOffset] = useState(0);
   useEffect(() => setOffset(0), [results]);
 
@@ -115,13 +116,14 @@ function Results({status, progress, results, limit=1000}: {status: Status, progr
                 <span className="App-results-nav-range-long">{t('displayedRange.long', {count: count, start: offset + 1, end: Math.min(count, offset + limit)})}</span>
                 <span className="App-results-nav-range-short">{t('displayedRange.short', {count: count, start: offset + 1, end: Math.min(count, offset + limit)})}</span>
               </div>
-              <button onClick={(e) => { e.preventDefault(); setOffset(Math.max(0, offset - limit)) }}>{t('loadPrev', {limit: limit})}</button>
-              <button onClick={(e) => { e.preventDefault(); setOffset(Math.min(Math.floor(count / limit) * limit, offset + limit)) }}>{t('loadNext', {limit: limit})}</button>
+              <button className='button-square' onClick={(e) => { e.preventDefault(); setOffset(Math.max(0, offset - limit)) }}>{t('loadPrev', {limit: limit})}</button>
+              <button className='button-square' onClick={(e) => { e.preventDefault(); setOffset(Math.min(Math.floor(count / limit) * limit, offset + limit)) }}>{t('loadNext', {limit: limit})}</button>
             </div>
           ) : <ProgressBar progress={progress} />
         }
+        <button className={showAllCharacters ? 'button-square active' : 'button-square'} onClick={(e) => { e.preventDefault(); setShowAllCharacters(!showAllCharacters); }} title={t('showAllCharacters')}>{t('showAllCharactersIcon')}</button>
       </div>
-      <main id="App-results" className="App-results">
+      <main id="App-results" className={`App-results control-${showAllCharacters ? 'show' : 'hide'}`}>
         { resultTables }
       </main>
     </>

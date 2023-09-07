@@ -11,8 +11,8 @@
   --text-gray-dark: #888;
   --progress-bar-color-light: limegreen;
   --progress-bar-color-dark: green;
-  --whitespace-background-light: skyblue;
-  --whitespace-background-dark: teal;
+  --accent-light: skyblue;
+  --accent-dark: teal;
   --line-height: 1.5;
 }
 
@@ -25,7 +25,7 @@
     --progress-bar-background: var(--highlight);
     --progress-bar-border: var(--text);
     --progress-bar-color: var(--progress-bar-color-light);
-    --whitespace-background: var(--whitespace-background-light);
+    --accent: var(--accent-light);
   }
 
   body:has(.App-mode-system) {
@@ -41,7 +41,7 @@
   --progress-bar-background: var(--highlight);
   --progress-bar-border: var(--text);
   --progress-bar-color: var(--progress-bar-color-light);
-  --whitespace-background: var(--whitespace-background-light);
+  --accent: var(--accent-light);
 }
 
 body:has(.App-mode-light) {
@@ -57,7 +57,7 @@ body:has(.App-mode-light) {
     --progress-bar-background: var(--highlight);
     --progress-bar-border: var(--text);
     --progress-bar-color: var(--progress-bar-color-dark);
-    --whitespace-background: var(--whitespace-background-dark);
+    --accent: var(--accent-dark);
   }
 
   body:has(.App-mode-system) {
@@ -73,7 +73,7 @@ body:has(.App-mode-light) {
   --progress-bar-background: var(--highlight);
   --progress-bar-border: var(--text);
   --progress-bar-color: var(--progress-bar-color-dark);
-  --whitespace-background: var(--whitespace-background-dark);
+  --accent: var(--accent-dark);
 }
 
 body:has(.App-mode-dark) {
@@ -115,12 +115,16 @@ dt {
 }
 
 .r, .c, .n {
-  display: none;
   color: var(--text-gray);
 }
 
-.whitespace {
-  background-color: var(--whitespace-background);
+.control-hide .r, .control-hide .c, .control-hide .n {
+  display: none;
+}
+
+.control-show .whitespace, .control-show .tab {
+  border: 1px dotted var(--text);
+  background-color: var(--accent);
 }
 
 .line-font-size-200 {
@@ -172,6 +176,16 @@ input[type=text], select, input[type=submit], input[type=button], button {
 
 input[type=text]:disabled, select:disabled, input[type=submit]:disabled, input[type=button]:disabled, button:disabled {
   opacity: 0.7;
+}
+
+.active, input[type=submit]:active, input[type=button]:active, button:active {
+  background: var(--accent);
+}
+
+.button-square {
+  height: 2em;
+  width: 2em;
+  padding: 2px;
 }
 
 .submit {
@@ -228,7 +242,7 @@ footer {
 
 .App-results-status {
   display: grid;
-  grid-template-columns: minmax(20em, 1fr) 1em 2fr;
+  grid-template-columns: minmax(20em, 1fr) 1em 2fr auto;
   align-items: center;
   text-align: center;
   gap: 0.25em;
@@ -396,11 +410,11 @@ footer {
   }
 
   .App-results-status {
-    grid-template-columns: 1em 1fr;
+    grid-template-columns: 1em 1fr 1.75em;
   }
 
   .App-results-jump, .App-results-status-text {
-    grid-column: span 2;
+    grid-column: span 3;
   }
 }
 

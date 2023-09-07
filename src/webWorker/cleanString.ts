@@ -250,7 +250,7 @@ function postprocessString(s: string) {
     .replaceAll(/(\[SFX [\d.]+\])/gu, '<span class="sfx">$1</span>') // BDSP
     .replaceAll(/(\[~ \d+\])/gu, '<span class="unused">$1</span>')
     .replaceAll(/\{([^|}]+)\|([^|}]+)\}/gu, '<ruby>$1<rp>(</rp><rt>$2</rt><rp>)</rp></ruby>') // Switch furigana
-    .replaceAll(/^(\s+)$/gu, '<span class="whitespace">$1</span>')
+    .replaceAll(/(^\s+|\s+$)/gu, '<span class="whitespace">$1</span>')
 
     // Escaped characters
     .replaceAll('\\\\', '\\')
