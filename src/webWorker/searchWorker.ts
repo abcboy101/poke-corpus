@@ -1,5 +1,5 @@
 import 'compression-streams-polyfill';
-import { postprocessString, preprocessString } from './cleanString';
+import { preprocessString, convertWhitespace, postprocessString } from './cleanString';
 
 export interface SearchParams {
   readonly query: string,
@@ -80,7 +80,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
 
   const re = params.regex ? new RegExp(params.query, params.caseInsensitive ? 'ui' : 'u') : null;
   const matchCondition = (line: string): boolean => {
-    return (params.regex && re !== null && line.match(re) !== null)
+    return (params.regex && re !== null && convertWhitespace(line).match(re) !== null)
       || (!params.regex && !params.caseInsensitive && line.includes(params.query))
       || (!params.regex && params.caseInsensitive && (line.toLowerCase().includes(params.query.toLowerCase()) || line.toUpperCase().includes(params.query.toUpperCase())));
   };

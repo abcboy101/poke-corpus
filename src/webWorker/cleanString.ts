@@ -152,6 +152,19 @@ function preprocessString(s: string) {
 }
 
 /**
+ * Converts escaped whitespace characters to literal whitespace characters, so that they are matched by `\s` when using a regex search.
+ *
+ * Returns the resulting string.
+ */
+function convertWhitespace(s: string) {
+  return (s
+    .replaceAll('\\n', '\n')
+    .replaceAll('\\r', '\r')
+    .replaceAll('\\c', '\f')
+  );
+}
+
+/**
  * Strips additional metadata from each string:
  * - Converted ruby text marked with `U+F0000` and `U+F0001`
  *
@@ -245,4 +258,4 @@ function postprocessString(s: string) {
   );
 }
 
-export { preprocessString, postprocessString };
+export { preprocessString, convertWhitespace, postprocessString };
