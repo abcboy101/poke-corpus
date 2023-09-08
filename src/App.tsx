@@ -283,7 +283,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
   useEffect(() => {
     if (id !== '') {
       postToWorker({
-        query: `^${id}$`,
+        query: `^${id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`,
         regex: true,
         caseInsensitive: false,
         common: true,
