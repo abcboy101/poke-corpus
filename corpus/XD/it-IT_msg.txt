@@ -5613,8 +5613,8 @@ Start.dol 0x3ba0c8󱀁[unknown2_07_0]ABRA usa TELETRASPORTO![dialogue_end]󱀀ta
 [bubble_or_speaker]: Hai sconfitto tutti gli ALLENATORI\ndell'AREA 2. \nE questi sono i POKéCOUPON che hai\nguadagnato![dialogue_end]
 [bubble_or_speaker]: Hai sconfitto tutti gli ALLENATORI\ndell'AREA 3. \nE questi sono i POKéCOUPON che hai\nguadagnato![dialogue_end]
 [bubble_or_speaker]: Hai sconfitto tutti gli ALLENATORI\ndell'AREA 4. \nE questi sono i POKéCOUPON che hai\nguadagnato![dialogue_end]
-\[bubble_or_speaker]: Hai sconfitto tutti gli ALLENATORI\ndell'AREA 5. \nE questi sono i POKéCOUPON che hai\nguadagnato![dialogue_end]
-\[bubble_or_speaker]: Hai sconfitto tutti gli ALLENATORI\ndell'AREA 6. \nE questi sono i POKéCOUPON che hai\nguadagnato![dialogue_end]
+\\[bubble_or_speaker]: Hai sconfitto tutti gli ALLENATORI\ndell'AREA 5. \nE questi sono i POKéCOUPON che hai\nguadagnato![dialogue_end]
+\\[bubble_or_speaker]: Hai sconfitto tutti gli ALLENATORI\ndell'AREA 6. \nE questi sono i POKéCOUPON che hai\nguadagnato![dialogue_end]
 [bubble_or_speaker]: Hai sconfitto tutti gli ALLENATORI\ndell'AREA 7. \nE questi sono i POKéCOUPON che hai\nguadagnato![dialogue_end]
 [bubble_or_speaker]: Hai sconfitto tutti gli ALLENATORI\ndell'AREA 8. \nE questi sono i POKéCOUPON che hai\nguadagnato![dialogue_end]
 [bubble_or_speaker]: Hai sconfitto tutti gli ALLENATORI\ndell'AREA 9. \nE questi sono i POKéCOUPON che hai\nguadagnato![dialogue_end]
@@ -8928,7 +8928,7 @@ Start.dol 0x3ba0c8󱀁[unknown2_07_0][var_2] e [var_9]\nnon sono compatibili.\nN
 Start.dol 0x3ba0c8󱀁[unknown2_07_0][var_2] vorrebbe imparare\n[var_9]!\cMa [var_2] conosce già\nquattro mosse.\cVuoi cancellare una mossa e\nsostituirla con [var_9]?󱀀tableres2.fdat 0xb5e34󱀁[unknown2_07_0][var_2] vorrebbe imparare\n[var_9].\cMa [var_2] conosce già\nquattro mosse.\cVuoi cancellare una mossa e\nsostituirla con [var_9]?
 [unknown2_07_0]Bloccare l'apprendimento\ndi [var_9]?
 Start.dol 0x3ba0c8󱀁[unknown2_07_0][var_2] non ha imparato\n[var_9]![dialogue_end]󱀀tableres2.fdat 0xb5e34󱀁[unknown2_07_0][var_2] non ha imparato\n[var_9].[dialogue_end]
-Start.dol 0x3ba0c8󱀁[unknown2_07_0]1, 2 e...[unknown_5D]\npuf!\c[var_2] scorda l'uso\ndi [var_9]!\nAl suo posto...[dialogue_end]󱀀tableres2.fdat 0xb5e34󱀁[unknown2_07_0]1, \[unknown2_09_a]2\[unknown2_09_a] e...\[unknown2_09_a] ...\[unknown2_09_a] ...\[unknown2_09_a] [unknown_5D]\npuf![unknown_5E]\c[var_2] scorda l'uso\ndi [var_9]...\ne al suo posto...[dialogue_end]
+Start.dol 0x3ba0c8󱀁[unknown2_07_0]1, 2 e...[unknown_5D]\npuf!\c[var_2] scorda l'uso\ndi [var_9]!\nAl suo posto...[dialogue_end]󱀀tableres2.fdat 0xb5e34󱀁[unknown2_07_0]1, \\[unknown2_09_a]2\\[unknown2_09_a] e...\\[unknown2_09_a] ...\\[unknown2_09_a] ...\\[unknown2_09_a] [unknown_5D]\npuf![unknown_5E]\c[var_2] scorda l'uso\ndi [var_9]...\ne al suo posto...[dialogue_end]
 [unknown2_07_0][var_2] impara\n[var_9]![dialogue_end]
 [unknown2_07_0]ATTACCO di [var_2] aumenta![dialogue_end]
 [unknown2_07_0][var_2] si gonfia![dialogue_end]
