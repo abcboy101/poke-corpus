@@ -1,3 +1,28 @@
+/**
+ * Various string handling functions.
+ *
+ * Note that the following codepoints are used internally, and may produce unexpected output if present in input text:
+ * - U+F0000: delimiter for copy of string with ruby text converted to kanji
+ * - U+F0001: delimiter for copy of string with ruby text converted to kanji
+ *
+ * - U+F0100: placeholder for literal backslash `\\`
+ * - U+F0102: placeholder for literal left square bracket `\[`
+ * - U+F0104: placeholder for literal left curly bracket `\{`
+ * - U+F0106: placeholder for less-than sign `<`
+ * - U+F0107: placeholder for greater-than sign `>`
+ *
+ * - U+F0200: placeholder for tab `\n`
+ * - U+F0201: placeholder for tab `\r`
+ * - U+F0202: placeholder for tab `\c`
+ * - U+F0203: placeholder for tab `\t`
+ * - U+F0207: placeholder for `[VAR 0207]`
+ * - U+F0208: placeholder for `[VAR 0208]`
+ *
+ * The following codepoints can be used in source documents for multivalued strings:
+ * - U+F1000: delimiter between multivalued strings
+ * - U+F1001: delimited between the discriminator and the string itself
+ */
+
 import chineseChars from './chineseChars.json';
 
 // SMUSUM Chinese Pokémon names
@@ -158,9 +183,11 @@ function preprocessString(s: string) {
  */
 function convertWhitespace(s: string) {
   return (s
+    .replaceAll('\\\\', '\u{F0100}')
     .replaceAll('\\n', '\n')
     .replaceAll('\\r', '\r')
     .replaceAll('\\c', '\f')
+    .replaceAll('\u{F0100}', '\\\\')
   );
 }
 
@@ -190,35 +217,51 @@ function multiLine(s: string) {
  */
 function postprocessString(s: string) {
   return multiLine(postprocessMetadata(s)
-    .replaceAll('<', '&lt;').replaceAll('>', '&gt;')
+    // Replace special characters with a placeholder so they don't match other rules
+    .replaceAll('\\\\', '\u{F0100}')
+    .replaceAll('\\[', '\u{F0102}')
+    .replaceAll('\\{', '\u{F0104}')
+    .replaceAll('<', '\u{F0106}')
+    .replaceAll('>', '\u{F0107}')
+
+    // Whitespace
+    .replaceAll('\\n', '\u{F0200}')
+    .replaceAll('\\r', '\u{F0201}')
+    .replaceAll('\\c', '\u{F0202}')
+    .replaceAll('\t', '\u{F0203}')
+    .replaceAll('[VAR 0207]', '\u{F0207}')
+    .replaceAll('[VAR 0208]', '\u{F0208}')
 
     // BDSP
-    .replaceAll(/&lt;color=(.*?)&gt;(.*?)&lt;\/color&gt;/gu, '<span style="color: $1">$2</span>')
-    .replaceAll(/&lt;size=(.*?)&gt;(.*?)&lt;\/size&gt;/gu, '<span style="font-size: $1">$2</span>')
-    .replaceAll(/((?<=^|\\r|\\c|\\n).*?)&lt;pos=(.*?)&gt;(.*?(?:\\r|\\c|\\n|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>')
-    .replaceAll(/((?<=^|\\r|\\c|\\n).*?)&lt;line-indent=(.*?)&gt;(.*?(?:\\r|\\c|\\n|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>')
+    .replaceAll(/\u{F0106}color=(.*?)\u{F0107}(.*?)\u{F0106}\/color\u{F0107}/gu, '<span style="color: $1">$2</span>') // color
+    .replaceAll(/\u{F0106}size=(.*?)\u{F0107}(.*?)\u{F0106}\/size\u{F0107}/gu, '<span style="font-size: $1">$2</span>') // size
+    .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\u{F0106}pos=(.*?)\u{F0107}(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>') // pos
+    .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\u{F0106}line-indent=(.*?)\u{F0107}(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>') // line-indent
 
     .replaceAll('\u2486', '<sup>P</sup><sub>K</sub>') // Gen 5 PK
     .replaceAll('\u2487', '<sup>M</sup><sub>N</sub>') // Gen 5 MN
-    .replaceAll('\uE0A7', '<sup>P</sup><sub>K</sub>') // 3DS PK
-    .replaceAll('\uE0A8', '<sup>M</sup><sub>N</sub>') // 3DS MN
-    .replaceAll(/\[VAR FF01\(FF43\)\]\[VAR FF01\(30B3\)\]/gu, '') // Gen 4 font size
-    .replaceAll(/\[VAR FF01\(FF43\)\](.+?)(?:\[VAR FF01\(30B3\)\]|\\r|\\c|\\n|$)/gu, '<span class="line-font-size-200"><span class="text-font-size-200">$1</span></span>')
-    .replaceAll('[VAR FF01(30B3)]', '')
-    .replaceAll(/\[VAR 0205\](.*?(?:\\r|\\c|\\n|$)+)/gu, '<span class="line-align-center">$1</span>') // HGSS
-    .replaceAll(/\[VAR 0206\](.*?(?:\\r|\\c|\\n|$)+)/gu, '<span class="line-align-right">$1</span>') // HGSS
+    .replaceAll('\uE0A7', '<sup>P</sup><sub>K</sub>') // 3DS PK (unused)
+    .replaceAll('\uE0A8', '<sup>M</sup><sub>N</sub>') // 3DS MN (unused)
+    .replaceAll(/\[VAR FF01\(FF43\)\]\[VAR FF01\(30B3\)\]/gu, '') // Gen 4 font size (empty string at 200%)
+    .replaceAll(/\[VAR FF01\(FF43\)\](.+?)(?:\[VAR FF01\(30B3\)\]|[\u{F0201}\u{F0202}\u{F0200}]|$)/gu, '<span class="line-font-size-200"><span class="text-font-size-200">$1</span></span>') // Gen 4 font size (text at 200%)
+    .replaceAll('[VAR FF01(30B3)]', '') // Gen 4 font size (set to 100%)
+    .replaceAll(/\[VAR 0205\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span class="line-align-center">$1</span>') // HGSS
+    .replaceAll(/\[VAR 0206\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span class="line-align-right">$1</span>') // HGSS
 
     // Line breaks
-    .replaceAll('[VAR 0207]\\n', '<span class="c">&#91;VAR 0207&#93;</span><span class="n">&#92;n</span><br>')
-    .replaceAll('[VAR 0208]\\n', '<span class="r">&#91;VAR 0208&#93;</span><span class="n">&#92;n</span><br>')
-    .replaceAll('\\r\\n', '<span class="r">&#92;r</span><span class="n">&#92;n</span><br>')
-    .replaceAll('\\c\\n', '<span class="c">&#92;c</span><span class="n">&#92;n</span><br>')
-    .replaceAll('[VAR 0207]', '<span class="c">[VAR 0207]</span>')
-    .replaceAll('[VAR 0208]', '<span class="r">[VAR 0208]</span>')
-    .replaceAll('\\r', '<span class="r">&#92;r</span><br>')
-    .replaceAll('\\c', '<span class="c">&#92;c</span><br>')
-    .replaceAll('\\n', '<span class="n">&#92;n</span><br>')
-    .replaceAll('\t', '<span class="tab">\t</span>')
+
+    .replaceAll('\u{F0207}\u{F0200}', '<span class="c">[VAR 0207]</span><span class="n">\\n</span><br>') // [VAR 0207]\n
+    .replaceAll('\u{F0208}\u{F0200}', '<span class="r">[VAR 0208]</span><span class="n">\\n</span><br>') // [VAR 0208]\n
+    .replaceAll('\u{F0201}\u{F0200}', '<span class="r">\\r</span><span class="n">\\n</span><br>') // \r\n
+    .replaceAll('\u{F0202}\u{F0200}', '<span class="c">\\c</span><span class="n">\\n</span><br>') // \c\n
+
+    .replaceAll('\u{F0207}', '<span class="c">[VAR 0207]</span><br>') // [VAR 0207]
+    .replaceAll('\u{F0208}', '<span class="r">[VAR 0208]</span><br>') // [VAR 0208]
+    .replaceAll('\u{F0201}', '<span class="r">\\r</span><br>') // \r
+    .replaceAll('\u{F0202}', '<span class="c">\\c</span><br>') // \c
+    .replaceAll('\u{F0200}', '<span class="n">\\n</span><br>') // \n
+
+    .replaceAll('\u{F0203}', '<span class="tab">\t</span>')
 
     // GCN
     .replaceAll(/\[unknown5_08_([0-9a-f]{2})_([0-9a-f]{2})_([0-9a-f]{2})_([0-9a-f]{2})\](.*?)(?:\[unknown5_08_ff_ff_ff_ff\]|$|(?=\u{F1000}))/gu, '<span style="color: #$1$2$3$4">$5</span>')
@@ -250,11 +293,15 @@ function postprocessString(s: string) {
     .replaceAll(/(\[SFX [\d.]+\])/gu, '<span class="sfx">$1</span>') // BDSP
     .replaceAll(/(\[~ \d+\])/gu, '<span class="unused">$1</span>')
     .replaceAll(/\{([^|}]+)\|([^|}]+)\}/gu, '<ruby>$1<rp>(</rp><rt>$2</rt><rp>)</rp></ruby>') // Switch furigana
-    .replaceAll(/(^\s+|\s+$)/gu, '<span class="whitespace">$1</span>')
+    .replaceAll(/(\s+$)/gu, '<span class="whitespace-trailing">$1</span>') // Trailing whitespace
+    .replaceAll(/(^\s+)/gu, '<span class="whitespace-leading">$1</span>') // Leading whitespace
 
-    // Escaped characters
-    .replaceAll('\\\\', '\\')
-    .replaceAll('\\[', '[')
+    // Replace placeholders with literal characters
+    .replaceAll('\u{F0100}', '\\')
+    .replaceAll('\u{F0102}', '[')
+    .replaceAll('\u{F0104}', '{')
+    .replaceAll('\u{F0106}', '&lt;')
+    .replaceAll('\u{F0107}', '&gt;')
   );
 }
 

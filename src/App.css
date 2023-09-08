@@ -126,8 +126,8 @@ dt {
   display: none;
 }
 
-.control-show .whitespace, .control-show .tab {
-  border: 1px dotted var(--text);
+.control-show .whitespace-leading, .whitespace-trailing, .control-show .tab {
+  border-bottom: 1px dotted var(--text);
   background-color: var(--accent);
 }
 
