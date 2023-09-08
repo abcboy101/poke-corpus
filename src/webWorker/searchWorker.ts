@@ -78,7 +78,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
     .then(preprocessString);
   }
 
-  const re = params.regex ? new RegExp(params.query, params.caseInsensitive ? 'ui' : 'u') : null;
+  const re = params.regex ? new RegExp(params.query, params.caseInsensitive ? 'sui' : 'su') : null;
   const matchCondition = (line: string): boolean => {
     return (params.regex && re !== null && convertWhitespace(line).match(re) !== null)
       || (!params.regex && !params.caseInsensitive && line.includes(params.query))
