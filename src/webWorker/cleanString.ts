@@ -3,7 +3,7 @@
  *
  * Note that the following codepoints are used internally, and may produce unexpected output if present in input text:
  * - U+F0000: delimiter for copy of string with ruby text converted to kanji
- * - U+F0001: delimiter for copy of string with ruby text converted to kanji
+ * - U+F0001: delimiter for copy of string with ruby text converted to kana
  *
  * - U+F0100: placeholder for literal backslash `\\`
  * - U+F0102: placeholder for literal left square bracket `\[`
