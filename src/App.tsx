@@ -88,6 +88,7 @@ function Results({status, progress, results, limit=1000}: {status: Status, progr
   const headers = filteredResults.map(({collection, file}) => t('tableHeader', {collection: t(`collections:${collection}.name`), file: t(`files:${file}`), interpolation: {escapeValue: false}}));
   const [showVariables, setShowVariables] = useState(true);
   const [showAllCharacters, setShowAllCharacters] = useState(false);
+  const [showGender, setShowGender] = useState(2);
   const [offset, setOffset] = useState(0);
   useEffect(() => setOffset(0), [results]);
 
@@ -125,9 +126,10 @@ function Results({status, progress, results, limit=1000}: {status: Status, progr
         <div className="App-results-toggle">
           <button className={showVariables ? 'button-square active' : 'button-square'} onClick={(e) => { e.preventDefault(); setShowVariables(!showVariables); }} title={t('showVariables')}>{t('showVariablesIcon')}</button>
           <button className={showAllCharacters ? 'button-square active' : 'button-square'} onClick={(e) => { e.preventDefault(); setShowAllCharacters(!showAllCharacters); }} title={t('showAllCharacters')}>{t('showAllCharactersIcon')}</button>
+          <button className={showGender !== 2 ? 'button-square active' : 'button-square'} onClick={(e) => { e.preventDefault(); setShowGender((showGender + 1) % 3); }} title={t('showGender')}>{t('showGenderIcon', {context: showGender})}</button>
         </div>
       </div>
-      <main id="App-results" className={`App-results variables-${showVariables ? 'show' : 'hide'} control-${showAllCharacters ? 'show' : 'hide'}`}>
+      <main id="App-results" className={`App-results variables-${showVariables ? 'show' : 'hide'} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender}`}>
         { resultTables }
       </main>
     </>

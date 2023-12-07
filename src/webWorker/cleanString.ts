@@ -209,6 +209,21 @@ function multiLine(s: string) {
 }
 
 /**
+ * Converts the male and female forms of a string to HTML, separated by a slash.
+ *
+ * Returns the resulting string.
+ */
+function genderBranch(male: string, female: string) {
+  if (male.length === 0) {
+    return `<span class="female">${female}</span>`;
+  }
+  else if (female.length === 0) {
+    return `<span class="male">${male}</span>`;
+  }
+  return `<span class="male">${male}</span><span class="gender">/</span><span class="female">${female}</span>`;
+}
+
+/**
  * Converts the provided string to HTML by escaping `<` and `>`,
  * replacing line break control characters such as  `\n` with `<br>`,
  * and converting the ruby syntax `{base|ruby}` to the corresponding HTML tags.
@@ -249,7 +264,6 @@ function postprocessString(s: string) {
     .replaceAll(/\[VAR 0206\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span class="line-align-right">$1</span>') // HGSS
 
     // Line breaks
-
     .replaceAll('\u{F0207}\u{F0200}', '<span class="c">[VAR 0207]</span><span class="n">\\n</span><br>') // [VAR 0207]\n
     .replaceAll('\u{F0208}\u{F0200}', '<span class="r">[VAR 0208]</span><span class="n">\\n</span><br>') // [VAR 0208]\n
     .replaceAll('\u{F0201}\u{F0200}', '<span class="r">\\r</span><span class="n">\\n</span><br>') // \r\n
@@ -288,6 +302,12 @@ function postprocessString(s: string) {
 
     .replaceAll('[NULL]', '<span class="null">[NULL]</span>')
     .replaceAll('[COMP]', '<span class="compressed">[COMP]</span>')
+    .replaceAll(/\[VAR (?:GENDBR|1100)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]+)/gu, (_, lenF, lenM, rest) => {
+      const endM = parseInt(lenM, 16);
+      const endF = endM + parseInt(lenF, 16);
+      return `${genderBranch(rest.substring(0, endM), rest.substring(endM, endF))}${rest.substring(endF)}`;
+    })
+    .replaceAll(/\[VAR 1[3-7A]00\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)\|([^[<{]*?)\)\]/gu, (_, male, female) => genderBranch(male, female))
     .replaceAll(/(\[VAR [^\]]+?\])/gu, '<span class="var">$1</span>')
     .replaceAll(/(\[WAIT [\d.]+\])/gu, '<span class="wait">$1</span>')
     .replaceAll(/(\[SFX [\d.]+\])/gu, '<span class="sfx">$1</span>') // BDSP

@@ -14,6 +14,10 @@
   --accent-light: skyblue;
   --accent-dark: teal;
   --line-height: 1.5;
+  --gender-male-color-light: #0000D3;
+  --gender-male-color-dark: #7192FB;
+  --gender-female-color-light: #C30000;
+  --gender-female-color-dark: #FB7171;
 }
 
 @media (prefers-color-scheme: light) {
@@ -26,6 +30,8 @@
     --progress-bar-border: var(--text);
     --progress-bar-color: var(--progress-bar-color-light);
     --accent: var(--accent-light);
+    --gender-male-color: var(--gender-male-color-light);
+    --gender-female-color: var(--gender-female-color-light);
   }
 
   body:has(.App-mode-system) {
@@ -42,6 +48,8 @@
   --progress-bar-border: var(--text);
   --progress-bar-color: var(--progress-bar-color-light);
   --accent: var(--accent-light);
+  --gender-male-color: var(--gender-male-color-light);
+  --gender-female-color: var(--gender-female-color-light);
 }
 
 body:has(.App-mode-light) {
@@ -58,6 +66,8 @@ body:has(.App-mode-light) {
     --progress-bar-border: var(--text);
     --progress-bar-color: var(--progress-bar-color-dark);
     --accent: var(--accent-dark);
+    --gender-male-color: var(--gender-male-color-dark);
+    --gender-female-color: var(--gender-female-color-dark);
   }
 
   body:has(.App-mode-system) {
@@ -74,6 +84,8 @@ body:has(.App-mode-light) {
   --progress-bar-border: var(--text);
   --progress-bar-color: var(--progress-bar-color-dark);
   --accent: var(--accent-dark);
+  --gender-male-color: var(--gender-male-color-dark);
+  --gender-female-color: var(--gender-female-color-dark);
 }
 
 body:has(.App-mode-dark) {
@@ -110,7 +122,7 @@ dt {
   font-style: italic;
 }
 
-.var, .wait, .sfx, .unused, .null, .compressed {
+.var, .wait, .sfx, .unused, .null, .compressed, .gender {
   color: var(--text-gray);
 }
 
@@ -149,6 +161,20 @@ dt {
 .line-align-right {
   display: block;
   text-align: right;
+}
+
+.gender-2 .male {
+  border-bottom: 1px dotted var(--text);
+  color: var(--gender-male-color);
+}
+
+.gender-2 .female {
+  border-bottom: 1px dotted var(--text);
+  color: var(--gender-female-color);
+}
+
+.gender-0 .female, .gender-0 .gender, .gender-1 .male, .gender-1 .gender {
+  display: none;
 }
 
 .d-none {
