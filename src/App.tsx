@@ -89,6 +89,7 @@ function Results({status, progress, results, limit=1000}: {status: Status, progr
   const [showVariables, setShowVariables] = useState(true);
   const [showAllCharacters, setShowAllCharacters] = useState(false);
   const [showGender, setShowGender] = useState(2);
+  const [showPlural, setShowPlural] = useState(0);
   const [offset, setOffset] = useState(0);
   useEffect(() => setOffset(0), [results]);
 
@@ -127,9 +128,10 @@ function Results({status, progress, results, limit=1000}: {status: Status, progr
           <button className={showVariables ? 'button-square active' : 'button-square'} onClick={(e) => { e.preventDefault(); setShowVariables(!showVariables); }} title={t('showVariables')}>{t('showVariablesIcon')}</button>
           <button className={showAllCharacters ? 'button-square active' : 'button-square'} onClick={(e) => { e.preventDefault(); setShowAllCharacters(!showAllCharacters); }} title={t('showAllCharacters')}>{t('showAllCharactersIcon')}</button>
           <button className={showGender !== 2 ? 'button-square active' : 'button-square'} onClick={(e) => { e.preventDefault(); setShowGender((showGender + 1) % 3); }} title={t('showGender')}>{t('showGenderIcon', {context: showGender})}</button>
+          <button className={showPlural !== 0 ? 'button-square active' : 'button-square'} onClick={(e) => { e.preventDefault(); setShowPlural((showPlural + 1) % 3); }} title={t('showPlural')}>{t('showPluralIcon', {context: showPlural})}</button>
         </div>
       </div>
-      <main id="App-results" className={`App-results variables-${showVariables ? 'show' : 'hide'} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender}`}>
+      <main id="App-results" className={`App-results variables-${showVariables ? 'show' : 'hide'} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural}`}>
         { resultTables }
       </main>
     </>

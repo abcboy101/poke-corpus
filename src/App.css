@@ -18,6 +18,10 @@
   --gender-male-color-dark: #7192FB;
   --gender-female-color-light: #C30000;
   --gender-female-color-dark: #FB7171;
+  --number-singular-color-light: #00D300;
+  --number-singular-color-dark: #92FB71;
+  --number-plural-color-light: #C3C300;
+  --number-plural-color-dark: #FBFB71;
 }
 
 @media (prefers-color-scheme: light) {
@@ -32,6 +36,8 @@
     --accent: var(--accent-light);
     --gender-male-color: var(--gender-male-color-light);
     --gender-female-color: var(--gender-female-color-light);
+    --number-singular-color: var(--number-singular-color-light);
+    --number-plural-color: var(--number-plural-color-light);
   }
 
   body:has(.App-mode-system) {
@@ -50,6 +56,8 @@
   --accent: var(--accent-light);
   --gender-male-color: var(--gender-male-color-light);
   --gender-female-color: var(--gender-female-color-light);
+  --number-singular-color: var(--number-singular-color-light);
+  --number-plural-color: var(--number-plural-color-light);
 }
 
 body:has(.App-mode-light) {
@@ -68,6 +76,8 @@ body:has(.App-mode-light) {
     --accent: var(--accent-dark);
     --gender-male-color: var(--gender-male-color-dark);
     --gender-female-color: var(--gender-female-color-dark);
+    --number-singular-color: var(--number-singular-color-dark);
+    --number-plural-color: var(--number-plural-color-dark);
   }
 
   body:has(.App-mode-system) {
@@ -86,6 +96,8 @@ body:has(.App-mode-light) {
   --accent: var(--accent-dark);
   --gender-male-color: var(--gender-male-color-dark);
   --gender-female-color: var(--gender-female-color-dark);
+  --number-singular-color: var(--number-singular-color-dark);
+  --number-plural-color: var(--number-plural-color-dark);
 }
 
 body:has(.App-mode-dark) {
@@ -122,7 +134,7 @@ dt {
   font-style: italic;
 }
 
-.var, .wait, .sfx, .unused, .null, .compressed, .gender {
+.var, .wait, .sfx, .unused, .null, .compressed, .gender, .number {
   color: var(--text-gray);
 }
 
@@ -163,17 +175,50 @@ dt {
   text-align: right;
 }
 
-.gender-2 .male {
+.gender-2 .branch.male {
   border-bottom: 1px dotted var(--text);
   color: var(--gender-male-color);
 }
 
-.gender-2 .female {
+.gender-2 .branch.female {
   border-bottom: 1px dotted var(--text);
   color: var(--gender-female-color);
 }
 
-.gender-0 .female, .gender-0 .gender, .gender-1 .male, .gender-1 .gender {
+.number-0 .branch.singular {
+  border-bottom: 1px dotted var(--text);
+  color: var(--number-singular-color);
+}
+
+.number-0 .branch.plural {
+  border-bottom: 1px dotted var(--text);
+  color: var(--number-plural-color);
+}
+
+.gender-2.number-0 .branch.male.singular {
+  border-bottom: 1px dotted var(--text);
+  color: color-mix(in oklab, var(--gender-male-color) 75%, var(--number-singular-color));
+}
+
+.gender-2.number-0 .branch.female.singular {
+  border-bottom: 1px dotted var(--text);
+  color: color-mix(in oklab, var(--gender-female-color) 75%, var(--number-singular-color));
+}
+
+.gender-2.number-0 .branch.male.plural {
+  border-bottom: 1px dotted var(--text);
+  color: color-mix(in oklab, var(--gender-male-color) 50%, var(--number-plural-color));
+}
+
+.gender-2.number-0 .branch.female.plural {
+  border-bottom: 1px dotted var(--text);
+  color: color-mix(in oklab, var(--gender-female-color) 50%, var(--number-plural-color));
+}
+
+.gender-0 .female:not(.male), .gender-0 .gender,
+.gender-1 .male:not(.female), .gender-1 .gender,
+.number-1 .plural, .number-1 .number,
+.number-2 .singular, .number-2 .number {
   display: none;
 }
 

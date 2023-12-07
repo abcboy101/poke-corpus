@@ -214,13 +214,48 @@ function multiLine(s: string) {
  * Returns the resulting string.
  */
 function genderBranch(male: string, female: string) {
-  if (male.length === 0) {
-    return `<span class="female">${female}</span>`;
-  }
-  else if (female.length === 0) {
-    return `<span class="male">${male}</span>`;
-  }
-  return `<span class="male">${male}</span><span class="gender">/</span><span class="female">${female}</span>`;
+  const results = [];
+  if (male.length > 0) results.push(`<span class="branch male">${male}</span>`);
+  if (female.length > 0) results.push(`<span class="branch female">${female}</span>`);
+  return results.join('<span class="gender">/</span>');
+}
+
+/**
+ * Converts the singular and plural forms of a string to HTML, separated by a slash.
+ *
+ * Returns the resulting string.
+ */
+function numberBranch(singular: string, plural: string) {
+  const results = [];
+  if (singular.length > 0) results.push(`<span class="branch singular">${singular}</span>`);
+  if (plural.length > 0) results.push(`<span class="branch plural">${plural}</span>`);
+  return results.join('<span class="number">/</span>');
+}
+
+/**
+ * Converts the male singular, female singular, male plural, and female plural forms of a string to HTML, separated by a slash.
+ *
+ * Returns the resulting string.
+ */
+function genderNumberBranch(maleSingular: string, femaleSingular: string, malePlural: string, femalePlural: string) {
+  const singularResults = [];
+  if (maleSingular.length > 0) singularResults.push(`<span class="branch male singular">${maleSingular}</span>`);
+  if (femaleSingular.length > 0) singularResults.push(`<span class="branch female singular">${femaleSingular}</span>`);
+  const singular = singularResults.join('<span class="gender singular">/</span>');
+
+  const pluralResults = [];
+  if (malePlural.length > 0) pluralResults.push(`<span class="branch male plural">${malePlural}</span>`);
+  if (femalePlural.length > 0) pluralResults.push(`<span class="branch female plural">${femalePlural}</span>`);
+  const plural = pluralResults.join('<span class="gender plural">/</span>');
+
+  const classResults = ['number'];
+  if (maleSingular.length > 0 && malePlural.length > 0) classResults.push('male');
+  if (femaleSingular.length > 0 && femalePlural.length > 0) classResults.push('female');
+  const className = classResults.join(' ');
+  return [singular, plural].join(`<span class="${className}">/</span>`);
+
+  // return `<span class="male singular">${maleSingular}</span><span class="gender singular">/</span><span class="female singular">${femaleSingular}</span>` +
+    // `<span class="number">/</span><span class="male plural">${malePlural}</span><span class="gender plural">/</span><span class="female plural">${femalePlural}</span>`;
 }
 
 /**
@@ -285,7 +320,7 @@ function postprocessString(s: string) {
     .replaceAll('[opp_trainer_class]', '<span class="var">[opp_trainer_class]</span>')
     .replaceAll('[opp_trainer_name]', '<span class="var">[opp_trainer_name]</span>')
     .replaceAll('[sent_out_pokemon_1]', '<span class="var">[sent_out_pokemon_1]</span>')
-    .replaceAll('[sent_out_pokemon_2]', '<span class="var">[sent_out_pokemon_2[]]</span>')
+    .replaceAll('[sent_out_pokemon_2]', '<span class="var">[sent_out_pokemon_2]</span>')
     .replaceAll('[speechbubble]', '<span class="var">[speechbubble]</span>')
     .replaceAll('[bubble_or_speaker]', '<span class="var">[bubble_or_speaker]</span>')
     .replaceAll('[maybe_speaker_ID_toggle]', '<span class="var">[maybe_speaker_ID_toggle]</span>')
@@ -307,7 +342,21 @@ function postprocessString(s: string) {
       const endF = endM + parseInt(lenF, 16);
       return `${genderBranch(rest.substring(0, endM), rest.substring(endM, endF))}${rest.substring(endF)}`;
     })
-    .replaceAll(/\[VAR 1[3-7A]00\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)\|([^[<{]*?)\)\]/gu, (_, male, female) => genderBranch(male, female))
+    .replaceAll(/\[VAR (?:NUMBRNCH|1101)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]+)/gu, (_, lenP, lenS, rest) => {
+      const endS = parseInt(lenS, 16);
+      const endP = endS + parseInt(lenP, 16);
+      return `${numberBranch(rest.substring(0, endS), rest.substring(endS, endP))}${rest.substring(endP)}`;
+    })
+    .replaceAll(/\[VAR (?:1102)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]+)/gu, (_, lenFS, lenMS, lenFP, lenMP, rest) => {
+      const endMS = parseInt(lenMS, 16);
+      const endFS = endMS + parseInt(lenFS, 16);
+      const endMP = endFS + parseInt(lenMP, 16);
+      const endFP = endMP + parseInt(lenFP, 16);
+      return `${genderNumberBranch(rest.substring(0, endMS), rest.substring(endMS, endFS), rest.substring(endFS, endMP), rest.substring(endMP, endFP))}${rest.substring(endFP)}`;
+    })
+    .replaceAll(/\[VAR 1[3-7A]00\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)(?:\|([^[<{]*?))?\)\]/gu, (_, male, female) => genderBranch(male, female ?? ''))
+    .replaceAll(/\[VAR 1[3-7A]01\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)(?:\|([^[<{]*?))?\)\]/gu, (_, singular, plural) => numberBranch(singular, plural ?? ''))
+    .replaceAll(/\[VAR 1[3-7A]02\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)\|([^[<{]*?)\|([^[<{]*?)\|([^[<{]*?)\)\]/gu, (_, maleSingular, femaleSingular, malePlural, femalePlural) => genderNumberBranch(maleSingular, femaleSingular, malePlural, femalePlural))
     .replaceAll(/(\[VAR [^\]]+?\])/gu, '<span class="var">$1</span>')
     .replaceAll(/(\[WAIT [\d.]+\])/gu, '<span class="wait">$1</span>')
     .replaceAll(/(\[SFX [\d.]+\])/gu, '<span class="sfx">$1</span>') // BDSP
