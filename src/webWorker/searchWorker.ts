@@ -1,5 +1,6 @@
 import 'compression-streams-polyfill';
 import { preprocessString, convertWhitespace, postprocessString } from './cleanString';
+import { Speaker, speakerDelimiter } from './corpus';
 
 export interface SearchParams {
   readonly query: string,
@@ -9,14 +10,15 @@ export interface SearchParams {
   readonly script: boolean,
   readonly collections: readonly string[],
   readonly languages: readonly string[]
-};
+}
 
 export interface SearchTask {
   readonly index: number,
   readonly params: SearchParams,
   readonly collectionKey: string,
   readonly fileKey: string,
-  readonly languages: readonly string[]
+  readonly languages: readonly string[],
+  readonly speaker?: Speaker
 }
 
 export type SearchTaskResultError = 'error' | 'regex' | 'network';
@@ -43,7 +45,7 @@ export const cacheVersion = "v1";
 
 /* eslint-disable no-restricted-globals */
 self.onmessage = (task: MessageEvent<SearchTask>) => {
-  const {index, params, collectionKey, fileKey, languages} = task.data;
+  const {index, params, collectionKey, fileKey, languages, speaker} = task.data;
   const notify = (status: SearchTaskResultStatus, result?: SearchTaskResultLines) => {
     const message: SearchTaskResult = {
       index: index,
@@ -107,8 +109,12 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
     }));
     processingFilePromises.forEach((promise) => promise.then(() => notify('processing')).catch(() => {})); // for progress bar
 
+    // Load speakers
+    // Since all dialogue with speaker names are in the script file while the speaker names are in the common file, we always have to load it separately
+    const speakerPromises = (speaker === undefined || fileKey !== 'script') ? [] : languages.map((languageKey) => getFileFromCache(collectionKey, languageKey, speaker.file).then((data) => data.split(/\r\n|\n/).slice(speaker.line, speaker.line + speaker.count)));
+
     // Filter only the lines that matched
-    Promise.all(processingFilePromises).then((processedFiles) => {
+    Promise.all([Promise.all(processingFilePromises), Promise.all(speakerPromises)]).then(([processedFiles, speakers]) => {
       const languageKeys: string[] = [];
       const lineKeysSet: Set<number> = new Set();
       const fileData: string[][] = [];
@@ -120,7 +126,12 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       });
 
       const fileResults: string[][] = [];
-      Array.from(lineKeysSet).sort((a, b) => a - b).forEach((i) => fileResults.push(fileData.map((lines) => postprocessString(lines[i] ?? ''))));
+      const replaceSpeaker = (s: string, languageIndex: number) => speaker === undefined ? s : s.replace(/(.*?)\[VAR 0114\(([0-9A-F]{4})\)\](?:$|(?=\u{F0000}))/u, (_, rest, speakerIndexHex) => {
+        const speakerIndex = parseInt(speakerIndexHex, 16);
+        const speakerName = speakers[languageIndex][speakerIndex - 1];
+        return `${speakerIndex}\u{F1100}${speakerName}${speakerDelimiter(languages[languageIndex]) ?? ': '}\u{F1101}${rest}`;
+      });
+      Array.from(lineKeysSet).sort((a, b) => a - b).forEach((i) => fileResults.push(fileData.map((lines, languageIndex) => postprocessString(replaceSpeaker(lines[i] ?? '', languageIndex)))));
       notify('done', {
         collection: collectionKey,
         file: fileKey,

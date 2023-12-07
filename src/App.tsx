@@ -4,13 +4,13 @@ import { useTranslation } from 'react-i18next';
 
 import { SearchParams } from './webWorker/searchWorker';
 import { SearchResults, SearchResultsInProgress, SearchResultsComplete, SearchResultLines } from './webWorker/searchWorkerManager';
+import corpus from './webWorker/corpus';
 import Share from './components/Share';
 import Spinner from './components/Spinner';
 import ProgressBar from './components/ProgressBar';
 
 import './App.css';
 import logo from './res/logo.svg';
-import corpus from './res/corpus.json'
 import supportedLngs from './i18n/supportedLngs.json'
 import './i18n/config';
 
@@ -69,7 +69,6 @@ function ResultsTable({header, languages, lines, displayHeader, k, count, start 
           <tbody dir={sameDir && displayDirs[0] !== i18next.dir() ? displayDirs[0] : undefined}>
             {slicedLines.map((row, i) => {
               return <tr key={i}>
-                {idIndex !== -1 ? <td key='share'><Share hash={`#id=${row[idIndex]}`}/></td> : null}
                 {row.map((s, j) => <td key={j} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]} dangerouslySetInnerHTML={{__html: s}}></td>)}
               </tr>
             })}
@@ -217,13 +216,14 @@ const defaultParams: SearchParams = {
   caseInsensitive: true,
   common: true,
   script: true,
-  collections: (Object.keys(corpus.collections) as (keyof typeof corpus.collections)[]).filter((value) => corpus.collections[value].structured),
+  collections: Object.keys(corpus.collections).filter((value) => corpus.collections[value].structured),
   languages: corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0])) || corpus.languages.filter((value) => value.startsWith('en'))
 }
 
 function SearchForm({status, postToWorker, terminateWorker}: {status: Status, postToWorker: (params: SearchParams) => void, terminateWorker: () => void}) {
   const { t } = useTranslation();
   const [id, setId] = useState('');
+  const [file, setFile] = useState('');
   const [query, setQuery] = useState(defaultParams.query);
   const [regex, setRegex] = useState(defaultParams.regex);
   const [caseInsensitive, setCaseInsensitive] = useState(defaultParams.caseInsensitive);
@@ -292,7 +292,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         caseInsensitive: false,
         common: true,
         script: true,
-        collections: (Object.keys(corpus.collections) as (keyof typeof corpus.collections)[]).filter((key) => corpus.collections[key].id === id.split('.')[0]),
+        collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key]?.id === id.split('.')[0]),
         languages: [codeId]
       });
     }

@@ -134,7 +134,7 @@ dt {
   font-style: italic;
 }
 
-.var, .wait, .sfx, .unused, .null, .compressed, .gender, .number {
+.var, .wait, .sfx, .unused, .null, .compressed, .gender, .number, .speaker {
   color: var(--text-gray);
 }
 

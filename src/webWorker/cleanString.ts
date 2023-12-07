@@ -20,7 +20,9 @@
  *
  * The following codepoints can be used in source documents for multivalued strings:
  * - U+F1000: delimiter between multivalued strings
- * - U+F1001: delimited between the discriminator and the string itself
+ * - U+F1001: delimiter between the discriminator and the string itself
+ * - U+F1100: delimiter between speaker ID and speaker name
+ * - U+F1101: delimiter between speaker name and dialogue
  */
 
 import chineseChars from './chineseChars.json';
@@ -364,6 +366,9 @@ function postprocessString(s: string) {
     .replaceAll(/\{([^|}]+)\|([^|}]+)\}/gu, '<ruby>$1<rp>(</rp><rt>$2</rt><rp>)</rp></ruby>') // Switch furigana
     .replaceAll(/(\s+$)/gu, '<span class="whitespace-trailing">$1</span>') // Trailing whitespace
     .replaceAll(/(^\s+)/gu, '<span class="whitespace-leading">$1</span>') // Leading whitespace
+
+    // Speaker name
+    .replaceAll(/^(\d+)\u{F1100}(.+?)\u{F1101}/gu, '<span class="speaker" data-value="$1">$2</span>')
 
     // Replace placeholders with literal characters
     .replaceAll('\u{F0100}', '\\')

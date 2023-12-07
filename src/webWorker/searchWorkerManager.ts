@@ -1,4 +1,4 @@
-import corpus from '../res/corpus.json'
+import corpus from './corpus';
 import { SearchParams, SearchTask, SearchTaskResult, SearchTaskResultComplete, SearchTaskResultError } from './searchWorker';
 
 export type SearchResultsInProgress = 'loading' | 'processing' | 'collecting';
@@ -64,7 +64,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
     // Load files
     let taskCount = 0;
     const taskList: SearchTask[] = [];
-    (Object.keys(corpus.collections) as (keyof typeof corpus.collections)[]).filter((collectionKey) => params.collections.includes(collectionKey)).forEach((collectionKey) => {
+    Object.keys(corpus.collections).filter((collectionKey) => params.collections.includes(collectionKey)).forEach((collectionKey) => {
       const collection = corpus.collections[collectionKey];
 
       // Do not process collection if it does not include any language being searched
@@ -94,7 +94,8 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
             params: params,
             collectionKey: collectionKey,
             fileKey: fileKey,
-            languages: languages
+            languages: languages,
+            speaker: collection?.speaker
           });
         }
         taskCount += languages.length;

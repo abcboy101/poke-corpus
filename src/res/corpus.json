@@ -15,7 +15,6 @@
   ],
   "collections": {
     "Red": {
-      "id": null,
       "languages": [
         "ja-Hrkt-JP",
         "en-US",
@@ -25,24 +24,20 @@
         "es-ES"
       ],
       "structured": false,
-      "version": null,
       "files": [
         "data"
       ]
     },
     "Green": {
-      "id": null,
       "languages": [
         "ja-Hrkt-JP"
       ],
       "structured": false,
-      "version": null,
       "files": [
         "data"
       ]
     },
     "Blue": {
-      "id": null,
       "languages": [
         "ja-Hrkt-JP",
         "en-US",
@@ -52,13 +47,11 @@
         "es-ES"
       ],
       "structured": false,
-      "version": null,
       "files": [
         "data"
       ]
     },
     "Yellow": {
-      "id": null,
       "languages": [
         "ja-Hrkt-JP",
         "en-US",
@@ -68,13 +61,11 @@
         "es-ES"
       ],
       "structured": false,
-      "version": null,
       "files": [
         "data"
       ]
     },
     "Gold": {
-      "id": null,
       "languages": [
         "ja-Hrkt-JP",
         "en-US",
@@ -85,13 +76,11 @@
         "ko-KR"
       ],
       "structured": false,
-      "version": null,
       "files": [
         "data"
       ]
     },
     "Silver": {
-      "id": null,
       "languages": [
         "ja-Hrkt-JP",
         "en-US",
@@ -102,13 +91,11 @@
         "ko-KR"
       ],
       "structured": false,
-      "version": null,
       "files": [
         "data"
       ]
     },
     "Crystal": {
-      "id": null,
       "languages": [
         "ja-Hrkt-JP",
         "en-US",
@@ -118,13 +105,11 @@
         "es-ES"
       ],
       "structured": false,
-      "version": null,
       "files": [
         "data"
       ]
     },
     "Ruby": {
-      "id": null,
       "languages": [
         "ja-Hrkt-JP",
         "en-US",
@@ -147,7 +132,6 @@
       ]
     },
     "Sapphire": {
-      "id": null,
       "languages": [
         "ja-Hrkt-JP",
         "en-US",
@@ -170,7 +154,6 @@
       ]
     },
     "FireRed": {
-      "id": null,
       "languages": [
         "ja-Hrkt-JP",
         "en-US",
@@ -193,7 +176,6 @@
       ]
     },
     "LeafGreen": {
-      "id": null,
       "languages": [
         "ja-Hrkt-JP",
         "en-US",
@@ -216,7 +198,6 @@
       ]
     },
     "Emerald": {
-      "id": null,
       "languages": [
         "ja-Hrkt-JP",
         "en-US",
@@ -245,7 +226,6 @@
         "ko-KR"
       ],
       "structured": true,
-      "version": null,
       "files": [
         "msg"
       ]
@@ -264,7 +244,6 @@
         "ko-KR"
       ],
       "structured": true,
-      "version": null,
       "files": [
         "msg"
       ]
@@ -282,7 +261,6 @@
         "ko-KR"
       ],
       "structured": true,
-      "version": null,
       "files": [
         "msg"
       ]
@@ -301,7 +279,6 @@
         "ko-KR"
       ],
       "structured": true,
-      "version": null,
       "files": [
         "common",
         "script"
@@ -321,7 +298,6 @@
         "ko-KR"
       ],
       "structured": true,
-      "version": null,
       "files": [
         "common",
         "script"
@@ -341,7 +317,6 @@
         "ko-KR"
       ],
       "structured": true,
-      "version": null,
       "files": [
         "common",
         "script"
@@ -361,7 +336,6 @@
         "ko-KR"
       ],
       "structured": true,
-      "version": null,
       "files": [
         "common",
         "script"
@@ -383,11 +357,15 @@
         "zh-TW"
       ],
       "structured": true,
-      "version": null,
       "files": [
         "common",
         "script"
-      ]
+      ],
+      "speaker": {
+        "file": "common",
+        "line": 18850,
+        "count": 54
+      }
     },
     "UltraSunUltraMoon": {
       "id": "usum",
@@ -405,11 +383,15 @@
         "zh-TW"
       ],
       "structured": true,
-      "version": null,
       "files": [
         "common",
         "script"
-      ]
+      ],
+      "speaker": {
+        "file": "common",
+        "line": 19650,
+        "count": 86
+      }
     },
     "LetsGoPikachuLetsGoEevee": {
       "id": "lgpe",
@@ -427,7 +409,6 @@
         "zh-TW"
       ],
       "structured": true,
-      "version": null,
       "files": [
         "common",
         "script"
@@ -453,7 +434,12 @@
       "files": [
         "common",
         "script"
-      ]
+      ],
+      "speaker": {
+        "file": "common",
+        "line": 14247,
+        "count": 125
+      }
     },
     "BrilliantDiamondShiningPearl": {
       "id": "bdsp",
@@ -496,7 +482,12 @@
       "files": [
         "common",
         "script"
-      ]
+      ],
+      "speaker": {
+        "file": "common",
+        "line": 11533,
+        "count": 275
+      }
     },
     "ScarletViolet": {
       "id": "sv",
@@ -517,7 +508,12 @@
       "files": [
         "common",
         "script"
-      ]
+      ],
+      "speaker": {
+        "file": "common",
+        "line": 16775,
+        "count": 86
+      }
     },
     "Colosseum": {
       "id": "colo",
@@ -532,7 +528,6 @@
         "es-ES"
       ],
       "structured": true,
-      "version": null,
       "files": [
         "msg"
       ]
@@ -550,7 +545,6 @@
         "es-ES"
       ],
       "structured": true,
-      "version": null,
       "files": [
         "msg"
       ]
