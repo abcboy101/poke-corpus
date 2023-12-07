@@ -13,6 +13,7 @@ import './App.css';
 import logo from './res/logo.svg';
 import supportedLngs from './i18n/supportedLngs.json'
 import './i18n/config';
+import ViewNearby from './components/ViewNearby';
 
 type StatusInProgress = 'waiting' | SearchResultsInProgress | 'rendering';
 type StatusComplete = 'initial' | SearchResultsComplete;
@@ -69,6 +70,13 @@ function ResultsTable({header, languages, lines, displayHeader, k, count, start 
           <tbody dir={sameDir && displayDirs[0] !== i18next.dir() ? displayDirs[0] : undefined}>
             {slicedLines.map((row, i) => {
               return <tr key={i}>
+                {idIndex !== -1 ?
+                  <td key="actions">
+                    <div className="App-results-table-actions">
+                      <Share hash={`#id=${row[idIndex]}`}/>
+                      <ViewNearby hash={`#file=${row[idIndex].split('.').slice(0, -1).join('.')}`}/>
+                    </div>
+                  </td> : null}
                 {row.map((s, j) => <td key={j} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]} dangerouslySetInnerHTML={{__html: s}}></td>)}
               </tr>
             })}
@@ -240,6 +248,11 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       setId(newId);
     }
 
+    const newFile = params.get('file');
+    if (newFile !== null) {
+      setFile(newFile);
+    }
+
     const newQuery = params.get('query');
     if (newQuery !== null) {
       setQuery(newQuery);
@@ -297,6 +310,20 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       });
     }
   }, [id, postToWorker]);
+
+  useEffect(() => {
+    if (file !== '') {
+      postToWorker({
+        query: `^${file.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\..*$`,
+        regex: true,
+        caseInsensitive: false,
+        common: true,
+        script: true,
+        collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key]?.id === file.split('.')[0]),
+        languages: [codeId]
+      });
+    }
+  }, [file, postToWorker]);
 
   const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();

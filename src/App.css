@@ -370,6 +370,14 @@ footer {
   background-color: var(--highlight);
 }
 
+.App-results-table-actions {
+  display: flex;
+  margin: auto;
+  place-items: center;
+  vertical-align: middle;
+  gap: 0.25em;
+}
+
 .App-results-nav-range-long {
   display: block;
 }
