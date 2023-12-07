@@ -18,6 +18,15 @@ Visit at [abcboy101.github.io/poke-corpus/](https://abcboy101.github.io/poke-cor
 5. The search results will appear in the window.
    - If there are results from multiple games, you can jump to a particular game's results using the "Jump to..." dropdown.
    - You can share a link to a particular line using the arrow icon.
+   - You can view nearby lines using the paper with lines icon.
+
+Near the top right of the results window are several buttons.
+- The button with a "[ ]" icon will show/hide variables.
+- The button with a "¶" icon will show/hide all characters, including line breaks.
+- The button with a "⚥" icon will change whether lines for the male or female player are displayed.
+  The available options are both players separated by a slash (⚥), male (♂), or female (♀).
+- The button with a "#" icon will change whether singular or plural forms are displayed.
+  The available options are both forms separated by a slash (#), singular (1), or plural (>1).
 
 You can change your selected language and colorscheme using the dropdowns in the top right.
 
