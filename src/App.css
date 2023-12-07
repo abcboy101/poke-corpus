@@ -18,10 +18,10 @@
   --gender-male-color-dark: #7192FB;
   --gender-female-color-light: #C30000;
   --gender-female-color-dark: #FB7171;
-  --number-singular-color-light: #00D300;
-  --number-singular-color-dark: #92FB71;
-  --number-plural-color-light: #C3C300;
-  --number-plural-color-dark: #FBFB71;
+  --number-singular-color-light: #007300;
+  --number-singular-color-dark: #82EB71;
+  --number-plural-color-light: #938300;
+  --number-plural-color-dark: #EBEB51;
 }
 
 @media (prefers-color-scheme: light) {
