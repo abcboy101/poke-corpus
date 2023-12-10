@@ -185,6 +185,11 @@ dt {
   color: var(--gender-female-color);
 }
 
+.gender-2 .branch.neuter {
+  border-bottom: 1px dotted var(--text);
+  color: color-mix(in oklab, var(--gender-male-color), var(--gender-female-color));
+}
+
 .number-0 .branch.singular {
   border-bottom: 1px dotted var(--text);
   color: var(--number-singular-color);
@@ -215,8 +220,8 @@ dt {
   color: color-mix(in oklab, var(--gender-female-color) 50%, var(--number-plural-color));
 }
 
-.gender-0 .female:not(.male), .gender-0 .gender,
-.gender-1 .male:not(.female), .gender-1 .gender,
+.gender-0 .female:not(.male), .gender-0 .gender, .gender-0 .neuter,
+.gender-1 .male:not(.female), .gender-1 .gender, .gender-1 .neuter,
 .number-1 .plural, .number-1 .number,
 .number-2 .singular, .number-2 .number {
   display: none;

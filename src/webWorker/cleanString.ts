@@ -215,10 +215,11 @@ function multiLine(s: string) {
  *
  * Returns the resulting string.
  */
-function genderBranch(male: string, female: string) {
+function genderBranch(male: string, female: string, neuter: string = '') {
   const results = [];
   if (male.length > 0) results.push(`<span class="branch male">${male}</span>`);
   if (female.length > 0) results.push(`<span class="branch female">${female}</span>`);
+  if (neuter.length > 0) results.push(`<span class="branch neuter">${neuter}</span>`);
   return results.join('<span class="gender">/</span>');
 }
 
@@ -343,6 +344,12 @@ function postprocessString(s: string) {
       const endM = parseInt(lenM, 16);
       const endF = endM + parseInt(lenF, 16);
       return `${genderBranch(rest.substring(0, endM), rest.substring(endM, endF))}${rest.substring(endF)}`;
+    })
+    .replaceAll(/\[VAR (?:GENDBR|1100)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),00([0-9A-F]{2})\)\]([^[<{]+)/gu, (_, lenF, lenM, lenN, rest) => {
+      const endM = parseInt(lenM, 16);
+      const endF = endM + parseInt(lenF, 16);
+      const endN = endF + parseInt(lenN, 16);
+      return `${genderBranch(rest.substring(0, endM), rest.substring(endM, endF), rest.substring(endF, endN))}${rest.substring(endN)}`;
     })
     .replaceAll(/\[VAR (?:NUMBRNCH|1101)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]+)/gu, (_, lenP, lenS, rest) => {
       const endS = parseInt(lenS, 16);
