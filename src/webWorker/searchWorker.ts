@@ -1,6 +1,6 @@
 import 'compression-streams-polyfill';
 import { preprocessString, convertWhitespace, postprocessString } from './cleanString';
-import { Speaker, speakerDelimiter } from './corpus';
+import { Speaker, speakerDelimiter, cacheVersion } from './corpus';
 
 export interface SearchParams {
   readonly query: string,
@@ -40,8 +40,6 @@ export interface SearchTaskResultComplete {
   readonly status: SearchTaskResultDone,
   readonly result: SearchTaskResultLines
 }
-
-export const cacheVersion = "v1";
 
 /* eslint-disable no-restricted-globals */
 self.onmessage = (task: MessageEvent<SearchTask>) => {

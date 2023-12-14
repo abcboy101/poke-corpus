@@ -18,6 +18,7 @@ export interface Collection {
 }
 
 export interface Corpus {
+  hash: string,
   readonly languages: readonly string[],
   readonly collections: {
     [collectionKey: string]: Collection
@@ -38,4 +39,5 @@ export function speakerDelimiter(language: string) {
 }
 
 export const corpus = corpusJson as Corpus;
+export const cacheVersion = `corpus-${corpus.hash}`;
 export default corpus;

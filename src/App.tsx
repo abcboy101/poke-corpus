@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import { SearchParams } from './webWorker/searchWorker';
 import { SearchResults, SearchResultsInProgress, SearchResultsComplete, SearchResultLines } from './webWorker/searchWorkerManager';
-import corpus from './webWorker/corpus';
+import { corpus, cacheVersion } from './webWorker/corpus';
 import Share from './components/Share';
 import Spinner from './components/Spinner';
 import ProgressBar from './components/ProgressBar';
@@ -516,6 +516,15 @@ function ModeSelect({mode, setMode}: {mode: string, setMode: Dispatch<SetStateAc
 function App() {
   const { t } = useTranslation();
   const [mode, setMode] = useState(localStorage.getItem('mode') ?? 'system');
+
+  // invalidate old caches on load
+  useEffect(() => {
+    if ('caches' in window) {
+      window.caches.keys().then((keyList) => {
+        Promise.all(keyList.filter((key) => key.startsWith('corpus-') && key !== cacheVersion).map((key) => window.caches.delete(key)))
+      });
+    }
+  }, []);
 
   return (
     <div className={`App App-mode-${mode}`} lang={i18next.language} dir={i18next.dir()}>
