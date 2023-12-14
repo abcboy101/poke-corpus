@@ -372,7 +372,7 @@ function postprocessString(s: string) {
     .replaceAll(/(^\s+)/gu, '<span class="whitespace-leading">$1</span>') // Leading whitespace
 
     // Speaker name
-    .replaceAll(/^(\d+)\u{F1100}(.+?)\u{F1101}/gu, '<span class="speaker" data-value="$1">$2</span>')
+    .replaceAll(/^(.+)\u{F1100}(.+?)\u{F1101}/gu, '<a class="speaker" data-var="$1">$2</a>')
 
     // Replace placeholders with literal characters
     .replaceAll('\u{F0100}', '\\')

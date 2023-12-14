@@ -32,6 +32,8 @@ const jumpTo = (k: number) => {
   }
 };
 
+const escapeRegex = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
 function JumpToSelect({headers}: {headers: readonly string[]}) {
   const { t } = useTranslation();
   return <nav className="App-results-jump">
@@ -54,6 +56,19 @@ function ResultsTable({header, languages, lines, displayHeader, k, count, start 
     setOffset(count);
     jumpTo(k);
   }
+
+  useEffect(() => {
+    const speakers = Array.from(document.getElementsByClassName('speaker'));
+    const params = new URLSearchParams(window.location.hash.substring(1));
+    speakers.forEach(element => {
+      const query = element.getAttribute('data-var');
+      if (query !== null) {
+        params.set('query', params.get('regex') === 'true' ? escapeRegex(query) : query);
+        element.setAttribute('href', `#${params}`);
+        element.setAttribute('title', t('viewSpeaker'));
+      }
+    });
+  }, [t, slicedLines])
 
   return (
     <section id={`App-results-section${k}`} className='App-results-table-container'>
@@ -300,7 +315,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
   useEffect(() => {
     if (id !== '') {
       postToWorker({
-        query: `^${id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`,
+        query: `^${escapeRegex(id)}$`,
         regex: true,
         caseInsensitive: false,
         common: true,
@@ -314,7 +329,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
   useEffect(() => {
     if (file !== '') {
       postToWorker({
-        query: `^${file.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\..*$`,
+        query: `^${escapeRegex(file)}\\..*$`,
         regex: true,
         caseInsensitive: false,
         common: true,

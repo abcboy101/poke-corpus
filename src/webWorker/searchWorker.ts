@@ -131,10 +131,10 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       });
 
       const fileResults: string[][] = [];
-      const replaceSpeaker = (s: string, languageIndex: number) => speaker === undefined ? s : s.replace(/(.*?)\[VAR 0114\(([0-9A-F]{4})\)\](?:$|(?=\u{F0000}))/u, (_, rest, speakerIndexHex) => {
+      const replaceSpeaker = (s: string, languageIndex: number) => speaker === undefined ? s : s.replace(/(.*?)(\[VAR 0114\(([0-9A-F]{4})\)\])(?:$|(?=\u{F0000}))/u, (_, rest, tag, speakerIndexHex) => {
         const speakerIndex = parseInt(speakerIndexHex, 16);
         const speakerName = speakers[languageIndex][speakerIndex];
-        return `${speakerIndex}\u{F1100}${speakerName}${speakerDelimiter(languages[languageIndex]) ?? ': '}\u{F1101}${rest}`;
+        return `${tag.replaceAll('[', '\\[')}\u{F1100}${speakerName}${speakerDelimiter(languages[languageIndex]) ?? ': '}\u{F1101}${rest}`;
       });
       Array.from(lineKeysSet).sort((a, b) => a - b).forEach((i) => fileResults.push(fileData.map((lines, languageIndex) => postprocessString(replaceSpeaker(lines[i] ?? '', languageIndex)))));
       notify('done', {
