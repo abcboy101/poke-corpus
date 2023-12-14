@@ -256,9 +256,6 @@ function genderNumberBranch(maleSingular: string, femaleSingular: string, malePl
   if (femaleSingular.length > 0 && femalePlural.length > 0) classResults.push('female');
   const className = classResults.join(' ');
   return [singular, plural].join(`<span class="${className}">/</span>`);
-
-  // return `<span class="male singular">${maleSingular}</span><span class="gender singular">/</span><span class="female singular">${femaleSingular}</span>` +
-    // `<span class="number">/</span><span class="male plural">${malePlural}</span><span class="gender plural">/</span><span class="female plural">${femalePlural}</span>`;
 }
 
 /**
@@ -340,23 +337,23 @@ function postprocessString(s: string) {
 
     .replaceAll('[NULL]', '<span class="null">[NULL]</span>')
     .replaceAll('[COMP]', '<span class="compressed">[COMP]</span>')
-    .replaceAll(/\[VAR (?:GENDBR|1100)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]+)/gu, (_, lenF, lenM, rest) => {
+    .replaceAll(/\[VAR (?:GENDBR|1100)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenF, lenM, rest) => {
       const endM = parseInt(lenM, 16);
       const endF = endM + parseInt(lenF, 16);
       return `${genderBranch(rest.substring(0, endM), rest.substring(endM, endF))}${rest.substring(endF)}`;
     })
-    .replaceAll(/\[VAR (?:GENDBR|1100)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),00([0-9A-F]{2})\)\]([^[<{]+)/gu, (_, lenF, lenM, lenN, rest) => {
+    .replaceAll(/\[VAR (?:GENDBR|1100)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),00([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenF, lenM, lenN, rest) => {
       const endM = parseInt(lenM, 16);
       const endF = endM + parseInt(lenF, 16);
       const endN = endF + parseInt(lenN, 16);
       return `${genderBranch(rest.substring(0, endM), rest.substring(endM, endF), rest.substring(endF, endN))}${rest.substring(endN)}`;
     })
-    .replaceAll(/\[VAR (?:NUMBRNCH|1101)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]+)/gu, (_, lenP, lenS, rest) => {
+    .replaceAll(/\[VAR (?:NUMBRNCH|1101)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenP, lenS, rest) => {
       const endS = parseInt(lenS, 16);
       const endP = endS + parseInt(lenP, 16);
       return `${numberBranch(rest.substring(0, endS), rest.substring(endS, endP))}${rest.substring(endP)}`;
     })
-    .replaceAll(/\[VAR (?:1102)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]+)/gu, (_, lenFS, lenMS, lenFP, lenMP, rest) => {
+    .replaceAll(/\[VAR (?:1102)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenFS, lenMS, lenFP, lenMP, rest) => {
       const endMS = parseInt(lenMS, 16);
       const endFS = endMS + parseInt(lenFS, 16);
       const endMP = endFS + parseInt(lenMP, 16);
