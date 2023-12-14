@@ -111,6 +111,7 @@ Cinta Excepcionalidad
 Emblema Alfa
 Emblema Imbatibilidad
 Emblema Dominancia
+Cinta Camarada
 Cinta obtenida por vencer a la Campeona de Kalos\ny entrar en el Hall de la Fama.
 Cinta obtenida por superar la Liga Pokémon de otra\nregión y entrar en su Hall de la Fama.
 Cinta obtenida por vencer a la Campeona de Sinnoh\ny entrar en el Hall de la Fama.
@@ -221,8 +222,7 @@ Extraña cinta que muy rara vez lleva consigo un\nPokémon recibido en un interc
 Emblema que distingue a un antiguo Pokémon alfa.
 Emblema que distingue a un Pokémon poseedor de\nuna fuerza especial.
 Emblema que distingue a un antiguo Pokémon\ndominante.
-[~ 220]
-[~ 221]
+Cinta especial que llevan los Pokémon recibidos por\nparte de Entrenadores selectos.
 [~ 222]
 [~ 223]
 [~ 224]
@@ -319,6 +319,8 @@ Emblema que distingue a un antiguo Pokémon\ndominante.
 [~ 315]
 [~ 316]
 [~ 317]
+[~ 318]
+[~ 319]
 ~~~~~~~~~~~~~~~
 Text File : initial
 ~~~~~~~~~~~~~~~
@@ -708,6 +710,10 @@ Evocarrecuerdos
 Evocarrecuerdos
 Cadena Tóxica
 Néctar Dulce
+Teracambio
+Teracaparazón
+Teraformación 0
+Títere Tóxico
 ~~~~~~~~~~~~~~~
 Text File : itemname
 ~~~~~~~~~~~~~~~
@@ -1162,7 +1168,7 @@ Supercaña
 Psydugadera
 Pokochera
 Bici
-Llave Suite
+Llave de la Suite
 Carta Prof. Oak
 Pluma Lunar
 Carné de Socio
@@ -2973,34 +2979,34 @@ MT198
 MT199
 MT200
 MT201
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+MT202
+MT203
+MT204
+MT205
+MT206
+MT207
+MT208
+MT209
+MT210
+MT211
+MT212
+MT213
+MT214
+MT215
+MT216
+MT217
+MT218
+MT219
+MT220
+MT221
+MT222
+MT223
+MT224
+MT225
+MT226
+MT227
+MT228
+MT229
 
 
 
@@ -3193,6 +3199,82 @@ Polvo de Poltchageist
 Mochi Reinicio
 Paloselfi Rotom
 Amuleto Cristalino
+Metal Compuesto
+Tarjeta Chic Azul
+Hoja de Oddish
+Aguijón de Tentacool
+Plumón de Doduo
+Pelo de Seel
+Cáscara de Exeggcute
+Sudor de Tyrogue
+Colmillo de Rhyhorn
+Tinta de Horsea
+Pelo de Elekid
+Pelo de Magby
+Lágrima de Lapras
+Fragmento de Porygon
+Electricidad de Chinchou
+Pelo de Snubbull
+Pluma de Skarmory
+Pintura de Smeargle
+Pelo de Plusle
+Pelo de Minun
+Coraza de Trapinch
+Garra de Beldum
+Púa de Cranidos
+Garra de Shieldon
+Mechón de Blitzle
+Garra de Drilbur
+Algodón de Cottonee
+Sudor de Scraggy
+Pelo de Minccino
+Gel de Solosis
+Hilo de Joltik
+Fragmento de Golett
+Pelo de Espurr
+Tinta de Inkay
+Pluma de Pikipek
+Hilo de Dewpider
+Flor de Comfey
+Caparazón de Minior
+Nata de Milcery
+Óxido de Duraludon
+Galleta Articuno
+Galleta Zapdos
+Galleta Moltres
+Galleta Raikou
+Galleta Entei
+Galleta Suicune
+Galleta Lugia
+Galleta Ho-Oh
+Galleta Latias
+Galleta Latios
+Galleta Kyogre
+Galleta Groudon
+Galleta Rayquaza
+Galleta Cobalion
+Galleta Terrakion
+Galleta Virizion
+Galleta Reshiram
+Galleta Zekrom
+Galleta Kyurem
+Galleta Solgaleo
+Galleta Lunala
+Galleta Necrozma
+Galleta Kubfu
+Galleta Glastrier
+Galleta Spectrier
+Disco Índigo
+Palillo Ígneo
+Teralito Astral
+Baya Meloc Singular
+Mantel Arándano
+Sillas Arándano
+Sincromisor
+Meteorito
+Libro Escarlata
+Libro Púrpura
+Libro de Brie
 ~~~~~~~~~~~~~~~
 Text File : monsname
 ~~~~~~~~~~~~~~~
@@ -4214,6 +4296,14 @@ Okidogi
 Munkidori
 Fezandipiti
 Ogerpon
+Archaludon
+Hydrapple
+Flamariete
+Electrofuria
+Ferromole
+Ferrotesta
+Terapagos
+Pecharunt
 ~~~~~~~~~~~~~~~
 Text File : strinput
 ~~~~~~~~~~~~~~~
@@ -5188,6 +5278,21 @@ Luna Roja
 Cañón Batidor
 Bomba Caramelo
 Garrote Liana
+Electrorrayo
+Teraclúster
+Láser Veleidoso
+Llama Protectora
+Relámpago Súbito
+Filo Potente
+Tajo Taquión
+Prensa Metálica
+Bramido Dragón
+Canto Encantador
+Cólera Ardiente
+Plancha Voltaica
+Psicorruido
+Palma Rauda
+Cadena Virulenta
 ~~~~~~~~~~~~~~~
 Text File : zkn_form
 ~~~~~~~~~~~~~~~
@@ -6659,6 +6764,16 @@ Máscara Turquesa
 Máscara Fuente
 Máscara Horno
 Máscara Cimiento
+
+
+
+
+
+
+Forma Normal
+Forma Teracristal
+Forma Astral
+
 ~~~~~~~~~~~~~~~
 Text File : zkn_type
 ~~~~~~~~~~~~~~~
@@ -6732,8 +6847,8 @@ Pokémon Superpoder
 Pokémon Superpoder
 Pokémon Superpoder
 Pokémon Flor
-Pokémon Matamoscas
-Pokémon Matamoscas
+Pokémon Atrapamoscas
+Pokémon Atrapamoscas
 Pokémon Medusa
 Pokémon Medusa
 Pokémon Roca
@@ -6773,7 +6888,7 @@ Pokémon Puñetazo
 Pokémon Lametazo
 Pokémon Gas Venenoso
 Pokémon Gas Venenoso
-Pokémon Clavos
+Pokémon Punzante
 Pokémon Taladro
 Pokémon Huevo
 Pokémon Enredadera
@@ -6837,7 +6952,7 @@ Pokémon Luz
 Pokémon Ratoncito
 Pokémon Estrella
 Pokémon Globo
-Pokémon Bolaclavos
+Pokémon Bolapicuda
 Pokémon Felicidad
 Pokémon Pajarito
 Pokémon Místico
@@ -6916,7 +7031,7 @@ Pokémon Arcoíris
 Pokémon Viajetiempo
 Pokémon Geco Bosque
 Pokémon Geco Bosque
-Pokémon Monte
+Pokémon Bosque
 Pokémon Polluelo
 Pokémon Ave Corral
 Pokémon Llameante
@@ -7505,8 +7620,8 @@ Pokémon Carbón
 Pokémon Manzanido
 Pokémon Manzanala
 Pokémon Manzanéctar
-Pokémon Serp. Arena
-Pokémon Serp. Arena
+Pokémon Serpiente Arena
+Pokémon Serpiente Arena
 Pokémon Tragón
 Pokémon Arremetida
 Pokémon Ensarta
@@ -7553,8 +7668,8 @@ Pokémon Furtivo
 Pokémon Guerrero
 Pokémon Guerrero
 Pokémon Gigantesco
-Pokémon Kung-fu
-Pokémon Kung-fu
+Pokémon Kung-Fu
+Pokémon Kung-Fu
 Pokémon Simiestro
 Pokémon Electrón
 Pokémon Dragosfera
@@ -7712,6 +7827,16 @@ Pokémon Matcha
 Pokémon Máscara
 Pokémon Máscara
 Pokémon Máscara
+Pokémon Aleación
+Pokémon Manzanhidra
+Pokémon Paradoja
+Pokémon Paradoja
+Pokémon Paradoja
+Pokémon Paradoja
+Pokémon Teracristal
+Pokémon Teracristal
+Pokémon Teracristal
+Pokémon Controlador
 ~~~~~~~~~~~~~~~
 Text File : go_system
 ~~~~~~~~~~~~~~~
@@ -8134,6 +8259,7 @@ Cinta Excepcionalidad
 Emblema Alfa
 Emblema Imbatibilidad
 Emblema Dominancia
+Cinta Camarada
 Cinta obtenida por vencer a la Campeona de Kalos\ny entrar en el Hall de la Fama.
 Cinta obtenida por superar la Liga Pokémon de otra\nregión y entrar en su Hall de la Fama.
 Cinta obtenida por vencer a la Campeona de Sinnoh\ny entrar en el Hall de la Fama.
@@ -8244,8 +8370,7 @@ Extraña cinta que muy rara vez lleva consigo un\nPokémon recibido en un interc
 Emblema que distingue a un antiguo Pokémon alfa.
 Emblema que distingue a un Pokémon poseedor de\nuna fuerza especial.
 Emblema que distingue a un antiguo Pokémon\ndominante.
-[~ 220]
-[~ 221]
+Cinta especial que llevan los Pokémon recibidos por\nparte de Entrenadores selectos.
 [~ 222]
 [~ 223]
 [~ 224]
@@ -8342,6 +8467,8 @@ Emblema que distingue a un antiguo Pokémon\ndominante.
 [~ 315]
 [~ 316]
 [~ 317]
+[~ 318]
+[~ 319]
 ~~~~~~~~~~~~~~~
 Text File : box_system
 ~~~~~~~~~~~~~~~
@@ -10184,6 +10311,16 @@ Text File : zkn_height
 1,2 m
 1,2 m
 1,2 m
+2,0 m
+1,8 m
+3,5 m
+5,2 m
+1,5 m
+1,6 m
+0,2 m
+0,3 m
+1,7 m
+0,3 m
 ~~~~~~~~~~~~~~~
 Text File : zkn_weight
 ~~~~~~~~~~~~~~~
@@ -11651,6 +11788,16 @@ Text File : zkn_weight
 39,8 kg
 39,8 kg
 39,8 kg
+60,0 kg
+93,0 kg
+590,0 kg
+480,0 kg
+162,5 kg
+156,0 kg
+6,5 kg
+16,0 kg
+77,0 kg
+0,3 kg
 ~~~~~~~~~~~~~~~
 Text File : SV_iteminfo
 ~~~~~~~~~~~~~~~
@@ -12497,7 +12644,7 @@ Cristal que confiere el Poder Z al movimiento Rayo de\nlos Pikachu que llevan go
 -\n-\n-
 Saco para guardar ingredientes, indispensable en la\nJungla Umbría para superar la prueba de Lulú.
 Caña fabricada por la Capitana Nereida. Permite pescar\nlos Pokémon escondidos en las rocas sumergidas.
-La máscara de luchador de Royale, el Enmascarado.\nMuy probablemente de factura propia.
+La máscara de luchador de Royale el Enmascarado.\nMuy probablemente de factura propia.
 Se puede canjear para organizar minijuegos en la\nFesti Plaza.
 Piedra con un misterioso brillo entregada por un\nPokémon considerado como uno de los espíritus\nguardianes de Alola.
 Aumenta la Velocidad del portador si se siente\nintimidado.
@@ -14136,6 +14283,82 @@ Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT
 La masa de este mochi está preparada con bayas.\nRestablece todos los puntos de base de un Pokémon.
 Un palo en el que se puede montar el SmartRotom.\nPermite sacar fotos desde una distancia mayor en el\nmodo selfi.
 Misterioso amuleto refulgente que puede aumentar\nla cantidad de teralitos obtenidos en teraincursiones.
+Curioso metal que hace evolucionar a una determinada\nespecie de Pokémon. Está formado por distintas capas.
+Una tarjeta que aumenta la selección de artículos\ndisponibles en las tiendas y permite elegir entre una\nmayor variedad de peinados en las peluquerías.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Material que ha dejado caer un Pokémon y que puede\nutilizarse para fabricar MT.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Articuno.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Zapdos.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Moltres.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Raikou.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Entei.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Suicune.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Lugia.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Ho-Oh.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Latias.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Latios.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Kyogre.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Groudon.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Rayquaza.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Cobalion.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Terrakion.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Virizion.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Reshiram.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Zekrom.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Kyurem.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Solgaleo.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Lunala.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Necrozma.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Kubfu.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Glastrier.
+Galleta preparada con los ingredientes favoritos\ndel Pokémon legendario Spectrier.
+Misterioso disco de reflejos índigos que te confió la\nSupercampeona. Parece guardar relación con el Área\nCero.
+Un palillo con forma de Magmortar que, según dicen,\nconfiere a los bocadillos un aspecto de pan tostado y\nrecién horneado la mar de apetecible.
+Esquirla que se forma muy raramente cuando la joya\nTeracristal de un Pokémon teracristalizado se quiebra\ntras derrotarlo.
+Baya Meloc de calidad suprema y de un lustre especial.\nSe dice que los agricultores tienen que dedicar años de\ncuidados para que los árboles produzcan siquiera una.
+El mantel oficial de la Academia Arándano, fabricado\ncon un material de última tecnología resistente tanto\nal fuego como a las mordeduras.
+Unas sillas ideales para irse de pícnic. Su diseño está\nbasado en el del Mantel Arándano.
+Dispositivo que permite sincronizar los pensamientos del\nusuario con los de sus Pokémon para hacer que sigan sus\ninstrucciones. Como es un prototipo, el diseño es simple.
+Roca proveniente del espacio exterior capaz de hacer\ncambiar de forma a cierto Pokémon. Es ligeramente\ncálida al tacto.
+Diario de exploración de las incursiones en el foso de\nPaldea que obtuviste de manos de la Profesora Albora.\nTiene escrito su nombre con una letra descuidada.
+Diario de exploración de las incursiones en el foso de\nPaldea que obtuviste de manos del Profesor Turo.\nTiene escrito su nombre con una letra descuidada.
+Libro que relata de forma extensiva los detalles de la\ninvestigación y las reflexiones de la docente Brie.\nSe titula "El tesoro oculto del Área Cero".
 ~~~~~~~~~~~~~~~
 Text File : load_system
 ~~~~~~~~~~~~~~~
@@ -16358,7 +16581,7 @@ Lanza pedruscos al objetivo de dos a cinco veces\nseguidas.
 Ataque eléctrico muy rápido que no falla nunca.
 Ataca con una potente onda de agua. Puede confundir\nal objetivo.
 Ataca al objetivo con innumerables haces de luz\ndos turnos después de haber usado el movimiento.
-Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente.
+Ataca al objetivo con toda su fuerza, pero reduce mucho\nel Ataque Especial del usuario.
 Aterriza sobre la superficie para descansar.\nRestaura hasta la mitad de sus PS máximos.
 Durante cinco turnos, se anulan los movimientos que\nalzan el vuelo y los Pokémon de tipo Volador o que\nlevitan son vulnerables a movimientos de tipo Tierra.
 Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente.
@@ -16696,7 +16919,7 @@ Lanza una patada con la fuerza del trópico que golpea\nal objetivo y reduce su 
 Fuerza al objetivo a repetir inmediatamente su último\nmovimiento.
 Primero aumenta la temperatura de su pico y, luego,\nejecuta un ataque. Quema a quien use un movimiento\nde contacto contra él mientras está calentando el pico.
 Frota todas las escamas de su cuerpo para crear un\nfuerte sonido con el que ataca. Cuando el ataque\ntermina, su Defensa se ve reducida.
-Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente.
+Usa el cuerpo como un martillo para abalanzarse sobre\nsu objetivo y causarle daño.
 Hace pivotar su cuerpo para causar daño a los Pokémon\nadyacentes.
 Reduce el daño de los ataques físicos y especiales\ndurante cinco turnos. Solo puede usarse cuando está\nnevando.
 Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente.
@@ -16909,6 +17132,22 @@ Ataca canalizando toda su fuerza y proyectándola\na través de una luna llena d
 Rocía al objetivo con té recién batido y recupera\nla mitad de los PS del daño que produce. Puede\ncausar quemaduras.
 Impregna al objetivo con una explosión de su viscoso\nnéctar y lo carameliza, lo que hace que su Velocidad\nse reduzca progresivamente durante tres turnos.
 Golpea con un garrote que forma enrollando su liana.\nEl tipo del movimiento varía según la máscara que lleve\npuesta el usuario. Suele asestar un golpe crítico.
+Acumula electricidad y aumenta su Ataque Especial en el\nprimer turno y dispara una descarga de alto voltaje en el\nsegundo. Si llueve, puede atacar en el primer turno.
+Ataca al objetivo irradiando el poder de sus cristales.\nSi Terapagos usa este movimiento en su Forma Astral,\ninflige daño a todos los rivales.
+Ataca disparando un haz de luz. En ocasiones, el resto\nde sus cabezas se unen al ataque. Cuando esto sucede,\nla potencia del movimiento se duplica.
+Emplea su ardiente pelaje para protegerse de los\nataques y causarle quemaduras al atacante si este\nusa un movimiento de contacto.
+Invoca un rayo que cae sobre el objetivo antes de que\neste pueda realizar cualquier acción. Falla si el objetivo\nno está preparando ningún ataque.
+Rebana al objetivo con la luz que ha acumulado en la\ntesta. Permite acertar aunque el objetivo esté\nprotegiéndose.
+Lanza una ráfaga de cuchillas formadas por partículas\ncontra el objetivo y le inflige daño dos veces seguidas.\nNo falla nunca.
+Oprime con los brazos o las pinzas. Cuantos más PS\nle queden al objetivo, mayor será la potencia del\nmovimiento.
+Bramido de dragón que sube la moral de los aliados y\naumenta sus probabilidades de asestar un golpe crítico.\nEs especialmente efectivo con aliados de tipo Dragón.
+Ataca con un canto angelical y, si las características del\nobjetivo han aumentado en ese turno, lo deja confuso.
+Arremete contra el objetivo tras dejarse llevar por la ira.\nSu potencia se duplica si el movimiento del usuario falló\nen el turno anterior.
+El usuario electrifica su cuerpo y salta en plancha sobre\nel objetivo. Si falla, se hiere a sí mismo.
+Ataca emitiendo una onda sonora desagradable que\nimpide al objetivo usar movimientos, habilidades y\nobjetos equipados que recuperan PS durante dos turnos.
+Se anticipa al objetivo golpeándolo rápidamente con\nla palma y lo amedrenta. Falla si el objetivo no está\npreparando un movimiento de prioridad alta.
+Apresa al objetivo con una cadena hecha de ponzoña\nque le inocula toxinas para minarle las fuerzas. Puede\nenvenenar gravemente.
+Inflige daño con el valor más alto entre Ataque y Ataque\nEspecial, pero reduce ambas características del usuario.\nSi el objetivo se ha teracristalizado, es supereficaz.
 ~~~~~~~~~~~~~~~
 Text File : first_system
 ~~~~~~~~~~~~~~~
@@ -17424,7 +17663,7 @@ Supercaña
 Psydugadera
 Pokochera
 Bici
-Llave Suite
+Llave de la Suite
 Carta Prof. Oak
 Pluma Lunar
 Carné de Socio
@@ -19235,34 +19474,34 @@ MT198
 MT199
 MT200
 MT201
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+MT202
+MT203
+MT204
+MT205
+MT206
+MT207
+MT208
+MT209
+MT210
+MT211
+MT212
+MT213
+MT214
+MT215
+MT216
+MT217
+MT218
+MT219
+MT220
+MT221
+MT222
+MT223
+MT224
+MT225
+MT226
+MT227
+MT228
+MT229
 
 
 
@@ -19455,6 +19694,82 @@ Polvo de Poltchageist
 Mochi Reinicio
 Paloselfi Rotom
 Amuleto Cristalino
+Metal Compuesto
+Tarjeta Chic Azul
+Hoja de Oddish
+Aguijón de Tentacool
+Plumón de Doduo
+Pelo de Seel
+Cáscara de Exeggcute
+Sudor de Tyrogue
+Colmillo de Rhyhorn
+Tinta de Horsea
+Pelo de Elekid
+Pelo de Magby
+Lágrima de Lapras
+Fragmento de Porygon
+Electricidad de Chinchou
+Pelo de Snubbull
+Pluma de Skarmory
+Pintura de Smeargle
+Pelo de Plusle
+Pelo de Minun
+Coraza de Trapinch
+Garra de Beldum
+Púa de Cranidos
+Garra de Shieldon
+Mechón de Blitzle
+Garra de Drilbur
+Algodón de Cottonee
+Sudor de Scraggy
+Pelo de Minccino
+Gel de Solosis
+Hilo de Joltik
+Fragmento de Golett
+Pelo de Espurr
+Tinta de Inkay
+Pluma de Pikipek
+Hilo de Dewpider
+Flor de Comfey
+Caparazón de Minior
+Nata de Milcery
+Óxido de Duraludon
+Galleta Articuno
+Galleta Zapdos
+Galleta Moltres
+Galleta Raikou
+Galleta Entei
+Galleta Suicune
+Galleta Lugia
+Galleta Ho-Oh
+Galleta Latias
+Galleta Latios
+Galleta Kyogre
+Galleta Groudon
+Galleta Rayquaza
+Galleta Cobalion
+Galleta Terrakion
+Galleta Virizion
+Galleta Reshiram
+Galleta Zekrom
+Galleta Kyurem
+Galleta Solgaleo
+Galleta Lunala
+Galleta Necrozma
+Galleta Kubfu
+Galleta Glastrier
+Galleta Spectrier
+Disco Índigo
+Palillo Ígneo
+Teralito Astral
+Baya Meloc Singular
+Mantel Arándano
+Sillas Arándano
+Sincromisor
+Meteorito
+Libro Escarlata
+Libro Púrpura
+Libro de Brie
 ~~~~~~~~~~~~~~~
 Text File : title_system
 ~~~~~~~~~~~~~~~
@@ -19821,7 +20136,7 @@ Lanza pedruscos al objetivo de dos a cinco veces\nseguidas.
 Ataque eléctrico muy rápido que no falla nunca.
 Ataca con una potente onda de agua. Puede confundir\nal objetivo.
 Ataca al objetivo con innumerables haces de luz\ndos turnos después de haber usado el movimiento.
-Ataque en toda regla que baja mucho el Ataque \nEspecial de quien lo usa.
+Ataca al objetivo con toda su fuerza, pero reduce mucho\nel Ataque Especial del usuario.
 Aterriza sobre la superficie para descansar.\nRestaura hasta la mitad de sus PS máximos.
 Durante cinco turnos, se anulan los movimientos que\nalzan el vuelo y los Pokémon de tipo Volador o que\nlevitan son vulnerables a movimientos de tipo Tierra.
 Permite atacar con cualquier movimiento a objetivos \nde tipo Siniestro y golpear a Pokémon evasivos.
@@ -20159,7 +20474,7 @@ Lanza una patada con la fuerza del trópico que golpea\nal objetivo y reduce su 
 Fuerza al objetivo a repetir inmediatamente su último\nmovimiento.
 Primero aumenta la temperatura de su pico y, luego,\nejecuta un ataque. Quema a quien use un movimiento\nde contacto contra él mientras está calentando el pico.
 Frota todas las escamas de su cuerpo para crear un\nfuerte sonido con el que ataca. Cuando el ataque\ntermina, su Defensa se ve reducida.
-Usa el cuerpo como un martillo para abalanzarse sobre\nsu rival y causarle daño.
+Usa el cuerpo como un martillo para abalanzarse sobre\nsu objetivo y causarle daño.
 Hace pivotar su cuerpo para causar daño a los Pokémon\nadyacentes.
 Reduce el daño de los ataques físicos y especiales\ndurante cinco turnos. Solo puede usarse cuando está\nnevando.
 Decidueye usa el Poder Z para proyectar multitud de\nflechas potentísimas que atraviesan a su oponente.
@@ -20372,6 +20687,22 @@ Ataca canalizando toda su fuerza y proyectándola\na través de una luna llena d
 Rocía al objetivo con té recién batido y recupera\nla mitad de los PS del daño que produce. Puede\ncausar quemaduras.
 Impregna al objetivo con una explosión de su viscoso\nnéctar y lo carameliza, lo que hace que su Velocidad\nse reduzca progresivamente durante tres turnos.
 Golpea con un garrote que forma enrollando su liana.\nEl tipo del movimiento varía según la máscara que lleve\npuesta el usuario. Suele asestar un golpe crítico.
+Acumula electricidad y aumenta su Ataque Especial en el\nprimer turno y dispara una descarga de alto voltaje en el\nsegundo. Si llueve, puede atacar en el primer turno.
+Ataca al objetivo irradiando el poder de sus cristales.\nSi Terapagos usa este movimiento en su Forma Astral,\ninflige daño a todos los rivales.
+Ataca disparando un haz de luz. En ocasiones, el resto\nde sus cabezas se unen al ataque. Cuando esto sucede,\nla potencia del movimiento se duplica.
+Emplea su ardiente pelaje para protegerse de los\nataques y causarle quemaduras al atacante si este\nusa un movimiento de contacto.
+Invoca un rayo que cae sobre el objetivo antes de que\neste pueda realizar cualquier acción. Falla si el objetivo\nno está preparando ningún ataque.
+Rebana al objetivo con la luz que ha acumulado en la\ntesta. Permite acertar aunque el objetivo esté\nprotegiéndose.
+Lanza una ráfaga de cuchillas formadas por partículas\ncontra el objetivo y le inflige daño dos veces seguidas.\nNo falla nunca.
+Oprime con los brazos o las pinzas. Cuantos más PS\nle queden al objetivo, mayor será la potencia del\nmovimiento.
+Bramido de dragón que sube la moral de los aliados y\naumenta sus probabilidades de asestar un golpe crítico.\nEs especialmente efectivo con aliados de tipo Dragón.
+Ataca con un canto angelical y, si las características del\nobjetivo han aumentado en ese turno, lo deja confuso.
+Arremete contra el objetivo tras dejarse llevar por la ira.\nSu potencia se duplica si el movimiento del usuario falló\nen el turno anterior.
+El usuario electrifica su cuerpo y salta en plancha sobre\nel objetivo. Si falla, se hiere a sí mismo.
+Ataca emitiendo una onda sonora desagradable que\nimpide al objetivo usar movimientos, habilidades y\nobjetos equipados que recuperan PS durante dos turnos.
+Se anticipa al objetivo golpeándolo rápidamente con\nla palma y lo amedrenta. Falla si el objetivo no está\npreparando un movimiento de prioridad alta.
+Apresa al objetivo con una cadena hecha de ponzoña\nque le inocula toxinas para minarle las fuerzas. Puede\nenvenenar gravemente.
+Inflige daño con el valor más alto entre Ataque y Ataque\nEspecial, pero reduce ambas características del usuario.\nSi el objetivo se ha teracristalizado, es supereficaz.
 ~~~~~~~~~~~~~~~
 Text File : zukan_system
 ~~~~~~~~~~~~~~~
@@ -23657,6 +23988,36 @@ Campos Prístinos de Noroteo
 Paso del Averno
 Monte Ogro
 Cueva Aguafría
+
+Academia Arándano
+
+Área Árida
+Biodomo
+Área Costera
+Biodomo
+Área Escarpada
+Biodomo
+Área Polar
+Biodomo
+Plaza Cúbica
+Biodomo
+Plaza Árida
+Biodomo
+Plaza Costera
+Biodomo
+Plaza Escarpada
+Biodomo
+Plaza Polar
+Biodomo
+Gruta Electrorroca
+Biodomo
+Laberinto Lumbre
+Biodomo
+Caverna Abisal Cero
+
+Caverna Abisal Cero
+
+Biodomo
 
 ~~~~~~~~~~~~~~~
 Text File : SWSH_iteminfo
@@ -28709,6 +29070,10 @@ Al evocar viejos recuerdos, el Pokémon hace brillar\nla Máscara Fuente y aumen
 Al evocar viejos recuerdos, el Pokémon hace brillar\nla Máscara Cimiento y aumenta su Defensa.
 Gracias al poder de su cadena impregnada de toxinas,\npuede envenenar gravemente al Pokémon al que ataque.
 Al entrar en combate por primera vez, esparce un aroma\ndulzón a néctar que reduce la Evasión del rival.
+Al entrar en combate, adopta la Forma Teracristal tras\nabsorber la energía de su alrededor.
+Su caparazón encierra energía de todos los tipos.\nGracias a ello, si sus PS están al máximo, el movimiento\nque lo alcance no será muy eficaz.
+Cuando Terapagos adopta la Forma Astral, anula todos\nlos efectos del tiempo atmosférico y de los campos que\nhaya en el terreno gracias a su poder oculto.
+Los rivales que Pecharunt envenene con sus movimientos\ntambién sufrirán confusión.
 ~~~~~~~~~~~~~~~
 Text File : tuucyou_system
 ~~~~~~~~~~~~~~~
@@ -32412,34 +32777,34 @@ MT198
 MT199
 MT200
 MT201
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+MT202
+MT203
+MT204
+MT205
+MT206
+MT207
+MT208
+MT209
+MT210
+MT211
+MT212
+MT213
+MT214
+MT215
+MT216
+MT217
+MT218
+MT219
+MT220
+MT221
+MT222
+MT223
+MT224
+MT225
+MT226
+MT227
+MT228
+MT229
 
 
 
@@ -32632,6 +32997,82 @@ Polvos de Poltchageist
 Mochis Reinicio
 Paloselfis Rotom
 Amuletos Cristalinos
+Metales Compuestos
+Tarjetas Chic Azules
+Hojas de Oddish
+Aguijones de Tentacool
+Plumones de Doduo
+Pelos de Seel
+Cáscaras de Exeggcute
+Sudores de Tyrogue
+Colmillos de Rhyhorn
+Tintas de Horsea
+Pelos de Elekid
+Pelos de Magby
+Lágrimas de Lapras
+Fragmentos de Porygon
+Electricidades de Chinchou
+Pelos de Snubbull
+Plumas de Skarmory
+Pinturas de Smeargle
+Pelos de Plusle
+Pelos de Minun
+Corazas de Trapinch
+Garras de Beldum
+Púas de Cranidos
+Garras de Shieldon
+Mechones de Blitzle
+Garras de Drilbur
+Algodones de Cottonee
+Sudores de Scraggy
+Pelos de Minccino
+Geles de Solosis
+Hilos de Joltik
+Fragmentos de Golett
+Pelos de Espurr
+Tintas de Inkay
+Plumas de Pikipek
+Hilos de Dewpider
+Flores de Comfey
+Caparazones de Minior
+Natas de Milcery
+Óxidos de Duraludon
+Galletas Articuno
+Galletas Zapdos
+Galletas Moltres
+Galletas Raikou
+Galletas Entei
+Galletas Suicune
+Galletas Lugia
+Galletas Ho-Oh
+Galletas Latias
+Galletas Latios
+Galletas Kyogre
+Galletas Groudon
+Galletas Rayquaza
+Galletas Cobalion
+Galletas Terrakion
+Galletas Virizion
+Galletas Reshiram
+Galletas Zekrom
+Galletas Kyurem
+Galletas Solgaleo
+Galletas Lunala
+Galletas Necrozma
+Galletas Kubfu
+Galletas Glastrier
+Galletas Spectrier
+Discos Índigos
+Palillos Ígneos
+Teralitos Astral
+Bayas Meloc Singulares
+Manteles Arándano
+Sillas Arándano
+Sincromisores
+Meteoritos
+Libros Escarlata
+Libros Púrpura
+Libros de Brie
 ~~~~~~~~~~~~~~~
 Text File : pokemile_system
 ~~~~~~~~~~~~~~~
@@ -32658,7 +33099,7 @@ La cantidad de puntos que querías enviar al juego superaba\nel límite, por lo 
 Guardando...\nNo cierres Pokémon HOME.
 Se han guardado los datos.\c\nLa conversión de puntos se ha realizado con éxito.
 [~ 22]
-Aquí puedes convertir puntos Pokémon HOME en Puntos de Batalla (PB)\ny enviarlos a tus juegos. Usa la palanca izquierda para seleccionar una\ncantidad y, cuando la tengas, dale a Confirmar. ¡Así de fácil!
+Aquí puedes convertir puntos Pokémon HOME en puntos de batalla (PB)\ny enviarlos a tus juegos. Usa la palanca izquierda para seleccionar una\ncantidad y, cuando la tengas, dale a Confirmar. ¡Así de fácil!
 [~ 24]
 Introduce la cantidad de PG que quieres obtener a cambio de puntos.
 [VAR 0206(0000,202F)]/[VAR 0206(0001,202F)]
@@ -32672,7 +33113,7 @@ Introduce la cantidad de PL que quieres obtener a cambio de puntos.
 [VAR 0201(0000)] PL = 1 punto
 PL
 ¿Quieres convertir [VAR 0204(0000,202F)] punto[VAR 1101(0000,0100)]s a [VAR 0205(0001,202F)] PL y enviar\ndicha suma a tu juego?
-Aquí puedes convertir puntos Pokémon HOME en Puntos de Liga (PL)\ny enviarlos a tus juegos. Usa la palanca izquierda para seleccionar una\ncantidad y, cuando la tengas, dale a Confirmar. ¡Así de fácil!
+Aquí puedes convertir puntos Pokémon HOME en puntos de liga (PL)\ny enviarlos a tus juegos. Usa la palanca izquierda para seleccionar una\ncantidad y, cuando la tengas, dale a Confirmar. ¡Así de fácil!
 ~~~~~~~~~~~~~~~
 Text File : stationed_error
 ~~~~~~~~~~~~~~~
@@ -32692,6 +33133,7 @@ Los servicios de Pokémon HOME ya no están\ndisponibles.
 Se ha pausado el plan prémium que estabas\nutilizando en tu dispositivo móvil.\nComprueba el estado de tu cuenta en la sección\nGestión de la suscripción.
 Se ha producido un error al guardar los datos del\njuego conectado.\n\nSi solo has realizado cambios en las cajas de\nPokémon HOME, estos se habrán guardado. \nSi has hecho cambios en las cajas del juego,\nno se habrán guardado los cambios en las cajas\nde dicho juego ni en las de Pokémon HOME.\n\nRegresarás a la pantalla del título.
 Las transferencias de Pokémon a Pokémon HOME\ndesde este Nintendo Network ID están\nrestringidas.
+Han concluido las labores de mantenimiento.\nPara equilibrar el tráfico en los servidores,\nestamos limitando temporalmente el número\nde usuarios que pueden iniciar sesión\nde forma simultánea. Dicha limitación se irá\nretirando gradualmente. Espera y disculpa\nlas molestias.
 ~~~~~~~~~~~~~~~
 Text File : topics_contents
 ~~~~~~~~~~~~~~~
@@ -32704,7 +33146,7 @@ N.º 5\nLa Cueva Diglett
 N.º 6\nMédiums
 N.º 7\nEl Túnel Roca
 N.º 8\nLa Torre Pokémon
-N.º 9\nEl Dojo Karate
+N.º 9\nEl Dojo Kárate
 N.º 10\nLa Central de Energía
 N.º 11\nLas Islas Espuma
 N.º 12\nLa Mansión Pokémon
@@ -41394,34 +41836,34 @@ MT198
 MT199
 MT200
 MT201
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+MT202
+MT203
+MT204
+MT205
+MT206
+MT207
+MT208
+MT209
+MT210
+MT211
+MT212
+MT213
+MT214
+MT215
+MT216
+MT217
+MT218
+MT219
+MT220
+MT221
+MT222
+MT223
+MT224
+MT225
+MT226
+MT227
+MT228
+MT229
 
 
 
@@ -41614,6 +42056,82 @@ puñado de Polvo de Poltchageist
 Mochi Reinicio
 Paloselfi Rotom
 Amuleto Cristalino
+trozo de Metal Compuesto
+Tarjeta Chic Azul
+Hoja de Oddish
+Aguijón de Tentacool
+bola de Plumón de Doduo
+Pelo de Seel
+Cáscara de Exeggcute
+gota de Sudor de Tyrogue
+Colmillo de Rhyhorn
+gota de Tinta de Horsea
+Pelo de Elekid
+Pelo de Magby
+Lágrima de Lapras
+Fragmento de Porygon
+carga de Electricidad de Chinchou
+Pelo de Snubbull
+Pluma de Skarmory
+gota de Pintura de Smeargle
+Pelo de Plusle
+Pelo de Minun
+Coraza de Trapinch
+Garra de Beldum
+Púa de Cranidos
+Garra de Shieldon
+Mechón de Blitzle
+Garra de Drilbur
+bola de Algodón de Cottonee
+gota de Sudor de Scraggy
+Pelo de Minccino
+gota de Gel de Solosis
+Hilo de Joltik
+Fragmento de Golett
+Pelo de Espurr
+gota de Tinta de Inkay
+Pluma de Pikipek
+Hilo de Dewpider
+Flor de Comfey
+Caparazón de Minior
+gota de Nata de Milcery
+pieza de Óxido de Duraludon
+Galleta Articuno
+Galleta Zapdos
+Galleta Moltres
+Galleta Raikou
+Galleta Entei
+Galleta Suicune
+Galleta Lugia
+Galleta Ho-Oh
+Galleta Latias
+Galleta Latios
+Galleta Kyogre
+Galleta Groudon
+Galleta Rayquaza
+Galleta Cobalion
+Galleta Terrakion
+Galleta Virizion
+Galleta Reshiram
+Galleta Zekrom
+Galleta Kyurem
+Galleta Solgaleo
+Galleta Lunala
+Galleta Necrozma
+Galleta Kubfu
+Galleta Glastrier
+Galleta Spectrier
+Disco Índigo
+Palillo Ígneo
+Teralito Astral
+Baya Meloc Singular
+Mantel Arándano
+juego de Sillas Arándano
+Sincromisor
+Meteorito
+Libro Escarlata
+Libro Púrpura
+Libro de Brie
 ~~~~~~~~~~~~~~~
 Text File : zukan_comment_alpha
 ~~~~~~~~~~~~~~~
@@ -48452,20 +48970,20 @@ Cuentan que salvó a las criaturas del bosque del impacto de un\nmeteorito graci
 Text File : zukan_comment_violet
 ~~~~~~~~~~~~~~~
 
+Lleva un bulbo en el lomo desde que nace. A medida que el\nPokémon crece, el bulbo también va haciéndose más grande.
+El capullo de la espalda crece al absorber nutrientes. Desprende\nun aroma delicioso cuando está a punto de florecer.
+Llena su cuerpo de energía con los rayos solares que capta\nal extender los enormes pétalos de su flor.
+
+
+Si está sano, la llama de la punta de su cola arderá\nvigorosamente, aunque se le moje un poco.
+Por naturaleza, se acalora con facilidad: siempre está buscando\nadversarios. Solo se calma cuando gana.
+Utiliza las alas para volar a gran altura. Cuanta más experiencia\ngane en batalla, mayor será la temperatura de sus llamas.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+Su caparazón, blando al nacer, enseguida se vuelve lo\nsuficientemente elástico como para contrarrestar la presión\nejercida por un dedo.
+Suele ocultarse en el agua para cazar a sus presas. Al nadar\nrápidamente, mueve las orejas para estabilizarse.
+Un Pokémon imponente que usa los cañones que tiene en el\ncaparazón para propulsarse con la potencia de un cohete.
 
 
 
@@ -48503,9 +49021,9 @@ La gorra que lleva de su compañero simboliza los lazos afectivos\nque estrechar
 Si las bolsas de sus mejillas se cargan por completo de\nelectricidad, se le ponen las orejas de punta.
 
 Puede salvarse de una caída desde cualquier altura haciéndose\nuna bola y rebotando contra el suelo.
-
+Un festival ancestral que se sigue celebrando en Alola consiste\nen hacer deslizar a un Sandshrew sobre el hielo para ver quién\nlo lanza más lejos.
 Sus afiladas púas, con las que ataca al rival tras hacerse una bola,\nson partes endurecidas de su piel.
-
+En la antigüedad vivía en el desierto. Sus afiladas garras\nle permiten incluso trepar icebergs sin resbalarse.
 
 
 
@@ -48515,24 +49033,24 @@ Sus afiladas púas, con las que ataca al rival tras hacerse una bola,\nson parte
 Cuando hay luna llena, los Clefairy salen en grupo a bailar.\nA su alrededor se genera un misterioso campo magnético.
 Tiene un agudísimo sentido del oído. Es capaz de oír la caída de\nuna aguja a 1 km de distancia.
 A medida que crece, el pelo de sus seis cálidas colas se va\nvolviendo más suave, lustroso y bello.
-
+Cuando hace calor, crea rocas de hielo con sus seis colas\ny las disemina por los alrededores para enfriar su cuerpo.
 Tiene nueve largas colas y un pelaje con un brillo dorado.\nDicen que este Pokémon llega a vivir mil años.
-
+En su pelaje se crean cristales de hielo con los que cubre\nal enemigo. Quien lo enfada acaba congelado al instante.
 Si se hincha para cantar una nana, cantará más tiempo y causará\nsopor en el público.
 Es como un peluche suave, tan agradable al tacto que, cuando\nalguien lo toca, no puede dejar de acariciarlo.
 
 
-
-
-
+Vaga durante la noche, despertado por la luz de la luna. De día\npermanece inmóvil bajo la tierra.
+Segrega a modo de saliva un néctar pegajoso. Aunque es dulce,\nsu olor es demasiado repulsivo como para acercarse.
+Posee los pétalos más grandes del mundo, desde los que\ndesprende una cantidad ingente de polen alergénico.
 
 
 Los ojos le funcionan como radar. Gracias a ellos, puede moverse\nen la oscuridad y disparar potentes rayos.
 Cuando ataca, agita sus grandes alas violentamente para esparcir\npolvo venenoso a su alrededor.
 Su piel es muy fina. Si se expone a la luz, su sangre se calienta y\nse queda sin fuerzas.
-
+Los pelillos dorados de su cabeza funcionan como sensores.\nPara explorar su entorno, los asoma por el agujero en el que se\nesconde.
 En combate, cava la tierra, se esconde y sale de repente para\ngolpear a su rival. Nunca se sabe por dónde puede aparecer.
-
+El peso de sus filamentos metálicos limita su velocidad, pero su\nfuerza le permite excavar incluso las capas de roca más duras.
 Le fascina todo lo que brilla. Si ve algo que destelle, la moneda\nde oro que tiene en la frente brillará.
 
 
@@ -48559,35 +49077,35 @@ Puede utilizar sus fornidos brazos y piernas para correr muy\nbrevemente por la 
 Entierra las patas profundamente en el suelo para absorber agua.\nSi lo atacan mientras está arraigado, no puede escapar.
 Sus hojas actúan como cuchillas en combate. Otra de sus armas\nes el corrosivo fluido que expulsa por la boca.
 A medida que disuelve presas con su ácido, este se vuelve más\ndulce y efectivo a la hora de atraer aún más presas.
-
-
+Tiene unos órganos cristalinos que parecen ojos desde los que\ndispara misteriosos rayos de luz.
+Cuando combate, extiende sus 80 tentáculos para atrapar al\nenemigo en una red venenosa.
 Mucha gente no se percata, pero, si mirasen a su alrededor,\nverían que hay Geodude por todas partes.
-
+Si alguien pisa por error a un Geodude que esté durmiendo\nen el suelo, oirá un chasquido y un calambre le recorrerá todo\nel cuerpo.
 Su comida preferida son las rocas cubiertas de musgo. Llega a\ncomer más de una tonelada al día y causa un gran estruendo al\nmasticar.
-
+Su cuerpo rebosa electricidad debido al tipo de rocas de las que\nse alimenta. Es muy propenso a pelearse.
 Es capaz de explotar a voluntad. Utiliza el impulso de la\nexplosión para saltar de una montaña a otra.
-
+Lanza rocas cargadas de electricidad. Basta con que rocen al\nenemigo para entumecerlo hasta el punto de hacerle perder\nla consciencia.
 
 
 
 
 Está siempre en su mundo, pero nadie sabe en qué piensa.\nSuele pescar con la cola.
-
+Emplea la cola para pescar, aunque nunca obtiene buenos\nresultados debido al aroma especiado que esta desprende.
 Si el Shellder que muerde su cola se desprende durante una\nlucha, se convertirá en un simple Slowpoke.
 
-
+La fuerte mordedura del Shellder que trata de succionarle\nel veneno del brazo le ocasiona tal picor que a veces pierde\nel control.
 Se desplaza flotando por el aire mientras emite ondas\nelectromagnéticas y similares a través de las unidades laterales.
 Están formados por Magnemite unidos. Se dice que aparecen\nen gran número cuando hay muchas manchas solares.
 
 
-
-
-
-
+Sus cabezas nunca duermen al mismo tiempo, sino que se turnan\npara montar guardias de aproximadamente una hora.
+La cabeza más fuerte y con el cuello más grueso hace las veces\nde líder y toma las riendas del cuerpo.
+Nada feliz de un lado para otro en los mares helados donde\nflotan trozos de hielo. Cuanto más frío hace, mejor se siente.
+Conserva energía térmica en su interior para protegerse del frío.\nAlcanza los 15 km/h hasta en los mares más fríos.
 Cuando se une a otro compañero de su especie, se generan\nnuevos tipos de sustancia venenosa.
-
+Se comen con ganas cualquier tipo de basura, por lo que son muy\nútiles y bien recibidos en los vertederos.
 Es pestilente y los componentes tóxicos de su cuerpo hacen que,\na su paso, cualquier planta se marchite.
-
+Lo que parecen colmillos y uñas son en realidad toxinas\ncristalizadas. Envenenan al contacto, por lo que no conviene\nacercarse demasiado.
 Cuando atenaza a sus enemigos, se vuelve vulnerable. Por eso\nsolo utiliza esta técnica como último recurso.
 Cuando lo atacan, se defiende lanzando púas en sucesión.\nNadie sabe realmente qué se oculta bajo la concha.
 Su etéreo cuerpo está hecho de gas. Puede envolver a un\noponente de cualquier tamaño hasta ahogarlo.
@@ -48603,27 +49121,27 @@ Lleva siempre un péndulo que hace oscilar a un ritmo constante\ny con el que ca
 
 Suele vivir en centrales de energía. Mucha gente acaba muy mal\nal confundirlo con una Poké Ball.
 Como explotan a la mínima, se les tiene mucho miedo. Reciben el\nmote de Bomba Ball.
+Utilizan entre ellos un tipo de telepatía que solo pueden\nentender los Exeggcute para mantenerse siempre en grupos\nde seis cabezas.
+Se dice que, en muy raras ocasiones, una de sus cabezas cae\nal suelo y comienza a desplazarse convertida en Exeggcute.
+Al crecer, ha dejado de necesitar su poder psíquico, pero ha\ndespertado en cambio el poder dragontino que tenía latente.
 
 
 
 
-
-
-
-
-
+Es capaz de estirar y contraer los ligamentos de las piernas a su\nantojo. Cuando propina una patada, llega a doblar su alcance.
+Sus puños son un manojo de puro músculo. Cada tres minutos se\ntoma un descanso para respirar y recuperar la concentración.
 
 Los gases venenosos que contiene son ligeramente menos\npesados que el aire, por lo que siempre flota levemente.
 Conforme inhala los gases tóxicos que se desprenden de la\nbasura, se va hinchando y el mal olor de su interior empeora.
 
-
-
+Cuando empieza a correr, no se detiene ni al chocarse contra\nuna roca, por lo que el hábitat de esta especie no hace más que\nexpandirse.
+Al evolucionar aprendió a andar sobre sus patas traseras, lo que\nle permitió expandir su hábitat a montañas escarpadas.
 Camina con cuidado para que no se rompa su huevo. Sin\nembargo, este Pokémon es extremadamente rápido escapando.
 
 
 
-
-
+Se vale de su cola enroscada para mantener el equilibrio.\nEn ocasiones, expulsa tinta por la boca.
+Segrega veneno por la punta de las aletas. Estas y sus huesos\nson ingredientes muy valorados en la medicina tradicional.
 
 
 
@@ -48632,18 +49150,18 @@ Camina con cuidado para que no se rompa su huevo. Sin\nembargo, este Pokémon es
 
 Las cortantes guadañas de sus antebrazos se vuelven más afiladas\ncada vez que cortan objetos duros.
 
+La comunidad científica estudia la posibilidad de almacenar\nen los Electabuzz la energía de los rayos para su posterior\nutilización.
+La superficie de su cuerpo desprende unas ondeantes llamaradas\nque recuerdan a las fulguraciones solares.
 
 
-
-
-
+Luchan entre sí con sus cuernos. Los miembros\nmás fuertes de la manada, a cargo de protegerla,\nalardean de las cicatrices de su cornamenta.
 La Variedad Combatiente se distingue por su fornida y poderosa\nmusculatura y por su temperamento especialmente agresivo.
 La Variedad Ardiente debe su nombre a la capacidad de exhalar\naire a altas temperaturas por el hocico. Lleva las tres colas\ntrenzadas.
 Su elevado nivel de grasa corporal permite a la Variedad Acuática\nflotar en el agua. Se propulsa expulsando agua por los cuernos.
 En un pasado lejano, era más fuerte de lo que hoy son sus débiles\ndescendientes.
 Cuando reina el conflicto en el mundo, aparece de la nada y\nreduce a cenizas todo lo que se cruza en su camino.
 
-
+Dotado de una gran inteligencia y capaz de comprender el\nlenguaje humano. Le gusta surcar los mares llevando a gente\nsobre el lomo.
 
 Tiene la capacidad de reorganizar su estructura celular para\nconvertirse en otras formas de vida.
 De código genético irregular, puede mutar si se le expone a la\nradiación de piedras evolutivas.
@@ -48652,7 +49170,7 @@ De código genético irregular, puede mutar si se le expone a la\nradiación de 
 La composición celular de su cuerpo es tan similar a la estructura\nmolecular del agua que se vuelve invisible al fundirse en ella.
 Si se agita, usa electricidad para convertir su pelaje en\nafiladísimas púas y dispararlas en racimos.
 Ahueca el pelaje de su cuello para bajar la temperatura de su\ncuerpo, que puede llegar a 900 ºC.
-
+Un Pokémon artificial creado con la tecnología más avanzada.\nPuede viajar por el ciberespacio.
 
 
 
@@ -48674,15 +49192,15 @@ A pesar del tamaño que tiene y de lo pesado que es, puede volar.\nEs capaz de d
 
 
 
-
-
-
-
-
-
-
-
-
+Su hoja aromática puede medir la humedad y la temperatura a su\nalrededor.
+Las hojas que le adornan el cuello emiten un aroma que resulta\nvigorizante para quien lo perciba.
+El aliento de Meganium tiene el poder de revivir las plantas y los\nárboles secos.
+Cuando se enfada, las llamas que emite por el lomo arden con\nmás vigor que nunca, lo cual intimida a sus rivales.
+El pelaje de este Pokémon es ignífugo. Puede soportar cualquier\nataque con fuego.
+Cuando su furia alcanza su apogeo, se calienta tanto que\ncualquier cosa que toque prenderá al instante.
+Esta violenta criatura le clava los dientes a todo lo que se mueve.\nConviene no cometer la imprudencia de darle la espalda.
+Abre sus grandes fauces para atacar. Si pierde algún colmillo al\nmorder, este le vuelve a crecer todas las veces que haga falta.
+A pesar de su corpulencia, sus fuertes patas traseras le permiten\ndesplazarse con rapidez incluso en tierra firme.
 Cuando se encuentra con un rival, se yergue sobre la cola para\naparentar un mayor tamaño e intimidarlo.
 Gracias a su agilidad y a la flexibilidad de su cuerpo, es capaz de\nescabullirse con facilidad cuando alguien lo agarra.
 Su gran exactitud al dar la hora ha hecho que en algunas zonas lo\nconsideren una deidad de la sabiduría con un vasto conocimiento\ndel mundo.
@@ -48692,8 +49210,8 @@ Su plumaje es extraordinariamente suave y no emite el menor\nsonido cuando vuela
 Algunos pescadores confeccionan redes para pescar Pokémon pez\ncon el robusto hilo que produce Spinarak.
 No acostumbra a anidar en un lugar determinado.\nAl caer la noche, ronda los alrededores en busca de sustento.
 
-
-
+Libera cargas eléctricas positivas y negativas con la punta de las\nantenas para aturdir a sus enemigos.
+Emite una luz cegadora con la que deslumbra a su presa y\naprovecha que no puede moverse para engullirla de un bocado.
 Es un Pokémon adorable, pero, cuando se convive con él,\nuno tiene que estar preparado para recibir alguna que otra\ndescarga eléctrica.
 Es muy común ver Cleffa en noches de lluvia de estrellas,\npor lo que se dice que llegan montados sobre estrellas fugaces.
 Le apasiona cantar, pero no se le da muy bien. Cuantos más\nelogios reciba, más mejorarán sus dotes de cantante.
@@ -48705,7 +49223,7 @@ Su lana crece continuamente. En verano la pierde toda, pero le\nvuelve a crecer 
 Como su piel es gomosa y aislante, puede almacenar mucha\nelectricidad en su pelaje sin problema.
 Al anochecer, la luz intensa que se desprende del extremo de\nsu cola puede apreciarse desde muy lejos en la superficie del\nocéano.
 
-
+Se alejan de sus bosques natales para formar manadas. Cuando\nse emocionan, se ponen a bailar.
 Su cola, llena de aceite, hace las veces de boya, con la que se\ndesenvuelve con soltura hasta en ríos de aguas bravas.
 Guardando silencio y prestando mucha atención puede saber lo\nque hay en ríos de corrientes rápidas y fuertes.
 Para evitar que lo ataquen, se limita a imitar un árbol. Odia el\nagua y huye de la lluvia.
@@ -48724,7 +49242,7 @@ Usa el corto pelaje que cubre su cuerpo para sentir el viento y\npredecir las ac
 Cuando oscurece, los anillos de su cuerpo comienzan a brillar y\nasustan a cualquiera que se acerque.
 Si algún incauto logra detectarlo, se verá abocado a perseguirlo\nhasta perderse en las montañas.
 Su intelecto e intuición son increíbles. No pierde la compostura\nen ninguna situación.
-
+Puede elaborar brebajes mezclando lo que ingiere con su veneno,\npero él mismo desconoce el efecto que estos tienen.
 Le gusta morder y tirar del pelo de la gente desde atrás sin avisar,\nsolo para ver su reacción.
 
 
@@ -48762,8 +49280,8 @@ Si es descubierto, escapa cavando con la cola. Puede flotar\nligeramente usando 
 Desciende planeando sobre sus víctimas y las sorprende\naferrándose a su rostro para después clavarles el aguijón\nvenenoso.
 
 
-
-
+Sus gruñidos inquietan a sus adversarios. Normalmente tiene\nuna personalidad afable y se pasa la mitad del día durmiendo.
+Le basta con abrir su enorme boca y mostrar sus gruesos colmillos\npara ahuyentar prácticamente a cualquier Pokémon.
 Los pescadores veteranos aconsejan pescarlo justo después\nde que arroje sus púas tóxicas, pues es cuando se encuentra\nindefenso.
 Intimida a los enemigos agitando sus pinzas con dibujos de ojos.\nAl hacerlo, da la impresión de tener tres cabezas.
 
@@ -48783,21 +49301,21 @@ Como su largo pelaje le impide ver con claridad, carga hacia\ndelante repetidame
 
 Siempre lleva la comida consigo, vaya donde vaya. Si lo atacan,\nse la tirará a su adversario.
 
-
+Las plumas que se le desprenden son delgadas y afiladas, por lo\nque, según parece, antiguamente se usaban a modo de espadas.
 Usa diferentes tipos de aullidos para comunicarse con los de su\nespecie o para perseguir a su presa.
 Al oír sus siniestros aullidos, los otros Pokémon se estremecen y\nhuyen a sus nidos.
 
-
+Se dice que recarga energía durmiendo en los rincones más\nprofundos del océano, allí donde ningún otro ser puede llegar.
 Es mucho más fuerte de lo que aparenta. Un trompazo accidental\npodría fracturarle los huesos del brazo a una persona.
 Por lo general se muestra tranquilo, pero, si lo enfadan, se enrolla\nhasta hacerse una bola y embiste rodando.
-
+Esta versión mejorada de Porygon se creó para posibilitar\nla exploración de otros planetas, pero ni siquiera es capaz\nde volar aún.
 Se dice que antaño había alcanzado un estadio evolutivo superior\ncomo respuesta a la profusión de enemigos.
+El color del misterioso fluido que segrega por la punta de la cola\nvaría en función de cada individuo.
+Con el fin de volverse cada vez más fuerte, combate contra\ntodo el que se le ponga por delante para entrenar su cuerpo\nsin mesura.
+Su cuerno, que no deja de crecerle durante toda la vida, le sirve\ncomo eje para girar mientras propina sus elegantes patadas.
 
-
-
-
-
-
+Gira los brazos para generar electricidad, pero se cansa\nenseguida, así que almacena muy poca.
+La sangre que corre por sus venas es como el magma, lo que\neleva su temperatura corporal hasta los 600 ºC.
 
 Los huevos que pone están llenos de felicidad. Solo con probar\nun poquito de uno, cualquiera sonríe.
 
@@ -48810,17 +49328,17 @@ Su poder es tan descomunal que le basta un solo brazo para\nderribar montañas y
 
 
 
+Escala con rapidez incluso superficies verticales. Percibe la\nhumedad ambiental con la cola y así prevé el tiempo que hará\nal día siguiente.
+Se desplaza saltando grácilmente de rama en rama por los árboles\nmás altos, haciendo gala de su tremenda agilidad.
+Las hojas que le crecen en los brazos están afiladas como\ncuchillas. Ataca a sus enemigos saltando grácilmente de rama\nen rama.
 
+La saca de fuego que arde en el interior de su abdomen hace que\nal abrazarlo esté tan caliente como un calientapiés.
+Al combatir, el fuego de su interior se intensifica. Es capaz de\npropinar unas patadas demoledoras.
+Puede saltar edificios de 30 plantas. Reduce a cenizas a sus\nrivales con sus puñetazos de fuego.
 
-
-
-
-
-
-
-
-
-
+Batir su gran aleta caudal en el agua le permite nadar muy rápido.\nA pesar de su reducido tamaño, tiene mucha fuerza.
+Está en su salsa en terrenos lodosos, donde aprovecha la\nreducida movilidad de sus rivales para someterlos en un abrir\ny cerrar de ojos.
+Tiene unos brazos duros como la roca, con los que puede dejar\nmolido al enemigo de un solo golpe. Construye su nido en playas\nbonitas.
 
 Persiguen a su presa en jaurías. Esperan a que se agote para darle\nel golpe de gracia, pero, si esta contraataca, salen corriendo.
 Cuando detectan el olor de una presa lejana, toda la jauría se\npone en movimiento a las órdenes del líder.
@@ -48880,8 +49398,8 @@ Evita los ataques moviéndose de forma elegante, como si bailara.\nAtaca dando u
 
 
 
-
-
+Absorbe electricidad de los postes de teléfono. La almacena\ny crea cortocircuitos en su cuerpo para producir sonidos.
+Como odia el agua, se protege bajo los aleros de las casas si\nllueve. Anima a sus compañeros con pompones de chispas.
 Se comunica con sus congéneres haciendo parpadear la luz de\nla cola. Adora el dulce aroma que desprende Illumise.
 De noche, guía a los Volbeat para dibujar señales en el cielo,\ncuyo significado es objeto de estudio por parte de algunos\ninvestigadores.
 
@@ -48899,9 +49417,9 @@ La fuente de su energía es el carbón. Torkoal suele vivir en\nmontañas donde 
 Utiliza su cola a modo de muelle y bota sin cesar para hacer que\nsu corazón lata. Si se detiene, su corazón, también.
 Las perlas negras aumentan sus poderes psíquicos. Controla las\nmentes de sus rivales con un extraño baile.
 
-
-
-
+Destroza con sus grandes mandíbulas las rocas que va\nencontrando a su paso mientras cava en la arena. Sus nidos\ntienen forma de embudo.
+Crea ondas ultrasónicas haciendo vibrar las alas con violencia.\nUna vez que su presa pierde el conocimiento, la disuelve con sus\njugos gástricos.
+Atrapa en tormentas de arena y convierte en sus presas a aquellos\nque quedan cautivados por el sonido del batir de sus alas, similar\na un canto.
 Vive en regiones secas y con pocas lluvias. Una vez al año,\nle brota una flor amarilla.
 Su medio es el desierto. Por la noche, se vuelve activo y sale a\ncazar presas agotadas por el calor.
 Si su cuerpo o su entorno no están limpios, no puede relajarse.\nEn cuanto ve algo de mugre, la limpia con las alas.
@@ -48953,6 +49471,9 @@ Parece ser que la información genética de los Bagon les impulsa\na creer que a
 La robusta capa que lo rodea repele los ataques. Aunque es una\nbuena protección, lo hace lento y pesado.
 Si se enfada, no hay forma de calmarlo; lo destruye todo\nlanzando arañazos y llamas.
 
+Todas sus células cuentan con carga magnética, y se comunica\ncon los suyos a través de pulsos electromagnéticos.
+Le encanta comer minerales con propiedades magnéticas.\nSe desplaza a más de 100 km/h rastreando Nosepass.
+Con sus cuatro garras y su descomunal cuerpo aprisiona a sus\npresas para luego triturarlas con los dientes de la boca en su\nvientre.
 
 
 
@@ -48972,18 +49493,15 @@ Si se enfada, no hay forma de calmarlo; lo destruye todo\nlanzando arañazos y l
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+Al bañarlo los rayos de sol, realiza la fotosíntesis con todo el\ncuerpo. Su caparazón está formado por tierra endurecida.
+Sabe dónde encontrar manantiales de agua pura y lleva a lomos\na sus amigos Pokémon hasta allí.
+Algunos Pokémon nacen en la espalda de un Torterra y pasan allí\ntoda su vida.
+Los gases de su estómago generan el fuego que le arde en el\ntrasero, el cual disminuye cuando está débil.
+Cuanto más grande sea la llama de su cola y más vivo el azul de\nsu cara, más peso tiene en el grupo.
+Utiliza unos movimientos de combate únicos en los que se\nenvuelve las manos y los pies con llamas para enfrentarse a\ncualquier enemigo.
+No le gusta que lo cuiden. Hace caso omiso de las indicaciones\nde su Entrenador, por lo que resulta difícil trabar amistad con él.
+Como cada uno se considera el más importante, les resulta\nimposible formar grupos.
+Nunca pelea en vano, pero, si un enemigo pone en peligro\nla seguridad de los suyos, lo golpeará sin miramientos hasta\nnoquearlo.
 Son débiles cuando van solos, por lo que forman grupos.\nSin embargo, se pelean si el grupo crece demasiado.
 Viven siempre en grandes grupos y las disputas entre ellos son\nmuy intensas.
 Jamás deja de atacar, aunque lo hayan herido. Le preocupa\nmucho la forma de su cresta.
@@ -48996,10 +49514,10 @@ Al unir su cola con la de otro Luxio, pueden emitir descargas\neléctricas por l
 Tiene la capacidad de ver a través de todo, algo que resulta\nextremadamente valioso cuando acecha el peligro.
 
 
-
-
-
-
+Hace chocar su ya robusta cabeza contra la de otros Cranidos\npara fortalecerla aún más si cabe.
+Por más que se propinen violentos cabezazos entre ellos, no\nllegan a perder el conocimiento gracias a los 30 cm de grosor\nde sus cráneos.
+Debido a la extraordinaria dureza de su rostro, se piensa que\ntenía pocos enemigos. Vivía en las junglas prehistóricas.
+Viven en manada. Cuando los agrede un enemigo, forman una\nlínea defensiva y previenen ulteriores ataques con sus duros\nrostros.
 
 
 
@@ -49065,17 +49583,17 @@ Aparece con las flores de nieve y se retira cuando se les caen\nlos pétalos. No
 Siempre van en grupos de cuatro o cinco. Dejan marcas en rocas\ny árboles al cazar para coordinarse con sus compañeros.
 Fruto de la evolución de Magneton al exponerse a un campo\nmagnético especial que alteró su estructura molecular.
 
+Su cerebro es más pequeño que el de Rhydon, pero esto lo hace\nmás fuerte, ya que gasta toda su energía en combatir en vez de\npensar.
 
-
-
-
+Alcanza al enemigo con la punta de las colas y lo electrocuta al\ninstante con una descarga de alta tensión de más de 20 000 V.
+Vive en cráteres volcánicos. Al parecer, en cada volcán solo\nhabita una pareja de Magmortar.
 
 Pasa volando a gran velocidad al lado de sus enemigos y\nlos destroza con su potente mandíbula.
 Los Leafeon jóvenes desprenden un intenso aroma a hierba\nfresca, mientras que el olor de los mayores es más semejante\na la hojarasca.
 Al reducir su temperatura corporal, su pelaje se congela y se\nconvierte en afilados pinchos que puede disparar.
 Vuela sin hacer nada de ruido. Con su larga cola captura a sus\npresas y perfora sus puntos vitales con los colmillos.
 Se encontró un ejemplar preservado en hielo datado de hace\ndiez mil años. Causó gran estupor al despertar.
-
+Se reprogramó su código para que también pudiera funcionar\nen otras dimensiones, pero no salió como se esperaba.
 Puede presentir los movimientos de sus rivales y, por eso, ataca\nsiempre antes que ellos.
 
 Emite un magnetismo tan potente que inutiliza cualquier\nelectrodoméstico mientras se encuentre cerca.
@@ -49121,6 +49639,15 @@ Asume esta forma cuando toma posesión de un cortacésped.\nCorta las flores y e
 
 
 
+Debido a su carácter, prefiere no formar grupos. En vez de sus\ncortos brazos, utiliza las lianas con gran habilidad en su día a día.
+Su único defecto es el orgullo excesivo del que hace gala. Le\nlleva algo de tiempo aprender a cooperar con otros Pokémon.
+Su mirada capaz de amilanar al rival y su porte majestuoso le han\nvalido el sobrenombre de Soberano de los Bosques.
+Es un glotón insaciable. Encuentra alimento con su agudo sentido\ndel olfato, para luego tostarlo bien antes de ingerirlo.
+Su fuerza le permite enfrentarse a cualquier rival, por temible\nque sea, para socorrer a los suyos, pero ante el hambre le vence\nla impotencia.
+Parece divertirse más cuanto más acorralado se halla. En esa\nsituación, las llamas del cuello se avivan y se vuelve más rápido\ny poderoso.
+Se dice que aprendió a cuidar de su cuchilleira utilizando cantos\nde la orilla del río e imitando a los humanos que usaban piedras\nde afilar.
+Estoico y diligente, perfecciona el manejo de sus cuchilleiras\nmediante un entrenamiento basado en la constancia y la\nrepetición.
+Su personalidad estricta lo lleva a castigar sin piedad a todo\naquel que ose infringir las reglas en el grupo que dirige.
 
 
 
@@ -49140,24 +49667,15 @@ Asume esta forma cuando toma posesión de un cortacésped.\nCorta las flores y e
 
 
 
+Le gustan los lugares donde las tormentas son frecuentes.\nCapta los rayos con la crin y acumula la electricidad en el\ninterior del cuerpo.
+Cuando oyen un trueno, corren en tropel tras los nubarrones para\nque los Blitzle de la manada puedan recargarse de electricidad\ncon los rayos.
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Puede desplazarse bajo tierra muy velozmente al juntar las garras\ny hacer rotar su cuerpo a una velocidad frenética.
+Su taladro se ha vuelto de acero tras evolucionar y es capaz de\natravesar planchas metálicas. Es de gran ayuda en la construcción\nde túneles.
 
 
 Lucha bamboleando vigas de madera. Cuando transporta vigas\nmuy pesadas sin dificultad, es señal de que va a evolucionar.
@@ -49174,8 +49692,8 @@ Elabora vestimentas tejiendo hojas. Posee un carácter afable,\npero se muestra 
 
 
 
-
-
+Despide bolas de algodón cuando lo atacan para que el enemigo\nlas confunda con él y así poder poner pies en polvorosa.
+Entra en las casas con las corrientes de aire y esparce algodón\npor todas partes. Desaparece entre risas tras su travesura.
 Adquiere un aspecto esplendoroso cuando se le recortan las\nhojas de la cabeza con cierta asiduidad.
 Por muchos esfuerzos o dinero que destine la gente para hacerla\nflorecer, siempre es más bella la flor que brota en un ejemplar\nsalvaje.
 Lo llaman el Matón de los Ríos por su ferocidad, aunque eso no\nimpide que le den caza Pokémon como Dondozo o Bombirdier.
@@ -49193,8 +49711,8 @@ Su vista es tan perspicaz que puede divisar presas de pequeño\ntamaño a 50 km
 
 
 
-
-
+Propina un cabezazo inmediato a todo aquel que lo mira a los\nojos. Su cráneo es muy duro.
+A pesar de su actitud chulesca, se preocupa\nmucho por los miembros de su familia, el resto\ndel grupo al que pertenece y su territorio.
 
 
 
@@ -49208,14 +49726,14 @@ Su vista es tan perspicaz que puede divisar presas de pequeño\ntamaño a 50 km
 
 Se transforma en humanos o en otros Pokémon. Se defiende del\npeligro ocultando su verdadera apariencia.
 Tiene la facultad de confundir a muchos humanos a la vez.\nProtege su guarida creando un paisaje ilusorio.
-
-
+Le encanta la limpieza. Usa la cola a modo de escoba y se pasa\nel día barriendo el polvo de su madriguera.
+El aceite que exuda por todo el cuerpo es muy lubrificante y\nsupone un tratamiento eficaz para las personas con problemas\nde piel.
 Cuidado con tocar los órganos con forma de lazo que controlan\nsu poder psíquico, pues se corre el riesgo de que rompa a llorar\ndesaforadamente.
 Usa su poder psíquico para disponer pequeños guijarros en\nforma de constelaciones. Algunos creen que procede del espacio\nexterior.
 Puede predecir el futuro observando las estrellas. Su actitud algo\nfría y distante se debe a que ha visto el fin de todo lo existente.
-
-
-
+Desata su poder psíquico para ahuyentar al enemigo.\nSe comunica con sus compañeros por telepatía.
+Cuando las dos partes de su cerebro piensan lo mismo, saca todo\nsu poder a relucir.
+Cuando los Reuniclus se dan la mano, sus cerebros se conectan\ny multiplican sus poderes psíquicos.
 Fortalece su musculatura buceando por el lecho de los lagos en\nbusca del musgo acuático del que se alimenta.
 Se dice que muchos artistas han encontrado la inspiración para\nsu obra en las exquisitas danzas que ejecutan al amanecer.
 
@@ -49239,8 +49757,8 @@ Intenta hacerse pasar por una Poké Ball, aunque se desconoce\nsi logra engañar
 
 
 Vive flotando a la deriva en mar abierto. Muchos Pokémon\nacuáticos se arremolinan a su alrededor.
-
-
+No puede generar electricidad por sí mismo, así que se encarama\na Pokémon grandes y absorbe su energía estática.
+Cuando un enemigo lo ataca, expulsa por la boca hilos\nelectrificados para crear una barrera eléctrica.
 
 
 
@@ -49267,8 +49785,8 @@ Rodea al rival con cadenas de cristales de hielo y, una vez\ninmovilizado, lo co
 Suele recluirse con otros congéneres en las montañas para\nentrenar. Según el grupo, la técnica de sus patadas o puñetazos\nvaría.
 Usa el pelaje de los brazos a modo de látigos para encadenar\nataques que nadie puede parar una vez iniciados.
 
-
-
+Se mueve gracias a una misteriosa energía, pero, habiendo estado\nactivo desde la antigüedad, dicha energía podría agotarse tarde o\ntemprano.
+Los Golurk fueron creados antaño para proteger a humanos\ny a Pokémon. Funcionan gracias a una extraña energía.
 Una mella en sus cuchillas podría resultar mortal. Al término\ndel combate, las cuida con diligencia usando su piedra de afilar\npreferida.
 Rebana al enemigo sin piedad con las afiladas hojas que le\nrecubren el cuerpo, pues siente que la victoria es un fin que\njustifica cualquier medio.
 
@@ -49306,15 +49824,15 @@ Esparce escamas flamígeras, más peligrosas por consumir todo el\noxígeno a su
 
 
 
-
-
-
-
-
-
-
-
-
+Al ingerir muchas bayas, la coraza de corteza de árbol que\nle recubre la cabeza y el cuerpo se vuelve más resistente.
+Es capaz de hacer volar un tráiler con tan solo un placaje.\nPermanece impertérrito por muy violento que sea el impacto,\nal ser casi insensible al dolor.
+Evita las riñas por su carácter tranquilo, pero, si la situación lo\nrequiere, es capaz de noquear al rival con sus puños dotados\nde púas.
+Las ramitas son como un aperitivo para Fennekin. Al\nmordisquearlas, se arma de valor para plantar cara a enemigos\ntemibles.
+La rama de la cola prende fuego al extraerla y genera una llama\ncon la que Braixen ejecuta poderosos movimientos.
+Maneja las llamas con sus poderes psíquicos. Envuelve a su\noponente en un vórtice de fuego a 3000 ºC y lo calcina.
+Gracias a sus poderosos saltos, es capaz de lanzar burbujas\nelásticas a sus enemigos desde arriba para dejarlos a su merced.
+Es capaz de adherirse a superficies verticales con la punta de los\ndedos, lo cual le permite escalar incluso rascacielos sin dificultad.
+Los shuriken que crea con la mucosidad que secreta por las ancas\npueden cortar cables de acero en dos.
 
 
 
@@ -49414,6 +49932,9 @@ Habita en regiones montañosas. El líder de la manada se decide\nen un duelo en
 
 
 
+Su semblante carece de expresión, pero en su interior está\nlibrando una lucha titánica por contener su poder psíquico.
+Si libera su potente poder psíquico de forma prolongada, puede\nllegar a infligirse daño a sí mismo.
+Cuando una hembra se siente amenazada, libera al máximo su\npoder psíquico, sin importarle las consecuencias.
 
 
 
@@ -49422,11 +49943,8 @@ Habita en regiones montañosas. El líder de la manada se decide\nen un duelo en
 
 
 
-
-
-
-
-
+Colocarse boca abajo mejora su circulación sanguínea, lo que\nagudiza su mente y potencia sus poderes psíquicos.
+Los destellos que emite sumen en un estado hipnótico al rival,\nque queda bajo su control.
 
 
 Es un pésimo nadador. Algunos ejemplares han sido incluso\nincapaces de volver a su hogar tras ser arrastrados lejos por\nuna intensa tormenta.
@@ -49474,18 +49992,18 @@ Cuando reina la oscuridad, hace temblar incluso a los Hydreigon.\nEn cambio, evi
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+Se siente a gusto en lugares angostos y oscuros. En ocasiones se\nmete en la chaqueta o la mochila de su Entrenador y la utiliza a\nmodo de nido.
+Ataca a sus presas y enemigos lanzándoles plumas\nsorprendentemente afiladas. Acierta prácticamente siempre.
+Dispara plumas a sus rivales a modo de flechas. Si no puede\npermitirse fallar, tira de las lianas de su capucha y la frunce para\nconcentrarse mejor.
+Prende las bolas de pelo que se le forman en el estómago tras\nacicalarse. Las llamas resultantes cambian según la forma en la\nque escupe el pelo.
+Si le coge cariño a su Entrenador, se muestra afectuoso, pero\nes tan fuerte y sus garras tan afiladas que lo puede dejar lleno\nde arañazos.
+Descarga ráfagas de demoledores puñetazos y patadas sobre\nsus rivales, a los que luego remata con las llamas que manan\nde su vientre.
+Gracias al entrenamiento diario al que se somete, es capaz\nde inflar globos cada vez más grandes a través de la nariz.
+Tiene un gran sentido de la camaradería y, si ve que su\nEntrenador está con la moral baja, no duda en echarse a\nbailar para intentar animarlo.
+Recibe el sobrenombre de Diva. El espectáculo que ofrece\nal liderar a la colonia con su canto a la luz de la luna es\nabsolutamente primoroso.
+Gracias a la robusta musculatura de su cuello, puede picotear\na ritmo frenético sin hacerse daño.
+Cuando se topa con un enemigo, dispara las numerosas semillas\nde bayas que guarda en el pico como si fueran perdigones.
+Las parejas de Toucannon son todo un símbolo de buena\navenencia, pues se dan calor de forma recíproca aumentando\nla temperatura del pico.
 Busca alimento sin cesar mientras está despierto. Cuando tiene\nhambre, se vuelve aún más feroz.
 Es experto en seguir meticulosamente el rastro que dejan sus\npresas, pero los Skwovet son tan simplones que no le suponen\nreto alguno.
 
@@ -49513,8 +50031,8 @@ Tiene una gran capacidad de regeneración. El sabor amargo y\nseco de sus tentá
 Se enfrenta a Bruxish en violentas disputas por las zonas de\ncorrientes cálidas, aunque siempre lleva las de perder.
 De andares lánguidos, posee una gran fuerza física. Camina\ndel mismo modo aunque lleve a lomos una carga 50 veces más\npesada que él.
 Sus patas recubiertas de lodo endurecido son más duras que\nuna roca. Es capaz de reducir un camión grande a chatarra de\nuna sola coz.
-
-
+Sujeta con tres patas la burbuja que le rodea la cabeza. No son\nsiempre las mismas, ya que las cambia en ocasiones con disimulo.
+Dispara burbujas viscosas en las que encierra al enemigo. Cuando\neste pierde el conocimiento, lo hace picadillo con sus grandes\nmandíbulas.
 
 Muchos Entrenadores les preparan sus propias macetas para que\npuedan tomar el sol tranquilos.
 Este Pokémon precisa de mucha atención por parte de su\nEntrenador, pues mantener sus vivos colores requiere tiempo\ny esfuerzo.
@@ -49529,7 +50047,7 @@ Cuando dos Salazzle se encuentran, utilizarán sus gases con\nferomonas para dis
 Los Greedent que se les acercan atraídos por su dulce aroma\nse los suelen llevar envueltos en la cola junto a las bayas.
 Recorre los bosques a base de enérgicos saltos. La cáscara\nque se le desprende se puede pulverizar para tratar dolores\nestomacales.
 Con sus esbeltas piernas propina unas patadas tan elegantes\ncomo brutales. Siente cierta rivalidad hacia Quaquaval.
-
+Cuando se adorna con flores, se llena de alegría y las flores\ndesprenden un efecto reconfortante. Siente predilección por\nlos lugares muy floridos.
 Vive tranquilamente en las profundidades del bosque. El pelo\nmorado que le crece a modo de capa se va alargando con los\naños.
 Solo diez integrantes de la manada elegidos por el líder salen de\ncaza, pero comparten el botín de forma equitativa con los demás.
 
@@ -49556,20 +50074,20 @@ Dispara por los huecos que tiene en los brazos los huesos de\naquellos cuya ener
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Muestran un atisbo de reacción cuando alguien los toca o les\ndirige la palabra, pero no se sabe si se trata de una respuesta\nvoluntaria.
+Muestran un atisbo de reacción cuando alguien los toca o les\ndirige la palabra, pero no se sabe si se trata de una respuesta\nvoluntaria.
+Muestran un atisbo de reacción cuando alguien los toca o les\ndirige la palabra, pero no se sabe si se trata de una respuesta\nvoluntaria.
+Muestran un atisbo de reacción cuando alguien los toca o les\ndirige la palabra, pero no se sabe si se trata de una respuesta\nvoluntaria.
+Muestran un atisbo de reacción cuando alguien los toca o les\ndirige la palabra, pero no se sabe si se trata de una respuesta\nvoluntaria.
+Muestran un atisbo de reacción cuando alguien los toca o les\ndirige la palabra, pero no se sabe si se trata de una respuesta\nvoluntaria.
+Muestran un atisbo de reacción cuando alguien los toca o les\ndirige la palabra, pero no se sabe si se trata de una respuesta\nvoluntaria.
+Su alimentación se basa en partículas que flotan en la atmósfera.\nDicen que el color de su núcleo depende de la composición de\nestas.
+Su alimentación se basa en partículas que flotan en la atmósfera.\nDicen que el color de su núcleo depende de la composición de\nestas.
+Su alimentación se basa en partículas que flotan en la atmósfera.\nDicen que el color de su núcleo depende de la composición de\nestas.
+Su alimentación se basa en partículas que flotan en la atmósfera.\nDicen que el color de su núcleo depende de la composición de\nestas.
+Su alimentación se basa en partículas que flotan en la atmósfera.\nDicen que el color de su núcleo depende de la composición de\nestas.
+Su alimentación se basa en partículas que flotan en la atmósfera.\nDicen que el color de su núcleo depende de la composición de\nestas.
+Su alimentación se basa en partículas que flotan en la atmósfera.\nDicen que el color de su núcleo depende de la composición de\nestas.
 Diluida, su saliva sirve para preparar un potente anestésico que\nantiguamente se utilizaba en operaciones quirúrgicas.
 
 
@@ -49615,17 +50133,17 @@ Hace sonar las escamas para poner a prueba la osadía del rival.\nAquellos que p
 
 
 
+Al golpear con su baqueta todo lo que ve, se deja llevar por la\nemoción y su ritmo se vuelve cada vez más animado.
+Se concentra tanto en marcar un ritmo frenético que a veces ni\noye las órdenes de su Entrenador.
+Cuando el líder del grupo es desafiado por otro, comienza una\nbatalla de percusión tras la cual el vencedor se proclama líder.
 
+Las almohadillas de las patas concentran energía ígnea y, cuando\nalcanzan temperaturas muy altas, pueden causar un gran daño a\nsus adversarios.
+Se enorgullece de sus variadas técnicas con los pies, pero,\ncuando su frente se calienta por las llamas, también propina\ntremendos cabezazos.
+Maneja los balones de fuego que crea para mantener a raya a sus\nadversarios o cegarlos.
 
-
-
-
-
-
-
-
-
-
+Es tan precavido que, cuando no le queda más remedio que\ncombatir, siempre se camufla antes de atacar.
+Pese a su falta de interés en general, es muy inteligente y protege\nsu hogar colocando trampas.
+Muestra un comportamiento educado, pero en el fondo sigue\nsiendo perezoso. En cuanto su Entrenador se gira, se pone a\nholgazanear.
 
 Por mucho que se hinche a comer, le preocupa que le vuelva a\nentrar hambre, así que se guarda bayas en los carrillos y en la\ncola.
 Su cola es el doble de larga que su cuerpo. Envuelve con ella\nlas bayas que tira de los árboles para llevárselas consigo.
@@ -49692,16 +50210,16 @@ Vive en lo más profundo del bosque. A pesar de haber\nevolucionado, no abandona
 
 
 
-
-
-
-
-
-
-
-
-
-
+Si recibe un ataque, carga contra su rival y huye,\nya sea gracias a haberlo cegado al recubrirlo de\nnata o a haberlo abrumado con su suculencia.
+La nata que producen los Alcremie tratados con cariño es un\nmanjar tan exquisito que todos sus Entrenadores los colman de\natenciones.
+Cuando se ve amenazado, se defiende lanzando\na sus agresores una nata con un toque agridulce.
+Cuando se ve amenazado, se defiende lanzando\na sus agresores una nata con un toque fragante.
+Cuando se ve amenazado, se defiende lanzando\na sus agresores una nata con un toque\nrefrescante.
+Cuando se ve amenazado, se defiende lanzando\na sus agresores una nata con un toque agrio.
+Cuando se ve amenazado, se defiende lanzando\na sus agresores una nata con un toque salado.
+Cuando se ve amenazado, se defiende lanzando\na sus agresores una nata con un toque especial.
+Cuando se ve amenazado, se defiende lanzando\na sus agresores una nata con un toque amargo.
+Cuando se ve amenazado, se defiende lanzando\na sus agresores una nata con un toque complejo.
 
 El líder utiliza su cuerno, capaz de expandirse y contraerse, para\nordenar a los demás que cambien la formación.
 Es tan cobarde que le basta con rozar un alga a la deriva\npara asustarse y liberar descargas. Sus labios no conducen\nla electricidad.
@@ -49721,7 +50239,7 @@ Es orgulloso y difícil de tratar. Aquellos con un tono de piel verde\nmás vivo
 
 
 
-
+Su cuerpo metálico es robusto, pero acumula calor con tanta\nfacilidad que se ve obligado a liberarlo a través de las rendijas\nde la cola.
 
 Se lanza a morder a los Clauncher a pesar de no alimentarse de\nellos. Se dice que este hábito es un vestigio de cuando estaba\nvivo.
 Almacena en los pulmones energía que luego expulsa. Lucha\njunto a un Dreepy y cuida de él hasta que alcanza la madurez.
@@ -49864,8 +50382,8 @@ Pese a sus similitudes con los Cyclizar, es mucho más violento\ny fornido. Se d
 
 Parece tratarse de la criatura Ferromandra, que, según unos viejos\nescritos, transformó la tierra en cenizas con sus rayos.
 
-En proceso de investigación.
-En proceso de análisis.
+Se asemeja a la ilustración de un Suicune de tiempos\ninmemoriales que apareció publicada en cierta revista esotérica.
+Unos pocos testimonios afirman haberlo visto cortar en tiras\nárboles y rocas de gran tamaño mediante sus espadas luminosas.
 Este Ursaluna tan particular se protege el cuerpo con una capa\nde barro tan dura como el hierro. Su ojo izquierdo le permite ver\nen la oscuridad.
 Exterappli, el que saca la cabeza, e Interappli, el que saca la cola,\nviven juntos dentro de la manzana y se ayudan el uno al otro.
 Si bien parece una forma regional de Sinistea, recientemente se\nha demostrado que ambos Pokémon no guardan ninguna relación\nentre sí.
@@ -49879,6 +50397,19 @@ Es bromista y extremadamente curioso. A la hora de combatir,\nse sirve del tipo 
 Esta forma emplea el poder del agua. Ataca de forma repetida\nasestando patadas y golpeando con su rama y su liana.
 Esta forma emplea el poder del fuego. Atraviesa a sus enemigos\ncon una rama llena de espinas que usa a modo de lanza.
 Esta forma emplea el poder de las rocas. Puede protegerse de\ncualquier acometida gracias a su cuerpo sólido como la piedra.
+Excava hoyos en las montañas para procurarse alimento. Su\nrobustez es tal que apenas se inmuta aunque lo afecte de lleno\nun derrumbe.
+Unos Viborappli caprichosos que comparten morada. En raras\nocasiones se ponen de acuerdo y son capaces de mostrar su\nverdadera fuerza.
+Se asemeja a un supuesto Pokémon descrito en una revista\nesotérica como "un Entei restaurado a partir de un fósil".
+Recuerda a un presunto antepasado de Raikou que dio bastante\nque hablar durante un tiempo tras aparecer en una revista\nesotérica.
+Su cuerpo parece estar compuesto enteramente de metal.\nDebe su nombre a un objeto descrito en un tomo antiguo.
+Se dice que puede cortarlo todo a su alrededor lanzando afiladas\nhojas luminosas, pero nada más se sabe acerca de esta criatura.
+Se creía que este Pokémon de la Paldea antigua se había\nextinguido, víctima de alteraciones en la corteza terrestre\ndebidas a la actividad tectónica.
+Su caparazón Teracristal le permite absorber y apropiarse de la\nenergía de los movimientos que recibe.
+Según un antiguo diario de exploración, cuando está enterrado\nen las profundidades de la tierra, se asemeja a un planeta que\nflota en el espacio.
+Su caparazón con forma de melocotón alberga un potente veneno\ncon el que prepara un mochi tóxico que ofrece a humanos y\nPokémon.
+Un Pokémon violento, tosco y rudo. Blande sus enormes y\npesadas hachas de piedra para acabar con sus presas.
+Posee un carácter feroz y agresivo. Las puntas de sus púas\nvenenosas son dentadas, por lo que no resulta fácil extraerlas\nuna vez que se clavan.
+Absorbe toxinas de la comida que ingiere. El ostensible color\nmorado de algunas de sus púas indica que contienen un veneno\nletal.
 ~~~~~~~~~~~~~~~
 Text File : ARCEUS_place_name_out
 ~~~~~~~~~~~~~~~
@@ -50031,20 +50562,20 @@ Sinnoh
 Text File : zukan_comment_scarlet
 ~~~~~~~~~~~~~~~
 
+Tras nacer, crece alimentándose durante un tiempo de los\nnutrientes que contiene el bulbo de su lomo.
+Cuanta más luz solar recibe, más aumenta su fuerza y más se\ndesarrolla el capullo que tiene en el lomo.
+Puede convertir la luz del sol en energía. Por esa razón, es más\npoderoso en verano.
+
+
+La llama de su cola indica su fuerza vital. Si está débil, la llama\narderá más tenue.
+Al agitar su ardiente cola, eleva poco a poco la temperatura a su\nalrededor para sofocar a sus rivales.
+Cuando se enfurece de verdad, la llama de la punta de su cola se\nvuelve de color azul claro.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+Tras nacer, se le hincha el lomo y se le forma un caparazón.\nEscupe poderosa espuma por la boca.
+Tiene una cola larga y peluda que simboliza la longevidad y lo\nhace popular entre los mayores.
+Aumenta de peso deliberadamente para contrarrestar la fuerza de\nlos chorros de agua que dispara.
 
 
 
@@ -50082,9 +50613,9 @@ La gorra que lleva este Pikachu está cargada de gratos\nrecuerdos de los viajes
 Su cola actúa como toma de tierra y descarga electricidad\nal suelo, lo que le protege de los calambrazos.
 
 Excava madrigueras profundas en las que vive. Cuando lo ataca\nalgún enemigo, se hace una bola y aguanta pacientemente sus\nembates.
-
+Vive en montañas nevadas. Su caparazón de acero es muy\nresistente, pero tiene tal dureza que no le permite enrollarse\ndel todo.
 Corre de un lado a otro a toda velocidad al tiempo que ataca\nhábilmente con las púas que tiene en la espalda y con sus\nafiladas garras.
-
+Sus púas de acero están cubiertas de hielo. Cuando pincha\ncon ellas, además de profundas heridas, también causa daño\npor congelación.
 
 
 
@@ -50094,24 +50625,24 @@ Corre de un lado a otro a toda velocidad al tiempo que ataca\nhábilmente con la
 En las noches de luna llena, Clefairy de diversos lugares se\nreúnen para bailar bajo su luz, la cual los hace flotar.
 Se dice que este Pokémon emparentado con las hadas vive en\nzonas tranquilas en lo profundo de las montañas, ya que odia\nque lo vean.
 Si lo ataca un enemigo más fuerte que él, finge estar herido para\nconfundirlo y huir en cuanto baja la guardia.
-
+Los miembros de la manada se ayudan entre sí. Congela a sus\npresas con su aliento gélido a -50 ºC antes de devorarlas.
 Cuentan algunas leyendas que cada una de sus nueve colas\nposee su propio y único poder sobrenatural.
-
+De temperamento tranquilo. Hasta que se supo que era la forma\nregional de Ninetales, se lo veneraba como la encarnación de una\ndeidad.
 Cuando le tiemblan sus redondos y adorables ojos, entona\nuna melodía agradable y misteriosa con la que duerme a sus\nenemigos.
 Tiene un pelaje muy fino. Se recomienda no enfadarlo,\no se inflará y golpeará con todo su cuerpo.
 
 
-
-
-
+Su nombre científico es Oddium viandantis. Se dice que,\ncuando cae la noche, puede llegar a desplazarse hasta\n300 m con sus dos raíces.
+El fluido que le cae lentamente de la boca no es saliva, sino\nuna especie de néctar que utiliza para atraer a sus presas.
+El capullo florece de golpe con un chasquido, tras lo cual\ncomienza a desprender un polen alergénico y venenoso.
 
 
 Rezuma veneno por todo su cuerpo. De noche, atrapa y come\npequeños Pokémon insecto atraídos por la luz.
 Tiene las alas cubiertas de escamas. Cada vez que las bate,\nesparce un polvillo sumamente venenoso.
 Vive 1 m por debajo del suelo, donde se alimenta de raíces.\nA veces también aparece en la superficie.
-
+Los pelillos metálicos de su cabeza son fruto de una mutación.\nSe comunica con sus compañeros meneándolos.
 Sus tres cabezas suben y bajan para remover la tierra cercana\ny facilitar así la excavación.
-
+Sus brillantes filamentos dorados son potentes sensores. Puede\ndetectar las vibraciones de un sonido a varios kilómetros de\ndistancia.
 Durante el día, se dedica a dormir. De noche, vigila su territorio\ncon un brillo en los ojos.
 
 
@@ -50138,35 +50669,35 @@ Aunque puede nadar de forma hábil y enérgica utilizando todos\nsus músculos, 
 Si detecta algún movimiento a su alrededor, sea cuando sea,\nreacciona enseguida extendiendo sus finas lianas en esa\ndirección.
 Rezuma un fluido neutralizante que impide que su propio ácido\nlo disuelva.
 Deja que sus presas se le acerquen a la boca, atraídas por\nel aroma a néctar. Una vez dentro, las disuelve con su ácido.
-
-
+Cuando baja la marea, se pueden encontrar Tentacool\ndeshidratados junto a la orilla.
+En muy raras ocasiones, cuando se produce una aparición masiva\nde Tentacruel, los Pokémon pez de los alrededores se esfuman\nsin dejar rastro.
 En reposo parece una roca normal, pero responde agitando\nlos puños con agresividad si se pisa por error.
-
+Su cuerpo de piedra está magnetizado. En los puntos donde\nsu campo magnético se intensifica, tiene masas compactas\nde arena ferruginosa.
 Camina muy lentamente, por lo que se desplaza rodando,\nsin importarle lo que pueda haber en su camino.
-
+Se pelean por las rocas de las que se alimentan.\nCuando chocan entre sí, se oyen estallidos y se\nven destellos de luz.
 Está cubierto por un duro caparazón formado por losas de piedra.\nLo muda una vez al año para aumentar de tamaño.
-
+Es de carácter cascarrabias y obstinado. Cuando se harta,\ndescarga electricidad por todo el cuerpo y ruge con voz\natronadora.
 
 
 
 
 Increíblemente lento y torpe. Tarda cinco segundos en sentir\ndolor si lo atacan.
-
+El olor estimulante que desprende se debe a que su cuerpo\nestá impregnado de la esencia de la especia que consume\nhabitualmente.
 Según parece, cuando Slowpoke fue a pescar al mar, un Shellder\nle mordió la cola y así evolucionó a Slowbro.
 
-
+A pesar de haber perdido el conocimiento por el veneno, el\nShellder que le muerde el brazo parece estar extasiado con\nsu delicioso sabor.
 Las unidades laterales crean ondas electromagnéticas que\ncontrarrestan la gravedad y le permiten flotar.
 Tres Magnemite se enlazan mediante una intensa fuerza\nmagnética. Provoca un fuerte pitido en los oídos a quien\nse le acerque.
 
 
-
-
-
-
+Sus cabezas gemelas comparten la misma información genética\ny combaten juntas al unísono.
+Ahora cuenta con tres corazones y tres pares de pulmones.\nNo alcanza las velocidades de Doduo, pero es capaz de correr\ndurante más tiempo.
+La protuberancia que tiene en la cabeza es tan dura que la usa\npara abrirse paso a cabezazos por el hielo de los icebergs.
+Duerme en aguas poco profundas durante el día y, por la noche,\ncuando baja la temperatura del agua, nada en busca de comida.
 Formados a partir de lodo, los Grimer se juntan en lugares sucios\npara aumentar el número de gérmenes de su cuerpo.
-
+Almacena las toxinas en el interior de su cuerpo, por lo que,\na diferencia de los Grimer de otras regiones, no apesta por\nmás que uno se acerque.
 Está cubierto por un repugnante lodo. Es tan tóxico que hasta\nsu rastro es venenoso.
-
+En su cuerpo alberga más de un centenar de tipos de veneno.\nLas reacciones químicas entre ellos son su fuente de energía vital.
 Está metido en una concha más dura que el diamante, pero tiene\nun cuerpo muy blando.
 A los Cloyster que viven en las fuertes corrientes marinas\nles crecen largas y afiladas púas en la concha.
 Su estrategia consiste en envolver al rival con su cuerpo gaseoso\ny envenenarlo a través de la piel.
@@ -50182,27 +50713,27 @@ Cuando mira al enemigo, usa diversos poderes psíquicos como\nla hipnosis.
 
 Se mueve rodando. Si el terreno es irregular, una chispa\nprovocada por algún bache lo hará explotar.
 Cuanta más energía almacena, mayor velocidad alcanza,\naunque aumenta también el riesgo de que explote.
+Si alguien confunde a una de sus cabezas con un huevo y la toca,\nse reagrupa con las otras para atacar todas juntas.
+Se lo llama la Selva Andante. Cada fruto tiene una cara distinta\ny voluntad propia.
+Asesta cabezazos al oponente chasqueando el cuello como un\nlátigo. Se marea un poco al hacerlo.
 
 
 
 
-
-
-
-
-
+Endurece los músculos de las plantas de los pies en el momento\nen el que impactan contra su rival para potenciar al máximo sus\npatadas.
+Acorrala a sus enemigos con combinaciones de puñetazos\ncon ambos puños, para luego darles el golpe de gracia con\nun directo a 500 km/h.
 
 Su cuerpo, con forma de globo y poco grosor, encierra gases muy\ntóxicos que pueden ocasionar explosiones espontáneas de gran\nmagnitud.
 Diluir sus venenosos gases internos lo máximo posible permite\nfabricar perfumes de alta gama.
 
-
-
+Puede controlar un territorio de hasta 10 km de radio, pero,\ncuando se pone a correr, parece olvidársele dónde empieza\ny dónde acaba.
+Hace chocar el cuerno con el de sus congéneres para afilarlo.\nEs capaz de horadar diamantes en bruto con él.
 Un generoso Pokémon que pone huevos muy nutritivos y se los\nda a personas o Pokémon heridos.
 
 
 
-
-
+Si es atacado por un enemigo, por muy grande que sea, nada\nveloz a un lugar seguro gracias a su fornida aleta dorsal.
+En esta especie, es el macho quien se ocupa de cuidar a las crías,\na las que defiende con sus púas venenosas de cualquiera que se\nles acerque.
 
 
 
@@ -50211,18 +50742,18 @@ Un generoso Pokémon que pone huevos muy nutritivos y se los\nda a personas o Po
 
 Avanza por la hierba con sus afiladas guadañas, más rápido de lo\nque el ojo humano puede percibir.
 
+Su cuerpo descarga electricidad constantemente, por lo que eriza\nel cabello a cualquiera que se le acerque.
+Fue descubierto junto al cráter de un volcán. Escupe llamaradas\ny su temperatura corporal alcanza los 1200 ºC.
 
 
-
-
-
+Cuando ve a un enemigo, se fustiga con las\ncolas y carga ferozmente contra él.
 Destaca en el combate cuerpo a cuerpo gracias a su constitución\nmusculosa. Ataca los puntos vitales del enemigo con sus cortos\ncuernos.
 Sus cuernos alcanzan los 1000 ºC cuando los calienta con\nenergía ígnea. Quienes reciben una de sus cornadas sufren\nheridas y quemaduras.
 Perfora a sus rivales lanzando chorros de agua a alta presión\npor la cavidad que tiene en la punta de los cuernos.
 Un Pokémon desvalido y patético. A veces es capaz de saltar alto,\npero rara vez más de 2 m.
 Cuando aparece, monta en cólera. No deja de estar furioso hasta\nque lo destruye todo.
 
-
+Surca los mares transportando gente sobre el lomo. Al parecer,\na veces entona un melodioso canto si está de buen humor.
 
 Su habilidad para transformarse es perfecta, pero, si se le hace\nreír, perderá la fuerza y no podrá mantenerse transformado.
 Es capaz de evolucionar de muchas maneras para adaptarse sin\nproblemas a cualquier medio.
@@ -50231,7 +50762,7 @@ Es capaz de evolucionar de muchas maneras para adaptarse sin\nproblemas a cualqu
 Vive cerca del agua. Su cola termina en una aleta parecida a la\nde un pez, por lo que hay gente que lo confunde con una sirena.
 Concentra la débil actividad eléctrica de sus células para lanzar\ndañinas descargas.
 Calienta el aire que inhala en su saca de fuego y lo expulsa\na 1700 ºC.
-
+Un Pokémon artificial que no respira, por lo que se le supone la\ncapacidad de desenvolverse sin problemas en cualquier entorno.
 
 
 
@@ -50253,15 +50784,15 @@ Dicen que viven en una isla en algún lugar del océano que solo\nellos habitan.
 
 
 
-
-
-
-
-
-
-
-
-
+Le encanta tomar el sol. Usa la hoja que tiene en la cabeza para\nlocalizar sitios cálidos.
+Su cuello desprende un aroma especiado que, por alguna razón,\nincita a combatir a quienes lo huelen.
+Estar a su lado produce una sensación de frescor similar a la de\nun relajante paseo por el bosque.
+Suele estar encorvado. Si se enfada o se asusta, lanzará llamas\npor el lomo.
+Antes de empezar a luchar, le da la espalda al rival para alardear\ndel alcance y la fuerza de sus llamas.
+Posee una técnica secreta y devastadora que consiste en atacar\nfrotando su pelaje ardiente para provocar explosiones.
+Sus desarrolladas y potentes mandíbulas pueden triturar cualquier\ncosa, por lo que hasta su propio Entrenador debe andarse con\ncuidado.
+Sus colmillos están curvados hacia dentro, por lo que, una vez\nque muerde a una presa, esta no tiene forma de escapar.
+Tras morder a su víctima con sus enormes y potentes mandíbulas,\nagita la cabeza con fuerza para despedazarla.
 Un Pokémon muy precavido. Su cola se mueve grácilmente,\npero al ser tan musculosa resulta dura al tacto.
 Cuida de sus crías en una madriguera larga y estrecha.\nCuando crecen, las lleva al exterior y les enseña a vivir\nde forma independiente.
 Mece la cabeza a un ritmo constante gracias a su reloj interno,\nel cual no pierde su extraordinaria precisión en ningún momento.
@@ -50271,8 +50802,8 @@ Posee unos ojos especialmente adaptados que le permiten\naprovechar incluso la l
 Espera inmóvil hasta que se hace de noche, incluso cuando hay\nuna presa atrapada en la telaraña que teje con su hilo.
 Segrega de forma continua por el abdomen una hebra de un hilo\nespecial cuyo extremo conecta con el nido.
 
-
-
+Vive en lo más profundo del océano, donde ya no alcanza\nla luz. Se comunica con los de su especie emitiendo luces\ncon las antenas.
+Las esferas luminiscentes con las que atrae a sus presas son en\nrealidad el resultado de la mutación parcial de su aleta dorsal.
 No se le da muy bien el almacenamiento de electricidad.\nA la mínima, descarga energía sin darse cuenta.
 Se dice que, cuando este Pokémon observa atentamente el cielo\nnocturno durante una lluvia de estrellas, está rememorando su\nhogar natal.
 Su cuerpo suave y elástico desprende un aroma ligeramente\ndulce. Cuando empieza a botar, no puede parar.
@@ -50284,7 +50815,7 @@ Cuando almacena electricidad estática en su cuerpo, la lana\ndobla su volumen. 
 Como almacena tanta electricidad, en algunas partes de su\ncuerpo no le crece ni la lana.
 El brillo de su cola es visible desde lejos. En la antigüedad,\nse usaba mucho como faro.
 
-
+Se ha vuelto diurno gracias a la influencia de la Piedra Solar.\nLe gusta bailar en lugares bañados por el sol.
 Tiene un pelaje que repele el agua, por lo que está seco incluso\ndespués de bañarse.
 Sus largas orejas son unos sensores excepcionales que le\npermiten diferenciar e identificar lo que oye dentro del agua.
 Aunque pretende ser un árbol, en su composición se parece más\na una roca que a una planta.
@@ -50303,7 +50834,7 @@ Al predecir el siguiente movimiento de su rival, los extremos de\nsu cola bífid
 Si se expone al aura de la luna, los anillos de su cuerpo relucen\ny adquiere un poder misterioso.
 Temido y odiado por muchos, dicen que trae la desgracia a todos\naquellos que lo ven por la noche.
 Al ser mordido en la cabeza, Slowpoke absorbió unas toxinas que\nliberaron su poder oculto.
-
+Cuando se topa con un Pokémon sin fuerzas, segrega un brebaje\nmedicinal hecho con veneno por los orificios de los cuernos y se\nlo ofrece.
 Sorprende a la gente en mitad de la noche y acumula su miedo\ncomo energía.
 
 
@@ -50341,8 +50872,8 @@ Construye laberintos en lugares oscuros. Si alguien lo descubre,\nhuye cavando u
 Construyen sus nidos en precipicios escarpados, a los que\nregresan dando pequeños saltos una vez que han dado por\nconcluido su planeo.
 
 
-
-
+En realidad es muy cobarde. Gruñe con desaforo en un intento\npor disimular su miedo.
+En el fondo es muy tímido y asustadizo. Cuando lo atacan, agita\nlas extremidades frenéticamente con la intención de ahuyentar\nal enemigo.
 Si comienza a beber agua para hincharse, es señal de amenaza.\nAtaca al rival arrojando las púas tóxicas que le recubren el\ncuerpo.
 Las pinzas que posee contienen acero y pueden hacer trizas\ncualquier objeto por duro que sea.
 
@@ -50362,21 +50893,21 @@ Su tupido pelaje lo protege del frío. Sus colmillos de hielo se\nengruesan cuan
 
 Transporta comida durante todo el día. Según dicen, muchos\ndesaparecidos han sobrevivido gracias a ella.
 
-
+Su robusto cuerpo metálico parece pesado, pero en realidad\nes fino y ligero, lo que le permite volar a 300 km/h.
 Tiene suficiente inteligencia para cazar en manada.\nSe comunica con los demás a través de diversos aullidos.
 Si alguien se quema con las llamas que lanza por la boca,\nel dolor no desaparecerá nunca.
 
-
+Se dice que duerme en el fondo del océano para recargar energía\ny que crea remolinos cuando despierta.
 Vive en hoyos que cava en la ribera de los ríos. Tras retozar en el\nlodo, no se queda tranquilo hasta haberse lavado bien el cuerpo.
 Su dura piel podría resistir el choque contra un coche sin sufrir\nun rasguño. La lluvia, sin embargo, es su punto débil.
-
+Pokémon artificial evolucionado con tecnología de vanguardia. En\nocasiones muestra reacciones que no forman parte de su código.
 Antaño habitaba en entornos inhóspitos, por lo que sus\npoderes psíquicos eran supuestamente más potentes aún\nque en la actualidad.
+Cuando un ejemplar alcanza la edad adulta, es costumbre que\nsus congéneres le impriman la marca de sus patas en el lomo.
+Este Pokémon tan decidido combate contra todo tipo de rivales\nen su búsqueda de un estilo de lucha propio.
+Su especialidad son las patadas danzarinas. El cuerno que\ntiene en la cabeza está hecho del mismo material que el pelo\ny las garras.
 
-
-
-
-
-
+Adora los rayos más violentos. Cuando se carga de electricidad,\nla cavidad entre sus cuernos emite una luz blanquecina.
+Cada vez que inspira y espira, este Pokémon deja escapar chispas\npor la boca y por las fosas nasales.
 
 Cualquiera que pruebe un poco de huevo de Blissey, se volverá\nmás amable y agradable con todos.
 
@@ -50389,17 +50920,17 @@ Tiene tanta fuerza que puede cambiar el paisaje. Su naturaleza\ninsolente le hac
 
 
 
+Tiene pequeñas púas en las plantas de los pies que le permiten\nandar por techos y paredes sin caerse.
+Los desarrollados músculos de sus extremidades inferiores le\nproporcionan una tremenda agilidad y una portentosa capacidad\nde salto.
+Corretea ágil y veloz por la selva y emplea las afiladas hojas de\nsus brazos para darles el golpe de gracia a sus presas.
 
+Posee una saca de fuego en el abdomen, cuya llama arderá\ndurante toda su vida. El calor que desprende resulta muy\nagradable al abrazarlo.
+Propina unas patadas demoledoras. Profiere potentes gritos para\naguzar su concentración.
+Ante un rival difícil, expulsa llamas por las muñecas. Tiene mucha\nfuerza en las patas; hasta puede saltar edificios.
 
-
-
-
-
-
-
-
-
-
+Puede reducir a añicos grandes rocas. Descansa enterrado en\nel lodo del lecho de los ríos.
+Vive en terrenos cubiertos de lodo viscoso, lo que contribuye\na que sus patas se fortalezcan y se vuelvan extremadamente\nrobustas.
+Con sus brazos duros como una roca puede partir pedruscos\ngigantescos en mil pedazos de un solo golpe.
 
 Enseña sus enormes colmillos y ladra con fuerza para intimidar\na sus rivales, lo cual no es más que una manera de esconder su\ncobardía.
 Siguen las órdenes del líder al pie de la letra. Gracias a la\neficacia de su trabajo en equipo, ninguna presa se les escapa.
@@ -50459,8 +50990,8 @@ Puede prever los movimientos de su rival usando sus poderes\npsíquicos, fortale
 
 
 
-
-
+Anima a sus compañeros con un alegre chisporroteo. Para\nabsorber electricidad, se sube a los postes de teléfono.
+La electricidad de Minun y Plusle es buena para la circulación\ny para desentumecer los músculos.
 Vive cerca de estanques de agua clara. De noche, hace parpadear\nla luz de la cola para comunicarse con otros de su especie.
 Con su dulce aroma guía a los Volbeat para trazar con ellos más\nde 200 dibujos distintos en el cielo nocturno.
 
@@ -50478,9 +51009,9 @@ Quema carbón en su caparazón para obtener energía. Si se ve\namenazado, despi
 Si dejara de saltar, se debilitaría. La perla que lleva en la cabeza\namplifica sus poderes psíquicos.
 Para controlar a su rival usa unos curiosos pasos de baile,\nantaño muy populares en el extranjero.
 
-
-
-
+Habita desiertos áridos. Cava nidos con forma de embudo, en los\nque espera pacientemente a que caiga su presa.
+Las alas de Vibrava están subdesarrolladas. Más que para volar,\nlas frota para crear ondas ultrasónicas con las que ataca a sus\nenemigos.
+Se lo conoce como el Alma del Desierto. Levanta tormentas de\narena al batir las alas y se oculta en su interior.
 Prefiere entornos inhóspitos, como los desiertos. Puede sobrevivir\n30 días sin beber gracias al agua que almacena en el interior de\nsu cuerpo.
 Persiguen en grupo a los viajeros del desierto y los acechan hasta\nque el cansancio los agote.
 Está continuamente acicalándose las alas de algodón que tiene.\nSi se ensucia, se da un baño para limpiarse enseguida.
@@ -50532,6 +51063,9 @@ Tiene la cabeza dura como el acero y es capaz de destrozar rocas.\nSu sueño es 
 En el interior de su coraza, las células se transforman a una\nvelocidad vertiginosa para preparar su evolución.
 Feliz de haber desarrollado al fin sus alas y de poder volar por\nel cielo, calcina con sus llamas todos los campos que sobrevuela.
 
+El magnetismo terrestre y el que emite su cuerpo se repelen,\nlo que le permite flotar en el aire.
+Está formado por dos Beldum fusionados. Sus dos cerebros están\nconectados, así que cuenta con poderes psíquicos amplificados.
+Dicen que sus cuatro cerebros superan a un superordenador.\nVuela plegando las cuatro patas.
 
 
 
@@ -50551,18 +51085,15 @@ Feliz de haber desarrollado al fin sus alas y de poder volar por\nel cielo, calc
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+Si su caparazón, hecho de tierra, está húmedo al tacto, es señal\nde que Turtwig se encuentra en plena forma.
+Viven en el bosque, donde se dice que hay manantiales\ncristalinos que solo ellos conocen.
+Las gentes de antaño creían que la superficie terrestre se\nencontraba sobre un gran Torterra.
+Es muy ágil. Antes de dormir apaga la llama del trasero para no\nprovocar un incendio.
+Controla hábilmente la intensidad del fuego de la cola para\nmantener al enemigo a una distancia ideal.
+Desconcierta a sus rivales con su tremenda agilidad. Su\ncaracterística forma de luchar utiliza todos sus miembros.
+No se le da bien andar. Se tropieza mucho, pero su orgullo le\nhace sacar pecho como si nada.
+Vive por su cuenta, alejado de sus congéneres. Puede partir en\ndos un árbol gigantesco de un fuerte aletazo.
+Si alguien hiere su orgullo, lo desgarra con sus alas, capaces de\ncortar incluso témpanos de hielo.
 Sobrevuela los campos en bandada buscando Pokémon de tipo\nBicho. Chilla de forma muy estridente.
 Son conscientes de su debilidad, así que siempre viven en grupo.\nSi se encuentran solos, lloran a gritos.
 Al evolucionar a Staraptor, deja su bandada y pasa a vivir en\nsoledad. Sus alas son inmensas.
@@ -50575,10 +51106,10 @@ Por las puntas de sus garras pasa una fuerte corriente eléctrica.\nEl mínimo r
 Puede ver claramente a través de las paredes para buscar a las\npresas huidas o a sus crías si se pierden.
 
 
-
-
-
-
+Vivía en la jungla hace cien millones de años. Gracias a su\ndestreza propinando cabezazos, podía hacer frente a los\nAerodactyl.
+Su cerebro no ha podido desarrollarse al verse limitado por\nel espesor de su cráneo, capaz de soportar cualquier golpe.
+Su imponente protección le exime de tener que combatir, por lo\nque pasa el tiempo comiendo hierba y bayas.
+Es capaz de repeler cualquier ataque frontal, pero se encuentra\ntotalmente a merced de los ataques por la retaguardia.
 
 
 
@@ -50644,17 +51175,17 @@ Vive en paz en cordilleras de nieves eternas. Genera ventiscas\npara ocultarse.
 Su carácter se volvió aún más vil con la evolución. Se comunica\nmarcando rocas con sus garras.
 Se dice que mientras vuela emite unas ondas eléctricas\nmisteriosas, a la vez que recibe otras ondas desconocidas.
 
+Repele erupciones volcánicas con sus robustos protectores.\nDispara con fuerza rocas redondas a través de las cavidades\nde las manos.
 
-
-
-
+Al exaltarse, se golpea con ímpetu el pecho. Cada vez que lo\nhace, saltan chispas y un trueno resuena por la zona.
+Al lanzar bolas de fuego a 2000 ºC por los extremos de los\nbrazos, su cuerpo adopta un tono blanquecino debido a la\ntemperatura.
 
 Bate las alas con tal fuerza que, cuando alza el vuelo, es capaz de\nabatir los árboles a su alrededor.
 En días soleados, duerme y hace la fotosíntesis, con la que emite\naire puro a su alrededor.
 Controla a su antojo la temperatura corporal y congela las\npartículas de agua que flotan en el aire para provocar ráfagas\nde nieve en polvo.
 Si consigue aprovechar bien las leves corrientes del aire,\npuede dar la vuelta al globo sin aletear ni una sola vez.
 Existe desde tiempos tan remotos que incluso se halló uno\nbajo hielo formado hace diez mil años.
-
+Se le instaló un software para convertirlo en un Pokémon más\navanzado. Sin embargo, algo salió mal y por eso se mueve de\nmanera extraña.
 Cuando quiere proteger a alguien, extiende los codos como\nsi fueran espadas y lucha con fiereza.
 
 Controla magnéticamente tres unidades llamadas mininarices,\ncon las que ataca al rival desde tres direcciones diferentes.
@@ -50700,6 +51231,15 @@ El cortacésped es uno de los aparatos que impulsaron\nel desarrollo de la Rotom
 
 
 
+Cuando genera energía exponiendo la hoja de la cola a la luz\nsolar, su agilidad aumenta y sus movimientos se vuelven más\nprecisos.
+Se mantiene agachado para abrirse camino entre la hierba\nmientras corre y, luego, fustiga sin piedad al objetivo con\nsus látigos de lianas.
+Amplifica decenas de veces en el interior de su largo cuerpo la\nenergía que genera a partir de la luz solar.
+Maneja a su rival moviéndose con una agilidad sorprendente\npara su apariencia. Lanza ráfagas de bolas de fuego por ambas\nfosas nasales.
+En cuanto entra en combate, su temperatura corporal se dispara\nhasta el punto de convertirse en una bola de fuego candente.
+Las llamas que le arden en el interior del pecho emanan con\nímpetu hacia el exterior a través de la barbilla y le confieren\nuna barba flamígera.
+Blande la cuchilleira del vientre a modo de daga. Tras bloquear\ncon ella los movimientos del rival, contraataca asestando ágiles\ncuchilladas.
+Se dice que sus movimientos al manejar las dos cuchilleiras,\nfluidos cual corriente de agua, se tomaron como modelo para\nel arte de la espada.
+Un maestro en el arte del desenvaine. Zanja sus combates con\nun tajo de los grandes sables que guarda en la coraza de las\npatas delanteras.
 
 
 
@@ -50719,24 +51259,15 @@ El cortacésped es uno de los aparatos que impulsaron\nel desarrollo de la Rotom
 
 
 
+El latido de su corazón genera electricidad, cuyo voltaje aumenta\ncuando se sobresalta y se acelera su ritmo cardíaco.
+Posee un temperamento salvaje y agresivo. Cuando se solivianta,\nsu crin desprende un fulgor dorado y lanza rayos.
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Es capaz de cavar bajo tierra a más de 50 km/h. Casi podría\nseguirle el ritmo a un coche que circule por la superficie.
+Sus garras y su cabeza se han vuelto de acero. Puede combinarlas\npara formar un taladro capaz de perforar incluso una gruesa\nplancha metálica.
 
 
 Siempre lleva una viga de madera y ayuda en las construcciones.\nSe busca vigas más grandes conforme crece.
@@ -50753,8 +51284,8 @@ De carácter afable y marcado instinto protector. Las hojas de sus\nbrazos son t
 
 
 
-
-
+Los edredones y almohadas rellenos del algodón que suelta\nCottonee son un producto de alta calidad por su ligereza y\ntranspirabilidad.
+Es capaz de atravesar las más mínimas fisuras cual soplo de\nviento. A su paso, deja pelusillas blancas.
 Las hojas de su cabeza vuelven a crecer rápidamente aunque\nse caigan. A pesar de ser amargas, restablecen la vitalidad.
 El aroma que despide la flor de su tocado tiene efectos\ntranquilizantes, pero este Pokémon requiere muchos cuidados.
 Un Pokémon agresivo y feroz cuya fortaleza y capacidad de\nadaptación le permiten multiplicar su número rápidamente.
@@ -50772,8 +51303,8 @@ En cuanto le hinca el diente a su presa con sus potentes\nmandíbulas, retuerce 
 
 
 
-
-
+Se sube la piel arrugada hasta el cuello para protegerse. Parece\nque los ejemplares con la piel más larga son los más respetados.
+Ataca en grupo con virulencia a todo aquel que se interne en su\nterritorio. Lanza ácido por la boca.
 
 
 
@@ -50787,14 +51318,14 @@ En cuanto le hinca el diente a su presa con sus potentes\nmandíbulas, retuerce 
 
 Se transforma en otros para crear desconcierto. A menudo,\nadopta la forma de un niño parco en palabras.
 Se dice que Zoroark atrapa en un mundo de ilusiones a quien\nlo intenta capturar y que, de esta manera, lo castiga.
-
-
+Tras usar la cola para limpiar su madriguera o su propio cuerpo,\nse pasa un día entero lavándosela con agua de manantial.
+Su pelaje blanco está recubierto por un aceite especial que hace\nresbalar los ataques enemigos.
 Un Pokémon que encarna la inocencia absoluta. Al fijar la mirada\nen algo invisible, permanece en silencio sin siquiera pestañear.
 Adormece a los niños mediante hipnosis y se los lleva consigo.\nConviene tener cuidado en las noches estrelladas.
 Libera su poder psíquico e induce al rival a soñar con el fin\ndel universo, un espectáculo al parecer tan bello como efímero.
-
-
-
+Puede vivir en cualquier ambiente gracias al líquido especial que\nrecubre su cuerpo.
+Dado que su cerebro está dividido en dos, a veces tiene\nconflictos a la hora de decidir qué hacer.
+Hacen gala de su poder psíquico para controlar sus brazos\ncompuestos de un líquido especial y hacer añicos las rocas.
 Aún no se le da muy bien volar. Observa con atención la danza\nde sus progenitores Swanna para aprender a mover las alas.
 Danzan en perfecta sincronía con el líder de la bandada,\nsituado en el centro, para reforzar su vínculo grupal.
 
@@ -50818,8 +51349,8 @@ Las esporas tóxicas que libera son peligrosas, ya que allí donde\ncaen acaban 
 
 
 Abraza gentilmente con sus aletas a Pokémon que están\nlastimados y cura sus heridas con su membrana especial.
-
-
+Los que viven en las ciudades han aprendido a absorber\nelectricidad de los enchufes de las casas particulares.
+Pone trampas con hilos electrificados. De este modo, electrocuta\na sus presas y las inmoviliza para poder devorarlas lentamente.
 
 
 
@@ -50844,10 +51375,10 @@ Aparece en las estaciones frías. Se dice que es la reencarnación\nde las perso
 
 
 Abruma a sus enemigos encadenando ataques veloces y los hace\ntrizas con sus afiladas garras.
-Si emite extraños aullidos, hay que extremar la precaución:\nempezará a repartir un sinfín de patadas y puñetazos a una\nvelocidad pasmosa.
+Si emite extraños aullidos, hay que extremar\nla precaución: empezará a repartir un sinfín de\npatadas y puñetazos a una velocidad pasmosa.
 
-
-
+Los rumores apuntan a que este Pokémon fue creado gracias a\nla tecnología de una antigua y misteriosa civilización.
+Si se le desprende el sello del pecho, pierde el control y arrasa\ncon todo sin miramientos: puede convertir un pueblo en un\nmontón de escombros.
 Desafía sin temor a enemigos poderosos. Si es necesario, se\naferra al rival y le clava las cuchillas que le recubren el cuerpo.
 Dirige a varios Pawniard para conformar grupos. Tras una disputa\nterritorial, el grupo victorioso incorpora a los vencidos.
 
@@ -50885,15 +51416,15 @@ El calor que irradia le granjea pocas simpatías en tierras cálidas.\nPor el co
 
 
 
-
-
-
-
-
-
-
-
-
+Cuando acumula energía antes de propinar un cabezazo, las púas\nde su cabeza se vuelven tan afiladas que atraviesan el cuerpo del\nenemigo.
+Lo protege una robusta coraza que, al ser tan pesada, le\nproporciona al mismo tiempo una forma natural de fortalecer\nlas piernas.
+Cuando sus aliados se encuentran en apuros, despliega un escudo\ncon los brazos y bloquea los ataques utilizando su propio cuerpo.
+Tiende a exaltarse con facilidad. Su temperatura corporal también\naumenta en exceso, por lo que expulsa el calor por las orejas\npara calmarse.
+Agita la rama candente de la cola para enviar señales a sus\ncompañeros. En caso de peligro, la mueve describiendo una\ntrayectoria circular.
+Deja marcas en el suelo con la punta candente de su varita. Las\ngentes de antaño practicaban la adivinación interpretando dichas\nmarcas.
+Su aire despreocupado no es más que una fachada con la que\nengaña a sus enemigos para después arrollarlos a una velocidad\nabrumadora.
+Es muy hábil ideando tácticas que usan el terreno a su favor.\nDispara piedras envueltas en burbujas con tal puntería que no\nfalla nunca.
+Puede detectar enemigos fuera de su campo visual al captar los\nmovimientos del aire con su larga lengua enroscada alrededor\ndel cuello.
 
 
 
@@ -50993,6 +51524,9 @@ Puede percibir cómo se siente alguien tocándolo con los cuernos.\nLleva ayudan
 
 
 
+Pliega las orejas en un esfuerzo por contener el inmenso poder\npsíquico en su interior, pero, si acumula demasiado, pierde la\nconsciencia.
+Su poder psíquico podría mandar volando a cualquier rival,\npero prefiere emplearlo para proteger a los suyos antes que\npara atacar.
+Las hembras son más agresivas que los machos. Pese a la potencia\nde los poderes psíquicos que utilizan, su expresión permanece\nimpasible.
 
 
 
@@ -51001,11 +51535,8 @@ Puede percibir cómo se siente alguien tocándolo con los cuernos.\nLleva ayudan
 
 
 
-
-
-
-
-
+Los destellos de luz intermitente que emiten sus órganos\nluminosos aplacan el ánimo del rival, lo que le permite\nprotegerse de enemigos fuertes.
+Sus potentes poderes hipnóticos no tienen rival. Aquellos a los\nque controla no recuerdan en absoluto haber estado sometidos\na su voluntad.
 
 
 Se oculta de sus enemigos mezclándose con las algas que flotan\na la deriva. Elabora su veneno a partir de las algas podridas que\ningiere.
@@ -51053,18 +51584,18 @@ Emite ondas ultrasónicas capaces de pulverizar rocas enormes.\nPosee un caráct
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+Se aproxima a sus enemigos planeando por el aire sin hacer el\nmenor ruido y les propina unas patadas de lo más poderosas.
+Es narcisista y bastante pulcro, por lo que, si no se le dedica\nsuficiente atención a su aseo, se niega a obedecer cualquier\norden.
+Las plumas de las alas le sirven de flechas que dispara con\nla precisión suficiente para perforar un guijarro a 100 m.
+Detesta el contacto físico excesivo, incluso de aquellos por los\nque siente apego. En caso de sentirse agobiado, se recluye en\nsí mismo.
+Luce al cuello un cascabel incandescente que tintinea con fuerza\ncuando desprende llamas.
+Cuando se aviva su espíritu combativo, las llamas que le rodean\nla cintura también arden de forma especialmente intensa.
+Maneja con soltura los globos de agua que crea. Para poder\nhacer globos más grandes, necesita practicar sin descanso.
+Un bailarín consumado. Crea globos de agua con los que golpea\na sus rivales una y otra vez sin dejar de bailar.
+Primarina considera los combates como un escenario ideal donde\nabatir a su presa con un canto y baile que derrochan elegancia.
+Puede perforar los troncos más duros gracias a una impresionante\ncadencia de 16 picotazos por segundo.
+Anuncia su territorio haciendo gala de su\ndominio de cien formas de gorjeo distintas\nmientras lo sobrevuela.
+Usando el gas a presión del interior de su pico, puede disparar\nsemillas con fuerza suficiente como para pulverizar rocas\nenormes.
 El estómago le ocupa gran parte del cuerpo. Sigue la misma\nruta todos los días, deambulando sin cesar en busca de alimento\nfresco.
 Cuando detecta el rastro de una presa, se aposta pacientemente\nen ese lugar y permanece al acecho hasta que cae el sol.
 
@@ -51092,8 +51623,8 @@ Vaga por las orillas en busca de sustento. Suele llevarse\ncalambrazos al intent
 Vive dentro de la cúpula que forma con las extremidades.\nUsa sus pinchos para sentir el flujo de las mareas y analizar\nsus alrededores.
 El lodo con el que se recubre es tierra que ha ingerido y\nregurgitado. No se seca por mucho tiempo que pase al sol.
 Es muy apreciado por su utilidad en las labores físicas y por la\nalta calidad del barro que produce, que es ideal para fabricar\ncerámica.
-
-
+La burbuja que le rodea la cabeza está hecha de un hilo viscoso,\npor lo que raramente se rompe.
+Es un Pokémon muy solícito. Además de guardar alimento dentro\nde su burbuja, también protege Dewpider en su interior mientras\nse desplaza.
 
 Detesta que lo molesten cuando echa la siesta. Dispara rayos\nempleando la energía que ha acumulado al tomar el sol.
 Si los Pokémon de tipo Bicho se acercan atraídos por el aroma\nde las flores, finge ser uno más para que no desconfíen y los\nataca con sus guadañas.
@@ -51108,7 +51639,7 @@ Convierte a sus rivales en devotos súbditos tras marearlos con\nsu gas venenoso
 En la antigüedad, cuando no eran comunes los sabores dulces,\nera muy apreciado por su sudor, pues es tan dulce como un\nconcentrado de fruta.
 Desprende un olor dulce que reanima a cualquiera y que es\npopular como aroma de desodorante.
 Es un Pokémon muy orgulloso y agresivo. Sin embargo, se dice\nque, si se le toca la corona del cáliz, se tranquiliza de inmediato.
-
+Usa el tallo para recoger flores. Las que prende en su cuerpo\nproducen un efecto reconfortante.
 Por la forma que tiene de dar una orden tras otra a los Pokémon\ndel bosque, en la antigüedad se pensaba que se trataba de un ser\nhumano.
 Combaten lanzando bayas duras. Ignoran por completo a los\nEntrenadores que no saben lanzar una Poké Ball correctamente.
 
@@ -51135,20 +51666,20 @@ Un Pokémon terrorífico que atrapa a Pokémon pequeños dentro\nde su cuerpo ar
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Nacen en la capa de ozono. Si el caparazón que recubre su\nnúcleo se vuelve demasiado pesado, caen a la superficie de\nla tierra.
+Nacen en la capa de ozono. Si el caparazón que recubre su\nnúcleo se vuelve demasiado pesado, caen a la superficie de\nla tierra.
+Nacen en la capa de ozono. Si el caparazón que recubre su\nnúcleo se vuelve demasiado pesado, caen a la superficie de\nla tierra.
+Nacen en la capa de ozono. Si el caparazón que recubre su\nnúcleo se vuelve demasiado pesado, caen a la superficie de\nla tierra.
+Nacen en la capa de ozono. Si el caparazón que recubre su\nnúcleo se vuelve demasiado pesado, caen a la superficie de\nla tierra.
+Nacen en la capa de ozono. Si el caparazón que recubre su\nnúcleo se vuelve demasiado pesado, caen a la superficie de\nla tierra.
+Nacen en la capa de ozono. Si el caparazón que recubre su\nnúcleo se vuelve demasiado pesado, caen a la superficie de\nla tierra.
+Los Minior que caen a la superficie tratan de regresar al espacio,\npero están condenados a desvanecerse sin ver este deseo\ncumplido.
+Los Minior que caen a la superficie tratan de regresar al espacio,\npero están condenados a desvanecerse sin ver este deseo\ncumplido.
+Los Minior que caen a la superficie tratan de regresar al espacio,\npero están condenados a desvanecerse sin ver este deseo\ncumplido.
+Los Minior que caen a la superficie tratan de regresar al espacio,\npero están condenados a desvanecerse sin ver este deseo\ncumplido.
+Los Minior que caen a la superficie tratan de regresar al espacio,\npero están condenados a desvanecerse sin ver este deseo\ncumplido.
+Los Minior que caen a la superficie tratan de regresar al espacio,\npero están condenados a desvanecerse sin ver este deseo\ncumplido.
+Los Minior que caen a la superficie tratan de regresar al espacio,\npero están condenados a desvanecerse sin ver este deseo\ncumplido.
 Pasan toda su vida durmiendo. Las hojas de las que se alimentan\ncontienen un veneno que solo ellos son capaces de descomponer.
 
 
@@ -51194,17 +51725,17 @@ Alza súbitamente sus brazos penduleantes para propinar al rival\nun puñetazo e
 
 
 
+La baqueta que posee Grookey se vuelve más flexible y resistente\ncuando absorbe la energía que emana de su cuerpo.
+Usa con habilidad sus dos baquetas, no solo para marcar ritmos\ncontundentes, sino también para aporrear a sus adversarios en\ncombate.
+Es de carácter tranquilo, pero no tolera a aquellos que\nquebrantan la armonía y los disciplina hasta que aprenden\nla lección.
 
+Desata su verdadera fuerza cuando su cuerpo entra en calor.\nPor eso hace ejercicios de calentamiento.
+Su suave pelaje le permite calentar energía ígnea con mayor\nfacilidad y así expulsar llamas todavía más potentes.
+Es de temperamento irascible, pero da lo mejor de sí mismo en\ncombate cuando cuenta con un Entrenador en el que confía.
 
-
-
-
-
-
-
-
-
-
+Dispara proyectiles de agua por la boca para hacer caer bayas de\nlos árboles y comérselas. Su puntería es infalible.
+Extiende su larga lengua recubierta de una sustancia viscosa a\nuna velocidad imperceptible para abatir a sus presas hábilmente.
+Gracias a las lentes especiales de sus ojos, es capaz de percibir la\ntemperatura corporal del adversario y así atacar sus puntos\ndébiles.
 
 Guarda bayas en los carrillos. Cuando no le quedan, mete en su\nlugar piedras pequeñas para lidiar con el antojo.
 Incluso en medio de un combate, si ve un árbol con bayas,\nno duda ni un segundo en ir a recolectarlas.
@@ -51271,16 +51802,16 @@ Controla su cabello a placer. Suele enrollarse el pelo por todo\nel cuerpo para 
 
 
 
-
-
-
-
-
-
-
-
-
-
+Su cuerpo va aumentando de tamaño conforme absorbe aromas\ndulces, pero se desinfla al perder energía.
+Los dulces decorados por Alcremie hacen feliz a todo aquel que\nlos ingiere gracias a la suma dulzura que los caracteriza.
+A causa de unas sutiles vibraciones en las células de su cuerpo en\nel momento de la evolución, ha adquirido un sabor agridulce.
+A causa de unas sutiles vibraciones en las células de su cuerpo en\nel momento de la evolución, ha adquirido un sabor fragante.
+A causa de unas sutiles vibraciones en las células de su cuerpo en\nel momento de la evolución, ha adquirido un sabor refrescante.
+A causa de unas sutiles vibraciones en las células de su cuerpo en\nel momento de la evolución, ha adquirido un sabor agrio.
+A causa de unas sutiles vibraciones en las células de su cuerpo en\nel momento de la evolución, ha adquirido un sabor salado.
+A causa de unas sutiles vibraciones en las células de su cuerpo en\nel momento de la evolución, ha adquirido un sabor especial.
+A causa de unas sutiles vibraciones en las células de su cuerpo en\nel momento de la evolución, ha adquirido un sabor amargo.
+A causa de unas sutiles vibraciones en las células de su cuerpo en\nel momento de la evolución, ha adquirido un sabor complejo.
 
 El líder, que es el más fuerte e inteligente de los seis,\nse encuentra al frente y da órdenes a los demás.
 Produce electricidad al digerir los alimentos. Raspa las algas de\nlas rocas con los cinco duros dientes que tiene para comérselas.
@@ -51300,7 +51831,7 @@ Llegó a Paldea hace mucho tiempo gracias a personas de\nuna tierra lejana. Con 
 
 
 
-
+Su cuerpo, compuesto de un metal especial, es tan liso como si\ntuviese un acabado de espejo. Además de ligero, es resistente a\nlas rayaduras.
 
 Al atardecer, recorren en manada la superficie marina a toda\nvelocidad y juegan a darles golpecitos a los Pokémon que hay\nen el agua.
 Vuela a 200 km/h. Si pierde un combate, el Dreepy que lo\nacompaña no dudará un segundo en emprender la huida.
@@ -51443,8 +51974,8 @@ Parece tratarse de Reyalado, la criatura que, según lo narrado\nen un antiguo d
 
 Pese a las similitudes con los Cyclizar, es mucho más fuerte y\ndespiadado que ellos. Está rodeado de incógnitas.
 
-En proceso de investigación.
-En proceso de análisis.
+Una criatura violenta rodeada de misterio, cuyo nombre se inspira\nen cierto monstruo acuático mencionado en un viejo diario de\nexploración.
+Presenta numerosas características en común con el Virizion del\nfuturo que apareció publicado en cierta revista esotérica.
 Ha desarrollado unas capacidades y un aspecto especiales tras\nhaber sobrevivido en la tierra donde recaló al atravesar el mar.
 Ha evolucionado gracias a una manzana especial que solo\nse cultiva en cierta zona. Este Pokémon está formado por dos\nindividuos.
 Según se dice, el resquemor de un practicante de la ceremonia\ndel té que murió sin perfeccionar el arte poseyó el matcha y dio\nlugar a un Pokémon.
@@ -51458,6 +51989,19 @@ Cambia de tipo según la máscara que lleve. Se vale de sus\nrápidos movimiento
 Esta forma destaca en la ofensiva y la defensiva. Arremete con\nmovimientos incesantes que se asemejan a un potente chorro\nde agua.
 Esta forma se especializa en la ofensiva. Agrede a sus enemigos\ncon la violencia de las llamas que arden con fuerza en un horno.
 Esta forma se especializa en la defensiva. Resiste los impactos\ncon la robustez de los cimientos de una casa.
+Acumula la electricidad estática de su entorno. El rayo que\ndispara cuando está a cuatro patas posee una potencia colosal.
+Se trata de siete seres llamados Viborappli que viven juntos en\nuna manzana de caramelo. El del centro es el líder del grupo.
+Apenas constan avistamientos de este Pokémon, pero existe una\nbreve grabación donde aparece desbocado y escupiendo ráfagas\nde fuego.
+Se dice que calcina todo cuanto lo rodea con los rayos que libera\nsu pelaje. Aparte de eso, se sabe muy poco sobre esta criatura.
+Recuerda a un Pokémon descrito en cierta revista de dudosa\nveracidad como "un Terrakion modificado por una malvada\norganización".
+Se asemeja a un extraño objeto descrito en una revista esotérica\ncomo "un arma de tecnología punta con forma de Cobalion".
+Se vale de su capacidad para transformar energía en duros\ncristales para protegerse. Este Pokémon dio origen a la\nteracristalización.
+Cuando presiente peligro, se prepara para combatir formando\nun caparazón de cristales muy resistente mediante la\nteracristalización.
+Adopta esta forma cuando su energía Teracristal se ve\namplificada  descomunalmente. Se asemeja a la imagen\ndel mundo que la gente tenía antaño.
+Hace comer a su objetivo un mochi tóxico que saca a relucir\ntodo su potencial y su ambición, para después controlarlo con\nsus cadenas.
+Gracias a un mineral extremadamente escaso que se encuentra\nen zonas volcánicas, parte de su cuerpo se volvió pétreo al\nevolucionar.
+Sus púas tóxicas reaccionan como acto reflejo ante cualquier\nmovimiento, por lo que ensartará todo lo que se acerque incluso\nmientras duerme.
+Vive en las aguas cercanas a tierras frías. Sus púas tóxicas son\nmás gruesas y cortas que las de los Qwilfish de otras regiones.
 ~~~~~~~~~~~~~~~
 Text File : SV_place_name_indirect
 ~~~~~~~~~~~~~~~
@@ -51632,6 +52176,36 @@ en los Campos Prístinos de Noroteo
 en el Paso del Averno
 en el Monte Ogro
 en la Cueva Aguafría
+
+en la Academia Arándano
+
+en el Área Árida
+en el Biodomo
+en el Área Costera
+en el Biodomo
+en el Área Escarpada
+en el Biodomo
+en el Área Polar
+en el Biodomo
+en la Plaza Cúbica
+en el Biodomo
+en la Plaza Árida
+en el Biodomo
+en la Plaza Costera
+en el Biodomo
+en la Plaza Escarpada
+en el Biodomo
+en la Plaza Polar
+en el Biodomo
+en la Gruta Electrorroca
+en el Biodomo
+en el Laberinto Lumbre
+en el Biodomo
+en la Caverna Abisal Cero
+
+en la Caverna Abisal Cero
+
+en el Biodomo
 
 ~~~~~~~~~~~~~~~
 Text File : SWSHDLC_place_name_out
@@ -55164,34 +55738,34 @@ MT198
 MT199
 MT200
 MT201
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+MT202
+MT203
+MT204
+MT205
+MT206
+MT207
+MT208
+MT209
+MT210
+MT211
+MT212
+MT213
+MT214
+MT215
+MT216
+MT217
+MT218
+MT219
+MT220
+MT221
+MT222
+MT223
+MT224
+MT225
+MT226
+MT227
+MT228
+MT229
 
 
 
@@ -55384,6 +55958,82 @@ puñado de Polvo de Poltchageist
 Mochi Reinicio
 Paloselfi Rotom
 Amuleto Cristalino
+trozo de Metal Compuesto
+Tarjeta Chic Azul
+Hoja de Oddish
+Aguijón de Tentacool
+bola de Plumón de Doduo
+Pelo de Seel
+Cáscara de Exeggcute
+gota de Sudor de Tyrogue
+Colmillo de Rhyhorn
+gota de Tinta de Horsea
+Pelo de Elekid
+Pelo de Magby
+Lágrima de Lapras
+Fragmento de Porygon
+carga de Electricidad de Chinchou
+Pelo de Snubbull
+Pluma de Skarmory
+gota de Pintura de Smeargle
+Pelo de Plusle
+Pelo de Minun
+Coraza de Trapinch
+Garra de Beldum
+Púa de Cranidos
+Garra de Shieldon
+Mechón de Blitzle
+Garra de Drilbur
+bola de Algodón de Cottonee
+gota de Sudor de Scraggy
+Pelo de Minccino
+gota de Gel de Solosis
+Hilo de Joltik
+Fragmento de Golett
+Pelo de Espurr
+gota de Tinta de Inkay
+Pluma de Pikipek
+Hilo de Dewpider
+Flor de Comfey
+Caparazón de Minior
+gota de Nata de Milcery
+pieza de Óxido de Duraludon
+Galleta Articuno
+Galleta Zapdos
+Galleta Moltres
+Galleta Raikou
+Galleta Entei
+Galleta Suicune
+Galleta Lugia
+Galleta Ho-Oh
+Galleta Latias
+Galleta Latios
+Galleta Kyogre
+Galleta Groudon
+Galleta Rayquaza
+Galleta Cobalion
+Galleta Terrakion
+Galleta Virizion
+Galleta Reshiram
+Galleta Zekrom
+Galleta Kyurem
+Galleta Solgaleo
+Galleta Lunala
+Galleta Necrozma
+Galleta Kubfu
+Galleta Glastrier
+Galleta Spectrier
+Disco Índigo
+Palillo Ígneo
+Teralito Astral
+Baya Meloc Singular
+Mantel Arándano
+juego de Sillas Arándano
+Sincromisor
+Meteorito
+Libro Escarlata
+Libro Púrpura
+Libro de Brie
 ~~~~~~~~~~~~~~~
 Text File : zukan_comment_ultramoon
 ~~~~~~~~~~~~~~~
@@ -59418,34 +60068,34 @@ MT198
 MT199
 MT200
 MT201
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+MT202
+MT203
+MT204
+MT205
+MT206
+MT207
+MT208
+MT209
+MT210
+MT211
+MT212
+MT213
+MT214
+MT215
+MT216
+MT217
+MT218
+MT219
+MT220
+MT221
+MT222
+MT223
+MT224
+MT225
+MT226
+MT227
+MT228
+MT229
 
 
 
@@ -59638,6 +60288,82 @@ puñados de Polvo de Poltchageist
 Mochis Reinicio
 Paloselfis Rotom
 Amuletos Cristalinos
+trozos de Metal Compuesto
+Tarjetas Chic Azules
+Hojas de Oddish
+Aguijones de Tentacool
+bolas de Plumón de Doduo
+Pelos de Seel
+Cáscaras de Exeggcute
+gotas de Sudor de Tyrogue
+Colmillos de Rhyhorn
+gotas de Tinta de Horsea
+Pelos de Elekid
+Pelos de Magby
+Lágrimas de Lapras
+Fragmentos de Porygon
+cargas de Electricidad de Chinchou
+Pelos de Snubbull
+Plumas de Skarmory
+gotas de Pintura de Smeargle
+Pelos de Plusle
+Pelos de Minun
+Corazas de Trapinch
+Garras de Beldum
+Púas de Cranidos
+Garras de Shieldon
+Mechones de Blitzle
+Garras de Drilbur
+bolas de Algodón de Cottonee
+gotas de Sudor de Scraggy
+Pelos de Minccino
+gotas de Gel de Solosis
+Hilos de Joltik
+Fragmentos de Golett
+Pelos de Espurr
+gotas de Tinta de Inkay
+Plumas de Pikipek
+Hilos de Dewpider
+Flores de Comfey
+Caparazones de Minior
+gotas de Nata de Milcery
+piezas de Óxido de Duraludon
+Galletas Articuno
+Galletas Zapdos
+Galletas Moltres
+Galletas Raikou
+Galletas Entei
+Galletas Suicune
+Galletas Lugia
+Galletas Ho-Oh
+Galletas Latias
+Galletas Latios
+Galletas Kyogre
+Galletas Groudon
+Galletas Rayquaza
+Galletas Cobalion
+Galletas Terrakion
+Galletas Virizion
+Galletas Reshiram
+Galletas Zekrom
+Galletas Kyurem
+Galletas Solgaleo
+Galletas Lunala
+Galletas Necrozma
+Galletas Kubfu
+Galletas Glastrier
+Galletas Spectrier
+Discos Índigos
+Palillos Ígneos
+Teralitos Astral
+Bayas Meloc Singulares
+Manteles Arándano
+juegos de Sillas Arándano
+Sincromisores
+Meteoritos
+Libros Escarlata
+Libros Púrpura
+Libros de Brie
 ~~~~~~~~~~~~~~~
 Text File : zukan_comment_shiningpearl
 ~~~~~~~~~~~~~~~

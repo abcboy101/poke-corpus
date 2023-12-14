@@ -111,6 +111,7 @@ Once-in-a-Lifetime Ribbon
 Alpha Mark
 Mightiest Mark
 Titan Mark
+Partner Ribbon
 A Ribbon awarded for beating the Kalos Champion\nand entering the Kalos Hall of Fame.
 A Ribbon awarded for clearing the Pokémon League\nand entering the Hall of Fame somewhere long ago.
 A Ribbon awarded for beating the Sinnoh Champion\nand entering the Sinnoh Hall of Fame.
@@ -221,8 +222,7 @@ A rare Ribbon found extremely infrequently on\nPokémon obtained in a Surprise T
 A mark for a Pokémon that was an alpha.
 A mark for an especially mighty Pokémon.
 A mark for a Pokémon that was a Titan.
-[~ 220]
-[~ 221]
+A special Ribbon awarded to a Pokémon that was\nonce partnered with another great Trainer.
 [~ 222]
 [~ 223]
 [~ 224]
@@ -319,6 +319,8 @@ A mark for a Pokémon that was a Titan.
 [~ 315]
 [~ 316]
 [~ 317]
+[~ 318]
+[~ 319]
 ~~~~~~~~~~~~~~~
 Text File : initial
 ~~~~~~~~~~~~~~~
@@ -708,6 +710,10 @@ Embody Aspect
 Embody Aspect
 Toxic Chain
 Supersweet Syrup
+Tera Shift
+Tera Shell
+Teraform Zero
+Poison Puppeteer
 ~~~~~~~~~~~~~~~
 Text File : itemname
 ~~~~~~~~~~~~~~~
@@ -2973,34 +2979,34 @@ TM198
 TM199
 TM200
 TM201
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+TM202
+TM203
+TM204
+TM205
+TM206
+TM207
+TM208
+TM209
+TM210
+TM211
+TM212
+TM213
+TM214
+TM215
+TM216
+TM217
+TM218
+TM219
+TM220
+TM221
+TM222
+TM223
+TM224
+TM225
+TM226
+TM227
+TM228
+TM229
 
 
 
@@ -3193,6 +3199,82 @@ Poltchageist Powder
 Fresh-Start Mochi
 Roto-Stick
 Glimmering Charm
+Metal Alloy
+Indigo Style Card
+Oddish Leaf
+Tentacool Stinger
+Doduo Down
+Seel Fur
+Exeggcute Shell
+Tyrogue Sweat
+Rhyhorn Fang
+Horsea Ink
+Elekid Fur
+Magby Hair
+Lapras Teardrop
+Porygon Fragment
+Chinchou Sparks
+Snubbull Hair
+Skarmory Feather
+Smeargle Paint
+Plusle Fur
+Minun Fur
+Trapinch Shell
+Beldum Claw
+Cranidos Spike
+Shieldon Claw
+Blitzle Mane Hair
+Drilbur Claw
+Cottonee Fluff
+Scraggy Sweat
+Minccino Fur
+Solosis Gel
+Joltik Thread
+Golett Shard
+Espurr Fur
+Inkay Ink
+Pikipek Feather
+Dewpider Thread
+Comfey Flower
+Minior Shell
+Milcery Cream
+Duraludon Tarnish
+Articuno Treat
+Zapdos Treat
+Moltres Treat
+Raikou Treat
+Entei Treat
+Suicune Treat
+Lugia Treat
+Ho-Oh Treat
+Latias Treat
+Latios Treat
+Kyogre Treat
+Groudon Treat
+Rayquaza Treat
+Cobalion Treat
+Terrakion Treat
+Virizion Treat
+Reshiram Treat
+Zekrom Treat
+Kyurem Treat
+Solgaleo Treat
+Lunala Treat
+Necrozma Treat
+Kubfu Treat
+Glastrier Treat
+Spectrier Treat
+Indigo Disk
+Fiery Pick
+Stellar Tera Shard
+Mythical Pecha Berry
+Blueberry Tablecloth
+Blueberry Chairs
+Synchro Machine
+Meteorite
+Scarlet Book
+Violet Book
+Briar’s Book
 ~~~~~~~~~~~~~~~
 Text File : monsname
 ~~~~~~~~~~~~~~~
@@ -4214,6 +4296,14 @@ Okidogi
 Munkidori
 Fezandipiti
 Ogerpon
+Archaludon
+Hydrapple
+Gouging Fire
+Raging Bolt
+Iron Boulder
+Iron Crown
+Terapagos
+Pecharunt
 ~~~~~~~~~~~~~~~
 Text File : strinput
 ~~~~~~~~~~~~~~~
@@ -5188,6 +5278,21 @@ Blood Moon
 Matcha Gotcha
 Syrup Bomb
 Ivy Cudgel
+Electro Shot
+Tera Starstorm
+Fickle Beam
+Burning Bulwark
+Thunderclap
+Mighty Cleave
+Tachyon Cutter
+Hard Press
+Dragon Cheer
+Alluring Voice
+Temper Flare
+Supercell Slam
+Psychic Noise
+Upper Hand
+Malignant Chain
 ~~~~~~~~~~~~~~~
 Text File : zkn_form
 ~~~~~~~~~~~~~~~
@@ -6659,6 +6764,16 @@ Teal Mask
 Wellspring Mask
 Hearthflame Mask
 Cornerstone Mask
+
+
+
+
+
+
+Normal Form
+Terastal Form
+Stellar Form
+
 ~~~~~~~~~~~~~~~
 Text File : zkn_type
 ~~~~~~~~~~~~~~~
@@ -7712,6 +7827,16 @@ Matcha Pokémon
 Mask Pokémon
 Mask Pokémon
 Mask Pokémon
+Alloy Pokémon
+Apple Hydra Pokémon
+Paradox Pokémon
+Paradox Pokémon
+Paradox Pokémon
+Paradox Pokémon
+Tera Pokémon
+Tera Pokémon
+Tera Pokémon
+Subjugation Pokémon
 ~~~~~~~~~~~~~~~
 Text File : go_system
 ~~~~~~~~~~~~~~~
@@ -8134,6 +8259,7 @@ Once-in-a-Lifetime Ribbon
 Alpha Mark
 Mightiest Mark
 Titan Mark
+Partner Ribbon
 A Ribbon awarded for beating the Kalos Champion\nand entering the Kalos Hall of Fame.
 A Ribbon awarded for clearing the Pokémon League\nand entering the Hall of Fame somewhere long ago.
 A Ribbon awarded for beating the Sinnoh Champion\nand entering the Sinnoh Hall of Fame.
@@ -8244,8 +8370,7 @@ A rare Ribbon found extremely infrequently on\nPokémon obtained in a Surprise T
 A mark for a Pokémon that was an alpha.
 A mark for an especially mighty Pokémon.
 A mark for a Pokémon that was a Titan.
-[~ 220]
-[~ 221]
+A special Ribbon awarded to a Pokémon that was\nonce partnered with another great Trainer.
 [~ 222]
 [~ 223]
 [~ 224]
@@ -8342,6 +8467,8 @@ A mark for a Pokémon that was a Titan.
 [~ 315]
 [~ 316]
 [~ 317]
+[~ 318]
+[~ 319]
 ~~~~~~~~~~~~~~~
 Text File : box_system
 ~~~~~~~~~~~~~~~
@@ -10184,6 +10311,16 @@ Text File : zkn_height
 3'11"
 3'11"
 3'11"
+6'7"
+5'11"
+11'6"
+17'1"
+4'11"
+5'3"
+8"
+1'
+5'7"
+1'
 ~~~~~~~~~~~~~~~
 Text File : zkn_weight
 ~~~~~~~~~~~~~~~
@@ -11651,6 +11788,16 @@ Text File : zkn_weight
 87.7 lbs.
 87.7 lbs.
 87.7 lbs.
+132.3 lbs.
+205 lbs.
+1300.7 lbs.
+1058.2 lbs.
+358.3 lbs.
+343.9 lbs.
+14.3 lbs.
+35.3 lbs.
+169.8 lbs.
+.7 lbs.
 ~~~~~~~~~~~~~~~
 Text File : SV_iteminfo
 ~~~~~~~~~~~~~~~
@@ -14136,6 +14283,82 @@ Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
 A mochi cake with Berries kneaded into its dough.\nIt causes a Pokémon to lose all its base points.
 A stick to rest a Rotom Phone on. It allows you to take\nselfies from a little bit farther away than you could on\nyour own.
 Having one of these mysterious glimmering charms\nincreases the number of Tera Shards you receive from\nTera Raid Battles.
+A peculiar metal that can make certain species of\nPokémon evolve. It is composed of many layers.
+Having one of these cards increases the selection\navailable to you in boutiques and hair salons.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+Material accidentally dropped by a Pokémon. It can be\nused to make TMs.
+A snack made from ingredients favored by the\nLegendary Pokémon Articuno.
+A snack made from ingredients favored by the\nLegendary Pokémon Zapdos.
+A snack made from ingredients favored by the\nLegendary Pokémon Moltres.
+A snack made from ingredients favored by the\nLegendary Pokémon Raikou.
+A snack made from ingredients favored by the\nLegendary Pokémon Entei.
+A snack made from ingredients favored by the\nLegendary Pokémon Suicune.
+A snack made from ingredients favored by the\nLegendary Pokémon Lugia.
+A snack made from ingredients favored by the\nLegendary Pokémon Ho-Oh.
+A snack made from ingredients favored by the\nLegendary Pokémon Latias.
+A snack made from ingredients favored by the\nLegendary Pokémon Latios.
+A snack made from ingredients favored by the\nLegendary Pokémon Kyogre.
+A snack made from ingredients favored by the\nLegendary Pokémon Groudon.
+A snack made from ingredients favored by the\nLegendary Pokémon Rayquaza.
+A snack made from ingredients favored by the\nLegendary Pokémon Cobalion.
+A snack made from ingredients favored by the\nLegendary Pokémon Terrakion.
+A snack made from ingredients favored by the\nLegendary Pokémon Virizion.
+A snack made from ingredients favored by the\nLegendary Pokémon Reshiram.
+A snack made from ingredients favored by the\nLegendary Pokémon Zekrom.
+A snack made from ingredients favored by the\nLegendary Pokémon Kyurem.
+A snack made from ingredients favored by the\nLegendary Pokémon Solgaleo.
+A snack made from ingredients favored by the\nLegendary Pokémon Lunala.
+A snack made from ingredients favored by the\nLegendary Pokémon Necrozma.
+A snack made from ingredients favored by the\nLegendary Pokémon Kubfu.
+A snack made from ingredients favored by the\nLegendary Pokémon Glastrier.
+A snack made from ingredients favored by the\nLegendary Pokémon Spectrier.
+A mysterious disk with an indigo shine to it, given to you\nby the Top Champion. It seems to be tied to Area Zero.
+A pick designed after Magmortar. It’s said that using\nthis pick makes any sandwich look like it’s fresh out of\nthe oven.
+On rare occasions, these shards form when a Tera\nPokémon falls in battle and its Tera Jewel shatters.
+A Pecha Berry of the highest quality. It’s said that a\nPecha Berry tree carefully tended by an expert gardener\nwill produce just one of these Berries every few years.
+Blueberry Academy’s standard issue tablecloth, made\nwith the latest fiber-processing technology. It’s heat-\nresistant and so tough even a Razor Claw can’t tear it.
+A set of chairs that are ideal for picnicking. Their design\nwas inspired by the Blueberry Tablecloth.
+A device that synchronizes your mind and feelings\nwith your Pokémon’s so that you can work as one.\nIt’s still a prototype—hence its unrefined appearance.
+A rock that fell to earth from space. It’s slightly\nwarm to the touch. It allows a certain species of\nPokémon to change forms.
+A record of an expedition to the Great Crater of Paldea,\ngiven to you by Professor Sada. The book has the name\n“Sada” written on it in clumsy handwriting.
+A record of an expedition to the Great Crater of Paldea,\ngiven to you by Professor Turo. The book has the name\n“Turo” written on it in clumsy handwriting.
+A proof copy of the exploration notes covering the\nArea Zero Underdepths. It’s filled with long paragraphs\ndescribing what happened, along with Briar’s thoughts.
 ~~~~~~~~~~~~~~~
 Text File : load_system
 ~~~~~~~~~~~~~~~
@@ -16358,7 +16581,7 @@ The user attacks by hurling hard rocks at the target.\nThis move hits two to fiv
 The user strikes the target with a quick jolt of electricity.\nThis attack never misses.
 The user attacks the target with a pulsing blast of water.\nThis may also confuse the target.
 Two turns after this move is used, a concentrated bundle\nof light blasts the target.
-This move can’t be used. It’s recommended that this\nmove is forgotten. Once forgotten, this move can’t\nbe remembered.
+The user attacks the target with all its might. The recoil\nfrom this move harshly lowers the user’s Sp. Atk stat.
 The user lands and rests its body. This move restores the\nuser’s HP by up to half its max HP.
 Enables Flying types or Pokémon with the Levitate\nAbility to be hit by Ground-type moves for five turns.\nMoves that involve flying can’t be used.
 This move can’t be used. It’s recommended that this\nmove is forgotten. Once forgotten, this move can’t\nbe remembered.
@@ -16696,7 +16919,7 @@ The user lands an intense kick of tropical origins on\nthe target. This also low
 The user instructs the target to reuse the move last used\nby the target.
 The user first heats up its beak, and then it attacks the\ntarget. Making direct contact with the user while it’s\nheating up its beak results in a burn.
 The user rubs the scales on its entire body and makes\na huge noise to attack opposing Pokémon. The user’s\nDefense stat is lowered after the attack.
-This move can’t be used. It’s recommended that this\nmove is forgotten. Once forgotten, this move can’t\nbe remembered.
+The user wields its body like a hammer to attack the\ntarget and inflict damage.
 The user swings its body around violently to inflict\ndamage on everything in its vicinity.
 This move reduces damage from physical and special\nmoves for five turns. This can be used only when it is\nsnowing.
 This move can’t be used. It’s recommended that this\nmove is forgotten. Once forgotten, this move can’t\nbe remembered.
@@ -16909,6 +17132,22 @@ The user unleashes the full brunt of its spirit from a full\nmoon that shines as
 The user fires a blast of tea that it mixed. The user’s HP\nis restored by up to half the damage taken by the target.\nThis may also leave the target with a burn.
 The user sets off an explosion of sticky candy syrup,\nwhich coats the target and causes the target’s Speed\nstat to drop each turn for three turns.
 The user strikes with an ivy-wrapped cudgel. This move’s\ntype changes depending on the mask worn by the user,\nand it has a heightened chance of landing a critical hit.
+The user gathers electricity on the first turn, boosting its\nSp. Atk stat, then fires a high-voltage shot on the next\nturn. The shot will be fired immediately in rain.
+With the power of its crystals, the user bombards and\neliminates the target. When used by Terapagos in its\nStellar Form, this move damages all opposing Pokémon.
+The user shoots a beam of light to inflict damage.\nSometimes all the user’s heads shoot beams in unison,\ndoubling the move’s power.
+The user’s intensely hot fur protects it from attacks and\nalso burns any attacker that makes direct contact with it.
+This move enables the user to attack first with a jolt of\nelectricity. This move fails if the target is not readying\nan attack.
+The user wields the light that has accumulated atop its\nhead to cleave the target. This move hits even if the\ntarget protects itself.
+The user attacks by launching particle blades at the\ntarget twice in a row. This attack never misses.
+The target is crushed with an arm, a claw, or the like to\ninflict damage. The more HP the target has left, the\ngreater the move’s power.
+The user raises its allies’ morale with a draconic cry so\nthat their future attacks have a heightened chance of\nlanding critical hits. This rouses Dragon types more.
+The user attacks the target using its angelic voice.\nThis also confuses the target if its stats have been\nboosted during the turn.
+Spurred by desperation, the user attacks the target.\nThis move’s power is doubled if the user’s previous\nmove failed.
+The user electrifies its body and drops onto the target\nto inflict damage. If this move misses, the user takes\ndamage instead.
+The user attacks the target with unpleasant sound waves.\nFor two turns, the target is prevented from recovering\nHP through moves, Abilities, or held items.
+The user reacts to the target’s movement and strikes\nwith the heel of its palm, making the target flinch. This\nmove fails if the target is not readying a priority move.
+The user pours toxins into the target by wrapping them\nin a toxic, corrosive chain. This may also leave the target\nbadly poisoned.
+Inflicts damage with the user’s Attack or Sp. Atk stat—\nwhichever is higher. Super effective against Terastallized\ntargets. This lowers the user’s Attack and Sp. Atk stats.
 ~~~~~~~~~~~~~~~
 Text File : first_system
 ~~~~~~~~~~~~~~~
@@ -19235,34 +19474,34 @@ TM198
 TM199
 TM200
 TM201
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+TM202
+TM203
+TM204
+TM205
+TM206
+TM207
+TM208
+TM209
+TM210
+TM211
+TM212
+TM213
+TM214
+TM215
+TM216
+TM217
+TM218
+TM219
+TM220
+TM221
+TM222
+TM223
+TM224
+TM225
+TM226
+TM227
+TM228
+TM229
 
 
 
@@ -19455,6 +19694,82 @@ Poltchageist Powder
 Fresh-Start Mochi
 Roto-Stick
 Glimmering Charm
+Metal Alloy
+Indigo Style Card
+Oddish Leaf
+Tentacool Stinger
+Doduo Down
+Seel Fur
+Exeggcute Shell
+Tyrogue Sweat
+Rhyhorn Fang
+Horsea Ink
+Elekid Fur
+Magby Hair
+Lapras Teardrop
+Porygon Fragment
+Chinchou Sparks
+Snubbull Hair
+Skarmory Feather
+Smeargle Paint
+Plusle Fur
+Minun Fur
+Trapinch Shell
+Beldum Claw
+Cranidos Spike
+Shieldon Claw
+Blitzle Mane Hair
+Drilbur Claw
+Cottonee Fluff
+Scraggy Sweat
+Minccino Fur
+Solosis Gel
+Joltik Thread
+Golett Shard
+Espurr Fur
+Inkay Ink
+Pikipek Feather
+Dewpider Thread
+Comfey Flower
+Minior Shell
+Milcery Cream
+Duraludon Tarnish
+Articuno Treat
+Zapdos Treat
+Moltres Treat
+Raikou Treat
+Entei Treat
+Suicune Treat
+Lugia Treat
+Ho-Oh Treat
+Latias Treat
+Latios Treat
+Kyogre Treat
+Groudon Treat
+Rayquaza Treat
+Cobalion Treat
+Terrakion Treat
+Virizion Treat
+Reshiram Treat
+Zekrom Treat
+Kyurem Treat
+Solgaleo Treat
+Lunala Treat
+Necrozma Treat
+Kubfu Treat
+Glastrier Treat
+Spectrier Treat
+Indigo Disk
+Fiery Pick
+Stellar Tera Shard
+Mythical Pecha Berry
+Blueberry Tablecloth
+Blueberry Chairs
+Synchro Machine
+Meteorite
+Scarlet Book
+Violet Book
+Briar’s Book
 ~~~~~~~~~~~~~~~
 Text File : title_system
 ~~~~~~~~~~~~~~~
@@ -19821,7 +20136,7 @@ The user attacks by hurling hard rocks at the target.\nThis move hits two to fiv
 The user strikes the target with a quick jolt of electricity.\nThis attack never misses.
 The user attacks the target with a pulsing blast of water.\nThis may also confuse the target.
 Two turns after this move is used, a concentrated bundle\nof light blasts the target.
-The user attacks the target at full power. The\nattack’s recoil harshly lowers the user’s\nSp. Atk stat.
+The user attacks the target with all its might. The recoil\nfrom this move harshly lowers the user’s Sp. Atk stat.
 The user lands and rests its body. This move restores the\nuser’s HP by up to half its max HP.
 Enables Flying types or Pokémon with the Levitate\nAbility to be hit by Ground-type moves for five turns.\nMoves that involve flying can’t be used.
 Enables a Dark-type target to be hit by\nPsychic-type attacks. This also enables an evasive\ntarget to be hit.
@@ -20159,7 +20474,7 @@ The user lands an intense kick of tropical origins on\nthe target. This also low
 The user instructs the target to reuse the move last used\nby the target.
 The user first heats up its beak, and then it attacks the\ntarget. Making direct contact with the user while it’s\nheating up its beak results in a burn.
 The user rubs the scales on its entire body and makes\na huge noise to attack opposing Pokémon. The user’s\nDefense stat is lowered after the attack.
-The user uses its body like a hammer to attack the\ntarget and inflict damage.
+The user wields its body like a hammer to attack the\ntarget and inflict damage.
 The user swings its body around violently to inflict\ndamage on everything in its vicinity.
 This move reduces damage from physical and special\nmoves for five turns. This can be used only when it is\nsnowing.
 The user, Decidueye, creates countless arrows\nusing its Z-Power and shoots the target with\nfull force.
@@ -20372,6 +20687,22 @@ The user unleashes the full brunt of its spirit from a full\nmoon that shines as
 The user fires a blast of tea that it mixed. The user’s HP\nis restored by up to half the damage taken by the target.\nThis may also leave the target with a burn.
 The user sets off an explosion of sticky candy syrup,\nwhich coats the target and causes the target’s Speed\nstat to drop each turn for three turns.
 The user strikes with an ivy-wrapped cudgel. This move’s\ntype changes depending on the mask worn by the user,\nand it has a heightened chance of landing a critical hit.
+The user gathers electricity on the first turn, boosting its\nSp. Atk stat, then fires a high-voltage shot on the next\nturn. The shot will be fired immediately in rain.
+With the power of its crystals, the user bombards and\neliminates the target. When used by Terapagos in its\nStellar Form, this move damages all opposing Pokémon.
+The user shoots a beam of light to inflict damage.\nSometimes all the user’s heads shoot beams in unison,\ndoubling the move’s power.
+The user’s intensely hot fur protects it from attacks and\nalso burns any attacker that makes direct contact with it.
+This move enables the user to attack first with a jolt of\nelectricity. This move fails if the target is not readying\nan attack.
+The user wields the light that has accumulated atop its\nhead to cleave the target. This move hits even if the\ntarget protects itself.
+The user attacks by launching particle blades at the\ntarget twice in a row. This attack never misses.
+The target is crushed with an arm, a claw, or the like to\ninflict damage. The more HP the target has left, the\ngreater the move’s power.
+The user raises its allies’ morale with a draconic cry so\nthat their future attacks have a heightened chance of\nlanding critical hits. This rouses Dragon types more.
+The user attacks the target using its angelic voice.\nThis also confuses the target if its stats have been\nboosted during the turn.
+Spurred by desperation, the user attacks the target.\nThis move’s power is doubled if the user’s previous\nmove failed.
+The user electrifies its body and drops onto the target\nto inflict damage. If this move misses, the user takes\ndamage instead.
+The user attacks the target with unpleasant sound waves.\nFor two turns, the target is prevented from recovering\nHP through moves, Abilities, or held items.
+The user reacts to the target’s movement and strikes\nwith the heel of its palm, making the target flinch. This\nmove fails if the target is not readying a priority move.
+The user pours toxins into the target by wrapping them\nin a toxic, corrosive chain. This may also leave the target\nbadly poisoned.
+Inflicts damage with the user’s Attack or Sp. Atk stat—\nwhichever is higher. Super effective against Terastallized\ntargets. This lowers the user’s Attack and Sp. Atk stats.
 ~~~~~~~~~~~~~~~
 Text File : zukan_system
 ~~~~~~~~~~~~~~~
@@ -23657,6 +23988,36 @@ Kitakami Wilds
 Infernal Pass
 Oni Mountain
 Chilling Waterhead
+
+Blueberry Academy
+
+Savanna Biome
+Terarium
+Coastal Biome
+Terarium
+Canyon Biome
+Terarium
+Polar Biome
+Terarium
+Central Plaza
+Terarium
+Savanna Plaza
+Terarium
+Coastal Plaza
+Terarium
+Canyon Plaza
+Terarium
+Polar Plaza
+Terarium
+Chargestone Cavern
+Terarium
+Torchlit Labyrinth
+Terarium
+Area Zero Underdepths
+
+Area Zero Underdepths
+
+Terarium
 
 ~~~~~~~~~~~~~~~
 Text File : SWSH_iteminfo
@@ -28709,6 +29070,10 @@ The Pokémon’s heart fills with memories, causing the\nWellspring Mask to shin
 The Pokémon’s heart fills with memories, causing the\nCornerstone Mask to shine and the Pokémon’s Defense\nstat to be boosted.
 The power of the Pokémon’s toxic chain may badly\npoison any target the Pokémon hits with a move.
 A sickly sweet scent spreads across the field the\nfirst time the Pokémon enters a battle, lowering\nthe evasiveness of opposing Pokémon.
+When the Pokémon enters a battle, it absorbs the energy\naround itself and transforms into its Terastal Form.
+The Pokémon’s shell contains the powers of each type.\nAll damage-dealing moves that hit the Pokémon when its\nHP is full will not be very effective.
+When Terapagos changes into its Stellar Form, it uses\nits hidden powers to eliminate all effects of weather and\nterrain, reducing them to zero.
+Pokémon poisoned by Pecharunt’s moves will also\nbecome confused.
 ~~~~~~~~~~~~~~~
 Text File : tuucyou_system
 ~~~~~~~~~~~~~~~
@@ -32412,34 +32777,34 @@ TM198s
 TM199s
 TM200s
 TM201s
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+TM202s
+TM203s
+TM204s
+TM205s
+TM206s
+TM207s
+TM208s
+TM209s
+TM210s
+TM211s
+TM212s
+TM213s
+TM214s
+TM215s
+TM216s
+TM217s
+TM218s
+TM219s
+TM220s
+TM221s
+TM222s
+TM223s
+TM224s
+TM225s
+TM226s
+TM227s
+TM228s
+TM229s
 
 
 
@@ -32632,6 +32997,82 @@ Poltchageist Powders
 Fresh-Start Mochi
 Roto-Sticks
 Glimmering Charms
+Metal Alloys
+Indigo Style Cards
+Oddish Leaves
+Tentacool Stingers
+Doduo Downs
+Seel Furs
+Exeggcute Shells
+Tyrogue Sweats
+Rhyhorn Fangs
+Horsea Inks
+Elekid Furs
+Magby Hairs
+Lapras Teardrops
+Porygon Fragments
+Chinchou Sparks
+Snubbull Hairs
+Skarmory Feathers
+Smeargle Paints
+Plusle Furs
+Minun Furs
+Trapinch Shells
+Beldum Claws
+Cranidos Spikes
+Shieldon Claws
+Blitzle Mane Hairs
+Drilbur Claws
+Cottonee Fluffs
+Scraggy Sweats
+Minccino Furs
+Solosis Gels
+Joltik Threads
+Golett Shards
+Espurr Furs
+Inkay Inks
+Pikipek Feathers
+Dewpider Threads
+Comfey Flowers
+Minior Shells
+Milcery Creams
+Duraludon Tarnishes
+Articuno Treats
+Zapdos Treats
+Moltres Treats
+Raikou Treats
+Entei Treats
+Suicune Treats
+Lugia Treats
+Ho-Oh Treats
+Latias Treats
+Latios Treats
+Kyogre Treats
+Groudon Treats
+Rayquaza Treats
+Cobalion Treats
+Terrakion Treats
+Virizion Treats
+Reshiram Treats
+Zekrom Treats
+Kyurem Treats
+Solgaleo Treats
+Lunala Treats
+Necrozma Treats
+Kubfu Treats
+Glastrier Treats
+Spectrier Treats
+Indigo Disks
+Fiery Picks
+Stellar Tera Shards
+Mythical Pecha Berries
+Blueberry Tablecloths
+Blueberry Chairs
+Synchro Machines
+Meteorites
+Scarlet Books
+Violet Books
+Briar’s Books
 ~~~~~~~~~~~~~~~
 Text File : pokemile_system
 ~~~~~~~~~~~~~~~
@@ -32692,6 +33133,7 @@ The Pokémon HOME service has\nbeen discontinued.
 The Premium Plan you have been using on your\nmobile device is currently paused.\nPlease check “Manage plan renewal” to check\nyour account status.
 There was an error saving your linked game data.\n\nIf you made changes only to your Pokémon\nHOME Boxes, those changes have been saved.\nIf you made changes to your Pokémon Boxes in\nthis linked game, no changes to those Boxes or\nto your Pokémon HOME Boxes were saved.\n\nNow returning to the title screen.
 This Nintendo Network ID has been restricted\nfrom moving Pokémon to Pokémon HOME.
+Maintenance has been completed. Log-ins are\ncurrently being limited to balance server load.\nUsers will gradually become able to log in.\nPlease wait a little while.
 ~~~~~~~~~~~~~~~
 Text File : topics_contents
 ~~~~~~~~~~~~~~~
@@ -41394,34 +41836,34 @@ TM198
 TM199
 TM200
 TM201
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+TM202
+TM203
+TM204
+TM205
+TM206
+TM207
+TM208
+TM209
+TM210
+TM211
+TM212
+TM213
+TM214
+TM215
+TM216
+TM217
+TM218
+TM219
+TM220
+TM221
+TM222
+TM223
+TM224
+TM225
+TM226
+TM227
+TM228
+TM229
 
 
 
@@ -41614,6 +42056,82 @@ bag of Poltchageist Powder
 Fresh-Start Mochi
 Roto-Stick
 Glimmering Charm
+hunk of Metal Alloy
+Indigo Style Card
+Oddish Leaf
+Tentacool Stinger
+bag of Doduo Down
+bag of Seel Fur
+Exeggcute Shell
+bag of Tyrogue Sweat
+Rhyhorn Fang
+bag of Horsea Ink
+bag of Elekid Fur
+bag of Magby Hair
+Lapras Teardrop
+Porygon Fragment
+bag of Chinchou Sparks
+bag of Snubbull Hair
+Skarmory Feather
+bag of Smeargle Paint
+bag of Plusle Fur
+bag of Minun Fur
+Trapinch Shell
+Beldum Claw
+Cranidos Spike
+Shieldon Claw
+bag of Blitzle Mane Hair
+Drilbur Claw
+bag of Cottonee Fluff
+bag of Scraggy Sweat
+bag of Minccino Fur
+bag of Solosis Gel
+bag of Joltik Thread
+Golett Shard
+bag of Espurr Fur
+bag of Inkay Ink
+Pikipek Feather
+bag of Dewpider Thread
+Comfey Flower
+Minior Shell
+bag of Milcery Cream
+bag of Duraludon Tarnish
+Articuno Treat
+Zapdos Treat
+Moltres Treat
+Raikou Treat
+Entei Treat
+Suicune Treat
+Lugia Treat
+Ho-Oh Treat
+Latias Treat
+Latios Treat
+Kyogre Treat
+Groudon Treat
+Rayquaza Treat
+Cobalion Treat
+Terrakion Treat
+Virizion Treat
+Reshiram Treat
+Zekrom Treat
+Kyurem Treat
+Solgaleo Treat
+Lunala Treat
+Necrozma Treat
+Kubfu Treat
+Glastrier Treat
+Spectrier Treat
+Indigo Disk
+Fiery Pick
+Stellar Tera Shard
+Mythical Pecha Berry
+Blueberry Tablecloth
+set of Blueberry Chairs
+Synchro Machine
+Meteorite
+Scarlet Book
+Violet Book
+copy of Briar’s Book
 ~~~~~~~~~~~~~~~
 Text File : zukan_comment_alpha
 ~~~~~~~~~~~~~~~
@@ -48452,20 +48970,20 @@ Legend says that by using its power to see all\nevents from past to future, this
 Text File : zukan_comment_violet
 ~~~~~~~~~~~~~~~
 
+It carries a seed on its back right from birth. As\nits body grows larger, the seed does too.
+The bulb on its back grows as it absorbs\nnutrients. The bulb gives off a pleasant aroma\nwhen it blooms.
+By spreading the broad petals of its flower\nand catching the sun’s rays, it fills its body\nwith power.
+
+
+If Charmander is healthy, the flame on the tip of\nits tail will burn vigorously and won’t go out even\nif it gets a bit wet.
+It is very hotheaded by nature, so it constantly\nseeks opponents to battle against. Its aggression\nwill not be quelled if it doesn’t win.
+It uses its wings to fly sky-high. The more\nexperience it gains in battle, the greater the\ntemperature at which its flames burn.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+Its shell is soft immediately after it is born. In no\ntime at all, the shell becomes so resilient that a\nprodding finger will bounce right off it.
+It often hides in water to stalk unwary prey.\nWhile swimming quickly, it moves its ears to\nmaintain balance.
+It has jet nozzles on its shell. This impressive\nPokémon uses these jets to charge toward foes\nwith all the force of a rocket.
 
 
 
@@ -48503,9 +49021,9 @@ This Pikachu wears its partner’s cap—proof of\nthe strong bond Pikachu and i
 If the electric pouches in its cheeks become fully\ncharged, both ears will stand straight up.
 
 No matter how high a place it falls from, this\nPokémon can save itself by rolling into a ball\nand bouncing.
-
+An ancient tradition of Alolan festivals, still\ncarried on to this day, is a competition to slide\nSandshrew across ice as far as one can.
 The spikes on its body are made up of its\nhardened hide. It rolls up and attacks foes\nwith its spikes.
-
+A long, long time ago, it lived in the desert. With\nits sharp claws fully extended, it can run right up\nan iceberg without slipping.
 
 
 
@@ -48515,24 +49033,24 @@ The spikes on its body are made up of its\nhardened hide. It rolls up and attack
 On nights with a full moon, they gather together\nand dance. The surrounding area is enveloped\nin an abnormal magnetic field.
 It has an acute sense of hearing. It can easily hear\na pin being dropped nearly 1,100 yards away.
 As its body grows larger, its six warm tails\nbecome more beautiful, with a more luxurious\ncoat of fur.
-
+In hot weather, this Pokémon makes ice shards\nwith its six tails and sprays them around to cool\nitself off.
 It has nine long tails and fur that gleams gold.\nIt is said to live for 1,000 years.
-
+It creates drops of ice in its coat and showers\nthem over its enemies. Anyone who angers it will\nbe frozen stiff in an instant.
 If it inflates to sing a lullaby, it can perform\nlonger and cause sure drowsiness in its audience.
 The rich, fluffy fur that covers its body feels\nso good that anyone who feels it can’t stop\ntouching it.
 
 
-
-
-
+When it is woken by moonlight, it wanders about.\nBut during the day, it stays still underground.
+It secretes a sticky, drool-like nectar. Though\nsweet, it smells too repulsive to get very close.
+It fiendishly scatters allergenic pollen from its\npetals, which are the largest in the world.
 
 
 Its eyes act as radar, enabling it to be active in\ndarkness. The eyes can also shoot powerful\nbeams.
 When it attacks, it flaps its large wings violently\nto scatter its poisonous powder all around.
 Its skin is very thin. If it is exposed to light,\nits blood heats up, causing it to grow weak.
-
+Its golden whiskers function as sensors.\nIt pokes them out of its burrow to monitor\nits surroundings.
 In battle, it digs through the ground and strikes\nthe unsuspecting foe from an unexpected\ndirection.
-
+Its metallic whiskers are heavy, so it’s not very\nfast, but it has the power to dig through even\nthe hardest bedrock.
 It loves things that sparkle. When it sees a shiny\nobject, the gold coin on its head shines, too.
 
 
@@ -48559,35 +49077,35 @@ It can use its well-developed arms and legs to run\non the surface of the water 
 It plants its feet deep underground to rehydrate\nitself. While doing so, it’s unable to run away if\nit’s attacked.
 The leafy parts act as cutters for slashing foes.\nIt spits a fluid that dissolves everything.
 After dissolving many prey, this Pokémon’s\nacid becomes sweeter. This makes it even\neasier to attract more prey.
-
-
+Its eyes are as transparent as crystals. From\nthem, it shoots mysterious beams of light.
+In battle, it extends all 80 of its tentacles to\nentrap its opponent inside a poisonous net.
 Most people may not notice, but a closer look\nshould reveal that there are many Geodude\naround.
-
+If you step on a Geodude sleeping on the\nground, you’ll hear a zapping sound and feel\na tingling shock throughout your entire body.
 Moss-covered rocks are Graveler’s favorite food.\nIt consumes over a ton of them a day, crunching\nloudly while it eats.
-
+Graveler’s entire body is electrically charged\ndue to the stones it likes to eat. It is a very\nquick-tempered Pokémon.
 It deliberately blows itself up, then uses this\nexplosive force to jump from mountain to\nmountain.
-
+It fires rocks charged with electricity. Even if the\nrock isn’t fired that accurately, just grazing an\nopponent will cause numbness and fainting.
 
 
 
 
 It is always vacantly lost in thought, but no one\nknows what it is thinking about. It is good at\nfishing with its tail.
-
+It uses its tail to fish, but the scent of the spice\nemanating from its tail ensures its catches are\nalways lacking.
 If the tail-biting Shellder is thrown off in a harsh\nbattle, this Pokémon reverts to being an ordinary\nSlowpoke.
 
-
+Shellder bites down hard on Slowbro’s arm\nto suck out more poison. This seems to cause\nitching, so Slowbro occasionally lashes out.
 It moves while constantly hovering. It discharges\nelectromagnetic waves and so on from the units\nat its sides.
 They’re formed by several Magnemite linked\ntogether. They frequently appear when sunspots\nflare up.
 
 
-
-
-
-
+Its heads never sleep at the same time—each one\ntakes a turn keeping watch while the other sleeps,\nswitching every hour or so.
+The strongest head with the thickest neck\nbecomes the leader and gains primary control\nof the body.
+The colder it gets, the better it feels. It joyfully\nswims around oceans so cold that they are filled\nwith floating ice.
+It stores thermal energy in its body to fend off\nthe cold. It swims at eight knots even in\nfrigid waters.
 When two of these Pokémon’s bodies are\ncombined together, new poisons are created.
-
+Alolan Grimer will gladly gobble up any kind\nof trash, making it a widely used and popular\nPokémon at garbage disposal facilities.
 It’s so stinky! Muk’s body contains toxic\nelements, and any plant will wilt when it\npasses by.
-
+What look like fangs and claws are actually\ncrystallized poison that will afflict you at a\nmere touch, so don’t get too close.
 Clamping on to an opponent reveals its\nvulnerable parts, so it uses this move only as\na last resort.
 When attacked, it launches its spikes in quick\nvolleys. Its innards have never been seen.
 Its body is made of gas. Despite lacking\nsubstance, it can envelop an opponent of\nany size and cause suffocation.
@@ -48603,27 +49121,27 @@ Always holding a pendulum that it swings at a\nsteady rhythm, it causes drowsine
 
 It’s usually found in power plants. Easily mistaken\nfor a Poké Ball, it has zapped many people.
 It explodes in response to even minor stimuli. It is\nfeared, with the nickname of the Bomb Ball.
+Using telepathy only fellow Exeggcute can\npick up on, they always form a cluster of six.
+It is said that on rare occasions, one of its heads\nwill drop off and continue on as an Exeggcute.
+As it grew taller and taller, it outgrew its reliance\non psychic powers, while within it awakened the\npower of the sleeping dragon.
 
 
 
 
-
-
-
-
-
+It has complete control over the ligaments in its\nlegs, expanding and contracting them to double\nthe reach of its kicks.
+Its fists are masses of muscle. It takes a break\nevery three minutes to steady its breath and\nmood.
 
 The poisonous gases it contains are a little bit\nlighter than air. That’s why it’s always slightly\nairborne.
 When it inhales poisonous gases from garbage,\nits body expands, and its insides smell much\nworse.
 
-
-
+Once it starts running, it won’t stop—even if it\ncrashes through boulders. This disposition is\nwhat’s caused its habitat to expand.
+It evolved to walk using only its hind legs,\nwhich has allowed it to expand its habitat\neven onto steep mountains.
 It walks carefully to prevent its egg from\nbreaking. However, it is extremely fast at\nrunning away.
 
 
 
-
-
+It maintains balance using its tail, which is wound\nup like a coil. It may spray ink from its mouth.
+Its fin tips leak poison. Its fins and bones are\nhighly valued as ingredients in herbal medicine.
 
 
 
@@ -48632,18 +49150,18 @@ It walks carefully to prevent its egg from\nbreaking. However, it is extremely f
 
 The sharp scythes on its forearms become\nincreasingly sharp by cutting through hard\nobjects.
 
+Research is progressing on storing lightning in\nElectabuzz so this energy can be used at any\ntime.
+Wavering flames similar to those of the sun\nappear on the surface of this Pokémon’s body.
 
 
-
-
-
+They fight each other by locking horns.\nThe herd’s protectors take pride in their\nbattle-scarred horns.
 This kind of Tauros, known as the Combat Breed,\nis distinguished by its thick, powerful muscles and\nits fierce disposition.
 People call this kind of Tauros the Blaze Breed\ndue to the hot air it snorts from its nostrils.\nIts three tails are intertwined.
 It swims by jetting water from its horns. The most\nnotable characteristic of the Aqua Breed is its\nhigh body fat, which allows it to float easily.
 In the distant past, it was somewhat stronger than\nthe horribly weak descendants that exist today.
 It appears whenever there is world conflict,\nburning down any place it travels through.
 
-
+Able to understand human speech and very\nintelligent, it loves to swim in the sea with\npeople on its back.
 
 It can freely recombine its own cellular structure\nto transform into other life-forms.
 Its genetic code is irregular. It may mutate if it is\nexposed to radiation from element stones.
@@ -48652,7 +49170,7 @@ Its genetic code is irregular. It may mutate if it is\nexposed to radiation from
 Its cell composition is similar to water molecules.\nAs a result, it can’t be seen when it melts away\ninto water.
 If agitated, it uses electricity to straighten out its\nfur and launch it in small bunches.
 It fluffs out its fur collar to cool down its body\ntemperature, which can reach 1,650 degrees\nFahrenheit.
-
+Porygon is an artificial Pokémon created using\nadvanced scientific means. It can move freely\nthrough cyberspace.
 
 
 
@@ -48674,15 +49192,15 @@ It can fly in spite of its big and bulky physique.\nIt circles the globe in just
 
 
 
-
-
-
-
-
-
-
-
-
+Its pleasantly aromatic leaf has the ability to\ncheck the humidity and temperature of the\narea around it.
+The scent that wafts from the leaves on its neck\ncauses anyone who smells it to become energetic.
+Meganium’s breath holds within it the power to\nrevive grasses and plants that have withered.
+The fire that spouts from its back burns hottest\nwhen it is angry. The flaring flames intimidate\nfoes.
+The fur covering this Pokémon’s body never\nburns, no matter what. It can shrug off any\nkind of fire attack.
+If its rage peaks, it becomes so hot that anything\nthat touches it will instantly go up in flames.
+This rough critter chomps at any moving\nobject it sees. Turning your back on it is\nnot recommended.
+It opens its huge jaws wide to attack. If it loses\nfangs while biting, they’ll just keep on growing\nback, one after another.
+Although it has a massive body, its\npowerful hind legs enable it to move\nquickly, even on land.
 If it encounters a foe, it will stand up on its tail,\nmaking itself look bigger than usual to intimidate\nthem.
 It is nimble and has a very flexible body.\nEven if you get ahold of it, it’ll slip right out\nof your arms.
 Since it tells time precisely, some countries\nconsider it to be a deity of wisdom, versed in\nthe ways of the world.
@@ -48692,8 +49210,8 @@ Its extremely soft wings make no sound in flight.\nIt silently sneaks up on prey
 Some fishers weave its sturdy thread into nets to\ncatch fish Pokémon.
 It wanders in search of food after darkness falls,\nnever nesting in a specific place.
 
-
-
+It shoots positively and negatively charged\nelectricity from the tips of its two antennae\nand stuns its opponents.
+It blinds prey with an intense burst of light.\nWith the prey incapacitated, the Pokémon\nswallows it in a single gulp.
 Despite this Pokémon’s cute appearance, those\nwho want to live with one should prepare to be\non the receiving end of its electric jolts.
 Since it is often seen when shooting stars fill the\nnight skies, it’s said to come here by riding on a\nstar.
 It likes to sing but is not yet good at it. With\npraise and encouragement, it will get better little\nby little.
@@ -48705,7 +49223,7 @@ Its fleece grows continually. In the summer,\nthe fleece is fully shed, but it g
 Because of its rubbery, electricity-resistant skin,\nit can store lots of electricity in its fur.
 When it gets dark, the light from its bright,\nshiny tail can be seen from far away on the\nocean’s surface.
 
-
+After it grows up, it leaves the forest it was born\nin to form groups with other Bellossom. It breaks\ninto dance when it gets excited.
 The oil-filled tail functions as a buoy, so it’s fine\neven in rivers with strong currents.
 By keeping still and listening intently, it can tell\nwhat is in even wild, fast-moving rivers.
 To avoid being attacked, it does nothing but\nmimic a tree. It hates water and flees from rain.
@@ -48724,7 +49242,7 @@ It uses the fine hair that covers its body to sense\nair currents and predict it
 When darkness falls, the rings on the body\nbegin to glow, striking fear in the hearts of\nanyone nearby.
 If spotted, it will lure an unwary person into\nchasing it, then lose the pursuer on mountain\ntrails.
 It has incredible intellect and intuition. Whatever\nthe situation, it remains calm and collected.
-
+It creates potions by mixing toxins with the food\nit’s eaten. Not even Slowking itself knows what\neffects the potions will have.
 It loves to bite and yank people’s hair from\nbehind without warning, just to see their\nshocked reactions.
 
 
@@ -48762,8 +49280,8 @@ If spotted, it escapes by burrowing with its tail.\nIt can float just slightly u
 It glides as if sliding. It startles foes by clamping\non to their faces, then jabs with its poison stinger.
 
 
-
-
+Its growls make its opponents uneasy. This\nlaid-back Pokémon tends to sleep half the day.
+It can make most any Pokémon run away\nby opening its big mouth to reveal its\nthick fangs.
 Experienced fishers say they try to catch Qwilfish\nin the brief moment that these Pokémon become\ndefenseless just after launching poisonous spikes.
 It swings its eye-patterned pincers up to scare its\nfoes. This makes it look like it has three heads.
 
@@ -48783,21 +49301,21 @@ Because the long hair all over its body obscures\nits sight, it just keeps charg
 
 It always carries its food with it, wherever it goes.\nIf attacked, it throws its food at the opponent.
 
-
+Since the feathers that it sheds are thin and\nsharp, people apparently once used them\nas swords.
 It uses different kinds of cries for communicating\nwith others of its kind and for pursuing its prey.
 Upon hearing its eerie howls, other Pokémon get\nthe shivers and head straight back to their nests.
 
-
+This Pokémon is said to sleep at the bottom of\nthe sea—deeper than any other life-form can\ndescend—building its energy.
 It is far stronger than it appears. If a Phanpy is\nswinging its trunk around and your arm gets hit\nby it, your arm bone will shatter.
 Donphan is normally a calm Pokémon, but once\nit is enraged, it will curl its body into a ball and\ncharge at you while rolling.
-
+Porygon was upgraded to become capable\nof planetary development. However, this\nupgraded version cannot even fly yet.
 It’s said that this Pokémon used to be stronger\nlong ago when it had many enemies, and that it\nwas even able to evolve under its own power.
+The color of the mysterious fluid secreted from\nthe tip of the tail is predetermined for each\nSmeargle.
+Its intense desire to become stronger and\nstronger drives it to recklessly train its body and\nchallenge any opponent it can find to battle.
+It spins on its horn while dealing out elegant\nkicks. Its horn grows continuously through its\nlifetime.
 
-
-
-
-
-
+It rotates its arms to generate electricity, but it\ntires easily, so it only charges up a little bit.
+Magma-like blood circulates throughout this\nPokémon’s body, raising its body temperature\nas high as 1,100 degrees Fahrenheit.
 
 The eggs it lays are filled with happiness. Eating\neven one bite will bring a smile to anyone.
 
@@ -48810,17 +49328,17 @@ In just one of its mighty hands, it has the power to\nmake the ground shake and 
 
 
 
+Treecko can quickly scale even vertical surfaces.\nIt senses humidity with its tail to predict the next\nday’s weather.
+Grovyle leaps from branch to branch in large\ntrees, moving with ease. It propels itself with\nastounding speed and force.
+The leaves on its arms are as sharp as swords.\nIt agilely leaps about the branches of trees to\nstrike its enemies.
 
+In its belly, it has a sac filled with burning fire,\nmeaning that Torchic feels as warm as a hot-water\nbottle if you hug it.
+When it enters battle, the flame inside its body\nburns stronger. Its kicks have outstanding\ndestructive power.
+It can jump powerfully, clearing a 30-story\nbuilding in a single leap. Its flaming punches\nscorch its opponents.
 
-
-
-
-
-
-
-
-
-
+When it uses its large tail fin, it picks up speed\nrapidly in the water. It is strong in spite of its\nsmall size.
+It is at its best when on muddy ground that offers\npoor footing. It quickly overwhelms opponents\nthat are bogged down and unable to move.
+Swampert’s arms are rock-hard. With one swing,\nthey can batter down Swampert’s foes. This\nPokémon makes its nest on beautiful beaches.
 
 Poochyena pursue their prey in packs. Once the\nprey is exhausted, the pack finishes it off. But\nsometimes the prey retaliates, and the pack flees.
 Once it’s caught the scent of faraway prey,\nthe leader gives a signal, and the whole pack\nmoves out.
@@ -48880,8 +49398,8 @@ It elegantly avoids attacks with dance-like\nsteps, then launches a devastating 
 
 
 
-
-
+This Pokémon absorbs electricity from telephone\npoles. It shorts out the electricity stored inside its\nbody to create noises.
+Its dislike of water makes it take shelter under\nthe eaves of houses in rain. It uses pom-poms\nmade of sparks for cheering.
 It flashes the light on its rear to communicate\nwith other Volbeat. It loves the sweet aroma\ngiven off by Illumise.
 It guides Volbeat to draw signs in the night sky.\nThere are scholars who research the meaning\nof these signs.
 
@@ -48899,9 +49417,9 @@ Coal is the source of Torkoal’s energy. Large\namounts of coal can be found in
 Using its tail like a spring, it keeps its heart\nbeating by bouncing constantly. If it stops,\nit dies.
 It uses black pearls to amplify its psychic power.\nIt does a strange dance to control foes’ minds.
 
-
-
-
+As it digs through the sand, its giant jaws\ncrush any rocks that obstruct its path. It\nbuilds a funnel-shaped nest.
+It generates ultrasonic waves by vigorously\nvibrating its wings. After making its prey faint,\nit dissolves the prey with its digestive juices.
+The sound of its wings flapping resembles\nsinging. Those entranced by this sound get lured\ninto a sandstorm and become Flygon’s prey.
 It lives in arid locations. Its yellow flowers bloom\nonce a year.
 It lives in deserts. It becomes active at night\nwhen it hunts for prey exhausted from the\ndesert’s heat.
 It can’t relax if it or its surroundings are not clean.\nIt wipes off dirt with its wings.
@@ -48953,6 +49471,9 @@ Its belief that it will be able to fly one day is\napparently the influence of i
 Its armored body makes all attacks bounce off.\nThe armor is too tough, however, making it heavy\nand somewhat sluggish.
 It becomes uncontrollable if it is enraged.\nIt destroys everything with shredding claws\nand fire.
 
+All its cells are magnets. It communicates with\nothers of its kind by transmitting magnetic forces\nfrom its body.
+It adores magnetic minerals, so it pursues\nNosepass at speeds exceeding 60 mph.
+It firmly pins its prey using its four claws and\nlarge body. Then Metagross uses the mouth\non its stomach to chew its prey to bits.
 
 
 
@@ -48972,18 +49493,15 @@ It becomes uncontrollable if it is enraged.\nIt destroys everything with shreddi
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+It uses its whole body to photosynthesize when\nexposed to sunlight. Its shell is made from\nhardened soil.
+It knows where pure water wells up. It carries\nfellow Pokémon there on its back.
+Some Pokémon are born on a Torterra’s back\nand spend their entire life there.
+The gas made in its belly burns from its rear end.\nThe fire burns weakly when it feels sick.
+A bigger fire on its tail and a brighter blue\npattern on its face means it holds a higher\nrank in its troop.
+It uses unique fighting moves with fire on its\nhands and feet. It will take on any opponent.
+It doesn’t like to be taken care of. It’s difficult to\nbond with since it won’t listen to its Trainer.
+Because every Prinplup considers itself to be the\nmost important, they can never form a group.
+It avoids unnecessary disputes, but it will\nmercilessly decimate anything that threatens\nthe safety of its colony.
 Because they are weak individually, they form\ngroups. However, they bicker if the group grows\ntoo big.
 They maintain huge flocks, although fierce\nscuffles break out between various flocks.
 It never stops attacking even if it is injured.\nIt fusses over the shape of its comb.
@@ -48996,10 +49514,10 @@ By gathering their tails together, they collectively\ngenerate powerful electric
 Luxray’s ability to see through objects comes in\nhandy when it’s scouting for danger.
 
 
-
-
-
-
+Cranidos toughen up their already sturdy\nheads by headbutting one another.
+If two were to smash their heads together, their\nfoot-thick skulls would keep them from fainting.
+This Pokémon lived in primeval jungles. It’s\nthought that Shieldon had few enemies thanks\nto its sturdy face.
+Bastiodon live in herds. When assaulted by\nenemies, they line up side by side and use\ntheir hard faces to block attacks.
 
 
 
@@ -49065,17 +49583,17 @@ They appear when the snow flowers bloom.\nWhen the petals fall, they retreat to 
 They travel in groups of four or five, leaving signs\nfor one another on trees and rocks. They bring\ndown their prey with coordinated attacks.
 Exposure to a special magnetic field changed\nMagneton’s molecular structure, turning it into\nMagnezone.
 
+A Rhyperior’s brain is smaller than a Rhydon’s,\nbut the Rhyperior is stronger because it spends\nmore energy on battling and less on brainpower.
 
-
-
-
+This Pokémon presses the tips of its tails onto\nan opponent and instantly sends over 20,000\nvolts of high-voltage electricity through them.
+They dwell in volcanic craters. It’s said that\nonly a single pair of Magmortar will inhabit\nany given volcano.
 
 Its jaw power is incredible. It is adept at biting\napart foes while flying by at high speed.
 The younger they are, the more they smell like\nfresh grass. With age, their fragrance takes on the\nodor of fallen leaves.
 It lowers its body heat to freeze its fur. The hairs\nthen become like needles it can fire.
 It flies soundlessly through the sky. It catches\nprey with its long tail, then lunges at the\nprey’s vulnerable spots with its fangs.
 A frozen one was dug up from soil dating back\n10,000 years. It woke up, to much amazement.
-
+Its programming was modified to enable it to\noperate in other dimensions. This did not work as\nplanned.
 Because it can sense what its foe is thinking,\nits attacks burst out first, fast, and fierce.
 
 Probopass radiates such a powerful magnetic\nfield that nearby electrical appliances are\nrendered useless while it’s around.
@@ -49121,6 +49639,15 @@ This Rotom has possessed a lawn mower. It will\nmow down grass and flowers, then
 
 
 
+It prefers to avoid groups. In its day-to-day life,\nit dexterously controls its vines to compensate\nfor its short arms.
+Servine’s one weakness is its inflated sense of\npride. It takes a while for Servine to be able to\ncooperate with other Pokémon.
+An intimidating gaze and majestic appearance\nhave caused this Pokémon to be known as the\nLord of the Forest.
+This Pokémon is a ravenous glutton. It uses its\nexcellent sense of smell to find food, then cooks\nit to a crisp before eating.
+When defending its friends, Pignite will stand\nup to any opponent, no matter how strong. But\nit’s powerless when faced with an empty stomach.
+The direr the situation, the more it seems to\nenjoy itself. The flames around its neck intensify,\ntoo, increasing Emboar’s power and speed.
+It’s said that Oshawott learned to maintain its\nscalchop with riverbed stones by mimicking\nhumans it saw using whetstones.
+Dewott has a studious and stern personality.\nIt masters the use of its scalchops through\ndedicated, repeated training.
+Samurott leads its group strictly. Those who do\nnot follow its rules receive a merciless thrashing.
 
 
 
@@ -49140,24 +49667,15 @@ This Rotom has possessed a lawn mower. It will\nmow down grass and flowers, then
 
 
 
+This Pokémon prefers places with lots of lightning\nstrikes. It catches lightning with its mane and\nstores the electricity within its body.
+Once the herd hears thunder, it chases after the\nstorm clouds so that the Blitzle in the group can\nuse the lightning to charge up.
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+It makes its way swiftly through the soil by putting\nboth claws together and rotating at high speed.
+Its drill, which has evolved into steel, is strong\nenough to bore through iron plates. This\nPokémon is a great help in tunnel construction.
 
 
 It fights by swinging a piece of lumber around.\nIt is close to evolving when it can handle heavy\nlumber without difficulty.
@@ -49174,8 +49692,8 @@ It fashions clothing from woven leaves. Though\ngentle in disposition, it will s
 
 
 
-
-
+When attacked, it escapes by shooting cotton\nfrom its body. The cotton serves as a decoy to\ndistract the attacker.
+It rides on the wind and slips into people’s\nhomes. After it has turned a room into a cotton-\nfilled mess, it giggles to itself and takes off.
 If the leaves on its head are pruned with\nregularity, this Pokémon can be grown into\na fine plump shape.
 No matter how much time and money is spent\nraising it, its flowers are the most beautiful when\nthey bloom in the wild.
 It’s so vicious that it’s called the Thug of the\nRiver. Yet Basculin is still targeted by predators,\nsuch as Dondozo and Bombirdier.
@@ -49193,8 +49711,8 @@ Its unique faculty of sight can detect small prey\nmore than 30 miles away, even
 
 
 
-
-
+It will abruptly headbutt anyone that makes eye\ncontact with it. Its skull is extremely hard.
+This Pokémon may be rude, but it takes very\ngood care of its family, its friends, and its turf.
 
 
 
@@ -49208,14 +49726,14 @@ Its unique faculty of sight can detect small prey\nmore than 30 miles away, even
 
 To protect themselves from danger, they hide\ntheir true identities by transforming into people\nand Pokémon.
 Each has the ability to fool a large group of\npeople simultaneously. They protect their lair\nwith illusory scenery.
-
-
+These Pokémon like things neat and tidy. They\nare always sweeping and dusting their habitat,\nusing their tails as brooms.
+The oil that seeps from its body is really smooth.\nFor people troubled by bad skin, this oil is an\neffective treatment.
 Beware of touching the ribbon-shaped feelers\nthat control its psychic power. Gothita will begin\nbawling if you do.
 Using its psychic power, it arranges pebbles to\nform the shapes of constellations. Some people\nbelieve this Pokémon came from outer space.
 It gazes at the stars to predict the future. It acts\nsomewhat detached because it has seen the end\nof all existence.
-
-
-
+They drive away attackers by unleashing psychic\npower. They can use telepathy to talk with others.
+When their brains, now divided in two, are\nthinking the same thoughts, these Pokémon\nexhibit their maximum power.
+When Reuniclus shake hands, a network\nforms between their brains, increasing their\npsychic power.
 It strengthens its body by diving into the depths\nof ponds, swimming around while looking for\nbog moss to eat.
 It’s said that many artists have taken inspiration\nfrom the sight of a Swanna performing a beautiful\ndance in the light of dawn.
 
@@ -49239,8 +49757,8 @@ Amoonguss mimics Poké Balls. It is not yet\nclear whether this mimicry is effec
 
 
 They float upon the open sea. Many water\nPokémon gather in the area around Alomomola.
-
-
+Since it can’t generate its own electricity, it sticks\nonto large-bodied Pokémon and absorbs static\nelectricity.
+When attacked, they create an electric\nbarrier by spitting out many electrically\ncharged threads.
 
 
 
@@ -49267,8 +49785,8 @@ Cryogonal uses its chains of ice to constrict its\nopponents and then flash-free
 They seclude themselves in the mountains and\ndevote themselves to training. The form of their\nkicks and chops differs from pack to pack.
 Using the long fur on its arms like whips, it\nlaunches into combo attacks that, once started,\nno one can stop.
 
-
-
+Its movements are powered by a mysterious\nenergy. It has continued to move since ancient\ntimes, so its power may soon run out.
+Golurk were created by ancient people to\nprotect both people and Pokémon. They run\non a mysterious energy.
 Any chips in its blades would prove fatal for it.\nAfter each battle, it diligently maintains its\nblades using its favorite sharpening stone.
 Bisharp mercilessly cuts its opponents to pieces\nwith the sharp blades covering its body. It will do\nanything to win.
 
@@ -49306,15 +49824,15 @@ This Pokémon scatters burning scales. Most of the\ndanger of these scales is no
 
 
 
-
-
-
-
-
-
-
-
-
+Eating lots of berries makes the bark shell that\ncovers Chespin’s head and body grow sturdier.
+It can send a trailer flying with a tackle. It’s numb\nto pain, so even violent collisions don’t faze it.
+Its gentle disposition would have it avoid\nconflict, but it gives opponents a thrashing with\nits thorned fists when the situation calls for it.
+Twigs make for Fennekin’s snacks. When it\nnibbles on twigs, it finds the courage to face\nstrong foes.
+Braixen’s branch ignites as it’s pulled from the\nPokémon’s tail. Braixen then uses the flame to\nspark powerful attacks.
+It controls flames telekinetically, trapping its\nfoes in a fiery vortex surpassing 5,400 degrees\nFahrenheit and burning them to a crisp.
+It utilizes its extraordinary jumping abilities to\nflummox its foes, throwing springy bubbles\nat them from above their heads.
+The tips of its fingers and toes stick firmly to\nvertical surfaces. Frogadier can scale skyscrapers\nwith ease.
+It makes shuriken out of mucus excreted from its\nthighs. These shuriken can cut cleanly through\nsteel cables.
 
 
 
@@ -49414,6 +49932,9 @@ These Pokémon live in herds in mountainous\nplaces. The victor in their contest
 
 
 
+Behind an Espurr’s expressionless face is a frantic\nstruggle to contain psychic power.
+If Meowstic continuously emits its powerful\npsychic energy, it will damage its own body.
+When they sense danger, they exert their psychic\npower at its maximum output. They have no\nregard for their opponents.
 
 
 
@@ -49422,11 +49943,8 @@ These Pokémon live in herds in mountainous\nplaces. The victor in their contest
 
 
 
-
-
-
-
-
+Being upside-down improves its blood flow and\nclears its mind, causing the power of its psychic\nmoves to increase dramatically.
+It flashes the luminescent spots on its body\nto hypnotize its opponents, gaining total\ncontrol over them.
 
 
 This Pokémon is a poor swimmer. If it’s caught in\na fierce storm, it will sometimes get washed far\naway and become unable to return to its home.
@@ -49474,18 +49992,18 @@ In the dark, even Hydreigon are terrified of this\nPokémon. But in the light, N
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+It feels relaxed in tight, dark places and has been\nknown to nestle into its Trainer’s bag or the front\nof their jacket.
+It throws sharp feathers called blade quills at\nenemies or prey. It seldom misses.
+It nocks its arrow quills and looses them at\nopponents. When it needs to hit, it pulls the\nvines on its hood to narrow its view and focus.
+While grooming itself, it builds up fur inside its\nstomach. It sets the fur alight and spews fiery\nattacks, which change based on how it coughs.
+Torracat will let its Trainer coddle it once they’ve\ngrown close, but it’s a powerful, sharp-clawed\nPokémon, so its Trainer gets covered in scratches.
+After hurling ferocious punches and flinging\nfurious kicks, it finishes opponents off by spewing\nfire from around its navel.
+The balloons it inflates with its nose grow larger\nand larger as it practices day by day.
+It cares deeply for its companions. When its\nTrainer is feeling down, it performs a cheery\ndance to try to help.
+Also known as a songstress, it is a sight to\nbehold on moonlit nights when it sings in\nfront of the colony it leads.
+Pikipek has strong muscles in its neck, so it won’t\nhurt itself even if it violently shakes its head.
+When it encounters foes, it launches the many\nseeds stored in its beak in a radial burst.
+Pairs of Toucannon are considered symbols of\ncompanionship, as these Pokémon will raise the\ntemperature of their beaks to warm each other.
 It spends its waking hours searching endlessly for\nfood. When Yungoos is hungry, its ferocity gains\na certain edge.
 Gumshoos specializes in relentlessly tracking\ndown prey. The simple-minded Skwovet doesn’t\nseem to provide Gumshoos enough challenge.
 
@@ -49513,8 +50031,8 @@ It has excellent regenerative capabilities. Legs\nthat a Mareanie has lost have 
 Toxapex gets into fierce battles with Bruxish over\nareas where warm ocean currents flow, but the\nodds are always against it.
 Though a slow walker, Mudbray is plenty strong.\nIts pace doesn’t change even when it’s loaded\nwith 50 times its own body weight.
 Its legs are fortified with mud and harder than\nstone, and they can reduce a large truck to scrap\nwith one kick.
-
-
+It supports the water bubble that envelops its\nhead with three of its legs. Sometimes it secretly\nswaps which legs are holding up the bubble.
+It launches sticky water bubbles. Foes who lose\nconsciousness while trapped inside these bubbles\nwill get torn apart by Araquanid’s gnashing jaws.
 
 Many Trainers give their Fomantis their own\nflowerpots so they can sunbathe in peace\nand quiet.
 A lot of time and effort is required to maintain\nthe vivid colors of its petals. This Pokémon puts\nits Trainer’s attentiveness to the test.
@@ -49529,7 +50047,7 @@ When two Salazzle meet, they will use their\npheromone gas to fight over the mal
 A Greedent drawn in by the sweet scent of these\nPokémon will tuck the Bounsweet in among the\nberries in its tail and carry them all away.
 Steenee bounces energetically through forests.\nIf the rind that peels off its body is pulverized,\nit can be used to treat stomach pains.
 This Pokémon launches fierce yet elegant kicks\nwith its long, slender legs. It views Quaquaval as\nits rival.
-
+It prefers areas with lots of flowers. A Comfey\nadorned with flowers is a happy Comfey, and the\nflowers gain healing effects.
 This Pokémon lives quietly in the depths of the\nforest. The purple, cape-like fur gets longer and\nlonger as Oranguru ages.
 The boss chooses 10 members of the group to\ngo out hunting. The hunting party will evenly split\nthe food they find with the rest of the group.
 
@@ -49556,20 +50074,20 @@ From the hollows in its arms, it fires the bones\nof its victims, which are all 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+It will react when touched or called to, but it’s\nunknown whether such responses indicate\nconsciousness.
+It will react when touched or called to, but it’s\nunknown whether such responses indicate\nconsciousness.
+It will react when touched or called to, but it’s\nunknown whether such responses indicate\nconsciousness.
+It will react when touched or called to, but it’s\nunknown whether such responses indicate\nconsciousness.
+It will react when touched or called to, but it’s\nunknown whether such responses indicate\nconsciousness.
+It will react when touched or called to, but it’s\nunknown whether such responses indicate\nconsciousness.
+It will react when touched or called to, but it’s\nunknown whether such responses indicate\nconsciousness.
+It feeds on dust in the atmosphere. The color\nof its core is said to be determined by the\ncomposition of the dust it eats.
+It feeds on dust in the atmosphere. The color\nof its core is said to be determined by the\ncomposition of the dust it eats.
+It feeds on dust in the atmosphere. The color\nof its core is said to be determined by the\ncomposition of the dust it eats.
+It feeds on dust in the atmosphere. The color\nof its core is said to be determined by the\ncomposition of the dust it eats.
+It feeds on dust in the atmosphere. The color\nof its core is said to be determined by the\ncomposition of the dust it eats.
+It feeds on dust in the atmosphere. The color\nof its core is said to be determined by the\ncomposition of the dust it eats.
+It feeds on dust in the atmosphere. The color\nof its core is said to be determined by the\ncomposition of the dust it eats.
 A potent anesthetic can be made by diluting\nKomala’s drool. This anesthetic was used for\nsurgeries in the past.
 
 
@@ -49615,17 +50133,17 @@ It bashes its scales to test its opponents’ mettle.\nThe sound of struck Kommo
 
 
 
+As Grookey strikes everything in sight with its\nstick, it has more and more fun, and its rhythm\nbecomes livelier.
+It becomes intensely focused while it drums out\nvigorous beats—so much so that sometimes it\nwon’t listen to its Trainer’s commands.
+When one Rillaboom challenges another who\nleads a troop, a drumming battle commences.\nThe victor becomes the troop’s new boss.
 
+Fire energy gathers in the pads of its feet,\nraising their temperature. Once hot, Scorbunny’s\nfootpads can deal heavy damage to opponents.
+While it prides itself on its varied kicking moves,\nit can also deliver powerful headbutts once its\nflames have heated up its forehead.
+Using a ball that it made out of flames,\nCinderace blinds its opponents and\nkeeps them at bay.
 
-
-
-
-
-
-
-
-
-
+It’s a very cautious Pokémon. When it has\nno choice but to battle, it hides itself before\nattacking.
+Highly intelligent but also very lazy, it defends its\nhome by laying traps.
+It may present itself as being well-mannered,\nbut deep down, it still has a lazy side. It will\nslack off when its Trainer isn’t looking.
 
 No matter how much it stuffs its belly with food,\nit is always anxious about getting hungry again.\nSo, it stashes berries in its cheeks and tail.
 This Pokémon makes off with heaps of fallen\nberries by wrapping them in its tail, which is\nroughly twice the length of its body.
@@ -49692,16 +50210,16 @@ It lives deep within the forest. Even after evolving\ninto this splendid form, i
 
 
 
-
-
-
-
-
-
-
-
-
-
+When attacked, it tackles its foe and covers\nthem in cream. With its foe either blinded or\nastonished by deliciousness, Milcery flees.
+Alcremie that have been cherished produce\nexquisite cream, so Trainers always raise them\nlovingly.
+When attacked, it strikes back by throwing cream\naccented with sweet and tart flavors.
+When attacked, it strikes back by throwing cream\naccented with an aromatic flavor.
+When attacked, it strikes back by throwing cream\naccented with a refreshing flavor.
+When attacked, it strikes back by throwing cream\naccented with a sour flavor.
+When attacked, it strikes back by throwing cream\naccented with a salty flavor.
+When attacked, it strikes back by throwing cream\naccented with a mix of flavors.
+When attacked, it strikes back by throwing cream\naccented with a bitter flavor.
+When attacked, it strikes back by throwing cream\naccented with complex flavors.
 
 The leader, known as the brass, uses its\nextendible horn to issue orders to the others\nwhen it’s time to change formation.
 This Pokémon is so timid that even brushing\nagainst seaweed will make it discharge electricity\nin surprise. Its lips do not conduct electricity.
@@ -49721,7 +50239,7 @@ Copperajah are prideful, cantankerous Pokémon.\nSpecimens with vibrant green sk
 
 
 
-
+Its metal body is durable but prone to\nretaining heat. It vents this heat from the\nslits in its tail.
 
 It has a habit of biting at Clauncher even though\nit doesn’t feed on them. This is said to be\nvestigial behavior from when Dreepy was alive.
 This Pokémon stores up energy in its lungs, then\nshoots it out. It takes care of Dreepy and battles\nalongside them until they’re all grown up.
@@ -49864,8 +50382,8 @@ This Pokémon resembles Cyclizar, but it is far\nburlier and more ferocious. Not
 
 This seems to be the Iron Serpent mentioned in\nan old book. The Iron Serpent is said to have\nturned the land to ash with its lightning.
 
-Ecology under research.
-Ecology under analysis.
+It resembles an illustration published in a\nparanormal magazine, said to be a depiction\nof a super-ancient Suicune.
+According to the few eyewitness accounts that\nexist, it used its shining blades to julienne large\ntrees and boulders.
 This special Ursaluna can see in the dark with\nits left eye and protects itself with mud that is\nas hard as iron.
 The head sticking out belongs to the fore-wyrm,\nwhile the tail belongs to the core-wyrm. The two\nshare one apple and help each other out.
 Poltchageist looks like a regional form of\nSinistea, but it was recently discovered that\nthe two Pokémon are entirely unrelated.
@@ -49879,6 +50397,19 @@ This mischief-loving Pokémon is full of curiosity.\nIt battles by drawing out t
 In this form, it draws on the power of water.\nIt attacks unrelentingly with kicks and ivy strikes.
 In this form, it draws on the power of fire.\nIt spears its enemies with thorn-covered ivy.
 In this form, it draws on the power of stone.\nIts body is rock-solid, protecting it from all\nmanner of attacks.
+It digs holes on mountains, searching for food.\nIt’s so durable that being caught in a cave-in\nwon’t faze it.
+These capricious syrpents have banded together.\nOn the rare occasion that their moods align,\ntheir true power is unleashed.
+It resembles an eerie Pokémon once shown in a\nparanormal magazine. That Pokémon was said to\nbe an Entei regenerated from a fossil.
+It bears resemblance to a Pokémon that became\na hot topic for a short while after a paranormal\nmagazine touted it as Raikou’s ancestor.
+It was named after a mysterious object\nrecorded in an old book. Its body seems\nto be metallic.
+There was supposedly an incident in which it\nlaunched shining blades to cut everything around\nit to pieces. Little else is known about it.
+It’s thought that this Pokémon lived in ancient\nPaldea until it got caught in seismic shifts and\nwent extinct.
+The shell is made of crystallized Terastal energy.\nWhen struck by a move, this shell absorbs the\nmove’s energy and transfers it to Terapagos.
+An old expedition journal describes the sight of\nthis Pokémon buried in the depths of the earth as\nresembling a planet floating in space.
+Its peach-shaped shell serves as storage for\na potent poison. It makes poisonous mochi\nand serves them to people and Pokémon.
+This Pokémon is a rough, crude, and\nviolent sort. It swings around its large,\nheavy stone axes to finish off its prey.
+It’s ferocious and has a short temper. The ends of\nits spikes are barbed, and they can’t be easily\nremoved once they’ve punctured something.
+It absorbs toxins from the food it eats.\nThe distinct purple spikes on its body are\nevidence of its potent poison.
 ~~~~~~~~~~~~~~~
 Text File : ARCEUS_place_name_out
 ~~~~~~~~~~~~~~~
@@ -50031,20 +50562,20 @@ the Sinnoh region
 Text File : zukan_comment_scarlet
 ~~~~~~~~~~~~~~~
 
+For some time after its birth, it uses the nutrients\nthat are packed into the seed on its back in order\nto grow.
+The more sunlight Ivysaur bathes in, the more\nstrength wells up within it, allowing the bud\non its back to grow larger.
+While it basks in the sun, it can convert the\nlight into energy. As a result, it is more\npowerful in the summertime.
+
+
+The flame on its tail shows the strength of its\nlife-force. If Charmander is weak, the flame\nalso burns weakly.
+When it swings its burning tail, the temperature\naround it rises higher and higher, tormenting its\nopponents.
+If Charizard becomes truly angered, the flame\nat the tip of its tail burns in a light blue shade.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+After birth, its back swells and hardens into a\nshell. It sprays a potent foam from its mouth.
+Wartortle’s long, furry tail is a symbol of\nlongevity, so this Pokémon is quite popular\namong older people.
+It deliberately increases its body weight so\nit can withstand the recoil of the water jets\nit fires.
 
 
 
@@ -50082,9 +50613,9 @@ The cap this Pikachu wears is filled with memories\nof this Pokémon and its par
 Its tail discharges electricity into the ground,\nprotecting it from getting shocked.
 
 It digs deep burrows to live in. When in danger,\nit rolls up its body to withstand attacks.
-
+It lives on snowy mountains. Its steel shell is\nvery hard—so much so, it can’t roll its body up\ninto a ball.
 It is adept at attacking with the spines on its back\nand its sharp claws while quickly scurrying about.
-
+This Pokémon’s steel spikes are sheathed\nin ice. Stabs from these spikes cause deep\nwounds and severe frostbite as well.
 
 
 
@@ -50094,24 +50625,24 @@ It is adept at attacking with the spines on its back\nand its sharp claws while 
 On nights with a full moon, Clefairy gather from\nall over and dance. Bathing in moonlight makes\nthem float.
 Said to live in quiet, remote mountains, this type\nof fairy has a strong aversion to being seen.
 If it is attacked by an enemy that is stronger\nthan itself, it feigns injury to fool the enemy\nand escapes.
-
+They live together in a skulk, helping one another.\nBefore eating their prey, they freeze it solid with\ntheir −58 degree Fahrenheit breath.
 Some legends claim that each of its nine tails has\nits own unique type of special mystical power.
-
+Possessing a calm demeanor, this Pokémon was\nrevered as a deity incarnate before it was\nidentified as a regional variant of Ninetales.
 When its huge eyes waver, it sings a mysteriously\nsoothing melody that lulls its enemies to sleep.
 It has a very fine fur. Take care not to make it\nangry, or it may inflate steadily and hit with a\nbody slam.
 
 
-
-
-
+Its scientific name is Oddium wanderus. It is said\nto cover distances as far as 1,000 feet when\nnight falls, walking on its two roots.
+The fluid that oozes from its mouth isn’t drool.\nIt is a nectar that is used to attract prey.
+The bud bursts into bloom with a bang. It then\nstarts scattering allergenic, poisonous pollen.
 
 
 Poison oozes from all over its body. It catches\nsmall bug Pokémon at night that are attracted\nby light.
 The wings are covered with dustlike scales. Every\ntime it flaps its wings, it looses highly toxic dust.
 It lives about one yard underground, where it\nfeeds on plant roots. It sometimes appears\naboveground.
-
+The things growing from its head are whiskers\nthat have become metallic. Diglett communicates\nwith its comrades by waving them.
 Its three heads bob separately up and down to\nloosen the soil nearby, making it easier for it\nto burrow.
-
+Its shining gold whiskers are advanced sensors\nthat can detect vibrations from sounds several\nmiles away.
 All it does is sleep during the daytime. At night,\nit patrols its territory with its eyes aglow.
 
 
@@ -50138,35 +50669,35 @@ Although it’s skilled in a style of dynamic\nswimming that uses all its muscle
 No matter what Bellsprout is doing, if it detects\nmovement nearby, it will immediately react by\nreaching out with its thin vines.
 Even though it is filled with acid, it does not melt\nbecause it also oozes a protective fluid.
 It lures prey into its mouth with a nectar-like\naroma. The helpless prey is melted with a\ndissolving fluid.
-
-
+When the tide goes out, dehydrated Tentacool\ncan be found left behind on the shore.
+On the rare occasions that large outbreaks of\nTentacruel occur, all fish Pokémon disappear\nfrom the surrounding sea.
 At rest, it looks just like a rock. Carelessly\nstepping on it will make it swing its fists angrily.
-
+Its body is a magnetic stone. Iron sand attaches\nfirmly to the portions of its body that are\nparticularly magnetic.
 A slow walker, it rolls to move. It pays no\nattention to any object that happens to be\nin its path.
-
+They eat rocks and often get into a scrap over\nthem. The impact of Graveler smashing together\ncauses a flash of light and a booming noise.
 It is enclosed in a hard shell that is as rugged\nas slabs of rock. It sheds skin once a year to\ngrow larger.
-
+It’s grumpy and stubborn. If you upset it, it\ndischarges electricity from the surface of its\nbody and growls with a voice like thunder.
 
 
 
 
 It is incredibly slow and dopey. It takes five\nseconds for it to feel pain when under attack.
-
+It gives off a stimulating scent because of\nchemicals that have seeped into its body from\nthe spice that it eats as its staple food.
 When a Slowpoke went hunting in the sea, its tail\nwas bitten by a Shellder. That made it evolve\ninto Slowbro.
 
-
+Shellder seems blissful over the taste of Slowbro\neven though the toxins seeping from the bite\nhave caused Shellder to faint.
 The electromagnetic waves emitted by the units\nat the sides of its head expel antigravity, which\nallows it to float.
 Three Magnemite are linked by a strong magnetic\nforce. Earaches will occur if you get too close.
 
 
-
-
-
-
+Its twin heads have exactly the same genes and\nbattle in perfect sync with each other.
+It now has three hearts and three sets of lungs.\nThough it can’t run as fast as Doduo, Dodrio can\nkeep running for longer stretches of time.
+The protrusion on its head is very hard. It is\nused for bashing through thick ice.
+It sleeps under shallow ocean waters during\nthe day, then looks for food at night when\nit’s colder.
 Born from sludge, these Pokémon now gather\nin polluted places and increase the bacteria in\ntheir bodies.
-
+They store their toxins inside their bodies, so\nunlike Grimer from other regions, they don’t\nsmell bad even up close.
 It’s thickly covered with a filthy, vile sludge. It is\nso toxic, even its footprints contain poison.
-
+There are over a hundred kinds of poison\ninside its body. Chemical reactions between\ndifferent poisons are the source of its vitality.
 It is encased in a shell that is harder than diamond.\nInside, however, it is surprisingly tender.
 Cloyster that live in seas with harsh tidal currents\ngrow large, sharp spikes on their shells.
 It wraps its opponent in its gas-like body,\nslowly weakening its prey by poisoning it\nthrough the skin.
@@ -50182,27 +50713,27 @@ When it locks eyes with an enemy, it will use\na mix of psi moves, such as Hypno
 
 It rolls to move. If the ground is uneven, a sudden\njolt from hitting a bump can cause it to explode.
 The more energy it charges up, the faster it gets.\nBut this also makes it more likely to explode.
+If you touch one of Exeggcute’s heads,\nmistaking it for an egg, the other heads will\nquickly gather and attack you in a swarm.
+It is called the Walking Jungle. Each of the nuts\nhas a face and a will of its own.
+It swings its long neck like a whip and smacks its\nhead into opponents. This makes Exeggutor itself\na little dizzy too.
 
 
 
 
-
-
-
-
-
+At the exact moment it lands a kick on its target,\nHitmonlee hardens the muscles on the sole of its\nfoot, maximizing the power of the kick.
+It corners its foes with combo punches from both\nsides, then finishes them off with a single straight\npunch launched at over 300 mph.
 
 Toxic gas is held within its thin, balloon-shaped\nbody, so it can cause massive explosions.
 Top-grade perfume is made using its internal\npoison gases by diluting them to the highest\nlevel.
 
-
-
+Rhyhorn claims an area with over a six mile radius\nas its territory. It apparently forgets where this\nterritory is when running, however.
+The horn of a Rhydon is powerful enough\nto crush raw diamonds. These Pokémon polish\ntheir horns by bashing them together.
 This kindly Pokémon lays highly nutritious eggs\nand shares them with injured Pokémon or people.
 
 
 
-
-
+If attacked—even by a large enemy—Horsea\neffortlessly swims to safety by utilizing its\nwell-developed dorsal fin.
+The male raises the young. If it is approached\nwhile caring for young, it will use its toxic spines\nto fend off the intruder.
 
 
 
@@ -50211,18 +50742,18 @@ This kindly Pokémon lays highly nutritious eggs\nand shares them with injured P
 
 It slashes through grass with its sharp scythes,\nmoving too fast for the human eye to track.
 
+Its body constantly discharges electricity.\nGetting close to it will make your hair stand\non end.
+Found near the mouth of a volcano. This\nfire-breather’s body temperature is nearly\n2,200 degrees Fahrenheit.
 
 
-
-
-
+When it targets an enemy, it charges furiously\nwhile whipping its body with its long tails.
 This Pokémon has a muscular body and excels at\nclose-quarters combat. It uses its short horns to\nstrike the opponent’s weak spots.
 When heated by fire energy, its horns can get\nhotter than 1,800 degrees Fahrenheit. Those\ngored by them will suffer both wounds and burns.
 This Pokémon blasts water from holes on the tips\nof its horns—the high-pressure jets pierce right\nthrough Tauros’s enemies.
 An underpowered, pathetic Pokémon. It may\njump high on rare occasions but never more\nthan seven feet.
 Once it appears, it goes on a rampage. It remains\nenraged until it demolishes everything around it.
 
-
+It ferries people across the sea on its back. It may\nsing an enchanting cry if it is in a good mood.
 
 Its transformation ability is perfect. However,\nif made to laugh, it can’t maintain its disguise.
 Its ability to evolve into many forms allows it to\nadapt smoothly and perfectly to any environment.
@@ -50231,7 +50762,7 @@ Its ability to evolve into many forms allows it to\nadapt smoothly and perfectly
 It lives close to water. Its long tail is ridged with a\nfin, which is often mistaken for a mermaid’s.
 It concentrates the weak electric charges emitted\nby its cells and launches wicked lightning bolts.
 Inhaled air is carried to its flame sac, heated, and\nexhaled as fire that reaches over 3,000 degrees\nFahrenheit.
-
+It is an artificial Pokémon. Since it doesn’t\nbreathe, people are excited by its potential\nto be useful in any environment.
 
 
 
@@ -50253,15 +50784,15 @@ It is said that somewhere in the ocean lies an\nisland where these gather. Only 
 
 
 
-
-
-
-
-
-
-
-
-
+It loves to bask in the sunlight. It uses the leaf on\nits head to seek out warm places.
+The spicy scent that wafts from around Bayleef’s\nneck somehow makes those who smell it want to\nfight.
+Anyone who stands beside it becomes\nrefreshed, just as if they were soaking in\nthe soothing atmosphere of a forest.
+It usually stays hunched over. If it is angry or\nsurprised, it shoots flames out of its back.
+Before battle, it turns its back on its opponent\nto demonstrate how ferociously its fire blazes.
+It has a secret, devastating move. It rubs its\nblazing fur to cause huge explosions.
+Its powerful, well-developed jaws are capable\nof crushing anything. Even its Trainer must be\ncareful.
+The tips of its fangs are slanted backward.\nOnce those fangs clamp down, the prey has\nno hope of escape.
+When it bites with its massive and\npowerful jaws, it shakes its head and\nsavagely tears its victim up.
 This Pokémon is extremely cautious. Its supple\ntail is well muscled and firm to the touch.
 It raises its offspring inside a long, narrow nest.\nOnce they’re old enough, it takes them outside\nthe nest to prepare them for independence.
 Hoothoot’s internal clock is precise at all times.\nIt tilts its head in a fixed rhythm.
@@ -50271,8 +50802,8 @@ Its eyes are specially adapted. They concentrate\neven faint light and enable it
 Even while there are prey ensnared in its nest of\nspun thread, Spinarak will wait motionlessly until\ndarkness falls.
 A single strand of a special thread is endlessly\nspun out of its rear. The thread leads back to\nits nest.
 
-
-
+It lives in ocean depths beyond the reach\nof sunlight. It flashes lights on its antennae\nto communicate with others of its kind.
+Portions of its dorsal fin mutated, becoming the\nparts that glow brightly to lure prey.
 It is unskilled at storing electric power.\nAny kind of shock causes it to discharge\nenergy spontaneously.
 On late nights illuminated by shooting stars, it\ngazes intently skyward, as if thinking of its home.
 Its body has a faintly sweet scent and is bouncy\nand soft. If it bounces even once, it cannot stop.
@@ -50284,7 +50815,7 @@ If static electricity builds in its body, its fleece\ndoubles in volume. Touchin
 As a result of storing too much electricity,\nit developed patches where even downy\nwool won’t grow.
 The bright light on its tail can be seen far\naway. It has been treasured since ancient\ntimes as a beacon.
 
-
+Due to the effects of the Sun Stone, it is now\nactive during the daytime. It likes to dance in\npools of sunlight.
 The fur on its body naturally repels water. It can\nstay dry even when it plays in the water.
 Its long ears are superb sensors. It can distinguish\nthe movements of things in water and tell what\nthey are.
 Although it always pretends to be a tree,\nits composition appears more similar to\nrock than to vegetation.
@@ -50303,7 +50834,7 @@ The tip of its forked tail quivers when it is\npredicting its opponent’s next 
 When exposed to the moon’s aura, the rings on\nits body glow faintly and it gains a mysterious\npower.
 Feared and loathed by many, it is believed to\nbring misfortune to all those who see it at night.
 When its head was bitten, toxins entered\nSlowpoke’s head and unlocked an extraordinary\npower.
-
+It administers its potions to weakened Pokémon\nit sees. These potions are derived from poison\nand secreted from holes in Slowking’s horns.
 This Pokémon startles people in the middle of\nthe night. It gathers fear as its energy.
 
 
@@ -50341,8 +50872,8 @@ It creates mazes in dark locations. When spotted,\nit flees into the ground by d
 It builds its nest on a steep cliff. When it is done\ngliding, it hops along the ground back to its nest.
 
 
-
-
+In truth, it is a cowardly Pokémon. It growls\neagerly in order to hide its fear from its\nopponent.
+It is actually timid and easily spooked.\nIf attacked, it desperately flails its limbs\nabout in an attempt to repel its opponent.
 Be cautious if this Pokémon starts sucking in\nwater—it will soon attack by scattering the toxic\nspikes that grow all over its body.
 This Pokémon’s pincers, which contain steel, can\ncrush any hard object they get ahold of into bits.
 
@@ -50362,21 +50893,21 @@ Covered by a shaggy coat, it is resistant to the\ncold. Its tusks of ice thicken
 
 It carries food all day long. There are tales about\nlost people who were saved by the food it had.
 
-
+Its sturdy, heavy-looking iron body is actually thin\nand light, so it can fly at speeds over 180 mph.
 It is smart enough to hunt in packs. It uses a\nvariety of cries for communicating with others.
 If you are burned by the flames it shoots from its\nmouth, the pain will never go away.
 
-
+It sleeps deep on the ocean floor to build its\nenergy. It is said to cause tornadoes as it wakes.
 This Pokémon lives and nests on a riverbank.\nAfter playing in the mud, it won’t be able to\nsettle down unless it washes its body.
 Donphan is covered in tough hide, so even being\nhit by a car won’t faze this Pokémon. However, it\nis extremely susceptible to rain.
-
+This artificial Pokémon evolved thanks to cutting-\nedge science. It sometimes displays behavior that\nis not in its programming.
 This Pokémon apparently used to live in much\nharsher environments, and thus it once had\nstronger psychic powers than it does now.
+Once a Smeargle reaches adulthood, it will have\nother members of its species leave paw prints on\nits back.
+This earnest Pokémon battles all sorts of\nopponents, searching for the fighting style\nthat suits it best.
+This Pokémon is adept at dance-like kicks.\nThe horn atop its head is made from the same\nsubstance that generally forms fur and claws.
 
-
-
-
-
-
+It loves violent thunder. The space between its\nhorns flickers bluish white when it is charging\nenergy.
+Each and every time it inhales and exhales,\nsparks leak from its mouth and nostrils.
 
 Anyone who takes even one taste of Blissey’s\negg becomes unfailingly caring and pleasant\nto everyone.
 
@@ -50389,17 +50920,17 @@ Extremely strong, it can change the landscape.\nIt is so insolent that it doesn�
 
 
 
+The small hooks on the soles of its feet latch\non to walls and ceilings, so it will never fall even\nwhile hanging upside down.
+Its strongly developed thigh muscles give it\nastounding agility and jumping performance.
+It agilely flits through the jungle and uses the\nsharp-edged leaves on its arms to cut down its\nprey.
 
+Torchic feels toasty warm if you hug it. It has a\nflame sac inside its belly, and the flames burn\ncontinuously as long as Torchic has life in it.
+It boosts its concentration by emitting harsh cries.\nIts kicks have outstanding destructive power.
+When facing a tough foe, it looses flames from\nits wrists. Its powerful legs let it jump clear over\nbuildings.
 
-
-
-
-
-
-
-
-
-
+It has the power to crush large boulders into\npieces. To rest, it buries itself in mud at the\nbottom of a river.
+Living on muddy ground that provides poor\nfooting has served to train its lower body\nand caused it to develop sturdy legs.
+Its arms are hard as rock. With one swing, it can\nbreak an enormous boulder into pieces.
 
 It bares its large fangs and barks vigorously to\ntry to intimidate opponents, but this is actually\na manifestation of its cowardly nature.
 They faithfully follow the orders of their leader.\nPrey targeted by Mightyena is never allowed to\nescape the outstanding teamwork of its pursuers.
@@ -50459,8 +50990,8 @@ Through yoga training, it gained the psychic\npower to predict its foe’s next 
 
 
 
-
-
+It cheers on partners while scattering sparks from\nits body. It climbs telephone poles to absorb\nelectricity.
+Exposure to electricity from Minun and Plusle\npromotes blood circulation and relaxes muscles.
 It lives around clean ponds. At night, its rear\nlights up. It converses with others by flashing\nits light.
 Illumise uses its sweet scent to guide Volbeat,\nhaving them form over 200 patterns in the\nnight sky.
 
@@ -50478,9 +51009,9 @@ It burns coal inside its shell for energy. It blows\nout black soot if it is end
 Spoink will die if it stops bouncing. The pearl on\nits head amplifies its psychic powers.
 It can perform odd dance steps to influence\nfoes. Its style of dancing became hugely\npopular overseas.
 
-
-
-
+This Pokémon lives in arid deserts.\nIt patiently awaits prey inside its funnel-\nshaped nest.
+Rather than using its underdeveloped wings for\nflight, it rubs them together, emitting ultrasonic\nwaves to attack its enemies.
+Known as the Desert Spirit, this Pokémon hides in\nthe sandstorms it causes by beating its wings.
 It prefers harsh environments, such as deserts.\nIt can survive for 30 days on water stored in\nits body.
 Packs of them follow travelers through the desert\nuntil the travelers can no longer move.
 It constantly grooms its cotton-like wings. It takes\na shower to clean itself if it becomes dirty.
@@ -50532,6 +51063,9 @@ Its steel-hard head can shatter boulders.\nIt longingly hopes for wings to grow 
 The cells within its shell transform with explosive\nspeed, preparing it for evolution.
 It flies around on its wings, which have grown in\nat last. In its happiness, it gushes hot flames,\nburning up everything it passes over.
 
+The magnetic force generated by its body repels\nthe ground’s natural magnetism, letting it float.
+It is formed by two Beldum joining\ntogether. Its two brains are linked,\namplifying its psychic power.
+It folds its four legs when flying. Its\nfour brains are said to be superior to\na supercomputer.
 
 
 
@@ -50551,18 +51085,15 @@ It flies around on its wings, which have grown in\nat last. In its happiness, it
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+The shell on its back is made of soil. If the shell\nis moist to the touch, Turtwig is very healthy.
+Grotle live in the forest. Each is said to have its\nown secret place for getting clean springwater.
+Ancient people imagined that beneath the\nground dwelt a gigantic Torterra.
+It is very agile. Before going to sleep,\nit extinguishes the flame on its tail to\nprevent fires.
+It skillfully controls the intensity of the fire on its\ntail to keep its foes at an ideal distance.
+This Pokémon confounds opponents with its\nspeed. It uses all its limbs to fight in its own\nunique style.
+A poor walker, it often falls down. However, its\nstrong pride makes it puff up its chest without\na care.
+It lives a solitary life. Its wings deliver wicked\nblows that can snap even the thickest of trees\nin half with a single hit.
+If anyone were to hurt its pride, it would slash\nthem in two with wings that can cleave through\nan ice floe.
 They flock around mountains and fields, chasing\nafter bug Pokémon. Their singing is noisy and\nannoying.
 Recognizing their own weakness, they always live\nin a group. When alone, a Staravia cries noisily.
 When Staravia evolve into Staraptor, they leave\nthe flock to live alone. They have sturdy wings.
@@ -50575,10 +51106,10 @@ Strong electricity courses through the tips of\nits sharp claws. A light scratch
 It can see clearly through walls to track down its\nprey and seek its lost young.
 
 
-
-
-
-
+It lived in jungles around a hundred million years\nago. It used its skillful headbutts to combat\nAerodactyl.
+Stifled by a thick skull that can withstand any\nimpact, this Pokémon’s brain never got very big.
+It is outstandingly armored. As a result, it has no\nparticular need to battle with others and can\nspend its time feeding on grass and berries.
+While it can guard against any sort of\nattack from the front, it is left without\nrecourse when attacked from behind.
 
 
 
@@ -50644,17 +51175,17 @@ It lives a quiet life on mountains that are\nperpetually covered in snow. It hid
 Evolution made it even more devious.\nIt communicates by clawing signs in boulders.
 As it zooms through the sky, this Pokémon seems\nto be receiving signals of unknown origin while\ntransmitting signals of unknown purpose.
 
+This Pokémon’s sturdy carapace protects\nit from volcanic eruptions. It shoots round\nrocks from the holes in its hands.
 
-
-
-
+When it gets excited, it thumps its chest.\nWith every thud, thunder roars and electric\nsparks shower all around.
+When shooting 3,600 degree Fahrenheit\nfireballs from its arms, its body takes on a\nwhitish hue from the intense heat.
 
 Yanmega’s wingbeats are so powerful that the\nPokémon blows down huge trees nearby when\nit vigorously launches itself into flight.
 When you see Leafeon asleep in a patch of\nsunshine, you’ll know it is using photosynthesis\nto produce clean air.
 It can control its body temperature at will.\nThis enables it to freeze the moisture in the\natmosphere, creating flurries of diamond dust.
 If it succeeds in catching even a faint breeze\nproperly, it can circle the globe without flapping\nonce.
 A frozen Mamoswine was dug from ice dating\nback 10,000 years. This Pokémon has been\naround a long, long, long time.
-
+An additional program was installed to create a\nmore advanced Pokémon, but it was apparently\nflawed. Porygon-Z moves oddly as a result.
 When trying to protect someone, it extends its\nelbows as if they were swords and fights savagely.
 
 It controls three units called Mini-Noses using\nmagnetic force. With them, it can attack a foe\nfrom three directions.
@@ -50700,6 +51231,15 @@ The lawn mower is one of the household\nappliances that led to the development o
 
 
 
+The leaf on Snivy’s tail generates energy when\nexposed to sunlight, making Snivy swifter and\nadding an edge to its moves.
+It runs low to the ground, weaving through the\ngrass, then mercilessly pummels its target by\nwhipping them with its vines.
+It generates energy from sunlight, then\namplifies that energy dozens of times\nwithin its long body.
+It’s more nimble than it looks, and it uses its\nspeed to confound its enemies. It rapidly\nlaunches fireballs from both nostrils.
+When Pignite enters battle, its body temperature\nrapidly soars until Pignite itself is engulfed by a\nscorching fireball.
+The flames blazing deep inside Emboar’s\nchest erupt vigorously from its chin, forming\na beard of fire.
+It wields the scalchop on its stomach like a knife,\nblocking the moves of its enemies before slashing\nback at them in swift retaliation.
+It’s said that people modeled swordplay after\nthe way Dewott’s movements flow like water\nwhile it’s wielding its two scalchops.
+A master of a sword-drawing art called iaijutsu,\nSamurott settles its battles with a single swing of\neither large sword sheathed in its foreleg armor.
 
 
 
@@ -50719,24 +51259,15 @@ The lawn mower is one of the household\nappliances that led to the development o
 
 
 
+Its heartbeat generates electricity. When Blitzle is\nsurprised and its heart rate goes up, the voltage\nof its electricity also rises.
+This Pokémon is aggressive and has a volatile\ndisposition. When agitated, it will illuminate its\nmane in yellow and fire off bolts of electricity.
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+It can dig through the ground at a speed of\n30 mph. It could give a car running aboveground\na good race.
+Forming a drill with its steel claws and head,\nit can bore through a steel plate, no matter\nhow thick it is.
 
 
 Always carrying squared logs, they help out\nwith construction. As they grow, they carry\nbigger logs.
@@ -50753,8 +51284,8 @@ This gentle Pokémon has strong protective\ninstincts. The leaves on its arms ar
 
 
 
-
-
+Pillows and beds stuffed with cotton exhaled by\nCottonee are soft and puffy, light and airy—\naltogether top quality.
+Like the wind, it can slip through any gap,\nno matter how small. It leaves balls of white\nfluff behind.
 The leaves on its head grow right back even if\nthey fall out. These bitter leaves refresh those\nwho eat them.
 The fragrance of the garland on its head has\na relaxing effect, but taking care of it is very\ndifficult.
 Its temperament is vicious and aggressive.\nThis Pokémon is also full of vitality and can\nmultiply rapidly before anyone notices.
@@ -50772,8 +51303,8 @@ After clamping down with its powerful jaws, it\ntwists its body around to rip it
 
 
 
-
-
+It stretches its saggy skin up to its neck to\nprotect itself. Among Scraggy, individuals with\nsaggier skin apparently garner more respect.
+Groups of them beat up anything that enters\ntheir territory. Each can spit acidic liquid from\nits mouth.
 
 
 
@@ -50787,14 +51318,14 @@ After clamping down with its powerful jaws, it\ntwists its body around to rip it
 
 It changes into the forms of others to surprise\nthem. Apparently, it often transforms into a\nsilent child.
 Stories say those who tried to catch Zoroark were\ntrapped in an illusion and punished.
-
-
+When its tail has gotten dirty from self-cleaning\nor from cleaning its nest, Minccino spends a\nwhole day washing its tail in clean springwater.
+Their white fur is coated in a special oil that\nmakes it easy for them to deflect attacks.
 This Pokémon is normally very innocent. When it\nis staring at something invisible, it is unblinking\nand utterly silent.
 This Pokémon will hypnotize children to put them\nto sleep before carrying them away. Be wary of\nnights when the starlight is bright.
 Gothitelle unleashes psychic energy and shows\nopponents dreams of the universe’s end. These\ndreams are apparently ethereal and beautiful.
-
-
-
+Because their bodies are enveloped in a special\nliquid, they can survive in any environment.
+Since they have two divided brains, at times\nthey suddenly try to take two different actions\nat once.
+Their arms are made of a special liquid. They\nuse psychic power to control these arms and\ncrush boulders.
 It’s not very good at flying yet. It watches the\ndances of its Swanna parents to learn how to\nmove its wings.
 Centered around its leader, the flock dances in\nperfect sync to strengthen its unity.
 
@@ -50818,8 +51349,8 @@ Be wary of the poisonous spores it releases.\nMushrooms resembling Amoonguss’s
 
 
 It gently holds injured and weak Pokémon in its\nfins. Its special membrane heals their wounds.
-
-
+Joltik that live in cities have learned a technique\nfor sucking electricity from the outlets in houses.
+They employ an electrically charged web\nto trap their prey. While it is immobilized\nby shock, they leisurely consume it.
 
 
 
@@ -50846,8 +51377,8 @@ Cryogonal appear during cold seasons. It is said\nthat people and Pokémon who d
 In fights, they dominate with onslaughts of\nflowing, continuous attacks. With their sharp\nclaws, they cut enemies.
 When Mienshao lets out a bizarre wail, you’re in\ndanger. A flurry of kicks and chops too fast to\nsee is about to be unleashed!
 
-
-
+These Pokémon are thought to have been\ncreated by the science of an ancient and\nmysterious civilization.
+When the seal on its chest is removed, it rages\nindiscriminately. During such rampages, it can\nturn a whole town into a mountain of rubble.
 Pawniard will fearlessly challenge even powerful\nfoes. In a pinch, it will cling to opponents and\npierce them with the blades all over its body.
 This Pokémon commands a group of several\nPawniard. Groups that are defeated in territorial\ndisputes are absorbed by the winning side.
 
@@ -50885,15 +51416,15 @@ Its burning body causes it to be unpopular in hot\nparts of the world, but in co
 
 
 
-
-
-
-
-
-
-
-
-
+When Chespin tenses up just before landing a\nheadbutt, the spikes on its head sharpen to\npoints, piercing the enemy’s body on contact.
+It’s protected by a sturdy shell. The shell is\nalso very heavy, which naturally strengthens\nQuilladin’s lower body.
+When its allies are in trouble, Chesnaught\ncreates a shield with its arms and uses its\nown body to block attacks.
+This Pokémon gets worked up easily. Its body\ncan also overheat, so it uses its ears to dissipate\nthe heat and calm down.
+It ignites the twig from its tail and waves the twig\naround to signal its allies. To indicate danger,\nit draws circles in the air with the twig’s flame.
+It leaves burn marks in the ground with the flame\nat the tip of its wand. Long ago, people used the\nshapes of these burn marks for divination.
+Its happy-go-lucky look is an act intended to fool\nits enemies. It will suddenly drop the facade and\noverwhelm its foes with its blinding speed.
+It excels at devising battle strategies that make\nuse of the terrain, and it never misses its mark\nwhen throwing bubble-covered pebbles.
+The movement of air against the long tongue\nGreninja keeps wrapped around its neck allows\nit to sense enemies it can’t see.
 
 
 
@@ -50993,6 +51524,9 @@ It can sense the feelings of others by touching\nthem with its horns. This speci
 
 
 
+It keeps its ears covered to prevent the intense\npsychic power in its body from escaping, but it\nfalls unconscious if this power builds too much.
+Though it has enough psychic power to blast\naway any opponent, Meowstic prefers to support\nits allies rather than attack.
+Female Meowstic are more aggressive than\nmales. Their expression remains blank even\nwhile they’re wielding immense psychic power.
 
 
 
@@ -51001,11 +51535,8 @@ It can sense the feelings of others by touching\nthem with its horns. This speci
 
 
 
-
-
-
-
-
+It protects itself from tough foes by flashing its\nluminescent spots to discourage them.
+Its hypnotic powers are dangerously strong.\nAnyone who falls under Malamar’s control\nloses their memories surrounding the event.
 
 
 Skrelp evades its enemies by hiding amid\ndrifting seaweed. It eats rotten seaweed to\ncreate its poison.
@@ -51053,18 +51584,18 @@ Ultrasonic waves emitted by a Noivern can\npulverize a large boulder. This Poké
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+Silently it glides, streaking toward its targets to\nget close to them. Before they even notice it,\nit begins to pelt them with vicious kicks.
+This narcissistic Pokémon is a clean freak.\nIf you don’t groom it diligently, it may stop\nlistening to you.
+It cunningly conceals arrow quills in its wings. It\nlaunches these quills with such precision that they\ncan pierce a pebble at over a hundred yards.
+If you try too hard to get close to it, it won’t\nopen up to you. Even if you do grow close,\ngiving it too much affection is still a no-no.
+At its throat, it bears a bell of fire. The bell rings\nbrightly whenever fire spews out.
+When its fighting spirit is set alight, the flames\naround its waist become especially intense.
+This Pokémon can control balloons made of\nwater. It practices diligently so it can learn to\nmake big balloons.
+A skillful dancer, it creates a sequence of water\nballoons as it dances, then briskly bombards its\nenemies.
+To Primarina, every battle is a stage. It takes\ndown its prey with beautiful singing and dancing.
+Using its beak to strike 16 times per second,\nit opens holes in even the hardest of trees.
+It flies around using a hundred different cries in\nvarious ways to declare its territory to others.
+The compressed gas in Toucannon’s beak\nlaunches seeds with such force that they can\nshatter large boulders.
 Its stomach fills most of its torso. It wanders the\nsame path every day, searching for fresh food.
 Once it finds signs of prey, it will patiently stake\nout the location, waiting until the sun goes down.
 
@@ -51092,8 +51623,8 @@ This Pokémon wanders the seaside looking for\nfood. It often gets electric shoc
 This Pokémon lives within a dome made by its\nown legs. Toxapex monitors its surroundings by\nsensing the flow of the tide through its spikes.
 This Pokémon covers itself in mud that it has\nregurgitated. The mud won’t dry out even if it’s\nexposed to the sun for a long time.
 This Pokémon has been treasured not just for\nits physical labor but also because it produces\nhigh-quality mud used for making pottery.
-
-
+Dewpider uses sticky threads to create the water\nbubble that covers its head, so the bubble very\nrarely bursts.
+A caring Pokémon, Araquanid carries Dewpider\naround inside its water bubble to protect them as\nit walks. It protects its food in its bubble too.
 
 Fomantis hates having its naps interrupted. It fires\noff beams using energy it gathers by bathing in\nthe sun.
 By masquerading as a bug Pokémon, it lowers the\nguard of actual bug Pokémon lured in by a scent\nof sweet flowers. Its sickles bring them down.
@@ -51108,7 +51639,7 @@ Salazzle makes its opponents light-headed with\npoisonous gas, then captivates t
 Its sweat is sweet, like syrup made from boiled-\ndown fruit. Because of this, Bounsweet was highly\nvalued in the past, when sweeteners were scarce.
 Steenee spreads a sweet scent that makes others\nfeel invigorated. This same scent is popular for\nantiperspirants.
 This Pokémon is proud and aggressive. However,\nit is said that a Tsareena will instantly become\ncalm if someone touches the crown on its calyx.
-
+It uses its vine to pick flowers. The flowers that\nComfey attaches to itself develop healing\nproperties.
 People used to mistake Oranguru for a human\nwhen they saw it issue command after command\nto the other Pokémon of the forest.
 This Pokémon battles by throwing hard berries.\nIt won’t obey a Trainer who throws Poké Balls\nwithout skill.
 
@@ -51135,20 +51666,20 @@ The terrifying Palossand drags smaller Pokémon\ninto its sandy body. Once its v
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+This Pokémon is born in the ozone layer. It falls\nto the ground once the outer shell enclosing its\ncore grows heavy.
+This Pokémon is born in the ozone layer. It falls\nto the ground once the outer shell enclosing its\ncore grows heavy.
+This Pokémon is born in the ozone layer. It falls\nto the ground once the outer shell enclosing its\ncore grows heavy.
+This Pokémon is born in the ozone layer. It falls\nto the ground once the outer shell enclosing its\ncore grows heavy.
+This Pokémon is born in the ozone layer. It falls\nto the ground once the outer shell enclosing its\ncore grows heavy.
+This Pokémon is born in the ozone layer. It falls\nto the ground once the outer shell enclosing its\ncore grows heavy.
+This Pokémon is born in the ozone layer. It falls\nto the ground once the outer shell enclosing its\ncore grows heavy.
+Minior that fall to the ground try to return to\nspace, but their wish will not come true—all they\ncan do is fade away.
+Minior that fall to the ground try to return to\nspace, but their wish will not come true—all they\ncan do is fade away.
+Minior that fall to the ground try to return to\nspace, but their wish will not come true—all they\ncan do is fade away.
+Minior that fall to the ground try to return to\nspace, but their wish will not come true—all they\ncan do is fade away.
+Minior that fall to the ground try to return to\nspace, but their wish will not come true—all they\ncan do is fade away.
+Minior that fall to the ground try to return to\nspace, but their wish will not come true—all they\ncan do is fade away.
+Minior that fall to the ground try to return to\nspace, but their wish will not come true—all they\ncan do is fade away.
 Komala spends its entire life sleeping. It feeds on\nleaves that contain a potent poison only Komala\ncan break down.
 
 
@@ -51194,17 +51725,17 @@ It lets its arm hang, and then—quick as a flash—\nswings upward to land its 
 
 
 
+The stick Grookey holds has grown harder and\nmore flexible after soaking in the energy that\nemanates from inside Grookey’s body.
+It skillfully uses its two sticks not only for\ndrumming out rapid beats but also for\npummeling opponents during battle.
+Though it has a calm disposition, it won’t tolerate\nthose who drum up discord. It strictly disciplines\noffenders until they learn their lesson.
 
+Once its body has heated up, Scorbunny can use\nthe full extent of its power. That’s why it does\nwarm-up exercises.
+Thanks to its soft and fluffy fur, Raboot can easily\nheat up its fire energy and produce flames with\nmore power.
+Although Cinderace loses its cool easily, it will\nbattle flawlessly for a Trainer it trusts.
 
-
-
-
-
-
-
-
-
-
+It gets berries to eat by shooting them down\nwith bullets of water it spurts from its mouth.\nIts aim is perfect.
+It extends its long, slimy tongue at blinding\nspeeds and finishes off its prey with great skill.
+It uses special lenses in its eyes to sense things\nabout its opponents—like their body heat—then\nattacks once it identifies a weak spot.
 
 It stores berries in its cheeks. When there are no\nberries to be found, Skwovet will stuff pebbles\ninto its cheeks to stave off its cravings.
 If it spots a berry tree, it will immediately go to\ngather berries without a sideways glance—even if\nit’s in the middle of a battle.
@@ -51271,16 +51802,16 @@ This Pokémon has complete control over its hair.\nGrimmsnarl normally keeps its
 
 
 
-
-
-
-
-
-
-
-
-
-
+The more sweet aromas it absorbs, the more its\nbody swells. Milcery will deflate when its energy\nlevel drops.
+Desserts that Alcremie have decorated with\ntheir cream have a rich, sweet flavor and bring\nhappiness to all who eat them.
+Slight vibrations shook its cells when it evolved,\ngiving it a sweet and tart flavor.
+Slight vibrations shook its cells when it evolved,\ngiving it an aromatic flavor.
+Slight vibrations shook its cells when it evolved,\ngiving it a refreshing flavor.
+Slight vibrations shook its cells when it evolved,\ngiving it a sour flavor.
+Slight vibrations shook its cells when it evolved,\ngiving it a salty flavor.
+Slight vibrations shook its cells when it evolved,\ngiving it a mixed flavor.
+Slight vibrations shook its cells when it evolved,\ngiving it a bitter flavor.
+Slight vibrations shook its cells when it evolved,\ngiving it a complex flavor.
 
 The brass, which is the one that stands at the\nfront and issues orders, is the strongest and\nsmartest of the six.
 This Pokémon generates electricity when it\ndigests food. It uses its five hard teeth to scrape\nseaweed off surfaces and eat it.
@@ -51300,7 +51831,7 @@ This Pokémon was brought to Paldea long ago by\npeople from a faraway land. It�
 
 
 
-
+Duraludon’s body is comprised of a special metal\nthat’s lightweight and scratch resistant. It’s also\nsmooth, as though it was given a mirror finish.
 
 In the evening, groups of Dreepy will fly at high\nspeeds over the ocean and poke at Pokémon in\nthe water for fun.
 This Pokémon flies around at over 120 miles per\nhour. If a Drakloak is defeated in a battle, its\nDreepy will wander off without a second thought.
@@ -51443,8 +51974,8 @@ This seems to be the Winged King mentioned in\nan old expedition journal. It was
 
 Much remains unknown about this creature.\nIt resembles Cyclizar, but it is far more ruthless\nand powerful.
 
-Ecology under research.
-Ecology under analysis.
+This ferocious creature is shrouded in mystery.\nIt’s named after an aquatic monster mentioned\nin an old expedition journal.
+Many of its physical characteristics match those\nof a Virizion from the future that was covered in\na paranormal magazine.
 It crossed the sea and drifted ashore in a new\nland. Surviving in this place led it to take on a\nunique appearance and gain special powers.
 Dipplin is two creatures in one Pokémon.\nIts evolution was triggered by a special apple\ngrown only in one place.
 Supposedly, the regrets of a tea ceremony master\nwho died before perfecting his craft lingered in\nsome matcha and became a Pokémon.
@@ -51458,6 +51989,19 @@ This Pokémon’s type changes based on which\nmask it’s wearing. It confounds
 This form excels in both attack and defense.\nIt ceaselessly unleashes moves like a spring\ngushes water.
 This form is the most aggressive, bombarding\nenemies with the intensity of flames blazing\nwithin a hearth.
 This form has excellent defenses, absorbing\nimpacts solidly like the cornerstones that support\nhouses.
+It gathers static electricity from its surroundings.\nThe beams it launches when down on all fours\nare tremendously powerful.
+Seven syrpents live inside an apple made\nof syrup. The syrpent in the center is the\ncommander.
+There are scant few reports of this creature\nbeing sighted. One short video shows it\nrampaging and spouting pillars of flame.
+It’s said to incinerate everything around it with\nlightning launched from its fur. Very little is\nknown about this creature.
+It resembles a Pokémon described in a\ndubious magazine as a Terrakion that had\nbeen modified by an evil organization.
+It resembles a mysterious object introduced in a\nparanormal magazine as a cutting-edge weapon\nshaped like a Cobalion.
+Terapagos protects itself using its power to\ntransform energy into hard crystals. This Pokémon\nis the source of the Terastal phenomenon.
+Upon sensing danger, it prepares itself for\nbattle by creating a sturdy shell of crystallized\nTerastal energy.
+In this form, Terapagos resembles the world\nas the ancients saw it, and its Terastal energy\nis abnormally amplified.
+It feeds others toxic mochi that draw out desires\nand capabilities. Those who eat the mochi fall\nunder Pecharunt’s control, chained to its will.
+Parts of its body turned to stone when\nit evolved thanks to an extremely rare\nore found in volcanic areas.
+Overqwil’s poisonous spikes will reflexively react\neven while Overqwil sleeps, stabbing any moving\nthing that approaches.
+It lives just offshore in cold parts of the world.\nIts poisonous spikes are thicker and shorter than\nthose of other regions’ Qwilfish.
 ~~~~~~~~~~~~~~~
 Text File : SV_place_name_indirect
 ~~~~~~~~~~~~~~~
@@ -51632,6 +52176,36 @@ in the Kitakami Wilds
 along the Infernal Pass
 on Oni Mountain
 at the Chilling Waterhead
+
+at Blueberry Academy
+
+in the Savanna Biome
+in the Terarium
+in the Coastal Biome
+in the Terarium
+in the Canyon Biome
+in the Terarium
+in the Polar Biome
+in the Terarium
+at the Central Plaza
+in the Terarium
+at the Savanna Plaza
+in the Terarium
+at the Coastal Plaza
+in the Terarium
+at the Canyon Plaza
+in the Terarium
+at the Polar Plaza
+in the Terarium
+in Chargestone Cavern
+in the Terarium
+in the Torchlit Labyrinth
+in the Terarium
+in the Area Zero Underdepths
+
+in the Area Zero Underdepths
+
+in the Terarium
 
 ~~~~~~~~~~~~~~~
 Text File : SWSHDLC_place_name_out
@@ -55164,34 +55738,34 @@ TM198
 TM199
 TM200
 TM201
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+TM202
+TM203
+TM204
+TM205
+TM206
+TM207
+TM208
+TM209
+TM210
+TM211
+TM212
+TM213
+TM214
+TM215
+TM216
+TM217
+TM218
+TM219
+TM220
+TM221
+TM222
+TM223
+TM224
+TM225
+TM226
+TM227
+TM228
+TM229
 
 
 
@@ -55384,6 +55958,82 @@ bag of Poltchageist Powder
 Fresh-Start Mochi
 Roto-Stick
 Glimmering Charm
+hunk of Metal Alloy
+Indigo Style Card
+Oddish Leaf
+Tentacool Stinger
+bag of Doduo Down
+bag of Seel Fur
+Exeggcute Shell
+bag of Tyrogue Sweat
+Rhyhorn Fang
+bag of Horsea Ink
+bag of Elekid Fur
+bag of Magby Hair
+Lapras Teardrop
+Porygon Fragment
+bag of Chinchou Sparks
+bag of Snubbull Hair
+Skarmory Feather
+bag of Smeargle Paint
+bag of Plusle Fur
+bag of Minun Fur
+Trapinch Shell
+Beldum Claw
+Cranidos Spike
+Shieldon Claw
+bag of Blitzle Mane Hair
+Drilbur Claw
+bag of Cottonee Fluff
+bag of Scraggy Sweat
+bag of Minccino Fur
+bag of Solosis Gel
+bag of Joltik Thread
+Golett Shard
+bag of Espurr Fur
+bag of Inkay Ink
+Pikipek Feather
+bag of Dewpider Thread
+Comfey Flower
+Minior Shell
+bag of Milcery Cream
+bag of Duraludon Tarnish
+Articuno Treat
+Zapdos Treat
+Moltres Treat
+Raikou Treat
+Entei Treat
+Suicune Treat
+Lugia Treat
+Ho-Oh Treat
+Latias Treat
+Latios Treat
+Kyogre Treat
+Groudon Treat
+Rayquaza Treat
+Cobalion Treat
+Terrakion Treat
+Virizion Treat
+Reshiram Treat
+Zekrom Treat
+Kyurem Treat
+Solgaleo Treat
+Lunala Treat
+Necrozma Treat
+Kubfu Treat
+Glastrier Treat
+Spectrier Treat
+Indigo Disk
+Fiery Pick
+Stellar Tera Shard
+Mythical Pecha Berry
+Blueberry Tablecloth
+set of Blueberry Chairs
+Synchro Machine
+Meteorite
+Scarlet Book
+Violet Book
+copy of Briar’s Book
 ~~~~~~~~~~~~~~~
 Text File : zukan_comment_ultramoon
 ~~~~~~~~~~~~~~~
@@ -59418,34 +60068,34 @@ TM198s
 TM199s
 TM200s
 TM201s
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+TM202s
+TM203s
+TM204s
+TM205s
+TM206s
+TM207s
+TM208s
+TM209s
+TM210s
+TM211s
+TM212s
+TM213s
+TM214s
+TM215s
+TM216s
+TM217s
+TM218s
+TM219s
+TM220s
+TM221s
+TM222s
+TM223s
+TM224s
+TM225s
+TM226s
+TM227s
+TM228s
+TM229s
 
 
 
@@ -59638,6 +60288,82 @@ bags of Poltchageist Powder
 Fresh-Start Mochi
 Roto-Sticks
 Glimmering Charms
+hunks of Metal Alloy
+Indigo Style Cards
+Oddish Leaves
+Tentacool Stingers
+bags of Doduo Down
+bags of Seel Fur
+Exeggcute Shells
+bags of Tyrogue Sweat
+Rhyhorn Fangs
+bags of Horsea Ink
+bags of Elekid Fur
+bags of Magby Hair
+Lapras Teardrops
+Porygon Fragments
+bags of Chinchou Sparks
+bags of Snubbull Hair
+Skarmory Feathers
+bags of Smeargle Paint
+bags of Plusle Fur
+bags of Minun Fur
+Trapinch Shells
+Beldum Claws
+Cranidos Spikes
+Shieldon Claws
+bags of Blitzle Mane Hair
+Drilbur Claws
+bags of Cottonee Fluff
+bags of Scraggy Sweat
+bags of Minccino Fur
+bags of Solosis Gel
+bags of Joltik Thread
+Golett Shards
+bags of Espurr Fur
+bags of Inkay Ink
+Pikipek Feathers
+bags of Dewpider Thread
+Comfey Flowers
+Minior Shells
+bags of Milcery Cream
+bags of Duraludon Tarnish
+Articuno Treats
+Zapdos Treats
+Moltres Treats
+Raikou Treats
+Entei Treats
+Suicune Treats
+Lugia Treats
+Ho-Oh Treats
+Latias Treats
+Latios Treats
+Kyogre Treats
+Groudon Treats
+Rayquaza Treats
+Cobalion Treats
+Terrakion Treats
+Virizion Treats
+Reshiram Treats
+Zekrom Treats
+Kyurem Treats
+Solgaleo Treats
+Lunala Treats
+Necrozma Treats
+Kubfu Treats
+Glastrier Treats
+Spectrier Treats
+Indigo Disks
+Fiery Picks
+Stellar Tera Shards
+Mythical Pecha Berries
+Blueberry Tablecloths
+sets of Blueberry Chairs
+Synchro Machines
+Meteorites
+copies of the Scarlet Book
+copies of the Violet Book
+copies of Briar’s Book
 ~~~~~~~~~~~~~~~
 Text File : zukan_comment_shiningpearl
 ~~~~~~~~~~~~~~~
