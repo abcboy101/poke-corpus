@@ -2,8 +2,7 @@ import corpusJson from '../res/corpus.json'
 
 export interface Speaker {
   readonly file: string,
-  readonly line: number,
-  readonly count: number
+  readonly textFile: string
 }
 
 export interface Collection {

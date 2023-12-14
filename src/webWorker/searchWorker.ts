@@ -109,7 +109,14 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
 
     // Load speakers
     // Since all dialogue with speaker names are in the script file while the speaker names are in the common file, we always have to load it separately
-    const speakerPromises = (speaker === undefined || fileKey !== 'script') ? [] : languages.map((languageKey) => getFileFromCache(collectionKey, languageKey, speaker.file).then((data) => data.split(/\r\n|\n/).slice(speaker.line, speaker.line + speaker.count)));
+    const speakerPromises = (speaker === undefined || fileKey !== 'script') ? [] : languages.map((languageKey) =>
+      getFileFromCache(collectionKey, languageKey, speaker.file).then((data) => {
+        const lines = data.split(/\r\n|\n/);
+        const start = lines.indexOf(`Text File : ${speaker.textFile}`) + 2;
+        const end = lines.indexOf('~~~~~~~~~~~~~~~', start);
+        return lines.slice(start, end);
+      })
+    );
 
     // Filter only the lines that matched
     Promise.all([Promise.all(processingFilePromises), Promise.all(speakerPromises)]).then(([processedFiles, speakers]) => {
@@ -126,7 +133,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       const fileResults: string[][] = [];
       const replaceSpeaker = (s: string, languageIndex: number) => speaker === undefined ? s : s.replace(/(.*?)\[VAR 0114\(([0-9A-F]{4})\)\](?:$|(?=\u{F0000}))/u, (_, rest, speakerIndexHex) => {
         const speakerIndex = parseInt(speakerIndexHex, 16);
-        const speakerName = speakers[languageIndex][speakerIndex - 1];
+        const speakerName = speakers[languageIndex][speakerIndex];
         return `${speakerIndex}\u{F1100}${speakerName}${speakerDelimiter(languages[languageIndex]) ?? ': '}\u{F1101}${rest}`;
       });
       Array.from(lineKeysSet).sort((a, b) => a - b).forEach((i) => fileResults.push(fileData.map((lines, languageIndex) => postprocessString(replaceSpeaker(lines[i] ?? '', languageIndex)))));
