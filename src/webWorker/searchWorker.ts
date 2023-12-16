@@ -109,7 +109,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
 
     // Load speakers
     // Since all dialogue with speaker names are in the script file while the speaker names are in the common file, we always have to load it separately
-    const speakerPromises = (speaker === undefined || fileKey !== 'script') ? [] : languages.map((languageKey) =>
+    const speakerPromises = (speaker === undefined) ? [] : languages.map((languageKey) =>
       getFileFromCache(collectionKey, languageKey, speaker.file).then((data) => {
         const lines = data.split(/\r\n|\n/);
         const start = lines.indexOf(`Text File : ${speaker.textFile}`) + 2;

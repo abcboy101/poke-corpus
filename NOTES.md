@@ -59,6 +59,7 @@ The text dumps for Brilliant Diamond/Shining Pearl have been converted to the st
 - `[WAIT]` takes a float as an argument instead of an integer.
 - `[SFX]` takes a float as an argument. (This is equivalent to `[VAR BE05]` in other games.)
 - The Unity rich text tags `<color>`, `<position>`, `<line-indent>`, and `<size>` are used to format text.
+- Speaker names are taken from `Dpr/masterdatas/MsgWindowData.json` and converted to the `[VAR 0114]` format used in other games.
 
 ### GB/GBC/GBA
 The text dumps from the GB, GBC, and GBA games were done by [RobbiRobb](https://robbirobb.de/spiele).

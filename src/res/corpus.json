@@ -1,5 +1,5 @@
 {
-  "hash": "D91A7943",
+  "hash": "630E9549",
   "languages": [
     "qid-ZZ",
     "ja-Hrkt-JP",
@@ -458,7 +458,11 @@
       "version": "1.3.0",
       "files": [
         "message"
-      ]
+      ],
+      "speaker": {
+        "file": "message",
+        "textFile": "dlp_speakers_name"
+      }
     },
     "LegendsArceus": {
       "id": "la",
