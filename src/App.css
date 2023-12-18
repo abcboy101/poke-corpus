@@ -22,6 +22,10 @@
   --number-singular-color-dark: #82EB71;
   --number-plural-color-light: #938300;
   --number-plural-color-dark: #EBEB51;
+  --version-1-color-light: #9E2A22;
+  --version-1-color-dark: #F7837B;
+  --version-2-color-light: #552277;
+  --version-2-color-dark: #AE7BD0;
 }
 
 @media (prefers-color-scheme: light) {
@@ -38,6 +42,8 @@
     --gender-female-color: var(--gender-female-color-light);
     --number-singular-color: var(--number-singular-color-light);
     --number-plural-color: var(--number-plural-color-light);
+    --version-1-color: var(--version-1-color-light);
+    --version-2-color: var(--version-2-color-light);
   }
 
   body:has(.App-mode-system) {
@@ -58,6 +64,8 @@
   --gender-female-color: var(--gender-female-color-light);
   --number-singular-color: var(--number-singular-color-light);
   --number-plural-color: var(--number-plural-color-light);
+  --version-1-color: var(--version-1-color-light);
+  --version-2-color: var(--version-2-color-light);
 }
 
 body:has(.App-mode-light) {
@@ -78,6 +86,8 @@ body:has(.App-mode-light) {
     --gender-female-color: var(--gender-female-color-dark);
     --number-singular-color: var(--number-singular-color-dark);
     --number-plural-color: var(--number-plural-color-dark);
+    --version-1-color: var(--version-1-color-dark);
+    --version-2-color: var(--version-2-color-dark);
   }
 
   body:has(.App-mode-system) {
@@ -98,6 +108,8 @@ body:has(.App-mode-light) {
   --gender-female-color: var(--gender-female-color-dark);
   --number-singular-color: var(--number-singular-color-dark);
   --number-plural-color: var(--number-plural-color-dark);
+  --version-1-color: var(--version-1-color-dark);
+  --version-2-color: var(--version-2-color-dark);
 }
 
 body:has(.App-mode-dark) {
@@ -205,6 +217,11 @@ dt {
   color: var(--number-plural-color);
 }
 
+.number-0 .branch.zero {
+  border-bottom: 1px dotted var(--text);
+  color: color-mix(in oklab, var(--number-singular-color), var(--number-plural-color));
+}
+
 .gender-2.number-0 .branch.male.singular {
   border-bottom: 1px dotted var(--text);
   color: color-mix(in oklab, var(--gender-male-color) 75%, var(--number-singular-color));
@@ -225,10 +242,24 @@ dt {
   color: color-mix(in oklab, var(--gender-female-color) 50%, var(--number-plural-color));
 }
 
+.apocope1, .apocope2 {
+  border-bottom: 1px dotted var(--text);
+}
+
+.version1 {
+  border-bottom: 1px dotted var(--text);
+  color: var(--version-1-color);
+}
+
+.version2 {
+  border-bottom: 1px dotted var(--text);
+  color: var(--version-2-color);
+}
+
 .gender-0 .female:not(.male), .gender-0 .gender, .gender-0 .neuter,
 .gender-1 .male:not(.female), .gender-1 .gender, .gender-1 .neuter,
-.number-1 .plural, .number-1 .number,
-.number-2 .singular, .number-2 .number {
+.number-1 .plural, .number-1 .zero, .number-1 .number,
+.number-2 .singular, .number-2 .zero, .number-2 .number {
   display: none;
 }
 

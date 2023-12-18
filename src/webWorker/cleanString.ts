@@ -228,10 +228,11 @@ function genderBranch(male: string, female: string, neuter: string = '') {
  *
  * Returns the resulting string.
  */
-function numberBranch(singular: string, plural: string) {
+function numberBranch(singular: string, plural: string, zero: string = '') {
   const results = [];
   if (singular.length > 0) results.push(`<span class="branch singular">${singular}</span>`);
   if (plural.length > 0) results.push(`<span class="branch plural">${plural}</span>`);
+  if (zero.length > 0) results.push(`<span class="branch zero">${zero}</span>`);
   return results.join('<span class="number">/</span>');
 }
 
@@ -256,6 +257,30 @@ function genderNumberBranch(maleSingular: string, femaleSingular: string, malePl
   if (femaleSingular.length > 0 && femalePlural.length > 0) classResults.push('female');
   const className = classResults.join(' ');
   return [singular, plural].join(`<span class="${className}">/</span>`);
+}
+
+/**
+ * Converts the apocope forms of a string to HTML, separated by a slash.
+ *
+ * Returns the resulting string.
+ */
+function apocopeBranch(form1: string, form2: string) {
+  const results = [];
+  if (form1.length > 0) results.push(`<span class="branch apocope1">${form1}</span>`);
+  if (form2.length > 0) results.push(`<span class="branch apocope2">${form2}</span>`);
+  return results.join('<span class="apocope">/</span>');
+}
+
+/**
+ * Converts the version-specific forms of a string to HTML, separated by a slash.
+ *
+ * Returns the resulting string.
+ */
+function versionBranch(form1: string, form2: string) {
+  const results = [];
+  if (form1.length > 0) results.push(`<span class="branch version1">${form1}</span>`);
+  if (form2.length > 0) results.push(`<span class="branch version2">${form2}</span>`);
+  return results.join('<span class="version">/</span>');
 }
 
 /**
@@ -362,6 +387,22 @@ function postprocessString(s: string) {
       const endMP = endFS + parseInt(lenMP, 16);
       const endFP = endMP + parseInt(lenFP, 16);
       return `${genderNumberBranch(rest.substring(0, endMS), rest.substring(endMS, endFS), rest.substring(endFS, endMP), rest.substring(endMP, endFP))}${rest.substring(endFP)}`;
+    })
+    .replaceAll(/\[VAR (?:1104|1106)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, len2, len1, rest) => {
+      const end1 = parseInt(len1, 16);
+      const end2 = end1 + parseInt(len2, 16);
+      return `${apocopeBranch(rest.substring(0, end1), rest.substring(end1, end2))}${rest.substring(end2)}`;
+    })
+    .replaceAll(/\[VAR (?:1105)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),00([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenP, lenS, lenZ, rest) => {
+      const endS = parseInt(lenS, 16);
+      const endP = endS + parseInt(lenP, 16);
+      const endZ = endP + parseInt(lenZ, 16);
+      return `${numberBranch(rest.substring(0, endS), rest.substring(endS, endP), rest.substring(endP, endZ))}${rest.substring(endZ)}`;
+    })
+    .replaceAll(/\[VAR (?:1107)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, len2, len1, rest) => {
+      const end1 = parseInt(len1, 16);
+      const end2 = end1 + parseInt(len2, 16);
+      return `${versionBranch(rest.substring(0, end1), rest.substring(end1, end2))}${rest.substring(end2)}`;
     })
     .replaceAll(/\[VAR 1[3-7A]00\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)(?:\|([^[<{]*?))?\)\]/gu, (_, male, female) => genderBranch(male, female ?? ''))
     .replaceAll(/\[VAR 1[3-7A]01\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)(?:\|([^[<{]*?))?\)\]/gu, (_, singular, plural) => numberBranch(singular, plural ?? ''))
