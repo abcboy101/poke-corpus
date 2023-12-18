@@ -175,6 +175,11 @@ dt {
   text-align: right;
 }
 
+.line-align-left {
+  display: block;
+  text-align: left;
+}
+
 .gender-2 .branch.male {
   border-bottom: 1px dotted var(--text);
   color: var(--gender-male-color);
