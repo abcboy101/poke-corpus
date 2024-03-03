@@ -62,7 +62,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
    * Returns a promise of the text of the file.
    */
   const getFileFromCache = (collectionKey: string, languageKey: string, fileKey: string) => {
-    const url = process.env.PUBLIC_URL + `/corpus/${collectionKey}/${languageKey}_${fileKey}.txt.gz`;
+    const url = import.meta.env.BASE_URL + `corpus/${collectionKey}/${languageKey}_${fileKey}.txt.gz`;
     return ('caches' in self ? caches.open(cacheVersion)
     .then((cache) => cache.match(url).then(res => res
       ?? cache.add(url).then(() => cache.match(url)).then(res => res
@@ -74,7 +74,10 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       return null;
     })
     .then((res) => res === null ? '' :
-      res.blob().then((blob) => new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text()))
+      res.blob().then((blob) => import.meta.env.DEV ? new Response(blob.stream()).text() : new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text()))
+      // Due to a bug, the Vite dev server serves .gz files with `Content-Encoding: gzip`.
+      // To work around this, don't bother decompressing the file in the dev environment.
+      // https://github.com/vitejs/vite/issues/12266
     .then(preprocessString);
   }
 

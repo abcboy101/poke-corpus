@@ -502,12 +502,12 @@ function Search() {
     if (params.query.length > 0 && params.collections.length > 0 && params.languages.length > 0) {
       if (workerRef.current === null) {
         console.log('Creating new worker...');
-        workerRef.current = new Worker(new URL("./webWorker/searchWorkerManager.ts", import.meta.url));
+        workerRef.current = new Worker(new URL("./webWorker/searchWorkerManager.ts", import.meta.url), {type: 'module'});
         workerRef.current.addEventListener("message", onMessage);
       }
       setStatus('waiting');
       setProgress(0.0);
-      if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+      if (import.meta.env.DEV) {
         console.log(params);
       }
       workerRef.current.postMessage(params);

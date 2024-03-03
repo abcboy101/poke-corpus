@@ -117,14 +117,14 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
       if (result.status === 'loading') {
         loadedCount++;
         updateStatusInProgress('loading', loadedCount/taskCount, processedCount/taskCount, collectedCount/taskList.length);
-        if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+        if (import.meta.env.DEV) {
           console.debug(`Loaded ${loadedCount}/${taskCount}`);
         }
       }
       else if (result.status === 'processing') {
         processedCount++;
         updateStatusInProgress('processing', loadedCount/taskCount, processedCount/taskCount, collectedCount/taskList.length);
-        if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+        if (import.meta.env.DEV) {
           console.debug(`Processed ${processedCount}/${taskCount}`);
         }
       }
@@ -132,7 +132,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
         taskResults.push(result as SearchTaskResultComplete);
         collectedCount++;
         updateStatusInProgress('collecting', loadedCount/taskCount, processedCount/taskCount, collectedCount/taskList.length);
-        if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+        if (import.meta.env.DEV) {
           console.debug(`Collected ${collectedCount}/${taskList.length}`);
         }
 
@@ -161,7 +161,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
     // Start helpers
     const numWorkers = Math.max(1, Math.min(taskList.length, (navigator.hardwareConcurrency || 4) - 2));
     for (let i = 0; i < numWorkers; i++) {
-      const helper = new Worker(new URL("./searchWorker.ts", import.meta.url));
+      const helper = new Worker(new URL("./searchWorker.ts", import.meta.url), {type: 'module'});
       helper.onmessage = helperOnMessage;
       helpers.push(helper);
     }
