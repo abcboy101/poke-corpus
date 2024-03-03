@@ -442,16 +442,7 @@ footer {
   gap: 0.5em;
 }
 
-.App-search-bar-query {
-  display: flex;
-  gap: 0.5em;
-  flex-wrap: wrap;
-  white-space: nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.App-search-bar-group, .App-search-button-group {
+.App-search-bar-query, .App-search-bar-group, .App-search-button-group {
   display: flex;
   gap: 0.5em;
   flex-wrap: wrap;
@@ -466,12 +457,16 @@ footer {
   flex-wrap: wrap;
 }
 
-.App-search-filters {
+.App-search-filters-show {
   display: grid;
   grid-template-columns: 1fr 1px 1fr;
   grid-template-rows: auto auto;
   grid-auto-flow: column;
   gap: 0.5em;
+}
+
+.App-search-filters-hide {
+  display: none;
 }
 
 .App-search-filters-divider {

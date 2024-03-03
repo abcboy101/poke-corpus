@@ -253,6 +253,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
   const [script, setScript] = useState(defaultParams.script);
   const [collections, setCollections] = useState(defaultParams.collections);
   const [languages, setLanguages] = useState(defaultParams.languages);
+  const [filtersVisible, setFiltersVisible] = useState((localStorage.getItem('corpus-filtersVisible') ?? 'false') !== 'false');
 
   const onHashChange = useCallback(() => {
     const params: URLSearchParams = new URLSearchParams(window.location.hash.substring(1));
@@ -387,6 +388,13 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
     }
   };
 
+  const toggleFiltersVisible: MouseEventHandler<HTMLButtonElement> = (e) => {
+    e.preventDefault();
+    const newValue = !filtersVisible;
+    setFiltersVisible(newValue);
+    localStorage.setItem('corpus-filtersVisible', newValue.toString());
+  };
+
   return <form className="App-search" onSubmit={onSubmit}>
     <div className="App-search-bar">
       <div className="App-search-bar-query">
@@ -417,12 +425,13 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
             <label htmlFor="script">{t('script')}</label>
           </div>
         </div>
-        <div>
+        <div className="App-search-button-group">
+          <button className={filtersVisible ? 'active' : undefined} onClick={toggleFiltersVisible}>{t('filters')}</button>
           <button onClick={clearCache}>{t('clearCache')}</button>
         </div>
       </div>
     </div>
-    <div className="App-search-filters">
+    <div className={`App-search-filters App-search-filters-${filtersVisible ? 'show' : 'hide'}`}>
       <SearchCollections collections={collections} setCollections={setCollections}/>
       <div className="App-search-filters-divider"></div>
       <SearchLanguages languages={languages} setLanguages={setLanguages}/>
