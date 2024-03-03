@@ -285,7 +285,7 @@ function versionBranch(form1: string, form2: string) {
 
 /**
  * Converts the provided string to HTML by escaping `<` and `>`,
- * replacing line break control characters such as  `\n` with `<br>`,
+ * replacing line break control characters such as `\n` with `<br>`,
  * and converting the ruby syntax `{base|ruby}` to the corresponding HTML tags.
  *
  * Returns the resulting HTML string.
