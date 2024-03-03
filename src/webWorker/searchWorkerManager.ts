@@ -78,9 +78,9 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
       .forEach((fileKey) => {
         const languages = collection.structured ? collection.languages : collection.languages.filter((languageKey) => params.languages.includes(languageKey));
         if (!collection.structured) {
-          languages.forEach((languageKey) => {
+          languages.forEach((languageKey, languageIndex) => {
             taskList.push({
-              index: taskCount,
+              index: taskCount + languageIndex,
               params: params,
               collectionKey: collectionKey,
               fileKey: fileKey,
