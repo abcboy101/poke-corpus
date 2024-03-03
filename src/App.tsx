@@ -106,8 +106,7 @@ function ResultsTable({header, languages, lines, displayHeader, k, count, start 
 
 function Results({status, progress, results, limit=1000}: {status: Status, progress: number, results: readonly SearchResultLines[], limit?: number}) {
   const { t } = useTranslation();
-  const filteredResults = results.filter(({lines}) => lines.length > 0);
-  const headers = filteredResults.map(({collection, file}) => t('tableHeader', {collection: t(`collections:${collection}.name`), file: t(`files:${file}`), interpolation: {escapeValue: false}}));
+  const headers = results.map(({collection, file}) => t('tableHeader', {collection: t(`collections:${collection}.name`), file: t(`files:${file}`), interpolation: {escapeValue: false}}));
   const [showVariables, setShowVariables] = useState(true);
   const [showAllCharacters, setShowAllCharacters] = useState(false);
   const [showGender, setShowGender] = useState(2);
@@ -117,7 +116,7 @@ function Results({status, progress, results, limit=1000}: {status: Status, progr
 
   let count = 0;
   const resultTables: JSX.Element[] = [];
-  filteredResults.forEach(({lines, languages, displayHeader}, k) => {
+  results.forEach(({lines, languages, displayHeader}, k) => {
     const start = Math.max(0, Math.min(lines.length, offset - count));
     const end = Math.max(0, Math.min(lines.length, (offset + limit) - count));
     resultTables.push(

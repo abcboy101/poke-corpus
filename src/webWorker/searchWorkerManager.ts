@@ -142,7 +142,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
           taskResults.sort((a, b) => a.index - b.index);
           let lastCollection = '';
           let lastFile = '';
-          taskResults.map((taskResults) => taskResults.result).forEach((result) => {
+          taskResults.map((taskResults) => taskResults.result).filter(({lines}) => lines.length > 0).forEach((result) => {
             results.push({...result, displayHeader: result.collection !== lastCollection || result.file !== lastFile});
             lastCollection = result.collection;
             lastFile = result.file;
