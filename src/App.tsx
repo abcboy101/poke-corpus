@@ -347,6 +347,12 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
 
   const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
+
+    // If there's no saved preference, save current filters status
+    if (!localStorage.getItem('corpus-filtersVisible')) {
+      localStorage.setItem('corpus-filtersVisible', filtersVisible.toString());
+    }
+
     window.location.hash = new URLSearchParams({
       query: query,
       regex: regex.toString(),
@@ -357,6 +363,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       languages: languages.join(','),
     }).toString();
     setId('');
+
     postToWorker({
       query: query,
       regex: regex,
