@@ -253,7 +253,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
   const [script, setScript] = useState(defaultParams.script);
   const [collections, setCollections] = useState(defaultParams.collections);
   const [languages, setLanguages] = useState(defaultParams.languages);
-  const [filtersVisible, setFiltersVisible] = useState((localStorage.getItem('corpus-filtersVisible') ?? 'false') !== 'false');
+  const [filtersVisible, setFiltersVisible] = useState(localStorage.getItem('corpus-filtersVisible') ?? (window.location.hash ? 'false' : 'true') !== 'false');
 
   const onHashChange = useCallback(() => {
     const params: URLSearchParams = new URLSearchParams(window.location.hash.substring(1));
@@ -296,6 +296,11 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
     const newLanguages = params.get('languages');
     if (newLanguages !== null) {
       setLanguages(newLanguages.split(',').filter((value) => corpus.languages.includes(value)));
+    }
+
+    // If there's no saved preference, show filters if search can't be performed immediately
+    if (localStorage.getItem('corpus-filtersVisible') === null) {
+      setFiltersVisible(!newId && !newFile && (!newQuery || !newCollections || !newLanguages));
     }
   }, []);
 
