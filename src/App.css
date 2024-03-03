@@ -444,12 +444,11 @@ footer {
 
 .App-search-bar-query {
   display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
   white-space: nowrap;
-  gap: 0 0.5em;
-}
-
-#query {
-  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-search-bar-group, .App-search-button-group {
