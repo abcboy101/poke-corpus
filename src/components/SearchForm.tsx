@@ -154,25 +154,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
   };
 
   const onCancel: MouseEventHandler<HTMLButtonElement> = (e) => {
-    e.preventDefault();
     terminateWorker();
-  };
-
-  const clearCache: MouseEventHandler<HTMLButtonElement> = (e) => {
-    e.preventDefault();
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.ready.then(registration => registration.unregister());
-    }
-    if (indexedDB){
-      indexedDB.databases()
-        .then(databases => databases.filter((db) => db.name !== undefined).forEach((db) => indexedDB.deleteDatabase(db.name as string)))
-        .catch(() => {});
-    }
-    if ('caches' in window) {
-      window.caches.keys()
-        .then((keyList) => Promise.all(keyList.map((key) => window.caches.delete(key))))
-        .catch(() => {});
-    }
   };
 
   const toggleFiltersVisible: MouseEventHandler<HTMLButtonElement> = (e) => {
@@ -181,7 +163,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
     localStorageSetItem('corpus-filtersVisible', newValue.toString());
   };
 
-  return <form className="App-search" onSubmit={onSubmit}>
+  return <form className="App-search App-search-form" onSubmit={onSubmit}>
     <div className="App-search-bar">
       <div className="App-search-bar-query">
         <label htmlFor="query">{t('query')} </label>
@@ -191,6 +173,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
           ? <button className="submit" type="button" onClick={onCancel}>{t('cancel')}</button>
           : <input className="submit" type="submit" value={t('search')} disabled={query.length === 0 || collections.length === 0 || languages.length === 0}/>
         }
+        <button type="button" className={filtersVisible ? 'active' : undefined} onClick={toggleFiltersVisible}>{t('filters')}</button>
       </div>
       <div className="App-search-bar-group">
         <div className="App-search-options">
@@ -210,10 +193,6 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
             <input type="checkbox" name="script" id="script" checked={script} onChange={e => setScript(e.target.checked)}/>
             <label htmlFor="script">{t('script')}</label>
           </div>
-        </div>
-        <div className="App-search-button-group">
-          <button onClick={clearCache}>{t('clearCache')}</button>
-          <button type="button" className={filtersVisible ? 'active' : undefined} onClick={toggleFiltersVisible}>{t('filters')}</button>
         </div>
       </div>
     </div>

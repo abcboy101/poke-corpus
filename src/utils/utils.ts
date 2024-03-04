@@ -16,3 +16,20 @@ export function localStorageSetItem(key: string, value: string) {
   }
   catch {}
 };
+
+/* Generate appropriate i18n number format options for n bytes */
+const byteUnits = ['byte', 'kilobyte', 'megabyte', 'gigabyte', 'terabyte', 'petabyte'] as const;
+export function bytesToUnits(n: number) {
+  const index = Math.min(Math.floor((n.toString().length - 1) / 3), byteUnits.length - 1);
+  const format: Intl.NumberFormatOptions = {
+    style: 'unit',
+    unit: byteUnits[index],
+    unitDisplay: index === 0 ? 'long' : 'short', // use "byte"/"bytes", but "kB", "MB", etc.
+    minimumFractionDigits: index === 0 ? 0 : 1, // don't display fractions of a byte
+    maximumFractionDigits: 1,
+    maximumSignificantDigits: 3,
+    // @ts-expect-error: TS doesn't recognize roundingPriority as a valid option yet
+    roundingPriority: 'lessPrecision'
+  };
+  return {amount: n / Math.pow(1000, index), formatParams: {amount: format}};
+}

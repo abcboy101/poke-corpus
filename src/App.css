@@ -181,6 +181,24 @@ input[type=text], select, input[type=submit], input[type=button], button {
   min-height: 2em;
 }
 
+button.link {
+  display: inline;
+  background: none;
+  border: none;
+  color: var(--text);
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  min-height: auto;
+}
+
+button.link:hover, button.link:active, button.link:active:enabled {
+  background: none;
+  text-decoration: underline;
+}
+
 input[type=text]:disabled, select:disabled, input[type=submit]:disabled, input[type=button]:disabled, button:disabled {
   opacity: 0.7;
 }
@@ -207,6 +225,7 @@ footer {
   text-align: center;
 }
 
+/* Layout */
 .App {
   display: flex;
   flex-direction: column;
@@ -245,4 +264,9 @@ footer {
 .App-header-options label {
   text-align: end;
   white-space: nowrap;
+}
+
+.App-view-Search .App-cache,
+.App-view-CacheManager .App-search {
+  display: none;
 }

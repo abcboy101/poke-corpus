@@ -16,6 +16,8 @@
   "common": "Common",
   "script": "Script",
   "filters": "Filters",
+  "backToSearch": "Back to Search",
+  "manageCache": "Manage cache",
   "clearCache": "Clear Cache",
   "selectAll": "Select All",
   "deselectAll": "Deselect All",
@@ -58,6 +60,15 @@
   "showPluralIcon_0": "#",
   "showPluralIcon_1": "1",
   "showPluralIcon_2": ">1",
+  "cache": {
+    "storageStatus": "Cache storage status: {{val}}",
+    "storageEnabled": "Enabled",
+    "storageDisabled": "Disabled",
+    "filesStored": "Number of files stored: $t(cache.files, {\"count\": {{count}} })",
+    "files": "{{count}} file",
+    "files_other": "{{count}} files",
+    "storageUsed": "Total storage used: {{amount, number}}"
+  },
   "tagline": "A tool to query the Pokémon corpus",
   "footerText": "Created by abcboy",
   "github": "GitHub"

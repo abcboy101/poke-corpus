@@ -36,6 +36,10 @@ const speakerDelimiters: {[language: string]: string} = {
 export function speakerDelimiter(language: string) {
   return speakerDelimiters[language] ?? ': ';
 }
+
+export const getFileUrl = (collectionKey: string, languageKey: string, fileKey: string) =>
+  import.meta.env.BASE_URL + `corpus/${collectionKey}/${languageKey}_${fileKey}.txt.gz`;
+
 export const codeId = "qid-ZZ";
 export const langId = "en-JP";
 

@@ -1,6 +1,6 @@
 import 'compression-streams-polyfill';
 import { preprocessString, convertWhitespace, postprocessString } from './cleanString';
-import { Speaker, speakerDelimiter, cacheVersion } from './corpus';
+import { Speaker, speakerDelimiter, cacheVersion, getFileUrl } from './corpus';
 import { SearchTaskResultDone, SearchTaskResultStatus } from '../utils/Status';
 
 export interface SearchParams {
@@ -62,7 +62,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
    * Returns a promise of the text of the file.
    */
   const getFileFromCache = (collectionKey: string, languageKey: string, fileKey: string) => {
-    const url = import.meta.env.BASE_URL + `corpus/${collectionKey}/${languageKey}_${fileKey}.txt.gz`;
+    const url = getFileUrl(collectionKey, languageKey, fileKey);
     return ('caches' in self ? caches.open(cacheVersion)
     .then((cache) => cache.match(url).then(res => res
       ?? cache.add(url).then(() => cache.match(url)).then(res => res

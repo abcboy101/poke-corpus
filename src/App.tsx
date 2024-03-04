@@ -1,9 +1,10 @@
-import { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import { Dispatch, MouseEventHandler, SetStateAction, useEffect, useState } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { cacheVersion } from './webWorker/corpus';
 import Search from './components/Search';
+import CacheManager from './components/CacheManager';
 import { localStorageGetItem, localStorageSetItem } from './utils/utils';
 
 import './App.css';
@@ -12,7 +13,9 @@ import supportedLngs from './i18n/supportedLngs.json';
 import './i18n/config';
 
 const modes = ['system', 'light', 'dark'] as const;
+const views = ['Search', 'CacheManager'] as const;
 type Mode = typeof modes[number];
+type View = typeof views[number];
 
 function LanguageSelect() {
   const { t } = useTranslation();
@@ -41,6 +44,7 @@ function ModeSelect({mode, setMode}: {mode: Mode, setMode: Dispatch<SetStateActi
 function App() {
   const { t } = useTranslation();
   const [mode, setMode] = useState((localStorageGetItem('mode') ?? 'system') as Mode);
+  const [view, setView] = useState('Search' as View);
 
   // invalidate old caches on load
   useEffect(() => {
@@ -52,7 +56,7 @@ function App() {
   }, []);
 
   return (
-    <div className={`App App-mode-${mode}`} lang={i18next.language} dir={i18next.dir()}>
+    <div className={`App App-mode-${mode} App-view-${view}`} lang={i18next.language} dir={i18next.dir()}>
       <header className="App-header">
         <h1>
           <a href="/poke-corpus/">
@@ -64,11 +68,14 @@ function App() {
           <ModeSelect mode={mode} setMode={setMode}/>
         </div>
       </header>
-      <Search/>
+      <Search active={view === "Search"}/>
+      <CacheManager active={view === "CacheManager"}/>
       <footer>
         <span>{t('tagline')}</span>
         <span className="separator"> | </span>
         <span>{t('footerText')}</span>
+        <span className="separator"> | </span>
+        <span><button className="link" onClick={() => setView(view !== 'Search' ? 'Search' : 'CacheManager')}>{view !== 'Search' ? t('backToSearch') : t('manageCache')}</button></span>
         <span className="separator"> | </span>
         <span><a href="https://github.com/abcboy101/poke-corpus">{t('github')}</a></span>
       </footer>

@@ -10,7 +10,7 @@ import Results from './Results';
 import './Search.css';
 import '../i18n/config';
 
-function Search() {
+function Search({active}: {active: boolean}) {
   const workerRef: MutableRefObject<Worker | null> = useRef(null);
   const [status, setStatus]: [Status, Dispatch<SetStateAction<Status>>] = useState('initial' as Status);
   const [progress, setProgress] = useState(0.0);

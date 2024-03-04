@@ -15,9 +15,11 @@
   "common": "コモン",
   "script": "スクリプト",
   "filters": "フィルター",
+  "backToSearch": "検索に戻る",
+  "manageCache": "キャッシュ管理",
+  "clearCache": "キャッシュを消去",
   "selectAll": "すべて選択",
   "deselectAll": "すべて解除",
-  "clearCache": "キャッシュを消去",
   "status": {
     "initial": "「検索」をクリックしてください",
     "waiting": "しばらくお待ちください…",
@@ -43,6 +45,14 @@
   "showAllCharacters": "制御文字をすべて表示",
   "showGender": "文法上の性別を変更",
   "showPlural": "単数形と複数形を変更",
+  "cache": {
+    "storageStatus": "キャッシュストレージの状況：{{val}}",
+    "storageEnabled": "有効",
+    "storageDisabled": "無効",
+    "filesStored": "保存ファイル数：$t(cache.files, {\"count\": {{count}} })",
+    "files": "{{count}}個",
+    "storageUsed": "ストレージの合計：{{amount, number}}"
+  },
   "tagline": "ポケモンのコーパスを検索するツール",
   "footerText": "Created by abcboy",
   "github": "GitHub"

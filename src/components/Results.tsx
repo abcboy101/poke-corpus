@@ -117,7 +117,7 @@ function Results({status, progress, results, limit=1000}: {status: Status, progr
 
   return (
     <>
-      <div className="App-results-status">
+      <div className="App-search App-results-status">
         {
           headers.length > 1 ? <JumpToSelect headers={headers} /> :
           <div className="App-results-status-text">{t(`status.${status}`)}</div>
@@ -142,7 +142,7 @@ function Results({status, progress, results, limit=1000}: {status: Status, progr
           <button className={showPlural !== 0 ? 'button-square active' : 'button-square'} onClick={(e) => { setShowPlural((showPlural + 1) % 3); }} title={t('showPlural')}>{t('showPluralIcon', {context: showPlural})}</button>
         </div>
       </div>
-      <main id="App-results" className={`App-results variables-${showVariables ? 'show' : 'hide'} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural}`}>
+      <main id="App-results" className={`App-search App-results variables-${showVariables ? 'show' : 'hide'} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural}`}>
         { resultTables }
       </main>
     </>
