@@ -65,7 +65,11 @@ function App() {
       </header>
       <Search/>
       <footer>
-        {t('tagline')} | {t('footerText')} | <a href="https://github.com/abcboy101/poke-corpus">{t('github')}</a>
+        <span>{t('tagline')}</span>
+        <span className="separator"> | </span>
+        <span>{t('footerText')}</span>
+        <span className="separator"> | </span>
+        <span><a href="https://github.com/abcboy101/poke-corpus">{t('github')}</a></span>
       </footer>
     </div>
   );
