@@ -36,6 +36,8 @@ const speakerDelimiters: {[language: string]: string} = {
 export function speakerDelimiter(language: string) {
   return speakerDelimiters[language] ?? ': ';
 }
+export const codeId = "qid-ZZ";
+export const langId = "en-JP";
 
 export const corpus = corpusJson as Corpus;
 export const cacheVersion = `corpus-${corpus.hash}`;

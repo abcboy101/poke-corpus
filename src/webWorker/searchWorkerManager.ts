@@ -1,10 +1,8 @@
 import corpus from './corpus';
-import { SearchParams, SearchTask, SearchTaskResult, SearchTaskResultComplete, SearchTaskResultError } from './searchWorker';
+import SearchWorker from "./searchWorker.ts?worker";
+import { SearchParams, SearchTask, SearchTaskResult, SearchTaskResultComplete } from './searchWorker';
+import { SearchResultsInProgress, SearchResultsComplete, SearchResultsStatus } from '../utils/Status';
 
-export type SearchResultsInProgress = 'loading' | 'processing' | 'collecting';
-export type SearchResultsError = SearchTaskResultError | 'noMatch';
-export type SearchResultsComplete = 'done' | SearchResultsError;
-export type SearchResultsStatus = SearchResultsInProgress | SearchResultsComplete;
 export interface SearchResultLines {
   readonly collection: string,
   readonly file: string,
@@ -12,6 +10,7 @@ export interface SearchResultLines {
   readonly lines: readonly string[][],
   readonly displayHeader: boolean
 };
+
 export interface SearchResults {
   readonly complete: boolean,
   readonly status: SearchResultsStatus,
@@ -161,7 +160,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
     // Start helpers
     const numWorkers = Math.max(1, Math.min(taskList.length, (navigator.hardwareConcurrency || 4) - 2));
     for (let i = 0; i < numWorkers; i++) {
-      const helper = new Worker(new URL("./searchWorker.ts", import.meta.url), {type: 'module'});
+      const helper = new SearchWorker();
       helper.onmessage = helperOnMessage;
       helpers.push(helper);
     }

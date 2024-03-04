@@ -1,6 +1,7 @@
 import 'compression-streams-polyfill';
 import { preprocessString, convertWhitespace, postprocessString } from './cleanString';
 import { Speaker, speakerDelimiter, cacheVersion } from './corpus';
+import { SearchTaskResultDone, SearchTaskResultStatus } from '../utils/Status';
 
 export interface SearchParams {
   readonly query: string,
@@ -21,20 +22,19 @@ export interface SearchTask {
   readonly speaker?: Speaker
 }
 
-export type SearchTaskResultError = 'error' | 'regex' | 'network';
-export type SearchTaskResultDone = 'done';
-export type SearchTaskResultStatus = 'loading' | 'processing' | SearchTaskResultDone | SearchTaskResultError;
 export interface SearchTaskResultLines {
   readonly collection: string,
   readonly file: string,
   readonly languages: readonly string[],
   readonly lines: readonly string[][]
 }
+
 export interface SearchTaskResult {
   readonly index: number,
   readonly status: SearchTaskResultStatus,
   readonly result?: SearchTaskResultLines
 }
+
 export interface SearchTaskResultComplete {
   readonly index: number,
   readonly status: SearchTaskResultDone,
