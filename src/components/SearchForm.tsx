@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { SearchParams } from '../webWorker/searchWorker';
 import { corpus, codeId } from '../webWorker/corpus';
 import SearchFilters from './SearchFilters';
-import { escapeRegex } from '../utils/utils';
+import { escapeRegex, localStorageGetItem, localStorageSetItem } from '../utils/utils';
 import { Status, statusInProgress } from '../utils/Status';
 
 import '../i18n/config';
@@ -31,7 +31,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
   const [script, setScript] = useState(defaultParams.script);
   const [collections, setCollections] = useState(defaultParams.collections);
   const [languages, setLanguages] = useState(defaultParams.languages);
-  const [filtersVisible, setFiltersVisible] = useState((localStorage.getItem('corpus-filtersVisible') ?? (window.location.hash ? 'false' : 'true')) !== 'false');
+  const [filtersVisible, setFiltersVisible] = useState((localStorageGetItem('corpus-filtersVisible') ?? (window.location.hash ? 'false' : 'true')) !== 'false');
 
   const onHashChange = useCallback(() => {
     const params: URLSearchParams = new URLSearchParams(window.location.hash.substring(1));
@@ -77,7 +77,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
     }
 
     // If there's no saved preference, show filters if search can't be performed immediately
-    if (localStorage.getItem('corpus-filtersVisible') === null) {
+    if (localStorageGetItem('corpus-filtersVisible') === null) {
       setFiltersVisible(!newId && !newFile && (!newQuery || !newCollections || !newLanguages));
     }
   }, []);
@@ -127,8 +127,8 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
     e.preventDefault();
 
     // If there's no saved preference, save current filters status
-    if (!localStorage.getItem('corpus-filtersVisible')) {
-      localStorage.setItem('corpus-filtersVisible', filtersVisible.toString());
+    if (!localStorageGetItem('corpus-filtersVisible')) {
+      localStorageSetItem('corpus-filtersVisible', filtersVisible.toString());
     }
 
     window.location.hash = new URLSearchParams({
@@ -164,24 +164,21 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       navigator.serviceWorker.ready.then(registration => registration.unregister());
     }
     if (indexedDB){
-      try {
-        indexedDB.databases().then(databases => databases.filter((db) => db.name !== undefined).forEach((db) => indexedDB.deleteDatabase(db.name as string)));
-      }
-      catch (err) {
-        indexedDB.deleteDatabase('workbox-expiration');
-      }
+      indexedDB.databases()
+        .then(databases => databases.filter((db) => db.name !== undefined).forEach((db) => indexedDB.deleteDatabase(db.name as string)))
+        .catch(() => {});
     }
     if ('caches' in window) {
-      window.caches.keys().then((keyList) => {
-        Promise.all(keyList.map((key) => window.caches.delete(key)))
-      });
+      window.caches.keys()
+        .then((keyList) => Promise.all(keyList.map((key) => window.caches.delete(key))))
+        .catch(() => {});
     }
   };
 
   const toggleFiltersVisible: MouseEventHandler<HTMLButtonElement> = (e) => {
     const newValue = !filtersVisible;
     setFiltersVisible(newValue);
-    localStorage.setItem('corpus-filtersVisible', newValue.toString());
+    localStorageSetItem('corpus-filtersVisible', newValue.toString());
   };
 
   return <form className="App-search" onSubmit={onSubmit}>

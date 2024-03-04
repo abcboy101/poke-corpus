@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import { cacheVersion } from './webWorker/corpus';
 import Search from './components/Search';
+import { localStorageGetItem, localStorageSetItem } from './utils/utils';
 
 import './App.css';
 import logo from './res/logo.svg';
@@ -30,7 +31,7 @@ function ModeSelect({mode, setMode}: {mode: Mode, setMode: Dispatch<SetStateActi
   return (
     <>
       <label htmlFor="mode">{t('mode')}</label>
-      <select name="mode" id="mode" onChange={(e) => { setMode(e.target.value as Mode); localStorage.setItem('mode', e.target.value); }} defaultValue={mode}>
+      <select name="mode" id="mode" onChange={(e) => { setMode(e.target.value as Mode); localStorageSetItem('mode', e.target.value); }} defaultValue={mode}>
         {modes.map((mode) => <option key={mode} value={mode}>{t(`modes.${mode}`)}</option>)}
       </select>
     </>
@@ -39,14 +40,14 @@ function ModeSelect({mode, setMode}: {mode: Mode, setMode: Dispatch<SetStateActi
 
 function App() {
   const { t } = useTranslation();
-  const [mode, setMode] = useState((localStorage.getItem('mode') ?? 'system') as Mode);
+  const [mode, setMode] = useState((localStorageGetItem('mode') ?? 'system') as Mode);
 
   // invalidate old caches on load
   useEffect(() => {
     if ('caches' in window) {
-      window.caches.keys().then((keyList) => {
-        Promise.all(keyList.filter((key) => key.startsWith('corpus-') && key !== cacheVersion).map((key) => window.caches.delete(key)))
-      });
+      window.caches.keys()
+        .then((keyList) => Promise.all(keyList.filter((key) => key.startsWith('corpus-') && key !== cacheVersion).map((key) => window.caches.delete(key))))
+        .catch(() => {});
     }
   }, []);
 
