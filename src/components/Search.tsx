@@ -7,6 +7,7 @@ import { Status, statusInProgress } from '../utils/Status';
 import SearchForm from './SearchForm';
 import Results from './Results';
 
+import './Search.css';
 import '../i18n/config';
 
 function Search() {

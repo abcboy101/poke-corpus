@@ -1,0 +1,90 @@
+.App-results-status {
+  display: grid;
+  grid-template-columns: minmax(20em, 1fr) 1em 2fr auto;
+  align-items: center;
+  text-align: center;
+  gap: 0.25em;
+}
+
+.App-results-jump, .App-results-status-text {
+  min-height: 1.75em;
+}
+
+.App-results-nav {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  text-align: center;
+  gap: 0.25em;
+}
+
+.App-results-toggle {
+  display: flex;
+  gap: 0.25em;
+}
+
+.App-results {
+  width: 100%;
+  min-height: max(12em, 50dvh);
+  overflow: auto;
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--text);
+  background-color: var(--highlight);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.App-results-table-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.App-results-table {
+  border-collapse: collapse;
+  white-space: pre;
+}
+
+.App-results-table th, .App-results-table td {
+  padding: 1px 0.25em;
+  border: 1px solid var(--text);
+  background-color: var(--highlight);
+}
+
+.App-results-table-actions {
+  display: flex;
+  margin: auto;
+  place-items: center;
+  vertical-align: middle;
+  gap: 0.25em;
+}
+
+.App-results-nav-range-long {
+  display: block;
+}
+
+.App-results-nav-range-short {
+  display: none;
+}
+
+@media (max-width: 575.98px) {
+  .App-results-status {
+    grid-template-columns: 1em 1fr auto;
+  }
+
+  .App-results-jump, .App-results-status-text {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .App-results-nav-range-short {
+    display: block;
+  }
+
+  .App-results-nav-range-long {
+    display: none;
+  }
+}

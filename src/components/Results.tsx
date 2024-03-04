@@ -11,6 +11,8 @@ import ViewNearby from './ViewNearby';
 import { escapeRegex } from '../utils/utils';
 import { Status, statusInProgress } from '../utils/Status';
 
+import './Results.css';
+import './ResultsText.css';
 import logo from '../res/logo.svg';
 import '../i18n/config';
 

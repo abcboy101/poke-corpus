@@ -1,0 +1,126 @@
+/* Variables */
+.var, .wait, .sfx, .unused, .null, .compressed, .gender, .number, .speaker {
+  color: var(--text-gray);
+}
+
+.variables-hide .var, .variables-hide .wait, .variables-hide .sfx, .variables-hide .unused, .variables-hide .null, .variables-hide .compressed {
+  display: none;
+}
+
+/* Line breaks, whitespace */
+.r, .c, .n {
+  color: var(--text-gray);
+}
+
+.control-hide .r, .control-hide .c, .control-hide .n {
+  display: none;
+}
+
+.control-show .whitespace-leading, .whitespace-trailing, .control-show .tab {
+  border-bottom: 1px dotted var(--text);
+  background-color: var(--accent);
+}
+
+/* Font size */
+.line-font-size-200 {
+  line-height: calc(2 * var(--line-height));
+}
+
+.text-font-size-200 {
+  display: inline-block;
+  scale: 1 2;
+  line-height: var(--line-height);
+}
+
+/* Text alignment */
+.line-align-center {
+  display: block;
+  text-align: center;
+}
+
+.line-align-right {
+  display: block;
+  text-align: right;
+}
+
+.line-align-left {
+  display: block;
+  text-align: left;
+}
+
+/* Gender branches */
+.gender-2 .branch.male {
+  border-bottom: 1px dotted var(--text);
+  color: var(--gender-male-color);
+}
+
+.gender-2 .branch.female {
+  border-bottom: 1px dotted var(--text);
+  color: var(--gender-female-color);
+}
+
+.gender-2 .branch.neuter {
+  border-bottom: 1px dotted var(--text);
+  color: color-mix(in oklab, var(--gender-male-color), var(--gender-female-color));
+}
+
+/* Number branches */
+.number-0 .branch.singular {
+  border-bottom: 1px dotted var(--text);
+  color: var(--number-singular-color);
+}
+
+.number-0 .branch.plural {
+  border-bottom: 1px dotted var(--text);
+  color: var(--number-plural-color);
+}
+
+.number-0 .branch.zero {
+  border-bottom: 1px dotted var(--text);
+  color: color-mix(in oklab, var(--number-singular-color), var(--number-plural-color));
+}
+
+/* Gender/number branches */
+.gender-2.number-0 .branch.male.singular {
+  border-bottom: 1px dotted var(--text);
+  color: color-mix(in oklab, var(--gender-male-color) 75%, var(--number-singular-color));
+}
+
+.gender-2.number-0 .branch.female.singular {
+  border-bottom: 1px dotted var(--text);
+  color: color-mix(in oklab, var(--gender-female-color) 75%, var(--number-singular-color));
+}
+
+.gender-2.number-0 .branch.male.plural {
+  border-bottom: 1px dotted var(--text);
+  color: color-mix(in oklab, var(--gender-male-color) 50%, var(--number-plural-color));
+}
+
+.gender-2.number-0 .branch.female.plural {
+  border-bottom: 1px dotted var(--text);
+  color: color-mix(in oklab, var(--gender-female-color) 50%, var(--number-plural-color));
+}
+
+/* Apocope branches */
+.apocope1, .apocope2 {
+  border-bottom: 1px dotted var(--text);
+}
+
+/* Version branches */
+.version1 {
+  border-bottom: 1px dotted var(--text);
+  color: var(--version-1-color);
+}
+
+.version2 {
+  border-bottom: 1px dotted var(--text);
+  color: var(--version-2-color);
+}
+
+/* Hidden branches based on toggles */
+.gender-0 .female:not(.male), .gender-0 .gender, .gender-0 .neuter,
+.gender-1 .male:not(.female), .gender-1 .gender, .gender-1 .neuter,
+.number-1 .plural, .number-1 .zero, .number-1 .number,
+.number-2 .singular, .number-2 .zero, .number-2 .number {
+  display: none;
+}

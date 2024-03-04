@@ -134,6 +134,10 @@ a {
   text-decoration: none;
 }
 
+a:hover, a:active {
+  text-decoration: underline;
+}
+
 abbr {
   text-decoration: none;
 }
@@ -144,123 +148,6 @@ ruby > rt {
 
 dt {
   font-style: italic;
-}
-
-.var, .wait, .sfx, .unused, .null, .compressed, .gender, .number, .speaker {
-  color: var(--text-gray);
-}
-
-.variables-hide .var, .variables-hide .wait, .variables-hide .sfx, .variables-hide .unused, .variables-hide .null, .variables-hide .compressed {
-  display: none;
-}
-
-.r, .c, .n {
-  color: var(--text-gray);
-}
-
-.control-hide .r, .control-hide .c, .control-hide .n {
-  display: none;
-}
-
-.control-show .whitespace-leading, .whitespace-trailing, .control-show .tab {
-  border-bottom: 1px dotted var(--text);
-  background-color: var(--accent);
-}
-
-.line-font-size-200 {
-  line-height: calc(2 * var(--line-height));
-}
-
-.text-font-size-200 {
-  display: inline-block;
-  scale: 1 2;
-  line-height: var(--line-height);
-}
-
-.line-align-center {
-  display: block;
-  text-align: center;
-}
-
-.line-align-right {
-  display: block;
-  text-align: right;
-}
-
-.line-align-left {
-  display: block;
-  text-align: left;
-}
-
-.gender-2 .branch.male {
-  border-bottom: 1px dotted var(--text);
-  color: var(--gender-male-color);
-}
-
-.gender-2 .branch.female {
-  border-bottom: 1px dotted var(--text);
-  color: var(--gender-female-color);
-}
-
-.gender-2 .branch.neuter {
-  border-bottom: 1px dotted var(--text);
-  color: color-mix(in oklab, var(--gender-male-color), var(--gender-female-color));
-}
-
-.number-0 .branch.singular {
-  border-bottom: 1px dotted var(--text);
-  color: var(--number-singular-color);
-}
-
-.number-0 .branch.plural {
-  border-bottom: 1px dotted var(--text);
-  color: var(--number-plural-color);
-}
-
-.number-0 .branch.zero {
-  border-bottom: 1px dotted var(--text);
-  color: color-mix(in oklab, var(--number-singular-color), var(--number-plural-color));
-}
-
-.gender-2.number-0 .branch.male.singular {
-  border-bottom: 1px dotted var(--text);
-  color: color-mix(in oklab, var(--gender-male-color) 75%, var(--number-singular-color));
-}
-
-.gender-2.number-0 .branch.female.singular {
-  border-bottom: 1px dotted var(--text);
-  color: color-mix(in oklab, var(--gender-female-color) 75%, var(--number-singular-color));
-}
-
-.gender-2.number-0 .branch.male.plural {
-  border-bottom: 1px dotted var(--text);
-  color: color-mix(in oklab, var(--gender-male-color) 50%, var(--number-plural-color));
-}
-
-.gender-2.number-0 .branch.female.plural {
-  border-bottom: 1px dotted var(--text);
-  color: color-mix(in oklab, var(--gender-female-color) 50%, var(--number-plural-color));
-}
-
-.apocope1, .apocope2 {
-  border-bottom: 1px dotted var(--text);
-}
-
-.version1 {
-  border-bottom: 1px dotted var(--text);
-  color: var(--version-1-color);
-}
-
-.version2 {
-  border-bottom: 1px dotted var(--text);
-  color: var(--version-2-color);
-}
-
-.gender-0 .female:not(.male), .gender-0 .gender, .gender-0 .neuter,
-.gender-1 .male:not(.female), .gender-1 .gender, .gender-1 .neuter,
-.number-1 .plural, .number-1 .zero, .number-1 .number,
-.number-2 .singular, .number-2 .zero, .number-2 .number {
-  display: none;
 }
 
 .d-none {
@@ -281,6 +168,10 @@ h1, h2 {
   white-space: nowrap;
 }
 
+h1 a:hover, h1 a:active {
+  text-decoration: none;
+}
+
 input[type=text], select, input[type=submit], input[type=button], button {
   background: var(--highlight);
   border: 1px solid var(--text);
@@ -294,7 +185,7 @@ input[type=text]:disabled, select:disabled, input[type=submit]:disabled, input[t
   opacity: 0.7;
 }
 
-.active, input[type=submit]:active, input[type=button]:active, button:active {
+.active:enabled, input[type=submit]:active:enabled, input[type=button]:active:enabled, button:active:enabled {
   background: var(--accent);
 }
 
@@ -354,223 +245,4 @@ footer {
 .App-header-options label {
   text-align: end;
   white-space: nowrap;
-}
-
-.App-results-status {
-  display: grid;
-  grid-template-columns: minmax(20em, 1fr) 1em 2fr auto;
-  align-items: center;
-  text-align: center;
-  gap: 0.25em;
-}
-
-.App-results-jump, .App-results-status-text {
-  min-height: 1.75em;
-}
-
-.App-results-nav {
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  align-items: center;
-  text-align: center;
-  gap: 0.25em;
-}
-
-.App-results-toggle {
-  display: flex;
-  gap: 0.25em;
-}
-
-.App-results {
-  width: 100%;
-  min-height: max(12em, 50dvh);
-  overflow: auto;
-  flex: 1;
-  padding: 0.5rem;
-  border: 1px solid var(--text);
-  background-color: var(--highlight);
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-
-.App-results-table-container {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-
-.App-results-table {
-  border-collapse: collapse;
-  white-space: pre;
-}
-
-.App-results-table th, .App-results-table td {
-  padding: 1px 0.25em;
-  border: 1px solid var(--text);
-  background-color: var(--highlight);
-}
-
-.App-results-table-actions {
-  display: flex;
-  margin: auto;
-  place-items: center;
-  vertical-align: middle;
-  gap: 0.25em;
-}
-
-.App-results-nav-range-long {
-  display: block;
-}
-
-.App-results-nav-range-short {
-  display: none;
-}
-
-.App-search {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-
-.App-search-bar {
-  display: flex;
-  margin: auto;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5em;
-}
-
-.App-search-bar-query, .App-search-bar-group, .App-search-button-group {
-  display: flex;
-  gap: 0.5em;
-  flex-wrap: wrap;
-  white-space: nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.App-search-options {
-  display: flex;
-  gap: 0.5em;
-  flex-wrap: wrap;
-}
-
-.App-search-filters-show {
-  display: grid;
-  grid-template-columns: 1fr 1px 1fr;
-  grid-template-rows: auto auto;
-  grid-auto-flow: column;
-  gap: 0.5em;
-}
-
-.App-search-filters-hide {
-  display: none;
-}
-
-.App-search-filters-divider {
-  background-color: var(--text);
-  grid-row: span 2;
-}
-
-.App-search-collections, .App-search-languages {
-  display: grid;
-  justify-content: start;
-  align-content: start;
-}
-
-.App-search-collections {
-  grid-template-columns: repeat(auto-fit, minmax(5.5em, 1fr));
-}
-
-.App-search-languages {
-  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
-}
-
-.App-search-language-code {
-  display: none;
-}
-
-.App-search-collection, .App-search-language, .App-search-option {
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-
-.App-search-collection label {
-  display: block;
-}
-
-.App-search-option label {
-  display: inline-block;
-  white-space: wrap;
-  line-height: 1.25;
-}
-
-.App-search-language-code {
-  white-space: nowrap;
-}
-
-.App-search-language-name {
-  display: inline-block;
-  text-overflow: ellipsis;
-  line-height: 1.25;
-}
-
-@media (max-width: 575.98px) {
-  .App-search-options {
-    grid-template-columns: repeat(2, auto);
-  }
-
-  .App-search-filters {
-    grid-template-columns: auto;
-    grid-template-rows: auto auto 1px auto auto;
-  }
-
-  .App-search-filters-divider {
-    grid-row: inherit;
-  }
-
-  .App-results-status {
-    grid-template-columns: 1em 1fr auto;
-  }
-
-  .App-results-jump, .App-results-status-text {
-    grid-column: span 3;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .App-search-filters {
-    grid-template-columns: 2fr 1px 1.5fr;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .App-search-languages {
-    grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
-  }
-
-  .App-search-language-name {
-    display: none;
-  }
-
-  .App-search-language-code {
-    display: inherit;
-  }
-
-  .App-results-nav-range-short {
-    display: block;
-  }
-
-  .App-results-nav-range-long {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .App-search-languages {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
