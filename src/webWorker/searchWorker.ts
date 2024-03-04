@@ -106,7 +106,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
           }
         });
       }
-      return [languageKey, lineKeys, lines] as [string, number[], string[]];
+      return [languageKey, lineKeys, lines] as const;
     }));
     processingFilePromises.forEach((promise) => promise.then(() => notify('processing')).catch(() => {})); // for progress bar
 

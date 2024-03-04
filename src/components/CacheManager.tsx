@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import './CacheManager.css';
 import corpus, { cacheVersion, getFileUrl } from '../webWorker/corpus';
-import { bytesToUnits } from "../utils/utils";
+import { formatBytes } from "../utils/utils";
 
 function CacheManager({active}: {active: boolean}) {
   const { t } = useTranslation();
@@ -54,6 +54,11 @@ function CacheManager({active}: {active: boolean}) {
     checkCachedFiles();
   });
 
+  const storageUsedAmount = () => {
+    const [amount, format] = formatBytes(cachedFileSize);
+    return {amount: amount, formatParams: {amount: format}};
+  };
+
   return (
     <>
       <div className='App-cache App-cache-button-group'>
@@ -62,8 +67,8 @@ function CacheManager({active}: {active: boolean}) {
       <div className="App-cache App-cache-results">
         <ul>
           <li>{t('cache.storageStatus', {val: cacheStorageEnabled ? t('cache.storageEnabled') : t('cache.storageDisabled')})}</li>
-          <li>{t('cache.filesStored', {count: cachedFileCount})}</li>
-          <li>{t('cache.storageUsed', bytesToUnits(cachedFileSize))}</li>
+          {cacheStorageEnabled && <li>{t('cache.filesStored', {count: cachedFileCount})}</li>}
+          {cacheStorageEnabled && <li>{t('cache.storageUsed', storageUsedAmount())}</li>}
         </ul>
       </div>
     </>

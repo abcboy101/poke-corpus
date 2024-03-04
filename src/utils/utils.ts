@@ -19,7 +19,7 @@ export function localStorageSetItem(key: string, value: string) {
 
 /* Generate appropriate i18n number format options for n bytes */
 const byteUnits = ['byte', 'kilobyte', 'megabyte', 'gigabyte', 'terabyte', 'petabyte'] as const;
-export function bytesToUnits(n: number) {
+export function formatBytes(n: number) {
   const index = Math.min(Math.floor((n.toString().length - 1) / 3), byteUnits.length - 1);
   const format: Intl.NumberFormatOptions = {
     style: 'unit',
@@ -31,5 +31,5 @@ export function bytesToUnits(n: number) {
     // @ts-expect-error: TS doesn't recognize roundingPriority as a valid option yet
     roundingPriority: 'lessPrecision'
   };
-  return {amount: n / Math.pow(1000, index), formatParams: {amount: format}};
+  return [n / Math.pow(1000, index), format] as const;
 }
