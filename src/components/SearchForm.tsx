@@ -179,7 +179,6 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
   };
 
   const toggleFiltersVisible: MouseEventHandler<HTMLButtonElement> = (e) => {
-    e.preventDefault();
     const newValue = !filtersVisible;
     setFiltersVisible(newValue);
     localStorage.setItem('corpus-filtersVisible', newValue.toString());
@@ -192,7 +191,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         <input type="text" name="query" id="query" value={query} onChange={e => setQuery(e.target.value)}/>
         {
           status !== 'rendering' && statusInProgress.includes(status)
-          ? <button className="submit" onClick={onCancel}>{t('cancel')}</button>
+          ? <button className="submit" type="button" onClick={onCancel}>{t('cancel')}</button>
           : <input className="submit" type="submit" value={t('search')} disabled={query.length === 0 || collections.length === 0 || languages.length === 0}/>
         }
       </div>
@@ -216,8 +215,8 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
           </div>
         </div>
         <div className="App-search-button-group">
-          <button className={filtersVisible ? 'active' : undefined} onClick={toggleFiltersVisible}>{t('filters')}</button>
           <button onClick={clearCache}>{t('clearCache')}</button>
+          <button type="button" className={filtersVisible ? 'active' : undefined} onClick={toggleFiltersVisible}>{t('filters')}</button>
         </div>
       </div>
     </div>

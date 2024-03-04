@@ -43,7 +43,6 @@ function ResultsTable({header, languages, lines, displayHeader, k, count, start 
   const sameDir = displayDirs.every((dir) => dir === displayDirs[0]);
   const slicedLines = (start !== 0 || end !== undefined) ? lines.slice(start, end) : lines;
   const onClick = (count: number): MouseEventHandler<HTMLButtonElement> => (e) => {
-    e.preventDefault();
     setOffset(count);
     jumpTo(k);
   }
@@ -131,16 +130,16 @@ function Results({status, progress, results, limit=1000}: {status: Status, progr
                 <span className="App-results-nav-range-long">{t('displayedRange.long', {count: count, start: offset + 1, end: Math.min(count, offset + limit)})}</span>
                 <span className="App-results-nav-range-short">{t('displayedRange.short', {count: count, start: offset + 1, end: Math.min(count, offset + limit)})}</span>
               </div>
-              <button className='button-square' onClick={(e) => { e.preventDefault(); setOffset(Math.max(0, offset - limit)) }}>{t('loadPrev', {limit: limit})}</button>
-              <button className='button-square' onClick={(e) => { e.preventDefault(); setOffset(Math.min(Math.floor(count / limit) * limit, offset + limit)) }}>{t('loadNext', {limit: limit})}</button>
+              <button className='button-square' onClick={(e) => { setOffset(Math.max(0, offset - limit)) }}>{t('loadPrev', {limit: limit})}</button>
+              <button className='button-square' onClick={(e) => { setOffset(Math.min(Math.floor(count / limit) * limit, offset + limit)) }}>{t('loadNext', {limit: limit})}</button>
             </div>
           ) : <ProgressBar progress={progress} />
         }
         <div className="App-results-toggle">
-          <button className={showVariables ? 'button-square active' : 'button-square'} onClick={(e) => { e.preventDefault(); setShowVariables(!showVariables); }} title={t('showVariables')}>{t('showVariablesIcon')}</button>
-          <button className={showAllCharacters ? 'button-square active' : 'button-square'} onClick={(e) => { e.preventDefault(); setShowAllCharacters(!showAllCharacters); }} title={t('showAllCharacters')}>{t('showAllCharactersIcon')}</button>
-          <button className={showGender !== 2 ? 'button-square active' : 'button-square'} onClick={(e) => { e.preventDefault(); setShowGender((showGender + 1) % 3); }} title={t('showGender')}>{t('showGenderIcon', {context: showGender})}</button>
-          <button className={showPlural !== 0 ? 'button-square active' : 'button-square'} onClick={(e) => { e.preventDefault(); setShowPlural((showPlural + 1) % 3); }} title={t('showPlural')}>{t('showPluralIcon', {context: showPlural})}</button>
+          <button className={showVariables ? 'button-square active' : 'button-square'} onClick={(e) => { setShowVariables(!showVariables); }} title={t('showVariables')}>{t('showVariablesIcon')}</button>
+          <button className={showAllCharacters ? 'button-square active' : 'button-square'} onClick={(e) => { setShowAllCharacters(!showAllCharacters); }} title={t('showAllCharacters')}>{t('showAllCharactersIcon')}</button>
+          <button className={showGender !== 2 ? 'button-square active' : 'button-square'} onClick={(e) => { setShowGender((showGender + 1) % 3); }} title={t('showGender')}>{t('showGenderIcon', {context: showGender})}</button>
+          <button className={showPlural !== 0 ? 'button-square active' : 'button-square'} onClick={(e) => { setShowPlural((showPlural + 1) % 3); }} title={t('showPlural')}>{t('showPluralIcon', {context: showPlural})}</button>
         </div>
       </div>
       <main id="App-results" className={`App-results variables-${showVariables ? 'show' : 'hide'} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural}`}>
