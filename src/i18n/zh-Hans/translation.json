@@ -2,9 +2,11 @@
   "title": "宝可语料库{{version}}",
   "language": "语言：",
   "mode": "色调：",
-  "modeSystem": "系统",
-  "modeLight": "浅色",
-  "modeDark": "深色",
+  "modes": {
+    "system": "系统",
+    "light": "浅色",
+    "dark": "深色"
+  },
   "query": "查询：",
   "regex": "正则表达式",
   "caseInsensitive": "不区分大小写",

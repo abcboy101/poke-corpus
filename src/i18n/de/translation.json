@@ -2,9 +2,11 @@
   "title": "Pokékorpus {{version}}",
   "language": "Sprache:",
   "mode": "Farbschema:",
-  "modeSystem": "System",
-  "modeLight": "Hell",
-  "modeDark": "Dunkel",
+  "modes": {
+    "system": "System",
+    "light": "Hell",
+    "dark": "Dunkel"
+  },
   "query": "Abfrage:",
   "regex": "Regex",
   "caseInsensitive": "Groß-/Kleinschreibung nicht beachten",

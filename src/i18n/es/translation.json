@@ -2,9 +2,11 @@
   "title": "Poké Corpus {{version}}",
   "language": "Idioma:",
   "mode": "Colores:",
-  "modeSystem": "Sistema",
-  "modeLight": "Claro",
-  "modeDark": "Oscuro",
+  "modes": {
+    "system": "Sistema",
+    "light": "Claro",
+    "dark": "Oscuro"
+  },
   "query": "Consulta:",
   "regex": "Expresión regular",
   "caseInsensitive": "Sin distinción entre mayúsculas y minúsculas",

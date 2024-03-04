@@ -10,6 +10,9 @@ import logo from './res/logo.svg';
 import supportedLngs from './i18n/supportedLngs.json';
 import './i18n/config';
 
+const modes = ['system', 'light', 'dark'] as const;
+type Mode = typeof modes[number];
+
 function LanguageSelect() {
   const { t } = useTranslation();
   return (
@@ -22,15 +25,13 @@ function LanguageSelect() {
   );
 }
 
-function ModeSelect({mode, setMode}: {mode: string, setMode: Dispatch<SetStateAction<string>>}) {
+function ModeSelect({mode, setMode}: {mode: Mode, setMode: Dispatch<SetStateAction<Mode>>}) {
   const { t } = useTranslation();
   return (
     <>
       <label htmlFor="mode">{t('mode')}</label>
-      <select name="mode" id="mode" onChange={(e) => { setMode(e.target.value); localStorage.setItem('mode', e.target.value); }} defaultValue={mode}>
-        <option value='system'>{t('modeSystem')}</option>
-        <option value='light'>{t('modeLight')}</option>
-        <option value='dark'>{t('modeDark')}</option>
+      <select name="mode" id="mode" onChange={(e) => { setMode(e.target.value as Mode); localStorage.setItem('mode', e.target.value); }} defaultValue={mode}>
+        {modes.map((mode) => <option key={mode} value={mode}>{t(`modes.${mode}`)}</option>)}
       </select>
     </>
   );
@@ -38,7 +39,7 @@ function ModeSelect({mode, setMode}: {mode: string, setMode: Dispatch<SetStateAc
 
 function App() {
   const { t } = useTranslation();
-  const [mode, setMode] = useState(localStorage.getItem('mode') ?? 'system');
+  const [mode, setMode] = useState((localStorage.getItem('mode') ?? 'system') as Mode);
 
   // invalidate old caches on load
   useEffect(() => {

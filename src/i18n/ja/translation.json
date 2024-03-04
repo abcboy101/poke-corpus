@@ -2,9 +2,11 @@
   "title": "ポケコーパス{{version}}",
   "language": "言語：",
   "mode": "配色：",
-  "modeSystem": "システム",
-  "modeLight": "ライト",
-  "modeDark": "ダーク",
+  "modes": {
+    "system": "システム",
+    "light": "ライト",
+    "dark": "ダーク"
+  },
   "query": "クエリ：",
   "regex": "正規表現",
   "caseInsensitive": "大文字小文字を区別しない",

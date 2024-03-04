@@ -3,9 +3,11 @@
   "version": "β",
   "language": "Language:",
   "mode": "Colorscheme:",
-  "modeSystem": "System",
-  "modeLight": "Light",
-  "modeDark": "Dark",
+  "modes": {
+    "system": "System",
+    "light": "Light",
+    "dark": "Dark"
+  },
   "query": "Query:",
   "regex": "Regex",
   "caseInsensitive": "Case insensitive",
