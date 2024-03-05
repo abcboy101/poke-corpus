@@ -16,8 +16,10 @@ function CacheManager({active}: {active: boolean}) {
     setCacheStorageEnabled('caches' in window && await window.caches.keys().then(() => true).catch(() => false));
   }
 
+  const [cacheInProgress, setCacheInProgress] = useState(false);
   const cacheAll = () => {
     if ('caches' in window) {
+      setCacheInProgress(true);
       window.caches.open(cacheVersion).then((cache) =>
         Promise.all(Object.entries(corpus.collections).flatMap(([collectionKey, collection]) =>
           collection.files.flatMap((fileKey) => collection.languages.map((languageKey) => {
@@ -30,6 +32,7 @@ function CacheManager({active}: {active: boolean}) {
       ).catch(() => {}).then(() => {
         console.log('Caching complete')
         checkCachedFiles();
+        setCacheInProgress(false);
       });
     }
   }
@@ -109,7 +112,7 @@ function CacheManager({active}: {active: boolean}) {
   return (
     <>
       <div className='App-cache App-cache-button-group'>
-        <button onClick={cacheAll}>{t('cacheAll')}</button>
+        <button onClick={cacheAll} disabled={cacheInProgress}>{t('cacheAll')}</button>
         <button onClick={clearCache}>{t('clearCache')}</button>
       </div>
       <div className="App-cache App-cache-results">
