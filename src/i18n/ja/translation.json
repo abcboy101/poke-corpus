@@ -17,6 +17,7 @@
   "filters": "フィルター",
   "backToSearch": "検索に戻る",
   "manageCache": "キャッシュ管理",
+  "cacheAll": "すべてをキャッシュ",
   "clearCache": "キャッシュを消去",
   "selectAll": "すべて選択",
   "deselectAll": "すべて解除",
@@ -51,8 +52,12 @@
     "storageDisabled": "無効",
     "filesStored": "保存ファイル数：$t(cache.files, {\"count\": {{count}} })",
     "files": "{{count}}個",
-    "storageUsed": "ストレージの合計：{{amount, number}}"
+    "storageUsed": "ストレージの合計：{{amount, number}}",
+    "headerCollection": "コレクション",
+    "headerSize": "サイズ",
+    "headerActions": "操作"
   },
+  "delete": "消す",
   "tagline": "ポケモンのコーパスを検索するツール",
   "footerText": "Created by abcboy",
   "github": "GitHub"

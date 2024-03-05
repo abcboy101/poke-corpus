@@ -19,3 +19,12 @@
   flex-direction: column;
   gap: 0.5em;
 }
+
+.App-cache-table-actions {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  place-items: center;
+  vertical-align: middle;
+  gap: 0.25em;
+}

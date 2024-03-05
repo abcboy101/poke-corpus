@@ -42,17 +42,6 @@
   gap: 0.5em;
 }
 
-.App-results-table {
-  border-collapse: collapse;
-  white-space: pre;
-}
-
-.App-results-table th, .App-results-table td {
-  padding: 1px 0.25em;
-  border: 1px solid var(--text);
-  background-color: var(--highlight);
-}
-
 .App-results-table-actions {
   display: flex;
   margin: auto;

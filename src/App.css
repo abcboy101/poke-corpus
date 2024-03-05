@@ -225,6 +225,17 @@ footer {
   text-align: center;
 }
 
+table {
+  border-collapse: collapse;
+  white-space: pre;
+}
+
+table th, table td {
+  padding: 1px 0.25em;
+  border: 1px solid var(--text);
+  background-color: var(--highlight);
+}
+
 /* Layout */
 .App {
   display: flex;
