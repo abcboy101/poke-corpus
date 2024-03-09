@@ -1,13 +1,9 @@
-import corpus from './corpus';
+import corpus, { cacheVersion, getCachedFile, getFileUrl } from './corpus';
 import SearchWorker from "./searchWorker.ts?worker";
-import { SearchParams, SearchTask, SearchTaskResult, SearchTaskResultComplete } from './searchWorker';
+import { SearchParams, SearchTask, SearchTaskResult, SearchTaskResultComplete, SearchTaskResultLines } from './searchWorker';
 import { SearchResultsInProgress, SearchResultsComplete, SearchResultsStatus } from '../utils/Status';
 
-export interface SearchResultLines {
-  readonly collection: string,
-  readonly file: string,
-  readonly languages: readonly string[],
-  readonly lines: readonly string[][],
+export interface SearchResultLines extends SearchTaskResultLines {
   readonly displayHeader: boolean
 };
 
@@ -17,6 +13,8 @@ export interface SearchResults {
   readonly progress: number,
   readonly results: readonly SearchResultLines[]
 };
+
+type SearchTaskPartial = Omit<SearchTask, "files" | "speakerFiles">;
 
 /* eslint-disable no-restricted-globals */
 self.onmessage = (message: MessageEvent<SearchParams>) => {
@@ -45,6 +43,37 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
     postMessage(message);
   };
 
+  /**
+   * Attempts the following, in order:
+   * - Retrieving the file from the cache
+   * - Populating the cache with the file
+   * - Fetching the file directly
+   *
+   * Returns a promise of the text of the file.
+   */
+  const loadFile = (collectionKey: string, languageKey: string, fileKey: string) => {
+    const url = getFileUrl(collectionKey, languageKey, fileKey);
+    if (import.meta.env.DEV) {
+      console.debug(`Getting ${url} from cache`);
+    }
+    return ('caches' in self ? self.caches.open(cacheVersion).then((cache) => getCachedFile(cache, url))
+      .catch((err) => {
+        console.error(err);
+        console.log(`Could not retrieve ${url} from cache. Fetching directly...`);
+        return fetch(url);
+      }) : fetch(url))
+      .catch((err) => {
+        console.error(err);
+        return null;
+      })
+      .then((res) => res === null ? '' :
+        res.blob().then((blob) => import.meta.env.DEV ? new Response(blob.stream()).text()
+        // Due to a bug, the Vite dev server serves .gz files with `Content-Encoding: gzip`.
+        // To work around this, don't bother decompressing the file in the dev environment.
+        // https://github.com/vitejs/vite/issues/12266
+        : new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text()));
+  }
+
   try {
     const params = message.data;
     updateStatusInProgress('loading', 0, 0, 0);
@@ -62,7 +91,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
 
     // Load files
     let taskCount = 0;
-    const taskList: SearchTask[] = [];
+    const taskList: SearchTaskPartial[] = [];
     Object.keys(corpus.collections).filter((collectionKey) => params.collections.includes(collectionKey)).forEach((collectionKey) => {
       const collection = corpus.collections[collectionKey];
 
@@ -113,24 +142,17 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
     const helpers: Worker[] = [];
     const helperOnMessage = (e: MessageEvent<SearchTaskResult>) => {
       const result = e.data;
-      if (result.status === 'loading') {
-        loadedCount++;
-        updateStatusInProgress('loading', loadedCount/taskCount, processedCount/taskCount, collectedCount/taskList.length);
-        if (import.meta.env.DEV) {
-          console.debug(`Loaded ${loadedCount}/${taskCount}`);
-        }
-      }
-      else if (result.status === 'processing') {
+      if (result.status === 'processing') {
         processedCount++;
-        updateStatusInProgress('processing', loadedCount/taskCount, processedCount/taskCount, collectedCount/taskList.length);
+        updateStatusInProgress('processing', loadedCount/taskList.length, processedCount/taskCount, collectedCount/taskList.length);
         if (import.meta.env.DEV) {
           console.debug(`Processed ${processedCount}/${taskCount}`);
         }
       }
       else if (result.status === 'done') {
-        taskResults.push(result as SearchTaskResultComplete);
+        taskResults.push(result);
         collectedCount++;
-        updateStatusInProgress('collecting', loadedCount/taskCount, processedCount/taskCount, collectedCount/taskList.length);
+        updateStatusInProgress('collecting', loadedCount/taskList.length, processedCount/taskCount, collectedCount/taskList.length);
         if (import.meta.env.DEV) {
           console.debug(`Collected ${collectedCount}/${taskList.length}`);
         }
@@ -164,8 +186,21 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
       helper.onmessage = helperOnMessage;
       helpers.push(helper);
     }
-    taskList.forEach((task, i) => {
-      helpers[i % helpers.length].postMessage(task);
+    taskList.forEach(async (task, i) => {
+      // Due to a bug in Safari, access to cache storage fails in subworkers.
+      // To work around this, we need to fetch the files in the manager worker instead.
+      const speaker = task.speaker;
+      const taskFull: SearchTask = {
+        ...task,
+        files: await Promise.all(task.languages.map((languageKey) => loadFile(task.collectionKey, languageKey, task.fileKey))),
+        speakerFiles: speaker === undefined ? undefined : await Promise.all(task.languages.map((languageKey) => loadFile(task.collectionKey, languageKey, speaker.file))),
+      };
+      loadedCount++;
+      updateStatusInProgress('loading', loadedCount/taskList.length, processedCount/taskCount, collectedCount/taskList.length);
+      if (import.meta.env.DEV) {
+        console.debug(`Loaded ${loadedCount}/${taskList.length}`);
+      }
+      helpers[i % helpers.length].postMessage(taskFull);
     });
   }
   catch (err) {

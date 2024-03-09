@@ -53,6 +53,7 @@
     "filesStored": "保存ファイル数：$t(cache.files, {\"count\": {{count}} })",
     "files": "{{count}}個",
     "storageUsed": "ストレージの合計：{{amount, number}}",
+    "inProgress": "キャッシュ中…",
     "headerCollection": "コレクション",
     "headerSize": "サイズ",
     "headerActions": "操作"

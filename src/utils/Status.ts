@@ -1,11 +1,12 @@
-/* SearchTask status codes: loading -> processing -> done (can raise error/network) */
-export type SearchTaskResultError = 'error' | 'network';
+/* SearchTask status codes: processing -> done (can raise error) */
+export type SearchTaskResultError = 'error';
 export type SearchTaskResultDone = 'done';
-export type SearchTaskResultStatus = 'loading' | 'processing' | SearchTaskResultDone | SearchTaskResultError;
+export type SearchTaskResultNotDone = 'processing' | SearchTaskResultError;
+export type SearchTaskResultStatus = SearchTaskResultNotDone | SearchTaskResultDone;
 
-/* SearchResults status codes: loading -> processing -> collecting -> done (can raise regex/noMatch/error or propagate from SearchTask) */
+/* SearchResults status codes: loading -> processing -> collecting -> done (can raise regex/noMatch/error/network or propagate from SearchTask) */
 export type SearchResultsInProgress = 'loading' | 'processing' | 'collecting';
-export type SearchResultsError = SearchTaskResultError | 'regex' | 'noMatch';
+export type SearchResultsError = SearchTaskResultError | 'regex' | 'noMatch' | 'network';
 export type SearchResultsComplete = 'done' | SearchResultsError;
 export type SearchResultsStatus = SearchResultsInProgress | SearchResultsComplete;
 

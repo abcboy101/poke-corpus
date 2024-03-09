@@ -1,7 +1,7 @@
 import 'compression-streams-polyfill';
 import { preprocessString, convertWhitespace, postprocessString } from './cleanString';
-import { Speaker, speakerDelimiter, cacheVersion, getFileUrl } from './corpus';
-import { SearchTaskResultDone, SearchTaskResultStatus } from '../utils/Status';
+import { Speaker, speakerDelimiter } from './corpus';
+import { SearchTaskResultDone, SearchTaskResultNotDone } from '../utils/Status';
 
 export interface SearchParams {
   readonly query: string,
@@ -19,7 +19,9 @@ export interface SearchTask {
   readonly collectionKey: string,
   readonly fileKey: string,
   readonly languages: readonly string[],
-  readonly speaker?: Speaker
+  readonly files: readonly string[],
+  readonly speaker?: Speaker,
+  readonly speakerFiles?: readonly string[]
 }
 
 export interface SearchTaskResultLines {
@@ -29,11 +31,7 @@ export interface SearchTaskResultLines {
   readonly lines: readonly string[][]
 }
 
-export interface SearchTaskResult {
-  readonly index: number,
-  readonly status: SearchTaskResultStatus,
-  readonly result?: SearchTaskResultLines
-}
+export type SearchTaskResult = SearchTaskResultIncomplete | SearchTaskResultComplete;
 
 export interface SearchTaskResultComplete {
   readonly index: number,
@@ -41,44 +39,28 @@ export interface SearchTaskResultComplete {
   readonly result: SearchTaskResultLines
 }
 
+export interface SearchTaskResultIncomplete {
+  readonly index: number,
+  readonly status: SearchTaskResultNotDone
+}
+
 /* eslint-disable no-restricted-globals */
 self.onmessage = (task: MessageEvent<SearchTask>) => {
-  const {index, params, collectionKey, fileKey, languages, speaker} = task.data;
-  const notify = (status: SearchTaskResultStatus, result?: SearchTaskResultLines) => {
-    const message: SearchTaskResult = {
+  const {index, params, collectionKey, fileKey, languages, files, speaker, speakerFiles: speakerData} = task.data;
+  const notifyIncomplete = (status: SearchTaskResultNotDone) => {
+    const message: SearchTaskResultIncomplete = {
+      index: index,
+      status: status
+    }
+    postMessage(message);
+  }
+  const notifyComplete = (status: SearchTaskResultDone, result: SearchTaskResultLines) => {
+    const message: SearchTaskResultComplete = {
       index: index,
       status: status,
       result: result
     }
     postMessage(message);
-  }
-
-  /**
-   * Attempts the following, in order:
-   * - Retrieving the file from the cache
-   * - Populating the cache with the file
-   * - Fetching the file directly
-   *
-   * Returns a promise of the text of the file.
-   */
-  const getFileFromCache = (collectionKey: string, languageKey: string, fileKey: string) => {
-    const url = getFileUrl(collectionKey, languageKey, fileKey);
-    return ('caches' in self ? caches.open(cacheVersion)
-    .then((cache) => cache.match(url).then(res => res
-      ?? cache.add(url).then(() => cache.match(url)).then(res => res
-        ?? fetch(url))))
-    .catch(() => fetch(url)) : fetch(url))
-    .catch((err) => {
-      console.error(err);
-      notify('network');
-      return null;
-    })
-    .then((res) => res === null ? '' :
-      res.blob().then((blob) => import.meta.env.DEV ? new Response(blob.stream()).text() : new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text()))
-      // Due to a bug, the Vite dev server serves .gz files with `Content-Encoding: gzip`.
-      // To work around this, don't bother decompressing the file in the dev environment.
-      // https://github.com/vitejs/vite/issues/12266
-    .then(preprocessString);
   }
 
   const re = params.regex ? new RegExp(params.query, params.caseInsensitive ? 'sui' : 'su') : null;
@@ -90,8 +72,8 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
 
   try {
     // Load files
-    const filePromises = languages.map((languageKey) => getFileFromCache(collectionKey, languageKey, fileKey).then((data) => [languageKey, data] as [string, string]));
-    filePromises.forEach((promise) => promise.then(() => notify('loading')).catch(() => {})); // for progress bar
+    const filePromises = languages.map(preprocessString).map(((languageKey, i) => Promise.resolve([languageKey, files[i]] as const)));
+    // notify('loading'); // for progress bar
 
     // Process files
     const processingFilePromises = filePromises.map((promise) => promise.then(([languageKey, data]) => {
@@ -108,18 +90,19 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       }
       return [languageKey, lineKeys, lines] as const;
     }));
-    processingFilePromises.forEach((promise) => promise.then(() => notify('processing')).catch(() => {})); // for progress bar
+    processingFilePromises.forEach((promise) => promise.then(() => notifyIncomplete('processing')).catch(() => {})); // for progress bar
 
     // Load speakers
     // Since all dialogue with speaker names are in the script file while the speaker names are in the common file, we always have to load it separately
-    const speakerPromises = (speaker === undefined) ? [] : languages.map((languageKey) =>
-      getFileFromCache(collectionKey, languageKey, speaker.file).then((data) => {
+    const speakerPromises = (speaker === undefined || speakerData === undefined) ? [] : speakerData.map((data) =>
+      Promise.resolve(data).then((data) => {
         const lines = data.split(/\r\n|\n/);
         const start = lines.indexOf(`Text File : ${speaker.textFile}`) + 2;
         const end = lines.indexOf('~~~~~~~~~~~~~~~', start);
         return lines.slice(start, end);
       })
     );
+
 
     // Filter only the lines that matched
     Promise.all([Promise.all(processingFilePromises), Promise.all(speakerPromises)]).then(([processedFiles, speakers]) => {
@@ -140,7 +123,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
         return `${tag.replaceAll('[', '\\[')}\u{F1100}${speakerName}${speakerDelimiter(languages[languageIndex]) ?? ': '}\u{F1101}${rest}`;
       });
       Array.from(lineKeysSet).sort((a, b) => a - b).forEach((i) => fileResults.push(fileData.map((lines, languageIndex) => postprocessString(replaceSpeaker(lines[i] ?? '', languageIndex)))));
-      notify('done', {
+      notifyComplete('done', {
         collection: collectionKey,
         file: fileKey,
         languages: languageKeys,
@@ -149,11 +132,11 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
     })
     .catch((err) => {
       console.error(err);
-      notify('error');
+      notifyIncomplete('error');
     });
   }
   catch (err) {
     console.error(err);
-    notify('error');
+    notifyIncomplete('error');
   }
 };

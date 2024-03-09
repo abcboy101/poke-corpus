@@ -1,39 +1,62 @@
-import { MouseEventHandler, useEffect, useState } from "react";
+import { MouseEventHandler, MutableRefObject, useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import CacheManagerWorker from '../webWorker/cacheManagerWorker.ts?worker';
 import Delete from "./Delete";
 
 import './CacheManager.css';
 import corpus, { cacheVersion, getFileUrl } from '../webWorker/corpus';
 import { formatBytes } from "../utils/utils";
 
+type CachedFileInfoEntry = readonly [readonly [string, string, string], number];
+
 function CacheManager({active}: {active: boolean}) {
   const { t } = useTranslation();
   const [cacheStorageEnabled, setCacheStorageEnabled] = useState(true);
-  const [cachedFileInfo, setCachedFileInfo] = useState([] as (readonly [readonly [string, string, string], number])[]);
+  const [cachedFileInfo, setCachedFileInfo] = useState([] as readonly CachedFileInfoEntry[]);
+  const [cacheInProgress, setCacheInProgress] = useState(false);
+  const workerRef: MutableRefObject<Worker | null> = useRef(null);
+
+  useEffect(() => {
+    const onBlur = () => {
+      if (workerRef.current !== null && !active) {
+        console.log('Terminating worker!');
+        workerRef.current.terminate();
+        workerRef.current = null;
+      }
+    };
+    window.addEventListener('blur', onBlur);
+    return () => {
+      window.removeEventListener('blur', onBlur);
+    };
+  }, [active]);
 
   const checkCacheStorageEnabled = async () => {
     setCacheStorageEnabled('caches' in window && await window.caches.keys().then(() => true).catch(() => false));
   }
 
-  const [cacheInProgress, setCacheInProgress] = useState(false);
+  const onMessage = useCallback((e: MessageEvent<boolean>) => {
+    if (e.data) {
+      console.log('Caching complete');
+      workerRef.current?.terminate();
+      workerRef.current = null;
+    }
+    else {
+      console.error('Caching error');
+    }
+    checkCachedFiles();
+    setCacheInProgress(false);
+  }, []);
+
   const cacheAll = () => {
     if ('caches' in window) {
       setCacheInProgress(true);
-      window.caches.open(cacheVersion).then((cache) =>
-        Promise.all(Object.entries(corpus.collections).flatMap(([collectionKey, collection]) =>
-          collection.files.flatMap((fileKey) => collection.languages.map((languageKey) => {
-            const url = getFileUrl(collectionKey, languageKey, fileKey);
-            return cache.match(url).then(res => res
-              ?? cache.add(url).then(() => cache.match(url)).then(res => res
-                ?? fetch(url)));
-          }))
-        ))
-      ).catch(() => {}).then(() => {
-        console.log('Caching complete')
-        checkCachedFiles();
-        setCacheInProgress(false);
-      });
+      if (workerRef.current === null) {
+        console.log('Creating new worker...');
+        workerRef.current = new CacheManagerWorker();
+        workerRef.current.addEventListener("message", onMessage);
+        workerRef.current.postMessage(null);
+      }
     }
   }
 
@@ -61,7 +84,10 @@ function CacheManager({active}: {active: boolean}) {
     // VitePWA does not use indexedDB
     if (indexedDB && 'databases' in indexedDB){
       indexedDB.databases()
-        .then(databases => databases.filter((db) => db.name !== undefined).forEach((db) => indexedDB.deleteDatabase(db.name as string)))
+        .then(databases => databases.forEach((db) => {
+          if (db.name !== undefined)
+            indexedDB.deleteDatabase(db.name);
+        }))
         .catch(() => {});
     }
     */
@@ -121,35 +147,35 @@ function CacheManager({active}: {active: boolean}) {
           {cacheStorageEnabled && <li>{t('cache.filesStored', {count: cachedFileInfo.length})}</li>}
           {cacheStorageEnabled && <li>{t('cache.storageUsed', storageUsedAmount())}</li>}
         </ul>
-        {
-        cachedFileInfo.length > 0 &&
         <div>
-          <table className="App-cache-table">
-            <thead>
-              <tr>
-                <th>{t('cache.headerCollection')}</th>
-                <th>{t('cache.headerSize')}</th>
-                <th>{t('cache.headerActions')}</th>
-              </tr>
-            </thead>
-            <tbody>
-            {
-              fileInfoSumByLanguage().map(([collectionKey, fileKey, size], index) =>
-                <tr key={index}>
-                  <td>{t('tableHeader', {collection: t(`collections:${collectionKey}.short`), file: t(`files:${fileKey}`), interpolation: {escapeValue: false}})}</td>
-                  <td>{t('cache.size', fileInfoParams(size))}</td>
-                  <td>
-                    <div className="App-cache-table-actions">
-                      <Delete callback={() => clearCachedFile(collectionKey, fileKey)}/>
-                    </div>
-                  </td>
+          {
+            cacheInProgress ? t('cache.inProgress') : cachedFileInfo.length > 0 &&
+            <table className="App-cache-table">
+              <thead>
+                <tr>
+                  <th>{t('cache.headerCollection')}</th>
+                  <th>{t('cache.headerSize')}</th>
+                  <th>{t('cache.headerActions')}</th>
                 </tr>
-              )
-            }
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+              {
+                fileInfoSumByLanguage().map(([collectionKey, fileKey, size], index) =>
+                  <tr key={index}>
+                    <td>{t('tableHeader', {collection: t(`collections:${collectionKey}.short`), file: t(`files:${fileKey}`), interpolation: {escapeValue: false}})}</td>
+                    <td>{t('cache.size', fileInfoParams(size))}</td>
+                    <td>
+                      <div className="App-cache-table-actions">
+                        <Delete callback={() => clearCachedFile(collectionKey, fileKey)}/>
+                      </div>
+                    </td>
+                  </tr>
+                )
+              }
+              </tbody>
+            </table>
+          }
         </div>
-        }
       </div>
     </>
   );
