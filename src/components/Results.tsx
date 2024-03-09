@@ -17,9 +17,9 @@ import logo from '../res/logo.svg';
 import '../i18n/config';
 
 const jumpTo = (k: number) => {
-  const results = document.getElementById("App-results");
-  const section0 = document.getElementById(`App-results-section0`);
-  const sectionk = document.getElementById(`App-results-section${k}`);
+  const results = document.getElementById("results");
+  const section0 = document.getElementById(`results-section0`);
+  const sectionk = document.getElementById(`results-section${k}`);
   if (results && section0 && sectionk) {
     results.scrollTop = sectionk.offsetTop - section0.offsetTop;
   }
@@ -27,7 +27,7 @@ const jumpTo = (k: number) => {
 
 function JumpToSelect({headers}: {headers: readonly string[]}) {
   const { t } = useTranslation();
-  return <nav className="App-results-jump">
+  return <nav className="results-jump">
     <select name="jump" id="jump" onChange={(e) => jumpTo(parseInt(e.target.value, 10))} value="">
       <option value="" disabled>{t('jumpTo')}</option>
       {headers.map((header, k) => (k === 0 || headers[k-1] !== header) && <option key={k} value={k}>{header}</option>)}
@@ -61,11 +61,11 @@ function ResultsTable({header, languages, lines, displayHeader, k, count, start 
   }, [t, slicedLines])
 
   return (
-    <section id={`App-results-section${k}`} className='App-results-table-container'>
+    <section id={`results-section${k}`} className='results-table-container'>
       <h2 className={displayHeader ? undefined : 'd-none'}>{header}</h2>
-      { start !== 0 ? <button className="App-results-notice" onClick={onClick(count)}>{t('tablePartial', {count: start})}</button> : null }
+      { start !== 0 ? <button className="results-notice" onClick={onClick(count)}>{t('tablePartial', {count: start})}</button> : null }
       { slicedLines.length > 0 ?
-        <table className="App-results-table">
+        <table className="results-table">
           <thead>
             <tr>
               {idIndex !== -1 ? <th></th> : null}
@@ -77,7 +77,7 @@ function ResultsTable({header, languages, lines, displayHeader, k, count, start 
               return <tr key={i}>
                 {idIndex !== -1 ?
                   <td key="actions">
-                    <div className="App-results-table-actions">
+                    <div className="results-table-actions">
                       <Share hash={`#id=${row[idIndex]}`}/>
                       <ViewNearby hash={`#file=${row[idIndex].split('.').slice(0, -1).join('.')}`}/>
                     </div>
@@ -89,7 +89,7 @@ function ResultsTable({header, languages, lines, displayHeader, k, count, start 
         </table>
         : null
       }
-      { end !== undefined && end < lines.length ? <button className="App-results-notice" onClick={onClick(count + end)}>{t('tablePartial', {count: lines.length - end})}</button> : null }
+      { end !== undefined && end < lines.length ? <button className="results-notice" onClick={onClick(count + end)}>{t('tablePartial', {count: lines.length - end})}</button> : null }
     </section>
   );
 }
@@ -117,32 +117,32 @@ function Results({status, progress, results, limit=1000}: {status: Status, progr
 
   return (
     <>
-      <div className="App-search App-results-status">
+      <div className="search results-status">
         {
           headers.length > 1 ? <JumpToSelect headers={headers} /> :
-          <div className="App-results-status-text">{t(`status.${status}`)}</div>
+          <div className="results-status-text">{t(`status.${status}`)}</div>
         }
         <Spinner src={logo} active={statusInProgress.includes(status)}/>
         {
           count > limit ? (
-            <div className="App-results-nav">
+            <div className="results-nav">
               <div>
-                <span className="App-results-nav-range-long">{t('displayedRange.long', {count: count, start: offset + 1, end: Math.min(count, offset + limit)})}</span>
-                <span className="App-results-nav-range-short">{t('displayedRange.short', {count: count, start: offset + 1, end: Math.min(count, offset + limit)})}</span>
+                <span className="results-nav-range-long">{t('displayedRange.long', {count: count, start: offset + 1, end: Math.min(count, offset + limit)})}</span>
+                <span className="results-nav-range-short">{t('displayedRange.short', {count: count, start: offset + 1, end: Math.min(count, offset + limit)})}</span>
               </div>
               <button className='button-square' onClick={(e) => { setOffset(Math.max(0, offset - limit)) }}>{t('loadPrev', {limit: limit})}</button>
               <button className='button-square' onClick={(e) => { setOffset(Math.min(Math.floor(count / limit) * limit, offset + limit)) }}>{t('loadNext', {limit: limit})}</button>
             </div>
           ) : <ProgressBar progress={progress} />
         }
-        <div className="App-results-toggle">
+        <div className="results-toggle">
           <button className={showVariables ? 'button-square active' : 'button-square'} onClick={(e) => { setShowVariables(!showVariables); }} title={t('showVariables')}>{t('showVariablesIcon')}</button>
           <button className={showAllCharacters ? 'button-square active' : 'button-square'} onClick={(e) => { setShowAllCharacters(!showAllCharacters); }} title={t('showAllCharacters')}>{t('showAllCharactersIcon')}</button>
           <button className={showGender !== 2 ? 'button-square active' : 'button-square'} onClick={(e) => { setShowGender((showGender + 1) % 3); }} title={t('showGender')}>{t('showGenderIcon', {context: showGender})}</button>
           <button className={showPlural !== 0 ? 'button-square active' : 'button-square'} onClick={(e) => { setShowPlural((showPlural + 1) % 3); }} title={t('showPlural')}>{t('showPluralIcon', {context: showPlural})}</button>
         </div>
       </div>
-      <main id="App-results" className={`App-search App-results variables-${showVariables ? 'show' : 'hide'} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural}`}>
+      <main id="results" className={`search results variables-${showVariables ? 'show' : 'hide'} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural}`}>
         { resultTables }
       </main>
     </>

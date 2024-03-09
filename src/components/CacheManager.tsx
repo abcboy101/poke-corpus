@@ -137,11 +137,11 @@ function CacheManager({active}: {active: boolean}) {
 
   return (
     <>
-      <div className='App-cache App-cache-button-group'>
+      <div className='cache cache-button-group'>
         <button onClick={cacheAll} disabled={cacheInProgress}>{t('cacheAll')}</button>
         <button onClick={clearCache}>{t('clearCache')}</button>
       </div>
-      <div className="App-cache App-cache-results">
+      <div className="cache cache-results">
         <ul>
           <li>{t('cache.storageStatus', {val: cacheStorageEnabled ? t('cache.storageEnabled') : t('cache.storageDisabled')})}</li>
           {cacheStorageEnabled && <li>{t('cache.filesStored', {count: cachedFileInfo.length})}</li>}
@@ -150,7 +150,7 @@ function CacheManager({active}: {active: boolean}) {
         <div>
           {
             cacheInProgress ? t('cache.inProgress') : cachedFileInfo.length > 0 &&
-            <table className="App-cache-table">
+            <table className="cache-table">
               <thead>
                 <tr>
                   <th>{t('cache.headerCollection')}</th>
@@ -165,7 +165,7 @@ function CacheManager({active}: {active: boolean}) {
                     <td>{t('tableHeader', {collection: t(`collections:${collectionKey}.short`), file: t(`files:${fileKey}`), interpolation: {escapeValue: false}})}</td>
                     <td>{t('cache.size', fileInfoParams(size))}</td>
                     <td>
-                      <div className="App-cache-table-actions">
+                      <div className="cache-table-actions">
                         <Delete callback={() => clearCachedFile(collectionKey, fileKey)}/>
                       </div>
                     </td>

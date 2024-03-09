@@ -56,14 +56,14 @@ function App() {
   }, []);
 
   return (
-    <div className={`App App-mode-${mode} App-view-${view}`} lang={i18next.language} dir={i18next.dir()}>
-      <header className="App-header">
+    <div className={`app mode-${mode} view-${view.toLowerCase()}`} lang={i18next.language} dir={i18next.dir()}>
+      <header className="header">
         <h1>
           <a href="/poke-corpus/">
-            <img className="App-header-logo" src={logo} alt="" height="40" width="40" /> {t('title', {version: t('version')})}
+            <img className="header-logo" src={logo} alt="" height="40" width="40" /> {t('title', {version: t('version')})}
           </a>
         </h1>
-        <div className="App-header-options">
+        <div className="header-options">
           <LanguageSelect/>
           <ModeSelect mode={mode} setMode={setMode}/>
         </div>

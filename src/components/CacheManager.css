@@ -1,4 +1,4 @@
-.App-cache-button-group {
+.cache-button-group {
   display: flex;
   gap: 0.5em;
   flex-wrap: wrap;
@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-.App-cache-results {
+.cache-results {
   width: 100%;
   min-height: max(12em, 50dvh);
   overflow: auto;
@@ -20,7 +20,7 @@
   gap: 0.5em;
 }
 
-.App-cache-table-actions {
+.cache-table-actions {
   display: flex;
   margin: auto;
   justify-content: center;

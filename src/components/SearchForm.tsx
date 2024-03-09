@@ -163,9 +163,9 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
     localStorageSetItem('corpus-filtersVisible', newValue.toString());
   };
 
-  return <form className="App-search App-search-form" onSubmit={onSubmit}>
-    <div className="App-search-bar">
-      <div className="App-search-bar-query">
+  return <form className="search search-form" onSubmit={onSubmit}>
+    <div className="search-bar">
+      <div className="search-bar-query">
         <label htmlFor="query">{t('query')} </label>
         <input type="text" name="query" id="query" value={query} onChange={e => setQuery(e.target.value)}/>
         <div className="btn-alternate-container">
@@ -174,21 +174,21 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         </div>
         <button type="button" className={filtersVisible ? 'active' : undefined} onClick={toggleFiltersVisible}>{t('filters')}</button>
       </div>
-      <div className="App-search-bar-group">
-        <div className="App-search-options">
-          <div className="App-search-option">
+      <div className="search-bar-group">
+        <div className="search-options">
+          <div className="search-option">
             <input type="checkbox" name="regex" id="regex" checked={regex} onChange={e => setRegex(e.target.checked)}/>
             <label htmlFor="regex">{t('regex')}</label>
           </div>
-          <div className="App-search-option">
+          <div className="search-option">
             <input type="checkbox" name="caseInsensitive" id="caseInsensitive" checked={caseInsensitive} onChange={e => setCaseInsensitive(e.target.checked)}/>
             <label htmlFor="caseInsensitive">{t('caseInsensitive')}</label>
           </div>
-          <div className="App-search-option">
+          <div className="search-option">
             <input type="checkbox" name="common" id="common" checked={common} onChange={e => setCommon(e.target.checked)}/>
             <label htmlFor="common">{t('common')}</label>
           </div>
-          <div className="App-search-option">
+          <div className="search-option">
             <input type="checkbox" name="script" id="script" checked={script} onChange={e => setScript(e.target.checked)}/>
             <label htmlFor="script">{t('script')}</label>
           </div>

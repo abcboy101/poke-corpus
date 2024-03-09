@@ -2,7 +2,7 @@
   display: inline-block;
   width: 1em;
   height: 1em;
-  animation: Spinner-spin infinite 0.5s linear;
+  animation: spinner-spin infinite 0.5s linear;
 }
 
 .spinner-active {
@@ -19,10 +19,11 @@
   animation: none;
 }
 
-@keyframes Spinner-spin {
+@keyframes spinner-spin {
   from {
     rotate: 0deg;
   }
+
   to {
     rotate: 360deg;
   }

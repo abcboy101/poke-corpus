@@ -1,14 +1,14 @@
 /* Colorschemes */
 
 :root {
-  --background-light: #dde;
-  --highlight-light: #eef;
-  --text-light: #111;
-  --text-gray-light: #888;
-  --background-dark: #112;
-  --highlight-dark: #224;
-  --text-dark: #eee;
-  --text-gray-dark: #888;
+  --background-light: #ddddee;
+  --highlight-light: #eeeeff;
+  --text-light: #111111;
+  --text-gray-light: #888888;
+  --background-dark: #111122;
+  --highlight-dark: #222244;
+  --text-dark: #eeeeee;
+  --text-gray-dark: #888888;
   --progress-bar-color-light: limegreen;
   --progress-bar-color-dark: green;
   --accent-light: skyblue;
@@ -46,12 +46,12 @@
     --version-2-color: var(--version-2-color-light);
   }
 
-  body:has(.App-mode-system) {
+  body:has(.mode-system) {
     background: var(--background-light);
   }
 }
 
-.App-mode-light {
+.mode-light {
   --background: var(--background-light);
   --highlight: var(--highlight-light);
   --text: var(--text-light);
@@ -66,10 +66,6 @@
   --number-plural-color: var(--number-plural-color-light);
   --version-1-color: var(--version-1-color-light);
   --version-2-color: var(--version-2-color-light);
-}
-
-body:has(.App-mode-light) {
-  background: var(--background-light);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -90,12 +86,12 @@ body:has(.App-mode-light) {
     --version-2-color: var(--version-2-color-dark);
   }
 
-  body:has(.App-mode-system) {
+  body:has(.mode-system) {
     background: var(--background-dark);
   }
 }
 
-.App-mode-dark {
+.mode-dark {
   --background: var(--background-dark);
   --highlight: var(--highlight-dark);
   --text: var(--text-dark);
@@ -112,10 +108,6 @@ body:has(.App-mode-light) {
   --version-2-color: var(--version-2-color-dark);
 }
 
-body:has(.App-mode-dark) {
-  background: var(--background-dark);
-}
-
 
 /* Styling */
 
@@ -127,6 +119,14 @@ body:has(.App-mode-dark) {
 body {
   height: 100dvh;
   overflow: auto;
+}
+
+body:has(.mode-light) {
+  background: var(--background-light);
+}
+
+body:has(.mode-dark) {
+  background: var(--background-dark);
 }
 
 a {
@@ -162,14 +162,6 @@ dt {
   visibility: hidden;
 }
 
-*[dir=ltr] h1, *[dir=ltr] h2 {
-  float: left;
-}
-
-*[dir=rtl] h1, *[dir=rtl] h2 {
-  float: right;
-}
-
 h1, h2 {
   margin: 0;
   max-width: 100%;
@@ -180,13 +172,25 @@ h1 a:hover, h1 a:active {
   text-decoration: none;
 }
 
-input[type=text], select, input[type=submit], input[type=button], button {
+*[dir="ltr"] h1, *[dir="ltr"] h2 {
+  float: left;
+}
+
+*[dir="rtl"] h1, *[dir="rtl"] h2 {
+  float: right;
+}
+
+input[type="text"], select, input[type="submit"], input[type="button"], button {
   background: var(--highlight);
   border: 1px solid var(--text);
   color: var(--text);
   border-radius: 3px;
   padding: 2px 4px;
   min-height: 2em;
+}
+
+select {
+  width: 100%;
 }
 
 button.link {
@@ -207,11 +211,11 @@ button.link:hover, button.link:active, button.link:active:enabled {
   text-decoration: underline;
 }
 
-input[type=text]:disabled, select:disabled, input[type=submit]:disabled, input[type=button]:disabled, button:disabled {
+input[type="text"]:disabled, select:disabled, input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled {
   opacity: 0.7;
 }
 
-.active:enabled, input[type=submit]:active:enabled, input[type=button]:active:enabled, button:active:enabled {
+.active:enabled, input[type="submit"]:active:enabled, input[type="button"]:active:enabled, button:active:enabled {
   background: var(--accent);
 }
 
@@ -219,10 +223,6 @@ input[type=text]:disabled, select:disabled, input[type=submit]:disabled, input[t
   height: 2em;
   width: 2em;
   white-space: nowrap;
-}
-
-select {
-  width: 100%;
 }
 
 footer {
@@ -241,7 +241,7 @@ table th, table td {
 }
 
 /* Layout */
-.App {
+.app {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
@@ -255,33 +255,33 @@ table th, table td {
   text-size-adjust: none;
 }
 
-.App-header-logo {
+.header-logo {
   height: 1.25em;
   margin-bottom: 0.25em;
   vertical-align: middle;
 }
 
-*[dir=ltr] .App-header-options, *[dir=ltr] .App-header-options {
-  float: right;
-}
-
-*[dir=rtl] .App-header-options, *[dir=rtl] .App-header-options {
-  float: left;
-}
-
-.App-header-options {
+.header-options {
   display: grid;
   max-width: 100%;
   gap: 0.25rem 0.5rem;
   grid-template-columns: repeat(2, auto);
 }
 
-.App-header-options label {
+*[dir="ltr"] .header-options {
+  float: right;
+}
+
+*[dir="rtl"] .header-options {
+  float: left;
+}
+
+.header-options label {
   text-align: end;
   white-space: nowrap;
 }
 
-.App-view-Search .App-cache,
-.App-view-CacheManager .App-search {
+.view-search .cache,
+.view-cachemanager .search {
   display: none;
 }

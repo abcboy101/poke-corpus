@@ -1,4 +1,4 @@
-.App-results-status {
+.results-status {
   display: grid;
   grid-template-columns: minmax(20em, 1fr) 1em 2fr auto;
   align-items: center;
@@ -6,11 +6,11 @@
   gap: 0.25em;
 }
 
-.App-results-jump, .App-results-status-text {
+.results-jump, .results-status-text {
   min-height: 1.75em;
 }
 
-.App-results-nav {
+.results-nav {
   display: grid;
   grid-template-columns: 1fr auto auto;
   align-items: center;
@@ -18,12 +18,12 @@
   gap: 0.25em;
 }
 
-.App-results-toggle {
+.results-toggle {
   display: flex;
   gap: 0.25em;
 }
 
-.App-results {
+.results {
   width: 100%;
   min-height: max(12em, 50dvh);
   overflow: auto;
@@ -36,13 +36,13 @@
   gap: 0.5em;
 }
 
-.App-results-table-container {
+.results-table-container {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
 }
 
-.App-results-table-actions {
+.results-table-actions {
   display: flex;
   margin: auto;
   place-items: center;
@@ -50,30 +50,30 @@
   gap: 0.25em;
 }
 
-.App-results-nav-range-long {
+.results-nav-range-long {
   display: block;
 }
 
-.App-results-nav-range-short {
+.results-nav-range-short {
   display: none;
 }
 
-@media (max-width: 575.98px) {
-  .App-results-status {
+@media (width <= 575.98px) {
+  .results-status {
     grid-template-columns: 1em 1fr auto;
   }
 
-  .App-results-jump, .App-results-status-text {
+  .results-jump, .results-status-text {
     grid-column: span 3;
   }
 }
 
-@media (max-width: 767.98px) {
-  .App-results-nav-range-short {
+@media (width <= 767.98px) {
+  .results-nav-range-short {
     display: block;
   }
 
-  .App-results-nav-range-long {
+  .results-nav-range-long {
     display: none;
   }
 }
