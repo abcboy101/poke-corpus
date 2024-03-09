@@ -1,7 +1,7 @@
 import { corpus, cacheVersion, getCachedFile, getFileUrl } from './corpus';
 
 /* eslint-disable no-restricted-globals */
-self.onmessage = (message: MessageEvent<null>) => {
+self.onmessage = () => {
   try {
     if (import.meta.env.DEV) {
       console.debug('Caching worker started');

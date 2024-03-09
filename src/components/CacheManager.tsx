@@ -71,12 +71,12 @@ function CacheManager({active}: {active: boolean}) {
           cache.match(getFileUrl(collectionKey, languageKey, fileKey)).then(async (res) =>
             res !== undefined ? (await res.blob()).size : -1
         )));
-        setCachedFileInfo(sizes.map((size, i) => [keys[i], size] as const).filter(([_, size]) => size !== -1));
+        setCachedFileInfo(sizes.map((size, i) => [keys[i], size] as const).filter(([, size]) => size !== -1));
       }).catch(() => {});
     }
   }
 
-  const clearCache: MouseEventHandler<HTMLButtonElement> = (e) => {
+  const clearCache: MouseEventHandler<HTMLButtonElement> = () => {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.ready.then(registration => registration.unregister()).catch(() => {});
     }
@@ -116,7 +116,7 @@ function CacheManager({active}: {active: boolean}) {
   }, [active]);
 
   const storageUsedAmount = () => {
-    const total = cachedFileInfo.map(([_, size]) => size).reduce((a, b) => a + b, 0);
+    const total = cachedFileInfo.map(([, size]) => size).reduce((a, b) => a + b, 0);
     const [amount, format] = formatBytes(total);
     return {amount: amount, formatParams: {amount: format}};
   };
@@ -129,9 +129,9 @@ function CacheManager({active}: {active: boolean}) {
   const fileInfoSumByLanguage = () => {
     const value = Object.entries(corpus.collections).flatMap(([collectionKey, collection]) =>
       collection.files.map((fileKey) => [collectionKey, fileKey,
-        cachedFileInfo.filter(([[collection, _language, file], _size]) => collectionKey === collection && fileKey === file).map(([_, size]) => size).reduce((a, b) => a + b, 0)
+        cachedFileInfo.filter(([[collection, , file], ]) => collectionKey === collection && fileKey === file).map(([, size]) => size).reduce((a, b) => a + b, 0)
       ] as const
-    )).filter(([_collection, _file, size]) => size > 0);
+    )).filter(([, , size]) => size > 0);
     return value;
   };
 

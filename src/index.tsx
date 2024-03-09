@@ -14,7 +14,7 @@ root.render(
   </React.StrictMode>
 );
 
-const updateSW = registerSW({
+registerSW({
   onOfflineReady() {
     console.log("Ready to work offline!");
   },

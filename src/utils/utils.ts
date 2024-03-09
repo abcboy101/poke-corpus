@@ -8,14 +8,16 @@ export function localStorageGetItem(key: string) {
   catch {
     return null;
   }
-};
+}
 
 export function localStorageSetItem(key: string, value: string) {
   try {
     localStorage.setItem(key, value);
   }
-  catch {}
-};
+  catch {
+    return;
+  }
+}
 
 /* Generate appropriate i18n number format options for n bytes */
 const byteUnits = ['byte', 'kilobyte', 'megabyte', 'gigabyte', 'terabyte', 'petabyte'] as const;

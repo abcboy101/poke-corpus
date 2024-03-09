@@ -1,5 +1,7 @@
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react-swc'
+import eslint from 'vite-plugin-eslint'
+import stylelint from 'vite-plugin-stylelint'
 import { splitVendorChunkPlugin } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
@@ -8,6 +10,8 @@ export default defineConfig({
   base: '/poke-corpus/',
   plugins: [
     react(),
+    eslint(),
+    stylelint(),
     splitVendorChunkPlugin(),
     VitePWA({
       registerType: 'autoUpdate',

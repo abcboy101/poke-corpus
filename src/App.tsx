@@ -1,4 +1,4 @@
-import { Dispatch, MouseEventHandler, SetStateAction, useEffect, useState } from 'react';
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
@@ -68,7 +68,7 @@ function App() {
           <ModeSelect mode={mode} setMode={setMode}/>
         </div>
       </header>
-      <Search active={view === "Search"}/>
+      <Search/> {/* <Search active={view === "Search"}/> */}
       <CacheManager active={view === "CacheManager"}/>
       <footer>
         <span>{t('tagline')}</span>

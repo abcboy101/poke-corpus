@@ -42,7 +42,7 @@ function ResultsTable({header, languages, lines, displayHeader, k, count, start 
   const displayDirs = displayLanguages.map((lang) => i18next.dir(lang));
   const sameDir = displayDirs.every((dir) => dir === displayDirs[0]);
   const slicedLines = (start !== 0 || end !== undefined) ? lines.slice(start, end) : lines;
-  const onClick = (count: number): MouseEventHandler<HTMLButtonElement> => (e) => {
+  const onClick = (count: number): MouseEventHandler<HTMLButtonElement> => () => {
     setOffset(count);
     jumpTo(k);
   }
@@ -130,16 +130,16 @@ function Results({status, progress, results, limit=1000}: {status: Status, progr
                 <span className="results-nav-range-long">{t('displayedRange.long', {count: count, start: offset + 1, end: Math.min(count, offset + limit)})}</span>
                 <span className="results-nav-range-short">{t('displayedRange.short', {count: count, start: offset + 1, end: Math.min(count, offset + limit)})}</span>
               </div>
-              <button className='button-square' onClick={(e) => { setOffset(Math.max(0, offset - limit)) }}>{t('loadPrev', {limit: limit})}</button>
-              <button className='button-square' onClick={(e) => { setOffset(Math.min(Math.floor(count / limit) * limit, offset + limit)) }}>{t('loadNext', {limit: limit})}</button>
+              <button className='button-square' onClick={() => { setOffset(Math.max(0, offset - limit)) }}>{t('loadPrev', {limit: limit})}</button>
+              <button className='button-square' onClick={() => { setOffset(Math.min(Math.floor(count / limit) * limit, offset + limit)) }}>{t('loadNext', {limit: limit})}</button>
             </div>
           ) : <ProgressBar progress={progress} />
         }
         <div className="results-toggle">
-          <button className={showVariables ? 'button-square active' : 'button-square'} onClick={(e) => { setShowVariables(!showVariables); }} title={t('showVariables')}>{t('showVariablesIcon')}</button>
-          <button className={showAllCharacters ? 'button-square active' : 'button-square'} onClick={(e) => { setShowAllCharacters(!showAllCharacters); }} title={t('showAllCharacters')}>{t('showAllCharactersIcon')}</button>
-          <button className={showGender !== 2 ? 'button-square active' : 'button-square'} onClick={(e) => { setShowGender((showGender + 1) % 3); }} title={t('showGender')}>{t('showGenderIcon', {context: showGender})}</button>
-          <button className={showPlural !== 0 ? 'button-square active' : 'button-square'} onClick={(e) => { setShowPlural((showPlural + 1) % 3); }} title={t('showPlural')}>{t('showPluralIcon', {context: showPlural})}</button>
+          <button className={showVariables ? 'button-square active' : 'button-square'} onClick={() => { setShowVariables(!showVariables); }} title={t('showVariables')}>{t('showVariablesIcon')}</button>
+          <button className={showAllCharacters ? 'button-square active' : 'button-square'} onClick={() => { setShowAllCharacters(!showAllCharacters); }} title={t('showAllCharacters')}>{t('showAllCharactersIcon')}</button>
+          <button className={showGender !== 2 ? 'button-square active' : 'button-square'} onClick={() => { setShowGender((showGender + 1) % 3); }} title={t('showGender')}>{t('showGenderIcon', {context: showGender})}</button>
+          <button className={showPlural !== 0 ? 'button-square active' : 'button-square'} onClick={() => { setShowPlural((showPlural + 1) % 3); }} title={t('showPlural')}>{t('showPluralIcon', {context: showPlural})}</button>
         </div>
       </div>
       <main id="results" className={`search results variables-${showVariables ? 'show' : 'hide'} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural}`}>
@@ -147,6 +147,6 @@ function Results({status, progress, results, limit=1000}: {status: Status, progr
       </main>
     </>
   );
-};
+}
 
 export default Results;

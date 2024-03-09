@@ -37,8 +37,8 @@ function SearchCollections({collections, setCollections}: {collections: readonly
         }
       </div>
       <div className="search-button-group">
-        <button disabled={collections.length === Object.keys(corpus.collections).length} onClick={(e) => { setCollections(Object.keys(corpus.collections)); }}>{t('selectAll')}</button>
-        <button disabled={collections.length === 0} onClick={(e) => { setCollections([]); }}>{t('deselectAll')}</button>
+        <button disabled={collections.length === Object.keys(corpus.collections).length} onClick={() => { setCollections(Object.keys(corpus.collections)); }}>{t('selectAll')}</button>
+        <button disabled={collections.length === 0} onClick={() => { setCollections([]); }}>{t('deselectAll')}</button>
       </div>
     </>
   )
@@ -72,8 +72,8 @@ function SearchLanguages({languages, setLanguages}: {languages: readonly string[
         }
       </div>
       <div className="search-button-group">
-        <button disabled={languages.length === Object.keys(corpus.languages).length} onClick={(e) => { setLanguages(corpus.languages); }}>{t('selectAll')}</button>
-        <button disabled={languages.length === 0} onClick={(e) => { setLanguages([]); }}>{t('deselectAll')}</button>
+        <button disabled={languages.length === Object.keys(corpus.languages).length} onClick={() => { setLanguages(corpus.languages); }}>{t('selectAll')}</button>
+        <button disabled={languages.length === 0} onClick={() => { setLanguages([]); }}>{t('deselectAll')}</button>
       </div>
     </>
   )

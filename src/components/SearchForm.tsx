@@ -153,11 +153,11 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
     });
   };
 
-  const onCancel: MouseEventHandler<HTMLButtonElement> = (e) => {
+  const onCancel: MouseEventHandler<HTMLButtonElement> = () => {
     terminateWorker();
   };
 
-  const toggleFiltersVisible: MouseEventHandler<HTMLButtonElement> = (e) => {
+  const toggleFiltersVisible: MouseEventHandler<HTMLButtonElement> = () => {
     const newValue = !filtersVisible;
     setFiltersVisible(newValue);
     localStorageSetItem('corpus-filtersVisible', newValue.toString());

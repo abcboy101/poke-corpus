@@ -5,14 +5,14 @@ import { SearchResultsInProgress, SearchResultsComplete, SearchResultsStatus } f
 
 export interface SearchResultLines extends SearchTaskResultLines {
   readonly displayHeader: boolean
-};
+}
 
 export interface SearchResults {
   readonly complete: boolean,
   readonly status: SearchResultsStatus,
   readonly progress: number,
   readonly results: readonly SearchResultLines[]
-};
+}
 
 type SearchTaskPartial = Omit<SearchTask, "files" | "speakerFiles">;
 
