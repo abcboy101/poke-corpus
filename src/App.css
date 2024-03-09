@@ -154,6 +154,14 @@ dt {
   display: none;
 }
 
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
 *[dir=ltr] h1, *[dir=ltr] h2 {
   float: left;
 }
@@ -211,10 +219,6 @@ input[type=text]:disabled, select:disabled, input[type=submit]:disabled, input[t
   height: 2em;
   width: 2em;
   white-space: nowrap;
-}
-
-.submit {
-  min-width: 4em;
 }
 
 select {

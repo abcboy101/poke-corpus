@@ -168,11 +168,10 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       <div className="App-search-bar-query">
         <label htmlFor="query">{t('query')} </label>
         <input type="text" name="query" id="query" value={query} onChange={e => setQuery(e.target.value)}/>
-        {
-          status !== 'rendering' && statusInProgress.includes(status)
-          ? <button className="submit" type="button" onClick={onCancel}>{t('cancel')}</button>
-          : <input className="submit" type="submit" value={t('search')} disabled={query.length === 0 || collections.length === 0 || languages.length === 0}/>
-        }
+        <div className="btn-alternate-container">
+          <input type="submit" className={status === 'rendering' || !statusInProgress.includes(status) ? 'visible' : 'invisible'} value={t('search')} disabled={query.length === 0 || collections.length === 0 || languages.length === 0 || (status !== 'rendering' && statusInProgress.includes(status))}/>
+          <button type="button" className={status === 'rendering' || !statusInProgress.includes(status) ? 'invisible' : 'visible'} onClick={onCancel} disabled={status === 'rendering' || !statusInProgress.includes(status)}>{t('cancel')}</button>
+        </div>
         <button type="button" className={filtersVisible ? 'active' : undefined} onClick={toggleFiltersVisible}>{t('filters')}</button>
       </div>
       <div className="App-search-bar-group">

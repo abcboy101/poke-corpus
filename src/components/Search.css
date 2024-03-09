@@ -22,6 +22,16 @@
   align-items: center;
 }
 
+.btn-alternate-container {
+  display: grid;
+  grid-template-columns: max-content;
+}
+
+.btn-alternate-container > * {
+  grid-column: 1;
+  grid-row: 1;
+}
+
 .App-search-options {
   display: flex;
   gap: 0.5em;
@@ -69,8 +79,8 @@
   overflow: hidden;
 }
 
-.App-search-collection label {
-  display: block;
+.App-search-collection label, .App-search-language label {
+  width: 100%;
 }
 
 .App-search-option label {
