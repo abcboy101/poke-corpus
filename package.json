@@ -39,12 +39,13 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "start": "vite",
-    "build": "tsc && vite build",
+    "start": "npm run hash && vite",
+    "build": "npm run hash && tsc && vite build",
     "serve": "vite preview",
     "test": "vitest",
     "test:coverage": "vitest run --coverage --watch=false",
-    "lint": "npx eslint \"src/**/*.{tsx,ts}\" && stylelint \"**/*.css\""
+    "lint": "npx eslint \"src/**/*.{tsx,ts}\" && stylelint \"**/*.css\"",
+    "hash": "python update_hash.py"
   },
   "browserslist": {
     "production": [
