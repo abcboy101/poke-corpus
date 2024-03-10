@@ -5631,6 +5631,7 @@ Argento*
 Cristallo*
 I Pokémon trasferiti nella Banca Pokémon non potranno\npiù essere riportati nel gioco da cui provengono.\c\nI Pokémon che hanno uno strumento non possono\nessere trasferiti.
 Sono presenti uno o più Pokémon con uno strumento.\nI Pokémon che hanno uno strumento non possono\nessere trasferiti.
+La scheda SD è piena.\nImpossibile avviare il Pokétrasferitore.
 ~~~~~~~~~~~~~~~
 Text File : 24
 ~~~~~~~~~~~~~~~
@@ -8032,6 +8033,9 @@ Ho un regalo speciale per ringraziarti della tua\nfedeltà alla Banca Pokémon!
 Ecco [VAR 1502(0000)][VAR PKNAME(0000)] per te!\nAbbine cura!
 [~ 22]
 Ti ho inviato tutto come Dono Segreto!\nNon scordarti di salvare il gioco!
+Perfetto, iniziamo il trasferimento in Pokémon HOME!\nSii paziente, potrebbe volerci un po’ di tempo!
+Il trasferimento dei tuoi Pokémon in Pokémon HOME\nè ancora in corso!\nVai ad accoglierli lì prima di continuare!
+Ops... Cosa dovremmo trasferire?\nNon hai neanche un Pokémon nella Banca Pokémon!
 ~~~~~~~~~~~~~~~
 Text File : 38
 ~~~~~~~~~~~~~~~
@@ -8090,10 +8094,17 @@ Vuoi assegnarlo a [VAR 01C6(0000)]?
 Non puoi assegnare questo Box.
 Il Box è già assegnato a questo gruppo!
 Un Pokémon non può essere trasferito qui.
+Seleziona i Box
+Vuoi trasferire i Pokémon in Pokémon HOME?
+Vuoi annullare il trasferimento?
+([VAR NUM3(0000)]/100)
+Conferma
+Azzera
+Tutti
 ~~~~~~~~~~~~~~~
 Text File : 39
 ~~~~~~~~~~~~~~~
-Non sono stati trovati dati di salvataggio di un gioco\ncompatibile con la Banca Pokémon.\c\nPer usare la Banca Pokémon è inoltre necessario\navere ottenuto il Pokédex nel gioco.
+Non sono stati trovati dati di salvataggio di un gioco\ncompatibile con la Banca Pokémon.\c\nPer usare la Banca Pokémon è inoltre necessario\navere ottenuto il Pokédex nel gioco.\c\nVuoi trasferire comunque i Pokémon della Banca Pokémon\nin Pokémon HOME?
 Il software della Banca Pokémon non è aggiornato\nalla versione più recente.\c\nVuoi scaricare la versione più recente?
 Caricamento della Banca Pokémon in corso.\nNon spegnere la console.
 Scegli con quale gioco usare\nla Banca Pokémon.
@@ -8179,6 +8190,16 @@ Impossibile ricevere Pokémiglia, poiché non sono compatibili\ncon Pokémon Sol
 Impossibile ricevere Pokémiglia, poiché non sono compatibili\ncon Pokémon Ultrasole e Pokémon Ultraluna.
 C[VAR NUMBRNCH(0003,0602)]'èi sono [VAR NUM2(0003)] regal[VAR NUMBRNCH(0003,0101)]oi da ricevere, ma hai spazio solo\nper [VAR NUM2(0002)] Don[VAR NUMBRNCH(0002,0909)]o Segretoi Segreti.\c\nPer poter ricevere [VAR NUM2(0003)] regal[VAR NUMBRNCH(0003,0101)]oi nel gioco di [VAR TRNAME(0000)]\n(ID [VAR NUM6(0001,0000)]), controlla l’Album Schede ed elimina\nle Schede Segrete che non ti servono più.\c\nSe non liberi spazio, non potrai ricevere eventuali regali in\nquesta sessione. Vuoi usare lo stesso la Banca Pokémon?
 Non c’è spazio per altri Doni Segreti nel gioco\ndi [VAR TRNAME(0000)] (ID [VAR NUM6(0001,0000)]).\c\nPer poter ricevere altri regali, elimina una Scheda Segreta\nche non ti serve più nell’Album Schede.
+Trasferisci in Pokémon HOME
+Stai per inviare i tuoi Pokémon a Pokémon HOME.\nUna volta trasferiti non potranno più tornare\nindietro.\nPer ulteriori informazioni, visita il sito ufficiale\ndi Pokémon HOME.
+Inizia
+Inizia il trasferimento
+Esci
+Il trasferimento in Pokémon HOME non è riuscito.\c\nFai un po’ di spazio su Pokémon HOME per poter ospitare\ntutti i Pokémon che vuoi trasferire.
+Il trasferimento in Pokémon HOME non è riuscito.\c\nA causa di questo errore, non è possibile accedere\nalla Banca Pokémon. Contatta il servizio clienti.
+Il trasferimento in Pokémon HOME non è riuscito.\nProva a ripetere la procedura di trasferimento dall’inizio.
+Periodo di prova senza costi!
+[VAR COLOR(0001)]Il periodo di prova senza costi finirà presto![VAR COLOR(0000)]
 ~~~~~~~~~~~~~~~
 Text File : 40
 ~~~~~~~~~~~~~~~
@@ -8388,6 +8409,9 @@ Canc
 [VAR COLOR(0002)]♂[VAR COLOR(0000)]
 [VAR COLOR(0001)]♀[VAR COLOR(0000)]
 [VAR PKNAME(0000)]
+Inserisci il codice trasferimento ottenuto\nin Pokémon HOME.
+Il codice trasferimento è stato inserito\ncorrettamente.
+Il codice trasferimento è errato.
 ~~~~~~~~~~~~~~~
 Text File : 45
 ~~~~~~~~~~~~~~~

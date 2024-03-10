@@ -5631,6 +5631,7 @@ Argent*
 Cristal*
 Les Pokémon transférés dans Banque Pokémon\nne pourront plus revenir dans leur jeu d’origine.\c\nIl est impossible de transférer un Pokémon qui tient\nun objet.
 Au moins un de vos Pokémon tient un objet.\nIl est impossible de transférer un Pokémon qui tient\nun objet.
+Il n’y a pas suffisamment d’espace libre sur la carte SD.\nImpossible de lancer Poké Transfert.
 ~~~~~~~~~~~~~~~
 Text File : 24
 ~~~~~~~~~~~~~~~
@@ -8032,6 +8033,9 @@ Tu as tellement utilisé Banque Pokémon que je ne peux\npas me retenir de te fa
 C’est un [VAR PKNAME(0000)] !\nPrends-en bien soin !
 [~ 22]
 Je t’ai envoyé un Cadeau Mystère !\nN’oublie pas de sauvegarder !
+Bien ! Commençons à transférer tous tes Pokémon\ndans Pokémon HOME !\nJe te préviens, ça peut prendre un peu de temps...
+Oups ! Le transfert de tes Pokémon vers Pokémon HOME\nn’est pas encore terminé. Va les y accueillir avant de te\nlancer dans d’autres opérations.
+Mais... Que veux-tu transférer ?\nIl n’y a aucun Pokémon déposé !
 ~~~~~~~~~~~~~~~
 Text File : 38
 ~~~~~~~~~~~~~~~
@@ -8090,10 +8094,17 @@ Inscrire dans « [VAR 01C6(0000)] » ?
 Impossible d’inscrire cette Boîte.
 Cette Boîte est déjà inscrite dans ce groupe !
 Impossible de transférer ce ou ces Pokémon.
+Sélection de Boîte
+Transférer ces Pokémon vers Pokémon HOME ?
+Voulez-vous annuler le transfert ?
+([VAR NUM3(0000)]/100)
+Valider
+Annuler
+Toutes
 ~~~~~~~~~~~~~~~
 Text File : 39
 ~~~~~~~~~~~~~~~
-Aucune donnée de sauvegarde d’un jeu compatible\navec Banque Pokémon n’a été trouvée.\c\nVous devez également avoir obtenu le Pokédex\ndans votre partie.
+Aucune donnée de sauvegarde d’un jeu compatible\navec Banque Pokémon n’a été trouvée.\c\nVous devez également avoir obtenu le Pokédex\ndans votre partie.\c\nVoulez-vous transférer vos Pokémon de Banque Pokémon\nvers Pokémon HOME malgré tout ?
 Votre logiciel Banque Pokémon n’est pas à jour.\nVoulez-vous télécharger la dernière version ?
 Préparation de Banque Pokémon…\nNe pas éteindre la console.
 Veuillez choisir le jeu avec lequel vous voulez utiliser\nBanque Pokémon.
@@ -8179,6 +8190,16 @@ Impossible de recevoir des Poké Miles car ils sont\ninutilisables dans Pokémon
 Impossible de recevoir des Poké Miles, car ils sont\ninutilisables dans Pokémon Ultra-Soleil et\c\nPokémon Ultra-Lune.
 [VAR NUM2(0003)] Cadeau[VAR NUMBRNCH(0003,0D0B)] Mystère esx Mystère sont en attente de réception,\nmais il ne reste plus de place que pour\n[VAR NUM2(0002)] cadeau[VAR NUMBRNCH(0002,110F)] supplémentairex supplémentaires.\c\nFaites du ménage dans l’Album Mystère du Dresseur\n[VAR TRNAME(0000)] (Nº ID : [VAR NUM6(0001,0000)]) pour laisser au moins\n[VAR NUM2(0003)] espace[VAR NUMBRNCH(0003,0806)] libres libres.\c\nVoulez-vous lancer Banque Pokémon sans recevoir\nvo[VAR NUMBRNCH(0003,090A)]tre cadeaus cadeaux ?
 Le Dresseur [VAR TRNAME(0000)] (Nº ID : [VAR NUM6(0001,0000)]) ne peut\nplus recevoir de Cadeaux Mystère supplémentaires.\c\nVeuillez faire de la place pour d’autres cadeaux dans votre\nAlbum Mystère.
+Transférer vers Pokémon HOME
+Vos Pokémon vont être envoyés vers Pokémon\nHOME. Une fois le transfert terminé, ils ne pourront\nplus revenir dans Banque Pokémon.\nPour en savoir plus, veuillez consulter le site officiel\nde Pokémon HOME.
+Commencer
+Commencer le transfert
+Annuler
+Le transfert vers Pokémon HOME a échoué.\nVeuillez faire de la place dans Pokémon HOME\npour permettre à vos Pokémon d’y être transférés.
+Le transfert vers Pokémon HOME a échoué.\c\nÀ cause de cette erreur, vous ne pouvez pas accéder\nà Banque Pokémon. Veuillez contacter le service client.
+Le transfert vers Pokémon HOME a échoué.\nVeuillez recommencer le transfert vers Pokémon HOME\ndepuis le début.
+Période d’essai sans frais !
+[VAR COLOR(0001)]La période d’essai sans frais finit bientôt ![VAR COLOR(0000)]
 ~~~~~~~~~~~~~~~
 Text File : 40
 ~~~~~~~~~~~~~~~
@@ -8388,6 +8409,9 @@ Effacer
 [VAR COLOR(0002)]♂[VAR COLOR(0000)]
 [VAR COLOR(0001)]♀[VAR COLOR(0000)]
 [VAR PKNAME(0000)]
+Veuillez entrer le code de transfert affiché\ndans Pokémon HOME.
+Code de transfert accepté !
+Le code de transfert est incorrect.
 ~~~~~~~~~~~~~~~
 Text File : 45
 ~~~~~~~~~~~~~~~

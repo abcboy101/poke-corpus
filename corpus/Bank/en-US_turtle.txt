@@ -5572,29 +5572,29 @@ Your communication with Pokémon Bank did not \ncomplete correctly during your l
 Communication in your last session did not \ncomplete correctly.\nPerforming cleanup process now...
 At least one Pokémon remains in the Transport Box\nfrom your previous session.\c\nPlease empty the Transport Box by using Pokémon Bank\nbefore using Poké Transporter.
 You previously used a different copy.\c\nPlease try again using [VAR TRNAME(0000)]’s game\n(Trainer ID No. [VAR NUM5(0001,0000)]).
-Pokémon sent to Pokémon Bank cannot be returned to\nthe original game from which they were transferred.\c\nAdditionally, any items held by transferred Pokémon\nwill be sent automatically to [VAR TRNAME(0000)]’s Bag.\c\nBut please note that your items will simply disappear\nif your Bag is full.
-No Pokémon found to transfer.\nPlease put your Pokémon in the \n[VAR BOX(0000)] Box and try again.
-Your game is being saved and your Pokémon transferred\nto Pokémon Bank.\nDo not turn off the power.
-Pokémon transferred to Pokémon Bank’s Transport Box.\c\nPlease open Pokémon Bank to check the Pokémon in\nyour Transport Box.
+Pokémon sent to Pokémon Bank can’t be returned to\nthe original game from which they were moved.\c\nAdditionally, any items held by moved Pokémon\nwill be sent automatically to [VAR TRNAME(0000)]’s Bag.\c\nBut please note that your items will simply disappear\nif your Bag is full.
+No Pokémon found to move.\nPlease put your Pokémon in the \n[VAR BOX(0000)] Box and try again.
+Your game is being saved and your Pokémon moved\nto Pokémon Bank.\nDon’t turn off the power.
+Pokémon moved to Pokémon Bank’s Transport Box.\c\nPlease open Pokémon Bank to check the Pokémon in\nyour Transport Box.
 The server did not receive the data.\c\nPlease confirm that your Game Card is\nproperly inserted, and then try again.
-Your pass for Pokémon Bank has expired, \nso you cannot use Poké Transporter.\c\nPlease open Pokémon Bank to purchase a pass.
+Your pass for Pokémon Bank has expired, \nso you can’t use Poké Transporter.\c\nPlease open Pokémon Bank to purchase a pass.
 Connecting to the Internet...
 Disconnecting from the Internet...
 Communicating with the Pokémon Bank server...
-Attention!\c\nDuring transfer, the nicknames or OT names of your\nPokémon will be erased if they contain words \nprohibited from use on the Nintendo 3DS system\r\nbecause they may be offensive to others.
-Attention!\nThere is at least one Pokémon in the Box\nthat cannot be sent.
-A Pokémon Egg has been detected.\nSorry. You cannot send Pokémon Eggs.
+Attention!\c\nDuring moving, the nicknames or OT names of your\nPokémon will be erased if they contain words \nprohibited from use on the Nintendo 3DS system\r\nbecause they may be offensive to others.
+Attention!\nThere is at least one Pokémon in the Box\nthat can’t be sent.
+A Pokémon Egg has been detected.\nSorry. You can’t send Pokémon Eggs.
 Black Kyurem or White Kyurem has been detected.\nSorry. Kyurem can be sent only in its unfused form.
-A problem has been detected with one of the Pokémon.\nSorry. The problematic Pokémon cannot be sent.
+A problem has been detected with one of the Pokémon.\nSorry. The problematic Pokémon can’t be sent.
 Any Pokémon that could not be transported\nhave been removed from the Transport Box.
-An item held by a Pokémon cannot be transferred\nwith it. Any items held by Pokémon have been\nreturned to [VAR TRNAME(0000)]’s Bag in the game.
+An item held by a Pokémon can’t be moved\nwith it. Any items held by Pokémon have been\nreturned to [VAR TRNAME(0000)]’s Bag in the game.
 [VAR PKNAME(0000)] will change to its regular form.
 One or more Pokémon have a nickname containing\nwords prohibited on the Nintendo 3DS system.\nAny such nickname will be modified.
 One or more Pokémon have an OT name containing\nwords prohibited on the Nintendo 3DS system.\nAll such OT names will be changed.
 You can try restoring your data, but you may\nlose the Pokémon currently being transported.\nWould you still like to try restoring your data?
 This is your final warning. The Pokémon you are trying\nto send could be lost forever. \nAre you sure you want to try to restore your data?
 Would you like to exit Poké Transporter?
-Would you like to transfer this Box?
+Would you like to move this Box?
 You have finished downloading the latest version of\nthe application. Please restart Poké Transporter now.
 It was impossible to read the update data.\c\nPlease delete any add-on content for Poké Transporter\nusing the System Settings and try again.\nPress  to return to the HOME Menu.
 Wireless communication is currently disabled.\nPlease turn wireless communication on.
@@ -5611,7 +5611,7 @@ Red*
 Green*
 Blue*
 Yellow*
-Pokémon sent to Pokémon Bank cannot be returned to\nthe original game from which they were transferred.
+Pokémon sent to Pokémon Bank can’t be returned to\nthe original game from which they were moved.
 BOX 1
 Trainer
 [~ 49]
@@ -5629,8 +5629,9 @@ Trainer
 Gold*
 Silver*
 Crystal*
-Pokémon sent to Pokémon Bank cannot be returned to\nthe original game from which they were transferred.\c\nPlease note that Pokémon that are holding an item cannot\nbe transferred.
-There are many Pokémon that are holding an item.\nPokémon that are holding an item cannot be transferred.
+Pokémon sent to Pokémon Bank can’t be returned to\nthe original game from which they were moved.\c\nPlease note that Pokémon that are holding an item can’t\nbe moved.
+There are many Pokémon that are holding an item.\nPokémon that are holding an item can’t be moved.
+You don’t have enough free space on your SD card\nto open Poké Transporter.
 ~~~~~~~~~~~~~~~
 Text File : 24
 ~~~~~~~~~~~~~~~
@@ -5720,7 +5721,7 @@ Quirky
 ~~~~~~~~~~~~~~~
 Text File : 26
 ~~~~~~~~~~~~~~~
-The SD Card is full.\nYou can’t download data.
+The SD card is full.\nYou can’t download data.
 No data is found on the server.\nPlease try again later.
 Communication with the server\nwas interrupted.
 Communication ended due to an error.
@@ -8010,7 +8011,7 @@ Text File : 37
 ~~~~~~~~~~~~~~~
 Welcome, and thanks for using Pokémon Bank!\c\nI’m Brigette. I’m the one who developed Pokémon Bank.
 Pokémon Bank is just what it sounds like: a place where\nyou can deposit your Pokémon and keep them safe.\c\nThe Pokémon that you deposit here can be withdrawn\nagain anytime, too.\c\nBut if you try to deposit any Pokémon holding items,\nI’ll remove the items and send them to your Bag, got it?\c\nSpecial alert! If your Bag happens to be full when\nI try to send an item to it, your item will disappear!\nSo be careful when you’re depositing Pokémon, OK?
-Do you know how many Pokémon you can store in\nPokémon Bank? The answer is 3,000 Pokémon!\nI know--it’s amazing, right?\c\nNow give me just a moment, and I’ll get Pokémon Bank\nall ready for you to use.
+Do you know how many Pokémon you can store in\nPokémon Bank? The answer is 3,000 Pokémon!\nI know—it’s amazing, right?\c\nNow give me just a moment, and I’ll get Pokémon Bank\nall ready for you to use.
 Pokémon Bank is just what it sounds like: a place where\nyou can deposit your Pokémon and keep them safe.\c\nThe Pokémon that you deposit here can be withdrawn\nagain anytime, too.\c\nBut if you try to deposit any Pokémon holding items,\nI’ll remove the items and send them to your Bag, got it?\c\nSpecial alert! If your Bag happens to be full when\nI try to send an item to it, your item will disappear!\nSo be careful when you’re depositing Pokémon, OK?
 I’ve got a present for you to help celebrate\nyour first time using Pokémon Bank!
 It’s a little token of my gratitude as a developer.
@@ -8023,7 +8024,7 @@ Got it!\nThen we’ll just let your Poké Miles rack up, shall we?
 Now enjoy using Pokémon Bank!
 Impressive! You’ve been using Pokémon Bank so much,\nyou’ve inspired me to give you a present!
 Here [VAR NUMBRNCH(0000,0302)]isare [VAR NUM7(0000,002C)] Poké Mile[VAR NUMBRNCH(0000,0100)]s for you.
-Once you’ve racked up at least 10 Poké Miles, \nyou can send them to your game.\c\nGo ahead and deposit a bunch of Pokémon, \nand then come and see me again!
+Once you’ve racked up at least 10 Poké Miles,\nyou can send them to your game.\c\nGo ahead and deposit a bunch of Pokémon,\nand then come and see me again!
 Would you like to receive the Poké Miles, or would\nyou prefer to exchange them for Battle Points?
 Welcome to Pokémon Bank!\nWhat would you like to do today?
 Are you ready to stop using Pokémon Bank for now?
@@ -8032,6 +8033,9 @@ I’ve got a special present for you to thank you\nfor your consistent use of Po
 Here it is! [VAR iCOLOR3(0000)][VAR PKNAME(0000)]!\nTake good care of it, OK?
 [~ 22]
 I’ve sent the gift as a Mystery Gift!\nAnd don’t forget to save later!
+All right! Time we get your Pokémon all moved in to their\nnew home in...well...Pokémon HOME!\nIt might take a little time to finish, so sit tight...
+Oops! We’re in the middle of moving some of your Pokémon\nto Pokémon HOME right now.\nHead there to receive them before we do anything else.
+What are we going to move?\nYou haven’t got even one Pokémon deposited right now!
 ~~~~~~~~~~~~~~~
 Text File : 38
 ~~~~~~~~~~~~~~~
@@ -8089,18 +8093,25 @@ No Box has been registered.
 Register this Box to [VAR 01C6(0000)]?
 You cannot register this Box.
 It is already registered to this group.
-One or more can’t be transferred to this game.
+One or more can’t be moved to this game.
+Select Boxes to Move
+Move these Pokémon to Pokémon HOME?
+Quit moving Pokémon?
+([VAR NUM3(0000)]/100)
+DONE
+RESET
+ALL
 ~~~~~~~~~~~~~~~
 Text File : 39
 ~~~~~~~~~~~~~~~
-Could not find saved data for a game that is compatible\nwith Pokémon Bank. You must also advance in the game\nto the point where you have received a Pokédex.
+Could not find saved data for a game that is compatible\nwith Pokémon Bank.\c\nYou must also advance in the game to the point where\nyou have received a Pokédex.\c\nDo you still want to move the Pokémon in Pokémon Bank\nto Pokémon HOME?
 Your version of Pokémon Bank is not the latest version.\c\nWould you like to download the latest version now?
 Preparing Pokémon Bank for your use...\nPlease do not turn off the power.
-Please choose the Pokémon title you would like \nto use with Pokémon Bank.
+Please choose the Pokémon title you would like\nto use with Pokémon Bank.
 The saved data in this software does not match\nthe previous saved data. It cannot be used.
-Your communication with Poké Transporter did not \ncomplete correctly during your last session. \c\nPlease open Poké Transporter and perform the \ncleanup process before using Pokémon Bank.
-Communication in your last session did not \ncomplete correctly.\nPerforming cleanup process now...
-[VAR TRNAME(0000)]’s Pokémon Link (ID No.: [VAR NUM5(0001,0000)]) is full.\c\nPlease receive the previous present via Pokémon Link \nin your Game Card.\c\nEven though a new present is waiting for you, \nyou won’t be able to receive it this time.\c\nDo you still want to go ahead and use Pokémon Bank?
+Your communication with Poké Transporter did not\ncomplete correctly during your last session.\c\nPlease open Poké Transporter and perform the\ncleanup process before using Pokémon Bank.
+Communication in your last session did not\ncomplete correctly.\nPerforming cleanup process now...
+[VAR TRNAME(0000)]’s Pokémon Link (ID No.: [VAR NUM5(0001,0000)]) is full.\c\nPlease receive the previous present via Pokémon Link\nin your Game Card.\c\nEven though a new present is waiting for you,\nyou won’t be able to receive it this time.\c\nDo you still want to go ahead and use Pokémon Bank?
 Saving the data and sending it to the server...\nDon’t turn off the power.
 Success! Changes saved.
 You previously used a different copy of this game.\nPlease try again using [VAR TRNAME(0000)]’s game\n(Trainer ID No. [VAR NUM6(0001,0000)]).
@@ -8115,7 +8126,7 @@ Failed to obtain sales data for Pokémon Bank passes.
 Your pass has expired.\nWould you like to purchase a new pass?
 You will be connected to Pokémon Bank\nwithout a valid pass.\c\nYou can withdraw Pokémon that were already deposited,\nbut you cannot deposit new Pokémon to Pokémon Bank\nbecause your pass has expired and is no longer valid.
 Connecting to the server...\nPlease wait.
-Poké Transporter allows you to transfer Pokémon\nfrom a compatible game. Would you like to download\nPoké Transporter from Nintendo eShop?
+Poké Transporter allows you to move Pokémon\nfrom a compatible game. Would you like to download\nPoké Transporter from Nintendo eShop?
 Is it OK to exit from Pokémon Bank and jump to\nthe Nintendo eShop?
 You can try Pokémon Bank for 30 days with no charge\nby getting a trial pass.\c\nTo use Pokémon Bank, you first need to get a pass.\nPlease follow the instructions to get your pass.
 Failed to obtain sales data for Pokémon Bank passes.\nYou cannot use Pokémon Bank without a valid pass.
@@ -8125,13 +8136,13 @@ Failed to read the update data.\c\nPlease delete any add-on content for Pokémon
 Wireless communication is currently disabled.\nPlease turn wireless communication on.
 The program is now closing.\nPlease wait...
 No Pokémon Game Card detected.\c\nPlease check that your Game Card is properly inserted\ninto your system’s Game Card slot.
-Checking the Game Card...\nDon’t turn off the power or remove the Game Card or \nSD Card.
-Communication with the server was interrupted during \nyour previous session, so the server has been locked.\c\nPlease wait a short while and then try to connect again.
+Checking the Game Card...\nDon’t turn off the power or remove the Game Card or\nSD card.
+Communication with the server was interrupted during\nyour previous session, so the server has been locked.\c\nPlease wait a short while and then try to connect again.
 Please enter the unlock key:\n[VAR NUM8(0000,0000)]
 The unlock key is incorrect.
 Your current pass will expire in [VAR NUM2(0000)] hour[VAR NUMBRNCH(0000,0100)]s.\c\nWould you like to purchase a new pass?
 Your current pass will expire very soon.\c\nWould you like to purchase a new pass?
-Pokémon Bank could not be started\ndue to a lack of space on your SD Card.
+Pokémon Bank could not be started\ndue to a lack of space on your SD card.
 Time Remaining on Your Pass:
 [VAR NUM3(0000)] day[VAR NUMBRNCH(0000,0100)]s
 Use Pokémon Bank
@@ -8172,13 +8183,23 @@ Battle Points
 Current Balance:
 Press  to return to the HOME Menu
 Ver. [VAR NUM2(0000)].[VAR NUM2(0001)]
-Precaution for Use\n\nIf you use Pokémon Bank and/or \nPoké Transporter to transfer Pokémon that have\nbeen created by any means that have not been\napproved by Nintendo, The Pokémon Company,\nand its affiliates, you forfeit your right to\nuse Pokémon Bank and/or Poké Transporter.\n\nWill you agree with the terms stated above and\nstart using Pokémon Bank and Poké Transporter?
+Precaution for Use\n\nIf you use Pokémon Bank and/or\nPoké Transporter to move Pokémon that have\nbeen created by any means that have not been\napproved by Nintendo, The Pokémon Company,\nand its affiliates, you forfeit your right to\nuse Pokémon Bank and/or Poké Transporter.\n\nWill you agree with the terms stated above and\nstart using Pokémon Bank and Poké Transporter?
 If you’re under 18, please have a guardian read the text\non the Touch Screen with you.
 [VAR TRNAME(0000)]’s Mystery Gift (ID No. [VAR NUM6(0001,0000)]) is full.\c\nPlease check your Card Album for your Mystery Gift and\nthrow away an old Wonder Card to receive a gift.\c\nOtherwise, you can’t receive a gift this time even if there is\na new gift. Do you still want to go ahead and use\nPokémon Bank?
 You can’t receive Poké Miles because you can’t use them\nin Pokémon Sun and Pokémon Moon.
 You can’t receive Poké Miles because you can’t use them\nin Pokémon Ultra Sun and Pokémon Ultra Moon.
 You have [VAR NUM2(0003)] gift[VAR NUMBRNCH(0003,0100)]s to receive, but you can receive only\n[VAR NUM2(0002)] more Mystery Gift[VAR NUMBRNCH(0002,0100)]s.\c\nPlease check your Card Album for your Mystery Gift\n(ID No. [VAR NUM6(0001,0000)]) and throw away some old Wonder\nCards to make room for [VAR NUM2(0003)] gift[VAR NUMBRNCH(0003,0100)]s.
 Your Mystery Gift (ID No. [VAR NUM6(0001,0000)]) is full.\c\nPlease check your Card Album for your Mystery Gift and\nthrow away an old Wonder Card to receive a gift.
+Move Pokémon to Pokémon HOME
+You’re about to send some of your Pokémon to\nPokémon HOME. Please note that you won’t be able\nto bring your Pokémon back to Pokémon Bank.\nPlease check the official Pokémon HOME website\nfor details.
+Begin
+Begin the move
+Cancel
+The move to Pokémon HOME didn’t\ncomplete successfully.\c\nPlease organize your Pokémon in Pokémon HOME so that\nthere is room for the moved Pokémon.
+The move to Pokémon HOME didn’t\ncomplete successfully.\c\nUnable to access Pokémon Bank due to this error.\nPlease contact customer support.
+The move to Pokémon HOME didn’t\ncomplete successfully.\c\nPlease attempt the move to Pokémon HOME one more\ntime from the beginning.
+Free trial period!
+[VAR COLOR(0001)]Free trial period ends soon![VAR COLOR(0000)]
 ~~~~~~~~~~~~~~~
 Text File : 40
 ~~~~~~~~~~~~~~~
@@ -8388,6 +8409,9 @@ Delete
 [VAR COLOR(0002)]♂[VAR COLOR(0000)]
 [VAR COLOR(0001)]♀[VAR COLOR(0000)]
 [VAR PKNAME(0000)]
+Please enter the Moving Key displayed in\nPokémon HOME.
+Your Moving Key has been\nconfirmed successfully.
+Incorrect Moving Key.
 ~~~~~~~~~~~~~~~
 Text File : 45
 ~~~~~~~~~~~~~~~
@@ -20179,7 +20203,7 @@ The units at the sides of its body generate\nantigravity energy to keep it aloft
 A linked cluster formed of several Magnemite.\nIt discharges powerful magnetic waves at\nhigh voltage.
 The plant stalk it holds is its weapon. The stalk is\nused like a sword to cut all sorts of things.
 A two-headed Pokémon that was discovered as a \nsudden mutation. It runs at a pace of over 60 miles\nper hour.
-An enemy that takes its eyes off any of the\nthree heads--even for a second--will get\npecked severely.
+An enemy that takes its eyes off any of the\nthree heads—even for a second—will get\npecked severely.
 A Pokémon that lives on icebergs. It swims in the\nsea using the point on its head to break up ice.
 Its body is covered with a pure white fur.\nThe colder the weather, the more active\nit becomes.
 Sludge exposed to X-rays from the moon\ntransformed into Grimer. It loves feeding\non filthy things.
@@ -20261,7 +20285,7 @@ It has a perfect sense of time. Whatever happens,\nit keeps rhythm by precisely 
 Its eyes are specially adapted. They concentrate\neven faint light and enable it to see in the dark.
 When the weather turns cold, lots of Ledyba gather\nfrom everywhere to cluster and keep each\nother warm.
 When the stars flicker in the night sky, it flutters\nabout, scattering a glowing powder.
-It spins a web using fine--but durable--thread.\nIt then waits patiently for prey to be trapped.
+It spins a web using fine—but durable—thread.\nIt then waits patiently for prey to be trapped.
 It spins string not only from its rear but also from\nits mouth. It’s hard to tell which end is which.
 It flies so silently through the dark on its four wings\nthat it may not be noticed even when nearby.
 On the dark ocean floor, its only means of\ncommunication is its constantly flashing lights.
@@ -20287,7 +20311,7 @@ Blown by seasonal winds, it circles the globe,\nscattering cotton spores as it g
 It lives atop tall trees. When leaping from branch to\nbranch, it deftly uses its tail for balance.
 It may plummet from the sky. If attacked by a\nSpearow, it will violently shake its leaves.
 As the hot season approaches, the petals on this\nPokémon’s face become more vivid and lively.
-Its eyes can see 360 degrees without moving its\nhead. It won’t miss prey--even those behind it.
+Its eyes can see 360 degrees without moving its\nhead. It won’t miss prey—even those behind it.
 This Pokémon lives in cold water. It will leave the\nwater to search for food when it gets cold outside.
 It has a sluggish nature. It lies at the river’s bottom,\nwaiting for prey to stray into its mouth.
 The tip of its forked tail quivers when it is predicting\nits opponent’s next move.
@@ -20417,7 +20441,7 @@ Its fangs rip through sheet iron. It swims at 75 mph\nand is known as “The Bul
 It bounces playfully like a ball. The more seawater\nit swallows, the higher it bounces.
 It can sometimes knock out opponents with the\nshock created by breaching and crashing its big\nbody onto the water.
 Its humped back stores intensely hot magma.\nIn rain, the magma cools, slowing its movement.
-The volcanoes on its back have a major eruption\nevery 10 years--or whenever it becomes\nreally angry.
+The volcanoes on its back have a major eruption\nevery 10 years—or whenever it becomes\nreally angry.
 You find abandoned coal mines full of them.\nThey dig tirelessly in search of coal.
 It bounces constantly, using its tail like a spring.\nThe shock of bouncing keeps its heart beating.
 It uses black pearls to amplify its psychic power.\nIt does a strange dance to control foes’ minds.
@@ -20447,7 +20471,7 @@ It eats anything, so it can even live in polluted\nstreams and lakes. No one pay
 Milotic is breathtakingly beautiful. Those that see it\nare said to forget their combative spirits.
 This Pokémon can change its cells, taking different\nforms based on the temperature and humidity.
 It can freely change its body’s color. The zigzag\npattern on its belly doesn’t change, however.
-It uses its horn to feed on envy and malice--\nor so it’s said. It’s very active at night.
+It uses its horn to feed on envy and malice—\nor so it’s said. It’s very active at night.
 A doll that became a Pokémon over its grudge from\nbeing junked. It seeks the child that disowned it.
 It doggedly pursues its prey wherever it goes.\nHowever, the chase is abandoned at sunrise.
 Anyone who dares peer into its body to see its\nspectral ball of fire will have their spirit stolen away.
@@ -20499,7 +20523,7 @@ It chats with others using the sounds of its colliding\nantennae. These sounds a
 It crosses its knifelike arms in front of its chest\nwhen it cries. It can compose melodies ad lib.
 The extension and contraction of its muscles\ngenerates electricity. It glows when in trouble.
 Its claws loose electricity with enough amperage\nto cause fainting. They live in small groups.
-When its eyes gleam gold, it can spot hiding\nprey--even those taking shelter behind a wall.
+When its eyes gleam gold, it can spot hiding\nprey—even those taking shelter behind a wall.
 When it feels the sun’s warm touch, it opens its bud\nto release pollen. It lives alongside clear pools.
 Luring prey with a sweet scent, it uses poison whips\non its arms to poison, bind, and finish off the prey.
 It was resurrected from an iron ball-like fossil.\nIt downs prey with its headbutts.
@@ -20595,7 +20619,7 @@ It only gives its all against strong opponents who\nare not fazed by the glare f
 It can deftly dodge its foe’s attacks while shooting\nfireballs from its nose. It roasts berries before it\neats them.
 The more it eats, the more fuel it has to make the\nfire in its stomach stronger. This fills it with even\nmore power.
 It can throw a fire punch by setting its fists on fire\nwith its fiery chin. It cares deeply about its friends.
-The scalchop on its stomach isn’t just used for\nbattle--it can be used to break open hard berries\nas well.
+The scalchop on its stomach isn’t just used for\nbattle—it can be used to break open hard berries\nas well.
 Strict training is how it learns its flowing\ndouble-scalchop technique.
 In the time it takes a foe to blink, it can draw and\nsheathe the seamitars attached to its front legs.
 Using food stored in cheek pouches, they can keep\nwatch for days. They use their tails to communicate\nwith others.
@@ -21103,7 +21127,7 @@ It is highly attuned to the emotions of people and\nPokémon. It hides if it sen
 It has a psychic power that enables it to distort the\nspace around it and see into the future.
 It has the power to predict the future. Its power\npeaks when it is protecting its Trainer.
 It appears as if it is skating on water. It draws prey\nwith a sweet scent from the tip of its head.
-It flaps its four wings to hover and fly freely in any\ndirection--to and fro and sideways.
+It flaps its four wings to hover and fly freely in any\ndirection—to and fro and sideways.
 It spouts poison spores from the top of its head.\nThese spores cause pain all over if inhaled.
 It scatters poisonous spores and throws powerful\npunches while its foe is hampered by\ninhaled spores.
 If it eats just three leaves in a day, it is satisfied.\nOther than that, it sleeps for 20 hours a day.
@@ -21114,7 +21138,7 @@ Because it moves so quickly, it sometimes becomes\nunseeable. It congregates aro
 A most peculiar Pokémon that somehow appears in\na Poké Ball when a Nincada evolves.
 If it senses danger, it scares the foe by crying out\nwith the volume of a jet-plane engine.
 The shock waves from its cries can tip over trucks.\nIt stamps its feet to power up.
-Its roar in battle shakes the ground like a\ntremor--or like an earthquake has struck.
+Its roar in battle shakes the ground like a\ntremor—or like an earthquake has struck.
 It grows stronger by enduring harsh training. It is a\ngutsy Pokémon that can withstand any attack.
 It loves to match power with big-bodied Pokémon.\nIt can knock a truck flying with its arm thrusts.
 It swings its large, nutrient-filled tail around to fight\nopponents bigger than itself.
@@ -21159,7 +21183,7 @@ Constant polishing makes the edge of the blade on\nits tail extremely sharp. It�
 It was discovered at the site of a meteor strike\n40 years ago. Its stare can lull its foes to sleep.
 It absorbs solar energy during the day. Always\nexpressionless, it can sense what its foe is thinking.
 Its whiskers make a superb radar. They are used to\nlocate prey, even in the murkiest of water.
-It makes its nest at the bottom of swamps.\nIt will eat anything--if it is alive, Whiscash will eat it.
+It makes its nest at the bottom of swamps.\nIt will eat anything—if it is alive, Whiscash will eat it.
 Its hardy vitality enables it to adapt to any\nenvironment. Its pincers will never release prey.
 Loving to battle, this Pokémon pinches all Pokémon\nthat enter its territory with its pincers and throws\nthem out.
 It moves by spinning on its foot. It is a rare\nPokémon that was discovered in ancient ruins.
@@ -21174,7 +21198,7 @@ It has the ability to change its form into the sun,\nthe rain, or a snow cloud, 
 It changes its shading to match its surroundings\nso it can sneak up on prey. Only its belly patterns\nstay fixed.
 It loves vengeful emotions and hangs in rows under\nthe eaves of houses where vengeful people live.
 Strong feelings of hatred turned a puppet into a\nPokémon. If it opens its mouth, its cursed\nenergy escapes.
-If it finds bad children who won’t listen to their\nparents, it will spirit them away--or so it’s said.
+If it finds bad children who won’t listen to their\nparents, it will spirit them away—or so it’s said.
 Its body is hollow. It is said that those who look\ninto its body are sucked into the void.
 The bunch of fruit around its neck ripens twice a\nyear and is delicious. It’s a highly favored\ntropical snack.
 Emitting ultrasonic cries, it floats on winds to travel\ngreat distances.

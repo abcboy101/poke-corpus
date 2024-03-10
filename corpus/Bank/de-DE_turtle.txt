@@ -5631,6 +5631,7 @@ Silber*
 Kristall*
 Auf Pokémon Bank übertragene Pokémon können nicht\nwieder auf das Spiel, aus dem sie übertragen wurden,\nzurückgeschickt werden.\c\nBitte beachte, dass Pokémon, die ein Item tragen,\nnicht übertragen werden können.
 In der Auswahl befindet sich ein Pokémon, das ein\nItem trägt. Pokémon, die mit einem Item ausgestattet\nsind, können nicht übertragen werden.
+Die Nutzung von PokéMover ist aufgrund unzureichend\nfreien Speicherplatzes auf deiner SD Card nicht möglich.
 ~~~~~~~~~~~~~~~
 Text File : 24
 ~~~~~~~~~~~~~~~
@@ -8032,6 +8033,9 @@ Ich habe ein besonderes Geschenk für dich als Dank\nfür deine Kundentreue gege
 Hier, ein [VAR PKNAME(0000)]!\nBitte gib gut darauf acht!
 [~ 22]
 Fertig! Jetzt kannst du dir alles über das Geheimgeschehen\nabholen. Vergiss nicht, danach dein Spiel zu speichern!
+Alles klar! Der Transfer deiner Pokémon auf die Software\nPokémon HOME wird eingeleitet.\nDas könnte einige Zeit in Anspruch nehmen.
+Huch! Wir transferieren gerade einige deiner Pokémon\nauf Pokémon HOME. Du musst sie dort in Empfang nehmen,\nbevor es hier weitergeht.
+Oh? Was soll denn übertragen werden?\nDu hast ja noch gar keine Pokémon gelagert!
 ~~~~~~~~~~~~~~~
 Text File : 38
 ~~~~~~~~~~~~~~~
@@ -8090,10 +8094,17 @@ Box auf [VAR 01C6(0000)] registrieren?
 Du kannst diese Box nicht registrieren.
 Die Box ist schon auf diese Gruppe registriert!
 Mindestens ein Pokémon ist nicht übertragbar.
+Boxenauswahl
+Soll der Transfer auf Pokémon HOME beginnen?
+Willst du den Transfer abbrechen?
+([VAR NUM3(0000)]/100)
+Fertig
+Neu
+Alle
 ~~~~~~~~~~~~~~~
 Text File : 39
 ~~~~~~~~~~~~~~~
-Es wurden keine Speicherdaten für ein Spiel gefunden,\ndas mit Pokémon Bank kompatibel ist.\c\nFerner musst du im Spiel mindestens bis zum\nErhalt des Pokédex fortgeschritten sein.
+Es wurden keine Speicherdaten für ein Spiel gefunden,\ndas mit Pokémon Bank kompatibel ist.\c\nFerner musst du im Spiel mindestens bis zum\nErhalt des Pokédex fortgeschritten sein.\c\nMöchtest du die Pokémon, die sich derzeit in Pokémon Bank\nbefinden, trotzdem auf Pokémon HOME transferieren?
 Du verfügst nicht über die neueste\nVersion von Pokémon Bank.\nMöchtest du deine Version aktualisieren?
 Pokémon Bank wird vorbereitet...\nBitte das System nicht ausschalten.
 Bitte wähle das Pokémon-Spiel, das du in Verbindung\nmit Pokémon Bank nutzen möchtest.
@@ -8179,6 +8190,16 @@ Du kannst keine Poké-Meilen empfangen, da sie in\nPokémon Sonne und Pokémon M
 Du kannst keine Poké-Meilen empfangen, da sie in\nPokémon Ultrasonne und Pokémon Ultramond nicht\nverwendbar sind.
 Es sind [VAR NUM2(0003)] Geschenke verfügbar, aber du kannst nur noch\n[VAR NUM2(0002)] weitere[VAR NUMBRNCH(0002,0001)]s über das Geheimgeschehen empfangen.\c\nWenn du im Kartenalbum von [VAR TRNAME(0000)]\n(ID-Nr. [VAR NUM6(0001,0000)]) ausreichend Platz schaffst,\nkannst du wieder Geschenke empfangen.\c\nMöchtest du Pokémon Bank nutzen, obwohl du diesmal\ndein[VAR NUMBRNCH(0003,0B09)] Geschenke Geschenke nicht empfangen kannst?
 Du kannst keine weiteren Geschenke erhalten,\nweil das Geheimgeschehen im Spiel von [VAR TRNAME(0000)]\n(ID-Nr. [VAR NUM6(0001,0000)]) voll ist.\c\nWenn du in deinem Kartenalbum ausreichend Platz\nschaffst, kannst du wieder Geschenke empfangen.
+Transfer auf Pokémon HOME
+Du bist im Begriff, manche deiner Pokémon auf\nPokémon HOME zu übertragen. Danach kannst du\nsie nicht mehr auf Pokémon Bank zurückschicken.\n\nWeitere Details findest du auf der offiziellen\nInternetseite von Pokémon HOME.
+Beginnen
+Transfer beginnen
+Abbrechen
+Der Transfer auf Pokémon HOME ist fehlgeschlagen.\c\nBitte schaffe in deinen Boxen auf Pokémon HOME\nPlatz für die Pokémon, die du transferieren möchtest.
+Der Transfer auf Pokémon HOME wurde nicht\nerfolgreich abgeschlossen.\c\nDurch diesen Fehler kannst du momentan nicht auf\nPokémon Bank zugreifen. Bitte kontaktiere den\nKundendienst.
+Der Transfer auf Pokémon HOME ist fehlgeschlagen.\nBitte versuche den Transfer auf Pokémon HOME von Neuem.
+Kostenfreie Probezeit!
+[VAR COLOR(0001)]Die kostenfreie Probezeit endet bald![VAR COLOR(0000)]
 ~~~~~~~~~~~~~~~
 Text File : 40
 ~~~~~~~~~~~~~~~
@@ -8388,6 +8409,9 @@ Entf.
 [VAR COLOR(0002)]♂[VAR COLOR(0000)]
 [VAR COLOR(0001)]♀[VAR COLOR(0000)]
 [VAR PKNAME(0000)]
+Bitte gib das Transferpasswort ein,\ndas in Pokémon HOME angezeigt wird.
+Das Transferpasswort wurde erfolgreich\nüberprüft und akzeptiert.
+Das eingegebene Transferpasswort ist\nnicht korrekt.
 ~~~~~~~~~~~~~~~
 Text File : 45
 ~~~~~~~~~~~~~~~

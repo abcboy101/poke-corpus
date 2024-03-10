@@ -5631,6 +5631,7 @@ Plata*
 Cristal*
 Los Pokémon que transfieras al Banco de Pokémon no\npodrán volver a enviarse al juego original.\c\nTen en cuenta que los Pokémon que llevan algún objeto no\npueden transferirse.
 Alguno de los Pokémon lleva un objeto.\nLos Pokémon que llevan un objeto no pueden transferirse.
+No es posible abrir el Poké Trasladador porque no queda\nespacio suficiente en la tarjeta SD.
 ~~~~~~~~~~~~~~~
 Text File : 24
 ~~~~~~~~~~~~~~~
@@ -8032,6 +8033,9 @@ Ya has descargado el Poké Trasladador.
 ¡Un [VAR PKNAME(0000)]! ¡Cuídalo bien!
 [~ 22]
 Te he enviado un regalo misterioso.\n¡No te olvides de guardar la partida!
+Muy bien, ¡empecemos a trasladar tus Pokémon a\nPokémon HOME! El proceso puede tardar un rato en\ncompletarse, ¡así que ten paciencia!
+En estos momentos estamos en pleno traslado de tus\nPokémon a Pokémon HOME. Recíbelos allí antes de hacer\notra cosa, ¿vale?
+Pero... ¿qué es lo que quieres trasladar? No tienes ningún\nPokémon depositado en el Banco de Pokémon ahora mismo.
 ~~~~~~~~~~~~~~~
 Text File : 38
 ~~~~~~~~~~~~~~~
@@ -8090,10 +8094,17 @@ Elige un grupo.
 No puedes asignar esta caja.
 ¡La caja ya está asignada a este grupo!
 Alguno de los Pokémon no puede transferirse.
+Selección de cajas
+¿Quieres iniciar el traslado a Pokémon HOME?
+¿Quieres cancelar el traslado?
+([VAR NUM3(0000)]/100)
+Confirmar
+Desmarcar
+Todas
 ~~~~~~~~~~~~~~~
 Text File : 39
 ~~~~~~~~~~~~~~~
-No se ha podido encontrar una partida guardada de\nningún juego compatible.\c\nNecesitas haber conseguido la Pokédex en tu partida para\npoder usar el Banco de Pokémon.
+No se han podido encontrar datos de guardado de ningún\njuego compatible con el Banco de Pokémon.\c\nAdemás, es necesario avanzar lo suficiente en la partida\ncomo para haber conseguido la Pokédex.\c\n¿Quieres trasladar tus Pokémon del Banco de Pokémon a\nPokémon HOME de todos modos?
 Tu versión del Banco de Pokémon no es la más reciente.\n¿Quieres actualizarla ahora?
 Preparando el Banco de Pokémon...\nNo apagues la consola.
 Escoge el juego que quieres usar con el Banco de\nPokémon.
@@ -8179,6 +8190,16 @@ No se puede recibir porque las Poké Millas no se utilizan\nen Pokémon Sol y Po
 No se puede recibir porque las Poké Millas no se utilizan\nen Pokémon Ultrasol y Pokémon Ultraluna.
 Hay [VAR NUM2(0003)] regalo[VAR NUMBRNCH(0003,0100)]s disponible[VAR NUMBRNCH(0003,0100)]s pero solo puedes recibir [VAR NUM2(0002)].\c\nHaz sitio en el Álbum de Tarjetas de [VAR TRNAME(0000)]\n(Nº ID: [VAR NUM6(0001,0000)]) para dejar al menos [VAR NUM2(0003)] espacio[VAR NUMBRNCH(0003,0100)]s libre[VAR NUMBRNCH(0003,0100)]s.\c\n¿Quieres iniciar el Banco de Pokémon sin recibir [VAR NUMBRNCH(0003,0302)]ellos\nregalo[VAR NUMBRNCH(0003,0100)]s?
 [VAR TRNAME(0000)] (Nº ID: [VAR NUM6(0001,0000)]) no puede recibir más\nRegalos Misteriosos.\c\nHaz sitio en el Álbum de Tarjetas si quieres recibir\nmás regalos.
+Trasladar a Pokémon HOME
+Tus Pokémon están a punto de trasladarse a\nPokémon HOME. Ten en cuenta que los Pokémon\ntrasladados no podrán enviarse de vuelta al Banco\nde Pokémon. Para obtener información detallada,\nconsulta el sitio web oficial de Pokémon HOME.
+Continuar
+Iniciar traslado
+Cancelar
+Se ha producido un error mientras se realizaba el traslado\na Pokémon HOME.\c\nOrganiza los Pokémon que tienes en Pokémon HOME para\nque haya espacio para los Pokémon que van a trasladarse.
+Se ha producido un error al intentar el traslado a\nPokémon HOME.\c\nDebido a este error, no es posible acceder al Banco de\nPokémon. Por favor, ponte en contacto con el servicio de\natención al consumidor.
+Se ha producido un error mientras se realizaba el traslado\na Pokémon HOME.\c\nVuelve a iniciar el traslado a Pokémon HOME desde el\nprincipio.
+Hay un período de prueba gratuito.
+[VAR COLOR(0001)]El período de prueba gratuito expirará pronto.[VAR COLOR(0000)]
 ~~~~~~~~~~~~~~~
 Text File : 40
 ~~~~~~~~~~~~~~~
@@ -8388,6 +8409,9 @@ Borrar
 [VAR COLOR(0002)]♂[VAR COLOR(0000)]
 [VAR COLOR(0001)]♀[VAR COLOR(0000)]
 [VAR PKNAME(0000)]
+Introduce el código de traslado que aparece\nen Pokémon HOME.
+El código introducido es válido.
+El código introducido es incorrecto.
 ~~~~~~~~~~~~~~~
 Text File : 45
 ~~~~~~~~~~~~~~~
