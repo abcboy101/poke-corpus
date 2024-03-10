@@ -72,7 +72,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
 
   try {
     // Load files
-    const filePromises = languages.map(preprocessString).map(((languageKey, i) => Promise.resolve([languageKey, files[i]] as const)));
+    const filePromises = languages.map(((languageKey, i) => Promise.resolve([languageKey, preprocessString(files[i])] as const)));
     // notify('loading'); // for progress bar
 
     // Process files
