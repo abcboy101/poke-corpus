@@ -252,7 +252,6 @@ table th, table td {
   color: var(--text);
   overflow: auto;
   line-height: var(--line-height);
-  text-size-adjust: none;
 }
 
 .header-logo {
