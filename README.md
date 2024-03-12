@@ -12,13 +12,15 @@ Visit at [abcboy101.github.io/poke-corpus/](https://abcboy101.github.io/poke-cor
      If you want to perform a case-sensitive search, make sure that the "Case sensitive" box is not checked.
    - By default, the search will search both the common text (interface text, names, descriptions) and the script text (story-related text, dialogue, etc.).
      If you want to limit your search, uncheck the relevant box.
-2. Select the games whose text you would like to search.
-3. Select the languages whose text you would like to search.
-4. Click "Search".
-5. The search results will appear in the window.
+2. Click "Filters" to display the list of filters.
+   Select the games and languages you would like to search.
+3. Click "Search".
+4. The search results will appear in the window.
    - If there are results from multiple games, you can jump to a particular game's results using the "Jump to..." dropdown.
    - You can share a link to a particular line using the arrow icon.
    - You can view nearby lines using the paper with lines icon.
+   - For certain games, the speaker's name will be displayed in gray at the start of the line.
+     Click their name and click "Search" to view other lines said by the same person.
 
 Near the top right of the results window are several buttons.
 - The button with a "[ ]" icon will show/hide variables.
@@ -29,6 +31,7 @@ Near the top right of the results window are several buttons.
   - In German, some lines can use neuter grammatical gender; these forms are displayed when all forms are displayed.
 - The button with a "#" icon will change whether singular or plural forms are displayed.
   The available options are both forms separated by a slash (#), singular (1), or plural (>1).
+- The button with a "ᵃᵇᶜ" icon will show/hide furigana and ruby text.
 
 You can change your selected language and colorscheme using the dropdowns in the top right.
 
