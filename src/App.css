@@ -181,6 +181,7 @@ h1 a:hover, h1 a:active {
 }
 
 input[type="text"], select, input[type="submit"], input[type="button"], button {
+  font-family: inherit;
   background: var(--highlight);
   border: 1px solid var(--text);
   color: var(--text);

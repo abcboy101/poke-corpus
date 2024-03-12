@@ -1,6 +1,7 @@
 {
   "extends": ["stylelint-config-standard"],
   "rules": {
-    "color-hex-length": "long"
+    "color-hex-length": "long",
+    "comment-empty-line-before": null
   }
 }
