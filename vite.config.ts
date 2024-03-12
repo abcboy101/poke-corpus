@@ -41,4 +41,7 @@ export default defineConfig({
       exclude: [],
     }
   },
+  optimizeDeps: {
+    include: ['compression-streams-polyfill']
+  }
 })
