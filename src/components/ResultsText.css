@@ -124,3 +124,8 @@
 .number-2 .singular, .number-2 .zero, .number-2 .number {
   display: none;
 }
+
+/* Furigana */
+.furigana-hide rt, .furigana-hide rp {
+  display: none;
+}
