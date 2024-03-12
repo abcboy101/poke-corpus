@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react-swc'
+import autoprefixer from 'autoprefixer'
 import eslint from 'vite-plugin-eslint'
 import stylelint from 'vite-plugin-stylelint'
 import { splitVendorChunkPlugin } from 'vite'
@@ -21,6 +22,13 @@ export default defineConfig({
       manifest: false,
     }),
   ],
+  css: {
+    postcss: {
+      plugins: [
+        autoprefixer()
+      ]
+    }
+  },
   test: {
     globals: true,
     environment: 'jsdom',
