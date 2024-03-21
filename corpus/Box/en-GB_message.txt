@@ -1,0 +1,1820 @@
+~~~~~~~~~~~~~~~
+Text File : character
+~~~~~~~~~~~~~~~
+HARDY
+LONELY
+BRAVE
+ADAMANT
+NAUGHTY
+BOLD
+DOCILE
+RELAXED
+IMPISH
+LAX
+TIMID
+HASTY
+SERIOUS
+JOLLY
+NAIVE
+MODEST
+MILD
+QUIET
+BASHFUL
+RASH
+CALM
+GENTLE
+SASSY
+CAREFUL
+QUIRKY
+[~ 26]
+~~~~~~~~~~~~~~~
+Text File : ctypename
+~~~~~~~~~~~~~~~
+COOL
+BEAUTY
+CUTE
+SMART
+TOUGH
+[~ 6]
+[~ 7]
+[~ 8]
+[~ 9]
+[~ 10]
+[~ 11]
+[~ 12]
+~~~~~~~~~~~~~~~
+Text File : feature
+~~~~~~~~~~~~~~~
+STENCH
+DRIZZLE
+SPEED BOOST
+BATTLE ARMOR
+STURDY
+DAMP
+LIMBER
+SAND VEIL
+STATIC
+VOLT ABSORB
+WATER ABSORB
+OBLIVIOUS
+CLOUD NINE
+COMPOUNDEYES
+INSOMNIA
+COLOR CHANGE
+IMMUNITY
+FLASH FIRE
+SHIELD DUST
+OWN TEMPO
+SUCTION CUPS
+INTIMIDATE
+SHADOW TAG
+ROUGH SKIN
+WONDER GUARD
+LEVITATE
+EFFECT SPORE
+SYNCHRONIZE
+CLEAR BODY
+NATURAL CURE
+LIGHTNINGROD
+SERENE GRACE
+SWIFT SWIM
+CHLOROPHYLL
+ILLUMINATE
+TRACE
+HUGE POWER
+POISON POINT
+INNER FOCUS
+MAGMA ARMOR
+WATER VEIL
+MAGNET PULL
+SOUNDPROOF
+RAIN DISH
+SAND STREAM
+PRESSURE
+THICK FAT
+EARLY BIRD
+FLAME BODY
+RUN AWAY
+KEEN EYE
+HYPER CUTTER
+PICKUP
+TRUANT
+HUSTLE
+CUTE CHARM
+PLUS
+MINUS
+FORECAST
+STICKY HOLD
+SHED SKIN
+GUTS
+MARVEL SCALE
+LIQUID OOZE
+OVERGROW
+BLAZE
+TORRENT
+SWARM
+ROCK HEAD
+DROUGHT
+ARENA TRAP
+VITAL SPIRIT
+WHITE SMOKE
+PURE POWER
+SHELL ARMOR
+CACOPHONY
+AIR LOCK
+[~ 78]
+~~~~~~~~~~~~~~~
+Text File : feature_info
+~~~~~~~~~~~~~~~
+Helps repel wild POKéMON.
+Summons rain in battle.
+Gradually boosts SPEED.
+Blocks critical hits.
+Negates 1-hit KO attacks.
+Prevents self-destruction.
+Prevents paralysis.
+Ups evasion in a sandstorm.
+Paralyzes on contact.
+Turns electricity into HP.
+Changes water into HP.
+Prevents attraction.
+Negates weather effects.
+Raises accuracy.
+Prevents sleep.
+Changes type to foe's move.
+Prevents poisoning.
+Powers up if hit by fire.
+Prevents added effects.
+Prevents confusion.
+Firmly anchors the body.
+Lowers the foe's ATTACK.
+Prevents the foe's escape.
+Hurts to touch.
+"Super effective" hits.
+Not hit by GROUND attacks.
+Leaves spores on contact.
+Passes on status problems.
+Prevents ability reduction.
+Heals upon switching out.
+Draws electrical moves.
+Promotes added effects.
+Raises SPEED in rain.
+Raises SPEED in sunshine.
+Encounter rate increases.
+Copies special ability.
+Raises ATTACK.
+Poisons foe on contact.
+Prevents flinching.
+Prevents freezing.
+Prevents burns.
+Traps STEEL-type POKéMON.
+Avoids sound-based moves.
+Slight HP recovery in rain.
+Summons a sandstorm.
+Raises foe's PP usage.
+Heat-and-cold protection.
+Awakens quickly from sleep.
+Burns the foe on contact.
+Makes escaping easier.
+Prevents loss of accuracy.
+Prevents ATTACK reduction.
+May pick up items.
+Moves only every two turns.
+Trades accuracy for power.
+Infatuates on contact.
+Powers up with MINUS.
+Powers up with PLUS.
+Changes with the weather.
+Prevents item theft.
+Heals the body by shedding.
+Ups ATTACK if suffering.
+Ups DEFENSE if suffering.
+Draining causes injury.
+Ups GRASS moves in a pinch.
+Ups FIRE moves in a pinch.
+Ups WATER moves in a pinch.
+Ups BUG moves in a pinch.
+Prevents recoil damage.
+Summons sunlight in battle.
+Prevents fleeing.
+Prevents sleep.
+Prevents ability reduction.
+Raises ATTACK.
+Blocks critical hits.
+Avoids sound-based moves.
+Negates weather effects.
+[~ 78]
+~~~~~~~~~~~~~~~
+Text File : itemname
+~~~~~~~~~~~~~~~
+MASTER BALL
+ULTRA BALL
+GREAT BALL
+POKé BALL
+SAFARI BALL
+NET BALL
+DIVE BALL
+NEST BALL
+REPEAT BALL
+TIMER BALL
+LUXURY BALL
+PREMIER BALL
+POTION
+ANTIDOTE
+BURN HEAL
+ICE HEAL
+AWAKENING
+PARLYZ HEAL
+FULL RESTORE
+MAX POTION
+HYPER POTION
+SUPER POTION
+FULL HEAL
+REVIVE
+MAX REVIVE
+FRESH WATER
+SODA POP
+LEMONADE
+MOOMOO MILK
+ENERGYPOWDER
+ENERGY ROOT
+HEAL POWDER
+REVIVAL HERB
+ETHER
+MAX ETHER
+ELIXIR
+MAX ELIXIR
+LAVA COOKIE
+BLUE FLUTE
+YELLOW FLUTE
+RED FLUTE
+BLACK FLUTE
+WHITE FLUTE
+BERRY JUICE
+SACRED ASH
+SHOAL SALT
+SHOAL SHELL
+RED SHARD
+BLUE SHARD
+YELLOW SHARD
+GREEN SHARD
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+HP UP
+PROTEIN
+IRON
+CARBOS
+CALCIUM
+RARE CANDY
+PP UP
+ZINC
+PP MAX
+???
+GUARD SPEC
+DIRE HIT
+X ATTACK
+X DEFEND
+X SPEED
+X ACCURACY
+X SPECIAL
+POKé DOLL
+FLUFFY TAIL
+???
+SUPER REPEL
+MAX REPEL
+ESCAPE ROPE
+REPEL
+???
+???
+???
+???
+???
+???
+SUN STONE
+MOON STONE
+FIRE STONE
+THUNDERSTONE
+WATER STONE
+LEAF STONE
+???
+???
+???
+???
+TINYMUSHROOM
+BIG MUSHROOM
+???
+PEARL
+BIG PEARL
+STARDUST
+STAR PIECE
+NUGGET
+HEART SCALE
+???
+???
+???
+???
+???
+???
+???
+???
+???
+ORANGE MAIL
+HARBOR MAIL
+GLITTER MAIL
+MECH MAIL
+WOOD MAIL
+WAVE MAIL
+BEAD MAIL
+SHADOW MAIL
+TROPIC MAIL
+DREAM MAIL
+FAB MAIL
+RETRO MAIL
+CHERI BERRY
+CHESTO BERRY
+PECHA BERRY
+RAWST BERRY
+ASPEAR BERRY
+LEPPA BERRY
+ORAN BERRY
+PERSIM BERRY
+LUM BERRY
+SITRUS BERRY
+FIGY BERRY
+WIKI BERRY
+MAGO BERRY
+AGUAV BERRY
+IAPAPA BERRY
+RAZZ BERRY
+BLUK BERRY
+NANAB BERRY
+WEPEAR BERRY
+PINAP BERRY
+POMEG BERRY
+KELPSY BERRY
+QUALOT BERRY
+HONDEW BERRY
+GREPA BERRY
+TAMATO BERRY
+CORNN BERRY
+MAGOST BERRY
+RABUTA BERRY
+NOMEL BERRY
+SPELON BERRY
+PAMTRE BERRY
+WATMEL BERRY
+DURIN BERRY
+BELUE BERRY
+LIECHI BERRY
+GANLON BERRY
+SALAC BERRY
+PETAYA BERRY
+APICOT BERRY
+LANSAT BERRY
+STARF BERRY
+ENIGMA BERRY
+???
+???
+???
+BRIGHTPOWDER
+WHITE HERB
+MACHO BRACE
+EXP. SHARE
+QUICK CLAW
+SOOTHE BELL
+MENTAL HERB
+CHOICE BAND
+KING'S ROCK
+SILVERPOWDER
+AMULET COIN
+CLEANSE TAG
+SOUL DEW
+DEEPSEATOOTH
+DEEPSEASCALE
+SMOKE BALL
+EVERSTONE
+FOCUS BAND
+LUCKY EGG
+SCOPE LENS
+METAL COAT
+LEFTOVERS
+DRAGON SCALE
+LIGHT BALL
+SOFT SAND
+HARD STONE
+MIRACLE SEED
+BLACKGLASSES
+BLACK BELT
+MAGNET
+MYSTIC WATER
+SHARP BEAK
+POISON BARB
+NEVERMELTICE
+SPELL TAG
+TWISTEDSPOON
+CHARCOAL
+DRAGON FANG
+SILK SCARF
+UP-GRADE
+SHELL BELL
+SEA INCENSE
+LAX INCENSE
+LUCKY PUNCH
+METAL POWDER
+THICK CLUB
+STICK
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+???
+RED SCARF
+BLUE SCARF
+PINK SCARF
+GREEN SCARF
+YELLOW SCARF
+MACH BIKE
+COIN CASE
+ITEMFINDER
+OLD ROD
+GOOD ROD
+SUPER ROD
+S.S. TICKET
+CONTEST PASS
+AMBER
+WAILMER PAIL
+DEVON GOODS
+SOOT SACK
+BASEMENT KEY
+ACRO BIKE
+POKé BLOCK CASE
+LETTER
+EON TICKET
+RED ORB
+BLUE ORB
+SCANNER
+GO-GOGGLES
+METEORITE
+RM. 1 KEY
+RM. 2 KEY
+RM. 4 KEY
+RM. 6 KEY
+STORAGE KEY
+ROOT FOSSIL
+CLAW FOSSIL
+DEVON SCOPE
+TM01
+TM02
+TM03
+TM04
+TM05
+TM06
+TM07
+TM08
+TM09
+TM10
+TM11
+TM12
+TM13
+TM14
+TM15
+TM16
+TM17
+TM18
+TM19
+TM20
+TM21
+TM22
+TM23
+TM24
+TM25
+TM26
+TM27
+TM28
+TM29
+TM30
+TM31
+TM32
+TM33
+TM34
+TM35
+TM36
+TM37
+TM38
+TM39
+TM40
+TM41
+TM42
+TM43
+TM44
+TM45
+TM46
+TM47
+TM48
+TM49
+TM50
+HM01
+HM02
+HM03
+HM04
+HM05
+HM06
+HM07
+HM08
+???
+???
+[~ 349]
+[~ 350]
+~~~~~~~~~~~~~~~
+Text File : mboxmain_banner
+~~~~~~~~~~~~~~~
+Pokémon Box R&S
+Pokémon Box R&S
+NINTENDO
+NINTENDO
+Pokémon Box is a useful tool to\norganize your Pokémon.
+Pokémon Box R&S
+Saved data of [VAR NUMBER(0012)]/[VAR NUMBER(0013)]
+[~ 8]
+[~ 9]
+[~ 10]
+~~~~~~~~~~~~~~~
+Text File : mboxmain_box
+~~~~~~~~~~~~~~~
+Pokémon Skills / Battle Moves
+Condition / Contest Moves
+[VAR NUMBER(0001)]
+No.[VAR NUMBER(0001)]
+No.???
+Mark
+Level
+[VAR NUMBER(0002)]
+Lv.[VAR NUMBER(0002)]
+Nickname
+[VAR STRING(0002)]
+Bad EGG
+Pokémon
+[VAR STRING(0003)]
+Gender
+♂
+♀
+Area
+BOX[VAR NUMBER(0010)]
+[VAR STRING(0018)]
+Nature
+[VAR STRING(0004)]
+Item
+[VAR STRING(0005)]
+Ribbons
+[VAR NUMBER(0003)]
+[VAR NUMBER(0003)]
+None
+PKRS
+·
+PROFILE
+OT/
+OT
+[VAR STRING(0006)]
+IDNo.
+ID
+[VAR NUMBER(0004)]
+IDNo.[VAR NUMBER(0004)]
+Friendship
+Excellent
+Very Good
+Good
+So-so
+Meager
+Not good
+Bad
+[VAR STRING(001A)]
+Type/
+Type 1
+[VAR STRING(0007)]
+Type 2
+[VAR STRING(0008)]
+EXP.
+Exp. Points
+[VAR NUMBER(0005)]
+Next Lv.
+
+[VAR NUMBER(0006)]
+EXP.
+ABILITY
+Ability
+[VAR STRING(0009)]
+[VAR STRING(000A)]
+STATS
+HP
+[VAR NUMBER(0007)]
+/
+[VAR NUMBER(0008)]
+Attack
+[VAR NUMBER(0009)]
+Defense
+[VAR NUMBER(000A)]
+Sp.Atk
+[VAR NUMBER(000B)]
+Sp.Def
+[VAR NUMBER(000C)]
+Speed
+[VAR NUMBER(000D)]
+MOVES
+[VAR STRING(000B)]
+[VAR STRING(000C)]
+[VAR STRING(000D)]
+[VAR STRING(000E)]
+Move 1
+[VAR STRING(0013)]
+Move 2
+[VAR STRING(0014)]
+Move 3
+[VAR STRING(0015)]
+Move 4
+[VAR STRING(0016)]
+PP
+[VAR NUMBER(000E)]
+/
+[VAR NUMBER(000F)]
+Other
+List
+Switch
+Next Page
+[VAR STRING(0019)]
+★
+★★
+★★★
+★★★★
+★★★★★
+Sort
+Clear
+Highest Mode
+Lowest Mode
+Majority Mode
+Minority Mode
+Alphabetical Mode
+Select Pokémon to List
+Clear All
+Pokédex Mode
+Numerical Mode
+Sort by ♂
+Clear ♂
+Sort by ♀
+Clear ♀
+Sort by Gender Unknown
+Clear Gender Unknown
+Area Mode
+Sort by Type
+Sort by Level
+Enter Level
+Sort by Move
+Sort by Ability
+Sort by Nature
+Sort by Mark
+Sort by Rare-Colored Pokémon
+Clear Rare-Colored Pokémon
+Sort by Pokérus-Infected Pokémon
+Clear Pokérus-Infected Pokémon
+Sort by Previously Infected Pokémon
+Clear Previously Infected Pokémon
+Sort by [VAR STRING(0003)]
+Clear [VAR STRING(0003)]
+Sort by Same-Type Pokémon
+Clear Same-Type Pokémon
+Search for [VAR STRING(0002)]
+Which Box?
+Pokémon R/S
+Pokémon Box
+Back to Brigette's Room?
+Back to Box Arrangement?
+Check
+Cancel
+Menu
+/
+Place
+Switch
+Mark
+Grab
+Summary
+Go to List
+You're still grabbing your Pokémon!
+You can't place it here.
+There is just one Pokémon with you.
+Pokémon holding Mail cannot be\ntransferred.
+Pokémon can't be transferred because\nthe Pokédex does not have more than\n100 owned Pokémon in it.
+Pokémon can't be transferred until\nyou have the Pokédex.
+Pokémon holding a certain item can't be\ntransferred.
+There is Pokémon that can't be transferred.
+A Bad EGG can't be transferred.
+Jump
+Wallpaper
+Name
+Jump to which Box?
+Party
+Box Name?
+Stage Name?
+Confirm
+Back
+Back
+OK
+-
+------
+----------
+----------
+--------
+CONDITION
+COOL
+BEAUTY
+CUTE
+SMART
+TOUGH
+Cool
+Beauty
+Cute
+Smart
+Tough
+MOVES
+[VAR STRING(000F)]
+[VAR STRING(0010)]
+[VAR STRING(0011)]
+[VAR STRING(0012)]
+PP
+[VAR NUMBER(000E)]
+/
+[VAR NUMBER(000F)]
+[~ 202]
+~~~~~~~~~~~~~~~
+Text File : mboxmain_chart
+~~~~~~~~~~~~~~~
+There is no Memory Card in Memory Card\nSlot A. \nPokémon Box can't be used if there is no\nMemory Card.\nPlease insert a Memory Card into\nMemory Card Slot A.
+The device in Memory Card Slot A\ncan't be used for this software.\nPlease insert a Memory Card.
+The Memory Card in Memory Card Slot A\nis damaged and can't be used.
+The Memory Card in Memory Card Slot A\nis corrupted and needs to be formatted.\nIs it OK to format?
+Memory Card formatting...\nPlease do not touch the Memory Card or\nthe POWER Button.
+Memory Card formatting might have failed.
+Memory Card formatting completed.
+A file for Pokémon Box will be created on\nthe Memory Card in Memory Card Slot A. \n59 blocks will be used.\nPlease don't touch the Memory Card or the\nPOWER Button while creating a file.\nIs this OK?
+Creating the file.\nPlease do not touch the Memory Card or\nthe POWER Button.
+Failed to create a file for Pokémon Box.
+There is not enough free space on\nthe Memory Card in Slot A. \nPokémon Box requires 59 blocks to save.\nTo organize the contents of the Memory\nCard, please use the Memory Card screen on\nyour Nintendo GameCube.\nRegarding the Memory Card screen, please\nread the Nintendo GameCube Instruction\nBooklet for details.
+The contents of the Memory Card in Memory\nCard Slot A have been partially corrupted.\nSome data might be unusable.
+The contents of the Memory Card in Memory\nCard Slot A have been partially corrupted.\nTrying to recover data from the previous\nsave.
+Please connect the Nintendo GameCube\nGame Boy Advance cable between\nController Socket 2 and your Game Boy\nAdvance system.\nPlease connect the Nintendo GameCube and\nGame Boy Advance system with the\nGame Boy Advance system's power off.\nInsert your Pokémon Ruby or Sapphire\nGame Pak into the Game Boy Advance\nsystem and turn it on.
+Confirming connection.\nPlease wait.
+Connection failure with the Game Boy\nAdvance system. Please check the\nconnection and ensure that Pokémon Ruby\nor Sapphire is properly inserted into your \nGame Boy Advance system.
+You can turn off the power on your\nGame Boy Advance system.\nBut please DO NOT unplug the Nintendo\nGameCube Game Boy Advance cable,\nPokémon Ruby or Sapphire Game Pak, or the\nMemory Card while you are using\nPokémon Box.
+You can now turn your Game Boy Advance\nsystem off.\nPlease DO NOT unplug the Nintendo\nGameCube Game Boy Advance cable or the\nPokémon Ruby or Sapphire Game Pak while\nyou are playing Pokémon Ruby or Sapphire.
+This Game Pak can't be used with\nPokémon Box.
+You can't go to Adventure with this\nGame Pak.
+The save data on your Pokémon Ruby or\nSapphire Game Pak is corrupted.
+The save data on your Pokémon Ruby or\nSapphire Game Pak is partially corrupted.\nTrying to recover data from a previous save.
+Please save your Pokémon Ruby or\nSapphire Game Pak at a Pokémon Center.
+There are unknown Pokémon that \nPokémon Box can't identify.\nThere is a high possibility that the other\nPokémon will be deleted.\nPokémon Box can't be used.
+There is no Memory Card in Memory Card\nSlot A. Please insert a Memory Card into\nMemory Card Slot A.
+Please insert the Memory Card you first\nused in Memory Card Slot A.
+The Memory Card in Memory Card Slot A is\ndamaged and can't be used.
+Connection error occurred.\nContents can't be saved.
+Connection error occurred.\nMay not have saved properly.
+Starting to save.\nPlease turn on the power of your\nGame Boy Advance system.
+All right then, I'll get it ready.\nPlease stand by.
+Saving... Please don't turn off the power or\nunplug the Nintendo GameCube Game Boy\nAdvance cable or the Memory Card.
+Saved!\nYou can now turn off the power on your\nGame Boy Advance system.[VAR ACTION(0001)]\nPlease DO NOT unplug the Nintendo\nGameCube Game Boy Advance cable,\nPokémon Ruby or Sapphire Game Pak,[VAR ACTION(0001)]\nor the Memory Card\nwhile you are using Pokémon Box.
+Connection error occurred.\nContents can't be saved.
+The contents can't be saved.\nThe Game Pak which was initially used is \nnot inserted.\nPlease turn off the power and insert the\nappropriate Game Pak and then turn the\npower back on.
+The current contents of Pokémon Box\ncan't be saved.\nThe Game Pak data which was initially used\nhas been changed and can't be saved.
+Starting to save.\nPlease turn on the power of your \nGame Boy Advance system.
+The Game Boy Advance system is not ready.\nTherefore, the contents can't be saved on\nyour Pokémon Ruby or Sapphire Game Pak.
+Confirming connection.\nPlease wait.
+Preparing to save.
+Saving... Please don't turn off the power or\nunplug the Nintendo GameCube Game Boy\nAdvance cable.
+Saved!\nYou can now turn off the power on your\nGame Boy Advance system.\nPlease DO NOT unplug the Nintendo\nGameCube Game Boy Advance cable or your\nPokémon Ruby or Sapphire Game Pak while\nyou are playing Pokémon Ruby or Sapphire.
+Connection error occurred.\nContents can't be saved.
+The contents can't be saved.\nThe Game Pak which was initially used is\nnot inserted.\nPlease turn off the power and insert the\nappropriate Game Pak and then turn the\npower back on.
+The current contents of Pokémon Box\ncan't be saved.\nThe Game Pak data which was initially used\nhas been changed and can't be saved.
+The Pokémon Ruby or Sapphire Game Pak\nthat is inserted in the Game Boy Advance\nsystem can't be used because it's damaged.
+Connection error occurred.\nSave might not have succeeded. Please\nreconfirm the connection of the Pokémon\nRuby or Sapphire Game Pak, Nintendo\nGameCube Game Boy Advance cable, and\nthe Memory Card.\nIn case the power of the Game Boy Advance\nsystem is on, turn it off and then on again.
+The contents can't be saved due to a \nconnection error. Please reconfirm the\nconnection of the Pokémon Ruby or Sapphire\nGame Pak, Nintendo GameCube Game Boy\nAdvance cable, and the Memory Card.\nIn case the power of the Game Boy Advance\nsystem is on, turn it off and then on again.
+The contents can't be saved due to a \nconnection error. Please reconfirm the\nconnection of the Pokémon Ruby or Sapphire\nGame Pak and the Nintendo GameCube\nGame Boy Advance cable.\nIn case the power of the Game Boy Advance\nsystem is on, turn it off and then on again.
+Saved!\nYour Berry Program was updated. \nYou can now turn off the power on your\nGame Boy Advance system.\nPlease DO NOT unplug the Nintendo\nGameCube Game Boy Advance cable or your\nPokémon Ruby or Sapphire Game Pak while\nyou are playing Pokémon Ruby or Sapphire.
+Saved!\nYour Berry Program was updated. \nYou can now turn off the power on your[VAR ACTION(0001)]\nGame Boy Advance system.\nPlease DO NOT unplug the Nintendo\nGameCube Game Boy Advance cable,[VAR ACTION(0001)]\nPokémon Ruby or Sapphire Game Pak,\nor the Memory Card\nwhile you are using Pokémon Box.
+[~ 52]
+[~ 53]
+[~ 54]
+~~~~~~~~~~~~~~~
+Text File : mboxmain_display
+~~~~~~~~~~~~~~~
+[VAR STRING(0017)]
+Place Piece
+Edit Stage
+Check Stage
+Quit
+You can place and display pieces.
+You can edit the stage.
+You can enjoy the view.
+Quit the Showcase.
+OK
+Stage 1
+Stage 2
+Stage 3
+Stage 4
+Stage 5
+Box
+Grab
+Delete
+Pattern
+Background
+Change Piece
+Music
+Cancel
+You can change the stage's pattern.
+You can change the background.
+You can change the kind of piece.
+You can change the music.
+You can change the stage name.
+You can delete the entire stage.
+Quit stage editing.
+Small Rectangle
+Large Rectangle
+Small Square
+Large Square
+Small Triangle
+Large Triangle
+Small Circle
+Large Circle
+Long Rectangle
+Big Rectangle
+You can place up to 60 pieces.
+You can place up to 240 pieces.
+You can place up to 81 pieces.
+You can place up to 225 pieces.
+You can place up to 64 pieces.
+You can place up to 441 pieces.
+You can place up to 221 pieces.
+You can place up to 421 pieces.
+You can place up to 600 pieces.
+You can place up to 1500 pieces.
+Grass
+Water
+Ground
+Rock
+Steel
+Wood
+Pink
+Brick
+Marble
+Tile
+Sky
+Sunset
+Night Sky
+Jungle
+Snow
+Underwater
+Fancy
+Poison
+Pattern 1
+Pattern 2
+Plastic
+Glass
+Hologram
+Wood
+Metal
+Delete the stage and all placed pieces?
+There are pieces which can't be\nplaced on the stage.
+You're still grabbing your piece!
+There is no place left on the stage.
+Landscape 1
+Landscape 2
+Landscape 3
+Etcetera
+Special
+Forest
+City
+Desert
+Savanna
+Crag
+Volcano
+Snow
+Cave
+Beach
+Seafloor
+River
+Sky
+Polka-Dot
+Pokémon Center
+Machine
+Plain
+Flower
+Tile
+Carpet
+Ruin
+My Wallpaper
+Are you OK with this stage?
+Change Name
+Edit Stage
+Edit new stage.
+Delete Stage
+Museum
+Gym
+Evolution
+Slateport City
+Pokémon Center
+Party
+Hall of Fame
+Title
+Camera
+Zoom
+Angle
+Rotate
+~~~~~~~~~~~~~~~
+Text File : mboxmain_emu
+~~~~~~~~~~~~~~~
+Continue
+Quit
+Did you save your contents?\nIs it really OK to quit?
+Take Pictures
+[~ 5]
+[~ 6]
+~~~~~~~~~~~~~~~
+Text File : mboxmain_main
+~~~~~~~~~~~~~~~
+Hello! My name is Brigette!\nAnd you are...?\nOK! How do you do, [VAR STRING(0001)]?[VAR ACTION(0001)]\nPokémon Box is an advanced remake of the\nPokémon storage system which was created\nby Lanette, who's actually my younger sister.[VAR ACTION(0001)]\nI hope you enjoy it! Oh, by the way,\n[VAR STRING(0001)], I'm sure that you are good at\nraising a Pokémon, aren't you?[VAR ACTION(0001)]\nSo, as a token of our first meeting, I placed\none Pokémon Egg in the Memory Box.[VAR ACTION(0002)][VAR ACTION(0001)]\nI hope you accept this. Well, that's enough\ngreetings for now.[VAR ACTION(0001)]\nI proudly present to you...Pokémon Box!
+Hello! My name is Brigette!\nAnd you are...?\nOK! How do you do, [VAR STRING(0001)]?[VAR ACTION(0001)]\nPokémon Box is an advanced remake of the\nPokémon storage system which was created\nby Lanette, who's actually my younger sister.[VAR ACTION(0001)]\nI hope you enjoy it! Oh, by the way,\n[VAR STRING(0001)], I'm sure that you are good at\nraising a Pokémon, aren't you?[VAR ACTION(0001)]\nSo, as a token of our first meeting, I placed\none Pokémon Egg in the Memory Box.[VAR ACTION(0002)][VAR ACTION(0001)]\nI hope you accept this. Well, that's enough\ngreetings for now.[VAR ACTION(0001)]\nI proudly present to you...Pokémon Box!
+[VAR ACTION(0003)]Hi! Nice to see you, [VAR STRING(0001)]!\nOK, let's get started!
+[VAR ACTION(0003)]Hi! Nice to see you, [VAR STRING(0001)]!\nOK, let's get started!
+Hi, [VAR STRING(0001)]! Thanks for storing so many\nPokémon![VAR ACTION(0001)]\nI would like to give you an Egg to show my\ngratitude. Please check the Box.[VAR ACTION(0002)][VAR ACTION(0001)]\n[VAR ACTION(0003)]I know you, [VAR STRING(0001)], can raise this Egg\nextremely well!!\nPlease take good care of it!
+Hi, [VAR STRING(0001)]! Thanks for storing so many\nPokémon![VAR ACTION(0001)]\nI would like to give you an Egg to show my\ngratitude. Please check the Box.[VAR ACTION(0002)][VAR ACTION(0001)]\n[VAR ACTION(0003)]I know you, [VAR STRING(0001)], can raise this Egg\nextremely well!!\nPlease take good care of it!
+Wow, [VAR STRING(0001)]! Impressive![VAR ACTION(0001)]\nYou've already stored so many Pokémon\nin Boxes! It was worth developing this\nsystem.[VAR ACTION(0001)]\nOh, by the way. I have another Egg for you.[VAR ACTION(0002)][VAR ACTION(0001)]\nWould you please take care of this?\nIt'll be in the Box.\nPlease take good care of it!
+Wow, [VAR STRING(0001)]! Impressive![VAR ACTION(0001)]\nYou've already stored so many Pokémon\nin Boxes! It was worth developing this\nsystem.[VAR ACTION(0001)]\nOh, by the way. I have another Egg for you.[VAR ACTION(0002)][VAR ACTION(0001)]\nWould you please take care of this?\nIt'll be in the Box.\nPlease take good care of it!
+This is surprising! I didn't expect you to\n[VAR ACTION(0003)]store so many Pokémon in the Pokémon Box\nthat I created![VAR ACTION(0001)]\n[VAR ACTION(0003)]You are one tough Pokémon Trainer![VAR ACTION(0001)]\nI'll give you this Egg on behalf of myself and \nLanette for your using our Pokémon Box so\nmuch.[VAR ACTION(0002)][VAR ACTION(0001)]\n[VAR ACTION(0003)]Maybe there are no Pokémon for you to\nfind, but this is a token of our friendship.[VAR ACTION(0001)]\nI'll place it in the Box as usual.\n[VAR ACTION(0003)]Please take good care of it!
+This is surprising! I didn't expect you to\n[VAR ACTION(0003)]store so many Pokémon in the Pokémon Box\nthat I created![VAR ACTION(0001)]\n[VAR ACTION(0003)]You are one tough Pokémon Trainer![VAR ACTION(0001)]\nI'll give you this Egg on behalf of myself and \nLanette for your using our Pokémon Box so\nmuch.[VAR ACTION(0002)][VAR ACTION(0001)]\n[VAR ACTION(0003)]Maybe there are no Pokémon for you to\nfind, but this is a token of our friendship.[VAR ACTION(0001)]\nI'll place it in the Box as usual.\n[VAR ACTION(0003)]Please take good care of it!
+Hmm...\nIt seems like your Box is full...\nPlease make some room in the Box.
+Hmm...\nIt seems like your Box is full...\nPlease make some room in the Box.
+Arrange Boxes
+Showcase
+Save
+Explanations
+Exit
+The contents have changed from the last\ntime you saved.\nAre you sure it is OK to quit Pokémon Box?
+Do you want to quit Pokémon Box?
+[VAR ACTION(0003)]Good-bye, [VAR STRING(0001)]!\nSee you soon!
+All of your Pokémon can be arranged here.\nYou can also search through them and\nchange their order.
+You can create pieces of your Pokémon\nthat are in Pokémon Box and display them\non a stage.
+Pokémon Box, Pokémon Ruby or Sapphire\nGame Pak Box, and Showcase can be\nsaved here. You can only save here.
+Save all the contents of the Boxes\nand Showcase?
+You can go to Adventure from here.\nBut, you'd better save the contents\nbefore you go.
+Go to Adventure
+Go to Pokémon Box
+Yes
+No
+OK
+Quit
+Cancel
+Quit
+OK
+Exit
+Take Pictures
+Quit
+Adjust
+Do you want to\nkeep this picture?
+Bright
+Normal
+Dark
+B & W
+Color
+Sepia
+×
+Registered in "My Wallpaper."\nTo save the wallpaper, please save in\nBrigette's room.
+[~ 48]
+[~ 49]
+[~ 50]
+~~~~~~~~~~~~~~~
+Text File : pokename
+~~~~~~~~~~~~~~~
+BULBASAUR
+IVYSAUR
+VENUSAUR
+CHARMANDER
+CHARMELEON
+CHARIZARD
+SQUIRTLE
+WARTORTLE
+BLASTOISE
+CATERPIE
+METAPOD
+BUTTERFREE
+WEEDLE
+KAKUNA
+BEEDRILL
+PIDGEY
+PIDGEOTTO
+PIDGEOT
+RATTATA
+RATICATE
+SPEAROW
+FEAROW
+EKANS
+ARBOK
+PIKACHU
+RAICHU
+SANDSHREW
+SANDSLASH
+NIDORAN♀
+NIDORINA
+NIDOQUEEN
+NIDORAN♂
+NIDORINO
+NIDOKING
+CLEFAIRY
+CLEFABLE
+VULPIX
+NINETALES
+JIGGLYPUFF
+WIGGLYTUFF
+ZUBAT
+GOLBAT
+ODDISH
+GLOOM
+VILEPLUME
+PARAS
+PARASECT
+VENONAT
+VENOMOTH
+DIGLETT
+DUGTRIO
+MEOWTH
+PERSIAN
+PSYDUCK
+GOLDUCK
+MANKEY
+PRIMEAPE
+GROWLITHE
+ARCANINE
+POLIWAG
+POLIWHIRL
+POLIWRATH
+ABRA
+KADABRA
+ALAKAZAM
+MACHOP
+MACHOKE
+MACHAMP
+BELLSPROUT
+WEEPINBELL
+VICTREEBEL
+TENTACOOL
+TENTACRUEL
+GEODUDE
+GRAVELER
+GOLEM
+PONYTA
+RAPIDASH
+SLOWPOKE
+SLOWBRO
+MAGNEMITE
+MAGNETON
+FARFETCH'D
+DODUO
+DODRIO
+SEEL
+DEWGONG
+GRIMER
+MUK
+SHELLDER
+CLOYSTER
+GASTLY
+HAUNTER
+GENGAR
+ONIX
+DROWZEE
+HYPNO
+KRABBY
+KINGLER
+VOLTORB
+ELECTRODE
+EXEGGCUTE
+EXEGGUTOR
+CUBONE
+MAROWAK
+HITMONLEE
+HITMONCHAN
+LICKITUNG
+KOFFING
+WEEZING
+RHYHORN
+RHYDON
+CHANSEY
+TANGELA
+KANGASKHAN
+HORSEA
+SEADRA
+GOLDEEN
+SEAKING
+STARYU
+STARMIE
+MR. MIME
+SCYTHER
+JYNX
+ELECTABUZZ
+MAGMAR
+PINSIR
+TAUROS
+MAGIKARP
+GYARADOS
+LAPRAS
+DITTO
+EEVEE
+VAPOREON
+JOLTEON
+FLAREON
+PORYGON
+OMANYTE
+OMASTAR
+KABUTO
+KABUTOPS
+AERODACTYL
+SNORLAX
+ARTICUNO
+ZAPDOS
+MOLTRES
+DRATINI
+DRAGONAIR
+DRAGONITE
+MEWTWO
+MEW
+CHIKORITA
+BAYLEEF
+MEGANIUM
+CYNDAQUIL
+QUILAVA
+TYPHLOSION
+TOTODILE
+CROCONAW
+FERALIGATR
+SENTRET
+FURRET
+HOOTHOOT
+NOCTOWL
+LEDYBA
+LEDIAN
+SPINARAK
+ARIADOS
+CROBAT
+CHINCHOU
+LANTURN
+PICHU
+CLEFFA
+IGGLYBUFF
+TOGEPI
+TOGETIC
+NATU
+XATU
+MAREEP
+FLAAFFY
+AMPHAROS
+BELLOSSOM
+MARILL
+AZUMARILL
+SUDOWOODO
+POLITOED
+HOPPIP
+SKIPLOOM
+JUMPLUFF
+AIPOM
+SUNKERN
+SUNFLORA
+YANMA
+WOOPER
+QUAGSIRE
+ESPEON
+UMBREON
+MURKROW
+SLOWKING
+MISDREAVUS
+UNOWN
+WOBBUFFET
+GIRAFARIG
+PINECO
+FORRETRESS
+DUNSPARCE
+GLIGAR
+STEELIX
+SNUBBULL
+GRANBULL
+QWILFISH
+SCIZOR
+SHUCKLE
+HERACROSS
+SNEASEL
+TEDDIURSA
+URSARING
+SLUGMA
+MAGCARGO
+SWINUB
+PILOSWINE
+CORSOLA
+REMORAID
+OCTILLERY
+DELIBIRD
+MANTINE
+SKARMORY
+HOUNDOUR
+HOUNDOOM
+KINGDRA
+PHANPY
+DONPHAN
+PORYGON2
+STANTLER
+SMEARGLE
+TYROGUE
+HITMONTOP
+SMOOCHUM
+ELEKID
+MAGBY
+MILTANK
+BLISSEY
+RAIKOU
+ENTEI
+SUICUNE
+LARVITAR
+PUPITAR
+TYRANITAR
+LUGIA
+HO-OH
+CELEBI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TREECKO
+GROVYLE
+SCEPTILE
+TORCHIC
+COMBUSKEN
+BLAZIKEN
+MUDKIP
+MARSHTOMP
+SWAMPERT
+POOCHYENA
+MIGHTYENA
+ZIGZAGOON
+LINOONE
+WURMPLE
+SILCOON
+BEAUTIFLY
+CASCOON
+DUSTOX
+LOTAD
+LOMBRE
+LUDICOLO
+SEEDOT
+NUZLEAF
+SHIFTRY
+NINCADA
+NINJASK
+SHEDINJA
+TAILLOW
+SWELLOW
+SHROOMISH
+BRELOOM
+SPINDA
+WINGULL
+PELIPPER
+SURSKIT
+MASQUERAIN
+WAILMER
+WAILORD
+SKITTY
+DELCATTY
+KECLEON
+BALTOY
+CLAYDOL
+NOSEPASS
+TORKOAL
+SABLEYE
+BARBOACH
+WHISCASH
+LUVDISC
+CORPHISH
+CRAWDAUNT
+FEEBAS
+MILOTIC
+CARVANHA
+SHARPEDO
+TRAPINCH
+VIBRAVA
+FLYGON
+MAKUHITA
+HARIYAMA
+ELECTRIKE
+MANECTRIC
+NUMEL
+CAMERUPT
+SPHEAL
+SEALEO
+WALREIN
+CACNEA
+CACTURNE
+SNORUNT
+GLALIE
+LUNATONE
+SOLROCK
+AZURILL
+SPOINK
+GRUMPIG
+PLUSLE
+MINUN
+MAWILE
+MEDITITE
+MEDICHAM
+SWABLU
+ALTARIA
+WYNAUT
+DUSKULL
+DUSCLOPS
+ROSELIA
+SLAKOTH
+VIGOROTH
+SLAKING
+GULPIN
+SWALOT
+TROPIUS
+WHISMUR
+LOUDRED
+EXPLOUD
+CLAMPERL
+HUNTAIL
+GOREBYSS
+ABSOL
+SHUPPET
+BANETTE
+SEVIPER
+ZANGOOSE
+RELICANTH
+ARON
+LAIRON
+AGGRON
+CASTFORM
+VOLBEAT
+ILLUMISE
+LILEEP
+CRADILY
+ANORITH
+ARMALDO
+RALTS
+KIRLIA
+GARDEVOIR
+BAGON
+SHELGON
+SALAMENCE
+BELDUM
+METANG
+METAGROSS
+REGIROCK
+REGICE
+REGISTEEL
+KYOGRE
+GROUDON
+RAYQUAZA
+LATIAS
+LATIOS
+JIRACHI
+DEOXYS
+CHIMECHO
+EGG
+[~ 413]
+[~ 414]
+~~~~~~~~~~~~~~~
+Text File : wazaname
+~~~~~~~~~~~~~~~
+POUND
+KARATE CHOP
+DOUBLESLAP
+COMET PUNCH
+MEGA PUNCH
+PAY DAY
+FIRE PUNCH
+ICE PUNCH
+THUNDERPUNCH
+SCRATCH
+VICEGRIP
+GUILLOTINE
+RAZOR WIND
+SWORDS DANCE
+CUT
+GUST
+WING ATTACK
+WHIRLWIND
+FLY
+BIND
+SLAM
+VINE WHIP
+STOMP
+DOUBLE KICK
+MEGA KICK
+JUMP KICK
+ROLLING KICK
+SAND-ATTACK
+HEADBUTT
+HORN ATTACK
+FURY ATTACK
+HORN DRILL
+TACKLE
+BODY SLAM
+WRAP
+TAKE DOWN
+THRASH
+DOUBLE-EDGE
+TAIL WHIP
+POISON STING
+TWINEEDLE
+PIN MISSILE
+LEER
+BITE
+GROWL
+ROAR
+SING
+SUPERSONIC
+SONICBOOM
+DISABLE
+ACID
+EMBER
+FLAMETHROWER
+MIST
+WATER GUN
+HYDRO PUMP
+SURF
+ICE BEAM
+BLIZZARD
+PSYBEAM
+BUBBLEBEAM
+AURORA BEAM
+HYPER BEAM
+PECK
+DRILL PECK
+SUBMISSION
+LOW KICK
+COUNTER
+SEISMIC TOSS
+STRENGTH
+ABSORB
+MEGA DRAIN
+LEECH SEED
+GROWTH
+RAZOR LEAF
+SOLARBEAM
+POISONPOWDER
+STUN SPORE
+SLEEP POWDER
+PETAL DANCE
+STRING SHOT
+DRAGON RAGE
+FIRE SPIN
+THUNDERSHOCK
+THUNDERBOLT
+THUNDER WAVE
+THUNDER
+ROCK THROW
+EARTHQUAKE
+FISSURE
+DIG
+TOXIC
+CONFUSION
+PSYCHIC
+HYPNOSIS
+MEDITATE
+AGILITY
+QUICK ATTACK
+RAGE
+TELEPORT
+NIGHT SHADE
+MIMIC
+SCREECH
+DOUBLE TEAM
+RECOVER
+HARDEN
+MINIMIZE
+SMOKESCREEN
+CONFUSE RAY
+WITHDRAW
+DEFENSE CURL
+BARRIER
+LIGHT SCREEN
+HAZE
+REFLECT
+FOCUS ENERGY
+BIDE
+METRONOME
+MIRROR MOVE
+SELFDESTRUCT
+EGG BOMB
+LICK
+SMOG
+SLUDGE
+BONE CLUB
+FIRE BLAST
+WATERFALL
+CLAMP
+SWIFT
+SKULL BASH
+SPIKE CANNON
+CONSTRICT
+AMNESIA
+KINESIS
+SOFTBOILED
+HI JUMP KICK
+GLARE
+DREAM EATER
+POISON GAS
+BARRAGE
+LEECH LIFE
+LOVELY KISS
+SKY ATTACK
+TRANSFORM
+BUBBLE
+DIZZY PUNCH
+SPORE
+FLASH
+PSYWAVE
+SPLASH
+ACID ARMOR
+CRABHAMMER
+EXPLOSION
+FURY SWIPES
+BONEMERANG
+REST
+ROCK SLIDE
+HYPER FANG
+SHARPEN
+CONVERSION
+TRI ATTACK
+SUPER FANG
+SLASH
+SUBSTITUTE
+STRUGGLE
+SKETCH
+TRIPLE KICK
+THIEF
+SPIDER WEB
+MIND READER
+NIGHTMARE
+FLAME WHEEL
+SNORE
+CURSE
+FLAIL
+CONVERSION 2
+AEROBLAST
+COTTON SPORE
+REVERSAL
+SPITE
+POWDER SNOW
+PROTECT
+MACH PUNCH
+SCARY FACE
+FAINT ATTACK
+SWEET KISS
+BELLY DRUM
+SLUDGE BOMB
+MUD-SLAP
+OCTAZOOKA
+SPIKES
+ZAP CANNON
+FORESIGHT
+DESTINY BOND
+PERISH SONG
+ICY WIND
+DETECT
+BONE RUSH
+LOCK-ON
+OUTRAGE
+SANDSTORM
+GIGA DRAIN
+ENDURE
+CHARM
+ROLLOUT
+FALSE SWIPE
+SWAGGER
+MILK DRINK
+SPARK
+FURY CUTTER
+STEEL WING
+MEAN LOOK
+ATTRACT
+SLEEP TALK
+HEAL BELL
+RETURN
+PRESENT
+FRUSTRATION
+SAFEGUARD
+PAIN SPLIT
+SACRED FIRE
+MAGNITUDE
+DYNAMICPUNCH
+MEGAHORN
+DRAGONBREATH
+BATON PASS
+ENCORE
+PURSUIT
+RAPID SPIN
+SWEET SCENT
+IRON TAIL
+METAL CLAW
+VITAL THROW
+MORNING SUN
+SYNTHESIS
+MOONLIGHT
+HIDDEN POWER
+CROSS CHOP
+TWISTER
+RAIN DANCE
+SUNNY DAY
+CRUNCH
+MIRROR COAT
+PSYCH UP
+EXTREMESPEED
+ANCIENTPOWER
+SHADOW BALL
+FUTURE SIGHT
+ROCK SMASH
+WHIRLPOOL
+BEAT UP
+FAKE OUT
+UPROAR
+STOCKPILE
+SPIT UP
+SWALLOW
+HEAT WAVE
+HAIL
+TORMENT
+FLATTER
+WILL-O-WISP
+MEMENTO
+FACADE
+FOCUS PUNCH
+SMELLINGSALT
+FOLLOW ME
+NATURE POWER
+CHARGE
+TAUNT
+HELPING HAND
+TRICK
+ROLE PLAY
+WISH
+ASSIST
+INGRAIN
+SUPERPOWER
+MAGIC COAT
+RECYCLE
+REVENGE
+BRICK BREAK
+YAWN
+KNOCK OFF
+ENDEAVOR
+ERUPTION
+SKILL SWAP
+IMPRISON
+REFRESH
+GRUDGE
+SNATCH
+SECRET POWER
+DIVE
+ARM THRUST
+CAMOUFLAGE
+TAIL GLOW
+LUSTER PURGE
+MIST BALL
+FEATHERDANCE
+TEETER DANCE
+BLAZE KICK
+MUD SPORT
+ICE BALL
+NEEDLE ARM
+SLACK OFF
+HYPER VOICE
+POISON FANG
+CRUSH CLAW
+BLAST BURN
+HYDRO CANNON
+METEOR MASH
+ASTONISH
+WEATHER BALL
+AROMATHERAPY
+FAKE TEARS
+AIR CUTTER
+OVERHEAT
+ODOR SLEUTH
+ROCK TOMB
+SILVER WIND
+METAL SOUND
+GRASSWHISTLE
+TICKLE
+COSMIC POWER
+WATER SPOUT
+SIGNAL BEAM
+SHADOW PUNCH
+EXTRASENSORY
+SKY UPPERCUT
+SAND TOMB
+SHEER COLD
+MUDDY WATER
+BULLET SEED
+AERIAL ACE
+ICICLE SPEAR
+IRON DEFENSE
+BLOCK
+HOWL
+DRAGON CLAW
+FRENZY PLANT
+BULK UP
+BOUNCE
+MUD SHOT
+POISON TAIL
+COVET
+VOLT TACKLE
+MAGICAL LEAF
+WATER SPORT
+CALM MIND
+LEAF BLADE
+DRAGON DANCE
+ROCK BLAST
+SHOCK WAVE
+WATER PULSE
+DOOM DESIRE
+PSYCHO BOOST
+[NULL]
+[NULL]
+~~~~~~~~~~~~~~~
+Text File : wtypename
+~~~~~~~~~~~~~~~
+NORMAL
+FIGHT
+FLYING
+POISON
+GROUND
+ROCK
+BUG
+GHOST
+STEEL
+???
+FIRE
+WATER
+GRASS
+ELECTR
+PSYCHC
+ICE
+DRAGON
+DARK
+[~ 19]
+[~ 20]

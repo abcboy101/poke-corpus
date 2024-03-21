@@ -67,9 +67,14 @@ As these games do not have a file system like later games, these text dumps incl
 These dumps are included unmodified.
 
 ### GCN
-The text dumps from the GCN games were done by [Tiddlywinks](https://bulbapedia.bulbagarden.net/wiki/User:Tiddlywinks), with the following changes:
+The text dumps from Pokémon Colosseum and XD were done by [Tiddlywinks](https://bulbapedia.bulbagarden.net/wiki/User:Tiddlywinks), with the following changes:
 - The text data has been formatted to align based on their IDs. IDs with multiple corresponding strings are displayed together using an HTML description list.
 - Variables and special characters are marked with square brackets instead of curly braces.
 - `{newline}` and `{clear_window}` are replaced with `\n` and `\c`.
 - Furigana is converted to the `{kanji|kana}` format.
 - The `{{null}}` terminator is stripped.
+
+The text dumps from Pokémon Box Ruby & Sapphire have been converted to the standard format, with the following extensions to the format:
+- Line feeds are replaced with `\n`.
+- `[NULL]` is used as a placeholder for lines and files which do not exist in a particular language version.
+- Entries with an offset of 0 in the `INF1` block are represented as `[~ 1]`, where `1` is the one-based index of the entry in the block.

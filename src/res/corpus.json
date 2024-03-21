@@ -1,5 +1,5 @@
 {
-  "hash": "5DB1017D",
+  "hash": "F5899446",
   "languages": [
     "qid-ZZ",
     "ja-Hrkt-JP",
@@ -552,6 +552,23 @@
       "structured": true,
       "files": [
         "msg"
+      ]
+    },
+    "Box": {
+      "id": "box",
+      "languages": [
+        "qid-ZZ",
+        "ja-Hrkt-JP",
+        "en-US",
+        "en-GB",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES"
+      ],
+      "structured": true,
+      "files": [
+        "message"
       ]
     },
     "Bank": {
