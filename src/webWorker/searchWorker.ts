@@ -122,7 +122,15 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
         const speakerName = speakers[languageIndex][speakerIndex];
         return `${tag.replaceAll('[', '\\[')}\u{F1100}${speakerName}${speakerDelimiter(languages[languageIndex]) ?? ': '}\u{F1101}${rest}`;
       });
-      Array.from(lineKeysSet).sort((a, b) => a - b).forEach((i) => fileResults.push(fileData.map((lines, languageIndex) => postprocessString(replaceSpeaker(lines[i] ?? '', languageIndex)))));
+      const offsetsPBR = {'No.': 992, 'Lv.': 998, 'HP': 1036, 'PP': 1042} as {[key: string]: number};
+      const languagesPBR = ['ja', 'en', 'de', 'fr', 'es', 'it'];
+      const replacePBR = (s: string, languageIndex: number) => collectionKey !== 'BattleRevolution' ? s : s.replace(/\["(No.|Lv.|PP|HP)"\]/gu, (_, tag) => {
+        const literalOffset = offsetsPBR[tag] - 1;
+        const literalIndex = languagesPBR.indexOf(languages[languageIndex].split('-')[0]);
+        const literal = fileData[languageIndex][literalOffset + literalIndex].substring('[FONT 0][SPACING 1]'.length).trim();
+        return `\u{F1102}${literal}\u{F1103}`
+      });
+      Array.from(lineKeysSet).sort((a, b) => a - b).forEach((i) => fileResults.push(fileData.map((lines, languageIndex) => postprocessString(replacePBR(replaceSpeaker(lines[i] ?? '', languageIndex), languageIndex)))));
       notifyComplete('done', {
         collection: collectionKey,
         file: fileKey,

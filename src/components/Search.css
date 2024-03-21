@@ -40,7 +40,7 @@
 
 .search-filters-show {
   display: grid;
-  grid-template-columns: 1fr 1px 1fr;
+  grid-template-columns: 54fr 1px 46fr;
   grid-template-rows: auto auto;
   grid-auto-flow: column;
   gap: 0.5em;
@@ -112,7 +112,7 @@
 
 @media (width >= 576px) and (width <= 767.98px) {
   .search-filters {
-    grid-template-columns: 2fr 1px 1.5fr;
+    grid-template-columns: 4fr 1px 3fr;
   }
 }
 

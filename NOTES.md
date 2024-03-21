@@ -77,4 +77,15 @@ The text dumps from Pokémon Colosseum and XD were done by [Tiddlywinks](https:/
 The text dumps from Pokémon Box Ruby & Sapphire have been converted to the standard format, with the following extensions to the format:
 - Line feeds are replaced with `\n`.
 - `[NULL]` is used as a placeholder for lines and files which do not exist in a particular language version.
-- Entries with an offset of 0 in the `INF1` block are represented as `[~ 1]`, where `1` is the one-based index of the entry in the block.
+- Entries with an offset of 0 in the `INF1` block are represented as `[~ #]`, where `#` is the one-based index of the entry in the block.
+
+### Wii
+The text dumps from Pokémon Battle Revolution are based on the format used by [PBRHex](https://github.com/bgsamm/PBRHex).
+They have been converted to the standard format, with the following extensions to the format:
+- `[FONT #]` is used to set the font.
+- `[SPACING #]` is used to set the letter spacing.
+- `[VERTOFFSET #]` is used to set the Y-position of the cursor.
+- `[ALIGN #]` is used to align lines of text.
+- `[COLOR #]` is used to set the text color.
+- `["PP"]`, `["HP"]`, `["Lv."]`, and `["No."]` are used to display language-dependent abbreviations.
+- `▽` and `▼` are used to represent `\r` and `\c` in lines taken from the DS games.

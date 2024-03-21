@@ -21,8 +21,12 @@
  * The following codepoints can be used in source documents for multivalued strings:
  * - U+F1000: delimiter between multivalued strings
  * - U+F1001: delimiter between the discriminator and the string itself
+ *
  * - U+F1100: delimiter between speaker ID and speaker name
  * - U+F1101: delimiter between speaker name and dialogue
+ *
+ * - U+F1102: start of replaced literal
+ * - U+F1103: end of replaced literal
  */
 
 import chineseChars from './chineseChars.json';
@@ -175,6 +179,18 @@ function preprocessString(s: string) {
     .replaceAll('[゛]', '゛')
     .replaceAll('[゜]', '゜')
     .replaceAll('[^er]', 'ᵉʳ')
+
+    // PBR
+    .replaceAll('▽', '\\r')
+    .replaceAll('▼', '\\c')
+    .replaceAll('㌨', '♂') // halfwidth
+    .replaceAll('㌩', '♀') // halfwidth
+    .replaceAll('㌕', '◎') // halfwidth
+    // .replaceAll('㌀', '①') // fullwidth neutral face
+    // .replaceAll('㌁', '②') // fullwidth happy face
+    .replaceAll('¼', 'ᵉʳ') // superscript er
+    .replaceAll('½', 'ʳᵉ') // superscript re
+    .replaceAll('¾', 'ᵉ') // Gen 5 superscript e
   ))));
 }
 
@@ -330,7 +346,9 @@ function postprocessString(s: string) {
     .replaceAll(/\[VAR BD04\(([0-9A-F]{4})\)\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, (_, pad, text) => `<span class="line-align-left" style="padding-left: ${parseInt(pad, 16)}pt">${text}</span>`) // Gen 5+
     .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\[VAR BD05\(..([0-9A-F]{2})\)\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, (_, before, size, after) => `<span style="tab-size: ${parseInt(size, 16)}pt">${before}\t${after}</span>`) // Gen 5 X coords
     .replaceAll(/\[VAR BD05\(..([0-9A-F]{2})\)\]/gu, '\t') // can't really have multiple tab sizes, so approximate the rest as tabs
-
+    .replaceAll(/\[ALIGN 1\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[ALIGN \d+\]|$)/gu, '<span class="line-align-left">$1</span>') // PBR
+    .replaceAll(/\[ALIGN 2\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[ALIGN \d+\]|$)/gu, '<span class="line-align-center">$1</span>') // PBR
+    .replaceAll(/\[ALIGN 3\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[ALIGN \d+\]|$)/gu, '<span class="line-align-right">$1</span>') // PBR
 
     // Line breaks
     .replaceAll('\u{F0207}\u{F0200}', '<span class="c">[VAR 0207]</span><span class="n">\\n</span><br>') // [VAR 0207]\n
@@ -368,6 +386,13 @@ function postprocessString(s: string) {
     .replaceAll(/(\[some_[^\]]+?\])/gu, '<span class="var">$1</span>')
     .replaceAll(/(\[unknown[^\]]+?\])/gu, '<span class="var">$1</span>')
     .replaceAll(/(\[var_[^\]]\])/gu, '<span class="var">$1</span>')
+
+    // PBR
+    .replaceAll(/\[COLOR (\d+)\](.*?)(?:\[COLOR \d+\]|[\u{F0201}\u{F0202}\u{F0200}]|$)/gu, '<span class="color-pbr-$1">$2</span>')
+    .replaceAll(/(\[VERTOFFSET -?[\d.]+\])/gu, '<span class="vertoffset">$1</span>') // '<span style="position: relative; top: $1px">$2</span>'
+    .replaceAll(/\[FONT ([0126])\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[FONT \d+\]|$)/gu, '<span class="font-pbr-$1">$2</span>')
+    .replaceAll(/(\[FONT [\d.]+\])/gu, '<span class="var">$1</span>')
+    .replaceAll(/\[SPACING (-?[\d.]+)\](.*?$)/gu, '<span class="spacing-$1">$2</span>')
 
     .replaceAll('[NULL]', '<span class="null">[NULL]</span>')
     .replaceAll('[COMP]', '<span class="compressed">[COMP]</span>')
@@ -423,6 +448,7 @@ function postprocessString(s: string) {
 
     // Speaker name
     .replaceAll(/^(.+)\u{F1100}(.+?)\u{F1101}/gu, '<a class="speaker" data-var="$1">$2</a>')
+    .replaceAll(/\u{F1102}(.+?)\u{F1103}/gu, '<span class="literal">$1</span>')
 
     // Replace placeholders with literal characters
     .replaceAll('\u{F0100}', '\\')

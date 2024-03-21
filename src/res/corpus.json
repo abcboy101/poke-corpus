@@ -1,5 +1,5 @@
 {
-  "hash": "F5899446",
+  "hash": "A3B4924B",
   "languages": [
     "qid-ZZ",
     "ja-Hrkt-JP",
@@ -552,6 +552,32 @@
       "structured": true,
       "files": [
         "msg"
+      ]
+    },
+    "BattleRevolution": {
+      "id": "pbr",
+      "languages": [
+        "qid-ZZ",
+        "ja-JP",
+        "en-US",
+        "en-GB",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES"
+      ],
+      "structured": true,
+      "version": {
+        "ja-JP": "1.0/1.1/1.2",
+        "en-US": "1.0",
+        "en-GB": "1.0",
+        "fr-FR": "1.0",
+        "it-IT": "1.0",
+        "de-DE": "1.0",
+        "es-ES": "1.0"
+      },
+      "files": [
+        "message"
       ]
     },
     "Box": {

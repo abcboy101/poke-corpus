@@ -3,7 +3,7 @@ import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { SearchResultLines } from '../webWorker/searchWorkerManager';
-import { codeId, langId } from '../webWorker/corpus';
+import corpus, { codeId, langId } from '../webWorker/corpus';
 import Share from './Share';
 import Spinner from './Spinner';
 import ProgressBar from './ProgressBar';
@@ -35,7 +35,7 @@ function JumpToSelect({headers}: {headers: readonly string[]}) {
   </nav>
 }
 
-function ResultsTable({header, languages, lines, displayHeader, k, count, start = 0, end, setOffset}: {header: string, languages: readonly string[], lines: readonly string[][], displayHeader: boolean, k: number, count: number, start?: number, end?: number, setOffset: Dispatch<SetStateAction<number>>}) {
+function ResultsTable({header, collection, languages, lines, displayHeader, k, count, start = 0, end, setOffset}: {header: string, collection: string, languages: readonly string[], lines: readonly string[][], displayHeader: boolean, k: number, count: number, start?: number, end?: number, setOffset: Dispatch<SetStateAction<number>>}) {
   const { t } = useTranslation();
   const idIndex = languages.indexOf(codeId);
   const displayLanguages = languages.map((lang) => lang === codeId ? langId : lang);
@@ -65,7 +65,7 @@ function ResultsTable({header, languages, lines, displayHeader, k, count, start 
       <h2 className={displayHeader ? undefined : 'd-none'}>{header}</h2>
       { start !== 0 ? <button className="results-notice" onClick={onClick(count)}>{t('tablePartial', {count: start})}</button> : null }
       { slicedLines.length > 0 ?
-        <table className="results-table">
+        <table className={`results-table collection-${corpus.collections[collection].id ?? collection.toLowerCase()}`}>
           <thead>
             <tr>
               {idIndex !== -1 ? <th></th> : null}
@@ -107,11 +107,11 @@ function Results({status, progress, results, limit=1000}: {status: Status, progr
 
   let count = 0;
   const resultTables: JSX.Element[] = [];
-  results.forEach(({lines, languages, displayHeader}, k) => {
+  results.forEach(({collection, lines, languages, displayHeader}, k) => {
     const start = Math.max(0, Math.min(lines.length, offset - count));
     const end = Math.max(0, Math.min(lines.length, (offset + limit) - count));
     resultTables.push(
-      <ResultsTable key={k} header={headers[k]} lines={lines} languages={languages} displayHeader={displayHeader} k={k} count={count} start={start} end={end} setOffset={setOffset} />
+      <ResultsTable key={k} header={headers[k]} collection={collection} lines={lines} languages={languages} displayHeader={displayHeader} k={k} count={count} start={start} end={end} setOffset={setOffset} />
     );
     count += lines.length;
   });
