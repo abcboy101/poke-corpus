@@ -417,9 +417,8 @@ function postprocessString(s: string) {
     .replaceAll(/\[SPACING (-?[\d.]+)\](.*?$)/gu, '<span class="spacing-$1">$2</span>')
 
     // Ranch
-    .replaceAll(/(%(\d+\$)?(\d*d|\d*\.\d+[fs]m?|ls))/gu, '<span class="var">$1</span>')
-    .replaceAll(/(%(\(\d+\)%|\d+\$)?\{\})/gu, '<span class="var">$1</span>')
-    .replaceAll(/(%\(\d+\))/gu, '<span class="var">$1</span>')
+    .replaceAll(/(%((\d+\$)?(\d*d|\d*\.\d+[fs]m?|ls)|(\(\d+\)%|\d+\$)?\{\}|\(\d+\)))/gu, '<span class="var">$1</span>')
+    .replaceAll(/(\$\d+\$)/gu, '<span class="var">$1</span>')
 
     .replaceAll('[NULL]', '<span class="null">[NULL]</span>')
     .replaceAll('[COMP]', '<span class="compressed">[COMP]</span>')
