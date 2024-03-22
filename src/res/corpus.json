@@ -1,5 +1,5 @@
 {
-  "hash": "A3B4924B",
+  "hash": "641D6BB9",
   "languages": [
     "qid-ZZ",
     "ja-Hrkt-JP",
@@ -568,13 +568,13 @@
       ],
       "structured": true,
       "version": {
-        "ja-JP": "1.0/1.1/1.2",
-        "en-US": "1.0",
-        "en-GB": "1.0",
-        "fr-FR": "1.0",
-        "it-IT": "1.0",
-        "de-DE": "1.0",
-        "es-ES": "1.0"
+        "ja-JP": "0/1/2",
+        "en-US": "0",
+        "en-GB": "0",
+        "fr-FR": "0",
+        "it-IT": "0",
+        "de-DE": "0",
+        "es-ES": "0"
       },
       "files": [
         "message"
@@ -595,6 +595,32 @@
       "structured": true,
       "files": [
         "message"
+      ]
+    },
+    "Ranch": {
+      "id": "ranch",
+      "languages": [
+        "qid-ZZ",
+        "ja-Hrkt-JP",
+        "en-US",
+        "en-GB",
+        "fr-FR",
+        "it-IT",
+        "de-DE",
+        "es-ES"
+      ],
+      "structured": true,
+      "version": {
+        "ja-Hrkt-JP": "258",
+        "en-US": "256",
+        "en-GB": "1",
+        "fr-FR": "1",
+        "it-IT": "1",
+        "de-DE": "1",
+        "es-ES": "1"
+      },
+      "files": [
+        "msg"
       ]
     },
     "Bank": {

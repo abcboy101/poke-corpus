@@ -39,6 +39,7 @@ For all text dumps in the standard format, there are six escape sequences:
 - Use `⒆⒇` for <sup>P</sup><sub>K</sub><sup>M</sup><sub>N</sub>.
 - Use `ᵉʳ`, `ʳᵉ`, `ʳ`, `ᵉ` for the ordinals.
 - Use `Ⓐ`, `Ⓑ`, `Ⓧ`, `Ⓨ`, `Ⓛ`, `Ⓡ`, `✜`, `🏠︎` for the Nintendo 3DS buttons.
+- Use `✜`, `Ⓐ`, `Ⓑ`, `⊕`, `⊖`, `①`, `②`, `◎`, `Ⓒ`, `Ⓩ`, `👆︎` for the Wii buttons.
 - Use `①`, `②`, `③`, `④` for the PictoChat neutral, happy, sad, and angry faces.
 - Use `✨︎` for the sparkles used for the differently-colored statues in BDSP.
 
@@ -53,7 +54,7 @@ The text dumps from the NDS games have been converted to the standard format, wi
 - The bag icons in the Generation IV games are encoded using `♈♌♎♊♍♋♏♉` as in [PKHeX](https://github.com/kwsch/PKHeX).
 
 ### BDSP
-The text dumps for Brilliant Diamond/Shining Pearl have been converted to the standard format, with the following extensions to the format:
+The text dumps for *Brilliant Diamond*/*Shining Pearl* have been converted to the standard format, with the following extensions to the format:
 - The arguments for variables may include named parameters and `|`-delimited arrays of strings, such as in `[VAR 1300(tagParameter=255,tagWordArray=he|she)]`.
   (This is equivalent to `[VAR 1100(00FF,0100)]she` in other games.)
 - `[WAIT]` takes a float as an argument instead of an integer.
@@ -66,21 +67,15 @@ The text dumps from the GB, GBC, and GBA games were done by [RobbiRobb](https://
 As these games do not have a file system like later games, these text dumps include other data interpreted as text.
 These dumps are included unmodified.
 
-### GCN
-The text dumps from Pokémon Colosseum and XD were done by [Tiddlywinks](https://bulbapedia.bulbagarden.net/wiki/User:Tiddlywinks), with the following changes:
+### GCN/Wii
+The text dumps from *Pokémon Colosseum* and *XD* were done by [Tiddlywinks](https://bulbapedia.bulbagarden.net/wiki/User:Tiddlywinks), with the following changes:
 - The text data has been formatted to align based on their IDs. IDs with multiple corresponding strings are displayed together using an HTML description list.
 - Variables and special characters are marked with square brackets instead of curly braces.
 - `{newline}` and `{clear_window}` are replaced with `\n` and `\c`.
 - Furigana is converted to the `{kanji|kana}` format.
 - The `{{null}}` terminator is stripped.
 
-The text dumps from Pokémon Box Ruby & Sapphire have been converted to the standard format, with the following extensions to the format:
-- Line feeds are replaced with `\n`.
-- `[NULL]` is used as a placeholder for lines and files which do not exist in a particular language version.
-- Entries with an offset of 0 in the `INF1` block are represented as `[~ #]`, where `#` is the one-based index of the entry in the block.
-
-### Wii
-The text dumps from Pokémon Battle Revolution are based on the format used by [PBRHex](https://github.com/bgsamm/PBRHex).
+The text dumps from *Pokémon Battle Revolution* are based on the format used by [PBRHex](https://github.com/bgsamm/PBRHex).
 They have been converted to the standard format, with the following extensions to the format:
 - `[FONT #]` is used to set the font.
 - `[SPACING #]` is used to set the letter spacing.
@@ -89,3 +84,15 @@ They have been converted to the standard format, with the following extensions t
 - `[COLOR #]` is used to set the text color.
 - `["PP"]`, `["HP"]`, `["Lv."]`, and `["No."]` are used to display language-dependent abbreviations.
 - `▽` and `▼` are used to represent `\r` and `\c` in lines taken from the DS games.
+
+The text dumps from *Pokémon Box Ruby & Sapphire* and *My Pokémon Ranch* have been converted to the standard format, with the following extensions to the format:
+- Line feeds are replaced with `\n`.
+- `[NULL]` is used as a placeholder for lines and files which do not exist in a particular language version.
+- Entries with an offset of 0 in the `INF1` block are represented as `[~ #]`, where `#` is the one-based index of the entry in the block.
+
+Additional notes for *My Pokémon Ranch*:
+- The `farm_items` file was split from the `pokemonfarm` file in the PAL version and the Japanese Platinum update.
+  The equivalent lines are moved in the USA version to match.
+- Some of the lines in `farm_event` were moved to `pokemonfarm` in the Japanese Platinum update
+  (specifically, lines 275-302 in `pokemonfarm` were originally beyween lines 538 and 539 in `farm_event`).
+  The equivalent lines in the USA/PAL versions are moved to match.

@@ -78,6 +78,23 @@ function remapNDSSpecialCharacters(s: string) {
   );
 }
 
+// Wii special characters
+function remapWiiSpecialCharacters (s: string) {
+  return s.search(/[\uE040-\uE06F]/u) === -1 ? s : (s
+    .replaceAll('\uE041', '✜') // Wii Remote Control Pad
+    .replaceAll('\uE042', 'Ⓐ') // Wii Remote A Button
+    .replaceAll('\uE043', 'Ⓑ') // Wii Remote B Button
+    .replaceAll('\uE045', '⊕') // Wii Remote + Button
+    .replaceAll('\uE046', '⊖') // Wii Remote - Button
+    .replaceAll('\uE047', '①') // Wii Remote 1 Button
+    .replaceAll('\uE048', '②') // Wii Remote 2 Button
+    .replaceAll('\uE049', '◎') // Nunchuk Control Stick
+    .replaceAll('\uE04A', 'Ⓒ') // Nunchuk C Button
+    .replaceAll('\uE04B', 'Ⓩ') // Nunchuk Z Button
+    .replaceAll('\uE058', '👆︎') // Player pointer
+  );
+}
+
 // 3DS special characters
 function remap3DSSpecialCharacters (s: string) {
   return remapChineseChars(remapKoreanBraille(
@@ -173,7 +190,7 @@ function preprocessMetadata(s: string) {
  * Returns the resulting string.
  */
 function preprocessString(s: string) {
-  return preprocessMetadata(remapSwitchSpecialCharacters(remap3DSSpecialCharacters(remapNDSSpecialCharacters(s
+  return preprocessMetadata(remapSwitchSpecialCharacters(remap3DSSpecialCharacters(remapWiiSpecialCharacters(remapNDSSpecialCharacters(s
     // GCN
     .replaceAll('[..]', '‥')
     .replaceAll('[゛]', '゛')
@@ -186,12 +203,16 @@ function preprocessString(s: string) {
     .replaceAll('㌨', '♂') // halfwidth
     .replaceAll('㌩', '♀') // halfwidth
     .replaceAll('㌕', '◎') // halfwidth
-    // .replaceAll('㌀', '①') // fullwidth neutral face
-    // .replaceAll('㌁', '②') // fullwidth happy face
+    .replaceAll('㌀', '①') // fullwidth neutral face
+    .replaceAll('㌁', '②') // fullwidth happy face
     .replaceAll('¼', 'ᵉʳ') // superscript er
     .replaceAll('½', 'ʳᵉ') // superscript re
     .replaceAll('¾', 'ᵉ') // Gen 5 superscript e
-  ))));
+
+    // Ranch
+    .replaceAll('\\f', '\\c')
+    .replaceAll('%quot;', '"')
+  )))));
 }
 
 /**
@@ -355,6 +376,7 @@ function postprocessString(s: string) {
     .replaceAll('\u{F0208}\u{F0200}', '<span class="r">[VAR 0208]</span><span class="n">\\n</span><br>') // [VAR 0208]\n
     .replaceAll('\u{F0201}\u{F0200}', '<span class="r">\\r</span><span class="n">\\n</span><br>') // \r\n
     .replaceAll('\u{F0202}\u{F0200}', '<span class="c">\\c</span><span class="n">\\n</span><br>') // \c\n
+    .replaceAll('\u{F0200}\u{F0202}', '<span class="n">\\n</span><span class="c">\\c</span><br>') // \n\c (Ranch)
 
     .replaceAll('\u{F0207}', '<span class="c">[VAR 0207]</span><br>') // [VAR 0207]
     .replaceAll('\u{F0208}', '<span class="r">[VAR 0208]</span><br>') // [VAR 0208]
@@ -393,6 +415,11 @@ function postprocessString(s: string) {
     .replaceAll(/\[FONT ([0126])\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[FONT \d+\]|$)/gu, '<span class="font-pbr-$1">$2</span>')
     .replaceAll(/(\[FONT [\d.]+\])/gu, '<span class="var">$1</span>')
     .replaceAll(/\[SPACING (-?[\d.]+)\](.*?$)/gu, '<span class="spacing-$1">$2</span>')
+
+    // Ranch
+    .replaceAll(/(%(\d+\$)?(\d*d|\d*\.\d+[fs]m?|ls))/gu, '<span class="var">$1</span>')
+    .replaceAll(/(%(\(\d+\)%|\d+\$)?\{\})/gu, '<span class="var">$1</span>')
+    .replaceAll(/(%\(\d+\))/gu, '<span class="var">$1</span>')
 
     .replaceAll('[NULL]', '<span class="null">[NULL]</span>')
     .replaceAll('[COMP]', '<span class="compressed">[COMP]</span>')
