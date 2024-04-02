@@ -141,7 +141,7 @@ function Results({status, progress, results, limit=1000}: {status: Status, progr
           <button className={showAllCharacters ? 'button-square active' : 'button-square'} onClick={() => { setShowAllCharacters(!showAllCharacters); }} title={t('showAllCharacters')}>{t('showAllCharactersIcon')}</button>
           <button className={showGender !== 2 ? 'button-square active' : 'button-square'} onClick={() => { setShowGender((showGender + 1) % 3); }} title={t('showGender')}>{t('showGenderIcon', {context: showGender})}</button>
           <button className={showPlural !== 0 ? 'button-square active' : 'button-square'} onClick={() => { setShowPlural((showPlural + 1) % 3); }} title={t('showPlural')}>{t('showPluralIcon', {context: showPlural})}</button>
-          <button className={showFurigana ? 'button-square active' : 'button-square'} onClick={() => { setShowFurigana(!showFurigana); }} title={t('showFurigana')}>{t('showFuriganaIcon')}</button>
+          <button className={showFurigana ? 'button-square active' : 'button-square'} onClick={() => { setShowFurigana(!showFurigana); }} title={t('showFurigana')}><sup style={{fontSize: "50%"}}>{t('showFuriganaIcon')}</sup></button>
         </div>
       </div>
       <main id="results" className={`search results app-window variables-${showVariables ? 'show' : 'hide'} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural} furigana-${showFurigana ? 'show' : 'hide'}`}>
