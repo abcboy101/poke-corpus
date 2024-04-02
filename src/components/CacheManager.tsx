@@ -100,12 +100,13 @@ function CacheManager({active}: {active: boolean}) {
     console.log('Cache cleared');
   };
 
-  const clearCachedFile = (collectionKey: string, fileKey: string) => {
+  const clearCachedFile = (collectionKey: string) => {
     if ('caches' in window) {
       window.caches.open(cacheVersion).then((cache) =>
-        Promise.all(corpus.collections[collectionKey].languages.map((languageKey) =>
-          cache.delete(getFileUrl(collectionKey, languageKey, fileKey))
-        ))
+        Promise.all(corpus.collections[collectionKey].languages.flatMap((languageKey) =>
+          corpus.collections[collectionKey].files.map((fileKey) =>
+            cache.delete(getFileUrl(collectionKey, languageKey, fileKey))
+        )))
       ).then(() => checkCachedFiles());
     }
   };
@@ -127,11 +128,9 @@ function CacheManager({active}: {active: boolean}) {
   };
 
   const fileInfoSumByLanguage = () => {
-    const value = Object.entries(corpus.collections).flatMap(([collectionKey, collection]) =>
-      collection.files.map((fileKey) => [collectionKey, fileKey,
-        cachedFileInfo.filter(([[collection, , file], ]) => collectionKey === collection && fileKey === file).map(([, size]) => size).reduce((a, b) => a + b, 0)
-      ] as const
-    )).filter(([, , size]) => size > 0);
+    const value = Object.entries(corpus.collections).map(([collectionKey]) =>
+      [collectionKey, cachedFileInfo.map(([[collection, ], size]) => collectionKey === collection ? size : 0).reduce((a, b) => a + b, 0)] as const
+    ).filter(([, size]) => size > 0);
     return value;
   };
 
@@ -141,41 +140,27 @@ function CacheManager({active}: {active: boolean}) {
         <button onClick={cacheAll} disabled={cacheInProgress}>{t('cacheAll')}</button>
         <button onClick={clearCache}>{t('clearCache')}</button>
       </div>
-      <div className="cache cache-results">
+      <div className="cache cache-results app-window">
         <ul>
           <li>{t('cache.storageStatus', {val: cacheStorageEnabled ? t('cache.storageEnabled') : t('cache.storageDisabled')})}</li>
           {cacheStorageEnabled && <li>{t('cache.filesStored', {count: cachedFileInfo.length})}</li>}
           {cacheStorageEnabled && <li>{t('cache.storageUsed', storageUsedAmount())}</li>}
         </ul>
-        <div>
-          {
-            cacheInProgress ? t('cache.inProgress') : cachedFileInfo.length > 0 &&
-            <table className="cache-table">
-              <thead>
-                <tr>
-                  <th>{t('cache.headerCollection')}</th>
-                  <th>{t('cache.headerSize')}</th>
-                  <th>{t('cache.headerActions')}</th>
-                </tr>
-              </thead>
-              <tbody>
-              {
-                fileInfoSumByLanguage().map(([collectionKey, fileKey, size], index) =>
-                  <tr key={index}>
-                    <td>{t('tableHeader', {collection: t(`collections:${collectionKey}.short`), file: t(`files:${fileKey}`), interpolation: {escapeValue: false}})}</td>
-                    <td>{t('cache.size', fileInfoParams(size))}</td>
-                    <td>
-                      <div className="cache-table-actions">
-                        <Delete callback={() => clearCachedFile(collectionKey, fileKey)}/>
-                      </div>
-                    </td>
-                  </tr>
-                )
-              }
-              </tbody>
-            </table>
-          }
-        </div>
+        {
+          cacheInProgress ? <div className="cache-entry-notice">{ t('cache.inProgress') }</div> :
+          <div className="cache-entry-list">
+            {
+              cachedFileInfo.length > 0 &&
+              fileInfoSumByLanguage().map(([collectionKey, size], index) =>
+                <div key={index} className="cache-entry">
+                  <div>{t(`collections:${collectionKey}.short`)}</div>
+                  <div>{t('cache.size', fileInfoParams(size))}</div>
+                  <Delete callback={() => clearCachedFile(collectionKey)}/>
+                </div>
+              )
+            }
+          </div>
+        }
       </div>
     </>
   );

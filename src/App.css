@@ -285,3 +285,16 @@ table th, table td {
 .view-cachemanager .search {
   display: none;
 }
+
+.app-window {
+  width: 100%;
+  min-height: max(12em, 50dvh);
+  overflow: auto;
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--text);
+  background-color: var(--highlight);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}

@@ -144,7 +144,7 @@ function Results({status, progress, results, limit=1000}: {status: Status, progr
           <button className={showFurigana ? 'button-square active' : 'button-square'} onClick={() => { setShowFurigana(!showFurigana); }} title={t('showFurigana')}>{t('showFuriganaIcon')}</button>
         </div>
       </div>
-      <main id="results" className={`search results variables-${showVariables ? 'show' : 'hide'} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural} furigana-${showFurigana ? 'show' : 'hide'}`}>
+      <main id="results" className={`search results app-window variables-${showVariables ? 'show' : 'hide'} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural} furigana-${showFurigana ? 'show' : 'hide'}`}>
         { resultTables }
       </main>
     </>

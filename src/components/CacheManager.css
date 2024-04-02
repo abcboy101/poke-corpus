@@ -7,24 +7,22 @@
   align-items: center;
 }
 
-.cache-results {
-  width: 100%;
-  min-height: max(12em, 50dvh);
-  overflow: auto;
-  flex: 1;
-  padding: 0.5rem;
-  border: 1px solid var(--text);
-  background-color: var(--highlight);
-  display: flex;
-  flex-direction: column;
+.cache-entry-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
   gap: 0.5em;
 }
 
-.cache-table-actions {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  place-items: center;
-  vertical-align: middle;
-  gap: 0.25em;
+.cache-entry {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  border: 1px solid var(--text);
+  background-color: var(--highlight);
+  gap: 0.5em;
+  padding: 0.5rem;
+  white-space: nowrap;
+}
+
+.cache-entry-notice {
+  text-align: center;
 }
