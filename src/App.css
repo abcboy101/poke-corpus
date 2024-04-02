@@ -142,6 +142,10 @@ abbr {
   text-decoration: none;
 }
 
+ruby {
+  ruby-align: space-around;
+}
+
 ruby > rt {
   font-size: 50%;
 }
