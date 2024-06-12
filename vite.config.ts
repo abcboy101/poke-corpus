@@ -1,10 +1,18 @@
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react-swc'
 import autoprefixer from 'autoprefixer'
-import eslint from 'vite-plugin-eslint'
+import eslint from 'vite-plugin-eslint2'
 import stylelint from 'vite-plugin-stylelint'
-import { splitVendorChunkPlugin } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
+
+function manualChunks(id: string) {
+  if (id.includes('workbox')) {
+    return 'workbox-window.prod.es5';
+  }
+  else if (id.includes('node_modules')) {
+    return 'vendor';
+  }
+}
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,7 +21,6 @@ export default defineConfig({
     react(),
     eslint(),
     stylelint(),
-    splitVendorChunkPlugin(),
     VitePWA({
       registerType: 'autoUpdate',
       workbox: {
@@ -43,5 +50,12 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['compression-streams-polyfill']
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: manualChunks
+      }
+    }
   }
 })
