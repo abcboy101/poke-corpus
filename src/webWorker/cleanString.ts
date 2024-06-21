@@ -31,6 +31,7 @@
 
 import chineseChars from './chineseChars.json';
 
+//#region Pre-processing
 // SMUSUM Chinese Pokémon names
 function remapChineseChars(s: string) {
   return s.search(/[\uE800-\uEE26]/u) === -1 ? s : (
@@ -68,18 +69,28 @@ function remapKoreanBraille(s: string) {
   );
 }
 
+// GCN special characters
+function remapGCNSpecialCharacters(s: string) {
+  return (s
+    .replaceAll('[..]', '‥')
+    .replaceAll('[゛]', '゛')
+    .replaceAll('[゜]', '゜')
+    .replaceAll('[^er]', 'ᵉʳ')
+  );
+}
+
 // NDS special characters
 function remapNDSSpecialCharacters(s: string) {
   return s.search(/[\u2460-\u2487]/u) === -1 ? s : (s
-    .replaceAll('\u2469', 'ᵉʳ') // Gen 5 superscript er
-    .replaceAll('\u246A', 'ʳᵉ') // Gen 5 superscript re
-    .replaceAll('\u246B', 'ʳ') // Gen 5 superscript r
-    .replaceAll('\u2485', 'ᵉ') // Gen 5 superscript e
+    .replaceAll('\u2469', 'ᵉʳ') // Gen 5 superscript er [also used privately for Gen 4]
+    .replaceAll('\u246A', 'ʳᵉ') // Gen 5 superscript re [also used privately for Gen 4]
+    .replaceAll('\u246B', 'ʳ') // Gen 5 superscript r [also used privately for Gen 4]
+    .replaceAll('\u2485', 'ᵉ') // Gen 5 superscript e [also used privately for Gen 4]
   );
 }
 
 // Wii special characters
-function remapWiiSpecialCharacters (s: string) {
+function remapWiiSpecialCharacters(s: string) {
   return s.search(/[\uE040-\uE06F]/u) === -1 ? s : (s
     .replaceAll('\uE041', '✜') // Wii Remote Control Pad
     .replaceAll('\uE042', 'Ⓐ') // Wii Remote A Button
@@ -92,6 +103,22 @@ function remapWiiSpecialCharacters (s: string) {
     .replaceAll('\uE04A', 'Ⓒ') // Nunchuk C Button
     .replaceAll('\uE04B', 'Ⓩ') // Nunchuk Z Button
     .replaceAll('\uE058', '👆︎') // Player pointer
+
+    // PBR
+    .replaceAll('▽', '\\r')
+    .replaceAll('▼', '\\c')
+    .replaceAll('㌨', '♂') // halfwidth
+    .replaceAll('㌩', '♀') // halfwidth
+    .replaceAll('㌕', '◎') // halfwidth
+    .replaceAll('㌀', '①') // fullwidth neutral face
+    .replaceAll('㌁', '②') // fullwidth happy face
+    .replaceAll('¼', 'ᵉʳ') // superscript er
+    .replaceAll('½', 'ʳᵉ') // superscript re
+    .replaceAll('¾', 'ᵉ') // Gen 5 superscript e
+
+    // Ranch
+    .replaceAll('\\f', '\\c')
+    .replaceAll('%quot;', '"')
   );
 }
 
@@ -182,6 +209,7 @@ function preprocessMetadata(s: string) {
     })
   );
 }
+//#endregion
 
 /**
  * Converts private use characters to the corresponding Unicode characters,
@@ -189,30 +217,44 @@ function preprocessMetadata(s: string) {
  *
  * Returns the resulting string.
  */
-function preprocessString(s: string) {
-  return preprocessMetadata(remapSwitchSpecialCharacters(remap3DSSpecialCharacters(remapWiiSpecialCharacters(remapNDSSpecialCharacters(s
-    // GCN
-    .replaceAll('[..]', '‥')
-    .replaceAll('[゛]', '゛')
-    .replaceAll('[゜]', '゜')
-    .replaceAll('[^er]', 'ᵉʳ')
+function preprocessString(s: string, collectionKey: string) {
+  switch (collectionKey) {
+    case "DiamondPearl":
+    case "Platinum":
+    case "HeartGoldSoulSilver":
+    case "BlackWhite":
+    case "Black2White2":
+      s = remapNDSSpecialCharacters(s);
+      break;
 
-    // PBR
-    .replaceAll('▽', '\\r')
-    .replaceAll('▼', '\\c')
-    .replaceAll('㌨', '♂') // halfwidth
-    .replaceAll('㌩', '♀') // halfwidth
-    .replaceAll('㌕', '◎') // halfwidth
-    .replaceAll('㌀', '①') // fullwidth neutral face
-    .replaceAll('㌁', '②') // fullwidth happy face
-    .replaceAll('¼', 'ᵉʳ') // superscript er
-    .replaceAll('½', 'ʳᵉ') // superscript re
-    .replaceAll('¾', 'ᵉ') // Gen 5 superscript e
+    case "XY":
+    case "OmegaRubyAlphaSapphire":
+    case "SunMoon":
+    case "UltraSunUltraMoon":
+    case "Bank":
+      s = remap3DSSpecialCharacters(s);
+      break;
 
-    // Ranch
-    .replaceAll('\\f', '\\c')
-    .replaceAll('%quot;', '"')
-  )))));
+    case "LetsGoPikachuLetsGoEevee":
+    case "SwordShield":
+    case "BrilliantDiamondShiningPearl":
+    case "LegendsArceus":
+    case "ScarletViolet":
+    case "HOME":
+      s = remapSwitchSpecialCharacters(s);
+      break;
+
+    case "Colosseum":
+    case "XD":
+      s = remapGCNSpecialCharacters(s);
+      break;
+
+    case "BattleRevolution":
+    case "Ranch":
+      s = remapWiiSpecialCharacters(s);
+      break;
+  }
+  return preprocessMetadata(s);
 }
 
 /**
@@ -230,6 +272,7 @@ function convertWhitespace(s: string) {
   );
 }
 
+//#region Post-processing
 /**
  * Strips additional metadata from each string:
  * - Converted ruby text marked with `U+F0000` and `U+F0001`
@@ -319,6 +362,7 @@ function versionBranch(form1: string, form2: string) {
   if (form2.length > 0) results.push(`<span class="branch version2">${form2}</span>`);
   return results.join('<span class="version">/</span>');
 }
+//#endregion
 
 /**
  * Converts the provided string to HTML by escaping `<` and `>`,
@@ -327,66 +371,108 @@ function versionBranch(form1: string, form2: string) {
  *
  * Returns the resulting HTML string.
  */
-function postprocessString(s: string) {
-  return multiLine(postprocessMetadata(s)
-    // Replace special characters with a placeholder so they don't match other rules
+function postprocessString(s: string, collectionKey: string) {
+  const isGen4 = ["DiamondPearl", "Platinum", "HeartGoldSoulSilver"].includes(collectionKey);
+  const isGen5 = ["BlackWhite", "Black2White2"].includes(collectionKey);
+  const isBDSP = collectionKey == "BrilliantDiamondShiningPearl";
+  const isPBR = collectionKey == "BattleRevolution";
+  const isRanch = collectionKey == "Ranch";
+
+  const isNDS = isGen4 || isGen5;
+  const is3DS = ["XY", "OmegaRubyAlphaSapphire", "SunMoon", "UltraSunUltraMoon", "Bank"].includes(collectionKey);
+  const isSwitch = ["LetsGoPikachuLetsGoEevee", "SwordShield", "BrilliantDiamondShiningPearl", "LegendsArceus", "ScarletViolet", "HOME"].includes(collectionKey);
+  const isSoftLineBreak = ["LegendsArceus", "ScarletViolet"].includes(collectionKey);
+  const isGCN = ["Colosseum", "XD"].includes(collectionKey);
+  const isModern = isGen5 || is3DS || isSwitch;
+
+  s = postprocessMetadata(s);
+
+  // Replace special characters with a placeholder so they don't match other rules
+  s = (s
     .replaceAll('\\\\', '\u{F0100}')
     .replaceAll('\\[', '\u{F0102}')
     .replaceAll('\\{', '\u{F0104}')
     .replaceAll('<', '\u{F0106}')
     .replaceAll('>', '\u{F0107}')
+  );
 
-    // Whitespace
+  // Whitespace
+  s = (s
     .replaceAll('\\n', '\u{F0200}')
     .replaceAll('\\r', '\u{F0201}')
     .replaceAll('\\c', '\u{F0202}')
     .replaceAll('\t', '\u{F0203}')
+  );
+  s = isGen4 ? (s
     .replaceAll('[VAR 0207]', '\u{F0207}')
     .replaceAll('[VAR 0208]', '\u{F0208}')
+  ): s;
 
-    // BDSP
-    .replaceAll(/\u{F0106}color=(.*?)\u{F0107}(.*?)\u{F0106}\/color\u{F0107}/gu, '<span style="color: $1">$2</span>') // color
-    .replaceAll(/\u{F0106}size=(.*?)\u{F0107}(.*?)\u{F0106}\/size\u{F0107}/gu, '<span style="font-size: $1">$2</span>') // size
-    .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\u{F0106}pos=(.*?)\u{F0107}(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>') // pos
-    .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\u{F0106}line-indent=(.*?)\u{F0107}(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>') // line-indent
-
-    .replaceAll('\u2486', '<sup>P</sup><sub>K</sub>') // Gen 5 PK
-    .replaceAll('\u2487', '<sup>M</sup><sub>N</sub>') // Gen 5 MN
+  // PKMN
+  s = isNDS ? (s
+    .replaceAll('\u2486', '<sup>P</sup><sub>K</sub>') // Gen 5 PK [also used privately for Gen 4]
+    .replaceAll('\u2487', '<sup>M</sup><sub>N</sub>') // Gen 5 MN [also used privately for Gen 4]
+  ): s;
+  s = is3DS ? (s
     .replaceAll('\uE0A7', '<sup>P</sup><sub>K</sub>') // 3DS PK (unused)
     .replaceAll('\uE0A8', '<sup>M</sup><sub>N</sub>') // 3DS MN (unused)
+  ): s;
+
+  // Text formatting
+  s = isBDSP ? (s
+    .replaceAll(/\u{F0106}color=(.*?)\u{F0107}(.*?)\u{F0106}\/color\u{F0107}/gu, '<span style="color: $1">$2</span>') // BDSP color
+    .replaceAll(/\u{F0106}size=(.*?)\u{F0107}(.*?)\u{F0106}\/size\u{F0107}/gu, '<span style="font-size: $1">$2</span>') // BDSP size
+    .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\u{F0106}pos=(.*?)\u{F0107}(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>') // BDSP pos
+    .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\u{F0106}line-indent=(.*?)\u{F0107}(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>') // BDSP line-indent
+  ): s;
+  s = isGen4 ? (s
     .replaceAll(/\[VAR FF01\(FF43\)\]\[VAR FF01\(30B3\)\]/gu, '') // Gen 4 font size (empty string at 200%)
     .replaceAll(/\[VAR FF01\(FF43\)\](.+?)(?:\[VAR FF01\(30B3\)\]|[\u{F0201}\u{F0202}\u{F0200}]|$)/gu, '<span class="line-font-size-200"><span class="text-font-size-200">$1</span></span>') // Gen 4 font size (text at 200%)
     .replaceAll('[VAR FF01(30B3)]', '') // Gen 4 font size (set to 100%)
+
     .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\[VAR 0203\(..([0-9A-F]{2})\)\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, (_, before, size, after) => `<span style="tab-size: ${parseInt(size, 16)}pt">${before}\t${after}</span>`) // Gen 4 X coords
     .replaceAll(/\[VAR 0203\(..([0-9A-F]{2})\)\]/gu, '\t') // can't really have multiple tab sizes, so approximate the rest as tabs
     .replaceAll(/\[VAR 0204\(..([0-9A-F]{2})\)\]/gu, (_, pad) => `<div style="height: ${parseInt(pad, 16)}pt"></div>`) // Gen 4 Y coords
     .replaceAll(/\[VAR 0205\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span class="line-align-center">$1</span>') // HGSS
     .replaceAll(/\[VAR 0206\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span class="line-align-right">$1</span>') // HGSS
+  ): s;
+  s = isModern ? (s
     .replaceAll(/\[VAR BD02\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span class="line-align-center">$1</span>') // Gen 5+
     .replaceAll(/\[VAR BD03\(([0-9A-F]{4})\)\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, (_, pad, text) => `<span class="line-align-right" style="padding-right: ${parseInt(pad, 16)}pt">${text}</span>`) // Gen 5+
     .replaceAll(/\[VAR BD04\(([0-9A-F]{4})\)\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, (_, pad, text) => `<span class="line-align-left" style="padding-left: ${parseInt(pad, 16)}pt">${text}</span>`) // Gen 5+
     .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\[VAR BD05\(..([0-9A-F]{2})\)\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, (_, before, size, after) => `<span style="tab-size: ${parseInt(size, 16)}pt">${before}\t${after}</span>`) // Gen 5 X coords
     .replaceAll(/\[VAR BD05\(..([0-9A-F]{2})\)\]/gu, '\t') // can't really have multiple tab sizes, so approximate the rest as tabs
+  ): s;
+  s = isPBR ? (s
     .replaceAll(/\[ALIGN 1\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[ALIGN \d+\]|$)/gu, '<span class="line-align-left">$1</span>') // PBR
     .replaceAll(/\[ALIGN 2\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[ALIGN \d+\]|$)/gu, '<span class="line-align-center">$1</span>') // PBR
     .replaceAll(/\[ALIGN 3\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[ALIGN \d+\]|$)/gu, '<span class="line-align-right">$1</span>') // PBR
+  ): s;
 
-    // Line breaks
+  // Line breaks
+  s = isGen4 ? (s
     .replaceAll('\u{F0207}\u{F0200}', '<span class="c">[VAR 0207]</span><span class="n">\\n</span><br>') // [VAR 0207]\n
     .replaceAll('\u{F0208}\u{F0200}', '<span class="r">[VAR 0208]</span><span class="n">\\n</span><br>') // [VAR 0208]\n
+  ): s;
+  s = (s
     .replaceAll('\u{F0201}\u{F0200}', '<span class="r">\\r</span><span class="n">\\n</span><br>') // \r\n
     .replaceAll('\u{F0202}\u{F0200}', '<span class="c">\\c</span><span class="n">\\n</span><br>') // \c\n
     .replaceAll('\u{F0200}\u{F0202}', '<span class="n">\\n</span><span class="c">\\c</span><br>') // \n\c (Ranch)
-
+  );
+  s = isGen4 ? (s
     .replaceAll('\u{F0207}', '<span class="c">[VAR 0207]</span><br>') // [VAR 0207]
     .replaceAll('\u{F0208}', '<span class="r">[VAR 0208]</span><br>') // [VAR 0208]
+  ): s;
+  s = (s
     .replaceAll('\u{F0201}', '<span class="r">\\r</span><br>') // \r
     .replaceAll('\u{F0202}', '<span class="c">\\c</span><br>') // \c
     .replaceAll('\u{F0200}', '<span class="n">\\n</span><br>') // \n
 
     .replaceAll('\u{F0203}', '<span class="tab">\t</span>')
+  );
 
-    // GCN
+  // GCN
+  s = isGCN ? (s
     .replaceAll(/\[unknown5_08_([0-9a-f]{2})_([0-9a-f]{2})_([0-9a-f]{2})_([0-9a-f]{2})\](.*?)(?:\[unknown5_08_ff_ff_ff_ff\]|$|(?=\u{F1000}))/gu, '<span style="color: #$1$2$3$4">$5</span>')
     .replaceAll('[Player]', '<span class="var">[Player]</span>')
     .replaceAll('[Player_alt]', '<span class="var">[Player_alt]</span>')
@@ -408,20 +494,28 @@ function postprocessString(s: string) {
     .replaceAll(/(\[some_[^\]]+?\])/gu, '<span class="var">$1</span>')
     .replaceAll(/(\[unknown[^\]]+?\])/gu, '<span class="var">$1</span>')
     .replaceAll(/(\[var_[^\]]\])/gu, '<span class="var">$1</span>')
+  ): s;
 
-    // PBR
+  // PBR
+  s = isPBR ? (s
     .replaceAll(/\[COLOR (\d+)\](.*?)(?:\[COLOR \d+\]|[\u{F0201}\u{F0202}\u{F0200}]|$)/gu, '<span class="color-pbr-$1">$2</span>')
     .replaceAll(/(\[VERTOFFSET -?[\d.]+\])/gu, '<span class="vertoffset">$1</span>') // '<span style="position: relative; top: $1px">$2</span>'
     .replaceAll(/\[FONT ([0126])\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[FONT \d+\]|$)/gu, '<span class="font-pbr-$1">$2</span>')
     .replaceAll(/(\[FONT [\d.]+\])/gu, '<span class="var">$1</span>')
     .replaceAll(/\[SPACING (-?[\d.]+)\](.*?$)/gu, '<span class="spacing-$1">$2</span>')
+  ): s;
 
-    // Ranch
+  // Ranch
+  s = isRanch ? (s
     .replaceAll(/(%((\d+\$)?(\d*d|\d*\.\d+[fs]m?|ls)|(\(\d+\)%|\d+\$)?\{\}|\(\d+\)))/gu, '<span class="var">$1</span>')
     .replaceAll(/(\$\d+\$)/gu, '<span class="var">$1</span>')
+  ): s;
 
+  s = (s
     .replaceAll('[NULL]', '<span class="null">[NULL]</span>')
     .replaceAll('[COMP]', '<span class="compressed">[COMP]</span>')
+  );
+  s = isModern ? (s
     .replaceAll(/\[VAR (?:GENDBR|1100)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenF, lenM, rest) => {
       const endM = parseInt(lenM, 16);
       const endF = endM + parseInt(lenF, 16);
@@ -461,9 +555,13 @@ function postprocessString(s: string) {
       const end2 = end1 + parseInt(len2, 16);
       return `${versionBranch(rest.substring(0, end1), rest.substring(end1, end2))}${rest.substring(end2)}`;
     })
+  ): s;
+  s = isBDSP ? (s
     .replaceAll(/\[VAR 1[3-7A]00\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)(?:\|([^[<{]*?))?\)\]/gu, (_, male, female) => genderBranch(male, female ?? ''))
     .replaceAll(/\[VAR 1[3-7A]01\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)(?:\|([^[<{]*?))?\)\]/gu, (_, singular, plural) => numberBranch(singular, plural ?? ''))
     .replaceAll(/\[VAR 1[3-7A]02\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)\|([^[<{]*?)\|([^[<{]*?)\|([^[<{]*?)\)\]/gu, (_, maleSingular, femaleSingular, malePlural, femalePlural) => genderNumberBranch(maleSingular, femaleSingular, malePlural, femalePlural))
+  ): s;
+  s = (s
     .replaceAll(/(\[VAR [^\]]+?\])/gu, '<span class="var">$1</span>')
     .replaceAll(/(\[WAIT [\d.]+\])/gu, '<span class="wait">$1</span>')
     .replaceAll(/(\[SFX [\d.]+\])/gu, '<span class="sfx">$1</span>') // BDSP
@@ -483,6 +581,7 @@ function postprocessString(s: string) {
     .replaceAll('\u{F0106}', '&lt;')
     .replaceAll('\u{F0107}', '&gt;')
   );
+  return multiLine(s);
 }
 
 export { preprocessString, convertWhitespace, postprocessString };

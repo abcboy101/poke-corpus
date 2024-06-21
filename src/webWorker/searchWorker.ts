@@ -72,7 +72,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
 
   try {
     // Load files
-    const filePromises = languages.map(((languageKey, i) => Promise.resolve([languageKey, preprocessString(files[i])] as const)));
+    const filePromises = languages.map(((languageKey, i) => Promise.resolve([languageKey, preprocessString(files[i], collectionKey)] as const)));
     // notify('loading'); // for progress bar
 
     // Process files
@@ -117,11 +117,15 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       });
 
       const fileResults: string[][] = [];
+
+      // Speaker names vary by language, so we need to look up what the speaker's name is in the appropriate language here
       const replaceSpeaker = (s: string, languageIndex: number) => speaker === undefined ? s : s.replace(/(.*?)(\[VAR 0114\(([0-9A-F]{4})\)\])(?:$|(?=\u{F0000}))/u, (_, rest, tag, speakerIndexHex) => {
         const speakerIndex = parseInt(speakerIndexHex, 16);
         const speakerName = speakers[languageIndex][speakerIndex];
         return `${tag.replaceAll('[', '\\[')}\u{F1100}${speakerName}${speakerDelimiter(languages[languageIndex]) ?? ': '}\u{F1101}${rest}`;
       });
+
+      // These string literals vary by language, so we need to look up what the string is in the appropriate language here
       const offsetsPBR = {'No.': 992, 'Lv.': 998, 'HP': 1036, 'PP': 1042} as {[key: string]: number};
       const languagesPBR = ['ja', 'en', 'de', 'fr', 'es', 'it'];
       const replacePBR = (s: string, languageIndex: number) => collectionKey !== 'BattleRevolution' ? s : s.replace(/\["(No.|Lv.|PP|HP)"\]/gu, (_, tag) => {
@@ -130,7 +134,8 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
         const literal = fileData[languageIndex][literalOffset + literalIndex].substring('[FONT 0][SPACING 1]'.length).trim();
         return `\u{F1102}${literal}\u{F1103}`
       });
-      Array.from(lineKeysSet).sort((a, b) => a - b).forEach((i) => fileResults.push(fileData.map((lines, languageIndex) => postprocessString(replacePBR(replaceSpeaker(lines[i] ?? '', languageIndex), languageIndex)))));
+
+      Array.from(lineKeysSet).sort((a, b) => a - b).forEach((i) => fileResults.push(fileData.map((lines, languageIndex) => postprocessString(replacePBR(replaceSpeaker(lines[i] ?? '', languageIndex), languageIndex), collectionKey))));
       notifyComplete('done', {
         collection: collectionKey,
         file: fileKey,
