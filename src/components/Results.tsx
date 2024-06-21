@@ -8,6 +8,7 @@ import Share from './Share';
 import Spinner from './Spinner';
 import ProgressBar from './ProgressBar';
 import ViewNearby from './ViewNearby';
+import Copy from './Copy';
 import { escapeRegex } from '../utils/utils';
 import { Status, statusInProgress } from '../utils/Status';
 
@@ -46,6 +47,16 @@ function ResultsTable({header, collection, languages, lines, displayHeader, k, c
     setOffset(count);
     jumpTo(k);
   }
+  const copyOnClick = (tableId: string): MouseEventHandler<HTMLButtonElement> => async () => {
+    const table = document.getElementById(tableId);
+    const sel = window.getSelection();
+    if (sel !== null && table !== null) {
+      sel.removeAllRanges();
+      sel.selectAllChildren(table);
+      document.execCommand('copy');
+      sel.removeAllRanges();
+    }
+  }
 
   useEffect(() => {
     const speakers = Array.from(document.getElementsByClassName('speaker'));
@@ -65,10 +76,10 @@ function ResultsTable({header, collection, languages, lines, displayHeader, k, c
       <h2 className={displayHeader ? undefined : 'd-none'}>{header}</h2>
       { start !== 0 ? <button className="results-notice" onClick={onClick(count)}>{t('tablePartial', {count: start})}</button> : null }
       { slicedLines.length > 0 ?
-        <table className={`results-table collection-${corpus.collections[collection].id ?? collection.toLowerCase()}`}>
+        <table id={`results-section${k}-table`} className={`results-table collection-${corpus.collections[collection].id ?? collection.toLowerCase()}`}>
           <thead>
             <tr>
-              {idIndex !== -1 ? <th></th> : null}
+              {idIndex !== -1 ? <th><Copy callback={copyOnClick(`results-section${k}-table`)}/></th> : null}
               {languages.map((lang) => <th key={lang}><abbr title={t(`languages:${lang}.name`)}>{t(`languages:${lang}.code`)}</abbr></th>)}
             </tr>
           </thead>
