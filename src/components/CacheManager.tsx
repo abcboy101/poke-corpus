@@ -153,8 +153,10 @@ function CacheManager({active}: {active: boolean}) {
               cachedFileInfo.length > 0 &&
               fileInfoSumByLanguage().map(([collectionKey, size], index) =>
                 <div key={index} className="cache-entry">
-                  <div>{t(`collections:${collectionKey}.short`)}</div>
-                  <div>{t('cache.size', fileInfoParams(size))}</div>
+                  <div className="cache-entry-text">
+                    <div>{t(`collections:${collectionKey}.short`)}</div>
+                    <div>{t('cache.size', fileInfoParams(size))}</div>
+                  </div>
                   <Delete callback={() => clearCachedFile(collectionKey)}/>
                 </div>
               )

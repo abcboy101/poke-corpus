@@ -15,7 +15,7 @@
 
 .cache-entry {
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto;
   border: 1px solid var(--text);
   background-color: var(--highlight);
   gap: 0.5em;
@@ -23,6 +23,22 @@
   white-space: nowrap;
 }
 
+.cache-entry-text {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
 .cache-entry-notice {
   text-align: center;
+}
+
+@media (width <= 575.98px) {
+  .cache-entry-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cache-entry-list {
+    grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
+  }
 }
