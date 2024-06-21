@@ -454,6 +454,9 @@ function postprocessString(s: string, collectionKey: string) {
     .replaceAll('\u{F0207}\u{F0200}', '<span class="c">[VAR 0207]</span><span class="n">\\n</span><br>') // [VAR 0207]\n
     .replaceAll('\u{F0208}\u{F0200}', '<span class="r">[VAR 0208]</span><span class="n">\\n</span><br>') // [VAR 0208]\n
   ): s;
+  s = isSoftLineBreak ? (s
+    .replaceAll('\u{F0201}\u{F0200}', '<span class="soft"> </span><span class="r">\\r</span><span class="n">\\n</span><wbr class="soft">') // \r\n
+  ): s;
   s = (s
     .replaceAll('\u{F0201}\u{F0200}', '<span class="r">\\r</span><span class="n">\\n</span><br>') // \r\n
     .replaceAll('\u{F0202}\u{F0200}', '<span class="c">\\c</span><span class="n">\\n</span><br>') // \c\n

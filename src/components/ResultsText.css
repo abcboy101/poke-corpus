@@ -12,7 +12,12 @@
   color: var(--text-gray);
 }
 
-.control-hide .r, .control-hide .c, .control-hide .n, .control-hide .vertoffset {
+.soft {
+  white-space: normal;
+}
+
+.control-hide .r, .control-hide .c, .control-hide .n, .control-hide .vertoffset,
+.control-show span.soft, .control-hide wbr.soft {
   display: none;
 }
 
