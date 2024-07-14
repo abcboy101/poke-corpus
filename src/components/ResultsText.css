@@ -1,5 +1,5 @@
 /* Variables */
-.var, .wait, .sfx, .unused, .null, .compressed, .gender, .number, .speaker, .literal {
+.var, .wait, .sfx, .unused, .null, .compressed, .gender, .number, .speaker {
   color: var(--text-gray);
 }
 
@@ -7,8 +7,17 @@
   display: none;
 }
 
+/* Literals */
+.literal {
+  border-bottom: 1px dotted var(--text-gray);
+}
+
+.literal-small {
+  font-size: 80%;
+}
+
 /* Line breaks, whitespace */
-.r, .c, .n, .vertoffset {
+.r, .c, .n, .e, .vertoffset {
   color: var(--text-gray);
 }
 
@@ -16,7 +25,7 @@
   white-space: normal;
 }
 
-.control-hide .r, .control-hide .c, .control-hide .n, .control-hide .vertoffset,
+.control-hide .r, .control-hide .c, .control-hide .n, .control-hide .e, .control-hide .vertoffset,
 .control-show span.soft, .control-hide wbr.soft {
   display: none;
 }
@@ -112,14 +121,14 @@
 }
 
 /* Version branches */
-.version1 {
+.version-scarlet {
   border-bottom: 1px dotted var(--text);
-  color: var(--version-1-color);
+  color: var(--version-scarlet-color);
 }
 
-.version2 {
+.version-violet {
   border-bottom: 1px dotted var(--text);
-  color: var(--version-2-color);
+  color: var(--version-violet-color);
 }
 
 /* Hidden branches based on toggles */

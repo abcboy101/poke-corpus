@@ -11,12 +11,13 @@
  * - U+F0106: placeholder for less-than sign `<`
  * - U+F0107: placeholder for greater-than sign `>`
  *
- * - U+F0200: placeholder for tab `\n`
- * - U+F0201: placeholder for tab `\r`
- * - U+F0202: placeholder for tab `\c`
+ * - U+F0200: placeholder for new line `\n`
+ * - U+F0201: placeholder for scroll `\r`
+ * - U+F0202: placeholder for clear `\c`
  * - U+F0203: placeholder for tab `\t`
  * - U+F0207: placeholder for `[VAR 0207]`
  * - U+F0208: placeholder for `[VAR 0208]`
+ * - U+F02FF: placeholder for end of text `\e`
  *
  * The following codepoints can be used in source documents for multivalued strings:
  * - U+F1000: delimiter between multivalued strings
@@ -27,9 +28,14 @@
  *
  * - U+F1102: start of replaced literal
  * - U+F1103: end of replaced literal
+ * - U+F1104: delimiter between branches in a literal
+ *
+ * - U+F1200: mark a gender branch in a literal
+ * - U+F1207: mark a version branch in a literal
  */
 
 import chineseChars from './chineseChars.json';
+import * as g3 from './expandVariablesG3';
 
 //#region Pre-processing
 // SMUSUM Chinese Pokémon names
@@ -69,6 +75,34 @@ function remapKoreanBraille(s: string) {
   );
 }
 
+// GBA special characters
+function remapGBASpecialCharacters(s: string) {
+  return (s
+    .replaceAll('[PK]', '⒆') // Gen 3 PK
+    .replaceAll('[PKMN]', '⒆⒇') // Gen 3 PKMN
+
+    .replaceAll('[UP_ARROW]', '↑')
+    .replaceAll('[DOWN_ARROW]', '↓')
+    .replaceAll('[LEFT_ARROW]', '←')
+    .replaceAll('[RIGHT_ARROW]', '→')
+    .replaceAll('[SUPER_ER]', 'ᵉʳ')
+    .replaceAll('[SUPER_E]', 'ᵉ')
+    .replaceAll('[SUPER_RE]', 'ʳᵉ')
+
+    .replaceAll('[UP_ARROW_2]', '↑')
+    .replaceAll('[DOWN_ARROW_2]', '↓')
+    .replaceAll('[LEFT_ARROW_2]', '←')
+    .replaceAll('[RIGHT_ARROW_2]', '→')
+    .replaceAll('[PLUS]', '+')
+    .replaceAll('[UNDERSCORE]', '_')
+
+    .replaceAll('[KANJI_BIG]', '大')
+    .replaceAll('[KANJI_SMALL]', '小')
+    .replaceAll('[DAKUTEN]', '゛')
+    .replaceAll('[HANDAKUTEN]', '゜')
+  );
+}
+
 // GCN special characters
 function remapGCNSpecialCharacters(s: string) {
   return (s
@@ -91,7 +125,7 @@ function remapNDSSpecialCharacters(s: string) {
 
 // Wii special characters
 function remapWiiSpecialCharacters(s: string) {
-  return s.search(/[\uE040-\uE06F]/u) === -1 ? s : (s
+  return (s
     .replaceAll('\uE041', '✜') // Wii Remote Control Pad
     .replaceAll('\uE042', 'Ⓐ') // Wii Remote A Button
     .replaceAll('\uE043', 'Ⓑ') // Wii Remote B Button
@@ -219,6 +253,10 @@ function preprocessMetadata(s: string) {
  */
 function preprocessString(s: string, collectionKey: string) {
   switch (collectionKey) {
+    case "Emerald":
+      s = remapGBASpecialCharacters(s);
+      break;
+
     case "DiamondPearl":
     case "Platinum":
     case "HeartGoldSoulSilver":
@@ -356,12 +394,15 @@ function apocopeBranch(form1: string, form2: string) {
  *
  * Returns the resulting string.
  */
-function versionBranch(form1: string, form2: string) {
+function versionBranch(form1: string, form2: string, version1: string, version2: string) {
   const results = [];
-  if (form1.length > 0) results.push(`<span class="branch version1">${form1}</span>`);
-  if (form2.length > 0) results.push(`<span class="branch version2">${form2}</span>`);
+  if (form1.length > 0) results.push(`<span class="branch version-${version1}">${form1}</span>`);
+  if (form2.length > 0) results.push(`<span class="branch version-${version2}">${form2}</span>`);
   return results.join('<span class="version">/</span>');
 }
+
+const versionBranchRS = (form1: string, form2: string) => versionBranch(form1, form2, 'ruby', 'sapphire');
+const versionBranchSV = (form1: string, form2: string) => versionBranch(form1, form2, 'scarlet', 'violet');
 //#endregion
 
 /**
@@ -371,7 +412,8 @@ function versionBranch(form1: string, form2: string) {
  *
  * Returns the resulting HTML string.
  */
-function postprocessString(s: string, collectionKey: string) {
+function postprocessString(s: string, collectionKey: string, language: string = '') {
+  const isGen3 = ["Emerald"].includes(collectionKey);
   const isGen4 = ["DiamondPearl", "Platinum", "HeartGoldSoulSilver"].includes(collectionKey);
   const isGen5 = ["BlackWhite", "Black2White2"].includes(collectionKey);
   const isBDSP = collectionKey == "BrilliantDiamondShiningPearl";
@@ -387,7 +429,7 @@ function postprocessString(s: string, collectionKey: string) {
 
   s = postprocessMetadata(s);
 
-  // Replace special characters with a placeholder so they don't match other rules
+  // Replace literal special characters with a placeholder so they don't match other rules
   s = (s
     .replaceAll('\\\\', '\u{F0100}')
     .replaceAll('\\[', '\u{F0102}')
@@ -407,15 +449,40 @@ function postprocessString(s: string, collectionKey: string) {
     .replaceAll('[VAR 0207]', '\u{F0207}')
     .replaceAll('[VAR 0208]', '\u{F0208}')
   ): s;
+  s = isGen3 ? (s
+    .replaceAll('\\e', '\u{F02FF}')
+  ): s;
 
   // PKMN
-  s = isNDS ? (s
-    .replaceAll('\u2486', '<sup>P</sup><sub>K</sub>') // Gen 5 PK [also used privately for Gen 4]
-    .replaceAll('\u2487', '<sup>M</sup><sub>N</sub>') // Gen 5 MN [also used privately for Gen 4]
+  s = (isGen3 || isNDS) ? (s
+    .replaceAll('\u2486', '<sup>P</sup><sub>K</sub>') // Gen 5 PK [also used privately for Gen 4 and earlier]
+    .replaceAll('\u2487', '<sup>M</sup><sub>N</sub>') // Gen 5 MN [also used privately for Gen 4 and earlier]
   ): s;
   s = is3DS ? (s
     .replaceAll('\uE0A7', '<sup>P</sup><sub>K</sub>') // 3DS PK (unused)
     .replaceAll('\uE0A8', '<sup>M</sup><sub>N</sub>') // 3DS MN (unused)
+  ): s;
+
+  // Literals
+  s = isGen3 ? (s
+    // POKé, POKéBLOCK
+    .replaceAll('[POKE]', '<sup>P</sup><sub>O</sub><sup>K</sup><sub>é</sub>')
+    .replaceAll('[POKEBLOCK]', `<sup>P</sup><sub>O</sub><sup>K</sup><sub>é</sub>\u{F1102}${g3.expandBlock(language)}\u{F1103}`)
+    .replaceAll('[BLOCK]', `\u{F1102}${g3.expandBlock(language)}\u{F1103}`)
+    .replaceAll('[POKEMELLA]', '\u{F1102}<sup>P</sup><sub>O</sub><sup>K</sup><sub>é</sub>MELLA\u{F1103}')
+    .replaceAll('[MELLA]', '\u{F1102}MELLA\u{F1103}')
+    .replaceAll('[POKEMELLE]', '\u{F1102}<sup>P</sup><sub>O</sub><sup>K</sup><sub>é</sub>MELLE\u{F1103}')
+    .replaceAll('[MELLE]', '\u{F1102}MELLE\u{F1103}')
+
+    // Gender unknown symbol (blank space with the same width as ♂/♀)
+    .replaceAll('[UNK_SPACER]', '\u2002')
+
+    // Special characters (Lv, PP, ID, No)
+    .replaceAll('[LV]', `\u{F1102}<span class="literal-small">${g3.expandLv(language)}</span>\u{F1103}`)
+    .replaceAll('[LV_2]', `\u{F1102}<span class="literal-small">${g3.expandLv2(language)}</span>\u{F1103}`)
+    .replaceAll('[PP]', `\u{F1102}<span class="literal-small">${g3.expandPP(language)}</span>\u{F1103}`)
+    .replaceAll('[ID]', `\u{F1102}<span class="literal-small">${g3.expandID()}</span>\u{F1103}`)
+    .replaceAll('[NO]', `\u{F1102}<span class="literal-small">${g3.expandNo(language)}</span>\u{F1103}`)
   ): s;
 
   // Text formatting
@@ -461,6 +528,7 @@ function postprocessString(s: string, collectionKey: string) {
     .replaceAll('\u{F0201}\u{F0200}', '<span class="r">\\r</span><span class="n">\\n</span><br>') // \r\n
     .replaceAll('\u{F0202}\u{F0200}', '<span class="c">\\c</span><span class="n">\\n</span><br>') // \c\n
     .replaceAll('\u{F0200}\u{F0202}', '<span class="n">\\n</span><span class="c">\\c</span><br>') // \n\c (Ranch)
+    .replaceAll('\u{F02FF}\u{F0200}', '<span class="e">\\e</span><span class="n">\\n</span><br>') // \e\n (Emerald)
   );
   s = isGen4 ? (s
     .replaceAll('\u{F0207}', '<span class="c">[VAR 0207]</span><br>') // [VAR 0207]
@@ -470,6 +538,7 @@ function postprocessString(s: string, collectionKey: string) {
     .replaceAll('\u{F0201}', '<span class="r">\\r</span><br>') // \r
     .replaceAll('\u{F0202}', '<span class="c">\\c</span><br>') // \c
     .replaceAll('\u{F0200}', '<span class="n">\\n</span><br>') // \n
+    .replaceAll('\u{F02FF}', '<span class="e">\\e</span><br>') // \e
 
     .replaceAll('\u{F0203}', '<span class="tab">\t</span>')
   );
@@ -518,6 +587,38 @@ function postprocessString(s: string, collectionKey: string) {
     .replaceAll('[NULL]', '<span class="null">[NULL]</span>')
     .replaceAll('[COMP]', '<span class="compressed">[COMP]</span>')
   );
+  s = isGen3 ? (s
+    .replaceAll(/(\[DYNAMIC \d+\])/gu, '<span class="var">$1</span>') // F7 xx
+    .replaceAll(/(\[(?:(?:[ABLR]|START|SELECT)_BUTTON|DPAD_(?:UP|DOWN|LEFT|RIGHT|UPDOWN|LEFTRIGHT|NONE))\])/gu, '<span class="var">$1</span>') // F8 xx
+    .replaceAll(/(\[EMOJI_[^\]]+?\])/gu, '<span class="var">$1</span>') // F9 D0 - F9 FE
+
+    .replaceAll(/(\[COLOR [^\]]+?\])/gu, '<span class="var">$1</span>') // FC 01 xx
+    .replaceAll('[COLOR]', '<span class="var">[COLOR]</span>') // FC 01
+    .replaceAll(/(\[HIGHLIGHT [^\]]+?\])/gu, '<span class="var">$1</span>') // FC 02 xx
+    .replaceAll(/(\[SHADOW [^\]]+?\])/gu, '<span class="var">$1</span>') // FC 03 xx
+    .replaceAll(/(\[COLOR_HIGHLIGHT_SHADOW [^\]]+?\])/gu, '<span class="var">$1</span>') // FC 04 xx xx xx
+    .replaceAll(/(\[PALETTE [^\]]+?\])/gu, '<span class="var">$1</span>') // FC 05 xx
+    .replaceAll(/(\[(?:FONT [^\]]+?|FONT_[^\]]+?)\])/gu, '<span class="var">$1</span>') // FC 06 xx
+    .replaceAll(/(\[PAUSE \d+\])/gu, '<span class="var">$1</span>') // FC 08 xx
+    .replaceAll('[PAUSE_UNTIL_PRESS]', '<span class="var">[PAUSE_UNTIL_PRESS]</span>') // FC 09 xx
+    .replaceAll('[WAIT_SE]', '<span class="var">[WAIT_SE]</span>') // FC 0A xx
+    .replaceAll(/(\[PLAY_BGM [^\]]+?\])/gu, '<span class="var">$1</span>') // FC 0B xx
+    .replaceAll(/(\[ESCAPE \d+\])/gu, '<span class="var">$1</span>') // FC 0C xx
+    .replaceAll(/(\[PLAY_SE [^\]]+?\])/gu, '<span class="var">$1</span>') // FC 10 xx
+    .replaceAll(/(\[CLEAR \d+\])/gu, '<span class="var">$1</span>') // FC 11 xx
+    .replaceAll(/(\[CLEAR_TO \d+\])/gu, '<span class="var">$1</span>') // FC 13 xx
+    .replaceAll('[PAUSE_MUSIC]', '<span class="var">[PAUSE_MUSIC]</span>') // FC 17 xx
+    .replaceAll('[RESUME_MUSIC]', '<span class="var">[RESUME_MUSIC]</span>') // FC 18 xx
+
+    .replaceAll('[PLAYER]', '<span class="var">[PLAYER]</span>') // FD 01
+    .replaceAll('[STR_VAR_1]', '<span class="var">[STR_VAR_1]</span>') // FD 02
+    .replaceAll('[STR_VAR_2]', '<span class="var">[STR_VAR_2]</span>') // FD 03
+    .replaceAll('[STR_VAR_3]', '<span class="var">[STR_VAR_3]</span>') // FD 04
+    .replaceAll(/(\[B_[^\]]+?\])/gu, '<span class="var">$1</span>') // FD xx (battle string placeholders)
+
+    .replaceAll(/\u{F1102}\u{F1200}(.*?)\u{F1104}(.*?)\u{F1103}/gu, (_, male, female) => genderBranch(male, female)) // FD 05, FD 06
+    .replaceAll(/\u{F1102}\u{F1207}(.*?)\u{F1104}(.*?)\u{F1103}/gu, (_, form1, form2) => versionBranchRS(form1, form2)) // FD 07 - FD 0D
+  ): s;
   s = isModern ? (s
     .replaceAll(/\[VAR (?:GENDBR|1100)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenF, lenM, rest) => {
       const endM = parseInt(lenM, 16);
@@ -556,7 +657,7 @@ function postprocessString(s: string, collectionKey: string) {
     .replaceAll(/\[VAR (?:1107)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, len2, len1, rest) => {
       const end1 = parseInt(len1, 16);
       const end2 = end1 + parseInt(len2, 16);
-      return `${versionBranch(rest.substring(0, end1), rest.substring(end1, end2))}${rest.substring(end2)}`;
+      return `${versionBranchSV(rest.substring(0, end1), rest.substring(end1, end2))}${rest.substring(end2)}`;
     })
   ): s;
   s = isBDSP ? (s

@@ -1,6 +1,6 @@
 import 'compression-streams-polyfill';
 import { preprocessString, convertWhitespace, postprocessString } from './cleanString';
-import { Speaker, speakerDelimiter } from './corpus';
+import { codeId, Speaker, speakerDelimiter, Literals } from './corpus';
 import { SearchTaskResultDone, SearchTaskResultNotDone } from '../utils/Status';
 
 export interface SearchParams {
@@ -22,6 +22,7 @@ export interface SearchTask {
   readonly files: readonly string[],
   readonly speaker?: Speaker,
   readonly speakerFiles?: readonly string[]
+  readonly literals?: Literals,
 }
 
 export interface SearchTaskResultLines {
@@ -46,7 +47,7 @@ export interface SearchTaskResultIncomplete {
 
 /* eslint-disable no-restricted-globals */
 self.onmessage = (task: MessageEvent<SearchTask>) => {
-  const {index, params, collectionKey, fileKey, languages, files, speaker, speakerFiles: speakerData} = task.data;
+  const {index, params, collectionKey, fileKey, languages, files, speaker, speakerFiles: speakerData, literals} = task.data;
   const notifyIncomplete = (status: SearchTaskResultNotDone) => {
     const message: SearchTaskResultIncomplete = {
       index: index,
@@ -125,17 +126,33 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
         return `${tag.replaceAll('[', '\\[')}\u{F1100}${speakerName}${speakerDelimiter(languages[languageIndex]) ?? ': '}\u{F1101}${rest}`;
       });
 
-      // These string literals vary by language, so we need to look up what the string is in the appropriate language here
-      const offsetsPBR = {'No.': 992, 'Lv.': 998, 'HP': 1036, 'PP': 1042} as {[key: string]: number};
-      const languagesPBR = ['ja', 'en', 'de', 'fr', 'es', 'it'];
-      const replacePBR = (s: string, languageIndex: number) => collectionKey !== 'BattleRevolution' ? s : s.replace(/\["(No.|Lv.|PP|HP)"\]/gu, (_, tag) => {
-        const literalOffset = offsetsPBR[tag] - 1;
-        const literalIndex = languagesPBR.indexOf(languages[languageIndex].split('-')[0]);
-        const literal = fileData[languageIndex][literalOffset + literalIndex].substring('[FONT 0][SPACING 1]'.length).trim();
-        return `\u{F1102}${literal}\u{F1103}`
-      });
+      // Substituted string literals vary by language, so we need to look up what the string is in the appropriate language here
+      const replaceLiterals = (s: string, languageIndex: number) => {
+        if (literals === undefined || languages[languageIndex] === codeId)
+          return s;
 
-      Array.from(lineKeysSet).sort((a, b) => a - b).forEach((i) => fileResults.push(fileData.map((lines, languageIndex) => postprocessString(replacePBR(replaceSpeaker(lines[i] ?? '', languageIndex), languageIndex), collectionKey))));
+        for (const [literalId, {branch, line}] of Object.entries(literals)) {
+          const searchValue = `[${literalId}]`;
+          let replaceValue = searchValue;
+          if (branch === undefined)
+            replaceValue = fileData[languageIndex][line - 1];
+          else if (branch === 'gender')
+            replaceValue = `\u{F1200}${line.map(lineNo => fileData[languageIndex][lineNo - 1]).join('\u{F1104}')}`;
+          else if (branch === 'version')
+            replaceValue = `\u{F1207}${line.map(lineNo => fileData[languageIndex][lineNo - 1]).join('\u{F1104}')}`;
+          else if (branch === 'language')
+            replaceValue = fileData[languageIndex][line[languages[languageIndex]] - 1];
+
+          if (collectionKey === 'BattleRevolution')
+            replaceValue = replaceValue.substring('[FONT 0][SPACING 1]'.length).trim();
+
+          s = s.replaceAll(searchValue, `\u{F1102}${replaceValue}\u{F1103}`);
+        }
+        return s;
+      };
+
+      Array.from(lineKeysSet).sort((a, b) => a - b).forEach((i) => fileResults.push(fileData.map((lines, languageIndex) =>
+        postprocessString(replaceLiterals(replaceSpeaker(lines[i] ?? '', languageIndex), languageIndex), collectionKey, languages[languageIndex]))));
       notifyComplete('done', {
         collection: collectionKey,
         file: fileKey,

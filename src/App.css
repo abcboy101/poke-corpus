@@ -22,10 +22,10 @@
   --number-singular-color-dark: #82EB71;
   --number-plural-color-light: #938300;
   --number-plural-color-dark: #EBEB51;
-  --version-1-color-light: #9E2A22;
-  --version-1-color-dark: #F7837B;
-  --version-2-color-light: #552277;
-  --version-2-color-dark: #AE7BD0;
+  --version-scarlet-color-light: #9E2A22;
+  --version-scarlet-color-dark: #F7837B;
+  --version-violet-color-light: #552277;
+  --version-violet-color-dark: #AE7BD0;
 }
 
 @media (prefers-color-scheme: light) {
@@ -42,8 +42,8 @@
     --gender-female-color: var(--gender-female-color-light);
     --number-singular-color: var(--number-singular-color-light);
     --number-plural-color: var(--number-plural-color-light);
-    --version-1-color: var(--version-1-color-light);
-    --version-2-color: var(--version-2-color-light);
+    --version-scarlet-color: var(--version-scarlet-color-light);
+    --version-violet-color: var(--version-violet-color-light);
   }
 
   body:has(.mode-system) {
@@ -64,8 +64,8 @@
   --gender-female-color: var(--gender-female-color-light);
   --number-singular-color: var(--number-singular-color-light);
   --number-plural-color: var(--number-plural-color-light);
-  --version-1-color: var(--version-1-color-light);
-  --version-2-color: var(--version-2-color-light);
+  --version-scarlet-color: var(--version-scarlet-color-light);
+  --version-violet-color: var(--version-violet-color-light);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -82,8 +82,8 @@
     --gender-female-color: var(--gender-female-color-dark);
     --number-singular-color: var(--number-singular-color-dark);
     --number-plural-color: var(--number-plural-color-dark);
-    --version-1-color: var(--version-1-color-dark);
-    --version-2-color: var(--version-2-color-dark);
+    --version-scarlet-color: var(--version-scarlet-color-dark);
+    --version-violet-color: var(--version-violet-color-dark);
   }
 
   body:has(.mode-system) {
@@ -104,8 +104,8 @@
   --gender-female-color: var(--gender-female-color-dark);
   --number-singular-color: var(--number-singular-color-dark);
   --number-plural-color: var(--number-plural-color-dark);
-  --version-1-color: var(--version-1-color-dark);
-  --version-2-color: var(--version-2-color-dark);
+  --version-scarlet-color: var(--version-scarlet-color-dark);
+  --version-violet-color: var(--version-violet-color-dark);
 }
 
 
@@ -152,6 +152,16 @@ ruby > rt {
 
 dt {
   font-style: italic;
+}
+
+sup {
+  vertical-align: top;
+  font-size: 80%;
+}
+
+sub {
+  vertical-align: bottom;
+  font-size: 80%;
 }
 
 .d-none {

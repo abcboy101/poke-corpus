@@ -123,7 +123,8 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
             collectionKey: collectionKey,
             fileKey: fileKey,
             languages: languages,
-            speaker: collection?.speaker
+            speaker: collection?.speaker,
+            literals: collection?.literals
           });
         }
         taskCount += languages.length;

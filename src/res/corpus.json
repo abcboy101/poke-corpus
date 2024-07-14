@@ -1,5 +1,5 @@
 {
-  "hash": "001FE069",
+  "hash": "A4F2B573",
   "languages": [
     "qid-ZZ",
     "ja-Hrkt-JP",
@@ -199,7 +199,9 @@
       ]
     },
     "Emerald": {
+      "id": "e",
       "languages": [
+        "qid-ZZ",
         "ja-Hrkt-JP",
         "en-US",
         "fr-FR",
@@ -207,11 +209,42 @@
         "de-DE",
         "es-ES"
       ],
-      "structured": false,
+      "structured": true,
       "version": "1.0",
       "files": [
-        "data"
-      ]
+        "msg"
+      ],
+      "literals": {
+        "KUN": {
+          "branch": "gender",
+          "line": [15083, 15084]
+        },
+        "VERSION": {
+          "line": 15087
+        },
+        "AQUA": {
+          "line": 15088
+        },
+        "MAGMA": {
+          "line": 15089
+        },
+        "ARCHIE": {
+          "line": 15090
+        },
+        "MAXIE": {
+          "line": 15091
+        },
+        "KYOGRE": {
+          "line": 15092
+        },
+        "GROUDON": {
+          "line": 15093
+        },
+        "RIVAL": {
+          "branch": "gender",
+          "line": [15095, 15094]
+        }
+      }
     },
     "DiamondPearl": {
       "id": "dp",
@@ -578,7 +611,57 @@
       },
       "files": [
         "message"
-      ]
+      ],
+      "literals": {
+        "\"No.\"": {
+          "branch": "language",
+          "line": {
+            "ja-JP": 992,
+            "en-US": 993,
+            "en-GB": 993,
+            "de-DE": 994,
+            "fr-FR": 995,
+            "es-ES": 996,
+            "it-IT": 997
+          }
+        },
+        "\"Lv.\"": {
+          "branch": "language",
+          "line": {
+            "ja-JP": 998,
+            "en-US": 999,
+            "en-GB": 999,
+            "de-DE": 1000,
+            "fr-FR": 1001,
+            "es-ES": 1002,
+            "it-IT": 1003
+          }
+        },
+        "\"HP\"": {
+          "branch": "language",
+          "line": {
+            "ja-JP": 1036,
+            "en-US": 1037,
+            "en-GB": 1037,
+            "de-DE": 1038,
+            "fr-FR": 1039,
+            "es-ES": 1040,
+            "it-IT": 1041
+          }
+        },
+        "\"PP\"": {
+          "branch": "language",
+          "line": {
+            "ja-JP": 1042,
+            "en-US": 1043,
+            "en-GB": 1043,
+            "de-DE": 1044,
+            "fr-FR": 1045,
+            "es-ES": 1046,
+            "it-IT": 1047
+          }
+        }
+      }
     },
     "Box": {
       "id": "box",
