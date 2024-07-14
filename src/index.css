@@ -1,39 +1,61 @@
+:root {
+  --font-family-latin: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI Symbol', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+  --font-family-ja: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', 'Noto Sans CJK JP', 'Noto Sans JP';
+  --font-family-ko: 'Apple SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', 'Noto Sans CJK KR', 'Noto Sans KR';
+  --font-family-zh-hant: '蘋方-繁', 'PingFang TC', '微軟正黑體', 'Microsoft JhengHei', 'Noto Sans CJK TC', 'Noto Sans TC';
+  --font-family-zh-hans: '苹方-简', 'PingFang SC', '微软雅黑', 'Microsoft YaHei', 'Noto Sans CJK SC', 'Noto Sans SC';
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI Symbol', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', 'Noto Sans CJK JP', 'Noto Sans JP', sans-serif;
+  font-family: var(--font-family-latin), var(--font-family-ja), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: none;
 }
 
 :lang(ja) {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI Symbol', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', 'Noto Sans CJK JP', 'Noto Sans JP', sans-serif;
-}
-
-:lang(zh-Hant), :lang(zh-TW) {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI Symbol', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    '蘋方-繁', 'PingFang TC', '微軟正黑體', 'Microsoft JhengHei', 'Noto Sans CJK TC', 'Noto Sans TC', sans-serif;
-}
-
-:lang(zh-Hans), :lang(zh-CN) {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI Symbol', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    '苹方-简', 'PingFang SC', '微软雅黑', 'Microsoft YaHei', 'Noto Sans CJK SC', 'Noto Sans SC', sans-serif;
+  font-family: --fullwidth-ja, var(--font-family-latin), var(--font-family-ja), sans-serif;
 }
 
 :lang(ko) {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI Symbol', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    'Apple SD 산돌고딕 Neo', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', sans-serif;
+  font-family: var(--font-family-latin), var(--font-family-ko), sans-serif;
 }
 
+:lang(zh-Hant), :lang(zh-TW) {
+  font-family: var(--font-family-latin), var(--font-family-zh-hant), sans-serif;
+}
+
+:lang(zh-Hans), :lang(zh-CN) {
+  font-family: var(--font-family-latin), var(--font-family-zh-hans), sans-serif;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Fullwidth forms */
+/*
+  Gen 4-7 specifically treat these characters as fullwidth characters distinct from other-language games,
+  even though they do not have separate Unicode codepoints in the Halfwidth and Fullwidth Forms block.
+  We approximate this distinction by preferring a Japanese font for these characters in Japanese text.
+  Characters affected: ×, ÷, …, ♂, ♀, ♠, ♣, ♥, ♦, ★, ◎, ○, □, △, ◇, ♪, ☀, ☁, ☂ (plus ‥ for Gen 3)
+*/
+@font-face {
+  font-family: --fullwidth-ja;
+  src:
+    local('ヒラギノ角ゴ Pro W3'),
+    local('Hiragino Kaku Gothic Pro'),
+    local('Osaka'),
+    local('メイリオ'),
+    local('Meiryo'),
+    local('ＭＳ Ｐゴシック'),
+    local('MS PGothic'),
+    local('Noto Sans CJK JP'),
+    local('Noto Sans JP');
+  unicode-range:
+    U+00D7, U+00F7, U+2025-2026, U+25A1, U+25B3, U+25C7, U+25CB, U+25CE,
+    U+2600-2602, U+2605, U+2640, U+2642, U+2660, U+2663, U+2665-2666, U+266A;
 }
