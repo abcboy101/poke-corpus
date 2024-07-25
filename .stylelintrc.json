@@ -3,8 +3,11 @@
   "rules": {
     "color-hex-length": "long",
     "comment-empty-line-before": null,
-    "value-keyword-case": {
-      "ignoreProperties": ["/--font-family-.+/"]
-    }
+    "value-keyword-case": [
+      "lower",
+      {
+        "ignoreProperties": ["/--font-family-.+/"]
+      }
+    ]
   }
 }
