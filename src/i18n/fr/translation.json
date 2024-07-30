@@ -43,9 +43,9 @@
   "tablePartial_one": "{{count, number}} résultat masqué",
   "tablePartial_other": "{{count, number}} résultats masqués",
   "displayedRange": {
-    "long_zero": "Affichage de {{start, number}} à {{end, number}} sur {{count, number}} résultat",
-    "long_one": "Affichage de {{start, number}} à {{end, number}} sur {{count, number}} résultat",
-    "long_other": "Affichage de {{start, number}} à {{end, number}} sur {{count, number}} résultats",
+    "long_zero": "{{start, number}} à {{end, number}} résultat affiché sur {{count, number}}",
+    "long_one": "{{start, number}} à {{end, number}} résultat affiché sur {{count, number}}",
+    "long_other": "{{start, number}} à {{end, number}} résultats affichés sur {{count, number}}",
     "short": "{{start, number}}-{{end, number}} sur {{count, number}}"
   },
   "loadPrev": "←",
