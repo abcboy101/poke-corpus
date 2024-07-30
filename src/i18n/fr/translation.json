@@ -71,7 +71,7 @@
     "filesStored": "Nombre de fichiers stockés : $t(cache.files, {\"count\": {{count}} })",
     "files": "{{count}} fichier",
     "files_other": "{{count}} fichiers",
-    "storageUsed": "Stockage total utilisé : {{amount, number}}",
+    "storageUsed": "Poids total utilisé : {{amount, number}}",
     "inProgress": "Mise en cache en cours...",
     "headerCollection": "Collection",
     "headerSize": "Taille",
