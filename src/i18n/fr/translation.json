@@ -9,7 +9,9 @@
     "dark": "Sombre"
   },
   "query": "Requête\u00A0:",
-  "regex": "Expression régulière",
+  "searchType": {
+    "regex": "Expression régulière"
+  },
   "caseInsensitive": "Insensible à la casse",
   "search": "Recherche",
   "cancel": "Annuler",

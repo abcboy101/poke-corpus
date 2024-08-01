@@ -8,7 +8,9 @@
     "dark": "Scuro"
   },
   "query": "Richiesta:",
-  "regex": "Espressione regolare",
+  "searchType": {
+    "regex": "Espressione regolare"
+  },
   "caseInsensitive": "Insensibile alle maiuscole e minuscole",
   "search": "Cerca",
   "cancel": "Annulla",

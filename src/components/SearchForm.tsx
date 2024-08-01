@@ -2,7 +2,7 @@ import { FormEventHandler, MouseEventHandler, useCallback, useEffect, useState }
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { SearchParams } from '../webWorker/searchWorker';
+import { SearchParams, SearchType, searchTypes, isSearchType } from '../webWorker/searchWorker';
 import { corpus, codeId } from '../utils/corpus';
 import SearchFilters from './SearchFilters';
 import { escapeRegex, localStorageGetItem, localStorageSetItem } from '../utils/utils';
@@ -12,7 +12,7 @@ import '../i18n/config';
 
 const defaultParams: SearchParams = {
   query: '',
-  regex: false,
+  type: 'exact',
   caseInsensitive: true,
   common: true,
   script: true,
@@ -25,7 +25,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
   const [id, setId] = useState('');
   const [file, setFile] = useState('');
   const [query, setQuery] = useState(defaultParams.query);
-  const [regex, setRegex] = useState(defaultParams.regex);
+  const [type, setType] = useState(defaultParams.type);
   const [caseInsensitive, setCaseInsensitive] = useState(defaultParams.caseInsensitive);
   const [common, setCommon] = useState(defaultParams.common);
   const [script, setScript] = useState(defaultParams.script);
@@ -51,9 +51,16 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       setQuery(newQuery);
     }
 
-    const newRegex = params.get('regex');
-    if (newRegex !== null) {
-      setRegex(newRegex === 'true');
+    const newType = params.get('type');
+    if (newType !== null && isSearchType(newType)) {
+      setType(newType);
+    }
+    else {
+      // Earlier versions used a boolean regex parameter rather than the search type enum
+      const newRegex = params.get('regex');
+      if (newRegex === 'true') {
+        setType('regex');
+      }
     }
 
     const newCaseInsensitive = params.get('caseInsensitive');
@@ -99,7 +106,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
     if (id !== '') {
       postToWorker({
         query: `^${escapeRegex(id)}$`,
-        regex: true,
+        type: 'regex',
         caseInsensitive: false,
         common: true,
         script: true,
@@ -113,7 +120,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
     if (file !== '') {
       postToWorker({
         query: `^${escapeRegex(file)}\\..*$`,
-        regex: true,
+        type: 'regex',
         caseInsensitive: false,
         common: true,
         script: true,
@@ -133,7 +140,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
 
     window.location.hash = new URLSearchParams({
       query: query,
-      regex: regex.toString(),
+      type: type,
       caseInsensitive: caseInsensitive.toString(),
       common: common.toString(),
       script: script.toString(),
@@ -144,7 +151,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
 
     postToWorker({
       query: query,
-      regex: regex,
+      type: type,
       caseInsensitive: caseInsensitive,
       common: common,
       script: script,
@@ -166,7 +173,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
   return <form className="search search-form" onSubmit={onSubmit}>
     <div className="search-bar">
       <div className="search-bar-query">
-        <label htmlFor="query">{t('query')} </label>
+        <label htmlFor="query">{t('query')}</label>
         <input type="text" name="query" id="query" value={query} onChange={e => setQuery(e.target.value)}/>
         <div className="btn-alternate-container">
           <input type="submit" className={status === 'rendering' || !statusInProgress.includes(status) ? 'visible' : 'invisible'} value={t('search')} disabled={query.length === 0 || collections.length === 0 || languages.length === 0 || (status !== 'rendering' && statusInProgress.includes(status))}/>
@@ -177,8 +184,9 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       <div className="search-bar-group">
         <div className="search-options">
           <div className="search-option">
-            <input type="checkbox" name="regex" id="regex" checked={regex} onChange={e => setRegex(e.target.checked)}/>
-            <label htmlFor="regex">{t('regex')}</label>
+            <select name="type" id="type" onChange={e => setType(e.target.value as SearchType)} value={type}>
+              {searchTypes.map((type) => <option key={type} value={type}>{t(`searchType.${type}`)}</option>)}
+            </select>
           </div>
           <div className="search-option">
             <input type="checkbox" name="caseInsensitive" id="caseInsensitive" checked={caseInsensitive} onChange={e => setCaseInsensitive(e.target.checked)}/>

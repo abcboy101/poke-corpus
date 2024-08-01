@@ -8,7 +8,9 @@
     "dark": "深色"
   },
   "query": "查詢：",
-  "regex": "正則表達式",
+  "searchType": {
+    "regex": "正則表達式"
+  },
   "caseInsensitive": "不區分大小寫",
   "search": "搜索",
   "cancel": "停止",

@@ -3,6 +3,7 @@ import { cacheName, getFile, getFilePath } from '../utils/files';
 import SearchWorker from "./searchWorker.ts?worker";
 import { SearchParams, SearchTask, SearchTaskResult, SearchTaskResultComplete, SearchTaskResultLines } from './searchWorker';
 import { SearchResultsInProgress, SearchResultsComplete, SearchResultsStatus } from '../utils/Status';
+import { isBooleanQueryValid } from './searchBoolean';
 
 export interface SearchResultLines extends SearchTaskResultLines {
   readonly displayHeader: boolean
@@ -79,8 +80,10 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
     const params = message.data;
     updateStatusInProgress('loading', 0, 0, 0);
 
+    // Ensure the regex is valid.
+    // If it's invalid, return with that error immediately.
     try {
-      if (params.regex) {
+      if (params.type === 'regex') {
         new RegExp(params.query, params.caseInsensitive ? 'ui' : 'u');
       }
     }
@@ -88,6 +91,17 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
       console.error(err);
       updateStatusComplete('regex');
       return;
+    }
+
+    // Ensure the boolean expression is valid.
+    // If it's invalid, return with that error immediately.
+    if (params.type === 'boolean') {
+      const result = isBooleanQueryValid(params);
+      if (result !== 'success') {
+        console.error(result);
+        updateStatusComplete('regex');
+        return;
+      }
     }
 
     // Load files
@@ -131,6 +145,8 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
         taskCount += languages.length;
       });
     });
+    // Check if the combination of collections/languages yielded no files.
+    // If it did, return with that error immediately.
     if (taskList.length === 0) {
       updateStatusComplete('noMatch');
       return;

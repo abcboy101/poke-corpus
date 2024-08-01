@@ -9,7 +9,11 @@
     "dark": "Dark"
   },
   "query": "Query:",
-  "regex": "Regex",
+  "searchType": {
+    "exact": "Exact phrase",
+    "regex": "Regex",
+    "boolean": "Boolean"
+  },
   "caseInsensitive": "Case insensitive",
   "search": "Search",
   "cancel": "Cancel",

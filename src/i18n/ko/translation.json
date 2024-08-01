@@ -8,7 +8,9 @@
     "dark": "어둡게"
   },
   "query": "쿼리:",
-  "regex": "정규식",
+  "searchType": {
+    "regex": "정규식"
+  },
   "caseInsensitive": "대/소문자 구분 없음",
   "search": "검색",
   "cancel": "정지",

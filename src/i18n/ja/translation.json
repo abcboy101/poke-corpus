@@ -8,7 +8,9 @@
     "dark": "ダーク"
   },
   "query": "クエリ：",
-  "regex": "正規表現",
+  "searchType": {
+    "regex": "正規表現"
+  },
   "caseInsensitive": "大文字小文字を区別しない",
   "search": "検索",
   "cancel": "停止",

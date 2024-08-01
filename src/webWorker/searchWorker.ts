@@ -2,10 +2,16 @@ import 'compression-streams-polyfill';
 import { preprocessString, convertWhitespace, postprocessString } from './cleanString';
 import { codeId, Speaker, speakerDelimiter, Literals } from '../utils/corpus';
 import { SearchTaskResultDone, SearchTaskResultNotDone } from '../utils/Status';
+import { getMatchConditionBoolean } from './searchBoolean';
+
+export const searchTypes = ["exact", "regex", "boolean"] as const;
+export type SearchType = typeof searchTypes[number];
+export const isSearchType = (s: string): s is SearchType => (searchTypes as readonly string[]).includes(s);
+export type MatchCondition = (line: string) => boolean;
 
 export interface SearchParams {
   readonly query: string,
-  readonly regex: boolean,
+  readonly type: SearchType,
   readonly caseInsensitive: boolean,
   readonly common: boolean,
   readonly script: boolean,
@@ -45,6 +51,29 @@ export interface SearchTaskResultIncomplete {
   readonly status: SearchTaskResultNotDone
 }
 
+function getMatchCondition(params: SearchParams): MatchCondition {
+  if (params.type === "exact") {
+    // exact match
+    if (!params.caseInsensitive) {
+      return (line) => line.includes(params.query); // case-sensitive
+    }
+    else {
+      const lowercase = params.query.toLowerCase();
+      const uppercase = params.query.toUpperCase();
+      return (line) => line.toLowerCase().includes(lowercase) || line.toUpperCase().includes(uppercase); // case-insensitive
+    }
+  }
+  else if (params.type === "regex") {
+    // regex match
+    const re = new RegExp(params.query, params.caseInsensitive ? 'sui' : 'su');
+    return (line) => convertWhitespace(line).match(re) !== null;
+  }
+  else if (params.type === "boolean") {
+    return getMatchConditionBoolean(params);
+  }
+  return () => false;
+}
+
 /* eslint-disable no-restricted-globals */
 self.onmessage = (task: MessageEvent<SearchTask>) => {
   const {index, params, collectionKey, fileKey, languages, files, speaker, speakerFiles: speakerData, literals} = task.data;
@@ -63,15 +92,9 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
     }
     postMessage(message);
   }
+  const matchCondition = getMatchCondition(params);
 
   try {
-    const re = params.regex ? new RegExp(params.query, params.caseInsensitive ? 'sui' : 'su') : null;
-    const matchCondition = (line: string): boolean => {
-      return (params.regex && re !== null && convertWhitespace(line).match(re) !== null)
-        || (!params.regex && !params.caseInsensitive && line.includes(params.query))
-        || (!params.regex && params.caseInsensitive && (line.toLowerCase().includes(params.query.toLowerCase()) || line.toUpperCase().includes(params.query.toUpperCase())));
-    };
-
     // Load files
     const preprocessedFiles = languages.map(((languageKey, i) => [languageKey, preprocessString(files[i], collectionKey)] as const));
 
