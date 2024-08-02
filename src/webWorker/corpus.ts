@@ -98,7 +98,7 @@ export const getCachedFile = (cache: Cache, url: string): Promise<Response> => (
         if (import.meta.env.DEV) {
           console.debug(`Saved ${url} to cache`);
         }
-      });
+      }).catch((err) => console.error(err));
       return res;
     });
   })

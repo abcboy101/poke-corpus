@@ -16,6 +16,37 @@ export interface SearchResults {
 
 type SearchTaskPartial = Omit<SearchTask, "files" | "speakerFiles">;
 
+/**
+ * Attempts the following, in order:
+ * - Retrieving the file from the cache
+ * - Populating the cache with the file
+ * - Fetching the file directly
+ *
+ * Returns a promise of the text of the file.
+ */
+const loadFile = (collectionKey: string, languageKey: string, fileKey: string) => {
+  const url = getFileUrl(collectionKey, languageKey, fileKey);
+  if (import.meta.env.DEV) {
+    console.debug(`Getting ${url} from cache`);
+  }
+  return ('caches' in self ? self.caches.open(cacheVersion).then((cache) => getCachedFile(cache, url))
+    .catch((err) => {
+      console.error(err);
+      console.log(`Could not retrieve ${url} from cache. Fetching directly...`);
+      return fetch(url);
+    }) : fetch(url))
+    .catch((err) => {
+      console.error(err);
+      return null;
+    })
+    .then((res) => res === null ? '' :
+      res.blob().then((blob) => import.meta.env.DEV ? new Response(blob.stream()).text()
+      // Due to a bug, the Vite dev server serves .gz files with `Content-Encoding: gzip`.
+      // To work around this, don't bother decompressing the file in the dev environment.
+      // https://github.com/vitejs/vite/issues/12266
+      : new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text()));
+}
+
 /* eslint-disable no-restricted-globals */
 self.onmessage = (message: MessageEvent<SearchParams>) => {
   const progressPortionLoading = 0.49;
@@ -42,37 +73,6 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
     };
     postMessage(message);
   };
-
-  /**
-   * Attempts the following, in order:
-   * - Retrieving the file from the cache
-   * - Populating the cache with the file
-   * - Fetching the file directly
-   *
-   * Returns a promise of the text of the file.
-   */
-  const loadFile = (collectionKey: string, languageKey: string, fileKey: string) => {
-    const url = getFileUrl(collectionKey, languageKey, fileKey);
-    if (import.meta.env.DEV) {
-      console.debug(`Getting ${url} from cache`);
-    }
-    return ('caches' in self ? self.caches.open(cacheVersion).then((cache) => getCachedFile(cache, url))
-      .catch((err) => {
-        console.error(err);
-        console.log(`Could not retrieve ${url} from cache. Fetching directly...`);
-        return fetch(url);
-      }) : fetch(url))
-      .catch((err) => {
-        console.error(err);
-        return null;
-      })
-      .then((res) => res === null ? '' :
-        res.blob().then((blob) => import.meta.env.DEV ? new Response(blob.stream()).text()
-        // Due to a bug, the Vite dev server serves .gz files with `Content-Encoding: gzip`.
-        // To work around this, don't bother decompressing the file in the dev environment.
-        // https://github.com/vitejs/vite/issues/12266
-        : new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text()));
-  }
 
   try {
     const params = message.data;
@@ -136,12 +136,18 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
     }
 
     // Initialize helpers
+    let helperError = false;
     let loadedCount = 0;
     let processedCount = 0;
     let collectedCount = 0;
     const taskResults: SearchTaskResultComplete[] = [];
     const helpers: Worker[] = [];
     const helperOnMessage = (e: MessageEvent<SearchTaskResult>) => {
+      // Another helper had an error, no need to process the message
+      if (helperError)
+        return;
+
+      // Handle message
       const result = e.data;
       if (result.status === 'processing') {
         processedCount++;
@@ -158,7 +164,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
           console.debug(`Collected ${collectedCount}/${taskList.length}`);
         }
 
-        // Send results
+        // Send results if all tasks are done
         if (collectedCount === taskList.length) {
           const results: SearchResultLines[] = [];
           taskResults.sort((a, b) => a.index - b.index);
@@ -174,7 +180,8 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
           helpers.forEach((helper) => helper.terminate());
         }
       }
-      else { // error
+      else { // error caught in searchWorker
+        helperError = true;
         updateStatusComplete(result.status);
         helpers.forEach((helper) => helper.terminate());
       }
@@ -185,6 +192,14 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
     for (let i = 0; i < numWorkers; i++) {
       const helper = new SearchWorker();
       helper.onmessage = helperOnMessage;
+      helper.onerror = () => {
+        // error not caught in searchWorker (such as stack overflow)
+        if (!helperError) {
+          helperError = true;
+          updateStatusComplete('error');
+          helpers.forEach((helper) => helper.terminate());
+        }
+      };
       helpers.push(helper);
     }
     taskList.forEach(async (task, i) => {
@@ -197,6 +212,12 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
         speakerFiles: speaker === undefined ? undefined : await Promise.all(task.languages.map((languageKey) => loadFile(task.collectionKey, languageKey, speaker.file))),
       };
       loadedCount++;
+
+      // Another helper had an error while loading, no need to continue
+      if (helperError)
+        return;
+
+      // Start helper
       updateStatusInProgress('loading', loadedCount/taskList.length, processedCount/taskCount, collectedCount/taskList.length);
       if (import.meta.env.DEV) {
         console.debug(`Loaded ${loadedCount}/${taskList.length}`);

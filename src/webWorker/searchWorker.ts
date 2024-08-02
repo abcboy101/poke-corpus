@@ -64,20 +64,20 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
     postMessage(message);
   }
 
-  const re = params.regex ? new RegExp(params.query, params.caseInsensitive ? 'sui' : 'su') : null;
-  const matchCondition = (line: string): boolean => {
-    return (params.regex && re !== null && convertWhitespace(line).match(re) !== null)
-      || (!params.regex && !params.caseInsensitive && line.includes(params.query))
-      || (!params.regex && params.caseInsensitive && (line.toLowerCase().includes(params.query.toLowerCase()) || line.toUpperCase().includes(params.query.toUpperCase())));
-  };
-
   try {
+    const re = params.regex ? new RegExp(params.query, params.caseInsensitive ? 'sui' : 'su') : null;
+    const matchCondition = (line: string): boolean => {
+      return (params.regex && re !== null && convertWhitespace(line).match(re) !== null)
+        || (!params.regex && !params.caseInsensitive && line.includes(params.query))
+        || (!params.regex && params.caseInsensitive && (line.toLowerCase().includes(params.query.toLowerCase()) || line.toUpperCase().includes(params.query.toUpperCase())));
+    };
+
     // Load files
-    const filePromises = languages.map(((languageKey, i) => Promise.resolve([languageKey, preprocessString(files[i], collectionKey)] as const)));
-    // notify('loading'); // for progress bar
+    const preprocessedFiles = languages.map(((languageKey, i) => [languageKey, preprocessString(files[i], collectionKey)] as const));
 
     // Process files
-    const processingFilePromises = filePromises.map((promise) => promise.then(([languageKey, data]) => {
+    const processedFiles = preprocessedFiles.map(([languageKey, data]) => {
+      notifyIncomplete('processing'); // for progress bar
       const lines = data.split(/\r\n|\n/);
       const lineKeys: number[] = [];
 
@@ -90,79 +90,75 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
         });
       }
       return [languageKey, lineKeys, lines] as const;
-    }));
-    processingFilePromises.forEach((promise) => promise.then(() => notifyIncomplete('processing')).catch(() => {})); // for progress bar
+    });
 
     // Load speakers
     // Since all dialogue with speaker names are in the script file while the speaker names are in the common file, we always have to load it separately
-    const speakerPromises = (speaker === undefined || speakerData === undefined) ? [] : speakerData.map((data) =>
-      Promise.resolve(data).then((data) => {
+    const speakers = (speaker === undefined || speakerData === undefined) ? [] :
+      speakerData.map((data) => {
         const lines = data.split(/\r\n|\n/);
         const start = lines.indexOf(`Text File : ${speaker.textFile}`) + 2;
         const end = lines.indexOf('~~~~~~~~~~~~~~~', start);
         return lines.slice(start, end);
-      })
+      }
     );
 
-
     // Filter only the lines that matched
-    Promise.all([Promise.all(processingFilePromises), Promise.all(speakerPromises)]).then(([processedFiles, speakers]) => {
-      const languageKeys: string[] = [];
-      const lineKeysSet: Set<number> = new Set();
-      const fileData: string[][] = [];
+    const languageKeys: string[] = [];
+    const lineKeysSet: Set<number> = new Set();
+    const fileData: string[][] = [];
 
-      processedFiles.forEach(([languageKey, lineKeys, lines]) => {
-        languageKeys.push(languageKey);
-        lineKeys.forEach((i) => lineKeysSet.add(i));
-        fileData.push(lines);
-      });
+    processedFiles.forEach(([languageKey, lineKeys, lines]) => {
+      languageKeys.push(languageKey);
+      lineKeys.forEach((i) => lineKeysSet.add(i));
+      fileData.push(lines);
+    });
 
-      const fileResults: string[][] = [];
+    // Speaker names vary by language, so we need to look up what the speaker's name is in the appropriate language here
+    const replaceSpeaker = (s: string, languageIndex: number) => speaker === undefined ? s : s.replace(/(.*?)(\[VAR 0114\(([0-9A-F]{4})\)\])(?:$|(?=\u{F0000}))/u, (_, rest, tag, speakerIndexHex) => {
+      const speakerIndex = parseInt(speakerIndexHex, 16);
+      const speakerName = speakers[languageIndex][speakerIndex];
+      return `${tag.replaceAll('[', '\\[')}\u{F1100}${speakerName}${speakerDelimiter(languages[languageIndex]) ?? ': '}\u{F1101}${rest}`;
+    });
 
-      // Speaker names vary by language, so we need to look up what the speaker's name is in the appropriate language here
-      const replaceSpeaker = (s: string, languageIndex: number) => speaker === undefined ? s : s.replace(/(.*?)(\[VAR 0114\(([0-9A-F]{4})\)\])(?:$|(?=\u{F0000}))/u, (_, rest, tag, speakerIndexHex) => {
-        const speakerIndex = parseInt(speakerIndexHex, 16);
-        const speakerName = speakers[languageIndex][speakerIndex];
-        return `${tag.replaceAll('[', '\\[')}\u{F1100}${speakerName}${speakerDelimiter(languages[languageIndex]) ?? ': '}\u{F1101}${rest}`;
-      });
-
-      // Substituted string literals vary by language, so we need to look up what the string is in the appropriate language here
-      const replaceLiterals = (s: string, languageIndex: number) => {
-        if (literals === undefined || languages[languageIndex] === codeId)
-          return s;
-
-        for (const [literalId, {branch, line}] of Object.entries(literals)) {
-          const searchValue = `[${literalId}]`;
-          let replaceValue = searchValue;
-          if (branch === undefined)
-            replaceValue = fileData[languageIndex][line - 1];
-          else if (branch === 'gender')
-            replaceValue = `\u{F1200}${line.map(lineNo => fileData[languageIndex][lineNo - 1]).join('\u{F1104}')}`;
-          else if (branch === 'version')
-            replaceValue = `\u{F1207}${line.map(lineNo => fileData[languageIndex][lineNo - 1]).join('\u{F1104}')}`;
-          else if (branch === 'language')
-            replaceValue = fileData[languageIndex][line[languages[languageIndex]] - 1];
-
-          if (collectionKey === 'BattleRevolution')
-            replaceValue = replaceValue.substring('[FONT 0][SPACING 1]'.length).trim();
-
-          s = s.replaceAll(searchValue, `\u{F1102}${replaceValue}\u{F1103}`);
-        }
+    // Substituted string literals vary by language, so we need to look up what the string is in the appropriate language here
+    const replaceLiterals = (s: string, languageIndex: number) => {
+      if (literals === undefined || languages[languageIndex] === codeId)
         return s;
-      };
 
-      Array.from(lineKeysSet).sort((a, b) => a - b).forEach((i) => fileResults.push(fileData.map((lines, languageIndex) =>
-        postprocessString(replaceLiterals(replaceSpeaker(lines[i] ?? '', languageIndex), languageIndex), collectionKey, languages[languageIndex]))));
-      notifyComplete('done', {
-        collection: collectionKey,
-        file: fileKey,
-        languages: languageKeys,
-        lines: fileResults,
-      });
-    })
-    .catch((err) => {
-      console.error(err);
-      notifyIncomplete('error');
+      for (const [literalId, {branch, line}] of Object.entries(literals)) {
+        const searchValue = `[${literalId}]`;
+        let replaceValue = searchValue;
+        if (branch === undefined)
+          replaceValue = fileData[languageIndex][line - 1];
+        else if (branch === 'gender')
+          replaceValue = `\u{F1200}${line.map(lineNo => fileData[languageIndex][lineNo - 1]).join('\u{F1104}')}`;
+        else if (branch === 'version')
+          replaceValue = `\u{F1207}${line.map(lineNo => fileData[languageIndex][lineNo - 1]).join('\u{F1104}')}`;
+        else if (branch === 'language')
+          replaceValue = fileData[languageIndex][line[languages[languageIndex]] - 1];
+
+        if (collectionKey === 'BattleRevolution')
+          replaceValue = replaceValue.substring('[FONT 0][SPACING 1]'.length).trim();
+
+        s = s.replaceAll(searchValue, `\u{F1102}${replaceValue}\u{F1103}`);
+      }
+      return s;
+    };
+
+    const lineKeysSorted = Array.from(lineKeysSet).sort((a, b) => a - b);
+    const fileResults: string[][] = lineKeysSorted.map((i) => fileData.map((lines, languageIndex) => {
+      let line = lines[i];
+      line = replaceSpeaker(lines[i] ?? '', languageIndex);
+      line = replaceLiterals(line, languageIndex);
+      return postprocessString(line, collectionKey, languages[languageIndex]);
+    }));
+
+    notifyComplete('done', {
+      collection: collectionKey,
+      file: fileKey,
+      languages: languageKeys,
+      lines: fileResults,
     });
   }
   catch (err) {
