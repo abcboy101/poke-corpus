@@ -12,7 +12,7 @@ export interface QueryParseResultError {
   readonly message: QueryParseStatus
 }
 
-export const queryParseStatus = ["parentheses", "quote", "operand", "success"] as const;
+export const queryParseStatus = ["parentheses", "quote", "operand", "operator", "success"] as const;
 type QueryParseStatus = typeof queryParseStatus[number];
 
 const validOperators = ['NOT', 'AND', 'OR', '"', '(', ')'] as const;
@@ -115,7 +115,7 @@ export function queryToPostfix(query: string): QueryParseResult {
 /**
  * Convert an array of boolean keywords in postfix notation to a function that evaluates the match condition.
  */
-export function postfixToMatchCondition(params: SearchParams, postfix: string[]): MatchCondition {
+export function postfixToMatchCondition(params: SearchParams, postfix: string[]): MatchCondition[] {
   const stack: MatchCondition[] = [];
   for (const keyword of postfix) {
     switch (keyword) {
@@ -166,7 +166,7 @@ export function postfixToMatchCondition(params: SearchParams, postfix: string[])
         }
     }
   }
-  return stack.pop()!;
+  return stack;
 }
 
 /* Converts the given search parameters to the match condition function. */
@@ -174,7 +174,9 @@ export function getMatchConditionBoolean(params: SearchParams): MatchCondition {
   const result = queryToPostfix(params.query);
   if (result.success && result.postfix.length > 0) {
     console.debug(result.postfix);
-    return postfixToMatchCondition(params, result.postfix);
+    const stack = postfixToMatchCondition(params, result.postfix);
+    if (stack.length === 1)
+      return stack.pop()!;
   }
   return () => false;
 }
@@ -188,7 +190,14 @@ export function isBooleanQueryValid(params: SearchParams): QueryParseStatus {
   }
 
   try {
-    postfixToMatchCondition(params, result.postfix)('');
+    const stack = postfixToMatchCondition(params, result.postfix);
+    if (stack.length === 1) {
+      const matchCondition = stack.pop()!;
+      matchCondition('');
+      return 'success';
+    }
+    // Leftover keywords in stack (missing operator)
+    return 'operator';
   }
   catch (e) {
     // Error during evaluation (missing operand)
