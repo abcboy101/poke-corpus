@@ -21,6 +21,14 @@
   "clearCache": "キャッシュを消去",
   "selectAll": "すべて選択",
   "deselectAll": "すべて解除",
+  "searchModal": {
+    "message": "{{amount, number}}のデータをダウンロードします。続けますか？",
+    "checkboxDoNotShowAgain": "今後このメッセージを表示しない",
+    "buttons": {
+      "yes": "はい",
+      "no": "いいえ"
+    }
+  },
   "status": {
     "initial": "「検索」をクリックしてください",
     "waiting": "しばらくお待ちください…",
@@ -34,8 +42,20 @@
     "regex": "不正な正規表現",
     "noMatch": "該当するファイルはありません"
   },
+  "statusModal": {
+    "error": "エラーが発生しました。ブラウザの開発者コンソールで追加情報を確認してGitHubでバグを報告してください。",
+    "network": "一つ以上のファイルがダウンロードできません。結果の一部のみが表示されます。インターネット接続を確認して、もう一度お試しください。",
+    "regex": "入力した正規表現が無効です。検索クエリの構文を確認して、もう一度お試しください。",
+    "noMatch": "選択したフィルターに一致するファイルがありません。選択したゲームと言語を確認してください。",
+    "buttons": {
+      "ok": "OK"
+    }
+  },
   "jumpTo": "移動…",
+  "copy": "コピー",
   "share": "共有",
+  "viewNearby": "近くのテキストを見る",
+  "viewSpeaker": "発言者のセリフを見る",
   "tableHeader": "{{collection}}の{{file}}",
   "tablePartial": "{{count, number}}件が表示されない",
   "displayedRange": {
@@ -58,8 +78,29 @@
     "inProgress": "キャッシュ中…",
     "headerCollection": "コレクション",
     "headerSize": "サイズ",
-    "headerActions": "操作"
+    "headerActions": "操作",
+    "cacheAllModal": {
+      "message": "本当にすべてのファイルをキャッシュしますか？（ダウンロードサイズ：約{{amount, number}}）",
+      "buttons": {
+        "yes": "はい",
+        "no": "いいえ"
+      }
+    },
+    "cacheAllFailedModal": {
+      "message": "一つ以上のファイルがキャッシュに保存できませんでした。十分な空き容量を確保してください。",
+      "buttons": {
+        "ok": "OK"
+      }
+    },
+    "clearCacheModal": {
+      "message": "本当にキャッシュを消去しますか？",
+      "buttons": {
+        "yes": "はい",
+        "no": "いいえ"
+      }
+    }
   },
+  "refresh": "更新",
   "delete": "消す",
   "tagline": "ポケモンのコーパスを検索するツール",
   "footerText": "Created by abcboy",

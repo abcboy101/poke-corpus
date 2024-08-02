@@ -26,6 +26,8 @@
   --version-scarlet-color-dark: #F7837B;
   --version-violet-color-light: #552277;
   --version-violet-color-dark: #AE7BD0;
+  --modal-backdrop-color-light: rgba(255 255 255 / 75%);
+  --modal-backdrop-color-dark: rgba(0 0 0 / 75%);
 }
 
 @media (prefers-color-scheme: light) {
@@ -44,6 +46,7 @@
     --number-plural-color: var(--number-plural-color-light);
     --version-scarlet-color: var(--version-scarlet-color-light);
     --version-violet-color: var(--version-violet-color-light);
+    --modal-backdrop-color: var(--modal-backdrop-color-light);
   }
 
   body:has(.mode-system) {
@@ -66,6 +69,7 @@
   --number-plural-color: var(--number-plural-color-light);
   --version-scarlet-color: var(--version-scarlet-color-light);
   --version-violet-color: var(--version-violet-color-light);
+  --modal-backdrop-color: var(--modal-backdrop-color-light);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -84,6 +88,7 @@
     --number-plural-color: var(--number-plural-color-dark);
     --version-scarlet-color: var(--version-scarlet-color-dark);
     --version-violet-color: var(--version-violet-color-dark);
+    --modal-backdrop-color: var(--modal-backdrop-color-dark);
   }
 
   body:has(.mode-system) {
@@ -106,6 +111,7 @@
   --number-plural-color: var(--number-plural-color-dark);
   --version-scarlet-color: var(--version-scarlet-color-dark);
   --version-violet-color: var(--version-violet-color-dark);
+  --modal-backdrop-color: var(--modal-backdrop-color-dark);
 }
 
 

@@ -1,4 +1,4 @@
-import { MouseEventHandler, MutableRefObject, useCallback, useEffect, useRef, useState } from "react";
+import { MutableRefObject, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import CacheManagerWorker from '../webWorker/cacheManagerWorker.ts?worker';
@@ -6,13 +6,14 @@ import Delete from "./Delete";
 
 import './CacheManager.css';
 import corpus from '../webWorker/corpus';
-import { cacheName, getFilePath, getFileCacheOnly } from '../webWorker/fileInfo';
-import { formatBytes } from "../utils/utils";
+import { cacheName, getFilePath, getFileCacheOnly, getDownloadSize, clearLocalFileInfo, deleteLocalFileInfo } from '../webWorker/fileInfo';
+import { formatBytesParams } from "../utils/utils";
 import Refresh from "./Refresh";
+import { ShowModalArguments } from './Modal';
 
 type CachedFileInfoEntry = readonly [readonly [string, string, string], number, boolean];
 
-function CacheManager({active}: {active: boolean}) {
+function CacheManager({active, showModal}: {active: boolean, showModal: (args: ShowModalArguments) => void}) {
   const { t } = useTranslation();
   const [cacheStorageEnabled, setCacheStorageEnabled] = useState(true);
   const [cachedFileInfo, setCachedFileInfo] = useState([] as readonly CachedFileInfoEntry[]);
@@ -37,8 +38,9 @@ function CacheManager({active}: {active: boolean}) {
     setCacheStorageEnabled('caches' in window && await window.caches.keys().then(() => true).catch(() => false));
   }
 
-  const onMessage = useCallback((e: MessageEvent<boolean>) => {
-    if (e.data) {
+  const onMessage = (e: MessageEvent<[boolean, string | null]>) => {
+    const [success, collectionKey] = e.data;
+    if (success) {
       console.log('Caching complete');
       workerRef.current?.terminate();
       workerRef.current = null;
@@ -46,9 +48,9 @@ function CacheManager({active}: {active: boolean}) {
     else {
       console.error('Caching error');
     }
-    checkCachedFiles();
+    checkCachedFiles(collectionKey);
     setCacheInProgress(false);
-  }, []);
+  };
 
   const cacheCollections = (collectionKey: string | null = null) => {
     if ('caches' in window) {
@@ -62,51 +64,66 @@ function CacheManager({active}: {active: boolean}) {
     }
   }
 
-  const checkCachedFiles = async () => {
+  const checkCachedFiles = async (collectionKey?: string | null) => {
     if ('caches' in window) {
-      window.caches.open(cacheName).then(async (cache) => {
-        const keys = Object.entries(corpus.collections).flatMap(([collectionKey, collection]) =>
-          collection.files.flatMap((fileKey) => collection.languages.map((languageKey) =>
-            [collectionKey, languageKey, fileKey] as const
-        )));
-        const fileInfo = await Promise.all(keys.map(([collectionKey, languageKey, fileKey]) =>
-          getFileCacheOnly(cache, getFilePath(collectionKey, languageKey, fileKey)).then(async ([res, current]) =>
-            [res !== undefined ? (await res.blob()).size : -1, current] as const
-        )));
-        setCachedFileInfo(fileInfo.map(([size, current], i) => [keys[i], size, current] as const).filter(([, size]) => size !== -1));
-      }).catch(() => {});
+      const cache = await window.caches.open(cacheName);
+      const keys = Object.entries(corpus.collections).flatMap(([collectionKey, collection]) =>
+        collection.files.flatMap((fileKey) => collection.languages.map((languageKey) =>
+          [collectionKey, languageKey, fileKey] as const
+      )));
+      const fileInfo = await Promise.all(keys.map(([collectionKey, languageKey, fileKey]) =>
+        getFileCacheOnly(cache, getFilePath(collectionKey, languageKey, fileKey)).then(async ([res, current]) =>
+          [res !== undefined ? (await res.blob()).size : -1, current] as const
+      )));
+      setCachedFileInfo(fileInfo.map(([size, current], i) => [keys[i], size, current] as const).filter(([, size]) => size !== -1));
+
+      if (collectionKey === null) {
+        if (fileInfo.some(([size, current]) => size === -1 || !current))
+          cacheAllFailedModal();
+      }
     }
   }
 
-  const clearCache: MouseEventHandler<HTMLButtonElement> = () => {
+  const clearCache = () => {
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.ready.then(registration => registration.unregister()).catch(() => {});
+      navigator.serviceWorker.ready
+        .then(registration => registration.unregister())
     }
+
+    const promises = [];
     if (indexedDB && 'databases' in indexedDB) {
-      indexedDB.databases()
-        .then(databases => databases.forEach((db) => {
-          if (db.name !== undefined)
-            indexedDB.deleteDatabase(db.name);
-        }))
-        .catch(() => {});
+      promises.push(
+        clearLocalFileInfo().then(() => checkCachedFiles())
+      );
     }
     if ('caches' in window) {
-      window.caches.keys()
-        .then((keyList) => Promise.all(keyList.map((key) => window.caches.delete(key))))
-        .then(() => checkCachedFiles())
-        .catch(() => {});
+      promises.push(
+        window.caches.keys().then((keyList) => Promise.all(keyList.map((key) => window.caches.delete(key))))
+      );
     }
-    console.log('Cache cleared');
+
+    Promise.all(promises).then(() => {
+      console.log('Cache cleared');
+    })
+    .catch((err) => {
+      console.log('Error clearing cache');
+      console.error(err);
+    });
   };
 
-  const clearCachedFile = (collectionKey: string) => {
+  const clearCachedFile = async (collectionKey: string) => {
     if ('caches' in window) {
-      window.caches.open(cacheName).then((cache) =>
-        Promise.all(corpus.collections[collectionKey].languages.flatMap((languageKey) =>
-          corpus.collections[collectionKey].files.map((fileKey) =>
-            cache.delete(getFilePath(collectionKey, languageKey, fileKey))
-        )))
-      ).then(() => checkCachedFiles());
+      const cache = await window.caches.open(cacheName)
+      await Promise.all(corpus.collections[collectionKey].languages.flatMap((languageKey) =>
+        corpus.collections[collectionKey].files.flatMap((fileKey) => {
+          const path = getFilePath(collectionKey, languageKey, fileKey);
+          return [
+            deleteLocalFileInfo(path),
+            cache.delete(path)
+          ];
+        })
+      ));
+      checkCachedFiles();
     }
   };
 
@@ -115,16 +132,7 @@ function CacheManager({active}: {active: boolean}) {
     checkCachedFiles();
   }, [active]);
 
-  const storageUsedAmount = () => {
-    const total = cachedFileInfo.map(([, size]) => size).reduce((a, b) => a + b, 0);
-    const [amount, format] = formatBytes(total);
-    return {amount: amount, formatParams: {amount: format}};
-  };
-
-  const fileInfoParams = (size: number) => {
-    const [amount, format] = formatBytes(size);
-    return {amount: amount, formatParams: {amount: format}};
-  };
+  const storageUsedAmount = () => formatBytesParams(cachedFileInfo.map(([, size]) => size).reduce((a, b) => a + b, 0));
 
   const fileInfoPerCollection = () => {
     const value = Object.entries(corpus.collections).map(([collectionKey]) => {
@@ -138,11 +146,61 @@ function CacheManager({active}: {active: boolean}) {
     return value;
   };
 
+  const cacheAllModal = async () => {
+    const size = (await Promise.all(Object.keys(corpus.collections).flatMap((collectionKey) =>
+      corpus.collections[collectionKey].languages.flatMap((languageKey) =>
+        corpus.collections[collectionKey].files.map((fileKey) =>
+          getDownloadSize(getFilePath(collectionKey, languageKey, fileKey))
+      ))
+    ))).reduce((a, b) => a + b, 0);
+    showModal({
+      message: t('cache.cacheAllModal.message', formatBytesParams(size)),
+      buttons: [
+        {
+          message: t('cache.cacheAllModal.buttons.yes'),
+          callback: cacheCollections
+        },
+        {
+          message: t('cache.cacheAllModal.buttons.no'),
+          autoFocus: true
+        },
+      ]
+    });
+  };
+
+  const cacheAllFailedModal = () => {
+    showModal({
+      message: t('cache.cacheAllFailedModal.message'),
+      buttons: [
+        {
+          message: t('cache.cacheAllFailedModal.buttons.ok'),
+          autoFocus: true
+        }
+      ]
+    });
+  };
+
+  const clearCacheModal = async () => {
+    showModal({
+      message: t('cache.clearCacheModal.message'),
+      buttons: [
+        {
+          message: t('cache.clearCacheModal.buttons.yes'),
+          callback: clearCache
+        },
+        {
+          message: t('cache.clearCacheModal.buttons.no'),
+          autoFocus: true
+        },
+      ]
+    });
+  };
+
   return (
     <>
       <div className='cache cache-button-group'>
-        <button onClick={() => cacheCollections()} disabled={cacheInProgress}>{t('cacheAll')}</button>
-        <button onClick={clearCache}>{t('clearCache')}</button>
+        <button onClick={cacheAllModal} disabled={cacheInProgress}>{t('cacheAll')}</button>
+        <button onClick={clearCacheModal}>{t('clearCache')}</button>
       </div>
       <div className="cache cache-results app-window">
         <ul>
@@ -159,7 +217,7 @@ function CacheManager({active}: {active: boolean}) {
                 <div key={index} className={`cache-entry cache-entry-${current ? 'current' : 'outdated'}`}>
                   <div className="cache-entry-text">
                     <div>{t(`collections:${collectionKey}.short`)}</div>
-                    <div>{t('cache.size', fileInfoParams(size))}</div>
+                    <div>{t('cache.size', formatBytesParams(size))}</div>
                   </div>
                   <div className="cache-entry-actions">
                     { !current && <Refresh callback={() => cacheCollections(collectionKey)}/> }

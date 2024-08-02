@@ -34,3 +34,8 @@ export function formatBytes(n: number) {
   };
   return [n / Math.pow(1000, index), format] as const;
 }
+
+export function formatBytesParams(size: number) {
+  const [amount, format] = formatBytes(size);
+  return {amount: amount, formatParams: {amount: format}};
+}

@@ -9,6 +9,7 @@ export type SearchResultsInProgress = 'loading' | 'processing' | 'collecting';
 export type SearchResultsError = SearchTaskResultError | 'regex' | 'noMatch' | 'network';
 export type SearchResultsComplete = 'done' | SearchResultsError;
 export type SearchResultsStatus = SearchResultsInProgress | SearchResultsComplete;
+export const statusError: readonly Status[] & readonly SearchResultsError[] = ['error', 'regex', 'noMatch', 'network'];
 
 /* Search status codes: initial -> waiting -> loading -> processing -> collecting -> rendering -> done (or propagate from SearchResults) */
 export type StatusInProgress = 'waiting' | SearchResultsInProgress | 'rendering';

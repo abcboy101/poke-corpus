@@ -138,6 +138,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
 
     // Initialize helpers
     let helperError = false;
+    let networkError = false;
     let loadedCount = 0;
     let processedCount = 0;
     let collectedCount = 0;
@@ -177,7 +178,8 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
             lastFile = result.file;
           });
 
-          updateStatusComplete('done', results);
+          // Raise network error if it occurred at the end here
+          updateStatusComplete(networkError ? 'network' : 'done', results);
           helpers.forEach((helper) => helper.terminate());
         }
       }
@@ -213,6 +215,12 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
         speakerFiles: speaker === undefined ? undefined : await Promise.all(task.languages.map((languageKey) => loadFile(task.collectionKey, languageKey, speaker.file))),
       };
       loadedCount++;
+
+      if (taskFull.files.some((file) => file === '')) {
+        // Network error ocurred, but allow the search to continue
+        // Partial results may still be useful even if incomplete
+        networkError = true;
+      }
 
       // Another helper had an error while loading, no need to continue
       if (helperError)

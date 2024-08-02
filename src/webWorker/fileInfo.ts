@@ -1,14 +1,72 @@
 import filesJson from '../res/files.json'
 
+/**
+ * Formats the collection, language, and file into the relative path to the text file.
+ */
+export const getFilePath = (collectionKey: string, languageKey: string, fileKey: string) =>
+  `corpus/${collectionKey}/${languageKey}_${fileKey}.txt.gz`;
+
+/**
+ * Returns the size of the pending download, or 0 if already downloaded.
+ */
+export const getDownloadSize = async (path: string): Promise<number> => {
+  const [remoteFileInfo, localFileInfo] = await getFileInfo(path);
+
+  // Cached file is up-to-date, no need to download
+  if ((localFileInfo?.hash === remoteFileInfo.hash)) {
+    return 0;
+  }
+
+  // Out-of-date or miss, need to download from remote
+  return remoteFileInfo.size;
+};
+
+/**
+ * Retrieves a file from the cache, if present and up-to-date, or the server otherwise.
+ */
+export const getFile = async (cache: Cache, path: string) => {
+  const url = import.meta.env.BASE_URL + path;
+  const [remoteFileInfo, localFileInfo] = await getFileInfo(path);
+
+  // Use cached file if local hash is up-to-date, or if we are offline
+  if ((localFileInfo?.hash === remoteFileInfo.hash) || (!navigator.onLine && localFileInfo?.hash !== undefined)) {
+    const res = await cacheMatch(cache, url);
+    if (res !== undefined)
+      return res
+  }
+
+  // Out-of-date or miss, overwrite cached file and update local hash
+  const res = await fetch(url);
+  if (import.meta.env.DEV)
+    console.debug(`Retrieved ${url} from the server`);
+  await cachePut(cache, url, res).then(async (success) => {
+    if (success)
+      await setLocalFileInfo(path);
+  });
+  return res;
+};
+
+/**
+ * Retrieves a file from the cache, if present, and whether it is up-to-date.
+ */
+export const getFileCacheOnly = async (cache: Cache, path: string) => {
+  // Try retrieving file from cache
+  const url = import.meta.env.BASE_URL + path;
+  const [remoteFileInfo, localFileInfo] = await getFileInfo(path);
+  if (localFileInfo?.hash !== undefined)
+    return [await cacheMatch(cache, url), (localFileInfo.hash === remoteFileInfo.hash)] as const;
+
+  // No file is cached
+  return [undefined, false] as const;
+};
+
+//#region Indexed DB/FileInfo
 const filesRemote = filesJson as Files;
 
 type FileInfo = {hash: string, size: number};
 export interface Files {
   [path: string]: FileInfo
 }
-
-export const getFilePath = (collectionKey: string, languageKey: string, fileKey: string) =>
-  `corpus/${collectionKey}/${languageKey}_${fileKey}.txt.gz`;
 
 const dbName = 'corpus';
 const dbObjectStore = 'files';
@@ -52,6 +110,24 @@ const setLocalFileInfo = (path: string): Promise<boolean> => (
   }).catch((reason) => new Promise<boolean>((_, reject) => reject(reason)))
 );
 
+export const deleteLocalFileInfo = (path: string): Promise<boolean> => (
+  getIndexedDB().then((db) => {
+    const transaction = db.transaction([dbObjectStore], "readwrite");
+    const objectStore = transaction.objectStore(dbObjectStore);
+    const request = objectStore.delete(path);
+    return new Promise<boolean>((resolve, reject) => {
+      request.onsuccess = () => resolve(request.result !== undefined);
+      request.onerror = () => reject(request.error);
+    });
+  }).catch((reason) => new Promise<boolean>((_, reject) => reject(reason)))
+);
+
+const getFileInfo = async (path: string) => [getRemoteFileInfo(path), await getLocalFileInfo(path)] as const;
+
+/**
+ * Clear all stored file info from the indexed DB.
+ * Returns true on success.
+ */
 export const clearLocalFileInfo = (): Promise<boolean> => (
   getIndexedDB().then((db) => {
     const transaction = db.transaction(["files"], "readwrite");
@@ -63,63 +139,34 @@ export const clearLocalFileInfo = (): Promise<boolean> => (
     });
   }).catch((reason) => new Promise<boolean>((_, reject) => reject(reason)))
 );
+//#endregion
 
-export const getFile = async (cache: Cache, path: string): Promise<Response> => {
-  const url = import.meta.env.BASE_URL + path;
-  const remoteFileInfo = getRemoteFileInfo(path);
-  const localFileInfo = await getLocalFileInfo(path);
-
-  // Use cached file if local hash is up-to-date, or if we are offline
-  if ((localFileInfo?.hash === remoteFileInfo.hash)
-      || (!navigator.onLine && localFileInfo?.hash !== undefined)) {
-    return getCachedUrl(cache, url);
-  }
-
-  // Out-of-date or miss, overwrite cached file and update local hash
-  const res = fetchAndSaveUrl(cache, url);
-  res.then(() => setLocalFileInfo(path));
-  return res;
-};
-
-export const getFileCacheOnly = async (cache: Cache, path: string): Promise<[Response | undefined, boolean]> => {
-  const url = import.meta.env.BASE_URL + path;
-  const remoteFileInfo = getRemoteFileInfo(path);
-  const localFileInfo = await getLocalFileInfo(path);
-
-  // No file is cached
-  if (localFileInfo?.hash === undefined) {
-    return [undefined, false];
-  }
-
-  // Use cached file
-  const current = (localFileInfo.hash === remoteFileInfo.hash);
-  return [await cache.match(url), current];
-};
-
-const getCachedUrl = (cache: Cache, url: string) => (
-   // Try retrieving file from cache
-  cache.match(url).then((res) => {
-    if (res !== undefined) {
-      if (import.meta.env.DEV) {
-        console.debug(`Retrieved ${url} from cache`);
-      }
-      return res;
-    }
-
-    // Try adding URL to cache and retrieving it from cache
-    return fetchAndSaveUrl(cache, url);
-  })
-);
-
-const fetchAndSaveUrl = (cache: Cache, url: string) => (
-  fetch(url).then((res) => {
-    cache.put(url, res.clone()).then(() => {
-      if (import.meta.env.DEV) {
-        console.debug(`Saved ${url} to cache`);
-      }
-    }).catch((err) => console.error(err));
+//#region Cache Storage
+const cacheMatch = async (cache: Cache, url: string) => {
+  try {
+    const res = await cache.match(url);
+    if (res !== undefined && import.meta.env.DEV)
+      console.debug(`Retrieved ${url} from cache`);
     return res;
-  })
-);
+  }
+  catch (e) {
+    console.error(e);
+    return undefined;
+  }
+};
+
+const cachePut = async (cache: Cache, url: string, res: Response) => {
+  try {
+    await cache.put(url, res.clone());
+    if (import.meta.env.DEV)
+      console.debug(`Saved ${url} to cache`);
+    return true;
+  }
+  catch (e) {
+    console.error(e);
+    return false;
+  }
+};
+//#endregion
 
 export const cacheName = "corpus";

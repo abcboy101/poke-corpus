@@ -22,6 +22,14 @@
   "clearCache": "Clear Cache",
   "selectAll": "Select All",
   "deselectAll": "Deselect All",
+  "searchModal": {
+    "message": "{{amount, number}} of data will be loaded to perform your query. Would you like to continue?",
+    "checkboxDoNotShowAgain": "Do not show again",
+    "buttons": {
+      "yes": "Yes",
+      "no": "No"
+    }
+  },
   "status": {
     "initial": "Click \"Search\" to begin.",
     "waiting": "Please wait...",
@@ -34,6 +42,15 @@
     "network": "Network error!",
     "regex": "Invalid regex!",
     "noMatch": "No matching files!"
+  },
+  "statusModal": {
+    "error": "An error occurred. Check your browser's developer console for additional information, and please report the issue on GitHub.",
+    "network": "One or more files could not be loaded. Only partial results are shown. Please check your internet connection and try again.",
+    "regex": "The regular expression you entered was invalid. Check the syntax of your search query and try again.",
+    "noMatch": "No files match the filters you have selected. Ensure that the games you selected were released in the languages you selected.",
+    "buttons": {
+      "ok": "OK"
+    }
   },
   "jumpTo": "Jump to...",
   "copy": "Copy",
@@ -76,8 +93,29 @@
     "headerCollection": "Collection",
     "headerSize": "Size",
     "headerActions": "Actions",
-    "size": "{{amount, number}}"
+    "size": "{{amount, number}}",
+    "cacheAllModal": {
+      "message": "Are you sure you want to cache all files? (Download size: about {{amount, number}})",
+      "buttons": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "cacheAllFailedModal": {
+      "message": "One or more files could not be saved to the cache. Please ensure you have enough free space.",
+      "buttons": {
+        "ok": "OK"
+      }
+    },
+    "clearCacheModal": {
+      "message": "Are you sure you want to clear the cache?",
+      "buttons": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    }
   },
+  "refresh": "Update",
   "delete": "Delete",
   "tagline": "A tool to query the Pokémon corpus",
   "footerText": "Created by abcboy",

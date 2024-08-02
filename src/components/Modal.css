@@ -1,0 +1,49 @@
+dialog[open] {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 1rem;
+  width: 20em;
+  height: 12em;
+  max-width: calc(100% - 1rem);
+  max-height: calc(100% - 1rem);
+  padding: 1rem;
+  margin: auto;
+  color: var(--text);
+  background-color: var(--highlight);
+  border: 1px solid var(--text);
+  text-align: center;
+  text-wrap: balance;
+  word-break: auto-phrase;
+  line-break: strict;
+}
+
+dialog::backdrop {
+  background-color: var(--modal-backdrop-color);
+}
+
+.modal-message {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+}
+
+.modal-checkbox {
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-button-group {
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-button-group > button {
+  min-width: 5em;
+}
