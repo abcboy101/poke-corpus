@@ -1,17 +1,28 @@
-import os
-import re
-import subprocess
+import json
+import os.path
+import zlib
 
-CORPUS_FOLDER = './public/corpus'
+PUBLIC_FOLDER = './public'
 CORPUS_JSON = './src/res/corpus.json'
+FILES_JSON = './src/res/files.json'
 
-# Calculate CRC32 hash of corpus files
-stdout = subprocess.run(['7z', 'h', CORPUS_FOLDER], text=True, capture_output=True).stdout
-crc32 = re.search("CRC32\s+for data and names:\s+([0-9A-F]{8})", stdout).group(1)
-
-# Update hash in corpus.json
+# Read corpus.json
 with open(CORPUS_JSON, 'r', encoding='utf-8') as f:
-    data = f.read()
-data = re.sub('"hash":\s+"([0-9A-F]{8})"', f'"hash": "{crc32}"', data)
-with open(CORPUS_JSON, 'w', encoding='utf-8') as f:
-    f.write(data)
+    corpus = json.load(f)
+
+entries: dict[str, str] = {}
+for collection_key, collection in corpus['collections'].items():
+    for language in collection['languages']:
+        for file in collection['files']:
+            file_path = '/'.join(['corpus', collection_key, f'{language}_{file}.txt.gz'])
+            with open(os.path.join(PUBLIC_FOLDER, file_path), 'rb') as f:
+                buf = f.read()
+            file_hash = f'{zlib.crc32(buf):08X}'
+            entries[file_path] = {
+                'hash': file_hash,
+                'size': len(buf),
+            }
+
+# Update files.json
+with open(FILES_JSON, 'w', encoding='utf-8') as f:
+    json.dump(entries, f, indent=2)

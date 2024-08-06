@@ -1,4 +1,5 @@
-import corpus, { cacheVersion, getCachedFile, getFileUrl } from './corpus';
+import corpus from './corpus';
+import { cacheName, getFile, getFilePath } from './fileInfo';
 import SearchWorker from "./searchWorker.ts?worker";
 import { SearchParams, SearchTask, SearchTaskResult, SearchTaskResultComplete, SearchTaskResultLines } from './searchWorker';
 import { SearchResultsInProgress, SearchResultsComplete, SearchResultsStatus } from '../utils/Status';
@@ -25,11 +26,11 @@ type SearchTaskPartial = Omit<SearchTask, "files" | "speakerFiles">;
  * Returns a promise of the text of the file.
  */
 const loadFile = (collectionKey: string, languageKey: string, fileKey: string) => {
-  const url = getFileUrl(collectionKey, languageKey, fileKey);
+  const url = getFilePath(collectionKey, languageKey, fileKey);
   if (import.meta.env.DEV) {
     console.debug(`Getting ${url} from cache`);
   }
-  return ('caches' in self ? self.caches.open(cacheVersion).then((cache) => getCachedFile(cache, url))
+  return ('caches' in self ? self.caches.open(cacheName).then((cache) => getFile(cache, url))
     .catch((err) => {
       console.error(err);
       console.log(`Could not retrieve ${url} from cache. Fetching directly...`);

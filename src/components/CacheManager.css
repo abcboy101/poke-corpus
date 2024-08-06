@@ -23,9 +23,21 @@
   white-space: nowrap;
 }
 
+.cache-entry-outdated {
+  background-color: var(--accent);
+}
+
 .cache-entry-text {
   display: grid;
   grid-template-columns: 1fr auto;
+}
+
+.cache-entry-actions {
+  display: flex;
+  margin: auto;
+  place-items: center;
+  vertical-align: middle;
+  gap: 0.25em;
 }
 
 .cache-entry-notice {

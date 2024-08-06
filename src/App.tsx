@@ -1,8 +1,7 @@
-import { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { cacheVersion } from './webWorker/corpus';
 import Search from './components/Search';
 import CacheManager from './components/CacheManager';
 import { localStorageGetItem, localStorageSetItem } from './utils/utils';
@@ -45,15 +44,6 @@ function App() {
   const { t } = useTranslation();
   const [mode, setMode] = useState((localStorageGetItem('mode') ?? 'system') as Mode);
   const [view, setView] = useState('Search' as View);
-
-  // invalidate old caches on load
-  useEffect(() => {
-    if ('caches' in window) {
-      window.caches.keys()
-        .then((keyList) => Promise.all(keyList.filter((key) => key.startsWith('corpus-') && key !== cacheVersion).map((key) => window.caches.delete(key))))
-        .catch(() => {});
-    }
-  }, []);
 
   return (
     <div className={`app mode-${mode} view-${view.toLowerCase()}`} lang={i18next.language} dir={i18next.dir()}>

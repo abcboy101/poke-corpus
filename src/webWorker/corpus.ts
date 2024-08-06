@@ -60,7 +60,6 @@ export interface Collection {
  * Describes the structure of the corpus file.
  */
 export interface Corpus {
-  hash: string,
   readonly languages: readonly string[],
   readonly collections: {
     [collectionKey: string]: Collection
@@ -80,33 +79,8 @@ export function speakerDelimiter(language: string) {
   return speakerDelimiters[language] ?? ': ';
 }
 
-export const getFileUrl = (collectionKey: string, languageKey: string, fileKey: string) =>
-  import.meta.env.BASE_URL + `corpus/${collectionKey}/${languageKey}_${fileKey}.txt.gz`;
-export const getCachedFile = (cache: Cache, url: string): Promise<Response> => (
-  // Try retrieving file from cache
-  cache.match(url).then((res) => {
-    if (res !== undefined) {
-      if (import.meta.env.DEV) {
-        console.debug(`Retrieved ${url} from cache`);
-      }
-      return res;
-    }
-
-    // Try adding URL to cache and retrieving it from cache
-    return fetch(url).then((res) => {
-      cache.put(url, res.clone()).then(() => {
-        if (import.meta.env.DEV) {
-          console.debug(`Saved ${url} to cache`);
-        }
-      }).catch((err) => console.error(err));
-      return res;
-    });
-  })
-);
-
 export const codeId = "qid-ZZ";
 export const langId = "en-JP";
 
 export const corpus = corpusJson as Corpus;
-export const cacheVersion = `corpus-${corpus.hash}`;
 export default corpus;
