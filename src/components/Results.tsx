@@ -136,7 +136,7 @@ function Results({status, progress, results, limit=1000}: {status: Status, progr
       <div className="search results-status">
         {
           headers.length > 1 ? <JumpToSelect headers={headers} /> :
-          <div className="results-status-text">{t(`status.${status}`)}</div>
+          <div className="results-status-text">{t(`status.${status.split('.', 1)[0]}`)}</div>
         }
         <Spinner src={logo} active={statusInProgress.includes(status)}/>
         {

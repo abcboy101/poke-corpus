@@ -45,12 +45,19 @@
     "error": "An error occurred",
     "network": "Network error!",
     "regex": "Invalid regex!",
+    "boolean": "Invalid query!",
     "noMatch": "No matching files!"
   },
   "statusModal": {
     "error": "An error occurred. Check your browser's developer console for additional information, and please report the issue on GitHub.",
     "network": "One or more files could not be loaded. Only partial results are shown. Please check your internet connection and try again.",
     "regex": "The regular expression you entered was invalid. Check the syntax of your search query and try again.",
+    "boolean": {
+      "parentheses": "Your Boolean search query has missing or extra parentheses.",
+      "quote": "Your Boolean search query has missing or extra quotation marks.",
+      "operand": "Your Boolean search query is missing one or more operands. If you meant to search for \"NOT\", \"AND\", or \"OR\" literally, please enclose it in quotes.",
+      "empty": "Your Boolean search query has no search keywords. If you meant to search for this text literally, please enclose it in quotes."
+    },
     "noMatch": "No files match the filters you have selected. Ensure that the games you selected were released in the languages you selected.",
     "buttons": {
       "ok": "OK"

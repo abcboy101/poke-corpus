@@ -99,7 +99,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
       const result = isBooleanQueryValid(params);
       if (result !== 'success') {
         console.error(result);
-        updateStatusComplete('regex');
+        updateStatusComplete(`boolean.${result}`);
         return;
       }
     }

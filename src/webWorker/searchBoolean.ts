@@ -1,3 +1,4 @@
+import { BooleanStatus, BooleanError } from "../utils/Status";
 import { MatchCondition, SearchParams } from "./searchWorker";
 
 export type QueryParseResult = QueryParseResultSuccess | QueryParseResultError;
@@ -9,16 +10,13 @@ export interface QueryParseResultSuccess {
 
 export interface QueryParseResultError {
   readonly success: false,
-  readonly message: QueryParseStatus
+  readonly message: BooleanError
 }
-
-export const queryParseStatus = ["parentheses", "quote", "operand", "operator", "success"] as const;
-type QueryParseStatus = typeof queryParseStatus[number];
 
 const validOperators = ['NOT', 'AND', 'OR', '"', '(', ')'] as const;
 type Operator = typeof validOperators[number];
 const queryParseResultSuccess = (result: string[]): QueryParseResultSuccess => ({'success': true, 'postfix': result});
-const queryParseResultError = (message: QueryParseStatus): QueryParseResultError => ({'success': false, 'message': message});
+const queryParseResultError = (message: BooleanError): QueryParseResultError => ({'success': false, 'message': message});
 
 /**
  * Convert a boolean query string in infix notation to an array of tokens in postfix notation using the shunting yard algorithm.
@@ -115,7 +113,7 @@ export function queryToPostfix(query: string): QueryParseResult {
 /**
  * Convert an array of boolean keywords in postfix notation to a function that evaluates the match condition.
  */
-export function postfixToMatchCondition(params: SearchParams, postfix: string[]): MatchCondition[] {
+export function postfixToMatchCondition(params: SearchParams, postfix: string[]): MatchCondition | undefined {
   const stack: MatchCondition[] = [];
   for (const keyword of postfix) {
     switch (keyword) {
@@ -166,7 +164,13 @@ export function postfixToMatchCondition(params: SearchParams, postfix: string[])
         }
     }
   }
-  return stack;
+  while (stack.length > 1) {
+    // AND all remaining terms
+    const cond2 = stack.pop()!;
+    const cond1 = stack.pop()!;
+    stack.push((line: string) => cond1(line) && cond2(line));
+  }
+  return stack.pop();
 }
 
 /* Converts the given search parameters to the match condition function. */
@@ -175,14 +179,14 @@ export function getMatchConditionBoolean(params: SearchParams): MatchCondition {
   if (result.success && result.postfix.length > 0) {
     console.debug(result.postfix);
     const stack = postfixToMatchCondition(params, result.postfix);
-    if (stack.length === 1)
-      return stack.pop()!;
+    if (stack)
+      return stack;
   }
   return () => false;
 }
 
 /* Tests if the given search parameters are a valid Boolean query. */
-export function isBooleanQueryValid(params: SearchParams): QueryParseStatus {
+export function isBooleanQueryValid(params: SearchParams): BooleanStatus {
   const result = queryToPostfix(params.query);
   if (!result.success) {
     // Error during parsing (mismatched parentheses or quotes)
@@ -190,18 +194,14 @@ export function isBooleanQueryValid(params: SearchParams): QueryParseStatus {
   }
 
   try {
-    const stack = postfixToMatchCondition(params, result.postfix);
-    if (stack.length === 1) {
-      const matchCondition = stack.pop()!;
-      matchCondition('');
+    if (postfixToMatchCondition(params, result.postfix) !== undefined)
       return 'success';
-    }
-    // Leftover keywords in stack (missing operator)
-    return 'operator';
+
+    // Empty stack (no keywords)
+    return 'empty';
   }
   catch (e) {
     // Error during evaluation (missing operand)
     return 'operand';
   }
-  return 'success';
 }
