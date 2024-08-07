@@ -1,5 +1,5 @@
 :root {
-  --font-family-latin: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI Symbol', Roboto, Oxygen,
+  --font-family-latin: --gender, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI Symbol', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
   --font-family-ja: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', 'Noto Sans CJK JP', 'Noto Sans JP';
   --font-family-ko: 'Apple SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', 'Noto Sans CJK KR', 'Noto Sans KR';
@@ -8,7 +8,6 @@
 }
 
 body {
-  margin: 0;
   font-family: var(--font-family-latin), var(--font-family-ja), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -58,4 +57,13 @@ code {
   unicode-range:
     U+00D7, U+00F7, U+2025-2026, U+25A1, U+25B3, U+25C7, U+25CB, U+25CE,
     U+2600-2602, U+2605, U+2640, U+2642, U+2660, U+2663, U+2665-2666, U+266A;
+}
+
+@font-face {
+  font-family: --gender;
+  src:
+    local('Segoe UI Symbol'),
+    local('Apple Symbols'),
+    local('Noto Emoji Regular');
+  unicode-range: U+2640, U+2642;
 }

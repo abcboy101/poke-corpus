@@ -9,7 +9,6 @@ import Spinner from './Spinner';
 import ProgressBar from './ProgressBar';
 import ViewNearby from './ViewNearby';
 import Copy from './Copy';
-import { escapeRegex } from '../utils/utils';
 import { Status, statusInProgress } from '../utils/Status';
 
 import './Results.css';
@@ -62,11 +61,16 @@ function ResultsTable({header, collection, languages, lines, displayHeader, k, c
     const speakers = Array.from(document.getElementsByClassName('speaker'));
     const params = new URLSearchParams(window.location.hash.substring(1));
     speakers.forEach(element => {
-      const query = element.getAttribute('data-var');
-      if (query !== null) {
-        params.set('query', params.get('regex') === 'true' ? escapeRegex(query) : query);
-        element.setAttribute('href', `#${params}`);
-        element.setAttribute('title', t('viewSpeaker'));
+      if (element instanceof HTMLAnchorElement) {
+        const query = element.getAttribute('data-var');
+        const collection = element.closest('table')?.getAttribute('data-collection') ?? '';
+        if (query !== null) {
+          params.set('query', query);
+          params.set('type', 'exact');
+          params.set('collections', collection);
+          element.setAttribute('href', `#${params}`);
+          element.setAttribute('title', t('viewSpeaker'));
+        }
       }
     });
   }, [t, slicedLines])
@@ -76,7 +80,7 @@ function ResultsTable({header, collection, languages, lines, displayHeader, k, c
       <h2 className={displayHeader ? undefined : 'd-none'}>{header}</h2>
       { start !== 0 ? <button className="results-notice" onClick={onClick(count)}>{t('tablePartial', {count: start})}</button> : null }
       { slicedLines.length > 0 ?
-        <table id={`results-section${k}-table`} className={`results-table collection-${corpus.collections[collection].id ?? collection.toLowerCase()}`}>
+        <table id={`results-section${k}-table`} className={`results-table collection-${corpus.collections[collection].id ?? collection.toLowerCase()}`} data-collection={collection}>
           <thead>
             <tr>
               {idIndex !== -1 ? <th><Copy callback={copyOnClick(`results-section${k}-table`)}/></th> : null}

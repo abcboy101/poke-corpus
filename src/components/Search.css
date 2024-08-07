@@ -10,7 +10,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 0.5em;
+  gap: 0.5em 0;
 }
 
 .search-bar-query, .search-bar-group, .search-button-group {
@@ -30,12 +30,6 @@
 .btn-alternate-container > * {
   grid-column: 1;
   grid-row: 1;
-}
-
-.search-options {
-  display: flex;
-  gap: 0.5em;
-  flex-wrap: wrap;
 }
 
 .search-filters-show {
@@ -96,10 +90,6 @@
 }
 
 @media (width <= 575.98px) {
-  .search-options {
-    grid-template-columns: repeat(2, auto);
-  }
-
   .search-filters {
     grid-template-columns: auto;
     grid-template-rows: auto auto 1px auto auto;

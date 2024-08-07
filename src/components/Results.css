@@ -10,6 +10,10 @@
   min-height: 1.75em;
 }
 
+.results-jump select {
+  width: 100%;
+}
+
 .results-nav {
   display: grid;
   grid-template-columns: 1fr auto auto;

@@ -1,16 +1,16 @@
 dialog[open] {
-  display: grid;
-  grid-template-rows: 1fr auto;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
-  width: 20em;
-  height: 12em;
+  width: 24em;
+  height: 14em;
   max-width: calc(100% - 1rem);
-  max-height: calc(100% - 1rem);
   padding: 1rem;
   margin: auto;
   color: var(--text);
   background-color: var(--highlight);
   border: 1px solid var(--text);
+  border-radius: 3px;
   text-align: center;
   text-wrap: balance;
   word-break: auto-phrase;
@@ -23,6 +23,7 @@ dialog::backdrop {
 
 .modal-message {
   display: flex;
+  flex: 1;
   place-items: center;
   justify-content: center;
 }

@@ -180,26 +180,24 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
           <button type="button" className={status === 'rendering' || !statusInProgress.includes(status) ? 'invisible' : 'visible'} onClick={onCancel} disabled={status === 'rendering' || !statusInProgress.includes(status)}>{t('cancel')}</button>
         </div>
         <button type="button" className={filtersVisible ? 'active' : undefined} onClick={toggleFiltersVisible}>{t('filters')}</button>
+        <select name="type" id="type" onChange={e => setType(e.target.value as SearchType)} value={type}>
+          {searchTypes.map((type) => <option key={type} value={type}>{t(`searchType.${type}`)}</option>)}
+        </select>
       </div>
       <div className="search-bar-group">
-        <div className="search-options">
-          <div className="search-option">
-            <select name="type" id="type" onChange={e => setType(e.target.value as SearchType)} value={type}>
-              {searchTypes.map((type) => <option key={type} value={type}>{t(`searchType.${type}`)}</option>)}
-            </select>
-          </div>
-          <div className="search-option">
-            <input type="checkbox" name="caseInsensitive" id="caseInsensitive" checked={caseInsensitive} onChange={e => setCaseInsensitive(e.target.checked)}/>
-            <label htmlFor="caseInsensitive">{t('caseInsensitive')}</label>
-          </div>
-          <div className="search-option">
-            <input type="checkbox" name="common" id="common" checked={common} onChange={e => setCommon(e.target.checked)}/>
-            <label htmlFor="common">{t('common')}</label>
-          </div>
-          <div className="search-option">
-            <input type="checkbox" name="script" id="script" checked={script} onChange={e => setScript(e.target.checked)}/>
-            <label htmlFor="script">{t('script')}</label>
-          </div>
+        <div className="search-option">
+        </div>
+        <div className="search-option">
+          <input type="checkbox" name="caseInsensitive" id="caseInsensitive" checked={caseInsensitive} onChange={e => setCaseInsensitive(e.target.checked)}/>
+          <label htmlFor="caseInsensitive">{t('caseInsensitive')}</label>
+        </div>
+        <div className="search-option">
+          <input type="checkbox" name="common" id="common" checked={common} onChange={e => setCommon(e.target.checked)}/>
+          <label htmlFor="common">{t('common')}</label>
+        </div>
+        <div className="search-option">
+          <input type="checkbox" name="script" id="script" checked={script} onChange={e => setScript(e.target.checked)}/>
+          <label htmlFor="script">{t('script')}</label>
         </div>
       </div>
     </div>

@@ -31,7 +31,7 @@ const loadFile = (collectionKey: string, languageKey: string, fileKey: string) =
   if (import.meta.env.DEV) {
     console.debug(`Getting ${url} from cache`);
   }
-  return ('caches' in self ? self.caches.open(cacheName).then((cache) => getFile(cache, url))
+  return (('caches' in self && indexedDB && 'databases' in indexedDB) ? self.caches.open(cacheName).then((cache) => getFile(cache, url))
     .catch((err) => {
       console.error(err);
       console.log(`Could not retrieve ${url} from cache. Fetching directly...`);
