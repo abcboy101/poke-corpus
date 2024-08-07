@@ -1,5 +1,5 @@
-import { corpus } from './corpus';
-import { cacheName, getFile, getFilePath } from './fileInfo';
+import { corpus } from '../utils/corpus';
+import { cacheName, getFile, getFilePath } from '../utils/files';
 
 /* eslint-disable no-restricted-globals */
 self.onmessage = async (message: MessageEvent<string | null>) => {

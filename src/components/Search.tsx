@@ -12,8 +12,8 @@ import { ShowModalArguments } from './Modal';
 import './Search.css';
 import '../i18n/config';
 import { formatBytesParams, localStorageGetItem, localStorageSetItem } from '../utils/utils';
-import corpus from '../webWorker/corpus';
-import { getDownloadSize, getFilePath } from '../webWorker/fileInfo';
+import corpus from '../utils/corpus';
+import { getDownloadSize, getFilePath } from '../utils/files';
 
 const searchModalWarn = 'corpus-warn';
 const searchModalThreshold = 20_000_000; // 20 MB

@@ -5,8 +5,8 @@ import CacheManagerWorker from '../webWorker/cacheManagerWorker.ts?worker';
 import Delete from "./Delete";
 
 import './CacheManager.css';
-import corpus from '../webWorker/corpus';
-import { cacheName, getFilePath, getFileCacheOnly, getDownloadSize, clearLocalFileInfo, deleteLocalFileInfo } from '../webWorker/fileInfo';
+import corpus from '../utils/corpus';
+import { cacheName, getFilePath, getFileCacheOnly, getDownloadSize, clearLocalFileInfo, deleteLocalFileInfo } from '../utils/files';
 import { formatBytesParams } from "../utils/utils";
 import Refresh from "./Refresh";
 import { ShowModalArguments } from './Modal';

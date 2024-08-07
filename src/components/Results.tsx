@@ -3,7 +3,7 @@ import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { SearchResultLines } from '../webWorker/searchWorkerManager';
-import corpus, { codeId, langId } from '../webWorker/corpus';
+import corpus, { codeId, langId } from '../utils/corpus';
 import Share from './Share';
 import Spinner from './Spinner';
 import ProgressBar from './ProgressBar';

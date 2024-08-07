@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { corpus } from '../webWorker/corpus';
+import { corpus } from '../utils/corpus';
 
 import '../i18n/config';
 

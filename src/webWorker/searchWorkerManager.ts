@@ -1,5 +1,5 @@
-import corpus from './corpus';
-import { cacheName, getFile, getFilePath } from './fileInfo';
+import corpus from '../utils/corpus';
+import { cacheName, getFile, getFilePath } from '../utils/files';
 import SearchWorker from "./searchWorker.ts?worker";
 import { SearchParams, SearchTask, SearchTaskResult, SearchTaskResultComplete, SearchTaskResultLines } from './searchWorker';
 import { SearchResultsInProgress, SearchResultsComplete, SearchResultsStatus } from '../utils/Status';

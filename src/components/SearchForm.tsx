@@ -3,7 +3,7 @@ import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { SearchParams } from '../webWorker/searchWorker';
-import { corpus, codeId } from '../webWorker/corpus';
+import { corpus, codeId } from '../utils/corpus';
 import SearchFilters from './SearchFilters';
 import { escapeRegex, localStorageGetItem, localStorageSetItem } from '../utils/utils';
 import { Status, statusInProgress } from '../utils/Status';
