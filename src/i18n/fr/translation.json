@@ -49,7 +49,7 @@
     "noMatch": "Aucun fichier correspondant"
   },
   "statusModal": {
-    "error": "Une erreur s'est produite. Consultez la console de developpement de votre navigateur pour tout information complémentaire, ainsi de nous faire remonter l'erreur sur GitHub.",
+    "error": "Une erreur s'est produite. Consultez la console de developpement de votre navigateur pour toute information complémentaire, ainsi de nous faire remonter l'erreur sur GitHub.",
     "network": "Un fichier ou plus n'ont pas pu être chargés et seuls des résultats partiels sont affichés. Vérifiez votre connexion Internet et réessayez.",
     "regex": "L'expession régulière que vous recherchez est invalide. Vérifiez sa syntaxe et réessayez.",
     "boolean": {
@@ -58,7 +58,7 @@
       "operand": "Votre recheche Booléenne a un ou plusieurs arguments manquants. Si vous recherchez littéralement \"NOT\", \"AND\", ou \"OR\", placez-les entre guillemets.",
       "empty": "Votre recheche Booléenne n'a aucun mot-clé de spécifié. Si vous recherchez littéralement ce texte, placez-le entre guillemets."
     },
-    "noMatch": "Aucun fichier ne correspond aux filtres sélectionné. Assurez-vous que les jeux sélectionnés existent dans les langues choisies.",
+    "noMatch": "Aucun fichier ne correspond aux filtres sélectionnés. Assurez-vous que les jeux sélectionnés existent dans les langues choisies.",
     "buttons": {
       "ok": "OK"
     }
@@ -106,20 +106,20 @@
     "headerActions": "Actions",
     "size": "{{amount, number}}",
     "cacheAllModal": {
-      "message": "Êtes-vous sûr·e de mettre tous les fichiers en chache ? (Taille : approximativement {{amount, number}})",
+      "message": "Êtes-vous sûr·e de mettre tous les fichiers en cache ? (Taille : approximativement {{amount, number}})",
       "buttons": {
         "yes": "Oui",
         "no": "Non"
       }
     },
     "cacheAllFailedModal": {
-      "message": "Un ou plusieurs fichiers n'ont pas pu être enregistrés dans le chache. Assurez-vous d'avoir suffisamment d'espace.",
+      "message": "Un ou plusieurs fichiers n'ont pas pu être enregistrés dans le cache. Assurez-vous d'avoir suffisamment d'espace.",
       "buttons": {
         "ok": "OK"
       }
     },
     "clearCacheModal": {
-      "message": "Êtes-vous sûr·e de vouloir vider le chache ?",
+      "message": "Êtes-vous sûr·e de vouloir vider le cache ?",
       "buttons": {
         "yes": "Oui",
         "no": "Non"
