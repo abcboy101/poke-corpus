@@ -10,7 +10,9 @@
   },
   "query": "Requête\u00A0:",
   "searchType": {
-    "regex": "Expression régulière"
+    "exact": "Phrase exacte",
+    "regex": "Expression régulière",
+    "boolean": "Booléen"
   },
   "caseInsensitive": "Insensible à la casse",
   "search": "Recherche",
