@@ -26,6 +26,14 @@
   "clearCache": "Vider le cache",
   "selectAll": "Tout sélectionner",
   "deselectAll": "Tout désélectionner",
+  "searchModal": {
+    "message": "Approximativement {{amount, number}} seront téléchargés pour exécuter cette requête. Continuer ?",
+    "checkboxDoNotShowAgain": "Ne plus montrer",
+    "buttons": {
+      "yes": "Oui",
+      "no": "Non"
+    }
+  },
   "status": {
     "initial": "Cliquez sur «\u00A0Recherche\u00A0» pour commencer.",
     "waiting": "Veuillez patienter...",
@@ -37,7 +45,23 @@
     "error": "Une erreur s'est produite",
     "network": "Erreur réseau",
     "regex": "Expression régulière non valide",
+    "boolean": "Requête invalide !",
     "noMatch": "Aucun fichier correspondant"
+  },
+  "statusModal": {
+    "error": "Une erreur s'est produite. Consultez la console de developpement de votre navigateur pour tout information complémentaire, ainsi de nous faire remonter l'erreur sur GitHub.",
+    "network": "Un fichier ou plus n'ont pas pu être chargés et seuls des résultats partiels sont affichés. Vérifiez votre connexion Internet et réessayez.",
+    "regex": "L'expession régulière que vous recherchez est invalide. Vérifiez sa syntaxe et réessayez.",
+    "boolean": {
+      "parentheses": "Votre recheche Booléenne a des paranthèses manquantes ou en trop.",
+      "quote": "Votre recheche Booléenne a des guillemets manquants ou en trop.",
+      "operand": "Votre recheche Booléenne a un ou plusieurs arguments manquants. Si vous recherchez littéralement \"NOT\", \"AND\", ou \"OR\", placez-les entre guillemets.",
+      "empty": "Votre recheche Booléenne n'a aucun mot-clé de spécifié. Si vous recherchez littéralement ce texte, placez-le entre guillemets."
+    },
+    "noMatch": "Aucun fichier ne correspond aux filtres sélectionné. Assurez-vous que les jeux sélectionnés existent dans les langues choisies.",
+    "buttons": {
+      "ok": "OK"
+    }
   },
   "jumpTo": "Aller à...",
   "copy": "Copier",
@@ -80,7 +104,27 @@
     "headerCollection": "Collection",
     "headerSize": "Taille",
     "headerActions": "Actions",
-    "size": "{{amount, number}}"
+    "size": "{{amount, number}}",
+    "cacheAllModal": {
+      "message": "Êtes-vous sûr·e de mettre tous les fichiers en chache ? (Taille : approximativement {{amount, number}})",
+      "buttons": {
+        "yes": "Oui",
+        "no": "Non"
+      }
+    },
+    "cacheAllFailedModal": {
+      "message": "Un ou plusieurs fichiers qu'on pas pu être entregistrés dans le chache. Assurez-vous d'avoir suffisamment d'espace.",
+      "buttons": {
+        "ok": "OK"
+      }
+    },
+    "clearCacheModal": {
+      "message": "Êtes-vous sûr·e de vouloir vider le chache ?",
+      "buttons": {
+        "yes": "Oui",
+        "no": "Non"
+      }
+    }
   },
   "delete": "Effacer",
   "tagline": "Un outil pour consulter le corpus Pokémon",
