@@ -2,9 +2,19 @@
   "searchType": {
     "regex": "Expression rationnelle"
   },
+  "searchModal": {
+    "message": "Approximativement {{amount, number}} seront téléchargés pour exécuter cette requête. Continuer?"
+  },
   "status": {
-    "initial": "Cliquez sur «Recherche» pour commencer.",
-    "regex": "Expression rationnelle non valide",
+    "regex": "Expression rationnelle invalide",
     "done": "Terminé!"
+  },
+  "cache": {
+    "cacheAllModal": {
+      "message": "Êtes-vous sûr·e de mettre tous les fichiers en cache? (Taille\u00A0: approximativement {{amount, number}})"
+    },
+    "clearCacheModal": {
+      "message": "Êtes-vous sûr·e de vouloir vider le cache?"
+    }
   }
 }

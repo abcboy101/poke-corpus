@@ -27,7 +27,7 @@
   "selectAll": "Tout sélectionner",
   "deselectAll": "Tout désélectionner",
   "searchModal": {
-    "message": "Approximativement {{amount, number}} seront téléchargés pour exécuter cette requête. Continuer ?",
+    "message": "Approximativement {{amount, number}} seront téléchargés pour exécuter cette requête. Continuer\u00A0?",
     "checkboxDoNotShowAgain": "Ne plus montrer",
     "buttons": {
       "yes": "Oui",
@@ -44,8 +44,8 @@
     "done": "Terminé\u00A0!",
     "error": "Une erreur s'est produite",
     "network": "Erreur réseau",
-    "regex": "Expression régulière non valide",
-    "boolean": "Requête invalide !",
+    "regex": "Expression régulière invalide",
+    "boolean": "Requête invalide",
     "noMatch": "Aucun fichier correspondant"
   },
   "statusModal": {
@@ -93,20 +93,20 @@
   "showPluralIcon_1": "1",
   "showPluralIcon_2": ">1",
   "cache": {
-    "storageStatus": "État du cache : {{val}}",
+    "storageStatus": "État du cache\u00A0: {{val}}",
     "storageEnabled": "Activé",
     "storageDisabled": "Désactivé",
-    "filesStored": "Nombre de fichiers stockés : $t(cache.files, {\"count\": {{count}} })",
+    "filesStored": "Nombre de fichiers stockés\u00A0: $t(cache.files, {\"count\": {{count}} })",
     "files": "{{count}} fichier",
     "files_other": "{{count}} fichiers",
-    "storageUsed": "Poids total utilisé : {{amount, number}}",
+    "storageUsed": "Poids total utilisé\u00A0: {{amount, number}}",
     "inProgress": "Mise en cache en cours...",
     "headerCollection": "Collection",
     "headerSize": "Taille",
     "headerActions": "Actions",
     "size": "{{amount, number}}",
     "cacheAllModal": {
-      "message": "Êtes-vous sûr·e de mettre tous les fichiers en cache ? (Taille : approximativement {{amount, number}})",
+      "message": "Êtes-vous sûr·e de mettre tous les fichiers en cache\u00A0? (Taille\u00A0: approximativement {{amount, number}})",
       "buttons": {
         "yes": "Oui",
         "no": "Non"
@@ -119,7 +119,7 @@
       }
     },
     "clearCacheModal": {
-      "message": "Êtes-vous sûr·e de vouloir vider le cache ?",
+      "message": "Êtes-vous sûr·e de vouloir vider le cache\u00A0?",
       "buttons": {
         "yes": "Oui",
         "no": "Non"
