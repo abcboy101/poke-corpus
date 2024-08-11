@@ -30,8 +30,32 @@
   --modal-backdrop-color-dark: rgba(0 0 0 / 75%);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
+@media screen {
+  @media (prefers-color-scheme: light) {
+    :root {
+      --background: var(--background-light);
+      --highlight: var(--highlight-light);
+      --text: var(--text-light);
+      --text-gray: var(--text-gray-light);
+      --progress-bar-background: var(--highlight);
+      --progress-bar-border: var(--text);
+      --progress-bar-color: var(--progress-bar-color-light);
+      --accent: var(--accent-light);
+      --gender-male-color: var(--gender-male-color-light);
+      --gender-female-color: var(--gender-female-color-light);
+      --number-singular-color: var(--number-singular-color-light);
+      --number-plural-color: var(--number-plural-color-light);
+      --version-scarlet-color: var(--version-scarlet-color-light);
+      --version-violet-color: var(--version-violet-color-light);
+      --modal-backdrop-color: var(--modal-backdrop-color-light);
+    }
+
+    body:has(.mode-system) {
+      background: var(--background-light);
+    }
+  }
+
+  .mode-light {
     --background: var(--background-light);
     --highlight: var(--highlight-light);
     --text: var(--text-light);
@@ -49,31 +73,31 @@
     --modal-backdrop-color: var(--modal-backdrop-color-light);
   }
 
-  body:has(.mode-system) {
-    background: var(--background-light);
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: var(--background-dark);
+      --highlight: var(--highlight-dark);
+      --text: var(--text-dark);
+      --text-gray: var(--text-gray-dark);
+      --progress-bar-background: var(--highlight);
+      --progress-bar-border: var(--text);
+      --progress-bar-color: var(--progress-bar-color-dark);
+      --accent: var(--accent-dark);
+      --gender-male-color: var(--gender-male-color-dark);
+      --gender-female-color: var(--gender-female-color-dark);
+      --number-singular-color: var(--number-singular-color-dark);
+      --number-plural-color: var(--number-plural-color-dark);
+      --version-scarlet-color: var(--version-scarlet-color-dark);
+      --version-violet-color: var(--version-violet-color-dark);
+      --modal-backdrop-color: var(--modal-backdrop-color-dark);
+    }
+
+    body:has(.mode-system) {
+      background: var(--background-dark);
+    }
   }
-}
 
-.mode-light {
-  --background: var(--background-light);
-  --highlight: var(--highlight-light);
-  --text: var(--text-light);
-  --text-gray: var(--text-gray-light);
-  --progress-bar-background: var(--highlight);
-  --progress-bar-border: var(--text);
-  --progress-bar-color: var(--progress-bar-color-light);
-  --accent: var(--accent-light);
-  --gender-male-color: var(--gender-male-color-light);
-  --gender-female-color: var(--gender-female-color-light);
-  --number-singular-color: var(--number-singular-color-light);
-  --number-plural-color: var(--number-plural-color-light);
-  --version-scarlet-color: var(--version-scarlet-color-light);
-  --version-violet-color: var(--version-violet-color-light);
-  --modal-backdrop-color: var(--modal-backdrop-color-light);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
+  .mode-dark {
     --background: var(--background-dark);
     --highlight: var(--highlight-dark);
     --text: var(--text-dark);
@@ -90,28 +114,6 @@
     --version-violet-color: var(--version-violet-color-dark);
     --modal-backdrop-color: var(--modal-backdrop-color-dark);
   }
-
-  body:has(.mode-system) {
-    background: var(--background-dark);
-  }
-}
-
-.mode-dark {
-  --background: var(--background-dark);
-  --highlight: var(--highlight-dark);
-  --text: var(--text-dark);
-  --text-gray: var(--text-gray-dark);
-  --progress-bar-background: var(--highlight);
-  --progress-bar-border: var(--text);
-  --progress-bar-color: var(--progress-bar-color-dark);
-  --accent: var(--accent-dark);
-  --gender-male-color: var(--gender-male-color-dark);
-  --gender-female-color: var(--gender-female-color-dark);
-  --number-singular-color: var(--number-singular-color-dark);
-  --number-plural-color: var(--number-plural-color-dark);
-  --version-scarlet-color: var(--version-scarlet-color-dark);
-  --version-violet-color: var(--version-violet-color-dark);
-  --modal-backdrop-color: var(--modal-backdrop-color-dark);
 }
 
 

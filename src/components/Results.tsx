@@ -83,7 +83,7 @@ function ResultsTable({header, collection, languages, lines, displayHeader, k, c
         <table id={`results-section${k}-table`} className={`results-table collection-${corpus.collections[collection].id ?? collection.toLowerCase()}`} data-collection={collection}>
           <thead>
             <tr>
-              {idIndex !== -1 ? <th><Copy callback={copyOnClick(`results-section${k}-table`)}/></th> : null}
+              {idIndex !== -1 ? <th className="results-table-actions-cell"><Copy callback={copyOnClick(`results-section${k}-table`)}/></th> : null}
               {languages.map((lang) => <th key={lang}><abbr title={t(`languages:${lang}.name`)}>{t(`languages:${lang}.code`)}</abbr></th>)}
             </tr>
           </thead>
@@ -91,7 +91,7 @@ function ResultsTable({header, collection, languages, lines, displayHeader, k, c
             {slicedLines.map((row, i) => {
               return <tr key={i}>
                 {idIndex !== -1 ?
-                  <td key="actions">
+                  <td key="actions" className="results-table-actions-cell">
                     <div className="results-table-actions">
                       <Share hash={`#id=${row[idIndex]}`}/>
                       <ViewNearby hash={`#file=${row[idIndex].split('.').slice(0, -1).join('.')}`}/>
