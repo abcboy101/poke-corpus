@@ -27,6 +27,11 @@
   gap: 0.25em;
 }
 
+.results-toggle-furigana {
+  vertical-align: top;
+  font-size: 50%;
+}
+
 .results-table-container {
   display: flex;
   flex-direction: column;

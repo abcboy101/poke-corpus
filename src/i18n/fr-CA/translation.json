@@ -9,6 +9,9 @@
     "regex": "Expression rationnelle invalide",
     "done": "Terminé!"
   },
+  "statusModal": {
+    "regex": "L'expession rationnelle que vous recherchez est invalide. Vérifiez sa syntaxe et réessayez."
+  },
   "cache": {
     "cacheAllModal": {
       "message": "Êtes-vous sûr·e de mettre tous les fichiers en cache? (Taille\u00A0: approximativement {{amount, number}})"

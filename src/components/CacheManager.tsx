@@ -213,15 +213,15 @@ function CacheManager({active, showModal}: {active: boolean, showModal: (args: S
           <div className="cache-entry-list">
             {
               cachedFileInfo.length > 0 &&
-              fileInfoPerCollection().map(([collectionKey, size, current], index) =>
+              fileInfoPerCollection().map(([key, size, current], index) =>
                 <div key={index} className={`cache-entry cache-entry-${current ? 'current' : 'outdated'}`}>
                   <div className="cache-entry-text">
-                    <div>{t(`collections:${collectionKey}.short`)}</div>
+                    <div><abbr title={t(`collections:${key}.name`)}>{t(`collections:${key}.short`)}</abbr></div>
                     <div>{t('cache.size', formatBytesParams(size))}</div>
                   </div>
                   <div className="cache-entry-actions">
-                    { !current && <Refresh callback={() => cacheCollections(collectionKey)}/> }
-                    <Delete callback={() => clearCachedFile(collectionKey)}/>
+                    { !current && <Refresh callback={() => cacheCollections(key)}/> }
+                    <Delete callback={() => clearCachedFile(key)}/>
                   </div>
                 </div>
               )
