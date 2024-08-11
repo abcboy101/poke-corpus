@@ -144,6 +144,28 @@
       --text-dark: white;
     }
   }
+
+  @media (prefers-reduced-transparency: reduce) {
+    @media (prefers-color-scheme: light) {
+      :root {
+        --modal-backdrop-color-light: white;
+      }
+    }
+
+    .mode-light {
+      --modal-backdrop-color-light: white;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --modal-backdrop-color-dark: black;
+      }
+    }
+
+    .mode-dark {
+      --modal-backdrop-color-dark: black;
+    }
+  }
 }
 
 
