@@ -114,6 +114,36 @@
     --version-violet-color: var(--version-violet-color-dark);
     --modal-backdrop-color: var(--modal-backdrop-color-dark);
   }
+
+  @media (prefers-contrast: more) {
+    @media (prefers-color-scheme: light) {
+      :root {
+        --background-light: white;
+        --highlight-light: white;
+        --text-light: black;
+      }
+    }
+
+    .mode-light {
+      --background-light: white;
+      --highlight-light: white;
+      --text-light: black;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background-dark: black;
+        --highlight-dark: black;
+        --text-dark: white;
+      }
+    }
+
+    .mode-dark {
+      --background-dark: black;
+      --highlight-dark: black;
+      --text-dark: white;
+    }
+  }
 }
 
 
