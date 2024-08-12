@@ -16,12 +16,13 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "start": "npm run hash && vite",
-    "build": "npm run hash && tsc && vite build",
+    "build": "npm run hash && tsc && vite build && npm run minify",
     "serve": "vite preview",
     "test": "vitest",
     "test:coverage": "vitest run --coverage --watch=false",
-    "lint": "npx eslint \"src/**/*.{tsx,ts}\" && stylelint \"**/*.css\"",
-    "hash": "python update_hash.py"
+    "lint": "eslint \"src/**/*.{tsx,ts}\" && stylelint \"**/*.css\"",
+    "hash": "python update_hash.py",
+    "minify": "minify dist/index.html > dist/index.min.html && minify dist/noscript.css > dist/noscript.min.css && python run_minify.py"
   },
   "browserslist": {
     "production": [
@@ -49,6 +50,7 @@
     "eslint-plugin-react": "^7.34.2",
     "gh-pages": "^6.1.1",
     "jsdom": "^24.1.0",
+    "minify": "^11.4.0",
     "postcss": "^8.4.38",
     "stylelint": "^16.6.1",
     "stylelint-config-standard": "^36.0.0",
