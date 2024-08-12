@@ -1,4 +1,15 @@
-import { queryToPostfix, QueryParseResultSuccess, QueryParseResultError } from "./searchBoolean";
+import { queryToPostfix, isBooleanQueryValid, QueryParseResultSuccess, QueryParseResultError } from "./searchBoolean";
+import { SearchParams } from "./searchWorker";
+
+const defaultParams: SearchParams = {
+  query: '',
+  type: 'boolean',
+  caseInsensitive: true,
+  common: true,
+  script: true,
+  collections: [],
+  languages: [],
+};
 
 test('queryToPostfix, NOT', () => {
   const {success, postfix} = queryToPostfix('NOT foo bar') as QueryParseResultSuccess;
@@ -43,16 +54,29 @@ test('queryToPostfix, complex', () => {
 });
 
 test('queryToPostfix, mismatched quotation marks', () => {
-  const {success} = queryToPostfix('"open but no close');
+  const {success, message} = queryToPostfix('"open but no close') as QueryParseResultError;
   expect(success).toBe(false);
+  expect(message).toBe('quote');
 });
 
 test('queryToPostfix, mismatched parentheses 1', () => {
-  const {success} = queryToPostfix('((missing one close)');
+  const {success, message} = queryToPostfix('((missing one close)') as QueryParseResultError;
   expect(success).toBe(false);
+  expect(message).toBe('parentheses');
 });
 
 test('queryToPostfix, mismatched parentheses 2', () => {
-  const {success} = queryToPostfix('(missing one open))');
+  const {success, message} = queryToPostfix('(missing one open))') as QueryParseResultError;
   expect(success).toBe(false);
+  expect(message).toBe('parentheses');
+});
+
+test('isBooleanQueryValid, no keywords', () => {
+  const status = isBooleanQueryValid({...defaultParams, query: '   ()   '});
+  expect(status).toBe('empty');
+});
+
+test('isBooleanQueryValid, missing operand', () => {
+  const status = isBooleanQueryValid({...defaultParams, query: 'foo OR'});
+  expect(status).toBe('operand');
 });

@@ -194,11 +194,15 @@ export function isBooleanQueryValid(params: SearchParams): BooleanStatus {
   }
 
   try {
-    if (postfixToMatchCondition(params, result.postfix) !== undefined)
-      return 'success';
+    const matchCondition = postfixToMatchCondition(params, result.postfix);
+    if (matchCondition === undefined) {
+      // Empty stack (no keywords)
+      return 'empty';
+    }
 
-    // Empty stack (no keywords)
-    return 'empty';
+    // Try evaluating it, will throw if an inner condition is undefined
+    matchCondition('');
+    return 'success';
   }
   catch (e) {
     // Error during evaluation (missing operand)
