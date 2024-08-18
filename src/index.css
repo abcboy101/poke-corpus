@@ -41,6 +41,11 @@ code {
   even though they do not have separate Unicode codepoints in the Halfwidth and Fullwidth Forms block.
   We approximate this distinction by preferring a Japanese font for these characters in Japanese text.
   Characters affected: ×, ÷, …, ♂, ♀, ♠, ♣, ♥, ♦, ★, ◎, ○, □, △, ◇, ♪, ☀, ☁, ☂ (plus ‥ for Gen 3)
+
+  Also, prioritize the Japanese appearance of characters that tend to be fullwidth in Japanese.
+  - Enclosed Alphanumerics (used in FRLG)
+  - CJK Symbols and Punctuation ('、', '。', '「', '」', '『', '』', etc.)
+  - Halfwidth and Fullwidth Forms ('！', '？', '．', etc.)
 */
 @font-face {
   font-family: --fullwidth-ja;
@@ -56,7 +61,8 @@ code {
     local('Noto Sans JP');
   unicode-range:
     U+00D7, U+00F7, U+2025-2026, U+25A1, U+25B3, U+25C7, U+25CB, U+25CE,
-    U+2600-2602, U+2605, U+2640, U+2642, U+2660, U+2663, U+2665-2666, U+266A;
+    U+2600-2602, U+2605, U+2640, U+2642, U+2660, U+2663, U+2665-2666, U+266A,
+    U+2460-24FF, U+3000-303F, U+FF00-FFEF;
 }
 
 @font-face {

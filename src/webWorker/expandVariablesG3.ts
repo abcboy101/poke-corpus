@@ -1,4 +1,4 @@
-const expandBlock = (language: string) => ({
+export const expandBlock = (language: string) => ({
   'en-US': 'BLOCK',
   'fr-FR': 'BLOC',
   'it-IT': 'MELLA', // cut off
@@ -6,8 +6,9 @@ const expandBlock = (language: string) => ({
   'es-ES': 'CUBO',
 } as const)[language] || 'BLOCK';
 
-const expandLv = (language: string, collectionKey: string = '') => ({
-  'ja-Hrkt-JP': 'Lv',
+// Used in Western RSE (34)
+// Text as displayed in the main font
+export const expandLv = (language: string, collectionKey: string = '') => ({
   'en-US': 'Lv',
   'fr-FR': 'N.',
   'it-IT': 'L.',
@@ -15,20 +16,30 @@ const expandLv = (language: string, collectionKey: string = '') => ({
   'es-ES': collectionKey == 'RubySapphire' ? 'Nv' : 'Nv.',
 } as const)[language] || 'Lv';
 
-const expandLv2 = (language: string, collectionKey: string = '') => ({
+// Used in Japanese/Western FRLGE (F9 05)
+// Text as displayed in the main font
+export const expandLv2 = (language: string) => ({
   'ja-Hrkt-JP': 'Lv',
   'en-US': 'Lv',
   'fr-FR': 'N.',
   'it-IT': 'L.',
   'de-DE': 'Lv.',
-  'es-ES': collectionKey == 'RubySapphire' ? 'Nv' : 'Nv.',
+  'es-ES': 'Nv.',
 } as const)[language] || 'Lv';
 
-const expandPP = (language: string) => language == 'de-DE' ? 'AP' : 'PP';
+// Used in German/Spanish FRLGE (F9 05 F9 18)
+// In the small font (used to display a Pokémon's level in battle, etc.), each character is 8 pixels wide.
+// These strings are 9 pixels wide, so two characters are used to display it all.
+export const expandLv3 = (language: string) => ({
+  'de-DE': 'Lv.',
+  'es-ES': 'Nv',
+} as const)[language] || 'Lv';
 
-const expandID = () => 'ID';
+export const expandPP = (language: string) => language == 'de-DE' ? 'AP' : 'PP';
 
-const expandNo = (language: string) => ({
+export const expandID = () => 'ID';
+
+export const expandNo = (language: string) => ({
   'ja-Hrkt-JP': 'No',
   'en-US': 'No',
   'fr-FR': 'Nº',
@@ -37,4 +48,5 @@ const expandNo = (language: string) => ({
   'es-ES': 'N.º',
 } as const)[language] || 'No';
 
-export { expandBlock, expandLv, expandLv2, expandPP, expandID, expandNo };
+// French BP (Battle Points)
+export const expandPco = () => 'Pco';

@@ -76,7 +76,8 @@ function remapKoreanBraille(s: string) {
 }
 
 // GBA special characters
-function remapGBASpecialCharacters(s: string) {
+function remapGBASpecialCharacters(s: string, language: string = '') {
+  const isFullwidth = language == 'ja-Hrkt-JP';
   return (s
     .replaceAll('[PK]', '⒆') // Gen 3 PK
     .replaceAll('[PKMN]', '⒆⒇') // Gen 3 PKMN
@@ -93,8 +94,23 @@ function remapGBASpecialCharacters(s: string) {
     .replaceAll('[DOWN_ARROW_2]', '↓')
     .replaceAll('[LEFT_ARROW_2]', '←')
     .replaceAll('[RIGHT_ARROW_2]', '→')
-    .replaceAll('[PLUS]', '+')
-    .replaceAll('[UNDERSCORE]', '_')
+    .replaceAll('[PLUS]', isFullwidth ? '＋' : '+')
+    // LV, PP, ID, NO are handled in postprocess
+    .replaceAll('[UNDERSCORE]', '＿') // also fullwidth in EFIGS, wider than EMOJI_UNDERSCORE
+    .replaceAll('[CIRCLE_1]', '①')
+    .replaceAll('[CIRCLE_2]', '②')
+    .replaceAll('[CIRCLE_3]', '③')
+    .replaceAll('[CIRCLE_4]', '④')
+    .replaceAll('[CIRCLE_5]', '⑤')
+    .replaceAll('[CIRCLE_6]', '⑥')
+    .replaceAll('[CIRCLE_7]', '⑦')
+    .replaceAll('[CIRCLE_8]', '⑧')
+    .replaceAll('[CIRCLE_9]', '⑨')
+    .replaceAll('[ROUND_LEFT_PAREN]', '（') // also fullwidth in EFIGS
+    .replaceAll('[ROUND_RIGHT_PAREN]', '）') // also fullwidth in EFIGS
+    .replaceAll('[CIRCLE_DOT]', '◎')
+    .replaceAll('[TRIANGLE]', '△')
+    .replaceAll('[BIG_MULT_X]', '✕') // EFIGS, larger than regular '×'
 
     .replaceAll('[KANJI_BIG]', '大')
     .replaceAll('[KANJI_SMALL]', '小')
@@ -251,10 +267,11 @@ function preprocessMetadata(s: string) {
  *
  * Returns the resulting string.
  */
-function preprocessString(s: string, collectionKey: string) {
+function preprocessString(s: string, collectionKey: string, language: string = '') {
   switch (collectionKey) {
+    case "FireRedLeafGreen":
     case "Emerald":
-      s = remapGBASpecialCharacters(s);
+      s = remapGBASpecialCharacters(s, language);
       break;
 
     case "DiamondPearl":
@@ -413,7 +430,7 @@ const versionBranchSV = (form1: string, form2: string) => versionBranch(form1, f
  * Returns the resulting HTML string.
  */
 function postprocessString(s: string, collectionKey: string, language: string = '') {
-  const isGen3 = ["Emerald"].includes(collectionKey);
+  const isGen3 = ["FireRedLeafGreen", "Emerald"].includes(collectionKey);
   const isGen4 = ["DiamondPearl", "Platinum", "HeartGoldSoulSilver"].includes(collectionKey);
   const isGen5 = ["BlackWhite", "Black2White2"].includes(collectionKey);
   const isBDSP = collectionKey == "BrilliantDiamondShiningPearl";
@@ -475,14 +492,17 @@ function postprocessString(s: string, collectionKey: string, language: string = 
     .replaceAll('[MELLE]', '\u{F1102}MELLE\u{F1103}')
 
     // Gender unknown symbol (blank space with the same width as ♂/♀)
+    // Also used as a figure space when printing variables, but this doesn't occur in regular text
     .replaceAll('[UNK_SPACER]', '\u2002')
 
     // Special characters (Lv, PP, ID, No)
     .replaceAll('[LV]', `\u{F1102}<span class="literal-small">${g3.expandLv(language)}</span>\u{F1103}`)
     .replaceAll('[LV_2]', `\u{F1102}<span class="literal-small">${g3.expandLv2(language)}</span>\u{F1103}`)
+    .replaceAll('[LV_3]', `\u{F1102}<span class="literal-small">${g3.expandLv3(language)}</span>\u{F1103}`)
     .replaceAll('[PP]', `\u{F1102}<span class="literal-small">${g3.expandPP(language)}</span>\u{F1103}`)
     .replaceAll('[ID]', `\u{F1102}<span class="literal-small">${g3.expandID()}</span>\u{F1103}`)
     .replaceAll('[NO]', `\u{F1102}<span class="literal-small">${g3.expandNo(language)}</span>\u{F1103}`)
+    .replaceAll('[Pco]', `\u{F1102}<span class="literal-small">${g3.expandPco()}</span>\u{F1103}`)
   ): s;
 
   // Text formatting
@@ -614,6 +634,7 @@ function postprocessString(s: string, collectionKey: string, language: string = 
     .replaceAll('[STR_VAR_1]', '<span class="var">[STR_VAR_1]</span>') // FD 02
     .replaceAll('[STR_VAR_2]', '<span class="var">[STR_VAR_2]</span>') // FD 03
     .replaceAll('[STR_VAR_3]', '<span class="var">[STR_VAR_3]</span>') // FD 04
+    .replaceAll('[RIVAL]', '<span class="var">[RIVAL]</span>') // FD 06 (FRLG)
     .replaceAll(/(\[B_[^\]]+?\])/gu, '<span class="var">$1</span>') // FD xx (battle string placeholders)
 
     .replaceAll(/\u{F1102}\u{F1200}(.*?)\u{F1104}(.*?)\u{F1103}/gu, (_, male, female) => genderBranch(male, female)) // FD 05, FD 06

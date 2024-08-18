@@ -96,7 +96,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
 
   try {
     // Load files
-    const preprocessedFiles = languages.map(((languageKey, i) => [languageKey, preprocessString(files[i], collectionKey)] as const));
+    const preprocessedFiles = languages.map(((languageKey, i) => [languageKey, preprocessString(files[i], collectionKey, languageKey)] as const));
 
     // Process files
     const processedFiles = preprocessedFiles.map(([languageKey, data]) => {
@@ -145,8 +145,9 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
     });
 
     // Substituted string literals vary by language, so we need to look up what the string is in the appropriate language here
+    const messageIdIndex = languageKeys.indexOf(codeId);
     const replaceLiterals = (s: string, languageIndex: number) => {
-      if (literals === undefined || languages[languageIndex] === codeId)
+      if (literals === undefined || languageIndex === messageIdIndex)
         return s;
 
       for (const [literalId, {branch, line}] of Object.entries(literals)) {
@@ -170,12 +171,18 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
     };
 
     const lineKeysSorted = Array.from(lineKeysSet).sort((a, b) => a - b);
-    const fileResults: string[][] = lineKeysSorted.map((i) => fileData.map((lines, languageIndex) => {
-      let line = lines[i];
-      line = replaceSpeaker(lines[i] ?? '', languageIndex);
-      line = replaceLiterals(line, languageIndex);
-      return postprocessString(line, collectionKey, languages[languageIndex]);
-    }));
+    const fileResults: string[][] = ((messageIdIndex === -1) ? lineKeysSorted :
+      lineKeysSorted.filter((i) => {
+        // Ignore lines that don't correspond to text data (blank lines, text file headers) based on the message ID file
+        const messageId = fileData[messageIdIndex][i];
+        return messageId !== '' && messageId !== '~~~~~~~~~~~~~~~' && !messageId.startsWith('Text File : ');
+      }))
+      .map((i) => fileData.map((lines, languageIndex) => {
+        let line = lines[i];
+        line = replaceSpeaker(lines[i] ?? '', languageIndex);
+        line = replaceLiterals(line, languageIndex);
+        return postprocessString(line, collectionKey, languages[languageIndex]);
+      }));
 
     notifyComplete('done', {
       collection: collectionKey,

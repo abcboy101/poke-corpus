@@ -54,7 +54,7 @@
   display: none;
 }
 
-@media (width <= 575.98px) {
+@media (width <= 767.98px) {
   .results-status {
     grid-template-columns: 1em 1fr auto;
   }
@@ -62,9 +62,7 @@
   .results-jump, .results-status-text {
     grid-column: span 3;
   }
-}
 
-@media (width <= 767.98px) {
   .results-nav-range-short {
     display: block;
   }

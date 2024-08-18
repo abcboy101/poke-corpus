@@ -153,8 +153,10 @@
         "data"
       ]
     },
-    "FireRed": {
+    "FireRedLeafGreen": {
+      "id": "frlg",
       "languages": [
+        "qid-ZZ",
         "ja-Hrkt-JP",
         "en-US",
         "fr-FR",
@@ -162,7 +164,7 @@
         "de-DE",
         "es-ES"
       ],
-      "structured": false,
+      "structured": true,
       "version": {
         "ja-JP": "1.0",
         "en-US": "1.1",
@@ -172,30 +174,14 @@
         "es-ES": "1.0"
       },
       "files": [
-        "data"
-      ]
-    },
-    "LeafGreen": {
-      "languages": [
-        "ja-Hrkt-JP",
-        "en-US",
-        "fr-FR",
-        "it-IT",
-        "de-DE",
-        "es-ES"
+        "msg"
       ],
-      "structured": false,
-      "version": {
-        "ja-JP": "1.0",
-        "en-US": "1.1",
-        "fr-FR": "1.0",
-        "it-IT": "1.0",
-        "de-DE": "1.0",
-        "es-ES": "1.0"
-      },
-      "files": [
-        "data"
-      ]
+      "literals": {
+        "KUN": {
+          "branch": "gender",
+          "line": [9312, 9313]
+        }
+      }
     },
     "Emerald": {
       "id": "e",
