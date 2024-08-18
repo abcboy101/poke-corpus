@@ -491,9 +491,12 @@ function postprocessString(s: string, collectionKey: string, language: string = 
     .replaceAll('[POKEMELLE]', '\u{F1102}<sup>P</sup><sub>O</sub><sup>K</sup><sub>é</sub>MELLE\u{F1103}')
     .replaceAll('[MELLE]', '\u{F1102}MELLE\u{F1103}')
 
+    // Pco (French BP)
+    .replaceAll('[Pco]', `\u{F1102}${g3.expandPco()}\u{F1103}`)
+
     // Gender unknown symbol (blank space with the same width as ♂/♀)
-    // Also used as a figure space when printing variables, but this doesn't occur in regular text
-    .replaceAll('[UNK_SPACER]', '\u2002')
+    // Also used as a figure space when printing numeric variables
+    .replaceAll('[UNK_SPACER]', '\u2007')
 
     // Special characters (Lv, PP, ID, No)
     .replaceAll('[LV]', `\u{F1102}<span class="literal-small">${g3.expandLv(language)}</span>\u{F1103}`)
@@ -502,7 +505,6 @@ function postprocessString(s: string, collectionKey: string, language: string = 
     .replaceAll('[PP]', `\u{F1102}<span class="literal-small">${g3.expandPP(language)}</span>\u{F1103}`)
     .replaceAll('[ID]', `\u{F1102}<span class="literal-small">${g3.expandID()}</span>\u{F1103}`)
     .replaceAll('[NO]', `\u{F1102}<span class="literal-small">${g3.expandNo(language)}</span>\u{F1103}`)
-    .replaceAll('[Pco]', `\u{F1102}<span class="literal-small">${g3.expandPco()}</span>\u{F1103}`)
   ): s;
 
   // Text formatting
