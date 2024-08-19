@@ -1,11 +1,15 @@
 {
   "title": "寶可語料庫{{version}}",
-  "language": "語言：",
-  "mode": "色調：",
-  "modes": {
-    "system": "系統",
-    "light": "淺色",
-    "dark": "深色"
+  "options": {
+    "options": "設定",
+    "language": "語言：",
+    "mode": "色調：",
+    "modes": {
+      "system": "系統",
+      "light": "淺色",
+      "dark": "深色"
+    },
+    "close": "關閉"
   },
   "query": "查詢：",
   "searchType": {

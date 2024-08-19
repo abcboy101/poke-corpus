@@ -1,11 +1,15 @@
 {
   "title": "ポケコーパス{{version}}",
-  "language": "言語：",
-  "mode": "配色：",
-  "modes": {
-    "system": "システム",
-    "light": "ライト",
-    "dark": "ダーク"
+  "options": {
+    "options": "設定",
+    "language": "言語：",
+    "mode": "配色：",
+    "modes": {
+      "system": "システム",
+      "light": "ライト",
+      "dark": "ダーク"
+    },
+    "close": "閉じる"
   },
   "query": "クエリ：",
   "searchType": {

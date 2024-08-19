@@ -1,12 +1,16 @@
 {
   "title": "Poké Corpus {{version}}",
   "version": "β",
-  "language": "Langue\u00A0:",
-  "mode": "Thème\u00A0:",
-  "modes": {
-    "system": "Système",
-    "light": "Clair",
-    "dark": "Sombre"
+  "options": {
+    "options": "Paramètres",
+    "language": "Langue\u00A0:",
+    "mode": "Thème\u00A0:",
+    "modes": {
+      "system": "Système",
+      "light": "Clair",
+      "dark": "Sombre"
+    },
+    "close": "Fermer"
   },
   "query": "Requête\u00A0:",
   "searchType": {

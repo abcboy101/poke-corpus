@@ -1,15 +1,15 @@
-import { useEffect, useRef, useState } from 'react';
+import { ReactNode, useEffect, useRef, useState } from 'react';
 import './Modal.css';
 
 interface ModalButton {
-  message: string
+  message: ReactNode
   callback?: () => void
   checkboxCallback?: (checked: boolean) => void
   autoFocus?: boolean
 }
 
 interface ModalCheckbox {
-  message: string
+  message: ReactNode
   checked: boolean
 }
 
@@ -24,14 +24,14 @@ export interface ModalArgumentsInactive {
 
 export interface ModalArgumentsActive {
   // active: true
-  message: string
+  message: ReactNode
   buttons: ModalButton[]
   checkbox?: undefined
 }
 
 export interface ModalArgumentsActiveCheckbox {
   // active: true
-  message: string
+  message: ReactNode
   buttons: ModalButton[]
   checkbox: ModalCheckbox
 }
@@ -59,7 +59,7 @@ function Modal({message, buttons, checkbox}: ModalArguments) {
         modal.showModal();
         if (buttons) {
           const autofocusIndex = buttons.findIndex((button) => button.autoFocus)
-          if (buttonsElement !== null)
+          if (buttonsElement !== null && autofocusIndex !== -1)
             Array.from(buttonsElement.children).filter((child) => child instanceof HTMLButtonElement)[autofocusIndex].focus();
         }
       }

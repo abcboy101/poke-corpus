@@ -1,11 +1,15 @@
 {
   "title": "宝可语料库{{version}}",
-  "language": "语言：",
-  "mode": "色调：",
-  "modes": {
-    "system": "系统",
-    "light": "浅色",
-    "dark": "深色"
+  "options": {
+    "options": "设置",
+    "language": "语言：",
+    "mode": "色调：",
+    "modes": {
+      "system": "系统",
+      "light": "浅色",
+      "dark": "深色"
+    },
+    "close": "关闭"
   },
   "query": "查询：",
   "searchType": {

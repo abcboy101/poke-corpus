@@ -264,6 +264,7 @@ input[type="text"], select, select:focus, input[type="submit"], input[type="butt
   border-radius: 3px;
   padding: 0 4px;
   height: 2em;
+  line-height: var(--line-height);
 }
 
 button.link {
@@ -332,28 +333,6 @@ table th, table td {
   width: 1.25em;
   margin-bottom: 0.25em;
   vertical-align: middle;
-}
-
-.header-options {
-  display: grid;
-  max-width: 100%;
-  gap: 0.25rem 0.5rem;
-  grid-template-columns: repeat(2, auto);
-}
-
-*[dir="ltr"] .header-options {
-  float: right;
-}
-
-*[dir="rtl"] .header-options {
-  float: left;
-}
-
-.header-options label {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  white-space: nowrap;
 }
 
 .view-search .cache,

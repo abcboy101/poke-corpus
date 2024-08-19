@@ -1,11 +1,15 @@
 {
   "title": "포켓말뭉치{{version}}",
-  "language": "언어:",
-  "mode": "배색:",
-  "modes": {
-    "system": "시스템",
-    "light": "밝게",
-    "dark": "어둡게"
+  "options": {
+    "options": "설정",
+    "language": "언어:",
+    "mode": "배색:",
+    "modes": {
+      "system": "시스템",
+      "light": "밝게",
+      "dark": "어둡게"
+    },
+    "close": "닫기"
   },
   "query": "쿼리:",
   "searchType": {
