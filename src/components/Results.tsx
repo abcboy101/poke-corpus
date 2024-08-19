@@ -1,4 +1,4 @@
-import { Dispatch, MouseEventHandler, SetStateAction, useEffect, useState } from 'react';
+import { Dispatch, MouseEventHandler, SetStateAction, useEffect, useMemo, useState } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
@@ -111,7 +111,6 @@ function ResultsTable({header, collection, languages, lines, displayHeader, k, c
 
 function Results({status, progress, results, limit=1000}: {status: Status, progress: number, results: readonly SearchResultLines[], limit?: number}) {
   const { t } = useTranslation();
-  const headers = results.map(({collection, file}) => t('tableHeader', {collection: t(`collections:${collection}.name`), file: t(`files:${file}`), interpolation: {escapeValue: false}}));
   const [showVariables, setShowVariables] = useState(true);
   const [showAllCharacters, setShowAllCharacters] = useState(false);
   const [showGender, setShowGender] = useState(2);
@@ -120,16 +119,23 @@ function Results({status, progress, results, limit=1000}: {status: Status, progr
   const [offset, setOffset] = useState(0);
   useEffect(() => setOffset(0), [results]);
 
-  let count = 0;
-  const resultTables: JSX.Element[] = [];
-  results.forEach(({collection, lines, languages, displayHeader}, k) => {
-    const start = Math.max(0, Math.min(lines.length, offset - count));
-    const end = Math.max(0, Math.min(lines.length, (offset + limit) - count));
-    resultTables.push(
-      <ResultsTable key={k} header={headers[k]} collection={collection} lines={lines} languages={languages} displayHeader={displayHeader} k={k} count={count} start={start} end={end} setOffset={setOffset} />
-    );
-    count += lines.length;
-  });
+  // Wrap in useMemo to prevent expensive recalculations.
+  // Only changes to results, limit, or offset will affect the generated HTML.
+  // All of the other toggles only change a CSS class.
+  const [count, headers, resultTables] = useMemo(() => {
+    let count = 0;
+    const headers = results.map(({collection, file}) => t('tableHeader', {collection: t(`collections:${collection}.name`), file: t(`files:${file}`), interpolation: {escapeValue: false}}));
+    const resultTables: JSX.Element[] = [];
+    results.forEach(({collection, lines, languages, displayHeader}, k) => {
+      const start = Math.max(0, Math.min(lines.length, offset - count));
+      const end = Math.max(0, Math.min(lines.length, (offset + limit) - count));
+      resultTables.push(
+        <ResultsTable key={k} header={headers[k]} collection={collection} lines={lines} languages={languages} displayHeader={displayHeader} k={k} count={count} start={start} end={end} setOffset={setOffset} />
+      );
+      count += lines.length;
+    });
+    return [count, headers, resultTables] as const;
+  }, [results, limit, offset]);
 
   return (
     <>
