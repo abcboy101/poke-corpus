@@ -92,8 +92,8 @@ function Modal({message, buttons, checkbox}: ModalArguments) {
     }
     <div ref={buttonsRef} className="modal-button-group">
     {
-      buttons && buttons.map(({message, callback, checkboxCallback, autoFocus}) =>
-        <button key={message} type="button" onClick={onClick(callback, checkboxCallback)} autoFocus={autoFocus}>{message}</button>)
+      buttons && buttons.map(({message, callback, checkboxCallback, autoFocus}, i) =>
+        <button key={i} type="button" onClick={onClick(callback, checkboxCallback)} autoFocus={autoFocus}>{message}</button>)
     }
     </div>
   </dialog>
