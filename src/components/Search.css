@@ -102,7 +102,7 @@
 
 @media (width >= 576px) and (width <= 767.98px) {
   .search-filters {
-    grid-template-columns: 4fr 1px 3fr;
+    grid-template-columns: 2fr 1px minmax(14em, 1fr);
   }
 }
 
