@@ -550,7 +550,6 @@ function postprocessString(s: string, collectionKey: string, language: string = 
     .replaceAll('\u{F0201}\u{F0200}', '<span class="r">\\r</span><span class="n">\\n</span><br>') // \r\n
     .replaceAll('\u{F0202}\u{F0200}', '<span class="c">\\c</span><span class="n">\\n</span><br>') // \c\n
     .replaceAll('\u{F0200}\u{F0202}', '<span class="n">\\n</span><span class="c">\\c</span><br>') // \n\c (Ranch)
-    .replaceAll('\u{F02FF}\u{F0200}', '<span class="e">\\e</span><span class="n">\\n</span><br>') // \e\n (Emerald)
   );
   s = isGen4 ? (s
     .replaceAll('\u{F0207}', '<span class="c">[VAR 0207]</span><br>') // [VAR 0207]
@@ -560,8 +559,8 @@ function postprocessString(s: string, collectionKey: string, language: string = 
     .replaceAll('\u{F0201}', '<span class="r">\\r</span><br>') // \r
     .replaceAll('\u{F0202}', '<span class="c">\\c</span><br>') // \c
     .replaceAll('\u{F0200}', '<span class="n">\\n</span><br>') // \n
-    .replaceAll('\u{F02FF}', '<span class="e">\\e</span><br>') // \e
 
+    .replaceAll('\u{F02FF}', '<span class="e">\\e</span>') // \e
     .replaceAll('\u{F0203}', '<span class="tab">\t</span>')
   );
 

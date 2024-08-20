@@ -25,7 +25,7 @@
   white-space: normal;
 }
 
-.control-hide .r, .control-hide .c, .control-hide .n, .control-hide .e, .control-hide .vertoffset,
+.control-hide .r, .control-hide .c, .control-hide .n, .control-hide .vertoffset,
 .control-show span.soft, .control-hide wbr.soft {
   display: none;
 }
