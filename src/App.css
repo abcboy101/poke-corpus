@@ -180,6 +180,8 @@ body {
   height: 100dvh;
   margin: 0;
   overflow: auto;
+  font-size: 16px;
+  line-height: var(--line-height);
 }
 
 body:has(.mode-light) {
@@ -264,7 +266,6 @@ input[type="text"], select, select:focus, input[type="submit"], input[type="butt
   border-radius: 3px;
   padding: 0 4px;
   height: 2em;
-  line-height: var(--line-height);
 }
 
 button.link {
@@ -299,6 +300,11 @@ input[type="text"]:disabled, select:disabled, input[type="submit"]:disabled, inp
   white-space: nowrap;
 }
 
+button svg, a svg {
+  position: relative;
+  top: 0.1em;
+}
+
 footer {
   text-align: center;
 }
@@ -325,7 +331,6 @@ table th, table td {
   background: var(--background);
   color: var(--text);
   overflow: auto;
-  line-height: var(--line-height);
 }
 
 .header-logo {

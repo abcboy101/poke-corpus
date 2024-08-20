@@ -11,10 +11,8 @@
   gap: 0.25rem;
 }
 
-.header-options {
-  display: flex;
-  place-items: center;
-  gap: 0.25em;
+.header-options svg {
+  margin-inline-end: 0.25em;
 }
 
 *[dir="ltr"] .header-options {
