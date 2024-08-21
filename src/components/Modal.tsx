@@ -77,10 +77,12 @@ function Modal({message, buttons, checkbox}: ModalArguments) {
     }
   );
 
+  const onCancel = () => setOpen(false);
+
   if (!open) {
     return null;
   }
-  return <dialog ref={modalRef} id="modal" className="modal">
+  return <dialog ref={modalRef} id="modal" className="modal" onCancel={onCancel}>
     <div className="modal-message">{message}</div>
     { checkbox &&
     <div className="modal-checkbox">

@@ -8,7 +8,7 @@ dialog[open] {
   padding: 1rem;
   margin: auto;
   color: var(--text);
-  background-color: var(--highlight);
+  background-color: var(--background);
   border: 1px solid var(--text);
   border-radius: 3px;
   text-align: center;

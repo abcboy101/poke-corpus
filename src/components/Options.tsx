@@ -17,7 +17,7 @@ function OptionsMenu({mode, setMode}: {mode: Mode, setMode: Dispatch<SetStateAct
     <div className="options">
       <div className="options-group">
         <label htmlFor="language">{t('options.language')}</label>
-        <select name="language" id="language" onChange={(e) => i18next.changeLanguage(e.target.value)} defaultValue={i18next.language}>
+        <select name="language" id="language" onChange={(e) => i18next.changeLanguage(e.target.value)} defaultValue={i18next.language} autoFocus={true}>
           {supportedLngs.map((lang) => <option key={lang.code} value={lang.code} lang={lang.code}>{lang.name}</option>)}
         </select>
       </div>
