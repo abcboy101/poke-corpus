@@ -127,9 +127,18 @@ function CacheManager({active, showModal}: {active: boolean, showModal: (args: S
     }
   };
 
+  // Refresh on page load
   useEffect(() => {
     checkCacheStorageEnabled();
     checkCachedFiles();
+  }, []);
+
+  // Refresh on switch to cache manager
+  useEffect(() => {
+    if (active) {
+      checkCacheStorageEnabled();
+      checkCachedFiles();
+    }
   }, [active]);
 
   const storageUsedAmount = () => formatBytesParams(cachedFileInfo.map(([, size]) => size).reduce((a, b) => a + b, 0));

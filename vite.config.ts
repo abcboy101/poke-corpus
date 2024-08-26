@@ -12,6 +12,12 @@ function manualChunks(id: string) {
   else if (id.includes('node_modules')) {
     return 'vendor';
   }
+  else if (/i18n\/(.+?)\//.test(id)) {
+    const match = /i18n\/(.+?)\//.exec(id);
+    if (match) {
+      return `i18n-${match[1].split('-')[0]}`;
+    }
+  }
 }
 
 // https://vitejs.dev/config/
@@ -23,7 +29,7 @@ export default defineConfig({
     stylelint(),
     VitePWA({
       registerType: 'autoUpdate',
-      workbox: { globPatterns: ['**/*.{js,css,html,ico,png,json}'] },
+      workbox: { globPatterns: ['**/{!(i18n*),i18n-en*}.{js,css,html,ico,png,json}'] }, // only pre-cache the English i18n file
       manifest: false,
     }),
   ],

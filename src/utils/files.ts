@@ -76,8 +76,11 @@ const getIndexedDB = (): Promise<IDBDatabase> => {
     request.onupgradeneeded = () => {
       const db = request.result;
       db.createObjectStore(dbObjectStore);
-      console.log('Created object store');
-      resolve(db);
+      if (request.transaction !== null) {
+        request.transaction.oncomplete = () => {
+          console.log('Created object store');
+        };
+      }
     };
     request.onsuccess = () => resolve(request.result);
     request.onerror = () => reject(request.error);
@@ -91,6 +94,7 @@ const getLocalFileInfo = (path: string): Promise<FileInfo> => (
     const transaction = db.transaction([dbObjectStore], "readonly");
     const objectStore = transaction.objectStore(dbObjectStore);
     const request = objectStore.get(path);
+    db.close();
     return new Promise<FileInfo>((resolve, reject) => {
       request.onsuccess = () => resolve(request.result);
       request.onerror = () => reject(request.error);
@@ -103,6 +107,7 @@ const setLocalFileInfo = (path: string): Promise<boolean> => (
     const transaction = db.transaction([dbObjectStore], "readwrite");
     const objectStore = transaction.objectStore(dbObjectStore);
     const request = objectStore.put(filesRemote[path], path);
+    db.close();
     return new Promise<boolean>((resolve, reject) => {
       request.onsuccess = () => resolve(request.result === (path as IDBValidKey));
       request.onerror = () => reject(request.error);
@@ -115,6 +120,7 @@ export const deleteLocalFileInfo = (path: string): Promise<boolean> => (
     const transaction = db.transaction([dbObjectStore], "readwrite");
     const objectStore = transaction.objectStore(dbObjectStore);
     const request = objectStore.delete(path);
+    db.close();
     return new Promise<boolean>((resolve, reject) => {
       request.onsuccess = () => resolve(request.result !== undefined);
       request.onerror = () => reject(request.error);
@@ -133,6 +139,7 @@ export const clearLocalFileInfo = (): Promise<boolean> => (
     const transaction = db.transaction(["files"], "readwrite");
     const objectStore = transaction.objectStore("files");
     const request = objectStore.clear();
+    db.close();
     return new Promise<boolean>((resolve, reject) => {
       request.onsuccess = () => resolve(request === undefined);
       request.onerror = () => reject(request.error);

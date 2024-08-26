@@ -10,10 +10,12 @@
       "light": "Light",
       "dark": "Dark"
     },
+    "network": "The selected language could not be loaded. Please check your internet connection and try again.",
     "close": "Close"
   },
   "query": "Query:",
   "searchType": {
+    "searchType": "Search mode:",
     "exact": "Exact phrase",
     "regex": "Regex",
     "boolean": "Boolean"
