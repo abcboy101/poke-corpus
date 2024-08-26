@@ -1,9 +1,9 @@
-import { defineConfig } from 'vitest/config'
-import react from '@vitejs/plugin-react-swc'
-import autoprefixer from 'autoprefixer'
-import eslint from 'vite-plugin-eslint2'
-import stylelint from 'vite-plugin-stylelint'
-import { VitePWA } from 'vite-plugin-pwa'
+import { defineConfig } from 'vitest/config';
+import react from '@vitejs/plugin-react-swc';
+import autoprefixer from 'autoprefixer';
+import eslint from 'vite-plugin-eslint2';
+import stylelint from 'vite-plugin-stylelint';
+import { VitePWA } from 'vite-plugin-pwa';
 
 function manualChunks(id: string) {
   if (id.includes('workbox')) {
@@ -23,18 +23,14 @@ export default defineConfig({
     stylelint(),
     VitePWA({
       registerType: 'autoUpdate',
-      workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,json}']
-      },
+      workbox: { globPatterns: ['**/*.{js,css,html,ico,png,json}'] },
       manifest: false,
     }),
   ],
   css: {
     postcss: {
-      plugins: [
-        autoprefixer()
-      ]
-    }
+      plugins: [autoprefixer()],
+    },
   },
   test: {
     globals: true,
@@ -46,16 +42,16 @@ export default defineConfig({
       reporter: ['text', 'json', 'html'],
       include: ['src/**/*'],
       exclude: [],
-    }
+    },
   },
   optimizeDeps: {
-    include: ['compression-streams-polyfill']
+    include: ['compression-streams-polyfill'],
   },
   build: {
     rollupOptions: {
       output: {
-        manualChunks: manualChunks
-      }
-    }
-  }
-})
+        manualChunks: manualChunks,
+      },
+    },
+  },
+});

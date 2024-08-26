@@ -465,20 +465,20 @@ function postprocessString(s: string, collectionKey: string, language: string = 
   s = isGen4 ? (s
     .replaceAll('[VAR 0207]', '\u{F0207}')
     .replaceAll('[VAR 0208]', '\u{F0208}')
-  ): s;
+  ) : s;
   s = isGen3 ? (s
     .replaceAll('\\e', '\u{F02FF}')
-  ): s;
+  ) : s;
 
   // PKMN
   s = (isGen3 || isNDS) ? (s
-    .replaceAll('\u2486', '<sup>P</sup><sub>K</sub>') // Gen 5 PK [also used privately for Gen 4 and earlier]
-    .replaceAll('\u2487', '<sup>M</sup><sub>N</sub>') // Gen 5 MN [also used privately for Gen 4 and earlier]
-  ): s;
+    .replaceAll('⒆', '<sup>P</sup><sub>K</sub>') // Gen 5 PK [also used privately for Gen 4 and earlier]
+    .replaceAll('⒇', '<sup>M</sup><sub>N</sub>') // Gen 5 MN [also used privately for Gen 4 and earlier]
+  ) : s;
   s = is3DS ? (s
     .replaceAll('\uE0A7', '<sup>P</sup><sub>K</sub>') // 3DS PK (unused)
     .replaceAll('\uE0A8', '<sup>M</sup><sub>N</sub>') // 3DS MN (unused)
-  ): s;
+  ) : s;
 
   // Literals
   s = isGen3 ? (s
@@ -505,7 +505,7 @@ function postprocessString(s: string, collectionKey: string, language: string = 
     .replaceAll('[PP]', `\u{F1102}<span class="literal-small">${g3.expandPP(language)}</span>\u{F1103}`)
     .replaceAll('[ID]', `\u{F1102}<span class="literal-small">${g3.expandID()}</span>\u{F1103}`)
     .replaceAll('[NO]', `\u{F1102}<span class="literal-small">${g3.expandNo(language)}</span>\u{F1103}`)
-  ): s;
+  ) : s;
 
   // Text formatting
   s = isBDSP ? (s
@@ -513,7 +513,7 @@ function postprocessString(s: string, collectionKey: string, language: string = 
     .replaceAll(/\u{F0106}size=(.*?)\u{F0107}(.*?)\u{F0106}\/size\u{F0107}/gu, '<span style="font-size: $1">$2</span>') // BDSP size
     .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\u{F0106}pos=(.*?)\u{F0107}(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>') // BDSP pos
     .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\u{F0106}line-indent=(.*?)\u{F0107}(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>') // BDSP line-indent
-  ): s;
+  ) : s;
   s = isGen4 ? (s
     .replaceAll(/\[VAR FF01\(FF43\)\]\[VAR FF01\(30B3\)\]/gu, '') // Gen 4 font size (empty string at 200%)
     .replaceAll(/\[VAR FF01\(FF43\)\](.+?)(?:\[VAR FF01\(30B3\)\]|[\u{F0201}\u{F0202}\u{F0200}]|$)/gu, '<span class="line-font-size-200"><span class="text-font-size-200">$1</span></span>') // Gen 4 font size (text at 200%)
@@ -524,28 +524,28 @@ function postprocessString(s: string, collectionKey: string, language: string = 
     .replaceAll(/\[VAR 0204\(..([0-9A-F]{2})\)\]/gu, (_, pad) => `<div style="height: ${parseInt(pad, 16)}pt"></div>`) // Gen 4 Y coords
     .replaceAll(/\[VAR 0205\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span class="line-align-center">$1</span>') // HGSS
     .replaceAll(/\[VAR 0206\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span class="line-align-right">$1</span>') // HGSS
-  ): s;
+  ) : s;
   s = isModern ? (s
     .replaceAll(/\[VAR BD02\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span class="line-align-center">$1</span>') // Gen 5+
     .replaceAll(/\[VAR BD03\(([0-9A-F]{4})\)\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, (_, pad, text) => `<span class="line-align-right" style="padding-right: ${parseInt(pad, 16)}pt">${text}</span>`) // Gen 5+
     .replaceAll(/\[VAR BD04\(([0-9A-F]{4})\)\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, (_, pad, text) => `<span class="line-align-left" style="padding-left: ${parseInt(pad, 16)}pt">${text}</span>`) // Gen 5+
     .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\[VAR BD05\(..([0-9A-F]{2})\)\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, (_, before, size, after) => `<span style="tab-size: ${parseInt(size, 16)}pt">${before}\t${after}</span>`) // Gen 5 X coords
     .replaceAll(/\[VAR BD05\(..([0-9A-F]{2})\)\]/gu, '\t') // can't really have multiple tab sizes, so approximate the rest as tabs
-  ): s;
+  ) : s;
   s = isPBR ? (s
     .replaceAll(/\[ALIGN 1\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[ALIGN \d+\]|$)/gu, '<span class="line-align-left">$1</span>') // PBR
     .replaceAll(/\[ALIGN 2\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[ALIGN \d+\]|$)/gu, '<span class="line-align-center">$1</span>') // PBR
     .replaceAll(/\[ALIGN 3\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[ALIGN \d+\]|$)/gu, '<span class="line-align-right">$1</span>') // PBR
-  ): s;
+  ) : s;
 
   // Line breaks
   s = isGen4 ? (s
     .replaceAll('\u{F0207}\u{F0200}', '<span class="c">[VAR 0207]</span><span class="n">\\n</span><br>') // [VAR 0207]\n
     .replaceAll('\u{F0208}\u{F0200}', '<span class="r">[VAR 0208]</span><span class="n">\\n</span><br>') // [VAR 0208]\n
-  ): s;
+  ) : s;
   s = isSoftLineBreak ? (s
     .replaceAll('\u{F0201}\u{F0200}', '<span class="soft"> </span><span class="r">\\r</span><span class="n">\\n</span><wbr class="soft">') // \r\n
-  ): s;
+  ) : s;
   s = (s
     .replaceAll('\u{F0201}\u{F0200}', '<span class="r">\\r</span><span class="n">\\n</span><br>') // \r\n
     .replaceAll('\u{F0202}\u{F0200}', '<span class="c">\\c</span><span class="n">\\n</span><br>') // \c\n
@@ -554,7 +554,7 @@ function postprocessString(s: string, collectionKey: string, language: string = 
   s = isGen4 ? (s
     .replaceAll('\u{F0207}', '<span class="c">[VAR 0207]</span><br>') // [VAR 0207]
     .replaceAll('\u{F0208}', '<span class="r">[VAR 0208]</span><br>') // [VAR 0208]
-  ): s;
+  ) : s;
   s = (s
     .replaceAll('\u{F0201}', '<span class="r">\\r</span><br>') // \r
     .replaceAll('\u{F0202}', '<span class="c">\\c</span><br>') // \c
@@ -587,7 +587,7 @@ function postprocessString(s: string, collectionKey: string, language: string = 
     .replaceAll(/(\[some_[^\]]+?\])/gu, '<span class="var">$1</span>')
     .replaceAll(/(\[unknown[^\]]+?\])/gu, '<span class="var">$1</span>')
     .replaceAll(/(\[var_[^\]]\])/gu, '<span class="var">$1</span>')
-  ): s;
+  ) : s;
 
   // PBR
   s = isPBR ? (s
@@ -596,13 +596,13 @@ function postprocessString(s: string, collectionKey: string, language: string = 
     .replaceAll(/\[FONT ([0126])\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[FONT \d+\]|$)/gu, '<span class="font-pbr-$1">$2</span>')
     .replaceAll(/(\[FONT [\d.]+\])/gu, '<span class="var">$1</span>')
     .replaceAll(/\[SPACING (-?[\d.]+)\](.*?$)/gu, '<span class="spacing-$1">$2</span>')
-  ): s;
+  ) : s;
 
   // Ranch
   s = isRanch ? (s
     .replaceAll(/(%((\d+\$)?(\d*d|\d*\.\d+[fs]m?|ls)|(\(\d+\)%|\d+\$)?\{\}|\(\d+\)))/gu, '<span class="var">$1</span>')
     .replaceAll(/(\$\d+\$)/gu, '<span class="var">$1</span>')
-  ): s;
+  ) : s;
 
   s = (s
     .replaceAll('[NULL]', '<span class="null">[NULL]</span>')
@@ -640,7 +640,7 @@ function postprocessString(s: string, collectionKey: string, language: string = 
 
     .replaceAll(/\u{F1102}\u{F1200}(.*?)\u{F1104}(.*?)\u{F1103}/gu, (_, male, female) => genderBranch(male, female)) // FD 05, FD 06
     .replaceAll(/\u{F1102}\u{F1207}(.*?)\u{F1104}(.*?)\u{F1103}/gu, (_, form1, form2) => versionBranchRS(form1, form2)) // FD 07 - FD 0D
-  ): s;
+  ) : s;
   s = isModern ? (s
     .replaceAll(/\[VAR (?:GENDBR|1100)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenF, lenM, rest) => {
       const endM = parseInt(lenM, 16);
@@ -681,12 +681,12 @@ function postprocessString(s: string, collectionKey: string, language: string = 
       const end2 = end1 + parseInt(len2, 16);
       return `${versionBranchSV(rest.substring(0, end1), rest.substring(end1, end2))}${rest.substring(end2)}`;
     })
-  ): s;
+  ) : s;
   s = isBDSP ? (s
     .replaceAll(/\[VAR 1[3-7A]00\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)(?:\|([^[<{]*?))?\)\]/gu, (_, male, female) => genderBranch(male, female ?? ''))
     .replaceAll(/\[VAR 1[3-7A]01\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)(?:\|([^[<{]*?))?\)\]/gu, (_, singular, plural) => numberBranch(singular, plural ?? ''))
     .replaceAll(/\[VAR 1[3-7A]02\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)\|([^[<{]*?)\|([^[<{]*?)\|([^[<{]*?)\)\]/gu, (_, maleSingular, femaleSingular, malePlural, femalePlural) => genderNumberBranch(maleSingular, femaleSingular, malePlural, femalePlural))
-  ): s;
+  ) : s;
   s = (s
     .replaceAll(/(\[VAR [^\]]+?\])/gu, '<span class="var">$1</span>')
     .replaceAll(/(\[WAIT [\d.]+\])/gu, '<span class="wait">$1</span>')

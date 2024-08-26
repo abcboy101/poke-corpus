@@ -40,8 +40,8 @@ function Options({showModal, mode, setMode}: {showModal: (args: ShowModalArgumen
   const { t } = useTranslation();
   const options: ShowModalArguments = {
     message: <OptionsMenu mode={mode} setMode={setMode}/>,
-    buttons: [{message: <OptionsClose/>}]
-  }
+    buttons: [{message: <OptionsClose/>}],
+  };
   return (
     <button className="header-options" onClick={() => showModal(options)}>
       <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">

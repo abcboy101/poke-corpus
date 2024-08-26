@@ -5,18 +5,17 @@ export type QueryParseResult = QueryParseResultSuccess | QueryParseResultError;
 
 export interface QueryParseResultSuccess {
   readonly success: true,
-  readonly postfix: string[]
+  readonly postfix: string[],
 }
 
 export interface QueryParseResultError {
   readonly success: false,
-  readonly message: BooleanError
+  readonly message: BooleanError,
 }
 
-const validOperators = ['NOT', 'AND', 'OR', '"', '(', ')'] as const;
-type Operator = typeof validOperators[number];
-const queryParseResultSuccess = (result: string[]): QueryParseResultSuccess => ({'success': true, 'postfix': result});
-const queryParseResultError = (message: BooleanError): QueryParseResultError => ({'success': false, 'message': message});
+type Operator = 'NOT' | 'AND' | 'OR' | '"' | '(' | ')';
+const queryParseResultSuccess = (result: string[]): QueryParseResultSuccess => ({success: true, postfix: result});
+const queryParseResultError = (message: BooleanError): QueryParseResultError => ({success: false, message: message});
 
 /**
  * Convert a boolean query string in infix notation to an array of tokens in postfix notation using the shunting yard algorithm.
@@ -44,11 +43,11 @@ export function queryToPostfix(query: string): QueryParseResult {
         break;
 
       // Binary operators
-      // NOT has precedence of AND and OR and AND has precedence over OR, so we should pop off these pending operators first
+      // NOT has precedence over AND and OR and AND has precedence over OR, so we should pop off these pending operators first
       // If both operators are the same, left has precedence over right
       case "AND":
       case "OR":
-        while (operators[operators.length - 1] !== '(' && ((operators[operators.length - 1] === 'NOT' || operators[operators.length - 1] === 'AND' && t === 'OR') || t == operators[operators.length - 1])) {
+        while (operators[operators.length - 1] !== '(' && (operators[operators.length - 1] === 'NOT' || (operators[operators.length - 1] === 'AND' && t === 'OR') || t == operators[operators.length - 1])) {
           output.push(operators.pop()!);
         }
         operators.push(t);
@@ -118,26 +117,27 @@ export function postfixToMatchCondition(params: SearchParams, postfix: string[])
   for (const keyword of postfix) {
     switch (keyword) {
       case "NOT":
-        {
-          const cond = stack.pop()!;
-          stack.push((line: string) => !cond(line));
-          break;
-        }
+      {
+        const cond = stack.pop()!;
+        stack.push((line: string) => !cond(line));
+        break;
+      }
       case "AND":
-        {
-          const cond2 = stack.pop()!;
-          const cond1 = stack.pop()!;
-          stack.push((line: string) => cond1(line) && cond2(line));
-          break;
-        }
+      {
+        const cond2 = stack.pop()!;
+        const cond1 = stack.pop()!;
+        stack.push((line: string) => cond1(line) && cond2(line));
+        break;
+      }
       case "OR":
-        {
-          const cond2 = stack.pop()!;
-          const cond1 = stack.pop()!;
-          stack.push((line: string) => cond1(line) || cond2(line));
-          break;
-        }
+      {
+        const cond2 = stack.pop()!;
+        const cond1 = stack.pop()!;
+        stack.push((line: string) => cond1(line) || cond2(line));
+        break;
+      }
       default:
+      {
         if (keyword.startsWith('"') && keyword.endsWith('"')) {
           // exact match
           const phrase = keyword.substring(1, keyword.length - 1);
@@ -162,6 +162,7 @@ export function postfixToMatchCondition(params: SearchParams, postfix: string[])
             stack.push((line) => phrases.every((_, i) => (line.toLowerCase().includes(lowercase[i]) || line.toUpperCase().includes(uppercase[i])))); // case-insensitive
           }
         }
+      }
     }
   }
   while (stack.length > 1) {
@@ -204,7 +205,7 @@ export function isBooleanQueryValid(params: SearchParams): BooleanStatus {
     matchCondition('');
     return 'success';
   }
-  catch (e) {
+  catch {
     // Error during evaluation (missing operand)
     return 'operand';
   }

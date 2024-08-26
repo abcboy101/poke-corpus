@@ -17,8 +17,8 @@ const defaultParams: SearchParams = {
   common: true,
   script: true,
   collections: Object.keys(corpus.collections).filter((value) => corpus.collections[value].structured),
-  languages: corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0])) || corpus.languages.filter((value) => value.startsWith('en'))
-}
+  languages: corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0])) || corpus.languages.filter((value) => value.startsWith('en')),
+};
 
 function SearchForm({status, postToWorker, terminateWorker}: {status: Status, postToWorker: (params: SearchParams) => void, terminateWorker: () => void}) {
   const { t } = useTranslation();
@@ -111,7 +111,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         common: true,
         script: true,
         collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key]?.id === id.split('.')[0]),
-        languages: [codeId]
+        languages: [codeId],
       });
     }
   }, [id, postToWorker]);
@@ -125,7 +125,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         common: true,
         script: true,
         collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key]?.id === file.split('.')[0]),
-        languages: [codeId]
+        languages: [codeId],
       });
     }
   }, [file, postToWorker]);
@@ -174,13 +174,13 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
     <div className="search-bar">
       <div className="search-bar-query">
         <label htmlFor="query">{t('query')}</label>
-        <input type="text" name="query" id="query" value={query} onChange={e => setQuery(e.target.value)}/>
+        <input type="text" name="query" id="query" value={query} onChange={(e) => setQuery(e.target.value)}/>
         <div className="btn-alternate-container">
           <input type="submit" className={status === 'rendering' || !statusInProgress.includes(status) ? 'visible' : 'invisible'} value={t('search')} disabled={query.length === 0 || collections.length === 0 || languages.length === 0 || (status !== 'rendering' && statusInProgress.includes(status))}/>
           <button type="button" className={status === 'rendering' || !statusInProgress.includes(status) ? 'invisible' : 'visible'} onClick={onCancel} disabled={status === 'rendering' || !statusInProgress.includes(status)}>{t('cancel')}</button>
         </div>
         <button type="button" className={filtersVisible ? 'active' : undefined} onClick={toggleFiltersVisible}>{t('filters')}</button>
-        <select name="type" id="type" onChange={e => setType(e.target.value as SearchType)} value={type}>
+        <select name="type" id="type" onChange={(e) => setType(e.target.value as SearchType)} value={type}>
           {searchTypes.map((type) => <option key={type} value={type}>{t(`searchType.${type}`)}</option>)}
         </select>
       </div>
@@ -188,21 +188,21 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         <div className="search-option">
         </div>
         <div className="search-option">
-          <input type="checkbox" name="caseInsensitive" id="caseInsensitive" checked={caseInsensitive} onChange={e => setCaseInsensitive(e.target.checked)}/>
+          <input type="checkbox" name="caseInsensitive" id="caseInsensitive" checked={caseInsensitive} onChange={(e) => setCaseInsensitive(e.target.checked)}/>
           <label htmlFor="caseInsensitive">{t('caseInsensitive')}</label>
         </div>
         <div className="search-option">
-          <input type="checkbox" name="common" id="common" checked={common} onChange={e => setCommon(e.target.checked)}/>
+          <input type="checkbox" name="common" id="common" checked={common} onChange={(e) => setCommon(e.target.checked)}/>
           <label htmlFor="common">{t('common')}</label>
         </div>
         <div className="search-option">
-          <input type="checkbox" name="script" id="script" checked={script} onChange={e => setScript(e.target.checked)}/>
+          <input type="checkbox" name="script" id="script" checked={script} onChange={(e) => setScript(e.target.checked)}/>
           <label htmlFor="script">{t('script')}</label>
         </div>
       </div>
     </div>
     <SearchFilters filtersVisible={filtersVisible} collections={collections} setCollections={setCollections} languages={languages} setLanguages={setLanguages} />
-  </form>
+  </form>;
 }
 
 export default SearchForm;

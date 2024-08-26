@@ -12,8 +12,7 @@ import './App.css';
 import logo from './res/logo.svg';
 import './i18n/config';
 
-const views = ['Search', 'CacheManager'] as const;
-type View = typeof views[number];
+type View = 'Search' | 'CacheManager';
 
 function App() {
   const { t } = useTranslation();

@@ -17,7 +17,7 @@ function collectionLabelStyle(text: string, maxWidth: number = 4): CSSProperties
   const width = [...text].map((c) => (c.codePointAt(0)! > 0xFF) ? 1 : 0.5).reduce((a, b) => a + b, 0);
   if (width <= maxWidth)
     return undefined;
-  return {fontSize: `${(maxWidth * 100) / width}%`, scale: `1 ${width / maxWidth}`, whiteSpace: 'nowrap'}
+  return {fontSize: `${(maxWidth * 100) / width}%`, scale: `1 ${width / maxWidth}`, whiteSpace: 'nowrap'};
 }
 
 function SearchCollections({collections, setCollections}: {collections: readonly string[], setCollections: Dispatch<SetStateAction<readonly string[]>>}) {
@@ -52,7 +52,7 @@ function SearchCollections({collections, setCollections}: {collections: readonly
         <button disabled={collections.length === 0} onClick={() => { setCollections([]); }}>{t('deselectAll')}</button>
       </div>
     </>
-  )
+  );
 }
 
 function SearchLanguages({languages, setLanguages}: {languages: readonly string[], setLanguages: Dispatch<SetStateAction<readonly string[]>>}) {
@@ -87,7 +87,7 @@ function SearchLanguages({languages, setLanguages}: {languages: readonly string[
         <button disabled={languages.length === 0} onClick={() => { setLanguages([]); }}>{t('deselectAll')}</button>
       </div>
     </>
-  )
+  );
 }
 
 function SearchFilters({filtersVisible, collections, setCollections, languages, setLanguages}: {filtersVisible: boolean, collections: readonly string[], setCollections: Dispatch<SetStateAction<readonly string[]>>, languages: readonly string[], setLanguages: Dispatch<SetStateAction<readonly string[]>>}) {

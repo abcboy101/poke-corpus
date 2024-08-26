@@ -44,7 +44,7 @@ i18next.use(LanguageDetector)
     fallbackLng: {
       'zh-Hans': ['zh-Hant', 'en'],
       'zh-Hant': ['zh-Hans', 'en'],
-      'default': ['en']
+      'default': ['en'],
     },
     resources: {
       'en': {
@@ -101,5 +101,5 @@ i18next.use(LanguageDetector)
         collections: collectionsZHHant,
         languages: languagesZHHant,
       },
-    }
+    },
   });

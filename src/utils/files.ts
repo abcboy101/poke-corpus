@@ -1,4 +1,4 @@
-import filesJson from '../res/files.json'
+import filesJson from '../res/files.json';
 
 /**
  * Formats the collection, language, and file into the relative path to the text file.
@@ -32,7 +32,7 @@ export const getFile = async (cache: Cache, path: string) => {
   if ((localFileInfo?.hash === remoteFileInfo.hash) || (!navigator.onLine && localFileInfo?.hash !== undefined)) {
     const res = await cacheMatch(cache, url);
     if (res !== undefined)
-      return res
+      return res;
   }
 
   // Out-of-date or miss, overwrite cached file and update local hash
@@ -65,7 +65,7 @@ const filesRemote = filesJson as Files;
 
 type FileInfo = {hash: string, size: number};
 export interface Files {
-  [path: string]: FileInfo
+  [path: string]: FileInfo,
 }
 
 const dbName = 'corpus';
@@ -82,7 +82,7 @@ const getIndexedDB = (): Promise<IDBDatabase> => {
     request.onsuccess = () => resolve(request.result);
     request.onerror = () => reject(request.error);
   });
-}
+};
 
 const getRemoteFileInfo = (path: string): FileInfo => filesRemote[path];
 

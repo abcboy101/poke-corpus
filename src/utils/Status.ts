@@ -13,9 +13,8 @@ export type SearchResultsInProgress = 'loading' | 'processing' | 'collecting';
 export type SearchResultsError = SearchTaskResultError | 'regex' | 'noMatch' | 'network' | `boolean.${BooleanError}`;
 export type SearchResultsComplete = 'done' | SearchResultsError;
 export type SearchResultsStatus = SearchResultsInProgress | SearchResultsComplete;
-export const statusError: readonly Status[] & readonly SearchResultsError[] = [
-  'error', 'regex', 'noMatch', 'network', 'boolean.parentheses', 'boolean.quote', 'boolean.operand', 'boolean.empty'
-];
+export const statusError: readonly Status[] & readonly SearchResultsError[]
+  = ['error', 'regex', 'noMatch', 'network', 'boolean.parentheses', 'boolean.quote', 'boolean.operand', 'boolean.empty'];
 
 /* Search status codes: initial -> waiting -> loading -> processing -> collecting -> rendering -> done (or propagate from SearchResults) */
 export type StatusInProgress = 'waiting' | SearchResultsInProgress | 'rendering';

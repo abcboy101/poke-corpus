@@ -6,14 +6,14 @@ import { SearchResultsInProgress, SearchResultsComplete, SearchResultsStatus } f
 import { isBooleanQueryValid } from './searchBoolean';
 
 export interface SearchResultLines extends SearchTaskResultLines {
-  readonly displayHeader: boolean
+  readonly displayHeader: boolean,
 }
 
 export interface SearchResults {
   readonly complete: boolean,
   readonly status: SearchResultsStatus,
   readonly progress: number,
-  readonly results: readonly SearchResultLines[]
+  readonly results: readonly SearchResultLines[],
 }
 
 type SearchTaskPartial = Omit<SearchTask, "files" | "speakerFiles">;
@@ -41,27 +41,26 @@ const loadFile = (collectionKey: string, languageKey: string, fileKey: string) =
       console.error(err);
       return null;
     })
-    .then((res) => res === null ? '' :
-      res.blob().then((blob) => import.meta.env.DEV ? new Response(blob.stream()).text()
-      // Due to a bug, the Vite dev server serves .gz files with `Content-Encoding: gzip`.
-      // To work around this, don't bother decompressing the file in the dev environment.
-      // https://github.com/vitejs/vite/issues/12266
-      : new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text()));
-}
+    // Due to a bug, the Vite dev server serves .gz files with `Content-Encoding: gzip`.
+    // To work around this, don't bother decompressing the file in the dev environment.
+    // https://github.com/vitejs/vite/issues/12266
+    .then((res) => res === null ? ''
+      : res.blob().then((blob) => import.meta.env.DEV ? new Response(blob.stream()).text()
+        : new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text()));
+};
 
-/* eslint-disable no-restricted-globals */
 self.onmessage = (message: MessageEvent<SearchParams>) => {
   const progressPortionLoading = 0.49;
   const progressPortionProcessing = 0.49;
   const progressPortionCollecting = 0.01; // 0.01 for rendering
 
   const updateStatusInProgress = (status: SearchResultsInProgress, loadingProgress: number, processingProgress: number, collectingProgress: number) => {
-    const progress = loadingProgress * progressPortionLoading + processingProgress * progressPortionProcessing + collectingProgress * progressPortionCollecting;
+    const progress = (loadingProgress * progressPortionLoading) + (processingProgress * progressPortionProcessing) + (collectingProgress * progressPortionCollecting);
     const message: SearchResults = {
       complete: false,
       status: status,
       progress: progress,
-      results: []
+      results: [],
     };
     postMessage(message);
   };
@@ -71,7 +70,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
       complete: true,
       status: status,
       progress: 1.0,
-      results: results
+      results: results,
     };
     postMessage(message);
   };
@@ -117,33 +116,33 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
 
       // Load all files in all languages in the collection
       collection.files
-      .filter((fileKey) => !((fileKey === 'common' && !params.common) || (fileKey === 'script' && !params.script)))
-      .forEach((fileKey) => {
-        const languages = collection.structured ? collection.languages : collection.languages.filter((languageKey) => params.languages.includes(languageKey));
-        if (!collection.structured) {
-          languages.forEach((languageKey, languageIndex) => {
+        .filter((fileKey) => !((fileKey === 'common' && !params.common) || (fileKey === 'script' && !params.script)))
+        .forEach((fileKey) => {
+          const languages = collection.structured ? collection.languages : collection.languages.filter((languageKey) => params.languages.includes(languageKey));
+          if (!collection.structured) {
+            languages.forEach((languageKey, languageIndex) => {
+              taskList.push({
+                index: taskCount + languageIndex,
+                params: params,
+                collectionKey: collectionKey,
+                fileKey: fileKey,
+                languages: [languageKey],
+              });
+            });
+          }
+          else {
             taskList.push({
-              index: taskCount + languageIndex,
+              index: taskCount,
               params: params,
               collectionKey: collectionKey,
               fileKey: fileKey,
-              languages: [languageKey]
+              languages: languages,
+              speaker: collection?.speaker,
+              literals: collection?.literals,
             });
-          });
-        }
-        else {
-          taskList.push({
-            index: taskCount,
-            params: params,
-            collectionKey: collectionKey,
-            fileKey: fileKey,
-            languages: languages,
-            speaker: collection?.speaker,
-            literals: collection?.literals
-          });
-        }
-        taskCount += languages.length;
-      });
+          }
+          taskCount += languages.length;
+        });
     });
     // Check if the combination of collections/languages yielded no files.
     // If it did, return with that error immediately.
@@ -169,7 +168,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
       const result = e.data;
       if (result.status === 'processing') {
         processedCount++;
-        updateStatusInProgress('processing', loadedCount/taskList.length, processedCount/taskCount, collectedCount/taskList.length);
+        updateStatusInProgress('processing', loadedCount / taskList.length, processedCount / taskCount, collectedCount / taskList.length);
         if (import.meta.env.DEV) {
           console.debug(`Processed ${processedCount}/${taskCount}`);
         }
@@ -177,7 +176,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
       else if (result.status === 'done') {
         taskResults.push(result);
         collectedCount++;
-        updateStatusInProgress('collecting', loadedCount/taskList.length, processedCount/taskCount, collectedCount/taskList.length);
+        updateStatusInProgress('collecting', loadedCount / taskList.length, processedCount / taskCount, collectedCount / taskList.length);
         if (import.meta.env.DEV) {
           console.debug(`Collected ${collectedCount}/${taskList.length}`);
         }
@@ -204,7 +203,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
         updateStatusComplete(result.status);
         helpers.forEach((helper) => helper.terminate());
       }
-    }
+    };
 
     // Start helpers
     const numWorkers = Math.max(1, Math.min(taskList.length, (navigator.hardwareConcurrency || 4) - 2));
@@ -243,7 +242,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
         return;
 
       // Start helper
-      updateStatusInProgress('loading', loadedCount/taskList.length, processedCount/taskCount, collectedCount/taskList.length);
+      updateStatusInProgress('loading', loadedCount / taskList.length, processedCount / taskCount, collectedCount / taskList.length);
       if (import.meta.env.DEV) {
         console.debug(`Loaded ${loadedCount}/${taskList.length}`);
       }

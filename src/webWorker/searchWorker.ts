@@ -16,7 +16,7 @@ export interface SearchParams {
   readonly common: boolean,
   readonly script: boolean,
   readonly collections: readonly string[],
-  readonly languages: readonly string[]
+  readonly languages: readonly string[],
 }
 
 export interface SearchTask {
@@ -27,7 +27,7 @@ export interface SearchTask {
   readonly languages: readonly string[],
   readonly files: readonly string[],
   readonly speaker?: Speaker,
-  readonly speakerFiles?: readonly string[]
+  readonly speakerFiles?: readonly string[],
   readonly literals?: Literals,
 }
 
@@ -35,7 +35,7 @@ export interface SearchTaskResultLines {
   readonly collection: string,
   readonly file: string,
   readonly languages: readonly string[],
-  readonly lines: readonly string[][]
+  readonly lines: readonly string[][],
 }
 
 export type SearchTaskResult = SearchTaskResultIncomplete | SearchTaskResultComplete;
@@ -43,12 +43,12 @@ export type SearchTaskResult = SearchTaskResultIncomplete | SearchTaskResultComp
 export interface SearchTaskResultComplete {
   readonly index: number,
   readonly status: SearchTaskResultDone,
-  readonly result: SearchTaskResultLines
+  readonly result: SearchTaskResultLines,
 }
 
 export interface SearchTaskResultIncomplete {
   readonly index: number,
-  readonly status: SearchTaskResultNotDone
+  readonly status: SearchTaskResultNotDone,
 }
 
 function getMatchCondition(params: SearchParams): MatchCondition {
@@ -74,24 +74,23 @@ function getMatchCondition(params: SearchParams): MatchCondition {
   return () => false;
 }
 
-/* eslint-disable no-restricted-globals */
 self.onmessage = (task: MessageEvent<SearchTask>) => {
   const {index, params, collectionKey, fileKey, languages, files, speaker, speakerFiles: speakerData, literals} = task.data;
   const notifyIncomplete = (status: SearchTaskResultNotDone) => {
     const message: SearchTaskResultIncomplete = {
       index: index,
-      status: status
-    }
+      status: status,
+    };
     postMessage(message);
-  }
+  };
   const notifyComplete = (status: SearchTaskResultDone, result: SearchTaskResultLines) => {
     const message: SearchTaskResultComplete = {
       index: index,
       status: status,
-      result: result
-    }
+      result: result,
+    };
     postMessage(message);
-  }
+  };
   const matchCondition = getMatchCondition(params);
 
   try {
@@ -117,14 +116,13 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
 
     // Load speakers
     // Since all dialogue with speaker names are in the script file while the speaker names are in the common file, we always have to load it separately
-    const speakers = (speaker === undefined || speakerData === undefined) ? [] :
-      speakerData.map((data) => {
+    const speakers = (speaker === undefined || speakerData === undefined) ? []
+      : speakerData.map((data) => {
         const lines = data.split(/\r\n|\n/);
         const start = lines.indexOf(`Text File : ${speaker.textFile}`) + 2;
         const end = lines.indexOf('~~~~~~~~~~~~~~~', start);
         return lines.slice(start, end);
-      }
-    );
+      });
 
     // Filter only the lines that matched
     const languageKeys: string[] = [];
@@ -156,9 +154,9 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
         if (branch === undefined)
           replaceValue = fileData[languageIndex][line - 1];
         else if (branch === 'gender')
-          replaceValue = `\u{F1200}${line.map(lineNo => fileData[languageIndex][lineNo - 1]).join('\u{F1104}')}`;
+          replaceValue = `\u{F1200}${line.map((lineNo) => fileData[languageIndex][lineNo - 1]).join('\u{F1104}')}`;
         else if (branch === 'version')
-          replaceValue = `\u{F1207}${line.map(lineNo => fileData[languageIndex][lineNo - 1]).join('\u{F1104}')}`;
+          replaceValue = `\u{F1207}${line.map((lineNo) => fileData[languageIndex][lineNo - 1]).join('\u{F1104}')}`;
         else if (branch === 'language')
           replaceValue = fileData[languageIndex][line[languages[languageIndex]] - 1];
 
@@ -171,8 +169,8 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
     };
 
     const lineKeysSorted = Array.from(lineKeysSet).sort((a, b) => a - b);
-    const fileResults: string[][] = ((messageIdIndex === -1) ? lineKeysSorted :
-      lineKeysSorted.filter((i) => {
+    const fileResults: string[][] = ((messageIdIndex === -1) ? lineKeysSorted
+      : lineKeysSorted.filter((i) => {
         // Ignore lines that don't correspond to text data (blank lines, text file headers) based on the message ID file
         const messageId = fileData[messageIdIndex][i];
         return messageId !== '' && messageId !== '~~~~~~~~~~~~~~~' && !messageId.startsWith('Text File : ');

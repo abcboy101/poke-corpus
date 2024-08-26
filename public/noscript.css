@@ -14,13 +14,6 @@
   --line-height: 1.5;
 }
 
-body {
-  font-family: var(--font-family-latin), var(--font-family-ja), sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-size-adjust: none;
-}
-
 :lang(ja) {
   font-family: var(--font-family-latin), var(--font-family-ja), sans-serif;
 }
@@ -67,6 +60,10 @@ body {
 }
 
 body {
+  font-family: var(--font-family-latin), var(--font-family-ja), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: none;
   background: var(--background);
   color: var(--text);
   line-height: var(--line-height);

@@ -30,7 +30,7 @@ export function formatBytes(n: number) {
     minimumFractionDigits: index === 0 ? 0 : 1, // don't display fractions of a byte
     maximumFractionDigits: 1,
     maximumSignificantDigits: 3,
-    roundingPriority: 'lessPrecision'
+    roundingPriority: 'lessPrecision',
   };
   return [n / Math.pow(1000, index), format] as const;
 }

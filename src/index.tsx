@@ -18,4 +18,4 @@ registerSW({
   onOfflineReady() {
     console.log("Ready to work offline!");
   },
-})
+});

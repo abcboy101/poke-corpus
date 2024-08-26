@@ -50,7 +50,7 @@ function Search({showModal}: {showModal: (args: ShowModalArguments) => void}) {
         if (statusError.includes(e.data.status)) {
           showModal({
             message: t(`statusModal.${e.data.status}`),
-            buttons: [{message: t('statusModal.buttons.ok'), autoFocus: true}]
+            buttons: [{message: t('statusModal.buttons.ok'), autoFocus: true}],
           });
         }
       });
@@ -94,14 +94,15 @@ function Search({showModal}: {showModal: (args: ShowModalArguments) => void}) {
         corpus.collections[collectionKey].languages.flatMap((languageKey) =>
           corpus.collections[collectionKey].files.map((fileKey) =>
             getDownloadSize(getFilePath(collectionKey, languageKey, fileKey))
-        ))
+          )
+        )
       ))).reduce((a, b) => a + b, 0);
       if (size > searchModalThreshold) {
         showModal({
           message: t('searchModal.message', formatBytesParams(size)),
           checkbox: {
             message: t('searchModal.checkboxDoNotShowAgain'),
-            checked: false
+            checked: false,
           },
           buttons: [
             {
@@ -110,13 +111,13 @@ function Search({showModal}: {showModal: (args: ShowModalArguments) => void}) {
               checkboxCallback: (checked) => {
                 setShowSearchModal(!checked);
                 localStorageSetItem(searchModalWarn, (!checked).toString());
-              }
+              },
             },
             {
               message: t('searchModal.buttons.no'),
-              autoFocus: true
+              autoFocus: true,
             },
-          ]
+          ],
         });
         return;
       }
