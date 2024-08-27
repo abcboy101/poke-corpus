@@ -21,7 +21,7 @@ function OptionsMenu({mode, setMode, showModal}: {mode: Mode, setMode: Dispatch<
       console.log(err);
       showModal({
         message: t('options.network'),
-        buttons: [{message: <OptionsClose/>}],
+        buttons: [{message: <OptionsClose/>, autoFocus: true}],
       });
     }
   };
