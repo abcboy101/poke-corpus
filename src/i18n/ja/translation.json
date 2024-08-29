@@ -67,6 +67,9 @@
       "ok": "OK"
     }
   },
+  "progressBar": {
+    "title": "進捗"
+  },
   "jumpTo": "移動…",
   "copy": "コピー",
   "share": "共有",
@@ -91,6 +94,7 @@
     "filesStored": "保存ファイル数：$t(cache.files, {\"count\": {{count}} })",
     "files": "{{count}}個",
     "storageUsed": "ストレージの合計：{{amount, number}}",
+    "loading": "{{message}}（{{loaded}}/{{total}}）",
     "inProgress": "キャッシュ中…",
     "headerCollection": "コレクション",
     "headerSize": "サイズ",
@@ -103,7 +107,7 @@
       }
     },
     "cacheAllFailedModal": {
-      "message": "一つ以上のファイルがキャッシュに保存できませんでした。十分な空き容量を確保してください。",
+      "message": "一つ以上のファイルがキャッシュに保存できませんでした。インターネット接続を確認し、十分な空き容量を確保してください。",
       "buttons": {
         "ok": "OK"
       }

@@ -180,8 +180,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
           <button type="button" className={status === 'rendering' || !statusInProgress.includes(status) ? 'invisible' : 'visible'} onClick={onCancel} disabled={status === 'rendering' || !statusInProgress.includes(status)}>{t('cancel')}</button>
         </div>
         <button type="button" className={filtersVisible ? 'active' : undefined} onClick={toggleFiltersVisible}>{t('filters')}</button>
-        <label htmlFor="type" className="d-none">{t('searchType.searchType')}</label>
-        <select name="type" id="type" onChange={(e) => setType(e.target.value as SearchType)} value={type}>
+        <select name="type" id="type" onChange={(e) => setType(e.target.value as SearchType)} value={type} aria-label={t('searchType.searchType')}>
           {searchTypes.map((type) => <option key={type} value={type}>{t(`searchType.${type}`)}</option>)}
         </select>
       </div>

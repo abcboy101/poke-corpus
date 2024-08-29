@@ -68,6 +68,10 @@
       "ok": "OK"
     }
   },
+  "progressBar": {
+    "title": "Avancement",
+    "value": "{{amount, number}}"
+  },
   "jumpTo": "Aller à...",
   "copy": "Copier",
   "share": "Partager",
@@ -118,7 +122,7 @@
       }
     },
     "cacheAllFailedModal": {
-      "message": "Un ou plusieurs fichiers n'ont pas pu être enregistrés dans le cache. Assurez-vous d'avoir suffisamment d'espace.",
+      "message": "Un ou plusieurs fichiers n'ont pas pu être enregistrés dans le cache. Vérifiez votre connexion Internet et assurez-vous d'avoir suffisamment d'espace.",
       "buttons": {
         "ok": "OK"
       }

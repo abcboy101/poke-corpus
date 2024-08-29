@@ -2,6 +2,7 @@ import { MutableRefObject, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import CacheManagerWorker from '../webWorker/cacheManagerWorker.ts?worker';
+import { CacheManagerParams, CacheManagerResult } from "../webWorker/cacheManagerWorker";
 import Delete from "./Delete";
 
 import './CacheManager.css';
@@ -10,6 +11,7 @@ import { cacheName, getFilePath, getFileCacheOnly, getDownloadSize, clearLocalFi
 import { formatBytesParams } from "../utils/utils";
 import Refresh from "./Refresh";
 import { ShowModalArguments } from './Modal';
+import ProgressBar from "./ProgressBar";
 
 type CachedFileInfoEntry = readonly [readonly [string, string, string], number, boolean];
 
@@ -18,6 +20,9 @@ function CacheManager({active, showModal}: {active: boolean, showModal: (args: S
   const [cacheStorageEnabled, setCacheStorageEnabled] = useState(true);
   const [cachedFileInfo, setCachedFileInfo] = useState([] as readonly CachedFileInfoEntry[]);
   const [cacheInProgress, setCacheInProgress] = useState(false);
+  const [progress, setProgress] = useState(0.0);
+  const [loadedBytes, setLoadedBytes] = useState(0);
+  const [totalBytes, setTotalBytes] = useState(0);
   const workerRef: MutableRefObject<Worker | null> = useRef(null);
 
   useEffect(() => {
@@ -38,23 +43,32 @@ function CacheManager({active, showModal}: {active: boolean, showModal: (args: S
     setCacheStorageEnabled('caches' in window && await window.caches.keys().then(() => true).catch(() => false));
   };
 
-  const onMessage = (e: MessageEvent<[boolean, string | null]>) => {
-    const [success, collectionKey] = e.data;
-    if (success) {
-      console.log('Caching complete');
-      workerRef.current?.terminate();
-      workerRef.current = null;
+  const onMessage = (e: MessageEvent<CacheManagerResult>) => {
+    const [status, loadedBytes, totalBytes, collectionKey] = e.data;
+    setProgress(loadedBytes / totalBytes);
+    setLoadedBytes(loadedBytes);
+    setTotalBytes(totalBytes);
+    if (status === 'loading') {
+      return;
     }
-    else {
+
+    if (status === 'done') {
+      console.log('Caching complete');
+    }
+    else if (status === 'error') {
       console.error('Caching error');
     }
+    workerRef.current?.terminate();
+    workerRef.current = null;
     checkCachedFiles(collectionKey);
     setCacheInProgress(false);
   };
 
-  const cacheCollections = (collectionKey: string | null = null) => {
+  const cacheCollections = (collectionKey: CacheManagerParams = null) => {
     if ('caches' in window) {
       setCacheInProgress(true);
+      setProgress(0.0);
+      setLoadedBytes(0);
       if (workerRef.current === null) {
         console.log('Creating new worker...');
         workerRef.current = new CacheManagerWorker();
@@ -64,7 +78,7 @@ function CacheManager({active, showModal}: {active: boolean, showModal: (args: S
     }
   };
 
-  const checkCachedFiles = async (collectionKey?: string | null) => {
+  const checkCachedFiles = async (collectionKey?: CacheManagerParams) => {
     if ('caches' in window) {
       const cache = await window.caches.open(cacheName);
       const keys = Object.entries(corpus.collections).flatMap(([collectionKey, collection]) =>
@@ -87,6 +101,11 @@ function CacheManager({active, showModal}: {active: boolean, showModal: (args: S
   };
 
   const clearCache = () => {
+    if (workerRef.current) {
+      workerRef.current.terminate();
+      workerRef.current = null;
+    }
+
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.ready
         .then((registration) => registration.unregister());
@@ -219,24 +238,38 @@ function CacheManager({active, showModal}: {active: boolean, showModal: (args: S
           {cacheStorageEnabled && <li>{t('cache.storageUsed', storageUsedAmount())}</li>}
         </ul>
         {
-          cacheInProgress ? <div className="cache-entry-notice">{ t('cache.inProgress') }</div>
-            : <div className="cache-entry-list">
-              {
-                cachedFileInfo.length > 0
-                && fileInfoPerCollection().map(([key, size, current], index) =>
-                  <div key={index} className={`cache-entry cache-entry-${current ? 'current' : 'outdated'}`}>
-                    <div className="cache-entry-text">
-                      <div><abbr title={t(`collections:${key}.name`)}>{t(`collections:${key}.short`)}</abbr></div>
-                      <div>{t('cache.size', formatBytesParams(size))}</div>
+          cacheInProgress
+            ? (
+              <div className="cache-entry-notice">
+                {
+                  t('cache.loading', {
+                    message: t('cache.inProgress'),
+                    loaded: t('cache.size', formatBytesParams(loadedBytes)),
+                    total: t('cache.size', formatBytesParams(totalBytes)),
+                  })
+                }
+                <ProgressBar progress={progress}/>
+              </div>
+            )
+            : (
+              <div className="cache-entry-list">
+                {
+                  cachedFileInfo.length > 0
+                  && fileInfoPerCollection().map(([key, size, current], index) =>
+                    <div key={index} className={`cache-entry cache-entry-${current ? 'current' : 'outdated'}`}>
+                      <div className="cache-entry-text">
+                        <div><abbr title={t(`collections:${key}.name`)}>{t(`collections:${key}.short`)}</abbr></div>
+                        <div>{t('cache.size', formatBytesParams(size))}</div>
+                      </div>
+                      <div className="cache-entry-actions">
+                        { !current && <Refresh callback={() => cacheCollections(key)}/> }
+                        <Delete callback={() => clearCachedFile(key)}/>
+                      </div>
                     </div>
-                    <div className="cache-entry-actions">
-                      { !current && <Refresh callback={() => cacheCollections(key)}/> }
-                      <Delete callback={() => clearCachedFile(key)}/>
-                    </div>
-                  </div>
-                )
-              }
-            </div>
+                  )
+                }
+              </div>
+            )
         }
       </div>
     </>

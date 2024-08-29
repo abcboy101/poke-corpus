@@ -50,9 +50,9 @@ const loadFile = (collectionKey: string, languageKey: string, fileKey: string) =
 };
 
 self.onmessage = (message: MessageEvent<SearchParams>) => {
-  const progressPortionLoading = 0.49;
-  const progressPortionProcessing = 0.49;
-  const progressPortionCollecting = 0.01; // 0.01 for rendering
+  const progressPortionLoading = 0.5;
+  const progressPortionProcessing = 0.5;
+  const progressPortionCollecting = 0.0;
 
   const updateStatusInProgress = (status: SearchResultsInProgress, loadingProgress: number, processingProgress: number, collectingProgress: number) => {
     const progress = (loadingProgress * progressPortionLoading) + (processingProgress * progressPortionProcessing) + (collectingProgress * progressPortionCollecting);
@@ -152,11 +152,35 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
     }
 
     // Initialize helpers
-    let helperError = false;
-    let networkError = false;
     let loadedCount = 0;
     let processedCount = 0;
     let collectedCount = 0;
+    const calculateProgress = () => [loadedCount / taskCount, processedCount / taskCount, collectedCount / taskList.length] as const;
+    const updateProgressLoaded = (file: string) => {
+      loadedCount++;
+      updateStatusInProgress('loading', ...calculateProgress());
+      if (import.meta.env.DEV) {
+        console.debug(`Loaded ${loadedCount}/${taskCount}`);
+      }
+      return file;
+    };
+    const updateProgressProcessed = () => {
+      processedCount++;
+      updateStatusInProgress('processing', ...calculateProgress());
+      if (import.meta.env.DEV) {
+        console.debug(`Processed ${processedCount}/${taskCount}`);
+      }
+    };
+    const updateProgressCollected = () => {
+      collectedCount++;
+      updateStatusInProgress('collecting', ...calculateProgress());
+      if (import.meta.env.DEV) {
+        console.debug(`Collected ${collectedCount}/${taskList.length}`);
+      }
+    };
+
+    let helperError = false;
+    let networkError = false;
     const taskResults: SearchTaskResultComplete[] = [];
     const helpers: Worker[] = [];
     const helperOnMessage = (e: MessageEvent<SearchTaskResult>) => {
@@ -167,19 +191,11 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
       // Handle message
       const result = e.data;
       if (result.status === 'processing') {
-        processedCount++;
-        updateStatusInProgress('processing', loadedCount / taskList.length, processedCount / taskCount, collectedCount / taskList.length);
-        if (import.meta.env.DEV) {
-          console.debug(`Processed ${processedCount}/${taskCount}`);
-        }
+        updateProgressProcessed();
       }
       else if (result.status === 'done') {
         taskResults.push(result);
-        collectedCount++;
-        updateStatusInProgress('collecting', loadedCount / taskList.length, processedCount / taskCount, collectedCount / taskList.length);
-        if (import.meta.env.DEV) {
-          console.debug(`Collected ${collectedCount}/${taskList.length}`);
-        }
+        updateProgressCollected();
 
         // Send results if all tasks are done
         if (collectedCount === taskList.length) {
@@ -224,14 +240,12 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
       // Due to a bug in Safari, access to cache storage fails in subworkers.
       // To work around this, we need to fetch the files in the manager worker instead.
       const speaker = task.speaker;
-      const taskFull: SearchTask = {
-        ...task,
-        files: await Promise.all(task.languages.map((languageKey) => loadFile(task.collectionKey, languageKey, task.fileKey))),
-        speakerFiles: speaker === undefined ? undefined : await Promise.all(task.languages.map((languageKey) => loadFile(task.collectionKey, languageKey, speaker.file))),
-      };
-      loadedCount++;
+      const files = await Promise.all(task.languages.map((languageKey) =>
+        loadFile(task.collectionKey, languageKey, task.fileKey).then(updateProgressLoaded)));
+      const speakerFiles = speaker === undefined ? undefined : await Promise.all(task.languages.map((languageKey) =>
+        loadFile(task.collectionKey, languageKey, speaker.file)));
 
-      if (taskFull.files.some((file) => file === '')) {
+      if (files.some((file) => file === '') || (speakerFiles && speakerFiles.some((file) => file === ''))) {
         // Network error ocurred, but allow the search to continue
         // Partial results may still be useful even if incomplete
         networkError = true;
@@ -242,10 +256,11 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
         return;
 
       // Start helper
-      updateStatusInProgress('loading', loadedCount / taskList.length, processedCount / taskCount, collectedCount / taskList.length);
-      if (import.meta.env.DEV) {
-        console.debug(`Loaded ${loadedCount}/${taskList.length}`);
-      }
+      const taskFull: SearchTask = {
+        ...task,
+        files: files,
+        speakerFiles: speakerFiles,
+      };
       helpers[i % helpers.length].postMessage(taskFull);
     });
   }

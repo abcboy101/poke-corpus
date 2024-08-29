@@ -69,6 +69,10 @@
       "ok": "OK"
     }
   },
+  "progressBar": {
+    "title": "Progress",
+    "value": "{{amount, number}}"
+  },
   "jumpTo": "Jump to...",
   "copy": "Copy",
   "share": "Share",
@@ -106,6 +110,7 @@
     "files": "{{count}} file",
     "files_other": "{{count}} files",
     "storageUsed": "Total storage used: {{amount, number}}",
+    "loading": "{{message}} ({{loaded}}/{{total}})",
     "inProgress": "Caching in progress...",
     "headerCollection": "Collection",
     "headerSize": "Size",
@@ -119,7 +124,7 @@
       }
     },
     "cacheAllFailedModal": {
-      "message": "One or more files could not be saved to the cache. Please ensure you have enough free space.",
+      "message": "One or more files could not be saved to the cache. Please check your internet connection and ensure you have enough free space.",
       "buttons": {
         "ok": "OK"
       }

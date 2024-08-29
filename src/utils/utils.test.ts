@@ -1,4 +1,4 @@
-import { formatBytes } from './utils';
+import { formatBytes, formatPercent } from './utils';
 
 test('bytesToUnits, 0 bytes', () => {
   const n = 0;
@@ -47,4 +47,32 @@ test('bytesToUnits, 100 MB', () => {
   const [value, options] = formatBytes(n);
   const format = Intl.NumberFormat('en-US', options).format(value);
   expect(format).toEqual('100 MB');
+});
+
+test('formatPercent, 1.0%', () => {
+  const n = 0.01;
+  const [value, options] = formatPercent(n);
+  const format = Intl.NumberFormat('en-US', options).format(value);
+  expect(format).toEqual('1.0%');
+});
+
+test('formatPercent, 50.0% (round down)', () => {
+  const n = 0.50049;
+  const [value, options] = formatPercent(n);
+  const format = Intl.NumberFormat('en-US', options).format(value);
+  expect(format).toEqual('50.0%');
+});
+
+test('formatPercent, 50.1% (round up)', () => {
+  const n = 0.50051;
+  const [value, options] = formatPercent(n);
+  const format = Intl.NumberFormat('en-US', options).format(value);
+  expect(format).toEqual('50.0%');
+});
+
+test('formatPercent, 100.0%', () => {
+  const n = 1;
+  const [value, options] = formatPercent(n);
+  const format = Intl.NumberFormat('en-US', options).format(value);
+  expect(format).toEqual('100.0%');
 });

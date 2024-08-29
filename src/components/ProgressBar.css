@@ -1,14 +1,34 @@
 .progress-bar {
-  display: inline-block;
+  display: grid;
+  grid-template-areas: "content";
+  place-items: center;
+  height: 2em;
+}
+
+.progress-bar progress {
+  grid-area: content;
   background: var(--progress-bar-background);
   border: 1px solid var(--progress-bar-border);
   border-radius: 3px;
   width: 100%;
   height: 1em;
-  overflow: hidden;
 }
 
-.progress-bar-complete {
-  height: 100%;
-  background: var(--progress-bar-color);
+.progress-bar progress::-webkit-progress-bar {
+  background-color: var(--progress-bar-background);
+}
+
+.progress-bar progress::-webkit-progress-value,
+.progress-bar progress::-moz-progress-bar {
+  background-color: var(--progress-bar-color);
+}
+
+.progress-bar-text {
+  display: flex;
+  padding: 0 4px;
+  font-size: 0.7em;
+  font-variant-numeric: tabular-nums;
+  place-items: center;
+  grid-area: content;
+  height: 2em;
 }

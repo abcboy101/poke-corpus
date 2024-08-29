@@ -1,27 +1,51 @@
 import { corpus } from '../utils/corpus';
-import { cacheName, getFile, getFilePath } from '../utils/files';
+import { cacheName, getFile, getFilePath, getFileSize } from '../utils/files';
 
-self.onmessage = async (message: MessageEvent<string | null>) => {
+export type CacheManagerStatus = 'done' | 'error' | 'loading';
+export type CacheManagerParams = string | null;
+export type CacheManagerResult = [CacheManagerStatus, number, number, CacheManagerParams];
+
+self.onmessage = async (message: MessageEvent<CacheManagerParams>) => {
+  const updateStatus = (result: CacheManagerResult) => postMessage(result);
   try {
     if (import.meta.env.DEV) {
       console.debug('Caching worker started');
     }
 
+    // Get the URLs of all the files to be cached
     const collections = (message.data === null) ? Object.entries(corpus.collections).reverse()
       : Object.entries(corpus.collections).filter(([collectionKey]) => collectionKey === message.data);
+    const filePaths = collections.flatMap(([collectionKey, collection]) =>
+      collection.files.flatMap((fileKey) => collection.languages.map((languageKey) =>
+        getFilePath(collectionKey, languageKey, fileKey)
+      ))
+    );
+
+    // Calculate and report the total size in bytes
+    const totalBytes = filePaths.map((path) => getFileSize(path)).reduce((a, b) => a + b, 0);
+    updateStatus(['loading', 0, totalBytes, message.data]);
+
+    // Load the files and save them to the cache
+    let loadedBytes = 0;
     const cache = await self.caches.open(cacheName);
-    for (const [collectionKey, collection] of collections) {
-      await Promise.all(
-        collection.files.flatMap((fileKey) => collection.languages.map((languageKey) =>
-          getFile(cache, getFilePath(collectionKey, languageKey, fileKey)).then((res) => res.blob())
-        )));
-    }
-    postMessage([true, message.data]);
+    await Promise.all(filePaths.map((filePath) => getFile(cache, filePath)
+      .then((res) => {
+        res.blob();
+        loadedBytes += getFileSize(filePath);
+        updateStatus(['loading', loadedBytes, totalBytes, message.data]);
+        if (import.meta.env.DEV) {
+          console.debug(`Loaded ${loadedBytes}/${totalBytes}`);
+        }
+      })
+    ));
+
+    // Send results once all done
+    updateStatus(['done', totalBytes, totalBytes, message.data]);
     console.debug('Caching worker complete');
   }
   catch (err) {
     console.error(err);
-    postMessage([false, message.data]);
+    updateStatus(['error', 0, 0, message.data]);
     console.debug('Caching worker error');
   }
 };

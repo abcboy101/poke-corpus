@@ -7,6 +7,13 @@ export const getFilePath = (collectionKey: string, languageKey: string, fileKey:
   `corpus/${collectionKey}/${languageKey}_${fileKey}.txt.gz`;
 
 /**
+ * Returns the size of the text file.
+ */
+export const getFileSize = (path: string): number => {
+  return getRemoteFileInfo(path).size;
+};
+
+/**
  * Returns the size of the pending download, or 0 if already downloaded.
  */
 export const getDownloadSize = async (path: string): Promise<number> => {

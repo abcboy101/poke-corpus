@@ -39,3 +39,17 @@ export function formatBytesParams(size: number) {
   const [amount, format] = formatBytes(size);
   return {amount: amount, formatParams: {amount: format}};
 }
+
+export function formatPercent(n: number, fractionDigits: number = 1) {
+  const format: Intl.NumberFormatOptions = {
+    style: 'percent',
+    minimumFractionDigits: fractionDigits,
+    maximumFractionDigits: fractionDigits,
+  };
+  return [n, format] as const;
+}
+
+export function formatPercentParams(size: number, fractionDigits: number = 1) {
+  const [amount, format] = formatPercent(size, fractionDigits);
+  return {amount: amount, formatParams: {amount: format}};
+}
