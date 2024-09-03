@@ -120,7 +120,7 @@ function Results({status, progress, results, limit = 1000}: {status: Status, pro
   useEffect(() => setOffset(0), [results]);
 
   // Wrap in useMemo to prevent expensive recalculations.
-  // Only changes to results, limit, or offset will affect the generated HTML.
+  // Only changes to results, limit, offset, or language will affect the generated HTML.
   // All of the other toggles only change a CSS class.
   const [count, headers, resultTables] = useMemo(() => {
     let count = 0;
@@ -135,7 +135,7 @@ function Results({status, progress, results, limit = 1000}: {status: Status, pro
       count += lines.length;
     });
     return [count, headers, resultTables] as const;
-  }, [results, limit, offset]);
+  }, [results, limit, offset, i18next.language]);
 
   return (
     <>
