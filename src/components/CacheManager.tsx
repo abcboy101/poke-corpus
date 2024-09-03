@@ -7,7 +7,7 @@ import Delete from "./Delete";
 
 import './CacheManager.css';
 import corpus from '../utils/corpus';
-import { cacheName, getFilePath, getFileCacheOnly, getDownloadSize, clearLocalFileInfo, deleteLocalFileInfo } from '../utils/files';
+import { cacheName, getFilePath, getFileCacheOnly, getDownloadSize, clearLocalFileInfo, deleteLocalFileInfo, getAllLocalFilePaths } from '../utils/files';
 import { formatBytesParams } from "../utils/utils";
 import Refresh from "./Refresh";
 import { ShowModalArguments } from './Modal';
@@ -80,18 +80,28 @@ function CacheManager({active, showModal}: {active: boolean, showModal: (args: S
 
   const checkCachedFiles = async (collectionKey?: CacheManagerParams) => {
     if ('caches' in window) {
+      // Check for all files in the cache
       const cache = await window.caches.open(cacheName);
       const keys = Object.entries(corpus.collections).flatMap(([collectionKey, collection]) =>
         collection.files.flatMap((fileKey) => collection.languages.map((languageKey) =>
           [collectionKey, languageKey, fileKey] as const
         ))
       );
-      const fileInfo = await Promise.all(keys.map(([collectionKey, languageKey, fileKey]) =>
-        getFileCacheOnly(cache, getFilePath(collectionKey, languageKey, fileKey)).then(async ([res, current]) =>
+      const paths = keys.map(([collectionKey, languageKey, fileKey]) => getFilePath(collectionKey, languageKey, fileKey));
+      const fileInfo = await Promise.all(paths.map((path) =>
+        getFileCacheOnly(cache, path).then(async ([res, current]) =>
           [res !== undefined ? (await res.blob()).size : -1, current] as const
         ))
       );
       setCachedFileInfo(fileInfo.map(([size, current], i) => [keys[i], size, current] as const).filter(([, size]) => size !== -1));
+
+      // Remove files that are no longer referenced from the cache
+      const pathsToDelete = new Set(await getAllLocalFilePaths()).difference(new Set(paths));
+      pathsToDelete.forEach((path) => {
+        console.debug(`Deleted ${path} from cache`);
+        cache.delete(path);
+        deleteLocalFileInfo(path);
+      });
 
       if (collectionKey === null) {
         if (fileInfo.some(([size, current]) => size === -1 || !current))

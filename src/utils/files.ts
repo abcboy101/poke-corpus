@@ -106,7 +106,7 @@ const getLocalFileInfo = (path: string): Promise<FileInfo> => (
       request.onsuccess = () => resolve(request.result);
       request.onerror = () => reject(request.error);
     });
-  }).catch((reason) => new Promise<FileInfo>((_, reject) => reject(reason)))
+  }).catch((reason) => new Promise((_, reject) => reject(reason)))
 );
 
 const setLocalFileInfo = (path: string): Promise<boolean> => (
@@ -119,7 +119,7 @@ const setLocalFileInfo = (path: string): Promise<boolean> => (
       request.onsuccess = () => resolve(request.result === (path as IDBValidKey));
       request.onerror = () => reject(request.error);
     });
-  }).catch((reason) => new Promise<boolean>((_, reject) => reject(reason)))
+  }).catch((reason) => new Promise((_, reject) => reject(reason)))
 );
 
 export const deleteLocalFileInfo = (path: string): Promise<boolean> => (
@@ -132,7 +132,7 @@ export const deleteLocalFileInfo = (path: string): Promise<boolean> => (
       request.onsuccess = () => resolve(request.result !== undefined);
       request.onerror = () => reject(request.error);
     });
-  }).catch((reason) => new Promise<boolean>((_, reject) => reject(reason)))
+  }).catch((reason) => new Promise((_, reject) => reject(reason)))
 );
 
 const getFileInfo = async (path: string) => [getRemoteFileInfo(path), await getLocalFileInfo(path)] as const;
@@ -151,7 +151,20 @@ export const clearLocalFileInfo = (): Promise<boolean> => (
       request.onsuccess = () => resolve(request === undefined);
       request.onerror = () => reject(request.error);
     });
-  }).catch((reason) => new Promise<boolean>((_, reject) => reject(reason)))
+  }).catch((reason) => new Promise((_, reject) => reject(reason)))
+);
+
+export const getAllLocalFilePaths = (): Promise<string[]> => (
+  getIndexedDB().then((db) => {
+    const transaction = db.transaction([dbObjectStore], "readonly");
+    const objectStore = transaction.objectStore(dbObjectStore);
+    const request = objectStore.getAllKeys();
+    db.close();
+    return new Promise<string[]>((resolve, reject) => {
+      request.onsuccess = () => resolve(request.result.filter((key) => typeof key === 'string'));
+      request.onerror = () => reject(request.error);
+    });
+  }).catch((reason) => new Promise((_, reject) => reject(reason)))
 );
 //#endregion
 
