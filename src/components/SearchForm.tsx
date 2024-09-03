@@ -186,8 +186,6 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       </div>
       <div className="search-bar-group">
         <div className="search-option">
-        </div>
-        <div className="search-option">
           <input type="checkbox" name="caseInsensitive" id="caseInsensitive" checked={caseInsensitive} onChange={(e) => setCaseInsensitive(e.target.checked)}/>
           <label htmlFor="caseInsensitive">{t('caseInsensitive')}</label>
         </div>

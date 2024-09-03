@@ -46,8 +46,11 @@ function App() {
     </footer>
   );
 
+  const classes = ['app', `mode-${mode}`, `view-${view.toLowerCase()}`];
+  if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent))
+    classes.push('ua-safari');
   return (
-    <div className={`app mode-${mode} view-${view.toLowerCase()}`} lang={i18next.language} dir={i18next.dir()}>
+    <div className={classes.join(' ')} lang={i18next.language} dir={i18next.dir()}>
       { header }
       <Search showModal={showModal}/>
       <CacheManager active={view === "CacheManager"} showModal={showModal}/>

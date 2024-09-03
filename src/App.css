@@ -14,6 +14,7 @@
   --accent-light: skyblue;
   --accent-dark: teal;
   --line-height: 1.5;
+  --line-height-narrow: 1.15;
   --gender-male-color-light: #0000D3;
   --gender-male-color-dark: #7192FB;
   --gender-female-color-light: #C30000;
@@ -266,6 +267,13 @@ input[type="text"], select, select:focus, input[type="submit"], input[type="butt
   border-radius: 3px;
   padding: 0 4px;
   height: 2em;
+  line-height: inherit;
+}
+
+input[type="checkbox"] {
+  margin: 0;
+  padding: 0;
+  margin-inline-end: 0.25em;
 }
 
 button.link {
@@ -307,6 +315,9 @@ button svg, a svg {
 
 footer {
   text-align: center;
+  line-height: var(--line-height-narrow);
+  margin-top: 0.2em;
+  margin-bottom: 0.15em;
 }
 
 table {
@@ -356,4 +367,30 @@ table th, table td {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+}
+
+/* CSS hacks for Safari */
+/* Safari displays these elements too high relative to the associated element */
+.ua-safari label,
+.ua-safari button svg,
+.ua-safari a svg,
+.ua-safari .progress-bar-text {
+  position: relative;
+  top: 0.15em;
+}
+
+/* Safari displays text in these elements too high with the line-height specified */
+/* Safari displays the text in the option elements oddly with the font specified  */
+.ua-safari select,
+.ua-safari select:focus {
+  line-height: initial;
+  font-family: system-ui;
+}
+
+/* Safari displays text in these elements too high with the line-height specified */
+.ua-safari input[type="text"],
+.ua-safari input[type="submit"],
+.ua-safari input[type="button"],
+.ua-safari button {
+  line-height: initial;
 }
