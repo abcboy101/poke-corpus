@@ -77,7 +77,7 @@ function remapKoreanBraille(s: string) {
 
 // GBA special characters
 function remapGBASpecialCharacters(s: string, language: string = '') {
-  const isFullwidth = language == 'ja-Hrkt-JP';
+  const isFullwidth = language == 'ja-Hrkt';
   return (s
     .replaceAll('[PK]', '⒆') // Gen 3 PK
     .replaceAll('[PKMN]', '⒆⒇') // Gen 3 PKMN

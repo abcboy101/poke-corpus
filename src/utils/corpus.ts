@@ -67,11 +67,11 @@ export interface Corpus {
 }
 
 const speakerDelimiters: {[language: string]: string} = {
-  'ja-Hrkt-JP': '『',
-  'ja-JP': '『',
-  'fr-FR': ' : ', // space before and after colon
-  'zh-CN': '\uFF1A', // fullwidth colon
-  'zh-TW': '「',
+  'ja-Hrkt': '『',
+  'ja': '『',
+  'fr': ' : ', // space before and after colon
+  'zh-Hans': '\uFF1A', // fullwidth colon
+  'zh-Hant': '「',
   // default: ': '
 };
 
@@ -79,8 +79,17 @@ export function speakerDelimiter(language: string) {
   return speakerDelimiters[language] ?? ': ';
 }
 
-export const codeId = "qid-ZZ";
-export const langId = "en-JP";
+/*
+Message IDs use the private-use language code "qid". ("qaa"-"qtz" are reserved for local use in ISO 639-2.)
+- For GB/GBC/GBA games, these are assigned based on the identifiers from the pret decompilation.
+- For DS/3DS games, these are assigned numerically based on which file it is in.
+- For Switch games, these are based on the identifiers assigned to it in the table files.
+
+These tend to be in a mixture of English ("en") and romanized Japanese ("ja-Latn").
+Since these are not natural language, we use the language code "zxx" (not applicable) on display.
+*/
+export const codeId = "qid";
+export const langId = "zxx";
 
 export const corpus = corpusJson as Corpus;
 export default corpus;

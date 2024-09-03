@@ -22,11 +22,11 @@ body {
   font-family: var(--font-family-latin), var(--font-family-ko), sans-serif;
 }
 
-:lang(zh-Hant), :lang(zh-TW) {
+:lang(zh-Hant) {
   font-family: var(--font-family-latin), var(--font-family-zh-hant), sans-serif;
 }
 
-:lang(zh-Hans), :lang(zh-CN) {
+:lang(zh-Hans) {
   font-family: var(--font-family-latin), var(--font-family-zh-hans), sans-serif;
 }
 
