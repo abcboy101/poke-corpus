@@ -5,9 +5,11 @@ import { formatPercentParams } from '../utils/utils';
 
 function ProgressBar({progress}: {progress: number}) {
   const { t } = useTranslation();
-  // const showValue = +progress.toFixed(2) > 0 && +progress.toFixed(2) < 1;
-  return <div className="progress-bar">
-    <progress value={progress} max={1} aria-label={t('progressBar.title')}/>
+  const percent = Math.min(Math.max(0, progress * 100), 100);
+  return <div className="progress-bar-container" role="progressbar" aria-label={t('progressBar.title')} aria-valuenow={percent}>
+    <div className="progress-bar">
+      <div className="progress-bar-complete" style={{width: `${percent}%`}}></div>
+    </div>
     <div className="progress-bar-text">{t('progressBar.value', formatPercentParams(progress))}</div>
   </div>;
 }
