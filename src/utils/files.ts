@@ -28,11 +28,14 @@ export const getDownloadSize = async (path: string): Promise<number> => {
   return remoteFileInfo.size;
 };
 
+export const getFileURL = (path: string) => import.meta.env.BASE_URL + path;
+
 /**
  * Retrieves a file from the cache, if present and up-to-date, or the server otherwise.
  */
 export const getFile = async (cache: Cache, path: string) => {
-  const url = import.meta.env.BASE_URL + path;
+  const url = getFileURL(path);
+
   const [remoteFileInfo, localFileInfo] = await getFileInfo(path);
 
   // Use cached file if local hash is up-to-date, or if we are offline
@@ -58,13 +61,21 @@ export const getFile = async (cache: Cache, path: string) => {
  */
 export const getFileCacheOnly = async (cache: Cache, path: string) => {
   // Try retrieving file from cache
-  const url = import.meta.env.BASE_URL + path;
+  const url = getFileURL(path);
   const [remoteFileInfo, localFileInfo] = await getFileInfo(path);
   if (localFileInfo?.hash !== undefined)
     return [await cacheMatch(cache, url), (localFileInfo.hash === remoteFileInfo.hash)] as const;
 
   // No file is cached
   return [undefined, false] as const;
+};
+
+/**
+ * Retrieves a file from the server.
+ */
+export const getFileRemote = (path: string) => {
+  const url = getFileURL(path);
+  return fetch(url);
 };
 
 //#region Indexed DB/FileInfo

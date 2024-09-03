@@ -1,5 +1,5 @@
 import corpus from '../utils/corpus';
-import { cacheName, getFile, getFilePath } from '../utils/files';
+import { cacheName, getFile, getFilePath, getFileRemote } from '../utils/files';
 import SearchWorker from "./searchWorker.ts?worker";
 import { SearchParams, SearchTask, SearchTaskResult, SearchTaskResultComplete, SearchTaskResultLines } from './searchWorker';
 import { SearchResultsInProgress, SearchResultsComplete, SearchResultsStatus } from '../utils/Status';
@@ -27,16 +27,16 @@ type SearchTaskPartial = Omit<SearchTask, "files" | "speakerFiles">;
  * Returns a promise of the text of the file.
  */
 const loadFile = (collectionKey: string, languageKey: string, fileKey: string) => {
-  const url = getFilePath(collectionKey, languageKey, fileKey);
+  const path = getFilePath(collectionKey, languageKey, fileKey);
   if (import.meta.env.DEV) {
-    console.debug(`Getting ${url} from cache`);
+    console.debug(`Loading ${path}`);
   }
-  return (('caches' in self && indexedDB && 'databases' in indexedDB) ? self.caches.open(cacheName).then((cache) => getFile(cache, url))
+  return (('caches' in self && indexedDB && 'databases' in indexedDB) ? self.caches.open(cacheName).then((cache) => getFile(cache, path))
     .catch((err) => {
       console.error(err);
-      console.log(`Could not retrieve ${url} from cache. Fetching directly...`);
-      return fetch(url);
-    }) : fetch(url))
+      console.log(`Could not retrieve ${path} from cache. Fetching directly...`);
+      return getFileRemote(path);
+    }) : getFileRemote(path))
     .catch((err) => {
       console.error(err);
       return null;
