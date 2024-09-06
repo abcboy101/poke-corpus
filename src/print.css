@@ -1,9 +1,9 @@
 @media print {
   /* Use light colorscheme, but with pure white background and black text */
   :root {
-    --background-light: white;
-    --highlight-light: white;
-    --text-light: black;
+    --background-light: white !important;
+    --highlight-light: white !important;
+    --text-light: black !important;
     --background: var(--background-light);
     --highlight: var(--highlight-light);
     --text: var(--text-light);
@@ -26,6 +26,7 @@
     height: auto !important;
     width: auto !important;
     overflow: visible !important;
+    background: var(--background-light) !important;
   }
 
   /* Hide navigation and interactive elements  */
