@@ -6926,6 +6926,28 @@ Va bene, allora!\nLeviamo le ancore! Verso casa!
 Va bene, come vuoi tu.
 “I sogni sono un'altra realtà.\nNon dimenticare…”.
 “Quando i ricordi si affievoliscono,\nricercali nel tuo cuore…”.
+[BRAILLE_FORMAT 4 6 26 13 7 9]⠗⠊⠎⠁⠇⠊⠀⠙⠁⠀⠟⠥⠊
+[BRAILLE_FORMAT 7 6 21 13 10 9]⠁⠃⠉
+[BRAILLE_FORMAT 7 6 21 13 10 9]⠛⠓⠊
+[BRAILLE_FORMAT 7 6 21 13 10 9]⠍⠝⠕
+[BRAILLE_FORMAT 7 6 21 13 10 9]⠞⠥⠧
+[BRAILLE_FORMAT 7 6 21 13 10 9]⠙⠑⠋
+[BRAILLE_FORMAT 7 6 21 13 10 9]⠚⠅⠇
+[BRAILLE_FORMAT 7 6 21 13 10 9]⠏⠟⠗⠎
+[BRAILLE_FORMAT 9 6 19 13 12 9]⠲
+[BRAILLE_FORMAT 7 6 21 13 10 9]⠺⠭⠽⠵
+[BRAILLE_FORMAT 9 6 19 13 12 9]⠂
+[BRAILLE_FORMAT 7 4 23 15 10 7]⠟⠥⠊⠀⠙⠑⠧⠊\n⠎⠉⠁⠧⠁⠗⠑
+[BRAILLE_FORMAT 0 0 29 19 3 3]⠏⠗⠊⠍⠕\n⠺⠁⠊⠇⠕⠗⠙⠂\n⠥⠇⠞⠊⠍⠕\n⠗⠑⠇⠊⠉⠁⠝⠞⠓
+[BRAILLE_FORMAT 2 0 26 19 5 3]⠟⠥⠑⠎⠞⠁⠀⠛⠗⠕⠞⠞⠁\n⠋⠥⠀⠇⠁⠀⠝⠕⠎⠞⠗⠁\n⠉⠁⠎⠁
+[BRAILLE_FORMAT 7 2 23 17 10 5]⠁⠊⠀⠏⠕⠅⠑⠍⠕⠝\n⠙⠕⠃⠃⠊⠁⠍⠕\n⠞⠥⠞⠞⠕
+[BRAILLE_FORMAT 3 0 25 19 6 3]⠍⠁⠀⠙⠕⠧⠑⠍⠍⠕\n⠗⠊⠝⠉⠓⠊⠥⠙⠑⠗⠇⠊\n⠊⠝⠀⠥⠝⠀⠇⠥⠕⠛⠕\n⠎⠑⠛⠗⠑⠞⠕
+[BRAILLE_FORMAT 5 6 25 13 8 9]⠝⠑⠀⠁⠧⠑⠧⠁⠍⠕\n⠏⠁⠥⠗⠁
+[BRAILLE_FORMAT 6 0 24 19 9 3]⠎⠑⠀⠁⠧⠗⠁⠊\n⠉⠕⠗⠁⠛⠛⠊⠕⠀⠑\n⠎⠏⠑⠗⠁⠝⠵⠁
+[BRAILLE_FORMAT 3 2 27 17 6 5]⠙⠊⠑⠞⠗⠕⠀⠁⠙⠀⠥⠝⠁\n⠏⠕⠗⠞⠁\n⠞⠗⠕⠧⠑⠗⠁⠊⠀⠥⠝\n⠏⠕⠅⠑⠍⠕⠝⠀⠑⠞⠑⠗⠝⠕
+[BRAILLE_FORMAT 1 0 27 19 4 3]⠎⠊⠝⠊⠎⠞⠗⠁⠀⠏⠑⠗\n⠙⠥⠑⠂⠀⠎⠉⠑⠝⠙⠊\n⠎⠉⠑⠝⠙⠊⠂⠀⠏⠕⠊\n⠎⠏⠁⠉⠉⠁⠗⠕⠉⠉⠊⠁
+[BRAILLE_FORMAT 5 0 25 19 8 3]⠎⠞⠁⠊⠀⠧⠊⠉⠊⠝⠕\n⠁⠇⠇⠁⠀⠏⠁⠗⠑⠞⠑⠂\n⠋⠁⠊⠀⠥⠝⠀⠛⠊⠗⠕\n⠉⠕⠍⠏⠇⠑⠞⠕
+[BRAILLE_FORMAT 3 0 25 19 6 3]⠉⠓⠊⠀⠉⠕⠝⠙⠊⠧⠊⠙⠑\n⠊⠀⠝⠕⠎⠞⠗⠊⠀⠎⠕⠛⠝⠊\n⠉⠓⠑⠀⠃⠗⠊⠇⠇⠊⠀⠁⠇\n⠉⠑⠝⠞⠗⠕
 PAPÀ: Ciao, [PLAYER]!\cHo appena ricevuto una BACCA molto\nrara. Vorrei che la prendessi tu!
 Se vedi delle BACCHE che crescono su\nun terreno fertile, prendile pure.\cPerò è regola comune piantare un'altra\nBACCA nello stesso punto. Ricordati!\cEcco, un regalo per te.
 Dall'aspetto sembri un ALLENATORE,\no sbaglio?\cGli ALLENATORI spesso fanno tenere\nBACCHE ai loro POKéMON.\cSei tu a decidere quante BACCHE vuoi\nusare e quante ne vuoi piantare.
@@ -14400,9 +14422,9 @@ BACCA[B_COPY_VAR_3]
 [B_DEF_NAME_WITH_PREFIX] resiste\nusando [B_LAST_ITEM]!
 
 Ora si lancia una BALL, vero?\nCercherò di fare del mio meglio!
-Cosa?\n[B_COPY_VAR_1] si sta evolvendo!
-Complimenti! Il tuo [B_COPY_VAR_1]\nsi è evoluto in [B_COPY_VAR_2]![WAIT_SE]\c
-Bloccata evoluzione\ndi [B_COPY_VAR_1]!\c
+Cosa?\n[STR_VAR_1] si sta evolvendo!
+Complimenti! Il tuo [STR_VAR_1]\nsi è evoluto in [STR_VAR_2]![WAIT_SE]\c
+Bloccata evoluzione\ndi [STR_VAR_1]!\c
 ……?\c
 Cosa deve fare\n[B_ACTIVE_NAME_WITH_PREFIX]?
 Cosa deve fare\n[B_PLAYER_NAME]?
@@ -15242,7 +15264,7 @@ Benvenuti alla SALA d'ONORE!
 Spotted POKéMON: [STR_VAR_1]!\nOwned POKéMON: [STR_VAR_2]!\cPROF. BIRCH's POKéDEX rating!\cPROF. BIRCH: Let's see…\c
 SAVING…\nDON'T TURN OFF THE POWER.
 Errore nei dati della SALA d'ONORE.
-  SALA d'ONORE nº [STR_VAR_1]
+SALA d'ONORE nº [STR_VAR_1]
 CAMPIONE LEGA POKéMON!\nCONGRATULAZIONI!
 Nº 
 L. 

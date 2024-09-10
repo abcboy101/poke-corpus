@@ -121,6 +121,16 @@
 }
 
 /* Version branches */
+.version-ruby {
+  border-bottom: 1px dotted var(--text);
+  color: var(--version-ruby-color);
+}
+
+.version-sapphire {
+  border-bottom: 1px dotted var(--text);
+  color: var(--version-sapphire-color);
+}
+
 .version-scarlet {
   border-bottom: 1px dotted var(--text);
   color: var(--version-scarlet-color);

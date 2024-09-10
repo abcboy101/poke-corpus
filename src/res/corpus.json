@@ -109,8 +109,9 @@
         "data"
       ]
     },
-    "Ruby": {
+    "RubySapphire": {
       "languages": [
+        "qid",
         "ja-Hrkt",
         "en",
         "fr",
@@ -118,40 +119,56 @@
         "de",
         "es"
       ],
-      "structured": false,
+      "structured": true,
       "version": {
-        "ja": "1.0",
-        "en": "1.1/1.2",
-        "fr": "1.0/1.1",
-        "it": "1.0/1.1",
-        "de": "1.0/1.1",
-        "es": "1.0/1.1"
+        "ja": "1.1",
+        "en": "1.2",
+        "fr": "1.1",
+        "it": "1.1",
+        "de": "1.1",
+        "es": "1.1"
       },
       "files": [
-        "data"
-      ]
-    },
-    "Sapphire": {
-      "languages": [
-        "ja-Hrkt",
-        "en",
-        "fr",
-        "it",
-        "de",
-        "es"
+        "msg"
       ],
-      "structured": false,
-      "version": {
-        "ja": "1.0",
-        "en": "1.1/1.2",
-        "fr": "1.0/1.1",
-        "it": "1.0/1.1",
-        "de": "1.0/1.1",
-        "es": "1.0/1.1"
-      },
-      "files": [
-        "data"
-      ]
+      "literals": {
+        "KUN": {
+          "branch": "gender",
+          "line": [12326, 12327]
+        },
+        "VERSION": {
+          "branch": "version",
+          "line": [12329, 12328]
+        },
+        "EVIL_TEAM": {
+          "branch": "version",
+          "line": [12331, 12330]
+        },
+        "GOOD_TEAM": {
+          "branch": "version",
+          "line": [12330, 12331]
+        },
+        "EVIL_LEADER": {
+          "branch": "version",
+          "line": [12333, 12332]
+        },
+        "GOOD_LEADER": {
+          "branch": "version",
+          "line": [12332, 12333]
+        },
+        "EVIL_LEGENDARY": {
+          "branch": "version",
+          "line": [12335, 12334]
+        },
+        "GOOD_LEGENDARY": {
+          "branch": "version",
+          "line": [12334, 12335]
+        },
+        "RIVAL": {
+          "branch": "gender",
+          "line": [12337, 12336]
+        }
+      }
     },
     "FireRedLeafGreen": {
       "id": "frlg",

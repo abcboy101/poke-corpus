@@ -3242,6 +3242,45 @@ Wroooooooaaaaaarrrr!
 はあ　はあ…
 Thank you, [PLAYER]!\nSincerely, thank you!\rYou've made my dream a reality!
 OAK: Ah, welcome!\cTell me, how is your POKéDEX\ncoming along?\cWahaha!\cActually, I know how it is, but I\nlove seeing it anyway!\cLet's see…
+⠥⠏
+⠙⠕⠺⠝
+⠗⠊⠛⠓⠞
+⠇⠑⠋⠞
+⠉⠥⠞
+⠁⠃⠉
+⠛⠓⠊
+⠍⠝⠕
+⠞⠥⠧
+⠙⠑⠋
+⠚⠅⠇
+⠏⠟⠗⠎
+⠺⠭⠽⠵
+⠲
+⠂
+⠑⠧⠑⠗⠽⠞⠓⠊⠝⠛
+⠓⠁⠎⠀⠍⠑⠁⠝⠊⠝⠛
+⠑⠭⠊⠎⠞⠑⠝⠉⠑
+⠓⠁⠎⠀⠍⠑⠁⠝⠊⠝⠛
+⠃⠑⠊⠝⠛⠀⠁⠇⠊⠧⠑
+⠓⠁⠎⠀⠍⠑⠁⠝⠊⠝⠛
+⠓⠁⠧⠑⠀⠙⠗⠑⠁⠍⠎
+⠥⠎⠑⠀⠏⠕⠺⠑⠗⠲
+⠇⠑⠞⠀⠞⠓⠑⠀⠞⠺⠕
+⠛⠇⠊⠞⠞⠑⠗⠊⠝⠛
+⠎⠞⠕⠝⠑⠎
+⠕⠝⠑⠀⠊⠝⠀⠗⠑⠙
+⠕⠝⠑⠀⠊⠝⠀⠃⠇⠥⠑
+⠉⠕⠝⠝⠑⠉⠞⠀⠞⠓⠑
+⠏⠁⠎⠞⠲
+⠞⠺⠕⠀⠋⠗⠊⠑⠝⠙⠎
+⠎⠓⠁⠗⠊⠝⠛
+⠏⠕⠺⠑⠗⠀⠕⠏⠑⠝
+⠁⠀⠺⠊⠝⠙⠕⠺⠀⠞⠕
+⠁⠀⠝⠑⠺⠀⠺⠕⠗⠇⠙
+⠞⠓⠁⠞⠀⠛⠇⠕⠺⠎⠲
+⠞⠓⠑⠀⠝⠑⠭⠞
+⠺⠕⠗⠇⠙⠀⠺⠁⠊⠞⠎
+⠋⠕⠗⠀⠽⠕⠥⠲
 テストよう　メッセージです！\nポケモンの　せかいへ　ようこそ！
 [COLOR BLUE][SHADOW LIGHT_BLUE]What does this person do?\c[COLOR DARK_GRAY][SHADOW LIGHT_GRAY]OAK POKéMON RESEARCH LAB
 [COLOR BLUE][SHADOW LIGHT_BLUE]What is this person like?\c[FONT_MALE][COLOR DARK_GRAY][SHADOW LIGHT_GRAY]To make a complete guide on all\nthe POKéMON in the world…\cThat was my dream!
@@ -9211,9 +9250,9 @@ OAK: Keep your eyes on your\nPOKéMON's HP.\cIt will faint if the HP drops to\n�
 OAK: No! There's no running away\nfrom a TRAINER POKéMON battle!\c
 OAK: Hm! Excellent!\cIf you win, you earn prize money,\nand your POKéMON will grow!\cBattle other TRAINERS and make\nyour POKéMON strong!\c
 OAK: Hm…\nHow disappointing…\cIf you win, you earn prize money,\nand your POKéMON grow.\cBut if you lose, [B_PLAYER_NAME], you end\nup paying prize money…\cHowever, since you had no warning\nthis time, I'll pay for you.\cBut things won't be this way once\nyou step outside these doors.\cThat's why you must strengthen your\nPOKéMON by battling wild POKéMON.\c
-What?\n[B_COPY_VAR_1] is evolving!
-Congratulations! Your [B_COPY_VAR_1]\nevolved into [B_COPY_VAR_2]![WAIT_SE]\c
-Huh? [B_COPY_VAR_1]\nstopped evolving!\c
+What?\n[STR_VAR_1] is evolving!
+Congratulations! Your [STR_VAR_1]\nevolved into [STR_VAR_2]![WAIT_SE]\c
+Huh? [STR_VAR_1]\nstopped evolving!\c
 ……?\c
 What will\n[B_ACTIVE_NAME_WITH_PREFIX] do?
 What will [B_PLAYER_NAME]\nthrow?
@@ -10813,7 +10852,7 @@ RECEIVE
 SEND
 TOSS
 DEL. ALL[CLEAR_TO 87]CANCEL[CLEAR_TO 164]OK
-　あきと
+あきと
 [UNDERSCORE]
 [CLEAR 17]
 

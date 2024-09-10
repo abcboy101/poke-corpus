@@ -75,26 +75,82 @@ function remapKoreanBraille(s: string) {
   );
 }
 
-// GBA special characters
-function remapGBASpecialCharacters(s: string, language: string = '') {
-  const isFullwidth = language == 'ja-Hrkt';
-  return (s
-    .replaceAll('[PK]', '⒆') // Gen 3 PK
-    .replaceAll('[PKMN]', '⒆⒇') // Gen 3 PKMN
+// GBA Braille
+const brailleJapanese = '　アッイワナ⠆ニ⠈ウオエヤヌノネ⠐ラーリヲタ⠖チ⠘ルロレヨツトテ⠠カ⠢キ⠤ハ⠦ヒ⠨クコケユフホヘ⠰サ⠲シンマ⠶ミ⠸スソセ⠼ムモメ';
+const brailleWestern = ' A,B.K⠆L⠈CIF⠌MSP,E⠒H⠔O⠖R⠘DJGÄNTQ⠠⠡⠢⠣-U⠦V⠨⠩Ö⠫⠬X⠮⠯⠰⠱.Ü⠴Z⠶⠷⠸⠹W⠻⠼Y⠾⠿';
 
+function remapGBABrailleJapanese(s: string) {
+  return (s.replaceAll(/[\u2800-\u283F]/gu, (c: string) => brailleJapanese[c.charCodeAt(0) - 0x2800])
+    .replaceAll(/([\u2808\u2810\u2818\u2820\u2828])(.)/gu, (_, prefix: string, base: string) => {
+      // Japanese braille encodes yōon, dakuten, and handakuten in the preceding cell
+      // " ^dh CV" (braille) -> "CV^dh" (kana)
+      // "y^dh CV" (braille) -> "Ci^dh yV" (kana)
+      const charCode = prefix.charCodeAt(0);
+
+      let suffix = '';
+      if (charCode & 0x08) { // yōon (dot 4)
+        const index = 'カクコサスソタツトナヌノハフホマムモラルロ'.indexOf(base);
+        if (index !== -1) {
+          base = 'キシチニヒミリ'[Math.floor(index / 7)]; // consonant + i
+          suffix = 'ャュョ'[index % 3]; // y + vowel
+        }
+      }
+
+      if (charCode & 0x10) // dakuten (dot 5)
+        base = String.fromCharCode(base.charCodeAt(0) + 1); // add dakuten
+      else if (charCode & 0x20) // handakuten (dot 6)
+        base = String.fromCharCode(base.charCodeAt(0) + 2); // add handakuten
+      return base.concat(suffix);
+    })
+  );
+}
+
+function remapGBABrailleWestern(s: string, language: string) {
+  // In German/Spanish, the period/comma are incorrectly written with a preceding '⠿'
+  if (language === 'de' || language === 'es')
+    s = s.replaceAll(/\u283F([\u2802\u2804])/gu, '$1');
+  return s.replaceAll(/[\u2800-\u283F]/gu, (c: string) => brailleWestern[c.charCodeAt(0) - 0x2800]);
+}
+
+function remapGBABraille(s: string, language: string) {
+  s = s.replaceAll(/(\[BRAILLE_FORMAT(?: \d+){6}\])/gu, ''); // Strip RSE braille format
+  return language === 'ja-Hrkt' ? remapGBABrailleJapanese(s) : remapGBABrailleWestern(s, language);
+}
+
+// GBA special characters
+function remapGBASpecialCharacters(s: string, language: string) {
+  return (remapGBABraille(s, language)
+    // Old method for strings introduced in RS
+    // Japanese - FC 0C xx (ESCAPE)
+    // Western - replacing Japanese characters
     .replaceAll('[UP_ARROW]', '↑')
     .replaceAll('[DOWN_ARROW]', '↓')
     .replaceAll('[LEFT_ARROW]', '←')
     .replaceAll('[RIGHT_ARROW]', '→')
+    .replaceAll('[PLUS]', '＋')
+    .replaceAll('[AMPERSAND]', '＆') // Japanese RS credits
+    .replaceAll('[EQUALS]', '＝') // Japanese RS options
+    .replaceAll('[PK]', '⒆') // Gen 3 PK
+    .replaceAll('[PKMN]', '⒆⒇') // Gen 3 PKMN
     .replaceAll('[SUPER_ER]', 'ᵉʳ')
     .replaceAll('[SUPER_E]', 'ᵉ')
     .replaceAll('[SUPER_RE]', 'ʳᵉ')
 
+    // FRLGE - FC 0C xx (ESCAPE)
+    // These still use the old escape sequence
+    .replaceAll('[ESCAPE 0]', '↑')
+    .replaceAll('[ESCAPE 1]', '↓')
+    .replaceAll('[ESCAPE 2]', '←')
+    .replaceAll('[ESCAPE 3]', '→')
+    .replaceAll('[ESCAPE 4]', '＋')
+
+    // New method for strings introduced in FRLGE
+    // FRLGE - F9 xx (EXTRA_SYMBOL)
     .replaceAll('[UP_ARROW_2]', '↑')
     .replaceAll('[DOWN_ARROW_2]', '↓')
     .replaceAll('[LEFT_ARROW_2]', '←')
     .replaceAll('[RIGHT_ARROW_2]', '→')
-    .replaceAll('[PLUS]', isFullwidth ? '＋' : '+')
+    .replaceAll('[PLUS]', '＋')
     // LV, PP, ID, NO are handled in postprocess
     .replaceAll('[UNDERSCORE]', '＿') // also fullwidth in EFIGS, wider than EMOJI_UNDERSCORE
     .replaceAll('[CIRCLE_1]', '①')
@@ -111,7 +167,6 @@ function remapGBASpecialCharacters(s: string, language: string = '') {
     .replaceAll('[CIRCLE_DOT]', '◎')
     .replaceAll('[TRIANGLE]', '△')
     .replaceAll('[BIG_MULT_X]', '✕') // EFIGS, larger than regular '×'
-
     .replaceAll('[KANJI_BIG]', '大')
     .replaceAll('[KANJI_SMALL]', '小')
     .replaceAll('[DAKUTEN]', '゛')
@@ -132,10 +187,10 @@ function remapGCNSpecialCharacters(s: string) {
 // NDS special characters
 function remapNDSSpecialCharacters(s: string) {
   return s.search(/[\u2460-\u2487]/u) === -1 ? s : (s
-    .replaceAll('\u2469', 'ᵉʳ') // Gen 5 superscript er [also used privately for Gen 4]
-    .replaceAll('\u246A', 'ʳᵉ') // Gen 5 superscript re [also used privately for Gen 4]
-    .replaceAll('\u246B', 'ʳ') // Gen 5 superscript r [also used privately for Gen 4]
-    .replaceAll('\u2485', 'ᵉ') // Gen 5 superscript e [also used privately for Gen 4]
+    .replaceAll('⑩', 'ᵉʳ') // Gen 5 superscript er [also used privately for Gen 4]
+    .replaceAll('⑪', 'ʳᵉ') // Gen 5 superscript re [also used privately for Gen 4]
+    .replaceAll('⑫', 'ʳ') // Gen 5 superscript r [also used privately for Gen 4]
+    .replaceAll('⒅', 'ᵉ') // Gen 5 superscript e [also used privately for Gen 4]
   );
 }
 
@@ -267,8 +322,9 @@ function preprocessMetadata(s: string) {
  *
  * Returns the resulting string.
  */
-function preprocessString(s: string, collectionKey: string, language: string = '') {
+function preprocessString(s: string, collectionKey: string, language: string) {
   switch (collectionKey) {
+    case "RubySapphire":
     case "FireRedLeafGreen":
     case "Emerald":
       s = remapGBASpecialCharacters(s, language);
@@ -430,7 +486,7 @@ const versionBranchSV = (form1: string, form2: string) => versionBranch(form1, f
  * Returns the resulting HTML string.
  */
 function postprocessString(s: string, collectionKey: string, language: string = '') {
-  const isGen3 = ["FireRedLeafGreen", "Emerald"].includes(collectionKey);
+  const isGen3 = ["RubySapphire", "FireRedLeafGreen", "Emerald"].includes(collectionKey);
   const isGen4 = ["DiamondPearl", "Platinum", "HeartGoldSoulSilver"].includes(collectionKey);
   const isGen5 = ["BlackWhite", "Black2White2"].includes(collectionKey);
   const isBDSP = collectionKey == "BrilliantDiamondShiningPearl";
@@ -613,6 +669,7 @@ function postprocessString(s: string, collectionKey: string, language: string = 
     .replaceAll(/(\[(?:(?:[ABLR]|START|SELECT)_BUTTON|DPAD_(?:UP|DOWN|LEFT|RIGHT|UPDOWN|LEFTRIGHT|NONE))\])/gu, '<span class="var">$1</span>') // F8 xx
     .replaceAll(/(\[EMOJI_[^\]]+?\])/gu, '<span class="var">$1</span>') // F9 D0 - F9 FE
 
+    .replaceAll('[NOP]', '<span class="var">[NOP]</span>') // FC 00 (no-op; in Western RS only, it's used to shorten city/town names in the Trainer's Eyes feature of the PokéNav, and as a placeholder for one-digit numbers in Contests)
     .replaceAll(/(\[COLOR [^\]]+?\])/gu, '<span class="var">$1</span>') // FC 01 xx
     .replaceAll('[COLOR]', '<span class="var">[COLOR]</span>') // FC 01
     .replaceAll(/(\[HIGHLIGHT [^\]]+?\])/gu, '<span class="var">$1</span>') // FC 02 xx
@@ -628,6 +685,7 @@ function postprocessString(s: string, collectionKey: string, language: string = 
     .replaceAll(/(\[PLAY_SE [^\]]+?\])/gu, '<span class="var">$1</span>') // FC 10 xx
     .replaceAll(/(\[CLEAR \d+\])/gu, '<span class="var">$1</span>') // FC 11 xx
     .replaceAll(/(\[CLEAR_TO \d+\])/gu, '<span class="var">$1</span>') // FC 13 xx
+    .replaceAll(/(\[MIN_LETTER_SPACING \d+\])/gu, '<span class="var">$1</span>') // FC 14 xx
     .replaceAll('[PAUSE_MUSIC]', '<span class="var">[PAUSE_MUSIC]</span>') // FC 17 xx
     .replaceAll('[RESUME_MUSIC]', '<span class="var">[RESUME_MUSIC]</span>') // FC 18 xx
 

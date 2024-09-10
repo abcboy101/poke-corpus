@@ -3242,6 +3242,45 @@ A ver cómo llevas la POKéDEX\nNACIONAL:\cPOKéMON avistados: [STR_VAR_1]\nPOK�
 はあ　はあ…
 ¡Gracias, [PLAYER]!\nGracias de verdad.\r¡Has hecho mi sueño realidad!
 OAK: ¡Hola!\c¿Qué tal llevas la POKéDEX?\cA ver...\cLa verdad es que sé cómo es, pero\nme gusta verla de todas formas.\cA ver, a ver...
+⠁⠗⠗⠊⠃⠁
+⠁⠃⠁⠚⠕
+⠙⠑⠗⠑⠉⠓⠁
+⠊⠵⠟⠥⠊⠑⠗⠙⠁
+⠉⠕⠗⠞⠑
+⠁⠃⠉
+⠛⠓⠊
+⠍⠝⠕
+⠞⠥⠧
+⠙⠑⠋
+⠚⠅⠇
+⠏⠟⠗⠎
+⠺⠭⠽⠵
+⠿⠄
+⠿⠂
+⠞⠕⠙⠕
+⠊⠍⠏⠕⠗⠞⠁
+⠑⠭⠊⠎⠞⠑⠝⠉⠊⠁
+⠊⠍⠏⠕⠗⠞⠁
+⠑⠎⠞⠁⠗⠀⠧⠊⠧⠕
+⠊⠍⠏⠕⠗⠞⠁
+⠙⠑⠎⠑⠁⠗
+⠥⠎⠁⠀⠋⠥⠑⠗⠵⠁
+⠙⠑⠚⠁⠀⠁⠀⠙⠕⠎
+⠃⠗⠊⠇⠇⠁⠝⠞⠑⠎
+⠏⠊⠑⠙⠗⠁⠎
+⠥⠝⠁⠀⠗⠕⠚⠁
+⠥⠝⠁⠀⠁⠵⠥⠇
+⠉⠕⠝⠑⠉⠞⠁⠗
+⠉⠕⠝⠀⠏⠁⠎⠁⠙⠕
+⠁⠍⠊⠛⠕⠎
+⠉⠕⠍⠏⠁⠗⠞⠊⠗
+⠋⠥⠑⠗⠵⠁
+⠁⠃⠗⠑⠀⠏⠥⠑⠗⠞⠁
+⠁⠀⠍⠥⠝⠙⠕
+⠏⠕⠗⠀⠑⠭⠏⠇⠕⠗⠁⠗
+⠝⠥⠑⠧⠕⠀⠍⠥⠝⠙⠕
+⠕⠎
+⠑⠎⠏⠑⠗⠁
 テストよう　メッセージです！\nポケモンの　せかいへ　ようこそ！
 [COLOR BLUE][SHADOW LIGHT_BLUE]¿Qué ponía aquí?\c[COLOR DARK_GRAY][SHADOW LIGHT_GRAY]LABORATORIO POKéMON del PROF. OAK
 [COLOR BLUE][SHADOW LIGHT_BLUE]¿Qué ha dicho esta persona?\c[FONT_MALE][COLOR DARK_GRAY][SHADOW LIGHT_GRAY]Quería hacer una guía de todos\nlos POKéMON del mundo...\c¡Era mi sueño!
@@ -9211,9 +9250,9 @@ OAK: No pierdas de vista los PS\nde tu POKéMON.\cSi llegan a 0, se debilitará.
 OAK: ¡Eh! ¡No puedes escapar\ndel combate con un ENTRENADOR!\c
 OAK: ¡Muy bien! ¡Excelente!\cSi vences, ganas dinero;\ny tu POKéMON, experiencia.\c¡Lucha con otros ENTRENADORES\npara hacerte más fuerte todavía!\c
 OAK: Oh...\nVaya chasco...\cSi vences, ganas dinero;\ny tu POKéMON, experiencia.\cPero si te derrotan, [B_PLAYER_NAME],\ndebes pagar una cantidad...\cBueno, como es la primera vez\ny no lo sabías, yo pagaré por ti.\cPero piensa que las cosas no\nson así fuera del laboratorio.\cDebes luchar con muchos POKéMON\nsalvajes; debes hacerte fuerte.\c
-¡Anda!\n¡[B_COPY_VAR_1] está evolucionando!
-¡Enhorabuena! ¡Tu [B_COPY_VAR_1]\nse ha convertido en [B_COPY_VAR_2]![WAIT_SE]\c
-¿Eh? ¡La evolución de\n[B_COPY_VAR_1] se ha detenido!\c
+¡Anda!\n¡[STR_VAR_1] está evolucionando!
+¡Enhorabuena! ¡Tu [STR_VAR_1]\nse ha convertido en [STR_VAR_2]![WAIT_SE]\c
+¿Eh? ¡La evolución de\n[STR_VAR_1] se ha detenido!\c
 ... ...?\c
 ¿Qué debería hacer\n[B_ACTIVE_NAME_WITH_PREFIX]?
 ¿Qué hará\n[B_PLAYER_NAME]?
@@ -10813,7 +10852,7 @@ RECIBIR
 ENVIAR
 TIRAR
 BORRAR[CLEAR_TO 87]SALIR[CLEAR_TO 164]VALE
-　あきと
+あきと
 [UNDERSCORE]
 [CLEAR 17]
 
