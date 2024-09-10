@@ -91,7 +91,7 @@ function remapGBABrailleJapanese(s: string) {
       if (charCode & 0x08) { // yōon (dot 4)
         const index = 'カクコサスソタツトナヌノハフホマムモラルロ'.indexOf(base);
         if (index !== -1) {
-          base = 'キシチニヒミリ'[Math.floor(index / 7)]; // consonant + i
+          base = 'キシチニヒミリ'[Math.floor(index / 3)]; // consonant + i
           suffix = 'ャュョ'[index % 3]; // y + vowel
         }
       }
