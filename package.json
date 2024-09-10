@@ -17,7 +17,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "start": "npm run hash && vite",
-    "build": "npm run lint && npm run hash && tsc && vite build && npm run minify",
+    "build": "npm run lint && vitest run && npm run hash && tsc && vite build && npm run minify",
     "serve": "vite preview",
     "test": "vitest",
     "test:coverage": "vitest run --coverage --watch=false",

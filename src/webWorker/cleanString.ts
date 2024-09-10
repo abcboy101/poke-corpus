@@ -39,17 +39,12 @@ import * as g3 from './expandVariablesG3';
 
 //#region Pre-processing
 // SMUSUM Chinese Pokémon names
-function remapChineseChars(s: string) {
-  return s.search(/[\uE800-\uEE26]/u) === -1 ? s : (
-    Array.from(s).map((c) => {
-      const codePoint = c.codePointAt(0);
-      return (codePoint !== undefined && codePoint >= 0xE800 && codePoint <= 0xEE26) ? chineseChars[codePoint - 0xE800] : c;
-    }).join('')
-  );
+export function remapChineseChars(s: string) {
+  return s.replaceAll(/[\uE800-\uEE26]/gu, (c: string) => chineseChars[c.codePointAt(0)! - 0xE800]);
 }
 
 // ORAS Korean Braille
-function remapKoreanBraille(s: string) {
+export function remapKoreanBraille(s: string) {
   return s.search(/[\u1100-\u11FF\uE0C0-\uE0C7]/u) === -1 ? s : (s
     .replaceAll('\uE0C0', '그래서') // geuraeseo
     .replaceAll('\uE0C1', '그러나') // geureona
@@ -79,16 +74,16 @@ function remapKoreanBraille(s: string) {
 const brailleJapanese = '　アッイワナ⠆ニ⠈ウオエヤヌノネ⠐ラーリヲタ⠖チ⠘ルロレヨツトテ⠠カ⠢キ⠤ハ⠦ヒ⠨クコケユフホヘ⠰サ⠲シンマ⠶ミ⠸スソセ⠼ムモメ';
 const brailleWestern = ' A,B.K⠆L⠈CIF⠌MSP,E⠒H⠔O⠖R⠘DJGÄNTQ⠠⠡⠢⠣-U⠦V⠨⠩Ö⠫⠬X⠮⠯⠰⠱.Ü⠴Z⠶⠷⠸⠹W⠻⠼Y⠾⠿';
 
-function remapGBABrailleJapanese(s: string) {
-  return (s.replaceAll(/[\u2800-\u283F]/gu, (c: string) => brailleJapanese[c.charCodeAt(0) - 0x2800])
+export function remapGBABrailleJapanese(s: string) {
+  return (s.replaceAll(/[\u2800-\u283F]/gu, (c: string) => brailleJapanese[c.codePointAt(0)! - 0x2800])
     .replaceAll(/([\u2808\u2810\u2818\u2820\u2828])(.)/gu, (_, prefix: string, base: string) => {
       // Japanese braille encodes yōon, dakuten, and handakuten in the preceding cell
       // " ^dh CV" (braille) -> "CV^dh" (kana)
       // "y^dh CV" (braille) -> "Ci^dh yV" (kana)
-      const charCode = prefix.charCodeAt(0);
+      const code = prefix.codePointAt(0)!;
 
       let suffix = '';
-      if (charCode & 0x08) { // yōon (dot 4)
+      if (code & 0x08) { // yōon (dot 4)
         const index = 'カクコサスソタツトナヌノハフホマムモラルロ'.indexOf(base);
         if (index !== -1) {
           base = 'キシチニヒミリ'[Math.floor(index / 3)]; // consonant + i
@@ -96,20 +91,20 @@ function remapGBABrailleJapanese(s: string) {
         }
       }
 
-      if (charCode & 0x10) // dakuten (dot 5)
-        base = String.fromCharCode(base.charCodeAt(0) + 1); // add dakuten
-      else if (charCode & 0x20) // handakuten (dot 6)
-        base = String.fromCharCode(base.charCodeAt(0) + 2); // add handakuten
+      if (code & 0x10) // dakuten (dot 5)
+        base = String.fromCodePoint(base.codePointAt(0)! + 1); // add dakuten
+      else if (code & 0x20) // handakuten (dot 6)
+        base = String.fromCodePoint(base.codePointAt(0)! + 2); // add handakuten
       return base.concat(suffix);
     })
   );
 }
 
-function remapGBABrailleWestern(s: string, language: string) {
+export function remapGBABrailleWestern(s: string, language: string) {
   // In German/Spanish, the period/comma are incorrectly written with a preceding '⠿'
   if (language === 'de' || language === 'es')
     s = s.replaceAll(/\u283F([\u2802\u2804])/gu, '$1');
-  return s.replaceAll(/[\u2800-\u283F]/gu, (c: string) => brailleWestern[c.charCodeAt(0) - 0x2800]);
+  return s.replaceAll(/[\u2800-\u283F]/gu, (c: string) => brailleWestern[c.codePointAt(0)! - 0x2800]);
 }
 
 function remapGBABraille(s: string, language: string) {
@@ -305,7 +300,7 @@ function remapSwitchSpecialCharacters(s: string) {
  *
  * Returns the resulting string.
  */
-function preprocessMetadata(s: string) {
+export function preprocessMetadata(s: string) {
   return s.search(/\{[^|}]+\|[^|}]+\}/u) === -1 ? s : (
     s.replaceAll(/^.*\{[^|}]+\|[^|}]+\}.*$/gum, (line) => {
       const lineKanji = line.replaceAll(/\{([^|}]+)\|[^|}]+\}/gu, '$1');
@@ -322,7 +317,7 @@ function preprocessMetadata(s: string) {
  *
  * Returns the resulting string.
  */
-function preprocessString(s: string, collectionKey: string, language: string) {
+export function preprocessString(s: string, collectionKey: string, language: string) {
   switch (collectionKey) {
     case "RubySapphire":
     case "FireRedLeafGreen":
@@ -373,7 +368,7 @@ function preprocessString(s: string, collectionKey: string, language: string) {
  *
  * Returns the resulting string.
  */
-function convertWhitespace(s: string) {
+export function convertWhitespace(s: string) {
   return (s
     .replaceAll('\\\\', '\u{F0100}')
     .replaceAll('\\n', '\n')
@@ -390,7 +385,7 @@ function convertWhitespace(s: string) {
  *
  * Returns the resulting string.
  */
-function postprocessMetadata(s: string) {
+export function postprocessMetadata(s: string) {
   return s.split('\u{F0000}')[0];
 }
 
@@ -485,7 +480,7 @@ const versionBranchSV = (form1: string, form2: string) => versionBranch(form1, f
  *
  * Returns the resulting HTML string.
  */
-function postprocessString(s: string, collectionKey: string, language: string = '') {
+export function postprocessString(s: string, collectionKey: string, language: string = '') {
   const isGen3 = ["RubySapphire", "FireRedLeafGreen", "Emerald"].includes(collectionKey);
   const isGen4 = ["DiamondPearl", "Platinum", "HeartGoldSoulSilver"].includes(collectionKey);
   const isGen5 = ["BlackWhite", "Black2White2"].includes(collectionKey);
@@ -767,5 +762,3 @@ function postprocessString(s: string, collectionKey: string, language: string = 
   );
   return multiLine(s);
 }
-
-export { preprocessString, convertWhitespace, postprocessString };

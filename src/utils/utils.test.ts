@@ -67,7 +67,7 @@ test('formatPercent, 50.1% (round up)', () => {
   const n = 0.50051;
   const [value, options] = formatPercent(n);
   const format = Intl.NumberFormat('en-US', options).format(value);
-  expect(format).toEqual('50.0%');
+  expect(format).toEqual('50.1%');
 });
 
 test('formatPercent, 100.0%', () => {
