@@ -78,7 +78,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
 
   useEffect(() => {
     if (id !== '') {
-      const collectionId = file.split('.')[0];
+      const collectionId = id.split('.')[0];
       postToWorker({
         query: `^${escapeRegex(id)}$`,
         type: 'regex',
