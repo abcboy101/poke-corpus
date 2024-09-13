@@ -1,7 +1,8 @@
 import corpus from '../utils/corpus';
 import { cacheName, getFile, getFilePath, getFileRemote } from '../utils/files';
 import SearchWorker from "./searchWorker.ts?worker";
-import { SearchParams, SearchTask, SearchTaskResult, SearchTaskResultComplete, SearchTaskResultLines } from './searchWorker';
+import { SearchParams } from '../utils/searchParams';
+import { SearchTask, SearchTaskResult, SearchTaskResultComplete, SearchTaskResultLines } from './searchWorker';
 import { SearchResultsInProgress, SearchResultsComplete, SearchResultsStatus } from '../utils/Status';
 import { isBooleanQueryValid } from './searchBoolean';
 

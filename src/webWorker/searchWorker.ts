@@ -1,23 +1,12 @@
 import 'compression-streams-polyfill';
 import { preprocessString, convertWhitespace, postprocessString } from './cleanString';
-import { codeId, Speaker, speakerDelimiter, Literals } from '../utils/corpus';
+import { codeId, Speaker, Literals } from '../utils/corpus';
 import { SearchTaskResultDone, SearchTaskResultNotDone } from '../utils/Status';
 import { getMatchConditionBoolean } from './searchBoolean';
+import { extractSpeakers, replaceSpeaker } from '../utils/speaker';
+import { SearchParams } from '../utils/searchParams';
 
-export const searchTypes = ["exact", "regex", "boolean"] as const;
-export type SearchType = typeof searchTypes[number];
-export const isSearchType = (s: string): s is SearchType => (searchTypes as readonly string[]).includes(s);
 export type MatchCondition = (line: string) => boolean;
-
-export interface SearchParams {
-  readonly query: string,
-  readonly type: SearchType,
-  readonly caseInsensitive: boolean,
-  readonly common: boolean,
-  readonly script: boolean,
-  readonly collections: readonly string[],
-  readonly languages: readonly string[],
-}
 
 export interface SearchTask {
   readonly index: number,
@@ -116,13 +105,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
 
     // Load speakers
     // Since all dialogue with speaker names are in the script file while the speaker names are in the common file, we always have to load it separately
-    const speakers = (speaker === undefined || speakerData === undefined) ? []
-      : speakerData.map((data) => {
-        const lines = data.split(/\r\n|\n/);
-        const start = lines.indexOf(`Text File : ${speaker.textFile}`) + 2;
-        const end = lines.indexOf('~~~~~~~~~~~~~~~', start);
-        return lines.slice(start, end);
-      });
+    const speakers = (speaker === undefined || speakerData === undefined) ? [] : extractSpeakers(speakerData, speaker.textFile);
 
     // Filter only the lines that matched
     const languageKeys: string[] = [];
@@ -133,13 +116,6 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       languageKeys.push(languageKey);
       lineKeys.forEach((i) => lineKeysSet.add(i));
       fileData.push(lines);
-    });
-
-    // Speaker names vary by language, so we need to look up what the speaker's name is in the appropriate language here
-    const replaceSpeaker = (s: string, languageIndex: number) => speaker === undefined ? s : s.replace(/(.*?)(\[VAR 0114\(([0-9A-F]{4})\)\])(?:$|(?=\u{F0000}))/u, (_, rest, tag, speakerIndexHex) => {
-      const speakerIndex = parseInt(speakerIndexHex, 16);
-      const speakerName = speakers[languageIndex][speakerIndex];
-      return `${tag.replaceAll('[', '\\[')}\u{F1100}${speakerName}${speakerDelimiter(languages[languageIndex]) ?? ': '}\u{F1101}${rest}`;
     });
 
     // Substituted string literals vary by language, so we need to look up what the string is in the appropriate language here
@@ -177,7 +153,8 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       }))
       .map((i) => fileData.map((lines, languageIndex) => {
         let line = lines[i];
-        line = replaceSpeaker(lines[i] ?? '', languageIndex);
+        if (speaker !== undefined)
+          line = replaceSpeaker(lines[i] ?? '', speakers[languageIndex], languages[languageIndex]);
         line = replaceLiterals(line, languageIndex);
         return postprocessString(line, collectionKey, languages[languageIndex]);
       }));

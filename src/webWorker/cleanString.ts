@@ -34,6 +34,7 @@
  * - U+F1207: mark a version branch in a literal
  */
 
+import { postprocessSpeaker } from '../utils/speaker';
 import chineseChars from './chineseChars.json';
 import * as g3 from './expandVariablesG3';
 
@@ -748,9 +749,9 @@ export function postprocessString(s: string, collectionKey: string, language: st
     .replaceAll(/\{([^|}]+)\|([^|}]+)\}/gu, '<ruby>$1<rp>(</rp><rt>$2</rt><rp>)</rp></ruby>') // Switch furigana
     .replaceAll(/(\s+$)/gu, '<span class="whitespace-trailing">$1</span>') // Trailing whitespace
     .replaceAll(/(^\s+)/gu, '<span class="whitespace-leading">$1</span>') // Leading whitespace
-
-    // Speaker name
-    .replaceAll(/^(.+)\u{F1100}(.+?)\u{F1101}/gu, '<a class="speaker" data-var="$1">$2</a>')
+  );
+  s = isModern ? postprocessSpeaker(s) : s;
+  s = (s
     .replaceAll(/\u{F1102}(.+?)\u{F1103}/gu, '<span class="literal">$1</span>')
 
     // Replace placeholders with literal characters

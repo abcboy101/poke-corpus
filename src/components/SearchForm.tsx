@@ -2,7 +2,7 @@ import { ChangeEventHandler, FormEventHandler, MouseEventHandler, useCallback, u
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { SearchParams, searchTypes, isSearchType } from '../webWorker/searchWorker';
+import { SearchParams, searchTypes, isSearchType, searchParamsToHash, hashToSearchParams } from '../utils/searchParams';
 import { corpus, codeId } from '../utils/corpus';
 import SearchFilters from './SearchFilters';
 import { escapeRegex, localStorageGetItem, localStorageSetItem } from '../utils/utils';
@@ -31,61 +31,35 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
   const [script, setScript] = useState(defaultParams.script);
   const [collections, setCollections] = useState(defaultParams.collections);
   const [languages, setLanguages] = useState(defaultParams.languages);
+  const [run, setRun] = useState(false);
   const [filtersVisible, setFiltersVisible] = useState((localStorageGetItem('corpus-filtersVisible') ?? (window.location.hash ? 'false' : 'true')) !== 'false');
 
   const onHashChange = useCallback(() => {
-    const params: URLSearchParams = new URLSearchParams(window.location.hash.substring(1));
-
-    const newId = params.get('id');
-    if (newId !== null) {
-      setId(newId);
-    }
-
-    const newFile = params.get('file');
-    if (newFile !== null) {
-      setFile(newFile);
-    }
-
-    const newQuery = params.get('query');
-    if (newQuery !== null) {
-      setQuery(newQuery);
-    }
-
-    const newType = params.get('type');
-    if (newType !== null && isSearchType(newType)) {
-      setType(newType);
-    }
-    else {
-      // Earlier versions used a boolean regex parameter rather than the search type enum
-      const newRegex = params.get('regex');
-      if (newRegex === 'true') {
-        setType('regex');
-      }
-    }
-
-    const newCaseInsensitive = params.get('caseInsensitive');
-    if (newCaseInsensitive !== null) {
-      setCaseInsensitive(newCaseInsensitive === 'true');
-    }
-
-    const newScript = params.get('script');
-    if (newScript !== null) {
-      setScript(newScript === 'true');
-    }
-
-    const newCollections = params.get('collections');
-    if (newCollections !== null) {
-      setCollections(newCollections.split(',').filter((value) => Object.keys(corpus.collections).includes(value)));
-    }
-
-    const newLanguages = params.get('languages');
-    if (newLanguages !== null) {
-      setLanguages(newLanguages.split(',').filter((value) => corpus.languages.includes(value)));
-    }
+    const params = hashToSearchParams(window.location.hash.substring(1));
+    if (params.id !== undefined)
+      setId(params.id);
+    if (params.file !== undefined)
+      setFile(params.file);
+    if (params.query !== undefined)
+      setQuery(params.query);
+    if (params.type !== undefined)
+      setType(params.type);
+    if (params.caseInsensitive !== undefined)
+      setCaseInsensitive(params.caseInsensitive);
+    if (params.common !== undefined)
+      setCommon(params.common);
+    if (params.script !== undefined)
+      setScript(params.script);
+    if (params.collections !== undefined)
+      setCollections(params.collections);
+    if (params.languages !== undefined)
+      setLanguages(params.languages);
+    if (params.run !== undefined)
+      setRun(params.run);
 
     // If there's no saved preference, show filters if search can't be performed immediately
     if (localStorageGetItem('corpus-filtersVisible') === null) {
-      setFiltersVisible(!newId && !newFile && (!newQuery || !newCollections || !newLanguages));
+      setFiltersVisible(!params.id && !params.file && !params.run && (!params.query || !params.collections || !params.languages));
     }
   }, []);
 
@@ -114,6 +88,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key]?.id === collectionId),
         languages: [codeId],
       });
+      setId('');
     }
   }, [id, postToWorker]);
 
@@ -129,8 +104,26 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key]?.id === collectionId),
         languages: [codeId],
       });
+      setFile('');
     }
   }, [file, postToWorker]);
+
+  useEffect(() => {
+    if (run) {
+      const params: SearchParams = {
+        query: query,
+        type: type,
+        caseInsensitive: caseInsensitive,
+        common: common,
+        script: script,
+        collections: collections,
+        languages: languages,
+      };
+      window.location.hash = searchParamsToHash(params);
+      postToWorker(params);
+      setRun(false);
+    }
+  }, [run, postToWorker]);
 
   const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
@@ -140,18 +133,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       localStorageSetItem('corpus-filtersVisible', filtersVisible.toString());
     }
 
-    window.location.hash = new URLSearchParams({
-      query: query,
-      type: type,
-      caseInsensitive: caseInsensitive.toString(),
-      common: common.toString(),
-      script: script.toString(),
-      collections: collections.join(','),
-      languages: languages.join(','),
-    }).toString();
-    setId('');
-
-    postToWorker({
+    const params: SearchParams = {
       query: query,
       type: type,
       caseInsensitive: caseInsensitive,
@@ -159,7 +141,9 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       script: script,
       collections: collections,
       languages: languages,
-    });
+    };
+    window.location.hash = searchParamsToHash(params);
+    postToWorker(params);
   };
 
   const onCancel: MouseEventHandler<HTMLButtonElement> = () => {

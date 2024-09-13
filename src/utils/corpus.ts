@@ -66,19 +66,6 @@ export interface Corpus {
   },
 }
 
-const speakerDelimiters: {[language: string]: string} = {
-  'ja-Hrkt': '『',
-  'ja': '『',
-  'fr': ' : ', // space before and after colon
-  'zh-Hans': '\uFF1A', // fullwidth colon
-  'zh-Hant': '「',
-  // default: ': '
-};
-
-export function speakerDelimiter(language: string) {
-  return speakerDelimiters[language] ?? ': ';
-}
-
 /*
 Message IDs use the private-use language code "qid". ("qaa"-"qtz" are reserved for local use in ISO 639-2.)
 - For GB/GBC/GBA games, these are assigned based on the identifiers from the pret decompilation.

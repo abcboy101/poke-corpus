@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import SearchWorkerManager from '../webWorker/searchWorkerManager.ts?worker';
-import { SearchParams } from '../webWorker/searchWorker';
+import { SearchParams } from '../utils/searchParams';
 import { SearchResults, SearchResultLines } from '../webWorker/searchWorkerManager';
 import { Status, statusError, statusInProgress } from '../utils/Status';
 import SearchForm from './SearchForm';

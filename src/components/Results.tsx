@@ -15,6 +15,7 @@ import './Results.css';
 import './ResultsText.css';
 import logo from '../res/logo.svg';
 import '../i18n/config';
+import { expandSpeakers } from '../utils/speaker';
 
 const jumpTo = (k: number) => {
   const results = document.getElementById("results");
@@ -56,31 +57,15 @@ function ResultsTable({header, collection, languages, lines, displayHeader, k, c
       sel.removeAllRanges();
     }
   };
-
-  useEffect(() => {
-    const speakers = Array.from(document.getElementsByClassName('speaker'));
-    const params = new URLSearchParams(window.location.hash.substring(1));
-    speakers.forEach((element) => {
-      if (element instanceof HTMLAnchorElement) {
-        const query = element.getAttribute('data-var');
-        const collection = element.closest('table')?.getAttribute('data-collection') ?? '';
-        if (query !== null) {
-          params.set('query', query);
-          params.set('type', 'exact');
-          params.set('collections', collection);
-          element.setAttribute('href', `#${params}`);
-          element.setAttribute('title', t('viewSpeaker'));
-        }
-      }
-    });
-  }, [t, slicedLines]);
+  const viewSpeaker = t('viewSpeaker');
+  const hasSpeakers = corpus.collections[collection].speaker !== undefined;
 
   return (
     <section id={`results-section${k}`} className='results-table-container'>
       <h2 className={displayHeader ? undefined : 'd-none'}>{header}</h2>
       { start !== 0 ? <button className="results-notice" onClick={onClick(count)}>{t('tablePartial', {count: start})}</button> : null }
       { slicedLines.length > 0
-        ? <table id={`results-section${k}-table`} className={`results-table collection-${corpus.collections[collection].id ?? collection.toLowerCase()}`} data-collection={collection}>
+        ? <table id={`results-section${k}-table`} className={`results-table collection-${corpus.collections[collection].id ?? collection.toLowerCase()}`}>
           <thead>
             <tr>
               {idIndex !== -1 ? <th className="results-table-actions-cell"><Copy callback={copyOnClick(`results-section${k}-table`)}/></th> : null}
@@ -97,7 +82,8 @@ function ResultsTable({header, collection, languages, lines, displayHeader, k, c
                       <ViewNearby hash={`#file=${row[idIndex].split('.').slice(0, -1).join('.')}`}/>
                     </div>
                   </td> : null}
-                {row.map((s, j) => <td key={j} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]} dangerouslySetInnerHTML={{__html: s}}></td>)}
+                {row.map((s, j) => <td key={j} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]}
+                  dangerouslySetInnerHTML={{__html: hasSpeakers ? expandSpeakers(s, collection, languages[j], viewSpeaker) : s}}></td>)}
               </tr>;
             })}
           </tbody>

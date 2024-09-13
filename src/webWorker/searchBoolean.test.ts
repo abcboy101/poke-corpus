@@ -1,5 +1,5 @@
 import { queryToPostfix, isBooleanQueryValid } from "./searchBoolean";
-import { SearchParams } from "./searchWorker";
+import { SearchParams } from "../utils/searchParams";
 
 const defaultParams: SearchParams = {
   query: '',

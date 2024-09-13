@@ -1,5 +1,6 @@
 import { BooleanStatus, BooleanError } from "../utils/Status";
-import { MatchCondition, SearchParams } from "./searchWorker";
+import { MatchCondition } from "./searchWorker";
+import { SearchParams } from "../utils/searchParams";
 
 export type QueryParseResult = QueryParseResultSuccess | QueryParseResultError;
 
