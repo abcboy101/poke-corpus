@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from 'react';
+import { ChangeEventHandler, Dispatch, SetStateAction } from 'react';
 import i18next, { Callback } from 'i18next';
 import { useTranslation } from 'react-i18next';
 
@@ -10,6 +10,8 @@ import supportedLngs from '../i18n/supportedLngs.json';
 
 const modes = ['system', 'light', 'dark'] as const;
 export type Mode = typeof modes[number];
+const isMode = (s: string): s is Mode => (modes as readonly string[]).includes(s);
+export const asValidMode = (s: unknown) => (typeof s === 'string' && isMode(s)) ? s : 'system';
 
 function OptionsMenu({mode, setMode, showModal}: {mode: Mode, setMode: Dispatch<SetStateAction<Mode>>, showModal: (args: ShowModalArguments) => void}) {
   const { t } = useTranslation();
@@ -26,6 +28,14 @@ function OptionsMenu({mode, setMode, showModal}: {mode: Mode, setMode: Dispatch<
     }
   };
 
+  const onChangeMode: ChangeEventHandler<HTMLSelectElement> = (e) => {
+    const newMode = e.target.value;
+    if (isMode(newMode)) {
+      setMode(newMode);
+      localStorageSetItem('mode', newMode);
+    }
+  };
+
   return (
     <div className="options">
       <div className="options-group">
@@ -36,7 +46,7 @@ function OptionsMenu({mode, setMode, showModal}: {mode: Mode, setMode: Dispatch<
       </div>
       <div className="options-group">
         <label htmlFor="mode">{t('options.mode')}</label>
-        <select name="mode" id="mode" onChange={(e) => { setMode(e.target.value as Mode); localStorageSetItem('mode', e.target.value); }} defaultValue={mode}>
+        <select name="mode" id="mode" onChange={onChangeMode} defaultValue={mode}>
           {modes.map((mode) => <option key={mode} value={mode}>{t(`options.modes.${mode}`)}</option>)}
         </select>
       </div>

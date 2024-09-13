@@ -1,4 +1,4 @@
-import { Dispatch, MutableRefObject, SetStateAction, useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import SearchWorkerManager from '../webWorker/searchWorkerManager.ts?worker';
@@ -19,10 +19,10 @@ const searchModalWarn = 'corpus-warn';
 const searchModalThreshold = 20_000_000; // 20 MB
 function Search({showModal}: {showModal: (args: ShowModalArguments) => void}) {
   const { t } = useTranslation();
-  const workerRef: MutableRefObject<Worker | null> = useRef(null);
-  const [status, setStatus]: [Status, Dispatch<SetStateAction<Status>>] = useState('initial' as Status);
+  const workerRef = useRef<Worker | null>(null);
+  const [status, setStatus] = useState<Status>('initial');
   const [progress, setProgress] = useState(0.0);
-  const [results, setResults] = useState([] as readonly SearchResultLines[]);
+  const [results, setResults] = useState<readonly SearchResultLines[]>([]);
   const [showSearchModal, setShowSearchModal] = useState(localStorageGetItem(searchModalWarn) !== 'false');
 
   useEffect(() => {

@@ -127,7 +127,7 @@ const setLocalFileInfo = (path: string): Promise<boolean> => (
     const request = objectStore.put(filesRemote[path], path);
     db.close();
     return new Promise<boolean>((resolve, reject) => {
-      request.onsuccess = () => resolve(request.result === (path as IDBValidKey));
+      request.onsuccess = () => resolve(request.result === path);
       request.onerror = () => reject(request.error);
     });
   }).catch((reason) => new Promise((_, reject) => reject(reason)))

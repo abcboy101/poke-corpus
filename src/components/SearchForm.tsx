@@ -1,8 +1,8 @@
-import { FormEventHandler, MouseEventHandler, useCallback, useEffect, useState } from 'react';
+import { ChangeEventHandler, FormEventHandler, MouseEventHandler, useCallback, useEffect, useState } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { SearchParams, SearchType, searchTypes, isSearchType } from '../webWorker/searchWorker';
+import { SearchParams, searchTypes, isSearchType } from '../webWorker/searchWorker';
 import { corpus, codeId } from '../utils/corpus';
 import SearchFilters from './SearchFilters';
 import { escapeRegex, localStorageGetItem, localStorageSetItem } from '../utils/utils';
@@ -104,13 +104,14 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
 
   useEffect(() => {
     if (id !== '') {
+      const collectionId = file.split('.')[0];
       postToWorker({
         query: `^${escapeRegex(id)}$`,
         type: 'regex',
         caseInsensitive: false,
         common: true,
         script: true,
-        collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key]?.id === id.split('.')[0]),
+        collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key]?.id === collectionId),
         languages: [codeId],
       });
     }
@@ -118,13 +119,14 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
 
   useEffect(() => {
     if (file !== '') {
+      const collectionId = file.split('.')[0];
       postToWorker({
         query: `^${escapeRegex(file)}\\..*$`,
         type: 'regex',
         caseInsensitive: false,
         common: true,
         script: true,
-        collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key]?.id === file.split('.')[0]),
+        collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key]?.id === collectionId),
         languages: [codeId],
       });
     }
@@ -170,17 +172,23 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
     localStorageSetItem('corpus-filtersVisible', newValue.toString());
   };
 
+  const onTypeChange: ChangeEventHandler<HTMLSelectElement> = (e) => {
+    const newType = e.target.value;
+    if (isSearchType(newType))
+      setType(newType);
+  };
+
   return <form className="search search-form" onSubmit={onSubmit}>
     <div className="search-bar">
       <div className="search-bar-query">
         <label htmlFor="query">{t('query')}</label>
         <input type="text" name="query" id="query" value={query} onChange={(e) => setQuery(e.target.value)}/>
         <div className="btn-alternate-container">
-          <input type="submit" className={status === 'rendering' || !statusInProgress.includes(status) ? 'visible' : 'invisible'} value={t('search')} disabled={query.length === 0 || collections.length === 0 || languages.length === 0 || (status !== 'rendering' && statusInProgress.includes(status))}/>
+          <input id="submit" type="submit" className={status === 'rendering' || !statusInProgress.includes(status) ? 'visible' : 'invisible'} value={t('search')} disabled={query.length === 0 || collections.length === 0 || languages.length === 0 || (status !== 'rendering' && statusInProgress.includes(status))}/>
           <button type="button" className={status === 'rendering' || !statusInProgress.includes(status) ? 'invisible' : 'visible'} onClick={onCancel} disabled={status === 'rendering' || !statusInProgress.includes(status)}>{t('cancel')}</button>
         </div>
         <button type="button" className={filtersVisible ? 'active' : undefined} onClick={toggleFiltersVisible}>{t('filters')}</button>
-        <select name="type" id="type" onChange={(e) => setType(e.target.value as SearchType)} value={type} aria-label={t('searchType.searchType')}>
+        <select name="type" id="type" onChange={onTypeChange} value={type} aria-label={t('searchType.searchType')}>
           {searchTypes.map((type) => <option key={type} value={type}>{t(`searchType.${type}`)}</option>)}
         </select>
       </div>

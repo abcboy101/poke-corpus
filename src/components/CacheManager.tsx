@@ -1,4 +1,4 @@
-import { MutableRefObject, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import CacheManagerWorker from '../webWorker/cacheManagerWorker.ts?worker';
@@ -18,12 +18,12 @@ type CachedFileInfoEntry = readonly [readonly [string, string, string], number, 
 function CacheManager({active, showModal}: {active: boolean, showModal: (args: ShowModalArguments) => void}) {
   const { t } = useTranslation();
   const [cacheStorageEnabled, setCacheStorageEnabled] = useState(true);
-  const [cachedFileInfo, setCachedFileInfo] = useState([] as readonly CachedFileInfoEntry[]);
+  const [cachedFileInfo, setCachedFileInfo] = useState<readonly CachedFileInfoEntry[]>([]);
   const [cacheInProgress, setCacheInProgress] = useState(false);
   const [progress, setProgress] = useState(0.0);
   const [loadedBytes, setLoadedBytes] = useState(0);
   const [totalBytes, setTotalBytes] = useState(0);
-  const workerRef: MutableRefObject<Worker | null> = useRef(null);
+  const workerRef = useRef<Worker | null>(null);
 
   useEffect(() => {
     const onBlur = () => {
