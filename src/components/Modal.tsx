@@ -13,29 +13,39 @@ interface ModalCheckbox {
   checked: boolean,
 }
 
-export type ModalArguments = ModalArgumentsInactive | ModalArgumentsActive | ModalArgumentsActiveCheckbox;
+export type ModalArguments = ModalArgumentsInactive | ModalArgumentsActive | ModalArgumentsActiveClasses | ModalArgumentsActiveCheckbox;
 
 export interface ModalArgumentsInactive {
+  classes?: undefined,
   message?: undefined,
   buttons?: undefined,
   checkbox?: undefined,
 }
 
 export interface ModalArgumentsActive {
+  classes?: undefined,
+  message: ReactNode,
+  buttons: ModalButton[],
+  checkbox?: undefined,
+}
+
+export interface ModalArgumentsActiveClasses {
+  classes: string[],
   message: ReactNode,
   buttons: ModalButton[],
   checkbox?: undefined,
 }
 
 export interface ModalArgumentsActiveCheckbox {
+  classes?: undefined,
   message: ReactNode,
   buttons: ModalButton[],
   checkbox: ModalCheckbox,
 }
 
-export type ShowModalArguments = Omit<ModalArgumentsActive | ModalArgumentsActiveCheckbox, 'active'>;
+export type ShowModalArguments = ModalArgumentsActive | ModalArgumentsActiveClasses | ModalArgumentsActiveCheckbox;
 
-function Modal({message, buttons, checkbox}: ModalArguments) {
+function Modal({classes, message, buttons, checkbox}: ModalArguments) {
   const [open, setOpen] = useState(false);
   const [checkboxChecked, setCheckboxChecked] = useState(checkbox?.checked ?? false);
   const modalRef = useRef<HTMLDialogElement>(null);
@@ -81,7 +91,11 @@ function Modal({message, buttons, checkbox}: ModalArguments) {
   if (!open) {
     return null;
   }
-  return <dialog ref={modalRef} id="modal" className="modal" onCancel={onCancel}>
+
+  const dialogClasses = ['modal'];
+  if (classes)
+    classes.forEach((s) => dialogClasses.push(s));
+  return <dialog ref={modalRef} id="modal" className={dialogClasses.join(' ')} onCancel={onCancel}>
     <div className="modal-message">{message}</div>
     {
       checkbox && <div className="modal-checkbox">

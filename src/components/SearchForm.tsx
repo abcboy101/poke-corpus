@@ -2,7 +2,7 @@ import { ChangeEventHandler, FormEventHandler, MouseEventHandler, useCallback, u
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { SearchParams, searchTypes, isSearchType, searchParamsToHash, hashToSearchParams } from '../utils/searchParams';
+import { SearchParams, searchTypes, isSearchType, searchParamsToHash, hashToSearchParams, defaultSearchParams } from '../utils/searchParams';
 import { corpus, codeId } from '../utils/corpus';
 import SearchFilters from './SearchFilters';
 import { escapeRegex, localStorageGetItem, localStorageSetItem } from '../utils/utils';
@@ -10,13 +10,8 @@ import { Status, statusInProgress } from '../utils/Status';
 
 import '../i18n/config';
 
-const defaultParams: SearchParams = {
-  query: '',
-  type: 'exact',
-  caseInsensitive: true,
-  common: true,
-  script: true,
-  collections: Object.keys(corpus.collections).filter((value) => corpus.collections[value].structured),
+const defaultParams: typeof defaultSearchParams = {
+  ...defaultSearchParams,
   languages: corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0])) || corpus.languages.filter((value) => value.startsWith('en')),
 };
 

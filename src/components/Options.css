@@ -1,3 +1,7 @@
+dialog[open].modal-options {
+  height: 16em;
+}
+
 .options, .options-group {
   display: flex;
   flex-direction: column;

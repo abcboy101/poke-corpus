@@ -3,7 +3,7 @@ import i18next, { Callback } from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { ShowModalArguments } from './Modal';
-import { localStorageSetItem } from '../utils/utils';
+import { localStorageGetItem, localStorageSetItem } from '../utils/utils';
 
 import './Options.css';
 import supportedLngs from '../i18n/supportedLngs.json';
@@ -50,6 +50,10 @@ function OptionsMenu({mode, setMode, showModal}: {mode: Mode, setMode: Dispatch<
           {modes.map((mode) => <option key={mode} value={mode}>{t(`options.modes.${mode}`)}</option>)}
         </select>
       </div>
+      <div>
+        <input type="checkbox" name="longURL" id="longURL" defaultChecked={localStorageGetItem('corpus-longURL') === 'true'} onChange={(e) => localStorageSetItem('corpus-longURL', e.target.checked.toString())}/>
+        <label htmlFor="longURL">{t(`options.longURL`)}</label>
+      </div>
     </div>
   );
 }
@@ -62,6 +66,7 @@ function OptionsClose() {
 function Options({showModal, mode, setMode}: {showModal: (args: ShowModalArguments) => void, mode: Mode, setMode: Dispatch<SetStateAction<Mode>>}) {
   const { t } = useTranslation();
   const options: ShowModalArguments = {
+    classes: ['modal-options'],
     message: <OptionsMenu mode={mode} setMode={setMode} showModal={showModal}/>,
     buttons: [{message: <OptionsClose/>}],
   };
