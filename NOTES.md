@@ -50,7 +50,7 @@ Most text dumps in this repo use the common format shared by [xytext](https://gi
 The text dumps from the NDS games have been converted to the standard format, with the following extensions to the format:
 - Compressed strings are decompressed and marked with `[COMP]` instead of `\c`.
 - `[NULL]` is used as a placeholder for lines and files which do not exist in a particular language version.
-- <sup>P</sup><sub>K</sub><sup>M</sup><sub>N</sub> in the Generation IV games is encoded using `⒆⒇` as in the Generation V games.
+- <sup>P</sup><sub>K</sub><sup>M</sup><sub>N</sub> is encoded using `⒆⒇` as in the Generation V games.
 - The bag icons in the Generation IV games are encoded using `♈♌♎♊♍♋♏♉` as in [PKHeX](https://github.com/kwsch/PKHeX).
 
 ### BDSP
@@ -62,8 +62,16 @@ The text dumps for *Brilliant Diamond*/*Shining Pearl* have been converted to th
 - The Unity rich text tags `<color>`, `<position>`, `<line-indent>`, and `<size>` are used to format text.
 - Speaker names are taken from `Dpr/masterdatas/MsgWindowData.json` and converted to the `[VAR 0114]` format used in other games.
 
-### GB/GBC/GBA
-The text dumps from the GB, GBC, and GBA games were done by [RobbiRobb](https://robbirobb.de/spiele).
+### GBA
+The text dumps from the GBA games are based on the format used by the [pret](https://github.com/pret) decompilations.
+They have been converted to the standard format, with the following extensions to the format:
+- The text data has been formatted to align based on the corresponding symbol in the decompilation.
+- Variables and special characters are marked with square brackets instead of curly braces.
+- <sup>P</sup><sub>K</sub><sup>M</sup><sub>N</sub> is encoded using `⒆⒇` as in the Generation V games.
+- Braille text is decoded to plain text.
+
+### GB/GBC
+The text dumps from the GB and GBC games were done by [RobbiRobb](https://robbirobb.de/spiele).
 As these games do not have a file system like later games, these text dumps include other data interpreted as text.
 These dumps are included unmodified.
 
