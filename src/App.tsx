@@ -4,9 +4,8 @@ import { useTranslation } from 'react-i18next';
 
 import Search from './components/Search';
 import CacheManager from './components/CacheManager';
-import Options, { asValidMode, Mode } from './components/Options';
+import Options, { getLimit, getMode, Mode } from './components/Options';
 import Modal, { ModalArguments } from './components/Modal';
-import { localStorageGetItem } from './utils/utils';
 
 import './App.css';
 import logo from './res/logo.svg';
@@ -16,7 +15,8 @@ type View = 'Search' | 'CacheManager';
 
 function App() {
   const { t } = useTranslation();
-  const [mode, setMode] = useState<Mode>(asValidMode(localStorageGetItem('mode')));
+  const [mode, setMode] = useState<Mode>(getMode);
+  const [limit, setLimit] = useState(getLimit);
   const [view, setView] = useState<View>('Search');
   const [modalArguments, setModalArguments] = useState<ModalArguments>({});
 
@@ -31,7 +31,7 @@ function App() {
           <img className="header-logo" src={logo} alt="" height="40" width="40" /> {t('title', {version: t('version')})}
         </a>
       </h1>
-      <Options showModal={showModal} mode={mode} setMode={setMode}/>
+      <Options showModal={showModal} mode={mode} setMode={setMode} limit={limit} setLimit={setLimit}/>
     </header>
   );
   const footer = (
@@ -52,7 +52,7 @@ function App() {
   return (
     <div className={classes.join(' ')} lang={i18next.language} dir={i18next.dir()}>
       { header }
-      <Search showModal={showModal}/>
+      <Search showModal={showModal} limit={limit}/>
       <CacheManager active={view === "CacheManager"} showModal={showModal}/>
       { footer }
       <Modal {...modalArguments}/>

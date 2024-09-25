@@ -9,11 +9,18 @@
       "light": "ライト",
       "dark": "ダーク"
     },
+    "limit": "表示件数：",
+    "longURL": "長いURL：",
+    "longURLs": {
+      "true": "有効",
+      "false": "無効"
+    },
     "network": "選択した言語をダウンロードできません。インターネット接続を確認して、もう一度お試しください。",
     "close": "閉じる"
   },
   "query": "クエリ：",
   "searchType": {
+    "searchType": "検索モード",
     "exact": "完全一致",
     "regex": "正規表現",
     "boolean": "ブール演算子"
@@ -81,6 +88,8 @@
     "long": "全{{count, number}}件中{{start, number}}～{{end, number}}件目を表示",
     "short": "{{start, number}}\u2013{{end, number}} (全{{count, number}}件)"
   },
+  "loadPrev": "前へ",
+  "loadNext": "次へ",
   "showVariables": "変数を表示",
   "showAllCharacters": "制御文字をすべて表示",
   "showFurigana": "ふりがなを表示",

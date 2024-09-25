@@ -17,6 +17,7 @@ import logo from '../res/logo.svg';
 import '../i18n/config';
 import { expandSpeakers } from '../utils/speaker';
 import { SearchTaskResultLines } from '../webWorker/searchWorker';
+import { defaultLimit } from './Options';
 
 /**
  * Scrolls the results window to the specified section.
@@ -151,7 +152,7 @@ function ResultsSection({header, displayHeader, ...params}: {header: string, dis
   );
 }
 
-function Results({status, progress, results, limit = 500}: {status: Status, progress: number, results: readonly SearchResultLines[], limit?: number}) {
+function Results({status, progress, results, limit = defaultLimit}: {status: Status, progress: number, results: readonly SearchResultLines[], limit?: number}) {
   const { t } = useTranslation();
   const [showVariables, setShowVariables] = useState(true);
   const [showAllCharacters, setShowAllCharacters] = useState(false);

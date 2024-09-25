@@ -16,7 +16,7 @@ import { getDownloadSizeTotal } from '../utils/files';
 
 const searchModalWarn = 'corpus-warn';
 const searchModalThreshold = 20_000_000; // 20 MB
-function Search({showModal}: {showModal: (args: ModalArguments) => void}) {
+function Search({showModal, limit}: {showModal: (args: ModalArguments) => void, limit?: number}) {
   const { t } = useTranslation();
   const workerRef = useRef<Worker | null>(null);
   const [status, setStatus] = useState<Status>('initial');
@@ -119,7 +119,7 @@ function Search({showModal}: {showModal: (args: ModalArguments) => void}) {
   return (
     <>
       <SearchForm status={status} postToWorker={postToWorkerModal} terminateWorker={terminateWorker} />
-      <Results status={status} progress={progress} results={results} />
+      <Results status={status} progress={progress} results={results} limit={limit} />
     </>
   );
 }

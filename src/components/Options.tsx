@@ -1,4 +1,4 @@
-import { ChangeEventHandler, Dispatch, SetStateAction } from 'react';
+import { ChangeEventHandler, Dispatch, RefObject, SetStateAction, useRef } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
@@ -11,9 +11,25 @@ import supportedLngs from '../i18n/supportedLngs.json';
 const modes = ['system', 'light', 'dark'] as const;
 export type Mode = typeof modes[number];
 const isMode = (s: string): s is Mode => (modes as readonly string[]).includes(s);
-export const asValidMode = (s: unknown) => (typeof s === 'string' && isMode(s)) ? s : 'system';
+const asValidMode = (s: unknown) => (typeof s === 'string' && isMode(s)) ? s : 'system';
+export const getMode = (): Mode => asValidMode(localStorageGetItem('mode'));
 
-function OptionsMenu({mode, setMode, showModal}: {mode: Mode, setMode: Dispatch<SetStateAction<Mode>>, showModal: (args: ModalArguments) => void}) {
+export const defaultLimit = 500;
+const isValidLimit = (n: unknown) => (typeof n === 'number' && !Number.isNaN(n) && Number.isInteger(n) && n > 0);
+export const getLimit = () => {
+  const value = +(localStorageGetItem('corpus-limit') ?? defaultLimit);
+  return Number.isNaN(value) ? defaultLimit : value;
+};
+
+interface OptionsParams {
+  showModal: (args: ModalArguments) => void,
+  mode: Mode,
+  setMode: Dispatch<SetStateAction<Mode>>,
+  limit: number,
+  setLimit: Dispatch<SetStateAction<number>>,
+}
+
+function OptionsMenu({showModal, mode, setMode, limit, limitRef}: OptionsParams & {limitRef: RefObject<HTMLInputElement>}) {
   const { t } = useTranslation();
 
   const onChangeLanguage: ChangeEventHandler<HTMLSelectElement> = async (e) => {
@@ -39,23 +55,33 @@ function OptionsMenu({mode, setMode, showModal}: {mode: Mode, setMode: Dispatch<
     }
   };
 
+  const onChangeLongURL: ChangeEventHandler<HTMLSelectElement> = (e) => {
+    const newLongURL = e.target.value;
+    if (newLongURL === "true" || newLongURL === "false") {
+      localStorageSetItem('corpus-longURL', newLongURL);
+    }
+  };
+
   return (
     <div className="options">
-      <div className="options-group">
+      <div className="options-grid">
         <label htmlFor="language">{t('options.language')}</label>
         <select name="language" id="language" onChange={onChangeLanguage} defaultValue={i18next.language} autoFocus={true}>
           {supportedLngs.map((lang) => <option key={lang.code} value={lang.code} lang={lang.code}>{lang.name}</option>)}
         </select>
-      </div>
-      <div className="options-group">
+
         <label htmlFor="mode">{t('options.mode')}</label>
         <select name="mode" id="mode" onChange={onChangeMode} defaultValue={mode}>
           {modes.map((mode) => <option key={mode} value={mode}>{t(`options.modes.${mode}`)}</option>)}
         </select>
-      </div>
-      <div>
-        <input type="checkbox" name="longURL" id="longURL" defaultChecked={localStorageGetItem('corpus-longURL') === 'true'} onChange={(e) => localStorageSetItem('corpus-longURL', e.target.checked.toString())}/>
-        <label htmlFor="longURL">{t(`options.longURL`)}</label>
+
+        <label htmlFor="longURL">{t('options.longURL')}</label>
+        <select name="longURL" id="longURL" onChange={onChangeLongURL} defaultValue={localStorageGetItem('corpus-longURL') ?? "false"}>
+          {["true", "false"].map((mode) => <option key={mode} value={mode}>{t(`options.longURLs.${mode}`)}</option>)}
+        </select>
+
+        <label htmlFor="limit">{t(`options.limit`)}</label>
+        <input ref={limitRef} type="number" name="limit" id="limit" min={1} defaultValue={limit}/>
       </div>
     </div>
   );
@@ -66,12 +92,26 @@ function OptionsClose() {
   return t('options.close');
 }
 
-function Options({showModal, mode, setMode}: {showModal: (args: ModalArguments) => void, mode: Mode, setMode: Dispatch<SetStateAction<Mode>>}) {
+function Options(params: OptionsParams) {
   const { t } = useTranslation();
+  const {showModal, setLimit} = params;
+  const limitRef = useRef<HTMLInputElement>(null);
+
+  const onClose = () => {
+    if (limitRef.current !== null) {
+      const newLimit = limitRef.current.valueAsNumber;
+      if (isValidLimit(newLimit)) {
+        localStorageSetItem('corpus-limit', newLimit.toString());
+        setLimit(newLimit);
+      }
+    }
+  };
+
   const options: ModalArguments = {
     classes: ['modal-options'],
-    message: <OptionsMenu mode={mode} setMode={setMode} showModal={showModal}/>,
-    buttons: [{message: <OptionsClose/>}],
+    message: <OptionsMenu {...params} limitRef={limitRef}/>,
+    buttons: [{message: <OptionsClose/>, callback: onClose}],
+    cancelCallback: onClose,
   };
   return (
     <button className="header-options" onClick={() => showModal(options)}>

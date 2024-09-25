@@ -270,7 +270,7 @@ h1 a:hover, h1 a:active {
   float: right;
 }
 
-input[type="text"], select, select:focus, input[type="submit"], input[type="button"], button {
+input[type="text"], input[type="number"], select, select:focus, input[type="submit"], input[type="button"], button {
   font-family: inherit;
   font-size: inherit;
   background: var(--highlight);
@@ -306,7 +306,7 @@ button.link:hover, button.link:active, button.link:active:enabled {
   text-decoration: underline;
 }
 
-input[type="text"]:disabled, select:disabled, input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled {
+input[type="text"]:disabled, input[type="number"]:disabled, select:disabled, input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled {
   opacity: 0.7;
 }
 
@@ -401,6 +401,7 @@ table th, table td {
 
 /* Safari displays text in these elements too high with the line-height specified */
 .ua-safari input[type="text"],
+.ua-safari input[type="number"],
 .ua-safari input[type="submit"],
 .ua-safari input[type="button"],
 .ua-safari button {
