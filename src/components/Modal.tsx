@@ -13,39 +13,15 @@ interface ModalCheckbox {
   checked: boolean,
 }
 
-export type ModalArguments = ModalArgumentsInactive | ModalArgumentsActive | ModalArgumentsActiveClasses | ModalArgumentsActiveCheckbox;
-
-export interface ModalArgumentsInactive {
-  classes?: undefined,
-  message?: undefined,
-  buttons?: undefined,
-  checkbox?: undefined,
-}
-
-export interface ModalArgumentsActive {
-  classes?: undefined,
-  message: ReactNode,
-  buttons: ModalButton[],
-  checkbox?: undefined,
-}
-
-export interface ModalArgumentsActiveClasses {
+export type ModalArguments = Partial<{
   classes: string[],
   message: ReactNode,
   buttons: ModalButton[],
-  checkbox?: undefined,
-}
-
-export interface ModalArgumentsActiveCheckbox {
-  classes?: undefined,
-  message: ReactNode,
-  buttons: ModalButton[],
   checkbox: ModalCheckbox,
-}
+  cancelCallback: () => void,
+}>;
 
-export type ShowModalArguments = ModalArgumentsActive | ModalArgumentsActiveClasses | ModalArgumentsActiveCheckbox;
-
-function Modal({classes, message, buttons, checkbox}: ModalArguments) {
+function Modal({classes, message, buttons, checkbox, cancelCallback}: ModalArguments) {
   const [open, setOpen] = useState(false);
   const [checkboxChecked, setCheckboxChecked] = useState(checkbox?.checked ?? false);
   const modalRef = useRef<HTMLDialogElement>(null);
@@ -86,7 +62,11 @@ function Modal({classes, message, buttons, checkbox}: ModalArguments) {
     }
   );
 
-  const onCancel = () => setOpen(false);
+  const onCancel = () => {
+    if (cancelCallback)
+      cancelCallback();
+    setOpen(false);
+  };
 
   if (!open) {
     return null;

@@ -53,3 +53,19 @@ export function formatPercentParams(size: number, fractionDigits: number = 1) {
   const [amount, format] = formatPercent(size, fractionDigits);
   return {amount: amount, formatParams: {amount: format}};
 }
+
+/* https://developer.chrome.com/blog/introducing-scheduler-yield-origin-trial */
+// A function for shimming scheduler.yield and setTimeout:
+export function yieldToMain() {
+  // Use scheduler.yield if it exists:
+  // @ts-expect-error scheduler
+  if ('scheduler' in window && 'yield' in scheduler) {
+    // @ts-expect-error scheduler
+    return scheduler.yield();
+  }
+
+  // Fall back to setTimeout:
+  return new Promise((resolve) => {
+    setTimeout(resolve, 0);
+  });
+}

@@ -32,12 +32,39 @@
   font-size: 50%;
 }
 
-.results-table-container {
+.results-notice {
+  border-radius: 0;
+}
+
+.results-rendering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--text);
+  padding: 0 4px;
+  height: 2em;
+}
+
+/* Pad the last rendering box so that there's enough empty space below it for it to be at the top of the window. */
+.results-section:last-child .results-rendering {
+  margin-bottom: max(12em, 100vh);
+}
+
+.results-section {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
-  width: fit-content;
   min-width: 100%;
+}
+
+.results-table-container {
+  padding-right: 0.5rem;
+  width: fit-content;
+  min-width: calc(100% + 0.5rem);
+}
+
+.results-table {
+  width: 100%;
 }
 
 .results-table-actions {

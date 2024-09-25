@@ -16,8 +16,8 @@ export type SearchResultsStatus = SearchResultsInProgress | SearchResultsComplet
 export const statusError: readonly Status[] & readonly SearchResultsError[]
   = ['error', 'regex', 'noMatch', 'network', 'boolean.parentheses', 'boolean.quote', 'boolean.operand', 'boolean.empty'];
 
-/* Search status codes: initial -> waiting -> loading -> processing -> collecting -> rendering -> done (or propagate from SearchResults) */
-export type StatusInProgress = 'waiting' | SearchResultsInProgress | 'rendering';
+/* Search status codes: initial -> waiting -> loading -> processing -> collecting -> done (or propagate from SearchResults) */
+export type StatusInProgress = 'waiting' | SearchResultsInProgress;
 export type StatusComplete = 'initial' | SearchResultsComplete;
 export type Status = StatusInProgress | StatusComplete;
-export const statusInProgress: readonly Status[] & readonly StatusInProgress[] = ['waiting', 'loading', 'processing', 'collecting', 'rendering'];
+export const statusInProgress: readonly Status[] & readonly StatusInProgress[] = ['loading', 'processing', 'collecting'];

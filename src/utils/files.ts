@@ -1,4 +1,5 @@
 import filesJson from '../res/files.json';
+import corpus from './corpus';
 
 /**
  * Formats the collection, language, and file into the relative path to the text file.
@@ -16,8 +17,8 @@ export const getFileSize = (path: string): number => {
 /**
  * Returns the size of the pending download, or 0 if already downloaded.
  */
-export const getDownloadSize = async (path: string): Promise<number> => {
-  const [remoteFileInfo, localFileInfo] = await getFileInfo(path);
+export const getDownloadSize = async (db: IDBDatabase, path: string): Promise<number> => {
+  const [remoteFileInfo, localFileInfo] = await getFileInfo(db, path);
 
   // Cached file is up-to-date, no need to download
   if ((localFileInfo?.hash === remoteFileInfo.hash)) {
@@ -28,15 +29,43 @@ export const getDownloadSize = async (path: string): Promise<number> => {
   return remoteFileInfo.size;
 };
 
+/**
+ * Returns the total size of the pending downloads, or 0 if already downloaded.
+ */
+export const getDownloadSizeTotal = async (collections: readonly string[]): Promise<number> => {
+  try {
+    const db = await getIndexedDB();
+    const size = (await Promise.all(collections.flatMap((collectionKey) =>
+      corpus.collections[collectionKey].languages.flatMap((languageKey) =>
+        corpus.collections[collectionKey].files.map((fileKey) =>
+          getDownloadSize(db, getFilePath(collectionKey, languageKey, fileKey))
+        )
+      )
+    ))).reduce((a, b) => a + b, 0);
+    db.close();
+    return size;
+  }
+  catch {
+    // Can't access cache storage or indexedDB, assume we'll need to download all files from the server
+    return collections.flatMap((collectionKey) =>
+      corpus.collections[collectionKey].languages.flatMap((languageKey) =>
+        corpus.collections[collectionKey].files.map((fileKey) =>
+          getFileSize(getFilePath(collectionKey, languageKey, fileKey))
+        )
+      )
+    ).reduce((a, b) => a + b, 0);
+  }
+};
+
 export const getFileURL = (path: string) => import.meta.env.BASE_URL + path;
 
 /**
  * Retrieves a file from the cache, if present and up-to-date, or the server otherwise.
  */
-export const getFile = async (cache: Cache, path: string) => {
+export const getFile = async (cache: Cache, db: IDBDatabase, path: string) => {
   const url = getFileURL(path);
 
-  const [remoteFileInfo, localFileInfo] = await getFileInfo(path);
+  const [remoteFileInfo, localFileInfo] = await getFileInfo(db, path);
 
   // Use cached file if local hash is up-to-date, or if we are offline
   if ((localFileInfo?.hash === remoteFileInfo.hash) || (!navigator.onLine && localFileInfo?.hash !== undefined)) {
@@ -51,7 +80,7 @@ export const getFile = async (cache: Cache, path: string) => {
     console.debug(`Retrieved ${url} from the server`);
   await cachePut(cache, url, res).then(async (success) => {
     if (success)
-      await setLocalFileInfo(path);
+      await setLocalFileInfo(db, path);
   });
   return res;
 };
@@ -59,10 +88,10 @@ export const getFile = async (cache: Cache, path: string) => {
 /**
  * Retrieves a file from the cache, if present, and whether it is up-to-date.
  */
-export const getFileCacheOnly = async (cache: Cache, path: string) => {
+export const getFileCacheOnly = async (cache: Cache, db: IDBDatabase, path: string) => {
   // Try retrieving file from cache
   const url = getFileURL(path);
-  const [remoteFileInfo, localFileInfo] = await getFileInfo(path);
+  const [remoteFileInfo, localFileInfo] = await getFileInfo(db, path);
   if (localFileInfo?.hash !== undefined)
     return [await cacheMatch(cache, url), (localFileInfo.hash === remoteFileInfo.hash)] as const;
 
@@ -88,7 +117,7 @@ export interface Files {
 
 const dbName = 'corpus';
 const dbObjectStore = 'files';
-const getIndexedDB = (): Promise<IDBDatabase> => {
+export const getIndexedDB = (): Promise<IDBDatabase> => {
   const request = indexedDB.open(dbName);
   return new Promise((resolve, reject) => {
     request.onupgradeneeded = () => {
@@ -107,46 +136,37 @@ const getIndexedDB = (): Promise<IDBDatabase> => {
 
 const getRemoteFileInfo = (path: string): FileInfo => filesRemote[path];
 
-const getLocalFileInfo = (path: string): Promise<FileInfo> => (
-  getIndexedDB().then((db) => {
-    const transaction = db.transaction([dbObjectStore], "readonly");
-    const objectStore = transaction.objectStore(dbObjectStore);
-    const request = objectStore.get(path);
-    db.close();
-    return new Promise<FileInfo>((resolve, reject) => {
-      request.onsuccess = () => resolve(request.result);
-      request.onerror = () => reject(request.error);
-    });
-  }).catch((reason) => new Promise((_, reject) => reject(reason)))
-);
+const getLocalFileInfo = (db: IDBDatabase, path: string): Promise<FileInfo> => {
+  const transaction = db.transaction([dbObjectStore], "readonly");
+  const objectStore = transaction.objectStore(dbObjectStore);
+  const request = objectStore.get(path);
+  return new Promise<FileInfo>((resolve, reject) => {
+    request.onsuccess = () => resolve(request.result);
+    request.onerror = () => reject(request.error);
+  });
+};
 
-const setLocalFileInfo = (path: string): Promise<boolean> => (
-  getIndexedDB().then((db) => {
-    const transaction = db.transaction([dbObjectStore], "readwrite");
-    const objectStore = transaction.objectStore(dbObjectStore);
-    const request = objectStore.put(filesRemote[path], path);
-    db.close();
-    return new Promise<boolean>((resolve, reject) => {
-      request.onsuccess = () => resolve(request.result === path);
-      request.onerror = () => reject(request.error);
-    });
-  }).catch((reason) => new Promise((_, reject) => reject(reason)))
-);
+const setLocalFileInfo = (db: IDBDatabase, path: string): Promise<boolean> => {
+  const transaction = db.transaction([dbObjectStore], "readwrite");
+  const objectStore = transaction.objectStore(dbObjectStore);
+  const request = objectStore.put(filesRemote[path], path);
+  return new Promise<boolean>((resolve, reject) => {
+    request.onsuccess = () => resolve(request.result === path);
+    request.onerror = () => reject(request.error);
+  });
+};
 
-export const deleteLocalFileInfo = (path: string): Promise<boolean> => (
-  getIndexedDB().then((db) => {
-    const transaction = db.transaction([dbObjectStore], "readwrite");
-    const objectStore = transaction.objectStore(dbObjectStore);
-    const request = objectStore.delete(path);
-    db.close();
-    return new Promise<boolean>((resolve, reject) => {
-      request.onsuccess = () => resolve(request.result !== undefined);
-      request.onerror = () => reject(request.error);
-    });
-  }).catch((reason) => new Promise((_, reject) => reject(reason)))
-);
+export const deleteLocalFileInfo = (db: IDBDatabase, path: string): Promise<boolean> => {
+  const transaction = db.transaction([dbObjectStore], "readwrite");
+  const objectStore = transaction.objectStore(dbObjectStore);
+  const request = objectStore.delete(path);
+  return new Promise<boolean>((resolve, reject) => {
+    request.onsuccess = () => resolve(request.result !== undefined);
+    request.onerror = () => reject(request.error);
+  });
+};
 
-const getFileInfo = async (path: string) => [getRemoteFileInfo(path), await getLocalFileInfo(path)] as const;
+const getFileInfo = async (db: IDBDatabase, path: string) => [getRemoteFileInfo(path), await getLocalFileInfo(db, path)] as const;
 
 /**
  * Clear all stored file info from the indexed DB.
@@ -180,6 +200,10 @@ export const getAllLocalFilePaths = (): Promise<string[]> => (
 //#endregion
 
 //#region Cache Storage
+const cacheName = "corpus";
+
+export const getCache = async () => await caches.open(cacheName);
+
 const cacheMatch = async (cache: Cache, url: string) => {
   try {
     const res = await cache.match(url);
@@ -206,5 +230,3 @@ const cachePut = async (cache: Cache, url: string, res: Response) => {
   }
 };
 //#endregion
-
-export const cacheName = "corpus";

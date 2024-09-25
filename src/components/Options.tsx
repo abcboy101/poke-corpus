@@ -1,9 +1,9 @@
 import { ChangeEventHandler, Dispatch, SetStateAction } from 'react';
-import i18next, { Callback } from 'i18next';
+import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { ShowModalArguments } from './Modal';
-import { localStorageGetItem, localStorageSetItem } from '../utils/utils';
+import { ModalArguments } from './Modal';
+import { localStorageGetItem, localStorageSetItem, yieldToMain } from '../utils/utils';
 
 import './Options.css';
 import supportedLngs from '../i18n/supportedLngs.json';
@@ -13,19 +13,22 @@ export type Mode = typeof modes[number];
 const isMode = (s: string): s is Mode => (modes as readonly string[]).includes(s);
 export const asValidMode = (s: unknown) => (typeof s === 'string' && isMode(s)) ? s : 'system';
 
-function OptionsMenu({mode, setMode, showModal}: {mode: Mode, setMode: Dispatch<SetStateAction<Mode>>, showModal: (args: ShowModalArguments) => void}) {
+function OptionsMenu({mode, setMode, showModal}: {mode: Mode, setMode: Dispatch<SetStateAction<Mode>>, showModal: (args: ModalArguments) => void}) {
   const { t } = useTranslation();
 
-  // Vite always throws 'Unknown variable dynamic import' on its first try loading each i18n file.
-  // The user-facing error message should only be shown if some other error happens to occur.
-  const onChangeLanguage: Callback = (err: Error[] | undefined) => {
-    if (err && err.some((e) => !e.message.includes('Unknown variable dynamic import'))) {
-      console.log(err);
-      showModal({
-        message: t('options.network'),
-        buttons: [{message: <OptionsClose/>, autoFocus: true}],
-      });
-    }
+  const onChangeLanguage: ChangeEventHandler<HTMLSelectElement> = async (e) => {
+    await yieldToMain();
+    await i18next.changeLanguage(e.target.value, (err: Error[] | undefined) => {
+      // Vite always throws 'Unknown variable dynamic import' on its first try loading each i18n file.
+      // The user-facing error message should only be shown if some other error happens to occur.
+      if (err && err.some((e) => !e.message.includes('Unknown variable dynamic import'))) {
+        console.log(err);
+        showModal({
+          message: t('options.network'),
+          buttons: [{message: <OptionsClose/>, autoFocus: true}],
+        });
+      }
+    });
   };
 
   const onChangeMode: ChangeEventHandler<HTMLSelectElement> = (e) => {
@@ -40,7 +43,7 @@ function OptionsMenu({mode, setMode, showModal}: {mode: Mode, setMode: Dispatch<
     <div className="options">
       <div className="options-group">
         <label htmlFor="language">{t('options.language')}</label>
-        <select name="language" id="language" onChange={(e) => i18next.changeLanguage(e.target.value, onChangeLanguage)} defaultValue={i18next.language} autoFocus={true}>
+        <select name="language" id="language" onChange={onChangeLanguage} defaultValue={i18next.language} autoFocus={true}>
           {supportedLngs.map((lang) => <option key={lang.code} value={lang.code} lang={lang.code}>{lang.name}</option>)}
         </select>
       </div>
@@ -63,9 +66,9 @@ function OptionsClose() {
   return t('options.close');
 }
 
-function Options({showModal, mode, setMode}: {showModal: (args: ShowModalArguments) => void, mode: Mode, setMode: Dispatch<SetStateAction<Mode>>}) {
+function Options({showModal, mode, setMode}: {showModal: (args: ModalArguments) => void, mode: Mode, setMode: Dispatch<SetStateAction<Mode>>}) {
   const { t } = useTranslation();
-  const options: ShowModalArguments = {
+  const options: ModalArguments = {
     classes: ['modal-options'],
     message: <OptionsMenu mode={mode} setMode={setMode} showModal={showModal}/>,
     buttons: [{message: <OptionsClose/>}],

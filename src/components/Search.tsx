@@ -7,17 +7,16 @@ import { SearchResults, SearchResultLines } from '../webWorker/searchWorkerManag
 import { Status, statusError, statusInProgress } from '../utils/Status';
 import SearchForm from './SearchForm';
 import Results from './Results';
-import { ShowModalArguments } from './Modal';
+import { ModalArguments } from './Modal';
 
 import './Search.css';
 import '../i18n/config';
 import { formatBytesParams, localStorageGetItem, localStorageSetItem } from '../utils/utils';
-import corpus from '../utils/corpus';
-import { getDownloadSize, getFilePath } from '../utils/files';
+import { getDownloadSizeTotal } from '../utils/files';
 
 const searchModalWarn = 'corpus-warn';
 const searchModalThreshold = 20_000_000; // 20 MB
-function Search({showModal}: {showModal: (args: ShowModalArguments) => void}) {
+function Search({showModal}: {showModal: (args: ModalArguments) => void}) {
   const { t } = useTranslation();
   const workerRef = useRef<Worker | null>(null);
   const [status, setStatus] = useState<Status>('initial');
@@ -41,19 +40,15 @@ function Search({showModal}: {showModal: (args: ShowModalArguments) => void}) {
 
   const onMessage = useCallback((e: MessageEvent<SearchResults>) => {
     if (e.data.complete) {
-      // use requestAnimationFrame to ensure that the browser has displayed the 'rendering' status before the results start being rendered
-      setStatus('rendering');
-      window.requestAnimationFrame(() => {
-        setStatus(e.data.status);
-        setProgress(e.data.progress);
-        setResults(e.data.results);
-        if (statusError.includes(e.data.status)) {
-          showModal({
-            message: t(`statusModal.${e.data.status}`),
-            buttons: [{message: t('statusModal.buttons.ok'), autoFocus: true}],
-          });
-        }
-      });
+      setStatus(e.data.status);
+      setProgress(e.data.progress);
+      setResults(e.data.results);
+      if (statusError.includes(e.data.status)) {
+        showModal({
+          message: t(`statusModal.${e.data.status}`),
+          buttons: [{message: t('statusModal.buttons.ok'), autoFocus: true}],
+        });
+      }
     }
     else {
       setStatus(e.data.status);
@@ -79,7 +74,6 @@ function Search({showModal}: {showModal: (args: ShowModalArguments) => void}) {
         workerRef.current = new SearchWorkerManager();
         workerRef.current.addEventListener("message", onMessage);
       }
-      setStatus('waiting');
       setProgress(0.0);
       if (import.meta.env.DEV) {
         console.log(params);
@@ -89,14 +83,9 @@ function Search({showModal}: {showModal: (args: ShowModalArguments) => void}) {
   }, []);
 
   const postToWorkerModal = useCallback(async (params: SearchParams) => {
+    setStatus('waiting');
     if (showSearchModal) {
-      const size = (await Promise.all(params.collections.flatMap((collectionKey) =>
-        corpus.collections[collectionKey].languages.flatMap((languageKey) =>
-          corpus.collections[collectionKey].files.map((fileKey) =>
-            getDownloadSize(getFilePath(collectionKey, languageKey, fileKey))
-          )
-        )
-      ))).reduce((a, b) => a + b, 0);
+      const size = await getDownloadSizeTotal(params.collections);
       if (size > searchModalThreshold) {
         showModal({
           message: t('searchModal.message', formatBytesParams(size)),
@@ -115,9 +104,11 @@ function Search({showModal}: {showModal: (args: ShowModalArguments) => void}) {
             },
             {
               message: t('searchModal.buttons.no'),
+              callback: () => setStatus('initial'),
               autoFocus: true,
             },
           ],
+          cancelCallback: () => setStatus('initial'),
         });
         return;
       }

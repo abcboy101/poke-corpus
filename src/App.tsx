@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import Search from './components/Search';
 import CacheManager from './components/CacheManager';
 import Options, { asValidMode, Mode } from './components/Options';
-import Modal, { ModalArguments, ShowModalArguments } from './components/Modal';
+import Modal, { ModalArguments } from './components/Modal';
 import { localStorageGetItem } from './utils/utils';
 
 import './App.css';
@@ -20,7 +20,7 @@ function App() {
   const [view, setView] = useState<View>('Search');
   const [modalArguments, setModalArguments] = useState<ModalArguments>({});
 
-  const showModal = (args: ShowModalArguments) => {
+  const showModal = (args: ModalArguments) => {
     setModalArguments(args);
   };
 

@@ -1,5 +1,5 @@
 import { corpus } from '../utils/corpus';
-import { cacheName, getFile, getFilePath, getFileSize } from '../utils/files';
+import { getCache, getFile, getFilePath, getFileSize, getIndexedDB } from '../utils/files';
 
 export type CacheManagerStatus = 'done' | 'error' | 'loading';
 export type CacheManagerParams = string | null;
@@ -27,8 +27,9 @@ self.onmessage = async (message: MessageEvent<CacheManagerParams>) => {
 
     // Load the files and save them to the cache
     let loadedBytes = 0;
-    const cache = await self.caches.open(cacheName);
-    await Promise.all(filePaths.map((filePath) => getFile(cache, filePath)
+    const cache = await getCache();
+    const db = await getIndexedDB();
+    await Promise.all(filePaths.map((filePath) => getFile(cache, db, filePath)
       .then((res) => {
         res.blob();
         loadedBytes += getFileSize(filePath);
@@ -38,6 +39,7 @@ self.onmessage = async (message: MessageEvent<CacheManagerParams>) => {
         }
       })
     ));
+    db.close();
 
     // Send results once all done
     updateStatus(['done', totalBytes, totalBytes, message.data]);

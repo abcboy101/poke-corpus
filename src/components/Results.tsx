@@ -1,4 +1,4 @@
-import { Dispatch, MouseEventHandler, SetStateAction, useEffect, useMemo, useState } from 'react';
+import { MouseEventHandler, useEffect, useMemo, useRef, useState } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
@@ -16,13 +16,18 @@ import './ResultsText.css';
 import logo from '../res/logo.svg';
 import '../i18n/config';
 import { expandSpeakers } from '../utils/speaker';
+import { SearchTaskResultLines } from '../webWorker/searchWorker';
 
-const jumpTo = (k: number) => {
+/**
+ * Scrolls the results window to the specified section.
+ * @param n Section index
+ */
+const jumpTo = (n: number) => {
   const results = document.getElementById("results");
   const section0 = document.getElementById(`results-section0`);
-  const sectionk = document.getElementById(`results-section${k}`);
-  if (results && section0 && sectionk) {
-    results.scrollTop = sectionk.offsetTop - section0.offsetTop;
+  const sectionN = document.getElementById(`results-section${n}`);
+  if (results && section0 && sectionN) {
+    results.scrollTop = sectionN.offsetTop - section0.offsetTop;
   }
 };
 
@@ -36,19 +41,36 @@ function JumpToSelect({headers}: {headers: readonly string[]}) {
   </nav>;
 }
 
-function ResultsTable({header, collection, languages, lines, displayHeader, k, count, start = 0, end, setOffset}: {header: string, collection: string, languages: readonly string[], lines: readonly string[][], displayHeader: boolean, k: number, count: number, start?: number, end?: number, setOffset: Dispatch<SetStateAction<number>>}) {
+function Rendering() {
+  const { t } = useTranslation();
+  return <div className="results-rendering">{t('status.rendering')}</div>;
+}
+
+function Actions({id}: {id: string}) {
+  return (
+    <td key="actions" className="results-table-actions-cell">
+      <div className="results-table-actions">
+        <Share hash={`#id=${id}`}/>
+        <ViewNearby hash={`#file=${id.split('.').slice(0, -1).join('.')}`}/>
+      </div>
+    </td>
+  );
+}
+
+function ResultsTable({collection, file, languages, lines}: SearchTaskResultLines) {
   const { t } = useTranslation();
   const idIndex = languages.indexOf(codeId);
   const displayLanguages = languages.map((lang) => lang === codeId ? langId : lang);
+  const viewSpeaker = t('viewSpeaker');
+  const hasSpeakers = corpus.collections[collection].speaker !== undefined;
+
+  // RTL support: if the interface language uses a different direction, make sure to tag each cell with its direction
   const displayDirs = displayLanguages.map((lang) => i18next.dir(lang));
   const sameDir = displayDirs.every((dir) => dir === displayDirs[0]);
-  const slicedLines = (start !== 0 || end !== undefined) ? lines.slice(start, end) : lines;
-  const onClick = (count: number): MouseEventHandler<HTMLButtonElement> => () => {
-    setOffset(count);
-    jumpTo(k);
-  };
-  const copyOnClick = (tableId: string): MouseEventHandler<HTMLButtonElement> => async () => {
-    const table = document.getElementById(tableId);
+
+  const tableRef = useRef(null);
+  const copyOnClick: MouseEventHandler<HTMLButtonElement> = () => {
+    const table = tableRef.current;
     const sel = window.getSelection();
     if (sel !== null && table !== null) {
       sel.removeAllRanges();
@@ -57,45 +79,79 @@ function ResultsTable({header, collection, languages, lines, displayHeader, k, c
       sel.removeAllRanges();
     }
   };
-  const viewSpeaker = t('viewSpeaker');
-  const hasSpeakers = corpus.collections[collection].speaker !== undefined;
 
   return (
-    <section id={`results-section${k}`} className='results-table-container'>
-      <h2 className={displayHeader ? undefined : 'd-none'}>{header}</h2>
-      { start !== 0 ? <button className="results-notice" onClick={onClick(count)}>{t('tablePartial', {count: start})}</button> : null }
-      { slicedLines.length > 0
-        ? <table id={`results-section${k}-table`} className={`results-table collection-${corpus.collections[collection].id ?? collection.toLowerCase()}`}>
-          <thead>
-            <tr>
-              {idIndex !== -1 ? <th className="results-table-actions-cell"><Copy callback={copyOnClick(`results-section${k}-table`)}/></th> : null}
-              {languages.map((lang) => <th key={lang}><abbr title={t(`languages:${lang}.name`)}>{t(`languages:${lang}.code`)}</abbr></th>)}
+    <div className="results-table-container">
+      <table ref={tableRef} className={`results-table collection-${corpus.collections[collection].id ?? collection.toLowerCase()} file-${file}`}>
+        <thead>
+          <tr>
+            {idIndex !== -1 ? <th className="results-table-actions-cell"><Copy callback={copyOnClick}/></th> : null}
+            {languages.map((lang) => <th key={lang}><abbr title={t(`languages:${lang}.name`)}>{t(`languages:${lang}.code`)}</abbr></th>)}
+          </tr>
+        </thead>
+        <tbody dir={sameDir && displayDirs[0] !== i18next.dir() ? displayDirs[0] : undefined}>
+          {lines.map((row, i) =>
+            <tr key={i}>
+              {idIndex !== -1 ? <Actions id={row[idIndex]}/> : null}
+              {row.map((s, j) => <td key={j} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]}
+                dangerouslySetInnerHTML={{__html: hasSpeakers ? expandSpeakers(s, collection, languages[j], viewSpeaker) : s}}></td>)}
             </tr>
-          </thead>
-          <tbody dir={sameDir && displayDirs[0] !== i18next.dir() ? displayDirs[0] : undefined}>
-            {slicedLines.map((row, i) => {
-              return <tr key={i}>
-                {idIndex !== -1
-                  ? <td key="actions" className="results-table-actions-cell">
-                    <div className="results-table-actions">
-                      <Share hash={`#id=${row[idIndex]}`}/>
-                      <ViewNearby hash={`#file=${row[idIndex].split('.').slice(0, -1).join('.')}`}/>
-                    </div>
-                  </td> : null}
-                {row.map((s, j) => <td key={j} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]}
-                  dangerouslySetInnerHTML={{__html: hasSpeakers ? expandSpeakers(s, collection, languages[j], viewSpeaker) : s}}></td>)}
-              </tr>;
-            })}
-          </tbody>
-        </table>
-        : null
-      }
-      { end !== undefined && end < lines.length ? <button className="results-notice" onClick={onClick(count + end)}>{t('tablePartial', {count: lines.length - end})}</button> : null }
+          )}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+interface ResultsSectionContentParams extends SearchTaskResultLines {
+  sectionOffset: number,
+  offset: number,
+  limit: number,
+  index: number,
+  onShowSection: ShowSectionCallback,
+}
+
+type ShowSectionCallback = (offset: number, index: number) => () => void;
+
+/** Content of a results section, including warnings when only part of a table is shown. */
+function ResultsSectionContent({lines, index, sectionOffset, offset, limit, onShowSection, ...params}: ResultsSectionContentParams) {
+  const { t } = useTranslation();
+  const start = Math.max(0, Math.min(lines.length, offset - sectionOffset));
+  const end = Math.max(0, Math.min(lines.length, (offset + limit) - sectionOffset));
+  const slicedLines = (start !== 0 || end !== undefined) ? lines.slice(start, end) : lines;
+
+  return <>
+    { start !== 0 ? <button className="results-notice" onClick={onShowSection(sectionOffset, index)}>{t('tablePartial', {count: start})}</button> : null }
+    { start !== end && <ResultsTable key={index} {...params} lines={slicedLines} /> }
+    { end !== undefined && end < lines.length ? <button className="results-notice" onClick={onShowSection(sectionOffset + end, index)}>{t('tablePartial', {count: lines.length - end})}</button> : null }
+  </>;
+}
+
+/** Results section, including its header. */
+function ResultsSection({header, displayHeader, ...params}: {header: string, displayHeader: boolean} & ResultsSectionContentParams) {
+  const [content, setContent] = useState<JSX.Element>(<Rendering/>);
+
+  // On prev/next navigation, scroll to first section displayed.
+  useEffect(() => {
+    const jumpToThis = params.offset >= params.sectionOffset && params.offset < (params.sectionOffset + params.lines.length);
+    if (jumpToThis)
+      jumpTo(params.index);
+  }, [params.offset]);
+
+  // Load content in useEffect so that it doesn't block immediately.
+  useEffect(() => {
+    setContent(<ResultsSectionContent {...params}/>);
+  }, Object.values(params));
+
+  return (
+    <section id={`results-section${params.index}`} className='results-section'>
+      <h2 className={displayHeader ? undefined : 'd-none'}>{header}</h2>
+      { content }
     </section>
   );
 }
 
-function Results({status, progress, results, limit = 1000}: {status: Status, progress: number, results: readonly SearchResultLines[], limit?: number}) {
+function Results({status, progress, results, limit = 500}: {status: Status, progress: number, results: readonly SearchResultLines[], limit?: number}) {
   const { t } = useTranslation();
   const [showVariables, setShowVariables] = useState(true);
   const [showAllCharacters, setShowAllCharacters] = useState(false);
@@ -103,7 +159,15 @@ function Results({status, progress, results, limit = 1000}: {status: Status, pro
   const [showPlural, setShowPlural] = useState(0);
   const [showFurigana, setShowFurigana] = useState(true);
   const [offset, setOffset] = useState(0);
-  useEffect(() => setOffset(0), [results]);
+
+  const onShowSection: ShowSectionCallback = (offset, index) => () => {
+    setOffset(offset);
+    jumpTo(index);
+  };
+
+  useEffect(() => {
+    setOffset(0);
+  }, [results]);
 
   // Wrap in useMemo to prevent expensive recalculations.
   // Only changes to results, limit, offset, or language will affect the generated HTML.
@@ -112,13 +176,12 @@ function Results({status, progress, results, limit = 1000}: {status: Status, pro
     let count = 0;
     const headers = results.map(({collection, file}) => t('tableHeader', {collection: t(`collections:${collection}.name`), file: t(`files:${file}`), interpolation: {escapeValue: false}}));
     const resultTables: JSX.Element[] = [];
-    results.forEach(({collection, lines, languages, displayHeader}, k) => {
-      const start = Math.max(0, Math.min(lines.length, offset - count));
-      const end = Math.max(0, Math.min(lines.length, (offset + limit) - count));
+    results.forEach((params, index) => {
       resultTables.push(
-        <ResultsTable key={k} header={headers[k]} collection={collection} lines={lines} languages={languages} displayHeader={displayHeader} k={k} count={count} start={start} end={end} setOffset={setOffset} />
+        // Reset the state by passing a different key when offset changes.
+        <ResultsSection key={[offset, index].join(',')} header={headers[index]} {...params} index={index} sectionOffset={count} offset={offset} limit={limit} onShowSection={onShowSection} />
       );
-      count += lines.length;
+      count += params.lines.length;
     });
     return [count, headers, resultTables] as const;
   }, [results, limit, offset, i18next.language]);
@@ -138,8 +201,8 @@ function Results({status, progress, results, limit = 1000}: {status: Status, pro
                 <span className="results-nav-range-long">{t('displayedRange.long', {count: count, start: offset + 1, end: Math.min(count, offset + limit)})}</span>
                 <span className="results-nav-range-short">{t('displayedRange.short', {count: count, start: offset + 1, end: Math.min(count, offset + limit)})}</span>
               </div>
-              <button className='button-square' onClick={() => setOffset(Math.max(0, offset - limit))}>{t('loadPrev', {limit: limit})}</button>
-              <button className='button-square' onClick={() => setOffset(Math.min(Math.floor(count / limit) * limit, offset + limit))}>{t('loadNext', {limit: limit})}</button>
+              <button className='button-square' disabled={offset === 0} onClick={() => setOffset(Math.max(0, offset - limit))} title={t('loadPrev')}>{t('loadPrevIcon', {limit: limit})}</button>
+              <button className='button-square' disabled={offset + limit >= count} onClick={() => setOffset(Math.min(Math.floor(count / limit) * limit, offset + limit))} title={t('loadNext')}>{t('loadNextIcon', {limit: limit})}</button>
             </div>
           ) : <ProgressBar progress={progress} />
         }

@@ -16,7 +16,7 @@
   },
   "query": "Query:",
   "searchType": {
-    "searchType": "Search mode:",
+    "searchType": "Search mode",
     "exact": "Exact phrase",
     "regex": "Regex",
     "boolean": "Boolean"
@@ -87,13 +87,15 @@
     "long_other": "Displaying {{start, number}}\u2013{{end, number}} of {{count, number}} results",
     "short": "{{start, number}}\u2013{{end, number}} of {{count, number}}"
   },
-  "loadPrev": "←",
-  "loadNext": "→",
+  "loadPrev": "Previous",
+  "loadNext": "Next",
   "showVariables": "Show Variables",
   "showAllCharacters": "Show All Characters",
   "showFurigana": "Show Furigana",
   "showGender": "Change Grammatical Gender",
   "showPlural": "Change Singular/Plural Forms",
+  "loadPrevIcon": "←",
+  "loadNextIcon": "→",
   "showVariablesIcon": "[ ]",
   "showFuriganaIcon": "abc",
   "showAllCharactersIcon": "¶",

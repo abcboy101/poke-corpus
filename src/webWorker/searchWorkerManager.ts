@@ -1,5 +1,5 @@
 import corpus from '../utils/corpus';
-import { cacheName, getFile, getFilePath, getFileRemote } from '../utils/files';
+import { getCache, getFile, getFilePath, getFileRemote, getIndexedDB } from '../utils/files';
 import SearchWorker from "./searchWorker.ts?worker";
 import { SearchParams } from '../utils/searchParams';
 import { SearchTask, SearchTaskResult, SearchTaskResultComplete, SearchTaskResultLines } from './searchWorker';
@@ -27,27 +27,41 @@ type SearchTaskPartial = Omit<SearchTask, "files" | "speakerFiles">;
  *
  * Returns a promise of the text of the file.
  */
-const loadFile = (collectionKey: string, languageKey: string, fileKey: string) => {
+const loadFile = async (collectionKey: string, languageKey: string, fileKey: string): Promise<string> => {
   const path = getFilePath(collectionKey, languageKey, fileKey);
   if (import.meta.env.DEV) {
     console.debug(`Loading ${path}`);
   }
-  return (('caches' in self && indexedDB && 'databases' in indexedDB) ? self.caches.open(cacheName).then((cache) => getFile(cache, path))
-    .catch((err) => {
-      console.error(err);
-      console.log(`Could not retrieve ${path} from cache. Fetching directly...`);
-      return getFileRemote(path);
-    }) : getFileRemote(path))
-    .catch((err) => {
-      console.error(err);
-      return null;
-    })
-    // Due to a bug, the Vite dev server serves .gz files with `Content-Encoding: gzip`.
-    // To work around this, don't bother decompressing the file in the dev environment.
-    // https://github.com/vitejs/vite/issues/12266
-    .then((res) => res === null ? ''
-      : res.blob().then((blob) => import.meta.env.DEV ? new Response(blob.stream()).text()
-        : new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text()));
+
+  let res: Response | null;
+  try {
+    if ('caches' in self && 'indexedDB' in self && 'databases' in self.indexedDB) {
+      // Retrieve from cache storage
+      const cache = await getCache();
+      const db = await getIndexedDB();
+      res = await getFile(cache, db, path);
+      db.close();
+    }
+    else {
+      // Can't access cache storage or indexedDB, download file from the server
+      res = await getFileRemote(path);
+    }
+  }
+  catch (err) {
+    // Couldn't download it from the server
+    console.error(err);
+    return '';
+  }
+
+  const stream = (await res.blob()).stream();
+
+  // Due to a bug, the Vite dev server serves .gz files with `Content-Encoding: gzip`.
+  // To work around this, don't bother decompressing the file in the dev environment.
+  // https://github.com/vitejs/vite/issues/12266
+  if (import.meta.env.DEV)
+    return new Response(stream).text();
+
+  return new Response(stream.pipeThrough(new DecompressionStream('gzip'))).text();
 };
 
 self.onmessage = (message: MessageEvent<SearchParams>) => {

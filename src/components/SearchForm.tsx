@@ -157,17 +157,24 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       setType(newType);
   };
 
+  // initial: submit enabled (unless form is incomplete)
+  // waiting: submit disabled (to prevent double-clicking)
+  // in progress: cancel enabled
+  // done or error: submit enabled
+  const cancelVisible = statusInProgress.includes(status);
+  const submitDisabled = cancelVisible || query.length === 0 || collections.length === 0 || languages.length === 0 || status === 'waiting';
+
   return <form className="search search-form" onSubmit={onSubmit}>
     <div className="search-bar">
       <div className="search-bar-query">
         <label htmlFor="query">{t('query')}</label>
         <input type="text" name="query" id="query" value={query} onChange={(e) => setQuery(e.target.value)}/>
         <div className="btn-alternate-container">
-          <input id="submit" type="submit" className={status === 'rendering' || !statusInProgress.includes(status) ? 'visible' : 'invisible'} value={t('search')} disabled={query.length === 0 || collections.length === 0 || languages.length === 0 || (status !== 'rendering' && statusInProgress.includes(status))}/>
-          <button type="button" className={status === 'rendering' || !statusInProgress.includes(status) ? 'invisible' : 'visible'} onClick={onCancel} disabled={status === 'rendering' || !statusInProgress.includes(status)}>{t('cancel')}</button>
+          <input id="submit" type="submit" className={cancelVisible ? 'invisible' : 'visible'} value={t('search')} disabled={submitDisabled}/>
+          <button type="button" className={cancelVisible ? 'visible' : 'invisible'} onClick={onCancel} disabled={!cancelVisible}>{t('cancel')}</button>
         </div>
         <button type="button" className={filtersVisible ? 'active' : undefined} onClick={toggleFiltersVisible}>{t('filters')}</button>
-        <select name="type" id="type" onChange={onTypeChange} value={type} aria-label={t('searchType.searchType')}>
+        <select name="type" id="type" onChange={onTypeChange} value={type} title={t('searchType.searchType')} aria-label={t('searchType.searchType')}>
           {searchTypes.map((type) => <option key={type} value={type}>{t(`searchType.${type}`)}</option>)}
         </select>
       </div>
