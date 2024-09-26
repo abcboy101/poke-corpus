@@ -108,12 +108,19 @@ export const getFileRemote = (path: string) => {
 };
 
 //#region Indexed DB/FileInfo
-const filesRemote = filesJson as Files;
-
 type FileInfo = {hash: string, size: number};
 export interface Files {
   [path: string]: FileInfo,
 }
+
+const filesRemoteData = filesJson as ([string, number])[];
+const filesRemote: Files = Object.fromEntries(
+  Object.entries(corpus.collections).flatMap(([collectionKey, collection]) =>
+    collection.languages.flatMap((languageKey) =>
+      collection.files.map((fileKey) => getFilePath(collectionKey, languageKey, fileKey))
+    )
+  ).map((filePath, i) => [filePath, {hash: filesRemoteData[i][0], size: filesRemoteData[i][1]} as FileInfo] as const)
+);
 
 const dbName = 'corpus';
 const dbObjectStore = 'files';

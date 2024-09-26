@@ -10,7 +10,7 @@ FILES_JSON = './src/res/files.json'
 with open(CORPUS_JSON, 'r', encoding='utf-8') as f:
     corpus = json.load(f)
 
-entries: dict[str, str] = {}
+entries: list[list[str, int]] = []
 for collection_key, collection in corpus['collections'].items():
     for language in collection['languages']:
         for file in collection['files']:
@@ -18,11 +18,10 @@ for collection_key, collection in corpus['collections'].items():
             with open(os.path.join(PUBLIC_FOLDER, file_path), 'rb') as f:
                 buf = f.read()
             file_hash = f'{zlib.crc32(buf):08X}'
-            entries[file_path] = {
-                'hash': file_hash,
-                'size': len(buf),
-            }
+            entries.append([file_hash, len(buf)])
 
 # Update files.json
 with open(FILES_JSON, 'w', encoding='utf-8') as f:
-    json.dump(entries, f, indent=2)
+    f.write("[\n  ")
+    f.write(",\n  ".join(json.dumps(entry) for entry in entries))
+    f.write("\n]")
