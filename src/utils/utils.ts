@@ -19,6 +19,19 @@ export function localStorageSetItem(key: string, value: string) {
   }
 }
 
+export const modes = ['system', 'light', 'dark'] as const;
+export type Mode = (typeof modes)[number];
+export const isMode = (s: string): s is Mode => (modes as readonly string[]).includes(s);
+const asValidMode = (s: unknown) => (typeof s === 'string' && isMode(s)) ? s : 'system';
+export const getMode = (): Mode => asValidMode(localStorageGetItem('mode'));
+
+export const defaultLimit = 500;
+export const isValidLimit = (n: unknown) => (typeof n === 'number' && !Number.isNaN(n) && Number.isInteger(n) && n > 0);
+export const getLimit = () => {
+  const value = +(localStorageGetItem('corpus-limit') ?? defaultLimit);
+  return Number.isNaN(value) ? defaultLimit : value;
+};
+
 /* Generate appropriate i18n number format options for n bytes */
 const byteUnits = ['byte', 'kilobyte', 'megabyte', 'gigabyte', 'terabyte', 'petabyte'] as const;
 export function formatBytes(n: number) {

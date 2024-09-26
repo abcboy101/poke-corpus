@@ -17,7 +17,7 @@ import logo from '../res/logo.svg';
 import '../i18n/config';
 import { expandSpeakers } from '../utils/speaker';
 import { SearchTaskResultLines } from '../webWorker/searchWorker';
-import { defaultLimit } from './Options';
+import { defaultLimit } from '../utils/utils';
 
 /**
  * Scrolls the results window to the specified section.

@@ -166,7 +166,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
 
   return <form className="search search-form" onSubmit={onSubmit}>
     <div className="search-bar">
-      <div className="search-bar-query">
+      <div className="item-group">
         <label htmlFor="query">{t('query')}</label>
         <input type="text" name="query" id="query" value={query} onChange={(e) => setQuery(e.target.value)}/>
         <div className="btn-alternate-container">
@@ -178,7 +178,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
           {searchTypes.map((type) => <option key={type} value={type}>{t(`searchType.${type}`)}</option>)}
         </select>
       </div>
-      <div className="search-bar-group">
+      <div className="item-group search-option-group">
         <div className="search-option">
           <input type="checkbox" name="caseInsensitive" id="caseInsensitive" checked={caseInsensitive} onChange={(e) => setCaseInsensitive(e.target.checked)}/>
           <label htmlFor="caseInsensitive">{t('caseInsensitive')}</label>

@@ -368,6 +368,19 @@ table th, table td {
   display: none;
 }
 
+.item-group {
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-placeholder {
+  flex: 1;
+}
+
 .app-window {
   width: 100%;
   min-height: max(12em, 50dvh);

@@ -25,20 +25,6 @@ function CacheManager({active, showModal}: {active: boolean, showModal: (args: M
   const [totalBytes, setTotalBytes] = useState(0);
   const workerRef = useRef<Worker | null>(null);
 
-  useEffect(() => {
-    const onBlur = () => {
-      if (workerRef.current !== null && !active) {
-        console.log('Terminating worker!');
-        workerRef.current.terminate();
-        workerRef.current = null;
-      }
-    };
-    window.addEventListener('blur', onBlur);
-    return () => {
-      window.removeEventListener('blur', onBlur);
-    };
-  }, [active]);
-
   const checkCacheStorageEnabled = async () => {
     setCacheStorageEnabled('caches' in window && await window.caches.keys().then(() => true).catch(() => false));
   };
@@ -239,7 +225,7 @@ function CacheManager({active, showModal}: {active: boolean, showModal: (args: M
 
   return (
     <>
-      <div className='cache cache-button-group'>
+      <div className='cache cache-button-group item-group'>
         <button onClick={cacheAllModal} disabled={cacheInProgress !== false}>{t('cacheAll')}</button>
         <button onClick={clearCacheModal}>{t('clearCache')}</button>
       </div>

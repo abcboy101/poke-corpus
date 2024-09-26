@@ -13,15 +13,6 @@
   gap: 0.5em;
 }
 
-.search-bar-query, .search-bar-group, .search-button-group {
-  display: flex;
-  gap: 0.5em;
-  flex-wrap: wrap;
-  white-space: nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
 .btn-alternate-container {
   display: grid;
   grid-template-columns: max-content;
@@ -49,7 +40,7 @@
   grid-row: span 2;
 }
 
-.search-bar-group, .search-collections, .search-languages {
+.search-option-group, .search-collections, .search-languages {
   margin: 0.15em 0;
 }
 

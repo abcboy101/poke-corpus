@@ -3,23 +3,10 @@ import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { ModalArguments } from './Modal';
-import { localStorageGetItem, localStorageSetItem, yieldToMain } from '../utils/utils';
+import { isMode, isValidLimit, localStorageGetItem, localStorageSetItem, Mode, modes, yieldToMain } from '../utils/utils';
 
 import './Options.css';
 import supportedLngs from '../i18n/supportedLngs.json';
-
-const modes = ['system', 'light', 'dark'] as const;
-export type Mode = typeof modes[number];
-const isMode = (s: string): s is Mode => (modes as readonly string[]).includes(s);
-const asValidMode = (s: unknown) => (typeof s === 'string' && isMode(s)) ? s : 'system';
-export const getMode = (): Mode => asValidMode(localStorageGetItem('mode'));
-
-export const defaultLimit = 500;
-const isValidLimit = (n: unknown) => (typeof n === 'number' && !Number.isNaN(n) && Number.isInteger(n) && n > 0);
-export const getLimit = () => {
-  const value = +(localStorageGetItem('corpus-limit') ?? defaultLimit);
-  return Number.isNaN(value) ? defaultLimit : value;
-};
 
 interface OptionsParams {
   showModal: (args: ModalArguments) => void,

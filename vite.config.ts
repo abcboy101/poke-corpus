@@ -9,14 +9,26 @@ function manualChunks(id: string) {
   if (id.includes('workbox')) {
     return 'workbox-window.prod.es5';
   }
-  else if (id.includes('node_modules')) {
+  if (id.includes('node_modules')) {
+    if (id.includes("node_modules/react-dom")) {
+      return 'react-dom';
+    }
     return 'vendor';
   }
-  else if (/i18n\/(.+?)\//.test(id)) {
-    const match = /i18n\/(.+?)\//.exec(id);
-    if (match) {
-      return `i18n-${match[1].split('-')[0]}`;
-    }
+
+  const match = /i18n\/(.+?)\//.exec(id);
+  if (match) {
+    return `i18n-${match[1].split('-')[0]}`;
+  }
+
+  // Needed for initial load
+  else if (id.includes("index.tsx") || id.includes("App.tsx") || id.includes("modulepreload-polyfill.js")) {
+    return 'index';
+  }
+
+  // Needed for search view
+  else if (id.includes("files.ts") || id.includes("Search.tsx") || id.includes("Options.tsx")) {
+    return 'search';
   }
 }
 

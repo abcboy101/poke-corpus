@@ -1,12 +1,3 @@
-.cache-button-group {
-  display: flex;
-  gap: 0.5em;
-  flex-wrap: wrap;
-  white-space: nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
 .cache-entry-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
