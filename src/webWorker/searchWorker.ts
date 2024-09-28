@@ -100,6 +100,32 @@ function parseQuery(params: SearchParams): [MatchCondition, WhereConditionFactor
   return [matchCondition, whereConditionFactory];
 }
 
+/**
+ * Generates the appropriate function to clean special characters.
+ *
+ * The development/localization team sometimes uses these characters interchangeably.
+ * Fold them to the same codepoint, unless the user requests a case-sensitive/regex search.
+ * (i.e. would have an expectation that the characters are treated literally)
+ */
+function cleanSpecialFactory(params: SearchParams): (s: string) => string {
+  return (params.caseInsensitive && params.type !== 'regex') ? (
+    (s) => (s
+      .replaceAll('\u00A0', ' ') // non-breaking space -> space
+      .replaceAll('\u2007', ' ') // figure space -> space
+      .replaceAll('\u202F', ' ') // narrow non-breaking space -> space
+      .replaceAll('\u3000', ' ') // fullwidth space -> space
+      .replaceAll('“', '"') // left double quotation mark -> quotation mark
+      .replaceAll('”', '"') // right double quotation mark -> quotation mark
+      .replaceAll('\u2018', "'") // left single quotation mark -> apostrophe
+      .replaceAll('\u2019', "'") // right single quotation mark -> apostrophe
+      .replaceAll('º', '°') // masculine ordinal indicator -> degree symbol
+      .replaceAll('‥', '..') // two dot leader -> full stop (x2)
+      .replaceAll('…', '...') // horizontal ellipsis -> full stop (x3)
+      .normalize()
+    )
+  ) : (s) => s;
+}
+
 self.onmessage = (task: MessageEvent<SearchTask>) => {
   const {index, params, collectionKey, fileKey, languages, files, speaker, speakerFiles: speakerData, literals} = task.data;
   const notifyIncomplete = (status: SearchTaskResultNotDone) => {
@@ -123,7 +149,8 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
     const preprocessedFiles = languages.map(((languageKey, i) => [languageKey, preprocessString(files[i], collectionKey, languageKey)] as const));
 
     // Process files
-    const [matchCondition, whereConditionFactory] = parseQuery(params);
+    const cleanSpecial = cleanSpecialFactory(params);
+    const [matchCondition, whereConditionFactory] = parseQuery({...params, query: cleanSpecial(params.query)});
     const processedFiles = preprocessedFiles.map(([languageKey, data]) => {
       notifyIncomplete('processing'); // for progress bar
       const lines = data.split(/\r\n|\n/);
@@ -132,7 +159,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       // Check selected languages for lines that satisfy the query
       if (params.languages.includes(languageKey)) {
         lines.forEach((line, i) => {
-          if (matchCondition(line)) {
+          if (matchCondition(cleanSpecial(line))) {
             lineKeys.push(i);
           }
         });
