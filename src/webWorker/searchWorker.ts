@@ -2,11 +2,13 @@ import 'compression-streams-polyfill';
 import { preprocessString, convertWhitespace, postprocessString } from './cleanString';
 import { codeId, Speaker, Literals } from '../utils/corpus';
 import { SearchTaskResultDone, SearchTaskResultNotDone } from '../utils/Status';
-import { getMatchConditionBoolean } from './searchBoolean';
+import { getMatchConditionBoolean, isBooleanQueryValid } from './searchBoolean';
 import { extractSpeakers, replaceSpeaker } from '../utils/speaker';
 import { SearchParams } from '../utils/searchParams';
 
 export type MatchCondition = (line: string) => boolean;
+export type WhereCondition = (i: number) => boolean;
+export type WhereConditionFactory = (fileData: string[][], languageKeys: string[]) => WhereCondition;
 
 export interface SearchTask {
   readonly index: number,
@@ -63,6 +65,41 @@ function getMatchCondition(params: SearchParams): MatchCondition {
   return () => false;
 }
 
+function parseQuery(params: SearchParams): [MatchCondition, WhereConditionFactory] {
+  // Not a boolean query, use params directly
+  if (params.type !== "boolean") {
+    return [getMatchCondition(params), () => () => true];
+  }
+
+  // Check for WHERE clause
+  const whereClause = /(.*)\bWHERE\s+([A-Za-z-]+)\s*(=|==|<>|!=)\s*([A-Za-z-]+)/u.exec(params.query);
+  if (!whereClause) {
+    return [getMatchCondition(params), () => () => true];
+  }
+
+  // WHERE clause found, parse it
+  const [, query, languageKey1, comparison, languageKey2] = whereClause;
+  const paramsModified = {...params, query: query};
+  const matchCondition: MatchCondition = (isBooleanQueryValid(paramsModified) === 'empty')
+    ? () => true
+    : getMatchCondition({...params, query: query});
+  const whereConditionFactory: WhereConditionFactory = (fileData, languageKeys) => {
+    // Find the index of both languages
+    const languageIndex1 = languageKeys.indexOf(languageKey1);
+    const languageIndex2 = languageKeys.indexOf(languageKey2);
+    if (languageIndex1 === -1 || languageIndex2 === -1)
+      return () => false; // Collection does not have both languages requested, exclude all lines
+
+    // Return the appropriate condition
+    if (comparison === '=' || comparison === '==')
+      return (i) => (fileData[languageIndex1][i] === fileData[languageIndex2][i]);
+    else if (comparison === '<>' || comparison === '!=')
+      return (i) => (fileData[languageIndex1][i] !== fileData[languageIndex2][i]);
+    return () => false;
+  };
+  return [matchCondition, whereConditionFactory];
+}
+
 self.onmessage = (task: MessageEvent<SearchTask>) => {
   const {index, params, collectionKey, fileKey, languages, files, speaker, speakerFiles: speakerData, literals} = task.data;
   const notifyIncomplete = (status: SearchTaskResultNotDone) => {
@@ -80,13 +117,13 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
     };
     postMessage(message);
   };
-  const matchCondition = getMatchCondition(params);
 
   try {
     // Load files
     const preprocessedFiles = languages.map(((languageKey, i) => [languageKey, preprocessString(files[i], collectionKey, languageKey)] as const));
 
     // Process files
+    const [matchCondition, whereConditionFactory] = parseQuery(params);
     const processedFiles = preprocessedFiles.map(([languageKey, data]) => {
       notifyIncomplete('processing'); // for progress bar
       const lines = data.split(/\r\n|\n/);
@@ -145,12 +182,14 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
     };
 
     const lineKeysSorted = Array.from(lineKeysSet).sort((a, b) => a - b);
+    const whereCondition = whereConditionFactory(fileData, languageKeys);
     const fileResults: string[][] = ((messageIdIndex === -1) ? lineKeysSorted
       : lineKeysSorted.filter((i) => {
         // Ignore lines that don't correspond to text data (blank lines, text file headers) based on the message ID file
         const messageId = fileData[messageIdIndex][i];
         return messageId !== '' && messageId !== '~~~~~~~~~~~~~~~' && !messageId.startsWith('Text File : ');
       }))
+      .filter(whereCondition)
       .map((i) => fileData.map((lines, languageIndex) => {
         let line = lines[i];
         if (speaker !== undefined)

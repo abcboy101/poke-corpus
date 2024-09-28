@@ -4,7 +4,7 @@ export type SearchTaskResultDone = 'done';
 export type SearchTaskResultNotDone = 'processing' | SearchTaskResultError;
 export type SearchTaskResultStatus = SearchTaskResultNotDone | SearchTaskResultDone;
 
-export type BooleanError = 'parentheses' | 'quote' | 'operand' | 'empty';
+export type BooleanError = 'parentheses' | 'quote' | 'operand' | 'empty' | 'where';
 export type BooleanStatus = 'success' | BooleanError;
 export const booleanStatus: readonly BooleanStatus[] = ["parentheses", "quote", "operand", "empty", "success"] as const;
 
@@ -14,7 +14,7 @@ export type SearchResultsError = SearchTaskResultError | 'regex' | 'noMatch' | '
 export type SearchResultsComplete = 'done' | SearchResultsError;
 export type SearchResultsStatus = SearchResultsInProgress | SearchResultsComplete;
 export const statusError: readonly Status[] & readonly SearchResultsError[]
-  = ['error', 'regex', 'noMatch', 'network', 'boolean.parentheses', 'boolean.quote', 'boolean.operand', 'boolean.empty'];
+  = ['error', 'regex', 'noMatch', 'network', 'boolean.parentheses', 'boolean.quote', 'boolean.operand', 'boolean.empty', 'boolean.where'];
 
 /* Search status codes: initial -> waiting -> loading -> processing -> collecting -> done (or propagate from SearchResults) */
 export type StatusInProgress = 'waiting' | SearchResultsInProgress;

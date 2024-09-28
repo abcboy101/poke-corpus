@@ -110,8 +110,21 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
     // Ensure the boolean expression is valid.
     // If it's invalid, return with that error immediately.
     if (params.type === 'boolean') {
-      const result = isBooleanQueryValid(params);
-      if (result !== 'success') {
+      // Check for WHERE clause
+      let paramsModified = params;
+      const whereClause = /(.*)\bWHERE\s+([A-Za-z_-]+)\s*(=|==|<>|!=)\s*([A-Za-z_-]+)$/u.exec(params.query);
+      if (whereClause) {
+        const [, query, languageKey1, , languageKey2] = whereClause;
+        if (!corpus.languages.includes(languageKey1) || !corpus.languages.includes(languageKey2)) {
+          // Language is invalid
+          updateStatusComplete('boolean.where');
+          return;
+        }
+        paramsModified = {...params, query: query};
+      }
+
+      const result = isBooleanQueryValid(paramsModified);
+      if (result !== 'success' && !(whereClause && result === 'empty')) {
         console.error(result);
         updateStatusComplete(`boolean.${result}`);
         return;
