@@ -10,6 +10,10 @@
  * - U+F0104: placeholder for literal left curly bracket `\{`
  * - U+F0106: placeholder for less-than sign `<`
  * - U+F0107: placeholder for greater-than sign `>`
+ * - U+F0108: placeholder for left parenthesis `(`
+ * - U+F0109: placeholder for right parenthesis `)`
+ *
+ * - U+F0180: placeholder for literal quotation mark `\"`
  *
  * - U+F0200: placeholder for new line `\n`
  * - U+F0201: placeholder for scroll `\r`

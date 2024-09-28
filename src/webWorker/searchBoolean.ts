@@ -18,6 +18,10 @@ type Operator = 'NOT' | 'AND' | 'OR' | '"' | '(' | ')';
 const queryParseResultSuccess = (result: string[]): QueryParseResultSuccess => ({success: true, postfix: result});
 const queryParseResultError = (message: BooleanError): QueryParseResultError => ({success: false, message: message});
 
+// Handle escaped quote marks and parentheses
+const escapeQuery = (s: string) => s.replaceAll('\\\\', '\u{F0100}').replaceAll('\\(', '\u{F0108}').replaceAll('\\)', '\u{F0109}').replaceAll('\\"', '\u{F0180}');
+const unescapeQuery = (s: string) => s.replaceAll('\u{F0108}', '(').replaceAll('\u{F0109}', ')').replaceAll('\u{F0180}', '"').replaceAll('\u{F0100}', '\\\\');
+
 /**
  * Convert a boolean query string in infix notation to an array of tokens in postfix notation using the shunting yard algorithm.
  *
@@ -25,6 +29,7 @@ const queryParseResultError = (message: BooleanError): QueryParseResultError => 
  * Quotation marks have the highest precedence, followed by parentheses, NOT, AND, and OR.
  */
 export function queryToPostfix(query: string): QueryParseResult {
+  query = escapeQuery(query);
   const tokens = query.split(/(\b(?:NOT|AND|OR)\b|\\?["()])/u).filter((s) => s.length > 0);
   const operators: Operator[] = [];
   const output: string[] = [];
@@ -141,7 +146,7 @@ export function postfixToMatchCondition(params: SearchParams, postfix: string[])
       {
         if (keyword.startsWith('"') && keyword.endsWith('"')) {
           // exact match
-          const phrase = keyword.substring(1, keyword.length - 1);
+          const phrase = unescapeQuery(keyword.substring(1, keyword.length - 1));
           if (!params.caseInsensitive) {
             stack.push((line) => line.includes(phrase)); // case-sensitive
           }
@@ -153,7 +158,7 @@ export function postfixToMatchCondition(params: SearchParams, postfix: string[])
         }
         else {
           // all of these words
-          const phrases = keyword.split(/\s+/);
+          const phrases = unescapeQuery(keyword).split(/\s+/);
           if (!params.caseInsensitive) {
             stack.push((line) => phrases.every((phrase) => line.includes(phrase))); // case-sensitive
           }

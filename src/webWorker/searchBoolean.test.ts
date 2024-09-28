@@ -46,7 +46,7 @@ test('queryToPostfix, OR', () => {
 test('queryToPostfix, quotation marks', () => {
   const {success, postfix} = queryToPostfixExpectSuccess(' "  foo \\"bar\\" (AND)  baz  " OR "" ');
   expect(success).toBe(true);
-  expect(postfix).toEqual(['"  foo \\"bar\\" (AND)  baz  "', '""', 'OR']);
+  expect(postfix).toEqual(['"  foo \u{F0180}bar\u{F0180} (AND)  baz  "', '""', 'OR']);
 });
 
 test('queryToPostfix, precedence', () => {
