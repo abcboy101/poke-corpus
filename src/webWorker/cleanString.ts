@@ -298,6 +298,14 @@ function remapSwitchSpecialCharacters(s: string) {
   );
 }
 
+// Pixel font used to display level in battle
+function remapChinaLGPEPixelFont(s: string) {
+  return (s
+    .replaceAll(/\b(ab|ef|ij)\b/g, '等级')
+    .replaceAll(/\b(cd|gh|kl)\b/g, '战力')
+  );
+}
+
 /**
  * Appends additional metadata to each string:
  * - For strings with ruby, appends copies of the strings with the ruby text converted to kana/kanji so that they can be searched.
@@ -347,6 +355,11 @@ export function preprocessString(s: string, collectionKey: string, language: str
       break;
 
     case "LetsGoPikachuLetsGoEevee":
+      s = remapSwitchSpecialCharacters(s);
+      if (language === 'zh-Hans-CN')
+        s = remapChinaLGPEPixelFont(s);
+      break;
+
     case "SwordShield":
     case "BrilliantDiamondShiningPearl":
     case "LegendsArceus":

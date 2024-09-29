@@ -25,7 +25,7 @@
 
 .search-filters-show {
   display: grid;
-  grid-template-columns: 54fr 1px 46fr;
+  grid-template-columns: 1fr 1px 1fr;
   grid-template-rows: auto auto;
   grid-auto-flow: column;
   gap: 0.5em 0.75em;
@@ -81,7 +81,9 @@
 
 .search-language-name {
   display: inline-block;
-  text-overflow: ellipsis;
+  text-wrap: balance;
+  word-break: keep-all;
+  line-break: strict;
 }
 
 @media (width <= 575.98px) {
