@@ -73,12 +73,12 @@ export function queryStringToSearchParams(hash: string): Partial<SearchParams & 
     id: asOptionalString(params.get('id')),
     file: asOptionalString(params.get('file')),
     query: asOptionalString(params.get('query')),
-    type: asOptionalLiteral(params.get('type'), isSearchType),
+    type: asOptionalLiteral(params.get('type') ?? (params.get('regex') === 'true' ? 'regex' : null), isSearchType),
     caseInsensitive: asOptionalBoolean(params.get('caseInsensitive')),
     common: asOptionalBoolean(params.get('common')),
     script: asOptionalBoolean(params.get('script')),
     collections: asOptionalArray(params.get('collections'), allCollections),
-    languages: asOptionalArray(params.get('languages'), corpus.languages),
+    languages: asOptionalArray(params.get('languages'), corpus.languages, remapLanguages),
     run: asOptionalBoolean(params.get('run')),
   };
 }
@@ -107,10 +107,33 @@ function asOptionalLiteral<T extends string>(param: string | null, check: (value
   return undefined;
 }
 
-function asOptionalArray(param: string | null, validValues: readonly string[]) {
+function asOptionalArray(param: string | null, validValues: readonly string[], remap: (value: string) => string = (value) => value) {
   if (param === null)
     return undefined;
-  return param.split(',').filter((value) => validValues.includes(value));
+  return param.split(',').map(remap).filter((value) => validValues.includes(value));
+}
+
+/* Remap old language codes for backwards compatibility */
+function remapLanguages(value: string) {
+  switch (value) {
+    case 'qid-ZZ':
+    case 'ja-JP':
+    case 'en-US':
+    case 'fr-FR':
+    case 'it-IT':
+    case 'de-DE':
+    case 'es-ES':
+    case 'ko-KR':
+      return value.split('-', 1)[0];
+    case 'ja-Hrkt-JP':
+      return 'ja-Hrkt';
+    case 'zh-CN':
+      return 'zh-Hans';
+    case 'zh-TW':
+      return 'zh-Hant';
+    default:
+      return value;
+  }
 }
 //#endregion
 
