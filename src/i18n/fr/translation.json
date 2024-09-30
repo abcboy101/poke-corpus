@@ -10,11 +10,18 @@
       "light": "Clair",
       "dark": "Sombre"
     },
+    "limit": "Resultats par page :",
+    "longURL": "URL longs :",
+    "longURLs": {
+      "true": "Activé",
+      "false": "Désactivé"
+    },
     "network": "La langue sélectionnée n'a pas pu être chargée. Vérifiez votre connexion Internet et réessayez.",
     "close": "Fermer"
   },
   "query": "Requête\u00A0:",
   "searchType": {
+    "searchType": "Mode de recherche",
     "exact": "Phrase exacte",
     "regex": "Expression régulière",
     "boolean": "Booléen"
@@ -62,6 +69,7 @@
       "quote": "Votre recheche Booléenne a des guillemets manquants ou en trop.",
       "operand": "Votre recheche Booléenne a un ou plusieurs arguments manquants. Si vous recherchez littéralement \"NOT\", \"AND\", ou \"OR\", placez-les entre guillemets.",
       "empty": "Votre recheche Booléenne n'a aucun mot-clé de spécifié. Si vous recherchez littéralement ce texte, placez-le entre guillemets."
+      "where": "Une des langues spécifiées avec WHERE n'a pas été reconnue."
     },
     "noMatch": "Aucun fichier ne correspond aux filtres sélectionnés. Assurez-vous que les jeux sélectionnés existent dans les langues choisies.",
     "buttons": {
@@ -85,13 +93,15 @@
     "long_other": "{{start, number}} à {{end, number}} résultats affichés sur {{count, number}}",
     "short": "{{start, number}}-{{end, number}} sur {{count, number}}"
   },
-  "loadPrevIcon": "←",
-  "loadNextIcon": "→",
+  "loadPrev": "Précédent",
+  "loadNext": "Suivant",
   "showVariables": "Afficher les variables",
   "showAllCharacters": "Afficher tous les caractères",
   "showFurigana": "Affichier les furigana",
   "showGender": "Modifier le genre grammatical",
   "showPlural": "Modifier les singuliers et les pluriels",
+  "loadPrevIcon": "←",
+  "loadNextIcon": "→",
   "showVariablesIcon": "[ ]",
   "showFuriganaIcon": "abc",
   "showAllCharactersIcon": "¶",
@@ -109,6 +119,7 @@
     "files": "{{count}} fichier",
     "files_other": "{{count}} fichiers",
     "storageUsed": "Poids total utilisé\u00A0: {{amount, number}}",
+    "loading": "{{message}} ({{loaded}}/{{total}})",
     "inProgress": "Mise en cache en cours...",
     "headerCollection": "Collection",
     "headerSize": "Taille",
@@ -135,6 +146,7 @@
       }
     }
   },
+  "refresh": "Rafraichir",
   "delete": "Effacer",
   "tagline": "Un outil pour consulter le corpus Pokémon",
   "footerText": "Créé par abcboy",
