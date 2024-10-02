@@ -67,9 +67,13 @@
   width: 100%;
 }
 
+.results-table-actions-cell {
+  width: calc(2.25em + 8px);
+}
+
 .results-table-actions {
   display: flex;
-  margin: auto;
+  place-content: center;
   place-items: center;
   vertical-align: middle;
   gap: 0.25em;

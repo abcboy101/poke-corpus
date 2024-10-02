@@ -12,6 +12,7 @@ test('query string', () => {
     caseInsensitive: false,
     common: true,
     script: true,
+    showAllLanguages: true,
     collections: ['ScarletViolet'],
     languages: ['en'],
   } as const;
@@ -27,6 +28,7 @@ test('base 64', () => {
     caseInsensitive: false,
     common: true,
     script: true,
+    showAllLanguages: true,
     collections: [],
     languages: [],
   } as const;
@@ -41,6 +43,7 @@ test('byte array', () => {
     caseInsensitive: false,
     common: true,
     script: true,
+    showAllLanguages: true,
     collections: [],
     languages: [],
   } as const;

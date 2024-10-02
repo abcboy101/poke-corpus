@@ -58,7 +58,7 @@ function Actions({id}: {id: string}) {
   );
 }
 
-function ResultsTable({collection, file, languages, lines}: SearchTaskResultLines) {
+function ResultsTable({collection, file, languages, lines, showId}: SearchTaskResultLines & {showId: boolean}) {
   const { t } = useTranslation();
   const idIndex = languages.indexOf(codeId);
   const displayLanguages = languages.map((lang) => lang === codeId ? langId : lang);
@@ -87,15 +87,17 @@ function ResultsTable({collection, file, languages, lines}: SearchTaskResultLine
         <thead>
           <tr>
             {idIndex !== -1 ? <th className="results-table-actions-cell"><Copy callback={copyOnClick}/></th> : null}
-            {languages.map((lang) => <th key={lang}><abbr title={t(`languages:${lang}.name`)}>{t(`languages:${lang}.code`)}</abbr></th>)}
+            {languages.filter((lang) => showId || lang !== codeId).map((lang) => <th key={lang}><abbr title={t(`languages:${lang}.name`)}>{t(`languages:${lang}.code`)}</abbr></th>)}
           </tr>
         </thead>
         <tbody dir={sameDir && displayDirs[0] !== i18next.dir() ? displayDirs[0] : undefined}>
           {lines.map((row, i) =>
             <tr key={i}>
               {idIndex !== -1 ? <Actions id={row[idIndex]}/> : null}
-              {row.map((s, j) => <td key={j} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]}
-                dangerouslySetInnerHTML={{__html: hasSpeakers ? expandSpeakers(s, collection, languages[j], viewSpeaker) : s}}></td>)}
+              {row.map((s, j) => (showId || languages[j] !== codeId)
+                ? <td key={j} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]}
+                  dangerouslySetInnerHTML={{__html: hasSpeakers ? expandSpeakers(s, collection, languages[j], viewSpeaker) : s}}></td>
+                : undefined)}
             </tr>
           )}
         </tbody>
@@ -109,6 +111,7 @@ interface ResultsSectionContentParams extends SearchTaskResultLines {
   offset: number,
   limit: number,
   index: number,
+  showId: boolean,
   onShowSection: ShowSectionCallback,
 }
 
@@ -152,7 +155,7 @@ function ResultsSection({header, displayHeader, ...params}: {header: string, dis
   );
 }
 
-function Results({status, progress, results, limit = defaultLimit}: {status: Status, progress: number, results: readonly SearchResultLines[], limit?: number}) {
+function Results({status, progress, results, showId = true, limit = defaultLimit}: {status: Status, progress: number, showId: boolean, results: readonly SearchResultLines[], limit?: number}) {
   const { t } = useTranslation();
   const [showVariables, setShowVariables] = useState(true);
   const [showAllCharacters, setShowAllCharacters] = useState(false);
@@ -180,7 +183,7 @@ function Results({status, progress, results, limit = defaultLimit}: {status: Sta
     results.forEach((params, index) => {
       resultTables.push(
         // Reset the state by passing a different key when offset changes.
-        <ResultsSection key={[offset, index].join(',')} header={headers[index]} {...params} index={index} sectionOffset={count} offset={offset} limit={limit} onShowSection={onShowSection} />
+        <ResultsSection key={[offset, index].join(',')} header={headers[index]} {...params} index={index} showId={showId} sectionOffset={count} offset={offset} limit={limit} onShowSection={onShowSection} />
       );
       count += params.lines.length;
     });

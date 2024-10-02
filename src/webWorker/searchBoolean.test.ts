@@ -7,6 +7,7 @@ const defaultParams: SearchParams = {
   caseInsensitive: true,
   common: true,
   script: true,
+  showAllLanguages: true,
   collections: [],
   languages: [],
 };

@@ -1,4 +1,4 @@
-import corpus from '../utils/corpus';
+import corpus, { codeId } from '../utils/corpus';
 import { getCache, getFile, getFilePath, getFileRemote, getIndexedDB } from '../utils/files';
 import SearchWorker from "./searchWorker.ts?worker";
 import { SearchParams } from '../utils/searchParams';
@@ -14,6 +14,7 @@ export interface SearchResults {
   readonly complete: boolean,
   readonly status: SearchResultsStatus,
   readonly progress: number,
+  readonly showId: boolean,
   readonly results: readonly SearchResultLines[],
 }
 
@@ -65,6 +66,9 @@ const loadFile = async (collectionKey: string, languageKey: string, fileKey: str
 };
 
 self.onmessage = (message: MessageEvent<SearchParams>) => {
+  const params = message.data;
+  const showId = params.showAllLanguages || params.languages.includes(codeId);
+
   const progressPortionLoading = 0.5;
   const progressPortionProcessing = 0.5;
   const progressPortionCollecting = 0.0;
@@ -75,6 +79,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
       complete: false,
       status: status,
       progress: progress,
+      showId: showId,
       results: [],
     };
     postMessage(message);
@@ -85,13 +90,13 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
       complete: true,
       status: status,
       progress: 1.0,
+      showId: showId,
       results: results,
     };
     postMessage(message);
   };
 
   try {
-    const params = message.data;
     updateStatusInProgress('loading', 0, 0, 0);
 
     // Ensure the regex is valid.
@@ -146,7 +151,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
       collection.files
         .filter((fileKey) => !((fileKey === 'common' && !params.common) || (fileKey === 'script' && !params.script)))
         .forEach((fileKey) => {
-          const languages = collection.structured ? collection.languages : collection.languages.filter((languageKey) => params.languages.includes(languageKey));
+          const languages = (collection.structured && params.showAllLanguages) ? collection.languages : collection.languages.filter((languageKey) => params.languages.includes(languageKey) || languageKey === codeId);
           if (!collection.structured) {
             languages.forEach((languageKey, languageIndex) => {
               taskList.push({

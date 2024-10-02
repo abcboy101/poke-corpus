@@ -24,6 +24,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
   const [caseInsensitive, setCaseInsensitive] = useState(defaultParams.caseInsensitive);
   const [common, setCommon] = useState(defaultParams.common);
   const [script, setScript] = useState(defaultParams.script);
+  const [showAllLanguages, setShowAllLanguages] = useState(defaultParams.showAllLanguages);
   const [collections, setCollections] = useState(defaultParams.collections);
   const [languages, setLanguages] = useState(defaultParams.languages);
   const [run, setRun] = useState(false);
@@ -45,6 +46,8 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       setCommon(params.common);
     if (params.script !== undefined)
       setScript(params.script);
+    if (params.showAllLanguages !== undefined)
+      setShowAllLanguages(params.showAllLanguages);
     if (params.collections !== undefined)
       setCollections(params.collections);
     if (params.languages !== undefined)
@@ -80,6 +83,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         caseInsensitive: false,
         common: true,
         script: true,
+        showAllLanguages: true,
         collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key]?.id === collectionId),
         languages: [codeId],
       });
@@ -96,6 +100,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         caseInsensitive: false,
         common: true,
         script: true,
+        showAllLanguages: true,
         collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key]?.id === collectionId),
         languages: [codeId],
       });
@@ -111,6 +116,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         caseInsensitive: caseInsensitive,
         common: common,
         script: script,
+        showAllLanguages: showAllLanguages,
         collections: collections,
         languages: languages,
       };
@@ -134,6 +140,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       caseInsensitive: caseInsensitive,
       common: common,
       script: script,
+      showAllLanguages: showAllLanguages,
       collections: collections,
       languages: languages,
     };
@@ -190,6 +197,10 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         <div className="search-option">
           <input type="checkbox" name="script" id="script" checked={script} onChange={(e) => setScript(e.target.checked)}/>
           <label htmlFor="script">{t('script')}</label>
+        </div>
+        <div className="search-option">
+          <input type="checkbox" name="showAllLanguages" id="showAllLanguages" checked={showAllLanguages} onChange={(e) => setShowAllLanguages(e.target.checked)}/>
+          <label htmlFor="showAllLanguages">{t('showAllLanguages')}</label>
         </div>
       </div>
     </div>

@@ -13,6 +13,8 @@ Visit at [abcboy101.github.io/poke-corpus/](https://abcboy101.github.io/poke-cor
      If you want to perform a case-sensitive search, make sure that the "Case sensitive" box is not checked.
    - By default, the search will search both the common text (interface text, names, descriptions) and the script text (story-related text, dialogue, etc.).
      If you want to limit your search, uncheck the relevant box.
+   - By default, the search will show matching lines in all languages.
+     If you want to only show the languages you select, make sure that the "Show all languages" box is not checked.
 2. Click "Filters" to display the list of filters.
    Select the games and languages you would like to search.
 3. Click "Search".

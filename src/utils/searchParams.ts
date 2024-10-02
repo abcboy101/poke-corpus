@@ -11,6 +11,7 @@ export interface SearchParams {
   readonly caseInsensitive: boolean,
   readonly common: boolean,
   readonly script: boolean,
+  readonly showAllLanguages: boolean,
   readonly collections: readonly string[],
   readonly languages: readonly string[],
 }
@@ -33,6 +34,7 @@ export const defaultSearchParams: SearchParams & SearchParamsURLOnly = {
   caseInsensitive: true,
   common: true,
   script: true,
+  showAllLanguages: true,
   collections: allCollectionsStructured,
   languages: corpus.languages,
   run: false,
@@ -57,6 +59,7 @@ export function searchParamsToQueryString(params: SearchParams & Partial<SearchP
     caseInsensitive: params.caseInsensitive.toString(),
     common: params.common.toString(),
     script: params.script.toString(),
+    showAllLanguages: params.showAllLanguages.toString(),
     collections: params.collections.join(','),
     languages: params.languages.join(','),
     ...urlOnlyString,
@@ -77,6 +80,7 @@ export function queryStringToSearchParams(hash: string): Partial<SearchParams & 
     caseInsensitive: asOptionalBoolean(params.get('caseInsensitive')),
     common: asOptionalBoolean(params.get('common')),
     script: asOptionalBoolean(params.get('script')),
+    showAllLanguages: asOptionalBoolean(params.get('showAllLanguages')),
     collections: asOptionalArray(params.get('collections'), allCollections),
     languages: asOptionalArray(params.get('languages'), corpus.languages, remapLanguages),
     run: asOptionalBoolean(params.get('run')),
@@ -147,7 +151,8 @@ function remapLanguages(value: string) {
 *   - Bit 2: common
 *   - Bit 3: script
 *   - Bit 4-5: type
-*   - Bit 6-7: (reserved)
+*   - Bit 6: (reserved)
+*   - Bit 7: showAllLanguages
 * - Byte 2-3: languages
 * - Byte 4-7: collections
 *
@@ -224,6 +229,7 @@ export function serializeByteArray(params: SearchSettings) {
     | (+params.common                           << 2)
     | (+params.script                           << 3)
     | (searchTypes.indexOf(params.type)         << 4)
+    | (+!params.showAllLanguages                << 7) // stored as complement so old links default to true
   );
   corpus.languages.forEach((language, i) => {
     if (params.languages.includes(language))
@@ -243,11 +249,12 @@ export function deserializeByteArray(bytes: Uint8Array): SearchSettings {
   const languages = corpus.languages.filter((_, i) => ((bytes[bytesHeader + Math.floor(i / 8)] >> (i % 8)) & 1) === 1);
   const collections = allCollections.filter((_, i) => ((bytes[bytesHeader + bytesLanguage + Math.floor(i / 8)] >> (i % 8)) & 1) === 1);
   return {
-    run:             (bytes[1] & 0x01) !== 0,
-    caseInsensitive: (bytes[1] & 0x02) !== 0,
-    common:          (bytes[1] & 0x04) !== 0,
-    script:          (bytes[1] & 0x08) !== 0,
-    type:            searchTypes[(bytes[1] & 0x30) >> 4],
+    run:              (bytes[1] & 0x01) !== 0,
+    caseInsensitive:  (bytes[1] & 0x02) !== 0,
+    common:           (bytes[1] & 0x04) !== 0,
+    script:           (bytes[1] & 0x08) !== 0,
+    type:             searchTypes[(bytes[1] & 0x30) >> 4],
+    showAllLanguages: (bytes[1] & 0x80) === 0, // read as complement so old links default to true
     languages: languages,
     collections: collections,
   } as const;
