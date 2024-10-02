@@ -9,11 +9,21 @@
       "light": "Claro",
       "dark": "Oscuro"
     },
+    "limit": "Resultados por página:",
+    "longURL": "URL largas:",
+    "longURLs": {
+      "true": "Activadas",
+      "false": "Desactivadas"
+    },
+    "network": "No se ha podido descargar el idioma seleccionado. Compruebe su conexión a Internet e inténtelo de nuevo.",
     "close": "Cerrar"
   },
   "query": "Consulta:",
   "searchType": {
-    "regex": "Expresión regular"
+    "searchType": "Modo de búsqueda",
+    "exact": "Frase exacta",
+    "regex": "Expresión regular",
+    "boolean": "Booleano"
   },
   "caseInsensitive": "Sin distinción entre mayúsculas y minúsculas",
   "search": "Buscar",
@@ -22,9 +32,20 @@
   "script": "Guion",
   "showAllLanguages": "Mostrar todos los idiomas",
   "filters": "Filtros",
+  "backToSearch": "Volver a la búsqueda",
+  "manageCache": "Gestionar la caché",
+  "cacheAll": "Almacenar todo en caché",
   "clearCache": "Borrar caché",
   "selectAll": "Seleccionar todos",
   "deselectAll": "Deseleccionar todos",
+  "searchModal": {
+    "message": "Se descargarán aproximadamente {{amount, number}} para ejecutar esta consulta. ¿Continuar?",
+    "checkboxDoNotShowAgain": "No volver a mostrar",
+    "buttons": {
+      "yes": "Sí",
+      "no": "No"
+    }
+  },
   "status": {
     "initial": "Haga clic en \"Buscar\" para empezar.",
     "waiting": "Por favor, espere...",
@@ -36,9 +57,15 @@
     "error": "Se ha producido un error",
     "network": "Error de red",
     "regex": "Su expresión regular no es válida",
+    "boolean": "Su consulta no es válida",
     "noMatch": "No hay archivos coincidentes"
   },
+  "progressBar": {
+    "title": "Progreso",
+    "value": "{{amount, number}}"
+  },
   "jumpTo": "Saltar a...",
+  "copy": "Copiar",
   "share": "Compartir",
   "tableHeader": "{{collection}} {{file}}",
   "tablePartial_one": "{{count, number}} resultado no mostrado",
@@ -48,10 +75,15 @@
     "long_other": "Mostrando {{start, number}}-{{end, number}} de {{count, number}} resultados",
     "short": "{{start, number}}-{{end, number}} de {{count, number}}"
   },
+  "loadPrev": "Anterior",
+  "loadNext": "Siguiente",
   "showVariables": "Mostrar variables",
   "showAllCharacters": "Mostrar todos los caracteres",
+  "showFurigana": "Mostrar furigana",
   "showGender": "Cambiar el género gramatical",
   "showPlural": "Cambiar los singulares y los plurales",
+  "refresh": "Actualizar",
+  "delete": "Borrar",
   "tagline": "Una herramienta para consultar el corpus Pokémon",
   "footerText": "Creada por abcboy",
   "github": "GitHub"
