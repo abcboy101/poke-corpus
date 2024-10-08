@@ -9,11 +9,21 @@
       "light": "浅色",
       "dark": "深色"
     },
+    "limit": "每页最大结果数：",
+    "longURL": "长链接：",
+    "longURLs": {
+      "true": "启用",
+      "false": "禁用"
+    },
+    "network": "无法加载所选语言。请检查您的互联网连接并重试。",
     "close": "关闭"
   },
   "query": "查询：",
   "searchType": {
-    "regex": "正则表达式"
+    "searchType": "搜索模式",
+    "exact": "精确搜索",
+    "regex": "正则表达式",
+    "boolean": "布尔表达式"
   },
   "caseInsensitive": "不区分大小写",
   "search": "搜索",
@@ -22,9 +32,20 @@
   "script": "脚本",
   "showAllLanguages": "显示所有语言",
   "filters": "过滤器",
+  "backToSearch": "返回搜索",
+  "manageCache": "管理缓存",
+  "cacheAll": "缓存全部",
+  "clearCache": "清除缓存",
   "selectAll": "全部选择",
   "deselectAll": "全部取消",
-  "clearCache": "清除缓存",
+  "searchModal": {
+    "message": "大约需要下载 {{amount, number}} 的数据来执行您的查询。是否继续？",
+    "checkboxDoNotShowAgain": "不再显示",
+    "buttons": {
+      "yes": "是",
+      "no": "否"
+    }
+  },
   "status": {
     "initial": "点击“搜索”开始",
     "waiting": "请稍候…",
@@ -36,20 +57,83 @@
     "error": "错误",
     "network": "网络错误",
     "regex": "正则表达式无效",
+    "boolean": "查询无效",
     "noMatch": "没有匹配的文档"
   },
-  "jumpTo": "跳转至…",
-  "share": "分享",
-  "tableHeader": "{{collection}} {{file}}",
-  "tablePartial": "不显示{{count, number}}条结果",
-  "displayedRange": {
-    "long": "显示第{{start, number}}～{{end, number}}条结果，共{{count, number}}条",
-    "short": "{{start, number}}\u2013{{end, number}} (共{{count, number}}条)"
+  "statusModal": {
+    "error": "发生错误。请检查浏览器的 DevTools 以获取更多信息，并在 GitHub 上报告问题。",
+    "network": "无法加载一个或多个文件。仅显示部分结果。请检查您的互联网连接并重试。",
+    "regex": "您输入的正则表达式无效。请检查您的搜索查询语法并重试。",
+    "boolean": {
+      "parentheses": "您的布尔搜索查询缺少或有多余的括号。",
+      "quote": "您的布尔搜索查询缺少或有多余的引号。",
+      "operand": "您的布尔搜索查询缺少一个或多个操作数。如果您想按字面意思搜索“NOT”“AND”或“OR”，请将其用引号括起来。",
+      "empty": "您的布尔搜索查询没有搜索关键词。如果您想按字面意思搜索此文本，请将其用引号括起来。",
+      "where": "WHERE 子句中指定的语言之一未被识别。"
+    },
+    "noMatch": "没有文件符合您选择的过滤器。请确保您选择的游戏发布了您所选语言的版本。",
+    "buttons": {
+      "ok": "好"
+    }
   },
+  "progressBar": {
+    "title": "进度",
+    "value": "{{amount, number}}"
+  },
+  "jumpTo": "跳转至…",
+  "copy": "复制",
+  "share": "分享",
+  "viewNearby": "查看附近行",
+  "viewSpeaker": "查看说话角色的行",
+  "tableHeader": "{{collection}} {{file}}",
+  "tablePartial": "{{count, number}} 条结果未显示",
+  "displayedRange": {
+    "long": "显示第 {{start, number}}～{{end, number}} 条结果，共 {{count, number}} 条",
+    "short": "{{start, number}}～{{end, number}} (共 {{count, number}} 条)"
+  },
+  "loadPrev": "上一页",
+  "loadNext": "下一页",
   "showVariables": "显示变量",
   "showAllCharacters": "显示所有字符",
+  "showFurigana": "日文汉字显示假名",
   "showGender": "更改语法性别",
   "showPlural": "更改单数与复数",
+  "cache": {
+    "storageStatus": "缓存状态：{{val}}",
+    "storageEnabled": "允许",
+    "storageDisabled": "禁用",
+    "filesStored": "缓存文件数：$t(cache.files, {\"count\": {{count}} })",
+    "files": "{{count}} 个",
+    "storageUsed": "缓存已使用：{{amount, number}}",
+    "loading": "{{message}} ({{loaded}}/{{total}})",
+    "inProgress": "正在缓存...",
+    "headerCollection": "Collection",
+    "headerSize": "大小",
+    "headerActions": "Actions",
+    "size": "{{amount, number}}",
+    "cacheAllModal": {
+      "message": "您确定要缓存所有文件吗？ （待下载大小: 大约 {{amount, number}}）",
+      "buttons": {
+        "yes": "是",
+        "no": "否"
+      }
+    },
+    "cacheAllFailedModal": {
+      "message": "无法将一个或多个文件保存到缓存中。请检查您的互联网连接，并确保您有足够的可用空间。",
+      "buttons": {
+        "ok": "好"
+      }
+    },
+    "clearCacheModal": {
+      "message": "您确定要清除缓存吗？",
+      "buttons": {
+        "yes": "是",
+        "no": "否"
+      }
+    }
+  },
+  "refresh": "更新",
+  "delete": "移除",
   "tagline": "宝可梦语料库查询工具",
   "footerText": "Created by abcboy",
   "github": "GitHub"
