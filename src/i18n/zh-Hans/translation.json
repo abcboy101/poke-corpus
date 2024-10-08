@@ -86,11 +86,9 @@
   "viewNearby": "查看附近行",
   "viewSpeaker": "查看说话角色的行",
   "tableHeader": "{{collection}} {{file}}",
-  "tablePartial_one": "{{count, number}} 条结果未显示",
-  "tablePartial_other": "{{count, number}} 条结果未显示",
+  "tablePartial": "{{count, number}} 条结果未显示",
   "displayedRange": {
-    "long_one": "显示第 {{start, number}}～{{end, number}} 条结果，共 {{count, number}} 条",
-    "long_other": "显示第 {{start, number}}～{{end, number}} 条结果，共 {{count, number}} 条",
+    "long": "显示第 {{start, number}}～{{end, number}} 条结果，共 {{count, number}} 条",
     "short": "{{start, number}}～{{end, number}} (共 {{count, number}} 条)"
   },
   "loadPrev": "上一页",
@@ -106,7 +104,6 @@
     "storageDisabled": "禁用",
     "filesStored": "缓存文件数：$t(cache.files, {\"count\": {{count}} })",
     "files": "{{count}} 个",
-    "files_other": "{{count}} 个",
     "storageUsed": "缓存已使用：{{amount, number}}",
     "loading": "{{message}} ({{loaded}}/{{total}})",
     "inProgress": "正在缓存...",

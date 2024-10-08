@@ -86,11 +86,9 @@
   "viewNearby": "查看附近行",
   "viewSpeaker": "查看說話角色的行",
   "tableHeader": "{{collection}} {{file}}",
-  "tablePartial_one": "{{count, number}} 個結果未顯示",
-  "tablePartial_other": "{{count, number}} 個結果未顯示",
+  "tablePartial": "{{count, number}} 個結果未顯示",
   "displayedRange": {
-    "long_one": "顯示第 {{start, number}}～{{end, number}} 筆結果，共 {{count, number}} 筆",
-    "long_other": "顯示第 {{start, number}}～{{end, number}} 筆結果，共 {{count, number}} 筆",
+    "long": "顯示第 {{start, number}}～{{end, number}} 筆結果，共 {{count, number}} 筆",
     "short": "{{start, number}}～{{end, number}} (共 {{count, number}} 筆)"
   },
   "loadPrev": "上一頁",
@@ -106,7 +104,6 @@
     "storageDisabled": "禁用",
     "filesStored": "快取文件數：$t(cache.files, {\"count\": {{count}} })",
     "files": "{{count}} 個",
-    "files_other": "{{count}} 個",
     "storageUsed": "快取已使用：{{amount, number}}",
     "loading": "{{message}} ({{loaded}}/{{total}})",
     "inProgress": "正在快取...",
