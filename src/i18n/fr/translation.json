@@ -117,7 +117,7 @@
     "storageEnabled": "Activé",
     "storageDisabled": "Désactivé",
     "filesStored": "Nombre de fichiers stockés\u00A0: $t(cache.files, {\"count\": {{count}} })",
-    "files": "{{count}} fichier",
+    "files_one": "{{count}} fichier",
     "files_other": "{{count}} fichiers",
     "storageUsed": "Poids total utilisé\u00A0: {{amount, number}}",
     "loading": "{{message}} ({{loaded}}/{{total}})",
