@@ -174,6 +174,14 @@ function remapGBASpecialCharacters(s: string, language: string) {
   );
 }
 
+// N64 special characters
+function remapN64SpecialCharacters(s: string) {
+  return (s
+    .replaceAll('¼', '⒆') // PK
+    .replaceAll('½', '⒇') // MN
+  );
+}
+
 // GCN special characters
 function remapGCNSpecialCharacters(s: string) {
   return (s
@@ -368,6 +376,11 @@ export function preprocessString(s: string, collectionKey: string, language: str
       s = remapSwitchSpecialCharacters(s);
       break;
 
+    case "Stadium":
+    case "Stadium2":
+      s = remapN64SpecialCharacters(s);
+      break;
+
     case "Colosseum":
     case "XD":
       s = remapGCNSpecialCharacters(s);
@@ -489,6 +502,16 @@ function versionBranch(form1: string, form2: string, version1: string, version2:
 
 const versionBranchRS = (form1: string, form2: string) => versionBranch(form1, form2, 'ruby', 'sapphire');
 const versionBranchSV = (form1: string, form2: string) => versionBranch(form1, form2, 'scarlet', 'violet');
+
+/* Text color */
+const dec2Hex = (n: string) => Number(n).toString(16).padStart(2, '0').toUpperCase();
+const textColorHex = (_: string, r: string, g: string, b: string, a: string, text: string) => textColor(_, `#${r}${g}${b}${a === 'FF' ? '' : a}`, text);
+const textColor = (_: string, value: string, text: string) => `<span style="color: ${value}">${text}</span>`;
+
+const textColorOpenDec = (_: string, r: string, g: string, b: string, a: string) => `<span style="color: #${dec2Hex(r)}${dec2Hex(g)}${dec2Hex(b)}${a === '255' ? '' : dec2Hex(a)}">`;
+const textGradientOpenDec = (_: string, r1: string, g1: string, b1: string, a1: string, r2: string, g2: string, b2: string, a2: string) =>
+  `<span class="text-gradient" style="--top: #${dec2Hex(r1)}${dec2Hex(g1)}${dec2Hex(b1)}${a1 === '255' ? '' : dec2Hex(a1)}; --bottom: #${dec2Hex(r2)}${dec2Hex(g2)}${dec2Hex(b2)}${a2 === '255' ? '' : dec2Hex(a2)}">`;
+
 //#endregion
 
 /**
@@ -510,6 +533,7 @@ export function postprocessString(s: string, collectionKey: string, language: st
   const is3DS = ["XY", "OmegaRubyAlphaSapphire", "SunMoon", "UltraSunUltraMoon", "Bank"].includes(collectionKey);
   const isSwitch = ["LetsGoPikachuLetsGoEevee", "SwordShield", "BrilliantDiamondShiningPearl", "LegendsArceus", "ScarletViolet", "HOME"].includes(collectionKey);
   const isSoftLineBreak = ["LegendsArceus", "ScarletViolet"].includes(collectionKey);
+  const isN64 = ["Stadium", "Stadium2"].includes(collectionKey);
   const isGCN = ["Colosseum", "XD"].includes(collectionKey);
   const isModern = isGen5 || is3DS || isSwitch;
 
@@ -540,7 +564,7 @@ export function postprocessString(s: string, collectionKey: string, language: st
   ) : s;
 
   // PKMN
-  s = (isGen3 || isNDS) ? (s
+  s = (isN64 || isGen3 || isNDS) ? (s
     .replaceAll('⒆', '<sup>P</sup><sub>K</sub>') // Gen 5 PK [also used privately for Gen 4 and earlier]
     .replaceAll('⒇', '<sup>M</sup><sub>N</sub>') // Gen 5 MN [also used privately for Gen 4 and earlier]
   ) : s;
@@ -578,7 +602,7 @@ export function postprocessString(s: string, collectionKey: string, language: st
 
   // Text formatting
   s = isBDSP ? (s
-    .replaceAll(/\u{F0106}color=(.*?)\u{F0107}(.*?)\u{F0106}\/color\u{F0107}/gu, '<span style="color: $1">$2</span>') // BDSP color
+    .replaceAll(/\u{F0106}color=(.*?)\u{F0107}(.*?)\u{F0106}\/color\u{F0107}/gu, textColor) // BDSP color
     .replaceAll(/\u{F0106}size=(.*?)\u{F0107}(.*?)\u{F0106}\/size\u{F0107}/gu, '<span style="font-size: $1">$2</span>') // BDSP size
     .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\u{F0106}pos=(.*?)\u{F0107}(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>') // BDSP pos
     .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\u{F0106}line-indent=(.*?)\u{F0107}(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>') // BDSP line-indent
@@ -633,9 +657,37 @@ export function postprocessString(s: string, collectionKey: string, language: st
     .replaceAll('\u{F0203}', '<span class="tab">\t</span>')
   );
 
+  // N64
+  if (isN64) {
+    s = (s
+      // Variables
+      .replaceAll('#71', '<span class="text-color-animation">')
+      .replaceAll(/(#\d{2})/gu, '<span class="var">$1</span>')
+
+      // Color
+      .replaceAll(/\u{F0106}COL1,PUSH,(\d+),(\d+),(\d+),(\d+)\u{F0107}\u{F0106}COL2,PUSH,(\d+),(\d+),(\d+),(\d+)\u{F0107}/gu, textGradientOpenDec)
+      .replaceAll(/\u{F0106}COL1,LOAD,(\d+),(\d+),(\d+),(\d+)\u{F0107}/gu, textColorOpenDec)
+      .replaceAll(/\u{F0106}COL1,PUSH,(\d+),(\d+),(\d+),(\d+)\u{F0107}/gu, textColorOpenDec)
+      .replaceAll(/\u{F0106}COL1,POP\u{F0107}\u{F0106}COL2,POP\u{F0107}/gu, '</span>')
+      .replaceAll(/\u{F0106}COL1,POP\u{F0107}/gu, '</span>')
+
+      // Spacing
+      .replaceAll(/\u{F0106}DIST,([\d.]+)\u{F0107}/gu, '<span class="spacing-$1">')
+
+      .replaceAll(/(\u{F0106}[0-9A-Z, ]+\u{F0107})/gu, '<span class="var">$1</span>')
+      .replaceAll(/%%/gu, '<span class="literal">%</span>') // printf
+    );
+    const spanOpen = s.match(/<span\b/gu)?.length ?? 0;
+    const spanClose = s.match(/<\/span>/gu)?.length ?? 0;
+    if (spanClose < spanOpen)
+      s = s.concat('</span>'.repeat(spanOpen - spanClose)); // LOAD, or extra PUSH
+    else if (spanOpen < spanClose)
+      s = '<span>'.repeat(spanClose - spanOpen).concat(s); // extra POP
+  }
+
   // GCN
   s = isGCN ? (s
-    .replaceAll(/\[unknown5_08_([0-9a-f]{2})_([0-9a-f]{2})_([0-9a-f]{2})_([0-9a-f]{2})\](.*?)(?:\[unknown5_08_ff_ff_ff_ff\]|$|(?=\u{F1000}))/gu, '<span style="color: #$1$2$3$4">$5</span>')
+    .replaceAll(/\[unknown5_08_([0-9a-f]{2})_([0-9a-f]{2})_([0-9a-f]{2})_([0-9a-f]{2})\](.*?)(?:\[unknown5_08_ff_ff_ff_ff\]|$|(?=\u{F1000}))/gu, textColorHex)
     .replaceAll('[Player]', '<span class="var">[Player]</span>')
     .replaceAll('[Player_alt]', '<span class="var">[Player_alt]</span>')
     .replaceAll('[Rui]', '<span class="var">[Rui]</span>')

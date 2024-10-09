@@ -46,6 +46,30 @@
   line-height: var(--line-height);
 }
 
+/* Spacing (ignored in non-Japanese games) */
+td:lang(ja) .spacing-0 {
+  letter-spacing: 0;
+}
+
+td:lang(ja) .spacing-1 {
+  letter-spacing: 1px;
+}
+
+td:lang(ja) .spacing-2 {
+  letter-spacing: 2px;
+}
+
+td:lang(ja) .spacing-3 {
+  letter-spacing: 3px;
+}
+
+td:lang(ja) .spacing-0 .var,
+td:lang(ja) .spacing-1 .var,
+td:lang(ja) .spacing-2 .var,
+td:lang(ja) .spacing-3 .var {
+  letter-spacing: normal;
+}
+
 /* Text alignment */
 .line-align-center {
   display: block;
@@ -154,6 +178,74 @@
   display: none;
 }
 
+/* Stadium 2 */
+/* Colored text */
+.text-gradient {
+  color: var(--top);
+}
+
+@supports (background-clip: text) {
+  .text-gradient {
+    background: linear-gradient(to bottom, var(--top), var(--bottom));
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* Animated text in Earl's Pokémon Academy */
+.text-color-animation {
+  color: rgb(247 152 177);
+  animation-duration: 1s;
+  animation-name: text-color-animation;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* Animated text on the quit warning */
+[data-id="stad2.39.1"] .text-color-animation {
+  color: rgb(240 120 30);
+  animation-duration: 1.25s;
+  animation-name: text-color-animation-quit;
+}
+
+@keyframes text-color-animation {
+  0% {
+    color: rgb(247 152 177);
+  }
+
+  25% {
+    color: rgb(240 154 100);
+  }
+
+  75% {
+    color: rgb(254 150 254);
+  }
+
+  100% {
+    color: rgb(247 152 177);
+  }
+}
+
+@keyframes text-color-animation-quit {
+  30% {
+    color: rgb(240 120 30 / 100%);
+  }
+
+  50% {
+    color: rgb(240 120 30 / 0%);
+  }
+
+  70% {
+    color: rgb(240 120 30 / 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-color-animation {
+    animation: none !important;
+  }
+}
+
 /* PBR */
 /* Font */
 .font-pbr-0 {
@@ -221,25 +313,4 @@
 
 .color-pbr-5 {
   color: #242424;
-}
-
-/* Spacing (Japanese only) */
-.collection-pbr td:lang(ja) .spacing-0 {
-  letter-spacing: 0;
-}
-
-.collection-pbr td:lang(ja) .spacing-1 {
-  letter-spacing: 1px;
-}
-
-.collection-pbr td:lang(ja) .spacing-2 {
-  letter-spacing: 2px;
-}
-
-.collection-pbr td:lang(ja) .spacing-3 {
-  letter-spacing: 3px;
-}
-
-.collection-pbr td:lang(ja) .var {
-  letter-spacing: normal;
 }

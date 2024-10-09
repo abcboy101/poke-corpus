@@ -64,4 +64,8 @@
   .results-table tr {
     break-inside: avoid;
   }
+
+  .text-color-animation {
+    animation: none !important;
+  }
 }

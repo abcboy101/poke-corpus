@@ -557,6 +557,37 @@
         "textFile": "namelist"
       }
     },
+    "Stadium": {
+      "id": "stad",
+      "languages": [
+        "qid",
+        "en",
+        "fr",
+        "it",
+        "de",
+        "es"
+      ],
+      "structured": true,
+      "files": [
+        "msg"
+      ]
+    },
+    "Stadium2": {
+      "id": "stad2",
+      "languages": [
+        "qid",
+        "ja-Hrkt",
+        "en",
+        "fr",
+        "it",
+        "de",
+        "es"
+      ],
+      "structured": true,
+      "files": [
+        "msg"
+      ]
+    },
     "Colosseum": {
       "id": "colo",
       "languages": [

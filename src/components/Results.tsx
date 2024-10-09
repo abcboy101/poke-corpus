@@ -35,7 +35,7 @@ const jumpTo = (n: number) => {
 function JumpToSelect({headers}: {headers: readonly string[]}) {
   const { t } = useTranslation();
   return <nav className="results-jump">
-    <select name="jump" id="jump" onChange={(e) => jumpTo(parseInt(e.target.value, 10))} value="">
+    <select name="jump" id="jump" onChange={(e) => jumpTo(Number(e.target.value))} value="">
       <option value="" disabled>{t('jumpTo')}</option>
       {headers.map((header, k) => (k === 0 || headers[k - 1] !== header) && <option key={k} value={k}>{header}</option>)}
     </select>
@@ -92,7 +92,7 @@ function ResultsTable({collection, file, languages, lines, showId}: SearchTaskRe
         </thead>
         <tbody dir={sameDir && displayDirs[0] !== i18next.dir() ? displayDirs[0] : undefined}>
           {lines.map((row, i) =>
-            <tr key={i}>
+            <tr key={i} data-id={idIndex !== -1 ? row[idIndex] : undefined}>
               {idIndex !== -1 ? <Actions id={row[idIndex]}/> : null}
               {row.map((s, j) => (showId || languages[j] !== codeId)
                 ? <td key={j} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]}
