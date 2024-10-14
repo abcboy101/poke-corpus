@@ -3,7 +3,7 @@
   color: var(--text-gray);
 }
 
-.variables-hide .var, .variables-hide .wait, .variables-hide .sfx, .variables-hide .unused, .variables-hide .null, .variables-hide .compressed {
+.variables-hide :is(.var, .wait, .sfx, .unused, .null, .compressed) {
   display: none;
 }
 
@@ -25,7 +25,7 @@
   white-space: normal;
 }
 
-.control-hide .r, .control-hide .c, .control-hide .n, .control-hide .vertoffset,
+.control-hide :is(.r, .c, .n, .vertoffset),
 .control-show span.soft, .control-hide wbr.soft {
   display: none;
 }
@@ -63,10 +63,7 @@ td:lang(ja) .spacing-3 {
   letter-spacing: 3px;
 }
 
-td:lang(ja) .spacing-0 .var,
-td:lang(ja) .spacing-1 .var,
-td:lang(ja) .spacing-2 .var,
-td:lang(ja) .spacing-3 .var {
+td:lang(ja) :is(.spacing-0, .spacing-1, .spacing-2, .spacing-3) .var {
   letter-spacing: normal;
 }
 
@@ -178,76 +175,7 @@ td:lang(ja) .spacing-3 .var {
   display: none;
 }
 
-/* Stadium 2 */
-/* Colored text */
-.text-gradient {
-  color: var(--top);
-}
-
-@supports (background-clip: text) {
-  .text-gradient {
-    background: linear-gradient(to bottom, var(--top), var(--bottom));
-    background-clip: text;
-    color: transparent;
-  }
-}
-
-/* Animated text in Earl's Pokémon Academy */
-.text-color-animation {
-  color: rgb(247 152 177);
-  animation-duration: 1s;
-  animation-name: text-color-animation;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-/* Animated text on the quit warning */
-[data-id="stad2.39.1"] .text-color-animation {
-  color: rgb(240 120 30);
-  animation-duration: 1.25s;
-  animation-name: text-color-animation-quit;
-}
-
-@keyframes text-color-animation {
-  0% {
-    color: rgb(247 152 177);
-  }
-
-  25% {
-    color: rgb(240 154 100);
-  }
-
-  75% {
-    color: rgb(254 150 254);
-  }
-
-  100% {
-    color: rgb(247 152 177);
-  }
-}
-
-@keyframes text-color-animation-quit {
-  30% {
-    color: rgb(240 120 30 / 100%);
-  }
-
-  50% {
-    color: rgb(240 120 30 / 0%);
-  }
-
-  70% {
-    color: rgb(240 120 30 / 100%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .text-color-animation {
-    animation: none !important;
-  }
-}
-
-/* PBR */
-/* Font */
+/* PBR font size */
 .font-pbr-0 {
   font-size: 125%;
 }
@@ -292,25 +220,4 @@ td:lang(ja) .spacing-3 .var {
       0 -1px black, -0.2588px -0.9659px black, -0.5px -0.866px black, -0.7071px -0.7071px black, -0.866px -0.5px black, -0.9659px -0.2588px black,
       -1px 0 black, -0.9659px 0.2588px black, -0.866px 0.5px black, -0.7071px 0.7071px black, -0.5px 0.866px black, -0.2588px 0.9659px black;
   }
-}
-
-/* Text color */
-.color-pbr-1 {
-  color: #E73F76;
-}
-
-.color-pbr-2 {
-  color: #36A3E7;
-}
-
-.color-pbr-3 {
-  color: #E7D024;
-}
-
-.color-pbr-4 {
-  color: #237F12;
-}
-
-.color-pbr-5 {
-  color: #242424;
 }

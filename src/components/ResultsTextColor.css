@@ -1,0 +1,209 @@
+/* Display variable placeholders as the specified color */
+.color :is(.var, .wait, .sfx, .unused, .null, .compressed, .gender, .number, .speaker) {
+  color: inherit;
+  border-bottom: 1px dotted var(--text-gray);
+}
+
+
+/* Colors from the Switch games (VAR FF00) */
+/* Hex codes are taken from LGPE */
+:root {
+  --color-1: #F01E1E;
+  --color-2: #0064FF;
+  --color-3: #64FA00;
+  --color-4: #F046F0;
+  --color-5: #FFFF46;
+  --color-6: #FF5000;
+  --color-7: #8C00FF;
+  --color-8: #50C8E6;
+  --color-9: #0050BE;
+}
+
+
+/* Colors from the 3DS games */
+.collection-xy, .collection-oras, .collection-sm, .collection-usum, .collection-bank {
+  /* VAR FF00 (VAR COLOR) */
+  --color-1: #FF0000;
+  --color-2: #008CFF;
+  --color-3: #00C000;
+
+  /* VAR BD00 */
+  --color-1-0-0: #00C000;
+  --color-2-0-0: #008CFF;
+  --color-3-0-0: #FF8000;
+  --color-4-0-0: #FF80FF;
+  --color-5-0-0: #8C00FF;
+  --color-6-0-0: #50C8E4;
+  --color-7-0-0: #FFE650;
+  --color-8-0-0: #64B4FF;
+  --color-9-0-0: #FFFF50;
+}
+
+
+/* Colors from Gen 5 */
+.collection-bw, .collection-b2w2 {
+  /* VAR FF00 */
+  --color-1: #C30000;
+  --color-2: #0000D3;
+  --color-3: #EBE300;
+  --color-4: #20B200;
+  --color-5: #F3B200;
+  --color-6: #EB00BA;
+  --color-255: var(--color-1);  /* retrieve cached color */
+
+  /* VAR BD00 */
+  --color-5-6-0: #F34141;  /* Hall of Fame interface */
+  --color-4-0-2: #96202BC0;  /* PWT Mix Tournament */
+}
+
+/* Use text shadow colors as alternates */
+@media screen {
+  @media (prefers-color-scheme: light) {
+    .mode-system :is(.collection-bw, .collection-b2w2) {
+      --color-3: #AAA200;
+      --color-5-6-0: #922828;
+    }
+  }
+
+  .mode-light :is(.collection-bw, .collection-b2w2) {
+    --color-3: #AAA200;
+    --color-5-6-0: #922828;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .mode-system :is(.collection-bw, .collection-b2w2) {
+      --color-1: #FB7171;
+      --color-2: #7192FB;
+      --color-4: #8AFB71;
+      --color-5: #FBDB92;
+      --color-6: #FB79EB;
+    }
+  }
+
+  .mode-dark :is(.collection-bw, .collection-b2w2) {
+    --color-1: #FB7171;
+    --color-2: #7192FB;
+    --color-4: #8AFB71;
+    --color-5: #FBDB92;
+    --color-6: #FB79EB;
+  }
+}
+
+
+/* Colors from Gen 4 (VAR FF00) */
+.collection-dp, .collection-pt, .collection-hgss {
+  --color-1: #EB2010;
+  --color-2: #0071FB;
+  --color-3: #61B249;  /* Grass-type starter Pokémon, Green Sphere */
+  --color-4: #FBCBF3;  /* Pale Sphere */
+  --color-5: #EB59EB;  /* Korean female color (pink) */
+  --color-101: var(--color-1);  /* cache color 1 */
+  --color-255: var(--color-1);  /* retrieve cached color */
+}
+
+/* Use text shadow colors as alternates */
+@media screen {
+  @media (prefers-color-scheme: light) {
+    .mode-system :is(.collection-dp, .collection-pt, .collection-hgss) {
+      --color-4: #AA8ABA;
+    }
+  }
+
+  .mode-light :is(.collection-dp, .collection-pt, .collection-hgss) {
+    --color-4: #AA8ABA;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .mode-system :is(.collection-dp, .collection-pt, .collection-hgss) {
+      --color-1: #FBAABA;
+      --color-2: #79BAEB;
+      --color-3: #B2D392;
+      --color-5: #FBAAFB;
+    }
+  }
+
+  .mode-dark :is(.collection-dp, .collection-pt, .collection-hgss) {
+    --color-1: #FBAABA;
+    --color-2: #79BAEB;
+    --color-3: #B2D392;
+    --color-5: #FBAAFB;
+  }
+}
+
+
+/* Stadium 2 */
+.gradient {
+  color: var(--top);
+}
+
+@supports (background-clip: text) {
+  .gradient {
+    background: linear-gradient(to bottom, var(--top), var(--bottom));
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* Animated text in Earl's Pokémon Academy */
+.color-animation {
+  color: rgb(247 152 177);
+  animation-duration: 1s;
+  animation-name: color-animation;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* Animated text on the quit warning */
+[data-id="stad2.39.1"] .color-animation {
+  color: rgb(240 120 30);
+  animation-duration: 1.25s;
+  animation-name: color-animation-quit;
+}
+
+@keyframes color-animation {
+  0% {
+    color: rgb(247 152 177);
+  }
+
+  25% {
+    color: rgb(240 154 100);
+  }
+
+  75% {
+    color: rgb(254 150 254);
+  }
+
+  100% {
+    color: rgb(247 152 177);
+  }
+}
+
+@keyframes color-animation-quit {
+  30% {
+    color: rgb(240 120 30 / 100%);
+  }
+
+  50% {
+    color: rgb(240 120 30 / 0%);
+  }
+
+  70% {
+    color: rgb(240 120 30 / 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .color-animation {
+    animation: none !important;
+  }
+}
+
+
+/* PBR */
+.collection-pbr {
+  --color-1: #E73F76;
+  --color-2: #36A3E7;
+  --color-3: #E7D024;
+  --color-4: #237F12;
+  --color-5: #242424;
+}

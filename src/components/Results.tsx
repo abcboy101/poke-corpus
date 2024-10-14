@@ -13,6 +13,7 @@ import { Status, statusInProgress } from '../utils/Status';
 
 import './Results.css';
 import './ResultsText.css';
+import './ResultsTextColor.css';
 import logo from '../res/logo.svg';
 import '../i18n/config';
 import { expandSpeakers } from '../utils/speaker';

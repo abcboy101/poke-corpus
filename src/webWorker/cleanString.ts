@@ -506,11 +506,11 @@ const versionBranchSV = (form1: string, form2: string) => versionBranch(form1, f
 /* Text color */
 const dec2Hex = (n: string) => Number(n).toString(16).padStart(2, '0').toUpperCase();
 const textColorHex = (_: string, r: string, g: string, b: string, a: string, text: string) => textColor(_, `#${r}${g}${b}${a === 'FF' ? '' : a}`, text);
-const textColor = (_: string, value: string, text: string) => `<span style="color: ${value}">${text}</span>`;
+const textColor = (_: string, value: string, text: string) => `<span class="color" style="color: ${value}">${text}</span>`;
 
-const textColorOpenDec = (_: string, r: string, g: string, b: string, a: string) => `<span style="color: #${dec2Hex(r)}${dec2Hex(g)}${dec2Hex(b)}${a === '255' ? '' : dec2Hex(a)}">`;
+const textColorOpenDec = (_: string, r: string, g: string, b: string, a: string) => `<span class="color" style="color: #${dec2Hex(r)}${dec2Hex(g)}${dec2Hex(b)}${a === '255' ? '' : dec2Hex(a)}">`;
 const textGradientOpenDec = (_: string, r1: string, g1: string, b1: string, a1: string, r2: string, g2: string, b2: string, a2: string) =>
-  `<span class="text-gradient" style="--top: #${dec2Hex(r1)}${dec2Hex(g1)}${dec2Hex(b1)}${a1 === '255' ? '' : dec2Hex(a1)}; --bottom: #${dec2Hex(r2)}${dec2Hex(g2)}${dec2Hex(b2)}${a2 === '255' ? '' : dec2Hex(a2)}">`;
+  `<span class="color gradient" style="--top: #${dec2Hex(r1)}${dec2Hex(g1)}${dec2Hex(b1)}${a1 === '255' ? '' : dec2Hex(a1)}; --bottom: #${dec2Hex(r2)}${dec2Hex(g2)}${dec2Hex(b2)}${a2 === '255' ? '' : dec2Hex(a2)}">`;
 
 //#endregion
 
@@ -603,9 +603,18 @@ export function postprocessString(s: string, collectionKey: string, language: st
   // Text formatting
   s = isBDSP ? (s
     .replaceAll(/\u{F0106}color=(.*?)\u{F0107}(.*?)\u{F0106}\/color\u{F0107}/gu, textColor) // BDSP color
+    .replaceAll('\u{F0106}/color\u{F0107}', '') // BDSP color (extra closing tag)
     .replaceAll(/\u{F0106}size=(.*?)\u{F0107}(.*?)\u{F0106}\/size\u{F0107}/gu, '<span style="font-size: $1">$2</span>') // BDSP size
     .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\u{F0106}pos=(.*?)\u{F0107}(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>') // BDSP pos
     .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\u{F0106}line-indent=(.*?)\u{F0107}(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>') // BDSP line-indent
+  ) : s;
+  s = (isGen4 || isModern) ? (s
+    .replaceAll(/\[VAR (?:FF00|COLOR)\((?!0000)([0-9A-F]{4})\)\](.+?)(?=\[VAR (?:FF00|COLOR)\([0-9A-F]{4}\)\]|$)/gu, (_, color, text) => `<span class="color" style="color: var(--color-${parseInt(color, 16)})">${text}</span>`) // font color
+    .replaceAll(/\[VAR (?:FF00|COLOR)\(0000\)\]/gu, '') // font color (reset)
+  ) : s;
+  s = (isGen5 || is3DS) ? (s
+    .replaceAll(/\[VAR BD00\(([0-9A-F]{4}),([0-9A-F]{4}),([0-9A-F]{4})\)\](.+?)(?:\[VAR BD00\(0001,0002,0000\)\]|\[VAR BD01\]|$)/gu, (_, color1, color2, color3, text) => `<span class="color" style="color: var(--color-${parseInt(color1, 16)}-${parseInt(color2, 16)}-${parseInt(color3, 16)})">${text}</span>`) // font color
+    .replaceAll('[VAR BD01]', '') // font color (reset)
   ) : s;
   s = isGen4 ? (s
     .replaceAll(/\[VAR FF01\(00C8\)\]\[VAR FF01\(0064\)\]/gu, '') // Gen 4 font size (empty string at 200%)
@@ -661,7 +670,7 @@ export function postprocessString(s: string, collectionKey: string, language: st
   if (isN64) {
     s = (s
       // Variables
-      .replaceAll('#71', '<span class="text-color-animation">')
+      .replaceAll('#71', '<span class="color color-animation">')
       .replaceAll(/(#\d{2})/gu, '<span class="var">$1</span>')
 
       // Color
@@ -712,7 +721,7 @@ export function postprocessString(s: string, collectionKey: string, language: st
 
   // PBR
   s = isPBR ? (s
-    .replaceAll(/\[COLOR (\d+)\](.*?)(?:\[COLOR \d+\]|[\u{F0201}\u{F0202}\u{F0200}]|$)/gu, '<span class="color-pbr-$1">$2</span>')
+    .replaceAll(/\[COLOR (\d+)\](.*?)(?:\[COLOR \d+\]|[\u{F0201}\u{F0202}\u{F0200}]|$)/gu, '<span class="color" style="color: var(--color-$1)">$2</span>')
     .replaceAll(/(\[VERTOFFSET -?[\d.]+\])/gu, '<span class="vertoffset">$1</span>') // '<span style="position: relative; top: $1px">$2</span>'
     .replaceAll(/\[FONT ([0126])\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[FONT \d+\]|$)/gu, '<span class="font-pbr-$1">$2</span>')
     .replaceAll(/(\[FONT [\d.]+\])/gu, '<span class="var">$1</span>')
