@@ -49,7 +49,7 @@
   --color-4: #20B200;
   --color-5: #F3B200;
   --color-6: #EB00BA;
-  --color-255: var(--color-1);  /* retrieve cached color */
+  --color-255: var(--color-2);  /* retrieve cached color */
 
   /* VAR BD00 */
   --color-5-6-0: #F34141;  /* Hall of Fame interface */
