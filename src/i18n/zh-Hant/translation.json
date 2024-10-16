@@ -9,9 +9,14 @@
       "light": "淺色",
       "dark": "深色"
     },
-    "limit": "每頁最大結果數：",
+    "limit": "顯示筆數：",
     "longURL": "長連結：",
-    "longURLs": {
+    "longURLSelect": {
+      "true": "啟用",
+      "false": "禁用"
+    },
+    "richText": "富文本：",
+    "richTextSelect": {
       "true": "啟用",
       "false": "禁用"
     },

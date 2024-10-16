@@ -31,6 +31,7 @@ export const getLimit = () => {
   const value = +(localStorageGetItem('corpus-limit') ?? defaultLimit);
   return Number.isNaN(value) ? defaultLimit : value;
 };
+export const getRichText = () => localStorageGetItem('corpus-richText') !== 'false';
 
 /* Generate appropriate i18n number format options for n bytes */
 const byteUnits = ['byte', 'kilobyte', 'megabyte', 'gigabyte', 'terabyte', 'petabyte'] as const;

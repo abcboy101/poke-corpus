@@ -49,6 +49,13 @@ function OptionsMenu({showModal, mode, setMode, limit, limitRef}: OptionsParams 
     }
   };
 
+  const onChangeRichText: ChangeEventHandler<HTMLSelectElement> = (e) => {
+    const newRichText = e.target.value;
+    if (newRichText === "true" || newRichText === "false") {
+      localStorageSetItem('corpus-richText', newRichText);
+    }
+  };
+
   return (
     <div className="options">
       <div className="options-grid">
@@ -64,7 +71,12 @@ function OptionsMenu({showModal, mode, setMode, limit, limitRef}: OptionsParams 
 
         <label htmlFor="longURL">{t('options.longURL')}</label>
         <select name="longURL" id="longURL" onChange={onChangeLongURL} defaultValue={localStorageGetItem('corpus-longURL') ?? "false"}>
-          {["true", "false"].map((mode) => <option key={mode} value={mode}>{t(`options.longURLs.${mode}`)}</option>)}
+          {["true", "false"].map((mode) => <option key={mode} value={mode}>{t(`options.longURLSelect.${mode}`)}</option>)}
+        </select>
+
+        <label htmlFor="richText">{t('options.richText')}</label>
+        <select name="richText" id="richText" onChange={onChangeRichText} defaultValue={localStorageGetItem('corpus-richText') ?? "true"}>
+          {["true", "false"].map((mode) => <option key={mode} value={mode}>{t(`options.richTextSelect.${mode}`)}</option>)}
         </select>
 
         <label htmlFor="limit">{t(`options.limit`)}</label>

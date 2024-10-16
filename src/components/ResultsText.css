@@ -25,6 +25,10 @@
   white-space: normal;
 }
 
+.rich-text-disabled table {
+  white-space: normal;
+}
+
 .control-hide :is(.r, .c, .n, .vertoffset),
 .control-show span.soft, .control-hide wbr.soft {
   display: none;

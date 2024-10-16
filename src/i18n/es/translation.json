@@ -11,9 +11,14 @@
     },
     "limit": "Resultados por página:",
     "longURL": "URL largas:",
-    "longURLs": {
+    "longURLSelect": {
       "true": "Activadas",
       "false": "Desactivadas"
+    },
+    "richText": "Texto enriquecido:",
+    "richTextSelect": {
+      "true": "Activado",
+      "false": "Desactivado"
     },
     "network": "No se ha podido descargar el idioma seleccionado. Compruebe su conexión a Internet e inténtelo de nuevo.",
     "close": "Cerrar"

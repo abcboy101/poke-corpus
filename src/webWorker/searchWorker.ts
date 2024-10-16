@@ -4,7 +4,8 @@ import { codeId, Speaker, Literals } from '../utils/corpus';
 import { SearchTaskResultDone, SearchTaskResultNotDone } from '../utils/Status';
 import { getMatchConditionBoolean, isBooleanQueryValid } from './searchBoolean';
 import { extractSpeakers, replaceSpeaker } from '../utils/speaker';
-import { SearchParams } from '../utils/searchParams';
+import { SearchParams, SearchTaskParams } from '../utils/searchParams';
+import { replaceLiteralsFactory } from '../utils/literals';
 
 export type MatchCondition = (line: string) => boolean;
 export type WhereCondition = (i: number) => boolean;
@@ -12,7 +13,7 @@ export type WhereConditionFactory = (fileData: string[][], languageKeys: string[
 
 export interface SearchTask {
   readonly index: number,
-  readonly params: SearchParams,
+  readonly params: SearchTaskParams,
   readonly collectionKey: string,
   readonly fileKey: string,
   readonly languages: readonly string[],
@@ -184,30 +185,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
 
     // Substituted string literals vary by language, so we need to look up what the string is in the appropriate language here
     const messageIdIndex = languageKeys.indexOf(codeId);
-    const replaceLiterals = (s: string, languageIndex: number) => {
-      if (literals === undefined || languageIndex === messageIdIndex)
-        return s;
-
-      for (const [literalId, {branch, line}] of Object.entries(literals)) {
-        const searchValue = `[${literalId}]`;
-        let replaceValue = searchValue;
-        if (branch === undefined)
-          replaceValue = fileData[languageIndex][line - 1];
-        else if (branch === 'gender')
-          replaceValue = `\u{F1200}${line.map((lineNo) => fileData[languageIndex][lineNo - 1]).join('\u{F1104}')}`;
-        else if (branch === 'version')
-          replaceValue = `\u{F1207}${line.map((lineNo) => fileData[languageIndex][lineNo - 1]).join('\u{F1104}')}`;
-        else if (branch === 'language')
-          replaceValue = fileData[languageIndex][line[languages[languageIndex]] - 1];
-
-        if (collectionKey === 'BattleRevolution')
-          replaceValue = replaceValue.substring('[FONT 0][SPACING 1]'.length).trim();
-
-        s = s.replaceAll(searchValue, `\u{F1102}${replaceValue}\u{F1103}`);
-      }
-      return s;
-    };
-
+    const replaceLiterals = replaceLiteralsFactory(fileData, messageIdIndex, collectionKey, languages, literals);
     const lineKeysSorted = Array.from(lineKeysSet).sort((a, b) => a - b);
     const whereCondition = whereConditionFactory(fileData, languageKeys);
     const fileResults: string[][] = ((messageIdIndex === -1) ? lineKeysSorted
@@ -219,10 +197,12 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       .filter(whereCondition)
       .map((i) => fileData.map((lines, languageIndex) => {
         let line = lines[i];
-        if (speaker !== undefined)
-          line = replaceSpeaker(lines[i] ?? '', speakers[languageIndex], languages[languageIndex]);
-        line = replaceLiterals(line, languageIndex);
-        return postprocessString(line, collectionKey, languages[languageIndex]);
+        if (params.richText) {
+          if (speaker !== undefined)
+            line = replaceSpeaker(lines[i] ?? '', speakers[languageIndex], languages[languageIndex]);
+          line = replaceLiterals(line, languageIndex);
+        }
+        return postprocessString(line, collectionKey, languages[languageIndex], params.richText);
       }));
 
     notifyComplete('done', {

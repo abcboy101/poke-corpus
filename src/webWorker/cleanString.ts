@@ -521,7 +521,7 @@ const textGradientOpenDec = (_: string, r1: string, g1: string, b1: string, a1: 
  *
  * Returns the resulting HTML string.
  */
-export function postprocessString(s: string, collectionKey: string, language: string = '') {
+export function postprocessString(s: string, collectionKey: string, language: string = '', richText: boolean = true) {
   const isGen3 = ["RubySapphire", "FireRedLeafGreen", "Emerald"].includes(collectionKey);
   const isGen4 = ["DiamondPearl", "Platinum", "HeartGoldSoulSilver"].includes(collectionKey);
   const isGen5 = ["BlackWhite", "Black2White2"].includes(collectionKey);
@@ -538,6 +538,8 @@ export function postprocessString(s: string, collectionKey: string, language: st
   const isModern = isGen5 || is3DS || isSwitch;
 
   s = postprocessMetadata(s);
+  if (!richText)
+    return multiLine(s);
 
   // Replace literal special characters with a placeholder so they don't match other rules
   s = (s

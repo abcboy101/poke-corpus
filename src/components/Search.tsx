@@ -22,6 +22,7 @@ function Search({showModal, limit}: {showModal: (args: ModalArguments) => void, 
   const [status, setStatus] = useState<Status>('initial');
   const [progress, setProgress] = useState(0.0);
   const [showId, setShowId] = useState(true);
+  const [richText, setRichText] = useState(true);
   const [results, setResults] = useState<readonly SearchResultLines[]>([]);
   const [showSearchModal, setShowSearchModal] = useState(localStorageGetItem(searchModalWarn) !== 'false');
 
@@ -44,6 +45,7 @@ function Search({showModal, limit}: {showModal: (args: ModalArguments) => void, 
       setStatus(e.data.status);
       setProgress(e.data.progress);
       setShowId(e.data.showId);
+      setRichText(e.data.richText);
       setResults(e.data.results);
       if (statusError.includes(e.data.status)) {
         showModal({
@@ -121,7 +123,7 @@ function Search({showModal, limit}: {showModal: (args: ModalArguments) => void, 
   return (
     <>
       <SearchForm status={status} postToWorker={postToWorkerModal} terminateWorker={terminateWorker} />
-      <Results status={status} progress={progress} showId={showId} results={results} limit={limit} />
+      <Results status={status} progress={progress} showId={showId} richText={richText} results={results} limit={limit} />
     </>
   );
 }

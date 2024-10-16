@@ -1,7 +1,7 @@
 import corpus, { codeId } from '../utils/corpus';
 import { getCache, getFile, getFilePath, getFileRemote, getIndexedDB } from '../utils/files';
 import SearchWorker from "./searchWorker.ts?worker";
-import { SearchParams } from '../utils/searchParams';
+import { SearchTaskParams } from '../utils/searchParams';
 import { SearchTask, SearchTaskResult, SearchTaskResultComplete, SearchTaskResultLines } from './searchWorker';
 import { SearchResultsInProgress, SearchResultsComplete, SearchResultsStatus } from '../utils/Status';
 import { isBooleanQueryValid } from './searchBoolean';
@@ -15,6 +15,7 @@ export interface SearchResults {
   readonly status: SearchResultsStatus,
   readonly progress: number,
   readonly showId: boolean,
+  readonly richText: boolean,
   readonly results: readonly SearchResultLines[],
 }
 
@@ -65,9 +66,10 @@ const loadFile = async (collectionKey: string, languageKey: string, fileKey: str
   return new Response(stream.pipeThrough(new DecompressionStream('gzip'))).text();
 };
 
-self.onmessage = (message: MessageEvent<SearchParams>) => {
+self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
   const params = message.data;
   const showId = params.showAllLanguages || params.languages.includes(codeId);
+  const richText = params.richText;
 
   const progressPortionLoading = 0.5;
   const progressPortionProcessing = 0.5;
@@ -80,6 +82,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
       status: status,
       progress: progress,
       showId: showId,
+      richText: richText,
       results: [],
     };
     postMessage(message);
@@ -91,6 +94,7 @@ self.onmessage = (message: MessageEvent<SearchParams>) => {
       status: status,
       progress: 1.0,
       showId: showId,
+      richText: richText,
       results: results,
     };
     postMessage(message);

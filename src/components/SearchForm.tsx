@@ -2,10 +2,10 @@ import { ChangeEventHandler, FormEventHandler, MouseEventHandler, useCallback, u
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { SearchParams, searchTypes, isSearchType, searchParamsToHash, hashToSearchParams, defaultSearchParams } from '../utils/searchParams';
+import { SearchTaskParams, searchTypes, isSearchType, searchParamsToHash, hashToSearchParams, defaultSearchParams } from '../utils/searchParams';
 import { corpus, codeId } from '../utils/corpus';
 import SearchFilters from './SearchFilters';
-import { escapeRegex, localStorageGetItem, localStorageSetItem } from '../utils/utils';
+import { escapeRegex, getRichText, localStorageGetItem, localStorageSetItem } from '../utils/utils';
 import { Status, statusInProgress } from '../utils/Status';
 
 import '../i18n/config';
@@ -15,7 +15,7 @@ const defaultParams: typeof defaultSearchParams = {
   languages: corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0])) || corpus.languages.filter((value) => value.startsWith('en')),
 };
 
-function SearchForm({status, postToWorker, terminateWorker}: {status: Status, postToWorker: (params: SearchParams) => void, terminateWorker: () => void}) {
+function SearchForm({status, postToWorker, terminateWorker}: {status: Status, postToWorker: (params: SearchTaskParams) => void, terminateWorker: () => void}) {
   const { t } = useTranslation();
   const [id, setId] = useState('');
   const [file, setFile] = useState('');
@@ -84,6 +84,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         common: true,
         script: true,
         showAllLanguages: true,
+        richText: getRichText(),
         collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key]?.id === collectionId),
         languages: [codeId],
       });
@@ -101,6 +102,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         common: true,
         script: true,
         showAllLanguages: true,
+        richText: getRichText(),
         collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key]?.id === collectionId),
         languages: [codeId],
       });
@@ -110,13 +112,14 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
 
   useEffect(() => {
     if (run) {
-      const params: SearchParams = {
+      const params: SearchTaskParams = {
         query: query,
         type: type,
         caseInsensitive: caseInsensitive,
         common: common,
         script: script,
         showAllLanguages: showAllLanguages,
+        richText: getRichText(),
         collections: collections,
         languages: languages,
       };
@@ -134,13 +137,14 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       localStorageSetItem('corpus-filtersVisible', filtersVisible.toString());
     }
 
-    const params: SearchParams = {
+    const params: SearchTaskParams = {
       query: query,
       type: type,
       caseInsensitive: caseInsensitive,
       common: common,
       script: script,
       showAllLanguages: showAllLanguages,
+      richText: getRichText(),
       collections: collections,
       languages: languages,
     };

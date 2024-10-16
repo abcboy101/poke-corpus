@@ -156,7 +156,7 @@ function ResultsSection({header, displayHeader, ...params}: {header: string, dis
   );
 }
 
-function Results({status, progress, results, showId = true, limit = defaultLimit}: {status: Status, progress: number, showId: boolean, results: readonly SearchResultLines[], limit?: number}) {
+function Results({status, progress, results, showId = true, richText = true, limit = defaultLimit}: {status: Status, progress: number, showId: boolean, richText: boolean, results: readonly SearchResultLines[], limit?: number}) {
   const { t } = useTranslation();
   const [showVariables, setShowVariables] = useState(true);
   const [showAllCharacters, setShowAllCharacters] = useState(false);
@@ -212,14 +212,14 @@ function Results({status, progress, results, showId = true, limit = defaultLimit
           ) : <ProgressBar progress={progress} />
         }
         <div className="results-toggle">
-          <button className={showVariables ? 'button-square active' : 'button-square'} onClick={() => { setShowVariables(!showVariables); }} title={t('showVariables')}>{t('showVariablesIcon')}</button>
-          <button className={showAllCharacters ? 'button-square active' : 'button-square'} onClick={() => { setShowAllCharacters(!showAllCharacters); }} title={t('showAllCharacters')}>{t('showAllCharactersIcon')}</button>
-          <button className={showGender !== 2 ? 'button-square active' : 'button-square'} onClick={() => { setShowGender((showGender + 1) % 3); }} title={t('showGender')}>{t('showGenderIcon', {context: showGender})}</button>
-          <button className={showPlural !== 0 ? 'button-square active' : 'button-square'} onClick={() => { setShowPlural((showPlural + 1) % 3); }} title={t('showPlural')}>{t('showPluralIcon', {context: showPlural})}</button>
-          <button className={showFurigana ? 'button-square active' : 'button-square'} onClick={() => { setShowFurigana(!showFurigana); }} title={t('showFurigana')}><span className='results-toggle-furigana'>{t('showFuriganaIcon')}</span></button>
+          <button className={showVariables ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowVariables(!showVariables); }} title={t('showVariables')}>{t('showVariablesIcon')}</button>
+          <button className={showAllCharacters ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowAllCharacters(!showAllCharacters); }} title={t('showAllCharacters')}>{t('showAllCharactersIcon')}</button>
+          <button className={showGender !== 2 ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowGender((showGender + 1) % 3); }} title={t('showGender')}>{t('showGenderIcon', {context: showGender})}</button>
+          <button className={showPlural !== 0 ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowPlural((showPlural + 1) % 3); }} title={t('showPlural')}>{t('showPluralIcon', {context: showPlural})}</button>
+          <button className={showFurigana ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowFurigana(!showFurigana); }} title={t('showFurigana')}><span className='results-toggle-furigana'>{t('showFuriganaIcon')}</span></button>
         </div>
       </div>
-      <main id="results" className={`search results app-window variables-${showVariables ? 'show' : 'hide'} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural} furigana-${showFurigana ? 'show' : 'hide'}`}>
+      <main id="results" className={`search results app-window variables-${showVariables ? 'show' : 'hide'} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural} furigana-${showFurigana ? 'show' : 'hide'} rich-text-${richText ? 'enabled' : 'disabled'}`}>
         { resultTables }
       </main>
     </>

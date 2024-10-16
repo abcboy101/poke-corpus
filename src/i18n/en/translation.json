@@ -12,7 +12,12 @@
     },
     "limit": "Results per page:",
     "longURL": "Long URLs:",
-    "longURLs": {
+    "longURLSelect": {
+      "true": "Enabled",
+      "false": "Disabled"
+    },
+    "richText": "Rich text:",
+    "richTextSelect": {
       "true": "Enabled",
       "false": "Disabled"
     },
