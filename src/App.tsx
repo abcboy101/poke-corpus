@@ -6,6 +6,7 @@ import { getLimit, getMode, Mode } from './utils/utils';
 import Modal, { ModalArguments } from './components/Modal';
 
 import './App.css';
+import './safari.css';
 import logo from './res/logo.svg';
 import './i18n/config';
 

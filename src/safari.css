@@ -1,0 +1,26 @@
+/* CSS hacks for Safari */
+/* Safari displays these elements too high relative to the associated element */
+.ua-safari label,
+.ua-safari button svg,
+.ua-safari a svg,
+.ua-safari .progress-bar-text {
+  position: relative;
+  top: 0.15em;
+}
+
+/* Safari displays text in these elements too high with the line-height specified */
+/* Safari displays the text in the option elements oddly with the font specified  */
+.ua-safari select,
+.ua-safari select:focus {
+  line-height: initial;
+  font-family: system-ui;
+}
+
+/* Safari displays text in these elements too high with the line-height specified */
+.ua-safari input[type="text"],
+.ua-safari input[type="number"],
+.ua-safari input[type="submit"],
+.ua-safari input[type="button"],
+.ua-safari button {
+  line-height: initial;
+}
