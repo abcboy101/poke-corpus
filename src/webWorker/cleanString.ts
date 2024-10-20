@@ -564,6 +564,9 @@ export function postprocessString(s: string, collectionKey: string, language: st
   s = isGen3 ? (s
     .replaceAll('\\e', '\u{F02FF}')
   ) : s;
+  s = isN64 ? (s
+    .replaceAll('\u{F0100}n', '\u{F0200}') // Game Boy Tower
+  ) : s;
 
   // PKMN
   s = (isN64 || isGen3 || isNDS) ? (s
@@ -687,6 +690,9 @@ export function postprocessString(s: string, collectionKey: string, language: st
 
       .replaceAll(/(\u{F0106}[0-9A-Z, ]+\u{F0107})/gu, '<span class="var">$1</span>')
       .replaceAll(/%%/gu, '<span class="literal">%</span>') // printf
+
+      // Game Boy Tower
+      .replaceAll(/(\u{F0100}(?:CU|CR|B|R))/gu, '<span class="var">$1</span>')
     );
     const spanOpen = s.match(/<span\b/gu)?.length ?? 0;
     const spanClose = s.match(/<\/span>/gu)?.length ?? 0;

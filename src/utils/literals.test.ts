@@ -7,19 +7,14 @@ import { replaceLiteralsFactory } from './literals';
 
 async function loadFile(collectionKey: string, languageKey: string, fileKey: string): Promise<string> {
   const path = getFilePath(collectionKey, languageKey, fileKey);
-  return await fs.readFile(path.split('.gz')[0], {encoding: 'utf-8'});
+  return fs.readFile(path.split('.gz')[0], {encoding: 'utf-8'});
 }
 
-async function readFileData(collectionKey: string, languages: readonly string[], fileKey: string) {
-  const files = await Promise.all(languages.map((languageKey) => loadFile(collectionKey, languageKey, fileKey)));
-  const fileData = languages.map(((languageKey, i) => preprocessString(files[i], collectionKey, languageKey).split(/\r\n|\n/)));
-  return fileData;
-}
-
-async function getReplaceLiterals(collectionKey: string) {
+async function getReplaceLiterals(collectionKey: string): Promise<ReturnType<typeof replaceLiteralsFactory>> {
   const { languages, files: fileKeys, literals } = corpus.collections[collectionKey];
   const messageIdIndex = languages.indexOf(codeId);
-  const fileData = await readFileData(collectionKey, languages, fileKeys[0]);
+  const files = await Promise.all(languages.map((languageKey) => loadFile(collectionKey, languageKey, fileKeys[0])));
+  const fileData = languages.map(((languageKey, i) => preprocessString(files[i], collectionKey, languageKey).split(/\r\n|\n/)));
   return replaceLiteralsFactory(fileData, messageIdIndex, collectionKey, languages, literals);
 }
 
