@@ -40,6 +40,7 @@
 
 import { postprocessSpeaker } from '../utils/speaker';
 import chineseChars from './chineseChars.json';
+import { postprocessStringGO, preprocessStringGO } from './cleanStringGO';
 import * as g3 from './expandVariablesG3';
 
 //#region Pre-processing
@@ -390,6 +391,10 @@ export function preprocessString(s: string, collectionKey: string, language: str
     case "Ranch":
       s = remapWiiSpecialCharacters(s);
       break;
+
+    case "GO":
+      s = preprocessStringGO(s, language);
+      break;
   }
   return preprocessMetadata(s);
 }
@@ -506,7 +511,7 @@ const versionBranchSV = (form1: string, form2: string) => versionBranch(form1, f
 /* Text color */
 const dec2Hex = (n: string) => Number(n).toString(16).padStart(2, '0').toUpperCase();
 const textColorHex = (_: string, r: string, g: string, b: string, a: string, text: string) => textColor(_, `#${r}${g}${b}${a === 'FF' ? '' : a}`, text);
-const textColor = (_: string, value: string, text: string) => `<span class="color" style="color: ${value}">${text}</span>`;
+export const textColor = (_: string, value: string, text: string) => `<span class="color" style="color: ${value}">${text}</span>`;
 
 const textColorOpenDec = (_: string, r: string, g: string, b: string, a: string) => `<span class="color" style="color: #${dec2Hex(r)}${dec2Hex(g)}${dec2Hex(b)}${a === '255' ? '' : dec2Hex(a)}">`;
 const textGradientOpenDec = (_: string, r1: string, g1: string, b1: string, a1: string, r2: string, g2: string, b2: string, a2: string) =>
@@ -528,6 +533,7 @@ export function postprocessString(s: string, collectionKey: string, language: st
   const isBDSP = collectionKey == "BrilliantDiamondShiningPearl";
   const isPBR = collectionKey == "BattleRevolution";
   const isRanch = collectionKey == "Ranch";
+  const isGO = collectionKey == "GO";
 
   const isNDS = isGen4 || isGen5;
   const is3DS = ["XY", "OmegaRubyAlphaSapphire", "SunMoon", "UltraSunUltraMoon", "Bank"].includes(collectionKey);
@@ -538,8 +544,13 @@ export function postprocessString(s: string, collectionKey: string, language: st
   const isModern = isGen5 || is3DS || isSwitch;
 
   s = postprocessMetadata(s);
-  if (!richText)
+  if (!richText) {
+    s = (s
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+    );
     return multiLine(s);
+  }
 
   // Replace literal special characters with a placeholder so they don't match other rules
   s = (s
@@ -741,6 +752,9 @@ export function postprocessString(s: string, collectionKey: string, language: st
     .replaceAll(/(%((\d+\$)?(\d*d|\d*\.\d+[fs]m?|ls)|(\(\d+\)%|\d+\$)?\{\}|\(\d+\)))/gu, '<span class="var">$1</span>')
     .replaceAll(/(\$\d+\$)/gu, '<span class="var">$1</span>')
   ) : s;
+
+  // GO
+  s = isGO ? postprocessStringGO(s) : s;
 
   s = (s
     .replaceAll('[NULL]', '<span class="null">[NULL]</span>')

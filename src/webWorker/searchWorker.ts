@@ -73,7 +73,7 @@ function parseQuery(params: SearchParams): [MatchCondition, WhereConditionFactor
   }
 
   // Check for WHERE clause
-  const whereClause = /(.*)\bWHERE\s+([A-Za-z-]+)\s*(=|==|<>|!=)\s*([A-Za-z-]+)/u.exec(params.query);
+  const whereClause = /(.*)\bWHERE\s+([0-9A-Za-z-]+)\s*(=|==|<>|!=)\s*([0-9A-Za-z-]+)/u.exec(params.query);
   if (!whereClause) {
     return [getMatchCondition(params), () => () => true];
   }

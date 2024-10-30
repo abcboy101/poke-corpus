@@ -9,10 +9,17 @@
     "it",
     "de",
     "es",
+    "es-419",
     "ko",
     "zh-Hans",
     "zh-Hans-CN",
-    "zh-Hant"
+    "zh-Hant",
+    "pt-BR",
+    "th",
+    "ru",
+    "tr",
+    "id",
+    "hi"
   ],
   "collections": {
     "Red": {
@@ -588,6 +595,23 @@
         "msg"
       ]
     },
+    "Box": {
+      "id": "box",
+      "languages": [
+        "qid",
+        "ja-Hrkt",
+        "en",
+        "en-GB",
+        "fr",
+        "it",
+        "de",
+        "es"
+      ],
+      "structured": true,
+      "files": [
+        "message"
+      ]
+    },
     "Colosseum": {
       "id": "colo",
       "languages": [
@@ -698,23 +722,6 @@
         }
       }
     },
-    "Box": {
-      "id": "box",
-      "languages": [
-        "qid",
-        "ja-Hrkt",
-        "en",
-        "en-GB",
-        "fr",
-        "it",
-        "de",
-        "es"
-      ],
-      "structured": true,
-      "files": [
-        "message"
-      ]
-    },
     "Ranch": {
       "id": "ranch",
       "languages": [
@@ -781,6 +788,31 @@
       "version": "3.2.1",
       "files": [
         "megaturtle"
+      ]
+    },
+    "GO": {
+      "id": "go",
+      "languages": [
+        "qid",
+        "ja",
+        "en",
+        "fr",
+        "it",
+        "de",
+        "es",
+        "es-419",
+        "ko",
+        "zh-Hant",
+        "pt-BR",
+        "th",
+        "ru",
+        "tr",
+        "id",
+        "hi"
+      ],
+      "structured": true,
+      "files": [
+        "text"
       ]
     }
   }

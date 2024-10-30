@@ -103,11 +103,11 @@
 
 @media (width >= 576px) and (width <= 991.98px) {
   .search-filters-show {
-    grid-template-columns: 65fr 1px minmax(14em, 35fr);
+    grid-template-columns: 55fr 1px minmax(14em, 45fr);
   }
 
   .search-languages {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
   }
 }
 

@@ -5,10 +5,12 @@
   --highlight-light: #eeeeff;
   --text-light: #111111;
   --text-gray-light: #888888;
+  --text-link-light: #2222FF;
   --background-dark: #111122;
   --highlight-dark: #222244;
   --text-dark: #eeeeee;
   --text-gray-dark: #888888;
+  --text-link-dark: #8888FF;
   --progress-bar-color-light: limegreen;
   --progress-bar-color-dark: green;
   --accent-light: skyblue;
@@ -42,6 +44,7 @@
       --highlight: var(--highlight-light);
       --text: var(--text-light);
       --text-gray: var(--text-gray-light);
+      --text-link: var(--text-link-light);
       --progress-bar-background: var(--highlight);
       --progress-bar-border: var(--text);
       --progress-bar-color: var(--progress-bar-color-light);
@@ -67,6 +70,7 @@
     --highlight: var(--highlight-light);
     --text: var(--text-light);
     --text-gray: var(--text-gray-light);
+    --text-link: var(--text-link-light);
     --progress-bar-background: var(--highlight);
     --progress-bar-border: var(--text);
     --progress-bar-color: var(--progress-bar-color-light);
@@ -88,6 +92,7 @@
       --highlight: var(--highlight-dark);
       --text: var(--text-dark);
       --text-gray: var(--text-gray-dark);
+      --text-link: var(--text-link-dark);
       --progress-bar-background: var(--highlight);
       --progress-bar-border: var(--text);
       --progress-bar-color: var(--progress-bar-color-dark);
@@ -113,6 +118,7 @@
     --highlight: var(--highlight-dark);
     --text: var(--text-dark);
     --text-gray: var(--text-gray-dark);
+    --text-link: var(--text-link-dark);
     --progress-bar-background: var(--highlight);
     --progress-bar-border: var(--text);
     --progress-bar-color: var(--progress-bar-color-dark);
