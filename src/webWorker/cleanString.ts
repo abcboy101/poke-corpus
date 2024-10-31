@@ -40,7 +40,8 @@
 
 import { postprocessSpeaker } from '../utils/speaker';
 import chineseChars from './chineseChars.json';
-import { postprocessStringGO, preprocessStringGO } from './cleanStringGO';
+import { preprocessStringGO, postprocessStringGO } from './cleanStringGO';
+import { preprocessStringMasters, postprocessStringMasters } from './cleanStringMasters';
 import * as g3 from './expandVariablesG3';
 
 //#region Pre-processing
@@ -395,6 +396,10 @@ export function preprocessString(s: string, collectionKey: string, language: str
     case "GO":
       s = preprocessStringGO(s, language);
       break;
+
+    case "Masters":
+      s = preprocessStringMasters(s, language);
+      break;
   }
   return preprocessMetadata(s);
 }
@@ -437,7 +442,7 @@ function multiLine(s: string) {
  *
  * Returns the resulting string.
  */
-function genderBranch(male: string, female: string, neuter: string = '') {
+export function genderBranch(male: string, female: string, neuter: string = '') {
   const results = [];
   if (male.length > 0) results.push(`<span class="branch male">${male}</span>`);
   if (female.length > 0) results.push(`<span class="branch female">${female}</span>`);
@@ -450,7 +455,7 @@ function genderBranch(male: string, female: string, neuter: string = '') {
  *
  * Returns the resulting string.
  */
-function numberBranch(singular: string, plural: string, zero: string = '') {
+export function numberBranch(singular: string, plural: string, zero: string = '') {
   const results = [];
   if (singular.length > 0) results.push(`<span class="branch singular">${singular}</span>`);
   if (plural.length > 0) results.push(`<span class="branch plural">${plural}</span>`);
@@ -534,6 +539,7 @@ export function postprocessString(s: string, collectionKey: string, language: st
   const isPBR = collectionKey == "BattleRevolution";
   const isRanch = collectionKey == "Ranch";
   const isGO = collectionKey == "GO";
+  const isMasters = collectionKey == "Masters";
 
   const isNDS = isGen4 || isGen5;
   const is3DS = ["XY", "OmegaRubyAlphaSapphire", "SunMoon", "UltraSunUltraMoon", "Bank"].includes(collectionKey);
@@ -543,7 +549,7 @@ export function postprocessString(s: string, collectionKey: string, language: st
   const isGCN = ["Colosseum", "XD"].includes(collectionKey);
   const isModern = isGen5 || is3DS || isSwitch;
 
-  s = postprocessMetadata(s);
+  s = postprocessMetadata(s ?? '');
   if (!richText) {
     s = (s
       .replaceAll('<', '&lt;')
@@ -755,6 +761,9 @@ export function postprocessString(s: string, collectionKey: string, language: st
 
   // GO
   s = isGO ? postprocessStringGO(s) : s;
+
+  // Masters
+  s = isMasters ? postprocessStringMasters(s) : s;
 
   s = (s
     .replaceAll('[NULL]', '<span class="null">[NULL]</span>')

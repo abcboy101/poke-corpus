@@ -152,8 +152,10 @@ self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
       }
 
       // Load all files in all languages in the collection
+      const commonKeys = ['common', 'messages', 'ui'];
+      const scriptKeys = ['script', 'talk'];
       collection.files
-        .filter((fileKey) => !((fileKey === 'common' && !params.common) || (fileKey === 'script' && !params.script)))
+        .filter((fileKey) => !((commonKeys.includes(fileKey) && !params.common) || (scriptKeys.includes(fileKey) && !params.script)))
         .forEach((fileKey) => {
           const languages = (collection.structured && params.showAllLanguages) ? collection.languages : collection.languages.filter((languageKey) => params.languages.includes(languageKey) || languageKey === codeId);
           if (!collection.structured) {

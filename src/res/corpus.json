@@ -814,6 +814,26 @@
       "files": [
         "text"
       ]
+    },
+    "Masters": {
+      "id": "masters",
+      "languages": [
+        "qid",
+        "ja",
+        "en",
+        "fr",
+        "it",
+        "de",
+        "es",
+        "ko",
+        "zh-Hant"
+      ],
+      "structured": true,
+      "files": [
+        "messages",
+        "talk",
+        "ui"
+      ]
     }
   }
 }

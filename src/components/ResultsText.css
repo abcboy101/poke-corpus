@@ -17,7 +17,7 @@
 }
 
 /* Line breaks, whitespace */
-.r, .c, .n, .e, .vertoffset {
+.r, .c, .n, .e, .vertoffset, .div {
   color: var(--text-gray);
 }
 
@@ -27,7 +27,7 @@
   white-space: normal;
 }
 
-.control-hide :is(.r, .c, .n, .vertoffset),
+.control-hide :is(.r, .c, .n, .vertoffset, .div),
 .control-show span.soft, .control-hide wbr.soft {
   display: none;
 }
@@ -46,6 +46,11 @@
   display: inline-block;
   scale: 1 2;
   line-height: var(--line-height);
+}
+
+/* Links */
+.link {
+  color: var(--text-link);
 }
 
 /* Spacing (ignored in non-Japanese games) */
@@ -224,7 +229,16 @@ td:lang(ja) :is(.spacing-0, .spacing-1, .spacing-2, .spacing-3) .var {
   }
 }
 
-/* Links */
-.link {
-  color: var(--text-link);
+/* Masters */
+[data-id^="masters.talk.Tips"] {
+  white-space: normal;
+}
+
+.word {
+  border-bottom: 1px dotted var(--text-gray);
+}
+
+.fallback {
+  color: var(--text-gray);
+  border-bottom: 1px dotted var(--text-gray);
 }
