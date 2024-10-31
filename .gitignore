@@ -28,3 +28,10 @@ yarn-error.log*
 
 .stylelintcache
 .eslintcache
+
+# remote files
+/corpus/GO/
+/corpus/Masters/
+/public/corpus/GO/
+/public/corpus/Masters/
+/src/res/files.json
