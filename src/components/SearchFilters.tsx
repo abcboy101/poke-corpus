@@ -57,6 +57,7 @@ function SearchCollections({collections, setCollections}: {collections: readonly
 
 function SearchLanguages({languages, setLanguages}: {languages: readonly string[], setLanguages: Dispatch<SetStateAction<readonly string[]>>}) {
   const { t } = useTranslation();
+  const isFullwidth = ['ja', 'ko', 'zh'].some((lang) => i18next.language.startsWith(lang));
   return (
     <>
       <div className="search-languages">
@@ -76,7 +77,7 @@ function SearchLanguages({languages, setLanguages}: {languages: readonly string[
               }}/>
               <label htmlFor={`language-${key}`}>
                 <span className="search-language-code"><abbr title={name}>{code}</abbr></span>
-                <span className="search-language-name">{name}</span>
+                <span className="search-language-name" style={isFullwidth ? collectionLabelStyle(name, 12) : collectionLabelStyle(name, 15)}>{name}</span>
               </label>
             </div>
           )

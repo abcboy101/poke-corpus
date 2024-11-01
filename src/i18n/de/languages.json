@@ -35,6 +35,10 @@
     "name": "Spanisch (Spanien)",
     "code": "SP-EU"
   },
+  "es-419": {
+    "name": "Spanisch (Lateinamerika)",
+    "code": "SP-LA"
+  },
   "ko": {
     "name": "Koreanisch",
     "code": "KOR"
@@ -45,10 +49,34 @@
   },
   "zh-Hans-CN": {
     "name": "Chinesisch (vereinfacht, China)",
-    "code": "CHS"
+    "code": "CHV (CN)"
   },
   "zh-Hant": {
     "name": "Chinesisch (traditionell)",
     "code": "CHT"
+  },
+  "pt-BR": {
+    "name": "Portugiesisch (Brasilien)",
+    "code": "PT-BR"
+  },
+  "th": {
+    "name": "Thailändisch",
+    "code": "THA"
+  },
+  "ru": {
+    "name": "Russisch",
+    "code": "RUS"
+  },
+  "tr": {
+    "name": "Türkisch",
+    "code": "TÜR"
+  },
+  "id": {
+    "name": "Indonesisch",
+    "code": "IND"
+  },
+  "hi": {
+    "name": "Hindi",
+    "code": "HIN"
   }
 }
