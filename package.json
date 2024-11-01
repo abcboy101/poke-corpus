@@ -14,8 +14,8 @@
     "react-i18next": "^15.0.2"
   },
   "scripts": {
-    "ci": "npm run lint && tsc --noEmit && vitest run && npm run hash",
-    "predeploy": "npm run ci && npm run build",
+    "ci": "npm run lint && tsc --noEmit && vitest run",
+    "predeploy": "npm run ci && npm run pull && npm run hash && npm run build",
     "deploy": "gh-pages -d dist",
     "start": "npm run hash && vite",
     "build": "tsc && vite build && npm run minify",
@@ -23,6 +23,7 @@
     "test": "vitest",
     "test:coverage": "vitest run --coverage --watch=false",
     "lint": "eslint && stylelint \"**/*.css\"",
+    "pull": "python scripts/remote_go.py && python scripts/remote_masters.py",
     "hash": "python scripts/gzip_files.py && python scripts/update_hash.py",
     "minify": "minify dist/index.html > dist/index.min.html && minify dist/noscript.css > dist/noscript.min.css && python scripts/run_minify.py"
   },

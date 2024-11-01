@@ -57,9 +57,17 @@ URLs can be invalidated when new features, games, or languages are added.
 
 
 ## Local setup
-You will need to have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
+You will need to have [Node.js](https://nodejs.org/), [npm](https://www.npmjs.com/), and [Python](https://www.python.org/) installed.
 To run the tool locally, clone the repository and run the following commands in the project directory:
 ```commandline
 npm ci
 npm start
+```
+
+Because text from live-service games changes frequently, their text is not included in this repository.
+Instead, they can be generated from external repositories.
+You will need to have the [Git](https://git-scm.com/) command line installed.
+To download or update these text files, run the following command:
+```commandline
+npm run pull
 ```
