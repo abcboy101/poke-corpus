@@ -1,6 +1,7 @@
 /* Variables */
 .var, .wait, .sfx, .unused, .null, .compressed, .gender, .number, .speaker {
   color: var(--text-gray);
+  white-space: nowrap;
 }
 
 .variables-hide :is(.var, .wait, .sfx, .unused, .null, .compressed) {
@@ -21,9 +22,8 @@
   color: var(--text-gray);
 }
 
-.soft,
-.collection-go,
-.rich-text-disabled table {
+.collection-go, .collection-masters,
+.soft, .rich-text-disabled table {
   white-space: normal;
 }
 
@@ -230,10 +230,6 @@ td:lang(ja) :is(.spacing-0, .spacing-1, .spacing-2, .spacing-3) .var {
 }
 
 /* Masters */
-[data-id^="masters.talk.Tips"] {
-  white-space: normal;
-}
-
 .word {
   border-bottom: 1px dotted var(--text-gray);
 }
