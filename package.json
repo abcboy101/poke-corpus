@@ -23,8 +23,8 @@
     "test": "vitest",
     "test:coverage": "vitest run --coverage --watch=false",
     "lint": "eslint && stylelint \"**/*.css\"",
-    "hash": "python update_hash.py",
-    "minify": "minify dist/index.html > dist/index.min.html && minify dist/noscript.css > dist/noscript.min.css && python run_minify.py"
+    "hash": "python scripts/gzip_files.py && python scripts/update_hash.py",
+    "minify": "minify dist/index.html > dist/index.min.html && minify dist/noscript.css > dist/noscript.min.css && python scripts/run_minify.py"
   },
   "browserslist": {
     "production": [
