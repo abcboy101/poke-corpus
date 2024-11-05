@@ -33,6 +33,8 @@ const jumpTo = (n: number) => {
   }
 };
 
+const addWordBreaksToID = (s: string, lang: string) => lang === codeId ? s.replaceAll(/([._/]|([a-z])(?=[A-Z])|([A-Za-z])(?=[0-9]))/gu, '$1<wbr>') : s;
+
 function JumpToSelect({headers}: {headers: readonly string[]}) {
   const { t } = useTranslation();
   return <nav className="results-jump">
@@ -82,9 +84,13 @@ function ResultsTable({collection, file, languages, lines, showId}: SearchTaskRe
     }
   };
 
+  const classes = ['results-table', `collection-${corpus.collections[collection].id ?? collection.toLowerCase()}`, `file-${file}`];
+  if (corpus.collections[collection].softWrap === true)
+    classes.push('soft');
+
   return (
     <div className="results-table-container">
-      <table ref={tableRef} className={`results-table collection-${corpus.collections[collection].id ?? collection.toLowerCase()} file-${file}`}>
+      <table ref={tableRef} className={classes.join(' ')}>
         <thead>
           <tr>
             {idIndex !== -1 ? <th className="results-table-actions-cell"><Copy callback={copyOnClick}/></th> : null}
@@ -97,7 +103,7 @@ function ResultsTable({collection, file, languages, lines, showId}: SearchTaskRe
               {idIndex !== -1 ? <Actions id={row[idIndex]}/> : null}
               {row.map((s, j) => (showId || languages[j] !== codeId)
                 ? <td key={j} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]}
-                  dangerouslySetInnerHTML={{__html: hasSpeakers ? expandSpeakers(s, collection, languages[j], viewSpeaker) : s}}></td>
+                  dangerouslySetInnerHTML={{__html: addWordBreaksToID(hasSpeakers ? expandSpeakers(s, collection, languages[j], viewSpeaker) : s, languages[j])}}></td>
                 : undefined)}
             </tr>
           )}

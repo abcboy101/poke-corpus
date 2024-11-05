@@ -22,9 +22,16 @@
   color: var(--text-gray);
 }
 
-.collection-go, .collection-masters,
 .soft, .rich-text-disabled table {
   white-space: normal;
+}
+
+td[lang="zxx"] wbr {
+  display: none;
+}
+
+.results-table.soft td[lang="zxx"] wbr {
+  display: unset;
 }
 
 .control-hide :is(.r, .c, .n, .vertoffset, .div),

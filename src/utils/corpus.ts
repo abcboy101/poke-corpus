@@ -48,6 +48,7 @@ export interface Collection {
   readonly id?: string,                   // used for looking up a specific line by ID
   readonly languages: readonly string[],  // available languages
   readonly structured: boolean,           // true if lines are aligned between languages, false otherwise
+  readonly softWrap?: boolean,            // true if lines are soft-wrapped, false otherwise
   readonly version?: string | {           // which version each language's files in the collection is from
     [language: string]: string,           // can be a string if the version number is the same between languages
   },
