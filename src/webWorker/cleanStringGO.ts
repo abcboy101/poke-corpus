@@ -19,83 +19,7 @@ const INITIAL = `(?:${HALF}*${MAIN_CONSONANT}|${MAIN_VOWEL})`;
 const FINAL = `(?:${HALANT}[${ZWNJ}${ZWJ}]?|${MATRA}*${NUKTA}?${HALANT}?)?${MODIFIER}?`;
 
 const replaceHindi: Record<string, string> = {
-  // Reph
-  '\uF000': REPH, // r (reph in र्द, र्र; reordering)
-  '\uF001': REPH, // r (reph in र्ट, र्ड; reordering)
-  '\uF002': REPH, // r (reph in र्ल; reordering)
-  '\uF003': REPH, // r (reph, unused; reordering)
-  '\uF004': REPH, // r (reph, unused; reordering)
-  '\uF005': REPH, // r (reph in र्क; reordering)
-  '\uF006': REPH, // r (reph, unused; reordering)
-  '\uF007': REPH, // r (reph, unused; reordering)
-
-  // Vowel marks
-  '\uF008': '\u0947', // long e (◌े in रे, टे, ट्रे)
-  '\uF009': '\u0947', // long e (unused)
-  '\uF00A': '\u0947', // long e (◌े in ले)
-  '\uF00B': '\u0947', // long e (unused)
-  '\uF00C': '\u0947', // long e (unused)
-  '\uF00D': '\u0947', // long e (◌े in के, फ्रे)
-  '\uF00E': '\u0947', // long e (unused)
-  '\uF00F': '\u0947', // long e (unused)
-  '\uF387': '\u0947', // long e (◌े in र्के; duplicate of F00E)
-  '\uF010': '\u0948', // ai (unused)
-  '\uF011': '\u0948', // ai (unused)
-  '\uF012': '\u0948', // ai (unused)
-  '\uF013': '\u0948', // ai (unused)
-  '\uF014': '\u0948', // ai (unused)
-  '\uF015': '\u0948', // ai (◌ै in कै)
-  '\uF016': '\u0948', // ai (unused)
-  '\uF017': '\u0948', // ai (unused)
-  '\uF018': '\u0941', // short u (◌ु in कु)
-  '\uF019': '\u0942', // long u (◌ू in कू)
-  '\uF01B': '\u0902', // ṁ (anusvara; ◌ं in लं, कैं)
-
-  // Syllable ligature
-  '\uF01A': 'द्भु', // dbhu (द्भ + ◌ु)
-
-  // Below-base forms
-  '\uF1B0': '्र', // r (rakar, ◌्र)
-
-  // Diacritics
-  '\uF300': '\u0901', // chandrabindu (◌ँ in ◌ैँ)
-  '\uF306': REPH, // r (reph; reordering)
-
-  // Vowel marks
-  '\uF30C': SHORT_I, // short i (◌ि in गि; reordering)
-  '\uF30D': SHORT_I, // short i (◌ि in रि; reordering)
-  '\uF30E': SHORT_I, // short i (unused; reordering)
-  '\uF30F': SHORT_I, // short i (◌ि in दि, डि, ठि; reordering)
-  '\uF310': SHORT_I, // short i (◌ि in टि; reordering)
-  '\uF311': SHORT_I, // short i (◌ि in कि, वि, हि, फि, बि, ब्रि; reordering)
-  '\uF312': SHORT_I, // short i (◌ि in ति, धि, नि; reordering)
-  '\uF313': SHORT_I, // short i (unused; reordering)
-  '\uF314': SHORT_I, // short i (◌ि in मि, लि, चि, भि; reordering)
-  '\uF315': SHORT_I, // short i (unused; reordering)
-  '\uF316': SHORT_I, // short i (unused; reordering)
-  '\uF317': SHORT_I, // short i (◌ि in शि; reordering)
-  '\uF318': SHORT_I, // short i (unused; reordering)
-  '\uF319': SHORT_I, // short i (◌ि in सि, क्षि; reordering)
-  '\uF31A': SHORT_I, // short i (unused; reordering)
-  '\uF31B': SHORT_I, // short i (unused; reordering)
-  '\uF31C': SHORT_I, // short i (unused; reordering)
-  '\uF31D': SHORT_I, // short i (unused; reordering)
-  '\uF31E': SHORT_I, // short i (unused; reordering)
-  '\uF31F': SHORT_I, // short i (unused; reordering)
-  '\uF320': SHORT_I, // short i (unused; reordering)
-  '\uF321': '\u0940', // long i (unused)
-  '\uF322': '\u0940', // long i (◌ी in री)
-  '\uF323': '\u0940', // long i (◌ी in टी, री)
-  '\uF324': '\u0940', // long i (unused)
-  '\uF325': '\u0940', // long i (◌ी in ली)
-  '\uF326': '\u0940', // long i (unused)
-  '\uF327': '\u0940', // long i (unused)
-  '\uF328': '\u0940', // long i (unused)
-  '\uF329': '\u0940', // long i (unused)
-  '\uF32A': '\u0940', // long i (◌ी in की, फी)
-  '\uF32B': '\u0940', // long i (unused)
-  '\uF32C': '\u0940', // long i (unused)
-
+  // CONSONANTS
   // Conjuncts
   '\uF337': 'क्ष', // ksha
   '\uF339': 'ज्ञ', // gya
@@ -129,9 +53,21 @@ const replaceHindi: Record<string, string> = {
   '\uF3D1': 'क्र', // kra (standard, left loop closed)
   '\uF3E3': 'द्म', // dma
   '\uF3E4': 'द्य', // dya
+  '\uF449': 'त्न', // tna
+  '\uF45A': 'द्द', // dda
+  '\uF46A': 'द्ध', // ddha
+  '\uF493': 'द्व', // dva
+  '\uF4F5': 'स्न', // sna (not used in most text)
 
-  // Full forms
-  '\uF334': 'छ', // cha (unused, GO uses the half form छ्‍ in all contexts)
+  // Stacked forms
+  '\uF5A2': 'ट्', // ṭ upper
+  '\uF5A3': 'ठ्', // ṭh upper
+  '\uF5A4': 'ड्', // ḍ upper
+  '\uF5A5': 'ढ्', // ḍh upper
+  '\uF61F': 'ट', // ṭ lower
+  '\uF625': 'ठ', // ṭh lower
+  '\uF62B': 'ड', // ḍ lower
+  '\uF633': 'ढ', // ḍh lower
 
   // Half forms (consonant + halant + ZWJ)
   '\uF33A': 'क्‍', // k
@@ -163,35 +99,105 @@ const replaceHindi: Record<string, string> = {
   '\uF35C': 'ह्‍', // h
   '\uF390': 'फ़्‍', // f
 
-  // Conjuncts
-  '\uF449': 'त्न', // tna
-  '\uF45A': 'द्द', // dda
-  '\uF46A': 'द्ध', // ddha
-  '\uF493': 'द्व', // dva
-  '\uF4F5': 'स्न', // sna
+  // Below-base forms
+  '\uF1B0': '्र', // r (rakar, ◌्र)
+
+  // Reph
+  '\uF000': REPH, // r (reph in र्द, र्र, र्ज़; reordering)
+  '\uF001': REPH, // r (reph in र्ट, र्ड; reordering)
+  '\uF002': REPH, // r (reph in र्ल; reordering)
+  '\uF003': REPH, // r (reph, unused; reordering)
+  '\uF004': REPH, // r (reph, unused; reordering)
+  '\uF005': REPH, // r (reph in र्क; reordering)
+  '\uF006': REPH, // r (reph, unused; reordering)
+  '\uF007': REPH, // r (reph, unused; reordering)
+  '\uF306': REPH, // r (reph; reordering)
+
+
+  // VOWELS
+  // Diacritics
+  '\uF300': '\u0901', // chandrabindu (◌ँ in ◌ैँ)
+
+  // Vowel marks
+  '\uF008': '\u0947', // long e (◌े in टे, रे, फ़्रे)
+  '\uF009': '\u0947', // long e (unused)
+  '\uF00A': '\u0947', // long e (◌े in ले)
+  '\uF00B': '\u0947', // long e (unused)
+  '\uF00C': '\u0947', // long e (unused)
+  '\uF00D': '\u0947', // long e (◌े in के, फ्रे)
+  '\uF00E': '\u0947', // long e (unused)
+  '\uF00F': '\u0947', // long e (unused)
+  '\uF387': '\u0947', // long e (◌े in र्के; duplicate of F00E)
+  '\uF010': '\u0948', // ai (unused)
+  '\uF011': '\u0948', // ai (unused)
+  '\uF012': '\u0948', // ai (unused)
+  '\uF013': '\u0948', // ai (unused)
+  '\uF014': '\u0948', // ai (unused)
+  '\uF015': '\u0948', // ai (◌ै in कै)
+  '\uF016': '\u0948', // ai (unused)
+  '\uF017': '\u0948', // ai (unused)
+  '\uF018': '\u0941', // short u (◌ु in कु)
+  '\uF019': '\u0942', // long u (◌ू in कू)
+  '\uF01B': '\u0902', // ṁ (anusvara; ◌ं in लं, कैं)
+  '\uF30C': SHORT_I, // short i (◌ि in गि; reordering)
+  '\uF30D': SHORT_I, // short i (◌ि in रि; reordering)
+  '\uF30E': SHORT_I, // short i (unused; reordering)
+  '\uF30F': SHORT_I, // short i (◌ि in ठि, डि, दि; reordering)
+  '\uF310': SHORT_I, // short i (◌ि in टि, र्पि; reordering)
+  '\uF311': SHORT_I, // short i (◌ि in कि, पि, फि, बि, वि, षि, हि, ढ़ि, ब्रि; reordering)
+  '\uF312': SHORT_I, // short i (◌ि in ति, धि, नि; reordering)
+  '\uF313': SHORT_I, // short i (unused; reordering)
+  '\uF314': SHORT_I, // short i (◌ि in चि, थि, भि, मि, लि, बि्, फ़्रि; reordering)
+  '\uF315': SHORT_I, // short i (unused; reordering)
+  '\uF316': SHORT_I, // short i (unused; reordering)
+  '\uF317': SHORT_I, // short i (◌ि in शि; reordering)
+  '\uF318': SHORT_I, // short i (unused; reordering)
+  '\uF319': SHORT_I, // short i (◌ि in सि, क्षि, कि्; reordering)
+  '\uF31A': SHORT_I, // short i (unused; reordering)
+  '\uF31B': SHORT_I, // short i (unused; reordering)
+  '\uF31C': SHORT_I, // short i (unused; reordering)
+  '\uF31D': SHORT_I, // short i (◌ि in मि्, ल्फ़ि, स्पि; reordering)
+  '\uF31E': SHORT_I, // short i (◌ि in खि, जि, क्लि, ल्कि, स्टि; reordering)
+  '\uF31F': SHORT_I, // short i (unused; reordering)
+  '\uF320': SHORT_I, // short i (◌ि in क्टि, क्वि, न्टि, ष्मि, स्कि, स्लि, स्वि; reordering)
+  '\uF321': '\u0940', // long i (unused)
+  '\uF322': '\u0940', // long i (◌ी in री)
+  '\uF323': '\u0940', // long i (◌ी in टी)
+  '\uF324': '\u0940', // long i (unused)
+  '\uF325': '\u0940', // long i (◌ी in ली)
+  '\uF326': '\u0940', // long i (unused)
+  '\uF327': '\u0940', // long i (unused)
+  '\uF328': '\u0940', // long i (unused)
+  '\uF329': '\u0940', // long i (unused)
+  '\uF32A': '\u0940', // long i (◌ी in की, फी)
+  '\uF32B': '\u0940', // long i (◌ी in फ़्री)
+  '\uF32C': '\u0940', // long i (unused)
+
+
+  // SYLLABLES
+  // Full forms
+  '\uF334': 'छ', // cha (unused, GO uses the half form छ्‍ in all contexts)
 
   // Syllable ligatures
+  '\uF01A': 'द्भु', // dbhu (द्भ + ◌ु)
   '\uF388': 'रु', // ru
   '\uF555': 'रू', // rū
   '\uF564': 'हु', // hu
   '\uF565': 'हू', // hū
-
-  // Stacked forms
-  '\uF5A2': 'ट्', // ṭ upper
-  '\uF5A3': 'ठ्', // ṭh upper
-  '\uF5A4': 'ड्', // ḍ upper
-  '\uF5A5': 'ढ्', // ḍh upper
-  '\uF61F': 'ट', // ṭ lower
-  '\uF625': 'ठ', // ṭh lower
-  '\uF62B': 'ड', // ḍ lower
-  '\uF633': 'ढ', // ḍh lower
 };
 
-function preprocessHindi(value: string) {
+function preprocessHindi(value: string, fixMalformed: boolean = true) {
   // Perform all simple mappings
-  value = value.replace(/\u094D/g, '\u094D\u200C'); // explicit halant
-  value = value.replace(/\u093F/g, SHORT_I); // short i
-  value = value.replace(/[\uF000-\uF633]/g, (c) => replaceHindi[c] ?? c); // Private Use
+  value = value.replace(/\u094D/gu, '\u094D\u200C'); // explicit halant
+  value = value.replace(/\u093F/gu, SHORT_I); // short i
+  value = value.replace(/[\uF000-\uF633]/gu, (c) => replaceHindi[c] ?? c); // Private Use
+
+  // Malformed double short i
+  // short i + short i + consonant cluster + consonant cluster (malformed)
+  // short i + consonant cluster + short i + consonant cluster (visual)
+  // consonant cluster + short i + consonant cluster + short i (logical)
+  if (fixMalformed)
+    value = value.replace(new RegExp(`${SHORT_I}${SHORT_I}(${INITIAL}${FINAL}${REPH}?)`, 'gu'), `${SHORT_I}$1${SHORT_I}`);
 
   // short i + consonant cluster + reph (visual)
   // reph + consonant cluster + short i (logical)
@@ -213,8 +219,9 @@ function preprocessHindi(value: string) {
   value = value.replaceAll(ZWNJ, '');
   value = value.replaceAll(ZWJ, '');
 
-  value = value.replace(/\u094D\u093C/g, '\u093C\u094D'); // halant + nukta -> nukta + halant
-  value = value.replace(/टय्ॎ/gu, 'ट्य'); // malformed ṭya (Buizel)
+  value = value.replace(/\u094D\u093C/gu, '\u093C\u094D'); // halant + nukta -> nukta + halant
+  if (fixMalformed)
+    value = value.replace(/टय्ॎ/gu, 'ट्य'); // malformed ṭya (Buizel)
   return value;
 }
 //#endregion
@@ -266,10 +273,7 @@ const replaceThai: Record<string, string> = {
 };
 
 function preprocessThai(s: string) {
-  Object.entries(replaceThai).forEach(([v1, v2]) => {
-    s = s.replaceAll(v1, v2);
-  });
-  return s;
+  return s.replace(/[\uF700-\uF71A]/gu, (c) => replaceThai[c] ?? c);
 }
 //#endregion
 

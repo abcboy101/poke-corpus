@@ -15,7 +15,7 @@
   },
   "scripts": {
     "ci": "npm run lint && tsc --noEmit && vitest run",
-    "predeploy": "npm run ci && npm run pull && npm run hash && npm run build",
+    "predeploy": "npm run pull && npm run hash && npm run ci && npm run build",
     "deploy": "gh-pages -d dist",
     "start": "npm run hash && vite",
     "build": "tsc && vite build && npm run minify",

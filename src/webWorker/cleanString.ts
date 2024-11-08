@@ -311,8 +311,8 @@ function remapSwitchSpecialCharacters(s: string) {
 // Pixel font used to display level in battle
 function remapChinaLGPEPixelFont(s: string) {
   return (s
-    .replaceAll(/\b(ab|ef|ij)\b/g, '等级')
-    .replaceAll(/\b(cd|gh|kl)\b/g, '战力')
+    .replaceAll(/\b(ab|ef|ij)\b/gu, '等级')
+    .replaceAll(/\b(cd|gh|kl)\b/gu, '战力')
   );
 }
 

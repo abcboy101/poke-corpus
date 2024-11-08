@@ -1,4 +1,4 @@
-export const escapeRegex = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+export const escapeRegex = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/gu, '\\$&');
 
 /* Wrappers for localStorage access, in case localStorage is blocked. */
 export function localStorageGetItem(key: string) {
