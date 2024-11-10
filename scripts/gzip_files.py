@@ -12,6 +12,8 @@ CORPUS_JSON = './src/res/corpus.json'
 with open(CORPUS_JSON, 'r', encoding='utf-8') as f:
     corpus = json.load(f)
 
+print('Checking corpus for changes...')
+modified = []
 for collection_key, collection in corpus['collections'].items():
     for language in collection['languages']:
         for file in collection['files']:
@@ -45,3 +47,18 @@ for collection_key, collection in corpus['collections'].items():
             gzip_path.parent.mkdir(parents=True, exist_ok=True)
             with open(gzip_path, 'wb') as f:
                 f.write(cmp)
+            modified.append(gzip_path)
+
+# Optimize
+PATH_LEANIFY = './scripts/bin/Leanify.exe'
+if modified and os.path.exists(PATH_LEANIFY):
+    import concurrent.futures
+    import subprocess
+
+    def optimize(gzip_path: str):
+        subprocess.run([PATH_LEANIFY, gzip_path], capture_output=True)
+        print(f'Compressed {gzip_path}')
+
+    print('Compressing modified files...')
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
+        executor.map(optimize, modified)
