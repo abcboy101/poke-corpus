@@ -1,4 +1,3 @@
-import 'compression-streams-polyfill';
 import { preprocessString, convertWhitespace, postprocessString } from './cleanString';
 import { codeId, Speaker, Literals } from '../utils/corpus';
 import { SearchTaskResultDone, SearchTaskResultNotDone } from '../utils/Status';

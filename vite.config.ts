@@ -4,6 +4,7 @@ import autoprefixer from 'autoprefixer';
 import eslint from 'vite-plugin-eslint2';
 import stylelint from 'vite-plugin-stylelint';
 import { VitePWA } from 'vite-plugin-pwa';
+import browserslistToEsbuild from 'browserslist-to-esbuild';
 
 function manualChunks(id: string) {
   if (id.includes('workbox')) {
@@ -66,6 +67,7 @@ export default defineConfig({
     include: ['compression-streams-polyfill'],
   },
   build: {
+    target: browserslistToEsbuild(),
     rollupOptions: {
       output: {
         manualChunks: manualChunks,

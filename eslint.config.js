@@ -3,11 +3,13 @@ import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
 import stylistic from '@stylistic/eslint-plugin';
+import compat from "eslint-plugin-compat";
 
 export default [
   { ignores: ["dist/", "dev-dist/"] },
   { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
   { languageOptions: { globals: globals.browser } },
+  compat.configs["flat/recommended"],
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
@@ -36,6 +38,11 @@ export default [
       "@stylistic/no-mixed-operators": "error",
       "@stylistic/quote-props": ["error", "consistent-as-needed"],
     },
-    settings: { react: { version: "detect" } },
+  },
+  {
+    settings: {
+      react: { version: "detect" },
+      polyfills: ["DecompressionStream"],
+    },
   },
 ];

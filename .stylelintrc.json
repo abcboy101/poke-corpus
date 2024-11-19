@@ -1,13 +1,26 @@
 {
   "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-no-unsupported-browser-features"],
   "rules": {
     "color-hex-length": "long",
     "comment-empty-line-before": null,
-    "value-keyword-case": [
-      "lower",
-      {
-        "ignoreProperties": ["/--font-family-.+/"]
-      }
-    ]
+    "value-keyword-case": ["lower", {
+      "ignoreProperties": ["/--font-family-.+/"]
+    }],
+    "plugin/no-unsupported-browser-features": [true, {
+      "browsers": [
+        "> 0.2%",
+        "last 2 versions",
+        "not dead",
+        "not Firefox ESR",
+        "not safari < 16.4",
+        "not ios_saf < 16.4",
+        "not kaios <= 3.1",
+        "not and_uc <= 15.5",
+        "not and_qq <= 14.9",
+        "not op_mini all"
+      ],
+      "severity": "warning"
+    }]
   }
 }

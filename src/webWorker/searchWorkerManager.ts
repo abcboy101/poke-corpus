@@ -1,3 +1,4 @@
+import 'compression-streams-polyfill';
 import corpus, { codeId } from '../utils/corpus';
 import { getCache, getFile, getFilePath, getFileRemote, getIndexedDB } from '../utils/files';
 import SearchWorker from "./searchWorker.ts?worker";
