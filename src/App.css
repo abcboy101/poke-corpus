@@ -1,6 +1,8 @@
 /* Colorschemes */
 
 :root {
+  color-scheme: light dark;
+
   --background-light: #ddddee;
   --highlight-light: #eeeeff;
   --text-light: #111111;
@@ -66,6 +68,8 @@
   }
 
   .mode-light {
+    color-scheme: light;
+
     --background: var(--background-light);
     --highlight: var(--highlight-light);
     --text: var(--text-light);
@@ -114,6 +118,8 @@
   }
 
   .mode-dark {
+    color-scheme: dark;
+
     --background: var(--background-dark);
     --highlight: var(--highlight-dark);
     --text: var(--text-dark);
