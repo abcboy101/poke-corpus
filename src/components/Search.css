@@ -74,6 +74,10 @@
   line-height: var(--line-height-narrow);
 }
 
+.search-invalid {
+  opacity: 0.3;
+}
+
 .search-language-code {
   display: none;
   white-space: nowrap;
