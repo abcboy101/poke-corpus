@@ -1,23 +1,22 @@
-import { ChangeEventHandler, Dispatch, RefObject, SetStateAction, useRef } from 'react';
+import { ChangeEventHandler, Dispatch, RefObject, SetStateAction, useRef, useState } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { ModalArguments } from './Modal';
-import { isMode, isValidLimit, localStorageGetItem, localStorageSetItem, Mode, modes, yieldToMain } from '../utils/utils';
+import { getMode, isMode, isValidLimit, localStorageGetItem, localStorageSetItem, Mode, modes, yieldToMain } from '../utils/utils';
 
 import './Options.css';
 import supportedLngs from '../i18n/supportedLngs.json';
 
 interface OptionsParams {
   showModal: (args: ModalArguments) => void,
-  mode: Mode,
-  setMode: Dispatch<SetStateAction<Mode>>,
   limit: number,
   setLimit: Dispatch<SetStateAction<number>>,
 }
 
-function OptionsMenu({showModal, mode, setMode, limit, limitRef}: OptionsParams & {limitRef: RefObject<HTMLInputElement>}) {
+function OptionsMenu({showModal, limit, limitRef}: OptionsParams & {limitRef: RefObject<HTMLInputElement>}) {
   const { t } = useTranslation();
+  const [mode, setMode] = useState<Mode>(getMode);
 
   const onChangeLanguage: ChangeEventHandler<HTMLSelectElement> = async (e) => {
     await yieldToMain();
@@ -39,6 +38,7 @@ function OptionsMenu({showModal, mode, setMode, limit, limitRef}: OptionsParams 
     if (isMode(newMode)) {
       setMode(newMode);
       localStorageSetItem('mode', newMode);
+      document.body.classList.replace(`mode-${mode}`, `mode-${newMode}`);
     }
   };
 

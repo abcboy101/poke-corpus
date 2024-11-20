@@ -41,93 +41,33 @@
 
 
 /* Colors from Gen 5 */
+/* Primary text color in light mode, text shadow color in dark mode unless reversed */
 .collection-bw, .collection-b2w2 {
   /* VAR FF00 */
-  --color-1: #C30000;
-  --color-2: #0000D3;
-  --color-3: #EBE300;
-  --color-4: #20B200;
-  --color-5: #F3B200;
-  --color-6: #EB00BA;
+  --color-1: light-dark(#C30000, #FB7171);
+  --color-2: light-dark(#0000D3, #7192FB);
+  --color-3: light-dark(#AAA200, #EBE300); /* reversed */
+  --color-4: light-dark(#20B200, #8AFB71);
+  --color-5: light-dark(#F3B200, #FBDB92);
+  --color-6: light-dark(#EB00BA, #FB79EB);
   --color-255: var(--color-2);  /* retrieve cached color */
 
   /* VAR BD00 */
-  --color-5-6-0: #F34141;  /* Hall of Fame interface */
+  --color-5-6-0: light-dark(#922828, #F34141);  /* Hall of Fame interface, reversed */
   --color-4-0-2: #96202BC0;  /* PWT Mix Tournament */
-}
-
-/* Use text shadow colors as alternates */
-@media screen {
-  @media (prefers-color-scheme: light) {
-    .mode-system :is(.collection-bw, .collection-b2w2) {
-      --color-3: #AAA200;
-      --color-5-6-0: #922828;
-    }
-  }
-
-  .mode-light :is(.collection-bw, .collection-b2w2) {
-    --color-3: #AAA200;
-    --color-5-6-0: #922828;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .mode-system :is(.collection-bw, .collection-b2w2) {
-      --color-1: #FB7171;
-      --color-2: #7192FB;
-      --color-4: #8AFB71;
-      --color-5: #FBDB92;
-      --color-6: #FB79EB;
-    }
-  }
-
-  .mode-dark :is(.collection-bw, .collection-b2w2) {
-    --color-1: #FB7171;
-    --color-2: #7192FB;
-    --color-4: #8AFB71;
-    --color-5: #FBDB92;
-    --color-6: #FB79EB;
-  }
 }
 
 
 /* Colors from Gen 4 (VAR FF00) */
+/* Primary text color in light mode, text shadow color in dark mode unless reversed */
 .collection-dp, .collection-pt, .collection-hgss {
-  --color-1: #EB2010;
-  --color-2: #0071FB;
-  --color-3: #61B249;  /* Grass-type starter Pokémon, Green Sphere */
-  --color-4: #FBCBF3;  /* Pale Sphere */
-  --color-5: #EB59EB;  /* Korean female color (pink) */
+  --color-1: light-dark(#EB2010, #FBAABA);
+  --color-2: light-dark(#0071FB, #79BAEB);
+  --color-3: light-dark(#61B249, #B2D392);  /* Grass-type starter Pokémon, Green Sphere */
+  --color-4: light-dark(#AA8ABA, #FBCBF3);  /* Pale Sphere, reversed */
+  --color-5: light-dark(#EB59EB, #FBAAFB);  /* Korean female color (pink) */
   --color-101: var(--color-1);  /* cache color 1 */
   --color-255: var(--color-1);  /* retrieve cached color */
-}
-
-/* Use text shadow colors as alternates */
-@media screen {
-  @media (prefers-color-scheme: light) {
-    .mode-system :is(.collection-dp, .collection-pt, .collection-hgss) {
-      --color-4: #AA8ABA;
-    }
-  }
-
-  .mode-light :is(.collection-dp, .collection-pt, .collection-hgss) {
-    --color-4: #AA8ABA;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .mode-system :is(.collection-dp, .collection-pt, .collection-hgss) {
-      --color-1: #FBAABA;
-      --color-2: #79BAEB;
-      --color-3: #B2D392;
-      --color-5: #FBAAFB;
-    }
-  }
-
-  .mode-dark :is(.collection-dp, .collection-pt, .collection-hgss) {
-    --color-1: #FBAABA;
-    --color-2: #79BAEB;
-    --color-3: #B2D392;
-    --color-5: #FBAAFB;
-  }
 }
 
 

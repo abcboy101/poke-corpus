@@ -1,8 +1,8 @@
-import { lazy, Suspense, useState, useTransition } from 'react';
+import { lazy, Suspense, useEffect, useState, useTransition } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { getLimit, getMode, Mode } from './utils/utils';
+import { getLimit, getMode } from './utils/utils';
 import Modal, { ModalArguments } from './components/Modal';
 
 import './App.css';
@@ -28,11 +28,15 @@ function Placeholder() {
 function App() {
   const { t } = useTranslation();
   const [, startTransition] = useTransition();
-  const [mode, setMode] = useState<Mode>(getMode);
   const [limit, setLimit] = useState(getLimit);
   const [view, setView] = useState<View>('Search');
   const [modalArguments, setModalArguments] = useState<ModalArguments | null>(null);
   const [cacheManagerLoaded, setCacheManagerLoaded] = useState(false);
+
+  useEffect(() => {
+    const mode = getMode();
+    document.body.classList.add(`mode-${mode}`);
+  }, []);
 
   const showModal = (args: ModalArguments) => {
     setModalArguments(args);
@@ -58,7 +62,7 @@ function App() {
           <img className="header-logo" src={logo} alt="" height="40" width="40" /> {t('title', {version: t('version')})}
         </a>
       </h1>
-      <Suspense><Options showModal={showModal} mode={mode} setMode={setMode} limit={limit} setLimit={setLimit}/></Suspense>
+      <Suspense><Options showModal={showModal} limit={limit} setLimit={setLimit}/></Suspense>
     </header>
   );
 
@@ -74,7 +78,7 @@ function App() {
     </footer>
   );
 
-  const classes = ['app', `mode-${mode}`, `view-${view.toLowerCase()}`];
+  const classes = ['app', `view-${view.toLowerCase()}`];
   if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent))
     classes.push('ua-safari');
   return (

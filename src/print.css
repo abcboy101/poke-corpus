@@ -1,24 +1,11 @@
 @media print {
   /* Use light colorscheme, but with pure white background and black text */
   :root {
-    --background-light: white !important;
-    --highlight-light: white !important;
-    --text-light: black !important;
-    --background: var(--background-light);
-    --highlight: var(--highlight-light);
-    --text: var(--text-light);
-    --text-gray: var(--text-gray-light);
-    --progress-bar-background: var(--highlight);
-    --progress-bar-border: var(--text);
-    --progress-bar-color: var(--progress-bar-color-light);
-    --accent: var(--accent-light);
-    --gender-male-color: var(--gender-male-color-light);
-    --gender-female-color: var(--gender-female-color-light);
-    --number-singular-color: var(--number-singular-color-light);
-    --number-plural-color: var(--number-plural-color-light);
-    --version-scarlet-color: var(--version-scarlet-color-light);
-    --version-violet-color: var(--version-violet-color-light);
-    --modal-backdrop-color: var(--modal-backdrop-color-light);
+    color-scheme: light !important;
+
+    --background: white !important;
+    --highlight: white !important;
+    --text: black !important;
   }
 
   /* Display all content, even if it overflows */
@@ -26,7 +13,7 @@
     height: auto !important;
     width: auto !important;
     overflow: visible !important;
-    background: var(--background-light) !important;
+    background: var(--background) !important;
   }
 
   /* Hide navigation and interactive elements  */
