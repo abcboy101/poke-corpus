@@ -37,6 +37,8 @@ for collection_key, collection in corpus['collections'].items():
                     cmp = f.read()
                 dec = gzip.decompress(cmp)
                 if dec.replace(b'\r\n', b'\n') == buf.replace(b'\r\n', b'\n'):
+                    # Update modified time to prevent a false positive in the future
+                    os.utime(gzip_path)
                     continue
                 os.remove(gzip_path)
             except FileNotFoundError:
