@@ -175,7 +175,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
   const cancelVisible = statusInProgress.includes(status);
   const submitDisabled = cancelVisible || query.length === 0 || collections.length === 0 || languages.length === 0 || status === 'waiting';
 
-  return <form className="search search-form" onSubmit={onSubmit}>
+  return <form className="search search-form" role="search" onSubmit={onSubmit}>
     <div className="search-bar">
       <div className="item-group">
         <label htmlFor="query">{t('query')}</label>
