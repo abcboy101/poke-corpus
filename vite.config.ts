@@ -5,6 +5,7 @@ import eslint from 'vite-plugin-eslint2';
 import stylelint from 'vite-plugin-stylelint';
 import { VitePWA } from 'vite-plugin-pwa';
 import browserslistToEsbuild from 'browserslist-to-esbuild';
+import postcssLightDarkFunction from '@csstools/postcss-light-dark-function';
 
 function manualChunks(id: string) {
   if (id.includes('workbox')) {
@@ -48,7 +49,10 @@ export default defineConfig({
   ],
   css: {
     postcss: {
-      plugins: [autoprefixer()],
+      plugins: [
+        autoprefixer(),
+        postcssLightDarkFunction(),
+      ],
     },
   },
   test: {
