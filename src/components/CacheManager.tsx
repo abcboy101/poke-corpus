@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, useTransition } from "react";
 import { useTranslation } from "react-i18next";
 
 import CacheManagerWorker from '../webWorker/cacheManagerWorker.ts?worker';
@@ -15,9 +15,72 @@ import ProgressBar from "./ProgressBar";
 
 type CachedFileInfoEntry = readonly [readonly [string, string, string], number, boolean];
 
+function CacheStatus({cacheStorageEnabled, cachedFileInfo}: {cacheStorageEnabled: boolean, cachedFileInfo: readonly CachedFileInfoEntry[]}) {
+  const { t } = useTranslation();
+  const storageUsedAmount = useMemo(() => formatBytesParams(cachedFileInfo.map(([, size]) => size).reduce((a, b) => a + b, 0)), [cachedFileInfo]);
+  return (
+    <ul>
+      <li>{t('cache.storageStatus', {val: cacheStorageEnabled ? t('cache.storageEnabled') : t('cache.storageDisabled')})}</li>
+      {cacheStorageEnabled && <li>{t('cache.filesStored', {count: cachedFileInfo.length})}</li>}
+      {cacheStorageEnabled && <li>{t('cache.storageUsed', storageUsedAmount)}</li>}
+    </ul>
+  );
+}
+
+function CacheProgress({loadedBytes, totalBytes, progress}: {loadedBytes: number, totalBytes: number, progress: number}) {
+  const { t } = useTranslation();
+  return (
+    <div className="cache-entry-notice">
+      {
+        t('cache.loading', {
+          message: t('cache.inProgress'),
+          loaded: t('cache.size', formatBytesParams(loadedBytes)),
+          total: t('cache.size', formatBytesParams(totalBytes)),
+        })
+      }
+      <ProgressBar progress={progress}/>
+    </div>
+  );
+}
+
+function CacheEntryList({cachedFileInfo, cacheCollections, clearCachedFile}: {cachedFileInfo: readonly CachedFileInfoEntry[], cacheCollections: (collectionKey: string) => void, clearCachedFile: (collectionKey: string) => void}) {
+  const { t } = useTranslation();
+  const fileInfoPerCollection = useMemo(() => {
+    const value = Object.entries(corpus.collections).map(([collectionKey]) => {
+      const collectionFileInfo = cachedFileInfo.filter(([[collection]]) => collectionKey === collection);
+      return [
+        collectionKey,
+        collectionFileInfo.map(([, size]) => size).reduce((a, b) => a + b, 0),
+        collectionFileInfo.every(([, , current]) => current === true),
+      ] as const;
+    }).filter(([, size]) => size > 0);
+    return value;
+  }, [cachedFileInfo]);
+  return (
+    <div className="cache-entry-list">
+      {
+        cachedFileInfo.length > 0
+        && fileInfoPerCollection.map(([key, size, current], index) =>
+          <div key={index} className={`cache-entry cache-entry-${current ? 'current' : 'outdated'}`}>
+            <div className="cache-entry-text">
+              <div><abbr title={t(`collections:${key}.name`)}>{t(`collections:${key}.short`)}</abbr></div>
+              <div>{t('cache.size', formatBytesParams(size))}</div>
+            </div>
+            <div className="cache-entry-actions">
+              { !current && <Refresh callback={() => cacheCollections(key)}/> }
+              <Delete callback={() => clearCachedFile(key)}/>
+            </div>
+          </div>
+        )
+      }
+    </div>
+  );
+}
+
 function CacheManager({active, showModal}: {active: boolean, showModal: (args: ModalArguments) => void}) {
   const { t } = useTranslation();
-  const [cacheStorageEnabled, setCacheStorageEnabled] = useState(true);
+  const [isPending, startTransition] = useTransition();
+  const [cacheStorageEnabled, setCacheStorageEnabled] = useState(false);
   const [cachedFileInfo, setCachedFileInfo] = useState<readonly CachedFileInfoEntry[]>([]);
   const [cacheInProgress, setCacheInProgress] = useState<boolean | null>(false);
   const [progress, setProgress] = useState(0.0);
@@ -150,8 +213,12 @@ function CacheManager({active, showModal}: {active: boolean, showModal: (args: M
 
   // Refresh on page load
   useEffect(() => {
-    checkCacheStorageEnabled();
-    checkCachedFiles();
+    startTransition(async () => {
+      await Promise.all([
+        checkCacheStorageEnabled(),
+        checkCachedFiles(),
+      ]);
+    });
   }, []);
 
   // Refresh on switch to cache manager
@@ -161,20 +228,6 @@ function CacheManager({active, showModal}: {active: boolean, showModal: (args: M
       checkCachedFiles();
     }
   }, [active]);
-
-  const storageUsedAmount = () => formatBytesParams(cachedFileInfo.map(([, size]) => size).reduce((a, b) => a + b, 0));
-
-  const fileInfoPerCollection = () => {
-    const value = Object.entries(corpus.collections).map(([collectionKey]) => {
-      const collectionFileInfo = cachedFileInfo.filter(([[collection]]) => collectionKey === collection);
-      return [
-        collectionKey,
-        collectionFileInfo.map(([, size]) => size).reduce((a, b) => a + b, 0),
-        collectionFileInfo.every(([, , current]) => current === true),
-      ] as const;
-    }).filter(([, size]) => size > 0);
-    return value;
-  };
 
   const cacheAllModal = async () => {
     const size = await getDownloadSizeTotal(Object.keys(corpus.collections));
@@ -230,44 +283,14 @@ function CacheManager({active, showModal}: {active: boolean, showModal: (args: M
         <button onClick={clearCacheModal}>{t('clearCache')}</button>
       </div>
       <div className="cache cache-results app-window">
-        <ul>
-          <li>{t('cache.storageStatus', {val: cacheStorageEnabled ? t('cache.storageEnabled') : t('cache.storageDisabled')})}</li>
-          {cacheStorageEnabled && <li>{t('cache.filesStored', {count: cachedFileInfo.length})}</li>}
-          {cacheStorageEnabled && <li>{t('cache.storageUsed', storageUsedAmount())}</li>}
-        </ul>
         {
-          cacheInProgress
-            ? (
-              <div className="cache-entry-notice">
-                {
-                  t('cache.loading', {
-                    message: t('cache.inProgress'),
-                    loaded: t('cache.size', formatBytesParams(loadedBytes)),
-                    total: t('cache.size', formatBytesParams(totalBytes)),
-                  })
-                }
-                <ProgressBar progress={progress}/>
-              </div>
-            )
-            : (
-              <div className="cache-entry-list">
-                {
-                  cachedFileInfo.length > 0
-                  && fileInfoPerCollection().map(([key, size, current], index) =>
-                    <div key={index} className={`cache-entry cache-entry-${current ? 'current' : 'outdated'}`}>
-                      <div className="cache-entry-text">
-                        <div><abbr title={t(`collections:${key}.name`)}>{t(`collections:${key}.short`)}</abbr></div>
-                        <div>{t('cache.size', formatBytesParams(size))}</div>
-                      </div>
-                      <div className="cache-entry-actions">
-                        { !current && <Refresh callback={() => cacheCollections(key)}/> }
-                        <Delete callback={() => clearCachedFile(key)}/>
-                      </div>
-                    </div>
-                  )
-                }
-              </div>
-            )
+          !isPending && <>
+            <CacheStatus cacheStorageEnabled={cacheStorageEnabled} cachedFileInfo={cachedFileInfo} />
+            { cacheInProgress
+              ? <CacheProgress loadedBytes={loadedBytes} totalBytes={totalBytes} progress={progress} />
+              : <CacheEntryList cachedFileInfo={cachedFileInfo} cacheCollections={cacheCollections} clearCachedFile={clearCachedFile} />
+            }
+          </>
         }
       </div>
     </>

@@ -14,7 +14,7 @@ interface OptionsParams {
   setLimit: Dispatch<SetStateAction<number>>,
 }
 
-function OptionsMenu({showModal, limit, limitRef}: OptionsParams & {limitRef: RefObject<HTMLInputElement>}) {
+function OptionsMenu({showModal, limit, limitRef}: OptionsParams & {limitRef: RefObject<HTMLInputElement | null>}) {
   const { t } = useTranslation();
   const [mode, setMode] = useState<Mode>(getMode);
 

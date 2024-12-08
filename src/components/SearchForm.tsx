@@ -137,6 +137,12 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       localStorageSetItem('corpus-filtersVisible', filtersVisible.toString());
     }
 
+    // If the Search view is taller than the viewport, automatically hide the filters on submit.
+    const viewSearch = document.getElementsByClassName('view-search').item(0);
+    if (viewSearch && viewSearch.scrollHeight > viewSearch.clientHeight) {
+      setFiltersVisible(false);
+    }
+
     const params: SearchTaskParams = {
       query: query,
       type: type,
