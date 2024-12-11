@@ -186,6 +186,11 @@ button svg, a svg {
   top: 0.1em;
 }
 
+.icon {
+  height: 1em;
+  width: 1em;
+}
+
 footer {
   text-align: center;
   line-height: var(--line-height-narrow);
