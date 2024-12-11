@@ -2,9 +2,9 @@ import { CSSProperties, Dispatch, SetStateAction } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { corpus } from '../utils/corpus';
+import { corpus } from '../../utils/corpus';
 
-import '../i18n/config';
+import '../../i18n/config';
 
 /**
  * Calculates the appropriate styles for a search filter collection label.

@@ -2,17 +2,17 @@ import { Dispatch, SetStateAction, useEffect, useMemo, useState } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { SearchResultLines } from '../webWorker/searchWorkerManager';
+import { SearchResultLines } from '../../webWorker/searchWorkerManager';
 import Spinner from './Spinner';
-import ProgressBar from './ProgressBar';
-import { Status, statusInProgress } from '../utils/Status';
+import ProgressBar from '../ProgressBar';
+import { Status, statusInProgress } from '../../utils/Status';
 
 import './Results.css';
 import './ResultsText.css';
 import './ResultsTextColor.css';
-import logo from '../res/logo.svg';
-import '../i18n/config';
-import { defaultLimit } from '../utils/utils';
+import logo from '../../res/logo.svg';
+import '../../i18n/config';
+import { defaultLimit } from '../../utils/utils';
 import { ResultsSections, ShowSectionCallback } from './ResultsSections';
 
 /**

@@ -2,13 +2,13 @@ import { ChangeEventHandler, FormEventHandler, MouseEventHandler, useCallback, u
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { SearchTaskParams, searchTypes, isSearchType, searchParamsToHash, hashToSearchParams, defaultSearchParams } from '../utils/searchParams';
-import { corpus, codeId } from '../utils/corpus';
+import { SearchTaskParams, searchTypes, isSearchType, searchParamsToHash, hashToSearchParams, defaultSearchParams } from '../../utils/searchParams';
+import { corpus, codeId } from '../../utils/corpus';
 import SearchFilters from './SearchFilters';
-import { escapeRegex, getRichText, localStorageGetItem, localStorageSetItem } from '../utils/utils';
-import { Status, statusInProgress } from '../utils/Status';
+import { escapeRegex, getRichText, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
+import { Status, statusInProgress } from '../../utils/Status';
 
-import '../i18n/config';
+import '../../i18n/config';
 
 const defaultParams: typeof defaultSearchParams = {
   ...defaultSearchParams,

@@ -1,18 +1,18 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import SearchWorkerManager from '../webWorker/searchWorkerManager.ts?worker';
-import { SearchParams } from '../utils/searchParams';
-import { SearchResults, SearchResultLines } from '../webWorker/searchWorkerManager';
-import { Status, statusError, statusInProgress } from '../utils/Status';
+import SearchWorkerManager from '../../webWorker/searchWorkerManager.ts?worker';
+import { SearchParams } from '../../utils/searchParams';
+import { SearchResults, SearchResultLines } from '../../webWorker/searchWorkerManager';
+import { Status, statusError, statusInProgress } from '../../utils/Status';
 import SearchForm from './SearchForm';
 import Results from './Results';
-import { ModalArguments } from './Modal';
+import { ModalArguments } from '../Modal';
 
 import './Search.css';
-import '../i18n/config';
-import { formatBytesParams, localStorageGetItem, localStorageSetItem } from '../utils/utils';
-import { getDownloadSizeTotal } from '../utils/files';
+import '../../i18n/config';
+import { formatBytesParams, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
+import { getDownloadSizeTotal } from '../../utils/files';
 
 const searchModalWarn = 'corpus-warn';
 const searchModalThreshold = 20_000_000; // 20 MB

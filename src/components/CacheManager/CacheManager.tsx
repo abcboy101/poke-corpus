@@ -1,17 +1,17 @@
 import { useEffect, useMemo, useRef, useState, useTransition } from "react";
 import { useTranslation } from "react-i18next";
 
-import CacheManagerWorker from '../webWorker/cacheManagerWorker.ts?worker';
-import { CacheManagerParams, CacheManagerResult } from "../webWorker/cacheManagerWorker";
+import CacheManagerWorker from '../../webWorker/cacheManagerWorker.ts?worker';
+import { CacheManagerParams, CacheManagerResult } from "../../webWorker/cacheManagerWorker";
 import Delete from "./Delete";
 
 import './CacheManager.css';
-import corpus from '../utils/corpus';
-import { getCache, getFilePath, getFileCacheOnly, getDownloadSizeTotal, clearLocalFileInfo, deleteLocalFileInfo, getAllLocalFilePaths, getIndexedDB } from '../utils/files';
-import { formatBytesParams } from "../utils/utils";
+import corpus from '../../utils/corpus';
+import { getCache, getFilePath, getFileCacheOnly, getDownloadSizeTotal, clearLocalFileInfo, deleteLocalFileInfo, getAllLocalFilePaths, getIndexedDB } from '../../utils/files';
+import { formatBytesParams } from "../../utils/utils";
 import Refresh from "./Refresh";
-import { ModalArguments } from './Modal';
-import ProgressBar from "./ProgressBar";
+import { ModalArguments } from '../Modal';
+import ProgressBar from "../ProgressBar";
 
 type CachedFileInfoEntry = readonly [readonly [string, string, string], number, boolean];
 

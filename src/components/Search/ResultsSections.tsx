@@ -2,14 +2,14 @@ import { MouseEventHandler, ReactElement, useEffect, useRef, useState, useTransi
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { SearchResultLines } from '../webWorker/searchWorkerManager';
-import corpus, { codeId, langId } from '../utils/corpus';
+import { SearchResultLines } from '../../webWorker/searchWorkerManager';
+import corpus, { codeId, langId } from '../../utils/corpus';
 import Share from './Share';
 import ViewNearby from './ViewNearby';
 import Copy from './Copy';
 
-import { expandSpeakers } from '../utils/speaker';
-import { SearchTaskResultLines } from '../webWorker/searchWorker';
+import { expandSpeakers } from '../../utils/speaker';
+import { SearchTaskResultLines } from '../../webWorker/searchWorker';
 
 const addWordBreaksToID = (s: string, lang: string) => lang === codeId ? s.replaceAll(/([._/]|([a-z])(?=[A-Z])|([A-Za-z])(?=[0-9]))/gu, '$1<wbr>') : s;
 

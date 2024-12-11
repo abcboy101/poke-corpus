@@ -14,8 +14,8 @@ type View = 'Search' | 'CacheManager';
 
 // Allow these to be lazy-loaded so the page can be displayed first.
 const Options = lazy(() => import('./components/Options.js'));
-const Search = lazy(() => import('./components/Search.js'));
-const CacheManager = lazy(() => import('./components/CacheManager.js'));
+const Search = lazy(() => import('./components/Search/Search.js'));
+const CacheManager = lazy(() => import('./components/CacheManager/CacheManager.js'));
 
 function Placeholder() {
   const { t } = useTranslation();
