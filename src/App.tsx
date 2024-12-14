@@ -7,7 +7,6 @@ import Modal, { ModalArguments } from './components/Modal';
 
 import './App.css';
 import './safari.css';
-import logo from './res/logo.svg';
 import './i18n/config';
 
 type View = 'Search' | 'CacheManager';
@@ -59,7 +58,7 @@ function App() {
     <header className="header">
       <h1>
         <a href="/poke-corpus/">
-          <img className="header-logo" src={logo} alt="" height="40" width="40" /> {t('title', {version: t('version')})}
+          <img className="header-logo" src="logo.svg" alt="" height="40" width="40" loading="lazy" /> {t('title', {version: t('version')})}
         </a>
       </h1>
       <Suspense><Options showModal={showModal} limit={limit} setLimit={setLimit}/></Suspense>

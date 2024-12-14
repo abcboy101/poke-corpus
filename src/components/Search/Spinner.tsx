@@ -23,7 +23,7 @@ function Spinner({src, active = true}: {src: string, active?: boolean}) {
     }
   }, [active]);
 
-  return <img ref={ref} className={`spinner ${active ? 'spinner-active' : 'spinner-inactive'}`} src={src} alt=""/>;
+  return <img ref={ref} className={`spinner ${active ? 'spinner-active' : 'spinner-inactive'}`} src={src} alt="" loading="lazy"/>;
 }
 
 export default Spinner;

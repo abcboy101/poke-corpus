@@ -243,10 +243,6 @@ table th, table td {
   align-items: center;
 }
 
-.app-placeholder {
-  flex: 1;
-}
-
 .app-window {
   width: 100%;
   min-height: max(12em, 50dvh);

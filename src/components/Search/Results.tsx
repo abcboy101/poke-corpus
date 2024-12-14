@@ -10,7 +10,6 @@ import { Status, statusInProgress } from '../../utils/Status';
 import './Results.css';
 import './ResultsText.css';
 import './ResultsTextColor.css';
-import logo from '../../res/logo.svg';
 import '../../i18n/config';
 import { defaultLimit } from '../../utils/utils';
 import { ResultsSections, ShowSectionCallback } from './ResultsSections';
@@ -92,7 +91,7 @@ function Results({status, progress, results, showId = true, richText = true, lim
     <>
       <div className="search results-status">
         { headers.length > 1 ? <JumpToSelect headers={headers} /> : <div className="results-status-text">{t(`status.${status.split('.', 1)[0]}`)}</div> }
-        <Spinner src={logo} active={statusInProgress.includes(status)}/>
+        <Spinner src="logo.svg" active={statusInProgress.includes(status)}/>
         { count > limit ? <ResultsNav count={count} offset={offset} limit={limit} setOffset={setOffset} /> : <ProgressBar progress={progress} /> }
         { resultsToggle }
       </div>
