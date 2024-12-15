@@ -1,8 +1,10 @@
-import { lazy, Suspense, useEffect, useState, useTransition } from 'react';
+import { lazy, useEffect, useState, useTransition } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { getLimit, getMode } from './utils/utils';
+import Options from './components/Options.js';
+import Search from './components/Search/Search.js';
 import Modal, { ModalArguments } from './components/Modal';
 
 import './App.css';
@@ -12,17 +14,7 @@ import './i18n/config';
 type View = 'Search' | 'CacheManager';
 
 // Allow these to be lazy-loaded so the page can be displayed first.
-const Options = lazy(() => import('./components/Options.js'));
-const Search = lazy(() => import('./components/Search/Search.js'));
 const CacheManager = lazy(() => import('./components/CacheManager/CacheManager.js'));
-
-function Placeholder() {
-  const { t } = useTranslation();
-  return <>
-    <div className="item-group">{t('status.loading')}</div>
-    <div className="app-window"></div>
-  </>;
-}
 
 function App() {
   const { t } = useTranslation();
@@ -35,6 +27,7 @@ function App() {
   useEffect(() => {
     const mode = getMode();
     document.body.classList.add(`mode-${mode}`);
+    setCacheManagerLoaded(true);
   }, []);
 
   const showModal = (args: ModalArguments) => {
@@ -58,10 +51,10 @@ function App() {
     <header className="header">
       <h1>
         <a href="/poke-corpus/">
-          <img className="header-logo" src="logo.svg" alt="" height="40" width="40" loading="lazy" /> {t('title', {version: t('version')})}
+          <img className="header-logo" src="logo.svg" alt="" height="40" width="40" /> {t('title', {version: t('version')})}
         </a>
       </h1>
-      <Suspense><Options showModal={showModal} limit={limit} setLimit={setLimit}/></Suspense>
+      <Options showModal={showModal} limit={limit} setLimit={setLimit}/>
     </header>
   );
 
@@ -78,15 +71,13 @@ function App() {
   );
 
   const classes = ['app', `view-${view.toLowerCase()}`];
-  if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent))
+  if (!import.meta.env.SSR && /^((?!chrome|android).)*safari/i.test(navigator.userAgent))
     classes.push('ua-safari');
   return (
     <div className={classes.join(' ')} lang={i18next.language} dir={i18next.dir()}>
       { header }
-      <Suspense fallback={<Placeholder/>}>
-        <Search showModal={showModal} limit={limit}/>
-        { cacheManager }
-      </Suspense>
+      <Search showModal={showModal} limit={limit}/>
+      { cacheManager }
       { footer }
       <Modal {...modalArguments}/>
     </div>

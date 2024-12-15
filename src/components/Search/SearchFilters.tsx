@@ -123,9 +123,13 @@ function SearchLanguages({collections, languages, setLanguages}: {collections: r
 function SearchFilters({filtersVisible, collections, setCollections, languages, setLanguages}: {filtersVisible: boolean, collections: readonly string[], setCollections: Dispatch<SetStateAction<readonly string[]>>, languages: readonly string[], setLanguages: Dispatch<SetStateAction<readonly string[]>>}) {
   return (
     <div className={`search-filters search-filters-${filtersVisible ? 'show' : 'hide'}`}>
-      <SearchCollections collections={collections} languages={languages} setCollections={setCollections}/>
-      <div className="search-filters-divider"></div>
-      <SearchLanguages collections={collections} languages={languages} setLanguages={setLanguages}/>
+      { !import.meta.env.SSR && (
+        <>
+          <SearchCollections collections={collections} languages={languages} setCollections={setCollections}/>
+          <div className="search-filters-divider"></div>
+          <SearchLanguages collections={collections} languages={languages} setLanguages={setLanguages}/>
+        </>
+      )}
     </div>
   );
 }

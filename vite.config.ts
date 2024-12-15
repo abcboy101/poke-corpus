@@ -24,13 +24,8 @@ function manualChunks(id: string) {
   }
 
   // Needed for initial load
-  else if (id.includes("index.tsx") || id.includes("App.tsx") || id.includes("modulepreload-polyfill.js")) {
+  else if (id.includes("index.tsx") || id.includes("App.tsx") || id.includes("modulepreload-polyfill.js") || id.includes("files.ts") || id.includes("Search.tsx") || id.includes("Options.tsx")) {
     return 'index';
-  }
-
-  // Needed for search view
-  else if (id.includes("files.ts") || id.includes("Search.tsx") || id.includes("Options.tsx")) {
-    return 'search';
   }
 }
 
@@ -43,7 +38,7 @@ export default defineConfig({
     stylelint(),
     VitePWA({
       registerType: 'autoUpdate',
-      workbox: { globPatterns: ['**/{!(i18n*),i18n-en*}.{js,css,html,ico,png,json}'] }, // only pre-cache the English i18n file
+      workbox: { globPatterns: ['**/*.{js,css,html,ico,png,json,svg}'] }, // only pre-cache the English i18n file
       manifest: false,
     }),
   ],

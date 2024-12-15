@@ -23,7 +23,10 @@ function Spinner({src, active = true}: {src: string, active?: boolean}) {
     }
   }, [active]);
 
-  return <img ref={ref} className={`spinner ${active ? 'spinner-active' : 'spinner-inactive'}`} src={src} alt="" loading="lazy"/>;
+  const classes = ['spinner', active ? 'spinner-active' : 'spinner-inactive'];
+  if (import.meta.env.SSR)
+    classes.push('spinner-stopped');
+  return <img ref={ref} className={classes.join(' ')} src={src} alt=""/>;
 }
 
 export default Spinner;

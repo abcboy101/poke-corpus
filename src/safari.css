@@ -18,6 +18,7 @@
 
 /* Safari displays text in these elements too high with the line-height specified */
 .ua-safari input[type="text"],
+.ua-safari input:not([type]),
 .ua-safari input[type="number"],
 .ua-safari input[type="submit"],
 .ua-safari input[type="button"],

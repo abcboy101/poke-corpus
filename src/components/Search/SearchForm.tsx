@@ -28,9 +28,12 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
   const [collections, setCollections] = useState(defaultParams.collections);
   const [languages, setLanguages] = useState(defaultParams.languages);
   const [run, setRun] = useState(false);
-  const [filtersVisible, setFiltersVisible] = useState((localStorageGetItem('corpus-filtersVisible') ?? (window.location.hash ? 'false' : 'true')) !== 'false');
+  const [filtersVisible, setFiltersVisible] = useState(import.meta.env.SSR ? false : ((localStorageGetItem('corpus-filtersVisible') ?? (window.location.hash ? 'false' : 'true')) !== 'false'));
 
   const onHashChange = useCallback(() => {
+    if (import.meta.env.SSR)
+      return;
+
     const params = hashToSearchParams(window.location.hash.substring(1));
     if (params.id !== undefined)
       setId(params.id);

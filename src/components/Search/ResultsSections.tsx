@@ -7,6 +7,7 @@ import corpus, { codeId, langId } from '../../utils/corpus';
 import Share from './Share';
 import ViewNearby from './ViewNearby';
 import Copy from './Copy';
+import NoScript from './NoScript';
 
 import { expandSpeakers } from '../../utils/speaker';
 import { SearchTaskResultLines } from '../../webWorker/searchWorker';
@@ -145,6 +146,7 @@ export function ResultsSections({className, results, headers, showId, offset, li
 
   return (
     <main id="results" className={className}>
+      { import.meta.env.SSR && <NoScript /> }
       {
         results.map(({displayHeader}, index) => (
           <section key={headers[index]} id={`results-section${index}`} className='results-section'>

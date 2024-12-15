@@ -10,7 +10,3 @@ with open("dist/manifest.json", "w", encoding="utf-8") as f:
 # index.html
 os.remove("dist/index.html")
 os.rename("dist/index.min.html", "dist/index.html")
-
-# noscript.css
-os.remove("dist/noscript.css")
-os.rename("dist/noscript.min.css", "dist/noscript.css")
