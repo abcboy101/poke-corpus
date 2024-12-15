@@ -21,6 +21,7 @@
 .progress-bar-complete {
   background: var(--progress-bar-color);
   height: 100%;
+  transition: width 0.1s linear;
 }
 
 .progress-bar-text {
