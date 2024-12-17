@@ -1,36 +1,13 @@
-.search-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-
-.search-bar {
-  display: flex;
-  margin: auto;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5em;
-}
-
-.btn-alternate-container {
-  display: grid;
-  grid-template-columns: max-content;
-}
-
-.btn-alternate-container > * {
-  grid-column: 1;
-  grid-row: 1;
-}
-
 .search-filters {
   display: grid;
-  grid-template-columns: 1fr 1px 1fr;
+  grid-template-columns: 4fr 1px 6fr;
   grid-template-rows: auto auto;
   grid-auto-flow: column;
   gap: 0.5em 0.75em;
   overflow: hidden;
-  transition: 0.2s ease-in-out;
+  transition: max-height, margin-bottom, opacity, visibility;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -40,14 +17,18 @@
 }
 
 .search-filters-show {
-  max-height: 100dvh;
+  max-height: var(--search-filters-height, 100dvh);
   margin-bottom: 0;
+  opacity: 1;
+  visibility: visible;
 }
 
 .search-filters-hide {
   max-height: 0;
-  visibility: hidden;
   margin-bottom: -0.5em;
+  opacity: 0;
+  visibility: hidden;
+  user-select: none;
   pointer-events: none;
 }
 
@@ -66,14 +47,12 @@
   grid-row: span 2;
 }
 
-.search-option-group, .search-collections, .search-languages {
-  margin: 0.15em 0;
-}
-
 .search-collections, .search-languages {
   display: grid;
   place-content: start;
   gap: 0.3em 0;
+  margin: 0.15em 0;
+  transition: none;
 }
 
 .search-collections {
@@ -84,19 +63,13 @@
   grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
 }
 
-.search-collection, .search-language, .search-option {
+.search-collection, .search-language {
   display: flex;
   align-items: center;
 }
 
 .search-collection label, .search-language label {
   width: 100%;
-  line-height: var(--line-height-narrow);
-}
-
-.search-option label {
-  display: inline-block;
-  white-space: wrap;
   line-height: var(--line-height-narrow);
 }
 
@@ -116,6 +89,26 @@
   line-break: strict;
 }
 
+/* On smaller screens, show language codes instead of the full names. */
+@media (width <= 991.98px) {
+  .search-filters {
+    grid-template-columns: 55fr 1px minmax(14em, 45fr);
+  }
+
+  .search-languages {
+    grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
+  }
+
+  .search-language-name {
+    display: none;
+  }
+
+  .search-language-code {
+    display: inherit;
+  }
+}
+
+/* On narrow screens, show collections above languages instead of side-by-side. */
 @media (width <= 575.98px) {
   .search-filters {
     grid-template-columns: auto;
@@ -124,29 +117,5 @@
 
   .search-filters-divider {
     grid-row: inherit;
-  }
-
-  .search-languages {
-    grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
-  }
-}
-
-@media (width >= 576px) and (width <= 991.98px) {
-  .search-filters {
-    grid-template-columns: 55fr 1px minmax(14em, 45fr);
-  }
-
-  .search-languages {
-    grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
-  }
-}
-
-@media (width <= 991.98px) {
-  .search-language-name {
-    display: none;
-  }
-
-  .search-language-code {
-    display: inherit;
   }
 }

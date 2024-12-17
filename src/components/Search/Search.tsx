@@ -9,7 +9,6 @@ import SearchForm from './SearchForm';
 import Results from './Results';
 import { ModalArguments } from '../Modal';
 
-import './Search.css';
 import '../../i18n/config';
 import { formatBytesParams, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
 import { getDownloadSizeTotal } from '../../utils/files';

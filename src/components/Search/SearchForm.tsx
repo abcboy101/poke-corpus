@@ -8,6 +8,7 @@ import SearchFilters from './SearchFilters';
 import { escapeRegex, getRichText, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
 import { Status, statusInProgress } from '../../utils/Status';
 
+import './SearchForm.css';
 import '../../i18n/config';
 
 const defaultParams: typeof defaultSearchParams = {

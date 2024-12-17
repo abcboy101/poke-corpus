@@ -1,9 +1,10 @@
-import { CSSProperties, Dispatch, SetStateAction } from 'react';
+import { CSSProperties, Dispatch, SetStateAction, useEffect, useRef } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { corpus } from '../../utils/corpus';
 
+import './SearchFilters.css';
 import '../../i18n/config';
 
 /**
@@ -121,8 +122,18 @@ function SearchLanguages({collections, languages, setLanguages}: {collections: r
 }
 
 function SearchFilters({filtersVisible, collections, setCollections, languages, setLanguages}: {filtersVisible: boolean, collections: readonly string[], setCollections: Dispatch<SetStateAction<readonly string[]>>, languages: readonly string[], setLanguages: Dispatch<SetStateAction<readonly string[]>>}) {
+  const filtersRef = useRef<HTMLDivElement>(null);
+  const updateFiltersHeight = () => filtersRef.current?.style.setProperty('--search-filters-height', `${filtersRef.current.scrollHeight}px`);
+  useEffect(() => {
+    if (CSS.supports('interpolate-size', 'allow-keywords'))
+      return;
+    updateFiltersHeight();
+    window.addEventListener('resize', updateFiltersHeight);
+    return () => window.removeEventListener('resize', updateFiltersHeight);
+  }, []);
+
   return (
-    <div className={`search-filters search-filters-${filtersVisible ? 'show' : 'hide'}`}>
+    <div ref={filtersRef} className={`search-filters search-filters-${filtersVisible ? 'show' : 'hide'}`}>
       { !import.meta.env.SSR && (
         <>
           <SearchCollections collections={collections} languages={languages} setCollections={setCollections}/>

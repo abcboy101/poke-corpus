@@ -1,0 +1,39 @@
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.search-bar {
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.btn-alternate-container {
+  display: grid;
+  grid-template-columns: max-content;
+}
+
+.btn-alternate-container > * {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.search-option-group {
+  margin: 0.15em 0;
+}
+
+.search-option {
+  display: flex;
+  align-items: center;
+}
+
+.search-option label {
+  display: inline-block;
+  white-space: wrap;
+  line-height: var(--line-height-narrow);
+}
