@@ -1,3 +1,5 @@
+import "core-js/proposals/set-methods";
+
 import { useEffect, useMemo, useRef, useState, useTransition } from "react";
 import { useTranslation } from "react-i18next";
 
