@@ -9,12 +9,8 @@
     }],
     "plugin/no-unsupported-browser-features": [true, {
       "browsers": [
-        "> 0.2%",
-        "last 2 versions",
-        "not dead",
-        "not Firefox ESR",
-        "not safari < 16.4",
-        "not ios_saf < 16.4",
+        "defaults and fully supports es6-module",
+        "not ios_saf <= 15.8",
         "not kaios <= 3.1",
         "not and_uc <= 15.5",
         "not and_qq <= 14.9",

@@ -45,11 +45,11 @@
 
   /* Prevent page breaks where inappropriate */
   h1, h2 {
-    break-after: avoid;
+    break-after: avoid; /* stylelint-disable-line plugin/no-unsupported-browser-features */
   }
 
   .results-table tr {
-    break-inside: avoid;
+    break-inside: avoid; /* stylelint-disable-line plugin/no-unsupported-browser-features */
   }
 
   .text-color-animation {

@@ -38,7 +38,7 @@
   }
 
   .search-filters-show {
-    max-height: fit-content;
+    max-height: fit-content; /* stylelint-disable-line plugin/no-unsupported-browser-features */
   }
 }
 

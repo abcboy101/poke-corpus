@@ -59,7 +59,7 @@
 
 .results-table-container {
   padding-right: 0.5rem;
-  width: fit-content;
+  width: fit-content; /* stylelint-disable-line plugin/no-unsupported-browser-features */
   min-width: calc(100% + 0.5rem);
 }
 
