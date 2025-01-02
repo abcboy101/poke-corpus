@@ -10,6 +10,8 @@ import Modal, { ModalArguments } from './components/Modal';
 import './App.css';
 import './safari.css';
 import './i18n/config';
+import { ErrorBoundary } from 'react-error-boundary';
+import ErrorWindow from './components/ErrorWindow';
 
 type View = 'Search' | 'CacheManager';
 
@@ -54,7 +56,9 @@ function App() {
           <img className="header-logo" src="logo.svg" alt="" height="40" width="40" /> {t('title', {version: t('version')})}
         </a>
       </h1>
-      <Options showModal={showModal} limit={limit} setLimit={setLimit}/>
+      <ErrorBoundary fallback={null}>
+        <Options showModal={showModal} limit={limit} setLimit={setLimit}/>
+      </ErrorBoundary>
     </header>
   );
 
@@ -76,10 +80,14 @@ function App() {
   return (
     <div className={classes.join(' ')} lang={i18next.language} dir={i18next.dir()}>
       { header }
-      <Search showModal={showModal} limit={limit}/>
-      { cacheManager }
+      <ErrorBoundary FallbackComponent={ErrorWindow}>
+        <Search showModal={showModal} limit={limit}/>
+        { cacheManager }
+      </ErrorBoundary>
       { footer }
-      <Modal {...modalArguments}/>
+      <ErrorBoundary fallback={null}>
+        <Modal {...modalArguments}/>
+      </ErrorBoundary>
     </div>
   );
 }

@@ -4,13 +4,17 @@ import { registerSW } from 'virtual:pwa-register';
 import './index.css';
 import './print.css';
 import App from './App';
+import ErrorApp from './components/ErrorApp';
+import { ErrorBoundary } from 'react-error-boundary';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <ErrorBoundary FallbackComponent={ErrorApp}>
+      <App />
+    </ErrorBoundary>
   </React.StrictMode>
 );
 

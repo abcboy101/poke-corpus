@@ -1,6 +1,10 @@
 {
   "title": "Poké Corpus {{version}}",
   "version": "β",
+  "error": {
+    "title": "An error occurred",
+    "message": "Check your browser's developer console for additional information, and please report the issue on GitHub."
+  },
   "options": {
     "options": "Options",
     "language": "Language:",

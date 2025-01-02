@@ -77,6 +77,8 @@ function Results({status, progress, results, showId = true, richText = true, lim
     results.map((params) => params.lines.length).reduce((a, b) => a + b, 0)
   ), [results]);
 
+  const resultsStatusText = t(import.meta.env.SSR ? t('status.loading') : `status.${status.split('.', 1)[0]}`);
+
   const resultsToggle = (
     <div className="results-toggle">
       <button className={showVariables ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowVariables(!showVariables); }} title={t('showVariables')}>{t('showVariablesIcon')}</button>
@@ -90,7 +92,7 @@ function Results({status, progress, results, showId = true, richText = true, lim
   return (
     <>
       <div className="search results-status">
-        { headers.length > 1 ? <JumpToSelect headers={headers} /> : <div className="results-status-text">{t(`status.${status.split('.', 1)[0]}`)}</div> }
+        { headers.length > 1 ? <JumpToSelect headers={headers} /> : <div className="results-status-text">{resultsStatusText}</div> }
         <Spinner src="logo.svg" active={statusInProgress.includes(status)}/>
         { count > limit ? <ResultsNav count={count} offset={offset} limit={limit} setOffset={setOffset} /> : <ProgressBar progress={progress} /> }
         { resultsToggle }
