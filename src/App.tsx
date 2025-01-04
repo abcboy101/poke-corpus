@@ -85,9 +85,7 @@ function App() {
         { cacheManager }
       </ErrorBoundary>
       { footer }
-      <ErrorBoundary fallback={null}>
-        <Modal {...modalArguments}/>
-      </ErrorBoundary>
+      <Modal {...modalArguments}/>
     </div>
   );
 }

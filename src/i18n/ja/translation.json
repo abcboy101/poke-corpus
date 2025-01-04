@@ -1,5 +1,9 @@
 {
   "title": "ポケコーパス{{version}}",
+  "error": {
+    "title": "エラーが発生しました",
+    "message": "ブラウザの開発者コンソールで追加情報を確認してGitHubでバグを報告してください。"
+  },
   "options": {
     "options": "設定",
     "language": "言語：",

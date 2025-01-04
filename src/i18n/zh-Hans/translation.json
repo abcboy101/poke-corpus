@@ -1,5 +1,9 @@
 {
   "title": "宝可语料库{{version}}",
+  "error": {
+    "title": "发生错误",
+    "message": "请检查浏览器的 DevTools 以获取更多信息，并在 GitHub 上报告问题。"
+  },
   "options": {
     "options": "设置",
     "language": "语言：",
