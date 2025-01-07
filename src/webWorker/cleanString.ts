@@ -535,11 +535,11 @@ export function postprocessString(s: string, collectionKey: string, language: st
   const isGen3 = ["RubySapphire", "FireRedLeafGreen", "Emerald"].includes(collectionKey);
   const isGen4 = ["DiamondPearl", "Platinum", "HeartGoldSoulSilver"].includes(collectionKey);
   const isGen5 = ["BlackWhite", "Black2White2"].includes(collectionKey);
-  const isBDSP = collectionKey == "BrilliantDiamondShiningPearl";
-  const isPBR = collectionKey == "BattleRevolution";
-  const isRanch = collectionKey == "Ranch";
-  const isGO = collectionKey == "GO";
-  const isMasters = collectionKey == "Masters";
+  const isBDSP = collectionKey === "BrilliantDiamondShiningPearl";
+  const isPBR = collectionKey === "BattleRevolution";
+  const isRanch = collectionKey === "Ranch";
+  const isGO = collectionKey === "GO";
+  const isMasters = collectionKey === "Masters";
 
   const isNDS = isGen4 || isGen5;
   const is3DS = ["XY", "OmegaRubyAlphaSapphire", "SunMoon", "UltraSunUltraMoon", "Bank"].includes(collectionKey);

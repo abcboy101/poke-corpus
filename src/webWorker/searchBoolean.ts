@@ -53,7 +53,7 @@ export function queryToPostfix(query: string): QueryParseResult {
       // If both operators are the same, left has precedence over right
       case "AND":
       case "OR":
-        while (operators[operators.length - 1] !== '(' && (operators[operators.length - 1] === 'NOT' || (operators[operators.length - 1] === 'AND' && t === 'OR') || t == operators[operators.length - 1])) {
+        while (operators[operators.length - 1] !== '(' && (operators[operators.length - 1] === 'NOT' || (operators[operators.length - 1] === 'AND' && t === 'OR') || t === operators[operators.length - 1])) {
           output.push(operators.pop()!);
         }
         operators.push(t);

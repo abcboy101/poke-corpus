@@ -14,7 +14,7 @@ export const expandLv = (language: string, collectionKey: string = '') => ({
   'fr': 'N.',
   'it': 'L.',
   'de': 'Lv.',
-  'es': collectionKey == 'RubySapphire' ? 'Nv' : 'Nv.',
+  'es': collectionKey === 'RubySapphire' ? 'Nv' : 'Nv.',
 } as const)[language] || 'Lv';
 
 // Used in Japanese/Western FRLGE (F9 05)
@@ -36,7 +36,7 @@ export const expandLv3 = (language: string) => ({
   'es': 'Nv',
 } as const)[language] || 'Lv';
 
-export const expandPP = (language: string) => language == 'de' ? 'AP' : 'PP';
+export const expandPP = (language: string) => language === 'de' ? 'AP' : 'PP';
 
 export const expandID = () => 'ID';
 

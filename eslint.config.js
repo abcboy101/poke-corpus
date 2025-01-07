@@ -16,6 +16,7 @@ export default [
   {
     plugins: { "@stylistic": stylistic },
     rules: {
+      "eqeqeq": ["error", "smart"],
       "react/react-in-jsx-scope": "off",
       "@stylistic/indent": ["error", 2],
       "@stylistic/semi": "error",
