@@ -487,16 +487,31 @@ function genderNumberBranch(maleSingular: string, femaleSingular: string, malePl
 }
 
 /**
- * Converts the apocope forms of a string to HTML, separated by a slash.
+ * Converts the context-dependent forms of a string to HTML, separated by a slash. Used for:
+ * - French apocope: before a consonant/vowel
+ * - Italian apocope: before a vowel/consonant
+ * - Korean particle: after a vowel/consonant
  *
  * Returns the resulting string.
  */
-function apocopeBranch(form1: string, form2: string) {
+function contextBranch(form1: string, form2: string, language: string) {
   const results = [];
-  if (form1.length > 0) results.push(`<span class="branch apocope1">${form1}</span>`);
-  if (form2.length > 0) results.push(`<span class="branch apocope2">${form2}</span>`);
-  return results.join('<span class="apocope">/</span>');
+  if (form1.length > 0) results.push(`<span class="branch ${language === 'fr' ? 'consonant' : 'vowel'}">${form1}</span>`);
+  if (form2.length > 0) results.push(`<span class="branch ${language === 'fr' ? 'vowel' : 'consonant'}">${form2}</span>`);
+  return results.join('<span class="context">/</span>');
 }
+
+const koreanParticles: Record<string, [string, string]> = {
+  0: ['', ''], // no particle
+  1: ['는', '은'], // 은(는), topic particle, equivalent to Japanese "ha"
+  2: ['를', '을'], // 을(를), object particle, equivalent to Japanese "wo"
+  3: ['가', '이'], // 이(가), subject particle, equivalent to Japanese "ga"
+  4: ['와', '과'], // 와(과), conjunctive particle, equivalent to Japanese "to"
+  5: ['', '으'], // (으)로, directional particle, equivalent to Japanese "ni"
+  6: ['', '이'], // (이), optional "i" in particles such as 이다/이랑/이야
+  7: ['야', '아'], // 아(야), vocative particle
+};
+export const particleBranch = (index: number, particles: Record<string, [string, string]> = koreanParticles) => contextBranch(...particles[index], 'ko');
 
 /**
  * Converts the version-specific forms of a string to HTML, separated by a slash.
@@ -804,6 +819,15 @@ export function postprocessString(s: string, collectionKey: string, language: st
     .replaceAll(/\u{F1102}\u{F1200}(.*?)\u{F1104}(.*?)\u{F1103}/gu, (_, male, female) => genderBranch(male, female)) // FD 05, FD 06
     .replaceAll(/\u{F1102}\u{F1207}(.*?)\u{F1104}(.*?)\u{F1103}/gu, (_, form1, form2) => versionBranchRS(form1, form2)) // FD 07 - FD 0D
   ) : s;
+  s = (language === 'ko' && isGen4) ? (s
+    .replaceAll(/\[VAR ((?:0[1346]|34)[0-9A-F]{2})\(([0-9A-F]{4}),([0-9A-F]{4})\)\]/gu, (_, tag, param, index) => `[VAR ${tag}(${param})]${particleBranch(parseInt(index, 16) % 8)}`)
+  ) : s;
+  s = (language === 'ko' && collectionKey === 'BlackWhite') ? (s
+    .replaceAll(/\[VAR (0[12][0-9A-F]{2})\(([0-9A-F]{4}),([0-9A-F]{4})\)\]/gu, (_, tag, param, index) => `[VAR ${tag}(${param})]${particleBranch(parseInt(index, 16) % 8)}`)
+  ) : s;
+  s = (collectionKey === 'Black2White2') ? (s
+    .replaceAll(/\[VAR 3400\(([0-9A-F]{4})\)\]/gu, (_, index) => particleBranch(parseInt(index, 16) % 8))
+  ) : s;
   s = isModern ? (s
     .replaceAll(/\[VAR (?:GENDBR|1100)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenF, lenM, rest) => {
       const endM = parseInt(lenM, 16);
@@ -831,7 +855,7 @@ export function postprocessString(s: string, collectionKey: string, language: st
     .replaceAll(/\[VAR (?:1104|1106)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, len2, len1, rest) => {
       const end1 = parseInt(len1, 16);
       const end2 = end1 + parseInt(len2, 16);
-      return `${apocopeBranch(rest.substring(0, end1), rest.substring(end1, end2))}${rest.substring(end2)}`;
+      return `${contextBranch(rest.substring(0, end1), rest.substring(end1, end2), language)}${rest.substring(end2)}`;
     })
     .replaceAll(/\[VAR (?:1105)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),00([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenP, lenS, lenZ, rest) => {
       const endS = parseInt(lenS, 16);
@@ -844,11 +868,14 @@ export function postprocessString(s: string, collectionKey: string, language: st
       const end2 = end1 + parseInt(len2, 16);
       return `${versionBranchSV(rest.substring(0, end1), rest.substring(end1, end2))}${rest.substring(end2)}`;
     })
+    .replaceAll(/\[VAR 1900\(([0-9A-F]{4})\)\]/gu, (_, index) => particleBranch(parseInt(index, 16)))
   ) : s;
   s = isBDSP ? (s
     .replaceAll(/\[VAR 1[3-7A]00\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)(?:\|([^[<{]*?))?\)\]/gu, (_, male, female) => genderBranch(male, female ?? ''))
     .replaceAll(/\[VAR 1[3-7A]01\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)(?:\|([^[<{]*?))?\)\]/gu, (_, singular, plural) => numberBranch(singular, plural ?? ''))
     .replaceAll(/\[VAR 1[3-7A]02\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)\|([^[<{]*?)\|([^[<{]*?)\|([^[<{]*?)\)\]/gu, (_, maleSingular, femaleSingular, malePlural, femalePlural) => genderNumberBranch(maleSingular, femaleSingular, malePlural, femalePlural))
+    .replaceAll(/\[VAR (?:1411|1518)\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)(?:\|([^[<{]*?))?(?:,forceGrmID=\d+)?\)\]/gu, (_, singular, plural) => contextBranch(singular, plural ?? '', language))
+    .replaceAll(/\[VAR 1900\(tagParameter=(\d+)\)\]/gu, (_, index) => particleBranch(index))
   ) : s;
   s = (s
     .replaceAll(/(\[VAR [^\]]+?\])/gu, '<span class="var">$1</span>')

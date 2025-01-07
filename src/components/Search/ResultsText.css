@@ -1,5 +1,5 @@
 /* Variables */
-.var, .wait, .sfx, .unused, .null, .compressed, .gender, .number, .speaker {
+.var, .wait, .sfx, .unused, .null, .compressed, .speaker, .gender, .number, .context, .version {
   color: var(--text-gray);
   white-space: nowrap;
 }
@@ -150,9 +150,15 @@ td:lang(ja) :is(.spacing-0, .spacing-1, .spacing-2, .spacing-3) .var {
   color: color-mix(in oklab, var(--gender-female-color) 50%, var(--number-plural-color));
 }
 
-/* Apocope branches */
-.apocope1, .apocope2 {
+/* Context branches */
+.consonant {
   border-bottom: 1px dotted var(--text);
+  color: color-mix(in oklab, var(--gender-male-color) 25%, var(--text-gray));
+}
+
+.vowel {
+  border-bottom: 1px dotted var(--text);
+  color: color-mix(in oklab, var(--gender-female-color) 25%, var(--text-gray));
 }
 
 /* Version branches */
