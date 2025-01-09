@@ -595,7 +595,7 @@ export function postprocessString(s: string, collectionKey: string, language: st
     .replaceAll('>', '\u{F0107}')
   );
 
-  // Whitespace
+  //#region Whitespace
   s = (s
     .replaceAll('\\n', '\u{F0200}')
     .replaceAll('\\r', '\u{F0201}')
@@ -612,8 +612,9 @@ export function postprocessString(s: string, collectionKey: string, language: st
   s = isN64 ? (s
     .replaceAll('\u{F0100}n', '\u{F0200}') // Game Boy Tower
   ) : s;
+  //#endregion
 
-  // PKMN
+  //#region Literals
   s = (isN64 || isGen3 || isNDS) ? (s
     .replaceAll('⒆', '<sup>P</sup><sub>K</sub>') // Gen 5 PK [also used privately for Gen 4 and earlier]
     .replaceAll('⒇', '<sup>M</sup><sub>N</sub>') // Gen 5 MN [also used privately for Gen 4 and earlier]
@@ -622,8 +623,6 @@ export function postprocessString(s: string, collectionKey: string, language: st
     .replaceAll('\uE0A7', '<sup>P</sup><sub>K</sub>') // 3DS PK (unused)
     .replaceAll('\uE0A8', '<sup>M</sup><sub>N</sub>') // 3DS MN (unused)
   ) : s;
-
-  // Literals
   s = isGen3 ? (s
     // POKé, POKéBLOCK
     .replaceAll('[POKE]', '<sup>P</sup><sub>O</sub><sup>K</sup><sub>é</sub>')
@@ -649,8 +648,9 @@ export function postprocessString(s: string, collectionKey: string, language: st
     .replaceAll('[ID]', `\u{F1102}<span class="literal-small">${g3.expandID()}</span>\u{F1103}`)
     .replaceAll('[NO]', `\u{F1102}<span class="literal-small">${g3.expandNo(language)}</span>\u{F1103}`)
   ) : s;
+  //#endregion
 
-  // Text formatting
+  //#region Formatting
   s = isBDSP ? (s
     .replaceAll(/\u{F0106}color=(.*?)\u{F0107}(.*?)\u{F0106}\/color\u{F0107}/gu, textColor) // BDSP color
     .replaceAll('\u{F0106}/color\u{F0107}', '') // BDSP color (extra closing tag)
@@ -689,8 +689,9 @@ export function postprocessString(s: string, collectionKey: string, language: st
     .replaceAll(/\[ALIGN 2\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[ALIGN \d+\]|$)/gu, '<span class="line-align-center">$1</span>') // PBR
     .replaceAll(/\[ALIGN 3\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[ALIGN \d+\]|$)/gu, '<span class="line-align-right">$1</span>') // PBR
   ) : s;
+  //#endregion
 
-  // Line breaks
+  //#region Line breaks
   // Soft line breaks
   switch (collectionKey) {
     case "SunMoon":
@@ -730,7 +731,9 @@ export function postprocessString(s: string, collectionKey: string, language: st
   );
   const space = ['ja', 'ko', 'zh'].some((lang) => language.startsWith(lang)) ? '\u3000' : ' ';
   s = s.replaceAll('<br>\u{F1300}', `<wbr class="soft"><span class="soft">${space}</span>`); // soft line break
+  //#endregion
 
+  //#region Spin-off
   // N64
   if (isN64) {
     s = (s
@@ -776,7 +779,7 @@ export function postprocessString(s: string, collectionKey: string, language: st
     .replaceAll('[bubble_or_speaker]', '<span class="var">[bubble_or_speaker]</span>')
     .replaceAll('[maybe_speaker_ID_toggle]', '<span class="var">[maybe_speaker_ID_toggle]</span>')
     .replaceAll('[maybe_location]', '<span class="var">[maybe_location]</span>')
-    .replaceAll('[dialogue_end]', '<span class="var">[dialogue_end]</span>')
+    .replaceAll('[dialogue_end]', '<span class="func">[dialogue_end]</span>')
     .replaceAll('[large_e]', '<span class="var">[large_e]</span>')
     .replaceAll('[large_e+]', '<span class="var">[large_e+]</span>')
     .replaceAll('[furi_kanji]', '<span class="var">[furi_kanji]</span>')
@@ -785,6 +788,7 @@ export function postprocessString(s: string, collectionKey: string, language: st
     .replaceAll(/(\[some_[^\]]+?\])/gu, '<span class="var">$1</span>')
     .replaceAll(/(\[unknown[^\]]+?\])/gu, '<span class="var">$1</span>')
     .replaceAll(/(\[var_[^\]]\])/gu, '<span class="var">$1</span>')
+    .replaceAll('\u{F0106}SCOL=0x0d0e0f\u{F0107}', '<span class="func">\u{F0106}SCOL=0x0d0e0f\u{F0107}</span>')
   ) : s;
 
   // PBR
@@ -792,7 +796,7 @@ export function postprocessString(s: string, collectionKey: string, language: st
     .replaceAll(/\[COLOR (\d+)\](.*?)(?:\[COLOR \d+\]|[\u{F0201}\u{F0202}\u{F0200}]|$)/gu, '<span class="color" style="color: var(--color-$1)">$2</span>')
     .replaceAll(/(\[VERTOFFSET -?[\d.]+\])/gu, '<span class="vertoffset">$1</span>') // '<span style="position: relative; top: $1px">$2</span>'
     .replaceAll(/\[FONT ([0126])\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[FONT \d+\]|$)/gu, '<span class="font-pbr-$1">$2</span>')
-    .replaceAll(/(\[FONT [\d.]+\])/gu, '<span class="var">$1</span>')
+    .replaceAll(/(\[FONT [\d.]+\])/gu, '<span class="func">$1</span>')
     .replaceAll(/\[SPACING (-?[\d.]+)\](.*?$)/gu, '<span class="spacing-$1">$2</span>')
   ) : s;
 
@@ -807,35 +811,33 @@ export function postprocessString(s: string, collectionKey: string, language: st
 
   // Masters
   s = isMasters ? postprocessStringMasters(s) : s;
+  //#endregion
 
-  s = (s
-    .replaceAll('[NULL]', '<span class="null">[NULL]</span>')
-    .replaceAll('[COMP]', '<span class="compressed">[COMP]</span>')
-  );
+  //#region Variables
   s = isGen3 ? (s
     .replaceAll(/(\[DYNAMIC \d+\])/gu, '<span class="var">$1</span>') // F7 xx
     .replaceAll(/(\[(?:(?:[ABLR]|START|SELECT)_BUTTON|DPAD_(?:UP|DOWN|LEFT|RIGHT|UPDOWN|LEFTRIGHT|NONE))\])/gu, '<span class="var">$1</span>') // F8 xx
     .replaceAll(/(\[EMOJI_[^\]]+?\])/gu, '<span class="var">$1</span>') // F9 D0 - F9 FE
 
     .replaceAll('[NOP]', '<span class="var">[NOP]</span>') // FC 00 (no-op; in Western RS only, it's used to shorten city/town names in the Trainer's Eyes feature of the PokéNav, and as a placeholder for one-digit numbers in Contests)
-    .replaceAll(/(\[COLOR [^\]]+?\])/gu, '<span class="var">$1</span>') // FC 01 xx
-    .replaceAll('[COLOR]', '<span class="var">[COLOR]</span>') // FC 01
-    .replaceAll(/(\[HIGHLIGHT [^\]]+?\])/gu, '<span class="var">$1</span>') // FC 02 xx
-    .replaceAll(/(\[SHADOW [^\]]+?\])/gu, '<span class="var">$1</span>') // FC 03 xx
-    .replaceAll(/(\[COLOR_HIGHLIGHT_SHADOW [^\]]+?\])/gu, '<span class="var">$1</span>') // FC 04 xx xx xx
-    .replaceAll(/(\[PALETTE [^\]]+?\])/gu, '<span class="var">$1</span>') // FC 05 xx
-    .replaceAll(/(\[(?:FONT [^\]]+?|FONT_[^\]]+?)\])/gu, '<span class="var">$1</span>') // FC 06 xx
-    .replaceAll(/(\[PAUSE \d+\])/gu, '<span class="var">$1</span>') // FC 08 xx
-    .replaceAll('[PAUSE_UNTIL_PRESS]', '<span class="var">[PAUSE_UNTIL_PRESS]</span>') // FC 09 xx
-    .replaceAll('[WAIT_SE]', '<span class="var">[WAIT_SE]</span>') // FC 0A xx
-    .replaceAll(/(\[PLAY_BGM [^\]]+?\])/gu, '<span class="var">$1</span>') // FC 0B xx
+    .replaceAll(/(\[COLOR [^\]]+?\])/gu, '<span class="func">$1</span>') // FC 01 xx
+    .replaceAll('[COLOR]', '<span class="func">[COLOR]</span>') // FC 01
+    .replaceAll(/(\[HIGHLIGHT [^\]]+?\])/gu, '<span class="func">$1</span>') // FC 02 xx
+    .replaceAll(/(\[SHADOW [^\]]+?\])/gu, '<span class="func">$1</span>') // FC 03 xx
+    .replaceAll(/(\[COLOR_HIGHLIGHT_SHADOW [^\]]+?\])/gu, '<span class="func">$1</span>') // FC 04 xx xx xx
+    .replaceAll(/(\[PALETTE [^\]]+?\])/gu, '<span class="func">$1</span>') // FC 05 xx
+    .replaceAll(/(\[(?:FONT [^\]]+?|FONT_[^\]]+?)\])/gu, '<span class="func">$1</span>') // FC 06 xx
+    .replaceAll(/(\[PAUSE \d+\])/gu, '<span class="func">$1</span>') // FC 08 xx
+    .replaceAll('[PAUSE_UNTIL_PRESS]', '<span class="func">[PAUSE_UNTIL_PRESS]</span>') // FC 09 xx
+    .replaceAll('[WAIT_SE]', '<span class="func">[WAIT_SE]</span>') // FC 0A xx
+    .replaceAll(/(\[PLAY_BGM [^\]]+?\])/gu, '<span class="func">$1</span>') // FC 0B xx
     .replaceAll(/(\[ESCAPE \d+\])/gu, '<span class="var">$1</span>') // FC 0C xx
-    .replaceAll(/(\[PLAY_SE [^\]]+?\])/gu, '<span class="var">$1</span>') // FC 10 xx
-    .replaceAll(/(\[CLEAR \d+\])/gu, '<span class="var">$1</span>') // FC 11 xx
-    .replaceAll(/(\[CLEAR_TO \d+\])/gu, '<span class="var">$1</span>') // FC 13 xx
-    .replaceAll(/(\[MIN_LETTER_SPACING \d+\])/gu, '<span class="var">$1</span>') // FC 14 xx
-    .replaceAll('[PAUSE_MUSIC]', '<span class="var">[PAUSE_MUSIC]</span>') // FC 17 xx
-    .replaceAll('[RESUME_MUSIC]', '<span class="var">[RESUME_MUSIC]</span>') // FC 18 xx
+    .replaceAll(/(\[PLAY_SE [^\]]+?\])/gu, '<span class="func">$1</span>') // FC 10 xx
+    .replaceAll(/(\[CLEAR \d+\])/gu, '<span class="func">$1</span>') // FC 11 xx
+    .replaceAll(/(\[CLEAR_TO \d+\])/gu, '<span class="func">$1</span>') // FC 13 xx
+    .replaceAll(/(\[MIN_LETTER_SPACING \d+\])/gu, '<span class="func">$1</span>') // FC 14 xx
+    .replaceAll('[PAUSE_MUSIC]', '<span class="func">[PAUSE_MUSIC]</span>') // FC 17 xx
+    .replaceAll('[RESUME_MUSIC]', '<span class="func">[RESUME_MUSIC]</span>') // FC 18 xx
 
     .replaceAll('[PLAYER]', '<span class="var">[PLAYER]</span>') // FD 01
     .replaceAll('[STR_VAR_1]', '<span class="var">[STR_VAR_1]</span>') // FD 02
@@ -906,19 +908,24 @@ export function postprocessString(s: string, collectionKey: string, language: st
     .replaceAll(/\[VAR 1900\(tagParameter=(\d+)\)\]/gu, (_, index) => particleBranch(index))
   ) : s;
   s = (s
+    .replaceAll('[NULL]', '<span class="null">[NULL]</span>')
+    .replaceAll('[COMP]', '<span class="func compressed">[COMP]</span>')
     .replaceAll(/(\[VAR [^\]]+?\])/gu, '<span class="var">$1</span>')
-    .replaceAll(/(\[WAIT [\d.]+\])/gu, '<span class="wait">$1</span>')
-    .replaceAll(/(\[SFX [\d.]+\])/gu, '<span class="sfx">$1</span>') // BDSP
+    .replaceAll(/(\[WAIT [\d.]+\])/gu, '<span class="func wait">$1</span>')
+    .replaceAll(/(\[SFX [\d.]+\])/gu, '<span class="func sfx">$1</span>') // BDSP
     .replaceAll(/(\[~ \d+\])/gu, '<span class="unused">$1</span>')
     .replaceAll(/\{([^|}]+)\|([^|}]+)\}/gu, '<ruby>$1<rp>(</rp><rt>$2</rt><rp>)</rp></ruby>') // Switch furigana
     .replaceAll(/(\s+$)/gu, '<span class="whitespace-trailing">$1</span>') // Trailing whitespace
     .replaceAll(/(^\s+)/gu, '<span class="whitespace-leading">$1</span>') // Leading whitespace
   );
   s = isModern ? postprocessSpeaker(s) : s;
-  s = (s
-    .replaceAll(/\u{F1102}(.+?)\u{F1103}/gu, '<span class="literal">$1</span>')
+  //#endregion
 
-    // Replace placeholders with literal characters
+  // Format literals
+  s = s.replaceAll(/\u{F1102}(.+?)\u{F1103}/gu, '<span class="literal">$1</span>');
+
+  // Replace placeholders with literal characters
+  s = (s
     .replaceAll('\u{F0100}', '\\')
     .replaceAll('\u{F0102}', '[')
     .replaceAll('\u{F0104}', '{')
