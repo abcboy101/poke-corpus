@@ -36,6 +36,8 @@
  *
  * - U+F1200: mark a gender branch in a literal
  * - U+F1207: mark a version branch in a literal
+ *
+ * - U+F1300: mark a soft line break
  */
 
 import { postprocessSpeaker } from '../utils/speaker';
@@ -571,7 +573,6 @@ export function postprocessString(s: string, collectionKey: string, language: st
   const isNDS = isGen4 || isGen5;
   const is3DS = ["XY", "OmegaRubyAlphaSapphire", "SunMoon", "UltraSunUltraMoon", "Bank"].includes(collectionKey);
   const isSwitch = ["LetsGoPikachuLetsGoEevee", "SwordShield", "BrilliantDiamondShiningPearl", "LegendsArceus", "ScarletViolet", "HOME"].includes(collectionKey);
-  const isSoftLineBreak = ["LegendsArceus", "ScarletViolet"].includes(collectionKey);
   const isN64 = ["Stadium", "Stadium2"].includes(collectionKey);
   const isGCN = ["Colosseum", "XD"].includes(collectionKey);
   const isModern = isGen5 || is3DS || isSwitch;
@@ -690,12 +691,25 @@ export function postprocessString(s: string, collectionKey: string, language: st
   ) : s;
 
   // Line breaks
+  // Soft line breaks
+  switch (collectionKey) {
+    case "SunMoon":
+    case "UltraSunUltraMoon":
+      // In SMUSUM, it affects the next \n (as long as \r or \c does not occur prior to the line break), but it must be at the start of the string and only affects two-line strings.
+      s = s.replaceAll(/^\[VAR BD06\([0-9A-F]{4}\)\]([^\u{F0201}\u{F0202}\u{F0200}]*?)\u{F0200}(?=[^\u{F0201}\u{F0202}\u{F0200}]*?[\u{F0201}\u{F0202}]?$)/gu, (_, line) => `${line}\u{F0200}\u{F1300}`);
+      break;
+    case "LetsGoPikachuLetsGoEevee":
+    case "SwordShield":
+      // In LGPE and SwSh, it affects the next \n (as long as \r or \c does not occur prior to the line break), and it can now be anywhere in the string and affect the following two lines.
+      s = s.replaceAll(/\[VAR BD06\([0-9A-F]{4}\)\]([^\u{F0201}\u{F0202}\u{F0200}]*?)\u{F0200}/gu, (_, line) => `${line}\u{F0200}\u{F1300}`);
+      break;
+    default:
+      // Starting in LA, it affects all subsequent \n and \r\n (but not \c\n).
+      s = s.replaceAll(/\[VAR BD06\([0-9A-F]{4}\)\](.*)$/gu, (_, text) => text.replaceAll(/(?<!\u{F0202})\u{F0200}/gu, '\u{F0200}\u{F1300}'));
+  }
   s = isGen4 ? (s
     .replaceAll('\u{F0207}\u{F0200}', '<span class="c">[VAR 0207]</span><span class="n">\\n</span><br>') // [VAR 0207]\n
     .replaceAll('\u{F0208}\u{F0200}', '<span class="r">[VAR 0208]</span><span class="n">\\n</span><br>') // [VAR 0208]\n
-  ) : s;
-  s = isSoftLineBreak ? (s
-    .replaceAll('\u{F0201}\u{F0200}', '<span class="soft"> </span><span class="r">\\r</span><span class="n">\\n</span><wbr class="soft">') // \r\n
   ) : s;
   s = (s
     .replaceAll('\u{F0201}\u{F0200}', '<span class="r">\\r</span><span class="n">\\n</span><br>') // \r\n
@@ -714,6 +728,8 @@ export function postprocessString(s: string, collectionKey: string, language: st
     .replaceAll('\u{F02FF}', '<span class="e">\\e</span>') // \e
     .replaceAll('\u{F0203}', '<span class="tab">\t</span>')
   );
+  const space = ['ja', 'ko', 'zh'].some((lang) => language.startsWith(lang)) ? '\u3000' : ' ';
+  s = s.replaceAll('<br>\u{F1300}', `<wbr class="soft"><span class="soft">${space}</span>`); // soft line break
 
   // N64
   if (isN64) {
