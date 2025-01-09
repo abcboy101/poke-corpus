@@ -43,6 +43,7 @@ import chineseChars from './chineseChars.json';
 import { preprocessStringGO, postprocessStringGO } from './cleanStringGO';
 import { preprocessStringMasters, postprocessStringMasters } from './cleanStringMasters';
 import * as g3 from './expandVariablesG3';
+import { variables3DS } from './variableNames';
 
 //#region Pre-processing
 // SMUSUM Chinese Pokémon names
@@ -272,6 +273,16 @@ function remap3DSSpecialCharacters (s: string) {
   ));
 }
 
+// 3DS variable names
+function remap3DSVariables(s: string) {
+  s = s.replaceAll('\\[', '\u{F0102}');
+  variables3DS.forEach(([code, name]) => {
+    s = s.replaceAll(new RegExp(`\\[VAR ${name}\\b`, 'gu'), `[VAR ${code}`);
+  });
+  s = s.replaceAll('\u{F0102}', '\\[');
+  return s;
+}
+
 // Switch special characters
 function remapSwitchSpecialCharacters(s: string) {
   return s.search(/[\uE104\uE300-\uE31C]/u) === -1 ? s : (s
@@ -362,6 +373,7 @@ export function preprocessString(s: string, collectionKey: string, language: str
     case "UltraSunUltraMoon":
     case "Bank":
       s = remap3DSSpecialCharacters(s);
+      s = remap3DSVariables(s);
       break;
 
     case "LetsGoPikachuLetsGoEevee":
@@ -646,8 +658,8 @@ export function postprocessString(s: string, collectionKey: string, language: st
     .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\u{F0106}line-indent=(.*?)\u{F0107}(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>') // BDSP line-indent
   ) : s;
   s = (isGen4 || isModern) ? (s
-    .replaceAll(/\[VAR (?:FF00|COLOR)\((?!0000)([0-9A-F]{4})\)\](.+?)(?=\[VAR (?:FF00|COLOR)\([0-9A-F]{4}\)\]|$)/gu, (_, color, text) => `<span class="color" style="color: var(--color-${parseInt(color, 16)})">${text}</span>`) // font color
-    .replaceAll(/\[VAR (?:FF00|COLOR)\(0000\)\]/gu, '') // font color (reset)
+    .replaceAll(/\[VAR FF00\((?!0000)([0-9A-F]{4})\)\](.+?)(?=\[VAR FF00\([0-9A-F]{4}\)\]|$)/gu, (_, color, text) => `<span class="color" style="color: var(--color-${parseInt(color, 16)})">${text}</span>`) // font color
+    .replaceAll(/\[VAR FF00\(0000\)\]/gu, '') // font color (reset)
   ) : s;
   s = (isGen5 || is3DS) ? (s
     .replaceAll(/\[VAR BD00\(([0-9A-F]{4}),([0-9A-F]{4}),([0-9A-F]{4})\)\](.+?)(?:\[VAR BD00\(0001,0002,0000\)\]|\[VAR BD01\]|$)/gu, (_, color1, color2, color3, text) => `<span class="color" style="color: var(--color-${parseInt(color1, 16)}-${parseInt(color2, 16)}-${parseInt(color3, 16)})">${text}</span>`) // font color
@@ -829,23 +841,23 @@ export function postprocessString(s: string, collectionKey: string, language: st
     .replaceAll(/\[VAR 3400\(([0-9A-F]{4})\)\]/gu, (_, index) => particleBranch(parseInt(index, 16) % 8))
   ) : s;
   s = isModern ? (s
-    .replaceAll(/\[VAR (?:GENDBR|1100)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenF, lenM, rest) => {
+    .replaceAll(/\[VAR 1100\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenF, lenM, rest) => {
       const endM = parseInt(lenM, 16);
       const endF = endM + parseInt(lenF, 16);
       return `${genderBranch(rest.substring(0, endM), rest.substring(endM, endF))}${rest.substring(endF)}`;
     })
-    .replaceAll(/\[VAR (?:GENDBR|1100)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),00([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenF, lenM, lenN, rest) => {
+    .replaceAll(/\[VAR 1100\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),00([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenF, lenM, lenN, rest) => {
       const endM = parseInt(lenM, 16);
       const endF = endM + parseInt(lenF, 16);
       const endN = endF + parseInt(lenN, 16);
       return `${genderBranch(rest.substring(0, endM), rest.substring(endM, endF), rest.substring(endF, endN))}${rest.substring(endN)}`;
     })
-    .replaceAll(/\[VAR (?:NUMBRNCH|1101)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenP, lenS, rest) => {
+    .replaceAll(/\[VAR 1101\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenP, lenS, rest) => {
       const endS = parseInt(lenS, 16);
       const endP = endS + parseInt(lenP, 16);
       return `${numberBranch(rest.substring(0, endS), rest.substring(endS, endP))}${rest.substring(endP)}`;
     })
-    .replaceAll(/\[VAR (?:1102)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenFS, lenMS, lenFP, lenMP, rest) => {
+    .replaceAll(/\[VAR 1102\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenFS, lenMS, lenFP, lenMP, rest) => {
       const endMS = parseInt(lenMS, 16);
       const endFS = endMS + parseInt(lenFS, 16);
       const endMP = endFS + parseInt(lenMP, 16);
@@ -857,13 +869,13 @@ export function postprocessString(s: string, collectionKey: string, language: st
       const end2 = end1 + parseInt(len2, 16);
       return `${contextBranch(rest.substring(0, end1), rest.substring(end1, end2), language)}${rest.substring(end2)}`;
     })
-    .replaceAll(/\[VAR (?:1105)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),00([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenP, lenS, lenZ, rest) => {
+    .replaceAll(/\[VAR 1105\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),00([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenP, lenS, lenZ, rest) => {
       const endS = parseInt(lenS, 16);
       const endP = endS + parseInt(lenP, 16);
       const endZ = endP + parseInt(lenZ, 16);
       return `${numberBranch(rest.substring(0, endS), rest.substring(endS, endP), rest.substring(endP, endZ))}${rest.substring(endZ)}`;
     })
-    .replaceAll(/\[VAR (?:1107)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, len2, len1, rest) => {
+    .replaceAll(/\[VAR 1107\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, len2, len1, rest) => {
       const end1 = parseInt(len1, 16);
       const end2 = end1 + parseInt(len2, 16);
       return `${versionBranchSV(rest.substring(0, end1), rest.substring(end1, end2))}${rest.substring(end2)}`;
