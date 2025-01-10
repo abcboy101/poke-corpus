@@ -1,4 +1,4 @@
-import { genderBranch, numberBranch, particleBranch } from "./cleanString";
+import { genderBranch, numberBranch, grammarBranch } from "./cleanString";
 
 export function preprocessStringMasters(s: string, language: string) {
   switch (language) {
@@ -7,7 +7,7 @@ export function preprocessStringMasters(s: string, language: string) {
   }
 }
 
-const koreanParticles: Record<string, [string, string]> = {
+const particlesKO: Record<string, [string, string]> = {
   ha: ['는', '은'],
   wo: ['를', '을'],
   ga: ['가', '이'],
@@ -15,6 +15,7 @@ const koreanParticles: Record<string, [string, string]> = {
   ni: ['로', '으로'], // differs from GF
   ya: ['', '이'],
 };
+const particleBranchFromChar = (char: string) => grammarBranch(...particlesKO[char]);
 
 export function postprocessStringMasters(s: string) {
   return (s
@@ -41,7 +42,7 @@ export function postprocessStringMasters(s: string) {
     .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):Qty (?:Ref="\d+" )?S="([^"]*?)" P="([^"]*?)" \]/gu, (_, singular, plural) => numberBranch(singular, plural))
     .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):Qty (?:Ref="\d+" )?S="([^"]*?)" \]/gu, (_, singular) => numberBranch(singular, ''))
     .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):Qty (?:Ref="\d+" )?P="([^"]*?)" \]/gu, (_, plural) => numberBranch('', plural))
-    .replaceAll(/\[Kor:Particle char="(ha|wo|ga|to|ni|ya)" \]/gu, (_, char) => particleBranch(char, koreanParticles))
+    .replaceAll(/\[Kor:Particle char="(ha|wo|ga|to|ni|ya)" \]/gu, (_, char) => particleBranchFromChar(char))
     .replaceAll(/(\[(?:Name:.+?|Digit:.+?) [^[]*?\])/gu, '<span class="var">$1</span>')
   );
 }

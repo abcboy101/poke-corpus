@@ -1,5 +1,5 @@
 /* Variables */
-.var, .func, .null, .unused, .speaker, .gender, .number, .context, .version {
+.var, .func, .null, .unused, .speaker, .grammar, .gender, .number, .version {
   color: var(--text-gray);
   white-space: nowrap;
 }
@@ -150,15 +150,18 @@ td:lang(ja) :is(.spacing-0, .spacing-1, .spacing-2, .spacing-3) .var {
   color: color-mix(in oklab, var(--gender-female-color) 50%, var(--number-plural-color));
 }
 
-/* Context branches */
-.consonant {
+/* Grammar branches */
+.branch.form {
   border-bottom: 1px dotted var(--text);
-  color: color-mix(in oklab, var(--gender-male-color) 25%, var(--text-gray));
+  color: color-mix(in oklab, var(--text) 50%, var(--text-gray));
 }
 
-.vowel {
-  border-bottom: 1px dotted var(--text);
-  color: color-mix(in oklab, var(--gender-female-color) 25%, var(--text-gray));
+.grammar-hide .branch.form, .grammar-hide .grammar {
+  display: none;
+}
+
+.grammar-hide .branch.form-0 {
+  display: unset;
 }
 
 /* Version branches */

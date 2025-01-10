@@ -45,6 +45,7 @@ import chineseChars from './chineseChars.json';
 import { preprocessStringGO, postprocessStringGO } from './cleanStringGO';
 import { preprocessStringMasters, postprocessStringMasters } from './cleanStringMasters';
 import * as g3 from './expandVariablesG3';
+import { grammarDE, grammarEN, grammarES, grammarFR, grammarIT, particlesKO, remapBDSPGrammarIndex } from './grammar';
 import { variables3DS } from './variableNames';
 
 //#region Pre-processing
@@ -501,31 +502,18 @@ function genderNumberBranch(maleSingular: string, femaleSingular: string, malePl
 }
 
 /**
- * Converts the context-dependent forms of a string to HTML, separated by a slash. Used for:
- * - French apocope: before a consonant/vowel
- * - Italian apocope: before a vowel/consonant
- * - Korean particle: after a vowel/consonant
+ * Converts the context-dependent forms of a string to HTML, separated by a slash.
+ * Used for definite articles, indefinite articles, prepositions, French elision, Italian dates, and Korean particles.
  *
  * Returns the resulting string.
  */
-function contextBranch(form1: string, form2: string, language: string) {
-  const results = [];
-  if (form1.length > 0) results.push(`<span class="branch ${language === 'fr' ? 'consonant' : 'vowel'}">${form1}</span>`);
-  if (form2.length > 0) results.push(`<span class="branch ${language === 'fr' ? 'vowel' : 'consonant'}">${form2}</span>`);
-  return results.join('<span class="context">/</span>');
+
+export function grammarBranch(...forms: string[]) {
+  return forms.filter((form) => form !== '').map((form, index) => `<span class="branch form form-${index}">${form}</span>`).join('<span class="grammar">/</span>');
 }
 
-const koreanParticles: Record<string, [string, string]> = {
-  0: ['', ''], // no particle
-  1: ['는', '은'], // 은(는), topic particle, equivalent to Japanese "ha"
-  2: ['를', '을'], // 을(를), object particle, equivalent to Japanese "wo"
-  3: ['가', '이'], // 이(가), subject particle, equivalent to Japanese "ga"
-  4: ['와', '과'], // 와(과), conjunctive particle, equivalent to Japanese "to"
-  5: ['', '으'], // (으)로, directional particle, equivalent to Japanese "ni"
-  6: ['', '이'], // (이), optional "i" in particles such as 이다/이랑/이야
-  7: ['야', '아'], // 아(야), vocative particle
-};
-export const particleBranch = (index: number, particles: Record<string, [string, string]> = koreanParticles) => contextBranch(...particles[index], 'ko');
+const grammarBranchFromIndex = (index: number, grammar: string[][]) => grammarBranch(...grammar[index]);
+const particleBranchFromIndex = (index: number) => grammarBranch(...particlesKO[index]);
 
 /**
  * Converts the version-specific forms of a string to HTML, separated by a slash.
@@ -813,6 +801,89 @@ export function postprocessString(s: string, collectionKey: string, language: st
   s = isMasters ? postprocessStringMasters(s) : s;
   //#endregion
 
+  //#region Grammar
+  s = isModern ? (!isBDSP ? (s
+    .replaceAll(/\[VAR 13(0[0-3])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarEN)) // English
+    .replaceAll(/\[VAR 14(0[0-B])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarFR)) // French
+    .replaceAll(/\[VAR 15(0[0-F])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarIT)) // Italian
+    .replaceAll(/\[VAR 16(0[0-7])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarDE)) // German
+    .replaceAll(/\[VAR 17(0[0-F])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarES)) // Spanish
+  ) : (s
+    .replaceAll(/\[VAR 13(0[3-6])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(parseInt(index, 16)), grammarEN)) // English
+    .replaceAll(/\[VAR 14(0[3-CF]|10)[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(parseInt(index, 16)), grammarFR)) // French
+    .replaceAll(/\[VAR 15(0[3-CF]|1[0-5])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(parseInt(index, 16)), grammarIT)) // Italian
+    .replaceAll(/\[VAR 16(0[3-A])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(parseInt(index, 16)), grammarDE)) // German
+    .replaceAll(/\[VAR 17(0[3-E]|1[3-6])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(parseInt(index, 16), true), grammarES)) // Spanish
+  )) : s;
+
+  // Korean particle
+  if (isModern && !isBDSP)
+    s = s.replaceAll(/\[VAR 1900\(([0-9A-F]{4})\)\]/gu, (_, index) => particleBranchFromIndex(parseInt(index, 16)));
+  else if (isBDSP)
+    s = s.replaceAll(/\[VAR 1900\(tagParameter=(\d+)\)\]/gu, (_, index) => particleBranchFromIndex(index));
+  else if (language === 'ko' && isGen4)
+    s = s.replaceAll(/\[VAR ((?:0[1346]|34)[0-9A-F]{2})\(([0-9A-F]{4}),([0-9A-F]{4})\)\]/gu, (_, tag, param, index) => `[VAR ${tag}(${param})]${particleBranchFromIndex(parseInt(index, 16) % 8)}`);
+  else if (language === 'ko' && collectionKey === 'BlackWhite')
+    s = s.replaceAll(/\[VAR (0[12][0-9A-F]{2})\(([0-9A-F]{4}),([0-9A-F]{4})\)\]/gu, (_, tag, param, index) => `[VAR ${tag}(${param})]${particleBranchFromIndex(parseInt(index, 16) % 8)}`);
+  else if (collectionKey === 'Black2White2')
+    s = s.replaceAll(/\[VAR 3400\(([0-9A-F]{4})\)\]/gu, (_, index) => particleBranchFromIndex(parseInt(index, 16) % 8));
+  //#endregion
+
+  //#region Branches
+  s = isGen3 ? (s
+    .replaceAll(/\u{F1102}\u{F1200}(.*?)\u{F1104}(.*?)\u{F1103}/gu, (_, male, female) => genderBranch(male, female)) // FD 05, FD 06
+    .replaceAll(/\u{F1102}\u{F1207}(.*?)\u{F1104}(.*?)\u{F1103}/gu, (_, form1, form2) => versionBranchRS(form1, form2)) // FD 07 - FD 0D
+  ) : s;
+  s = isModern ? (s
+    .replaceAll(/\[VAR 1100\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenF, lenM, rest) => {
+      const endM = parseInt(lenM, 16);
+      const endF = endM + parseInt(lenF, 16);
+      return `${genderBranch(rest.substring(0, endM), rest.substring(endM, endF))}${rest.substring(endF)}`;
+    })
+    .replaceAll(/\[VAR 1100\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),00([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenF, lenM, lenN, rest) => {
+      const endM = parseInt(lenM, 16);
+      const endF = endM + parseInt(lenF, 16);
+      const endN = endF + parseInt(lenN, 16);
+      return `${genderBranch(rest.substring(0, endM), rest.substring(endM, endF), rest.substring(endF, endN))}${rest.substring(endN)}`;
+    })
+    .replaceAll(/\[VAR 1101\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenP, lenS, rest) => {
+      const endS = parseInt(lenS, 16);
+      const endP = endS + parseInt(lenP, 16);
+      return `${numberBranch(rest.substring(0, endS), rest.substring(endS, endP))}${rest.substring(endP)}`;
+    })
+    .replaceAll(/\[VAR 1102\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenFS, lenMS, lenFP, lenMP, rest) => {
+      const endMS = parseInt(lenMS, 16);
+      const endFS = endMS + parseInt(lenFS, 16);
+      const endMP = endFS + parseInt(lenMP, 16);
+      const endFP = endMP + parseInt(lenFP, 16);
+      return `${genderNumberBranch(rest.substring(0, endMS), rest.substring(endMS, endFS), rest.substring(endFS, endMP), rest.substring(endMP, endFP))}${rest.substring(endFP)}`;
+    })
+    .replaceAll(/\[VAR (?:1104|1106)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, len2, len1, rest) => {
+      const end1 = parseInt(len1, 16);
+      const end2 = end1 + parseInt(len2, 16);
+      return `${grammarBranch(rest.substring(0, end1), rest.substring(end1, end2))}${rest.substring(end2)}`;
+    })
+    .replaceAll(/\[VAR 1105\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),00([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenP, lenS, lenZ, rest) => {
+      const endS = parseInt(lenS, 16);
+      const endP = endS + parseInt(lenP, 16);
+      const endZ = endP + parseInt(lenZ, 16);
+      return `${numberBranch(rest.substring(0, endS), rest.substring(endS, endP), rest.substring(endP, endZ))}${rest.substring(endZ)}`;
+    })
+    .replaceAll(/\[VAR 1107\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, len2, len1, rest) => {
+      const end1 = parseInt(len1, 16);
+      const end2 = end1 + parseInt(len2, 16);
+      return `${versionBranchSV(rest.substring(0, end1), rest.substring(end1, end2))}${rest.substring(end2)}`;
+    })
+  ) : s;
+  s = isBDSP ? (s
+    .replaceAll(/\[VAR (?:1[3-7A]00|1901)\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)(?:\|([^[<{]*?))?\)\]/gu, (_, male, female) => genderBranch(male, female ?? ''))
+    .replaceAll(/\[VAR (?:1[3-7]01|1902)\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)(?:\|([^[<{]*?))?\)\]/gu, (_, singular, plural) => numberBranch(singular, plural ?? ''))
+    .replaceAll(/\[VAR (?:1[3-7]02|1903)\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)\|([^[<{]*?)\|([^[<{]*?)\|([^[<{]*?)\)\]/gu, (_, maleSingular, femaleSingular, malePlural, femalePlural) => genderNumberBranch(maleSingular, femaleSingular, malePlural, femalePlural))
+    .replaceAll(/\[VAR (?:130A|1413|1517|160E|1712|1904)\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)(?:\|([^[<{]*?))?(?:\|([^[<{]*?))?\)\]/gu, (_, singular, plural, zero) => numberBranch(singular, plural ?? '', zero ?? ''))
+    .replaceAll(/\[VAR (?:1411|1518)\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)(?:\|([^[<{]*?))?(?:,forceGrmID=\d+)?\)\]/gu, (_, form1, form2) => grammarBranch(form1, form2 ?? ''))
+  ) : s;
+  //#endregion
+
   //#region Variables
   s = isGen3 ? (s
     .replaceAll(/(\[DYNAMIC \d+\])/gu, '<span class="var">$1</span>') // F7 xx
@@ -845,67 +916,6 @@ export function postprocessString(s: string, collectionKey: string, language: st
     .replaceAll('[STR_VAR_3]', '<span class="var">[STR_VAR_3]</span>') // FD 04
     .replaceAll('[RIVAL]', '<span class="var">[RIVAL]</span>') // FD 06 (FRLG)
     .replaceAll(/(\[B_[^\]]+?\])/gu, '<span class="var">$1</span>') // FD xx (battle string placeholders)
-
-    .replaceAll(/\u{F1102}\u{F1200}(.*?)\u{F1104}(.*?)\u{F1103}/gu, (_, male, female) => genderBranch(male, female)) // FD 05, FD 06
-    .replaceAll(/\u{F1102}\u{F1207}(.*?)\u{F1104}(.*?)\u{F1103}/gu, (_, form1, form2) => versionBranchRS(form1, form2)) // FD 07 - FD 0D
-  ) : s;
-  s = (language === 'ko' && isGen4) ? (s
-    .replaceAll(/\[VAR ((?:0[1346]|34)[0-9A-F]{2})\(([0-9A-F]{4}),([0-9A-F]{4})\)\]/gu, (_, tag, param, index) => `[VAR ${tag}(${param})]${particleBranch(parseInt(index, 16) % 8)}`)
-  ) : s;
-  s = (language === 'ko' && collectionKey === 'BlackWhite') ? (s
-    .replaceAll(/\[VAR (0[12][0-9A-F]{2})\(([0-9A-F]{4}),([0-9A-F]{4})\)\]/gu, (_, tag, param, index) => `[VAR ${tag}(${param})]${particleBranch(parseInt(index, 16) % 8)}`)
-  ) : s;
-  s = (collectionKey === 'Black2White2') ? (s
-    .replaceAll(/\[VAR 3400\(([0-9A-F]{4})\)\]/gu, (_, index) => particleBranch(parseInt(index, 16) % 8))
-  ) : s;
-  s = isModern ? (s
-    .replaceAll(/\[VAR 1100\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenF, lenM, rest) => {
-      const endM = parseInt(lenM, 16);
-      const endF = endM + parseInt(lenF, 16);
-      return `${genderBranch(rest.substring(0, endM), rest.substring(endM, endF))}${rest.substring(endF)}`;
-    })
-    .replaceAll(/\[VAR 1100\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),00([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenF, lenM, lenN, rest) => {
-      const endM = parseInt(lenM, 16);
-      const endF = endM + parseInt(lenF, 16);
-      const endN = endF + parseInt(lenN, 16);
-      return `${genderBranch(rest.substring(0, endM), rest.substring(endM, endF), rest.substring(endF, endN))}${rest.substring(endN)}`;
-    })
-    .replaceAll(/\[VAR 1101\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenP, lenS, rest) => {
-      const endS = parseInt(lenS, 16);
-      const endP = endS + parseInt(lenP, 16);
-      return `${numberBranch(rest.substring(0, endS), rest.substring(endS, endP))}${rest.substring(endP)}`;
-    })
-    .replaceAll(/\[VAR 1102\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenFS, lenMS, lenFP, lenMP, rest) => {
-      const endMS = parseInt(lenMS, 16);
-      const endFS = endMS + parseInt(lenFS, 16);
-      const endMP = endFS + parseInt(lenMP, 16);
-      const endFP = endMP + parseInt(lenFP, 16);
-      return `${genderNumberBranch(rest.substring(0, endMS), rest.substring(endMS, endFS), rest.substring(endFS, endMP), rest.substring(endMP, endFP))}${rest.substring(endFP)}`;
-    })
-    .replaceAll(/\[VAR (?:1104|1106)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, len2, len1, rest) => {
-      const end1 = parseInt(len1, 16);
-      const end2 = end1 + parseInt(len2, 16);
-      return `${contextBranch(rest.substring(0, end1), rest.substring(end1, end2), language)}${rest.substring(end2)}`;
-    })
-    .replaceAll(/\[VAR 1105\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),00([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, lenP, lenS, lenZ, rest) => {
-      const endS = parseInt(lenS, 16);
-      const endP = endS + parseInt(lenP, 16);
-      const endZ = endP + parseInt(lenZ, 16);
-      return `${numberBranch(rest.substring(0, endS), rest.substring(endS, endP), rest.substring(endP, endZ))}${rest.substring(endZ)}`;
-    })
-    .replaceAll(/\[VAR 1107\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\]([^[<{]*)/gu, (_, len2, len1, rest) => {
-      const end1 = parseInt(len1, 16);
-      const end2 = end1 + parseInt(len2, 16);
-      return `${versionBranchSV(rest.substring(0, end1), rest.substring(end1, end2))}${rest.substring(end2)}`;
-    })
-    .replaceAll(/\[VAR 1900\(([0-9A-F]{4})\)\]/gu, (_, index) => particleBranch(parseInt(index, 16)))
-  ) : s;
-  s = isBDSP ? (s
-    .replaceAll(/\[VAR 1[3-7A]00\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)(?:\|([^[<{]*?))?\)\]/gu, (_, male, female) => genderBranch(male, female ?? ''))
-    .replaceAll(/\[VAR 1[3-7A]01\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)(?:\|([^[<{]*?))?\)\]/gu, (_, singular, plural) => numberBranch(singular, plural ?? ''))
-    .replaceAll(/\[VAR 1[3-7A]02\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)\|([^[<{]*?)\|([^[<{]*?)\|([^[<{]*?)\)\]/gu, (_, maleSingular, femaleSingular, malePlural, femalePlural) => genderNumberBranch(maleSingular, femaleSingular, malePlural, femalePlural))
-    .replaceAll(/\[VAR (?:1411|1518)\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)(?:\|([^[<{]*?))?(?:,forceGrmID=\d+)?\)\]/gu, (_, singular, plural) => contextBranch(singular, plural ?? '', language))
-    .replaceAll(/\[VAR 1900\(tagParameter=(\d+)\)\]/gu, (_, index) => particleBranch(index))
   ) : s;
   s = (s
     .replaceAll('[NULL]', '<span class="null">[NULL]</span>')
