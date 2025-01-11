@@ -43,6 +43,7 @@ export function postprocessStringMasters(s: string) {
     .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):Qty (?:Ref="\d+" )?S="([^"]*?)" \]/gu, (_, singular) => numberBranch(singular, ''))
     .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):Qty (?:Ref="\d+" )?P="([^"]*?)" \]/gu, (_, plural) => numberBranch('', plural))
     .replaceAll(/\[Kor:Particle char="(ha|wo|ga|to|ni|ya)" \]/gu, (_, char) => particleBranchFromChar(char))
-    .replaceAll(/(\[(?:Name:.+?|Digit:.+?) [^[]*?\])/gu, '<span class="var">$1</span>')
+    .replaceAll(/(\[(?:Name:.+?) [^[]*?\])/gu, '<span class="var long">$1</span><span class="var short" title="$1">[Name]</span>')
+    .replaceAll(/(\[(?:Digit:.+?) [^[]*?\])/gu, '<span class="var long">$1</span><span class="var short" title="$1">[Digit]</span>')
   );
 }

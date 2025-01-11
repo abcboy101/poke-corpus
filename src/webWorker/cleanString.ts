@@ -817,16 +817,16 @@ export function postprocessString(s: string, collectionKey: string, language: st
   )) : s;
 
   // Korean particle
-  if (isModern && !isBDSP)
-    s = s.replaceAll(/\[VAR 1900\(([0-9A-F]{4})\)\]/gu, (_, index) => particleBranchFromIndex(parseInt(index, 16)));
-  else if (isBDSP)
-    s = s.replaceAll(/\[VAR 1900\(tagParameter=(\d+)\)\]/gu, (_, index) => particleBranchFromIndex(index));
-  else if (language === 'ko' && isGen4)
+  if (language === 'ko' && isGen4)
     s = s.replaceAll(/\[VAR ((?:0[1346]|34)[0-9A-F]{2})\(([0-9A-F]{4}),([0-9A-F]{4})\)\]/gu, (_, tag, param, index) => `[VAR ${tag}(${param})]${particleBranchFromIndex(parseInt(index, 16) % 8)}`);
   else if (language === 'ko' && collectionKey === 'BlackWhite')
     s = s.replaceAll(/\[VAR (0[12][0-9A-F]{2})\(([0-9A-F]{4}),([0-9A-F]{4})\)\]/gu, (_, tag, param, index) => `[VAR ${tag}(${param})]${particleBranchFromIndex(parseInt(index, 16) % 8)}`);
   else if (collectionKey === 'Black2White2')
     s = s.replaceAll(/\[VAR 3400\(([0-9A-F]{4})\)\]/gu, (_, index) => particleBranchFromIndex(parseInt(index, 16) % 8));
+  else if (isBDSP)
+    s = s.replaceAll(/\[VAR 1900\(tagParameter=(\d+)\)\]/gu, (_, index) => particleBranchFromIndex(index));
+  else if (isModern)
+    s = s.replaceAll(/\[VAR 1900\(([0-9A-F]{4})\)\]/gu, (_, index) => particleBranchFromIndex(parseInt(index, 16)));
   //#endregion
 
   //#region Branches
@@ -916,6 +916,19 @@ export function postprocessString(s: string, collectionKey: string, language: st
     .replaceAll('[STR_VAR_3]', '<span class="var">[STR_VAR_3]</span>') // FD 04
     .replaceAll('[RIVAL]', '<span class="var">[RIVAL]</span>') // FD 06 (FRLG)
     .replaceAll(/(\[B_[^\]]+?\])/gu, '<span class="var">$1</span>') // FD xx (battle string placeholders)
+  ) : s;
+  s = isGen4 ? (s
+    .replaceAll(/\[(VAR 013[2-9A-B][^\]]+?\])/gu, '<span class="var long">\u{F0102}$1</span><span class="var short" title="\u{F0102}$1">\u{F0102}Digit]</span>')
+    .replaceAll(/\[(VAR (?:0[1346]|34)[^\]]+?\])/gu, '<span class="var long">\u{F0102}$1</span><span class="var short" title="\u{F0102}$1">\u{F0102}Name]</span>')
+    .replaceAll(/\[(VAR 02[^\]]+?\])/gu, '<span class="func long">\u{F0102}$1</span><span class="func short" title="\u{F0102}$1">\u{F0102}Ctrl1]</span>')
+    .replaceAll(/\[(VAR FF[^\]]+?\])/gu, '<span class="func long">\u{F0102}$1</span><span class="func short" title="\u{F0102}$1">\u{F0102}Ctrl2]</span>')
+  ) : s;
+  s = isModern ? (s
+    .replaceAll(/\[(VAR 01[^\]]+?\])/gu, '<span class="var long">\u{F0102}$1</span><span class="var short" title="\u{F0102}$1">\u{F0102}Name]</span>')
+    .replaceAll(/\[(VAR 02[^\]]+?\])/gu, '<span class="var long">\u{F0102}$1</span><span class="var short" title="\u{F0102}$1">\u{F0102}Digit]</span>')
+    .replaceAll(/\[(VAR 1[0-9A][^\]]+?\])/gu, '<span class="func long">\u{F0102}$1</span><span class="func short" title="\u{F0102}$1">\u{F0102}Grm]</span>')
+    .replaceAll(/\[(VAR BD[^\]]+?\])/gu, '<span class="func long">\u{F0102}$1</span><span class="func short" title="\u{F0102}$1">\u{F0102}Ctrl1]</span>')
+    .replaceAll(/\[(VAR BE[^\]]+?\])/gu, '<span class="func long">\u{F0102}$1</span><span class="func short" title="\u{F0102}$1">\u{F0102}Ctrl2]</span>')
   ) : s;
   s = (s
     .replaceAll('[NULL]', '<span class="null">[NULL]</span>')

@@ -53,7 +53,7 @@ function ResultsNav({count, offset, limit, setOffset}: {count: number, offset: n
 
 function Results({status, progress, results, showId = true, richText = true, limit = defaultLimit}: {status: Status, progress: number, showId: boolean, richText: boolean, results: readonly SearchResultLines[], limit?: number}) {
   const { t } = useTranslation();
-  const [showVariables, setShowVariables] = useState(true);
+  const [showVariables, setShowVariables] = useState(0);
   const [showAllCharacters, setShowAllCharacters] = useState(false);
   const [showGender, setShowGender] = useState(2);
   const [showPlural, setShowPlural] = useState(0);
@@ -82,7 +82,7 @@ function Results({status, progress, results, showId = true, richText = true, lim
 
   const resultsToggle = (
     <div className="results-toggle">
-      <button className={showVariables ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowVariables(!showVariables); }} title={t('showVariables')}>{t('showVariablesIcon')}</button>
+      <button className={showVariables !== 2 ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowVariables((showVariables + 1) % 3); }} title={t('showVariables')}>{t('showVariablesIcon', {context: showVariables})}</button>
       <button className={showAllCharacters ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowAllCharacters(!showAllCharacters); }} title={t('showAllCharacters')}>{t('showAllCharactersIcon')}</button>
       <button className={showGender !== 2 ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowGender((showGender + 1) % 3); }} title={t('showGender')}>{t('showGenderIcon', {context: showGender})}</button>
       <button className={showPlural !== 0 ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowPlural((showPlural + 1) % 3); }} title={t('showPlural')}>{t('showPluralIcon', {context: showPlural})}</button>
@@ -99,7 +99,7 @@ function Results({status, progress, results, showId = true, richText = true, lim
         { count > limit ? <ResultsNav count={count} offset={offset} limit={limit} setOffset={setOffset} /> : <ProgressBar progress={progress} /> }
         { resultsToggle }
       </div>
-      <ResultsSections className={`search results app-window variables-${showVariables ? 'show' : 'hide'} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural} grammar-${showGrammar ? 'show' : 'hide'} furigana-${showFurigana ? 'show' : 'hide'} rich-text-${richText ? 'enabled' : 'disabled'}`}
+      <ResultsSections className={`search results app-window variables-${['short', 'show', 'hide'][showVariables]} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural} grammar-${showGrammar ? 'show' : 'hide'} furigana-${showFurigana ? 'show' : 'hide'} rich-text-${richText ? 'enabled' : 'disabled'}`}
         results={results} headers={headers} showId={showId} offset={offset} limit={limit} onShowSection={onShowSection} jumpTo={jumpTo} />
     </>
   );

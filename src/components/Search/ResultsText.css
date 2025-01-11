@@ -4,8 +4,15 @@
   white-space: nowrap;
 }
 
-.variables-hide :is(.var, .func) {
+.variables-hide :is(.var, .func),
+.variables-short :is(.var.long, .func.long),
+.var.short, .func.short {
   display: none;
+}
+
+.variables-hide .var.short,
+.variables-short :is(.var.short, .func.short) {
+  display: unset;
 }
 
 /* Literals */
@@ -153,7 +160,7 @@ td:lang(ja) :is(.spacing-0, .spacing-1, .spacing-2, .spacing-3) .var {
 /* Grammar branches */
 .branch.form {
   border-bottom: 1px dotted var(--text);
-  color: color-mix(in oklab, var(--text) 50%, var(--text-gray));
+  color: color-mix(in oklab, var(--number-singular-color), var(--number-plural-color));
 }
 
 .grammar-hide .branch.form, .grammar-hide .grammar {
