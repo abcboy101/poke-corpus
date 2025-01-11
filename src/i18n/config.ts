@@ -7,6 +7,7 @@ import translation from './en/translation.json';
 import collections from './en/collections.json';
 import languages from './en/languages.json';
 import files from './en/files.json';
+import icons from './en/icons.json';
 import translation_enGB from './en-GB/translation.json';
 
 i18next.use(LanguageDetector)
@@ -20,6 +21,7 @@ i18next.use(LanguageDetector)
       'collections',
       'languages',
       'files',
+      'icons',
     ],
 
     // Since English is the fallback language, we always need to load it.
@@ -29,6 +31,7 @@ i18next.use(LanguageDetector)
         collections: collections,
         languages: languages,
         files: files,
+        icons: icons,
       },
       'en-GB': {
         translation: translation_enGB,
