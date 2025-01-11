@@ -11,6 +11,7 @@ import './Results.css';
 import './ResultsText.css';
 import './ResultsTextColor.css';
 import '../../i18n/config';
+import { localStorageGetItem, localStorageSetItem } from '../../utils/utils';
 import { defaultLimit } from '../../utils/utils';
 import { ResultsSections, ShowSectionCallback } from './ResultsSections';
 
@@ -51,15 +52,73 @@ function ResultsNav({count, offset, limit, setOffset}: {count: number, offset: n
   );
 }
 
+interface ResultsPreferences {
+  showVariables: number,
+  showAllCharacters: boolean,
+  showGender: number,
+  showPlural: number,
+  showGrammar: boolean,
+  showFurigana: boolean,
+}
+
+const defaultResultsPreferences: Readonly<ResultsPreferences> = {
+  showVariables: 0, // short
+  showAllCharacters: false,
+  showGender: 2, // all forms
+  showPlural: 0, // all forms
+  showGrammar: true,
+  showFurigana: true,
+};
+
+const getSavedResultsPreferences = () => {
+  const saved = localStorageGetItem('corpus-toggle');
+  if (saved === null)
+    return defaultResultsPreferences;
+
+  const toggleDefault = {...defaultResultsPreferences};
+  try {
+    const toggle: Partial<ResultsPreferences> = JSON.parse(saved);
+    if (toggle.showVariables !== undefined && [0, 1, 2].includes(toggle.showVariables))
+      toggleDefault.showVariables = toggle.showVariables;
+    if (toggle.showAllCharacters !== undefined && typeof toggle.showAllCharacters === 'boolean')
+      toggleDefault.showAllCharacters = toggle.showAllCharacters;
+    if (toggle.showGender !== undefined && [0, 1, 2].includes(toggle.showGender))
+      toggleDefault.showGender = toggle.showGender;
+    if (toggle.showPlural !== undefined && [0, 1, 2].includes(toggle.showPlural))
+      toggleDefault.showPlural = toggle.showPlural;
+    if (toggle.showGrammar !== undefined && typeof toggle.showGrammar === 'boolean')
+      toggleDefault.showGrammar = toggle.showGrammar;
+    if (toggle.showFurigana !== undefined && typeof toggle.showFurigana === 'boolean')
+      toggleDefault.showFurigana = toggle.showFurigana;
+  }
+  catch {
+    console.log('Failed to parse saved toggle preferences!');
+  }
+  return toggleDefault;
+};
+
 function Results({status, progress, results, showId = true, richText = true, limit = defaultLimit}: {status: Status, progress: number, showId: boolean, richText: boolean, results: readonly SearchResultLines[], limit?: number}) {
   const { t } = useTranslation();
-  const [showVariables, setShowVariables] = useState(0);
-  const [showAllCharacters, setShowAllCharacters] = useState(false);
-  const [showGender, setShowGender] = useState(2);
-  const [showPlural, setShowPlural] = useState(0);
-  const [showGrammar, setShowGrammar] = useState(true);
-  const [showFurigana, setShowFurigana] = useState(true);
+  const initial = useMemo(getSavedResultsPreferences, []);
+  const [showVariables, setShowVariables] = useState(initial.showVariables);
+  const [showAllCharacters, setShowAllCharacters] = useState(initial.showAllCharacters);
+  const [showGender, setShowGender] = useState(initial.showGender);
+  const [showPlural, setShowPlural] = useState(initial.showPlural);
+  const [showGrammar, setShowGrammar] = useState(initial.showGrammar);
+  const [showFurigana, setShowFurigana] = useState(initial.showFurigana);
   const [offset, setOffset] = useState(0);
+
+  // Save preferences on change
+  useEffect(() => {
+    localStorageSetItem('corpus-toggle', JSON.stringify({
+      showVariables: showVariables,
+      showAllCharacters: showAllCharacters,
+      showGender: showGender,
+      showPlural: showPlural,
+      showGrammar: showGrammar,
+      showFurigana: showFurigana,
+    }));
+  }, [showVariables, showAllCharacters, showGender, showPlural, showGrammar, showFurigana]);
 
   const onShowSection: ShowSectionCallback = (offset, index) => () => {
     setOffset(offset);
