@@ -6,8 +6,36 @@
 
 
 /* Colors from the Switch games (VAR FF00) */
-/* Hex codes are taken from LGPE */
-:root {
+.collection-sv {
+  --color-0: #182840;
+  --color-1: #ED5F5F;
+  --color-2: #0065CC;
+  --color-3: #288028;
+  --color-4: #8040E9;
+  --color-5: #FFB900;
+  --color-6: #EF6000;
+  --color-7: #E02080;
+  --color-8: #65B9E0;
+  --color-9: #10409F;
+  --color-10: #9F9F9F;
+}
+
+.collection-la {
+  --color-0: #344E65;
+  --color-1: #FF6595;
+  --color-2: #529FEF;
+  --color-3: #64FA00;
+  --color-4: #EF46EF;
+  --color-5: #FFFF46;
+  --color-6: #FF6595;
+  --color-7: #8B00FF;
+  --color-8: #50C8E7;
+  --color-9: #0050BE;
+  --color-10: #B5B5B5;
+}
+
+.collection-lgpe, .collection-home, .collection-swsh {
+  --color-0: #232323;
   --color-1: #F01E1E;
   --color-2: #0064FF;
   --color-3: #64FA00;
@@ -19,15 +47,27 @@
   --color-9: #0050BE;
 }
 
+.collection-home, .collection-swsh {
+  --color-0: #646464;
+  --color-6: #FF5080;
+}
+
+.collection-swsh {
+  --color-0: #000000;
+  --color-10: #B4B4B4;
+}
+
 
 /* Colors from the 3DS games */
 .collection-xy, .collection-oras, .collection-sm, .collection-usum, .collection-bank {
   /* VAR FF00 (VAR COLOR) */
+  --color-0: #000000;
   --color-1: #FF0000;
   --color-2: #008CFF;
   --color-3: #00C000;
 
   /* VAR BD00 */
+  --color-0-0-0: #FF0000;
   --color-1-0-0: #00C000;
   --color-2-0-0: #008CFF;
   --color-3-0-0: #FF8000;
@@ -44,6 +84,7 @@
 /* Primary text color in light mode, text shadow color in dark mode unless reversed */
 .collection-bw, .collection-b2w2 {
   /* VAR FF00 */
+  --color-0: light-dark(#595151, #A2A2AA);
   --color-1: light-dark(#C30000, #FB7171);
   --color-2: light-dark(#0000D3, #7192FB);
   --color-3: light-dark(#AAA200, #EBE300); /* reversed */
@@ -61,6 +102,7 @@
 /* Colors from Gen 4 (VAR FF00) */
 /* Primary text color in light mode, text shadow color in dark mode unless reversed */
 .collection-dp, .collection-pt, .collection-hgss {
+  --color-0: light-dark(#515159, #A2A2AA);
   --color-1: light-dark(#EB2010, #FBAABA);
   --color-2: light-dark(#0071FB, #79BAEB);
   --color-3: light-dark(#61B249, #B2D392);  /* Grass-type starter Pokémon, Green Sphere */
