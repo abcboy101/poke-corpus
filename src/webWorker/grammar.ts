@@ -69,10 +69,10 @@ export const grammarES = [
   ["El ", "La ", "Los ", "Las ", ""],              // DefArtCap_TrTypeAndName
   ["al ", "a la ", "a los ", "a las ", "a "],      // A_DefArt_TrTypeAndName
   ["del ", "de la ", "de los ", "de las ", "de "], // De_DefArt_TrTypeAndName
-  ["y ", "e "],                                    // y_e
-  ["Y ", "E "],                                    // Y_E
-  ["o ", "u "],                                    // o_u
-  ["O ", "U "],                                    // O_U
+  ["y ", "e "],                                    // y/e
+  ["Y ", "E "],                                    // Y/E
+  ["o ", "u "],                                    // o/u
+  ["O ", "U "],                                    // O/U
 ];
 
 // Korean: VAR 1900
