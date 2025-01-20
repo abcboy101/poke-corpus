@@ -8,7 +8,7 @@ function ProgressBar({progress}: {progress: number}) {
   const percent = Math.min(Math.max(0, progress * 100), 100);
   return <div className="progress-bar-container" role="progressbar" aria-label={t('progressBar.title')} aria-valuenow={percent}>
     <div className="progress-bar">
-      <div className="progress-bar-complete" style={{width: `${percent}%`, maxWidth: percent === 0 ? 0 : undefined}}></div>
+      <div className="progress-bar-complete" style={{width: `${percent}%`, maxWidth: percent === 0 ? 0 : undefined, visibility: percent === 0 ? 'hidden' : undefined}}></div>
     </div>
     <div className="progress-bar-text">{t('progressBar.value', formatPercentParams(progress))}</div>
   </div>;
