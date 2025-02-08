@@ -70,7 +70,7 @@ function SearchCollections({collections, languages, setCollections}: {collection
                 }
               }}/>
               <label htmlFor={`collection-${key}`} style={isFullwidth ? collectionLabelStyle(short) : undefined}>
-                <abbr title={name}>{short}</abbr>
+                { (name === short) ? name : <abbr title={name}>{short}</abbr> }
               </label>
             </div>
           )
