@@ -90,7 +90,7 @@
 }
 
 /* On smaller screens, show language codes instead of the full names. */
-@media (width <= 991.98px) {
+@media (width < 62rem) {
   .search-filters {
     grid-template-columns: 55fr 1px minmax(14em, 45fr);
   }
@@ -109,7 +109,7 @@
 }
 
 /* On narrow screens, show collections above languages instead of side-by-side. */
-@media (width <= 575.98px) {
+@media (width <= 36rem) {
   .search-filters {
     grid-template-columns: auto;
     grid-template-rows: auto auto 1px auto auto;

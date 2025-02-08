@@ -26,7 +26,7 @@
 
 .progress-bar-text {
   display: flex;
-  padding: 0 4px;
+  padding: 0 0.25em;
   font-size: 0.7em;
   font-variant-numeric: tabular-nums;
   place-content: center;

@@ -53,7 +53,6 @@ body {
   height: 100dvh;
   margin: 0;
   overflow: auto;
-  font-size: 16px;
   background: var(--background);
   line-height: var(--line-height);
 }
@@ -137,16 +136,20 @@ input[type="text"], input:not([type]), input[type="number"], select, select:focu
   background: var(--highlight);
   border: 1px solid var(--text);
   color: var(--text);
-  border-radius: 3px;
-  padding: 0 4px;
+  border-radius: 0.2em;
+  padding: 0 0.25em;
   height: 2em;
   line-height: inherit;
 }
 
 input[type="checkbox"] {
+  font-family: inherit;
+  font-size: inherit;
+  height: 0.8125em;
+  width: 0.8125em;
   margin: 0;
   padding: 0;
-  margin-inline-end: 0.25em;
+  margin-inline-end: 0.2em;
 }
 
 button.link {

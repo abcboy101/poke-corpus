@@ -35,7 +35,7 @@
   text-align: center;
 }
 
-@media (width <= 575.98px) {
+@media (width < 36rem) {
   .cache-entry-text {
     display: flex;
     flex-direction: column;
