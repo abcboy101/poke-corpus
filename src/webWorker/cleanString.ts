@@ -804,16 +804,16 @@ export function postprocessString(s: string, collectionKey: string, language: st
   //#region Grammar
   s = isModern ? (!isBDSP ? (s
     .replaceAll(/\[VAR 13(0[0-3])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarEN)) // English
-    .replaceAll(/\[VAR 14(0[0-B])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarFR)) // French
-    .replaceAll(/\[VAR 15(0[0-F])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarIT)) // Italian
+    .replaceAll(/\[VAR 14(0[0-9A-B])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarFR)) // French
+    .replaceAll(/\[VAR 15(0[0-9A-F])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarIT)) // Italian
     .replaceAll(/\[VAR 16(0[0-7])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarDE)) // German
-    .replaceAll(/\[VAR 17(0[0-F])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarES)) // Spanish
+    .replaceAll(/\[VAR 17(0[0-9A-F])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarES)) // Spanish
   ) : (s
     .replaceAll(/\[VAR 13(0[3-6])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(parseInt(index, 16)), grammarEN)) // English
-    .replaceAll(/\[VAR 14(0[3-CF]|10)[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(parseInt(index, 16)), grammarFR)) // French
-    .replaceAll(/\[VAR 15(0[3-CF]|1[0-5])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(parseInt(index, 16)), grammarIT)) // Italian
-    .replaceAll(/\[VAR 16(0[3-A])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(parseInt(index, 16)), grammarDE)) // German
-    .replaceAll(/\[VAR 17(0[3-E]|1[3-6])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(parseInt(index, 16), true), grammarES)) // Spanish
+    .replaceAll(/\[VAR 14(0[3-9A-CF]|10)[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(parseInt(index, 16)), grammarFR)) // French
+    .replaceAll(/\[VAR 15(0[3-9A-CF]|1[0-5])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(parseInt(index, 16)), grammarIT)) // Italian
+    .replaceAll(/\[VAR 16(0[3-9A])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(parseInt(index, 16)), grammarDE)) // German
+    .replaceAll(/\[VAR 17(0[3-9A-E]|1[3-6])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(parseInt(index, 16), true), grammarES)) // Spanish
   )) : s;
 
   // Korean particle
