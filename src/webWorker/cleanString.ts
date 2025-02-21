@@ -557,6 +557,7 @@ export function postprocessString(s: string, collectionKey: string, language: st
   const isRanch = collectionKey === "Ranch";
   const isGO = collectionKey === "GO";
   const isMasters = collectionKey === "Masters";
+  const isHOME = collectionKey === "HOME";
 
   const isNDS = isGen4 || isGen5;
   const is3DS = ["XY", "OmegaRubyAlphaSapphire", "SunMoon", "UltraSunUltraMoon", "Bank"].includes(collectionKey);
@@ -676,6 +677,9 @@ export function postprocessString(s: string, collectionKey: string, language: st
     .replaceAll(/\[ALIGN 1\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[ALIGN \d+\]|$)/gu, '<span class="line-align-left">$1</span>') // PBR
     .replaceAll(/\[ALIGN 2\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[ALIGN \d+\]|$)/gu, '<span class="line-align-center">$1</span>') // PBR
     .replaceAll(/\[ALIGN 3\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[ALIGN \d+\]|$)/gu, '<span class="line-align-right">$1</span>') // PBR
+  ) : s;
+  s = isHOME ? (s
+    .replaceAll(/\u{F0106}(\/?[bu]) *\u{F0107}/giu, '<$1>') // HOME mobile b, u
   ) : s;
   //#endregion
 

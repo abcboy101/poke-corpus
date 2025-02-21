@@ -64,14 +64,10 @@ for folder_path in INPUT_FOLDERS:
         if lang not in lang_list:
             lang_list.append(lang)
 
-        if file not in map:
-            map[file] = {}
+        map.setdefault(file, {})
         for sid, string_text in data.items():
             sid = make_id(sid.replace('\\', '\\\\').replace('\n', '\\n'), file, folder)
-            if sid in map[file]:
-                map[file][sid][lang] = string_text
-            else:
-                map[file][sid] = {lang: string_text}
+            map[file].setdefault(sid, {})[lang] = string_text
         # print(f'Loaded {base}')
 
     # Write the text files in all languages

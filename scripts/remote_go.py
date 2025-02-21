@@ -58,10 +58,7 @@ for folder in [RELEASE_FOLDER, REMOTE_FOLDER]:
         for i in range(0, len(data['data']), 2):
             sid, text = data['data'][i:i+2]
             sid = make_id(sid)
-            if sid in map:
-                map[sid][lang] = text
-            else:
-                map[sid] = {lang: text}
+            map.setdefault(sid, {})[lang] = text
         # print(f'Loaded {base}')
 
 # Write the text files in all languages

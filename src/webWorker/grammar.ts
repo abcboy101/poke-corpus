@@ -95,5 +95,5 @@ export const remapBDSPGrammarIndex = (index: number, isSpanish: boolean = false)
   // English/German: max value is 0x06/0x0A (total of 3)
   // French/Italian: also skip 0x0D, 0x0E (2 more, total of 5)
   // Spanish: also skip 0x0F, 0x10, 0x11, 0x12 (4 more, total of 7)
-  return (index < 0xF) ? (index - 3) : (isSpanish ? (index - 7) : (index - 5));
+  return index - ((index < 0xF) ? 3 : (isSpanish ? 7 : 5));
 };

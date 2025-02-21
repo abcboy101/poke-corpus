@@ -25,7 +25,7 @@
     "test": "vitest",
     "test:coverage": "vitest run --coverage --watch=false",
     "lint": "eslint && stylelint \"**/*.css\"",
-    "pull": "python scripts/remote_go.py && python scripts/remote_masters.py",
+    "pull": "python scripts/remote_go.py && python scripts/remote_home.py && python scripts/remote_masters.py",
     "hash": "python scripts/gzip_files.py && python scripts/update_hash.py",
     "minify": "minify dist/index.html > dist/index.min.html && python scripts/run_minify.py"
   },

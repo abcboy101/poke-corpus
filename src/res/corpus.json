@@ -785,9 +785,12 @@
         "zh-Hant"
       ],
       "structured": true,
-      "version": "3.2.1",
+      "version": {
+        "nx": "3.2.1"
+      },
       "files": [
-        "megaturtle"
+        "megaturtle_nx",
+        "megaturtle_sp"
       ]
     },
     "GO": {
