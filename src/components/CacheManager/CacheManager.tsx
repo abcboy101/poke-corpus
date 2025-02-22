@@ -1,5 +1,3 @@
-import "core-js/proposals/set-methods";
-
 import { useEffect, useMemo, useRef, useState, useTransition } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -149,7 +147,8 @@ function CacheManager({active, showModal}: {active: boolean, showModal: (args: M
       setCachedFileInfo(fileInfo.map(([size, current], i) => [keys[i], size, current] as const).filter(([, size]) => size !== -1));
 
       // Remove files that are no longer referenced from the cache
-      const pathsToDelete = new Set(await getAllLocalFilePaths()).difference(new Set(paths));
+      const pathsSet = new Set(paths);
+      const pathsToDelete = (await getAllLocalFilePaths()).filter((path) => !pathsSet.has(path));
       pathsToDelete.forEach((path) => {
         console.debug(`Deleted ${path} from cache`);
         cache.delete(path);
