@@ -24,6 +24,25 @@ def convert_lang(lang: str) -> str:
     return lang_codes[lang]
 
 
+def fix(s: str) -> str:
+    """Fixes stray line breaks near calls to a number branch."""
+    if match := next(re.finditer(r'(?:\\n)?\[VAR 1101\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)]', s), None):
+        ofsM = ofsS = ofsP = 0
+        startM = match.start()
+        if s[startM:startM + 2] == r'\n':
+            ofsM += 2
+        endM = match.end()
+        if s[endM:endM + 2] == r'\n':
+            ofsS += 2
+            ofsP += 2
+        endS = endM + int(match.group(2), 16)
+        if s[endS:endS + 2] == r'\n':
+            ofsP += 2
+        endP = endS + int(match.group(1), 16)
+        return ''.join([s[:startM], s[startM + ofsM:endM], s[endM + ofsS:endS + ofsS], s[endS + ofsP:endP + ofsP], fix(s[endP + ofsP:])])
+    return s
+
+
 # Clone/pull remote repository
 if not os.path.exists(REPO_PATH) or len(os.listdir(REPO_PATH)) == 0:
     print(f'Downloading repository...')
@@ -60,7 +79,7 @@ for path in glob.iglob(os.path.join(REPO_PATH, '**/msbt_*_lf.txt'), recursive=Tr
             map.setdefault(file, {})
         elif '\t' in text:
             sid, string_text = text.split('\t', 1)
-            map[file].setdefault(sid, {})[lang] = string_text
+            map[file].setdefault(sid, {})[lang] = fix(string_text)
 
 # Write the text files in all languages
 print('Writing files...')
