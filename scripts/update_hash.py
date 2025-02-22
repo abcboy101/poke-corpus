@@ -20,6 +20,15 @@ for collection_key, collection in corpus['collections'].items():
             file_hash = f'{zlib.crc32(buf):08X}'
             entries.append([file_hash, len(buf)])
 
+# Check if files.json needs to be updated
+try:
+    with open(FILES_JSON, 'r', encoding='utf-8') as f:
+        entries_old = json.load(f)
+    if entries == entries_old:
+        exit()
+except FileNotFoundError:
+    pass
+
 # Update files.json
 with open(FILES_JSON, 'w', encoding='utf-8') as f:
     f.write("[\n  ")
