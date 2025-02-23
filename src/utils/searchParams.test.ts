@@ -1,3 +1,4 @@
+import corpus from './corpus';
 import {
   searchParamsToQueryString, queryStringToSearchParams,
   searchParamsToBase64, base64ToSearchParams,
@@ -37,7 +38,7 @@ test('base 64', () => {
   expect(deserialized).toMatchObject(params);
 });
 
-test('byte array', () => {
+test('byte array none', () => {
   const params = {
     type: 'boolean',
     caseInsensitive: false,
@@ -50,6 +51,38 @@ test('byte array', () => {
   const arr = serializeByteArray(params);
   const deserialized = deserializeByteArray(arr);
   expect(deserialized).toMatchObject(params);
+});
+
+test('byte array all', () => {
+  const params = {
+    type: 'boolean',
+    caseInsensitive: false,
+    common: true,
+    script: true,
+    showAllLanguages: true,
+    collections: Object.keys(corpus.collections),
+    languages: corpus.languages,
+  } as const;
+  const arr = serializeByteArray(params);
+  const deserialized = deserializeByteArray(arr);
+  expect(deserialized).toMatchObject(params);
+});
+
+test('byte array random', () => {
+  for (let i = 0; i < 100; i++) {
+    const params = {
+      type: 'regex',
+      caseInsensitive: true,
+      common: false,
+      script: false,
+      showAllLanguages: false,
+      collections: Object.keys(corpus.collections).filter(() => Math.random() < 0.5),
+      languages: corpus.languages.filter(() => Math.random() < 0.5),
+    } as const;
+    const arr = serializeByteArray(params);
+    const deserialized = deserializeByteArray(arr);
+    expect(deserialized).toMatchObject(params);
+  }
 });
 
 test('encryption', () => {

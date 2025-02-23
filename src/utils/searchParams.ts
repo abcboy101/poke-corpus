@@ -1,6 +1,14 @@
 import corpus from "./corpus";
 import { localStorageGetItem } from "./utils";
 
+/* https://github.com/microsoft/TypeScript/issues/37792#issuecomment-1264705598 */
+type TypedArrayMutableProperties = "copyWithin" | "fill" | "reverse" | "set" | "sort" | "subarray" | "valueOf";
+interface ReadonlyUint8Array extends Omit<Uint8Array, TypedArrayMutableProperties> {
+  readonly [n: number]: number,
+  subarray(begin?: number, end?: number): ReadonlyUint8Array,
+  valueOf(): ReadonlyUint8Array,
+}
+
 export const searchTypes = ["exact", "regex", "boolean"] as const;
 export type SearchType = typeof searchTypes[number];
 export const isSearchType = (s: string): s is SearchType => (searchTypes as readonly string[]).includes(s);
@@ -146,7 +154,7 @@ function remapLanguages(value: string) {
 //#endregion
 
 //#region Base64
-/**
+/*
 * To create shorter URLs, we serialize the search settings/filters into a binary format.
 * - Byte 0: checksum/version
 * - Byte 1:
@@ -155,24 +163,32 @@ function remapLanguages(value: string) {
 *   - Bit 2: common
 *   - Bit 3: script
 *   - Bit 4-5: type
-*   - Bit 6: (reserved)
-*   - Bit 7: showAllLanguages
-* - Byte 2-3: languages
-* - Byte 4-7: collections
+*   - Bit 6: rleFlag
+*   - Bit 7: showAllLanguages (inverted)
+* - Byte 2+: languages/collections
 *
-* The checksum uses the number of collections/languages as an initial magic value, added to a byte-wise sum of bytes 1-7.
+* The checksum uses the number of collections/languages as an initial magic value, added to a byte-wise sum of the remaining bytes.
 * This allows it to also serve as a version number when a new collection/language has been added.
-* Next, we XOR bytes 1-7 with bytes generated from a pseudorandom number generator seeded with the checksum.
+* Next, we XOR the other bytes with bytes generated from a pseudorandom number generator seeded with the checksum.
 * We then convert it to a URL-safe base64 string for display in the URL bar.
+*
+* When rleFlag is 0, the languages/collections are stored as a bit array, padded so that the collections begin on a byte boundary.
+* When rleFlag is 1, the bit array is compressed using run-length encoding.
+* - Bit 0 of byte 2 stores the (inverted) value for the first run. Since the values are either 0 or 1, each run has the opposite value of the previous.
+* - The length of each run is stored sequentially, using a constant number of bits for each count (see rleBitCount).
+* - More compressible selections (such as all/none/one/consecutive languages/collections) will require fewer characters.
 */
 
 const magic = allCollections.length ^ (corpus.languages.length << 4);
 const bytesHeader = 2;
 const bytesLanguage = Math.ceil(corpus.languages.length / 8);
 const bytesCollection = Math.ceil(allCollections.length / 8);
-export const bytesBase64 = bytesHeader + bytesLanguage + bytesCollection;
+const bytesFilters = bytesLanguage + bytesCollection;
+const rleFlag = 1 << 6;
+const rleBitCount = Math.ceil(Math.log2(corpus.languages.length + allCollections.length));
+export const bytesBase64 = bytesHeader + bytesFilters;
 
-const btoaUrlSafe = (bytes: Uint8Array) => btoa(String.fromCodePoint(...bytes)).replaceAll('/', '_').replaceAll('+', '-').replace(/=+$/, '');
+const btoaUrlSafe = (bytes: ReadonlyUint8Array) => btoa(String.fromCodePoint(...bytes)).replaceAll('/', '_').replaceAll('+', '-').replace(/=+$/, '');
 const atobUrlSafe = (s: string) => Uint8Array.from(atob(s.replaceAll('_', '/').replaceAll('-', '+')), (m) => m.codePointAt(0)!);
 
 /**
@@ -209,8 +225,7 @@ export function base64ToSearchParams(hash: string): Partial<SearchParams & Searc
     return stringParams;
 
   try {
-    const bytes = new Uint8Array(bytesBase64);
-    bytes.set(atobUrlSafe(s).slice(0, bytes.length));
+    const bytes = atobUrlSafe(s).subarray(0, bytesBase64);
     decryptBytes(bytes);
     return {
       ...stringParams,
@@ -235,23 +250,28 @@ export function serializeByteArray(params: SearchSettings) {
     | (searchTypes.indexOf(params.type)         << 4)
     | (+!params.showAllLanguages                << 7) // stored as complement so old links default to true
   );
-  corpus.languages.forEach((language, i) => {
-    if (params.languages.includes(language))
-      bytes[bytesHeader + Math.floor(i / 8)] |= (1 << (i % 8));
-  });
-  allCollections.forEach((collection, i) => {
-    if (params.collections.includes(collection))
-      bytes[bytesHeader + bytesLanguage + Math.floor(i / 8)] |= (1 << (i % 8));
-  });
-  return bytes;
+  const filters = bytes.subarray(bytesHeader);
+  setBitArrayFromParams(params, filters);
+  setRLEBytesIfShorter(filters, bytes.subarray(1, 2));
+
+  // Trim zero bytes
+  let end = bytes.length;
+  while (bytes[end - 1] === 0 && end > 1)
+    end--;
+  return bytes.subarray(0, end);
 }
 
 /**
  * Deserializes a bit array into a search settings object.
  */
-export function deserializeByteArray(bytes: Uint8Array): SearchSettings {
-  const languages = corpus.languages.filter((_, i) => ((bytes[bytesHeader + Math.floor(i / 8)] >> (i % 8)) & 1) === 1);
-  const collections = allCollections.filter((_, i) => ((bytes[bytesHeader + bytesLanguage + Math.floor(i / 8)] >> (i % 8)) & 1) === 1);
+export function deserializeByteArray(bytes: ReadonlyUint8Array): SearchSettings {
+  const filters = new Uint8Array(bytesFilters);
+  if (bytes[1] & rleFlag)
+    setBitArrayFromRLEBytes(bytes.subarray(bytesHeader), filters);
+  else
+    filters.set(bytes.subarray(bytesHeader)); // pad with zero bytes
+  const languages = corpus.languages.filter((_, i) => getBit(filters, i) === 1);
+  const collections = allCollections.filter((_, i) => getBit(filters, (8 * bytesLanguage) + i) === 1);
   return {
     run:              (bytes[1] & 0x01) !== 0,
     caseInsensitive:  (bytes[1] & 0x02) !== 0,
@@ -262,6 +282,99 @@ export function deserializeByteArray(bytes: Uint8Array): SearchSettings {
     languages: languages,
     collections: collections,
   } as const;
+}
+
+function setBitArrayFromParams(params: SearchSettings, bitArr: Uint8Array) {
+  corpus.languages.forEach((language, i) => {
+    if (params.languages.includes(language))
+      setBit(bitArr, i);
+  });
+  allCollections.forEach((collection, i) => {
+    if (params.collections.includes(collection))
+      setBit(bitArr, (8 * bytesLanguage) + i);
+  });
+}
+
+function setBitArrayFromRLEBytes(rleBytes: ReadonlyUint8Array, bitArr: Uint8Array) {
+  const it = iterateRLE(rleBytes);
+  corpus.languages.forEach((_, i) => {
+    if (it.next().value)
+      setBit(bitArr, i);
+  });
+  allCollections.forEach((_, i) => {
+    if (it.next().value)
+      setBit(bitArr, (8 * bytesLanguage) + i);
+  });
+}
+
+function setRLEBytesIfShorter(bitArr: Uint8Array, header: Uint8Array) {
+  const initialValue = getBit(bitArr, 0) === 1;
+  const rleArr = makeRLEArray(bitArr, initialValue);
+  let bitArrLength = bitArr.length;
+  while (bitArr[bitArrLength - 1] === 0)
+    bitArrLength--;
+  if (1 + (rleArr.length * rleBitCount) < 8 * bitArrLength) {
+    header[0] |= rleFlag;
+    bitArr.fill(0);
+    if (!initialValue)
+      setBit(bitArr, 0); // invert
+    let i = 1;
+    rleArr.forEach(([count]) => {
+      for (let j = 0; j < rleBitCount; i++, j++)
+        setBit(bitArr, i, (count >> j) & 1);
+    });
+  }
+}
+
+function makeRLEArray(bitArr: ReadonlyUint8Array, initialValue: boolean): readonly [number, boolean][] {
+  const rleArr: [number, boolean][] = [[0, initialValue]];
+  corpus.languages.forEach((_, i) => {
+    const value = getBit(bitArr, i) === 1;
+    if (rleArr[rleArr.length - 1][1] === value)
+      rleArr[rleArr.length - 1][0]++;
+    else
+      rleArr.push([1, value]);
+  });
+  allCollections.forEach((_, i) => {
+    const value = getBit(bitArr, (8 * bytesLanguage) + i) === 1;
+    if (rleArr[rleArr.length - 1][1] === value)
+      rleArr[rleArr.length - 1][0]++;
+    else
+      rleArr.push([1, value]);
+  });
+  rleArr.pop(); // last entry is always redundant, no need to include it
+  return rleArr;
+}
+
+function* iterateRLE(bytes: ReadonlyUint8Array): Generator<boolean, void, never> {
+  const bitArr = new Uint8Array(bytesFilters);
+  bitArr.set(bytes); // pad with zero bytes
+  let enabled = getBit(bitArr, 0) !== 1; // invert
+  for (let i = 1; i + rleBitCount <= bitArr.length * 8;) {
+    let count = 0;
+    for (let j = 0; j < rleBitCount; i++, j++) {
+      count |= getBit(bitArr, i) << j;
+    }
+    if (count === 0)
+      break;
+    while (count > 0) {
+      yield enabled;
+      count--;
+    }
+    enabled = !enabled;
+  }
+
+  // Last entry is not encoded, return this value for all remaining calls
+  while (true)
+    yield enabled;
+}
+
+function setBit(bitArr: Uint8Array, i: number, value: number = 1) {
+  bitArr[Math.floor(i / 8)] |= (value << (i % 8));
+}
+
+function getBit(bitArr: ReadonlyUint8Array, i: number): number {
+  return (bitArr[Math.floor(i / 8)] >> (i % 8)) & 1;
 }
 
 export function encryptBytes(bytes: Uint8Array) {
@@ -276,8 +389,8 @@ export function decryptBytes(bytes: Uint8Array) {
     throw Error('invalid checksum');
 }
 
-function calculateChecksum(bytes: Uint8Array, start: number = 1) {
-  return bytes.slice(start).reduce((a, b) => (a + b) & 0xFF, 0) ^ (magic & 0xFF);
+function calculateChecksum(bytes: ReadonlyUint8Array, start: number = 1) {
+  return bytes.subarray(start).reduce((a, b) => (a + b) & 0xFF, 0) ^ (magic & 0xFF);
 }
 
 /**
