@@ -68,6 +68,18 @@ export function formatPercentParams(size: number, fractionDigits: number = 1) {
   return {amount: amount, formatParams: {amount: format}};
 }
 
+/** Checks if a regex is valid. */
+export function isValidRegex(pattern: string) {
+  try {
+    new RegExp(pattern, 'u');
+  }
+  catch (err) {
+    console.error(err);
+    return false;
+  }
+  return true;
+}
+
 /* https://developer.chrome.com/blog/introducing-scheduler-yield-origin-trial */
 // A function for shimming scheduler.yield and setTimeout:
 export function yieldToMain() {

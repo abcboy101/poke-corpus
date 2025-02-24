@@ -5,7 +5,8 @@ import SearchWorker from "./searchWorker.ts?worker";
 import { SearchTaskParams } from '../utils/searchParams';
 import { SearchTask, SearchTaskResult, SearchTaskResultComplete, SearchTaskResultLines } from './searchWorker';
 import { SearchResultsInProgress, SearchResultsComplete, SearchResultsStatus } from '../utils/Status';
-import { isBooleanQueryValid } from './searchBoolean';
+import { isBooleanQueryValid, parseWhereClause } from './searchBoolean';
+import { isValidRegex } from '../utils/utils';
 
 export interface SearchResultLines extends SearchTaskResultLines {
   readonly displayHeader: boolean,
@@ -106,13 +107,7 @@ self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
 
     // Ensure the regex is valid.
     // If it's invalid, return with that error immediately.
-    try {
-      if (params.type === 'regex') {
-        new RegExp(params.query, params.caseInsensitive ? 'ui' : 'u');
-      }
-    }
-    catch (err) {
-      console.error(err);
+    if (params.type === 'regex' && !isValidRegex(params.query)) {
       updateStatusComplete('regex');
       return;
     }
@@ -122,7 +117,7 @@ self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
     if (params.type === 'boolean') {
       // Check for WHERE clause
       let paramsModified = params;
-      const whereClause = /(.*)\bWHERE\s+([A-Za-z_-]+)\s*(=|==|<>|!=)\s*([A-Za-z_-]+)$/u.exec(params.query);
+      const whereClause = parseWhereClause(params.query);
       if (whereClause) {
         const [, query, languageKey1, , languageKey2] = whereClause;
         if (!corpus.languages.includes(languageKey1) || !corpus.languages.includes(languageKey2)) {
@@ -133,9 +128,8 @@ self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
         paramsModified = {...params, query: query};
       }
 
-      const result = isBooleanQueryValid(paramsModified);
+      const result = isBooleanQueryValid(paramsModified.query, paramsModified.caseInsensitive);
       if (result !== 'success' && !(whereClause && result === 'empty')) {
-        console.error(result);
         updateStatusComplete(`boolean.${result}`);
         return;
       }
@@ -286,7 +280,7 @@ self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
         loadFile(task.collectionKey, languageKey, speaker.file)));
 
       if (files.some((file) => file === '') || (speakerFiles && speakerFiles.some((file) => file === ''))) {
-        // Network error ocurred, but allow the search to continue
+        // Network error occurred, but allow the search to continue
         // Partial results may still be useful even if incomplete
         networkError = true;
       }

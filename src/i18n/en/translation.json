@@ -31,6 +31,7 @@
   "query": "Query:",
   "searchType": {
     "searchType": "Search mode",
+    "all": "All words",
     "exact": "Exact phrase",
     "regex": "Regex",
     "boolean": "Boolean"
@@ -75,8 +76,10 @@
     "network": "One or more files could not be loaded. Only partial results are shown. Please check your internet connection and try again.",
     "regex": "The regular expression you entered was invalid. Check the syntax of your search query and try again.",
     "boolean": {
-      "parentheses": "Your Boolean search query has missing or extra parentheses.",
-      "quote": "Your Boolean search query has missing or extra quotation marks.",
+      "parentheses": "Your Boolean search query has missing or extra parentheses. If you meant to search for literal parenthesis characters, please escape them with a backslash.",
+      "quote": "Your Boolean search query has missing or extra quotation marks. If you meant to search for literal quotation mark characters, please escape them with a backslash.",
+      "slash": "Your Boolean search query has missing or extra slashes. If you meant to search for literal slash characters, please escape them with a backslash.",
+      "regex": "A regular expression in your Boolean search query was invalid. Check the syntax of your search query and try again.",
       "operand": "Your Boolean search query is missing one or more operands. If you meant to search for \"NOT\", \"AND\", or \"OR\" literally, please enclose it in quotes.",
       "empty": "Your Boolean search query has no search keywords. If you meant to search for this text literally, please enclose it in quotes.",
       "where": "One of the languages specified in the WHERE clause was not recognized."

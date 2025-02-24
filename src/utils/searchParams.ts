@@ -9,7 +9,7 @@ interface ReadonlyUint8Array extends Omit<Uint8Array, TypedArrayMutablePropertie
   valueOf(): ReadonlyUint8Array,
 }
 
-export const searchTypes = ["exact", "regex", "boolean"] as const;
+export const searchTypes = ["exact", "regex", "boolean", "all"] as const;
 export type SearchType = typeof searchTypes[number];
 export const isSearchType = (s: string): s is SearchType => (searchTypes as readonly string[]).includes(s);
 
@@ -42,7 +42,7 @@ export const defaultSearchParams: SearchParams & SearchParamsURLOnly = {
   id: '',
   file: '',
   query: '',
-  type: 'exact',
+  type: 'all',
   caseInsensitive: true,
   common: true,
   script: true,

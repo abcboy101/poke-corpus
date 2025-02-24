@@ -44,10 +44,16 @@ test('queryToPostfix, OR', () => {
   expect(postfix).toEqual(['abc def', 'ghi jkl', 'OR']);
 });
 
-test('queryToPostfix, quotation marks', () => {
-  const {success, postfix} = queryToPostfixExpectSuccess(' "  foo \\"bar\\" (AND)  baz  " OR "" ');
+test('queryToPostfix, regex', () => {
+  const {success, postfix} = queryToPostfixExpectSuccess(' / foo.*(bar) "\\d\\"  / OR /\\// ');
   expect(success).toBe(true);
-  expect(postfix).toEqual(['"  foo \u{F0180}bar\u{F0180} (AND)  baz  "', '""', 'OR']);
+  expect(postfix).toEqual(['/ foo.*(bar) "\\d\u{F0180}  /', '/\u{F0101}/', 'OR']);
+});
+
+test('queryToPostfix, quotation marks', () => {
+  const {success, postfix} = queryToPostfixExpectSuccess(' "  foo \\"bar\\" (AND)  /baz/  " OR "" ');
+  expect(success).toBe(true);
+  expect(postfix).toEqual(['"  foo \u{F0180}bar\u{F0180} (AND)  /baz/  "', '""', 'OR']);
 });
 
 test('queryToPostfix, precedence', () => {
@@ -66,6 +72,12 @@ test('queryToPostfix, complex', () => {
   const {success, postfix} = queryToPostfixExpectSuccess('NOT (foo OR (bar AND (baz OR qux))) AND (NOT a OR NOT b) AND c');
   expect(success).toBe(true);
   expect(postfix).toEqual(['foo', 'bar', 'baz', 'qux', 'OR', 'AND', 'OR', 'NOT', 'a', 'NOT', 'b', 'NOT', 'OR', 'AND', 'c', 'AND']);
+});
+
+test('queryToPostfix, mismatched slashes', () => {
+  const {success, message} = queryToPostfixExpectError('/open but no close');
+  expect(success).toBe(false);
+  expect(message).toBe('slash');
 });
 
 test('queryToPostfix, mismatched quotation marks', () => {
@@ -87,11 +99,11 @@ test('queryToPostfix, mismatched parentheses 2', () => {
 });
 
 test('isBooleanQueryValid, no keywords', () => {
-  const status = isBooleanQueryValid({...defaultParams, query: '   ()   '});
+  const status = isBooleanQueryValid('   ()   ', defaultParams.caseInsensitive);
   expect(status).toBe('empty');
 });
 
 test('isBooleanQueryValid, missing operand', () => {
-  const status = isBooleanQueryValid({...defaultParams, query: 'foo OR'});
+  const status = isBooleanQueryValid('foo OR', defaultParams.caseInsensitive);
   expect(status).toBe('operand');
 });

@@ -1,12 +1,12 @@
-import { preprocessString, convertWhitespace, postprocessString } from './cleanString';
+import { preprocessString, postprocessString } from './cleanString';
 import { codeId, Speaker, Literals } from '../utils/corpus';
 import { SearchTaskResultDone, SearchTaskResultNotDone } from '../utils/Status';
-import { getMatchConditionBoolean, isBooleanQueryValid } from './searchBoolean';
+import { parseWhereClause, isBooleanQueryValid } from './searchBoolean';
 import { extractSpeakers, replaceSpeaker } from '../utils/speaker';
 import { SearchParams, SearchTaskParams } from '../utils/searchParams';
 import { replaceLiteralsFactory } from '../utils/literals';
+import { getMatchCondition, MatchCondition } from './searchCondition';
 
-export type MatchCondition = (line: string) => boolean;
 export type WhereCondition = (i: number) => boolean;
 export type WhereConditionFactory = (fileData: string[][], languageKeys: string[]) => WhereCondition;
 
@@ -42,29 +42,6 @@ export interface SearchTaskResultIncomplete {
   readonly status: SearchTaskResultNotDone,
 }
 
-function getMatchCondition(params: SearchParams): MatchCondition {
-  if (params.type === "exact") {
-    // exact match
-    if (!params.caseInsensitive) {
-      return (line) => line.includes(params.query); // case-sensitive
-    }
-    else {
-      const lowercase = params.query.toLowerCase();
-      const uppercase = params.query.toUpperCase();
-      return (line) => line.toLowerCase().includes(lowercase) || line.toUpperCase().includes(uppercase); // case-insensitive
-    }
-  }
-  else if (params.type === "regex") {
-    // regex match
-    const re = new RegExp(params.query, params.caseInsensitive ? 'sui' : 'su');
-    return (line) => convertWhitespace(line).match(re) !== null;
-  }
-  else if (params.type === "boolean") {
-    return getMatchConditionBoolean(params);
-  }
-  return () => false;
-}
-
 function parseQuery(params: SearchParams): [MatchCondition, WhereConditionFactory] {
   // Not a boolean query, use params directly
   if (params.type !== "boolean") {
@@ -72,7 +49,7 @@ function parseQuery(params: SearchParams): [MatchCondition, WhereConditionFactor
   }
 
   // Check for WHERE clause
-  const whereClause = /(.*)\bWHERE\s+([0-9A-Za-z-]+)\s*(=|==|<>|!=)\s*([0-9A-Za-z-]+)/u.exec(params.query);
+  const whereClause = parseWhereClause(params.query);
   if (!whereClause) {
     return [getMatchCondition(params), () => () => true];
   }
@@ -80,7 +57,7 @@ function parseQuery(params: SearchParams): [MatchCondition, WhereConditionFactor
   // WHERE clause found, parse it
   const [, query, languageKey1, comparison, languageKey2] = whereClause;
   const paramsModified = {...params, query: query};
-  const matchCondition: MatchCondition = (isBooleanQueryValid(paramsModified) === 'empty')
+  const matchCondition: MatchCondition = (isBooleanQueryValid(paramsModified.query, paramsModified.caseInsensitive) === 'empty')
     ? () => true
     : getMatchCondition({...params, query: query});
   const whereConditionFactory: WhereConditionFactory = (fileData, languageKeys) => {

@@ -15,6 +15,12 @@ const defaultParams: typeof defaultSearchParams = {
   ...defaultSearchParams,
   languages: corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0])) || corpus.languages.filter((value) => value.startsWith('en')),
 };
+const searchTypesDropdown = [
+  searchTypes[3], // all
+  searchTypes[0], // exact
+  searchTypes[1], // regex
+  searchTypes[2], // boolean
+];
 
 function SearchForm({status, postToWorker, terminateWorker}: {status: Status, postToWorker: (params: SearchTaskParams) => void, terminateWorker: () => void}) {
   const { t } = useTranslation();
@@ -196,7 +202,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         </div>
         <button type="button" className={filtersVisible ? 'active' : undefined} onClick={toggleFiltersVisible}>{t('filters')}</button>
         <select name="type" id="type" onChange={onTypeChange} value={type} title={t('searchType.searchType')} aria-label={t('searchType.searchType')}>
-          {searchTypes.map((type) => <option key={type} value={type}>{t(`searchType.${type}`)}</option>)}
+          {searchTypesDropdown.map((type) => <option key={type} value={type}>{t(`searchType.${type}`)}</option>)}
         </select>
       </div>
       <div className="item-group search-option-group">

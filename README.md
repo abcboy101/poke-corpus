@@ -6,7 +6,8 @@ Visit at [abcboy101.github.io/poke-corpus/](https://abcboy101.github.io/poke-cor
 
 ## How to use
 1. Enter your search query into the "Query:" box.
-   - By default, a line matches the query if it contains the exact phrase anywhere.
+   - By default, a line matches the query if it contains all of the search terms.
+     If you want to search for an exact phrase, select "Exact phrase" using the dropdown.
      If you want to search using a regular expression, select "Regex" using the dropdown.
      If you want to search using a Boolean expression, select "Boolean" using the dropdown.
    - By default, the search is case-insensitive.
@@ -46,7 +47,15 @@ By clicking the "Manage cache" link in the footer, you can view and delete downl
 
 
 ## Advanced
-When performing a Boolean search, you can append a `WHERE` clause to filter based on a comparison between two languages.
+When performing a Boolean search, in addition to the typical `NOT`, `AND`, and `OR` operators, you can:
+- use parentheses to change the order of operations,
+- use quotation marks to mark an exact phrase that should be included,
+- and use slashes to mark a regular expression that should be matched.
+
+For example, `good morning` is treated as `"good" AND "morning"`, and will match all lines that contain both "good" and "morning" somewhere.
+On the other hand, `"good morning"` will only match lines containing the exact phrase "good morning".
+
+You can also append a `WHERE` clause to a Boolean search to filter based on a comparison between two languages.
 For example, you could use `WHERE ja = en` to find lines where the "Japanese (Kanji)" and "English" text are the same,
 or use `WHERE en <> en-GB` to find lines that differ between "English" and "English (UK)".
 The operators `==` and `!=` are also supported.

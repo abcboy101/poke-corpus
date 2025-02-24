@@ -1,6 +1,7 @@
 import { BooleanStatus, BooleanError } from "../utils/Status";
-import { MatchCondition } from "./searchWorker";
-import { SearchParams } from "../utils/searchParams";
+import { isValidRegex } from "../utils/utils";
+import { MatchCondition } from './searchCondition';
+import { getMatchConditionAll, getMatchConditionExact, getMatchConditionRegex } from './searchCondition';
 
 export type QueryParseResult = QueryParseResultSuccess | QueryParseResultError;
 
@@ -14,30 +15,32 @@ export interface QueryParseResultError {
   readonly message: BooleanError,
 }
 
-type Operator = 'NOT' | 'AND' | 'OR' | '"' | '(' | ')';
+type Operator = 'NOT' | 'AND' | 'OR' | '/' | '"' | '(' | ')';
 const queryParseResultSuccess = (result: string[]): QueryParseResultSuccess => ({success: true, postfix: result});
 const queryParseResultError = (message: BooleanError): QueryParseResultError => ({success: false, message: message});
 
 // Handle escaped quote marks and parentheses
-const escapeQuery = (s: string) => s.replaceAll('\\\\', '\u{F0100}').replaceAll('\\(', '\u{F0108}').replaceAll('\\)', '\u{F0109}').replaceAll('\\"', '\u{F0180}');
-const unescapeQuery = (s: string) => s.replaceAll('\u{F0108}', '(').replaceAll('\u{F0109}', ')').replaceAll('\u{F0180}', '"').replaceAll('\u{F0100}', '\\\\');
+const escapeQuery = (s: string) => s.replaceAll('\\\\', '\u{F0100}').replaceAll('\\/', '\u{F0101}').replaceAll('\\(', '\u{F0108}').replaceAll('\\)', '\u{F0109}').replaceAll('\\"', '\u{F0180}');
+const unescapeQuery = (s: string) => s.replaceAll('\u{F0108}', '(').replaceAll('\u{F0109}', ')').replaceAll('\u{F0180}', '"').replaceAll('\u{F0101}', '/').replaceAll('\u{F0100}', '\\\\');
+const unescapeQueryRegex = (s: string) => s.replaceAll('\u{F0108}', '\\(').replaceAll('\u{F0109}', '\\)').replaceAll('\u{F0180}', '\\"').replaceAll('\u{F0101}', '/').replaceAll('\u{F0100}', '\\\\');
 
 /**
  * Convert a boolean query string in infix notation to an array of tokens in postfix notation using the shunting yard algorithm.
  *
- * The supported operators are NOT, AND, and OR, with support for quotation marks to delimit exact phrases and parentheses to group terms.
- * Quotation marks have the highest precedence, followed by parentheses, NOT, AND, and OR.
+ * The supported operators are NOT, AND, and OR, with support for slashes to delimit regular expressions, quotation marks to delimit exact phrases,
+ * and parentheses to group terms. Slashes have the highest precedence, followed by quotation marks, parentheses, NOT, AND, and OR.
  */
 export function queryToPostfix(query: string): QueryParseResult {
   query = escapeQuery(query);
-  const tokens = query.split(/(\b(?:NOT|AND|OR)\b|\\?["()])/u).filter((s) => s.length > 0);
+  const tokens = query.split(/(\b(?:NOT|AND|OR)\b|\\?[/"()])/u).filter((s) => s.length > 0);
   const operators: Operator[] = [];
   const output: string[] = [];
+  let regex = false;
   let quote = false;
   for (const raw of tokens) {
-    // In quote mode, concatenate any tokens until a literal quote is seen
+    // In regex or quote mode, concatenate any tokens until a literal slash/quote is seen
     const t = raw.trim();
-    if (quote && t !== '"') {
+    if ((regex && t !== '/') || (quote && t !== '"')) {
       output[output.length - 1] += raw;
       continue;
     }
@@ -57,6 +60,30 @@ export function queryToPostfix(query: string): QueryParseResult {
           output.push(operators.pop()!);
         }
         operators.push(t);
+        break;
+
+      // Slash
+      // Triggers regex mode or ends regex mode. When it ends, pop any unary operators.
+      case '/':
+        if (!regex) {
+          operators.push(t);
+          regex = true;
+          output.push(''); // push an empty string to concatenate onto
+        }
+        else if (operators[operators.length - 1] === '/') {
+          operators.pop();
+          const pattern = output.pop()!;
+
+          // Ensure the regex is valid.
+          // If it's invalid, return with that error immediately.
+          if (!isValidRegex(pattern))
+            return queryParseResultError('regex');
+
+          output.push(`/${pattern}/`);
+          regex = false;
+          while (operators[operators.length - 1] === 'NOT')
+            output.push(operators.pop()!);
+        }
         break;
 
       // Quotation mark
@@ -108,6 +135,8 @@ export function queryToPostfix(query: string): QueryParseResult {
   while (operators.length > 0) {
     if (operators[operators.length - 1] === '(')
       return queryParseResultError('parentheses');
+    if (operators[operators.length - 1] === '/')
+      return queryParseResultError('slash');
     if (operators[operators.length - 1] === '"')
       return queryParseResultError('quote');
     output.push(operators.pop()!);
@@ -118,7 +147,7 @@ export function queryToPostfix(query: string): QueryParseResult {
 /**
  * Convert an array of boolean keywords in postfix notation to a function that evaluates the match condition.
  */
-export function postfixToMatchCondition(params: SearchParams, postfix: string[]): MatchCondition | undefined {
+export function postfixToMatchCondition(caseInsensitive: boolean, postfix: string[]): MatchCondition | undefined {
   const stack: MatchCondition[] = [];
   for (const keyword of postfix) {
     switch (keyword) {
@@ -144,29 +173,14 @@ export function postfixToMatchCondition(params: SearchParams, postfix: string[])
       }
       default:
       {
-        if (keyword.startsWith('"') && keyword.endsWith('"')) {
-          // exact match
-          const phrase = unescapeQuery(keyword.substring(1, keyword.length - 1));
-          if (!params.caseInsensitive) {
-            stack.push((line) => line.includes(phrase)); // case-sensitive
-          }
-          else {
-            const lowercase = phrase.toLowerCase();
-            const uppercase = phrase.toUpperCase();
-            stack.push((line) => line.toLowerCase().includes(lowercase) || line.toUpperCase().includes(uppercase)); // case-insensitive
-          }
+        if (keyword.startsWith('/') && keyword.endsWith('/')) { // regex
+          stack.push(getMatchConditionRegex(unescapeQueryRegex(keyword.substring(1, keyword.length - 1)), caseInsensitive));
         }
-        else {
-          // all of these words
-          const phrases = unescapeQuery(keyword).split(/\s+/);
-          if (!params.caseInsensitive) {
-            stack.push((line) => phrases.every((phrase) => line.includes(phrase))); // case-sensitive
-          }
-          else {
-            const lowercase = phrases.map((phrase) => phrase.toLowerCase());
-            const uppercase = phrases.map((phrase) => phrase.toUpperCase());
-            stack.push((line) => phrases.every((_, i) => (line.toLowerCase().includes(lowercase[i]) || line.toUpperCase().includes(uppercase[i])))); // case-insensitive
-          }
+        else if (keyword.startsWith('"') && keyword.endsWith('"')) { // exact match
+          stack.push(getMatchConditionExact(unescapeQuery(keyword.substring(1, keyword.length - 1)), caseInsensitive));
+        }
+        else { // all of these words
+          stack.push(getMatchConditionAll(unescapeQuery(keyword), caseInsensitive));
         }
       }
     }
@@ -181,11 +195,11 @@ export function postfixToMatchCondition(params: SearchParams, postfix: string[])
 }
 
 /* Converts the given search parameters to the match condition function. */
-export function getMatchConditionBoolean(params: SearchParams): MatchCondition {
-  const result = queryToPostfix(params.query);
+export function getMatchConditionBoolean(query: string, caseInsensitive: boolean): MatchCondition {
+  const result = queryToPostfix(query);
   if (result.success && result.postfix.length > 0) {
     console.debug(result.postfix);
-    const stack = postfixToMatchCondition(params, result.postfix);
+    const stack = postfixToMatchCondition(caseInsensitive, result.postfix);
     if (stack)
       return stack;
   }
@@ -193,15 +207,15 @@ export function getMatchConditionBoolean(params: SearchParams): MatchCondition {
 }
 
 /* Tests if the given search parameters are a valid Boolean query. */
-export function isBooleanQueryValid(params: SearchParams): BooleanStatus {
-  const result = queryToPostfix(params.query);
+export function isBooleanQueryValid(query: string, caseInsensitive: boolean): BooleanStatus {
+  const result = queryToPostfix(query);
   if (!result.success) {
-    // Error during parsing (mismatched parentheses or quotes)
+    // Error during parsing (mismatched parentheses/quotes/slashes, invalid regex)
     return result.message;
   }
 
   try {
-    const matchCondition = postfixToMatchCondition(params, result.postfix);
+    const matchCondition = postfixToMatchCondition(caseInsensitive, result.postfix);
     if (matchCondition === undefined) {
       // Empty stack (no keywords)
       return 'empty';
@@ -215,4 +229,8 @@ export function isBooleanQueryValid(params: SearchParams): BooleanStatus {
     // Error during evaluation (missing operand)
     return 'operand';
   }
+}
+
+export function parseWhereClause(query: string) {
+  return /(.*)\bWHERE\s+([0-9A-Za-z-]+)\s*(=|==|<>|!=)\s*([0-9A-Za-z-]+)/u.exec(query);
 }

@@ -6,6 +6,7 @@
  * - U+F0001: delimiter for copy of string with ruby text converted to kana
  *
  * - U+F0100: placeholder for literal backslash `\\`
+ * - U+F0101: placeholder for literal slash `\/`
  * - U+F0102: placeholder for literal left square bracket `\[`
  * - U+F0104: placeholder for literal left curly bracket `\{`
  * - U+F0106: placeholder for less-than sign `<`
