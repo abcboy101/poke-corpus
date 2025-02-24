@@ -104,11 +104,11 @@ function parseQuery(params: SearchParams): [MatchCondition, WhereConditionFactor
  * Generates the appropriate function to clean special characters.
  *
  * The development/localization team sometimes uses these characters interchangeably.
- * Fold them to the same codepoint, unless the user requests a case-sensitive/regex search.
+ * Fold them to the same codepoint, unless the user requests a case-sensitive search.
  * (i.e. would have an expectation that the characters are treated literally)
  */
 function cleanSpecialFactory(params: SearchParams): (s: string) => string {
-  return (params.caseInsensitive && params.type !== 'regex') ? (
+  return (params.caseInsensitive) ? (
     (s) => (s
       .replaceAll('\u00A0', ' ') // non-breaking space -> space
       .replaceAll('\u2007', ' ') // figure space -> space
@@ -157,9 +157,11 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       const lineKeys: number[] = [];
 
       // Check selected languages for lines that satisfy the query
+      const ignoreSpaces = params.caseInsensitive && ['ja', 'ko', 'zh', 'th'].some((lang) => languageKey.startsWith(lang));
       if (params.languages.includes(languageKey)) {
         lines.forEach((line, i) => {
-          if (matchCondition(cleanSpecial(line))) {
+          const clean = cleanSpecial(line);
+          if (matchCondition(clean) || (ignoreSpaces && matchCondition(clean.replaceAll(' ', '')))) {
             lineKeys.push(i);
           }
         });
