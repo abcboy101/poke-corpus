@@ -222,7 +222,7 @@ td:lang(ja) :is(.spacing-0, .spacing-1, .spacing-2, .spacing-3) .var {
   color: white;
 }
 
-@media (resolution < 192dpi) {
+@media (resolution < 2dppx) {
   .font-pbr-6 {
     text-shadow:
       0 1px black, 0.7071px 0.7071px black,
@@ -232,7 +232,7 @@ td:lang(ja) :is(.spacing-0, .spacing-1, .spacing-2, .spacing-3) .var {
   }
 }
 
-@media (192dpi <= resolution < 288dpi) {
+@media (2dppx <= resolution < 3dppx) {
   .font-pbr-6 {
     text-shadow:
       0 1px black, 0.3827px 0.9239px black, 0.7071px 0.7071px black, 0.9239px 0.3827px black,
@@ -242,7 +242,7 @@ td:lang(ja) :is(.spacing-0, .spacing-1, .spacing-2, .spacing-3) .var {
   }
 }
 
-@media (288dpi <= resolution) {
+@media (3dppx <= resolution) {
   .font-pbr-6 {
     text-shadow:
       0 1px black, 0.2588px 0.9659px black, 0.5px 0.866px black, 0.7071px 0.7071px black, 0.866px 0.5px black, 0.9659px 0.2588px black,

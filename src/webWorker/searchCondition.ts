@@ -1,4 +1,4 @@
-import { SearchParams, SearchType } from '../utils/searchParams';
+import { SearchParams } from '../utils/searchParams';
 import { convertWhitespace } from './cleanString';
 import { getMatchConditionBoolean } from './searchBoolean';
 
