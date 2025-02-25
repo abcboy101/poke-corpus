@@ -39,13 +39,17 @@ export function getMatchConditionRegex(query: string, caseInsensitive: boolean):
   return (line) => convertWhitespace(line).match(re) !== null;
 }
 
-const matchConditions: Record<SearchType, MatchConditionFactory> = {
-  all: getMatchConditionAll,
-  exact: getMatchConditionExact,
-  regex: getMatchConditionRegex,
-  boolean: getMatchConditionBoolean,
-};
-
 export function getMatchCondition(params: SearchParams): MatchCondition {
-  return (matchConditions[params.type] ?? (() => () => false))(params.query, params.caseInsensitive);
+  switch (params.type) {
+    case 'all':
+      return getMatchConditionAll(params.query, params.caseInsensitive);
+    case 'exact':
+      return getMatchConditionExact(params.query, params.caseInsensitive);
+    case 'regex':
+      return getMatchConditionRegex(params.query, params.caseInsensitive);
+    case 'boolean':
+      return getMatchConditionBoolean(params.query, params.caseInsensitive);
+    default:
+      return () => false;
+  }
 }
