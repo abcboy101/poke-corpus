@@ -414,8 +414,6 @@ export function searchParamsToHash(params: SearchParams & Partial<SearchParamsUR
 }
 export function hashToSearchParams(hash: string) {
   const searchParams: URLSearchParams = new URLSearchParams(hash);
-  if (searchParams.get('q') || searchParams.get('s'))
-    return base64ToSearchParams(hash);
-  return queryStringToSearchParams(hash);
+  return ((searchParams.get('q') || searchParams.get('s')) ? base64ToSearchParams : queryStringToSearchParams)(hash);
 };
 //#endregion

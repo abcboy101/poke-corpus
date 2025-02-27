@@ -192,13 +192,13 @@ export const clearLocalFileInfo = (): Promise<boolean> => (
   }).catch((reason) => new Promise((_, reject) => reject(reason)))
 );
 
-export const getAllLocalFilePaths = (): Promise<string[]> => (
+export const getAllLocalFilePaths = (): Promise<readonly string[]> => (
   getIndexedDB().then((db) => {
     const transaction = db.transaction([dbObjectStore], "readonly");
     const objectStore = transaction.objectStore(dbObjectStore);
     const request = objectStore.getAllKeys();
     db.close();
-    return new Promise<string[]>((resolve, reject) => {
+    return new Promise<readonly string[]>((resolve, reject) => {
       request.onsuccess = () => resolve(request.result.filter((key) => typeof key === 'string'));
       request.onerror = () => reject(request.error);
     });

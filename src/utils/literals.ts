@@ -1,6 +1,6 @@
 import { Literals } from "./corpus";
 
-export const replaceLiteralsFactory = (fileData: string[][], messageIdIndex: number, collectionKey: string, languages: readonly string[], literals: Literals | undefined) => {
+export const replaceLiteralsFactory = (fileData: readonly string[][], messageIdIndex: number, collectionKey: string, languages: readonly string[], literals: Literals | undefined) => {
   return (s: string, languageIndex: number) => {
     if (literals === undefined || languageIndex === messageIdIndex)
       return s;

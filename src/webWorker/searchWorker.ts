@@ -8,7 +8,7 @@ import { replaceLiteralsFactory } from '../utils/literals';
 import { getMatchCondition, MatchCondition } from './searchCondition';
 
 export type WhereCondition = (i: number) => boolean;
-export type WhereConditionFactory = (fileData: string[][], languageKeys: string[]) => WhereCondition;
+export type WhereConditionFactory = (fileData: readonly string[][], languageKeys: readonly string[]) => WhereCondition;
 
 export interface SearchTask {
   readonly index: number,
@@ -166,7 +166,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
     const replaceLiterals = replaceLiteralsFactory(fileData, messageIdIndex, collectionKey, languages, literals);
     const lineKeysSorted = Array.from(lineKeysSet).sort((a, b) => a - b);
     const whereCondition = whereConditionFactory(fileData, languageKeys);
-    const fileResults: string[][] = ((messageIdIndex === -1) ? lineKeysSorted
+    const fileResults: readonly string[][] = ((messageIdIndex === -1) ? lineKeysSorted
       : lineKeysSorted.filter((i) => {
         // Ignore lines that don't correspond to text data (blank lines, text file headers) based on the message ID file
         const messageId = fileData[messageIdIndex][i];

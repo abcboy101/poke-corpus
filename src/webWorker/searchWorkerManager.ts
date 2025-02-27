@@ -90,7 +90,7 @@ self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
     postMessage(message);
   };
 
-  const updateStatusComplete = (status: SearchResultsComplete, results: SearchResultLines[] = []) => {
+  const updateStatusComplete = (status: SearchResultsComplete, results: readonly SearchResultLines[] = []) => {
     const message: SearchResults = {
       complete: true,
       status: status,

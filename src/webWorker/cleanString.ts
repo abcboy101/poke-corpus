@@ -509,11 +509,11 @@ function genderNumberBranch(maleSingular: string, femaleSingular: string, malePl
  * Returns the resulting string.
  */
 
-export function grammarBranch(...forms: string[]) {
+export function grammarBranch(...forms: readonly string[]) {
   return forms.filter((form) => form !== '').map((form, index) => `<span class="branch form form-${index}">${form}</span>`).join('<span class="grammar">/</span>');
 }
 
-const grammarBranchFromIndex = (index: number, grammar: string[][]) => grammarBranch(...grammar[index]);
+const grammarBranchFromIndex = (index: number, grammar: readonly string[][]) => grammarBranch(...grammar[index]);
 const particleBranchFromIndex = (index: number) => grammarBranch(...particlesKO[index]);
 
 /**

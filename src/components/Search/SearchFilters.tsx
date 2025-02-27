@@ -60,10 +60,7 @@ function SearchCollections({collections, languages, setCollections}: {collection
             <div key={key} className={`search-collection search-${validCollections.has(key) ? 'valid' : 'invalid'}`}>
               <input type="checkbox" name={`collection-${key}`} id={`collection-${key}`} checked={collections.includes(key)} onChange={(e) => {
                 if (e.target.checked && !collections.includes(key)) {
-                  const newCollections: string[] = [];
-                  newCollections.splice(0, 0, ...collections);
-                  newCollections.push(key);
-                  setCollections(newCollections);
+                  setCollections(collections.concat([key]));
                 }
                 else if (!e.target.checked && collections.includes(key)) {
                   setCollections(collections.filter((value) => value !== key));
@@ -96,10 +93,7 @@ function SearchLanguages({collections, languages, setLanguages}: {collections: r
             <div key={key} className={`search-language search-${validLanguages.has(key) ? 'valid' : 'invalid'}`}>
               <input type="checkbox" name={`language-${key}`} id={`language-${key}`} checked={languages.includes(key)} onChange={(e) => {
                 if (e.target.checked && !languages.includes(key)) {
-                  const newLanguages: string[] = [];
-                  newLanguages.splice(0, 0, ...languages);
-                  newLanguages.push(key);
-                  setLanguages(newLanguages);
+                  setLanguages(languages.concat([key]));
                 }
                 else if (!e.target.checked && languages.includes(key)) {
                   setLanguages(languages.filter((value) => value !== key));

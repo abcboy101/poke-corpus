@@ -14,9 +14,9 @@ interface ModalCheckbox {
 }
 
 export type ModalArguments = Partial<{
-  classes: string[],
+  classes: readonly string[],
   message: ReactNode,
-  buttons: ModalButton[],
+  buttons: readonly ModalButton[],
   checkbox: ModalCheckbox,
   cancelCallback: () => void,
 }>;

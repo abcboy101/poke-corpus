@@ -7,7 +7,7 @@ export function preprocessStringMasters(s: string, language: string) {
   }
 }
 
-const particlesKO: Record<string, [string, string]> = {
+const particlesKO: Record<string, readonly [string, string]> = {
   ha: ['는', '은'],
   wo: ['를', '을'],
   ga: ['가', '이'],

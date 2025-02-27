@@ -7,7 +7,7 @@ export type QueryParseResult = QueryParseResultSuccess | QueryParseResultError;
 
 export interface QueryParseResultSuccess {
   readonly success: true,
-  readonly postfix: string[],
+  readonly postfix: readonly string[],
 }
 
 export interface QueryParseResultError {
@@ -16,7 +16,7 @@ export interface QueryParseResultError {
 }
 
 type Operator = 'NOT' | 'AND' | 'OR' | '/' | '"' | '(' | ')';
-const queryParseResultSuccess = (result: string[]): QueryParseResultSuccess => ({success: true, postfix: result});
+const queryParseResultSuccess = (result: readonly string[]): QueryParseResultSuccess => ({success: true, postfix: result});
 const queryParseResultError = (message: BooleanError): QueryParseResultError => ({success: false, message: message});
 
 // Handle escaped quote marks and parentheses
@@ -147,7 +147,7 @@ export function queryToPostfix(query: string): QueryParseResult {
 /**
  * Convert an array of boolean keywords in postfix notation to a function that evaluates the match condition.
  */
-export function postfixToMatchCondition(caseInsensitive: boolean, postfix: string[]): MatchCondition | undefined {
+export function postfixToMatchCondition(caseInsensitive: boolean, postfix: readonly string[]): MatchCondition | undefined {
   const stack: MatchCondition[] = [];
   for (const keyword of postfix) {
     switch (keyword) {

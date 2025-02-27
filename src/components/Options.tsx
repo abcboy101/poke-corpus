@@ -20,7 +20,7 @@ function OptionsMenu({showModal, limit, limitRef}: OptionsParams & {limitRef: Re
 
   const onChangeLanguage: ChangeEventHandler<HTMLSelectElement> = async (e) => {
     await yieldToMain();
-    await i18next.changeLanguage(e.target.value, (err: Error[] | undefined) => {
+    await i18next.changeLanguage(e.target.value, (err: readonly Error[] | undefined) => {
       // Vite always throws 'Unknown variable dynamic import' on its first try loading each i18n file.
       // The user-facing error message should only be shown if some other error happens to occur.
       if (err && err.some((e) => !e.message.includes('Unknown variable dynamic import'))) {

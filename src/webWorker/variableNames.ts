@@ -1,5 +1,5 @@
 /* Variable names used by pk3DS, from https://github.com/kwsch/pk3DS/blob/master/pk3DS.Core/Game/TextVariableCode.cs */
-export const variables3DS: [string, string][] = [
+export const variables3DS: ReadonlyMap<string, string> = new Map([
   ["0100", "TRNAME"],
   ["0101", "PKNAME"],
   ["0102", "PKNICK"],
@@ -48,10 +48,10 @@ export const variables3DS: [string, string][] = [
   ["1302", "iCOLOR2"],
   ["1303", "iCOLOR3"],
   ["FF00", "COLOR"],
-];
+]);
 
 /* Variable names used internally in MessageEnumData */
-export const variablesBDSP: [string, string][] = [
+export const variablesBDSP: ReadonlyMap<string, string> = new Map([
   ["0001", "System:Font"],
   ["0002", "System:Size"],
   ["0003", "System:Color"],
@@ -312,7 +312,7 @@ export const variablesBDSP: [string, string][] = [
   ["BE02", "Ctrl2:WaitOne"],
   ["BE05", "Ctrl2:CallBackOne"],
   ["BE0A", "Ctrl2:GuidIcon"],
-];
+]);
 
 export const variableNameToCode = (variableName: string) => {
   for (const [code, name] of variables3DS)
@@ -321,9 +321,4 @@ export const variableNameToCode = (variableName: string) => {
   return undefined;
 };
 
-export const variableCodeToName = (variableCode: string) => {
-  for (const [code, name] of variables3DS)
-    if (code === variableCode)
-      return name;
-  return undefined;
-};
+export const variableCodeToName = (variableCode: string) => variables3DS.get(variableCode);

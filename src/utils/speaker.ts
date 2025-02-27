@@ -24,7 +24,7 @@ export function extractSpeakers(speakerData: readonly string[], textFile: string
 }
 
 /* Looks up the speaker's name by index, and prepend it to the string. */
-export function replaceSpeaker(s: string, speakerNames: string[], language: string) {
+export function replaceSpeaker(s: string, speakerNames: readonly string[], language: string) {
   return s.replace(/(.*?)(\[VAR 0114\(([0-9A-F]{4})\)\])(?:$|(?=\u{F0000}))/u, (_, rest, tag, speakerIndexHex) => {
     const speakerIndex = parseInt(speakerIndexHex, 16);
     const speakerName = speakerNames[speakerIndex];
