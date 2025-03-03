@@ -7,7 +7,6 @@ REPO_URL = "https://github.com/sora10pls/megaturtle-text.git"
 REPO_PATH = "./remote/megaturtle-text"
 OUTPUT_FOLDER = "./corpus/HOME"
 
-os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 def convert_lang(lang: str) -> str:
     lang_codes = {
@@ -53,9 +52,10 @@ print(f'Checking if repository is up to date...')
 subprocess.run(['git', 'pull'], cwd=REPO_PATH, check=True)
 
 # Check modified time
-latest_src = max(os.path.getmtime(path) for path in glob.iglob(os.path.join(REPO_PATH, '**/msbt_*_lf.txt'), recursive=True))
-output_list = list(glob.iglob(os.path.join(OUTPUT_FOLDER, '*_megaturtle_sp.txt')))
-if len(output_list) > 0 and max(os.path.getmtime(path) for path in output_list) >= latest_src:
+os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+src_times = [os.path.getmtime(path) for path in glob.iglob(os.path.join(REPO_PATH, '**/msbt_*_lf.txt'), recursive=True)]
+dst_times = [os.path.getmtime(path) for path in glob.iglob(os.path.join(OUTPUT_FOLDER, '*_megaturtle_sp.txt'))]
+if dst_times and max(dst_times) >= max(src_times):
     print(f'No changes found')
     exit()
 

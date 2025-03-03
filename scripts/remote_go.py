@@ -10,7 +10,6 @@ RELEASE_FOLDER = os.path.join(REPO_PATH, "Release")
 REMOTE_FOLDER = os.path.join(REPO_PATH, "Remote")
 OUTPUT_FOLDER = "./corpus/GO"
 
-os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 def convert_lang(lang: str) -> str:
     match lang:
@@ -36,9 +35,10 @@ print(f'Checking if repository is up to date...')
 subprocess.run(['git', 'pull'], cwd=REPO_PATH, check=True)
 
 # Check modified time
-latest_src = max(os.path.getmtime(path) for path in glob.iglob(os.path.join(REPO_PATH, '**/*.json'), recursive=True))
-output_list = list(glob.iglob(os.path.join(OUTPUT_FOLDER, '*.txt')))
-if len(output_list) > 0 and max(os.path.getmtime(path) for path in output_list) >= latest_src:
+os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+src_times = [os.path.getmtime(path) for path in glob.iglob(os.path.join(REPO_PATH, '**/*.json'), recursive=True)]
+dst_times = [os.path.getmtime(path) for path in glob.iglob(os.path.join(OUTPUT_FOLDER, '*.txt'))]
+if dst_times and max(dst_times) >= max(src_times):
     print(f'No changes found')
     exit()
 
