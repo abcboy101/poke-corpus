@@ -1,8 +1,8 @@
-import { ChangeEventHandler, FormEventHandler, MouseEventHandler, useCallback, useEffect, useState } from 'react';
+import { ChangeEventHandler, FormEventHandler, MouseEventHandler, useCallback, useEffect, useMemo, useState } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { SearchTaskParams, searchTypes, isSearchType, searchParamsToHash, hashToSearchParams, defaultSearchParams } from '../../utils/searchParams';
+import { SearchTaskParams, searchTypes, isSearchType, searchParamsToHash, hashToSearchParams, defaultSearchParams, SearchParams } from '../../utils/searchParams';
 import { corpus, codeId } from '../../utils/corpus';
 import SearchFilters from './SearchFilters';
 import { escapeRegex, getRichText, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
@@ -11,10 +11,42 @@ import { Status, statusInProgress } from '../../utils/Status';
 import './SearchForm.css';
 import '../../i18n/config';
 
-const defaultParams: typeof defaultSearchParams = {
+const defaultParamsPreferences: typeof defaultSearchParams = {
   ...defaultSearchParams,
   languages: corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0])) || corpus.languages.filter((value) => value.startsWith('en')),
 };
+
+const getSavedParamsPreferences = () => {
+  const saved = localStorageGetItem('corpus-params');
+  if (saved === null)
+    return defaultParamsPreferences;
+
+  const paramsDefault = {...defaultParamsPreferences};
+  try {
+    const params: Partial<SearchParams> = JSON.parse(saved);
+    // if (params.query !== undefined && typeof params.query === 'string')
+    //   paramsDefault.query = params.query;
+    if (params.type !== undefined && searchTypes.includes(params.type))
+      paramsDefault.type = params.type;
+    if (params.caseInsensitive !== undefined && typeof params.caseInsensitive === 'boolean')
+      paramsDefault.caseInsensitive = params.caseInsensitive;
+    if (params.common !== undefined && typeof params.common === 'boolean')
+      paramsDefault.common = params.common;
+    if (params.script !== undefined && typeof params.script === 'boolean')
+      paramsDefault.script = params.script;
+    if (params.showAllLanguages !== undefined && typeof params.showAllLanguages === 'boolean')
+      paramsDefault.showAllLanguages = params.showAllLanguages;
+    // if (params.collections !== undefined && params.collections.every((collectionKey) => Object.keys(corpus.collections).includes(collectionKey)))
+    //   paramsDefault.collections = params.collections;
+    // if (params.languages !== undefined && params.languages.every((languageKey) => corpus.languages.includes(languageKey)))
+    //   paramsDefault.languages = params.languages;
+  }
+  catch {
+    console.log('Failed to parse saved search params!');
+  }
+  return paramsDefault;
+};
+
 const searchTypesDropdown = [
   searchTypes[3], // all
   searchTypes[0], // exact
@@ -24,17 +56,18 @@ const searchTypesDropdown = [
 
 function SearchForm({status, postToWorker, terminateWorker}: {status: Status, postToWorker: (params: SearchTaskParams) => void, terminateWorker: () => void}) {
   const { t } = useTranslation();
-  const [id, setId] = useState('');
-  const [file, setFile] = useState('');
-  const [query, setQuery] = useState(defaultParams.query);
-  const [type, setType] = useState(defaultParams.type);
-  const [caseInsensitive, setCaseInsensitive] = useState(defaultParams.caseInsensitive);
-  const [common, setCommon] = useState(defaultParams.common);
-  const [script, setScript] = useState(defaultParams.script);
-  const [showAllLanguages, setShowAllLanguages] = useState(defaultParams.showAllLanguages);
-  const [collections, setCollections] = useState(defaultParams.collections);
-  const [languages, setLanguages] = useState(defaultParams.languages);
-  const [run, setRun] = useState(false);
+  const initial = useMemo(getSavedParamsPreferences, []);
+  const [id, setId] = useState(initial.id);
+  const [file, setFile] = useState(initial.file);
+  const [query, setQuery] = useState(initial.query);
+  const [type, setType] = useState(initial.type);
+  const [caseInsensitive, setCaseInsensitive] = useState(initial.caseInsensitive);
+  const [common, setCommon] = useState(initial.common);
+  const [script, setScript] = useState(initial.script);
+  const [showAllLanguages, setShowAllLanguages] = useState(initial.showAllLanguages);
+  const [collections, setCollections] = useState(initial.collections);
+  const [languages, setLanguages] = useState(initial.languages);
+  const [run, setRun] = useState(initial.run);
   const [filtersVisible, setFiltersVisible] = useState(import.meta.env.SSR ? false : ((localStorageGetItem('corpus-filtersVisible') ?? (window.location.hash ? 'false' : 'true')) !== 'false'));
 
   const onHashChange = useCallback(() => {
@@ -83,6 +116,17 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       window.removeEventListener('hashchange', onHashChange);
     };
   }, [onHashChange]);
+
+  // Save preferences on change
+  useEffect(() => {
+    localStorageSetItem('corpus-params', JSON.stringify({
+      type: type,
+      caseInsensitive: caseInsensitive,
+      common: common,
+      script: script,
+      showAllLanguages: showAllLanguages,
+    }));
+  }, [type, caseInsensitive, common, script, showAllLanguages]);
 
   useEffect(() => {
     if (id !== '') {
