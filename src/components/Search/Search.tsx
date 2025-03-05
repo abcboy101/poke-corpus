@@ -1,10 +1,10 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import SearchWorkerManager from '../../webWorker/searchWorkerManager.ts?worker';
 import { SearchParams } from '../../utils/searchParams';
 import { SearchResults, SearchResultLines } from '../../webWorker/searchWorkerManager';
-import { Status, statusError, statusInProgress } from '../../utils/Status';
+import { Status, statusError } from '../../utils/Status';
 import SearchForm from './SearchForm';
 import Results from './Results';
 import { ModalArguments } from '../Modal';
@@ -24,20 +24,6 @@ function Search({showModal, limit}: {showModal: (args: ModalArguments) => void, 
   const [richText, setRichText] = useState(true);
   const [results, setResults] = useState<readonly SearchResultLines[]>([]);
   const [showSearchModal, setShowSearchModal] = useState(localStorageGetItem(searchModalWarn) !== 'false');
-
-  useEffect(() => {
-    const onBlur = () => {
-      if (workerRef.current !== null && !statusInProgress.includes(status)) {
-        console.log('Terminating worker!');
-        workerRef.current.terminate();
-        workerRef.current = null;
-      }
-    };
-    window.addEventListener('blur', onBlur);
-    return () => {
-      window.removeEventListener('blur', onBlur);
-    };
-  }, [status]);
 
   const onMessage = useCallback((e: MessageEvent<SearchResults>) => {
     if (e.data.complete) {
@@ -62,6 +48,7 @@ function Search({showModal, limit}: {showModal: (args: ModalArguments) => void, 
   const terminateWorker = () => {
     if (workerRef.current !== null) {
       console.log('Terminating worker!');
+      workerRef.current.removeEventListener("message", onMessage);
       workerRef.current.terminate();
       workerRef.current = null;
       setStatus('initial');

@@ -8,6 +8,15 @@ import { SearchResultsInProgress, SearchResultsComplete, SearchResultsStatus } f
 import { isBooleanQueryValid, parseWhereClause } from './searchBoolean';
 import { isValidRegex } from '../utils/utils';
 
+declare global {
+  interface Window {
+    /**
+     * Cache for loaded files that is shared between queries.
+     */
+    fileCache: Map<string, string>,
+  }
+}
+
 export interface SearchResultLines extends SearchTaskResultLines {
   readonly displayHeader: boolean,
 }
@@ -23,6 +32,11 @@ export interface SearchResults {
 
 type SearchTaskPartial = Omit<SearchTask, "files" | "speakerFiles">;
 
+const isCached = (collectionKey: string, languageKey: string, fileKey: string): boolean => {
+  const path = getFilePath(collectionKey, languageKey, fileKey);
+  return self.fileCache.has(path);
+};
+
 /**
  * Attempts the following, in order:
  * - Retrieving the file from the cache
@@ -33,6 +47,10 @@ type SearchTaskPartial = Omit<SearchTask, "files" | "speakerFiles">;
  */
 const loadFile = async (collectionKey: string, languageKey: string, fileKey: string): Promise<string> => {
   const path = getFilePath(collectionKey, languageKey, fileKey);
+  const localCachedFile = self.fileCache.get(path);
+  if (localCachedFile)
+    return localCachedFile;
+
   if (import.meta.env.DEV) {
     console.debug(`Loading ${path}`);
   }
@@ -62,20 +80,29 @@ const loadFile = async (collectionKey: string, languageKey: string, fileKey: str
   // Due to a bug, the Vite dev server serves .gz files with `Content-Encoding: gzip`.
   // To work around this, don't bother decompressing the file in the dev environment.
   // https://github.com/vitejs/vite/issues/12266
-  if (import.meta.env.DEV)
-    return new Response(stream).text();
+  if (import.meta.env.DEV) {
+    const text = await new Response(stream).text();
+    self.fileCache.set(path, text);
+    return text;
+  }
 
-  return new Response(stream.pipeThrough(new DecompressionStream('gzip'))).text();
+  const text = await new Response(stream.pipeThrough(new DecompressionStream('gzip'))).text();
+  self.fileCache.set(path, text);
+  return text;
 };
 
 self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
   const params = message.data;
+  if (self.fileCache === undefined) {
+    self.fileCache = new Map<string, string>();
+  }
+
   const showId = params.showAllLanguages || params.languages.includes(codeId);
   const richText = params.richText;
 
-  const progressPortionLoading = 0.5;
-  const progressPortionProcessing = 0.5;
-  const progressPortionCollecting = 0.0;
+  let progressPortionLoading = 0.5;
+  let progressPortionProcessing = 0.5;
+  let progressPortionCollecting = 0.0;
 
   const updateStatusInProgress = (status: SearchResultsInProgress, loadingProgress: number, processingProgress: number, collectingProgress: number) => {
     const progress = (loadingProgress * progressPortionLoading) + (processingProgress * progressPortionProcessing) + (collectingProgress * progressPortionCollecting);
@@ -137,6 +164,7 @@ self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
 
     // Load files
     let taskCount = 0;
+    let cachedCount = 0;
     const taskList: SearchTaskPartial[] = [];
     Object.keys(corpus.collections).filter((collectionKey) => params.collections.includes(collectionKey)).forEach((collectionKey) => {
       const collection = corpus.collections[collectionKey];
@@ -176,6 +204,7 @@ self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
             });
           }
           taskCount += languages.length;
+          cachedCount += languages.filter((languageKey) => isCached(collectionKey, languageKey, fileKey)).length;
         });
     });
     // Check if the combination of collections/languages yielded no files.
@@ -183,6 +212,13 @@ self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
     if (taskList.length === 0) {
       updateStatusComplete('noMatch');
       return;
+    }
+
+    // Adjust progress bar portions
+    if (cachedCount > 0) {
+      progressPortionLoading *= (taskCount - cachedCount) / taskCount;
+      progressPortionProcessing *= (1 - progressPortionLoading) / (progressPortionProcessing + progressPortionCollecting);
+      progressPortionCollecting *= (1 - progressPortionLoading) / (progressPortionProcessing + progressPortionCollecting);
     }
 
     // Initialize helpers
