@@ -25,6 +25,7 @@
 .results-toggle {
   display: flex;
   gap: 0.25em;
+  justify-content: center;
 }
 
 .results-toggle-furigana {
@@ -102,5 +103,20 @@
 
   .results-nav-range-long {
     display: none;
+  }
+}
+
+@media (width < 26rem) {
+  .results-status {
+    grid-template-columns: 1em 1fr;
+  }
+
+  .results-jump, .results-status-text {
+    grid-column: span 2
+  }
+
+  .results-toggle {
+    grid-column: span 2;
+    flex-wrap: wrap;
   }
 }
