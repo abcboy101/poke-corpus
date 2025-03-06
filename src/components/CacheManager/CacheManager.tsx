@@ -17,7 +17,7 @@ type CachedFileInfoEntry = readonly [readonly [string, string, string], number, 
 
 function CacheStatus({cacheStorageEnabled, cachedFileInfo}: {cacheStorageEnabled: boolean, cachedFileInfo: readonly CachedFileInfoEntry[]}) {
   const { t } = useTranslation();
-  const storageUsedAmount = useMemo(() => formatBytesParams(cachedFileInfo.map(([, size]) => size).reduce((a, b) => a + b, 0)), [cachedFileInfo]);
+  const storageUsedAmount = useMemo(() => formatBytesParams(cachedFileInfo.reduce((acc, [, size]) => acc + size, 0)), [cachedFileInfo]);
   return (
     <ul>
       <li>{t('cache.storageStatus', {val: cacheStorageEnabled ? t('cache.storageEnabled') : t('cache.storageDisabled')})}</li>
@@ -50,7 +50,7 @@ function CacheEntryList({cachedFileInfo, cacheCollections, clearCachedFile}: {ca
       const collectionFileInfo = cachedFileInfo.filter(([[collection]]) => collectionKey === collection);
       return [
         collectionKey,
-        collectionFileInfo.map(([, size]) => size).reduce((a, b) => a + b, 0),
+        collectionFileInfo.reduce((acc, [, size]) => acc + size, 0),
         collectionFileInfo.every(([, , current]) => current === true),
       ] as const;
     }).filter(([, size]) => size > 0);

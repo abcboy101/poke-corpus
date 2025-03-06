@@ -22,7 +22,7 @@ self.onmessage = async (message: MessageEvent<CacheManagerParams>) => {
     );
 
     // Calculate and report the total size in bytes
-    const totalBytes = filePaths.map((path) => getFileSize(path)).reduce((a, b) => a + b, 0);
+    const totalBytes = filePaths.reduce((acc, path) => acc + getFileSize(path), 0);
     updateStatus(['loading', 0, totalBytes, message.data]);
 
     // Load the files and save them to the cache

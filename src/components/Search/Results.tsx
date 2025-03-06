@@ -134,7 +134,7 @@ function Results({status, progress, results, showId = true, richText = true, lim
   ), [results, i18next.language]);
 
   const count = useMemo(() => (
-    results.map((params) => params.lines.length).reduce((a, b) => a + b, 0)
+    results.reduce((acc, params) => acc + params.lines.length, 0)
   ), [results]);
 
   const resultsStatusText = t(import.meta.env.SSR ? t('status.loading') : `status.${status.split('.', 1)[0]}`);

@@ -204,7 +204,7 @@ self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
             });
           }
           taskCount += languages.length;
-          cachedCount += languages.filter((languageKey) => isCached(collectionKey, languageKey, fileKey)).length;
+          cachedCount += languages.reduce((acc, languageKey) => acc + +memoryCacheHas(collectionKey, languageKey, fileKey), 0);
         });
     });
     // Check if the combination of collections/languages yielded no files.

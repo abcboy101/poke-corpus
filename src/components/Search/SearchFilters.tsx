@@ -15,7 +15,7 @@ import '../../i18n/config';
  * To approximate the length, Latin-1 characters are treated as halfwidth, and all others as fullwidth.
  */
 function collectionLabelStyle(text: string, maxWidth: number = 4): CSSProperties | undefined {
-  const width = [...text].map((c) => (c.codePointAt(0)! > 0xFF) ? 1 : 0.5).reduce((a, b) => a + b, 0);
+  const width = [...text].reduce((acc, c) => acc + ((c.codePointAt(0)! > 0xFF) ? 1 : 0.5), 0);
   if (width <= maxWidth)
     return undefined;
   return {fontSize: `${(maxWidth * 100) / width}%`, scale: `1 ${width / maxWidth}`, whiteSpace: 'nowrap'};
