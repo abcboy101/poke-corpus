@@ -13,7 +13,7 @@ declare global {
     /**
      * Cache for loaded files that is shared between queries.
      */
-    fileCache: Map<string, string>,
+    memoryCache: Map<string, WeakRef<Promise<string>>>,
   }
 }
 
@@ -32,31 +32,39 @@ export interface SearchResults {
 
 type SearchTaskPartial = Omit<SearchTask, "files" | "speakerFiles">;
 
-const isCached = (collectionKey: string, languageKey: string, fileKey: string): boolean => {
+/** Returns a promise for the text of the file if it is cached in memory, or undefined if it has not been cached or has been evicted. */
+const memoryCacheGet = (path: string) => self.memoryCache.get(path)?.deref();
+
+/** Adds the promise for the text of the file to the in-memory cache. */
+const memoryCacheSet = (path: string, value: Promise<string>) => self.memoryCache.set(path, new WeakRef(value));
+
+/** Returns true if the file is cached in memory, or false otherwise. */
+const isMemoryCached = (collectionKey: string, languageKey: string, fileKey: string): boolean => {
   const path = getFilePath(collectionKey, languageKey, fileKey);
-  return self.fileCache.has(path);
+  return memoryCacheGet(path) !== undefined;
 };
 
 /**
  * Attempts the following, in order:
- * - Retrieving the file from the cache
- * - Populating the cache with the file
- * - Fetching the file directly
+ * - Getting the data from the in-memory cache in the worker's global scope
+ * - Retrieving the file from cache storage
+ * - Fetching the file directly from the server
  *
- * Returns a promise of the text of the file.
+ * Returns a promise for the text of the file.
  */
 const loadFile = async (collectionKey: string, languageKey: string, fileKey: string): Promise<string> => {
   const path = getFilePath(collectionKey, languageKey, fileKey);
-  const localCachedFile = self.fileCache.get(path);
-  if (localCachedFile)
-    return localCachedFile;
-
-  if (import.meta.env.DEV) {
-    console.debug(`Loading ${path}`);
+  const memoryCached = memoryCacheGet(path);
+  if (memoryCached) {
+    return memoryCached;
   }
 
   let res: Response | null;
   try {
+    if (import.meta.env.DEV) {
+      console.debug(`Loading ${path}`);
+    }
+
     if ('caches' in self && 'indexedDB' in self && 'databases' in self.indexedDB) {
       // Retrieve from cache storage
       const cache = await getCache();
@@ -75,26 +83,23 @@ const loadFile = async (collectionKey: string, languageKey: string, fileKey: str
     return '';
   }
 
-  const stream = (await res.blob()).stream();
-
   // Due to a bug, the Vite dev server serves .gz files with `Content-Encoding: gzip`.
   // To work around this, don't bother decompressing the file in the dev environment.
   // https://github.com/vitejs/vite/issues/12266
-  if (import.meta.env.DEV) {
-    const text = await new Response(stream).text();
-    self.fileCache.set(path, text);
-    return text;
+  let stream = (await res.blob()).stream();
+  if (!import.meta.env.DEV) {
+    stream = stream.pipeThrough(new DecompressionStream('gzip'));
   }
 
-  const text = await new Response(stream.pipeThrough(new DecompressionStream('gzip'))).text();
-  self.fileCache.set(path, text);
+  const text = new Response(stream).text();
+  memoryCacheSet(path, text);
   return text;
 };
 
 self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
   const params = message.data;
-  if (self.fileCache === undefined) {
-    self.fileCache = new Map<string, string>();
+  if (self.memoryCache === undefined) {
+    self.memoryCache = new Map();
   }
 
   const showId = params.showAllLanguages || params.languages.includes(codeId);
@@ -166,46 +171,49 @@ self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
     let taskCount = 0;
     let cachedCount = 0;
     const taskList: SearchTaskPartial[] = [];
-    Object.keys(corpus.collections).filter((collectionKey) => params.collections.includes(collectionKey)).forEach((collectionKey) => {
-      const collection = corpus.collections[collectionKey];
+    Object.entries(corpus.collections).forEach(([collectionKey, collection]) => {
+      // Do not process collection if it it does not need to be searched
+      if (!params.collections.includes(collectionKey))
+        return;
 
       // Do not process collection if it does not include any language being searched
-      if (params.languages.every((languageKey) => !collection.languages.includes(languageKey))) {
+      if (!params.languages.some((languageKey) => collection.languages.includes(languageKey))) {
         return;
       }
 
-      // Load all files in all languages in the collection
+      // Load all files in all needed languages in the collection
       const commonKeys = ['common', 'messages', 'ui'];
       const scriptKeys = ['script', 'talk'];
-      collection.files
-        .filter((fileKey) => !((commonKeys.includes(fileKey) && !params.common) || (scriptKeys.includes(fileKey) && !params.script)))
-        .forEach((fileKey) => {
-          const languages = (collection.structured && params.showAllLanguages) ? collection.languages : collection.languages.filter((languageKey) => params.languages.includes(languageKey) || languageKey === codeId);
-          if (!collection.structured) {
-            languages.forEach((languageKey, languageIndex) => {
-              taskList.push({
-                index: taskCount + languageIndex,
-                params: params,
-                collectionKey: collectionKey,
-                fileKey: fileKey,
-                languages: [languageKey],
-              });
-            });
-          }
-          else {
+      const languages = (collection.structured && params.showAllLanguages) ? collection.languages : collection.languages.filter((languageKey) => params.languages.includes(languageKey) || languageKey === codeId);
+      collection.files.forEach((fileKey) => {
+        if ((!params.common && commonKeys.includes(fileKey)) || (!params.script && scriptKeys.includes(fileKey)))
+          return;
+
+        if (!collection.structured) {
+          languages.forEach((languageKey, languageIndex) => {
             taskList.push({
-              index: taskCount,
+              index: taskCount + languageIndex,
               params: params,
               collectionKey: collectionKey,
               fileKey: fileKey,
-              languages: languages,
-              speaker: collection?.speaker,
-              literals: collection?.literals,
+              languages: [languageKey],
             });
-          }
-          taskCount += languages.length;
-          cachedCount += languages.reduce((acc, languageKey) => acc + +memoryCacheHas(collectionKey, languageKey, fileKey), 0);
-        });
+          });
+        }
+        else {
+          taskList.push({
+            index: taskCount,
+            params: params,
+            collectionKey: collectionKey,
+            fileKey: fileKey,
+            languages: languages,
+            speaker: collection?.speaker,
+            literals: collection?.literals,
+          });
+        }
+        taskCount += languages.length;
+        cachedCount += languages.reduce((acc, languageKey) => acc + +isMemoryCached(collectionKey, languageKey, fileKey), 0);
+      });
     });
     // Check if the combination of collections/languages yielded no files.
     // If it did, return with that error immediately.
@@ -273,7 +281,9 @@ self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
           taskResults.sort((a, b) => a.index - b.index);
           let lastCollection = '';
           let lastFile = '';
-          taskResults.map((taskResults) => taskResults.result).filter(({lines}) => lines.length > 0).forEach((result) => {
+          taskResults.forEach(({result}) => {
+            if (result.lines.length === 0)
+              return;
             results.push({...result, displayHeader: result.collection !== lastCollection || result.file !== lastFile});
             lastCollection = result.collection;
             lastFile = result.file;
