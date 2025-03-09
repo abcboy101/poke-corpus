@@ -9,8 +9,6 @@
 
 body {
   font-family: var(--font-family-latin), var(--font-family-ja), sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-size-adjust: none; /* stylelint-disable-line plugin/no-unsupported-browser-features */
 }
 
