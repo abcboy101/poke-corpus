@@ -2,7 +2,7 @@ import { lazy, useEffect, useState, useTransition } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { getLimit, getMode } from './utils/utils';
+import { getLimit, getMode, getRichText } from './utils/utils';
 import Options from './components/Options.js';
 import Search from './components/Search/Search.js';
 import Modal, { ModalArguments } from './components/Modal';
@@ -21,6 +21,7 @@ const CacheManager = lazy(() => import('./components/CacheManager/CacheManager.j
 function App() {
   const { t } = useTranslation();
   const [, startTransition] = useTransition();
+  const [richText, setRichText] = useState(getRichText);
   const [limit, setLimit] = useState(getLimit);
   const [view, setView] = useState<View>('Search');
   const [modalArguments, setModalArguments] = useState<ModalArguments | null>(null);
@@ -57,7 +58,7 @@ function App() {
         </a>
       </h1>
       <ErrorBoundary fallback={null}>
-        <Options showModal={showModal} limit={limit} setLimit={setLimit}/>
+        <Options showModal={showModal} richText={richText} setRichText={setRichText} limit={limit} setLimit={setLimit}/>
       </ErrorBoundary>
     </header>
   );
@@ -81,7 +82,7 @@ function App() {
     <div className={classes.join(' ')} lang={i18next.language} dir={i18next.dir()}>
       { header }
       <ErrorBoundary FallbackComponent={ErrorWindow}>
-        <Search showModal={showModal} limit={limit}/>
+        <Search showModal={showModal} richText={richText} limit={limit}/>
         { cacheManager }
       </ErrorBoundary>
       { footer }

@@ -1,11 +1,9 @@
 import { preprocessString } from './cleanStringPre';
-import { postprocessString } from './cleanStringPost';
 import { codeId, Speaker, Literals } from '../utils/corpus';
 import { SearchTaskResultDone, SearchTaskResultNotDone } from '../utils/Status';
 import { parseWhereClause, isBooleanQueryValid } from './searchBoolean';
-import { extractSpeakers, replaceSpeaker } from '../utils/speaker';
+import { extractSpeakers } from '../utils/speaker';
 import { SearchParams, SearchTaskParams } from '../utils/searchParams';
-import { replaceLiteralsFactory } from '../utils/literals';
 import { getMatchCondition, MatchCondition } from './searchCondition';
 
 export type WhereCondition = (i: number) => boolean;
@@ -28,6 +26,8 @@ export interface SearchTaskResultLines {
   readonly file: string,
   readonly languages: readonly string[],
   readonly lines: readonly string[][],
+  readonly speakers: readonly string[][],
+  readonly literals: readonly ReadonlyMap<number, string>[],
 }
 
 export type SearchTaskResult = SearchTaskResultIncomplete | SearchTaskResultComplete;
@@ -162,9 +162,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       fileData.push(lines);
     });
 
-    // Substituted string literals vary by language, so we need to look up what the string is in the appropriate language here
     const messageIdIndex = languageKeys.indexOf(codeId);
-    const replaceLiterals = replaceLiteralsFactory(fileData, messageIdIndex, collectionKey, languages, literals);
     const lineKeysSorted = Array.from(lineKeysSet).sort((a, b) => a - b);
     const whereCondition = whereConditionFactory(fileData, languageKeys);
     const fileResults: readonly string[][] = ((messageIdIndex === -1) ? lineKeysSorted
@@ -174,21 +172,19 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
         return messageId !== '' && messageId !== '~~~~~~~~~~~~~~~' && !messageId.startsWith('Text File : ');
       }))
       .filter(whereCondition)
-      .map((i) => fileData.map((lines, languageIndex) => {
-        let line = lines[i];
-        if (params.richText) {
-          if (speaker !== undefined)
-            line = replaceSpeaker(lines[i] ?? '', speakers[languageIndex], languages[languageIndex]);
-          line = replaceLiterals(line, languageIndex);
-        }
-        return postprocessString(line, collectionKey, languages[languageIndex], params.richText);
-      }));
+      .map((i) => fileData.map((lines) => lines[i]));
+
+    // Substituted string literals vary by language, so we need to look up what the string is in the appropriate language here
+    const literalsLine = literals ? Object.keys(literals).flatMap((id) => (literals[id].branch !== 'language') ? literals[id].line : Object.values(literals[id].line)) : undefined;
+    const literalsData = literalsLine ? fileData.map((lines) => new Map(literalsLine.map((i) => [i, lines[i - 1]]))) : [];
 
     notifyComplete('done', {
       collection: collectionKey,
       file: fileKey,
       languages: languageKeys,
       lines: fileResults,
+      speakers: speakers,
+      literals: literalsData,
     });
   }
   catch (err) {

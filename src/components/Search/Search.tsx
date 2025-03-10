@@ -15,13 +15,12 @@ import { getDownloadSizeTotal } from '../../utils/files';
 
 const searchModalWarn = 'corpus-warn';
 const searchModalThreshold = 20_000_000; // 20 MB
-function Search({showModal, limit}: {showModal: (args: ModalArguments) => void, limit?: number}) {
+function Search({showModal, richText, limit}: {showModal: (args: ModalArguments) => void, richText: boolean, limit?: number}) {
   const { t } = useTranslation();
   const workerRef = useRef<Worker | null>(null);
   const [status, setStatus] = useState<Status>('initial');
   const [progress, setProgress] = useState(0.0);
   const [showId, setShowId] = useState(true);
-  const [richText, setRichText] = useState(true);
   const [results, setResults] = useState<readonly SearchResultLines[]>([]);
   const [showSearchModal, setShowSearchModal] = useState(localStorageGetItem(searchModalWarn) !== 'false');
 
@@ -30,7 +29,6 @@ function Search({showModal, limit}: {showModal: (args: ModalArguments) => void, 
       setStatus(e.data.status);
       setProgress(e.data.progress);
       setShowId(e.data.showId);
-      setRichText(e.data.richText);
       setResults(e.data.results);
       if (statusError.includes(e.data.status)) {
         showModal({

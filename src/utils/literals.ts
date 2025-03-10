@@ -1,6 +1,6 @@
 import { Literals } from "./corpus";
 
-export const replaceLiteralsFactory = (fileData: readonly string[][], messageIdIndex: number, collectionKey: string, languages: readonly string[], literals: Literals | undefined) => {
+export const replaceLiteralsFactory = (literalsData: readonly ReadonlyMap<number, string>[], messageIdIndex: number, collectionKey: string, languages: readonly string[], literals: Literals | undefined) => {
   return (s: string, languageIndex: number) => {
     if (literals === undefined || languageIndex === messageIdIndex)
       return s;
@@ -9,13 +9,13 @@ export const replaceLiteralsFactory = (fileData: readonly string[][], messageIdI
       const searchValue = `[${literalId}]`;
       let replaceValue = searchValue;
       if (branch === undefined)
-        replaceValue = fileData[languageIndex][line - 1];
+        replaceValue = literalsData[languageIndex].get(line)!;
       else if (branch === 'gender')
-        replaceValue = `\u{F1200}${line.map((lineNo) => fileData[languageIndex][lineNo - 1]).join('\u{F1104}')}`;
+        replaceValue = `\u{F1200}${line.map((lineNo) => literalsData[languageIndex].get(lineNo)).join('\u{F1104}')}`;
       else if (branch === 'version')
-        replaceValue = `\u{F1207}${line.map((lineNo) => fileData[languageIndex][lineNo - 1]).join('\u{F1104}')}`;
+        replaceValue = `\u{F1207}${line.map((lineNo) => literalsData[languageIndex].get(lineNo)).join('\u{F1104}')}`;
       else if (branch === 'language')
-        replaceValue = fileData[languageIndex][line[languages[languageIndex]] - 1];
+        replaceValue = literalsData[languageIndex].get(line[languages[languageIndex]])!;
 
       if (collectionKey === 'BattleRevolution')
         replaceValue = replaceValue.substring('[FONT 0][SPACING 1]'.length).trim();

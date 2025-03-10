@@ -24,9 +24,7 @@ export interface SearchParams {
   readonly languages: readonly string[],
 }
 
-export interface SearchTaskParams extends SearchParams {
-  readonly richText: boolean,
-}
+export type SearchTaskParams = SearchParams;
 
 export interface SearchParamsURLOnly {
   readonly id: string,

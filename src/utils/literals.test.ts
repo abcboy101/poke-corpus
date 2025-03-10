@@ -15,7 +15,9 @@ async function getReplaceLiterals(collectionKey: string): Promise<ReturnType<typ
   const messageIdIndex = languages.indexOf(codeId);
   const files = await Promise.all(languages.map((languageKey) => loadFile(collectionKey, languageKey, fileKeys[0])));
   const fileData = languages.map(((languageKey, i) => preprocessString(files[i], collectionKey, languageKey).split(/\r\n|\n/)));
-  return replaceLiteralsFactory(fileData, messageIdIndex, collectionKey, languages, literals);
+  const literalsLine = literals ? Object.keys(literals).flatMap((id) => (literals[id].branch !== 'language') ? literals[id].line : Object.values(literals[id].line)) : undefined;
+  const literalsData = literalsLine ? fileData.map((lines) => new Map(literalsLine.map((i) => [i, lines[i - 1]]))) : [];
+  return replaceLiteralsFactory(literalsData, messageIdIndex, collectionKey, languages, literals);
 }
 
 test('replaceLiterals, RubySapphire', async () => {

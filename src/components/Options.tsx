@@ -10,11 +10,13 @@ import supportedLngs from '../i18n/supportedLngs.json';
 
 interface OptionsParams {
   showModal: (args: ModalArguments) => void,
+  richText: boolean,
+  setRichText: Dispatch<SetStateAction<boolean>>,
   limit: number,
   setLimit: Dispatch<SetStateAction<number>>,
 }
 
-function OptionsMenu({showModal, limit, limitRef}: OptionsParams & {limitRef: RefObject<HTMLInputElement | null>}) {
+function OptionsMenu({showModal, richText, richTextRef, limit, limitRef}: OptionsParams & {richTextRef: RefObject<HTMLSelectElement | null>, limitRef: RefObject<HTMLInputElement | null>}) {
   const { t } = useTranslation();
   const [mode, setMode] = useState<Mode>(getMode);
 
@@ -49,13 +51,6 @@ function OptionsMenu({showModal, limit, limitRef}: OptionsParams & {limitRef: Re
     }
   };
 
-  const onChangeRichText: ChangeEventHandler<HTMLSelectElement> = (e) => {
-    const newRichText = e.target.value;
-    if (newRichText === "true" || newRichText === "false") {
-      localStorageSetItem('corpus-richText', newRichText);
-    }
-  };
-
   return (
     <div className="options">
       <div className="options-grid">
@@ -75,7 +70,7 @@ function OptionsMenu({showModal, limit, limitRef}: OptionsParams & {limitRef: Re
         </select>
 
         <label htmlFor="richText">{t('options.richText')}</label>
-        <select name="richText" id="richText" onChange={onChangeRichText} defaultValue={localStorageGetItem('corpus-richText') ?? "true"}>
+        <select ref={richTextRef} name="richText" id="richText" defaultValue={richText ? "true" : "false"}>
           {["true", "false"].map((mode) => <option key={mode} value={mode}>{t(`options.richTextSelect.${mode}`)}</option>)}
         </select>
 
@@ -93,10 +88,18 @@ function OptionsClose() {
 
 function Options(params: OptionsParams) {
   const { t } = useTranslation();
-  const {showModal, setLimit} = params;
+  const {showModal, setRichText, setLimit} = params;
+  const richTextRef = useRef<HTMLSelectElement>(null);
   const limitRef = useRef<HTMLInputElement>(null);
 
   const onClose = () => {
+    if (richTextRef.current !== null) {
+      const newRichText = richTextRef.current.value;
+      if (newRichText === "true" || newRichText === "false") {
+        localStorageSetItem('corpus-richText', newRichText);
+        setRichText(newRichText !== 'false');
+      }
+    }
     if (limitRef.current !== null) {
       const newLimit = limitRef.current.valueAsNumber;
       if (isValidLimit(newLimit)) {
@@ -108,7 +111,7 @@ function Options(params: OptionsParams) {
 
   const options: ModalArguments = {
     classes: ['modal-options'],
-    message: <OptionsMenu {...params} limitRef={limitRef}/>,
+    message: <OptionsMenu {...params} richTextRef={richTextRef} limitRef={limitRef}/>,
     buttons: [{message: <OptionsClose/>, callback: onClose}],
     cancelCallback: onClose,
   };

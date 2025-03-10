@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { SearchTaskParams, searchTypes, isSearchType, searchParamsToHash, hashToSearchParams, defaultSearchParams, SearchParams } from '../../utils/searchParams';
 import { corpus, codeId } from '../../utils/corpus';
 import SearchFilters from './SearchFilters';
-import { escapeRegex, getRichText, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
+import { escapeRegex, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
 import { Status, statusInProgress } from '../../utils/Status';
 
 import './SearchForm.css';
@@ -138,7 +138,6 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         common: true,
         script: true,
         showAllLanguages: true,
-        richText: getRichText(),
         collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key]?.id === collectionId),
         languages: [codeId],
       });
@@ -156,7 +155,6 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         common: true,
         script: true,
         showAllLanguages: true,
-        richText: getRichText(),
         collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key]?.id === collectionId),
         languages: [codeId],
       });
@@ -173,7 +171,6 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         common: common,
         script: script,
         showAllLanguages: showAllLanguages,
-        richText: getRichText(),
         collections: collections,
         languages: languages,
       };
@@ -204,7 +201,6 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       common: common,
       script: script,
       showAllLanguages: showAllLanguages,
-      richText: getRichText(),
       collections: collections,
       languages: languages,
     };

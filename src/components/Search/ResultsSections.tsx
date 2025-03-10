@@ -9,8 +9,10 @@ import ViewNearby from './ViewNearby';
 import Copy from './Copy';
 import NoScript from './NoScript';
 
-import { expandSpeakers } from '../../utils/speaker';
+import { expandSpeakers, replaceSpeaker } from '../../utils/speaker';
 import { SearchTaskResultLines } from '../../webWorker/searchWorker';
+import { postprocessString } from '../../webWorker/cleanStringPost';
+import { replaceLiteralsFactory } from '../../utils/literals';
 
 const addWordBreaksToID = (s: string, lang: string) => lang === codeId ? s.replaceAll(/([._/]|([a-z])(?=[A-Z])|([A-Za-z])(?=[0-9]))/gu, '$1<wbr>') : s;
 
@@ -30,12 +32,13 @@ function Actions({id}: {id: string}) {
   );
 }
 
-function ResultsTable({collection, file, languages, lines, showId}: SearchTaskResultLines & {showId: boolean}) {
+function ResultsTable({collection, file, languages, lines, speakers, literals, richText, showId}: SearchTaskResultLines & {richText: boolean, showId: boolean}) {
   const { t } = useTranslation();
   const idIndex = languages.indexOf(codeId);
   const displayLanguages = languages.map((lang) => lang === codeId ? langId : lang);
   const viewSpeaker = t('viewSpeaker');
   const hasSpeakers = corpus.collections[collection].speaker !== undefined;
+  const replaceLiterals = replaceLiteralsFactory(literals, languages.indexOf(codeId), collection, languages, corpus.collections[collection].literals);
 
   // RTL support: if the interface language uses a different direction, make sure to tag each cell with its direction
   const displayDirs = displayLanguages.map((lang) => i18next.dir(lang));
@@ -70,10 +73,18 @@ function ResultsTable({collection, file, languages, lines, showId}: SearchTaskRe
           {lines.map((row, i) =>
             <tr key={i} data-id={idIndex !== -1 ? row[idIndex] : undefined}>
               {idIndex !== -1 && <Actions id={row[idIndex]}/> }
-              {row.map((s, j) => (showId || languages[j] !== codeId)
-                ? <td key={j} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]}
-                  dangerouslySetInnerHTML={{__html: addWordBreaksToID(hasSpeakers ? expandSpeakers(s, collection, languages[j], viewSpeaker) : s, languages[j])}}></td>
-                : undefined)}
+              {row.map((s, j) => {
+                if (showId || languages[j] !== codeId) {
+                  if (richText) {
+                    if (hasSpeakers)
+                      s = replaceSpeaker(s, speakers[j], languages[j]);
+                    s = replaceLiterals(s, j);
+                  }
+                  s = postprocessString(s, collection, languages[j], richText);
+                  return <td key={j} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]}
+                    dangerouslySetInnerHTML={{__html: addWordBreaksToID(hasSpeakers ? expandSpeakers(s, collection, languages[j], viewSpeaker) : s, languages[j])}}></td>;
+                }
+              })}
             </tr>
           )}
         </tbody>
@@ -85,6 +96,7 @@ function ResultsTable({collection, file, languages, lines, showId}: SearchTaskRe
 interface ResultsSectionsParams {
   offset: number,
   limit: number,
+  richText: boolean,
   showId: boolean,
   onShowSection: ShowSectionCallback,
 }
@@ -111,7 +123,7 @@ function ResultsSectionContent({lines, index, sectionOffset, offset, limit, onSh
 }
 
 /** Results section, including its header. */
-export function ResultsSections({className, results, headers, showId, offset, limit, onShowSection, jumpTo}: {className: string, results: readonly SearchResultLines[], headers: readonly string[], jumpTo: (n: number) => void} & ResultsSectionsParams) {
+export function ResultsSections({className, results, headers, richText, showId, offset, limit, onShowSection, jumpTo}: {className: string, results: readonly SearchResultLines[], headers: readonly string[], jumpTo: (n: number) => void} & ResultsSectionsParams) {
   const [resultTables, setResultTables] = useState<readonly ReactElement[]>([]);
   const [isPending, startTransition] = useTransition();
 
@@ -124,13 +136,13 @@ export function ResultsSections({className, results, headers, showId, offset, li
       const resultTables: ReactElement[] = [];
       for (const [index, params] of results.entries()) {
         resultTables.push(
-          <ResultsSectionContent {...params} index={index} sectionOffset={count} offset={offset} limit={limit} showId={showId} onShowSection={onShowSection} />
+          <ResultsSectionContent {...params} index={index} sectionOffset={count} offset={offset} limit={limit} richText={richText} showId={showId} onShowSection={onShowSection} />
         );
         count += params.lines.length;
       }
       setResultTables(resultTables);
     });
-  }, [results, limit, offset]);
+  }, [results, richText, limit, offset]);
 
   // On prev/next navigation, scroll to first section displayed.
   useEffect(() => {
@@ -151,7 +163,7 @@ export function ResultsSections({className, results, headers, showId, offset, li
         results.map(({displayHeader}, index) => (
           <section key={headers[index]} id={`results-section${index}`} className='results-section'>
             <h2 className={displayHeader ? undefined : 'd-none'}>{headers[index]}</h2>
-            { isPending ? <Rendering /> : resultTables[index] }
+            { isPending ? <Rendering /> : (resultTables[index] ?? <Rendering />) }
           </section>
         ))
       }

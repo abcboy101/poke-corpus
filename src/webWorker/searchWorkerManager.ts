@@ -26,7 +26,6 @@ export interface SearchResults {
   readonly status: SearchResultsStatus,
   readonly progress: number,
   readonly showId: boolean,
-  readonly richText: boolean,
   readonly results: readonly SearchResultLines[],
 }
 
@@ -103,7 +102,6 @@ self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
   }
 
   const showId = params.showAllLanguages || params.languages.includes(codeId);
-  const richText = params.richText;
 
   let progressPortionLoading = 0.5;
   let progressPortionProcessing = 0.5;
@@ -116,7 +114,6 @@ self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
       status: status,
       progress: progress,
       showId: showId,
-      richText: richText,
       results: [],
     };
     postMessage(message);
@@ -128,7 +125,6 @@ self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
       status: status,
       progress: 1.0,
       showId: showId,
-      richText: richText,
       results: results,
     };
     postMessage(message);

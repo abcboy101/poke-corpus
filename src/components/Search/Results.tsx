@@ -159,7 +159,7 @@ function Results({status, progress, results, showId = true, richText = true, lim
         { resultsToggle }
       </div>
       <ResultsSections className={`search results app-window variables-${['short', 'show', 'hide'][showVariables]} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural} grammar-${showGrammar ? 'show' : 'hide'} furigana-${showFurigana ? 'show' : 'hide'} rich-text-${richText ? 'enabled' : 'disabled'}`}
-        results={results} headers={headers} showId={showId} offset={offset} limit={limit} onShowSection={onShowSection} jumpTo={jumpTo} />
+        results={results} headers={headers} richText={richText} showId={showId} offset={offset} limit={limit} onShowSection={onShowSection} jumpTo={jumpTo} />
     </>
   );
 }
