@@ -1,8 +1,5 @@
-import {
-  remapChineseChars, remapKoreanBraille, remapGBABrailleJapanese, remapGBABrailleWestern,
-  preprocessMetadata, postprocessMetadata,
-  postprocessString,
-} from "./cleanString";
+import { remapChineseChars, remapKoreanBraille, remapGBABrailleJapanese, remapGBABrailleWestern, preprocessMetadata } from "./cleanStringPre";
+import { postprocessMetadata, postprocessString } from './cleanStringPost';
 
 const remapChineseCharsTestCases = [
   ["\uE801\uE802\uE803\uE804", "妙蛙种子"],
