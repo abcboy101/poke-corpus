@@ -280,7 +280,7 @@ function remap3DSSpecialCharacters (s: string) {
 // 3DS variable names
 function remap3DSVariables(s: string) {
   s = s.replaceAll('\\[', '\u{F0102}');
-  variables3DS.forEach(([code, name]) => {
+  variables3DS.entries().forEach(([code, name]) => {
     s = s.replaceAll(new RegExp(`\\[VAR ${name}\\b`, 'gu'), `[VAR ${code}`);
   });
   s = s.replaceAll('\u{F0102}', '\\[');
