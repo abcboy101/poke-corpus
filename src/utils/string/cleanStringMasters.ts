@@ -1,4 +1,4 @@
-import { genderBranch, numberBranch, grammarBranch } from './cleanStringPost';
+import { genderBranch, numberBranch, grammarBranch } from './branches';
 
 export function preprocessStringMasters(s: string, language: string) {
   switch (language) {

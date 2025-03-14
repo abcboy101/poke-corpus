@@ -1,10 +1,10 @@
 import { preprocessString } from '../utils/string/cleanStringPre';
 import { codeId, Speaker, Literals } from '../utils/corpus';
 import { SearchTaskResultDone, SearchTaskResultNotDone } from '../utils/Status';
-import { parseWhereClause, isBooleanQueryValid } from './searchBoolean';
+import { parseWhereClause, isBooleanQueryValid, getMatchConditionBoolean } from './searchBoolean';
 import { extractSpeakers } from '../utils/speaker';
 import { SearchParams, SearchTaskParams } from '../utils/searchParams';
-import { getMatchCondition, MatchCondition } from './searchCondition';
+import { getMatchConditionAll, getMatchConditionExact, getMatchConditionRegex, MatchCondition } from './searchCondition';
 
 export type WhereCondition = (i: number) => boolean;
 export type WhereConditionFactory = (fileData: readonly string[][], languageKeys: readonly string[]) => WhereCondition;
@@ -41,6 +41,21 @@ export interface SearchTaskResultComplete {
 export interface SearchTaskResultIncomplete {
   readonly index: number,
   readonly status: SearchTaskResultNotDone,
+}
+
+function getMatchCondition(params: SearchParams): MatchCondition {
+  switch (params.type) {
+    case 'all':
+      return getMatchConditionAll(params.query, params.caseInsensitive);
+    case 'exact':
+      return getMatchConditionExact(params.query, params.caseInsensitive);
+    case 'regex':
+      return getMatchConditionRegex(params.query, params.caseInsensitive);
+    case 'boolean':
+      return getMatchConditionBoolean(params.query, params.caseInsensitive);
+    default:
+      return () => false;
+  }
 }
 
 function parseQuery(params: SearchParams): [MatchCondition, WhereConditionFactory] {

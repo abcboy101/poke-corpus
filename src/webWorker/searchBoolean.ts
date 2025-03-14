@@ -1,7 +1,6 @@
 import { BooleanStatus, BooleanError } from "../utils/Status";
 import { isValidRegex } from "../utils/utils";
-import { MatchCondition } from './searchCondition';
-import { getMatchConditionAll, getMatchConditionExact, getMatchConditionRegex } from './searchCondition';
+import { MatchCondition, getMatchConditionAll, getMatchConditionExact, getMatchConditionRegex } from './searchCondition';
 
 export type QueryParseResult = QueryParseResultSuccess | QueryParseResultError;
 

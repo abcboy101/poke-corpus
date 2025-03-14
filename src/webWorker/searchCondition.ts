@@ -1,6 +1,4 @@
-import { SearchParams } from '../utils/searchParams';
 import { convertWhitespace } from '../utils/string/cleanStringPre';
-import { getMatchConditionBoolean } from './searchBoolean';
 
 export type MatchCondition = (line: string) => boolean;
 export type MatchConditionFactory = (query: string, caseInsensitive: boolean) => MatchCondition;
@@ -37,19 +35,4 @@ export function getMatchConditionExact(query: string, caseInsensitive: boolean):
 export function getMatchConditionRegex(query: string, caseInsensitive: boolean): MatchCondition {
   const re = new RegExp(query, caseInsensitive ? 'sui' : 'su');
   return (line) => convertWhitespace(line).match(re) !== null;
-}
-
-export function getMatchCondition(params: SearchParams): MatchCondition {
-  switch (params.type) {
-    case 'all':
-      return getMatchConditionAll(params.query, params.caseInsensitive);
-    case 'exact':
-      return getMatchConditionExact(params.query, params.caseInsensitive);
-    case 'regex':
-      return getMatchConditionRegex(params.query, params.caseInsensitive);
-    case 'boolean':
-      return getMatchConditionBoolean(params.query, params.caseInsensitive);
-    default:
-      return () => false;
-  }
 }
