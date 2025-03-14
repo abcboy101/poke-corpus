@@ -7,7 +7,7 @@ import { SearchResults, SearchResultLines } from '../../webWorker/searchWorkerMa
 import { Status, statusError } from '../../utils/Status';
 import SearchForm from './SearchForm';
 import Results from './Results';
-import { ModalArguments } from '../Modal';
+import { ShowModal } from '../Modal';
 
 import '../../i18n/config';
 import { formatBytesParams, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
@@ -15,7 +15,7 @@ import { getDownloadSizeTotal } from '../../utils/files';
 
 const searchModalWarn = 'corpus-warn';
 const searchModalThreshold = 20_000_000; // 20 MB
-function Search({showModal, richText, limit}: {showModal: (args: ModalArguments) => void, richText: boolean, limit?: number}) {
+function Search({showModal, richText, limit}: {showModal: ShowModal, richText: boolean, limit?: number}) {
   const { t } = useTranslation();
   const workerRef = useRef<Worker | null>(null);
   const [status, setStatus] = useState<Status>('initial');

@@ -10,7 +10,7 @@ import corpus from '../../utils/corpus';
 import { getCache, getFilePath, getFileCacheOnly, getDownloadSizeTotal, clearLocalFileInfo, deleteLocalFileInfo, getAllLocalFilePaths, getIndexedDB } from '../../utils/files';
 import { formatBytesParams } from "../../utils/utils";
 import Refresh from "./Refresh";
-import { ModalArguments } from '../Modal';
+import { ShowModal } from '../Modal';
 import ProgressBar from "../ProgressBar";
 
 type CachedFileInfoEntry = readonly [readonly [string, string, string], number, boolean];
@@ -77,7 +77,7 @@ function CacheEntryList({cachedFileInfo, cacheCollections, clearCachedFile}: {ca
   );
 }
 
-function CacheManager({active, showModal}: {active: boolean, showModal: (args: ModalArguments) => void}) {
+function CacheManager({active, showModal}: {active: boolean, showModal: ShowModal}) {
   const { t } = useTranslation();
   const [isPending, startTransition] = useTransition();
   const [cacheStorageEnabled, setCacheStorageEnabled] = useState(false);

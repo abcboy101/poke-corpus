@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { getLimit, getMode, getRichText } from './utils/utils';
 import Options from './components/Options.js';
 import Search from './components/Search/Search.js';
-import Modal, { ModalArguments } from './components/Modal';
+import Modal, { ModalArguments, ShowModal } from './components/Modal';
 
 import './App.css';
 import './safari.css';
@@ -33,7 +33,7 @@ function App() {
     setCacheManagerLoaded(true);
   }, []);
 
-  const showModal = (args: ModalArguments) => {
+  const showModal: ShowModal = (args) => {
     setModalArguments(args);
   };
 

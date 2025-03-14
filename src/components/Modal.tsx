@@ -21,6 +21,8 @@ export type ModalArguments = Partial<{
   cancelCallback: () => void,
 }>;
 
+export type ShowModal = (args: ModalArguments) => void;
+
 function Modal({classes, message, buttons, checkbox, cancelCallback}: ModalArguments) {
   const [open, setOpen] = useState(false);
   const [checkboxChecked, setCheckboxChecked] = useState(checkbox?.checked ?? false);

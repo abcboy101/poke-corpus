@@ -2,14 +2,14 @@ import { ChangeEventHandler, Dispatch, RefObject, SetStateAction, useRef, useSta
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { ModalArguments } from './Modal';
+import { ModalArguments, ShowModal } from './Modal';
 import { getMode, isMode, isValidLimit, localStorageGetItem, localStorageSetItem, Mode, modes, yieldToMain } from '../utils/utils';
 
 import './Options.css';
 import supportedLngs from '../i18n/supportedLngs.json';
 
 interface OptionsParams {
-  showModal: (args: ModalArguments) => void,
+  showModal: ShowModal,
   richText: boolean,
   setRichText: Dispatch<SetStateAction<boolean>>,
   limit: number,
