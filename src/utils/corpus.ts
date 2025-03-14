@@ -11,9 +11,7 @@ export interface Speaker {
 /**
  * Describes the locations of substituted string literals in a Collection.
  */
-export interface Literals {
-  [id: string]: LiteralInfoBranch | LiteralInfoBranchLanguage | LiteralInfoNoBranch,
-}
+export type Literals = Record<string, LiteralInfoBranch | LiteralInfoBranchLanguage | LiteralInfoNoBranch>;
 
 /**
  * Lists the 1-indexed line numbers for a substituted literal that depends on the player's gender or the game version.
@@ -28,9 +26,7 @@ interface LiteralInfoBranch {
  */
 interface LiteralInfoBranchLanguage {
   readonly branch: "language",
-  readonly line: {
-    [language: string]: number,
-  },
+  readonly line: Record<string, number>,
 }
 
 /**
@@ -49,9 +45,7 @@ export interface Collection {
   readonly languages: readonly string[],  // available languages
   readonly structured: boolean,           // true if lines are aligned between languages, false otherwise
   readonly softWrap?: boolean,            // true if lines are soft-wrapped, false otherwise
-  readonly version?: string | {           // which version each language's files in the collection is from
-    [language: string]: string,           // can be a string if the version number is the same between languages
-  },
+  readonly version?: string | Record<string, string>, // which version each language's files in the collection is from, can be a string if the version number is the same between languages
   readonly files: readonly string[],      // what files the collection contains
   readonly speaker?: Speaker,             // location of speaker names
   readonly literals?: Literals,           // location of substituted literals
@@ -62,9 +56,7 @@ export interface Collection {
  */
 export interface Corpus {
   readonly languages: readonly string[],
-  readonly collections: {
-    [collectionKey: string]: Collection,
-  },
+  readonly collections: Record<string, Collection>,
 }
 
 /*

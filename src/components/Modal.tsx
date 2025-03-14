@@ -82,7 +82,7 @@ function Modal({classes, message, buttons, checkbox, cancelCallback}: ModalArgum
     {
       checkbox && <div className="modal-checkbox">
         <div>
-          <input type="checkbox" id="modalCheckbox" name="modalCheckbox" checked={checkboxChecked} onChange={(e) => setCheckboxChecked(e.target.checked)}/>
+          <input type="checkbox" id="modalCheckbox" name="modalCheckbox" checked={checkboxChecked} onChange={(e) => { setCheckboxChecked(e.target.checked); }}/>
           <label htmlFor="modalCheckbox">{checkbox.message}</label>
         </div>
       </div>

@@ -186,7 +186,7 @@ const replaceHindi: Record<string, string> = {
   '\uF565': 'हू', // hū
 };
 
-function preprocessHindi(value: string, fixMalformed: boolean = true) {
+function preprocessHindi(value: string, fixMalformed = true) {
   // Perform all simple mappings
   value = value.replace(/\u094D/gu, '\u094D\u200C'); // explicit halant
   value = value.replace(/\u093F/gu, SHORT_I); // short i

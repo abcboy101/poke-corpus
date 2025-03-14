@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { postprocessSpeaker } from '../speaker';
 import { grammarBranch, versionBranch, genderBranch, numberBranch, genderNumberBranch } from './branches';
 import { postprocessStringGO } from './cleanStringGO';
@@ -46,7 +50,7 @@ const textGradientOpenDec = (_: string, r1: string, g1: string, b1: string, a1: 
  *
  * Returns the resulting HTML string.
  */
-export function postprocessString(s: string, collectionKey: string, language: string = '', richText: boolean = true) {
+export function postprocessString(s: string, collectionKey: string, language = '', richText = true) {
   const isGen3 = ["RubySapphire", "FireRedLeafGreen", "Emerald"].includes(collectionKey);
   const isGen4 = ["DiamondPearl", "Platinum", "HeartGoldSoulSilver"].includes(collectionKey);
   const isGen5 = ["BlackWhite", "Black2White2"].includes(collectionKey);
@@ -64,7 +68,7 @@ export function postprocessString(s: string, collectionKey: string, language: st
   const isGCN = ["Colosseum", "XD"].includes(collectionKey);
   const isModern = isGen5 || is3DS || isSwitch;
 
-  s = postprocessMetadata(s ?? '');
+  s = postprocessMetadata(s);
   if (!richText) {
     s = (s
       .replaceAll('<', '&lt;')

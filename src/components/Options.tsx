@@ -3,7 +3,7 @@ import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { ModalArguments, ShowModal } from './Modal';
-import { getMode, isMode, isValidLimit, localStorageGetItem, localStorageSetItem, Mode, modes, yieldToMain } from '../utils/utils';
+import { getMode, isMode, isValidLimit, localStorageGetItem, localStorageSetItem, Mode, modes } from '../utils/utils';
 
 import './Options.css';
 import supportedLngs from '../i18n/supportedLngs.json';
@@ -20,9 +20,8 @@ function OptionsMenu({showModal, richText, richTextRef, limit, limitRef}: Option
   const { t } = useTranslation();
   const [mode, setMode] = useState<Mode>(getMode);
 
-  const onChangeLanguage: ChangeEventHandler<HTMLSelectElement> = async (e) => {
-    await yieldToMain();
-    await i18next.changeLanguage(e.target.value, (err: readonly Error[] | undefined) => {
+  const onChangeLanguage: ChangeEventHandler<HTMLSelectElement> = (e) => {
+    i18next.changeLanguage(e.target.value, (err: readonly Error[] | undefined) => {
       // Vite always throws 'Unknown variable dynamic import' on its first try loading each i18n file.
       // The user-facing error message should only be shown if some other error happens to occur.
       if (err && err.some((e) => !e.message.includes('Unknown variable dynamic import'))) {
@@ -32,6 +31,8 @@ function OptionsMenu({showModal, richText, richTextRef, limit, limitRef}: Option
           buttons: [{message: <OptionsClose/>, autoFocus: true}],
         });
       }
+    }).catch((err: unknown) => {
+      console.error(err);
     });
   };
 
@@ -118,7 +119,7 @@ function Options(params: OptionsParams) {
     cancelCallback: onClose,
   };
   return (
-    <button className="header-options" onClick={() => showModal(options)}>
+    <button className="header-options" onClick={() => { showModal(options); }}>
       <svg className="icon">
         <use href="sprites.svg#gear" />
       </svg>

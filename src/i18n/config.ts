@@ -37,4 +37,7 @@ i18next.use(LanguageDetector)
         translation: translation_enGB,
       },
     },
+  })
+  .catch((err: unknown) => {
+    console.error(err);
   });

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { genderBranch, numberBranch, grammarBranch } from './branches';
 
 export function preprocessStringMasters(s: string, language: string) {

@@ -51,7 +51,7 @@ function CacheEntryList({cachedFileInfo, cacheCollections, clearCachedFile}: {ca
       return [
         collectionKey,
         collectionFileInfo.reduce((acc, [, size]) => acc + size, 0),
-        collectionFileInfo.every(([, , current]) => current === true),
+        collectionFileInfo.every(([, , current]) => current),
       ] as const;
     }).filter(([, size]) => size > 0);
     return value;
@@ -67,8 +67,8 @@ function CacheEntryList({cachedFileInfo, cacheCollections, clearCachedFile}: {ca
               <div>{t('cache.size', formatBytesParams(size))}</div>
             </div>
             <div className="cache-entry-actions">
-              { !current && <Refresh callback={() => cacheCollections(key)}/> }
-              <Delete callback={() => clearCachedFile(key)}/>
+              { !current && <Refresh callback={() => { cacheCollections(key); }}/> }
+              <Delete callback={() => { clearCachedFile(key); }}/>
             </div>
           </div>
         )
@@ -97,20 +97,19 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
     setProgress(loadedBytes / totalBytes);
     setLoadedBytes(loadedBytes);
     setTotalBytes(totalBytes);
-    if (status === 'loading') {
-      return;
-    }
-
-    if (status === 'done') {
-      console.log('Caching complete');
-    }
-    else if (status === 'error') {
-      console.error('Caching error');
+    switch (status) {
+      case 'loading':
+        return;
+      case 'done':
+        console.log('Caching complete');
+        break;
+      case 'error':
+        console.log('Caching error');
     }
     workerRef.current?.terminate();
     workerRef.current = null;
-    checkCachedFiles(collectionKey);
     setCacheInProgress(false);
+    checkCachedFiles(collectionKey);
   };
 
   const cacheCollections = (collectionKey: CacheManagerParams = null) => {
@@ -127,7 +126,7 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
     }
   };
 
-  const checkCachedFiles = async (collectionKey?: CacheManagerParams) => {
+  const checkCachedFilesAsync = async (collectionKey?: CacheManagerParams) => {
     if ('caches' in window && 'indexedDB' in window && 'databases' in window.indexedDB) {
       const cache = await getCache();
       const db = await getIndexedDB();
@@ -149,11 +148,11 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
       // Remove files that are no longer referenced from the cache
       const pathsSet = new Set(paths);
       const pathsToDelete = (await getAllLocalFilePaths()).filter((path) => !pathsSet.has(path));
-      pathsToDelete.forEach((path) => {
-        console.debug(`Deleted ${path} from cache`);
-        cache.delete(path);
-        deleteLocalFileInfo(db, path);
-      });
+      await Promise.all(pathsToDelete.flatMap((path) => (
+        deleteLocalFileInfo(db, path)
+          .then(() => cache.delete(path))
+          .then(() => { console.debug(`Deleted ${path} from cache`); })
+      )));
       db.close();
 
       if (collectionKey === null) {
@@ -162,42 +161,47 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
       }
     }
   };
+  const checkCachedFiles = (collectionKey?: CacheManagerParams) => {
+    checkCachedFilesAsync(collectionKey).catch((err: unknown) => {
+      console.error(err);
+    });
+  };
 
-  const clearCache = async () => {
+  const clearCache = () => {
+    const promises = [];
     if (workerRef.current) {
       workerRef.current.terminate();
       workerRef.current = null;
     }
 
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.ready
-        .then((registration) => registration.unregister());
+      promises.push(
+        navigator.serviceWorker.ready.then((registration) => registration.unregister())
+      );
     }
 
-    const promises = [];
     if ('indexedDB' in window && 'databases' in window.indexedDB) {
       promises.push(
-        clearLocalFileInfo().then(() => checkCachedFiles())
+        clearLocalFileInfo().then(() => checkCachedFilesAsync())
       );
     }
     if ('caches' in window) {
-      const cache = await getCache();
-      promises.push(
+      promises.push(getCache().then((cache) =>
         cache.keys().then((keyList) => Promise.all(keyList.map((key) => cache.delete(key))))
-      );
+      ));
     }
 
     Promise.all(promises)
       .then(() => {
         console.log('Cache cleared');
       })
-      .catch((err) => {
+      .catch((err: unknown) => {
         console.log('Error clearing cache');
         console.error(err);
       });
   };
 
-  const clearCachedFile = async (collectionKey: string) => {
+  const clearCachedFileAsync = async (collectionKey: string) => {
     if ('caches' in window && 'indexedDB' in window && 'databases' in window.indexedDB) {
       const cache = await getCache();
       const db = await getIndexedDB();
@@ -211,13 +215,18 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
       checkCachedFiles();
     }
   };
+  const clearCachedFile = (collectionKey: string) => {
+    clearCachedFileAsync(collectionKey).catch((err: unknown) => {
+      console.error(err);
+    });
+  };
 
   // Refresh on page load
   useEffect(() => {
     startTransition(async () => {
       await Promise.all([
         checkCacheStorageEnabled(),
-        checkCachedFiles(),
+        checkCachedFilesAsync(),
       ]);
     });
   }, []);
@@ -225,27 +234,34 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
   // Refresh on switch to cache manager
   useEffect(() => {
     if (active) {
-      checkCacheStorageEnabled();
-      checkCachedFiles();
+      Promise.all([
+        checkCacheStorageEnabled(),
+        checkCachedFilesAsync(),
+      ]).catch((err: unknown) => {
+        console.error(err);
+      });
     }
   }, [active]);
 
-  const cacheAllModal = async () => {
-    const size = await getDownloadSizeTotal(Object.keys(corpus.collections));
-    showModal({
-      message: t('cache.cacheAllModal.message', formatBytesParams(size)),
-      buttons: [
-        {
-          message: t('cache.cacheAllModal.buttons.yes'),
-          callback: cacheCollections,
-        },
-        {
-          message: t('cache.cacheAllModal.buttons.no'),
-          callback: () => setCacheInProgress(false),
-          autoFocus: true,
-        },
-      ],
-      cancelCallback: () => setCacheInProgress(false),
+  const cacheAllModal = () => {
+    getDownloadSizeTotal(Object.keys(corpus.collections)).then((size) => {
+      showModal({
+        message: t('cache.cacheAllModal.message', formatBytesParams(size)),
+        buttons: [
+          {
+            message: t('cache.cacheAllModal.buttons.yes'),
+            callback: cacheCollections,
+          },
+          {
+            message: t('cache.cacheAllModal.buttons.no'),
+            callback: () => { setCacheInProgress(false); },
+            autoFocus: true,
+          },
+        ],
+        cancelCallback: () => { setCacheInProgress(false); },
+      });
+    }).catch((err: unknown) => {
+      console.error(err);
     });
   };
 
@@ -261,7 +277,7 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
     });
   };
 
-  const clearCacheModal = async () => {
+  const clearCacheModal = () => {
     showModal({
       message: t('cache.clearCacheModal.message'),
       buttons: [

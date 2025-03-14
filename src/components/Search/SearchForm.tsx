@@ -2,7 +2,7 @@ import { ChangeEventHandler, FormEventHandler, MouseEventHandler, useCallback, u
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { SearchTaskParams, searchTypes, isSearchType, searchParamsToHash, hashToSearchParams, defaultSearchParams, SearchParams } from '../../utils/searchParams';
+import { SearchTaskParams, searchTypes, isSearchType, searchParamsToHash, hashToSearchParams, defaultSearchParams } from '../../utils/searchParams';
 import { corpus, codeId } from '../../utils/corpus';
 import SearchFilters from './SearchFilters';
 import { escapeRegex, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
@@ -11,38 +11,39 @@ import { Status, statusInProgress } from '../../utils/Status';
 import './SearchForm.css';
 import '../../i18n/config';
 
+const userLanguage = corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0]));
 const defaultParamsPreferences: typeof defaultSearchParams = {
   ...defaultSearchParams,
-  languages: corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0])) || corpus.languages.filter((value) => value.startsWith('en')),
+  languages: userLanguage.length === 0 ? corpus.languages.filter((value) => value.startsWith('en')) : userLanguage,
 };
 
+// const isStringArray = (arr: unknown): arr is readonly string[] => {
+//   return Array.isArray(arr) && arr.every((value) => typeof value === 'string');
+// };
 const getSavedParamsPreferences = () => {
   const saved = localStorageGetItem('corpus-params');
   if (saved === null)
     return defaultParamsPreferences;
 
   const paramsDefault = {...defaultParamsPreferences};
-  try {
-    const params: Partial<SearchParams> = JSON.parse(saved);
-    // if (params.query !== undefined && typeof params.query === 'string')
+  const params: unknown = JSON.parse(saved);
+  if (typeof params === 'object' && params !== null) {
+    // if ('query' in params && typeof params.query === 'string')
     //   paramsDefault.query = params.query;
-    if (params.type !== undefined && searchTypes.includes(params.type))
+    if ('type' in params && typeof params.type === 'string' && isSearchType(params.type))
       paramsDefault.type = params.type;
-    if (params.caseInsensitive !== undefined && typeof params.caseInsensitive === 'boolean')
+    if ('caseInsensitive' in params && typeof params.caseInsensitive === 'boolean')
       paramsDefault.caseInsensitive = params.caseInsensitive;
-    if (params.common !== undefined && typeof params.common === 'boolean')
+    if ('common' in params && typeof params.common === 'boolean')
       paramsDefault.common = params.common;
-    if (params.script !== undefined && typeof params.script === 'boolean')
+    if ('script' in params && typeof params.script === 'boolean')
       paramsDefault.script = params.script;
-    if (params.showAllLanguages !== undefined && typeof params.showAllLanguages === 'boolean')
+    if ('showAllLanguages' in params && typeof params.showAllLanguages === 'boolean')
       paramsDefault.showAllLanguages = params.showAllLanguages;
-    // if (params.collections !== undefined && params.collections.every((collectionKey) => Object.keys(corpus.collections).includes(collectionKey)))
+    // if ('collections' in params && isStringArray(params.collections) && params.collections.every((collectionKey) => Object.keys(corpus.collections).includes(collectionKey)))
     //   paramsDefault.collections = params.collections;
-    // if (params.languages !== undefined && params.languages.every((languageKey) => corpus.languages.includes(languageKey)))
+    // if ('languages' in params && isStringArray(params.languages) && params.languages.every((languageKey) => corpus.languages.includes(languageKey)))
     //   paramsDefault.languages = params.languages;
-  }
-  catch {
-    console.log('Failed to parse saved search params!');
   }
   return paramsDefault;
 };
@@ -138,7 +139,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         common: true,
         script: true,
         showAllLanguages: true,
-        collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key]?.id === collectionId),
+        collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key].id === collectionId),
         languages: [codeId],
       });
       setId('');
@@ -155,7 +156,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         common: true,
         script: true,
         showAllLanguages: true,
-        collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key]?.id === collectionId),
+        collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key].id === collectionId),
         languages: [codeId],
       });
       setFile('');
@@ -235,7 +236,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
     <div className="search-bar">
       <div className="item-group">
         <label htmlFor="query">{t('query')}</label>
-        <input type="text" name="query" id="query" value={query} onChange={(e) => setQuery(e.target.value)}/>
+        <input type="text" name="query" id="query" value={query} onChange={(e) => { setQuery(e.target.value); }}/>
         <div className="btn-alternate-container">
           <input id="submit" type="submit" className={cancelVisible ? 'invisible' : 'visible'} value={t('search')} disabled={submitDisabled}/>
           <button type="button" className={cancelVisible ? 'visible' : 'invisible'} onClick={onCancel} disabled={!cancelVisible}>{t('cancel')}</button>
@@ -247,19 +248,19 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
       </div>
       <div className="item-group search-option-group">
         <div className="search-option">
-          <input type="checkbox" name="caseInsensitive" id="caseInsensitive" checked={caseInsensitive} onChange={(e) => setCaseInsensitive(e.target.checked)}/>
+          <input type="checkbox" name="caseInsensitive" id="caseInsensitive" checked={caseInsensitive} onChange={(e) => { setCaseInsensitive(e.target.checked); }}/>
           <label htmlFor="caseInsensitive">{t('caseInsensitive')}</label>
         </div>
         <div className="search-option">
-          <input type="checkbox" name="common" id="common" checked={common} onChange={(e) => setCommon(e.target.checked)}/>
+          <input type="checkbox" name="common" id="common" checked={common} onChange={(e) => { setCommon(e.target.checked); }}/>
           <label htmlFor="common">{t('common')}</label>
         </div>
         <div className="search-option">
-          <input type="checkbox" name="script" id="script" checked={script} onChange={(e) => setScript(e.target.checked)}/>
+          <input type="checkbox" name="script" id="script" checked={script} onChange={(e) => { setScript(e.target.checked); }}/>
           <label htmlFor="script">{t('script')}</label>
         </div>
         <div className="search-option">
-          <input type="checkbox" name="showAllLanguages" id="showAllLanguages" checked={showAllLanguages} onChange={(e) => setShowAllLanguages(e.target.checked)}/>
+          <input type="checkbox" name="showAllLanguages" id="showAllLanguages" checked={showAllLanguages} onChange={(e) => { setShowAllLanguages(e.target.checked); }}/>
           <label htmlFor="showAllLanguages">{t('showAllLanguages')}</label>
         </div>
       </div>

@@ -56,7 +56,7 @@ export function queryToPostfix(query: string): QueryParseResult {
       case "AND":
       case "OR":
         while (operators[operators.length - 1] !== '(' && (operators[operators.length - 1] === 'NOT' || (operators[operators.length - 1] === 'AND' && t === 'OR') || t === operators[operators.length - 1])) {
-          output.push(operators.pop()!);
+          output.push(operators.pop()!); // eslint-disable-line @typescript-eslint/no-non-null-assertion -- checked in while loop
         }
         operators.push(t);
         break;
@@ -71,7 +71,7 @@ export function queryToPostfix(query: string): QueryParseResult {
         }
         else if (operators[operators.length - 1] === '/') {
           operators.pop();
-          const pattern = output.pop()!;
+          const pattern = output.pop()!; // eslint-disable-line @typescript-eslint/no-non-null-assertion -- pattern was pushed when the previous '/' was pushed
 
           // Ensure the regex is valid.
           // If it's invalid, return with that error immediately.
@@ -81,7 +81,7 @@ export function queryToPostfix(query: string): QueryParseResult {
           output.push(`/${pattern}/`);
           regex = false;
           while (operators[operators.length - 1] === 'NOT')
-            output.push(operators.pop()!);
+            output.push(operators.pop()!); // eslint-disable-line @typescript-eslint/no-non-null-assertion -- checked in while loop
         }
         break;
 
@@ -98,7 +98,7 @@ export function queryToPostfix(query: string): QueryParseResult {
           output.push(`"${output.pop()}"`);
           quote = false;
           while (operators[operators.length - 1] === 'NOT')
-            output.push(operators.pop()!);
+            output.push(operators.pop()!); // eslint-disable-line @typescript-eslint/no-non-null-assertion -- checked in while loop
         }
         break;
 
@@ -114,13 +114,13 @@ export function queryToPostfix(query: string): QueryParseResult {
         while (operators[operators.length - 1] !== '(') {
           if (operators.length === 0)
             return queryParseResultError('parentheses');
-          output.push(operators.pop()!);
+          output.push(operators.pop()!); // eslint-disable-line @typescript-eslint/no-non-null-assertion -- checked in while loop
         }
         if (operators[operators.length - 1] !== '(')
           return queryParseResultError('parentheses');
         operators.pop();
         while (operators[operators.length - 1] === 'NOT')
-          output.push(operators.pop()!);
+          output.push(operators.pop()!); // eslint-disable-line @typescript-eslint/no-non-null-assertion -- checked in while loop
         break;
 
       // All other strings are treated as search keywords
@@ -138,35 +138,43 @@ export function queryToPostfix(query: string): QueryParseResult {
       return queryParseResultError('slash');
     if (operators[operators.length - 1] === '"')
       return queryParseResultError('quote');
-    output.push(operators.pop()!);
+    output.push(operators.pop()!); // eslint-disable-line @typescript-eslint/no-non-null-assertion -- checked in while loop
   }
   return queryParseResultSuccess(output);
 }
 
 /**
  * Convert an array of boolean keywords in postfix notation to a function that evaluates the match condition.
+ *
+ * Returns the match condition. If the array is empty, undefined is returned. If an operand is missing, null is returned.
  */
-export function postfixToMatchCondition(caseInsensitive: boolean, postfix: readonly string[]): MatchCondition | undefined {
+export function postfixToMatchCondition(caseInsensitive: boolean, postfix: readonly string[]): MatchCondition | undefined | null {
   const stack: MatchCondition[] = [];
   for (const keyword of postfix) {
     switch (keyword) {
       case "NOT":
       {
-        const cond = stack.pop()!;
+        const cond = stack.pop();
+        if (cond === undefined)
+          return null;
         stack.push((line: string) => !cond(line));
         break;
       }
       case "AND":
       {
-        const cond2 = stack.pop()!;
-        const cond1 = stack.pop()!;
+        const cond2 = stack.pop();
+        const cond1 = stack.pop();
+        if (cond2 === undefined || cond1 === undefined)
+          return null;
         stack.push((line: string) => cond1(line) && cond2(line));
         break;
       }
       case "OR":
       {
-        const cond2 = stack.pop()!;
-        const cond1 = stack.pop()!;
+        const cond2 = stack.pop();
+        const cond1 = stack.pop();
+        if (cond2 === undefined || cond1 === undefined)
+          return null;
         stack.push((line: string) => cond1(line) || cond2(line));
         break;
       }
@@ -184,10 +192,10 @@ export function postfixToMatchCondition(caseInsensitive: boolean, postfix: reado
       }
     }
   }
-  while (stack.length > 1) {
+  while (stack.length >= 2) {
     // AND all remaining terms
-    const cond2 = stack.pop()!;
-    const cond1 = stack.pop()!;
+    const cond2 = stack.pop()!; // eslint-disable-line @typescript-eslint/no-non-null-assertion -- checked in while loop
+    const cond1 = stack.pop()!; // eslint-disable-line @typescript-eslint/no-non-null-assertion -- checked in while loop
     stack.push((line: string) => cond1(line) && cond2(line));
   }
   return stack.pop();
@@ -213,21 +221,16 @@ export function isBooleanQueryValid(query: string, caseInsensitive: boolean): Bo
     return result.message;
   }
 
-  try {
-    const matchCondition = postfixToMatchCondition(caseInsensitive, result.postfix);
-    if (matchCondition === undefined) {
-      // Empty stack (no keywords)
-      return 'empty';
-    }
-
-    // Try evaluating it, will throw if an inner condition is undefined
-    matchCondition('');
-    return 'success';
-  }
-  catch {
-    // Error during evaluation (missing operand)
+  const matchCondition = postfixToMatchCondition(caseInsensitive, result.postfix);
+  if (matchCondition === null) {
+    // Missing operand
     return 'operand';
   }
+  if (matchCondition === undefined) {
+    // Empty stack (no keywords)
+    return 'empty';
+  }
+  return 'success';
 }
 
 export function parseWhereClause(query: string) {

@@ -54,7 +54,7 @@ export function formatBytesParams(size: number) {
   return {amount: amount, formatParams: {amount: format}};
 }
 
-export function formatPercent(n: number, fractionDigits: number = 1) {
+export function formatPercent(n: number, fractionDigits = 1) {
   const format: Intl.NumberFormatOptions = {
     style: 'percent',
     minimumFractionDigits: fractionDigits,
@@ -63,7 +63,7 @@ export function formatPercent(n: number, fractionDigits: number = 1) {
   return [n, format] as const;
 }
 
-export function formatPercentParams(size: number, fractionDigits: number = 1) {
+export function formatPercentParams(size: number, fractionDigits = 1) {
   const [amount, format] = formatPercent(size, fractionDigits);
   return {amount: amount, formatParams: {amount: format}};
 }
@@ -78,20 +78,4 @@ export function isValidRegex(pattern: string) {
     return false;
   }
   return true;
-}
-
-/* https://developer.chrome.com/blog/introducing-scheduler-yield-origin-trial */
-// A function for shimming scheduler.yield and setTimeout:
-export function yieldToMain() {
-  // Use scheduler.yield if it exists:
-  // @ts-expect-error scheduler
-  if ('scheduler' in window && 'yield' in scheduler) {
-    // @ts-expect-error scheduler
-    return scheduler.yield();
-  }
-
-  // Fall back to setTimeout:
-  return new Promise((resolve) => {
-    setTimeout(resolve, 0);
-  });
 }

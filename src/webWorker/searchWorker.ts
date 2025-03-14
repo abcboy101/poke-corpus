@@ -168,7 +168,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
 
     // Filter only the lines that matched
     const languageKeys: string[] = [];
-    const lineKeysSet: Set<number> = new Set();
+    const lineKeysSet = new Set<number>();
     const fileData: string[][] = [];
 
     processedFiles.forEach(([languageKey, lineKeys, lines]) => {

@@ -44,14 +44,14 @@ function ResultsTable({collection, file, languages, lines, speakers, literals, r
   const displayDirs = displayLanguages.map((lang) => i18next.dir(lang));
   const sameDir = displayDirs.every((dir) => dir === displayDirs[0]);
 
-  const tableRef = useRef(null);
+  const tableRef = useRef<HTMLTableElement>(null);
   const copyOnClick: MouseEventHandler<HTMLButtonElement> = () => {
     const table = tableRef.current;
     const sel = window.getSelection();
     if (sel !== null && table !== null) {
       sel.removeAllRanges();
       sel.selectAllChildren(table);
-      document.execCommand('copy');
+      document.execCommand('copy'); // eslint-disable-line @typescript-eslint/no-deprecated -- for native-like behavior
       sel.removeAllRanges();
     }
   };
@@ -113,12 +113,12 @@ function ResultsSectionContent({lines, index, sectionOffset, offset, limit, onSh
   const { t } = useTranslation();
   const start = Math.max(0, Math.min(lines.length, offset - sectionOffset));
   const end = Math.max(0, Math.min(lines.length, (offset + limit) - sectionOffset));
-  const slicedLines = (start !== 0 || end !== undefined) ? lines.slice(start, end) : lines;
+  const slicedLines = (start !== 0) ? lines.slice(start, end) : lines;
 
   return <>
     { start !== 0 && <button className="results-notice" onClick={onShowSection(sectionOffset, index)}>{t('tablePartial', {count: start})}</button> }
     { start !== end && <ResultsTable key={index} {...params} lines={slicedLines} /> }
-    { end !== undefined && end < lines.length && <button className="results-notice" onClick={onShowSection(sectionOffset + end, index)}>{t('tablePartial', {count: lines.length - end})}</button> }
+    { end < lines.length && <button className="results-notice" onClick={onShowSection(sectionOffset + end, index)}>{t('tablePartial', {count: lines.length - end})}</button> }
   </>;
 }
 
@@ -131,7 +131,7 @@ export function ResultsSections({className, results, headers, richText, showId, 
   // Wrap in startTransition to allow it to be rendered in the background.
   // Only changes to results, limit, offset, or language will affect the generated HTML.
   useEffect(() => {
-    startTransition(async () => {
+    startTransition(() => {
       let count = 0;
       const resultTables: ReactElement[] = [];
       for (const [index, params] of results.entries()) {

@@ -14,11 +14,11 @@ import '../../i18n/config';
  * We adjust the character scaling for these so that the whole string can be displayed.
  * To approximate the length, Latin-1 characters are treated as halfwidth, and all others as fullwidth.
  */
-function collectionLabelStyle(text: string, maxWidth: number = 4): CSSProperties | undefined {
-  const width = [...text].reduce((acc, c) => acc + ((c.codePointAt(0)! > 0xFF) ? 1 : 0.5), 0);
-  if (width <= maxWidth)
-    return undefined;
-  return {fontSize: `${(maxWidth * 100) / width}%`, scale: `1 ${width / maxWidth}`, whiteSpace: 'nowrap'};
+function collectionLabelStyle(text: string, maxWidth = 4): CSSProperties | undefined {
+  let width = 0;
+  for (let i = 0; i < text.length; i++)
+    width += (text.charCodeAt(i) > 0xFF) ? 1 : 0.5;
+  return width <= maxWidth ? undefined : {fontSize: `${(maxWidth * 100) / width}%`, scale: `1 ${width / maxWidth}`, whiteSpace: 'nowrap'};
 }
 
 function getValidCollections(languages: readonly string[]) {
@@ -123,7 +123,7 @@ function SearchFilters({filtersVisible, collections, setCollections, languages, 
       return;
     updateFiltersHeight();
     window.addEventListener('resize', updateFiltersHeight);
-    return () => window.removeEventListener('resize', updateFiltersHeight);
+    return () => { window.removeEventListener('resize', updateFiltersHeight); };
   }, []);
 
   return (

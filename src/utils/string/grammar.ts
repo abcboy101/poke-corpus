@@ -90,7 +90,7 @@ export const particlesKO = [
 /**
  * Remap indices for grammar tags in BDSP to the standard indices used in the Game Freak games.
  */
-export const remapBDSPGrammarIndex = (index: number, isSpanish: boolean = false) => {
+export const remapBDSPGrammarIndex = (index: number, isSpanish = false) => {
   // All languages: skip 0x00, 0x01, 0x02
   // English/German: max value is 0x06/0x0A (total of 3)
   // French/Italian: also skip 0x0D, 0x0E (2 more, total of 5)

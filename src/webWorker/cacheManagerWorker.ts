@@ -6,7 +6,7 @@ export type CacheManagerParams = string | null;
 export type CacheManagerResult = [CacheManagerStatus, number, number, CacheManagerParams];
 
 self.onmessage = async (message: MessageEvent<CacheManagerParams>) => {
-  const updateStatus = (result: CacheManagerResult) => postMessage(result);
+  const updateStatus = (result: CacheManagerResult) => { postMessage(result); };
   try {
     if (import.meta.env.DEV) {
       console.debug('Caching worker started');
@@ -30,8 +30,7 @@ self.onmessage = async (message: MessageEvent<CacheManagerParams>) => {
     const cache = await getCache();
     const db = await getIndexedDB();
     await Promise.all(filePaths.map((filePath) => getFile(cache, db, filePath)
-      .then((res) => {
-        res.blob();
+      .then(() => {
         loadedBytes += getFileSize(filePath);
         updateStatus(['loading', loadedBytes, totalBytes, message.data]);
         if (import.meta.env.DEV) {

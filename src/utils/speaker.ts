@@ -1,6 +1,6 @@
 import { searchParamsToHash } from "../utils/searchParams";
 
-const speakerDelimiters: {[language: string]: string} = {
+const speakerDelimiters: Record<string, string> = {
   'ja-Hrkt': '『',
   'ja': '『',
   'fr': ' : ', // space before and after colon
@@ -25,7 +25,7 @@ export function extractSpeakers(speakerData: readonly string[], textFile: string
 
 /* Looks up the speaker's name by index, and prepend it to the string. */
 export function replaceSpeaker(s: string, speakerNames: readonly string[], language: string) {
-  return s.replace(/(.*?)(\[VAR 0114\(([0-9A-F]{4})\)\])(?:$|(?=\u{F0000}))/u, (_, rest, tag, speakerIndexHex) => {
+  return s.replace(/(.*?)(\[VAR 0114\(([0-9A-F]{4})\)\])(?:$|(?=\u{F0000}))/u, (_, rest: string, tag: string, speakerIndexHex: string) => {
     const speakerIndex = parseInt(speakerIndexHex, 16);
     const speakerName = speakerNames[speakerIndex];
     return `${tag.replaceAll('[', '\\[')}\u{F1100}${speakerName}${speakerDelimiter(language)}\u{F1101}${rest}`;

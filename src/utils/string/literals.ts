@@ -7,15 +7,23 @@ export const replaceLiteralsFactory = (literalsData: readonly ReadonlyMap<number
 
     for (const [literalId, {branch, line}] of Object.entries(literals)) {
       const searchValue = `[${literalId}]`;
-      let replaceValue = searchValue;
-      if (branch === undefined)
-        replaceValue = literalsData[languageIndex].get(line)!;
-      else if (branch === 'gender')
-        replaceValue = `\u{F1200}${line.map((lineNo) => literalsData[languageIndex].get(lineNo)).join('\u{F1104}')}`;
-      else if (branch === 'version')
-        replaceValue = `\u{F1207}${line.map((lineNo) => literalsData[languageIndex].get(lineNo)).join('\u{F1104}')}`;
-      else if (branch === 'language')
-        replaceValue = literalsData[languageIndex].get(line[languages[languageIndex]])!;
+      let replaceValue = undefined;
+      switch (branch) {
+        case undefined:
+          replaceValue = literalsData[languageIndex].get(line);
+          break;
+        case 'gender':
+          replaceValue = `\u{F1200}${line.map((lineNo) => literalsData[languageIndex].get(lineNo)).join('\u{F1104}')}`;
+          break;
+        case 'version':
+          replaceValue = `\u{F1207}${line.map((lineNo) => literalsData[languageIndex].get(lineNo)).join('\u{F1104}')}`;
+          break;
+        case 'language':
+          replaceValue = literalsData[languageIndex].get(line[languages[languageIndex]]);
+          break;
+      }
+      if (replaceValue === undefined)
+        return s;
 
       if (collectionKey === 'BattleRevolution')
         replaceValue = replaceValue.substring('[FONT 0][SPACING 1]'.length).trim();

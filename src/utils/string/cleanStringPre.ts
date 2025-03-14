@@ -49,7 +49,7 @@ import { variables3DS } from './variableNames';
 //#region Pre-processing
 // SMUSUM Chinese Pokémon names
 export function remapChineseChars(s: string) {
-  return s.replaceAll(/[\uE800-\uEE26]/gu, (c: string) => chineseChars[c.codePointAt(0)! - 0xE800]);
+  return s.replaceAll(/[\uE800-\uEE26]/gu, (c: string) => chineseChars[c.charCodeAt(0) - 0xE800]);
 }
 
 // ORAS Korean Braille
@@ -84,12 +84,12 @@ const brailleJapanese = '　アッイワナ⠆ニ⠈ウオエヤヌノネ⠐ラ�
 const brailleWestern = ' A,B.K⠆L⠈CIF⠌MSP,E⠒H⠔O⠖R⠘DJGÄNTQ⠠⠡⠢⠣-U⠦V⠨⠩Ö⠫⠬X⠮⠯⠰⠱.Ü⠴Z⠶⠷⠸⠹W⠻⠼Y⠾⠿';
 
 export function remapGBABrailleJapanese(s: string) {
-  return (s.replaceAll(/[\u2800-\u283F]/gu, (c: string) => brailleJapanese[c.codePointAt(0)! - 0x2800])
+  return (s.replaceAll(/[\u2800-\u283F]/gu, (c: string) => brailleJapanese[c.charCodeAt(0) - 0x2800])
     .replaceAll(/([\u2808\u2810\u2818\u2820\u2828])(.)/gu, (_, prefix: string, base: string) => {
       // Japanese braille encodes yōon, dakuten, and handakuten in the preceding cell
       // " ^dh CV" (braille) -> "CV^dh" (kana)
       // "y^dh CV" (braille) -> "Ci^dh yV" (kana)
-      const code = prefix.codePointAt(0)!;
+      const code = prefix.charCodeAt(0);
 
       let suffix = '';
       if (code & 0x08) { // yōon (dot 4)
@@ -101,9 +101,9 @@ export function remapGBABrailleJapanese(s: string) {
       }
 
       if (code & 0x10) // dakuten (dot 5)
-        base = String.fromCodePoint(base.codePointAt(0)! + 1); // add dakuten
+        base = String.fromCodePoint(base.charCodeAt(0) + 1); // add dakuten
       else if (code & 0x20) // handakuten (dot 6)
-        base = String.fromCodePoint(base.codePointAt(0)! + 2); // add handakuten
+        base = String.fromCodePoint(base.charCodeAt(0) + 2); // add handakuten
       return base.concat(suffix);
     })
   );
@@ -113,7 +113,7 @@ export function remapGBABrailleWestern(s: string, language: string) {
   // In German/Spanish, the period/comma are incorrectly written with a preceding '⠿'
   if (language === 'de' || language === 'es')
     s = s.replaceAll(/\u283F([\u2802\u2804])/gu, '$1');
-  return s.replaceAll(/[\u2800-\u283F]/gu, (c: string) => brailleWestern[c.codePointAt(0)! - 0x2800]);
+  return s.replaceAll(/[\u2800-\u283F]/gu, (c: string) => brailleWestern[c.charCodeAt(0) - 0x2800]);
 }
 
 function remapGBABraille(s: string, language: string) {

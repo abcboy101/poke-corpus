@@ -31,7 +31,7 @@ function jumpTo(n: number) {
 function JumpToSelect({headers}: {headers: readonly string[]}) {
   const { t } = useTranslation();
   return <nav className="results-jump">
-    <select name="jump" id="jump" onChange={(e) => jumpTo(Number(e.target.value))} value="">
+    <select name="jump" id="jump" onChange={(e) => { jumpTo(Number(e.target.value)); }} value="">
       <option value="" disabled>{t('jumpTo')}</option>
       {headers.map((header, k) => (k === 0 || headers[k - 1] !== header) && <option key={k} value={k}>{header}</option>)}
     </select>
@@ -46,8 +46,8 @@ function ResultsNav({count, offset, limit, setOffset}: {count: number, offset: n
         <span className="results-nav-range-long">{t('displayedRange.long', {count: count, start: offset + 1, end: Math.min(count, offset + limit)})}</span>
         <span className="results-nav-range-short">{t('displayedRange.short', {count: count, start: offset + 1, end: Math.min(count, offset + limit)})}</span>
       </div>
-      <button className='button-square' disabled={offset === 0} onClick={() => setOffset(Math.max(0, offset - limit))} title={t('loadPrev')}>{t('icons:loadPrev', {limit: limit})}</button>
-      <button className='button-square' disabled={offset + limit >= count} onClick={() => setOffset(Math.min(Math.floor(count / limit) * limit, offset + limit))} title={t('loadNext')}>{t('icons:loadNext', {limit: limit})}</button>
+      <button className='button-square' disabled={offset === 0} onClick={() => { setOffset(Math.max(0, offset - limit)); }} title={t('loadPrev')}>{t('icons:loadPrev', {limit: limit})}</button>
+      <button className='button-square' disabled={offset + limit >= count} onClick={() => { setOffset(Math.min(Math.floor(count / limit) * limit, offset + limit)); }} title={t('loadNext')}>{t('icons:loadNext', {limit: limit})}</button>
     </div>
   );
 }
@@ -76,23 +76,20 @@ const getSavedResultsPreferences = () => {
     return defaultResultsPreferences;
 
   const toggleDefault = {...defaultResultsPreferences};
-  try {
-    const toggle: Partial<ResultsPreferences> = JSON.parse(saved);
-    if (toggle.showVariables !== undefined && [0, 1, 2].includes(toggle.showVariables))
+  const toggle: unknown = JSON.parse(saved);
+  if (typeof toggle === 'object' && toggle !== null) {
+    if ('showVariables' in toggle && typeof toggle.showVariables === 'number' && [0, 1, 2].includes(toggle.showVariables))
       toggleDefault.showVariables = toggle.showVariables;
-    if (toggle.showAllCharacters !== undefined && typeof toggle.showAllCharacters === 'boolean')
+    if ('showAllCharacters' in toggle && typeof toggle.showAllCharacters === 'boolean')
       toggleDefault.showAllCharacters = toggle.showAllCharacters;
-    if (toggle.showGender !== undefined && [0, 1, 2].includes(toggle.showGender))
+    if ('showGender' in toggle && typeof toggle.showGender === 'number' && [0, 1, 2].includes(toggle.showGender))
       toggleDefault.showGender = toggle.showGender;
-    if (toggle.showPlural !== undefined && [0, 1, 2].includes(toggle.showPlural))
+    if ('showPlural' in toggle && typeof toggle.showPlural === 'number' && [0, 1, 2].includes(toggle.showPlural))
       toggleDefault.showPlural = toggle.showPlural;
-    if (toggle.showGrammar !== undefined && typeof toggle.showGrammar === 'boolean')
+    if ('showGrammar' in toggle && typeof toggle.showGrammar === 'boolean')
       toggleDefault.showGrammar = toggle.showGrammar;
-    if (toggle.showFurigana !== undefined && typeof toggle.showFurigana === 'boolean')
+    if ('showFurigana' in toggle && typeof toggle.showFurigana === 'boolean')
       toggleDefault.showFurigana = toggle.showFurigana;
-  }
-  catch {
-    console.log('Failed to parse saved toggle preferences!');
   }
   return toggleDefault;
 };

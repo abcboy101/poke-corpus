@@ -70,38 +70,45 @@ function Search({showModal, richText, limit}: {showModal: ShowModal, richText: b
     }
   }, []);
 
-  const postToWorkerModal = useCallback(async (params: SearchParams) => {
+  const postToWorkerModal = useCallback((params: SearchParams) => {
     setStatus('waiting');
-    if (showSearchModal) {
-      const size = await getDownloadSizeTotal(params.collections);
-      if (size > searchModalThreshold) {
-        showModal({
-          message: t('searchModal.message', formatBytesParams(size)),
-          checkbox: {
-            message: t('searchModal.checkboxDoNotShowAgain'),
-            checked: false,
-          },
-          buttons: [
-            {
-              message: t('searchModal.buttons.yes'),
-              callback: () => postToWorker(params),
-              checkboxCallback: (checked) => {
-                setShowSearchModal(!checked);
-                localStorageSetItem(searchModalWarn, (!checked).toString());
-              },
-            },
-            {
-              message: t('searchModal.buttons.no'),
-              callback: () => setStatus('initial'),
-              autoFocus: true,
-            },
-          ],
-          cancelCallback: () => setStatus('initial'),
-        });
+    if (!showSearchModal) {
+      postToWorker(params);
+      return;
+    }
+
+    getDownloadSizeTotal(params.collections).then((size) => {
+      if (size <= searchModalThreshold) {
+        postToWorker(params);
         return;
       }
-    }
-    postToWorker(params);
+
+      showModal({
+        message: t('searchModal.message', formatBytesParams(size)),
+        checkbox: {
+          message: t('searchModal.checkboxDoNotShowAgain'),
+          checked: false,
+        },
+        buttons: [
+          {
+            message: t('searchModal.buttons.yes'),
+            callback: () => { postToWorker(params); },
+            checkboxCallback: (checked) => {
+              setShowSearchModal(!checked);
+              localStorageSetItem(searchModalWarn, (!checked).toString());
+            },
+          },
+          {
+            message: t('searchModal.buttons.no'),
+            callback: () => { setStatus('initial'); },
+            autoFocus: true,
+          },
+        ],
+        cancelCallback: () => { setStatus('initial'); },
+      });
+    }).catch((err: unknown) => {
+      console.error(err);
+    });
   }, [showSearchModal]);
 
   return (

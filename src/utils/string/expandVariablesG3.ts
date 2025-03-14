@@ -9,7 +9,7 @@ export const expandBlock = (language: string) => ({
 
 // Used in Western RSE (34)
 // Text as displayed in the main font
-export const expandLv = (language: string, collectionKey: string = '') => ({
+export const expandLv = (language: string, collectionKey = '') => ({
   'en': 'Lv',
   'fr': 'N.',
   'it': 'L.',

@@ -3,7 +3,7 @@
  *
  * Returns the resulting string.
  */
-export function genderBranch(male: string, female: string, neuter: string = '') {
+export function genderBranch(male: string, female: string, neuter = '') {
   const results = [];
   if (male.length > 0) results.push(`<span class="branch male">${male}</span>`);
   if (female.length > 0) results.push(`<span class="branch female">${female}</span>`);
@@ -16,7 +16,7 @@ export function genderBranch(male: string, female: string, neuter: string = '') 
  *
  * Returns the resulting string.
  */
-export function numberBranch(singular: string, plural: string, zero: string = '') {
+export function numberBranch(singular: string, plural: string, zero = '') {
   const results = [];
   if (singular.length > 0) results.push(`<span class="branch singular">${singular}</span>`);
   if (plural.length > 0) results.push(`<span class="branch plural">${plural}</span>`);

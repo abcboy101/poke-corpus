@@ -13,7 +13,7 @@ declare global {
     /**
      * Cache for loaded files that is shared between queries.
      */
-    memoryCache: Map<string, WeakRef<Promise<string>>>,
+    memoryCache?: Map<string, WeakRef<Promise<string>>>,
   }
 }
 
@@ -32,10 +32,10 @@ export interface SearchResults {
 type SearchTaskPartial = Omit<SearchTask, "files" | "speakerFiles">;
 
 /** Returns a promise for the text of the file if it is cached in memory, or undefined if it has not been cached or has been evicted. */
-const memoryCacheGet = (path: string) => self.memoryCache.get(path)?.deref();
+const memoryCacheGet = (path: string) => self.memoryCache?.get(path)?.deref();
 
 /** Adds the promise for the text of the file to the in-memory cache. */
-const memoryCacheSet = (path: string, value: Promise<string>) => self.memoryCache.set(path, new WeakRef(value));
+const memoryCacheSet = (path: string, value: Promise<string>) => self.memoryCache?.set(path, new WeakRef(value));
 
 /** Returns true if the file is cached in memory, or false otherwise. */
 const isMemoryCached = (collectionKey: string, languageKey: string, fileKey: string): boolean => {
@@ -95,7 +95,7 @@ const loadFile = async (collectionKey: string, languageKey: string, fileKey: str
   return text;
 };
 
-self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
+self.onmessage = async (message: MessageEvent<SearchTaskParams>) => {
   const params = message.data;
   if (self.memoryCache === undefined) {
     self.memoryCache = new Map();
@@ -203,8 +203,8 @@ self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
             collectionKey: collectionKey,
             fileKey: fileKey,
             languages: languages,
-            speaker: collection?.speaker,
-            literals: collection?.literals,
+            speaker: collection.speaker,
+            literals: collection.literals,
           });
         }
         taskCount += languages.length;
@@ -287,13 +287,13 @@ self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
 
           // Raise network error if it occurred at the end here
           updateStatusComplete(networkError ? 'network' : 'done', results);
-          helpers.forEach((helper) => helper.terminate());
+          helpers.forEach((helper) => { helper.terminate(); });
         }
       }
       else { // error caught in searchWorker
         helperError = true;
         updateStatusComplete(result.status);
-        helpers.forEach((helper) => helper.terminate());
+        helpers.forEach((helper) => { helper.terminate(); });
       }
     };
 
@@ -307,12 +307,12 @@ self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
         if (!helperError) {
           helperError = true;
           updateStatusComplete('error');
-          helpers.forEach((helper) => helper.terminate());
+          helpers.forEach((helper) => { helper.terminate(); });
         }
       };
       helpers.push(helper);
     }
-    taskList.forEach(async (task, i) => {
+    await Promise.all(taskList.map(async (task, i) => {
       // Due to a bug in Safari, access to cache storage fails in subworkers.
       // To work around this, we need to fetch the files in the manager worker instead.
       const speaker = task.speaker;
@@ -338,7 +338,7 @@ self.onmessage = (message: MessageEvent<SearchTaskParams>) => {
         speakerFiles: speakerFiles,
       };
       helpers[i % helpers.length].postMessage(taskFull);
-    });
+    }));
   }
   catch (err) {
     console.error(err);

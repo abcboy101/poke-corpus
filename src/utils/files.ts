@@ -92,7 +92,7 @@ export const getFileCacheOnly = async (cache: Cache, db: IDBDatabase, path: stri
   // Try retrieving file from cache
   const url = getFileURL(path);
   const [remoteFileInfo, localFileInfo] = await getFileInfo(db, path);
-  if (localFileInfo?.hash !== undefined)
+  if (localFileInfo !== undefined)
     return [await cacheMatch(cache, url), (localFileInfo.hash === remoteFileInfo.hash)] as const;
 
   // No file is cached
@@ -108,10 +108,10 @@ export const getFileRemote = (path: string) => {
 };
 
 //#region Indexed DB/FileInfo
-type FileInfo = {hash: string, size: number};
-export interface Files {
-  [path: string]: FileInfo,
-}
+interface FileInfo {hash: string, size: number}
+const isFileInfo = (o: unknown): o is FileInfo => o !== null && typeof o === 'object' && 'hash' in o && typeof o.hash === 'string' && 'size' in o && typeof o.size === 'number';
+
+export type Files = Record<string, FileInfo>;
 
 const filesRemoteData = filesJson as ([string, number])[];
 const filesRemote: Files = Object.fromEntries(
@@ -136,20 +136,20 @@ export const getIndexedDB = (): Promise<IDBDatabase> => {
         };
       }
     };
-    request.onsuccess = () => resolve(request.result);
-    request.onerror = () => reject(request.error);
+    request.onsuccess = () => { resolve(request.result); };
+    request.onerror = () => { reject(request.error!); }; // eslint-disable-line @typescript-eslint/no-non-null-assertion -- in onerror
   });
 };
 
 const getRemoteFileInfo = (path: string): FileInfo => filesRemote[path];
 
-const getLocalFileInfo = (db: IDBDatabase, path: string): Promise<FileInfo> => {
+const getLocalFileInfo = (db: IDBDatabase, path: string) => {
   const transaction = db.transaction([dbObjectStore], "readonly");
   const objectStore = transaction.objectStore(dbObjectStore);
   const request = objectStore.get(path);
-  return new Promise<FileInfo>((resolve, reject) => {
-    request.onsuccess = () => resolve(request.result);
-    request.onerror = () => reject(request.error);
+  return new Promise<FileInfo | undefined>((resolve, reject) => {
+    request.onsuccess = () => { resolve(isFileInfo(request.result) ? request.result : undefined); };
+    request.onerror = () => { reject(request.error!); }; // eslint-disable-line @typescript-eslint/no-non-null-assertion -- in onerror
   });
 };
 
@@ -158,8 +158,8 @@ const setLocalFileInfo = (db: IDBDatabase, path: string): Promise<boolean> => {
   const objectStore = transaction.objectStore(dbObjectStore);
   const request = objectStore.put(filesRemote[path], path);
   return new Promise<boolean>((resolve, reject) => {
-    request.onsuccess = () => resolve(request.result === path);
-    request.onerror = () => reject(request.error);
+    request.onsuccess = () => { resolve(request.result === path); };
+    request.onerror = () => { reject(request.error!); }; // eslint-disable-line @typescript-eslint/no-non-null-assertion -- in onerror
   });
 };
 
@@ -168,8 +168,8 @@ export const deleteLocalFileInfo = (db: IDBDatabase, path: string): Promise<bool
   const objectStore = transaction.objectStore(dbObjectStore);
   const request = objectStore.delete(path);
   return new Promise<boolean>((resolve, reject) => {
-    request.onsuccess = () => resolve(request.result !== undefined);
-    request.onerror = () => reject(request.error);
+    request.onsuccess = () => { resolve(true); };
+    request.onerror = () => { reject(request.error!); }; // eslint-disable-line @typescript-eslint/no-non-null-assertion -- in onerror
   });
 };
 
@@ -186,10 +186,10 @@ export const clearLocalFileInfo = (): Promise<boolean> => (
     const request = objectStore.clear();
     db.close();
     return new Promise<boolean>((resolve, reject) => {
-      request.onsuccess = () => resolve(request === undefined);
-      request.onerror = () => reject(request.error);
+      request.onsuccess = () => { resolve(true); };
+      request.onerror = () => { reject(request.error!); }; // eslint-disable-line @typescript-eslint/no-non-null-assertion -- in onerror
     });
-  }).catch((reason) => new Promise((_, reject) => reject(reason)))
+  })
 );
 
 export const getAllLocalFilePaths = (): Promise<readonly string[]> => (
@@ -199,10 +199,10 @@ export const getAllLocalFilePaths = (): Promise<readonly string[]> => (
     const request = objectStore.getAllKeys();
     db.close();
     return new Promise<readonly string[]>((resolve, reject) => {
-      request.onsuccess = () => resolve(request.result.filter((key) => typeof key === 'string'));
-      request.onerror = () => reject(request.error);
+      request.onsuccess = () => { resolve(request.result.filter((key) => typeof key === 'string')); };
+      request.onerror = () => { reject(request.error!); }; // eslint-disable-line @typescript-eslint/no-non-null-assertion -- in onerror
     });
-  }).catch((reason) => new Promise((_, reject) => reject(reason)))
+  })
 );
 //#endregion
 

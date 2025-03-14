@@ -187,7 +187,7 @@ const rleBitCount = Math.ceil(Math.log2(corpus.languages.length + allCollections
 export const bytesBase64 = bytesHeader + bytesFilters;
 
 const btoaUrlSafe = (bytes: ReadonlyUint8Array) => btoa(String.fromCodePoint(...bytes)).replaceAll('/', '_').replaceAll('+', '-').replace(/=+$/, '');
-const atobUrlSafe = (s: string) => Uint8Array.from(atob(s.replaceAll('_', '/').replaceAll('-', '+')), (m) => m.codePointAt(0)!);
+const atobUrlSafe = (s: string) => Uint8Array.from(atob(s.replaceAll('_', '/').replaceAll('-', '+')), (m) => m.charCodeAt(0));
 
 /**
  * Converts a SearchParams object to a short URL hash.
@@ -367,7 +367,7 @@ function* iterateRLE(bytes: ReadonlyUint8Array): Generator<boolean, void, never>
     yield enabled;
 }
 
-function setBit(bitArr: Uint8Array, i: number, value: number = 1) {
+function setBit(bitArr: Uint8Array, i: number, value = 1) {
   bitArr[Math.floor(i / 8)] |= (value << (i % 8));
 }
 
@@ -387,14 +387,14 @@ export function decryptBytes(bytes: Uint8Array) {
     throw Error('invalid checksum');
 }
 
-function calculateChecksum(bytes: ReadonlyUint8Array, start: number = 1) {
+function calculateChecksum(bytes: ReadonlyUint8Array, start = 1) {
   return bytes.subarray(start).reduce((a, b) => (a + b) & 0xFF, 0) ^ (magic & 0xFF);
 }
 
 /**
  * Symmetric encryption/decryption using a PRNG
  */
-function cryptBytes(initial: number, bytes: Uint8Array, start: number = 1) {
+function cryptBytes(initial: number, bytes: Uint8Array, start = 1) {
   let state = mcgAdvance(initial);
   for (let i = start; i < bytes.length; i++) {
     bytes[i] ^= state >> 24;
