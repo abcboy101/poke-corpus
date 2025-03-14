@@ -1,8 +1,8 @@
 import fs from 'node:fs/promises';
 
-import { preprocessString } from '../webWorker/cleanStringPre';
-import corpus, { codeId } from './corpus';
-import { getFilePath } from './files';
+import { preprocessString } from './cleanStringPre';
+import corpus, { codeId } from '../corpus';
+import { getFilePath } from '../files';
 import { replaceLiteralsFactory } from './literals';
 
 async function loadFile(collectionKey: string, languageKey: string, fileKey: string): Promise<string> {

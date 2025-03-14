@@ -1,5 +1,5 @@
 import { SearchParams } from '../utils/searchParams';
-import { convertWhitespace } from './cleanStringPre';
+import { convertWhitespace } from '../utils/string/cleanStringPre';
 import { getMatchConditionBoolean } from './searchBoolean';
 
 export type MatchCondition = (line: string) => boolean;

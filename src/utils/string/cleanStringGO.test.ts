@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 
-import { getFilePath } from '../utils/files';
+import { getFilePath } from '../files';
 import { preprocessStringGO } from './cleanStringGO';
 
 async function loadFile(collectionKey: string, languageKey: string, fileKey: string): Promise<string> {

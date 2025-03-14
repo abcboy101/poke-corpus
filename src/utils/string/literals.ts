@@ -1,4 +1,4 @@
-import { Literals } from "./corpus";
+import { Literals } from "../corpus";
 
 export const replaceLiteralsFactory = (literalsData: readonly ReadonlyMap<number, string>[], messageIdIndex: number, collectionKey: string, languages: readonly string[], literals: Literals | undefined) => {
   return (s: string, languageIndex: number) => {

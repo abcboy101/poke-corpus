@@ -1,4 +1,4 @@
-import { preprocessString } from './cleanStringPre';
+import { preprocessString } from '../utils/string/cleanStringPre';
 import { codeId, Speaker, Literals } from '../utils/corpus';
 import { SearchTaskResultDone, SearchTaskResultNotDone } from '../utils/Status';
 import { parseWhereClause, isBooleanQueryValid } from './searchBoolean';

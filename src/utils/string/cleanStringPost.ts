@@ -1,4 +1,4 @@
-import { postprocessSpeaker } from '../utils/speaker';
+import { postprocessSpeaker } from '../speaker';
 import { postprocessStringGO } from './cleanStringGO';
 import { postprocessStringMasters } from './cleanStringMasters';
 import * as g3 from './expandVariablesG3';

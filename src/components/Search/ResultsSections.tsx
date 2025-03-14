@@ -11,8 +11,8 @@ import NoScript from './NoScript';
 
 import { expandSpeakers, replaceSpeaker } from '../../utils/speaker';
 import { SearchTaskResultLines } from '../../webWorker/searchWorker';
-import { postprocessString } from '../../webWorker/cleanStringPost';
-import { replaceLiteralsFactory } from '../../utils/literals';
+import { postprocessString } from '../../utils/string/cleanStringPost';
+import { replaceLiteralsFactory } from '../../utils/string/literals';
 
 const addWordBreaksToID = (s: string, lang: string) => lang === codeId ? s.replaceAll(/([._/]|([a-z])(?=[A-Z])|([A-Za-z])(?=[0-9]))/gu, '$1<wbr>') : s;
 
