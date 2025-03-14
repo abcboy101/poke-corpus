@@ -1,4 +1,4 @@
-import { lazy, useEffect, useState, useTransition } from 'react';
+import { lazy, startTransition, useEffect, useState } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
@@ -20,7 +20,6 @@ const CacheManager = lazy(() => import('./components/CacheManager/CacheManager.j
 
 function App() {
   const { t } = useTranslation();
-  const [, startTransition] = useTransition();
   const [richText, setRichText] = useState(getRichText);
   const [limit, setLimit] = useState(getLimit);
   const [view, setView] = useState<View>('Search');
