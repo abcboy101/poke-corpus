@@ -89,7 +89,7 @@ function Modal({classes, message, buttons, checkbox, cancelCallback}: ModalArgum
     }
     <div ref={buttonsRef} className="modal-button-group">
       {
-        buttons && buttons.map(({message, callback, checkboxCallback, autoFocus}, i) =>
+        buttons?.map(({message, callback, checkboxCallback, autoFocus}, i) =>
           <button key={i} type="button" onClick={onClick(callback, checkboxCallback)} autoFocus={autoFocus}>{message}</button>)
       }
     </div>

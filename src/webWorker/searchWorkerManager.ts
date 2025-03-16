@@ -321,7 +321,7 @@ self.onmessage = async (message: MessageEvent<SearchTaskParams>) => {
       const speakerFiles = speaker === undefined ? undefined : await Promise.all(task.languages.map((languageKey) =>
         loadFile(task.collectionKey, languageKey, speaker.file)));
 
-      if (files.some((file) => file === '') || (speakerFiles && speakerFiles.some((file) => file === ''))) {
+      if (files.some((file) => file === '') || (speakerFiles?.some((file) => file === ''))) {
         // Network error occurred, but allow the search to continue
         // Partial results may still be useful even if incomplete
         networkError = true;

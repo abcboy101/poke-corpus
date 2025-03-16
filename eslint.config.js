@@ -33,7 +33,7 @@ export default [
   // ...tseslint.configs.strictTypeChecked,
   ...eslint.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
-  ...tseslint.configs.stylistic,
+  ...tseslint.configs.stylisticTypeChecked,
   pluginReact.configs.flat.recommended,
   {
     plugins: { "@stylistic": stylistic },
