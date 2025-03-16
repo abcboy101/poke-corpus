@@ -26,6 +26,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+tsconfig.tsbuildinfo
 .stylelintcache
 .eslintcache
 
@@ -37,5 +38,7 @@ yarn-error.log*
 /public/corpus/GO/
 /public/corpus/Masters/
 /public/corpus/HOME/*megaturtle_sp*
+
 /src/res/files.json
+/src/res/corpusJson.ts
 /scripts/bin/

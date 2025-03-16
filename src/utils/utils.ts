@@ -21,7 +21,7 @@ export function localStorageSetItem(key: string, value: string) {
 
 export const modes = ['system', 'light', 'dark'] as const;
 export type Mode = (typeof modes)[number];
-export const isMode = (s: string): s is Mode => (modes as readonly string[]).includes(s);
+export const isMode = (s: string): s is Mode => modes.some((mode) => s === mode);
 const asValidMode = (s: unknown) => (typeof s === 'string' && isMode(s)) ? s : 'system';
 export const getMode = (): Mode => asValidMode(localStorageGetItem('mode'));
 

@@ -41,7 +41,8 @@
  * - U+F1300: mark a soft line break
  */
 
-import chineseChars from './chineseChars.json';
+import { CollectionKey, LanguageKey } from '../corpus';
+import chineseChars from './chineseChars';
 import { preprocessStringGO } from './cleanStringGO';
 import { preprocessStringMasters } from './cleanStringMasters';
 import { variables3DS } from './variableNames';
@@ -109,20 +110,20 @@ export function remapGBABrailleJapanese(s: string) {
   );
 }
 
-export function remapGBABrailleWestern(s: string, language: string) {
+export function remapGBABrailleWestern(s: string, language: LanguageKey) {
   // In German/Spanish, the period/comma are incorrectly written with a preceding '⠿'
   if (language === 'de' || language === 'es')
     s = s.replaceAll(/\u283F([\u2802\u2804])/gu, '$1');
   return s.replaceAll(/[\u2800-\u283F]/gu, (c: string) => brailleWestern[c.charCodeAt(0) - 0x2800]);
 }
 
-function remapGBABraille(s: string, language: string) {
+function remapGBABraille(s: string, language: LanguageKey) {
   s = s.replaceAll(/(\[BRAILLE_FORMAT(?: \d+){6}\])/gu, ''); // Strip RSE braille format
   return language === 'ja-Hrkt' ? remapGBABrailleJapanese(s) : remapGBABrailleWestern(s, language);
 }
 
 // GBA special characters
-function remapGBASpecialCharacters(s: string, language: string) {
+function remapGBASpecialCharacters(s: string, language: LanguageKey) {
   return (remapGBABraille(s, language)
     // Old method for strings introduced in RS
     // Japanese - FC 0C xx (ESCAPE)
@@ -352,7 +353,7 @@ export function preprocessMetadata(s: string) {
  *
  * Returns the resulting string.
  */
-export function preprocessString(s: string, collectionKey: string, language: string) {
+export function preprocessString(s: string, collectionKey: CollectionKey, language: LanguageKey) {
   switch (collectionKey) {
     case "RubySapphire":
     case "FireRedLeafGreen":
@@ -411,7 +412,7 @@ export function preprocessString(s: string, collectionKey: string, language: str
       break;
 
     case "Masters":
-      s = preprocessStringMasters(s, language);
+      s = preprocessStringMasters(s);
       break;
   }
   return preprocessMetadata(s);

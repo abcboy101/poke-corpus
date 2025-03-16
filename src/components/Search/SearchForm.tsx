@@ -3,7 +3,7 @@ import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { SearchTaskParams, searchTypes, isSearchType, searchParamsToHash, hashToSearchParams, defaultSearchParams } from '../../utils/searchParams';
-import { corpus, codeId } from '../../utils/corpus';
+import { corpus, codeId, corpusKeys } from '../../utils/corpus';
 import SearchFilters from './SearchFilters';
 import { escapeRegex, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
 import { Status, statusInProgress } from '../../utils/Status';
@@ -40,9 +40,9 @@ const getSavedParamsPreferences = () => {
       paramsDefault.script = params.script;
     if ('showAllLanguages' in params && typeof params.showAllLanguages === 'boolean')
       paramsDefault.showAllLanguages = params.showAllLanguages;
-    // if ('collections' in params && isStringArray(params.collections) && params.collections.every((collectionKey) => Object.keys(corpus.collections).includes(collectionKey)))
+    // if ('collections' in params && isStringArray(params.collections) && params.collections.every((collectionKey) => isCollectionKey(collectionKey)))
     //   paramsDefault.collections = params.collections;
-    // if ('languages' in params && isStringArray(params.languages) && params.languages.every((languageKey) => corpus.languages.includes(languageKey)))
+    // if ('languages' in params && isStringArray(params.languages) && params.languages.every((languageKey) => isLanguageKey(languageKey)))
     //   paramsDefault.languages = params.languages;
   }
   return paramsDefault;
@@ -139,7 +139,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         common: true,
         script: true,
         showAllLanguages: true,
-        collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key].id === collectionId),
+        collections: corpusKeys.filter((key) => corpus.collections[key].id === collectionId),
         languages: [codeId],
       });
       setId('');
@@ -156,7 +156,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         common: true,
         script: true,
         showAllLanguages: true,
-        collections: Object.keys(corpus.collections).filter((key) => corpus.collections[key].id === collectionId),
+        collections: corpusKeys.filter((key) => corpus.collections[key].id === collectionId),
         languages: [codeId],
       });
       setFile('');

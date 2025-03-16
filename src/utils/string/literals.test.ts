@@ -1,16 +1,16 @@
 import fs from 'node:fs/promises';
 
 import { preprocessString } from './cleanStringPre';
-import corpus, { codeId } from '../corpus';
+import corpus, { codeId, CollectionKey, FileKey, LanguageKey } from '../corpus';
 import { getFilePath } from '../files';
 import { replaceLiteralsFactory } from './literals';
 
-async function loadFile(collectionKey: string, languageKey: string, fileKey: string): Promise<string> {
+async function loadFile(collectionKey: CollectionKey, languageKey: LanguageKey, fileKey: FileKey): Promise<string> {
   const path = getFilePath(collectionKey, languageKey, fileKey);
   return fs.readFile(path.split('.gz')[0], {encoding: 'utf-8'});
 }
 
-async function getReplaceLiterals(collectionKey: string): Promise<ReturnType<typeof replaceLiteralsFactory>> {
+async function getReplaceLiterals(collectionKey: CollectionKey): Promise<ReturnType<typeof replaceLiteralsFactory>> {
   const { languages, files: fileKeys, literals } = corpus.collections[collectionKey];
   const messageIdIndex = languages.indexOf(codeId);
   const files = await Promise.all(languages.map((languageKey) => loadFile(collectionKey, languageKey, fileKeys[0])));

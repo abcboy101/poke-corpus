@@ -1,4 +1,4 @@
-import corpus from './corpus';
+import corpus, { corpusKeys } from './corpus';
 import {
   searchParamsToQueryString, queryStringToSearchParams,
   searchParamsToBase64, base64ToSearchParams,
@@ -60,7 +60,7 @@ test('byte array all', () => {
     common: true,
     script: true,
     showAllLanguages: true,
-    collections: Object.keys(corpus.collections),
+    collections: corpusKeys,
     languages: corpus.languages,
   } as const;
   const arr = serializeByteArray(params);
@@ -76,7 +76,7 @@ test('byte array random', () => {
       common: false,
       script: false,
       showAllLanguages: false,
-      collections: Object.keys(corpus.collections).filter(() => Math.random() < 0.5),
+      collections: corpusKeys.filter(() => Math.random() < 0.5),
       languages: corpus.languages.filter(() => Math.random() < 0.5),
     } as const;
     const arr = serializeByteArray(params);

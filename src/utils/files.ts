@@ -1,10 +1,10 @@
 import filesJson from '../res/files.json';
-import corpus from './corpus';
+import corpus, { corpusEntries, CollectionKey, LanguageKey, FileKey } from './corpus';
 
 /**
  * Formats the collection, language, and file into the relative path to the text file.
  */
-export const getFilePath = (collectionKey: string, languageKey: string, fileKey: string) =>
+export const getFilePath = (collectionKey: CollectionKey, languageKey: LanguageKey, fileKey: FileKey) =>
   `corpus/${collectionKey}/${languageKey}_${fileKey}.txt.gz`;
 
 /**
@@ -17,7 +17,7 @@ export const getFileSize = (path: string): number => {
 /**
  * Returns the size of the pending download, or 0 if already downloaded.
  */
-export const getDownloadSize = async (db: IDBDatabase, path: string): Promise<number> => {
+const getDownloadSize = async (db: IDBDatabase, path: string): Promise<number> => {
   const [remoteFileInfo, localFileInfo] = await getFileInfo(db, path);
 
   // Cached file is up-to-date, no need to download
@@ -32,7 +32,7 @@ export const getDownloadSize = async (db: IDBDatabase, path: string): Promise<nu
 /**
  * Returns the total size of the pending downloads, or 0 if already downloaded.
  */
-export const getDownloadSizeTotal = async (collections: readonly string[]): Promise<number> => {
+export const getDownloadSizeTotal = async (collections: readonly CollectionKey[]): Promise<number> => {
   try {
     const db = await getIndexedDB();
     const size = (await Promise.all(collections.flatMap((collectionKey) =>
@@ -57,7 +57,7 @@ export const getDownloadSizeTotal = async (collections: readonly string[]): Prom
   }
 };
 
-export const getFileURL = (path: string) => import.meta.env.BASE_URL + path;
+const getFileURL = (path: string) => import.meta.env.BASE_URL + path;
 
 /**
  * Retrieves a file from the cache, if present and up-to-date, or the server otherwise.
@@ -113,13 +113,13 @@ const isFileInfo = (o: unknown): o is FileInfo => o !== null && typeof o === 'ob
 
 export type Files = Record<string, FileInfo>;
 
-const filesRemoteData = filesJson as ([string, number])[];
+const filesRemoteData: readonly [string, number][] = filesJson as [string, number][];
 const filesRemote: Files = Object.fromEntries(
-  Object.entries(corpus.collections).flatMap(([collectionKey, collection]) =>
+  corpusEntries.flatMap(([collectionKey, collection]) =>
     collection.languages.flatMap((languageKey) =>
       collection.files.map((fileKey) => getFilePath(collectionKey, languageKey, fileKey))
     )
-  ).map((filePath, i) => [filePath, {hash: filesRemoteData[i][0], size: filesRemoteData[i][1]} as FileInfo] as const)
+  ).map((filePath, i) => [filePath, {hash: filesRemoteData[i][0], size: filesRemoteData[i][1]}] as const)
 );
 
 const dbName = 'corpus';

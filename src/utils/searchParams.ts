@@ -1,4 +1,4 @@
-import corpus from "./corpus";
+import corpus, { corpusKeys, CollectionKey, isCollectionKey, isLanguageKey, LanguageKey } from "./corpus";
 import { localStorageGetItem } from "./utils";
 
 /* https://github.com/microsoft/TypeScript/issues/37792#issuecomment-1264705598 */
@@ -11,7 +11,7 @@ interface ReadonlyUint8Array extends Omit<Uint8Array, TypedArrayMutablePropertie
 
 export const searchTypes = ["exact", "regex", "boolean", "all"] as const;
 export type SearchType = typeof searchTypes[number];
-export const isSearchType = (s: string): s is SearchType => (searchTypes as readonly string[]).includes(s);
+export const isSearchType = (s: unknown): s is SearchType => searchTypes.some((searchType) => s === searchType);
 
 export interface SearchParams {
   readonly query: string,
@@ -20,8 +20,8 @@ export interface SearchParams {
   readonly common: boolean,
   readonly script: boolean,
   readonly showAllLanguages: boolean,
-  readonly collections: readonly string[],
-  readonly languages: readonly string[],
+  readonly collections: readonly CollectionKey[],
+  readonly languages: readonly LanguageKey[],
 }
 
 export type SearchTaskParams = SearchParams;
@@ -34,8 +34,6 @@ export interface SearchParamsURLOnly {
 
 type SearchSettings = Omit<SearchParams, 'query'> & Partial<Pick<SearchParamsURLOnly, 'run'>>;
 
-const allCollections: readonly string[] = Object.keys(corpus.collections);
-const allCollectionsStructured: readonly string[] = allCollections.filter((value) => corpus.collections[value].structured);
 export const defaultSearchParams: SearchParams & SearchParamsURLOnly = {
   id: '',
   file: '',
@@ -45,7 +43,7 @@ export const defaultSearchParams: SearchParams & SearchParamsURLOnly = {
   common: true,
   script: true,
   showAllLanguages: true,
-  collections: allCollectionsStructured,
+  collections: corpusKeys.filter((value) => corpus.collections[value].structured),
   languages: corpus.languages,
   run: false,
 };
@@ -91,8 +89,8 @@ export function queryStringToSearchParams(hash: string): Partial<SearchParams & 
     common: asOptionalBoolean(params.get('common')),
     script: asOptionalBoolean(params.get('script')),
     showAllLanguages: asOptionalBoolean(params.get('showAllLanguages')),
-    collections: asOptionalArray(params.get('collections'), allCollections),
-    languages: asOptionalArray(params.get('languages'), corpus.languages, remapLanguages),
+    collections: asOptionalArray(params.get('collections'), isCollectionKey),
+    languages: asOptionalArray(params.get('languages'), isLanguageKey, remapLanguages),
     run: asOptionalBoolean(params.get('run')),
   };
 }
@@ -121,10 +119,10 @@ function asOptionalLiteral<T extends string>(param: string | null, check: (value
   return undefined;
 }
 
-function asOptionalArray(param: string | null, validValues: readonly string[], remap: (value: string) => string = (value) => value) {
+function asOptionalArray<T extends string>(param: string | null, filter: (value: string) => value is T, remap: (value: string) => string = (value) => value) {
   if (param === null)
     return undefined;
-  return param.split(',').map(remap).filter((value) => validValues.includes(value));
+  return param.split(',').map(remap).filter(filter);
 }
 
 /* Remap old language codes for backwards compatibility */
@@ -177,13 +175,13 @@ function remapLanguages(value: string) {
 * - More compressible selections (such as all/none/one/consecutive languages/collections) will require fewer characters.
 */
 
-const magic = allCollections.length ^ (corpus.languages.length << 4);
+const magic = corpusKeys.length ^ (corpus.languages.length << 4);
 const bytesHeader = 2;
 const bytesLanguage = Math.ceil(corpus.languages.length / 8);
-const bytesCollection = Math.ceil(allCollections.length / 8);
+const bytesCollection = Math.ceil(corpusKeys.length / 8);
 const bytesFilters = bytesLanguage + bytesCollection;
 const rleFlag = 1 << 6;
-const rleBitCount = Math.ceil(Math.log2(corpus.languages.length + allCollections.length));
+const rleBitCount = Math.ceil(Math.log2(corpus.languages.length + corpusKeys.length));
 export const bytesBase64 = bytesHeader + bytesFilters;
 
 const btoaUrlSafe = (bytes: ReadonlyUint8Array) => btoa(String.fromCodePoint(...bytes)).replaceAll('/', '_').replaceAll('+', '-').replace(/=+$/, '');
@@ -269,7 +267,7 @@ export function deserializeByteArray(bytes: ReadonlyUint8Array): SearchSettings 
   else
     filters.set(bytes.subarray(bytesHeader)); // pad with zero bytes
   const languages = corpus.languages.filter((_, i) => getBit(filters, i) === 1);
-  const collections = allCollections.filter((_, i) => getBit(filters, (8 * bytesLanguage) + i) === 1);
+  const collections = corpusKeys.filter((_, i) => getBit(filters, (8 * bytesLanguage) + i) === 1);
   return {
     run:              (bytes[1] & 0x01) !== 0,
     caseInsensitive:  (bytes[1] & 0x02) !== 0,
@@ -287,7 +285,7 @@ function setBitArrayFromParams(params: SearchSettings, bitArr: Uint8Array) {
     if (params.languages.includes(language))
       setBit(bitArr, i);
   });
-  allCollections.forEach((collection, i) => {
+  corpusKeys.forEach((collection, i) => {
     if (params.collections.includes(collection))
       setBit(bitArr, (8 * bytesLanguage) + i);
   });
@@ -299,7 +297,7 @@ function setBitArrayFromRLEBytes(rleBytes: ReadonlyUint8Array, bitArr: Uint8Arra
     if (it.next().value)
       setBit(bitArr, i);
   });
-  allCollections.forEach((_, i) => {
+  corpusKeys.forEach((_, i) => {
     if (it.next().value)
       setBit(bitArr, (8 * bytesLanguage) + i);
   });
@@ -333,7 +331,7 @@ function makeRLEArray(bitArr: ReadonlyUint8Array, initialValue: boolean): readon
     else
       rleArr.push([1, value]);
   });
-  allCollections.forEach((_, i) => {
+  corpusKeys.forEach((_, i) => {
     const value = getBit(bitArr, (8 * bytesLanguage) + i) === 1;
     if (rleArr[rleArr.length - 1][1] === value)
       rleArr[rleArr.length - 1][0]++;

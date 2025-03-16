@@ -1,11 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { genderBranch, numberBranch, grammarBranch } from './branches';
 
-export function preprocessStringMasters(s: string, language: string) {
-  switch (language) {
-    default:
-      return s;
-  }
+export function preprocessStringMasters(s: string) {
+  return s;
 }
 
 const particlesKO: Record<string, readonly [string, string]> = {

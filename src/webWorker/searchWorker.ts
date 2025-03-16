@@ -1,5 +1,5 @@
 import { preprocessString } from '../utils/string/cleanStringPre';
-import { codeId, Speaker, Literals } from '../utils/corpus';
+import { codeId, Speaker, Literals, CollectionKey, FileKey, LanguageKey } from '../utils/corpus';
 import { SearchTaskResultDone, SearchTaskResultNotDone } from '../utils/Status';
 import { parseWhereClause, isBooleanQueryValid, getMatchConditionBoolean } from './searchBoolean';
 import { extractSpeakers } from '../utils/speaker';
@@ -12,9 +12,9 @@ export type WhereConditionFactory = (fileData: readonly string[][], languageKeys
 export interface SearchTask {
   readonly index: number,
   readonly params: SearchTaskParams,
-  readonly collectionKey: string,
-  readonly fileKey: string,
-  readonly languages: readonly string[],
+  readonly collectionKey: CollectionKey,
+  readonly fileKey: FileKey,
+  readonly languages: readonly LanguageKey[],
   readonly files: readonly string[],
   readonly speaker?: Speaker,
   readonly speakerFiles?: readonly string[],
@@ -22,9 +22,9 @@ export interface SearchTask {
 }
 
 export interface SearchTaskResultLines {
-  readonly collection: string,
-  readonly file: string,
-  readonly languages: readonly string[],
+  readonly collection: CollectionKey,
+  readonly file: FileKey,
+  readonly languages: readonly LanguageKey[],
   readonly lines: readonly string[][],
   readonly speakers: readonly string[][],
   readonly literals: readonly ReadonlyMap<number, string>[],
@@ -54,6 +54,7 @@ function getMatchCondition(params: SearchParams): MatchCondition {
     case 'boolean':
       return getMatchConditionBoolean(params.query, params.caseInsensitive);
     default:
+      params.type satisfies never;
       return () => false;
   }
 }
@@ -167,7 +168,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
     const speakers = (speaker === undefined || speakerData === undefined) ? [] : extractSpeakers(speakerData, speaker.textFile);
 
     // Filter only the lines that matched
-    const languageKeys: string[] = [];
+    const languageKeys: LanguageKey[] = [];
     const lineKeysSet = new Set<number>();
     const fileData: string[][] = [];
 

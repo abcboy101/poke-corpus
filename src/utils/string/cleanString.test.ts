@@ -78,7 +78,7 @@ const remapGBABrailleWesternTestCases = [
   ["it", "⠲\n⠂", ".\n,"], // Italian
   ["de", "⠿⠄\n⠿⠂", ".\n,"], // German
   ["es", "⠿⠄\n⠿⠂", ".\n,"], // Spanish
-];
+] as const;
 
 describe("remapGBABrailleWestern", () => {
   test.each(remapGBABrailleWesternTestCases)(
@@ -118,7 +118,7 @@ const postprocessStringTestCases = [
 describe("postprocessString", () => {
   test.each(postprocessStringTestCases)(
     "%j", (s, html) => {
-      const result = postprocessString(s, '');
+      const result = postprocessString(s);
       expect(result).toEqual(html);
     }
   );

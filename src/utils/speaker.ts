@@ -1,16 +1,15 @@
 import { searchParamsToHash } from "../utils/searchParams";
+import { CollectionKey, LanguageKey } from "./corpus";
 
-const speakerDelimiters: Record<string, string> = {
-  'ja-Hrkt': '『',
-  'ja': '『',
-  'fr': ' : ', // space before and after colon
-  'zh-Hans': '\uFF1A', // fullwidth colon
-  'zh-Hant': '「',
-  // default: ': '
-};
-
-function speakerDelimiter(language: string) {
-  return speakerDelimiters[language] ?? ': ';
+function speakerDelimiter(language: LanguageKey) {
+  switch (language) {
+    case 'ja-Hrkt':
+    case 'ja':      return '『';
+    case 'fr':      return ' : ';    // space before and after colon
+    case 'zh-Hans': return '\uFF1A'; // fullwidth colon
+    case 'zh-Hant': return '「';
+    default:        return ': ';
+  }
 }
 
 /* Extracts the lines containing speaker names from a file. */
@@ -24,7 +23,7 @@ export function extractSpeakers(speakerData: readonly string[], textFile: string
 }
 
 /* Looks up the speaker's name by index, and prepend it to the string. */
-export function replaceSpeaker(s: string, speakerNames: readonly string[], language: string) {
+export function replaceSpeaker(s: string, speakerNames: readonly string[], language: LanguageKey) {
   return s.replace(/(.*?)(\[VAR 0114\(([0-9A-F]{4})\)\])(?:$|(?=\u{F0000}))/u, (_, rest: string, tag: string, speakerIndexHex: string) => {
     const speakerIndex = parseInt(speakerIndexHex, 16);
     const speakerName = speakerNames[speakerIndex];
@@ -38,7 +37,7 @@ export function postprocessSpeaker(s: string) {
 }
 
 /* Converts the speaker's name to a context-dependent link. */
-export function expandSpeakers(s: string, collection: string, language: string, viewSpeaker: string) {
+export function expandSpeakers(s: string, collection: CollectionKey, language: LanguageKey, viewSpeaker: string) {
   return s.replaceAll(/<a class="speaker" data-var="(.+?)">(.+?)<\/a>/gu, (_, speakerVar: string, speakerName: string) => {
     const hash = searchParamsToHash({
       query: speakerVar,

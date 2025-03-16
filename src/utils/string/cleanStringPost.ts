@@ -2,6 +2,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { CollectionKey, LanguageKey } from '../corpus';
 import { postprocessSpeaker } from '../speaker';
 import { grammarBranch, versionBranch, genderBranch, numberBranch, genderNumberBranch } from './branches';
 import { postprocessStringGO } from './cleanStringGO';
@@ -50,7 +52,7 @@ const textGradientOpenDec = (_: string, r1: string, g1: string, b1: string, a1: 
  *
  * Returns the resulting HTML string.
  */
-export function postprocessString(s: string, collectionKey: string, language = '', richText = true) {
+export function postprocessString(s: string, collectionKey: CollectionKey | '' = '', language: LanguageKey = 'en', richText = true) {
   const isGen3 = ["RubySapphire", "FireRedLeafGreen", "Emerald"].includes(collectionKey);
   const isGen4 = ["DiamondPearl", "Platinum", "HeartGoldSoulSilver"].includes(collectionKey);
   const isGen5 = ["BlackWhite", "Black2White2"].includes(collectionKey);

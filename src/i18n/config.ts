@@ -9,6 +9,7 @@ import languages from './en/languages.json';
 import files from './en/files.json';
 import icons from './en/icons.json';
 import translation_enGB from './en-GB/translation.json';
+import { CollectionKey, FileKey, LanguageKey } from '../utils/corpus';
 
 i18next.use(LanguageDetector)
   .use(initReactI18next)
@@ -28,9 +29,9 @@ i18next.use(LanguageDetector)
     resources: {
       'en': {
         translation: translation,
-        collections: collections,
-        languages: languages,
-        files: files,
+        collections: collections satisfies Record<CollectionKey, {name: string, short: string}>,
+        languages: languages satisfies Record<LanguageKey, {name: string, code: string}>,
+        files: files satisfies Record<FileKey, string>,
         icons: icons,
       },
       'en-GB': {

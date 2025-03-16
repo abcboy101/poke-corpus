@@ -1,6 +1,6 @@
-import { Literals } from "../corpus";
+import { CollectionKey, LanguageKey, Literals } from "../corpus";
 
-export const replaceLiteralsFactory = (literalsData: readonly ReadonlyMap<number, string>[], messageIdIndex: number, collectionKey: string, languages: readonly string[], literals: Literals | undefined) => {
+export const replaceLiteralsFactory = (literalsData: readonly ReadonlyMap<number, string>[], messageIdIndex: number, collectionKey: CollectionKey, languages: readonly LanguageKey[], literals: Literals | undefined) => {
   return (s: string, languageIndex: number) => {
     if (literals === undefined || languageIndex === messageIdIndex)
       return s;
@@ -19,8 +19,14 @@ export const replaceLiteralsFactory = (literalsData: readonly ReadonlyMap<number
           replaceValue = `\u{F1207}${line.map((lineNo) => literalsData[languageIndex].get(lineNo)).join('\u{F1104}')}`;
           break;
         case 'language':
-          replaceValue = literalsData[languageIndex].get(line[languages[languageIndex]]);
+        {
+          const lineNo = line[languages[languageIndex]];
+          if (lineNo !== undefined)
+            replaceValue = literalsData[languageIndex].get(lineNo);
           break;
+        }
+        default:
+          branch satisfies never;
       }
       if (replaceValue === undefined)
         return s;

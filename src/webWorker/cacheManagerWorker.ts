@@ -1,8 +1,8 @@
-import { corpus } from '../utils/corpus';
+import { CollectionKey, corpusEntries } from '../utils/corpus';
 import { getCache, getFile, getFilePath, getFileSize, getIndexedDB } from '../utils/files';
 
 export type CacheManagerStatus = 'done' | 'error' | 'loading';
-export type CacheManagerParams = string | null;
+export type CacheManagerParams = CollectionKey | null;
 export type CacheManagerResult = [CacheManagerStatus, number, number, CacheManagerParams];
 
 self.onmessage = async (message: MessageEvent<CacheManagerParams>) => {
@@ -13,8 +13,8 @@ self.onmessage = async (message: MessageEvent<CacheManagerParams>) => {
     }
 
     // Get the URLs of all the files to be cached
-    const collections = (message.data === null) ? Object.entries(corpus.collections).reverse()
-      : Object.entries(corpus.collections).filter(([collectionKey]) => collectionKey === message.data);
+    const collections = (message.data === null) ? corpusEntries
+      : corpusEntries.filter(([collectionKey]) => collectionKey === message.data);
     const filePaths = collections.flatMap(([collectionKey, collection]) =>
       collection.files.flatMap((fileKey) => collection.languages.map((languageKey) =>
         getFilePath(collectionKey, languageKey, fileKey)

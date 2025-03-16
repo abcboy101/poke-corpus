@@ -8,7 +8,7 @@ import ErrorApp from './components/ErrorApp';
 import { ErrorBoundary } from 'react-error-boundary';
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById('root')! // eslint-disable-line @typescript-eslint/no-non-null-assertion -- index.html
 );
 root.render(
   <React.StrictMode>

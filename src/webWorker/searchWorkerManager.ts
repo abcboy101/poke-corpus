@@ -1,5 +1,5 @@
 import 'compression-streams-polyfill';
-import corpus, { codeId } from '../utils/corpus';
+import { corpusEntries, codeId, isLanguageKey, CollectionKey, LanguageKey, FileKey } from '../utils/corpus';
 import { getCache, getFile, getFilePath, getFileRemote, getIndexedDB } from '../utils/files';
 import SearchWorker from "./searchWorker.ts?worker";
 import { SearchTaskParams } from '../utils/searchParams';
@@ -38,7 +38,7 @@ const memoryCacheGet = (path: string) => self.memoryCache?.get(path)?.deref();
 const memoryCacheSet = (path: string, value: Promise<string>) => self.memoryCache?.set(path, new WeakRef(value));
 
 /** Returns true if the file is cached in memory, or false otherwise. */
-const isMemoryCached = (collectionKey: string, languageKey: string, fileKey: string): boolean => {
+const isMemoryCached = (collectionKey: CollectionKey, languageKey: LanguageKey, fileKey: FileKey): boolean => {
   const path = getFilePath(collectionKey, languageKey, fileKey);
   return memoryCacheGet(path) !== undefined;
 };
@@ -51,7 +51,7 @@ const isMemoryCached = (collectionKey: string, languageKey: string, fileKey: str
  *
  * Returns a promise for the text of the file.
  */
-const loadFile = async (collectionKey: string, languageKey: string, fileKey: string): Promise<string> => {
+const loadFile = async (collectionKey: CollectionKey, languageKey: LanguageKey, fileKey: FileKey): Promise<string> => {
   const path = getFilePath(collectionKey, languageKey, fileKey);
   const memoryCached = memoryCacheGet(path);
   if (memoryCached) {
@@ -148,7 +148,7 @@ self.onmessage = async (message: MessageEvent<SearchTaskParams>) => {
       const whereClause = parseWhereClause(params.query);
       if (whereClause) {
         const [, query, languageKey1, , languageKey2] = whereClause;
-        if (!corpus.languages.includes(languageKey1) || !corpus.languages.includes(languageKey2)) {
+        if (!isLanguageKey(languageKey1) || !isLanguageKey(languageKey2)) {
           // Language is invalid
           updateStatusComplete('boolean.where');
           return;
@@ -167,7 +167,7 @@ self.onmessage = async (message: MessageEvent<SearchTaskParams>) => {
     let taskCount = 0;
     let cachedCount = 0;
     const taskList: SearchTaskPartial[] = [];
-    Object.entries(corpus.collections).forEach(([collectionKey, collection]) => {
+    corpusEntries.forEach(([collectionKey, collection]) => {
       // Do not process collection if it it does not need to be searched
       if (!params.collections.includes(collectionKey))
         return;

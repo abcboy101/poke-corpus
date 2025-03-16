@@ -2,8 +2,9 @@ import fs from 'node:fs/promises';
 
 import { getFilePath } from '../files';
 import { preprocessStringGO } from './cleanStringGO';
+import { CollectionKey, FileKey, LanguageKey } from '../corpus';
 
-async function loadFile(collectionKey: string, languageKey: string, fileKey: string): Promise<string> {
+async function loadFile(collectionKey: CollectionKey, languageKey: LanguageKey, fileKey: FileKey): Promise<string> {
   const path = getFilePath(collectionKey, languageKey, fileKey);
   return fs.readFile(path.split('.gz')[0], {encoding: 'utf-8'});
 }

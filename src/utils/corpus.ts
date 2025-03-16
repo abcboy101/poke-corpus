@@ -1,10 +1,14 @@
-import corpusJson from '../res/corpus.json';
+import corpusJson from '../res/corpusJson';
+
+export type CollectionKey = keyof typeof corpusJson['collections'] & {};
+export type LanguageKey = typeof corpusJson['languages'][number] & {};
+export type FileKey = typeof corpusJson['collections'][CollectionKey]['files'][number] & {};
 
 /**
  * Describes the locations of speaker names in a Collection.
  */
 export interface Speaker {
-  readonly file: string,
+  readonly file: FileKey,
   readonly textFile: string,
 }
 
@@ -26,7 +30,7 @@ interface LiteralInfoBranch {
  */
 interface LiteralInfoBranchLanguage {
   readonly branch: "language",
-  readonly line: Record<string, number>,
+  readonly line: Partial<Record<LanguageKey, number>>,
 }
 
 /**
@@ -41,22 +45,22 @@ interface LiteralInfoNoBranch {
  * Describes the properties of a collection of files.
  */
 export interface Collection {
-  readonly id?: string,                   // used for looking up a specific line by ID
-  readonly languages: readonly string[],  // available languages
-  readonly structured: boolean,           // true if lines are aligned between languages, false otherwise
-  readonly softWrap?: boolean,            // true if lines are soft-wrapped, false otherwise
-  readonly version?: string | Record<string, string>, // which version each language's files in the collection is from, can be a string if the version number is the same between languages
-  readonly files: readonly string[],      // what files the collection contains
-  readonly speaker?: Speaker,             // location of speaker names
-  readonly literals?: Literals,           // location of substituted literals
+  readonly id?: string,                        // used for looking up a specific line by ID
+  readonly languages: readonly LanguageKey[],  // available languages
+  readonly structured: boolean,                // true if lines are aligned between languages, false otherwise
+  readonly softWrap?: true,                    // true if lines are soft-wrapped, undefined otherwise
+  readonly version?: string | Partial<Record<LanguageKey, string>> | Partial<Record<FileKey, string>>, // which version each language's files in the collection is from, can be a string if the version number is the same between languages
+  readonly files: readonly FileKey[],          // what files the collection contains
+  readonly speaker?: Speaker,                  // location of speaker names
+  readonly literals?: Literals,                // location of substituted literals
 }
 
 /**
  * Describes the structure of the corpus file.
  */
 export interface Corpus {
-  readonly languages: readonly string[],
-  readonly collections: Record<string, Collection>,
+  readonly languages: readonly LanguageKey[],
+  readonly collections: Record<CollectionKey, Collection>,
 }
 
 /*
@@ -71,5 +75,10 @@ Since these are not natural language, we use the language code "zxx" (not applic
 export const codeId = "qid";
 export const langId = "zxx";
 
-export const corpus = corpusJson as Corpus;
+export const corpus: Corpus = corpusJson satisfies Corpus;
+export const corpusKeys = Object.keys(corpus.collections) as readonly CollectionKey[];
+export const corpusEntries = Object.entries(corpus.collections) as readonly [CollectionKey, Collection][];
+export const isCollectionKey = (s: string): s is CollectionKey => corpusKeys.some((collection) => s === collection);
+export const isLanguageKey = (s: string): s is LanguageKey => corpus.languages.some((language) => s === language);
+
 export default corpus;

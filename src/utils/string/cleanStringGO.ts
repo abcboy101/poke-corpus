@@ -1,3 +1,5 @@
+import { LanguageKey } from "../corpus";
+
 //#region Hindi
 const REPH = '\u{10F306}';
 const SHORT_I = '\u{10093F}';
@@ -277,7 +279,7 @@ function preprocessThai(s: string) {
 }
 //#endregion
 
-export function preprocessStringGO(s: string, language: string) {
+export function preprocessStringGO(s: string, language: LanguageKey) {
   switch (language) {
     case 'hi':
       return preprocessHindi(s);

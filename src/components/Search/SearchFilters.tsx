@@ -2,7 +2,7 @@ import { CSSProperties, Dispatch, SetStateAction, useEffect, useRef } from 'reac
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { corpus } from '../../utils/corpus';
+import { corpusKeys, CollectionKey, corpus, LanguageKey } from '../../utils/corpus';
 
 import './SearchFilters.css';
 import '../../i18n/config';
@@ -24,18 +24,18 @@ function collectionLabelStyle(text: string, maxWidth = 4): CSSProperties | undef
 function getValidCollections(languages: readonly string[]) {
   // If no languages are selected, no collection is invalid yet.
   if (languages.length === 0)
-    return new Set(Object.keys(corpus.collections));
+    return new Set(corpusKeys);
 
   // Otherwise, include all valid collections with at least one selected language.
   const validCollections = new Set<string>();
   const languageSet = new Set(languages);
-  for (const collectionKey of Object.keys(corpus.collections))
+  for (const collectionKey of corpusKeys)
     if (corpus.collections[collectionKey].languages.some((languageKey) => languageSet.has(languageKey)))
       validCollections.add(collectionKey);
   return validCollections;
 }
 
-function getValidLanguages(collections: readonly string[]) {
+function getValidLanguages(collections: readonly CollectionKey[]) {
   // If no collections are selected, no language is invalid yet.
   if (collections.length === 0)
     return new Set(corpus.languages);
@@ -48,7 +48,7 @@ function getValidLanguages(collections: readonly string[]) {
   return validLanguages;
 }
 
-function SearchCollections({collections, languages, setCollections}: {collections: readonly string[], languages: readonly string[], setCollections: Dispatch<SetStateAction<readonly string[]>>}) {
+function SearchCollections({collections, languages, setCollections}: {collections: readonly CollectionKey[], languages: readonly LanguageKey[], setCollections: Dispatch<SetStateAction<readonly CollectionKey[]>>}) {
   const { t } = useTranslation();
   const isFullwidth = ['ja', 'ko', 'zh'].some((lang) => i18next.language.startsWith(lang));
   const validCollections = getValidCollections(languages);
@@ -56,7 +56,7 @@ function SearchCollections({collections, languages, setCollections}: {collection
     <>
       <div className="search-collections">
         {
-          Object.keys(corpus.collections).map((key) => [key, t(`collections:${key}.name`), t(`collections:${key}.short`)] as const).map(([key, name, short]) =>
+          corpusKeys.map((key) => [key, t(`collections:${key}.name`), t(`collections:${key}.short`)] as const).map(([key, name, short]) =>
             <div key={key} className={`search-collection search-${validCollections.has(key) ? 'valid' : 'invalid'}`}>
               <input type="checkbox" name={`collection-${key}`} id={`collection-${key}`} checked={collections.includes(key)} onChange={(e) => {
                 if (e.target.checked && !collections.includes(key)) {
@@ -74,14 +74,14 @@ function SearchCollections({collections, languages, setCollections}: {collection
         }
       </div>
       <div className="item-group">
-        <button disabled={collections.length === Object.keys(corpus.collections).length} onClick={() => { setCollections(Object.keys(corpus.collections)); }}>{t('selectAll')}</button>
+        <button disabled={collections.length === corpusKeys.length} onClick={() => { setCollections(corpusKeys); }}>{t('selectAll')}</button>
         <button disabled={collections.length === 0} onClick={() => { setCollections([]); }}>{t('deselectAll')}</button>
       </div>
     </>
   );
 }
 
-function SearchLanguages({collections, languages, setLanguages}: {collections: readonly string[], languages: readonly string[], setLanguages: Dispatch<SetStateAction<readonly string[]>>}) {
+function SearchLanguages({collections, languages, setLanguages}: {collections: readonly CollectionKey[], languages: readonly LanguageKey[], setLanguages: Dispatch<SetStateAction<readonly LanguageKey[]>>}) {
   const { t } = useTranslation();
   const isFullwidth = ['ja', 'ko', 'zh'].some((lang) => i18next.language.startsWith(lang));
   const validLanguages = getValidLanguages(collections);
@@ -115,7 +115,7 @@ function SearchLanguages({collections, languages, setLanguages}: {collections: r
   );
 }
 
-function SearchFilters({filtersVisible, collections, setCollections, languages, setLanguages}: {filtersVisible: boolean, collections: readonly string[], setCollections: Dispatch<SetStateAction<readonly string[]>>, languages: readonly string[], setLanguages: Dispatch<SetStateAction<readonly string[]>>}) {
+function SearchFilters({filtersVisible, collections, setCollections, languages, setLanguages}: {filtersVisible: boolean, collections: readonly CollectionKey[], setCollections: Dispatch<SetStateAction<readonly CollectionKey[]>>, languages: readonly LanguageKey[], setLanguages: Dispatch<SetStateAction<readonly LanguageKey[]>>}) {
   const filtersRef = useRef<HTMLDivElement>(null);
   const updateFiltersHeight = () => filtersRef.current?.style.setProperty('--search-filters-height', `${filtersRef.current.scrollHeight}px`);
   useEffect(() => {

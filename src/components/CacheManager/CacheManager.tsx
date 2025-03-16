@@ -1,19 +1,19 @@
 import { useEffect, useMemo, useRef, useState, useTransition } from "react";
 import { useTranslation } from "react-i18next";
 
-import CacheManagerWorker from '../../webWorker/cacheManagerWorker.ts?worker';
 import { CacheManagerParams, CacheManagerResult } from "../../webWorker/cacheManagerWorker";
+import CacheManagerWorker from '../../webWorker/cacheManagerWorker.ts?worker';
 import Delete from "./Delete";
 
-import './CacheManager.css';
-import corpus from '../../utils/corpus';
-import { getCache, getFilePath, getFileCacheOnly, getDownloadSizeTotal, clearLocalFileInfo, deleteLocalFileInfo, getAllLocalFilePaths, getIndexedDB } from '../../utils/files';
+import corpus, { corpusEntries, corpusKeys, CollectionKey, FileKey, LanguageKey } from '../../utils/corpus';
+import { clearLocalFileInfo, deleteLocalFileInfo, getAllLocalFilePaths, getCache, getDownloadSizeTotal, getFileCacheOnly, getFilePath, getIndexedDB } from '../../utils/files';
 import { formatBytesParams } from "../../utils/utils";
-import Refresh from "./Refresh";
 import { ShowModal } from '../Modal';
 import ProgressBar from "../ProgressBar";
+import './CacheManager.css';
+import Refresh from "./Refresh";
 
-type CachedFileInfoEntry = readonly [readonly [string, string, string], number, boolean];
+type CachedFileInfoEntry = readonly [readonly [CollectionKey, LanguageKey, FileKey], number, boolean];
 
 function CacheStatus({cacheStorageEnabled, cachedFileInfo}: {cacheStorageEnabled: boolean, cachedFileInfo: readonly CachedFileInfoEntry[]}) {
   const { t } = useTranslation();
@@ -43,10 +43,10 @@ function CacheProgress({loadedBytes, totalBytes, progress}: {loadedBytes: number
   );
 }
 
-function CacheEntryList({cachedFileInfo, cacheCollections, clearCachedFile}: {cachedFileInfo: readonly CachedFileInfoEntry[], cacheCollections: (collectionKey: string) => void, clearCachedFile: (collectionKey: string) => void}) {
+function CacheEntryList({cachedFileInfo, cacheCollections, clearCachedFile}: {cachedFileInfo: readonly CachedFileInfoEntry[], cacheCollections: (collectionKey: CollectionKey) => void, clearCachedFile: (collectionKey: CollectionKey) => void}) {
   const { t } = useTranslation();
   const fileInfoPerCollection = useMemo(() => {
-    const value = Object.entries(corpus.collections).map(([collectionKey]) => {
+    const value = corpusKeys.map((collectionKey) => {
       const collectionFileInfo = cachedFileInfo.filter(([[collection]]) => collectionKey === collection);
       return [
         collectionKey,
@@ -105,6 +105,9 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
         break;
       case 'error':
         console.log('Caching error');
+        break;
+      default:
+        status satisfies never;
     }
     workerRef.current?.terminate();
     workerRef.current = null;
@@ -132,7 +135,7 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
       const db = await getIndexedDB();
 
       // Check for all files in the cache
-      const keys = Object.entries(corpus.collections).flatMap(([collectionKey, collection]) =>
+      const keys = corpusEntries.flatMap(([collectionKey, collection]) =>
         collection.files.flatMap((fileKey) => collection.languages.map((languageKey) =>
           [collectionKey, languageKey, fileKey] as const
         ))
@@ -201,7 +204,7 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
       });
   };
 
-  const clearCachedFileAsync = async (collectionKey: string) => {
+  const clearCachedFileAsync = async (collectionKey: CollectionKey) => {
     if ('caches' in window && 'indexedDB' in window && 'databases' in window.indexedDB) {
       const cache = await getCache();
       const db = await getIndexedDB();
@@ -215,7 +218,7 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
       checkCachedFiles();
     }
   };
-  const clearCachedFile = (collectionKey: string) => {
+  const clearCachedFile = (collectionKey: CollectionKey) => {
     clearCachedFileAsync(collectionKey).catch((err: unknown) => {
       console.error(err);
     });
@@ -244,7 +247,7 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
   }, [active]);
 
   const cacheAllModal = () => {
-    getDownloadSizeTotal(Object.keys(corpus.collections)).then((size) => {
+    getDownloadSizeTotal(corpusKeys).then((size) => {
       showModal({
         message: t('cache.cacheAllModal.message', formatBytesParams(size)),
         buttons: [
