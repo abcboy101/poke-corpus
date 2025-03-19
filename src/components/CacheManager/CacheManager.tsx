@@ -20,7 +20,7 @@ function CacheStatus({cacheStorageEnabled, cachedFileInfo}: {cacheStorageEnabled
   const storageUsedAmount = useMemo(() => formatBytesParams(cachedFileInfo.reduce((acc, [, size]) => acc + size, 0)), [cachedFileInfo]);
   return (
     <ul>
-      <li>{t('cache.storageStatus', {val: cacheStorageEnabled ? t('cache.storageEnabled') : t('cache.storageDisabled')})}</li>
+      <li>{t('cache.storageStatus', {val: t(cacheStorageEnabled ? 'cache.storageEnabled' : 'cache.storageDisabled')})}</li>
       {cacheStorageEnabled && <li>{t('cache.filesStored', {count: cachedFileInfo.length})}</li>}
       {cacheStorageEnabled && <li>{t('cache.storageUsed', storageUsedAmount)}</li>}
     </ul>

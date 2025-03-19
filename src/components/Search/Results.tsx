@@ -134,7 +134,7 @@ function Results({status, progress, results, showId = true, richText = true, lim
     results.reduce((acc, params) => acc + params.lines.length, 0)
   ), [results]);
 
-  const resultsStatusText = t(import.meta.env.SSR ? t('status.loading') : `status.${status.split('.', 1)[0]}`);
+  const resultsStatusText = t(import.meta.env.SSR ? 'status.loading' : `status.${status.split('.', 1)[0]}`);
 
   const resultsToggle = (
     <div className="results-toggle">

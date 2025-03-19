@@ -68,7 +68,7 @@ function App() {
       <span className="separator"> | </span>
       <span>{t('footerText')}</span>
       <span className="separator"> | </span>
-      <span><button className="link" onClick={switchView}>{view !== 'Search' ? t('backToSearch') : t('manageCache')}</button></span>
+      <span><button className="link" onClick={switchView}>{t(view !== 'Search' ? 'backToSearch' : 'manageCache')}</button></span>
       <span className="separator"> | </span>
       <span><a href="https://github.com/abcboy101/poke-corpus">{t('github')}</a></span>
     </footer>
