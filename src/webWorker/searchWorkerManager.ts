@@ -97,9 +97,7 @@ const loadFile = async (collectionKey: CollectionKey, languageKey: LanguageKey, 
 
 self.onmessage = async (message: MessageEvent<SearchTaskParams>) => {
   const params = message.data;
-  if (self.memoryCache === undefined) {
-    self.memoryCache = new Map();
-  }
+  self.memoryCache ??= new Map();
 
   const showId = params.showAllLanguages || params.languages.includes(codeId);
 
