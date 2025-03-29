@@ -86,7 +86,7 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
   const [progress, setProgress] = useState(0.0);
   const [loadedBytes, setLoadedBytes] = useState(0);
   const [totalBytes, setTotalBytes] = useState(0);
-  const workerRef = useRef<Worker | null>(null);
+  const workerRef = useRef<Worker>(null);
 
   const checkCacheStorageEnabled = async () => {
     setCacheStorageEnabled('caches' in window && await window.caches.keys().then(() => true).catch(() => false));
@@ -121,7 +121,7 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
       setProgress(0.0);
       setLoadedBytes(0);
       if (workerRef.current === null) {
-        console.log('Creating new worker...');
+        console.log('Creating new CacheManagerWorker...');
         workerRef.current = new CacheManagerWorker();
         workerRef.current.addEventListener("message", onMessage);
         workerRef.current.postMessage(collectionKey);

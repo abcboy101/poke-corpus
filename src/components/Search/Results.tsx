@@ -2,18 +2,16 @@ import { Dispatch, SetStateAction, useEffect, useMemo, useState } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { SearchResultLines } from '../../webWorker/searchWorkerManager';
 import Spinner from './Spinner';
 import ProgressBar from '../ProgressBar';
 import { Status, statusInProgress } from '../../utils/Status';
 
 import './Results.css';
-import './ResultsText.css';
-import './ResultsTextColor.css';
 import '../../i18n/config';
 import { localStorageGetItem, localStorageSetItem } from '../../utils/utils';
 import { defaultLimit } from '../../utils/utils';
 import { ResultsSections, ShowSectionCallback } from './ResultsSections';
+import { Result, SectionHeader } from '../../utils/searchResults';
 
 /**
  * Scrolls the results window to the specified section.
@@ -21,19 +19,19 @@ import { ResultsSections, ShowSectionCallback } from './ResultsSections';
  */
 function jumpTo(n: number) {
   const results = document.getElementById("results");
-  const section0 = document.getElementById(`results-section0`);
-  const sectionN = document.getElementById(`results-section${n}`);
-  if (results && section0 && sectionN) {
-    results.scrollTop = sectionN.offsetTop - section0.offsetTop;
+  const target = document.getElementById(`results-section${n}`);
+  const first = results?.firstElementChild;
+  if (results && target && first instanceof HTMLElement) {
+    results.scrollTop = target.offsetTop - first.offsetTop;
   }
 }
 
-function JumpToSelect({headers}: {headers: readonly string[]}) {
+function JumpToSelect({headers}: {headers: readonly SectionHeader[]}) {
   const { t } = useTranslation();
   return <nav className="results-jump">
     <select name="jump" id="jump" onChange={(e) => { jumpTo(Number(e.target.value)); }} value="">
       <option value="" disabled>{t('jumpTo')}</option>
-      {headers.map((header, k) => (k === 0 || headers[k - 1] !== header) && <option key={k} value={k}>{header}</option>)}
+      {headers.map((header, k) => header !== undefined && (k === 0 || headers[k - 1] !== header) && <option key={k} value={k}>{header}</option>)}
     </select>
   </nav>;
 }
@@ -94,7 +92,7 @@ const getSavedResultsPreferences = () => {
   return toggleDefault;
 };
 
-function Results({status, progress, results, showId = true, richText = true, limit = defaultLimit}: {status: Status, progress: number, showId: boolean, richText: boolean, results: readonly SearchResultLines[], limit?: number}) {
+function Results({status, progress, results, showId = true, richText = true, limit = defaultLimit}: {status: Status, progress: number, showId: boolean, richText: boolean, results: readonly Result[], limit?: number}) {
   const { t } = useTranslation();
   const initial = useMemo(getSavedResultsPreferences, []);
   const [showVariables, setShowVariables] = useState(initial.showVariables);
@@ -126,12 +124,24 @@ function Results({status, progress, results, showId = true, richText = true, lim
     setOffset(0);
   }, [results]);
 
-  const headers = useMemo(() => (
-    results.map(({collection, file}) => t('tableHeader', {collection: t(`collections:${collection}.name`), file: t(`files:${file}`), interpolation: {escapeValue: false}}))
-  ), [results, i18next.language]);
+  const headers = useMemo(() => {
+    const headers: SectionHeader[] = [];
+    let lastHeader = '';
+    for (const result of results) {
+      if (result.status === 'initial' || result.status === 'noLines') {
+        headers.push(undefined);
+        continue;
+      }
+      const {collection, file} = result.params;
+      const header = t('tableHeader', {collection: t(`collections:${collection}.name`), file: t(`files:${file}`), interpolation: {escapeValue: false}});
+      headers.push(header === lastHeader ? undefined : header);
+      lastHeader = header;
+    }
+    return headers;
+  }, [results, i18next.language]);
 
   const count = useMemo(() => (
-    results.reduce((acc, params) => acc + params.lines.length, 0)
+    results.reduce((acc, result) => acc + (result.status === 'initial' ? 0 : result.params.lines.length), 0)
   ), [results]);
 
   const resultsStatusText = t(import.meta.env.SSR ? 'status.loading' : `status.${status.split('.', 1)[0]}`);
@@ -147,16 +157,17 @@ function Results({status, progress, results, showId = true, richText = true, lim
     </div>
   );
 
+  const inProgress = statusInProgress.includes(status);
   return (
     <>
       <div className="search results-status">
-        { headers.length > 1 ? <JumpToSelect headers={headers} /> : <div className="results-status-text">{resultsStatusText}</div> }
-        <Spinner src="logo.svg" active={statusInProgress.includes(status)}/>
-        { count > limit ? <ResultsNav count={count} offset={offset} limit={limit} setOffset={setOffset} /> : <ProgressBar progress={progress} /> }
+        { !inProgress && headers.length > 1 ? <JumpToSelect headers={headers} /> : <div className="results-status-text">{resultsStatusText}</div> }
+        <Spinner src="logo.svg" active={inProgress}/>
+        { !inProgress && count > limit ? <ResultsNav count={count} offset={offset} limit={limit} setOffset={setOffset} /> : <ProgressBar progress={progress} /> }
         { resultsToggle }
       </div>
-      <ResultsSections className={`search results app-window variables-${['short', 'show', 'hide'][showVariables]} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural} grammar-${showGrammar ? 'show' : 'hide'} furigana-${showFurigana ? 'show' : 'hide'} rich-text-${richText ? 'enabled' : 'disabled'}`}
-        results={results} headers={headers} richText={richText} showId={showId} offset={offset} limit={limit} onShowSection={onShowSection} jumpTo={jumpTo} />
+      <ResultsSections className={`search results app-window variables-${['short', 'show', 'hide'][showVariables]} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural} grammar-${showGrammar ? 'show' : 'hide'} furigana-${showFurigana ? 'show' : 'hide'}`}
+        results={results} headers={headers} showId={showId} offset={offset} limit={limit} onShowSection={onShowSection} jumpTo={jumpTo} />
     </>
   );
 }

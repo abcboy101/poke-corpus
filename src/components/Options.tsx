@@ -25,7 +25,7 @@ function OptionsMenu({showModal, richText, richTextRef, limit, limitRef}: Option
       // Vite always throws 'Unknown variable dynamic import' on its first try loading each i18n file.
       // The user-facing error message should only be shown if some other error happens to occur.
       if (err?.some((e) => !e.message.includes('Unknown variable dynamic import'))) {
-        console.log(err);
+        console.error(err);
         showModal({
           message: t('options.network'),
           buttons: [{message: <OptionsClose/>, autoFocus: true}],

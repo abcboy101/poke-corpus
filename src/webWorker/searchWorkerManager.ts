@@ -3,7 +3,7 @@ import { corpusEntries, codeId, isLanguageKey, CollectionKey, LanguageKey, FileK
 import { getCache, getFile, getFilePath, getFileRemote, getIndexedDB } from '../utils/files';
 import SearchWorker from "./searchWorker.ts?worker";
 import { SearchTaskParams } from '../utils/searchParams';
-import { SearchTask, SearchTaskResult, SearchTaskResultComplete, SearchTaskResultLines } from './searchWorker';
+import { SearchTask, SearchTaskResult, SearchTaskResultComplete } from './searchWorker';
 import { SearchResultsInProgress, SearchResultsComplete, SearchResultsStatus } from '../utils/Status';
 import { isBooleanQueryValid, parseWhereClause } from './searchBoolean';
 import { isValidRegex } from '../utils/utils';
@@ -17,17 +17,16 @@ declare global {
   }
 }
 
-export interface SearchResultLines extends SearchTaskResultLines {
-  readonly displayHeader: boolean,
-}
-
-export interface SearchResults {
+interface SearchManagerStatus {
   readonly complete: boolean,
   readonly status: SearchResultsStatus,
   readonly progress: number,
   readonly showId: boolean,
-  readonly results: readonly SearchResultLines[],
 }
+
+type SearchManagerStatusWithResult = SearchManagerStatus & Omit<SearchTaskResultComplete, "status">;
+
+export type SearchManagerResponse = SearchManagerStatus | SearchManagerStatusWithResult;
 
 type SearchTaskPartial = Omit<SearchTask, "files" | "speakerFiles">;
 
@@ -107,23 +106,34 @@ self.onmessage = async (message: MessageEvent<SearchTaskParams>) => {
 
   const updateStatusInProgress = (status: SearchResultsInProgress, loadingProgress: number, processingProgress: number, collectingProgress: number) => {
     const progress = (loadingProgress * progressPortionLoading) + (processingProgress * progressPortionProcessing) + (collectingProgress * progressPortionCollecting);
-    const message: SearchResults = {
+    const message: SearchManagerResponse = {
       complete: false,
       status: status,
       progress: progress,
       showId: showId,
-      results: [],
     };
     postMessage(message);
   };
 
-  const updateStatusComplete = (status: SearchResultsComplete, results: readonly SearchResultLines[] = []) => {
-    const message: SearchResults = {
+  const updateStatusWithResult = (status: SearchResultsInProgress, loadingProgress: number, processingProgress: number, collectingProgress: number, result: SearchTaskResultComplete) => {
+    const progress = (loadingProgress * progressPortionLoading) + (processingProgress * progressPortionProcessing) + (collectingProgress * progressPortionCollecting);
+    const message: SearchManagerResponse = {
+      complete: false,
+      status: status,
+      progress: progress,
+      showId: showId,
+      index: result.index,
+      result: result.result,
+    };
+    postMessage(message);
+  };
+
+  const updateStatusComplete = (status: SearchResultsComplete) => {
+    const message: SearchManagerResponse = {
       complete: true,
       status: status,
       progress: 1.0,
       showId: showId,
-      results: results,
     };
     postMessage(message);
   };
@@ -163,6 +173,7 @@ self.onmessage = async (message: MessageEvent<SearchTaskParams>) => {
 
     // Load files
     let taskCount = 0;
+    let fileCount = 0;
     let cachedCount = 0;
     const taskList: SearchTaskPartial[] = [];
     corpusEntries.forEach(([collectionKey, collection]) => {
@@ -184,14 +195,15 @@ self.onmessage = async (message: MessageEvent<SearchTaskParams>) => {
           return;
 
         if (!collection.structured) {
-          languages.forEach((languageKey, languageIndex) => {
+          languages.forEach((languageKey) => {
             taskList.push({
-              index: taskCount + languageIndex,
+              index: taskCount,
               params: params,
               collectionKey: collectionKey,
               fileKey: fileKey,
               languages: [languageKey],
             });
+            taskCount++;
           });
         }
         else {
@@ -204,21 +216,22 @@ self.onmessage = async (message: MessageEvent<SearchTaskParams>) => {
             speaker: collection.speaker,
             literals: collection.literals,
           });
+          taskCount++;
         }
-        taskCount += languages.length;
+        fileCount += languages.length;
         cachedCount += languages.reduce((acc, languageKey) => acc + +isMemoryCached(collectionKey, languageKey, fileKey), 0);
       });
     });
     // Check if the combination of collections/languages yielded no files.
     // If it did, return with that error immediately.
-    if (taskList.length === 0) {
+    if (taskCount === 0) {
       updateStatusComplete('noMatch');
       return;
     }
 
     // Adjust progress bar portions
     if (cachedCount > 0) {
-      progressPortionLoading *= (taskCount - cachedCount) / taskCount;
+      progressPortionLoading *= (fileCount - cachedCount) / fileCount;
       progressPortionProcessing *= (1 - progressPortionLoading) / (progressPortionProcessing + progressPortionCollecting);
       progressPortionCollecting *= (1 - progressPortionLoading) / (progressPortionProcessing + progressPortionCollecting);
     }
@@ -227,12 +240,12 @@ self.onmessage = async (message: MessageEvent<SearchTaskParams>) => {
     let loadedCount = 0;
     let processedCount = 0;
     let collectedCount = 0;
-    const calculateProgress = () => [loadedCount / taskCount, processedCount / taskCount, collectedCount / taskList.length] as const;
+    const calculateProgress = () => [loadedCount / fileCount, processedCount / fileCount, collectedCount / taskCount] as const;
     const updateProgressLoaded = (file: string) => {
       loadedCount++;
       updateStatusInProgress('loading', ...calculateProgress());
       if (import.meta.env.DEV) {
-        console.debug(`Loaded ${loadedCount}/${taskCount}`);
+        console.debug(`Loaded ${loadedCount}/${fileCount}`);
       }
       return file;
     };
@@ -240,20 +253,19 @@ self.onmessage = async (message: MessageEvent<SearchTaskParams>) => {
       processedCount++;
       updateStatusInProgress('processing', ...calculateProgress());
       if (import.meta.env.DEV) {
-        console.debug(`Processed ${processedCount}/${taskCount}`);
+        console.debug(`Processed ${processedCount}/${fileCount}`);
       }
     };
-    const updateProgressCollected = () => {
+    const updateProgressCollected = (result: SearchTaskResultComplete) => {
       collectedCount++;
-      updateStatusInProgress('collecting', ...calculateProgress());
+      updateStatusWithResult('collecting', ...calculateProgress(), result);
       if (import.meta.env.DEV) {
-        console.debug(`Collected ${collectedCount}/${taskList.length}`);
+        console.debug(`Collected ${collectedCount}/${taskCount}`);
       }
     };
 
     let helperError = false;
     let networkError = false;
-    const taskResults: SearchTaskResultComplete[] = [];
     const helpers: Worker[] = [];
     const helperOnMessage = (e: MessageEvent<SearchTaskResult>) => {
       // Another helper had an error, no need to process the message
@@ -266,25 +278,10 @@ self.onmessage = async (message: MessageEvent<SearchTaskParams>) => {
         updateProgressProcessed();
       }
       else if (result.status === 'done') {
-        taskResults.push(result);
-        updateProgressCollected();
-
-        // Send results if all tasks are done
-        if (collectedCount === taskList.length) {
-          const results: SearchResultLines[] = [];
-          taskResults.sort((a, b) => a.index - b.index);
-          let lastCollection = '';
-          let lastFile = '';
-          taskResults.forEach(({result}) => {
-            if (result.lines.length === 0)
-              return;
-            results.push({...result, displayHeader: result.collection !== lastCollection || result.file !== lastFile});
-            lastCollection = result.collection;
-            lastFile = result.file;
-          });
-
+        updateProgressCollected(result);
+        if (collectedCount === taskCount) {
           // Raise network error if it occurred at the end here
-          updateStatusComplete(networkError ? 'network' : 'done', results);
+          updateStatusComplete(networkError ? 'network' : 'done');
           helpers.forEach((helper) => { helper.terminate(); });
         }
       }
@@ -296,7 +293,7 @@ self.onmessage = async (message: MessageEvent<SearchTaskParams>) => {
     };
 
     // Start helpers
-    const numWorkers = Math.max(1, Math.min(taskList.length, (navigator.hardwareConcurrency || 4) - 2));
+    const numWorkers = Math.max(1, Math.min(taskCount, (navigator.hardwareConcurrency || 4) - 2));
     for (let i = 0; i < numWorkers; i++) {
       const helper = new SearchWorker();
       helper.onmessage = helperOnMessage;
