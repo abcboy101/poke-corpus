@@ -1,6 +1,5 @@
 import globals from "globals";
-import pluginJs from "@eslint/js";
-import eslint from "typescript-eslint";
+import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
 import stylistic from '@stylistic/eslint-plugin';
@@ -28,11 +27,8 @@ export default [
     }
   },
   compat.configs["flat/recommended"],
-  pluginJs.configs.recommended,
-  // ...eslint.configs.strict,
-  // ...tseslint.configs.strictTypeChecked,
-  ...eslint.configs.recommended,
-  ...tseslint.configs.recommendedTypeChecked,
+  eslint.configs.recommended,
+  ...tseslint.configs.strictTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
   pluginReact.configs.flat.recommended,
   {
