@@ -366,11 +366,11 @@ function* iterateRLE(bytes: ReadonlyUint8Array): Generator<boolean, void, never>
 }
 
 function setBit(bitArr: Uint8Array, i: number, value = 1) {
-  bitArr[Math.floor(i / 8)] |= (value << (i % 8));
+  bitArr[i >> 3] |= (value << (i & 7));
 }
 
 function getBit(bitArr: ReadonlyUint8Array, i: number): number {
-  return (bitArr[Math.floor(i / 8)] >> (i % 8)) & 1;
+  return (bitArr[i >> 3] >> (i & 7)) & 1;
 }
 
 export function encryptBytes(bytes: Uint8Array) {
