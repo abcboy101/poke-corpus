@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import Spinner from './Spinner';
 import ProgressBar from '../ProgressBar';
+import NoScript from './NoScript';
 import { Status, statusInProgress } from '../../utils/Status';
 
 import './Results.css';
@@ -176,7 +177,7 @@ function Results({status, progress, results, showId = true, richText = true, lim
         { resultsToggle }
       </div>
       <main id="results" className={classes}>
-        { sections }
+        { import.meta.env.SSR ? <NoScript /> : sections }
       </main>
     </>
   );

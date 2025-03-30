@@ -6,7 +6,6 @@ import corpus, { codeId, langId } from '../../utils/corpus';
 import Share from './Share';
 import ViewNearby from './ViewNearby';
 import Copy from './Copy';
-import NoScript from './NoScript';
 
 import './ResultsText.css';
 import './ResultsTextColor.css';
@@ -143,9 +142,6 @@ interface ResultsSectionsParams extends Omit<ResultsSectionsParamsPassed, 'richT
 
 /** Results section, including its header. */
 export function ResultsSections({results, headers, jumpTo, ...passed}: ResultsSectionsParams) {
-  if (import.meta.env.SSR)
-    return <NoScript />;
-
   // Wrap in useMemo to prevent expensive recalculations.
   const sectionParams = useMemo(() => {
     let sectionOffset = 0;
