@@ -1,4 +1,4 @@
-import { MouseEventHandler, ReactNode, startTransition, useEffect, useRef, useState } from 'react';
+import { MouseEventHandler, useEffect, useMemo, useRef } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
@@ -12,7 +12,7 @@ import './ResultsText.css';
 import './ResultsTextColor.css';
 import { expandSpeakers } from '../../utils/speaker';
 import { SearchTaskResultLines } from '../../webWorker/searchWorker';
-import { Result, SectionHeader } from '../../utils/searchResults';
+import { ParamsResult, Result, SectionHeader } from '../../utils/searchResults';
 
 const addWordBreaksToID = (s: string, lang: string) => lang === codeId ? s.replaceAll(/([._/]|([a-z])(?=[A-Z])|([A-Za-z])(?=[0-9]))/gu, '$1<wbr>') : s;
 
@@ -32,7 +32,17 @@ function Actions({id}: {id: string}) {
   );
 }
 
-function ResultsTable({collection, file, languages, lines, start, end, showId, richText}: SearchTaskResultLines & {start: number, end: number, showId: boolean, richText: boolean}) {
+interface ResultsTableParams extends Omit<SearchTaskResultLines, 'speakers' | 'literals'> {
+  index: number,
+  start: number,
+  end: number,
+  showId: boolean,
+  richText: boolean,
+  sectionOffset: number,
+  onShowSection: ShowSectionCallback,
+}
+
+function ResultsTable({index, collection, file, languages, lines, start, end, showId, richText, sectionOffset, onShowSection}: ResultsTableParams) {
   const { t } = useTranslation();
   const idIndex = languages.indexOf(codeId);
   const displayLanguages = languages.map((lang) => lang === codeId ? langId : lang);
@@ -59,7 +69,7 @@ function ResultsTable({collection, file, languages, lines, start, end, showId, r
   if (corpus.collections[collection].softWrap === true)
     classes.push('soft');
 
-  return (
+  const table = (
     <div className="results-table-container">
       <table ref={tableRef} className={classes.join(' ')}>
         <thead>
@@ -84,70 +94,77 @@ function ResultsTable({collection, file, languages, lines, start, end, showId, r
       </table>
     </div>
   );
-}
-
-interface ResultsSectionsParams {
-  offset: number,
-  limit: number,
-  showId: boolean,
-  onShowSection: ShowSectionCallback,
-}
-
-interface ResultsSectionContentParams extends SearchTaskResultLines, ResultsSectionsParams {
-  index: number,
-  richText: boolean,
-  sectionOffset: number,
-}
-
-export type ShowSectionCallback = (offset: number, index: number) => () => void;
-
-/** Content of a results section, including warnings when only part of a table is shown. */
-function ResultsSectionContent({lines, index, sectionOffset, offset, limit, onShowSection, ...params}: ResultsSectionContentParams) {
-  const { t } = useTranslation();
-  const start = Math.max(0, Math.min(lines.length, offset - sectionOffset));
-  const end = Math.max(0, Math.min(lines.length, (offset + limit) - sectionOffset));
-
   return <>
     { start !== 0 && <button className="results-notice" onClick={onShowSection(sectionOffset, index)}>{t('tablePartial', {count: start})}</button> }
-    { start !== end && <ResultsTable key={index} {...params} lines={lines} start={start} end={end} /> }
+    { start !== end && table }
     { end < lines.length && <button className="results-notice" onClick={onShowSection(sectionOffset + end, index)}>{t('tablePartial', {count: lines.length - end})}</button> }
   </>;
 }
 
-/** Results section, including its header. */
-export function ResultsSections({className, results, headers, showId, offset, limit, onShowSection, jumpTo}: {className: string, results: readonly Result[], headers: readonly SectionHeader[], jumpTo: (n: number) => void} & ResultsSectionsParams) {
-  const [resultTables, setResultTables] = useState<readonly ReactNode[]>([]);
+export type ShowSectionCallback = (offset: number, index: number) => () => void;
 
-  // Wrap in useEffect to prevent expensive recalculations.
-  // Wrap in startTransition to allow it to be rendered in the background.
-  // Only changes to results, limit, offset, or language will affect the generated HTML.
-  useEffect(() => {
-    startTransition(() => {
-      let count = 0;
-      const resultTables: ReactNode[] = [];
-      for (const [index, result] of results.entries()) {
-        if (result.status === 'initial')
-          break;
-        let table: ReactNode | undefined = undefined;
-        switch (result.status) {
-          case 'noLines':
-            table = undefined;
-            break;
-          case 'worker':
-            table = <Rendering />;
-            break;
-          case 'done':
-            table = <ResultsSectionContent {...result.params} index={index} richText={result.richText} sectionOffset={count} offset={offset} limit={limit} showId={showId} onShowSection={onShowSection} />;
-            break;
-          default:
-            result satisfies never;
-        }
-        resultTables.push(table);
-        count += result.params.lines.length;
-      }
-      setResultTables(resultTables);
-    });
-  }, [results, limit, offset]);
+interface ResultsSectionParams extends Omit<ResultsTableParams, 'start' | 'end'> {
+  status: ParamsResult['status'],
+  header: SectionHeader,
+  offset: number,
+  limit: number,
+}
+
+function ResultsSection(params: ResultsSectionParams) {
+  const {index, status, header, offset, limit, lines, sectionOffset, richText} = params;
+  const start = Math.max(0, Math.min(lines.length, offset - sectionOffset));
+  const end = Math.max(0, Math.min(lines.length, (offset + limit) - sectionOffset));
+  const table = useMemo(() => {
+    switch (status) {
+      case 'noLines': return undefined;
+      case 'worker':  return <Rendering />;
+      case 'done':    return <ResultsTable {...params} start={start} end={end} />;
+      default:        status satisfies never;
+    }
+  }, [status, start, end, richText]);
+  return (
+    <section id={`results-section${index}`} className='results-section'>
+      { header && <h2>{header}</h2> }
+      { table }
+    </section>
+  );
+}
+
+type ResultsSectionsParamsPassed = (
+  Pick<ResultsTableParams, 'showId' | 'richText' | 'onShowSection'>
+  & Pick<ResultsSectionParams, 'offset' | 'limit'>
+);
+
+interface ResultsSectionsParams extends Omit<ResultsSectionsParamsPassed, 'richText'> {
+  results: readonly Result[],
+  headers: readonly SectionHeader[],
+  jumpTo: (n: number) => void,
+}
+
+/** Results section, including its header. */
+export function ResultsSections({results, headers, jumpTo, ...passed}: ResultsSectionsParams) {
+  if (import.meta.env.SSR)
+    return <NoScript />;
+
+  // Wrap in useMemo to prevent expensive recalculations.
+  const sectionParams = useMemo(() => {
+    let sectionOffset = 0;
+    const newSectionParams: (Parameters<typeof ResultsSection>[0])[] = [];
+    for (const [index, result] of results.entries()) {
+      if (result.status === 'initial')
+        break;
+      const richText = result.status === 'done' && result.richText;
+      newSectionParams.push({
+        ...passed,
+        ...result.params,
+        index, sectionOffset, richText,
+        status: result.status,
+        header: headers[index],
+      });
+      sectionOffset += result.params.lines.length;
+    }
+    return newSectionParams;
+  }, [results, passed]);
 
   // On prev/next navigation, scroll to first section displayed.
   useEffect(() => {
@@ -155,25 +172,15 @@ export function ResultsSections({className, results, headers, showId, offset, li
     for (const [index, result] of results.entries()) {
       if (result.status === 'initial')
         continue;
-      if (offset >= count && offset < (count + result.params.lines.length)) {
+      if (passed.offset >= count && passed.offset < (count + result.params.lines.length)) {
         jumpTo(index);
         break;
       }
       count += result.params.lines.length;
     }
-  }, [offset]);
+  }, [passed.offset]);
 
-  return (
-    <main id="results" className={className}>
-      { import.meta.env.SSR && <NoScript /> }
-      {
-        resultTables.map((resultTable, index) => resultTable === undefined ? undefined : (
-          <section key={index} id={`results-section${index}`} className='results-section'>
-            { headers[index] && <h2>{headers[index]}</h2> }
-            { resultTable }
-          </section>
-        ))
-      }
-    </main>
-  );
+  return <div className="app-window-inner">
+    { sectionParams.map((params) => <ResultsSection key={params.index} {...params} />) }
+  </div>;
 }

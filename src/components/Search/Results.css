@@ -65,7 +65,7 @@
 }
 
 .results-table {
-  width: 100%;
+  min-width: 100%;
 }
 
 .results-table-actions-cell {

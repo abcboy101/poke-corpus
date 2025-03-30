@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, useTransition } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, useTransition } from "react";
 import { useTranslation } from "react-i18next";
 
 import { CacheManagerParams, CacheManagerResult } from "../../webWorker/cacheManagerWorker";
@@ -115,7 +115,7 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
     checkCachedFiles(collectionKey);
   };
 
-  const cacheCollections = (collectionKey: CacheManagerParams = null) => {
+  const cacheCollections = useCallback((collectionKey: CacheManagerParams = null) => {
     if ('caches' in window) {
       setCacheInProgress(true);
       setProgress(0.0);
@@ -127,7 +127,7 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
         workerRef.current.postMessage(collectionKey);
       }
     }
-  };
+  }, []);
 
   const checkCachedFilesAsync = async (collectionKey?: CacheManagerParams) => {
     if ('caches' in window && 'indexedDB' in window && 'databases' in window.indexedDB) {
@@ -218,11 +218,11 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
       checkCachedFiles();
     }
   };
-  const clearCachedFile = (collectionKey: CollectionKey) => {
+  const clearCachedFile = useCallback((collectionKey: CollectionKey) => {
     clearCachedFileAsync(collectionKey).catch((err: unknown) => {
       console.error(err);
     });
-  };
+  }, []);
 
   // Refresh on page load
   useEffect(() => {
@@ -296,24 +296,24 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
     });
   };
 
-  return (
-    <>
-      <div className='cache cache-button-group item-group'>
+  return active && (
+    <div className="cache">
+      <div className="cache-button-group item-group">
         <button onClick={cacheAllModal} disabled={cacheInProgress !== false}>{t('cacheAll')}</button>
         <button onClick={clearCacheModal}>{t('clearCache')}</button>
       </div>
-      <div className="cache cache-results app-window">
+      <div className="cache-results app-window">
         {
-          !isPending && <>
+          !isPending && <div className="app-window-inner">
             <CacheStatus cacheStorageEnabled={cacheStorageEnabled} cachedFileInfo={cachedFileInfo} />
             { cacheInProgress
               ? <CacheProgress loadedBytes={loadedBytes} totalBytes={totalBytes} progress={progress} />
               : <CacheEntryList cachedFileInfo={cachedFileInfo} cacheCollections={cacheCollections} clearCachedFile={clearCachedFile} />
             }
-          </>
+          </div>
         }
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,4 +1,4 @@
-import { ChangeEventHandler, Dispatch, RefObject, SetStateAction, startTransition, useRef, useState } from 'react';
+import { ChangeEventHandler, Dispatch, RefObject, SetStateAction, useRef, useState } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
@@ -94,22 +94,20 @@ function Options(params: OptionsParams) {
   const limitRef = useRef<HTMLInputElement>(null);
 
   const onClose = () => {
-    startTransition(() => {
-      if (richTextRef.current !== null) {
-        const newRichText = richTextRef.current.value;
-        if (newRichText === "true" || newRichText === "false") {
-          localStorageSetItem('corpus-richText', newRichText);
-          setRichText(newRichText !== 'false');
-        }
+    if (richTextRef.current !== null) {
+      const newRichText = richTextRef.current.value;
+      if (newRichText === "true" || newRichText === "false") {
+        localStorageSetItem('corpus-richText', newRichText);
+        setRichText(newRichText !== 'false');
       }
-      if (limitRef.current !== null) {
-        const newLimit = limitRef.current.valueAsNumber;
-        if (isValidLimit(newLimit)) {
-          localStorageSetItem('corpus-limit', newLimit.toString());
-          setLimit(newLimit);
-        }
+    }
+    if (limitRef.current !== null) {
+      const newLimit = limitRef.current.valueAsNumber;
+      if (isValidLimit(newLimit)) {
+        localStorageSetItem('corpus-limit', newLimit.toString());
+        setLimit(newLimit);
       }
-    });
+    }
   };
 
   const options: ModalArguments = {

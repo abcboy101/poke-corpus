@@ -214,10 +214,10 @@ table th, table td {
 
 /* Layout */
 .app {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   gap: 0.5em;
-  height: 100dvh;
+  min-height: 100dvh;
   width: 100%;
   padding: 1rem;
   background: var(--background);
@@ -230,6 +230,13 @@ table th, table td {
   width: 1.25em;
   margin-bottom: 0.25em;
   vertical-align: middle;
+}
+
+.search, .cache {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  max-height: 100%;
 }
 
 .view-search .cache,
@@ -247,13 +254,18 @@ table th, table td {
 }
 
 .app-window {
-  width: 100%;
+  flex: 1;
+  position: relative;
   min-height: max(12em, 50dvh);
   overflow: auto;
-  flex: 1;
-  padding: 0.5rem;
   border: 1px solid var(--text);
   background-color: var(--highlight);
+}
+
+.app-window-inner {
+  position: absolute;
+  width: 100%;
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.5em;

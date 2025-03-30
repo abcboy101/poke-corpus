@@ -2,11 +2,18 @@ import { SearchTaskResultLines } from "../webWorker/searchWorker";
 
 export const initialResult = { status: 'initial' } as const;
 
-export interface ParamsResult {
-  readonly status: 'worker' | 'noLines' | 'done',
+interface ParamsResultInProgress {
+  readonly status: 'worker' | 'noLines',
+  readonly params: SearchTaskResultLines,
+};
+
+interface ParamsResultDone {
+  readonly status: 'done',
   readonly params: SearchTaskResultLines,
   readonly richText: boolean,
 };
+
+export type ParamsResult = ParamsResultInProgress | ParamsResultDone;
 
 export type Result = typeof initialResult | ParamsResult;
 

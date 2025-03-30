@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useEffect, useMemo, useState } from 'react';
+import { Dispatch, ReactNode, SetStateAction, startTransition, useCallback, useEffect, useMemo, useState } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
@@ -101,6 +101,7 @@ function Results({status, progress, results, showId = true, richText = true, lim
   const [showPlural, setShowPlural] = useState(initial.showPlural);
   const [showGrammar, setShowGrammar] = useState(initial.showGrammar);
   const [showFurigana, setShowFurigana] = useState(initial.showFurigana);
+  const [sections, setSections] = useState<ReactNode>(null);
   const [offset, setOffset] = useState(0);
 
   // Save preferences on change
@@ -115,14 +116,10 @@ function Results({status, progress, results, showId = true, richText = true, lim
     }));
   }, [showVariables, showAllCharacters, showGender, showPlural, showGrammar, showFurigana]);
 
-  const onShowSection: ShowSectionCallback = (offset, index) => () => {
+  const onShowSection: ShowSectionCallback = useCallback((offset, index) => () => {
     setOffset(offset);
     jumpTo(index);
-  };
-
-  useEffect(() => {
-    setOffset(0);
-  }, [results]);
+  }, []);
 
   const headers = useMemo(() => {
     const headers: SectionHeader[] = [];
@@ -144,6 +141,10 @@ function Results({status, progress, results, showId = true, richText = true, lim
     results.reduce((acc, result) => acc + (result.status === 'initial' ? 0 : result.params.lines.length), 0)
   ), [results]);
 
+  useEffect(() => {
+    setOffset((prev) => Math.min(prev, count));
+  }, [count]);
+
   const resultsStatusText = t(import.meta.env.SSR ? 'status.loading' : `status.${status.split('.', 1)[0]}`);
 
   const resultsToggle = (
@@ -157,17 +158,26 @@ function Results({status, progress, results, showId = true, richText = true, lim
     </div>
   );
 
+  useEffect(() => {
+    // Wrap in startTransition to allow it to be rendered in the background.
+    startTransition(() => {
+      setSections(<ResultsSections results={results} headers={headers} showId={showId} offset={offset} limit={limit} onShowSection={onShowSection} jumpTo={jumpTo} />);
+    });
+  }, [results, headers, showId, offset, limit, onShowSection, jumpTo]);
+
   const inProgress = statusInProgress.includes(status);
+  const classes = `app-window variables-${['short', 'show', 'hide'][showVariables]} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural} grammar-${showGrammar ? 'show' : 'hide'} furigana-${showFurigana ? 'show' : 'hide'}`;
   return (
     <>
-      <div className="search results-status">
+      <div className="results-status">
         { !inProgress && headers.length > 1 ? <JumpToSelect headers={headers} /> : <div className="results-status-text">{resultsStatusText}</div> }
         <Spinner src="logo.svg" active={inProgress}/>
         { !inProgress && count > limit ? <ResultsNav count={count} offset={offset} limit={limit} setOffset={setOffset} /> : <ProgressBar progress={progress} /> }
         { resultsToggle }
       </div>
-      <ResultsSections className={`search results app-window variables-${['short', 'show', 'hide'][showVariables]} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural} grammar-${showGrammar ? 'show' : 'hide'} furigana-${showFurigana ? 'show' : 'hide'}`}
-        results={results} headers={headers} showId={showId} offset={offset} limit={limit} onShowSection={onShowSection} jumpTo={jumpTo} />
+      <main id="results" className={classes}>
+        { sections }
+      </main>
     </>
   );
 }

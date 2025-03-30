@@ -1,4 +1,4 @@
-import { lazy, startTransition, useEffect, useState } from 'react';
+import { Dispatch, lazy, SetStateAction, useCallback, useEffect, useState } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
@@ -18,8 +18,38 @@ type View = 'Search' | 'CacheManager';
 // Allow these to be lazy-loaded so the page can be displayed first.
 const CacheManager = lazy(() => import('./components/CacheManager/CacheManager.js'));
 
-function App() {
+function Header({showModal, richText, setRichText, limit, setLimit}: {showModal: ShowModal, richText: boolean, setRichText: Dispatch<SetStateAction<boolean>>, limit: number, setLimit: Dispatch<SetStateAction<number>>}) {
   const { t } = useTranslation();
+  return (
+    <header className="header">
+      <h1>
+        <a href="/poke-corpus/">
+          <img className="header-logo" src="logo.svg" alt="" height="40" width="40" /> {t('title', {version: t('version')})}
+        </a>
+      </h1>
+      <ErrorBoundary fallback={null}>
+        <Options showModal={showModal} richText={richText} setRichText={setRichText} limit={limit} setLimit={setLimit}/>
+      </ErrorBoundary>
+    </header>
+  );
+}
+
+function Footer({view, switchView}: {view: View, switchView: () => void}) {
+  const { t } = useTranslation();
+  return (
+    <footer>
+      <span>{t('tagline')}</span>
+      <span className="separator"> | </span>
+      <span>{t('footerText')}</span>
+      <span className="separator"> | </span>
+      <span><button className="link" onClick={switchView}>{t(view !== 'Search' ? 'backToSearch' : 'manageCache')}</button></span>
+      <span className="separator"> | </span>
+      <span><a href="https://github.com/abcboy101/poke-corpus">{t('github')}</a></span>
+    </footer>
+  );
+}
+
+function App() {
   const [richText, setRichText] = useState(getRichText);
   const [limit, setLimit] = useState(getLimit);
   const [view, setView] = useState<View>('Search');
@@ -32,59 +62,34 @@ function App() {
     setCacheManagerLoaded(true);
   }, []);
 
-  const showModal: ShowModal = (args) => {
+  const showModal: ShowModal = useCallback((args) => {
     setModalArguments(args);
-  };
+  }, []);
 
-  const switchView = () => {
-    startTransition(() => {
-      const newView = view !== 'Search' ? 'Search' : 'CacheManager';
-      setView(newView);
+  const switchView = useCallback(() => {
+    setView((prev) => {
+      const newView = prev !== 'Search' ? 'Search' : 'CacheManager';
       if (!cacheManagerLoaded)
         setCacheManagerLoaded(newView === 'CacheManager');
+      return newView;
     });
-  };
+  }, []);
 
   // Don't need to load the cache manager until the user navigates to it.
   // Once it's loaded, keep it open in the background to maintain its state.
   const cacheManager = cacheManagerLoaded && <CacheManager active={view === 'CacheManager'} showModal={showModal}/>;
-
-  const header = (
-    <header className="header">
-      <h1>
-        <a href="/poke-corpus/">
-          <img className="header-logo" src="logo.svg" alt="" height="40" width="40" /> {t('title', {version: t('version')})}
-        </a>
-      </h1>
-      <ErrorBoundary fallback={null}>
-        <Options showModal={showModal} richText={richText} setRichText={setRichText} limit={limit} setLimit={setLimit}/>
-      </ErrorBoundary>
-    </header>
-  );
-
-  const footer = (
-    <footer>
-      <span>{t('tagline')}</span>
-      <span className="separator"> | </span>
-      <span>{t('footerText')}</span>
-      <span className="separator"> | </span>
-      <span><button className="link" onClick={switchView}>{t(view !== 'Search' ? 'backToSearch' : 'manageCache')}</button></span>
-      <span className="separator"> | </span>
-      <span><a href="https://github.com/abcboy101/poke-corpus">{t('github')}</a></span>
-    </footer>
-  );
 
   const classes = ['app', `view-${view.toLowerCase()}`];
   if (!import.meta.env.SSR && /^((?!chrome|android).)*safari/i.test(navigator.userAgent))
     classes.push('ua-safari');
   return (
     <div className={classes.join(' ')} lang={i18next.language} dir={i18next.dir()}>
-      { header }
+      <Header showModal={showModal} richText={richText} setRichText={setRichText} limit={limit} setLimit={setLimit} />
       <ErrorBoundary FallbackComponent={ErrorWindow}>
         <Search showModal={showModal} richText={richText} limit={limit}/>
         { cacheManager }
       </ErrorBoundary>
-      { footer }
+      <Footer view={view} switchView={switchView} />
       <Modal {...modalArguments}/>
     </div>
   );

@@ -6,7 +6,6 @@ import { SearchTaskParams, searchTypes, isSearchType, searchParamsToHash, hashTo
 import { corpus, codeId, corpusKeys } from '../../utils/corpus';
 import SearchFilters from './SearchFilters';
 import { escapeRegex, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
-import { Status, statusInProgress } from '../../utils/Status';
 
 import './SearchForm.css';
 import '../../i18n/config';
@@ -55,7 +54,7 @@ const searchTypesDropdown = [
   searchTypes[2], // boolean
 ];
 
-function SearchForm({status, postToWorker, terminateWorker}: {status: Status, postToWorker: (params: SearchTaskParams) => void, terminateWorker: () => void}) {
+function SearchForm({waiting, inProgress, postToWorker, terminateWorker}: {waiting: boolean, inProgress: boolean, postToWorker: (params: SearchTaskParams) => void, terminateWorker: () => void}) {
   const { t } = useTranslation();
   const initial = useMemo(getSavedParamsPreferences, []);
   const [id, setId] = useState(initial.id);
@@ -191,7 +190,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
 
     // If the Search view is taller than the viewport, automatically hide the filters on submit.
     const viewSearch = document.getElementsByClassName('view-search').item(0);
-    if (viewSearch && viewSearch.scrollHeight > viewSearch.clientHeight) {
+    if (viewSearch && viewSearch.scrollHeight > document.body.clientHeight) {
       setFiltersVisible(false);
     }
 
@@ -229,17 +228,18 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
   // waiting: submit disabled (to prevent double-clicking)
   // in progress: cancel enabled
   // done or error: submit enabled
-  const cancelVisible = statusInProgress.includes(status);
-  const submitDisabled = cancelVisible || query.length === 0 || collections.length === 0 || languages.length === 0 || status === 'waiting';
-
-  return <form className="search search-form" role="search" onSubmit={onSubmit}>
+  const submitDisabled = waiting || inProgress || query.length === 0 || collections.length === 0 || languages.length === 0;
+  const filters = useMemo(() => (
+    <SearchFilters filtersVisible={filtersVisible} collections={collections} setCollections={setCollections} languages={languages} setLanguages={setLanguages} />
+  ), [filtersVisible, collections, languages]);
+  return <form className="search-form" role="search" onSubmit={onSubmit}>
     <div className="search-bar">
       <div className="item-group">
         <label htmlFor="query">{t('query')}</label>
         <input type="text" name="query" id="query" value={query} onChange={(e) => { setQuery(e.target.value); }}/>
         <div className="btn-alternate-container">
-          <input id="submit" type="submit" className={cancelVisible ? 'invisible' : 'visible'} value={t('search')} disabled={submitDisabled}/>
-          <button type="button" className={cancelVisible ? 'visible' : 'invisible'} onClick={onCancel} disabled={!cancelVisible}>{t('cancel')}</button>
+          <input id="submit" type="submit" className={inProgress ? 'invisible' : 'visible'} value={t('search')} disabled={submitDisabled}/>
+          <button type="button" className={inProgress ? 'visible' : 'invisible'} onClick={onCancel} disabled={!inProgress}>{t('cancel')}</button>
         </div>
         <button type="button" className={filtersVisible ? 'active' : undefined} onClick={toggleFiltersVisible}>{t('filters')}</button>
         <select name="type" id="type" onChange={onTypeChange} value={type} title={t('searchType.searchType')} aria-label={t('searchType.searchType')}>
@@ -265,7 +265,7 @@ function SearchForm({status, postToWorker, terminateWorker}: {status: Status, po
         </div>
       </div>
     </div>
-    <SearchFilters filtersVisible={filtersVisible} collections={collections} setCollections={setCollections} languages={languages} setLanguages={setLanguages} />
+    { filters }
   </form>;
 }
 
