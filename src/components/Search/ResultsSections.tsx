@@ -121,7 +121,7 @@ function ResultsSection(params: ResultsSectionParams) {
       default:        status satisfies never;
     }
   }, [status, start, end, richText]);
-  return (
+  return table && (
     <section id={`results-section${index}`} className='results-section'>
       { header && <h2>{header}</h2> }
       { table }
