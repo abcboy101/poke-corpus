@@ -171,7 +171,7 @@ function Results({status, progress, results, showId = true, richText = true, lim
   return (
     <>
       <div className="results-status">
-        { !inProgress && headers.length > 1 ? <JumpToSelect headers={headers} /> : <div className="results-status-text">{resultsStatusText}</div> }
+        { !inProgress && headers.filter((header) => header !== undefined).length > 1 ? <JumpToSelect headers={headers} /> : <div className="results-status-text">{resultsStatusText}</div> }
         <Spinner src="logo.svg" active={inProgress}/>
         { !inProgress && count > limit ? <ResultsNav count={count} offset={offset} limit={limit} setOffset={setOffset} /> : <ProgressBar progress={progress} /> }
         { resultsToggle }
