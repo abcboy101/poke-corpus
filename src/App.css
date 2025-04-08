@@ -22,7 +22,7 @@
   --version-sapphire-color: light-dark(#28356D, #818FC6);
   --version-scarlet-color: light-dark(#9E2A22, #F7837B);
   --version-violet-color: light-dark(#552277, #AE7BD0);
-  --modal-backdrop-color: light-dark(rgba(255 255 255 / 75%), rgba(0 0 0 / 75%));
+  --modal-backdrop-color: light-dark(rgb(255 255 255 / 75%), rgb(0 0 0 / 75%));
 }
 
 @media screen {
