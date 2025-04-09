@@ -123,6 +123,7 @@
     background: linear-gradient(to bottom, var(--top), var(--bottom));
     background-clip: text;
     color: transparent;
+    filter: drop-shadow(0 0 color-mix(in oklab, var(--top), var(--bottom)));
   }
 }
 
