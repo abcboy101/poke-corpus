@@ -188,7 +188,7 @@ const replaceHindi: Record<string, string> = {
   '\uF565': 'हू', // hū
 };
 
-function preprocessHindi(value: string, fixMalformed = true) {
+export function preprocessHindi(value: string, fixMalformed = true) {
   // Perform all simple mappings
   value = value.replace(/\u094D/gu, '\u094D\u200C'); // explicit halant
   value = value.replace(/\u093F/gu, SHORT_I); // short i
@@ -274,7 +274,7 @@ const replaceThai: Record<string, string> = {
   '\uF717': '\u0E4C', // thanthakhat (silent letter)
 };
 
-function preprocessThai(s: string) {
+export function preprocessThai(s: string) {
   return s.replace(/[\uF700-\uF71A]/gu, (c) => replaceThai[c] ?? c);
 }
 //#endregion
