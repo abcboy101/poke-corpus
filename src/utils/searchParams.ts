@@ -24,17 +24,16 @@ export interface SearchParams {
   readonly languages: readonly LanguageKey[],
 }
 
-export type SearchTaskParams = SearchParams;
-
-export interface SearchParamsURLOnly {
+interface SearchParamsURLOnly {
   readonly id: string,
   readonly file: string,
   readonly run: boolean,
 }
 
-type SearchSettings = Omit<SearchParams, 'query'> & Partial<Pick<SearchParamsURLOnly, 'run'>>;
+interface SearchParamsURL extends SearchParams, Partial<SearchParamsURLOnly> {}
+interface SearchSettings extends Omit<SearchParams, 'query'>, Partial<Pick<SearchParamsURLOnly, 'run'>> {}
 
-export const defaultSearchParams: SearchParams & SearchParamsURLOnly = {
+export const defaultSearchParams: Required<SearchParamsURL> = {
   id: '',
   file: '',
   query: '',
@@ -53,7 +52,7 @@ export const defaultSearchParams: SearchParams & SearchParamsURLOnly = {
  * Converts a SearchParams object to a URL hash.
  * If the parameter is invalid or missing, that field will be undefined.
  */
-export function searchParamsToQueryString(params: SearchParams & Partial<SearchParamsURLOnly>) {
+export function searchParamsToQueryString(params: SearchParamsURL) {
   const urlOnlyString: Record<string, string> = {};
   if (params.id !== undefined)
     urlOnlyString.id = params.id;
@@ -78,7 +77,7 @@ export function searchParamsToQueryString(params: SearchParams & Partial<SearchP
  * Converts a URL hash to a valid, possibly partial SearchParams object.
  * If the parameter is invalid or missing, that field will be undefined.
  */
-export function queryStringToSearchParams(hash: string): Partial<SearchParams & SearchParamsURLOnly> {
+export function queryStringToSearchParams(hash: string): Partial<SearchParamsURL> {
   const params: URLSearchParams = new URLSearchParams(hash);
   return {
     id: asOptionalString(params.get('id')),
@@ -190,7 +189,7 @@ const atobUrlSafe = (s: string) => Uint8Array.from(atob(s.replaceAll('_', '/').r
 /**
  * Converts a SearchParams object to a short URL hash.
  */
-export function searchParamsToBase64(params: SearchParams & Partial<SearchParamsURLOnly>) {
+export function searchParamsToBase64(params: SearchParamsURL) {
   const urlOnlyString: Record<string, string> = {};
   if (params.id !== undefined)
     urlOnlyString.id = params.id;
@@ -209,9 +208,9 @@ export function searchParamsToBase64(params: SearchParams & Partial<SearchParams
 /**
  * Converts a short URL hash to a valid SearchParams object.
  */
-export function base64ToSearchParams(hash: string): Partial<SearchParams & SearchParamsURLOnly> {
+export function base64ToSearchParams(hash: string): Partial<SearchParamsURL> {
   const searchParams: URLSearchParams = new URLSearchParams(hash);
-  const stringParams: Partial<SearchParams & SearchParamsURLOnly> = {
+  const stringParams: Partial<SearchParamsURL> = {
     id: asOptionalString(searchParams.get('id')),
     file: asOptionalString(searchParams.get('file')),
     query: asOptionalString(searchParams.get('q')),
@@ -405,7 +404,7 @@ function cryptBytes(initial: number, bytes: Uint8Array, start = 1) {
 const mcgAdvance = (state: number) => (0x93D765DD * state) & 0xFFFFFFFF;
 const lcgAdvance = (state: number) => ((0x915F77F5 * state) + 0x9E3779B9) & 0xFFFFFFFF;
 
-export function searchParamsToHash(params: SearchParams & Partial<SearchParamsURLOnly>) {
+export function searchParamsToHash(params: SearchParamsURL) {
   return (localStorageGetItem('corpus-longURL') === 'true' ? searchParamsToQueryString : searchParamsToBase64)(params);
 }
 export function hashToSearchParams(hash: string) {

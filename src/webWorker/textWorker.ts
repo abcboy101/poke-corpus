@@ -9,16 +9,16 @@ export interface TextTask extends SearchTaskResultLines {
   readonly richText: boolean,
 }
 
-export type TextResult = TextTask | TextTask & {
-  error: true,
-};
+export interface TextResult extends TextTask {
+  readonly error?: true,
+}
 
 self.onmessage = (task: MessageEvent<TextTask>) => {
   try {
     const {collection, languages, richText, speakers, literals, lines} = task.data;
     const hasSpeakers = corpus.collections[collection].speaker !== undefined;
     const replaceLiterals = replaceLiteralsFactory(literals, languages.indexOf(codeId), collection, languages, corpus.collections[collection].literals);
-    const result: TextTask = {
+    const result: TextResult = {
       ...task.data,
       lines: lines.map((row) => row.map((s, j) => {
         if (richText) {

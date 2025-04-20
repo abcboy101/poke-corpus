@@ -2,7 +2,7 @@ import 'compression-streams-polyfill';
 import { corpusEntries, codeId, isLanguageKey, CollectionKey, LanguageKey, FileKey } from '../utils/corpus';
 import { getCache, getFile, getFilePath, getFileRemote, getIndexedDB } from '../utils/files';
 import SearchWorker from "./searchWorker.ts?worker";
-import { SearchTaskParams } from '../utils/searchParams';
+import { SearchParams } from '../utils/searchParams';
 import { SearchTask, SearchTaskResult, SearchTaskResultComplete } from './searchWorker';
 import { SearchResultsInProgress, SearchResultsComplete, SearchResultsStatus } from '../utils/Status';
 import { isBooleanQueryValid, parseWhereClause } from './searchBoolean';
@@ -24,7 +24,7 @@ interface SearchManagerStatus {
   readonly showId: boolean,
 }
 
-type SearchManagerStatusWithResult = SearchManagerStatus & Omit<SearchTaskResultComplete, "status">;
+interface SearchManagerStatusWithResult extends SearchManagerStatus, Omit<SearchTaskResultComplete, "status"> {}
 
 export type SearchManagerResponse = SearchManagerStatus | SearchManagerStatusWithResult;
 
@@ -94,7 +94,7 @@ const loadFile = async (collectionKey: CollectionKey, languageKey: LanguageKey, 
   return text;
 };
 
-self.onmessage = async (message: MessageEvent<SearchTaskParams>) => {
+self.onmessage = async (message: MessageEvent<SearchParams>) => {
   const params = message.data;
   self.memoryCache ??= new Map();
 

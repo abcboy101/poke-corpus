@@ -7,7 +7,7 @@ import Delete from "./Delete";
 
 import corpus, { corpusEntries, corpusKeys, CollectionKey, FileKey, LanguageKey } from '../../utils/corpus';
 import { clearLocalFileInfo, deleteLocalFileInfo, getAllLocalFilePaths, getCache, getDownloadSizeTotal, getFileCacheOnly, getFilePath, getIndexedDB } from '../../utils/files';
-import { formatBytesParams } from "../../utils/utils";
+import { formatBytes } from "../../utils/utils";
 import { ShowModal } from '../Modal';
 import ProgressBar from "../ProgressBar";
 import './CacheManager.css';
@@ -17,7 +17,7 @@ type CachedFileInfoEntry = readonly [readonly [CollectionKey, LanguageKey, FileK
 
 function CacheStatus({cacheStorageEnabled, cachedFileInfo}: {cacheStorageEnabled: boolean, cachedFileInfo: readonly CachedFileInfoEntry[]}) {
   const { t } = useTranslation();
-  const storageUsedAmount = useMemo(() => formatBytesParams(cachedFileInfo.reduce((acc, [, size]) => acc + size, 0)), [cachedFileInfo]);
+  const storageUsedAmount = useMemo(() => formatBytes(cachedFileInfo.reduce((acc, [, size]) => acc + size, 0)), [cachedFileInfo]);
   return (
     <ul>
       <li>{t('cache.storageStatus', {val: t(cacheStorageEnabled ? 'cache.storageEnabled' : 'cache.storageDisabled')})}</li>
@@ -34,8 +34,8 @@ function CacheProgress({loadedBytes, totalBytes, progress}: {loadedBytes: number
       {
         t('cache.loading', {
           message: t('cache.inProgress'),
-          loaded: t('cache.size', formatBytesParams(loadedBytes)),
-          total: t('cache.size', formatBytesParams(totalBytes)),
+          loaded: t('cache.size', formatBytes(loadedBytes)),
+          total: t('cache.size', formatBytes(totalBytes)),
         })
       }
       <ProgressBar progress={progress}/>
@@ -64,7 +64,7 @@ function CacheEntryList({cachedFileInfo, cacheCollections, clearCachedFile}: {ca
           <div key={index} className={`cache-entry cache-entry-${current ? 'current' : 'outdated'}`}>
             <div className="cache-entry-text">
               <div><abbr title={t(`collections:${key}.name`)}>{t(`collections:${key}.short`)}</abbr></div>
-              <div>{t('cache.size', formatBytesParams(size))}</div>
+              <div>{t('cache.size', formatBytes(size))}</div>
             </div>
             <div className="cache-entry-actions">
               { !current && <Refresh callback={() => { cacheCollections(key); }}/> }
@@ -93,7 +93,7 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
   };
 
   const onMessage = (e: MessageEvent<CacheManagerResult>) => {
-    const [status, loadedBytes, totalBytes, collectionKey] = e.data;
+    const { status, loadedBytes, totalBytes, params  } = e.data;
     setProgress(loadedBytes / totalBytes);
     setLoadedBytes(loadedBytes);
     setTotalBytes(totalBytes);
@@ -112,7 +112,7 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
     workerRef.current?.terminate();
     workerRef.current = null;
     setCacheInProgress(false);
-    checkCachedFiles(collectionKey);
+    checkCachedFiles(params);
   };
 
   const cacheCollections = useCallback((collectionKey: CacheManagerParams = null) => {
@@ -249,7 +249,7 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
   const cacheAllModal = () => {
     getDownloadSizeTotal(corpusKeys).then((size) => {
       showModal({
-        message: t('cache.cacheAllModal.message', formatBytesParams(size)),
+        message: t('cache.cacheAllModal.message', formatBytes(size)),
         buttons: [
           {
             message: t('cache.cacheAllModal.buttons.yes'),

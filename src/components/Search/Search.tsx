@@ -5,15 +5,15 @@ import SearchWorkerManager from '../../webWorker/searchWorkerManager.ts?worker';
 import TextWorker from '../../webWorker/textWorker.ts?worker';
 import { SearchParams } from '../../utils/searchParams';
 import { SearchManagerResponse } from '../../webWorker/searchWorkerManager';
-import { Status, statusError, statusInProgress } from '../../utils/Status';
+import { isStatusError, isStatusInProgress, Status } from '../../utils/Status';
 import SearchForm from './SearchForm';
 import Results from './Results';
 import { ShowModal } from '../Modal';
 
 import '../../i18n/config';
-import { formatBytesParams, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
+import { formatBytes, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
 import { getDownloadSizeTotal } from '../../utils/files';
-import { TextResult } from '../../webWorker/textWorker';
+import { TextResult, TextTask } from '../../webWorker/textWorker';
 import { Result, ParamsResult, initialResult } from '../../utils/searchResults';
 import { SearchTaskResultLines } from '../../webWorker/searchWorker';
 
@@ -50,7 +50,7 @@ function Search({showModal, richText, limit}: {showModal: ShowModal, richText: b
 
   const onText = (e: MessageEvent<TextResult>) => {
     addResult(e.data.index, {status: 'done', params: e.data, richText: e.data.richText});
-    if ('error' in e.data) {
+    if (e.data.error) {
       showModal({
         message: t(`statusModal.error`),
         buttons: [{message: t('statusModal.buttons.ok'), autoFocus: true}],
@@ -64,7 +64,7 @@ function Search({showModal, richText, limit}: {showModal: ShowModal, richText: b
       textWorker.current = new TextWorker();
       textWorker.current.addEventListener("message", onText);
     }
-    textWorker.current.postMessage({...params, index, richText: richTextRef.current});
+    textWorker.current.postMessage({...params, index, richText: richTextRef.current} satisfies TextTask);
   };
 
   const onMessage = (e: MessageEvent<SearchManagerResponse>) => {
@@ -82,7 +82,7 @@ function Search({showModal, richText, limit}: {showModal: ShowModal, richText: b
         postText(index, params);
       }
     }
-    if (e.data.complete && statusError.includes(e.data.status)) {
+    if (e.data.complete && isStatusError(e.data.status)) {
       showModal({
         message: t(`statusModal.${e.data.status}`),
         buttons: [{message: t('statusModal.buttons.ok'), autoFocus: true}],
@@ -139,7 +139,7 @@ function Search({showModal, richText, limit}: {showModal: ShowModal, richText: b
       }
 
       showModal({
-        message: t('searchModal.message', formatBytesParams(size)),
+        message: t('searchModal.message', formatBytes(size)),
         checkbox: {
           message: t('searchModal.checkboxDoNotShowAgain'),
           checked: false,
@@ -166,7 +166,7 @@ function Search({showModal, richText, limit}: {showModal: ShowModal, richText: b
     });
   }, []);
 
-  const inProgress = statusInProgress.includes(status);
+  const inProgress = isStatusInProgress(status);
   const waiting = status === 'waiting';
   const searchForm = useMemo(() => (
     <SearchForm inProgress={inProgress} waiting={waiting} postToWorker={postToWorkerModal} terminateWorker={terminateWorker} />

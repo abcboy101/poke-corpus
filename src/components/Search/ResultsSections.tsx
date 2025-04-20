@@ -32,13 +32,13 @@ function Actions({id}: {id: string}) {
 }
 
 interface ResultsTableParams extends Omit<SearchTaskResultLines, 'speakers' | 'literals'> {
-  index: number,
-  start: number,
-  end: number,
-  showId: boolean,
-  richText: boolean,
-  sectionOffset: number,
-  onShowSection: ShowSectionCallback,
+  readonly index: number,
+  readonly start: number,
+  readonly end: number,
+  readonly showId: boolean,
+  readonly richText: boolean,
+  readonly sectionOffset: number,
+  readonly onShowSection: ShowSectionCallback,
 }
 
 function ResultsTable({index, collection, file, languages, lines, start, end, showId, richText, sectionOffset, onShowSection}: ResultsTableParams) {
@@ -102,11 +102,10 @@ function ResultsTable({index, collection, file, languages, lines, start, end, sh
 
 export type ShowSectionCallback = (offset: number, index: number) => () => void;
 
-interface ResultsSectionParams extends Omit<ResultsTableParams, 'start' | 'end'> {
-  status: ParamsResult['status'],
-  header: SectionHeader,
-  offset: number,
-  limit: number,
+interface ResultsSectionParams extends Omit<ResultsTableParams, 'start' | 'end'>, Pick<ParamsResult, 'status'> {
+  readonly header: SectionHeader,
+  readonly offset: number,
+  readonly limit: number,
 }
 
 function ResultsSection(params: ResultsSectionParams) {
@@ -135,9 +134,9 @@ type ResultsSectionsParamsPassed = (
 );
 
 interface ResultsSectionsParams extends Omit<ResultsSectionsParamsPassed, 'richText'> {
-  results: readonly Result[],
-  headers: readonly SectionHeader[],
-  jumpTo: (n: number) => void,
+  readonly results: readonly Result[],
+  readonly headers: readonly SectionHeader[],
+  readonly jumpTo: (n: number) => void,
 }
 
 /** Results section, including its header. */

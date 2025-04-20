@@ -3,7 +3,7 @@ import { codeId, Speaker, Literals, CollectionKey, FileKey, LanguageKey } from '
 import { SearchTaskResultDone, SearchTaskResultNotDone } from '../utils/Status';
 import { parseWhereClause, isBooleanQueryValid, getMatchConditionBoolean } from './searchBoolean';
 import { extractSpeakers } from '../utils/speaker';
-import { SearchParams, SearchTaskParams } from '../utils/searchParams';
+import { SearchParams } from '../utils/searchParams';
 import { getMatchConditionAll, getMatchConditionExact, getMatchConditionRegex, MatchCondition } from './searchCondition';
 
 export type WhereCondition = (i: number) => boolean;
@@ -11,7 +11,7 @@ export type WhereConditionFactory = (fileData: readonly string[][], languageKeys
 
 export interface SearchTask {
   readonly index: number,
-  readonly params: SearchTaskParams,
+  readonly params: SearchParams,
   readonly collectionKey: CollectionKey,
   readonly fileKey: FileKey,
   readonly languages: readonly LanguageKey[],

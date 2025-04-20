@@ -1,3 +1,5 @@
+export type ReadonlyExhaustiveArray<A extends readonly unknown[], T extends A[number]> = readonly T[];
+
 export const escapeRegex = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/gu, '\\$&');
 
 /* Wrappers for localStorage access, in case localStorage is blocked. */
@@ -20,13 +22,13 @@ export function localStorageSetItem(key: string, value: string) {
 }
 
 export const modes = ['system', 'light', 'dark'] as const;
-export type Mode = (typeof modes)[number];
+export type Mode = typeof modes[number];
 export const isMode = (s: string): s is Mode => modes.some((mode) => s === mode);
 const asValidMode = (s: unknown) => (typeof s === 'string' && isMode(s)) ? s : 'system';
 export const getMode = (): Mode => asValidMode(localStorageGetItem('mode'));
 
 export const defaultLimit = 500;
-export const isValidLimit = (n: unknown) => (typeof n === 'number' && !Number.isNaN(n) && Number.isInteger(n) && n > 0);
+export const isValidLimit = (n: number) => (!Number.isNaN(n) && Number.isInteger(n) && n > 0);
 export const getLimit = () => {
   const value = +(localStorageGetItem('corpus-limit') ?? defaultLimit);
   return Number.isNaN(value) ? defaultLimit : value;
@@ -35,8 +37,8 @@ export const getRichText = () => localStorageGetItem('corpus-richText') !== 'fal
 
 /* Generate appropriate i18n number format options for n bytes */
 const byteUnits = ['byte', 'kilobyte', 'megabyte', 'gigabyte', 'terabyte', 'petabyte'] as const;
-export function formatBytes(n: number) {
-  const index = Math.min(Math.floor((n.toString().length - 1) / 3), byteUnits.length - 1);
+export function formatBytes(size: number) {
+  const index = Math.min(Math.floor((size.toString().length - 1) / 3), byteUnits.length - 1);
   const format: Intl.NumberFormatOptions = {
     style: 'unit',
     unit: byteUnits[index],
@@ -46,26 +48,16 @@ export function formatBytes(n: number) {
     maximumSignificantDigits: 3,
     roundingPriority: 'lessPrecision',
   };
-  return [n / Math.pow(1000, index), format] as const;
+  return {amount: size / Math.pow(1000, index), formatParams: {amount: format}};
 }
 
-export function formatBytesParams(size: number) {
-  const [amount, format] = formatBytes(size);
-  return {amount: amount, formatParams: {amount: format}};
-}
-
-export function formatPercent(n: number, fractionDigits = 1) {
+export function formatPercent(amount: number, fractionDigits = 1) {
   const format: Intl.NumberFormatOptions = {
     style: 'percent',
     minimumFractionDigits: fractionDigits,
     maximumFractionDigits: fractionDigits,
   };
-  return [n, format] as const;
-}
-
-export function formatPercentParams(size: number, fractionDigits = 1) {
-  const [amount, format] = formatPercent(size, fractionDigits);
-  return {amount: amount, formatParams: {amount: format}};
+  return {amount, formatParams: {amount: format}};
 }
 
 /** Checks if a regex is valid. */

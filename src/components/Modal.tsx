@@ -2,24 +2,24 @@ import { ReactNode, useEffect, useRef, useState } from 'react';
 import './Modal.css';
 
 interface ModalButton {
-  message: ReactNode,
-  callback?: () => void,
-  checkboxCallback?: (checked: boolean) => void,
-  autoFocus?: boolean,
+  readonly message: ReactNode,
+  readonly callback?: () => void,
+  readonly checkboxCallback?: (checked: boolean) => void,
+  readonly autoFocus?: boolean,
 }
 
 interface ModalCheckbox {
-  message: ReactNode,
-  checked: boolean,
+  readonly message: ReactNode,
+  readonly checked: boolean,
 }
 
-export type ModalArguments = Partial<{
-  classes: readonly string[],
-  message: ReactNode,
-  buttons: readonly ModalButton[],
-  checkbox: ModalCheckbox,
-  cancelCallback: () => void,
-}>;
+export interface ModalArguments {
+  readonly classes?: readonly string[],
+  readonly message?: ReactNode,
+  readonly buttons?: readonly ModalButton[],
+  readonly checkbox?: ModalCheckbox,
+  readonly cancelCallback?: () => void,
+}
 
 export type ShowModal = (args: ModalArguments) => void;
 

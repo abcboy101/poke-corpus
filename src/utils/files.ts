@@ -108,7 +108,10 @@ export const getFileRemote = (path: string) => {
 };
 
 //#region Indexed DB/FileInfo
-interface FileInfo {hash: string, size: number}
+interface FileInfo {
+  readonly hash: string,
+  readonly size: number,
+}
 const isFileInfo = (o: unknown): o is FileInfo => o !== null && typeof o === 'object' && 'hash' in o && typeof o.hash === 'string' && 'size' in o && typeof o.size === 'number';
 
 export type Files = Record<string, FileInfo>;

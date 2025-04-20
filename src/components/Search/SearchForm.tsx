@@ -2,10 +2,10 @@ import { ChangeEventHandler, FormEventHandler, MouseEventHandler, useCallback, u
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { SearchTaskParams, searchTypes, isSearchType, searchParamsToHash, hashToSearchParams, defaultSearchParams } from '../../utils/searchParams';
+import { SearchParams, searchTypes, isSearchType, searchParamsToHash, hashToSearchParams, defaultSearchParams } from '../../utils/searchParams';
 import { corpus, codeId, corpusKeys } from '../../utils/corpus';
 import SearchFilters from './SearchFilters';
-import { escapeRegex, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
+import { escapeRegex, ReadonlyExhaustiveArray, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
 
 import './SearchForm.css';
 import '../../i18n/config';
@@ -52,9 +52,10 @@ const searchTypesDropdown = [
   searchTypes[0], // exact
   searchTypes[1], // regex
   searchTypes[2], // boolean
-];
+] as const;
+searchTypesDropdown satisfies ReadonlyExhaustiveArray<typeof searchTypesDropdown, typeof searchTypes[number]>;
 
-function SearchForm({waiting, inProgress, postToWorker, terminateWorker}: {waiting: boolean, inProgress: boolean, postToWorker: (params: SearchTaskParams) => void, terminateWorker: () => void}) {
+function SearchForm({waiting, inProgress, postToWorker, terminateWorker}: {waiting: boolean, inProgress: boolean, postToWorker: (params: SearchParams) => void, terminateWorker: () => void}) {
   const { t } = useTranslation();
   const initial = useMemo(getSavedParamsPreferences, []);
   const [id, setId] = useState(initial.id);
@@ -164,7 +165,7 @@ function SearchForm({waiting, inProgress, postToWorker, terminateWorker}: {waiti
 
   useEffect(() => {
     if (run) {
-      const params: SearchTaskParams = {
+      const params: SearchParams = {
         query: query,
         type: type,
         caseInsensitive: caseInsensitive,
@@ -194,7 +195,7 @@ function SearchForm({waiting, inProgress, postToWorker, terminateWorker}: {waiti
       setFiltersVisible(false);
     }
 
-    const params: SearchTaskParams = {
+    const params: SearchParams = {
       query: query,
       type: type,
       caseInsensitive: caseInsensitive,

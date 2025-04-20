@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import Spinner from './Spinner';
 import ProgressBar from '../ProgressBar';
 import NoScript from './NoScript';
-import { Status, statusInProgress } from '../../utils/Status';
+import { isStatusInProgress, Status } from '../../utils/Status';
 
 import './Results.css';
 import '../../i18n/config';
@@ -52,15 +52,15 @@ function ResultsNav({count, offset, limit, setOffset}: {count: number, offset: n
 }
 
 interface ResultsPreferences {
-  showVariables: number,
-  showAllCharacters: boolean,
-  showGender: number,
-  showPlural: number,
-  showGrammar: boolean,
-  showFurigana: boolean,
+  readonly showVariables: number,
+  readonly showAllCharacters: boolean,
+  readonly showGender: number,
+  readonly showPlural: number,
+  readonly showGrammar: boolean,
+  readonly showFurigana: boolean,
 }
 
-const defaultResultsPreferences: Readonly<ResultsPreferences> = {
+const defaultResultsPreferences: ResultsPreferences = {
   showVariables: 0, // short
   showAllCharacters: false,
   showGender: 2, // all forms
@@ -166,7 +166,7 @@ function Results({status, progress, results, showId = true, richText = true, lim
     });
   }, [results, headers, showId, offset, limit, onShowSection, jumpTo]);
 
-  const inProgress = statusInProgress.includes(status);
+  const inProgress = isStatusInProgress(status);
   const classes = `app-window variables-${['short', 'show', 'hide'][showVariables]} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural} grammar-${showGrammar ? 'show' : 'hide'} furigana-${showFurigana ? 'show' : 'hide'}`;
   return (
     <>

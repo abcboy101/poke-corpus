@@ -9,14 +9,19 @@ import './Options.css';
 import supportedLngs from '../i18n/supportedLngs.json';
 
 interface OptionsParams {
-  showModal: ShowModal,
-  richText: boolean,
-  setRichText: Dispatch<SetStateAction<boolean>>,
-  limit: number,
-  setLimit: Dispatch<SetStateAction<number>>,
+  readonly showModal: ShowModal,
+  readonly richText: boolean,
+  readonly setRichText: Dispatch<SetStateAction<boolean>>,
+  readonly limit: number,
+  readonly setLimit: Dispatch<SetStateAction<number>>,
 }
 
-function OptionsMenu({showModal, richText, richTextRef, limit, limitRef}: OptionsParams & {richTextRef: RefObject<HTMLSelectElement | null>, limitRef: RefObject<HTMLInputElement | null>}) {
+interface OptionsMenuParams extends OptionsParams {
+  readonly richTextRef: RefObject<HTMLSelectElement | null>,
+  readonly limitRef: RefObject<HTMLInputElement | null>,
+}
+
+function OptionsMenu({showModal, richText, richTextRef, limit, limitRef}: OptionsMenuParams) {
   const { t } = useTranslation();
   const [mode, setMode] = useState<Mode>(getMode);
 

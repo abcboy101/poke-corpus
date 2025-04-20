@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 
 import './ProgressBar.css';
-import { formatPercentParams } from '../utils/utils';
+import { formatPercent } from '../utils/utils';
 
 function ProgressBar({progress}: {progress: number}) {
   const { t } = useTranslation();
@@ -10,7 +10,7 @@ function ProgressBar({progress}: {progress: number}) {
     <div className="progress-bar">
       <div className="progress-bar-complete" style={{width: `${percent}%`, maxWidth: percent === 0 ? 0 : undefined, visibility: percent === 0 ? 'hidden' : undefined}}></div>
     </div>
-    <div className="progress-bar-text">{t('progressBar.value', formatPercentParams(progress))}</div>
+    <div className="progress-bar-text">{t('progressBar.value', formatPercent(progress))}</div>
   </div>;
 }
 
