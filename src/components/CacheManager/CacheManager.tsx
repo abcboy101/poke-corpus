@@ -237,11 +237,11 @@ function CacheManager({active, showModal}: {active: boolean, showModal: ShowModa
   // Refresh on switch to cache manager
   useEffect(() => {
     if (active) {
-      Promise.all([
-        checkCacheStorageEnabled(),
-        checkCachedFilesAsync(),
-      ]).catch((err: unknown) => {
-        console.error(err);
+      startTransition(async () => {
+        await Promise.all([
+          checkCacheStorageEnabled(),
+          checkCachedFilesAsync(),
+        ]);
       });
     }
   }, [active]);

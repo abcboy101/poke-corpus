@@ -53,6 +53,7 @@ function App() {
   const [richText, setRichText] = useState(getRichText);
   const [limit, setLimit] = useState(getLimit);
   const [view, setView] = useState<View>('Search');
+  const [modalKey, setModalKey] = useState(0);
   const [modalArguments, setModalArguments] = useState<ModalArguments | null>(null);
   const [cacheManagerLoaded, setCacheManagerLoaded] = useState(false);
 
@@ -64,6 +65,7 @@ function App() {
 
   const showModal: ShowModal = useCallback((args) => {
     setModalArguments(args);
+    setModalKey((prev) => (prev + 1) & 0xFF);
   }, []);
 
   const switchView = useCallback(() => {
@@ -90,7 +92,7 @@ function App() {
         { cacheManager }
       </ErrorBoundary>
       <Footer view={view} switchView={switchView} />
-      <Modal {...modalArguments}/>
+      <Modal key={modalKey} {...modalArguments}/>
     </div>
   );
 }

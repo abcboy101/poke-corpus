@@ -141,12 +141,8 @@ function Results({status, progress, results, showId = true, richText = true, lim
   const count = useMemo(() => (
     results.reduce((acc, result) => acc + (result.status === 'initial' ? 0 : result.params.lines.length), 0)
   ), [results]);
-
-  useEffect(() => {
+  if (count < offset)
     setOffset((prev) => Math.min(prev, count));
-  }, [count]);
-
-  const resultsStatusText = t(import.meta.env.SSR ? 'status.loading' : `status.${status.split('.', 1)[0]}`);
 
   const resultsToggle = (
     <div className="results-toggle">
@@ -167,11 +163,16 @@ function Results({status, progress, results, showId = true, richText = true, lim
   }, [results, headers, showId, offset, limit, onShowSection, jumpTo]);
 
   const inProgress = isStatusInProgress(status);
+  const resultsStatusText = t(import.meta.env.SSR ? 'status.loading' : `status.${status.split('.', 1)[0]}`);
+  const statusBarLeft = useMemo(() => (
+    !inProgress && headers.filter((header) => header !== undefined).length > 1 ? <JumpToSelect headers={headers} /> : <div className="results-status-text">{resultsStatusText}</div>
+  ), [inProgress, headers]);
+
   const classes = `app-window variables-${['short', 'show', 'hide'][showVariables]} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural} grammar-${showGrammar ? 'show' : 'hide'} furigana-${showFurigana ? 'show' : 'hide'}`;
   return (
     <>
       <div className="results-status">
-        { !inProgress && headers.filter((header) => header !== undefined).length > 1 ? <JumpToSelect headers={headers} /> : <div className="results-status-text">{resultsStatusText}</div> }
+        { statusBarLeft }
         <Spinner src="logo.svg" active={inProgress}/>
         { !inProgress && count > limit ? <ResultsNav count={count} offset={offset} limit={limit} setOffset={setOffset} /> : <ProgressBar progress={progress} /> }
         { resultsToggle }

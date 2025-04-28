@@ -130,7 +130,7 @@ h1 a:hover, h1 a:active {
   float: right;
 }
 
-input[type="text"], input:not([type]), input[type="number"], select, select:focus, input[type="submit"], input[type="button"], button {
+input[type="text"], input:not([type]), input[type="number"], input[type="search"], select, select:focus, input[type="submit"], input[type="button"], button {
   font-family: inherit;
   font-size: inherit;
   background: var(--highlight);
@@ -170,7 +170,7 @@ button.link:hover, button.link:active, button.link:active:enabled {
   text-decoration: underline;
 }
 
-input[type="text"]:disabled, input:not([type]):disabled, input[type="number"]:disabled, select:disabled, input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled {
+input[type="text"]:disabled, input:not([type]):disabled, input[type="number"]:disabled, input[type="search"]:disabled, select:disabled, input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled {
   opacity: 0.7;
 }
 

@@ -3,7 +3,7 @@ import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { SearchParams, searchTypes, isSearchType, searchParamsToHash, hashToSearchParams, defaultSearchParams } from '../../utils/searchParams';
-import { corpus, codeId, corpusKeys } from '../../utils/corpus';
+import corpus, { codeId, corpusKeys, isCollectionKey, isLanguageKey } from '../../utils/corpus';
 import SearchFilters from './SearchFilters';
 import { escapeRegex, ReadonlyExhaustiveArray, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
 
@@ -16,9 +16,9 @@ const defaultParamsPreferences: typeof defaultSearchParams = {
   languages: userLanguage.length === 0 ? corpus.languages.filter((value) => value.startsWith('en')) : userLanguage,
 };
 
-// const isStringArray = (arr: unknown): arr is readonly string[] => {
-//   return Array.isArray(arr) && arr.every((value) => typeof value === 'string');
-// };
+const isStringArray = (arr: unknown): arr is readonly string[] => {
+  return Array.isArray(arr) && arr.every((value) => typeof value === 'string');
+};
 const getSavedParamsPreferences = () => {
   const saved = localStorageGetItem('corpus-params');
   if (saved === null)
@@ -27,9 +27,9 @@ const getSavedParamsPreferences = () => {
   const paramsDefault = {...defaultParamsPreferences};
   const params: unknown = JSON.parse(saved);
   if (typeof params === 'object' && params !== null) {
-    // if ('query' in params && typeof params.query === 'string')
-    //   paramsDefault.query = params.query;
-    if ('type' in params && typeof params.type === 'string' && isSearchType(params.type))
+    if ('query' in params && typeof params.query === 'string')
+      paramsDefault.query = params.query;
+    if ('type' in params && isSearchType(params.type))
       paramsDefault.type = params.type;
     if ('caseInsensitive' in params && typeof params.caseInsensitive === 'boolean')
       paramsDefault.caseInsensitive = params.caseInsensitive;
@@ -39,10 +39,10 @@ const getSavedParamsPreferences = () => {
       paramsDefault.script = params.script;
     if ('showAllLanguages' in params && typeof params.showAllLanguages === 'boolean')
       paramsDefault.showAllLanguages = params.showAllLanguages;
-    // if ('collections' in params && isStringArray(params.collections) && params.collections.every((collectionKey) => isCollectionKey(collectionKey)))
-    //   paramsDefault.collections = params.collections;
-    // if ('languages' in params && isStringArray(params.languages) && params.languages.every((languageKey) => isLanguageKey(languageKey)))
-    //   paramsDefault.languages = params.languages;
+    if ('collections' in params && isStringArray(params.collections) && params.collections.every((collectionKey) => isCollectionKey(collectionKey)))
+      paramsDefault.collections = params.collections;
+    if ('languages' in params && isStringArray(params.languages) && params.languages.every((languageKey) => isLanguageKey(languageKey)))
+      paramsDefault.languages = params.languages;
   }
   return paramsDefault;
 };
@@ -58,8 +58,6 @@ searchTypesDropdown satisfies ReadonlyExhaustiveArray<typeof searchTypesDropdown
 function SearchForm({waiting, inProgress, postToWorker, terminateWorker}: {waiting: boolean, inProgress: boolean, postToWorker: (params: SearchParams) => void, terminateWorker: () => void}) {
   const { t } = useTranslation();
   const initial = useMemo(getSavedParamsPreferences, []);
-  const [id, setId] = useState(initial.id);
-  const [file, setFile] = useState(initial.file);
   const [query, setQuery] = useState(initial.query);
   const [type, setType] = useState(initial.type);
   const [caseInsensitive, setCaseInsensitive] = useState(initial.caseInsensitive);
@@ -68,7 +66,6 @@ function SearchForm({waiting, inProgress, postToWorker, terminateWorker}: {waiti
   const [showAllLanguages, setShowAllLanguages] = useState(initial.showAllLanguages);
   const [collections, setCollections] = useState(initial.collections);
   const [languages, setLanguages] = useState(initial.languages);
-  const [run, setRun] = useState(initial.run);
   const [filtersVisible, setFiltersVisible] = useState(import.meta.env.SSR ? false : ((localStorageGetItem('corpus-filtersVisible') ?? (window.location.hash ? 'false' : 'true')) !== 'false'));
 
   const onHashChange = useCallback(() => {
@@ -76,10 +73,6 @@ function SearchForm({waiting, inProgress, postToWorker, terminateWorker}: {waiti
       return;
 
     const params = hashToSearchParams(window.location.hash.substring(1));
-    if (params.id !== undefined)
-      setId(params.id);
-    if (params.file !== undefined)
-      setFile(params.file);
     if (params.query !== undefined)
       setQuery(params.query);
     if (params.type !== undefined)
@@ -96,14 +89,56 @@ function SearchForm({waiting, inProgress, postToWorker, terminateWorker}: {waiti
       setCollections(params.collections);
     if (params.languages !== undefined)
       setLanguages(params.languages);
-    if (params.run !== undefined)
-      setRun(params.run);
+
+    if (params.id !== undefined && params.id !== '') {
+      const collectionId = params.id.split('.')[0];
+      postToWorker({
+        query: `^${escapeRegex(params.id)}$`,
+        type: 'regex',
+        caseInsensitive: false,
+        common: true,
+        script: true,
+        showAllLanguages: true,
+        collections: corpusKeys.filter((key) => corpus.collections[key].id === collectionId),
+        languages: [codeId],
+      });
+      return;
+    }
+    if (params.file !== undefined && params.file !== '') {
+      const collectionId = params.file.split('.')[0];
+      postToWorker({
+        query: `^${escapeRegex(params.file)}\\..*$`,
+        type: 'regex',
+        caseInsensitive: false,
+        common: true,
+        script: true,
+        showAllLanguages: true,
+        collections: corpusKeys.filter((key) => corpus.collections[key].id === collectionId),
+        languages: [codeId],
+      });
+      return;
+    }
+    if (params.run !== undefined && params.run) {
+      const searchParams = {
+        query: params.query ?? initial.query,
+        type: params.type ?? initial.type,
+        caseInsensitive: params.caseInsensitive ?? initial.caseInsensitive,
+        common: params.common ?? initial.common,
+        script: params.script ?? initial.script,
+        showAllLanguages: params.showAllLanguages ?? initial.showAllLanguages,
+        collections: params.collections ?? initial.collections,
+        languages: params.languages ?? initial.languages,
+      };
+      window.location.hash = searchParamsToHash(searchParams);
+      postToWorker(searchParams);
+      return;
+    }
 
     // If there's no saved preference, show filters if search can't be performed immediately
     if (localStorageGetItem('corpus-filtersVisible') === null) {
-      setFiltersVisible(!params.id && !params.file && !params.run && (!params.query || !params.collections || !params.languages));
+      setFiltersVisible(!params.query || !params.collections || !params.languages);
     }
-  }, []);
+  }, [postToWorker, initial]);
 
   useEffect(() => {
     // Initial page load
@@ -120,66 +155,9 @@ function SearchForm({waiting, inProgress, postToWorker, terminateWorker}: {waiti
 
   // Save preferences on change
   useEffect(() => {
-    localStorageSetItem('corpus-params', JSON.stringify({
-      type: type,
-      caseInsensitive: caseInsensitive,
-      common: common,
-      script: script,
-      showAllLanguages: showAllLanguages,
-    }));
-  }, [type, caseInsensitive, common, script, showAllLanguages]);
-
-  useEffect(() => {
-    if (id !== '') {
-      const collectionId = id.split('.')[0];
-      postToWorker({
-        query: `^${escapeRegex(id)}$`,
-        type: 'regex',
-        caseInsensitive: false,
-        common: true,
-        script: true,
-        showAllLanguages: true,
-        collections: corpusKeys.filter((key) => corpus.collections[key].id === collectionId),
-        languages: [codeId],
-      });
-      setId('');
-    }
-  }, [id, postToWorker]);
-
-  useEffect(() => {
-    if (file !== '') {
-      const collectionId = file.split('.')[0];
-      postToWorker({
-        query: `^${escapeRegex(file)}\\..*$`,
-        type: 'regex',
-        caseInsensitive: false,
-        common: true,
-        script: true,
-        showAllLanguages: true,
-        collections: corpusKeys.filter((key) => corpus.collections[key].id === collectionId),
-        languages: [codeId],
-      });
-      setFile('');
-    }
-  }, [file, postToWorker]);
-
-  useEffect(() => {
-    if (run) {
-      const params: SearchParams = {
-        query: query,
-        type: type,
-        caseInsensitive: caseInsensitive,
-        common: common,
-        script: script,
-        showAllLanguages: showAllLanguages,
-        collections: collections,
-        languages: languages,
-      };
-      window.location.hash = searchParamsToHash(params);
-      postToWorker(params);
-      setRun(false);
-    }
-  }, [run, postToWorker]);
+    const params: SearchParams = {query, type, caseInsensitive, common, script, showAllLanguages, collections, languages};
+    localStorageSetItem('corpus-params', JSON.stringify(params));
+  }, [query, type, caseInsensitive, common, script, showAllLanguages, collections, languages]);
 
   const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
@@ -195,16 +173,7 @@ function SearchForm({waiting, inProgress, postToWorker, terminateWorker}: {waiti
       setFiltersVisible(false);
     }
 
-    const params: SearchParams = {
-      query: query,
-      type: type,
-      caseInsensitive: caseInsensitive,
-      common: common,
-      script: script,
-      showAllLanguages: showAllLanguages,
-      collections: collections,
-      languages: languages,
-    };
+    const params: SearchParams = {query, type, caseInsensitive, common, script, showAllLanguages, collections, languages};
     window.location.hash = searchParamsToHash(params);
     postToWorker(params);
   };
@@ -237,7 +206,7 @@ function SearchForm({waiting, inProgress, postToWorker, terminateWorker}: {waiti
     <div className="search-bar">
       <div className="item-group">
         <label htmlFor="query">{t('query')}</label>
-        <input type="text" name="query" id="query" value={query} onChange={(e) => { setQuery(e.target.value); }}/>
+        <input type="search" name="query" id="query" value={query} onChange={(e) => { setQuery(e.target.value); }}/>
         <div className="btn-alternate-container">
           <input id="submit" type="submit" className={inProgress ? 'invisible' : 'visible'} value={t('search')} disabled={submitDisabled}/>
           <button type="button" className={inProgress ? 'visible' : 'invisible'} onClick={onCancel} disabled={!inProgress}>{t('cancel')}</button>

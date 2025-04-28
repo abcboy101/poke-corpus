@@ -24,17 +24,10 @@ export interface ModalArguments {
 export type ShowModal = (args: ModalArguments) => void;
 
 function Modal({classes, message, buttons, checkbox, cancelCallback}: ModalArguments) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(message !== undefined);
   const [checkboxChecked, setCheckboxChecked] = useState(checkbox?.checked ?? false);
   const modalRef = useRef<HTMLDialogElement>(null);
   const buttonsRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (message || buttons || checkbox) {
-      setOpen(true);
-      setCheckboxChecked(checkbox?.checked ?? false);
-    }
-  }, [message, buttons, checkbox]);
 
   useEffect(() => {
     const modal = modalRef.current;

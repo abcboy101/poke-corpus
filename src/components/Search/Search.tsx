@@ -117,6 +117,7 @@ function Search({showModal, richText, limit}: {showModal: ShowModal, richText: b
         searchWorkerManager.current = new SearchWorkerManager();
         searchWorkerManager.current.addEventListener("message", onMessage);
       }
+      setStatus('waiting');
       setProgress(0.0);
       if (import.meta.env.DEV) {
         console.log(params);
@@ -126,7 +127,6 @@ function Search({showModal, richText, limit}: {showModal: ShowModal, richText: b
   };
 
   const postToWorkerModal = useCallback((params: SearchParams) => {
-    setStatus('waiting');
     if (!showSearchModal.current) {
       postToWorker(params);
       return;
@@ -171,11 +171,14 @@ function Search({showModal, richText, limit}: {showModal: ShowModal, richText: b
   const searchForm = useMemo(() => (
     <SearchForm inProgress={inProgress} waiting={waiting} postToWorker={postToWorkerModal} terminateWorker={terminateWorker} />
   ), [inProgress, waiting, postToWorkerModal, terminateWorker]);
+  const searchResults = useMemo(() => (
+    <Results status={status} progress={progress} showId={showId} richText={richText} results={results} limit={limit} />
+  ), [status, progress, showId, richText, results, limit]);
 
   return (
     <div className="search">
       { searchForm }
-      <Results status={status} progress={progress} showId={showId} richText={richText} results={results} limit={limit} />
+      { searchResults }
     </div>
   );
 }
