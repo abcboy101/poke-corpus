@@ -63,8 +63,8 @@ function CacheEntryList({cachedFileInfo, cacheCollections, clearCachedFile}: {ca
         && fileInfoPerCollection.map(([key, size, current], index) =>
           <div key={index} className={`cache-entry cache-entry-${current ? 'current' : 'outdated'}`}>
             <div className="cache-entry-text">
-              <div><abbr title={t(`collections:${key}.name`)}>{t(`collections:${key}.short`)}</abbr></div>
-              <div>{t('cache.size', formatBytes(size))}</div>
+              <div><abbr title={t(`collections:${key}.name`)}><span translate="no">{t(`collections:${key}.short`)}</span></abbr></div>
+              <div translate="no">{t('cache.size', formatBytes(size))}</div>
             </div>
             <div className="cache-entry-actions">
               { !current && <Refresh callback={() => { cacheCollections(key); }}/> }
