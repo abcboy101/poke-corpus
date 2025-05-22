@@ -61,7 +61,7 @@ function OptionsMenu({showModal, richText, richTextRef, limit, limitRef}: Option
     <div className="options">
       <div className="options-grid">
         <label htmlFor="language">{t('options.language')}</label>
-        <select name="language" id="language" onChange={onChangeLanguage} defaultValue={i18next.language} autoFocus={true}>
+        <select name="language" id="language" onChange={onChangeLanguage} defaultValue={i18next.language} autoFocus={true} translate="no">
           {supportedLngs.map((lang) => <option key={lang.code} value={lang.code} lang={lang.code}>{lang.name}</option>)}
         </select>
 

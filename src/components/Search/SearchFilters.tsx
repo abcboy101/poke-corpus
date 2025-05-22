@@ -67,7 +67,7 @@ function SearchCollections({collections, languages, setCollections}: {collection
                 }
               }}/>
               <label htmlFor={`collection-${key}`} style={isFullwidth ? collectionLabelStyle(short) : undefined}>
-                { (name === short) ? name : <abbr title={name}>{short}</abbr> }
+                { (name === short) ? name : <abbr title={name}><span translate="no">{short}</span></abbr> }
               </label>
             </div>
           )
@@ -100,7 +100,7 @@ function SearchLanguages({collections, languages, setLanguages}: {collections: r
                 }
               }}/>
               <label htmlFor={`language-${key}`}>
-                <span className="search-language-code"><abbr title={name}>{code}</abbr></span>
+                <span className="search-language-code"><abbr title={name}><span translate="no">{code}</span></abbr></span>
                 <span className="search-language-name" style={isFullwidth ? collectionLabelStyle(name, 12) : collectionLabelStyle(name, 15)}>{name}</span>
               </label>
             </div>

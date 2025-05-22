@@ -22,7 +22,7 @@ function Rendering() {
 
 function Actions({id}: {id: string}) {
   return (
-    <td key="actions" className="results-table-actions-cell">
+    <td key="actions" className="results-table-actions-cell" translate="yes">
       <div className="results-table-actions">
         <Share hash={`#id=${id}`}/>
         <ViewNearby hash={`#file=${id.split('.').slice(0, -1).join('.')}`}/>
@@ -74,10 +74,10 @@ function ResultsTable({index, collection, file, languages, lines, start, end, sh
         <thead>
           <tr>
             {idIndex !== -1 && <th className="results-table-actions-cell"><Copy callback={copyOnClick}/></th> }
-            {languages.filter((lang) => showId || lang !== codeId).map((lang) => <th key={lang}><abbr title={t(`languages:${lang}.name`)}>{t(`languages:${lang}.code`)}</abbr></th>)}
+            {languages.filter((lang) => showId || lang !== codeId).map((lang) => <th key={lang}><abbr title={t(`languages:${lang}.name`)}><span translate="no">{t(`languages:${lang}.code`)}</span></abbr></th>)}
           </tr>
         </thead>
-        <tbody dir={sameDir && displayDirs[0] !== i18next.dir() ? displayDirs[0] : undefined}>
+        <tbody dir={sameDir && displayDirs[0] !== i18next.dir() ? displayDirs[0] : undefined} translate="no">
           {lines.map((row, i) => (start <= i && i < end) && (
             <tr key={i} data-id={idIndex !== -1 ? row[idIndex] : undefined}>
               {idIndex !== -1 && <Actions id={row[idIndex]}/> }

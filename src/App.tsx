@@ -39,11 +39,11 @@ function Footer({view, switchView}: {view: View, switchView: () => void}) {
   return (
     <footer>
       <span>{t('tagline')}</span>
-      <span className="separator"> | </span>
+      <span className="separator" translate="no"> | </span>
       <span>{t('footerText')}</span>
-      <span className="separator"> | </span>
+      <span className="separator" translate="no"> | </span>
       <span><button className="link" onClick={switchView}>{t(view !== 'Search' ? 'backToSearch' : 'manageCache')}</button></span>
-      <span className="separator"> | </span>
+      <span className="separator" translate="no"> | </span>
       <span><a href="https://github.com/abcboy101/poke-corpus">{t('github')}</a></span>
     </footer>
   );

@@ -50,6 +50,6 @@ export function expandSpeakers(s: string, collection: CollectionKey, language: L
       languages: [language],
       run: true,
     });
-    return `<a class="speaker" href="#${hash}" title="${viewSpeaker}">${speakerName}</a>`;
+    return `<a class="speaker" href="#${hash}" title="${viewSpeaker}" translate="yes"><span translate="no">${speakerName}</span></a>`;
   });
 };

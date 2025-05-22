@@ -146,12 +146,24 @@ function Results({status, progress, results, showId = true, richText = true, lim
 
   const resultsToggle = (
     <div className="results-toggle">
-      <button className={showVariables !== 2 ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowVariables((showVariables + 1) % 3); }} title={t('showVariables')}>{t('icons:showVariables', {context: showVariables})}</button>
-      <button className={showAllCharacters ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowAllCharacters(!showAllCharacters); }} title={t('showAllCharacters')}>{t('icons:showAllCharacters')}</button>
-      <button className={showGender !== 2 ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowGender((showGender + 1) % 3); }} title={t('showGender')}>{t('icons:showGender', {context: showGender})}</button>
-      <button className={showPlural !== 0 ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowPlural((showPlural + 1) % 3); }} title={t('showPlural')}>{t('icons:showPlural', {context: showPlural})}</button>
-      <button className={showGrammar ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowGrammar(!showGrammar); }} title={t('showGrammar')}>{t('icons:showGrammar')}</button>
-      <button className={showFurigana ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowFurigana(!showFurigana); }} title={t('showFurigana')}><span className='results-toggle-furigana'>{t('icons:showFurigana')}</span></button>
+      <button className={showVariables !== 2 ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowVariables((showVariables + 1) % 3); }} title={t('showVariables')}>
+        <span translate='no'>{t('icons:showVariables', {context: showVariables})}</span>
+      </button>
+      <button className={showAllCharacters ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowAllCharacters(!showAllCharacters); }} title={t('showAllCharacters')}>
+        <span translate='no'>{t('icons:showAllCharacters')}</span>
+      </button>
+      <button className={showGender !== 2 ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowGender((showGender + 1) % 3); }} title={t('showGender')}>
+        <span translate='no'>{t('icons:showGender', {context: showGender})}</span>
+      </button>
+      <button className={showPlural !== 0 ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowPlural((showPlural + 1) % 3); }} title={t('showPlural')}>
+        <span translate='no'>{t('icons:showPlural', {context: showPlural})}</span>
+      </button>
+      <button className={showGrammar ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowGrammar(!showGrammar); }} title={t('showGrammar')}>
+        <span translate='no'>{t('icons:showGrammar')}</span>
+      </button>
+      <button className={showFurigana ? 'button-square active' : 'button-square'} disabled={!richText} onClick={() => { setShowFurigana(!showFurigana); }} title={t('showFurigana')}>
+        <span className='results-toggle-furigana' translate='no'>{t('icons:showFurigana')}</span>
+      </button>
     </div>
   );
 
