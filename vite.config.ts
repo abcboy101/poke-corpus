@@ -34,7 +34,7 @@ export default defineConfig({
   base: '/poke-corpus/',
   plugins: [
     react(),
-    eslint(),
+    eslint({ cache: false }),
     stylelint(),
     VitePWA({
       registerType: 'autoUpdate',

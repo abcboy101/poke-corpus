@@ -9,8 +9,7 @@ import { isStatusInProgress, Status } from '../../utils/Status';
 
 import './Results.css';
 import '../../i18n/config';
-import { localStorageGetItem, localStorageSetItem } from '../../utils/utils';
-import { defaultLimit } from '../../utils/utils';
+import { defaultLimit, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
 import { ResultsSections, ShowSectionCallback } from './ResultsSections';
 import { Result, SectionHeader } from '../../utils/searchResults';
 

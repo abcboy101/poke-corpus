@@ -1,8 +1,9 @@
 import globals from "globals";
 import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
+import importPlugin from "eslint-plugin-import";
 import pluginReact from "eslint-plugin-react";
-import stylistic from '@stylistic/eslint-plugin';
+import stylistic from "@stylistic/eslint-plugin";
 import compat from "eslint-plugin-compat";
 
 export default [
@@ -30,11 +31,18 @@ export default [
   eslint.configs.recommended,
   ...tseslint.configs.strictTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
+  importPlugin.flatConfigs.recommended,
+  importPlugin.flatConfigs.typescript,
   pluginReact.configs.flat.recommended,
   {
     plugins: { "@stylistic": stylistic },
     rules: {
       "eqeqeq": ["error", "smart"],
+      "import/no-named-as-default-member": "off",
+      "import/no-unresolved": ["error", {
+        ignore: ['.+\?worker$', 'virtual:pwa-register', 'react-error-boundary'],
+      }],
+      "import/no-cycle": "error",
       "react/react-in-jsx-scope": "off",
       "@stylistic/indent": ["error", 2],
       "@stylistic/semi": "error",

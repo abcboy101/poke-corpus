@@ -2,7 +2,7 @@ import { CSSProperties, Dispatch, SetStateAction, useEffect, useRef } from 'reac
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { corpusKeys, CollectionKey, corpus, LanguageKey } from '../../utils/corpus';
+import corpus, { corpusKeys, CollectionKey, LanguageKey } from '../../utils/corpus';
 
 import './SearchFilters.css';
 import '../../i18n/config';

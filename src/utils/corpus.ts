@@ -75,7 +75,7 @@ Since these are not natural language, we use the language code "zxx" (not applic
 export const codeId = "qid";
 export const langId = "zxx";
 
-export const corpus: Corpus = corpusJson satisfies Corpus;
+const corpus: Corpus = corpusJson satisfies Corpus;
 export const corpusKeys = Object.keys(corpus.collections) as readonly CollectionKey[];
 export const corpusEntries = Object.entries(corpus.collections) as readonly [CollectionKey, Collection][];
 export const isCollectionKey = (s: string): s is CollectionKey => corpusKeys.some((collection) => s === collection);

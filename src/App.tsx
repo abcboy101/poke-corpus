@@ -3,8 +3,8 @@ import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { getLimit, getMode, getRichText } from './utils/utils';
-import Options from './components/Options.js';
-import Search from './components/Search/Search.js';
+import Options from './components/Options';
+import Search from './components/Search/Search';
 import Modal, { ModalArguments, ShowModal } from './components/Modal';
 
 import './App.css';
@@ -16,7 +16,7 @@ import ErrorWindow from './components/ErrorWindow';
 type View = 'Search' | 'CacheManager';
 
 // Allow these to be lazy-loaded so the page can be displayed first.
-const CacheManager = lazy(() => import('./components/CacheManager/CacheManager.js'));
+const CacheManager = lazy(() => import('./components/CacheManager/CacheManager'));
 
 function Header({showModal, richText, setRichText, limit, setLimit}: {showModal: ShowModal, richText: boolean, setRichText: Dispatch<SetStateAction<boolean>>, limit: number, setLimit: Dispatch<SetStateAction<number>>}) {
   const { t } = useTranslation();
