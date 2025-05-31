@@ -1,8 +1,8 @@
-import { Dispatch, lazy, SetStateAction, useCallback, useEffect, useState } from 'react';
+import { Dispatch, lazy, MouseEventHandler, SetStateAction, useCallback, useEffect, useState } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { getLimit, getMode, getRichText } from './utils/utils';
+import { getLimit, getMode, getRichText, localStorageRemoveItem } from './utils/utils';
 import Options from './components/Options';
 import Search from './components/Search/Search';
 import Modal, { ModalArguments, ShowModal } from './components/Modal';
@@ -14,16 +14,25 @@ import { ErrorBoundary } from 'react-error-boundary';
 import ErrorWindow from './components/ErrorWindow';
 
 type View = 'Search' | 'CacheManager';
+const initialView = 'Search';
 
 // Allow these to be lazy-loaded so the page can be displayed first.
 const CacheManager = lazy(() => import('./components/CacheManager/CacheManager'));
 
-function Header({showModal, richText, setRichText, limit, setLimit}: {showModal: ShowModal, richText: boolean, setRichText: Dispatch<SetStateAction<boolean>>, limit: number, setLimit: Dispatch<SetStateAction<number>>}) {
+function Header({showModal, richText, setRichText, limit, setLimit, setView, setAppKey}: {showModal: ShowModal, richText: boolean, setRichText: Dispatch<SetStateAction<boolean>>, limit: number, setLimit: Dispatch<SetStateAction<number>>, setView: Dispatch<SetStateAction<View>>, setAppKey: Dispatch<SetStateAction<number>>}) {
   const { t } = useTranslation();
+  const reset: MouseEventHandler<HTMLAnchorElement> = (e) => {
+    window.location.hash = '';
+    localStorageRemoveItem('corpus-params'); // clear saved search query
+    setView(initialView); // reset the view
+    setAppKey((prev) => (prev + 1) & 0xFF); // force re-render
+    e.preventDefault();
+  };
+
   return (
     <header className="header">
       <h1>
-        <a href="/poke-corpus/">
+        <a href="/poke-corpus/" onClick={reset}>
           <img className="header-logo" src="logo.svg" alt="" height="40" width="40" /> {t('title', {version: t('version')})}
         </a>
       </h1>
@@ -52,7 +61,8 @@ function Footer({view, switchView}: {view: View, switchView: () => void}) {
 function App() {
   const [richText, setRichText] = useState(getRichText);
   const [limit, setLimit] = useState(getLimit);
-  const [view, setView] = useState<View>('Search');
+  const [view, setView] = useState<View>(initialView);
+  const [appKey, setAppKey] = useState(0);
   const [modalKey, setModalKey] = useState(0);
   const [modalArguments, setModalArguments] = useState<ModalArguments | null>(null);
   const [cacheManagerLoaded, setCacheManagerLoaded] = useState(false);
@@ -85,8 +95,8 @@ function App() {
   if (!import.meta.env.SSR && /^((?!chrome|android).)*safari/i.test(navigator.userAgent))
     classes.push('ua-safari');
   return (
-    <div className={classes.join(' ')} lang={i18next.language} dir={i18next.dir()}>
-      <Header showModal={showModal} richText={richText} setRichText={setRichText} limit={limit} setLimit={setLimit} />
+    <div key={appKey} className={classes.join(' ')} lang={i18next.language} dir={i18next.dir()}>
+      <Header showModal={showModal} richText={richText} setRichText={setRichText} limit={limit} setLimit={setLimit} setView={setView} setAppKey={setAppKey} />
       <ErrorBoundary FallbackComponent={ErrorWindow}>
         <Search showModal={showModal} richText={richText} limit={limit}/>
         { cacheManager }

@@ -21,6 +21,15 @@ export function localStorageSetItem(key: string, value: string) {
   }
 }
 
+export function localStorageRemoveItem(key: string) {
+  try {
+    localStorage.removeItem(key);
+  }
+  catch {
+    return;
+  }
+}
+
 export const modes = ['system', 'light', 'dark'] as const;
 export type Mode = typeof modes[number];
 export const isMode = (s: string): s is Mode => modes.some((mode) => s === mode);
