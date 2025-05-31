@@ -9,7 +9,7 @@ import { isStatusInProgress, Status } from '../../utils/Status';
 
 import './Results.css';
 import '../../i18n/config';
-import { defaultLimit, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
+import { defaultLimit, localStorageGetItem, localStorageSetItem, parseJSONNullable } from '../../utils/utils';
 import { ResultsSections, ShowSectionCallback } from './ResultsSections';
 import { Result, SectionHeader } from '../../utils/searchResults';
 
@@ -74,7 +74,7 @@ const getSavedResultsPreferences = () => {
     return defaultResultsPreferences;
 
   const toggleDefault = {...defaultResultsPreferences};
-  const toggle: unknown = JSON.parse(saved);
+  const toggle = parseJSONNullable(saved);
   if (typeof toggle === 'object' && toggle !== null) {
     if ('showVariables' in toggle && typeof toggle.showVariables === 'number' && [0, 1, 2].includes(toggle.showVariables))
       toggleDefault.showVariables = toggle.showVariables;

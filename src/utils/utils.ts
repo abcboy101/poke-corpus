@@ -71,3 +71,14 @@ export function isValidRegex(pattern: string) {
   }
   return true;
 }
+
+/** Converts a JSON string to an object, or null if it is invalid JSON. */
+export function parseJSONNullable(text: string): unknown {
+  try {
+    return JSON.parse(text);
+  }
+  catch (err) {
+    console.error(err);
+    return null;
+  }
+}

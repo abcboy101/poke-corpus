@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { SearchParams, searchTypes, isSearchType, searchParamsToHash, hashToSearchParams, defaultSearchParams } from '../../utils/searchParams';
 import corpus, { codeId, corpusKeys, isCollectionKey, isLanguageKey } from '../../utils/corpus';
 import SearchFilters from './SearchFilters';
-import { escapeRegex, ReadonlyExhaustiveArray, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
+import { escapeRegex, ReadonlyExhaustiveArray, localStorageGetItem, localStorageSetItem, parseJSONNullable } from '../../utils/utils';
 
 import './SearchForm.css';
 import '../../i18n/config';
@@ -25,7 +25,7 @@ const getSavedParamsPreferences = () => {
     return defaultParamsPreferences;
 
   const paramsDefault = {...defaultParamsPreferences};
-  const params: unknown = JSON.parse(saved);
+  const params = parseJSONNullable(saved);
   if (typeof params === 'object' && params !== null) {
     if ('query' in params && typeof params.query === 'string')
       paramsDefault.query = params.query;
