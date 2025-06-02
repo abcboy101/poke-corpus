@@ -1,44 +1,51 @@
-import { CollectionKey, corpusEntries } from '../utils/corpus';
-import { getCache, getFile, getFilePath, getFileSize, getIndexedDB } from '../utils/files';
+import { CollectionKey, deserializeCorpus, SerializedCorpus } from '../utils/corpus';
+import { getLoader } from '../utils/loader';
 
+export type RequestedCollection = CollectionKey | 'cacheAll' | 'background';
 export type CacheManagerStatus = 'done' | 'error' | 'loading';
-export type CacheManagerParams = CollectionKey | null;
+export interface CacheManagerParams {
+  readonly serializedCorpus: SerializedCorpus,
+  readonly requestedCollection: RequestedCollection,
+};
 export interface CacheManagerResult {
   readonly status: CacheManagerStatus,
   readonly loadedBytes: number,
   readonly totalBytes: number,
-  readonly params: CacheManagerParams,
+  readonly requestedCollection: RequestedCollection,
 };
 
 self.onmessage = async (message: MessageEvent<CacheManagerParams>) => {
   const updateStatus = (result: CacheManagerResult) => { postMessage(result); };
-  const params = message.data;
+  const { serializedCorpus, requestedCollection } = message.data;
   try {
     if (import.meta.env.DEV) {
       console.debug('Caching worker started');
     }
 
+    // Deserialize corpus and loader
+    const corpus = deserializeCorpus(serializedCorpus);
+    const loader = getLoader(corpus);
+
     // Get the URLs of all the files to be cached
-    const collections = (params === null) ? corpusEntries
-      : corpusEntries.filter(([collectionKey]) => collectionKey === params);
+    const collections = (requestedCollection === 'cacheAll' || requestedCollection === 'background') ? corpus.entries
+      : corpus.entries.filter(([collectionKey]) => collectionKey === requestedCollection);
     const filePaths = collections.flatMap(([collectionKey, collection]) =>
       collection.files.flatMap((fileKey) => collection.languages.map((languageKey) =>
-        getFilePath(collectionKey, languageKey, fileKey)
+        loader.getFilePath(collectionKey, languageKey, fileKey)
       ))
     );
 
     // Calculate and report the total size in bytes
     let loadedBytes = 0;
-    const totalBytes = filePaths.reduce((acc, path) => acc + getFileSize(path), 0);
-    updateStatus({status: 'loading', loadedBytes, totalBytes, params});
+    const totalBytes = filePaths.reduce((acc, path) => acc + loader.getFileSize(path), 0);
+    updateStatus({status: 'loading', loadedBytes, totalBytes, requestedCollection});
 
     // Load the files and save them to the cache
-    const cache = await getCache();
-    const db = await getIndexedDB();
-    await Promise.all(filePaths.map((filePath) => getFile(cache, db, filePath)
+    const [cache, db] = await Promise.all([loader.getCache(), loader.getIndexedDB()] as const);
+    await Promise.all(filePaths.map((filePath) => loader.getFile(cache, db, filePath)
       .then(() => {
-        loadedBytes += getFileSize(filePath);
-        updateStatus({status: 'loading', loadedBytes, totalBytes, params});
+        loadedBytes += loader.getFileSize(filePath);
+        updateStatus({status: 'loading', loadedBytes, totalBytes, requestedCollection});
         if (import.meta.env.DEV) {
           console.debug(`Loaded ${loadedBytes}/${totalBytes}`);
         }
@@ -47,12 +54,12 @@ self.onmessage = async (message: MessageEvent<CacheManagerParams>) => {
     db.close();
 
     // Send results once all done
-    updateStatus({status: 'done', loadedBytes, totalBytes, params});
+    updateStatus({status: 'done', loadedBytes, totalBytes, requestedCollection});
     console.debug('Caching worker complete');
   }
   catch (err) {
     console.error(err);
-    updateStatus({status: 'error', loadedBytes: 0, totalBytes: 0, params});
+    updateStatus({status: 'error', loadedBytes: 0, totalBytes: 0, requestedCollection});
     console.debug('Caching worker error');
   }
 };

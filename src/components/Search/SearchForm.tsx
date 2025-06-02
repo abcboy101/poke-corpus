@@ -2,29 +2,29 @@ import { ChangeEventHandler, FormEventHandler, MouseEventHandler, useCallback, u
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import { SearchParams, searchTypes, isSearchType, searchParamsToHash, hashToSearchParams, defaultSearchParams } from '../../utils/searchParams';
-import corpus, { codeId, corpusKeys, isCollectionKey, isLanguageKey } from '../../utils/corpus';
+import { SearchParams, searchTypes, isSearchType, getSearchParamsFactory, getDefaultSearchParams } from '../../utils/searchParams';
+import { Corpus, LanguageKey, codeId } from '../../utils/corpus';
 import SearchFilters from './SearchFilters';
 import { escapeRegex, ReadonlyExhaustiveArray, localStorageGetItem, localStorageSetItem, parseJSONNullable } from '../../utils/utils';
 
 import './SearchForm.css';
 import '../../i18n/config';
 
-const userLanguage = corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0]));
-const defaultParamsPreferences: typeof defaultSearchParams = {
-  ...defaultSearchParams,
-  languages: userLanguage.length === 0 ? corpus.languages.filter((value) => value.startsWith('en')) : userLanguage,
-};
-
 const isStringArray = (arr: unknown): arr is readonly string[] => {
   return Array.isArray(arr) && arr.every((value) => typeof value === 'string');
 };
-const getSavedParamsPreferences = () => {
+
+const getSavedParamsPreferences = (corpus: Corpus) => {
+  const userLanguage: readonly LanguageKey[] = corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0]));
+  const paramsDefault = {
+    ...getDefaultSearchParams(corpus),
+    languages: userLanguage.length === 0 ? corpus.languages.filter((value) => value.startsWith('en')) : userLanguage,
+  };
+
   const saved = localStorageGetItem('corpus-params');
   if (saved === null)
-    return defaultParamsPreferences;
+    return paramsDefault;
 
-  const paramsDefault = {...defaultParamsPreferences};
   const params = parseJSONNullable(saved);
   if (typeof params === 'object' && params !== null) {
     if ('query' in params && typeof params.query === 'string')
@@ -39,9 +39,9 @@ const getSavedParamsPreferences = () => {
       paramsDefault.script = params.script;
     if ('showAllLanguages' in params && typeof params.showAllLanguages === 'boolean')
       paramsDefault.showAllLanguages = params.showAllLanguages;
-    if ('collections' in params && isStringArray(params.collections) && params.collections.every((collectionKey) => isCollectionKey(collectionKey)))
+    if ('collections' in params && isStringArray(params.collections) && params.collections.every((collectionKey) => corpus.isCollectionKey(collectionKey)))
       paramsDefault.collections = params.collections;
-    if ('languages' in params && isStringArray(params.languages) && params.languages.every((languageKey) => isLanguageKey(languageKey)))
+    if ('languages' in params && isStringArray(params.languages) && params.languages.every((languageKey) => corpus.isLanguageKey(languageKey)))
       paramsDefault.languages = params.languages;
   }
   return paramsDefault;
@@ -55,9 +55,9 @@ const searchTypesDropdown = [
 ] as const;
 searchTypesDropdown satisfies ReadonlyExhaustiveArray<typeof searchTypesDropdown, typeof searchTypes[number]>;
 
-function SearchForm({waiting, inProgress, postToWorker, terminateWorker}: {waiting: boolean, inProgress: boolean, postToWorker: (params: SearchParams) => void, terminateWorker: () => void}) {
+function SearchForm({corpus, waiting, inProgress, postToWorker, terminateWorker}: {corpus: Corpus, waiting: boolean, inProgress: boolean, postToWorker: (params: SearchParams) => void, terminateWorker: () => void}) {
   const { t } = useTranslation();
-  const initial = useMemo(getSavedParamsPreferences, []);
+  const initial = useMemo(() => import.meta.env.SSR ? getDefaultSearchParams(corpus) : getSavedParamsPreferences(corpus), [corpus]);
   const [query, setQuery] = useState(initial.query);
   const [type, setType] = useState(initial.type);
   const [caseInsensitive, setCaseInsensitive] = useState(initial.caseInsensitive);
@@ -67,12 +67,13 @@ function SearchForm({waiting, inProgress, postToWorker, terminateWorker}: {waiti
   const [collections, setCollections] = useState(initial.collections);
   const [languages, setLanguages] = useState(initial.languages);
   const [filtersVisible, setFiltersVisible] = useState(import.meta.env.SSR ? false : ((localStorageGetItem('corpus-filtersVisible') ?? (window.location.hash ? 'false' : 'true')) !== 'false'));
+  const searchParamsFactory = useMemo(() => getSearchParamsFactory(corpus), [corpus]);
 
   const onHashChange = useCallback(() => {
     if (import.meta.env.SSR)
       return;
 
-    const params = hashToSearchParams(window.location.hash.substring(1));
+    const params = searchParamsFactory.hashToSearchParams(window.location.hash.substring(1));
     if (params.query !== undefined)
       setQuery(params.query);
     if (params.type !== undefined)
@@ -99,7 +100,7 @@ function SearchForm({waiting, inProgress, postToWorker, terminateWorker}: {waiti
         common: true,
         script: true,
         showAllLanguages: true,
-        collections: corpusKeys.filter((key) => corpus.collections[key].id === collectionId),
+        collections: corpus.collections.filter((key) => corpus.getCollection(key).id === collectionId),
         languages: [codeId],
       });
       return;
@@ -113,7 +114,7 @@ function SearchForm({waiting, inProgress, postToWorker, terminateWorker}: {waiti
         common: true,
         script: true,
         showAllLanguages: true,
-        collections: corpusKeys.filter((key) => corpus.collections[key].id === collectionId),
+        collections: corpus.collections.filter((key) => corpus.getCollection(key).id === collectionId),
         languages: [codeId],
       });
       return;
@@ -129,7 +130,7 @@ function SearchForm({waiting, inProgress, postToWorker, terminateWorker}: {waiti
         collections: params.collections ?? initial.collections,
         languages: params.languages ?? initial.languages,
       };
-      window.location.hash = searchParamsToHash(searchParams);
+      window.location.hash = searchParamsFactory.searchParamsToHash(searchParams);
       postToWorker(searchParams);
       return;
     }
@@ -174,7 +175,7 @@ function SearchForm({waiting, inProgress, postToWorker, terminateWorker}: {waiti
     }
 
     const params: SearchParams = {query, type, caseInsensitive, common, script, showAllLanguages, collections, languages};
-    window.location.hash = searchParamsToHash(params);
+    window.location.hash = searchParamsFactory.searchParamsToHash(params);
     postToWorker(params);
   };
 
@@ -200,7 +201,7 @@ function SearchForm({waiting, inProgress, postToWorker, terminateWorker}: {waiti
   // done or error: submit enabled
   const submitDisabled = waiting || inProgress || query.length === 0 || collections.length === 0 || languages.length === 0;
   const filters = useMemo(() => (
-    <SearchFilters filtersVisible={filtersVisible} collections={collections} setCollections={setCollections} languages={languages} setLanguages={setLanguages} />
+    <SearchFilters corpus={corpus} filtersVisible={filtersVisible} collections={collections} setCollections={setCollections} languages={languages} setLanguages={setLanguages} />
   ), [filtersVisible, collections, languages]);
   return <form className="search-form" role="search" onSubmit={onSubmit}>
     <div className="search-bar">

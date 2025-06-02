@@ -44,7 +44,7 @@ interface LiteralInfoNoBranch {
 /**
  * Describes the properties of a collection of files.
  */
-export interface Collection {
+interface Collection {
   readonly id?: string,                        // used for looking up a specific line by ID
   readonly languages: readonly LanguageKey[],  // available languages
   readonly structured: boolean,                // true if lines are aligned between languages, false otherwise
@@ -58,9 +58,18 @@ export interface Collection {
 /**
  * Describes the structure of the corpus file.
  */
-export interface Corpus {
+export interface CorpusData {
   readonly languages: readonly LanguageKey[],
   readonly collections: Record<CollectionKey, Collection>,
+}
+
+/**
+ * Describes the structure of the corpus source file.
+ */
+export interface CorpusSource {
+  readonly corpus: CorpusData,
+  readonly hashes: readonly string[],
+  readonly sizes: readonly number[],
 }
 
 /*
@@ -75,10 +84,92 @@ Since these are not natural language, we use the language code "zxx" (not applic
 export const codeId = "qid";
 export const langId = "zxx";
 
-const corpus: Corpus = corpusJson satisfies Corpus;
-export const corpusKeys = Object.keys(corpus.collections) as readonly CollectionKey[];
-export const corpusEntries = Object.entries(corpus.collections) as readonly [CollectionKey, Collection][];
-export const isCollectionKey = (s: string): s is CollectionKey => corpusKeys.some((collection) => s === collection);
-export const isLanguageKey = (s: string): s is LanguageKey => corpus.languages.some((language) => s === language);
 
-export default corpus;
+/**
+ * Metadata for a file in a collection.
+ */
+export interface Metadata {
+  readonly hash: string,
+  readonly size: number,
+}
+
+export type MetadataRecord = Record<string, Metadata>;
+
+export const isMetadata = (o: unknown): o is Metadata => o !== null && typeof o === 'object' && 'hash' in o && typeof o.hash === 'string' && 'size' in o && typeof o.size === 'number';
+
+const convertMetadata = (source: CorpusSource): MetadataRecord => {
+  const entries = Object.entries(source.corpus.collections) as readonly [CollectionKey, Collection][];
+  return Object.fromEntries(
+    entries.flatMap(([collectionKey, collection]) =>
+      collection.languages.flatMap((languageKey) =>
+        collection.files.map((fileKey) => getFilePath(collectionKey, languageKey, fileKey))
+      )
+    ).map((filePath, i) => [filePath, {hash: source.hashes[i], size: source.sizes[i]}] as const)
+  );
+};
+
+export const getCorpus = (source: CorpusSource) => {
+  const corpus = source.corpus;
+  const collections = Object.keys(corpus.collections) as readonly CollectionKey[];
+  const entries = Object.entries(corpus.collections) as readonly [CollectionKey, Collection][];
+  const metadata: Record<string, Metadata> = convertMetadata(source);
+  return {
+    // protected (serialization)
+    _corpus: corpus,
+
+    // public
+    collections,
+    languages: corpus.languages,
+    entries,
+    metadata,
+    getCollection: (collection: CollectionKey) => corpus.collections[collection],
+    isCollectionKey: (s: string): s is CollectionKey => collections.some((collection) => s === collection),
+    isLanguageKey: (s: string): s is LanguageKey => corpus.languages.some((language) => s === language),
+  };
+};
+
+/**
+ * Formats the collection, language, and file into the relative path to the text file.
+ */
+export const getFilePath = (collectionKey: CollectionKey, languageKey: LanguageKey, fileKey: FileKey) => `corpus/${collectionKey}/${languageKey}_${fileKey}.txt.gz`;
+
+export async function fetchCorpus(): Promise<Corpus> {
+  const res = await fetch(import.meta.env.BASE_URL + 'data.json');
+  const source = await res.json() as CorpusSource;
+  return getCorpus(source);
+}
+
+//#region Serialization
+export interface SerializedCorpus {
+  readonly corpus: CorpusData,
+  readonly metadata: Record<string, Metadata>,
+}
+
+export function serializeCorpus(corpus: Corpus): SerializedCorpus {
+  return {
+    corpus: corpus._corpus,
+    metadata: corpus.metadata,
+  };
+};
+
+export function deserializeCorpus(serialized: SerializedCorpus): Corpus {
+  const corpus = serialized.corpus;
+  const collections = Object.keys(corpus.collections) as readonly CollectionKey[];
+  const entries = Object.entries(corpus.collections) as readonly [CollectionKey, Collection][];
+  return {
+    // protected (serialization)
+    _corpus: corpus,
+
+    // public
+    collections,
+    languages: corpus.languages,
+    entries,
+    metadata: serialized.metadata,
+    getCollection: (collection: CollectionKey) => corpus.collections[collection],
+    isCollectionKey: (s: string): s is CollectionKey => collections.some((collection) => s === collection),
+    isLanguageKey: (s: string): s is LanguageKey => corpus.languages.some((language) => s === language),
+  };
+};
+//#endregion
+
+export type Corpus = ReturnType<typeof getCorpus>;

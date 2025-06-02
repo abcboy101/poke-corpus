@@ -1,6 +1,11 @@
+import { readCorpus } from './corpusFs';
+import { getSearchParamsFactory } from './searchParams';
 import { replaceSpeaker, postprocessSpeaker, expandSpeakers } from './speaker';
 
 test('speaker names', () => {
+  const corpus = readCorpus();
+  const factory = getSearchParamsFactory(corpus);
+
   const collection = 'ScarletViolet';
   const language = 'en';
   const lines = [
@@ -15,7 +20,7 @@ test('speaker names', () => {
 
   const lines2 = lines.map((s) => replaceSpeaker(s, speakerNames, language));
   const lines3 = lines2.map((s) => postprocessSpeaker(s));
-  const lines4 = lines3.map((s) => expandSpeakers(s, collection, language, viewSpeaker));
+  const lines4 = lines3.map((s) => expandSpeakers(s, factory, collection, language, viewSpeaker));
   lines4.forEach((s, i) => {
     expect(s.indexOf('<a class="speaker"')).toEqual(0);
     expect(s).toContain('href="#');

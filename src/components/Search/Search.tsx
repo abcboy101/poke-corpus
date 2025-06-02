@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import SearchWorkerManager from '../../webWorker/searchWorkerManager.ts?worker';
 import TextWorker from '../../webWorker/textWorker.ts?worker';
 import { SearchParams } from '../../utils/searchParams';
-import { SearchManagerResponse } from '../../webWorker/searchWorkerManager';
+import { SearchManagerParams, SearchManagerResponse } from '../../webWorker/searchWorkerManager';
 import { isStatusError, isStatusInProgress, Status } from '../../utils/Status';
 import SearchForm from './SearchForm';
 import Results from './Results';
@@ -12,14 +12,15 @@ import { ShowModal } from '../Modal';
 
 import '../../i18n/config';
 import { formatBytes, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
-import { getDownloadSizeTotal } from '../../utils/files';
+import { Loader } from '../../utils/loader';
 import { TextResult, TextTask } from '../../webWorker/textWorker';
 import { Result, ParamsResult, initialResult } from '../../utils/searchResults';
 import { SearchTaskResultLines } from '../../webWorker/searchWorker';
+import { serializeCorpus } from '../../utils/corpus';
 
 const searchModalWarn = 'corpus-warn';
 const searchModalThreshold = 20_000_000; // 20 MB
-function Search({showModal, richText, limit}: {showModal: ShowModal, richText: boolean, limit?: number}) {
+function Search({loader, showModal, richText, limit}: {loader: Loader, showModal: ShowModal, richText: boolean, limit?: number}) {
   const { t } = useTranslation();
   const searchWorkerManager = useRef<Worker>(null);
   const textWorker = useRef<Worker>(null);
@@ -64,7 +65,7 @@ function Search({showModal, richText, limit}: {showModal: ShowModal, richText: b
       textWorker.current = new TextWorker();
       textWorker.current.addEventListener("message", onText);
     }
-    textWorker.current.postMessage({...params, index, richText: richTextRef.current} satisfies TextTask);
+    textWorker.current.postMessage({...params, index, richText: richTextRef.current, corpusLiterals: loader.corpus.getCollection(params.collection).literals} satisfies TextTask);
   };
 
   const onMessage = (e: MessageEvent<SearchManagerResponse>) => {
@@ -122,7 +123,7 @@ function Search({showModal, richText, limit}: {showModal: ShowModal, richText: b
       if (import.meta.env.DEV) {
         console.log(params);
       }
-      searchWorkerManager.current.postMessage(params);
+      searchWorkerManager.current.postMessage({...params, serializedCorpus: serializeCorpus(loader.corpus)} satisfies SearchManagerParams);
     }
   };
 
@@ -132,7 +133,7 @@ function Search({showModal, richText, limit}: {showModal: ShowModal, richText: b
       return;
     }
 
-    getDownloadSizeTotal(params.collections).then((size) => {
+    loader.getDownloadSizeTotal().then((size) => {
       if (size <= searchModalThreshold) {
         postToWorker(params);
         return;
@@ -169,10 +170,10 @@ function Search({showModal, richText, limit}: {showModal: ShowModal, richText: b
   const inProgress = isStatusInProgress(status);
   const waiting = status === 'waiting';
   const searchForm = useMemo(() => (
-    <SearchForm inProgress={inProgress} waiting={waiting} postToWorker={postToWorkerModal} terminateWorker={terminateWorker} />
+    <SearchForm corpus={loader.corpus} inProgress={inProgress} waiting={waiting} postToWorker={postToWorkerModal} terminateWorker={terminateWorker} />
   ), [inProgress, waiting, postToWorkerModal, terminateWorker]);
   const searchResults = useMemo(() => (
-    <Results status={status} progress={progress} showId={showId} richText={richText} results={results} limit={limit} />
+    <Results corpus={loader.corpus} status={status} progress={progress} showId={showId} richText={richText} results={results} limit={limit} />
   ), [status, progress, showId, richText, results, limit]);
 
   return (

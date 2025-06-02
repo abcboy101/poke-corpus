@@ -2,7 +2,7 @@ import { CSSProperties, Dispatch, SetStateAction, useEffect, useRef } from 'reac
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import corpus, { corpusKeys, CollectionKey, LanguageKey } from '../../utils/corpus';
+import { CollectionKey, Corpus, LanguageKey } from '../../utils/corpus';
 
 import './SearchFilters.css';
 import '../../i18n/config';
@@ -21,21 +21,21 @@ function collectionLabelStyle(text: string, maxWidth = 4): CSSProperties | undef
   return width <= maxWidth ? undefined : {fontSize: `${(maxWidth * 100) / width}%`, scale: `1 ${width / maxWidth}`, whiteSpace: 'nowrap'};
 }
 
-function getValidCollections(languages: readonly string[]) {
+function getValidCollections(corpus: Corpus, languages: readonly string[]) {
   // If no languages are selected, no collection is invalid yet.
   if (languages.length === 0)
-    return new Set(corpusKeys);
+    return new Set(corpus.collections);
 
   // Otherwise, include all valid collections with at least one selected language.
   const validCollections = new Set<string>();
   const languageSet = new Set(languages);
-  for (const collectionKey of corpusKeys)
-    if (corpus.collections[collectionKey].languages.some((languageKey) => languageSet.has(languageKey)))
+  for (const collectionKey of corpus.collections)
+    if (corpus.getCollection(collectionKey).languages.some((languageKey) => languageSet.has(languageKey)))
       validCollections.add(collectionKey);
   return validCollections;
 }
 
-function getValidLanguages(collections: readonly CollectionKey[]) {
+function getValidLanguages(corpus: Corpus, collections: readonly CollectionKey[]) {
   // If no collections are selected, no language is invalid yet.
   if (collections.length === 0)
     return new Set(corpus.languages);
@@ -43,20 +43,20 @@ function getValidLanguages(collections: readonly CollectionKey[]) {
   // Otherwise, include all valid languages for each selected collection.
   const validLanguages = new Set<string>();
   for (const collectionKey of collections)
-    for (const languageKey of corpus.collections[collectionKey].languages)
+    for (const languageKey of corpus.getCollection(collectionKey).languages)
       validLanguages.add(languageKey);
   return validLanguages;
 }
 
-function SearchCollections({collections, languages, setCollections}: {collections: readonly CollectionKey[], languages: readonly LanguageKey[], setCollections: Dispatch<SetStateAction<readonly CollectionKey[]>>}) {
+function SearchCollections({corpus, collections, languages, setCollections}: {corpus: Corpus, collections: readonly CollectionKey[], languages: readonly LanguageKey[], setCollections: Dispatch<SetStateAction<readonly CollectionKey[]>>}) {
   const { t } = useTranslation();
   const isFullwidth = ['ja', 'ko', 'zh'].some((lang) => i18next.language.startsWith(lang));
-  const validCollections = getValidCollections(languages);
+  const validCollections = getValidCollections(corpus, languages);
   return (
     <>
       <div className="search-collections">
         {
-          corpusKeys.map((key) => [key, t(`collections:${key}.name`), t(`collections:${key}.short`)] as const).map(([key, name, short]) =>
+          corpus.collections.map((key) => [key, t(`collections:${key}.name`), t(`collections:${key}.short`)] as const).map(([key, name, short]) =>
             <div key={key} className={`search-collection search-${validCollections.has(key) ? 'valid' : 'invalid'}`}>
               <input type="checkbox" name={`collection-${key}`} id={`collection-${key}`} checked={collections.includes(key)} onChange={(e) => {
                 if (e.target.checked && !collections.includes(key)) {
@@ -74,17 +74,17 @@ function SearchCollections({collections, languages, setCollections}: {collection
         }
       </div>
       <div className="item-group">
-        <button disabled={collections.length === corpusKeys.length} onClick={() => { setCollections(corpusKeys); }}>{t('selectAll')}</button>
+        <button disabled={collections.length === corpus.collections.length} onClick={() => { setCollections(corpus.collections); }}>{t('selectAll')}</button>
         <button disabled={collections.length === 0} onClick={() => { setCollections([]); }}>{t('deselectAll')}</button>
       </div>
     </>
   );
 }
 
-function SearchLanguages({collections, languages, setLanguages}: {collections: readonly CollectionKey[], languages: readonly LanguageKey[], setLanguages: Dispatch<SetStateAction<readonly LanguageKey[]>>}) {
+function SearchLanguages({corpus, collections, languages, setLanguages}: {corpus: Corpus, collections: readonly CollectionKey[], languages: readonly LanguageKey[], setLanguages: Dispatch<SetStateAction<readonly LanguageKey[]>>}) {
   const { t } = useTranslation();
   const isFullwidth = ['ja', 'ko', 'zh'].some((lang) => i18next.language.startsWith(lang));
-  const validLanguages = getValidLanguages(collections);
+  const validLanguages = getValidLanguages(corpus, collections);
   return (
     <>
       <div className="search-languages">
@@ -115,7 +115,7 @@ function SearchLanguages({collections, languages, setLanguages}: {collections: r
   );
 }
 
-function SearchFilters({filtersVisible, collections, setCollections, languages, setLanguages}: {filtersVisible: boolean, collections: readonly CollectionKey[], setCollections: Dispatch<SetStateAction<readonly CollectionKey[]>>, languages: readonly LanguageKey[], setLanguages: Dispatch<SetStateAction<readonly LanguageKey[]>>}) {
+function SearchFilters({corpus, filtersVisible, collections, setCollections, languages, setLanguages}: {corpus: Corpus, filtersVisible: boolean, collections: readonly CollectionKey[], setCollections: Dispatch<SetStateAction<readonly CollectionKey[]>>, languages: readonly LanguageKey[], setLanguages: Dispatch<SetStateAction<readonly LanguageKey[]>>}) {
   const filtersRef = useRef<HTMLDivElement>(null);
   const updateFiltersHeight = () => filtersRef.current?.style.setProperty('--search-filters-height', `${filtersRef.current.scrollHeight}px`);
   useEffect(() => {
@@ -130,9 +130,9 @@ function SearchFilters({filtersVisible, collections, setCollections, languages, 
     <div ref={filtersRef} className={`search-filters search-filters-${filtersVisible ? 'show' : 'hide'}`}>
       { !import.meta.env.SSR && (
         <>
-          <SearchCollections collections={collections} languages={languages} setCollections={setCollections}/>
+          <SearchCollections corpus={corpus} collections={collections} languages={languages} setCollections={setCollections}/>
           <div className="search-filters-divider"></div>
-          <SearchLanguages collections={collections} languages={languages} setLanguages={setLanguages}/>
+          <SearchLanguages corpus={corpus} collections={collections} languages={languages} setLanguages={setLanguages}/>
         </>
       )}
     </div>

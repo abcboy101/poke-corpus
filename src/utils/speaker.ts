@@ -1,4 +1,4 @@
-import { searchParamsToHash } from "../utils/searchParams";
+import { SearchParamsFactory } from "../utils/searchParams";
 import { CollectionKey, LanguageKey } from "./corpus";
 
 function speakerDelimiter(language: LanguageKey) {
@@ -37,9 +37,9 @@ export function postprocessSpeaker(s: string) {
 }
 
 /* Converts the speaker's name to a context-dependent link. */
-export function expandSpeakers(s: string, collection: CollectionKey, language: LanguageKey, viewSpeaker: string) {
+export function expandSpeakers(s: string, factory: SearchParamsFactory, collection: CollectionKey, language: LanguageKey, viewSpeaker: string) {
   return s.replaceAll(/<a class="speaker" data-var="(.+?)">(.+?)<\/a>/gu, (_, speakerVar: string, speakerName: string) => {
-    const hash = searchParamsToHash({
+    const hash = factory.searchParamsToHash({
       query: speakerVar,
       type: 'exact',
       caseInsensitive: false,

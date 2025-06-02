@@ -1,19 +1,16 @@
-import fs from 'node:fs/promises';
-
 import { preprocessString } from './cleanStringPre';
-import corpus, { codeId, CollectionKey, FileKey, LanguageKey } from '../corpus';
-import { getFilePath } from '../files';
+import { codeId, CollectionKey } from '../corpus';
+import { readFile, readCorpus } from '../corpusFs';
+import { getLoader } from '../loader';
 import { replaceLiteralsFactory } from './literals';
 
-async function loadFile(collectionKey: CollectionKey, languageKey: LanguageKey, fileKey: FileKey): Promise<string> {
-  const path = getFilePath(collectionKey, languageKey, fileKey);
-  return fs.readFile(path.split('.gz')[0], {encoding: 'utf-8'});
-}
+const corpus = readCorpus();
+const loader = getLoader(corpus);
 
 async function getReplaceLiterals(collectionKey: CollectionKey): Promise<ReturnType<typeof replaceLiteralsFactory>> {
-  const { languages, files: fileKeys, literals } = corpus.collections[collectionKey];
+  const { languages, files: fileKeys, literals } = corpus.getCollection(collectionKey);
   const messageIdIndex = languages.indexOf(codeId);
-  const files = await Promise.all(languages.map((languageKey) => loadFile(collectionKey, languageKey, fileKeys[0])));
+  const files = await Promise.all(languages.map((languageKey) => readFile(loader, collectionKey, languageKey, fileKeys[0])));
   const fileData = languages.map(((languageKey, i) => preprocessString(files[i], collectionKey, languageKey).split(/\r\n|\n/)));
   const literalsLine = literals ? Object.keys(literals).flatMap((id) => (literals[id].branch !== 'language') ? literals[id].line : Object.values(literals[id].line)) : undefined;
   const literalsData = literalsLine ? fileData.map((lines) => new Map(literalsLine.map((i) => [i, lines[i - 1]]))) : [];
@@ -22,8 +19,8 @@ async function getReplaceLiterals(collectionKey: CollectionKey): Promise<ReturnT
 
 test('replaceLiterals, RubySapphire', async () => {
   const collectionKey = 'RubySapphire';
-  const ja = corpus.collections[collectionKey].languages.indexOf('ja-Hrkt');
-  const en = corpus.collections[collectionKey].languages.indexOf('en');
+  const ja = corpus.getCollection(collectionKey).languages.indexOf('ja-Hrkt');
+  const en = corpus.getCollection(collectionKey).languages.indexOf('en');
   const replaceLiterals = await getReplaceLiterals(collectionKey);
   expect(replaceLiterals('[KUN]', ja)).toEqual(`\u{F1102}\u{F1200}くん\u{F1104}ちゃん\u{F1103}`);
   expect(replaceLiterals('[KUN]', en)).toEqual(`\u{F1102}\u{F1200}\u{F1104}\u{F1103}`);
@@ -33,8 +30,8 @@ test('replaceLiterals, RubySapphire', async () => {
 
 test('replaceLiterals, FireRedLeafGreen', async () => {
   const collectionKey = 'FireRedLeafGreen';
-  const ja = corpus.collections[collectionKey].languages.indexOf('ja-Hrkt');
-  const en = corpus.collections[collectionKey].languages.indexOf('en');
+  const ja = corpus.getCollection(collectionKey).languages.indexOf('ja-Hrkt');
+  const en = corpus.getCollection(collectionKey).languages.indexOf('en');
   const replaceLiterals = await getReplaceLiterals(collectionKey);
   expect(replaceLiterals('[KUN]', ja)).toEqual(`\u{F1102}\u{F1200}くん\u{F1104}ちゃん\u{F1103}`);
   expect(replaceLiterals('[KUN]', en)).toEqual(`\u{F1102}\u{F1200}\u{F1104}\u{F1103}`);
@@ -42,8 +39,8 @@ test('replaceLiterals, FireRedLeafGreen', async () => {
 
 test('replaceLiterals, Emerald', async () => {
   const collectionKey = 'Emerald';
-  const ja = corpus.collections[collectionKey].languages.indexOf('ja-Hrkt');
-  const en = corpus.collections[collectionKey].languages.indexOf('en');
+  const ja = corpus.getCollection(collectionKey).languages.indexOf('ja-Hrkt');
+  const en = corpus.getCollection(collectionKey).languages.indexOf('en');
   const replaceLiterals = await getReplaceLiterals(collectionKey);
   expect(replaceLiterals('[KUN]', ja)).toEqual(`\u{F1102}\u{F1200}くん\u{F1104}ちゃん\u{F1103}`);
   expect(replaceLiterals('[KUN]', en)).toEqual(`\u{F1102}\u{F1200}\u{F1104}\u{F1103}`);
@@ -53,9 +50,9 @@ test('replaceLiterals, Emerald', async () => {
 
 test('replaceLiterals, BattleRevolution', async () => {
   const collectionKey = 'BattleRevolution';
-  const ja = corpus.collections[collectionKey].languages.indexOf('ja');
-  const en = corpus.collections[collectionKey].languages.indexOf('en');
-  const es = corpus.collections[collectionKey].languages.indexOf('es');
+  const ja = corpus.getCollection(collectionKey).languages.indexOf('ja');
+  const en = corpus.getCollection(collectionKey).languages.indexOf('en');
+  const es = corpus.getCollection(collectionKey).languages.indexOf('es');
   const replaceLiterals = await getReplaceLiterals(collectionKey);
   expect(replaceLiterals('["Lv."]', ja)).toEqual(`\u{F1102}Lv\u{F1103}`);
   expect(replaceLiterals('["Lv."]', en)).toEqual(`\u{F1102}Lv.\u{F1103}`);

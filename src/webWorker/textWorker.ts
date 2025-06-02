@@ -1,4 +1,4 @@
-import corpus, { codeId } from "../utils/corpus";
+import { codeId, Literals } from "../utils/corpus";
 import { replaceSpeaker } from "../utils/speaker";
 import { postprocessString } from "../utils/string/cleanStringPost";
 import { replaceLiteralsFactory } from "../utils/string/literals";
@@ -7,6 +7,7 @@ import { SearchTaskResultLines } from "./searchWorker";
 export interface TextTask extends SearchTaskResultLines {
   readonly index: number,
   readonly richText: boolean,
+  readonly corpusLiterals?: Literals,
 }
 
 export interface TextResult extends TextTask {
@@ -15,14 +16,13 @@ export interface TextResult extends TextTask {
 
 self.onmessage = (task: MessageEvent<TextTask>) => {
   try {
-    const {collection, languages, richText, speakers, literals, lines} = task.data;
-    const hasSpeakers = corpus.collections[collection].speaker !== undefined;
-    const replaceLiterals = replaceLiteralsFactory(literals, languages.indexOf(codeId), collection, languages, corpus.collections[collection].literals);
+    const {collection, languages, richText, speakers, literals, lines, corpusLiterals} = task.data;
+    const replaceLiterals = replaceLiteralsFactory(literals, languages.indexOf(codeId), collection, languages, corpusLiterals);
     const result: TextResult = {
       ...task.data,
       lines: lines.map((row) => row.map((s, j) => {
         if (richText) {
-          if (hasSpeakers)
+          if (speakers.length > 0)
             s = replaceSpeaker(s, speakers[j], languages[j]);
           s = replaceLiterals(s, j);
         }

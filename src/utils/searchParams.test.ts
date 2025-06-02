@@ -1,10 +1,8 @@
-import corpus, { corpusKeys } from './corpus';
-import {
-  searchParamsToQueryString, queryStringToSearchParams,
-  searchParamsToBase64, base64ToSearchParams,
-  serializeByteArray, deserializeByteArray,
-  bytesBase64, encryptBytes, decryptBytes,
-} from './searchParams';
+import { readCorpus } from './corpusFs';
+import { getSearchParamsFactory } from './searchParams';
+
+const corpus = readCorpus();
+const factory = getSearchParamsFactory(corpus);
 
 test('query string', () => {
   const params = {
@@ -17,8 +15,8 @@ test('query string', () => {
     collections: ['ScarletViolet'],
     languages: ['en'],
   } as const;
-  const hash = searchParamsToQueryString(params);
-  const deserialized = queryStringToSearchParams(hash);
+  const hash = factory._searchParamsToQueryString(params);
+  const deserialized = factory._queryStringToSearchParams(hash);
   expect(deserialized).toMatchObject(params);
 });
 
@@ -33,8 +31,8 @@ test('base 64', () => {
     collections: [],
     languages: [],
   } as const;
-  const hash = searchParamsToBase64(params);
-  const deserialized = base64ToSearchParams(hash);
+  const hash = factory._searchParamsToBase64(params);
+  const deserialized = factory._base64ToSearchParams(hash);
   expect(deserialized).toMatchObject(params);
 });
 
@@ -48,8 +46,8 @@ test('byte array none', () => {
     collections: [],
     languages: [],
   } as const;
-  const arr = serializeByteArray(params);
-  const deserialized = deserializeByteArray(arr);
+  const arr = factory._serializeByteArray(params);
+  const deserialized = factory._deserializeByteArray(arr);
   expect(deserialized).toMatchObject(params);
 });
 
@@ -60,11 +58,11 @@ test('byte array all', () => {
     common: true,
     script: true,
     showAllLanguages: true,
-    collections: corpusKeys,
+    collections: corpus.collections,
     languages: corpus.languages,
   } as const;
-  const arr = serializeByteArray(params);
-  const deserialized = deserializeByteArray(arr);
+  const arr = factory._serializeByteArray(params);
+  const deserialized = factory._deserializeByteArray(arr);
   expect(deserialized).toMatchObject(params);
 });
 
@@ -76,24 +74,24 @@ test('byte array random', () => {
       common: false,
       script: false,
       showAllLanguages: false,
-      collections: corpusKeys.filter(() => Math.random() < 0.5),
+      collections: corpus.collections.filter(() => Math.random() < 0.5),
       languages: corpus.languages.filter(() => Math.random() < 0.5),
     } as const;
-    const arr = serializeByteArray(params);
-    const deserialized = deserializeByteArray(arr);
+    const arr = factory._serializeByteArray(params);
+    const deserialized = factory._deserializeByteArray(arr);
     expect(deserialized).toMatchObject(params);
   }
 });
 
 test('encryption', () => {
   for (let i = 0; i < 10; i++) {
-    const original = new Uint8Array(bytesBase64);
+    const original = new Uint8Array(factory._bytesBase64);
     crypto.getRandomValues(original);
     original[0] = 0;
 
     const bytes = new Uint8Array(original);
-    encryptBytes(bytes);
-    decryptBytes(bytes);
+    factory._encryptBytes(bytes);
+    factory._decryptBytes(bytes);
     expect(bytes.slice(1)).toEqual(original.slice(1));
   }
 });

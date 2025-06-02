@@ -1,6 +1,6 @@
 import 'compression-streams-polyfill';
-import { corpusEntries, codeId, isLanguageKey, CollectionKey, LanguageKey, FileKey } from '../utils/corpus';
-import { getCache, getFile, getFilePath, getFileRemote, getIndexedDB } from '../utils/files';
+import { codeId, CollectionKey, LanguageKey, FileKey, deserializeCorpus, SerializedCorpus } from '../utils/corpus';
+import { getLoader, Loader } from '../utils/loader';
 import SearchWorker from "./searchWorker.ts?worker";
 import { SearchParams } from '../utils/searchParams';
 import { SearchTask, SearchTaskResult, SearchTaskResultComplete } from './searchWorker';
@@ -15,6 +15,10 @@ declare global {
      */
     memoryCache?: Map<string, WeakRef<Promise<string>>>,
   }
+}
+
+export interface SearchManagerParams extends SearchParams {
+  readonly serializedCorpus: SerializedCorpus,
 }
 
 interface SearchManagerStatus {
@@ -37,8 +41,8 @@ const memoryCacheGet = (path: string) => self.memoryCache?.get(path)?.deref();
 const memoryCacheSet = (path: string, value: Promise<string>) => self.memoryCache?.set(path, new WeakRef(value));
 
 /** Returns true if the file is cached in memory, or false otherwise. */
-const isMemoryCached = (collectionKey: CollectionKey, languageKey: LanguageKey, fileKey: FileKey): boolean => {
-  const path = getFilePath(collectionKey, languageKey, fileKey);
+const isMemoryCached = (loader: Loader, collectionKey: CollectionKey, languageKey: LanguageKey, fileKey: FileKey): boolean => {
+  const path = loader.getFilePath(collectionKey, languageKey, fileKey);
   return memoryCacheGet(path) !== undefined;
 };
 
@@ -50,8 +54,8 @@ const isMemoryCached = (collectionKey: CollectionKey, languageKey: LanguageKey, 
  *
  * Returns a promise for the text of the file.
  */
-const loadFile = async (collectionKey: CollectionKey, languageKey: LanguageKey, fileKey: FileKey): Promise<string> => {
-  const path = getFilePath(collectionKey, languageKey, fileKey);
+const loadFile = async (loader: Loader, collectionKey: CollectionKey, languageKey: LanguageKey, fileKey: FileKey): Promise<string> => {
+  const path = loader.getFilePath(collectionKey, languageKey, fileKey);
   const memoryCached = memoryCacheGet(path);
   if (memoryCached) {
     return memoryCached;
@@ -65,14 +69,13 @@ const loadFile = async (collectionKey: CollectionKey, languageKey: LanguageKey, 
 
     if ('caches' in self && 'indexedDB' in self && 'databases' in self.indexedDB) {
       // Retrieve from cache storage
-      const cache = await getCache();
-      const db = await getIndexedDB();
-      res = await getFile(cache, db, path);
+      const [cache, db] = await Promise.all([loader.getCache(), loader.getIndexedDB()] as const);
+      res = await loader.getFile(cache, db, path);
       db.close();
     }
     else {
       // Can't access cache storage or indexedDB, download file from the server
-      res = await getFileRemote(path);
+      res = await loader.getFileRemote(path);
     }
   }
   catch (err) {
@@ -94,7 +97,7 @@ const loadFile = async (collectionKey: CollectionKey, languageKey: LanguageKey, 
   return text;
 };
 
-self.onmessage = async (message: MessageEvent<SearchParams>) => {
+self.onmessage = async (message: MessageEvent<SearchManagerParams>) => {
   const params = message.data;
   self.memoryCache ??= new Map();
 
@@ -141,6 +144,10 @@ self.onmessage = async (message: MessageEvent<SearchParams>) => {
   try {
     updateStatusInProgress('loading', 0, 0, 0);
 
+    // Deserialize corpus and loader
+    const corpus = deserializeCorpus(params.serializedCorpus);
+    const loader = getLoader(corpus);
+
     // Ensure the regex is valid.
     // If it's invalid, return with that error immediately.
     if (params.type === 'regex' && !isValidRegex(params.query)) {
@@ -156,7 +163,7 @@ self.onmessage = async (message: MessageEvent<SearchParams>) => {
       const whereClause = parseWhereClause(params.query);
       if (whereClause) {
         const [, query, languageKey1, , languageKey2] = whereClause;
-        if (!isLanguageKey(languageKey1) || !isLanguageKey(languageKey2)) {
+        if (!corpus.isLanguageKey(languageKey1) || !corpus.isLanguageKey(languageKey2)) {
           // Language is invalid
           updateStatusComplete('boolean.where');
           return;
@@ -176,7 +183,7 @@ self.onmessage = async (message: MessageEvent<SearchParams>) => {
     let fileCount = 0;
     let cachedCount = 0;
     const taskList: SearchTaskPartial[] = [];
-    corpusEntries.forEach(([collectionKey, collection]) => {
+    corpus.entries.forEach(([collectionKey, collection]) => {
       // Do not process collection if it it does not need to be searched
       if (!params.collections.includes(collectionKey))
         return;
@@ -219,7 +226,7 @@ self.onmessage = async (message: MessageEvent<SearchParams>) => {
           taskCount++;
         }
         fileCount += languages.length;
-        cachedCount += languages.reduce((acc, languageKey) => acc + +isMemoryCached(collectionKey, languageKey, fileKey), 0);
+        cachedCount += languages.reduce((acc, languageKey) => acc + +isMemoryCached(loader, collectionKey, languageKey, fileKey), 0);
       });
     });
     // Check if the combination of collections/languages yielded no files.
@@ -312,9 +319,9 @@ self.onmessage = async (message: MessageEvent<SearchParams>) => {
       // To work around this, we need to fetch the files in the manager worker instead.
       const speaker = task.speaker;
       const files = await Promise.all(task.languages.map((languageKey) =>
-        loadFile(task.collectionKey, languageKey, task.fileKey).then(updateProgressLoaded)));
+        loadFile(loader, task.collectionKey, languageKey, task.fileKey).then(updateProgressLoaded)));
       const speakerFiles = speaker === undefined ? undefined : await Promise.all(task.languages.map((languageKey) =>
-        loadFile(task.collectionKey, languageKey, speaker.file)));
+        loadFile(loader, task.collectionKey, languageKey, speaker.file)));
 
       if (files.some((file) => file === '') || (speakerFiles?.some((file) => file === ''))) {
         // Network error occurred, but allow the search to continue

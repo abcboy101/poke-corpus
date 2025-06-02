@@ -38,7 +38,7 @@ export default defineConfig({
     stylelint(),
     VitePWA({
       registerType: 'autoUpdate',
-      workbox: { globPatterns: ['**/*.{js,css,html,ico,png,json,svg}'] }, // only pre-cache the English i18n file
+      workbox: { globPatterns: ['**/*.{js,css,html,ico,png,json,svg}'] },
       manifest: false,
     }),
   ],

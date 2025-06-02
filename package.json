@@ -19,14 +19,15 @@
     "predeploy": "npm run pull && npm run hash && npm run ci && npm run build",
     "deploy": "gh-pages -d dist",
     "start": "npm run hash && vite",
-    "build": "tsc -b && vite build && node gen-static.js && npm run minify",
+    "build": "tsc -b && vite build && npm run build:ssr && npm run build:minify",
+    "build:ssr": "npx tsx gen-static.ts",
+    "build:minify": "minify dist/index.ssr.html > dist/index.min.html && python scripts/run_minify.py",
     "serve": "vite preview",
     "test": "vitest",
     "test:coverage": "vitest run --coverage --watch=false",
     "lint": "eslint && stylelint \"**/*.css\"",
     "pull": "python scripts/remote_go.py && python scripts/remote_home.py && python scripts/remote_masters.py",
-    "hash": "python scripts/gzip_files.py && python scripts/update_hash.py && python scripts/corpus_json.py && eslint --fix src/res/corpusJson.ts",
-    "minify": "minify dist/index.html > dist/index.min.html && python scripts/run_minify.py",
+    "hash": "python scripts/gzip_files.py && python scripts/update_hash.py && python scripts/corpus_json.py",
     "update": "npx npm-check-updates -u && npm install"
   },
   "browserslist": {

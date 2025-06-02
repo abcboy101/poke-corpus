@@ -6,6 +6,7 @@ import Spinner from './Spinner';
 import ProgressBar from '../ProgressBar';
 import NoScript from './NoScript';
 import { isStatusInProgress, Status } from '../../utils/Status';
+import { Corpus } from '../../utils/corpus';
 
 import './Results.css';
 import '../../i18n/config';
@@ -92,7 +93,7 @@ const getSavedResultsPreferences = () => {
   return toggleDefault;
 };
 
-function Results({status, progress, results, showId = true, richText = true, limit = defaultLimit}: {status: Status, progress: number, showId: boolean, richText: boolean, results: readonly Result[], limit?: number}) {
+function Results({corpus, status, progress, results, showId = true, richText = true, limit = defaultLimit}: {corpus: Corpus, status: Status, progress: number, showId: boolean, richText: boolean, results: readonly Result[], limit?: number}) {
   const { t } = useTranslation();
   const initial = useMemo(getSavedResultsPreferences, []);
   const [showVariables, setShowVariables] = useState(initial.showVariables);
@@ -169,9 +170,9 @@ function Results({status, progress, results, showId = true, richText = true, lim
   useEffect(() => {
     // Wrap in startTransition to allow it to be rendered in the background.
     startTransition(() => {
-      setSections(<ResultsSections results={results} headers={headers} showId={showId} offset={offset} limit={limit} onShowSection={onShowSection} jumpTo={jumpTo} />);
+      setSections(<ResultsSections corpus={corpus} results={results} headers={headers} showId={showId} offset={offset} limit={limit} onShowSection={onShowSection} jumpTo={jumpTo} />);
     });
-  }, [results, headers, showId, offset, limit, onShowSection, jumpTo]);
+  }, [corpus, results, headers, showId, offset, limit, onShowSection, jumpTo]);
 
   const inProgress = isStatusInProgress(status);
   const resultsStatusText = t(import.meta.env.SSR ? 'status.loading' : `status.${status.split('.', 1)[0]}`);

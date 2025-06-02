@@ -2,7 +2,7 @@ import { MouseEventHandler, useEffect, useMemo, useRef } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import corpus, { codeId, langId } from '../../utils/corpus';
+import { codeId, Corpus, langId } from '../../utils/corpus';
 import Share from './Share';
 import ViewNearby from './ViewNearby';
 import Copy from './Copy';
@@ -12,6 +12,7 @@ import './ResultsTextColor.css';
 import { expandSpeakers } from '../../utils/speaker';
 import { SearchTaskResultLines } from '../../webWorker/searchWorker';
 import { ParamsResult, Result, SectionHeader } from '../../utils/searchResults';
+import { getSearchParamsFactory, SearchParamsFactory } from '../../utils/searchParams';
 
 const addWordBreaksToID = (s: string, lang: string) => lang === codeId ? s.replaceAll(/([._/]|([a-z])(?=[A-Z])|([A-Za-z])(?=[0-9]))/gu, '$1<wbr>') : s;
 
@@ -32,6 +33,7 @@ function Actions({id}: {id: string}) {
 }
 
 interface ResultsTableParams extends Omit<SearchTaskResultLines, 'speakers' | 'literals'> {
+  readonly corpus: Corpus,
   readonly index: number,
   readonly start: number,
   readonly end: number,
@@ -39,14 +41,15 @@ interface ResultsTableParams extends Omit<SearchTaskResultLines, 'speakers' | 'l
   readonly richText: boolean,
   readonly sectionOffset: number,
   readonly onShowSection: ShowSectionCallback,
+  readonly searchParamsFactory: SearchParamsFactory,
 }
 
-function ResultsTable({index, collection, file, languages, lines, start, end, showId, richText, sectionOffset, onShowSection}: ResultsTableParams) {
+function ResultsTable({corpus, index, collection, file, languages, lines, start, end, showId, richText, sectionOffset, onShowSection, searchParamsFactory}: ResultsTableParams) {
   const { t } = useTranslation();
   const idIndex = languages.indexOf(codeId);
   const displayLanguages = languages.map((lang) => lang === codeId ? langId : lang);
   const viewSpeaker = t('viewSpeaker');
-  const hasSpeakers = corpus.collections[collection].speaker !== undefined;
+  const hasSpeakers = corpus.getCollection(collection).speaker !== undefined;
 
   // RTL support: if the interface language uses a different direction, make sure to tag each cell with its direction
   const displayDirs = displayLanguages.map((lang) => i18next.dir(lang));
@@ -64,8 +67,8 @@ function ResultsTable({index, collection, file, languages, lines, start, end, sh
     }
   };
 
-  const classes = ['results-table', `collection-${corpus.collections[collection].id ?? collection.toLowerCase()}`, `file-${file}`, `rich-text-${richText ? 'enabled' : 'disabled'}`];
-  if (corpus.collections[collection].softWrap === true)
+  const classes = ['results-table', `collection-${corpus.getCollection(collection).id ?? collection.toLowerCase()}`, `file-${file}`, `rich-text-${richText ? 'enabled' : 'disabled'}`];
+  if (corpus.getCollection(collection).softWrap === true)
     classes.push('soft');
 
   const table = (
@@ -84,7 +87,7 @@ function ResultsTable({index, collection, file, languages, lines, start, end, sh
               {row.map((s, j) => {
                 if (showId || languages[j] !== codeId) {
                   return <td key={j} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]}
-                    dangerouslySetInnerHTML={{__html: addWordBreaksToID(hasSpeakers ? expandSpeakers(s, collection, languages[j], viewSpeaker) : s, languages[j])}}></td>;
+                    dangerouslySetInnerHTML={{__html: addWordBreaksToID(hasSpeakers ? expandSpeakers(s, searchParamsFactory, collection, languages[j], viewSpeaker) : s, languages[j])}}></td>;
                 }
               })}
             </tr>
@@ -129,11 +132,11 @@ function ResultsSection(params: ResultsSectionParams) {
 }
 
 type ResultsSectionsParamsPassed = (
-  Pick<ResultsTableParams, 'showId' | 'richText' | 'onShowSection'>
+  Pick<ResultsTableParams, 'corpus' | 'showId' | 'richText' | 'onShowSection' | 'searchParamsFactory'>
   & Pick<ResultsSectionParams, 'offset' | 'limit'>
 );
 
-interface ResultsSectionsParams extends Omit<ResultsSectionsParamsPassed, 'richText'> {
+interface ResultsSectionsParams extends Omit<ResultsSectionsParamsPassed, 'richText' | 'searchParamsFactory'> {
   readonly results: readonly Result[],
   readonly headers: readonly SectionHeader[],
   readonly jumpTo: (n: number) => void,
@@ -142,6 +145,7 @@ interface ResultsSectionsParams extends Omit<ResultsSectionsParamsPassed, 'richT
 /** Results section, including its header. */
 export function ResultsSections({results, headers, jumpTo, ...passed}: ResultsSectionsParams) {
   // Wrap in useMemo to prevent expensive recalculations.
+  const searchParamsFactory = useMemo(() => getSearchParamsFactory(passed.corpus), [passed.corpus]);
   const sectionParams = useMemo(() => {
     let sectionOffset = 0;
     const newSectionParams: (Parameters<typeof ResultsSection>[0])[] = [];
@@ -155,6 +159,7 @@ export function ResultsSections({results, headers, jumpTo, ...passed}: ResultsSe
         index, sectionOffset, richText,
         status: result.status,
         header: headers[index],
+        searchParamsFactory,
       });
       sectionOffset += result.params.lines.length;
     }
