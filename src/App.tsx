@@ -23,16 +23,8 @@ declare global {
 type View = 'Search' | 'CacheManager';
 const initialView = 'Search';
 
-function Header({showModal, richText, setRichText, limit, setLimit, setView, setAppKey}: {showModal: ShowModal, richText: boolean, setRichText: Dispatch<SetStateAction<boolean>>, limit: number, setLimit: Dispatch<SetStateAction<number>>, setView: Dispatch<SetStateAction<View>>, setAppKey: Dispatch<SetStateAction<number>>}) {
+function Header({showModal, richText, setRichText, limit, setLimit, reset}: {showModal: ShowModal, richText: boolean, setRichText: Dispatch<SetStateAction<boolean>>, limit: number, setLimit: Dispatch<SetStateAction<number>>, reset: MouseEventHandler<HTMLAnchorElement>}) {
   const { t } = useTranslation();
-  const reset: MouseEventHandler<HTMLAnchorElement> = (e) => {
-    window.location.hash = '';
-    localStorageRemoveItem('corpus-params'); // clear saved search query
-    setView(initialView); // reset the view
-    setAppKey((prev) => (prev + 1) & 0xFF); // force re-render
-    e.preventDefault();
-  };
-
   return (
     <header className="header">
       <h1>
@@ -85,6 +77,16 @@ function App() {
     });
   }, []);
 
+  const reset: MouseEventHandler<HTMLAnchorElement> = useCallback((e) => {
+    window.location.hash = '';
+    localStorageRemoveItem('corpus-params'); // clear saved search query
+    setView(initialView);
+    setAppKey((prev) => (prev + 1) & 0xFF); // force re-render
+    setModalKey(0);
+    setModalArguments(null);
+    e.preventDefault();
+  }, []);
+
   const showModal: ShowModal = useCallback((args) => {
     setModalArguments(args);
     setModalKey((prev) => (prev + 1) & 0xFF);
@@ -112,7 +114,7 @@ function App() {
     classes.push('ua-safari');
   return (
     <div key={appKey} className={classes.join(' ')} lang={i18next.language} dir={i18next.dir()}>
-      <Header showModal={showModal} richText={richText} setRichText={setRichText} limit={limit} setLimit={setLimit} setView={setView} setAppKey={setAppKey} />
+      <Header showModal={showModal} richText={richText} setRichText={setRichText} limit={limit} setLimit={setLimit} reset={reset} />
       <ErrorBoundary FallbackComponent={ErrorWindow}>
         { loader !== null ? <Search loader={loader} showModal={showModal} richText={richText} limit={limit}/> : <ErrorWindow /> }
         { cacheManager }
