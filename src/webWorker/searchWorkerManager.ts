@@ -6,7 +6,7 @@ import { SearchParams } from '../utils/searchParams';
 import { SearchTask, SearchTaskResult, SearchTaskResultComplete } from './searchWorker';
 import { SearchResultsInProgress, SearchResultsComplete, SearchResultsStatus } from '../utils/Status';
 import { isBooleanQueryValid, parseWhereClause } from './searchBoolean';
-import { isValidRegex } from '../utils/utils';
+import { isValidRegex, Mutable } from '../utils/utils';
 
 declare global {
   interface Window {
@@ -76,6 +76,10 @@ const loadFile = async (loader: Loader, collectionKey: CollectionKey, languageKe
     else {
       // Can't access cache storage or indexedDB, download file from the server
       res = await loader.getFileRemote(path);
+    }
+
+    if (res === null) {
+      return '';
     }
   }
   catch (err) {
@@ -323,22 +327,26 @@ self.onmessage = async (message: MessageEvent<SearchManagerParams>) => {
       const speakerFiles = speaker === undefined ? undefined : await Promise.all(task.languages.map((languageKey) =>
         loadFile(loader, task.collectionKey, languageKey, speaker.file)));
 
-      if (files.some((file) => file === '') || (speakerFiles?.some((file) => file === ''))) {
-        // Network error occurred, but allow the search to continue
-        // Partial results may still be useful even if incomplete
-        networkError = true;
-      }
-
       // Another helper had an error while loading, no need to continue
       if (helperError)
         return;
 
+      const taskFull: Mutable<SearchTask> = { ...task, files, speakerFiles };
+
+      // Network error occurred, but allow the search to continue
+      // Partial results may still be useful even if incomplete
+      if (files.some((file) => file === '') || (speakerFiles?.some((file) => file === ''))) {
+        networkError = true;
+
+        // Remove files that didn't load from the task
+        taskFull.languages = task.languages.filter((_, i) => files[i] !== '');
+        taskFull.files = files.filter((_, i) => files[i] !== '');
+        taskFull.speakerFiles = speakerFiles?.filter((_, i) => files[i] !== '');
+        if (taskFull.speakerFiles?.some((file) => file === ''))
+          taskFull.speaker = undefined;
+      }
+
       // Start helper
-      const taskFull: SearchTask = {
-        ...task,
-        files: files,
-        speakerFiles: speakerFiles,
-      };
       helpers[i % helpers.length].postMessage(taskFull);
     }));
   }

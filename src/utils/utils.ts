@@ -1,4 +1,7 @@
 export type ReadonlyExhaustiveArray<A extends readonly unknown[], T extends A[number]> = readonly T[];
+export type Mutable<T> = {
+  -readonly [P in keyof T]: T[P];
+};
 
 export const escapeRegex = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/gu, '\\$&');
 

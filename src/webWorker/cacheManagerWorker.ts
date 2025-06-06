@@ -42,20 +42,29 @@ self.onmessage = async (message: MessageEvent<CacheManagerParams>) => {
 
     // Load the files and save them to the cache
     const [cache, db] = await Promise.all([loader.getCache(), loader.getIndexedDB()] as const);
-    await Promise.all(filePaths.map((filePath) => loader.getFile(cache, db, filePath)
-      .then(() => {
+    const results = await Promise.all(filePaths.map((filePath) => loader.getFile(cache, db, filePath)
+      .then((res) => {
+        if (res === null)
+          return false;
         loadedBytes += loader.getFileSize(filePath);
         updateStatus({status: 'loading', loadedBytes, totalBytes, requestedCollection});
         if (import.meta.env.DEV) {
           console.debug(`Loaded ${loadedBytes}/${totalBytes}`);
         }
+        return true;
       })
     ));
     db.close();
 
     // Send results once all done
-    updateStatus({status: 'done', loadedBytes, totalBytes, requestedCollection});
-    console.debug('Caching worker complete');
+    if (results.some((result) => !result)) {
+      updateStatus({status: 'error', loadedBytes: 0, totalBytes: 0, requestedCollection});
+      console.debug('Caching worker error');
+    }
+    else {
+      updateStatus({status: 'done', loadedBytes, totalBytes, requestedCollection});
+      console.debug('Caching worker complete');
+    }
   }
   catch (err) {
     console.error(err);

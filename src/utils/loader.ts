@@ -57,27 +57,33 @@ export const loaderFactory = (corpus: Corpus) => {
   /**
    * Retrieves a file from the cache, if present and up-to-date, or the server otherwise.
    */
-  const getFile = async (cache: Cache, db: IDBDatabase, path: string) => {
+  const getFile = async (cache: Cache, db: IDBDatabase, path: string): Promise<Response | null> => {
     const url = getFileURL(path);
 
     const [remoteMetadata, localMetadata] = await getMetadata(db, path);
 
     // Use cached file if local hash is up-to-date, or if we are offline
     if ((localMetadata?.hash === remoteMetadata.hash) || (!navigator.onLine && localMetadata?.hash !== undefined)) {
-      const res = await cacheMatch(cache, url);
-      if (res !== undefined)
-        return res;
+      const local = await cacheMatch(cache, url);
+      if (local !== undefined)
+        return local;
     }
 
     // Out-of-date or miss, overwrite cached file and update local hash
-    const res = await fetch(url);
-    if (import.meta.env.DEV)
-      console.debug(`Retrieved ${url} from the server`);
-    await cachePut(cache, url, res).then(async (success) => {
-      if (success)
-        await setLocalMetadata(db, path);
-    });
-    return res;
+    const remote = await fetch(url);
+    if (remote.ok) {
+      if (import.meta.env.DEV)
+        console.debug(`Retrieved ${url} from the server`);
+      await cachePut(cache, url, remote).then(async (success) => {
+        if (success)
+          await setLocalMetadata(db, path);
+      });
+      return remote;
+    }
+
+    // Server error, use cached file even if it is out-of-date
+    const local = await cacheMatch(cache, url);
+    return local ?? null;
   };
 
   /**
@@ -97,9 +103,10 @@ export const loaderFactory = (corpus: Corpus) => {
   /**
    * Retrieves a file from the server.
    */
-  const getFileRemote = (path: string) => {
+  const getFileRemote = async (path: string): Promise<Response | null> => {
     const url = getFileURL(path);
-    return fetch(url);
+    const res = await fetch(url);
+    return res.ok ? res : null;
   };
   //#endregion
 
