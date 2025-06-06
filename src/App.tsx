@@ -70,7 +70,7 @@ function App() {
   const [modalKey, setModalKey] = useState(0);
   const [modalArguments, setModalArguments] = useState<ModalArguments | null>(null);
   const [cacheManagerLoaded, setCacheManagerLoaded] = useState(false);
-  const [loader, setLoader] = useState<Loader | null>(import.meta.env.SSR ? getLoaderSSR() : null);
+  const [loader, setLoader] = useState<Loader | null | undefined>(import.meta.env.SSR ? getLoaderSSR() : undefined);
 
   useEffect(() => {
     const mode = getMode();
@@ -81,6 +81,7 @@ function App() {
       setLoader(loader);
     }).catch((err: unknown) => {
       console.error(err);
+      setLoader(null);
     });
   }, []);
 
@@ -98,13 +99,13 @@ function App() {
     });
   }, []);
 
-  if (loader === null) {
+  if (loader === undefined) {
     return undefined;
   }
 
   // Don't need to load the cache manager until the user navigates to it.
   // Once it's loaded, keep it open in the background to maintain its state.
-  const cacheManager = cacheManagerLoaded && <CacheManager active={view === 'CacheManager'} loader={loader} showModal={showModal}/>;
+  const cacheManager = loader !== null && cacheManagerLoaded && <CacheManager active={view === 'CacheManager'} loader={loader} showModal={showModal}/>;
 
   const classes = ['app', `view-${view.toLowerCase()}`];
   if (!import.meta.env.SSR && /^((?!chrome|android).)*safari/i.test(navigator.userAgent))
@@ -113,7 +114,7 @@ function App() {
     <div key={appKey} className={classes.join(' ')} lang={i18next.language} dir={i18next.dir()}>
       <Header showModal={showModal} richText={richText} setRichText={setRichText} limit={limit} setLimit={setLimit} setView={setView} setAppKey={setAppKey} />
       <ErrorBoundary FallbackComponent={ErrorWindow}>
-        { <Search loader={loader} showModal={showModal} richText={richText} limit={limit}/> }
+        { loader !== null ? <Search loader={loader} showModal={showModal} richText={richText} limit={limit}/> : <ErrorWindow /> }
         { cacheManager }
       </ErrorBoundary>
       <Footer view={view} switchView={switchView} />

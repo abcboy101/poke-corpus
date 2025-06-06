@@ -1,4 +1,4 @@
-import { Corpus, CollectionKey, Metadata, getFilePath, isMetadata, fetchCorpus } from './corpus';
+import { Corpus, CollectionKey, Metadata, cacheName, fetchCorpus, getFilePath, isMetadata } from './corpus';
 
 export const loaderFactory = (corpus: Corpus) => {
   //#region Metadata/Fetch
@@ -189,8 +189,6 @@ export const loaderFactory = (corpus: Corpus) => {
   //#endregion
 
   //#region Cache Storage
-  const cacheName = "corpus";
-
   const getCache = async () => await caches.open(cacheName);
 
   const cacheMatch = async (cache: Cache, url: string) => {

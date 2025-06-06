@@ -38,7 +38,10 @@ export default defineConfig({
     stylelint(),
     VitePWA({
       registerType: 'autoUpdate',
-      workbox: { globPatterns: ['**/*.{js,css,html,ico,png,json,svg}'] },
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,ico,png,json,svg}'],
+        globIgnores: ['data.json'],
+      },
       manifest: false,
     }),
   ],

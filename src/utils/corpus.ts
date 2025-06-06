@@ -133,8 +133,33 @@ export const getCorpus = (source: CorpusSource) => {
  */
 export const getFilePath = (collectionKey: CollectionKey, languageKey: LanguageKey, fileKey: FileKey) => `corpus/${collectionKey}/${languageKey}_${fileKey}.txt.gz`;
 
+export const cacheName = 'corpus';
+
+async function fetchLatest(url: string): Promise<Response | undefined> {
+  // Fetch from both the cache and the server simultaneously
+  const [[cache, local], remote] = await Promise.all([
+    'caches' in window
+      ? caches.open(cacheName)
+        .then(async (cache) => [cache, await cache.match(url).catch(() => undefined)] as const)
+        .catch(() => [undefined, undefined])
+      : [undefined, undefined],
+    navigator.onLine
+      ? fetch(url)
+        .then((res) => res.ok ? res : undefined)
+        .catch(() => undefined)
+      : undefined,
+  ]);
+
+  // Save to cache
+  if (cache && remote)
+    cache.put(url, remote.clone()).catch((err: unknown) => { console.error(err); });
+  return remote ?? local;
+}
+
 export async function fetchCorpus(): Promise<Corpus> {
-  const res = await fetch(import.meta.env.BASE_URL + 'data.json');
+  const res = await fetchLatest(import.meta.env.BASE_URL + 'data.json');
+  if (res === undefined)
+    throw new TypeError('Failed to fetch corpus data');
   const source = await res.json() as CorpusSource;
   return getCorpus(source);
 }
