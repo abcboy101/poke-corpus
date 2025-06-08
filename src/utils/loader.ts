@@ -265,14 +265,13 @@ export function initializeLoader(setLoader: Dispatch<SetStateAction<Loader | nul
 }
 
 async function getLoaderCacheOnly(url: string | URL | Request): Promise<Loader | null> {
-  const cache = await caches.open(cacheName);
-  const local = await cache.match(url);
-  if (local === undefined)
-    return null; // no match
-  if (!local.ok)
-    return null; // HTTP error
-
-  return getLoaderFromResponse(local);
+  if ('caches' in window) {
+    const cache = await caches.open(cacheName);
+    const local = await cache.match(url);
+    if (local?.ok)
+      return getLoaderFromResponse(local);
+  }
+  return null;
 }
 
 async function getLoaderRemote(url: string | URL | Request): Promise<Loader | null> {
