@@ -165,16 +165,16 @@ function Search({loader, showModal, richText, limit}: {loader: Loader, showModal
     }).catch((err: unknown) => {
       console.error(err);
     });
-  }, []);
+  }, [loader.getDownloadSizeTotal]);
 
   const inProgress = isStatusInProgress(status);
   const waiting = status === 'waiting';
   const searchForm = useMemo(() => (
     <SearchForm corpus={loader.corpus} inProgress={inProgress} waiting={waiting} postToWorker={postToWorkerModal} terminateWorker={terminateWorker} />
-  ), [inProgress, waiting, postToWorkerModal, terminateWorker]);
+  ), [loader.corpus, inProgress, waiting, postToWorkerModal, terminateWorker]);
   const searchResults = useMemo(() => (
     <Results corpus={loader.corpus} status={status} progress={progress} showId={showId} richText={richText} results={results} limit={limit} />
-  ), [status, progress, showId, richText, results, limit]);
+  ), [loader.corpus, status, progress, showId, richText, results, limit]);
 
   return (
     <div className="search">

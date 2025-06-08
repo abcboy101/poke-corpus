@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState, useTransition } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { CacheManagerParams, CacheManagerResult, RequestedCollection } from "../../webWorker/cacheManagerWorker";
@@ -79,7 +79,6 @@ function CacheEntryList({corpus, cachedMetadata, cacheCollections, clearCachedFi
 
 function CacheManager({active, loader, showModal}: {active: boolean, loader: Loader, showModal: ShowModal}) {
   const { t } = useTranslation();
-  const [isPending, startTransition] = useTransition();
   const [cacheStorageEnabled, setCacheStorageEnabled] = useState(false);
   const [cachedMetadata, setCachedMetadata] = useState<readonly CachedMetadataEntry[]>([]);
   const [cacheInProgress, setCacheInProgress] = useState<boolean | null>(false);
@@ -127,7 +126,7 @@ function CacheManager({active, loader, showModal}: {active: boolean, loader: Loa
         workerRef.current.postMessage({serializedCorpus: serializeCorpus(loader.corpus), requestedCollection} satisfies CacheManagerParams);
       }
     }
-  }, []);
+  }, [loader]);
 
   const checkCachedFilesAsync = async (collectionKey: RequestedCollection = 'background') => {
     if ('caches' in window && 'indexedDB' in window && 'databases' in window.indexedDB) {
@@ -222,27 +221,15 @@ function CacheManager({active, loader, showModal}: {active: boolean, loader: Loa
     });
   }, []);
 
-  // Refresh on page load
+  // Refresh on page load or switch to cache manager
   useEffect(() => {
-    startTransition(async () => {
-      await Promise.all([
-        checkCacheStorageEnabled(),
-        checkCachedFilesAsync(),
-      ]);
+    Promise.all([
+      checkCacheStorageEnabled(),
+      checkCachedFilesAsync(),
+    ]).catch((err: unknown) => {
+      console.error(err);
     });
-  }, []);
-
-  // Refresh on switch to cache manager
-  useEffect(() => {
-    if (active) {
-      startTransition(async () => {
-        await Promise.all([
-          checkCacheStorageEnabled(),
-          checkCachedFilesAsync(),
-        ]);
-      });
-    }
-  }, [active]);
+  }, [active, loader.corpus.entries, loader.corpus.metadata]);
 
   const cacheAllModal = () => {
     loader.getDownloadSizeTotal().then((size) => {
@@ -301,15 +288,13 @@ function CacheManager({active, loader, showModal}: {active: boolean, loader: Loa
         <button onClick={clearCacheModal}>{t('clearCache')}</button>
       </div>
       <div className="cache-results app-window">
-        {
-          !isPending && <div className="app-window-inner">
-            <CacheStatus cacheStorageEnabled={cacheStorageEnabled} cachedMetadata={cachedMetadata} />
-            { cacheInProgress
-              ? <CacheProgress loadedBytes={loadedBytes} totalBytes={totalBytes} progress={progress} />
-              : <CacheEntryList corpus={loader.corpus} cachedMetadata={cachedMetadata} cacheCollections={cacheCollections} clearCachedFile={clearCachedFile} />
-            }
-          </div>
-        }
+        <div className="app-window-inner">
+          <CacheStatus cacheStorageEnabled={cacheStorageEnabled} cachedMetadata={cachedMetadata} />
+          { cacheInProgress
+            ? <CacheProgress loadedBytes={loadedBytes} totalBytes={totalBytes} progress={progress} />
+            : <CacheEntryList corpus={loader.corpus} cachedMetadata={cachedMetadata} cacheCollections={cacheCollections} clearCachedFile={clearCachedFile} />
+          }
+        </div>
       </div>
     </div>
   );

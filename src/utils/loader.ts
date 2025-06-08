@@ -1,4 +1,10 @@
-import { Corpus, CollectionKey, Metadata, cacheName, fetchCorpus, getFilePath, isMetadata } from './corpus';
+import { Dispatch, SetStateAction } from 'react';
+import { CollectionKey, Corpus, CorpusSource, Metadata, getCorpus, getFilePath, isMetadata } from './corpus';
+
+const cacheName = 'corpus';
+
+const getFileURL = (path: string) => import.meta.env.BASE_URL + path;
+const dataURL = getFileURL('data.json');
 
 export const loaderFactory = (corpus: Corpus) => {
   //#region Metadata/Fetch
@@ -51,8 +57,6 @@ export const loaderFactory = (corpus: Corpus) => {
       ).reduce((a, b) => a + b, 0);
     }
   };
-
-  const getFileURL = (path: string) => import.meta.env.BASE_URL + path;
 
   /**
    * Retrieves a file from the cache, if present and up-to-date, or the server otherwise.
@@ -247,7 +251,48 @@ export function getLoader(corpus: Corpus): Loader {
   return loaderFactory(corpus);
 }
 
-export async function fetchLoader(): Promise<Loader> {
-  const corpus = await fetchCorpus();
-  return loaderFactory(corpus);
+//#region Initialization
+export function initializeLoader(setLoader: Dispatch<SetStateAction<Loader | null | undefined>>, url: string | URL | Request = dataURL) {
+  const replaceLoaderOnFailure = () => { setLoader((prev) => prev === undefined ? null : prev); };
+  Promise.all([
+    getLoaderCacheOnly(url)
+      .then((loader) => { setLoader((prev) => (prev === undefined && loader !== null) ? loader : prev); })
+      .catch((err: unknown) => { console.log(err); }),
+    getLoaderRemote(url)
+      .then((loader) => { setLoader((prev) => loader ?? prev); })
+      .catch((err: unknown) => { console.log(err); }),
+  ]).then(replaceLoaderOnFailure, replaceLoaderOnFailure);
 }
+
+async function getLoaderCacheOnly(url: string | URL | Request): Promise<Loader | null> {
+  const cache = await caches.open(cacheName);
+  const local = await cache.match(url);
+  if (local === undefined)
+    return null; // no match
+  if (!local.ok)
+    return null; // HTTP error
+
+  return getLoaderFromResponse(local);
+}
+
+async function getLoaderRemote(url: string | URL | Request): Promise<Loader | null> {
+  const remote = await fetch(url);
+  if (!remote.ok)
+    return null; // HTTP error
+
+  // Save to cache storage
+  if ('caches' in window) {
+    const remoteClone = remote.clone();
+    caches.open(cacheName)
+      .then((cache) => cache.put(url, remoteClone))
+      .catch((err: unknown) => { console.log(err); });
+  }
+  return getLoaderFromResponse(remote);
+}
+
+async function getLoaderFromResponse(res: Response): Promise<Loader> {
+  const source = await res.json() as CorpusSource;
+  const corpus = getCorpus(source);
+  return getLoader(corpus);
+}
+//#endregion

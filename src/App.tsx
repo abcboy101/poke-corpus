@@ -13,11 +13,12 @@ import './safari.css';
 import './i18n/config';
 import { ErrorBoundary } from 'react-error-boundary';
 import ErrorWindow from './components/ErrorWindow';
-import { fetchLoader, Loader } from './utils/loader';
+import { initializeLoader, Loader } from './utils/loader';
 
 declare global {
   /** Instantiates a Loader during SSR. See entry-server.tsx for definition. */
   function getLoaderSSR(): Loader;
+  function reloadCorpus(): void;
 }
 
 type View = 'Search' | 'CacheManager';
@@ -68,13 +69,7 @@ function App() {
     const mode = getMode();
     document.body.classList.add(`mode-${mode}`);
     setCacheManagerLoaded(true);
-
-    fetchLoader().then((loader) => {
-      setLoader(loader);
-    }).catch((err: unknown) => {
-      console.error(err);
-      setLoader(null);
-    });
+    initializeLoader(setLoader);
   }, []);
 
   const reset: MouseEventHandler<HTMLAnchorElement> = useCallback((e) => {
@@ -105,20 +100,20 @@ function App() {
     return undefined;
   }
 
-  // Don't need to load the cache manager until the user navigates to it.
-  // Once it's loaded, keep it open in the background to maintain its state.
-  const cacheManager = loader !== null && cacheManagerLoaded && <CacheManager active={view === 'CacheManager'} loader={loader} showModal={showModal}/>;
-
   const classes = ['app', `view-${view.toLowerCase()}`];
   if (!import.meta.env.SSR && /^((?!chrome|android).)*safari/i.test(navigator.userAgent))
     classes.push('ua-safari');
   return (
     <div key={appKey} className={classes.join(' ')} lang={i18next.language} dir={i18next.dir()}>
       <Header showModal={showModal} richText={richText} setRichText={setRichText} limit={limit} setLimit={setLimit} reset={reset} />
-      <ErrorBoundary FallbackComponent={ErrorWindow}>
-        { loader !== null ? <Search loader={loader} showModal={showModal} richText={richText} limit={limit}/> : <ErrorWindow /> }
-        { cacheManager }
-      </ErrorBoundary>
+      {
+        loader !== null ? (
+          <ErrorBoundary FallbackComponent={ErrorWindow}>
+            <Search loader={loader} showModal={showModal} richText={richText} limit={limit}/>
+            <CacheManager active={view === 'CacheManager'} loader={loader} showModal={showModal}/>
+          </ErrorBoundary>
+        ) : <ErrorWindow />
+      }
       <Footer view={view} switchView={switchView} />
       <Modal key={modalKey} {...modalArguments}/>
     </div>
