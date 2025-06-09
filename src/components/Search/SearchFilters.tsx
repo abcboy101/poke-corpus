@@ -29,8 +29,8 @@ function getValidCollections(corpus: Corpus, languages: readonly string[]) {
   // Otherwise, include all valid collections with at least one selected language.
   const validCollections = new Set<string>();
   const languageSet = new Set(languages);
-  for (const collectionKey of corpus.collections)
-    if (corpus.getCollection(collectionKey).languages.some((languageKey) => languageSet.has(languageKey)))
+  for (const [collectionKey, collection] of corpus.entries)
+    if (collection.languages.some((languageKey) => languageSet.has(languageKey)))
       validCollections.add(collectionKey);
   return validCollections;
 }

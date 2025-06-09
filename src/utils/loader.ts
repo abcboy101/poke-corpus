@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from 'react';
-import { CollectionKey, Corpus, CorpusSource, Metadata, getCorpus, getFilePath, isMetadata } from './corpus';
+import { CollectionKey, Corpus, CorpusSource, LanguageKey, Metadata, getCorpus, getFilePath, isMetadata } from './corpus';
 import { logErrorToConsole } from './utils';
 
 const cacheName = 'corpus';
@@ -34,11 +34,11 @@ export const loaderFactory = (corpus: Corpus) => {
   /**
    * Returns the total size of the pending downloads, or 0 if already downloaded.
    */
-  const getDownloadSizeTotal = async (collections: readonly CollectionKey[] = corpus.collections): Promise<number> => {
+  const getDownloadSizeTotal = async (collections: readonly CollectionKey[] = corpus.collections, languages: readonly LanguageKey[] = corpus.languages): Promise<number> => {
     try {
       const db = await getIndexedDB();
       const size = (await Promise.all(collections.flatMap((collectionKey) =>
-        corpus.getCollection(collectionKey).languages.flatMap((languageKey) =>
+        corpus.getCollection(collectionKey).languages.filter((languageKey) => languages.includes(languageKey)).flatMap((languageKey) =>
           corpus.getCollection(collectionKey).files.map((fileKey) =>
             getDownloadSize(db, getFilePath(collectionKey, languageKey, fileKey))
           )
@@ -50,7 +50,7 @@ export const loaderFactory = (corpus: Corpus) => {
     catch {
       // Can't access cache storage or indexedDB, assume we'll need to download all files from the server
       return collections.flatMap((collectionKey) =>
-        corpus.getCollection(collectionKey).languages.flatMap((languageKey) =>
+        corpus.getCollection(collectionKey).languages.filter((languageKey) => languages.includes(languageKey)).flatMap((languageKey) =>
           corpus.getCollection(collectionKey).files.map((fileKey) =>
             getFileSize(getFilePath(collectionKey, languageKey, fileKey))
           )

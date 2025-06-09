@@ -217,8 +217,9 @@ function CacheManager({active, loader, showModal}: {active: boolean, loader: Loa
   const clearCachedFileAsync = async (collectionKey: CollectionKey) => {
     if ('caches' in window && 'indexedDB' in window && 'databases' in window.indexedDB) {
       const [cache, db] = await Promise.all([loader.getCache(), loader.getIndexedDB()] as const);
-      await Promise.all(loader.corpus.getCollection(collectionKey).languages.flatMap((languageKey) =>
-        loader.corpus.getCollection(collectionKey).files.flatMap((fileKey) => {
+      const collection = loader.corpus.getCollection(collectionKey);
+      await Promise.all(collection.languages.flatMap((languageKey) =>
+        collection.files.flatMap((fileKey) => {
           const path = loader.getFilePath(collectionKey, languageKey, fileKey);
           return [loader.deleteLocalMetadata(db, path), cache.delete(path)];
         })

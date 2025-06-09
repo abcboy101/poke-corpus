@@ -133,7 +133,7 @@ function Search({loader, showModal, richText, limit}: {loader: Loader, showModal
       return;
     }
 
-    loader.getDownloadSizeTotal().then((size) => {
+    loader.getDownloadSizeTotal(params.collections, params.showAllLanguages ? undefined : params.languages).then((size) => {
       if (size <= searchModalThreshold) {
         postToWorker(params);
         return;
