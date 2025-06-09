@@ -7,7 +7,7 @@ import Delete from "./Delete";
 
 import { Corpus, CollectionKey, FileKey, LanguageKey, serializeCorpus } from '../../utils/corpus';
 import { Loader } from '../../utils/loader';
-import { formatBytes } from "../../utils/utils";
+import { formatBytes, logErrorToConsole } from "../../utils/utils";
 import { ShowModal } from '../Modal';
 import ProgressBar from "../ProgressBar";
 import './CacheManager.css';
@@ -87,8 +87,21 @@ function CacheManager({active, loader, showModal}: {active: boolean, loader: Loa
   const [totalBytes, setTotalBytes] = useState(0);
   const workerRef = useRef<Worker>(null);
 
-  const checkCacheStorageEnabled = async () => {
-    setCacheStorageEnabled('caches' in window && await window.caches.keys().then(() => true).catch(() => false));
+  const checkCacheStorageEnabled = () => {
+    if ('caches' in window && 'indexedDB' in window && 'databases' in window.indexedDB) {
+      Promise.all([loader.getCache(), loader.getIndexedDB()] as const)
+        .then(() => {
+          setCacheStorageEnabled(true);
+        })
+        .catch(() => {
+          setCacheStorageEnabled(false);
+          setCachedMetadata([]);
+        });
+    }
+    else {
+      setCacheStorageEnabled(false);
+      setCachedMetadata([]);
+    }
   };
 
   const onMessage = (e: MessageEvent<CacheManagerResult>) => {
@@ -148,11 +161,12 @@ function CacheManager({active, loader, showModal}: {active: boolean, loader: Loa
 
       // Remove files that are no longer referenced from the cache
       const pathsSet = new Set(paths);
-      const pathsToDelete = (await loader.getAllLocalFilePaths()).filter((path) => !pathsSet.has(path));
-      await Promise.all(pathsToDelete.flatMap((path) => (
-        loader.deleteLocalMetadata(db, path)
-          .then(() => cache.delete(path))
-          .then(() => { console.debug(`Deleted ${path} from cache`); })
+      const pathsToDelete = (await loader.getAllLocalFilePaths(db)).filter((path) => !pathsSet.has(path));
+      await Promise.all(pathsToDelete.map((path) => (
+        Promise.all([loader.deleteLocalMetadata(db, path), cache.delete(path)] as const)
+          .then(([dbSuccess, cacheSuccess]) => {
+            console.debug((dbSuccess && cacheSuccess) ? `Deleted ${path} from cache` : `Failed to delete ${path} from cache`);
+          })
       )));
       db.close();
 
@@ -163,9 +177,7 @@ function CacheManager({active, loader, showModal}: {active: boolean, loader: Loa
     }
   };
   const checkCachedFiles = (collectionKey: RequestedCollection) => {
-    checkCachedFilesAsync(collectionKey).catch((err: unknown) => {
-      console.error(err);
-    });
+    checkCachedFilesAsync(collectionKey).catch(logErrorToConsole);
   };
 
   const clearCache = () => {
@@ -182,9 +194,9 @@ function CacheManager({active, loader, showModal}: {active: boolean, loader: Loa
     }
 
     if ('indexedDB' in window && 'databases' in window.indexedDB) {
-      promises.push(
-        loader.clearLocalMetadata().then(() => checkCachedFilesAsync())
-      );
+      promises.push(loader.getIndexedDB().then((db) =>
+        loader.clearLocalMetadata(db).then(() => checkCachedFilesAsync())
+      ));
     }
     if ('caches' in window) {
       promises.push(loader.getCache().then((cache) =>
@@ -216,19 +228,13 @@ function CacheManager({active, loader, showModal}: {active: boolean, loader: Loa
     }
   };
   const clearCachedFile = useCallback((collectionKey: CollectionKey) => {
-    clearCachedFileAsync(collectionKey).catch((err: unknown) => {
-      console.error(err);
-    });
+    clearCachedFileAsync(collectionKey).catch(logErrorToConsole);
   }, []);
 
   // Refresh on page load or switch to cache manager
   useEffect(() => {
-    Promise.all([
-      checkCacheStorageEnabled(),
-      checkCachedFilesAsync(),
-    ]).catch((err: unknown) => {
-      console.error(err);
-    });
+    checkCacheStorageEnabled();
+    checkCachedFilesAsync().catch(logErrorToConsole);
   }, [active, loader.corpus.entries, loader.corpus.metadata]);
 
   const cacheAllModal = () => {
@@ -248,9 +254,7 @@ function CacheManager({active, loader, showModal}: {active: boolean, loader: Loa
         ],
         cancelCallback: () => { setCacheInProgress(false); },
       });
-    }).catch((err: unknown) => {
-      console.error(err);
-    });
+    }).catch(logErrorToConsole);
   };
 
   const cacheAllFailedModal = () => {

@@ -11,7 +11,7 @@ import Results from './Results';
 import { ShowModal } from '../Modal';
 
 import '../../i18n/config';
-import { formatBytes, localStorageGetItem, localStorageSetItem } from '../../utils/utils';
+import { formatBytes, localStorageGetItem, localStorageSetItem, logErrorToConsole } from '../../utils/utils';
 import { Loader } from '../../utils/loader';
 import { TextResult, TextTask } from '../../webWorker/textWorker';
 import { Result, ParamsResult, initialResult } from '../../utils/searchResults';
@@ -162,9 +162,7 @@ function Search({loader, showModal, richText, limit}: {loader: Loader, showModal
         ],
         cancelCallback: () => { setStatus('initial'); },
       });
-    }).catch((err: unknown) => {
-      console.error(err);
-    });
+    }).catch(logErrorToConsole);
   }, [loader.getDownloadSizeTotal]);
 
   const inProgress = isStatusInProgress(status);

@@ -10,6 +10,7 @@ import files from './en/files.json';
 import icons from './en/icons.json';
 import translation_enGB from './en-GB/translation.json';
 import { CollectionKey, FileKey, LanguageKey } from '../utils/corpus';
+import { logErrorToConsole } from '../utils/utils';
 
 i18next.use(LanguageDetector)
   .use(initReactI18next)
@@ -39,6 +40,4 @@ i18next.use(LanguageDetector)
       },
     },
   })
-  .catch((err: unknown) => {
-    console.error(err);
-  });
+  .catch(logErrorToConsole);

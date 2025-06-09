@@ -3,7 +3,7 @@ import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { ModalArguments, ShowModal } from './Modal';
-import { getMode, isMode, isValidLimit, localStorageGetItem, localStorageSetItem, Mode, modes } from '../utils/utils';
+import { getMode, isMode, isValidLimit, localStorageGetItem, localStorageSetItem, logErrorToConsole, Mode, modes } from '../utils/utils';
 
 import './Options.css';
 import supportedLngs from '../i18n/supportedLngs.json';
@@ -36,9 +36,7 @@ function OptionsMenu({showModal, richText, richTextRef, limit, limitRef}: Option
           buttons: [{message: <OptionsClose/>, autoFocus: true}],
         });
       }
-    }).catch((err: unknown) => {
-      console.error(err);
-    });
+    }).catch(logErrorToConsole);
   };
 
   const onChangeMode: ChangeEventHandler<HTMLSelectElement> = (e) => {

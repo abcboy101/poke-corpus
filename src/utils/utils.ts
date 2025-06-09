@@ -94,3 +94,7 @@ export function parseJSONNullable(text: string): unknown {
     return null;
   }
 }
+
+export function logErrorToConsole(err: unknown) {
+  console.error(err);
+}

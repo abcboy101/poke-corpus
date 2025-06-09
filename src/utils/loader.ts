@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from 'react';
 import { CollectionKey, Corpus, CorpusSource, Metadata, getCorpus, getFilePath, isMetadata } from './corpus';
+import { logErrorToConsole } from './utils';
 
 const cacheName = 'corpus';
 
@@ -117,7 +118,7 @@ export const loaderFactory = (corpus: Corpus) => {
   //#region Indexed DB
   const dbName = 'corpus';
   const dbObjectStore = 'files';
-  const getIndexedDB = (): Promise<IDBDatabase> => {
+  const getIndexedDB = async (): Promise<IDBDatabase> => {
     const request = indexedDB.open(dbName);
     return new Promise((resolve, reject) => {
       request.onupgradeneeded = () => {
@@ -136,7 +137,7 @@ export const loaderFactory = (corpus: Corpus) => {
 
   const getRemoteMetadata = (path: string): Metadata => corpus.metadata[path];
 
-  const getLocalMetadata = (db: IDBDatabase, path: string) => {
+  const getLocalMetadata = async (db: IDBDatabase, path: string) => {
     const transaction = db.transaction([dbObjectStore], "readonly");
     const objectStore = transaction.objectStore(dbObjectStore);
     const request = objectStore.get(path);
@@ -146,7 +147,7 @@ export const loaderFactory = (corpus: Corpus) => {
     });
   };
 
-  const setLocalMetadata = (db: IDBDatabase, path: string): Promise<boolean> => {
+  const setLocalMetadata = async (db: IDBDatabase, path: string): Promise<boolean> => {
     const transaction = db.transaction([dbObjectStore], "readwrite");
     const objectStore = transaction.objectStore(dbObjectStore);
     const request = objectStore.put(getRemoteMetadata(path), path);
@@ -156,7 +157,7 @@ export const loaderFactory = (corpus: Corpus) => {
     });
   };
 
-  const deleteLocalMetadata = (db: IDBDatabase, path: string): Promise<boolean> => {
+  const deleteLocalMetadata = async (db: IDBDatabase, path: string): Promise<boolean> => {
     const transaction = db.transaction([dbObjectStore], "readwrite");
     const objectStore = transaction.objectStore(dbObjectStore);
     const request = objectStore.delete(path);
@@ -172,31 +173,27 @@ export const loaderFactory = (corpus: Corpus) => {
    * Clear all stored file info from the indexed DB.
    * Returns true on success.
    */
-  const clearLocalMetadata = (): Promise<boolean> => (
-    getIndexedDB().then((db) => {
-      const transaction = db.transaction(["files"], "readwrite");
-      const objectStore = transaction.objectStore("files");
-      const request = objectStore.clear();
-      db.close();
-      return new Promise<boolean>((resolve, reject) => {
-        request.onsuccess = () => { resolve(true); };
-        request.onerror = () => { reject(request.error!); }; // eslint-disable-line @typescript-eslint/no-non-null-assertion -- in onerror
-      });
-    })
-  );
+  const clearLocalMetadata = async (db: IDBDatabase): Promise<boolean> => {
+    const transaction = db.transaction(["files"], "readwrite");
+    const objectStore = transaction.objectStore("files");
+    const request = objectStore.clear();
+    db.close();
+    return new Promise<boolean>((resolve, reject) => {
+      request.onsuccess = () => { resolve(true); };
+      request.onerror = () => { reject(request.error!); }; // eslint-disable-line @typescript-eslint/no-non-null-assertion -- in onerror
+    });
+  };
 
-  const getAllLocalFilePaths = (): Promise<readonly string[]> => (
-    getIndexedDB().then((db) => {
-      const transaction = db.transaction([dbObjectStore], "readonly");
-      const objectStore = transaction.objectStore(dbObjectStore);
-      const request = objectStore.getAllKeys();
-      db.close();
-      return new Promise<readonly string[]>((resolve, reject) => {
-        request.onsuccess = () => { resolve(request.result.filter((key) => typeof key === 'string')); };
-        request.onerror = () => { reject(request.error!); }; // eslint-disable-line @typescript-eslint/no-non-null-assertion -- in onerror
-      });
-    })
-  );
+  const getAllLocalFilePaths = async (db: IDBDatabase): Promise<readonly string[]> => {
+    const transaction = db.transaction([dbObjectStore], "readonly");
+    const objectStore = transaction.objectStore(dbObjectStore);
+    const request = objectStore.getAllKeys();
+    db.close();
+    return new Promise<readonly string[]>((resolve, reject) => {
+      request.onsuccess = () => { resolve(request.result.filter((key) => typeof key === 'string')); };
+      request.onerror = () => { reject(request.error!); }; // eslint-disable-line @typescript-eslint/no-non-null-assertion -- in onerror
+    });
+  };
   //#endregion
 
   //#region Cache Storage
@@ -257,10 +254,10 @@ export function initializeLoader(setLoader: Dispatch<SetStateAction<Loader | nul
   Promise.all([
     getLoaderCacheOnly(url)
       .then((loader) => { setLoader((prev) => (prev === undefined && loader !== null) ? loader : prev); })
-      .catch((err: unknown) => { console.log(err); }),
+      .catch(logErrorToConsole),
     getLoaderRemote(url)
       .then((loader) => { setLoader((prev) => loader ?? prev); })
-      .catch((err: unknown) => { console.log(err); }),
+      .catch(logErrorToConsole),
   ]).then(replaceLoaderOnFailure, replaceLoaderOnFailure);
 }
 
@@ -284,7 +281,7 @@ async function getLoaderRemote(url: string | URL | Request): Promise<Loader | nu
     const remoteClone = remote.clone();
     caches.open(cacheName)
       .then((cache) => cache.put(url, remoteClone))
-      .catch((err: unknown) => { console.log(err); });
+      .catch(logErrorToConsole);
   }
   return getLoaderFromResponse(remote);
 }
