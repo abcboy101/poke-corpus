@@ -92,7 +92,7 @@ const loadFile = async (loader: Loader, collectionKey: CollectionKey, languageKe
   // To work around this, don't bother decompressing the file in the dev environment.
   // https://github.com/vitejs/vite/issues/12266
   let stream = (await res.blob()).stream();
-  if (!import.meta.env.DEV) {
+  if (!(import.meta.env.DEV && res.headers.get('Content-Encoding') === 'gzip')) {
     stream = stream.pipeThrough(new DecompressionStream('gzip'));
   }
 
