@@ -63,4 +63,8 @@ if modified and os.path.exists(PATH_LEANIFY):
 
     print('Compressing modified files...')
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
-        executor.map(optimize, modified)
+        try:
+            executor.map(optimize, modified)
+        except BaseException as e:
+            executor.shutdown(cancel_futures=True)
+            raise e

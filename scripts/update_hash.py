@@ -22,16 +22,20 @@ futures: list[concurrent.futures.Future] = []
 hashes: list[str] = []
 sizes: list[int] = []
 with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
-    for collection_key, collection in corpus['collections'].items():
-        for language in collection['languages']:
-            for file in collection['files']:
-                file_path = '/'.join(['corpus', collection_key, f'{language}_{file}.txt.gz'])
-                futures.append(executor.submit(get_metadata, file_path))
+    try:
+        for collection_key, collection in corpus['collections'].items():
+            for language in collection['languages']:
+                for file in collection['files']:
+                    file_path = '/'.join(['corpus', collection_key, f'{language}_{file}.txt.gz'])
+                    futures.append(executor.submit(get_metadata, file_path))
 
-    for fu in futures:
-        file_hash, file_size = fu.result()
-        hashes.append(file_hash)
-        sizes.append(file_size)
+        for fu in futures:
+            file_hash, file_size = fu.result()
+            hashes.append(file_hash)
+            sizes.append(file_size)
+    except BaseException as e:
+        executor.shutdown(cancel_futures=True)
+        raise e
 
 data = {
     'corpus': corpus,
