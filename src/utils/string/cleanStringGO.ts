@@ -181,25 +181,44 @@ const replaceHindi: Record<string, string> = {
   '\uF334': 'छ', // cha (unused, GO uses the half form छ्‍ in all contexts)
 
   // Syllable ligatures
-  '\uF01A': 'द्भु', // dbhu (द्भ + ◌ु)
+  '\uF01A': 'द्भ', // dbh (displayed as dbhu द्भ + ◌ु, but GO uses it as just dbh द्भ)
   '\uF388': 'रु', // ru
   '\uF555': 'रू', // rū
   '\uF564': 'हु', // hu
   '\uF565': 'हू', // hū
 };
 
+function preprocessHindiHeuristic(lineOld: string, lineNew: string): string {
+  const oldHasPUA = /[\uE000-\uF8FF]/gu.test(lineOld);
+  const oldHasFinalShortI = /\u093F($|\s)/gum.test(lineOld); // short i at end of word
+  const newHasDupeVowels = /[\u093E-\u094C\u094D][\u093E-\u094C]/gu.test(lineNew); // duplicate vowel marks, halant + vowel mark
+  return (!oldHasPUA && (oldHasFinalShortI || newHasDupeVowels)) ? lineOld : lineNew;
+}
+
 export function preprocessHindi(value: string, fixMalformed = true) {
+  const linesOld = value.split(/\r\n|\n/);
+
+  if (fixMalformed) {
+    // De-duplicate vowel marks (except short i)
+    value = value.replace(/([\u093E\u0940-\u094C])\1/gu, '$1');
+  }
+
   // Perform all simple mappings
   value = value.replace(/\u094D/gu, '\u094D\u200C'); // explicit halant
   value = value.replace(/\u093F/gu, SHORT_I); // short i
   value = value.replace(/[\uF000-\uF633]/gu, (c) => replaceHindi[c] ?? c); // Private Use
 
-  // Malformed double short i
-  // short i + short i + consonant cluster + consonant cluster (malformed)
-  // short i + consonant cluster + short i + consonant cluster (visual)
-  // consonant cluster + short i + consonant cluster + short i (logical)
-  if (fixMalformed)
+  if (fixMalformed) {
+    // short i + short i + consonant cluster + consonant cluster (malformed)
+    // short i + consonant cluster + short i + consonant cluster (visual)
+    // consonant cluster + short i + consonant cluster + short i (logical)
     value = value.replace(new RegExp(`${SHORT_I}${SHORT_I}(${INITIAL}${FINAL}${REPH}?)`, 'gu'), `${SHORT_I}$1${SHORT_I}`);
+
+    // consonant cluster + short i + reph (malformed)
+    // short i + consonant cluster + reph (visual)
+    // reph + consonant cluster + short i (logical)
+    value = value.replace(new RegExp(`(${INITIAL})${SHORT_I}${REPH}`, 'gu'), 'र्$1\u093F');
+  }
 
   // short i + consonant cluster + reph (visual)
   // reph + consonant cluster + short i (logical)
@@ -220,10 +239,31 @@ export function preprocessHindi(value: string, fixMalformed = true) {
   value = value.replaceAll(REPH, 'र्');
   value = value.replaceAll(ZWNJ, '');
   value = value.replaceAll(ZWJ, '');
-
   value = value.replace(/\u094D\u093C/gu, '\u093C\u094D'); // halant + nukta -> nukta + halant
-  if (fixMalformed)
+
+  // Use original line based on heuristics
+  value = value.split(/\r\n|\n/).map((lineNew, i) => preprocessHindiHeuristic(linesOld[i], lineNew)).join('\n');
+
+  if (fixMalformed) {
+    // Visually identical
     value = value.replace(/टय्ॎ/gu, 'ट्य'); // malformed ṭya (Buizel)
+    value = value.replace(/जाेगा/gu, 'जोगा'); // jā+e.gā -> jo.gā
+
+    // Transposed letters
+    value = value.replace(/मौजदूा/gu, 'मौजूदा'); // mau.ja.dū+a -> mau.jū.da
+    value = value.replace(/हाइलिाट/gu, 'हाइलाइट'); // hā.i.li+a.ṭ -> ha.i.la.i.t
+    value = value.replace(/जिॉन/gu, 'जॉइन'); // ji+o.n -> jo.i.n
+
+    // Extra e
+    value = value.replace(/हैे/gu, 'है'); // hai+e -> hai
+    value = value.replace(/पोकेेमॉन/gu, 'पोकेमॉन'); // po.ke+e.mo.n -> po.ke.mo.n
+    value = value.replace(/ज़रिेए/gu, 'ज़रिए'); // za.ri+e.e -> za.ri.e
+    value = value.replace(/दिखाेएंगे/gu, 'दिखाएंगे'); // di.khā+e.en.ge -> di.khā.en.ge
+
+    // Wrong vowel form
+    value = value.replace(/लिे/gu, 'लिए'); // li+e -> li.e
+    value = value.replace(/कोी/gu, 'कोई'); // ko+ī -> ko.ī
+  }
   return value;
 }
 //#endregion
