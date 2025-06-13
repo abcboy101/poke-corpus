@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitest/config';
-import react from '@vitejs/plugin-react-swc';
+import react from '@vitejs/plugin-react';
 import autoprefixer from 'autoprefixer';
 import eslint from 'vite-plugin-eslint2';
 import stylelint from 'vite-plugin-stylelint';
@@ -33,7 +33,13 @@ function manualChunks(id: string) {
 export default defineConfig({
   base: '/poke-corpus/',
   plugins: [
-    react(),
+    react({
+      babel: {
+        plugins: [
+          ["babel-plugin-react-compiler", {}],
+        ],
+      },
+    }),
     eslint({ cache: false }),
     stylelint(),
     VitePWA({
