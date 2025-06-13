@@ -30,7 +30,7 @@
 }
 
 .soft, .rich-text-disabled {
-  white-space: normal;
+  white-space: pre-wrap;
 }
 
 td[lang="zxx"] wbr {
