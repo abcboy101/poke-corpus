@@ -78,6 +78,8 @@
     "boolean": {
       "parentheses": "Votre recheche Booléenne a des paranthèses manquantes ou en trop.",
       "quote": "Votre recheche Booléenne a des guillemets manquants ou en trop.",
+      "slash": "Votre recheche Booléenne a des slashs manquants ou en trop. Si vous recherchez littéralement des slashs, démarquez-les avec des antislashs.",
+      "regex": "Une expression régulière dans votre recherche Booléenne est invalide. Vérifiez la syntaxe de votre recherche et réessayez.",
       "operand": "Votre recheche Booléenne a un ou plusieurs arguments manquants. Si vous recherchez littéralement \"NOT\", \"AND\", ou \"OR\", placez-les entre guillemets.",
       "empty": "Votre recheche Booléenne n'a aucun mot-clé de spécifié. Si vous recherchez littéralement ce texte, placez-le entre guillemets.",
       "where": "Une des langues spécifiées avec WHERE n'a pas été reconnue."
