@@ -108,11 +108,22 @@ function cleanSpecialFactory(params: SearchParams): (s: string) => string {
       .replaceAll('\u2007', ' ') // figure space -> space
       .replaceAll('\u202F', ' ') // narrow non-breaking space -> space
       .replaceAll('\u3000', ' ') // fullwidth space -> space
+
       .replaceAll('“', '"') // left double quotation mark -> quotation mark
       .replaceAll('”', '"') // right double quotation mark -> quotation mark
       .replaceAll('\u2018', "'") // left single quotation mark -> apostrophe
       .replaceAll('\u2019', "'") // right single quotation mark -> apostrophe
+
+      .replaceAll('\u2010', '-') // hyphen -> hyphen-minus
+      .replaceAll('\u2013', '-') // en dash -> hyphen-minus
+      .replaceAll('\u2014', '-') // em dash -> hyphen-minus
+      .replaceAll('\u2015', '-') // horizontal bar -> hyphen-minus
+      .replaceAll('\u2212', '-') // minus -> hyphen-minus
+
       .replaceAll('º', '°') // masculine ordinal indicator -> degree symbol
+      .replaceAll('˚', '°') // ring above -> degree symbol
+
+      .replaceAll('〜', '～') // wave dash -> fullwidth tilde
       .replaceAll('‥', '..') // two dot leader -> full stop (x2)
       .replaceAll('…', '...') // horizontal ellipsis -> full stop (x3)
       .normalize()
