@@ -97,7 +97,7 @@ function parseQuery(params: SearchParams): [MatchCondition, WhereConditionFactor
 /**
  * Generates the appropriate function to clean special characters.
  *
- * The development/localization team sometimes uses these characters interchangeably.
+ * The development/localization teams sometimes uses these characters interchangeably.
  * Fold them to the same codepoint, unless the user requests a case-sensitive search.
  * (i.e. would have an expectation that the characters are treated literally)
  */
@@ -122,6 +122,7 @@ function cleanSpecialFactory(params: SearchParams): (s: string) => string {
 
       .replaceAll('º', '°') // masculine ordinal indicator -> degree symbol
       .replaceAll('˚', '°') // ring above -> degree symbol
+      .replaceAll('ᵒ', '°') // modifier letter small O -> degree symbol
 
       .replaceAll('〜', '～') // wave dash -> fullwidth tilde
       .replaceAll('‥', '..') // two dot leader -> full stop (x2)
