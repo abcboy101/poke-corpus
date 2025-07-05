@@ -1,5 +1,4 @@
 import { ChangeEventHandler, FormEventHandler, MouseEventHandler, useCallback, useEffect, useMemo, useState } from 'react';
-import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { SearchParams, searchTypes, isSearchType, getSearchParamsFactory, getDefaultSearchParams } from '../../utils/searchParams';
@@ -14,8 +13,8 @@ const isStringArray = (arr: unknown): arr is readonly string[] => {
   return Array.isArray(arr) && arr.every((value) => typeof value === 'string');
 };
 
-const getSavedParamsPreferences = (corpus: Corpus) => {
-  const userLanguage: readonly LanguageKey[] = corpus.languages.filter((value) => value.startsWith(i18next.language.split('-')[0]));
+const getSavedParamsPreferences = (corpus: Corpus, language: string) => {
+  const userLanguage: readonly LanguageKey[] = corpus.languages.filter((value) => value.startsWith(language.split('-')[0]));
   const paramsDefault = {
     ...getDefaultSearchParams(corpus),
     languages: userLanguage.length === 0 ? corpus.languages.filter((value) => value.startsWith('en')) : userLanguage,
@@ -55,9 +54,9 @@ const searchTypesDropdown = [
 ] as const;
 searchTypesDropdown satisfies ReadonlyExhaustiveArray<typeof searchTypesDropdown, typeof searchTypes[number]>;
 
-function SearchForm({corpus, waiting, inProgress, postToWorker, terminateWorker}: {corpus: Corpus, waiting: boolean, inProgress: boolean, postToWorker: (params: SearchParams) => void, terminateWorker: () => void}) {
+function SearchForm({corpus, language, waiting, inProgress, postToWorker, terminateWorker}: {corpus: Corpus, language: string, waiting: boolean, inProgress: boolean, postToWorker: (params: SearchParams) => void, terminateWorker: () => void}) {
   const { t } = useTranslation();
-  const initial = useMemo(() => import.meta.env.SSR ? getDefaultSearchParams(corpus) : getSavedParamsPreferences(corpus), [corpus]);
+  const initial = useMemo(() => import.meta.env.SSR ? getDefaultSearchParams(corpus) : getSavedParamsPreferences(corpus, language), [corpus, language]);
   const [query, setQuery] = useState(initial.query);
   const [type, setType] = useState(initial.type);
   const [caseInsensitive, setCaseInsensitive] = useState(initial.caseInsensitive);
@@ -146,7 +145,9 @@ function SearchForm({corpus, waiting, inProgress, postToWorker, terminateWorker}
     if (window.location.hash) {
       onHashChange();
     }
+  }, []);
 
+  useEffect(() => {
     // Changes while on page
     window.addEventListener('hashchange', onHashChange);
     return () => {
@@ -201,8 +202,8 @@ function SearchForm({corpus, waiting, inProgress, postToWorker, terminateWorker}
   // done or error: submit enabled
   const submitDisabled = waiting || inProgress || query.length === 0 || collections.length === 0 || languages.length === 0;
   const filters = useMemo(() => (
-    <SearchFilters corpus={corpus} filtersVisible={filtersVisible} collections={collections} setCollections={setCollections} languages={languages} setLanguages={setLanguages} />
-  ), [filtersVisible, collections, languages]);
+    <SearchFilters corpus={corpus} language={language} filtersVisible={filtersVisible} collections={collections} setCollections={setCollections} languages={languages} setLanguages={setLanguages} />
+  ), [language, filtersVisible, collections, languages]);
   return <form className="search-form" role="search" onSubmit={onSubmit}>
     <div className="search-bar">
       <div className="item-group">

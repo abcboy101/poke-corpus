@@ -1,5 +1,4 @@
 import { Dispatch, ReactNode, SetStateAction, startTransition, useCallback, useEffect, useMemo, useState } from 'react';
-import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import Spinner from './Spinner';
@@ -93,7 +92,7 @@ const getSavedResultsPreferences = () => {
   return toggleDefault;
 };
 
-function Results({corpus, status, progress, results, showId = true, richText = true, limit = defaultLimit}: {corpus: Corpus, status: Status, progress: number, showId: boolean, richText: boolean, results: readonly Result[], limit?: number}) {
+function Results({corpus, language, status, progress, results, showId = true, richText = true, limit = defaultLimit}: {corpus: Corpus, language: string, status: Status, progress: number, showId: boolean, richText: boolean, results: readonly Result[], limit?: number}) {
   const { t } = useTranslation();
   const initial = useMemo(getSavedResultsPreferences, []);
   const [showVariables, setShowVariables] = useState(initial.showVariables);
@@ -136,7 +135,7 @@ function Results({corpus, status, progress, results, showId = true, richText = t
       lastHeader = header;
     }
     return headers;
-  }, [results, i18next.language]);
+  }, [results, language]);
 
   const count = useMemo(() => (
     results.reduce((acc, result) => acc + (result.status === 'initial' ? 0 : result.params.lines.length), 0)
@@ -178,7 +177,7 @@ function Results({corpus, status, progress, results, showId = true, richText = t
   const resultsStatusText = t(import.meta.env.SSR ? 'status.loading' : `status.${status.split('.', 1)[0]}`);
   const statusBarLeft = useMemo(() => (
     !inProgress && headers.filter((header) => header !== undefined).length > 1 ? <JumpToSelect headers={headers} /> : <div className="results-status-text">{resultsStatusText}</div>
-  ), [inProgress, headers]);
+  ), [inProgress, headers, resultsStatusText]);
 
   const classes = `app-window variables-${['short', 'show', 'hide'][showVariables]} control-${showAllCharacters ? 'show' : 'hide'} gender-${showGender} number-${showPlural} grammar-${showGrammar ? 'show' : 'hide'} furigana-${showFurigana ? 'show' : 'hide'}`;
   return (

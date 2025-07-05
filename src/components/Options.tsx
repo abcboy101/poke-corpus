@@ -1,5 +1,5 @@
 import { ChangeEventHandler, Dispatch, RefObject, SetStateAction, useRef, useState } from 'react';
-import i18next from 'i18next';
+import { changeLanguage } from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { ModalArguments, ShowModal } from './Modal';
@@ -8,8 +8,10 @@ import { getMode, isMode, isValidLimit, localStorageGetItem, localStorageSetItem
 import './Options.css';
 import supportedLngs from '../i18n/supportedLngs.json';
 
-interface OptionsParams {
+export interface OptionsParams {
   readonly showModal: ShowModal,
+  readonly language: string,
+  readonly setLanguage: Dispatch<SetStateAction<string>>,
   readonly richText: boolean,
   readonly setRichText: Dispatch<SetStateAction<boolean>>,
   readonly limit: number,
@@ -21,12 +23,12 @@ interface OptionsMenuParams extends OptionsParams {
   readonly limitRef: RefObject<HTMLInputElement | null>,
 }
 
-function OptionsMenu({showModal, richText, richTextRef, limit, limitRef}: OptionsMenuParams) {
+function OptionsMenu({showModal, language, setLanguage, richText, richTextRef, limit, limitRef}: OptionsMenuParams) {
   const { t } = useTranslation();
   const [mode, setMode] = useState<Mode>(getMode);
 
   const onChangeLanguage: ChangeEventHandler<HTMLSelectElement> = (e) => {
-    i18next.changeLanguage(e.target.value, (err: readonly Error[] | undefined) => {
+    changeLanguage(e.target.value, (err: readonly Error[] | undefined) => {
       // Vite always throws 'Unknown variable dynamic import' on its first try loading each i18n file.
       // The user-facing error message should only be shown if some other error happens to occur.
       if (err?.some((e) => !e.message.includes('Unknown variable dynamic import'))) {
@@ -35,6 +37,9 @@ function OptionsMenu({showModal, richText, richTextRef, limit, limitRef}: Option
           message: t('options.network'),
           buttons: [{message: <OptionsClose/>, autoFocus: true}],
         });
+      }
+      else {
+        setLanguage(e.target.value);
       }
     }).catch(logErrorToConsole);
   };
@@ -59,7 +64,7 @@ function OptionsMenu({showModal, richText, richTextRef, limit, limitRef}: Option
     <div className="options">
       <div className="options-grid">
         <label htmlFor="language">{t('options.language')}</label>
-        <select name="language" id="language" onChange={onChangeLanguage} defaultValue={i18next.language} autoFocus={true} translate="no">
+        <select name="language" id="language" onChange={onChangeLanguage} defaultValue={language} autoFocus={true} translate="no">
           {supportedLngs.map((lang) => <option key={lang.code} value={lang.code} lang={lang.code}>{lang.name}</option>)}
         </select>
 

@@ -1,5 +1,4 @@
 import { CSSProperties, Dispatch, SetStateAction, useEffect, useRef } from 'react';
-import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { CollectionKey, Corpus, LanguageKey } from '../../utils/corpus';
@@ -48,9 +47,9 @@ function getValidLanguages(corpus: Corpus, collections: readonly CollectionKey[]
   return validLanguages;
 }
 
-function SearchCollections({corpus, collections, languages, setCollections}: {corpus: Corpus, collections: readonly CollectionKey[], languages: readonly LanguageKey[], setCollections: Dispatch<SetStateAction<readonly CollectionKey[]>>}) {
+function SearchCollections({corpus, language, collections, languages, setCollections}: {corpus: Corpus, language: string, collections: readonly CollectionKey[], languages: readonly LanguageKey[], setCollections: Dispatch<SetStateAction<readonly CollectionKey[]>>}) {
   const { t } = useTranslation();
-  const isFullwidth = ['ja', 'ko', 'zh'].some((lang) => i18next.language.startsWith(lang));
+  const isFullwidth = ['ja', 'ko', 'zh'].some((lang) => language.startsWith(lang));
   const validCollections = getValidCollections(corpus, languages);
   return (
     <>
@@ -81,9 +80,9 @@ function SearchCollections({corpus, collections, languages, setCollections}: {co
   );
 }
 
-function SearchLanguages({corpus, collections, languages, setLanguages}: {corpus: Corpus, collections: readonly CollectionKey[], languages: readonly LanguageKey[], setLanguages: Dispatch<SetStateAction<readonly LanguageKey[]>>}) {
+function SearchLanguages({corpus, language, collections, languages, setLanguages}: {corpus: Corpus, language: string, collections: readonly CollectionKey[], languages: readonly LanguageKey[], setLanguages: Dispatch<SetStateAction<readonly LanguageKey[]>>}) {
   const { t } = useTranslation();
-  const isFullwidth = ['ja', 'ko', 'zh'].some((lang) => i18next.language.startsWith(lang));
+  const isFullwidth = ['ja', 'ko', 'zh'].some((lang) => language.startsWith(lang));
   const validLanguages = getValidLanguages(corpus, collections);
   return (
     <>
@@ -115,7 +114,7 @@ function SearchLanguages({corpus, collections, languages, setLanguages}: {corpus
   );
 }
 
-function SearchFilters({corpus, filtersVisible, collections, setCollections, languages, setLanguages}: {corpus: Corpus, filtersVisible: boolean, collections: readonly CollectionKey[], setCollections: Dispatch<SetStateAction<readonly CollectionKey[]>>, languages: readonly LanguageKey[], setLanguages: Dispatch<SetStateAction<readonly LanguageKey[]>>}) {
+function SearchFilters({corpus, language, filtersVisible, collections, setCollections, languages, setLanguages}: {corpus: Corpus, language: string, filtersVisible: boolean, collections: readonly CollectionKey[], setCollections: Dispatch<SetStateAction<readonly CollectionKey[]>>, languages: readonly LanguageKey[], setLanguages: Dispatch<SetStateAction<readonly LanguageKey[]>>}) {
   const filtersRef = useRef<HTMLDivElement>(null);
   const updateFiltersHeight = () => filtersRef.current?.style.setProperty('--search-filters-height', `${filtersRef.current.scrollHeight}px`);
   useEffect(() => {
@@ -130,9 +129,9 @@ function SearchFilters({corpus, filtersVisible, collections, setCollections, lan
     <div ref={filtersRef} className={`search-filters search-filters-${filtersVisible ? 'show' : 'hide'}`}>
       { !import.meta.env.SSR && (
         <>
-          <SearchCollections corpus={corpus} collections={collections} languages={languages} setCollections={setCollections}/>
+          <SearchCollections corpus={corpus} language={language} collections={collections} languages={languages} setCollections={setCollections}/>
           <div className="search-filters-divider"></div>
-          <SearchLanguages corpus={corpus} collections={collections} languages={languages} setLanguages={setLanguages}/>
+          <SearchLanguages corpus={corpus} language={language} collections={collections} languages={languages} setLanguages={setLanguages}/>
         </>
       )}
     </div>

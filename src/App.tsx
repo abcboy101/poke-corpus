@@ -1,9 +1,9 @@
-import { Dispatch, MouseEventHandler, SetStateAction, useCallback, useEffect, useState } from 'react';
+import { MouseEventHandler, useCallback, useEffect, useState } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { getLimit, getMode, getRichText, localStorageRemoveItem } from './utils/utils';
-import Options from './components/Options';
+import Options, { OptionsParams } from './components/Options';
 import Search from './components/Search/Search';
 import CacheManager from './components/CacheManager/CacheManager';
 import Modal, { ModalArguments, ShowModal } from './components/Modal';
@@ -24,7 +24,7 @@ declare global {
 type View = 'Search' | 'CacheManager';
 const initialView = 'Search';
 
-function Header({showModal, richText, setRichText, limit, setLimit, reset}: {showModal: ShowModal, richText: boolean, setRichText: Dispatch<SetStateAction<boolean>>, limit: number, setLimit: Dispatch<SetStateAction<number>>, reset: MouseEventHandler<HTMLAnchorElement>}) {
+function Header({reset, ...optionsParams}: {reset: MouseEventHandler<HTMLAnchorElement>} & OptionsParams) {
   const { t } = useTranslation();
   return (
     <header className="header">
@@ -34,7 +34,7 @@ function Header({showModal, richText, setRichText, limit, setLimit, reset}: {sho
         </a>
       </h1>
       <ErrorBoundary fallback={null}>
-        <Options showModal={showModal} richText={richText} setRichText={setRichText} limit={limit} setLimit={setLimit}/>
+        <Options {...optionsParams}/>
       </ErrorBoundary>
     </header>
   );
@@ -56,6 +56,7 @@ function Footer({view, switchView}: {view: View, switchView: () => void}) {
 }
 
 function App() {
+  const [language, setLanguage] = useState(i18next.language);
   const [richText, setRichText] = useState(getRichText);
   const [limit, setLimit] = useState(getLimit);
   const [view, setView] = useState<View>(initialView);
@@ -104,12 +105,12 @@ function App() {
   if (!import.meta.env.SSR && /^((?!chrome|android).)*safari/i.test(navigator.userAgent))
     classes.push('ua-safari');
   return (
-    <div key={appKey} className={classes.join(' ')} lang={i18next.language} dir={i18next.dir()}>
-      <Header showModal={showModal} richText={richText} setRichText={setRichText} limit={limit} setLimit={setLimit} reset={reset} />
+    <div key={appKey} className={classes.join(' ')} lang={language} dir={i18next.dir(language)}>
+      <Header showModal={showModal} language={language} setLanguage={setLanguage} richText={richText} setRichText={setRichText} limit={limit} setLimit={setLimit} reset={reset} />
       {
         loader !== null ? (
           <ErrorBoundary FallbackComponent={ErrorWindow}>
-            <Search loader={loader} showModal={showModal} richText={richText} limit={limit}/>
+            <Search loader={loader} showModal={showModal} language={language} richText={richText} limit={limit}/>
             <CacheManager active={view === 'CacheManager'} loader={loader} showModal={showModal}/>
           </ErrorBoundary>
         ) : <ErrorWindow />
