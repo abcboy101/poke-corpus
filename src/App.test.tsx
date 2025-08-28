@@ -22,7 +22,7 @@ beforeAll(() => {
     if (input.startsWith(import.meta.env.BASE_URL))
       input = input.substring(import.meta.env.BASE_URL.length);
     const body = await fs.readFile(path.join(__dirname, '..', 'public', input));
-    return new Response(body);
+    return new Response(new Uint8Array(body));
   };
   global.HTMLDialogElement.prototype.showModal = vi.fn();
 });
