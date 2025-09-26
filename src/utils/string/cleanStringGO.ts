@@ -246,7 +246,7 @@ export function preprocessHindi(value: string, fixMalformed = true) {
 
   if (fixMalformed) {
     // Visually identical
-    value = value.replace(/टय्ॎ/gu, 'ट्य'); // malformed ṭya (Buizel)
+    // value = value.replace(/टय्ॎ/gu, 'ट्य'); // malformed ṭya (Buizel)
     value = value.replace(/जाेगा/gu, 'जोगा'); // jā+e.gā -> jo.gā
 
     // Transposed letters

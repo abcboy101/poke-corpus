@@ -36,7 +36,7 @@ test('preprocessHindi, malformed', async () => {
   expect(/[\u094D][\u093E-\u094C]/gum.test(preprocess)).toBe(true); // halant + vowel mark
 
   // Visually identical
-  expect(preprocess).toContain('टय्ॎ'); // malformed ṭya (Buizel)
+  // expect(preprocess).toContain('टय्ॎ'); // malformed ṭya (Buizel)
   expect(preprocess).toContain('जाेगा'); // jā+e.gā -> jo.gā
 
   // Transposed letters
