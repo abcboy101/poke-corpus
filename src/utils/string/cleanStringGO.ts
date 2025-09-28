@@ -3,6 +3,7 @@ import { LanguageKey } from "../corpus";
 //#region Hindi
 const REPH = '\u{10F306}';
 const SHORT_I = '\u{10093F}';
+const RAKAR = '(?:\u094D\u0930)';
 
 const NUKTA = '\u093C';
 const HALANT = '\u094D';
@@ -118,7 +119,7 @@ const replaceHindi: Record<string, string> = {
 
   // VOWELS
   // Diacritics
-  '\uF300': '\u0901', // chandrabindu (◌ँ in ◌ैँ)
+  '\uF300': '\u0901', // m̐ (chandrabindu, ◌ँ in ◌ैँ)
 
   // Vowel marks
   '\uF008': '\u0947', // long e (◌े in टे, रे, फ़्रे)
@@ -140,7 +141,7 @@ const replaceHindi: Record<string, string> = {
   '\uF017': '\u0948', // ai (unused)
   '\uF018': '\u0941', // short u (◌ु in कु)
   '\uF019': '\u0942', // long u (◌ू in कू)
-  '\uF01B': '\u0902', // ṁ (anusvara; ◌ं in लं, कैं)
+  '\uF01B': '\u0902', // ṁ (bindu; ◌ं in लं, कैं)
   '\uF30C': SHORT_I, // short i (◌ि in गि; reordering)
   '\uF30D': SHORT_I, // short i (◌ि in रि; reordering)
   '\uF30E': SHORT_I, // short i (unused; reordering)
@@ -188,11 +189,33 @@ const replaceHindi: Record<string, string> = {
   '\uF565': 'हू', // hū
 };
 
+/**
+ * Determines if a line is encoded for display in Pokémon GO's font by checking if the Hindi text is well-formed.
+ * Although most strings are encoded, a few strings are displayed outside of the game's text engine and were therefore not encoded.
+ * Decoding them again unnecessarily can affect the position of short i (ि), corrupting the text.
+ * @param lineOld the encoded line
+ * @param lineNew the decoded line
+ * @returns the appropriate line based on the heuristics
+ */
 function preprocessHindiHeuristic(lineOld: string, lineNew: string): string {
-  const oldHasPUA = /[\uE000-\uF8FF]/gu.test(lineOld);
-  const oldHasFinalShortI = /\u093F($|\s)/gum.test(lineOld); // short i at end of word
-  const newHasDupeVowels = /[\u093E-\u094C\u094D][\u093E-\u094C]/gu.test(lineNew); // duplicate vowel marks, halant + vowel mark
-  return (!oldHasPUA && (oldHasFinalShortI || newHasDupeVowels)) ? lineOld : lineNew;
+  if (lineOld === lineNew // no changes
+      || /[\uE000-\uF8FF]/gu.test(lineOld) // has PUA characters
+      || /(^|\s)\u093F/gum.test(lineOld) // short i at start of word
+      || /(?<![\u0915-\u0939\u0958-\u095F]\u093C?)([\u093E-\u094C]|\u094D)/gu.test(lineOld)) // vowel mark/halant without preceding consonant
+    return lineNew;
+
+  // In production builds, return the old line if the first heuristic isn't met.
+  if (!import.meta.env.DEV)
+    return lineOld;
+
+  // In development builds/tests, ensure full coverage by running a heuristic for the reverse case to check if the old line is correct.
+  if (/\u093F($|\s)/gum.test(lineOld) // short i at end of word
+      || /(?<![\u0915-\u0939\u0958-\u095F]\u093C?)([\u093E-\u094C]|\u094D)/gu.test(lineNew) // vowel mark/halant without preceding consonant
+      || lineOld.includes('सेटिंग') // check keyword: "setting"
+      || lineOld.includes('फ़िटनेस') // check keyword: "fitness"
+      || lineOld.includes('स्पिन')) // check keyword: "spin"
+    return lineOld;
+  throw new Error(`could not determine whether to decode "${lineOld}"`);
 }
 
 export function preprocessHindi(value: string, fixMalformed = true) {
@@ -208,61 +231,81 @@ export function preprocessHindi(value: string, fixMalformed = true) {
   value = value.replace(/\u093F/gu, SHORT_I); // short i
   value = value.replace(/[\uF000-\uF633]/gu, (c) => replaceHindi[c] ?? c); // Private Use
 
+  // Reorder marks to canonical order, so that the nukta is first
+  // consonant + halant + ZWNJ/ZWJ + nukta -> consonant + nukta + halant + ZWNJ/ZWJ
+  value = value.replace(new RegExp(`(${HALANT}[${ZWNJ}${ZWJ}]?|[${ZWNJ}${ZWJ}]${HALANT})${NUKTA}`, 'gu'), `${NUKTA}$1`);
+
   if (fixMalformed) {
     // short i + short i + consonant cluster + consonant cluster (malformed)
     // short i + consonant cluster + short i + consonant cluster (visual)
     // consonant cluster + short i + consonant cluster + short i (logical)
-    value = value.replace(new RegExp(`${SHORT_I}${SHORT_I}(${INITIAL}${FINAL}${REPH}?)`, 'gu'), `${SHORT_I}$1${SHORT_I}`);
+    value = value.replace(new RegExp(`${SHORT_I}${SHORT_I}(${INITIAL}${FINAL}${REPH}?${RAKAR}?)`, 'gu'), `${SHORT_I}$1${SHORT_I}`);
 
-    // consonant cluster + short i + reph (malformed)
-    // short i + consonant cluster + reph (visual)
-    // reph + consonant cluster + short i (logical)
-    value = value.replace(new RegExp(`(${INITIAL})${SHORT_I}${REPH}`, 'gu'), 'र्$1\u093F');
+    // consonant cluster + short i + reph + [rakar] (malformed)
+    // short i + consonant cluster + reph + [rakar] (visual)
+    // reph + consonant cluster + [rakar] + short i (logical)
+    value = value.replace(new RegExp(`(${INITIAL})${SHORT_I}${REPH}(${RAKAR}?)`, 'gu'), 'र्$1$2\u093F');
   }
 
-  // short i + consonant cluster + reph (visual)
-  // reph + consonant cluster + short i (logical)
+  // short i + consonant cluster + reph + [rakar] (visual)
+  // reph + consonant cluster + [rakar] + short i (logical)
   // Example: ि + क + र् = र्कि (i + k + r = rki)
-  value = value.replace(new RegExp(`${SHORT_I}(${INITIAL})(${FINAL})${REPH}`, 'gu'), 'र्$1\u093F$2');
+  // Example: ि + ट + र् + ◌्र = र्ट्रि (i + t + r + r = rtri)
+  value = value.replace(new RegExp(`${SHORT_I}(${INITIAL})(${FINAL})${REPH}(${RAKAR}?)`, 'gu'), 'र्$1$3\u093F$2');
 
   // short i + consonant cluster (visual)
   // consonant cluster + short i (logical)
   // Example: ि + क = कि (i + k = ki)
   value = value.replace(new RegExp(`${SHORT_I}(${INITIAL})(${FINAL})`, 'gu'), '$1\u093F$2');
 
-  // consonant cluster + reph (visual)
-  // reph + consonant cluster (logical)
+  // consonant cluster + reph + [rakar] (visual)
+  // reph + consonant cluster + [rakar] (logical)
   // Example: क + र् = र्क (k + r = rk)
-  value = value.replace(new RegExp(`(${INITIAL})(${FINAL})${REPH}`, 'gu'), 'र्$1$2');
+  // Example: ट + र् + ◌्र = र्ट्र (t + r + r = rtr)
+  value = value.replace(new RegExp(`(${INITIAL})(${FINAL})${REPH}(${RAKAR}?)`, 'gu'), 'र्$1$3$2');
 
   value = value.replaceAll(SHORT_I, 'ि');
   value = value.replaceAll(REPH, 'र्');
   value = value.replaceAll(ZWNJ, '');
   value = value.replaceAll(ZWJ, '');
-  value = value.replace(/\u094D\u093C/gu, '\u093C\u094D'); // halant + nukta -> nukta + halant
+  value = value.replace(/[\u0901\u0902]{2,}/gu, '\u0902'); // chandrabindu overstrike
+  value = value.replace(/\u093C{2,}/gu, '\u093C'); // consecutive nukta
 
   // Use original line based on heuristics
   value = value.split(/\r\n|\n/).map((lineNew, i) => preprocessHindiHeuristic(linesOld[i], lineNew)).join('\n');
 
   if (fixMalformed) {
     // Visually identical
-    // value = value.replace(/टय्ॎ/gu, 'ट्य'); // malformed ṭya (Buizel)
     value = value.replace(/जाेगा/gu, 'जोगा'); // jā+e.gā -> jo.gā
+    value = value.replace(/हैे/gu, 'है'); // hai+e -> hai
+    value = value.replace(/पोकेेमॉन/gu, 'पोकेमॉन'); // po.ke+e.mo.n -> po.ke.mo.n
+    value = value.replace(/ज़रिेए/gu, 'ज़रिए'); // za.ri+e.e -> za.ri.e
+    value = value.replace(/दिखाेएंगे/gu, 'दिखाएंगे'); // di.khā+e.en.ge -> di.khā.en.ge
+    value = value.replace(/ े /gu, ' '); // stray e in privacy_policy_text
 
     // Transposed letters
     value = value.replace(/मौजदूा/gu, 'मौजूदा'); // mau.ja.dū+a -> mau.jū.da
     value = value.replace(/हाइलिाट/gu, 'हाइलाइट'); // hā.i.li+a.ṭ -> ha.i.la.i.t
     value = value.replace(/जिॉन/gu, 'जॉइन'); // ji+o.n -> jo.i.n
-
-    // Extra e
-    value = value.replace(/हैे/gu, 'है'); // hai+e -> hai
-    value = value.replace(/पोकेेमॉन/gu, 'पोकेमॉन'); // po.ke+e.mo.n -> po.ke.mo.n
-    value = value.replace(/ज़रिेए/gu, 'ज़रिए'); // za.ri+e.e -> za.ri.e
-    value = value.replace(/दिखाेएंगे/gu, 'दिखाएंगे'); // di.khā+e.en.ge -> di.khā.en.ge
+    value = value.replace(/डार्टि्रक्स/gu, 'डार्ट्रिक्स'); // ḍa.rṭi*r.ks -> ḍa.rṭri.ks
 
     // Wrong vowel form
     value = value.replace(/लिे/gu, 'लिए'); // li+e -> li.e
     value = value.replace(/कोी/gu, 'कोई'); // ko+ī -> ko.ī
+
+    // Misplaced halant
+    value = value.replace(/हू्ं/gu, 'हूँ'); // hū*ṁ -> hūm̐
+    value = value.replace(/शु्क्रिया/gu, 'शुक्रिया'); // śu*kri.yā -> śu.kri.yā
+    value = value.replace(/इ्स्तेमाल/gu, 'इस्तेमाल'); // i*ste.mā.l -> i.ste.mā.l
+    value = value.replace(/अ्च्छा/gu, 'अच्छा'); // a*cchā -> a.cchā
+
+    // Extra nukta
+    value = value.replace(new RegExp(`(${VOWEL}|${MATRA})${NUKTA}(${CONSONANT}${NUKTA})`, 'gu'), '$1$2'); // extra nukta on preceding vowel
+    value = value.replace(/एडवेंचर मो़ड/gu, 'एडवेंचर मोड'); // "Adventure Mode" in fitness_enable_modal_success_title
+    value = value.replace(/पोकेमॉ़न/gu, 'पोकेमॉन'); // "Pokémon" in mega_level_tutorial_page4_body
+    value = value.replace(/को़ड/gu, 'कोड'); // "code" in passcode_log_received_badge
+    value = value.replace(/ताजे़/gu, 'ताज़े'); // "tāze" in pokemon_desc_0042
+    value = value.replace(/बॉ़डी/gu, 'बॉडी'); // "tāze" in quest_special_dialogue_macht_1_4
   }
   return value;
 }
