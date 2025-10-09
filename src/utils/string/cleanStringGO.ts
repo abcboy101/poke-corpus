@@ -305,7 +305,7 @@ export function preprocessHindi(value: string, fixMalformed = true) {
     value = value.replace(/पोकेमॉ़न/gu, 'पोकेमॉन'); // "Pokémon" in mega_level_tutorial_page4_body
     value = value.replace(/को़ड/gu, 'कोड'); // "code" in passcode_log_received_badge
     value = value.replace(/ताजे़/gu, 'ताज़े'); // "tāze" in pokemon_desc_0042
-    value = value.replace(/बॉ़डी/gu, 'बॉडी'); // "tāze" in quest_special_dialogue_macht_1_4
+    value = value.replace(/बॉ़डी/gu, 'बॉडी'); // "body" in quest_special_dialogue_macht_1_4
   }
   return value;
 }

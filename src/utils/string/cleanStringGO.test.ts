@@ -70,5 +70,5 @@ test('preprocessHindi, malformed', async () => {
   expect(preprocess).toContain('पोकेमॉ़न'); // "Pokémon" in mega_level_tutorial_page4_body
   expect(preprocess).toContain('को़ड'); // "code" in passcode_log_received_badge
   expect(preprocess).toContain('ताजे़'); // "tāze" in pokemon_desc_0042
-  expect(preprocess).toContain('बॉ़डी'); // "tāze" in quest_special_dialogue_macht_1_4
+  expect(preprocess).toContain('बॉ़डी'); // "body" in quest_special_dialogue_macht_1_4
 });
