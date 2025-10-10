@@ -182,6 +182,7 @@ function remapGBASpecialCharacters(s: string, language: LanguageKey) {
 // N64 special characters
 function remapN64SpecialCharacters(s: string) {
   return (s
+    .replaceAll('¥', '$') // Pokémon Dollar
     .replaceAll('¼', '⒆') // PK
     .replaceAll('½', '⒇') // MN
   );
@@ -237,6 +238,7 @@ function remapWiiSpecialCharacters(s: string) {
     // Ranch
     .replaceAll('\\f', '\\c')
     .replaceAll('%quot;', '"')
+    .replaceAll('¥', '\\\\') // backslash
   );
 }
 
