@@ -28,8 +28,15 @@ for collection_key, collection in corpus['collections'].items():
                 pass
 
             # Load text file
-            with open(text_path, 'rb') as f:
-                buf = f.read().removeprefix(codecs.BOM_UTF8)
+            buf = b''
+            try:
+                with open(text_path, 'rb') as f:
+                    buf = f.read().removeprefix(codecs.BOM_UTF8)
+            except FileNotFoundError:
+                pass
+            if not buf:
+                print(f'WARNING: {text_path} was not found or empty')
+                buf = b'null' if language == 'qid' else b'[NULL]'
 
             # Abort if it already matches the existing file
             try:

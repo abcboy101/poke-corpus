@@ -289,9 +289,12 @@ function remap3DSVariables(s: string) {
 
 // Switch special characters
 function remapSwitchSpecialCharacters(s: string) {
-  return s.search(/[\uE104\uE300-\uE31C]/u) === -1 ? s : (s
+  s = remapLegendsZAEscapedCharacters(s);
+  return s.search(/[\uE104\uE300-\uE34C]/u) === -1 ? s : (s
     .replaceAll('\uE104', '✨︎') // BDSP sparkles
     .replaceAll('\uE300', '$') // Pokémon Dollar
+
+    // PLA
     .replaceAll('\uE301', 'A') // Unown A
     .replaceAll('\uE302', 'B') // Unown B
     .replaceAll('\uE303', 'C') // Unown C
@@ -320,7 +323,39 @@ function remapSwitchSpecialCharacters(s: string) {
     .replaceAll('\uE31A', 'Z') // Unown Z
     .replaceAll('\uE31B', '!') // Unown !
     .replaceAll('\uE31C', '?') // Unown ?
+
+    // Z-A
+    // U+E31D-E33F: buttons are handled in postprocess
+    .replaceAll('\uE340', '▾') // Bottom-right down-pointing triangle
+    // U+E341 handled in postprocess
+    .replaceAll('\uE342', '綉') // CHT xiù (used in Valerie's name)
+    .replaceAll('\uE343', '원') // KOR won (currency)
+    .replaceAll('\uE344', '배') // KOR bae (times)
+    .replaceAll('\uE345', '명') // KOR myeong (people)
+    .replaceAll('\uE346', '개') // KOR gae (counter)
+    .replaceAll('\uE347', '倍') // CHT bèi (times)
+    .replaceAll('\uE348', '人') // CHT rén (people)
+    .replaceAll('\uE349', '枚') // CHT méi (counter)
+    .replaceAll('\uE34A', '倍') // CHS bèi (times)
+    .replaceAll('\uE34B', '人') // CHS rén (people)
+    .replaceAll('\uE34C', '枚') // CHS méi (counter)
   );
+}
+
+const escapedZA: ReadonlyMap<string, string> = new Map([
+  ['Text_icon1', '\uE340'],
+  ['Text_infinity', '\uE341'],
+]);
+
+// Legends: Z-A escaped private use characters
+function remapLegendsZAEscapedCharacters(s: string) {
+  if (s.search(/VAR BD0A/u) !== -1) {
+    for (const [name, c] of escapedZA.entries()) {
+      const len = name.length.toString(16).padStart(4, '0').toUpperCase();
+      s = s.replaceAll(new RegExp( `\\[VAR BD0A\\(${len}\\)\\]${name}`, 'gu'), c);
+    };
+  }
+  return s;
 }
 
 // Pixel font used to display level in battle
@@ -391,6 +426,7 @@ export function preprocessString(s: string, collectionKey: CollectionKey, langua
     case "LegendsArceus":
     case "ScarletViolet":
     case "HOME":
+    case "LegendsZA":
       s = remapSwitchSpecialCharacters(s);
       break;
 

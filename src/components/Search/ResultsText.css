@@ -24,6 +24,23 @@
   font-size: 80%;
 }
 
+.literal-big {
+  font-size: 150%;
+  line-height: 0.67;
+  vertical-align: text-top;
+}
+
+/* Buttons */
+.button {
+  border: 1.5px solid currentcolor;
+  font-size: 70%;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  vertical-align: 0.1rem;
+  padding: 0 0.25rem;
+  margin: 0 1px;
+}
+
 /* Line breaks, whitespace */
 .r, .c, .n, .e, .vertoffset, .div {
   color: var(--text-gray);

@@ -6,6 +6,20 @@
 
 
 /* Colors from the Switch games (VAR FF00) */
+.collection-za {
+  --color-0: #36364C;
+  --color-1: #ED5F5F;
+  --color-2: #0066CC;
+  --color-3: #BDE930;
+  --color-4: #8040E8;
+  --color-5: #FFB800;
+  --color-6: #F06000;
+  --color-7: #E02080;
+  --color-8: #66B8E0;
+  --color-9: #1040A0;
+  --color-10: #A0A0A0;
+}
+
 .collection-sv {
   --color-0: #182840;
   --color-1: #ED5F5F;

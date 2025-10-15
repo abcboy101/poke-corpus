@@ -34,6 +34,35 @@ const particleBranchFromIndex = (index: number) => grammarBranch(...particlesKO[
 const versionBranchRS = (form1: string, form2: string) => versionBranch(form1, form2, 'ruby', 'sapphire');
 const versionBranchSV = (form1: string, form2: string) => versionBranch(form1, form2, 'scarlet', 'violet');
 
+
+/* Z-A buttons */
+const buttonsZA: ReadonlyMap<string, string> = new Map([
+  ['Decide', 'A'], // \uE31D
+  ['Cancel', 'B'], // \uE31E
+  ['Sp_1', 'X'], // \uE31F
+  ['Sp_2', 'Y'], // \uE320
+  ['L', 'L'], // \uE321
+  ['R', 'R'], // \uE322
+  ['ZL', 'ZL'], // \uE323
+  ['ZR', 'ZR'], // \uE324
+  ['Button_Up', '▲'], // \uE325
+  ['Button_Down', '▼'], // \uE326
+  ['Button_Left', '◀'], // \uE327
+  ['Button_Right', '▶'], // \uE328
+  ['Plus', '+'], // \uE319
+  ['Minus', '\u2212'], // \uE32A
+
+  ['Stick_L', 'Stick_L'], // \uE335
+  ['Stick_R', 'Stick_R'], // \uE336
+  ['Stick_L_Push', 'Stick_L_Push'], // \uE338
+  ['Stick_R_Push', 'Stick_R_Push'], // \uE339
+]);
+const buttonFromName = (_: string, tag: string, len: string, rest: string) => {
+  const end = parseInt(len, 16);
+  const name = rest.substring(0, end);
+  return `<span class="button" title="${tag.replaceAll('[', '\u{F0102}') + name}">${buttonsZA.get(name) ?? name}</span>${rest.substring(end)}`;
+};
+
 /* Text color */
 const dec2Hex = (n: string) => Number(n).toString(16).padStart(2, '0').toUpperCase();
 const textColorHex = (_: string, r: string, g: string, b: string, a: string, text: string) => textColor(_, `#${r}${g}${b}${a === 'FF' ? '' : a}`, text);
@@ -65,7 +94,7 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
 
   const isNDS = isGen4 || isGen5;
   const is3DS = ["XY", "OmegaRubyAlphaSapphire", "SunMoon", "UltraSunUltraMoon", "Bank"].includes(collectionKey);
-  const isSwitch = ["LetsGoPikachuLetsGoEevee", "SwordShield", "BrilliantDiamondShiningPearl", "LegendsArceus", "ScarletViolet", "HOME"].includes(collectionKey);
+  const isSwitch = ["LetsGoPikachuLetsGoEevee", "SwordShield", "BrilliantDiamondShiningPearl", "LegendsArceus", "ScarletViolet", "LegendsZA", "HOME"].includes(collectionKey);
   const isN64 = ["Stadium", "Stadium2"].includes(collectionKey);
   const isGCN = ["Colosseum", "XD"].includes(collectionKey);
   const isModern = isGen5 || is3DS || isSwitch;
@@ -115,6 +144,12 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
   s = is3DS ? (s
     .replaceAll('\uE0A7', '<sup>P</sup><sub>K</sub>') // 3DS PK (unused)
     .replaceAll('\uE0A8', '<sup>M</sup><sub>N</sub>') // 3DS MN (unused)
+  ) : s;
+  s = isSwitch ? (s
+    // Infinity
+    // The normal codepoint is the width of one CJK character, this one is about 1.5 wide
+    // Always used instead in Traditional Chinese due to the normal one being too small
+    .replaceAll('\uE341', '\u{F1102}<span class="literal-big">∞</span>\u{F1103}')
   ) : s;
   s = isGen3 ? (s
     // POKé, POKéBLOCK
@@ -176,6 +211,7 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
     .replaceAll(/\[VAR BD04\(([0-9A-F]{4})\)\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, (_, pad, text) => `<span class="line-align-left" style="padding-left: ${parseInt(pad, 16)}pt">${text}</span>`) // Gen 5+
     .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\[VAR BD05\(([0-9A-F]{4})\)\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, (_, before, size, after) => `<span style="tab-size: ${parseInt(size, 16)}pt">${before}\t${after}</span>`) // Gen 5 X coords
     .replaceAll(/\[VAR BD05\(([0-9A-F]{4})\)\]/gu, '\t') // can't really have multiple tab sizes, so approximate the rest as tabs
+    .replaceAll(/(\[VAR BD0A\(([0-9A-F]{4})\)\])([^[<{]*)/gu, buttonFromName) // buttons
   ) : s;
   s = isPBR ? (s
     .replaceAll(/\[ALIGN 1\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[ALIGN \d+\]|$)/gu, '<span class="line-align-left">$1</span>') // PBR

@@ -593,6 +593,32 @@
         "textFile": "namelist"
       }
     },
+    "LegendsZA": {
+      "id": "za",
+      "languages": [
+        "qid",
+        "ja",
+        "en",
+        "fr",
+        "it",
+        "de",
+        "es",
+        "es-419",
+        "ko",
+        "zh-Hans",
+        "zh-Hant"
+      ],
+      "structured": true,
+      "version": "1.0.0",
+      "files": [
+        "common",
+        "script"
+      ],
+      "speaker": {
+        "file": "common",
+        "textFile": "namelist"
+      }
+    },
     "Stadium": {
       "id": "stad",
       "languages": [
