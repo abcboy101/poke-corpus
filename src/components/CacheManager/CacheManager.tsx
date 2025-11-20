@@ -195,7 +195,10 @@ function CacheManager({active, loader, showModal}: {active: boolean, loader: Loa
 
     if ('indexedDB' in window && 'databases' in window.indexedDB) {
       promises.push(loader.getIndexedDB().then((db) =>
-        loader.clearLocalMetadata(db).then(() => checkCachedFilesAsync())
+        loader.clearLocalMetadata(db).then(() => {
+          db.close();
+          return checkCachedFilesAsync();
+        })
       ));
     }
     if ('caches' in window) {

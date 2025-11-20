@@ -188,7 +188,6 @@ export const loaderFactory = (corpus: Corpus) => {
     const transaction = db.transaction([dbObjectStore], "readonly");
     const objectStore = transaction.objectStore(dbObjectStore);
     const request = objectStore.getAllKeys();
-    db.close();
     return new Promise<readonly string[]>((resolve, reject) => {
       request.onsuccess = () => { resolve(request.result.filter((key) => typeof key === 'string')); };
       request.onerror = () => { reject(request.error!); }; // eslint-disable-line @typescript-eslint/no-non-null-assertion -- in onerror
