@@ -1,3 +1,4 @@
+import concurrent.futures
 import glob
 import json
 import os.path
@@ -25,6 +26,11 @@ def convert_lang(lang: str) -> str:
 def make_id(key: str):
     return f'go.{key}'
 
+def load_json(path: str):
+    with open(path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    return data
+
 
 # Clone/pull remote repository
 if not os.path.exists(REPO_PATH) or len(os.listdir(REPO_PATH)) == 0:
@@ -46,13 +52,19 @@ if dst_times and max(dst_times) >= max(src_times):
 print(f'Loading files...')
 map: dict[str, dict[str, str]] = {}
 lang_list = []
-for folder in [RELEASE_FOLDER, REMOTE_FOLDER]:
-    for path in glob.iglob(os.path.join(folder, '*/*.json')):
-        with open(path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
 
+with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
+    futures: dict[str, concurrent.futures.Future] = {}
+    for folder in [RELEASE_FOLDER, REMOTE_FOLDER]:
+        for path in glob.iglob(os.path.join(folder, '*/*.json')):
+            futures[path] = executor.submit(load_json, path)
+
+    for path, future in futures.items():
+        data = future.result()
         base = os.path.basename(path)
-        lang = re.search(r'(.+)_raw\.json', base).group(1)
+        match = re.search(r'(.+)_raw\.json', base)
+        assert match is not None
+        lang = match.group(1)
         if lang not in lang_list:
             lang_list.append(lang)
 
@@ -64,8 +76,8 @@ for folder in [RELEASE_FOLDER, REMOTE_FOLDER]:
 
 # Write the text files in all languages
 print('Writing files...')
+lang_files = {code: open(os.path.join(OUTPUT_FOLDER, f'{convert_lang(code)}_text.txt'), 'w', encoding='utf-8') for code in lang_list}
 try:
-    lang_files = {code: open(os.path.join(OUTPUT_FOLDER, f'{convert_lang(code)}_text.txt'), 'w', encoding='utf-8') for code in lang_list}
     with open(os.path.join(OUTPUT_FOLDER, 'qid_text.txt'), 'w', encoding='utf-8') as qid:
         for sid in sorted(map):
             lang_text = map[sid]

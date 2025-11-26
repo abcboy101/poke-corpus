@@ -68,7 +68,9 @@ for path in glob.iglob(os.path.join(REPO_PATH, '**/msbt_*_lf.txt'), recursive=Tr
         data = f.read()
 
     base = os.path.basename(path)
-    lang = re.search(r'msbt_(.+)_lf\.txt', base).group(1)
+    match = re.search(r'msbt_(.+)_lf\.txt', base)
+    assert match is not None
+    lang = match.group(1)
     if lang not in lang_list:
         lang_list.append(lang)
 
@@ -80,12 +82,13 @@ for path in glob.iglob(os.path.join(REPO_PATH, '**/msbt_*_lf.txt'), recursive=Tr
             map.setdefault(file, {})
         elif '\t' in text:
             sid, string_text = text.split('\t', 1)
+            assert file in map
             map[file].setdefault(sid, {})[lang] = fix(string_text)
 
 # Write the text files in all languages
 print('Writing files...')
+lang_files = {code: open(os.path.join(OUTPUT_FOLDER, f'{convert_lang(code)}_megaturtle_sp.txt'), 'w', encoding='utf-8') for code in lang_list}
 try:
-    lang_files = {code: open(os.path.join(OUTPUT_FOLDER, f'{convert_lang(code)}_megaturtle_sp.txt'), 'w', encoding='utf-8') for code in lang_list}
     with open(os.path.join(OUTPUT_FOLDER, 'qid_megaturtle_sp.txt'), 'w', encoding='utf-8') as qid:
         for file in sorted(map):
             for f in [qid, *lang_files.values()]:

@@ -1,3 +1,4 @@
+import concurrent.futures
 import glob
 import json
 import os.path
@@ -31,6 +32,11 @@ def make_id(key: str, filename: str, prefix: str):
         entries.pop(1)
     return '.'.join(entries)
 
+def load_json(path: str):
+    with open(path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    return data
+
 
 # Clone/pull remote repository
 if not os.path.exists(REPO_PATH) or len(os.listdir(REPO_PATH)) == 0:
@@ -55,26 +61,31 @@ for folder_path in INPUT_FOLDERS:
     folder = os.path.basename(folder_path).lower()
 
     # Load the source data in all languages
-    print(f'Loading files for {folder}...')
-    for path in glob.iglob(os.path.join(folder_path, '*.json')):
-        with open(path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
+        print(f'Loading files for {folder}...')
+        futures: dict[str, concurrent.futures.Future] = {}
+        for path in glob.iglob(os.path.join(folder_path, '*.json')):
+            futures[path] = executor.submit(load_json, path)
 
-        base = os.path.basename(path)
-        file, lang = re.search(r'(.+)_([^_]+?)\.json', base).groups()
-        if lang not in lang_list:
-            lang_list.append(lang)
+        for path, future in futures.items():
+            data = future.result()
+            base = os.path.basename(path)
+            match = re.search(r'(.+)_([^_]+?)\.json', base)
+            assert match is not None
+            file, lang = match.groups()
+            if lang not in lang_list:
+                lang_list.append(lang)
 
-        map.setdefault(file, {})
-        for sid, string_text in data.items():
-            sid = make_id(sid.replace('\\', '\\\\').replace('\n', '\\n'), file, folder)
-            map[file].setdefault(sid, {})[lang] = string_text
-        # print(f'Loaded {base}')
+            map.setdefault(file, {})
+            for sid, string_text in data.items():
+                sid = make_id(sid.replace('\\', '\\\\').replace('\n', '\\n'), file, folder)
+                map[file].setdefault(sid, {})[lang] = string_text
+            # print(f'Loaded {base}')
 
     # Write the text files in all languages
     print(f'Writing files for {folder}...')
+    lang_files = {code: open(os.path.join(OUTPUT_FOLDER, f'{convert_lang(code)}_{folder}.txt'), 'w', encoding='utf-8') for code in lang_list}
     try:
-        lang_files = {code: open(os.path.join(OUTPUT_FOLDER, f'{convert_lang(code)}_{folder}.txt'), 'w', encoding='utf-8') for code in lang_list}
         with open(os.path.join(OUTPUT_FOLDER, f'qid_{folder}.txt'), 'w', encoding='utf-8') as qid:
             for file in sorted(map):
                 for f in [qid, *lang_files.values()]:
