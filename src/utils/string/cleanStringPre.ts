@@ -242,8 +242,27 @@ function remapWiiSpecialCharacters(s: string) {
   );
 }
 
+// Dream Radar special characters
+function remapDreamRadarSpecialCharacters(s: string) {
+  return (s
+    // Pokémon private use
+    .replaceAll('[VAR 0004]', '\\c')
+
+    // System
+    .replaceAll('[VAR 0200]', '✜') // Wii Remote Control Pad
+    .replaceAll('[VAR 0201]', 'Ⓐ') // Wii Remote A Button
+    .replaceAll('[VAR 0202]', 'Ⓑ') // Wii Remote B Button
+    .replaceAll('[VAR 0203]', '🏠︎') // Home Button
+    .replaceAll('[VAR 0204]', '⊕') // Wii Remote + Button
+    .replaceAll('[VAR 0205]', '⊖') // Wii Remote - Button
+    .replaceAll('[VAR 0206]', '①') // Wii Remote 1 Button
+    .replaceAll('[VAR 0207]', '②') // Wii Remote 2 Button
+    // [VAR 0208]: Play Coin icon handled in postprocess
+  );
+}
+
 // 3DS special characters
-function remap3DSSpecialCharacters (s: string) {
+function remap3DSSpecialCharacters(s: string) {
   return remapChineseChars(remapKoreanBraille(
     s.search(/[\uE000-\uE0A8]/u) === -1 ? s : (s
       // System
@@ -443,6 +462,10 @@ export function preprocessString(s: string, collectionKey: CollectionKey, langua
     case "BattleRevolution":
     case "Ranch":
       s = remapWiiSpecialCharacters(s);
+      break;
+
+    case "DreamRadar":
+      s = remapDreamRadarSpecialCharacters(s);
       break;
 
     case "GO":

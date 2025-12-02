@@ -88,6 +88,7 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
   const isBDSP = collectionKey === "BrilliantDiamondShiningPearl";
   const isPBR = collectionKey === "BattleRevolution";
   const isRanch = collectionKey === "Ranch";
+  const isDreamRadar = collectionKey === "DreamRadar";
   const isGO = collectionKey === "GO";
   const isMasters = collectionKey === "Masters";
   const isHOME = collectionKey === "HOME";
@@ -338,6 +339,12 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
     .replaceAll(/(\$\d+\$)/gu, '<span class="var">$1</span>')
   ) : s;
 
+  // Dream Radar
+  s = isDreamRadar ? (s
+    .replaceAll(/\[VAR 0003\(([0-9A-F]{2})[0-9A-F]{2}\)\](.*?)(?=\[VAR 0003\([0-9A-F]{4}\)\]|$)/gu, (_, color, text) => `<span class="color" style="color: var(--color-${parseInt(color, 16)})">${text}</span>`) // font color
+    .replaceAll(/\[VAR 0003\(0000\)\]/gu, '') // font color (reset)
+  ) : s;
+
   // GO
   s = isGO ? postprocessStringGO(s) : s;
 
@@ -371,6 +378,8 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
     s = s.replaceAll(/\[VAR 1900\(tagParameter=(\d+)\)\]/gu, (_, index) => particleBranchFromIndex(index));
   else if (isModern)
     s = s.replaceAll(/\[VAR 1900\(([0-9A-F]{4})\)\]/gu, (_, index) => particleBranchFromIndex(parseInt(index, 16)));
+  else if (isDreamRadar)
+    s = s.replaceAll(/\[VAR 0600\((0[0-9A-F])[0-9A-F]{2}\)\]/gu, (_, index) => particleBranchFromIndex(parseInt(index, 16)));
   //#endregion
 
   //#region Branches
@@ -473,6 +482,11 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
     .replaceAll(/\[(VAR 1[0-9A][^\]]+?\])/gu, '<span class="func long">\u{F0102}$1</span><span class="func short" title="\u{F0102}$1">\u{F0102}Grm]</span>')
     .replaceAll(/\[(VAR BD[^\]]+?\])/gu, '<span class="func long">\u{F0102}$1</span><span class="func short" title="\u{F0102}$1">\u{F0102}Ctrl1]</span>')
     .replaceAll(/\[(VAR BE[^\]]+?\])/gu, '<span class="func long">\u{F0102}$1</span><span class="func short" title="\u{F0102}$1">\u{F0102}Ctrl2]</span>')
+  ) : s;
+  s = isDreamRadar ? (s
+    .replaceAll(/\[(VAR 02[^\]]+?\])/gu, '<span class="var long">\u{F0102}$1</span><span class="var short" title="\u{F0102}$1">\u{F0102}Character]</span>')
+    .replaceAll(/\[(VAR 03[^\]]+?\])/gu, '<span class="var long">\u{F0102}$1</span><span class="var short" title="\u{F0102}$1">\u{F0102}Digit]</span>')
+    .replaceAll(/\[(VAR 04[^\]]+?\])/gu, '<span class="var long">\u{F0102}$1</span><span class="var short" title="\u{F0102}$1">\u{F0102}Name]</span>')
   ) : s;
   s = (s
     .replaceAll('[NULL]', '<span class="null">[NULL]</span>')

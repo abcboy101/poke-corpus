@@ -1,0 +1,594 @@
+~~~~~~~~~~~~~~~
+Text File : Event
+~~~~~~~~~~~~~~~
+C'est toi, la nouvelle recrue ?\nBienvenue !\nJe m'appelle Pimprenelle,\net j'étudie les rêves.\nJe m'intéresse surtout à un lieu où\nj'ai aperçu d'étranges Pokémon...\nDepuis, je ne peux plus penser\nà autre chose !
+J'ai besoin que tu m'assistes dans\ncette recherche ! T'en penses quoi ?\nSi t'es OK, touche\n[VAR 0003(0100)]Explorer[VAR 0003(0000)] !
+Bien ! Ne perdons pas une seconde,\nallons-y tout de suite !
+[VAR 0003(0200)]Si les déplacements semblent\nhachés, posez votre console[VAR 0003(0000)]\n[VAR 0003(0200)]Nintendo 3DS sur une surface\nplane pendant un instant.[VAR 0003(0000)]
+[VAR 0003(0200)]Tenez votre console devant vous.\nAttention à votre environnement.[VAR 0003(0000)]
+Alors ? T'en penses quoi ?\nJ'ai branché l'engin sans t'avertir,\nmais sache que ce que tu vois,\nc'est un espace entre les songes\net la réalité. On l'appelle\nl'interstice du rêve !\nRegarde autour de toi !
+[VAR 0003(0200)]Bougez votre console Nintendo 3DS\npour regarder autour de vous.[VAR 0003(0000)]
+Pas mal, hein ?\nTu vois ces trucs cotonneux\nqui flottent devant toi ?\nCe sont des Nuages de Rêve !\nChacun évolue à son propre rythme,\net ça crée de l'énergie.\nET DONC !!! J'ai besoin de toi\npour collecter cette énergie !\nIl faudrait que tu récupères les Bulles\nde Rêve libérées par les Nuages.\nEt pour ce faire... aligne le viseur\nau milieu de l'écran sur un Nuage...\net appuie sur [VAR 0003(0100)][VAR 0201][VAR 0003(0000)] !
+T'en penses quoi ? Génial, non ?\nC'est un rayon un peu spécial,\nmais tu n'as eu aucun problème\npour viser en plein dans le mille !\nPeux-tu continuer et toucher tous les\nNuages de Rêve avec le rayon ?\nLe symbole « nuage » sur l'écran\ninférieur t'indique le nombre de\nNuages restants.[VAR 0004]Ah ! Et n'oublie pas ! Ce qui sort du\nNuage, c'est des Bulles de Rêve.\nPour les récolter, tire dessus avec\nle rayon, toujours avec [VAR 0003(0100)][VAR 0201][VAR 0003(0000)] !
+Et si... Et si cette lumière,\nc'était un Pokémon... ?\nUne hypothèse suggère que\nles Pokémon peuvent s'égarer\ndans l'interstice du rêve.\nEst-ce qu'on peut les aider... ?\nEssaye d'attraper celui-là !\nUtilise ton rayon avec [VAR 0003(0100)][VAR 0201][VAR 0003(0000)]\npour l'immobiliser, puis appuie\nencore sur [VAR 0003(0100)][VAR 0201] [VAR 0003(0000)]!\nContinue jusqu'à remplir toute la\njauge sur l'écran supérieur.\nCourage ![VAR 0004]Attention : si tu mets trop de temps,\nle Pokémon risque de t'échapper.
+Une fois le Pokémon attrapé, il faut\nle ramener dans le monde réel...\nPourrais-tu le confier à un Dresseur\nde confiance qui en prendra soin ?
+[VAR 0003(0200)]Vous pouvez envoyer des\nPokémon et des objets.[VAR 0003(0000)]\n[VAR 0003(0200)]Après avoir fini l'investigation,\nchoisissez [VAR 0003(0100)]Envoi des données[VAR 0003(0200)].[VAR 0003(0000)]
+Ce Pokémon !!![VAR 0004]Incroyable ! Ébouriffant ! Rencontrer\nun tel Pokémon à ton premier essai !\nC'est l'un des Pokémon étranges\ndont je te parlais !
+Bravo ![VAR 0004]Quelle chance d'être tombée sur toi !\nIl FAUT qu'on travaille ensemble !\nIl te faudrait amasser les Bulles de\nRêve dont j'ai besoin pour étudier.\nOn estime qu'un nouveau Nuage de\nRêve apparaît toutes les 5 minutes.\nMais aucun Nuage ne se crée durant\nune investigation, alors il ne faut\ns'aventurer dans l'interstice du rêve\nqu'une fois que plein de Nuages\nont fait leur apparition. T'en penses\nquoi ? Je compte sur toi !
+J'aimerais améliorer ton équipement,\nmais pour cela, j'ai besoin de Bulles\nde Rêve. Alors, attrapes-en plein !
+Grâce à toi, j'ai mis au point\nun Affineur ! Ça nous permettra\nde trouver plus facilement\nces étranges Pokémon !\nJ'ai hâte que tu les attrapes...\nCe sont sans doute des Pokémon qui\nn'ont jamais été attrapés ! Mais toi,\nje suis sûre que tu en es capable !
+Incroyable ! Ce Pokémon\nétrange était Boréas !\nJe l'ai déjà examiné, et ce Boréas...\na une forme totalement différente\nde celle qu'il a dans le monde réel !\nIl a dû changer pour s'adapter\nà son environnement... Je nomme\ncette forme « Forme Totémique » !\nEt ces deux autres Pokémon que\nj'ai aperçus... pourraient donc être\nFulguris et Démétéros sous cette\nmême forme... ?\nJe dois développer des Affineurs\npour les trouver, et j'aurai besoin\nde plein de Bulles de Rêve... Mais\navec toi à mes côtés, tout ira bien !\nJe te fais confiance pour tout !
+J'ai terminé mon Affineur !\nAvec ça, tu devrais être capable\nde trouver un autre Pokémon sous\nsa Forme Totémique !\nAprès tout, tu as déjà réussi à\ncapturer Boréas, alors je ne me\nfais aucun souci pour toi !\nTu y arriveras, j'en suis sûre !
+Décidément, tu ne déçois jamais ![VAR 0004]C'est bien Fulguris sous sa Forme\nTotémique que tu as attrapé !\nQuel aspect saisissant...\nC'est admirable...\nTu sais, je suis sûre qu'étudier ces\nPokémon sous leur Forme Totémique\npourrait nous permettre de mieux\ncomprendre l'interstice du rêve\net ses mystères. Hélas, l'Affineur\npour trouver Démétéros n'est pas\nencore au point. J'ai besoin\nd'encore plus de Bulles de Rêve !
+J'ai terminé mon Affineur !\nIl devrait être capable de\nrévéler le dernier Pokémon sous\nsa Forme Totémique ! \nBonne chance dans ta chasse aux\nPokémon ! Mais ne force pas trop...\nJe ne voudrais pas que tu t'épuises\net que tu perdes ta bonne humeur !\nParce que, tu sais, personne ne sait\nse servir de ce rayon comme toi...\nMais non, je plaisante !\nJe m'inquiète pour toi parce qu'on\nest potes, maintenant, pas vrai ?\nAlors, t'en penses quoi ?\nJe te souhaite bonne chance !
+Ah, te voilà !\nBravo, c'est encore un sans-faute !\nVoilà donc la Forme Totémique de\nDémétéros... C'est stupéfiant...\nEn les étudiant tous les trois, nous\nallons apprendre plein de choses sur\nl'interstice du rêve... et aussi sur ce\nque nous appelons le monde réel !\nTes exploits ont dévoilé de nouveaux\nhorizons pour la science !\nCette découverte entrera dans\nl'Histoire...\nLa recherche va devenir de plus en\nplus intéressante, maintenant !\nTu as répondu à toutes mes\nattentes, et j'espère que nous\nallons continuer nos recherches\nensemble !\nJe n'ai jamais eu d'assistant ayant\nton génie pour la science !\nT'en penses quoi ?\nT'es OK, hein ?\nOn va continuer à faire du bon travail\nensemble, toi et moi !
+Vous pouvez envoyer vos données\nd'investigation vers une carte de jeu\nde Pokémon Version Noire 2\nou Pokémon Version Blanche 2.\nTouchez le bouton [VAR 0003(0100)]Envoi\n[VAR 0003(0000)]pour commencer.
+J'ai eu une illumination soudaine, et\nça m'a fait créer un nouvel Affineur\npour toi : un [VAR 0403(00CD)] !\nJ'espère que tu vas l'essayer !
+À force de marcher dans le labo,\nj'ai eu l'idée d'un nouvel Affineur\npour toi : un [VAR 0403(00CD)] !\nEssaye-le si tu as le temps !
+J'ai mis au point un Affineur différent.\nJe le nomme [VAR 0403(00CD)] !\nL'idée, c'est de voir un monde de\nl'autre côté, tout distordu...
+J'ai fini l'[VAR 0403(00CD)] !\nJe suis sûre qu'il va nous apporter\nbeaucoup de bonheur ! Essaye-le !
+Je pensais à la mer, calme d'abord,\npuis déchaînée l'instant d'après, et\nj'ai créé cet [VAR 0403(00CD)].\nTu veux bien l'essayer ?
+J'ai fini cet [VAR 0403(00CD)].\nJe m'amusais en lisant les dernières\ndécouvertes sur le magnétisme, et\nje les ai appliquées. Essaye-le !
+Je nettoyais mes tiroirs, et j'ai trouvé\ncet [VAR 0403(00CD)].\nEn fait, je l'avais créé il y a quelque\ntemps... Essaye-le si tu as un instant.
+Figure-toi que je réfléchissais\nà la rotation de la Terre,\net l'instant d'après je mettais cet\n[VAR 0403(00CD)] au point.\nTu veux l'essayer ?
+Ça m'inspire de te voir te démener\nautant ! Du coup, j'ai développé\nl'[VAR 0003(0500)][VAR 0403(00CD)][VAR 0003(0000)], un nouveau\ntype d'Affineur qui réagit aux\nPokémon qui portent un objet.\nEssaye-le la prochaine fois !
+Ah ! Je t'attendais !\nJ'ai fini de créer un truc génial :\nde tout nouveaux Simulateurs !\nJe les ai créés pour étudier Boréas,\nFulguris et Démétéros.\nEssaye-les à l'occasion !\nPar contre, ils ont besoin de plein de\nBulles de Rêve pour fonctionner !
+
+Mes recherches progressent à pas\nde géant depuis que tu es là !\nJ'ai déjà fini un nouvel Affineur !\nJe l'ai appelé l'[VAR 0003(0500)][VAR 0403(00CD)][VAR 0003(0000)].\nIl permet de trouver plus facilement\ndes Pokémon ! Tu devrais l'essayer.
+Plus il y a de Nuages de Rêve,\nplus l'énergie s'accumule.\nIl vaut mieux attendre qu'il y\nen ait plein avant d'explorer\nl'interstice du rêve ![VAR 0004]Si tu n'attends pas assez, tu ne\ntrouveras pas beaucoup de Bulles\nde Rêve. La patience, c'est vital !\nJe sais ! Pendant que tu attends,\npourquoi ne pas aller te promener\nà travers Unys ?
+[VAR 0003(0200)]Nouveauté :[VAR 0003(0000)] [VAR 0003(0300)][VAR 0003(0500)][VAR 0403(00CD)][VAR 0003(0300)] [VAR 0003(0200)]![VAR 0003(0300)][VAR 0003(0000)]
+[VAR 0003(0200)]Nouveautés :[VAR 0003(0000)] [VAR 0003(0100)][VAR 0403(00CD)][VAR 0003(0000)][VAR 0003(0200)],[VAR 0003(0000)]\n[VAR 0003(0100)][VAR 0403(01CD)][VAR 0003(0000)][VAR 0003(0200)] et[VAR 0003(0000)]\n[VAR 0003(0100)][VAR 0403(02CD)][VAR 0003(0000)][VAR 0003(0200)] ![VAR 0003(0000)]
+Je crois que j'ai trouvé comment\nsuivre ces Pokémon étranges,\nmais pour affiner les données,\nj'ai besoin de beaucoup de Bulles\nde Rêve et de beaucoup de temps...
+J'avance dans mon Affineur\nde données pour identifier\nles Pokémon étranges ! J'en suis\ngrosso modo à la moitié !
+J'ai presque fini cet Affineur !\nJ'en suis aux derniers réglages...
+Depuis que j'ai vu ce Pokémon\nétrange, je n'arrive plus à\npenser à autre chose qu'à\nl'interstice du rêve...
+Ces trois Pokémon sont différents\nde ceux qui errent dans l'interstice\ndu rêve... On dirait qu'ils se sont\nacclimatés à cet environnement...
+Alors ? Tu as fait connaissance\navec le matériel ?\nPour attraper un Pokémon, tu dois\nappuyer sur [VAR 0201] pour le toucher avec\nle rayon, puis appuyer rapidement\nsur [VAR 0201] pour maintenir le rayon.
+Comment trouver un Pokémon\nsous sa Forme Totémique... ?\nJ'ai lancé l'analyse de tes résultats,\nmais je manque de Bulles de Rêve...
+Je suis en train d'élaborer le\nprototype, j'en suis à la moitié...\nJ'ai besoin de plus de\nBulles de Rêve !
+Mon prototype pour attraper un\nPokémon sous sa Forme Totémique\nest presque prêt ! Le plus dur\nest derrière nous !
+Grâce à toi, l'[VAR 0403(00CD)]\nest presque opérationnel !\nJ'en suis aux derniers réglages...\nVivement qu'il soit prêt !
+J'ai hâte d'étudier les deux autres\nFormes Totémiques !
+Lequel serait le plus facile à observer\nentre Démétéros et Fulguris... ?
+Il semble que Boréas et ses\nsemblables se nourrissent de Bulles\nde Rêve... Peut-être qu'une énergie\nplus banale ne leur convient pas ?
+Le Dresseur dont tu m'as parlé se\ntrouve dans la région d'Unys, non ?\nOn dit qu'il y a là-bas un Champion\nd'Arène du nom de Strykna qui fait\ndes ravages...[VAR 0004]Heureusement que je ne m'intéresse\nqu'à mes recherches !
+Ça sonne bien,\n« Forme Totémique » !\nÇa leur convient bien, non ?
+Bravo pour tes efforts !\nMais attention, c'est quand on\ntravaille dur qu'il faut savoir\nse reposer...\nEn tout cas, on me le\nrépète souvent.
+J'ai encore besoin de beaucoup de\nBulles de Rêve pour parachever un\nAffineur capable de détecter\nDémétéros sous sa[VAR 0004]Forme Totémique...
+Grâce à toi, je progresse\nà toute allure !\nJ'en suis environ à la moitié...
+Mon [VAR 0403(00CD)] est sur\nla bonne voie ! Le plus dur est\nderrière nous, j'ai juste besoin\nde plus de Bulles de Rêve...
+L'[VAR 0403(00CD)] est\npresque opérationnel !\nJ'en suis aux derniers réglages !\nJe ne tiens pas en place !
+Jamais je n'aurais imaginé la Forme\nTotémique de Fulguris comme ça...
+Boréas, et maintenant Fulguris...\nLa recherche avance à grands pas !
+Il ne reste plus que Démétéros...\nOn y est presque !
+À partir des données récoltées\ngrâce à Boréas et Fulguris,\nje suis sur le point d'identifier\noù se trouve Démétéros.
+La recherche n'a jamais de fin...\nPour te donner un exemple :\neh bien, quand je ne te connaissais\npas, je ne savais rien à ton sujet.\nMais maintenant que je te connais,\nje me pose plein de questions :\nqui tu es vraiment, ce que tu aimes...\nTu vois ce que je veux dire ?\nBref ! Plus on en sait, plus\non veut en savoir !
+C'est l'heure de ma pause... Ça me\nrelaxe de regarder mon café refroidir.
+Je n'arrive pas à croire à quel point\nj'avance vite depuis que tu es là !
+Personne ne récolte les Bulles\nde Rêve aussi vite que toi !
+On se sent à l'étroit, ici... Je devrais\npeut-être aller me balader.
+Au fait, tu savais que la lumière\ndu soleil nous arrive avec un\ndécalage de 8 minutes ?\nJe me demande si l'interstice\ndu rêve nous paraît proche, mais\nest en fait très éloigné...
+Je me demande si Démétéros et\nses deux compères viennent de\nla région d'Unys, ou s'ils sont nés\ndans l'interstice du rêve...
+Il me semble avoir lu que Démétéros\nétait vénéré quelque part à Unys...\nAh, je me souviens !\nC'était à l'Autel Abondance !
+Qui aurait cru que nous réunirions\nles trois Formes Totémiques\nen si peu de temps... ?
+Je suis encore loin de savoir quoi\npenser des Formes Totémiques...
+Les Bulles de Rêve renferment une\ngrande source d'énergie...\nTu te rends compte que toi et moi,\nrien qu'en étant ici, nous avons sur\nl'univers une influence si vaste... ?\nC'est vertigineux...
+La science me prend tout mon\ntemps ! Rien n'est jamais définitif,\nil faut toujours penser à ce que l'on\npourrait découvrir ensuite...\nVoilà pourquoi c'est impossible\nde s'en lasser.
+J'ai sauté le déjeuner, et j'ai juste bu\nun café à la place, mais ce n'est pas\nbon pour la santé... Peut-être que\nje devrais manger un truc...
+Cette recherche m'a permis de\ncomprendre beaucoup de choses...\nMais la science ne dévoile jamais\nla réalité, elle permet simplement\nde s'en approcher pas à pas !\nC'est du moins mon opinion.
+Merci pour ton aide ! Mais n'oublie\npas de te reposer un peu...
+Hmm... Les rêves ont-ils un sens,\nou sont-ils juste vides... ?
+Je me sens en ébullition... Je devrais\nmanger une glace pour me refroidir.\nAh, ça me rappelle la glace qu'Oryse\nm'avait offerte la dernière fois...
+Mon hypothèse, c'est que la forme\nde Boréas dans l'interstice du rêve\nserait sa véritable apparence...\nMais je ne peux rien affirmer !
+Je reste dans ce labo tout le temps,\nmais je suis sur une planète qui\nparcourt des millions de kilomètres\ndans l'espace, alors, c'est comme\nsi je faisais de l'exercice... non ?
+Qu'est-ce que je ferais sans toi... ?\nMerci d'être là !
+Si tu as confiance en ce Dresseur,\nje ne suis pas inquiète,\non peut lui confier les Pokémon.\nTu lui as envoyé tes données\nd'investigation ? Qui sait quelles\naventures ils vont vivre ensemble...
+Les Bulles de Rêve que tu récoltes\nsont de première qualité...
+Dans le monde réel, on n'a identifié\naucune source d'énergie\nqui fonctionne comme\nles Bulles de Rêve...
+Oh ? La bouteille que j'avais mise\nau frigo a disparu...\nDu bon Jus de Baie pressé par un\nCaratroc... Tu en as déjà goûté ?
+Mes inventions ne sont pas toujours\nbien reçues par mes collègues...\nIl faut dire que je ne fais jamais\nde compromis.
+Quand on fait une expérience sur\nles dimensions, c'est comme si\non effaçait le trou dans un beignet\net qu'il réapparaissait ailleurs.\nIl faut faire attention aux\nconséquences !
+Ça a l'air délicieux, les Bulles de\nRêve... T'en dis quoi ?
+Que se passerait-il si un humain\nléchait une Bulle de Rêve... ?\nNe me regarde pas comme ça,\nj'en sais rien !
+Les Bulles de Rêve que tu ramènes\ntransforment ma vision du monde !
+Tu as vu comme les Nuages de Rêve\ngrossissent et rapetissent ?\nC'est ce mouvement qui\ncrée leur énergie.\nDu coup, je pense que si tu les\ntouches avec ton rayon quand\nils sont au plus gros, ils donneront\nplus d'énergie ! Qui sait ?
+Ah, je n'arrête pas d'éternuer...\nJ'ai attrapé un rhume... ?\nFais attention à toi, et\nne te surmène pas !
+Hmm ? Bizarre, j'ai eu comme\nl'impression d'une distorsion...
+Tu as accumulé, depuis le début,\n[VAR 0303(000001CD)] Bulles de Rêve\nau total. Merci pour tout !
+Après avoir parlé avec Oryse, j'ai\ntrouvé plein de pistes pour mes\nrecherches...\nOryse, c'est une amie de la fac,\non étudiait toutes les deux le rêve,\net on s'est super bien entendues...\nMais elle étudie aussi les\nDresseurs, elle.
+Mon amie Oryse étudie aussi\nles rêves...\nNous nous sommes rencontrées\nà l'université. Je l'avais félicitée\npour un papier qu'elle avait rendu,\net j'ai découvert qu'elle avait mon\nâge... Je n'en revenais pas.
+Est-ce que les humains et les\nPokémon font des rêves pour\norganiser dans leur mémoire les\nchoses étranges qu'ils ont vécues\ndans le monde réel, ou est-ce que\nle cerveau, lorsqu'il est endormi,\nentre dans un état particulier... ?\nC'est toujours un mystère.
+Quand je dis que j'étudie les rêves,\nles gens commencent à me\nraconter les leurs... Je ne suis\npourtant pas psychanalyste !
+Les rêves, comme les inventions\net les fulgurances de l'esprit,\nsont des phénomènes du\ntélencéphale qu'on s'explique mal...
+Quand on tombe sur un problème,\nil faut le diviser en parties\npour trouver la solution.\nOn peut aussi aller prendre l'air !
+Te voilà de retour ! J'ai bien\navancé dans mes recherches,\nmoi aussi !
+Alors ? J'espère que tu prends le\ntemps de manger comme il faut ?
+Le temps passe si vite quand on\nse passionne pour un sujet !
+Avec l'Amphiscope que tu utilises,\nil te faut 45 minutes pour voir\nle maximum de Nuages de Rêve.\nJuste le temps de lire un article !
+Avec l'Amphiscope que tu utilises,\nil te faut 70 minutes pour voir\nle maximum de Nuages de Rêve.\nJuste le temps pour une pause !
+Avec l'Amphiscope que tu utilises,\nil te faut 95 minutes pour voir\nle maximum de Nuages de Rêve.\nJuste le temps d'une expérience !
+Avec l'Amphiscope que tu utilises,\ntu atteindras le maximum de Nuages\nde Rêve dans le temps qu'il faut au\nsoleil pour bouger de 30º dans\nle ciel... soit 120 minutes,\nplus ou moins !
+Avec l'Amphiscope que tu utilises,\nil te faut 145 minutes pour voir\nle maximum de Nuages de Rêve.\nJuste le temps d'une sieste !
+Alors, tu as fini ?\nMerci pour tout ce que tu fais !
+Salut !\nComment tu te portes ?
+Tu sais que les Bulles de Rêve\nchangent de couleur si on attend ?\nJe me demande si, en accumulant\ndes Bulles de Rêve de la même\ncouleur, ça ferait quelque chose...\nPar exemple, est-ce que ça\nchangerait le Pokémon rencontré ?
+Je suis sûre qu'il y a un lien entre\nla couleur des Bulles de Rêve\nattrapées et l'espèce de Pokémon\nrencontrée...
+Tu utilises les dispositifs ?[VAR 0004]Ça rend la capture de Pokémon\nbeaucoup plus aisée...
+Si tu tombes sur un Pokémon rapide,\nutilise un Filtre Ralentisseur.\nÇa le rendra plus facile à attraper !
+J'aimerais bien connaître l'avis\nd'Oryse sur l'interstice du rêve...\nAh, Oryse, c'est une amie à moi !\nUne spécialiste des rêves.
+Tu connais Volucité, à Unys ?\nOryse, une amie à moi,\ny étudie les rêves...\nC'est une ville incroyable !\nOn y trouve des Évoli, mon\nPokémon favori, en plus !
+Au fait, tu sais que ton équipement\nporte un nom ? Ça s'appelle le\nDispositif Dimensionnel Des Songes.\nComme c'est trop long, on préfère\ndire le « DDDS » !
+En fait, l'interstice du rêve que tu\nexplores a été découvert par\nhasard, au cours d'une expérience\nsur les dimensions topologiques.\nAh, le charme de la sérendipité !
+En maintenant [VAR 0003(0100)][VAR 0201][VAR 0003(0000)] enfoncé, ton\nrayon tire automatiquement !
+Les Bulles de Rêve que tu récoltes\ndans l'interstice du rêve sont des\néchantillons absolument centraux\npour ma recherche.\nJe te suis tellement reconnaissante !
+On utilise aussi les Bulles de\nRêve pour les machines qui\nexaminent les rêves...\nOn les exploite par condensation.
+Chaque fois que quelqu'un utilisait\nce rayon pour explorer, le tir\nétait totalement incontrôlable...\nMais toi, tu le maîtrises parfaitement !
+Beaucoup de collègues ont\nessayé de tirer avec le rayon,\nmais à part toi, personne n'a réussi\nà l'utiliser correctement.
+Tu as l'air d'avoir maîtrisé cette\ntâche... Continue comme ça !
+Si tu croises un Pokémon qui se\ndéplace de façon erratique,\nutilise un Filtre Appât !\nÇa le rendra plus facile à viser.
+Si un Pokémon persiste à t'échapper,\nutilise une Batterie de rechange !\nÇa te donnera plus de temps\npour l'attraper !
+Plus tu atteins de Bulles\nde Rêve d'affilée, plus il\nest facile de les collecter !
+Les Nuages de Rêve n'apparaissent\nni au-dessus ni en dessous de toi,\ndonc pas besoin de te tordre le cou !
+Je crois que lorsqu'il y a beaucoup\nde Nuages de Rêve, les chances\nde trouver un Pokémon augmentent.\nOn estime qu'il faut 5 minutes à\nun Nuage de Rêve pour apparaître,\nalors patiente un peu entre\nchaque investigation !
+Quand tu commences une\ninvestigation, regarde bien alentour.\nJe dis ça pour que tu ne te fasses\npas mal et que tu ne déranges pas\nles gens autour de toi !
+Plus j'étudie l'interstice du rêve,\nmoins je le comprends...
+Plus je me sens excitée, plus\nj'ai de bonnes idées !
+Alors ? Tu avances bien ?\nMoi, j'avance à fond !
+Tu savais qu'en attrapant toutes les\nBulles de Rêve du même Nuage de\nRêve, ça pouvait créer d'autres\nBulles de Rêve ?\nMais ça n'arrive pas s'il n'y en a\npas assez au départ...
+Mes instruments réagissent de\nfaçon étrange, je suis en train\nde les examiner...[VAR 0004]Peut-être qu'ils sont déréglés, ou\nqu'un Motisma s'y est introduit...
+Au fait, tu penses quoi du nom\n« Nuages de Rêve » ?\nJe les ai nommés comme ça\nsans trop y penser...
+La façon dont les Nuages de Rêve\ncréent de l'énergie ressemble à\nla façon dont un nuage dans le\nciel crée la pluie...
+Ah, c'est toi ![VAR 0004]Ne regarde pas par là, un trou noir\nest apparu dans le placard.\nIl paraît que c'est une expérience\nd'un de mes collègues...\nIl faut que je sois à la hauteur !
+Comment les Pokémon pénètrent-ils\ndans l'interstice du rêve... ?\nJ'ai l'impression que plus il y a\nde Nuages de Rêve,\nplus on a de chances de\ntomber sur un Pokémon...
+Ce sont les Bulles de Rêve qui\nfournissent l'énergie pour les\nmachines du labo. Mais l'énergie qui\nme maintient en mouvement, moi,\nce sont les calories et\nla soif de savoir !\nOn pourrait aussi appeler ça\nun rêve, en fait...
+Ah, te voilà ! Comment vas-tu ?
+Merci pour tous tes efforts !
+~~~~~~~~~~~~~~~
+Text File : Item
+~~~~~~~~~~~~~~~
+Tesson Rouge
+Tesson Bleu
+Tesson Jaune
+Tesson Vert
+PP Plus
+Baie Mepo
+Rappel
+Rappel Max
+Pierresoleil
+Pierre Lune
+Pierre Feu
+Pierre Eau
+Pierrefoudre
+Pierreplante
+Cendresacrée
+Super Bonbon
+Morc. Étoile
+Écaillecœur
+Pierre Aube
+Roche Royale
+Orbe Vie
+Ceint. Force
+Évoluroc
+Rayon +
+Batterie +
+Scope +
+Rayon
+Batterie
+Amphiscope
+Augmente la puissance du rayon\npour attraper un Pokémon.
+Offre plus de temps pour\nattraper un Pokémon.
+Permet de découvrir davantage\nde Nuages de Rêve.
+Filtre Appât
+Filtre Ralentisseur
+Batterie de rechange
+Retient un Pokémon au niveau du\nviseur pour faciliter sa capture.
+Ralentit un Pokémon pendant\nune certaine durée.
+Permet de recouvrer le temps\nutilisé pour attraper un Pokémon.
+Affineur Normal
+Affineur Recyclage
+Affineur Sauvetage
+Affineur Miracle α
+Affineur Miracle β
+Affineur Miracle γ
+Affineur Temps
+Affineur Espace
+Affineur Renégat
+Affineur Arcenciel
+Affineur Plongeon
+Affineur Spécial A
+Affineur Spécial B
+Affineur Spécial C
+Simulateur α
+Simulateur β
+Simulateur γ
+Un Affineur équilibré.
+Réagit plus particulièrement aux\nPokémon tenant un objet.
+Trouve plus facilement\nles Pokémon.
+Affineur calibré pour trouver un\ncertain Pokémon (version 1).
+Affineur calibré pour trouver un\ncertain Pokémon (version 2).
+Affineur calibré pour trouver un\ncertain Pokémon (version 3).
+Affineur basé sur les conclusions\nd'un essai sur le temps.
+Affineur basé sur les conclusions\nd'un essai sur l'espace.
+Affineur basé sur les conclusions\nd'un essai sur la distorsion.
+Affineur basé sur les conclusions\nd'un essai sur la lumière et la joie.
+Affineur basé sur les conclusions\nd'un essai sur le calme et la tempête.
+Affineur basé sur les conclusions\nd'un essai sur le magnétisme.
+Affineur développé en rêvassant à\ndes vacances calmes à la plage.
+Affineur basé sur les conclusions\nd'un essai sur la rotation de la Terre.
+Simulateur développé\npour étudier Boréas.
+Simulateur développé\npour étudier Fulguris.
+Simulateur développé\npour étudier Démétéros.
+~~~~~~~~~~~~~~~
+Text File : Menu
+~~~~~~~~~~~~~~~
+[VAR 0303(000001CD)]
+
+Retour
+Envoi
+Parcourir
+Commencer
+Crédits
+Envoi des données
+
+Explorer
+Salle de recherche
+Quitter le laboratoire
+[VAR 0208] pièces de jeu
+Laboratoire
+Records
+On met au point des tas de trucs,\nici ! Ça te dirait d'essayer ?
+Il faudra [VAR 0303(000001CD)] Bulles de\nRêve pour l'installer, ça te va ?
+Super ! Laisse-moi faire.
+Hmm... J'aurai besoin d'un peu plus\nde Bulles de Rêve...
+Désolée, mais tu n'as plus de place\noù installer ça...
+Et voilà, parfait !\nAutre chose t'intéresse ?
+Et voilà, prêt à l'usage !\nPour l'utiliser, tu n'auras qu'à\ntoucher le bouton qui apparaîtra sur\nl'écran tactile quand tu essaieras\nd'attraper un Pokémon.\nAutre chose t'intéresse ?
+N.
+MAX
+Nbre de dispositifs
+Permet d'envoyer les données\nd'investigation vers\nPokémon Version Noire 2 ou\nPokémon Version Blanche 2.
+Envoyer les données d'investigation\nvers Pokémon Version Noire 2 ?
+Envoyer les données d'investigation\nvers Pokémon Version Blanche 2 ?
+Envoi des données. Attention à\nne pas retirer la carte de jeu.
+Envoi effectué ![VAR 0004]Sélectionnez LIEN UNYS\ndepuis le menu principal\nde Pokémon Version Noire 2\npour recevoir les données.
+Envoi effectué ![VAR 0004]Sélectionnez LIEN UNYS\ndepuis le menu principal\nde Pokémon Version Blanche 2\npour recevoir les données.
+Échec de l'envoi de données.\nRetour à l'écran titre.
+Retour à l'écran titre.
+Ni Pokémon Version Noire 2\nni Pokémon Version Blanche 2\nne sont insérés dans la console.\nRetour à l'écran titre.
+Échec de l'envoi de données.\nVeuillez sauvegarder une partie\ndans Pokémon Version Noire 2,\npuis réessayez.
+Échec de l'envoi de données.\nVeuillez sauvegarder une partie\ndans Pokémon Version Blanche 2,\npuis réessayez.
+Impossible d'envoyer des données\ntant que les données précédentes\nn'ont pas été reçues. Veuillez les\nrecevoir en sélectionnant LIEN UNYS\ndans Pokémon Version Noire 2.
+Impossible d'envoyer des données\ntant que les données précédentes\nn'ont pas été reçues. Veuillez les\nrecevoir en sélectionnant LIEN UNYS\ndans Pokémon Version Blanche 2.
+[VAR 0003(0500)][VAR 0400(0000)] [VAR 0003(0000)]a déjà été reçu.\nImpossible de l'envoyer vers\ncette carte de jeu.
+[VAR 0003(0500)][VAR 0400(0000)][VAR 0003(0000)] et\n[VAR 0003(0500)][VAR 0400(0100)] [VAR 0003(0000)]ont déjà\nété reçus. Impossible de les envoyer\nvers cette carte de jeu.
+[VAR 0003(0500)][VAR 0400(0000)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0100)][VAR 0003(0000)], et\n[VAR 0003(0500)][VAR 0400(0200)][VAR 0003(0000)] ont déjà\nété reçus. Impossible de les envoyer\nvers cette carte de jeu.
+[VAR 0003(0500)][VAR 0400(0000)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0100)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0200)][VAR 0003(0000)], et\n[VAR 0003(0500)][VAR 0400(0300)][VAR 0003(0000)] ont déjà\nété reçus. Impossible de les envoyer\nvers cette carte de jeu.
+[VAR 0003(0500)][VAR 0400(0000)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0100)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0200)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0300)][VAR 0003(0000)] et\n[VAR 0003(0500)][VAR 0400(0400)][VAR 0003(0000)][VAR 0003(0500)] [VAR 0003(0000)]ont déjà\nété reçus. Impossible de les envoyer\nvers cette carte de jeu.
+[VAR 0003(0500)][VAR 0400(0000)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0100)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0200)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0300)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0400)] [VAR 0003(0000)]et\n[VAR 0003(0500)][VAR 0400(0500)] [VAR 0003(0000)]ont déjà\nété reçus. Impossible de les envoyer\nvers cette carte de jeu.
+[VAR 0003(0500)][VAR 0400(0000)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0100)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0200)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0300)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0400)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0500)][VAR 0003(0000)] et\n[VAR 0003(0500)][VAR 0400(0600)] [VAR 0003(0000)]ont déjà\nété reçus. Impossible de les envoyer\nvers cette carte de jeu.
+[VAR 0003(0500)][VAR 0400(0000)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0100)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0200)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0300)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0400)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0500)][VAR 0003(0000)],\n[VAR 0003(0500)][VAR 0400(0600)][VAR 0003(0000)] et\n[VAR 0003(0500)][VAR 0400(0700)][VAR 0003(0000)] ont déjà\nété reçus. Impossible de les envoyer\nvers cette carte de jeu.
+Voulez-vous envoyer les autres\nPokémon ou objets ?
+Aucune donnée n'a été trouvée.\nRetour à l'écran titre.
+On ne peut envoyer qu'un maximum\nde 6 Pokémon à la fois.
+Impossible d'envoyer les données.\nVeuillez consulter le LIEN UNYS\ndepuis l'écran titre de\nPokémon Version Noire 2.
+Impossible d'envoyer les données.\nVeuillez consulter le LIEN UNYS\ndepuis l'écran titre de\nPokémon Version Blanche 2.
+La carte de jeu a été retirée.[VAR 0004]Redémarrage de RAdar Pokémon.
+Aucune donnée à envoyer.\nRetour à l'écran titre.
+Commencer l'investigation ?
+Votre boîte à Pokémon est pleine.[VAR 0004]Si vous attrapez un autre Pokémon\net que vous décidez de le garder,\nvous devrez relâcher l'un de\nceux qui sont dans la boîte.
+Votre boîte à objets est pleine.\nSi vous trouvez un autre objet et\nque vous décidez de le garder,\nvous devrez jeter l'un de ceux\nqui sont dans la boîte.
+Pas assez de Bulles de Rêve.
+Vous avez attrapé\n[VAR 0003(0500)][VAR 0400(0000)] [VAR 0003(0000)]!
+Le Pokémon a laissé tomber\n1 [VAR 0003(0500)][VAR 0401(00CD)][VAR 0003(0000)] !
+Mais il n'y a plus de place\ndans la boîte.
+Le Pokémon s'est enfui !
+[VAR 0003(0500)][VAR 0400(0000)][VAR 0003(0000)] s'est enfui !
+
+[VAR 0003(0200)]L'investigation n'est pas terminée.\nSi vous rentrez au laboratoire,[VAR 0003(0000)]\n[VAR 0003(0200)]les Nuages et les Bulles\nde Rêve disparaîtront.[VAR 0003(0000)]\n[VAR 0003(0200)]Voulez-vous rentrer au laboratoire ?[VAR 0003(0000)]
+[VAR 0003(0200)][VAR 0003(0200)]L'investigation est terminée.\nRetour [VAR 0003(0200)][VAR 0003(0200)]au laboratoire.[VAR 0003(0200)][VAR 0003(0000)]
+
+La boîte à Pokémon est pleine,\nil faut en relâcher un.\nLequel veux-tu relâcher pour faire\nune place à [VAR 0003(0500)][VAR 0400(0000)] [VAR 0003(0000)]?
+Pas de chance, je crois que la boîte\nà objets est pleine...\nQu'est-ce que tu veux jeter pour\nfaire une place à ta trouvaille[VAR 0003(0500)] [VAR 0003(0000)]?
+Allons-nous relâcher\n[VAR 0003(0500)][VAR 0400(0000)] [VAR 0003(0000)]?
+Allons-nous retirer l'objet\n[VAR 0003(0500)][VAR 0401(00CD)] [VAR 0003(0000)]de la boîte ?
+Alors, c'est [VAR 0003(0500)][VAR 0400(0000)][VAR 0003(0000)]\nqu'on va relâcher. Ça te va ?
+Tu préfères abandonner\n1 [VAR 0003(0500)][VAR 0401(00CD)] [VAR 0003(0000)]?
+Quel Pokémon veux-tu remplacer\npar [VAR 0003(0500)][VAR 0400(0000)] [VAR 0003(0000)]?
+Quel objet veux-tu remplacer\npar 1 [VAR 0003(0500)][VAR 0401(00CD)][VAR 0003(0000)] ?
+Vous pouvez créer le nombre\nmaximal de Nuages de Rêve contre\n[VAR 0301(000000CD)] pièces de jeu.\nVoulez-vous les utiliser ?\nVous en avez actuellement [VAR 0302(010000CD)].
+Le nombre maximum de Nuages\nde Rêve est apparu.\nVous pouvez utiliser vos pièces de\njeu encore [VAR 0003(0100)][VAR 0301(000000CD)] [VAR 0003(0000)]fois aujourd'hui.
+Il n'y a pas assez de pièces de jeu.\nIl vous en faut [VAR 0302(000000CD)],\net vous en avez [VAR 0302(010000CD)].
+Vous ne pouvez plus utiliser de\npièces de jeu pour aujourd'hui.\nVous ne pouvez les utiliser que\n[VAR 0003(0100)][VAR 0301(000000CD)][VAR 0003(0000)] fois par jour.
+Nuages de Rêves au maximum.\nInutile d'utiliser les pièces de jeu.
+Le nombre maximum de Nuages\nde Rêve est apparu.\nVous ne pouvez plus utiliser vos\npièces de jeu jusqu'à demain.
+[VAR 0203] vous ramène au menu HOME.
+Voilà le résultat de tes\ninvestigations !\nAlors, t'en penses quoi ?
+Nbre d'investigations
+Nuages examinés
+Pokémon attrapés
+Objets trouvés
+Bulles amassées
+Vitesse de capture
+
+
+
+s
+Sauvegarde en cours de création...
+Les données de sauvegarde sont\ncorrompues. Réinitialisation...
+
+
+~~~~~~~~~~~~~~~
+Text File : Pokemon
+~~~~~~~~~~~~~~~
+Baudrive
+Toudoudou
+Tylton
+Archéomire
+Munna
+Caratroc
+Stari
+Cryptéro
+Riolu
+Lippouti
+Porygon
+Spiritomb
+Togepi
+Motisma
+Tarsal
+Terhal
+Ramoloss
+Hoothoot
+Boréas
+Fulguris
+Démétéros
+Dialga
+Palkia
+Giratina
+Ho-Oh
+Lugia
+~~~~~~~~~~~~~~~
+Text File : StaffRoll
+~~~~~~~~~~~~~~~
+[NULL]
+Yasunori Isari
+Takao Unno
+Masafumi Saito
+Yasunori Isari
+Hitoshi Matsui
+Noriaki Teramoto
+Sosuke Tamada
+Yasunori Isari
+Yasuhiro Ito
+Hiroshi Igarashi
+Takao Unno
+Masafumi Saito
+Kenichi Higeta
+Rie Seki
+Megumi Mizutani
+Takuto Kitsuta
+Ayumu Ito
+Wataru Ishiyama
+Hitomi Sato
+Misato Kadosawa
+Toshinobu Matsumiya
+Hiroyuki Ogasawara
+Katsunori Orimoto
+Rie Takeuchi
+Hironori Ichibayashi
+Shuhei Furukawa 
+Yoshiharu Tsukuda
+Norihide Okamura
+Toru Inage
+Tomohiro Umeda
+Yuki Tanikawa
+Yuki Okada
+Mario Club Co., Ltd.
+Sakae Kimura
+Kenichi Koga
+Hidehumi Ide
+Kenkichi Toyama
+Kiyomi Itani
+Sachiko Nakamichi
+Keiko Inoue
+Yasuhiro Usui
+Mikiko Ryu
+Satomi Honda
+Reiko Feinstein
+Tim Hove
+Sayuri Munday
+Jillian Nonaka
+Kellyn Ballard
+Blaise Selby
+Noriko Netley
+Makiko Cottrell
+Kaori Manabe
+Mitsuyo Matsunaga
+Nami Kusumoto
+Maya Yoshida
+Guillaume Didier
+Bertrand Lecocq
+Florian Becquereau
+Manuela Suriano
+Gill George De Gregorio
+Marco Sartori
+Marco Borrelli
+Francesca Gola
+Michael Ecke
+Daniel Heucher
+Kathleen Kalms
+Anja Weinbach
+Ralph Lunt
+Enrique Joga Elvira
+Alejandro Martínez Monge
+Alberto Gracia Castellano
+Esther Sánchez Giráldez
+Teresa Cueto Álvarez de Sotomayor
+Rey Perez
+Antoin Johnson
+Eric Medalle
+Chanho  Sohn
+Yongho  So
+Mihwa  Choi
+Jeonghwa  Jeong
+Goeun  Ryou
+Taehyung  Lee
+Hyerim Jang
+Yoshiharu Tsukuda
+Yasunori Isari
+Hitoshi Matsui
+Kenichi Higeta
+Rie Seki
+Norihide Okamura
+Seth McMahill
+Rie Fujiwara
+Joel Simon
+Dan Owsen
+Michael Barry
+Andreas Fey
+Michaël Hugot
+Jamie Grant
+Yu  Fukaya
+Hyokjin  Jung
+Jihyun  Choi
+Siyoung  An 
+Kwanja Lim
+Masayasu Nakata
+Kyle Hudson
+Eric M. Bush
+Sean Egan
+Tomoko Mikami
+Teresa Lillygren
+Nicko Gonzalez De Santiago
+Kathy Huguenard
+Miyuki Matsunaga
+Sara Hoad
+Stéphane Arlot
+Josh Newman
+Kindra Timmerwilke
+Luis Golbano
+Christopher Stewart
+David Edgcumbe
+Laurence Uhlen
+Florian Richert
+Jérôme Petit
+Fabio Brignoli
+Sergio Fragomeli
+Daniele Albrito
+Patrick Thorenz
+Matthias Noll
+Benedikt Grosser
+Jesús Gutiérrez
+David Higueras
+Cristina Araújo Gámir
+Junbong  Lee
+Sungmin  Park 
+Seokju Kim
+NOK  Debug  Team
+Kenjiro Ito
+Mikiko Ohashi
+Tomotaka Komura
+Atsushi Sugimoto
+Susumu Fukunaga
+Takato Utsunomiya
+Toshio Miyahara
+Taku Kawamoto
+Rui Kawaguchi
+Eisuke Kasejima
+Nobuhiro Sawabe
+Retsuji Nomoto
+Michiko Takizawa
+Yukiko Kanagawa
+Nobue Kamikawabata
+Ayako Kajiwara
+Yuichiro Tsumita
+Masayuki Soga
+Noriko Nakao
+Kei Ninomiya
+Kenji Okubo
+Gaku Susai
+Hirofumi  Hasegawa
+Kyuhyung  Choi
+Jihye  Lee
+Jongman  Chung
+Sangwook  Ahn
+Juhee  Yang
+Katsuyoshi Irie
+Junichi Masuda
+Masamichi Anazawa
+Sho Furutani
+Shunsuke Kohori
+Shusaku Egami
+Akira Kinashi
+Hideaki Araki
+Hirokazu Tanaka
+Hiroyuki Jinnai
+Junichi Masuda
+Hitoshi Yamagami
+Satoshi Tajiri
+Satoru Iwata
+Tsunekazu Ishihara
+Nintendo, The Pokémon Company,
+GAME FREAK inc., and Creatures Inc.
+are the authors of this software for
+the purpose of copyright.
+All rights reserved.
+Nintendo, The Pokémon Company, 
+GAME FREAK inc. et Creatures Inc.
+sont les auteurs de ce logiciel 
+au regard du droit d'auteur.
+Tous droits réservés.
+©2012 Pokémon.
+©1995-2012 Nintendo
+©1995-2012 Creatures Inc.
+©1995-2012 GAME FREAK inc.
+Developed by Creatures Inc. and GAME FREAK inc.
+©2012 Pokémon.
+©1995-2012 Nintendo/Creatures Inc./GAME FREAK inc.
+Développé par Creatures Inc. et GAME FREAK inc.
+Directors
+Programming
+Planning
+Graphics
+Character Design
+Sound
+Scenario
+Concept Design
+Technical Support
+Development Support
+Debug Management
+Debug
+Artwork
+English Localization
+English Translation
+English Editing
+EU Localization 
+French Translation
+French Editing
+Italian Translation
+Italian Editing
+German Translation
+German Editing
+Spanish Translation
+Spanish Editing
+Manual Development
+Logo Design
+Korean Localization
+Localization Development
+NOA Localization Support
+NOE Management
+NOE Localization Producer
+NOK Management
+NOK Localization Coordinators
+NOA Product Testing
+NOE Quality Assurance
+NOK Product Testing
+Special Thanks
+Supervisors
+Production Management
+Development Producers
+Coordinators
+Producers
+Executive Producer
+Executive Producer
+Executive Producer
+
