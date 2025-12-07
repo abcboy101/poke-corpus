@@ -11,6 +11,7 @@ export default [
     ignores: [
       "dist/",
       "dev-dist/",
+      "coverage/",
       "eslint.config.js",
       "gen-static.js",
       "vite-env.d.ts",
