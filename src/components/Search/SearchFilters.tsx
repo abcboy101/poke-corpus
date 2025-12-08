@@ -58,12 +58,7 @@ function SearchCollections({corpus, language, collections, languages, setCollect
           corpus.collections.map((key) => [key, t(`collections:${key}.name`), t(`collections:${key}.short`)] as const).map(([key, name, short]) =>
             <div key={key} className={`search-collection search-${validCollections.has(key) ? 'valid' : 'invalid'}`}>
               <input type="checkbox" name={`collection-${key}`} id={`collection-${key}`} checked={collections.includes(key)} onChange={(e) => {
-                if (e.target.checked && !collections.includes(key)) {
-                  setCollections(collections.concat([key]));
-                }
-                else if (!e.target.checked && collections.includes(key)) {
-                  setCollections(collections.filter((value) => value !== key));
-                }
+                setCollections((prev) => e.target.checked ? prev.concat([key]) : prev.filter((value) => value !== key));
               }}/>
               <label htmlFor={`collection-${key}`} style={isFullwidth ? collectionLabelStyle(short) : undefined}>
                 { (name === short) ? name : <abbr title={name}><span translate="no">{short}</span></abbr> }
@@ -88,15 +83,18 @@ function SearchLanguages({corpus, language, collections, languages, setLanguages
     <>
       <div className="search-languages">
         {
-          corpus.languages.map((key) => [key, t(`languages:${key}.name`), t(`languages:${key}.code`)] as const).map(([key, name, code]) =>
-            <div key={key} className={`search-language search-${validLanguages.has(key) ? 'valid' : 'invalid'}`}>
-              <input type="checkbox" name={`language-${key}`} id={`language-${key}`} checked={languages.includes(key)} onChange={(e) => {
-                if (e.target.checked && !languages.includes(key)) {
-                  setLanguages(languages.concat([key]));
-                }
-                else if (!e.target.checked && languages.includes(key)) {
-                  setLanguages(languages.filter((value) => value !== key));
-                }
+          corpus.languages.filter((key) => key !== 'en-AU').map((key) => {
+            let displayKey: LanguageKey | 'en-ZZ' = key;
+            let keyArr: readonly LanguageKey[] = [key];
+            if (key === 'en-GB') {
+              displayKey = 'en-ZZ';
+              keyArr = ['en-GB', 'en-AU'];
+            }
+            return [displayKey, keyArr, t(`languages:${displayKey}.name`), t(`languages:${displayKey}.code`)] as const;
+          }).map(([key, keyArr, name, code]) =>
+            <div key={key} className={`search-language search-${keyArr.some((key) => validLanguages.has(key)) ? 'valid' : 'invalid'}`}>
+              <input type="checkbox" name={`language-${key}`} id={`language-${key}`} checked={keyArr.some((key) => languages.includes(key))} onChange={(e) => {
+                setLanguages((prev) => e.target.checked ? prev.concat(keyArr) : prev.filter((value) => !keyArr.includes(value)));
               }}/>
               <label htmlFor={`language-${key}`}>
                 <span className="search-language-code"><abbr title={name}><span translate="no">{code}</span></abbr></span>

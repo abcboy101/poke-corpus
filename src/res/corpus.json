@@ -5,6 +5,7 @@
     "ja",
     "en",
     "en-GB",
+    "en-AU",
     "fr",
     "it",
     "de",
@@ -104,17 +105,20 @@
       ]
     },
     "Crystal": {
+      "id": "c",
       "languages": [
+        "qid",
         "ja-Hrkt",
         "en",
+        "en-AU",
         "fr",
         "it",
         "de",
         "es"
       ],
-      "structured": false,
+      "structured": true,
       "files": [
-        "data"
+        "msg"
       ]
     },
     "RubySapphire": {

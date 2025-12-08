@@ -179,13 +179,16 @@ const searchParamsFactory = (corpus: Corpus) => {
   * - More compressible selections (such as all/none/one/consecutive languages/collections) will require fewer characters.
   */
 
-  const magic = corpus.collections.length ^ (corpus.languages.length << 4);
+  const corpusLanguages: readonly Exclude<LanguageKey, 'en-AU'>[] = corpus.languages.filter((lang) => lang !== 'en-AU'); // en-GB/AU flags are combined
+  const corpusCollections = corpus.collections;
+
+  const magic = corpusCollections.length ^ (corpusLanguages.length << 4);
   const bytesHeader = 2;
-  const bytesLanguage = Math.ceil(corpus.languages.length / 8);
-  const bytesCollection = Math.ceil(corpus.collections.length / 8);
+  const bytesLanguage = Math.ceil(corpusLanguages.length / 8);
+  const bytesCollection = Math.ceil(corpusCollections.length / 8);
   const bytesFilters = bytesLanguage + bytesCollection;
   const rleFlag = 1 << 6;
-  const rleBitCount = Math.ceil(Math.log2(corpus.languages.length + corpus.collections.length));
+  const rleBitCount = Math.ceil(Math.log2(corpusLanguages.length + corpusCollections.length));
   const bytesBase64 = bytesHeader + bytesFilters;
 
   const btoaUrlSafe = (bytes: ReadonlyUint8Array) => btoa(String.fromCodePoint(...bytes)).replaceAll('/', '_').replaceAll('+', '-').replace(/=+$/, '');
@@ -241,6 +244,9 @@ const searchParamsFactory = (corpus: Corpus) => {
    * Serializes search settings as a bit array.
    */
   function serializeByteArray(params: SearchSettings) {
+    // Remap en-AU to en-GB
+    params = { ...params, languages: params.languages.map((lang) => lang === 'en-AU' ? 'en-GB' : lang) };
+
     const bytes = new Uint8Array(bytesBase64);
     bytes[1] = (
       (  +(params.run ?? defaultSearchParams.run) << 0)
@@ -270,8 +276,14 @@ const searchParamsFactory = (corpus: Corpus) => {
       setBitArrayFromRLEBytes(bytes.subarray(bytesHeader), filters);
     else
       filters.set(bytes.subarray(bytesHeader)); // pad with zero bytes
-    const languages = corpus.languages.filter((_, i) => getBit(filters, i) === 1);
-    const collections = corpus.collections.filter((_, i) => getBit(filters, (8 * bytesLanguage) + i) === 1);
+    const languages: LanguageKey[] = corpusLanguages.filter((_, i) => isBitSet(filters, i));
+    const collections: CollectionKey[] = corpusCollections.filter((_, i) => isBitSet(filters, (8 * bytesLanguage) + i));
+
+    // Remap en-GB to en-GB/AU
+    const index = languages.indexOf('en-GB');
+    if (index !== -1)
+      languages.splice(index + 1, 0, 'en-AU');
+
     return {
       run:              (bytes[1] & 0x01) !== 0,
       caseInsensitive:  (bytes[1] & 0x02) !== 0,
@@ -285,11 +297,11 @@ const searchParamsFactory = (corpus: Corpus) => {
   }
 
   function setBitArrayFromParams(params: SearchSettings, bitArr: Uint8Array) {
-    corpus.languages.forEach((language, i) => {
+    corpusLanguages.forEach((language, i) => {
       if (params.languages.includes(language))
         setBit(bitArr, i);
     });
-    corpus.collections.forEach((collection, i) => {
+    corpusCollections.forEach((collection, i) => {
       if (params.collections.includes(collection))
         setBit(bitArr, (8 * bytesLanguage) + i);
     });
@@ -297,18 +309,18 @@ const searchParamsFactory = (corpus: Corpus) => {
 
   function setBitArrayFromRLEBytes(rleBytes: ReadonlyUint8Array, bitArr: Uint8Array) {
     const it = iterateRLE(rleBytes);
-    corpus.languages.forEach((_, i) => {
+    corpusLanguages.forEach((_, i) => {
       if (it.next().value)
         setBit(bitArr, i);
     });
-    corpus.collections.forEach((_, i) => {
+    corpusCollections.forEach((_, i) => {
       if (it.next().value)
         setBit(bitArr, (8 * bytesLanguage) + i);
     });
   }
 
   function setRLEBytesIfShorter(bitArr: Uint8Array, header: Uint8Array) {
-    const initialValue = getBit(bitArr, 0) === 1;
+    const initialValue = isBitSet(bitArr, 0);
     const rleArr = makeRLEArray(bitArr, initialValue);
     let bitArrLength = bitArr.length;
     while (bitArr[bitArrLength - 1] === 0)
@@ -328,15 +340,15 @@ const searchParamsFactory = (corpus: Corpus) => {
 
   function makeRLEArray(bitArr: ReadonlyUint8Array, initialValue: boolean): readonly [number, boolean][] {
     const rleArr: [number, boolean][] = [[0, initialValue]];
-    corpus.languages.forEach((_, i) => {
-      const value = getBit(bitArr, i) === 1;
+    corpusLanguages.forEach((_, i) => {
+      const value = isBitSet(bitArr, i);
       if (rleArr[rleArr.length - 1][1] === value)
         rleArr[rleArr.length - 1][0]++;
       else
         rleArr.push([1, value]);
     });
-    corpus.collections.forEach((_, i) => {
-      const value = getBit(bitArr, (8 * bytesLanguage) + i) === 1;
+    corpusCollections.forEach((_, i) => {
+      const value = isBitSet(bitArr, (8 * bytesLanguage) + i);
       if (rleArr[rleArr.length - 1][1] === value)
         rleArr[rleArr.length - 1][0]++;
       else
@@ -349,7 +361,7 @@ const searchParamsFactory = (corpus: Corpus) => {
   function* iterateRLE(bytes: ReadonlyUint8Array): Generator<boolean, void, never> {
     const bitArr = new Uint8Array(bytesFilters);
     bitArr.set(bytes); // pad with zero bytes
-    let enabled = getBit(bitArr, 0) !== 1; // invert
+    let enabled = !isBitSet(bitArr, 0); // invert
     for (let i = 1; i + rleBitCount <= bitArr.length * 8;) {
       let count = 0;
       for (let j = 0; j < rleBitCount; i++, j++) {
@@ -375,6 +387,10 @@ const searchParamsFactory = (corpus: Corpus) => {
 
   function getBit(bitArr: ReadonlyUint8Array, i: number): number {
     return (bitArr[i >> 3] >> (i & 7)) & 1;
+  }
+
+  function isBitSet(bitArr: ReadonlyUint8Array, i: number): boolean {
+    return getBit(bitArr, i) === 1;
   }
 
   function encryptBytes(bytes: Uint8Array) {

@@ -75,7 +75,7 @@ test('byte array random', () => {
       script: false,
       showAllLanguages: false,
       collections: corpus.collections.filter(() => Math.random() < 0.5),
-      languages: corpus.languages.filter(() => Math.random() < 0.5),
+      languages: corpus.languages.filter((lang) => !lang.startsWith('en-') && Math.random() < 0.5),
     } as const;
     const arr = factory._serializeByteArray(params);
     const deserialized = factory._deserializeByteArray(arr);
@@ -94,4 +94,32 @@ test('encryption', () => {
     factory._decryptBytes(bytes);
     expect(bytes.slice(1)).toEqual(original.slice(1));
   }
+});
+
+test('base64, en-GB/AU are equivalent', () => {
+  const params = {
+    query: 'foo',
+    type: 'boolean',
+    caseInsensitive: false,
+    common: true,
+    script: true,
+    showAllLanguages: true,
+    collections: ['Crystal', 'Platinum'],
+    languages: ['en', 'en-GB', 'en-AU'],
+  } as const;
+  const paramsGB = {
+    ...params,
+    languages: ['en', 'en-GB'],
+  } as const;
+  const paramsAU = {
+    ...params,
+    languages: ['en', 'en-AU'],
+  } as const;
+  const hash = factory._searchParamsToBase64(params);
+  const hashGB = factory._searchParamsToBase64(paramsGB);
+  const hashAU = factory._searchParamsToBase64(paramsAU);
+  expect(hashGB).toEqual(hash);
+  expect(hashAU).toEqual(hash);
+  const deserialized = factory._base64ToSearchParams(hash);
+  expect(deserialized).toMatchObject(params);
 });
