@@ -1,5 +1,5 @@
 :root {
-  --font-family-latin: --gender, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI Symbol', Roboto, Oxygen,
+  --font-family-latin: --safari-ja, --gender, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI Symbol', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
   --font-family-ja: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', 'Noto Sans CJK JP', 'Noto Sans JP';
   --font-family-ko: 'Apple SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', 'Noto Sans CJK KR', 'Noto Sans KR';
@@ -61,6 +61,25 @@ code {
     U+00D7, U+00F7, U+2025-2026, U+25A1, U+25B3, U+25C7, U+25CB, U+25CE,
     U+2600-2602, U+2605, U+2640, U+2642, U+2660, U+2663, U+2665-2666, U+266A,
     U+2460-24FF, U+3000-303F, U+FF00-FFEF;
+}
+
+/*
+  Hack to ensure that Safari uses the metrics from a Japanese font instead of the system font.
+  Otherwise, text tends to have excess padding underneath.
+*/
+@font-face {
+  font-family: --safari-ja;
+  src:
+    local('ヒラギノ角ゴ Pro W3'),
+    local('Hiragino Kaku Gothic Pro'),
+    local('Osaka'),
+    local('メイリオ'),
+    local('Meiryo'),
+    local('ＭＳ Ｐゴシック'),
+    local('MS PGothic'),
+    local('Noto Sans CJK JP'),
+    local('Noto Sans JP');
+  unicode-range: U+0000;
 }
 
 @font-face {

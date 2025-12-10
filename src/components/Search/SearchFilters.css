@@ -73,6 +73,10 @@
   line-height: var(--line-height-narrow);
 }
 
+.search-collection label {
+  font-variant-east-asian: proportional-width;
+}
+
 .search-invalid {
   opacity: 0.3;
 }
