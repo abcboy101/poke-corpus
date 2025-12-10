@@ -382,6 +382,29 @@ Mineralwasser
 Möchtest du aufhören, Fotos zu machen?
 Ja
 Nein
+[~ 124]
+Willkommen im Café Coucou!\c\nBitte keine weiteren Bestellungen von Sushi mit\nKaffee...
+[~ 126]
+Wer könnte heute ein friedliches Nickerchen\nvertragen?[VAR 0114(01BB)]
+Ich
+[VAR 0102(0002)]
+[VAR 0102(0003)]
+[VAR 0102(0004)]
+[VAR 0102(0005)]
+[VAR 0102(0006)]
+[VAR 0102(0007)]
+Niemand
+Wir freuen uns auf deinen nächsten Besuch.[VAR 0114(01BB)]
+Mach’s dir bitte gemütlich und genieß eine Tasse\nKaffee, [VAR 0100(0000)].\c\nNun denn, Somnivora. Wenn ich bitten darf?[VAR 0114(01BB)]
+Sooom! ♪
+War das nicht ein Powernap vom Feinsten?\nBitte beehre uns bald wieder![VAR 0114(01BB)]
+Nun denn, Somnivora. Wenn ich bitten darf?[VAR 0114(01BB)]
+Sooom! ♪
+Möchtest du dein Pokémon wecken?
+Ja bitte.
+Ich lasse es noch etwas schlafen.
+War das nicht ein Powernap vom Feinsten?\nBitte beehre uns bald wieder![VAR 0114(01BB)]
+Sooom.
 ~~~~~~~~~~~~~~~
 Text File : shop
 ~~~~~~~~~~~~~~~
@@ -426,7 +449,7 @@ Du hast deinen Einkauf in deiner Tasche verstaut.\c
 [VAR BD06(0000)]Du hast [VAR 0202(0001)] [VAR 0110(0000)]\nerhalten\r\nund\r\nin\r\ndeiner\r\nTasche\r\nverstaut.\c
 [VAR BD06(0000)]Du hast [VAR 0202(0001)] [VAR 1001][VAR 0110(0000)]\nerhalten\r\nund\r\nin\r\ndeiner\r\nTasche\r\nverstaut.\c
 Du hast alles in deiner Tasche verstaut.\c
-[~ 41]
+[VAR BD06(0000)]Du hast die TM [VAR 0107(0000)] erhalten\nund\r\nin\r\ndeiner\r\nTasche\r\nverstaut.\c
 [~ 42]
 [~ 43]
 [~ 44]
@@ -439,6 +462,7 @@ Du hast alles in deiner Tasche verstaut.\c
 [~ 51]
 [~ 52]
 [~ 53]
+[~ 54]
 Ja
 Nein
 Fortsetzen
@@ -456,15 +480,15 @@ Abbrechen
 Mehrere tauschen
 [VAR 0202(0000)]
 Stärke
-[~ 71]
 [~ 72]
 [~ 73]
+[~ 74]
 [VAR 0107(0000)]
 TM[VAR 0202(0000)]
 [VAR 0202(0000)]
 ---
 ---
-[~ 79]
+[~ 80]
 Ausverkauft
 --
 Warenangebot
@@ -2518,6 +2542,8 @@ Du hast doch gar nicht genug Geld dabei...
 Komm gern wieder vorbei!
 Ähm, mehr scheint gerade nicht in deine\nTasche zu passen.
 Gibt’s sonst noch was, das dir gefällt?
+[~ 80]
+Wie wär’s mit einer Lauchstange? Porenta freuen\nsich, wenn man ihnen eine zum Tragen gibt.
 ~~~~~~~~~~~~~~~
 Text File : byebye
 ~~~~~~~~~~~~~~~
@@ -2712,6 +2738,57 @@ Wer stylish sein will, muss den Spagat schaffen,\nsich den ständig wechselnden 
 Unser Kampf hat sich bestimmt als erste\nErinnerung an diese Stadt in dein Gedächtnis\r\neingebrannt, hab ich recht?\c\nLass uns diesen Moment gleich noch mal\ngemeinsam durchleben![VAR 0114(002C)]
 Du bist nicht [VAR 1100(00FF,1010,0000)]der Einzige, derdie Einzige, die sich verbessert hat!\nIch zeig dir jetzt, wie stark ich geworden bin![VAR 0114(002C)]
 Mal wieder erste Sahne von dir! Aber du könntest\nmich ruhig auch mal gewinnen lassen, weißt du?[VAR 0114(002C)]
+[~ 158]
+Meine Pokémon und ich, wir werden mit ganzem\nHerzen kämpfen![VAR 0114(0006)]
+Dank dir werden wir über uns selbst\nhinauswachsen![VAR 0114(0006)]
+Meine Pokémon und ich, wir werden mit ganzem\nHerzen kämpfen![VAR 0114(0005)]
+Dank dir können wir über uns selbst\nhinauswachsen![VAR 0114(0005)]
+Ich werd dir beweisen, wie stark ich als Leiterin\ndes LeBelle-Büros bin![VAR 0114(0008)]
+Nur wenn ich stark genug bin, kann ich den\nFrieden in Illumina bewahren![VAR 0114(0008)]
+Was wir als Team MZ alles erlebt haben...\nIch bin dadurch viel stärker geworden.[VAR 0114(000B)]
+Irokex! Nutze meine Dankbarkeit als Energie für\ndeine Mega-Entwicklung![VAR 0114(000B)]
+Nach der verrückten Zeit hier in Illumina bin ich\nviel stärker geworden![VAR 0114(000C)]
+Denk an die Choreo für die Mega-Entwicklung und\nlass es krachen, Starmie! Zeigen wir unser Talent![VAR 0114(000C)]
+Illumina City ist eine großartige Stadt. Und wenn\nich gewonnen habe, mache ich sie noch besser![VAR 0114(000E)]
+Unsere Herzen schlagen im Einklang, Sen-Long!\nZeigen wir ihnen die Kraft der Mega-Entwicklung![VAR 0114(000E)]
+Pass auf, Chat: Ich gewinn jetzt und buffe den\nDonnerSquad, indem ich Team MZ rekrutiere![VAR 0114(000F)]
+Zapplarang und ich servieren euch jetzt mit der\ngenialsten Mega-Entwicklung überhaupt ab![VAR 0114(000F)]
+Ich werd beim Z-A Infiniroyale siegen und die\nideale Stadt für alle gestalten![VAR 0114(0010)]
+Unser Siegeswille schweißt uns zusammen!\nStalobor, Mega-Entwicklung![VAR 0114(0010)]
+Dank euch allen kenne ich jetzt mehrere Arten\nvon Stärke und kämpfe nun voller Dankbarkeit![VAR 0114(0011)]
+Legios, verleih der Gerechtigkeit in deinem Herzen\nGestalt und führe die Mega-Entwicklung durch![VAR 0114(0011)]
+Ich werde gewinnen.[VAR 0114(0012)]
+Los, Skelabra... Mega-Entwicklung der\nGerechtigkeit...[VAR 0114(0012)]
+Erst räum ich hier ab und dann lass ich euch alle\nbrav für Illumina schuften.[VAR 0114(0013)]
+Nach all dem Stress ist unser Band stärker als je\nzuvor. Mach dich auf was gefasst![VAR 0114(0013)]
+Ich weiß deinen Einsatz sehr zu schätzen,\naber in Sachen Kampf kenne ich keine Gnade.[VAR 0114(0014)]
+Panzaeron, lass uns wieder so sein wie vor\nunserer Zeit im Clan: Hungrig auf jeden Kampf![VAR 0114(0014)]
+Die Schönheit von Kämpfen liegt darin, dass man\nseine Gegner richtig ins Herz schließt, wenn man\r\nsich aufrichtig mit ihnen misst![VAR 0114(0015)]
+Tauche alles in das Licht der Mega-Entwicklung\nund demonstriere ihnen die Stärke der IGKC![VAR 0114(0015)]
+Mein Sieg beim Z-A Infiniroyale wird beweisen,\nwie sehr unsere Begegnung mich gestärkt hat![VAR 0114(0016)]
+Ich kämpfe, um über mich hinauszuwachsen.\nLos, Tandrak! Zeig uns allen dein wahres Ich![VAR 0114(0016)]
+Die Begegnung mit dir hat das Feuer in mir neu\nauflodern lassen![VAR 0114(0017)]
+Los, Glurak! Möge deine Mega-Entwicklung so\ngleißend hell leuchten, dass sie alle blendet![VAR 0114(0017)]
+Ich werde dir all meine Dankbarkeit in ’nem\nfeurig heißen Kampf um die Ohren hauen![VAR 0114(0018)]
+Mit der Mega-Entwicklung wird unser Team\nden Weg in ein neues Leben finden![VAR 0114(0018)]
+Weißt du, einem erstklassigen Taxifahrer wie mir\nsind die Parallelen zwischen dem Autofahren und\r\nPokémon-Kämpfen gleich aufgefallen.\c\nBei beidem geht es darum, die Situation fest im\nGriff zu haben![VAR 0114(002F)]
+Ich hab den Level meines Pokémon um 1 erhöht.\nPuh, jetzt hab ich kaum mehr Energie...[VAR 0114(002F)]
+Normalerweise bin ich ja eher der Typ, der alles\nschnell hinter sich bringen will, aber nicht dieses\r\nMal! Nein, diesen Kampf will ich voll auskosten![VAR 0114(0030)]
+Wenn wir jetzt schlappmachen, erreichen wir nie\ndas Ziel. Also los![VAR 0114(0030)]
+Ränge sind so was von gestern! Wir leben in\neiner Welt der endlosen Pokémon-Kämpfe![VAR 0114(0031)]
+In einer Welt der endlosen Kämpfe der ewige\nVerlierer zu sein, ist ein hartes Los...[VAR 0114(0031)]
+Ich weiß, ich wiederhole mich, aber es ist in der\nTat mein Herzenswunsch, Restaurant Solala in\r\nein Drei-Sterne-Etablissement für Feinschmecker\r\nzu verwandeln.[VAR 0114(0032)]
+Gäbe es kein Mittelmaß, hätten wir auch keinerlei\nMaßstab für „gut“ und „schlecht“![VAR 0114(0032)]
+Mag ich es wirklich, Leuten mit Boost-Attacken\nweiterzuhelfen, oder sammle ich einfach nur gern\r\nMeistersamen...?\c\nNa ja, Hauptsache, es wird gekämpft![VAR 0114(0033)]
+Ich kämpfe weiter! Und zwar für all die Pokémon,\ndie für mich bis an ihre Grenzen gegangen sind![VAR 0114(0033)]
+Ich werde dir beweisen, was ich für mein Idol\nCanary empfinde, indem ich in diesem Kampf\r\nein wahres Feuerwerk entfache![VAR 0114(0035)]
+Mein letztes kampffähiges Pokémon...\nIch muss jetzt alles auf eine Karte setzen![VAR 0114(0035)]
+Heute noch hip, morgen schon ein Flop – das gilt\nfür die Mode genauso wie für Pokémon-Kämpfe.\c\nAber egal, ob man nun auf seine Lieblingstaktik\nsetzt oder jedem Trend nachrennt, um „in“ zu\r\nsein, wir haben alle unseren ganz eigenen Stil![VAR 0114(003A)]
+Auch wenn dir das Wasser bis zum Hals steht...\nGeh elegant damit um, dann bist du stylish![VAR 0114(003A)]
+Unser Kampf hat sich bestimmt als erste\nErinnerung an diese Stadt in dein Gedächtnis\r\neingebrannt, hab ich recht?\c\nLass uns diesen Moment gleich noch mal\ngemeinsam durchleben![VAR 0114(002C)]
+Du bist nicht [VAR 1100(00FF,1010,0000)]der Einzige, derdie Einzige, die sich verbessert hat!\nIch zeig dir jetzt, wie stark ich geworden bin![VAR 0114(002C)]
+Aufgepasst, hier komme ich, Connie![VAR 0114(0192)]
+Pokémon und Trainerin, ein Herz und eine Seele.\nJetzt geben wir alles![VAR 0114(0192)]
 ~~~~~~~~~~~~~~~
 Text File : t1_A01
 ~~~~~~~~~~~~~~~
@@ -4565,7 +4642,12 @@ Ich find’s klasse, wie man sich\ndurch Training verbessern kann!
 Nachts sind Geister-Pokémon\nstärker... Glaube ich zumindest.
 Es gibt nichts Besseres, als die\nNacht durchzumachen!
 Meister Gavin ist unerschütterlich, Gwynn ist\nflexibel. Ein perfekt ausbalanciertes Duo!
-[~ 166]
+Kartons, die wahllos mit Ausstattung der Faust\nder Gerechten gefüllt wurden.
+Diese Trainingspuppe im Trombork-Stil eignet\nsich perfekt zum Üben von Schlägen und Tritten.
+Eine Bank für Sit-ups. Sie ist mit einer winzigen\nNotiz versehen: „Für Gavin tabu!“
+Die Teamfahne der Faust der Gerechten, bedruckt\nmit ihrem Logo.
+Ein Sandsack zum Boxen. Er ist mit einer winzigen\nNotiz versehen: „Für Gavin tabu!“
+[~ 171]
 Was, wenn im Wildsektor mal das\nHolo-Dingsbums aussetzt...?!
 Ein wirklich tolles Pokémon! Es hat\nGlück, dass du seine Trainerin bist.
 Lass mein Pokémon\nin Ruhe...
@@ -4576,7 +4658,7 @@ Zobiris ist ein seltenes Pokémon, dessen einzige\nSchwäche der Typ Fee ist.
 Im Stock über mir wohnt keiner,\naber ich höre immer Geräusche...
 Vielleicht hat sich ja ein\nPokémon da eingenistet?
 Finde ich ein Karpador an Land,\ndann ab in den Fluss mit ihm!
-[~ 177]
+[~ 182]
 Wer einen Zahn von Tohaido mit sich trägt,\nist laut Volksmund vor einem Unglück auf See\r\ngeschützt.
 Manchmal gibt Botogel mir Käfer-Pokémon...
 Das gemeinsame Training mit Machollo hat mein\nInteresse an Kampfkunst geweckt!
@@ -4598,7 +4680,7 @@ Vergiss nie das Herzklopfen vom\nersten Treffen mit einem Pokémon!
 Du musst gaaanz\nviel mit ihnen spielen!
 Was soll ich machen, um meinen\nPokémon was Gutes zu tun?
 Ich verpasse deinem Coiffwaff\neinen stylishen Schnitt![VAR BD0A(000A)]Text_icon1
-[~ 199]
+[~ 204]
 Die Blicke, die sich Trainer beim Z-A Royale\nzuwerfen, riechen förmlich nach Ärger!
 In einigen Regionen reiten Leute\nauf Pokémon, in anderen nicht.
 Ab und zu verlaufe ich mich bloß,\num neue Landschaften zu sehen.
@@ -4640,7 +4722,7 @@ Ich organisiere in Eigenregie einen\nFanclub für den Trainertyp Hexe.
 Ich werde mir mit Tanhel beim Z-A Royale den\nSieg schnappen und dann den Pokémon-Fanclub\r\nzurückbringen!
 In Alola gab es doch diese Z-Attacken...\nUnd dann war da noch das Pokémon Zygarde...
 Ich bin Mitglied des Pokédex-Forschungsvereins.\c\nWenn es nach mir ginge, würde ich Rocaras\nPokédex-Eintrag wie folgt verfassen:\c\n„Durch Bewegungen der Erdkruste infolge von\nVulkanausbrüchen und Erdbeben erwachte das\r\nPokémon Rocara, das zuvor im Erdreich geruht\r\nhatte, und trat an die Erdoberfläche.“
-[~ 241]
+[~ 246]
 Wir haben uns gegenseitig zehn Dinge genannt,\ndie wir an Pokémon toll finden!
 Als ehemaliges Mitglied des Pokémon-Fanclubs\nhätte ich locker 100 Dinge aufzählen können!
 Es ist ein herrliches Gefühl, um die\nHotelanlage zu spazieren!
@@ -4662,7 +4744,7 @@ Um dein Pokémon effektiv zu trainieren, solltest\ndu gegen starke Gegner antret
 Jeder Weg führt\nan irgendein Ziel...
 Team Flare beizutreten hat früher\nwohl 5.000.000  gekostet...
 Ich bin ganz verzaubert von\nSarzenias süßem Duft...
-[~ 263]
+[~ 268]
 Wir haben doch ’nen Gully mit\nResladero drauf gesehen, oder?
 Ja, das haben wir, ganz sicher!\nDenke ich zumindest...
 Es könnte sich lohnen, Pokémon\nals Kunden ins Visier zu nehmen...
@@ -4673,7 +4755,7 @@ Ob manche Pokémon sich\nabsichtlich fangen lassen?
 Ich bewundere Lieferanten und\nziehe mich daher genauso an!
 Starmie gehört zur Kategorie „Mysteriös“... Tja...\nDavon sind wir jetzt auch nicht klüger, oder?
 Es spielt keine Rolle, wo ich mich aufhalte, denn\nmeine bloße Anwesenheit verwandelt jeden Ort\r\nin eine Bühne!
-[~ 274]
+[~ 279]
 Der Sommer mit meinen Pokémon\nliegt nun in nebelgrauer Ferne...
 Klagen über die Stadtentwicklung\nstoßen auf taube Ohren...
 Ja! Die Kanalisation soll an alle möglichen Orte\nin Illumina hinführen!
@@ -4694,7 +4776,7 @@ Es reicht nicht aus, wenn nur das\neigene Pokémon stärker wird...
 Ich frage mich, was für Pokémon die ideale\nNahrung ist.
 Das hängt wahrscheinlich ganz von der Art ab.\nUnd die Nährwerte sollte man wohl bedenken.
 Was ist die ideale\nNahrung für Pokémon?
-[~ 295]
+[~ 300]
 Wenn meine Pokémon nur ihre\nLebenskraft mit mir teilen könnten.
 Was, wenn man mit den Pokémon\nin den Boxen spielen könnte?[VAR BD0A(000A)]Text_icon1
 Meine Rollerskates liegen schon\newig irgendwo verstaut...[VAR BD0A(000A)]Text_icon1
@@ -4750,7 +4832,7 @@ Ich habe bei der Faust der Gerechten trainiert,\naber ich glaube nicht, dass ich
 Die Bewegungen von Pokémon\nim Kampf sind die Kunst der Natur!
 Bei der Arbeit sehe ich oft Lieferanten.\nIch frage mich, wie viele es in Illumina gibt.
 Sich in Illumina verirren ist nichts!\nIch hab mich im Leben verirrt![VAR BD0A(000A)]Text_icon1
-[~ 351]
+[~ 356]
 Was ist besser: Eine Attacke mit kurzer\nAufladezeit mehrmals einsetzen?\c\nOder auf eine Attacke mit langer Aufladezeit\nsetzen und Gegner mit einem Schlag besiegen?
 Ich will ein starker Trainer werden, um in dieser\nStadt voller Pokémon richtig reinzupassen!
 Sollen wir dann in eins der Cafés\ngehen, die sie empfohlen hat?
@@ -4760,7 +4842,7 @@ Bei meiner Lieferadresse hält ein beängstigendes\nPokémon Wache. Ich weiß ni
 Gegen es kämpfen kannst du jedenfalls nicht...\c\nWie wär’s, wenn dein Partner es weglockt und\ndu in der Zwischenzeit das Paket auslieferst?
 Ich hätte so gern ein\nSchillerndes Elite-Pokémon!
 Ich mag Pokémon nicht besonders\nund überlege, wegzuziehen...
-[~ 361]
+[~ 366]
 Ist klar,\nIscalar.
 Unser Platz ist auch\nein Platz für Pokémon.[VAR BD0A(000A)]Text_icon1
 Partnerlook ist\ntoll, stimmt’s?
@@ -4780,7 +4862,7 @@ Meine Pokémon sind mir\nwichtiger als meine Arbeit!
 Gibt’s auch Tipps, wenn ich bei der\nAttackenwahl nicht weiterweiß?
 Wenn du dich verirrst, kann ein\nReisepunkt auf der Karte helfen.
 Soll ich nach links oder rechts?\nOder doch weiter geradeaus?
-[~ 381]
+[~ 386]
 Mein Fokus liegt darauf, gegnerischen Attacken\nauszuweichen. Denn in Illumina spielen auch\r\nTrainer im Kampf eine entscheidende Rolle.
 Wenn man anfängt zu sammeln, lassen einem\ndie Stücke, die noch fehlen, keine Ruhe mehr!
 Es gibt so viele Arten, Pokémon zu\ntrainieren, wie es Trainer gibt!
@@ -4802,7 +4884,7 @@ Wer in Kunst und Kampf nur auf\nErfolg aus ist, wird nicht glücklich!
 Überall auf der Welt gibt es gute und weniger\ngute Orte.
 Hippopotas hat je nach Geschlecht eine andere\nKörperfarbe. Kannst du erkennen, ob dieses\r\nExemplar männlich oder weiblich ist?
 Wilde Pokémon lassen\nmanchmal Items fallen.
-[~ 403]
+[~ 408]
 Der passende Rhythmus ist beim\nEinsatz von Attacken sehr wichtig!
 Pokémon erhalten EP im Kampf\nund werden so stärker.
 Pokébälle sollte man immer\ndabeihaben, man weiß ja nie.
@@ -9041,8 +9123,8 @@ Weißt du, worauf ich mich beim Z-A Infiniroyale\nam meisten freue? Auf ein Rema
 Du weißt Bescheid, im Z-A Infiniroyale sind wir\nbeide bittere Rivalen![VAR 0114(0005)]
 Leute, ich weiß, in letzter Zeit muss ich immer\neinen auf Firmenchef machen, aber...\c\nOhne euch hätte ich es nie im Leben bis hierher\ngeschafft.[VAR 0114(0006)]
 Leute, ich weiß, in letzter Zeit muss ich immer\neinen auf Firmenchefin machen, aber...\c\nOhne euch hätte ich es nie im Leben bis hierher\ngeschafft.[VAR 0114(0005)]
-
-
+Das Schild für Antjas Donutladen. Kaylen hat es\nfür sie entworfen.
+Ein Regal voller Bücher, die Azett angesammelt\nhat. Antja scheint manchmal darin zu blättern.
 ~~~~~~~~~~~~~~~
 Text File : t1_i005
 ~~~~~~~~~~~~~~~
@@ -9061,7 +9143,7 @@ Denk dran, die Mega-Entwicklung einzusetzen!\nIm Kampf gegen Megamanie-Pokémon 
 So sehr ich auch nachforsche, ich komme einfach\nnicht darauf, was F beabsichtigt...\c\nUnd das als Leiterin einer Detektei! Wie peinlich.[VAR 0114(0008)]
 Irgendetwas stimmt nicht mit dem Prismaturm.\c\nKomme, was wolle, ich werde den Frieden in\nIllumina City bewahren. Das habe ich LeBelle\r\nversprochen![VAR 0114(0008)]
 In Illumina gibt es immer irgendwo Pokémon oder\nMenschen, die Hilfe brauchen![VAR 0114(0008)]
-
+Auf dem Whiteboard sind diverse Informationen\nzu Matières Aufträgen notiert.
 ~~~~~~~~~~~~~~~
 Text File : t1_i011
 ~~~~~~~~~~~~~~~
@@ -10248,6 +10330,7 @@ Entspannte Kunden\nhabe ich am liebsten.
 Text File : t1_i014_1
 ~~~~~~~~~~~~~~~
 Das ist ein sogenanntes Winke-Sniebel.\c\nSeine winkende rechte Hand sowie die goldene\nFarbe sollen dem Besitzer Wohlstand bringen.
+Der Boss ist gerade nicht hier. Komm später\nwieder.
 ~~~~~~~~~~~~~~~
 Text File : t1_i014_2
 ~~~~~~~~~~~~~~~
@@ -10263,11 +10346,13 @@ Verlieren kommt nicht in Frage! Dafür hab ich\nnoch zu viele Pläne...[VAR 0114
 Was schleichst du hier so rum? Mach dich lieber\nnützlich![VAR 0114(0013)]
 Wir müssen den Turm in den Griff kriegen,\nsonst bricht hier bald die Panik vom Zaun.[VAR 0114(0013)]
 Was sagst du zu einem Team-Wettkampf?\nTeam MZ gegen den Corrosio-Clan.\c\nSpannender als Violettes lächerliches Turnier\nwär’s allemal.[VAR 0114(0013)]
+Dachtet ihr, dass ihr eure Dimensionsforschung\nan den Nagel hängen könnt? Vergesst es.\c\nIhr macht brav weiter, und sobald ihr genug\nPunkte beisammen habt, sagt ihr Gipson\r\nBescheid, kapiert?[VAR 0114(0013)]
 Wenn dir eine Regel seltsam erscheint, liegt das\nmeistens daran, dass jemand davon profitiert.\c\nZum Beispiel die Zinsen, die der Corrosio-Clan\nverlangt.[VAR 0114(0014)]
 [VAR BD06(0000)]Bitte richte [VAR 018B(0001)] aus, dass ich sehr\ngespannt auf\r\n[VAR 1100(00FF,0403,0000)]ihrsein nächstes Video bin.[VAR 0114(0014)]
 Etwas stimmt nicht mit dem Wahrzeichen\nIlluminas? Das ist ein schlechtes Omen...[VAR 0114(0014)]
 Mir ist aufgefallen, dass der Boss immer besser\ndrauf ist, wenn du uns einen Besuch abstattest.[VAR 0114(0014)]
-
+Auf dem Holo-Display werden die in Illumina City\nauftretenden Dimensionsverzerrungen sowie\r\ndiverse Messwerte zu ihnen angezeigt.
+Ich hoffe, dass die gute – aber angemessen\ndistanzierte – Zusammenarbeit zwischen\r\ndem Corrosio-Clan und Team MZ auch künftig\r\nbestehen bleibt.[VAR 0114(0014)]
 ~~~~~~~~~~~~~~~
 Text File : common_scr
 ~~~~~~~~~~~~~~~
@@ -17574,14 +17659,20 @@ Du vermerkst den Stand der Dinge in der\n[VAR 0109(0001)].
 Ein Zaubertausch steht noch aus.\nBitte verbinde dich mit dem Internet.
 Möchtest du an den Ort zurückkehren, an dem\ndu dich vorher befunden hast?
 Du bist schleunigst zu den anderen\nzurückgekehrt.
-
-
-
-
-
-
-
-
+Hoopas Donut-Energie wurde aufgebraucht!
+Du verlässt diese Dimension.\nBist du damit einverstanden?
+Ja
+Nein
+Mega-Palimpalim greift an!
+Mega-Knakrack Z greift an!
+Mega-Golgantes greift an!
+Mega-Tectass greift an!
+Mega-Halupenjo greift an!
+Mega-Lumiflora greift an!
+[~ 37]
+[VAR BD06(0000)]Es scheint sich ein [VAR 0101(0002)] in deiner\nNähe\r\nzu\r\nbefinden![VAR 0114(0007)]
+Finde und fange es![VAR 0114(0007)]
+Der goldene Bonusball enthält verschiedene\nItems!
 ~~~~~~~~~~~~~~~
 Text File : field_trade
 ~~~~~~~~~~~~~~~
@@ -17635,6 +17726,57 @@ Damit hast du einen neuen Rekord aufgestellt!\nFormidabel![VAR 0114(000E)]
 Bitte nimm diese Belohnung entgegen.[VAR 0114(000E)]
 Das Schöne an Simulationen ist, dass man selbst\nbei einer Niederlage ohne Schaden davonkommt.\c\nAlso, nur nicht den Mut verlieren – versuch es\neinfach erneut![VAR 0114(000E)]
 Ich stehe dir zur Verfügung, wenn du eine weitere\nKampfsimulation angehen willst. Bis bald![VAR 0114(000E)]
+Absol Z
+Staraptor
+Nigiragi
+Psiaugon
+Heatran
+Darkrai
+Groudon
+Kyogre
+Rayquaza
+Zygarde
+Zeraora
+Eigentlich hatte ich nur Kaffee vorbeigebracht,\naber dann wollte Vincent, dass ich für ihn\r\neinspringe, weil er so beschäftigt ist...\c\nUnd jetzt bin ich auf einmal für den Megamanie-\nKampfsimulator verantwortlich!
+Gegen welche Megamanie-Entwicklung möchtest\ndu im Kampfsimulator antreten?
+Gegen welche Megamanie-Entwicklung möchtest\ndu als Nächstes im Kampfsimulator antreten?
+[VAR BD06(0000)][VAR 0101(0002)]? Alles klar! Hast du alle nötigen\nVorbereitungen\r\ngetroffen?
+Deine Rekordzeit für den Kampf gegen\n[VAR 0101(0002)] beträgt [VAR 0201(0003)]:[VAR 0201(0004)],[VAR 0201(0005)].\c\nHast du alle nötigen Vorbereitungen getroffen?
+Wow! Deine Zeit betrug [VAR 0201(0003)]:[VAR 0201(0004)],[VAR 0201(0005)].
+Wahnsinn! Du hast einen neuen Rekord\naufgestellt!
+Hier, deine Belohnung!
+Es ist ja nur eine Simulation, also selbst wenn du\nverlierst, kommst du unversehrt davon.
+Komm jederzeit wieder vorbei, um dich an einer\nKampfsimulation zu versuchen!
+Dem Megamanie-Kampfsimulator wurden neue\nPokémon hinzugefügt.
+Herzlichen Glückwunsch!\c\nDu kannst dich nun am Megamanie-Marathon\nversuchen!
+Wonach steht dir der Sinn?
+Megamanie-Simulator
+Megamanie-Marathon
+Abbrechen
+Du möchtest dich am Megamanie-Marathon\nversuchen?
+Ja!
+Kannst du mir das genauer erklären?
+Was ist mein momentaner Rekord?
+Nein danke.
+Beim [VAR FF00(0006)]Megamanie-Marathon[VAR FF00(0000)] trittst du gegen alle\nMegamanie-Pokémon hintereinander an.\c\nDabei kannst du die Zusammenstellung deines\nTeams nicht ändern und wenn du verlierst,\r\ndann war’s das.\c\nDu kannst dein Team zwar heilen, aber nur\ndrei Mal!\c\nWir zeichnen auf, wie viele Pokémon du besiegst,\nund wenn du gegen alle Megamanie-Pokémon\r\ngewinnst, messen wir auch deine Zeit.\c\nAlso, wonach steht dir der Sinn?
+Bist du sicher, dass du dich dieser extrem\nschwierigen Herausforderung stellen möchtest?
+Ja!
+Nein...
+Bist du bereit für das nächste Pokémon?
+Kämpfen
+Heilen
+Aufgeben
+Du kannst dein Team noch [VAR 0200(0003)] Mal heilen.\nMöchtest du fortfahren?
+Ja
+Nein
+Wir zeichnen deinen Rekord auf, aber beim\nnächsten Mal musst du wieder von vorn\r\nanfangen. Möchtest du wirklich aufgeben?
+Schade! Ich hoffe, du versuchst es irgendwann\nnoch mal.
+Du hast [VAR 0201(0004)] Pokémon besiegt. Ich bin gespannt,\nob du nächstes Mal deinen Rekord brichst!
+Deine Rekordzeit für diese Herausforderung\nbeträgt [VAR 0201(0005)]:[VAR 0201(0006)]:[VAR 0201(0007)],[VAR 0201(0008)]!
+Du hast [VAR 0201(0004)] Pokémon besiegt!
+Moment mal... Du hast sie ja alle besiegt!\nWow, Wahnsinn! Herzlichen Glückwunsch!!
+Deine Rekordzeit für diese Herausforderung\nbeträgt [VAR 0201(0005)]:[VAR 0201(0006)]:[VAR 0201(0007)],[VAR 0201(0008)]!
+Komm gerne jederzeit wieder vorbei!
 ~~~~~~~~~~~~~~~
 Text File : coordination
 ~~~~~~~~~~~~~~~
@@ -17689,6 +17831,32 @@ Willst du etwa\nmeine Preismedaillen?[VAR BD0A(000A)]Text_icon1
 Unter uns Kampf-Connaisseurs gibt es einen\nWettstreit darum, wer die meisten Medaillen\r\nin einer einzigen Nacht erkämpfen kann.\c\nAusnahmsweise teile ich meine mit dir.
 Du erhältst Preismedaillen!
 Du erhältst [VAR 1606(0002,0000)][VAR FF00(0008)][VAR 010A(0002)][VAR FF00(0000)]!
+Ich hätte da ein paar\nDimensionsbeeren für dich![VAR BD0A(000A)]Text_icon1
+[VAR BD06(0000)]Ich habe hier ein paar\n[VAR 1001][VAR 0110(0002)]\r\naufgesammelt.\c\nKomm, ich geb dir welche ab.
+Möchtest du ein paar meiner\nDimensionsbeeren haben?[VAR BD0A(000A)]Text_icon1
+Weil du so stark bist, schenke ich dir ein paar\n[VAR 1001][VAR 0110(0002)]!
+Soll ich dein[VAR 1101(00FD,0100)]e Pokémon\nfür dich heilen?[VAR BD0A(000A)]Text_icon1
+Auch hier im rätselhaften Dimensions-Illumina\nmache ich Pokémon wieder fit!
+Lust auf einen außerdimensional\nguten Kaffee?[VAR BD0A(000A)]Text_icon1
+Egal, in welcher Dimension man sich befindet:\nKaffee macht müde Pokémon munter!
+Wie wär’s mit\neinem Kaffee?[VAR BD0A(000A)]Text_icon1
+Das ist unser spezieller Dimensions-Kaffee.\nEin Schluck genügt und du fühlst dich wie neu.
+Probiere unsere\nKaffeespezialität![VAR BD0A(000A)]Text_icon1
+Warum ich hier bin, ist mir ein Rätsel...\nIst aber auch egal.\c\nJedenfalls macht unser Röstkaffee „Feuersturm“\ndein[VAR 1101(00FD,0100)]e Pokémon wieder fit!
+Probiere unsere\nKaffeespezialität![VAR BD0A(000A)]Text_icon1
+Selbst in einer anderen Dimension servieren wir\nbeim Imbiss Nouveau etwas ganz Besonderes:\c\nMit unserem Röstkaffee „Hitzekoller“ geht es\ndeine[VAR 1101(00FD,0101)]mn Pokémon gleich wieder gut.
+Karten hab ich leider keine, aber\nich hab was anderes für dich![VAR BD0A(000A)]Text_icon1
+[VAR BD06(0000)][VAR 1001][VAR 0110(0002)] sind\nübrigens\r\nsuperduperselten!
+Ich habe sehr\nkostbare Items![VAR BD0A(000A)]Text_icon1
+[VAR BD06(0000)][VAR 1001][VAR 0110(0002)] sind\nausgesprochen\r\nwertvoll!\r\nIch besitze davon aber natürlich reichlich.
+Ich habe etwas\nSchönes für dich![VAR BD0A(000A)]Text_icon1
+[VAR BD06(0000)]Diese [VAR 1001][VAR 0110(0002)] sind\nvon\r\nenormem\r\nWert.\r\nWarum? Weil sie aus meinem Besitz\r\nstammen, natürlich!
+Ich habe ein Geschenk\nfür dich![VAR BD0A(000A)]Text_icon1
+[VAR BD06(0000)]Auch in fremden Dimensionen zeigt sich die IGKC\nspendabel. Bitte sehr,\r\n[VAR 1001][VAR 0110(0002)]!
+Hättest du Interesse an\neinem tollen Geschenk?[VAR BD0A(000A)]Text_icon1
+Violettes Großzügigkeit reicht über dimensionale\nGrenzen hinaus!\c\nHier, nimm diese [VAR 1001][VAR 0110(0002)].
+Ich mag nur ein Hologramm sein,\naber ich habe etwas für dich![VAR BD0A(000A)]Text_icon1
+[VAR BD06(0000)]An so einem seltsamen Ort\n[VAR 1001][VAR 0110(0002)]\r\nvon\r\neinem\r\nHologramm\r\nzu kriegen...\r\nKomisch, oder?
 ~~~~~~~~~~~~~~~
 Text File : pokemoncenter
 ~~~~~~~~~~~~~~~
@@ -17815,12 +17983,12 @@ Text File : change_deox_scr
 Text File : staffrollreplay
 ~~~~~~~~~~~~~~~
 Mein Erinnerungsvermögen ist der Hammer!\nIch erinnere mich sogar an Namen, die ich nur\r\neinmal gelesen hab.\c\nNa, willst du prüfen, ob ich die Wahrheit sage?
-
+Mein Erinnerungsvermögen ist der Hammer!\nIch erinnere mich sogar an Namen, die ich nur\r\neinmal gelesen hab.\c\nIch hab sogar noch ein paar neue Namen\nauswendig gelernt!\c\nNa, willst du prüfen, ob ich die Wahrheit sage?
 Beweis es mir!
-
-
-
-
+Liste nur die vorherigen Namen auf!
+Okay, lass hören.
+Liste die neuen Namen auf!
+Okay, lass hören.
 Nein, lass mal...
 Ich brauche ungefähr sechs Minuten, um alle\nNamen aufzuzählen. Ist das okay für dich?
 Ja, leg los!

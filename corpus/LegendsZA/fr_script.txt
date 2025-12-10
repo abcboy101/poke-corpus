@@ -382,6 +382,29 @@ Eau Pétillante
 Voulez-vous arrêter d’utiliser l’appareil photo ?
 Oui
 Non
+[~ 124]
+Bienvenue au Café Coucou.\c\nFaites-moi plaisir et ne commandez PAS\nde café-sushis...
+[~ 126]
+Alors, qui a besoin de faire un petit somme\naujourd’hui ?[VAR 0114(01BB)]
+[VAR 0100(0000)]
+[VAR 0102(0002)]
+[VAR 0102(0003)]
+[VAR 0102(0004)]
+[VAR 0102(0005)]
+[VAR 0102(0006)]
+[VAR 0102(0007)]
+Personne, merci.
+J’espère vous revoir bientôt ![VAR 0114(01BB)]
+Je vous en prie, mettez-vous à l’aise pendant\nque vous dégustez notre café.\c\nMushana, c’est à toi de jouer ![VAR 0114(01BB)]
+Mumumu ! ♪
+Une bonne sieste, y a que ça de vrai !\nÀ la prochaine ![VAR 0114(01BB)]
+Mushana, c’est à toi de jouer ![VAR 0114(01BB)]
+Mumumu ! ♪
+Voulez-vous réveiller votre Pokémon ?
+Oui !
+Pas tout de suite...
+Une bonne sieste, y a que ça de vrai !\nÀ la prochaine ![VAR 0114(01BB)]
+Mumumu ! ♪
 ~~~~~~~~~~~~~~~
 Text File : shop
 ~~~~~~~~~~~~~~~
@@ -426,7 +449,7 @@ Vous rangez vos achats dans votre Sacoche.\c
 [VAR BD06(0000)]Vous recevez [VAR 1402(0000,0000)][VAR 010A(0000)]\net l[VAR 1100(0000,0101)]ea rangez dans votre Sacoche.\c
 [VAR BD06(0000)]Vous recevez [VAR 0202(0001)] [VAR 010A(0000)]\net les rangez dans votre Sacoche.\c
 Vous rangez les objets dans votre Sacoche.\c
-[~ 41]
+Vous recevez la CT [VAR 0107(0000)]\net la rangez dans votre Sacoche.\c
 [~ 42]
 [~ 43]
 [~ 44]
@@ -439,6 +462,7 @@ Vous rangez les objets dans votre Sacoche.\c
 [~ 51]
 [~ 52]
 [~ 53]
+[~ 54]
 Oui
 Non
 Continuer
@@ -456,15 +480,15 @@ Quitter
 Échange en gros
 [VAR 0202(0000)]
 Puissance
-[~ 71]
 [~ 72]
 [~ 73]
+[~ 74]
 [VAR 0107(0000)]
 CT[VAR 0202(0000)]
 [VAR 0202(0000)]
 -
 ---
-[~ 79]
+[~ 80]
 Épuisé
 --
 Articles disponibles
@@ -2518,6 +2542,8 @@ Il va falloir plus d’argent.
 À un de ces quatre !
 Y a pas assez de place dans ta Sacoche...
 Besoin d’autre chose ?
+[~ 80]
+Voulez-vous un Poireau ? Vous pourriez le faire\ntenir à un Canarticho !
 ~~~~~~~~~~~~~~~
 Text File : byebye
 ~~~~~~~~~~~~~~~
@@ -2712,6 +2738,57 @@ Avoir du « staïle », c’est être capable d’identifier\nles dernières ten
 Notre combat est l’un de tes premiers\nsouvenirs à Illumis, pas vrai ?\c\nJe te propose de revivre l’expérience ![VAR 0114(002C)]
 Nous aussi, on a progressé depuis la dernière\nfois ! Je vais te montrer de quoi on est capables ![VAR 0114(002C)]
 Vous êtes toujours aussi redoutables !\nEt c’est toujours aussi désagréable de perdre...[VAR 0114(002C)]
+[~ 158]
+Mes Pokémon et moi, on va tout donner pour\nce combat ![VAR 0114(0006)]
+Pour toi, je vais repousser mes limites ![VAR 0114(0006)]
+Mes Pokémon et moi, on va tout donner pour\nce combat ![VAR 0114(0005)]
+Pour toi, je vais repousser mes limites ![VAR 0114(0005)]
+Je suis là pour montrer que je suis digne\nd’avoir pris la tête de l’Agence Beladonis ![VAR 0114(0008)]
+J’ai juré de protéger la paix à Illumis,\net je tiendrai parole ![VAR 0114(0008)]
+Les exploits de la Team MZ nous ont permis de\nnous améliorer, mon équipe et moi ![VAR 0114(000B)]
+Accepte toute ma gratitude, Baggaïd ! Qu’elle\nt’aide à puiser ta force dans la Méga-Évolution ![VAR 0114(000B)]
+Illumis est une ville pleine d’énergie qui nous a\naidés à devenir plus forts, mes Pokémon et moi ![VAR 0114(000C)]
+Vas-y, Staross, méga-évolue !\nMontrons l’étendue de notre talent ![VAR 0114(000C)]
+Quand j’aurai remporté ce combat, je continuerai\nde faire ce que je peux pour améliorer Illumis.[VAR 0114(000E)]
+Draïeul et moi sommes en parfaite symbiose !\nÀ nous la Méga-Évolution ![VAR 0114(000E)]
+Si j’gagne ce combat, la Team MZ rejoindra\nles Digi-Z4P ! On sera alors invincibles ![VAR 0114(000F)]
+Ohmassacre, méga-évolue !\nToi et moi, on va faire un massacre ![VAR 0114(000F)]
+J’vais enchaîner les victoires au Royale Z-A ∞ et\nj’réaménagerai la ville au goût de tout l’monde ![VAR 0114(0010)]
+T’as envie qu’on gagne, pas vrai, Minotaupe ?\nMéga-évolue et montre-leur ce que tu sais faire ![VAR 0114(0010)]
+Vous m’avez appris que la FORCE peut prendre\ndifférentes formes ! Ce combat est pour vous ![VAR 0114(0011)]
+Hexadron, méga-évolue !\nDeviens JUSTICE ![VAR 0114(0011)]
+La victoire est à moi.[VAR 0114(0012)]
+Lugulabre... Méga-évolue...\nPour la justice...[VAR 0114(0012)]
+Une fois que je t’aurai battu[VAR 1100(00FF,0100)]e, j’compte bien faire\nbosser les habitants pour le bien d’leur ville ![VAR 0114(0013)]
+Brutapode et moi, on a renforcé nos liens dans\nla douleur ! Mais là, c’est à toi d’souffrir ![VAR 0114(0013)]
+J’ai beaucoup d’estime pour toi, mais en combat,\non doit mettre ses sentiments de côté.[VAR 0114(0014)]
+Airmure, montrons-leur comment nous nous\nbattions, avant de former le Clan Dérouillard ![VAR 0114(0014)]
+Comment ne pas tomber sous le charme des\ncombats lorsqu’ils nous permettent d’admirer\r\ndes adversaires prêts à tout pour la victoire ?[VAR 0114(0015)]
+Attention, la reine de la FRIM va t’éblouir !\nMéga-Évolution ![VAR 0114(0015)]
+J’vais gagner au Royale Z-A ∞ pour te prouver\nque notre rencontre a changé ma vie ![VAR 0114(0016)]
+Les combats, c’est fait pour s’dépasser !\nKravarech, donne tout ce que t’as ![VAR 0114(0016)]
+Toi et tes amis avez ravivé la flamme au fond\nde moi ![VAR 0114(0017)]
+Dracaufeu, méga-évolue ! Brille de mille feux\net brûle tout sur ton passage ![VAR 0114(0017)]
+Ce combat, c’est le reflet d’la gratitude qui brûle\nau fond d’moi ![VAR 0114(0018)]
+Cette Méga-Évolution, c’est le « Néo » de notre\nnom ! Le symbole de notre renouveau ![VAR 0114(0018)]
+Étant un chauffeur de taxi hors pair, j’ai eu une\nrévélation.\c\nLes combats, c’est un peu comme la conduite :\ntout s’passe bien tant qu’on garde le contrôle.[VAR 0114(002F)]
+J’ai fait le plein pour faire monter mes Pokémon\nd’un niveau, mais du coup, je suis à sec...[VAR 0114(002F)]
+Ne perdons pas de temps.\c\nC’est ce que j’aurais dit auparavant, mais\nmaintenant, je savoure chaque combat.[VAR 0114(0030)]
+Si on s’arrête de courir, on ne peut pas atteindre\nla ligne d’arrivée.[VAR 0114(0030)]
+Les rangs, c’est « eXaspérant » !\nL’avenir, c’est les combats à l’infini ![VAR 0114(0031)]
+Je peux pas croire que mon avenir,\nc’est les défaites à l’infini...[VAR 0114(0031)]
+Au risque de me répéter, je vais transformer\nL’Étoilé en « Triple Étoilé » ![VAR 0114(0032)]
+Tu m’en fais voir, des étoiles...\nMais je ne t’ai pas servi le dessert ![VAR 0114(0032)]
+J’aime changer les capacités en capacités Plus !\nOu peut-être que j’aime juste me servir\r\ndes Graines Maîtrise ? Va savoir ![VAR 0114(0033)]
+Je vais tout donner ! Je dois faire honneur\nà mes Pokémon qui se sont battus pour moi ![VAR 0114(0033)]
+Mon amour pour Narica va me donner la force\nde t’écraser ![VAR 0114(0035)]
+Je mise tout sur mon dernier Pokémon ![VAR 0114(0035)]
+En combat aussi, il faut suivre les tendances !\nEt toi, quel genre de « staïle » t’imposes ?\c\nT’essaies d’affiner tes techniques avec panache,\nou tu préfères essayer de nouvelles tactiques ?[VAR 0114(003A)]
+Dans les situations difficiles, faut pas paniquer,\nmais réagir avec « staïle » ![VAR 0114(003A)]
+Notre combat est l’un de tes premiers\nsouvenirs à Illumis, pas vrai ?\c\nJe te propose de revivre l’expérience ![VAR 0114(002C)]
+Nous aussi, on a progressé depuis la dernière\nfois ! Je vais te montrer de quoi on est capables ![VAR 0114(002C)]
+Bougez pas, v’là Cornélia ![VAR 0114(0192)]
+Je fais qu’un avec mon Pokémon !\nOn est prêts... ON MET LA GOMME !!![VAR 0114(0192)]
 ~~~~~~~~~~~~~~~
 Text File : t1_A01
 ~~~~~~~~~~~~~~~
@@ -4565,7 +4642,12 @@ J’aime m’entraîner et voir\nles progrès que je fais !
 J’ai l’impression que les Pokémon\nSpectre sont plus forts la nuit...
 Me coucher tard me donne\ndes montées d’adrénaline !
 Albia et Nivis sont complémentaires ! Elle, c’est\nl’adaptabilité ! Alors que lui, c’est l’inflexibilité !
-[~ 166]
+Des boîtes en carton où quelqu’un a fourré\npêle-mêle des affaires des Poings de la Justice.
+Un mannequin d’entraînement aux arts martiaux\nressemblant à un Desséliande.
+Un banc de musculation. Il est écrit en tout petit :\n« Interdit à Nivis ».
+Un drapeau orné du logo des Poings de la Justice.
+Un sac de sable pour s’entraîner à frapper.\nIl est écrit en tout petit : « Interdit à Nivis ».
+[~ 171]
 Et si les barrières holographiques\ndes zones sauvages se cassaient ?
 C’est un chouette Pokémon !\nIl doit être heureux d’être avec toi !
 Mais pourquoi tu t’intéresses\nautant à mon Pokémon ?
@@ -4576,7 +4658,7 @@ La seule faiblesse de Ténéfix est le type Fée.\nC’est plutôt rare chez un 
 Personne ne vit au-dessus de chez\nmoi, mais j’entends des bruits...
 Peut-être qu’un Pokémon s’y est\nintroduit et y a fait son nid ?
 Si un Magicarpe bondit hors de\nl’eau, je l’y remettrai tout de suite !
-[~ 177]
+[~ 182]
 On raconte que porter une dent de Sharpedo\nprotège des accidents en mer.
 Parfois, mon Cadoizo m’offre des Pokémon\ninsectes...
 J’ai compris que j’adorais les arts martiaux en\nparticipant aux entraînements de mon Machoc !
@@ -4598,7 +4680,7 @@ Ah... Revivre l’émoi de la première\nfois que j’ai vu un Pokémon...
 Il faut jouer avec eux tous les jours\net pour toujours !
 Qu’est-ce que je dois faire pour\nque mon Pokémon soit heureux ?
 Ton Couafarel sera le plus joli\ndu monde, tu vas voir ! [VAR BD0A(000A)]Text_icon1
-[~ 199]
+[~ 204]
 Au Royale Z-A, l’ambiance est vraiment\nélectrique. Ça peut péter à tout moment !
 On peut utiliser sa monture dans\ncertaines régions, mais pas toutes.
 Parfois, j’fais exprès de me perdre.\nJe découvre de nouvelles choses !
@@ -4640,7 +4722,7 @@ Et moi, d’un club de fans d’occulte.\nBon, OK. Je suis la seule membre...
 Terhal et moi, on sera premiers au Royale Z-A,\net je vais relancer le Fan Club Pokémon !
 À Alola, on peut utiliser des capacités Z...\nEt il paraît que Zygarde y a aussi été aperçu...
 Je suis membre du Bureau de la Pokédexpertise !\nSi ça ne tenait qu’à moi, je décrirais Strassie ainsi :\c\n« Les Strassie font rompiche sous terre, et quand\nle sol fait boum à cause de volcans ou de séismes,\r\nils sortent, car ils peuvent plus faire dodo. »
-[~ 241]
+[~ 246]
 On est en train de nommer dix choses\nqu’on aime chez le Pokémon de l’autre.
 J’ai été membre du Fan Club Pokémon.\nJe pourrais t’en citer cent les doigts dans le nez !
 C’est agréable de se balader\nautour de l’hôtel.
@@ -4662,7 +4744,7 @@ Si t’entraînes pas tes Pokémon face à des\nadversaires coriaces, c’est m�
 À force de marcher, tu finiras bien\npar arriver quelque part.
 Ça coûtait 5 000 000  pour\nrejoindre la Team Flare ?!
 Le doux parfum d’Empiflor\nme fait fondre... !
-[~ 263]
+[~ 268]
 Je suis sûr d’avoir vu une plaque\nd’égout Brutalibré quelque part.
 Ah, oui ! Je l’ai vue aussi !\nEnfin... je crois.
 Un resto pour les Pokémon... C’est\npeut-être ça, l’idée à un million !
@@ -4673,7 +4755,7 @@ Certains Pokémon se laissent\ndélibérément attraper, non ?
 Les métiers de la livraison me font\nrêver. Je porte déjà l’uniforme !
 La catégorie de Staross est « Pokémon\nMystérieux ». Ça nous avance pas beaucoup...
 La vie est une pièce de théâtre. Et où que\nje me trouve, j’ai toujours le rôle principal !
-[~ 274]
+[~ 279]
 Les étés avec mes Pokémon ne\nsont que des souvenirs à présent...
 Réclamer l’arrêt des travaux...\nAutant souffler dans un violon !
 Paraît qu’on peut entrer quelque part dans\nles égouts et ressortir ailleurs dans la ville.
@@ -4694,7 +4776,7 @@ C’est bien d’avoir des Pokémon\npuissants, mais ça ne suffit pas !
 C’est quoi le meilleur repas pour un Pokémon,\nd’après toi ?
 Ça dépend des espèces ! Il faut s’assurer\nqu’il corresponde aux besoins du Pokémon.
 C’est quoi, un repas « idéal »,\npour un Pokémon ?
-[~ 295]
+[~ 300]
 J’aimerais que mon Pokémon me\ntransmette un peu de son énergie !
 Je vais jouer avec les Pokémon\nqui sont dans mes Boîtes ! [VAR BD0A(000A)]Text_icon1
 J’ai toujours mes rollers quelque\npart chez moi... [VAR BD0A(000A)]Text_icon1
@@ -4750,7 +4832,7 @@ Malgré l’aide des Poings de la Justice, je me sens\ntoujours incapable de bat
 Les capacités des Pokémon, c’est\nla nature qui exprime son art !
 Je croise souvent des collègues pendant\nmes livraisons. Combien on est, en tout, ici ?
 Se perdre dans la ville, c’est rien !\nMoi, je suis perdu dans la VIE ! [VAR BD0A(000A)]Text_icon1
-[~ 351]
+[~ 356]
 Est-ce qu’il vaut mieux utiliser plein de capacités\nrapides, ou une seule, plus lente, mais qui peut\r\nmettre K.O. d’un coup ?
 Je vais devenir un Dresseur super fort pour vivre\ntranquillement dans cette ville pleine de Pokémon !
 Elle connaissait de bons cafés ?\nJ’ai envie de changer de crèmerie !
@@ -4760,7 +4842,7 @@ J’ai essayé de livrer un colis, mais un Pokémon\nterrifiant montait la garde
 Et on n’a pas le droit de l’attaquer...\c\nTon Pokémon pourrait faire diversion, et pendant\nce temps, tu pourrais déposer le colis !
 Un Baron chromatique...\nJe veux un Baron chromatique...
 Les Pokémon, c’est pas mon fort...\nJe devrais sûrement déménager !
-[~ 361]
+[~ 366]
 Mon Sepiatop n’est pas top !
 Cette place est pour tout le monde.\nÊtres humains et Pokémon ! [VAR BD0A(000A)]Text_icon1
 C’est trop chouette d’avoir\ndes habits assortis !
@@ -4780,7 +4862,7 @@ Le travail, non !\nLes Pokémon, oui !
 Pratique, mais moi, je me perds\nplutôt dans le choix des capacités.
 Quand je me perds, je me sers des\ndestinations qu’on a sur la Carte.
 Faut aller à gauche ou à droite ?\nOu tout droit, peut-être... ?
-[~ 381]
+[~ 386]
 Éviter les capacités est un talent essentiel !\nTu dois aussi faire attention à toi en combat.
 Les éléments manquants, c’est toujours frustrant\nquand on commence une collection.
 Il y a autant de façons d’élever son\nPokémon que d’êtres humains.
@@ -4802,7 +4884,7 @@ Pfff, quelle vie... Sentir l’odeur\nde mon Pokémon me calmerait...
 Chaque région a ses qualités et ses défauts,\nil semblerait !
 Les Hippopotas ont des couleurs différentes\nselon leur sexe.\c\nÀ ton avis, celui-ci est un mâle ou une femelle ?
 Alors comme ça, les Pokémon\nsauvages font tomber des objets ?
-[~ 403]
+[~ 408]
 En combat, c’est bien d’enchaîner\nles capacités avec un bon rythme.
 Plus un Pokémon gagne de Points\nd’Expérience, plus il devient fort !
 Il faut toujours avoir des Poké Balls\nsur soi, au cas où !
@@ -9041,8 +9123,8 @@ J’attends qu’une chose, c’est de te vaincre\nà notre prochain combat au R
 J’attends qu’une chose, c’est de te vaincre\nà notre prochain combat au Royale Z-A ∞ ![VAR 0114(0005)]
 J’ai beau être le chef de la Team MZ, j’y serais\njamais arrivé tout seul.\c\nC’est grâce à vous qu’on a pu s’en sortir\net qu’on a l’avenir devant nous ![VAR 0114(0006)]
 J’ai beau être la cheffe de la Team MZ, j’y serais\njamais arrivée toute seule.\c\nC’est grâce à vous qu’on a pu s’en sortir\net qu’on a l’avenir devant nous ![VAR 0114(0005)]
-
-
+Un panneau créé par Inno pour la boutique\nde Donuts d’Anya.
+De nombreux livres collectionnés par A.Z.\nAnya les lit parfois.
 ~~~~~~~~~~~~~~~
 Text File : t1_i005
 ~~~~~~~~~~~~~~~
@@ -9061,7 +9143,7 @@ Tu te sers de la Méga-Évolution ? C’est le meilleur\nmoyen de venir à bout 
 Malgré mes recherches, je n’ai toujours aucune\nidée des motivations de ce « L ».\c\nJe ne suis vraiment pas digne d’avoir hérité\nde cette agence...[VAR 0114(0008)]
 C’est terrible ce qui arrive à la Tour Prismatique...\nMais je protègerai Illumis coûte que coûte !\r\nJe l’ai promis à mon mentor ![VAR 0114(0008)]
 Il y a encore plein de Pokémon et de personnes\nqui ont besoin de mon aide à Illumis ![VAR 0114(0008)]
-
+Le tableau est couvert d’informations concernant\ndiverses enquêtes.
 ~~~~~~~~~~~~~~~
 Text File : t1_i011
 ~~~~~~~~~~~~~~~
@@ -10248,6 +10330,7 @@ Les clients à l’aise financièrement\nsont plus simples à gérer.
 Text File : t1_i014_1
 ~~~~~~~~~~~~~~~
 C’est un Farfuret porte-bonheur.\c\nSa patte droite levée et sa couleur dorée ont\npour but d’attirer la fortune.
+Monsieur Corvault est actuellement absent.\nVeuillez quitter les lieux.
 ~~~~~~~~~~~~~~~
 Text File : t1_i014_2
 ~~~~~~~~~~~~~~~
@@ -10263,11 +10346,13 @@ Il est hors de question que j’perde !\nJ’ai encore des affaires à régler !
 T’as pas bientôt fini de courir partout ?\nSi tu t’ennuies, j’peux te filer du travail ![VAR 0114(0013)]
 Si on s’occupe pas d’la Tour Prismatique,\nles gens vont commencer à paniquer ![VAR 0114(0013)]
 Et si on faisait des combats d’équipe, genre\nTeam MZ contre le Clan Dérouillard ?\c\nÇa serait vachement plus fun qu’les tournois\nen carton organisés par Violine.[VAR 0114(0013)]
+On est loin d’en avoir fini avec ces failles\nextradimensionnelles...\nQuand t’auras récolté assez de points de\nrecherche, touches-en un mot à Gypso.[VAR 0114(0013)]
 Les règles les plus étranges existent\ncar elles profitent à quelqu’un.\c\nNos taux d’intérêt en sont un parfait exemple.[VAR 0114(0014)]
 Tu diras à [VAR 018B(0001)] que nous avons hâte\nde regarder sa nouvelle vidéo.[VAR 0114(0014)]
 Le symbole d’Illumis est menacé...\nÇa ne présage rien de bon.[VAR 0114(0014)]
 Pour une raison qui m’échappe, tes visites\nmettent toujours le boss de bonne humeur.[VAR 0114(0014)]
-
+L’hologramme affiche diverses données chiffrées\nsur les failles extradimensionnelles apparaissant\r\nà Illumis, ainsi que des informations à leur sujet.
+On continue de collaborer avec toi, mais je te\nconseille quand même de garder tes distances.[VAR 0114(0014)]
 ~~~~~~~~~~~~~~~
 Text File : common_scr
 ~~~~~~~~~~~~~~~
@@ -17574,14 +17659,20 @@ Vous avez résumé la situation actuelle\ndans [VAR 1400(0001,0000)][VAR 0109(00
 Vous avez un Échange Magique en attente !\nConnectez-vous à Internet pour l’effectuer.
 Souhaitez-vous retourner où vous étiez\nauparavant ?
 Vous retournez aussi vite que possible auprès\ndes autres !
-
-
-
-
-
-
-
-
+Hoopa n’a plus de Satiéténergie !
+Vous allez quitter l’extradimension.\nÊtes-vous sûr[VAR 1100(00FF,0100)]e ?
+Oui
+Non
+Méga-Éoko passe à l’attaque !
+Méga-Carchacrok Z passe à l’attaque !
+Méga-Golemastoc passe à l’attaque !
+Méga-Sarmuraï passe à l’attaque !
+Méga-Scovilain passe à l’attaque !
+Méga-Floréclat passe à l’attaque !
+[~ 37]
+Je repère la présence d’un [VAR 0101(0002)] ![VAR 0114(0007)]
+Trouve-le et capture-le ![VAR 0114(0007)]
+La Bonus Ball contenait des tas de choses !
 ~~~~~~~~~~~~~~~
 Text File : field_trade
 ~~~~~~~~~~~~~~~
@@ -17635,6 +17726,57 @@ Vous avez battu votre précédent record !\nMerveilleux ![VAR 0114(000E)]
 Veuillez accepter cette récompense.[VAR 0114(000E)]
 Heureusement, il ne s’agit que d’une simulation.\nVous vous en sortez sans une égratignure !\c\nVous oublierez vite cette défaite.[VAR 0114(000E)]
 Vous savez où me trouver, si vous souhaitez\nparticiper à une autre simulation ![VAR 0114(000E)]
+Absol Z
+Étouraptor
+Nigirigon
+Mistigrix
+Heatran
+Darkrai
+Groudon
+Kyogre
+Rayquaza
+Zygarde
+Zeraora
+À la base, j’étais simplement venue livrer\nun café à Monsieur Musquat...\c\nEt voilà que je me retrouve responsable du\nsimulateur Méga-Ferox en son absence ! Bref...
+Quel Pokémon Méga-Ferox souhaitez-vous\naffronter ?
+Quel Pokémon Méga-Ferox souhaitez-vous\naffronter ensuite ?
+[VAR 0101(0002)] ? C’est noté.\nÊtes-vous prêt[VAR 1100(00FF,0100)]e ?
+Votre record de temps contre [VAR 0101(0002)]\nest de [VAR 0201(0003)]:[VAR 0201(0004)],[VAR 0201(0005)].\r\nPrêt[VAR 1100(00FF,0100)]e pour un autre combat ?
+Excellent !\nVotre temps pour ce combat est de [VAR 0201(0003)]:[VAR 0201(0004)],[VAR 0201(0005)] !
+Incroyable !\nVous avez battu votre précédent record !
+Voilà votre récompense !
+Heureusement que ce n’est qu’une simulation.\nVous vous en tirez sans égratignures !
+Revenez me voir si vous voulez participer à\nune autre simulation !
+De nouveaux Pokémon ont été ajoutés\nau simulateur Méga-Ferox !
+Félicitations !\c\nVous pouvez désormais relever\nle Défi Méga-Furieux.
+Que souhaitez-vous faire ?
+Utiliser le simulateur Méga-Ferox
+Relever le Défi Méga-Furieux
+Rien pour le moment
+Souhaitez-vous lancer le Défi Méga-Furieux ?
+Oui !
+En quoi ça consiste ?
+Quel est mon meilleur score ?
+Non merci.
+Le [VAR FF00(0006)]Défi Méga-Furieux[VAR FF00(0000)] consiste en une série de\ncombats contre des Pokémon Méga-Ferox\r\nau cours desquels certaines règles s’appliquent.\c\nVous ne pouvez pas changer les Pokémon\nde votre équipe.\c\nLe défi prend fin dès que vous perdez un combat.\c\nVous pouvez soigner votre équipe,\nmais seulement TROIS fois.\c\nEnfin, si vous parvenez à vaincre tous les Pokémon\ndu défi, j’enregistrerai votre temps.
+Je vous préviens, ce défi est très difficile.\nÊtes-vous sûr[VAR 1100(00FF,0100)]e de vouloir le relever ?
+Oui !
+Non...
+Prêt[VAR 1100(00FF,0100)]e pour le combat suivant ?
+Je suis prêt[VAR 1100(00FF,0100)]e !
+Je veux soigner mon équipe.
+Je préfère abandonner...
+Vous pouvez soigner votre équipe encore [VAR 0200(0003)] fois.\nVoulez-vous vraiment soigner vos Pokémon ?
+Oui.
+Non, pas encore.
+Si vous abandonnez maintenant, j’enregistrerai\nvotre nombre de victoires, mais vous devrez\r\nreprendre le défi depuis le début la prochaine fois.\c\nVoulez-vous vraiment abandonner ?
+Oh non, quel dommage...\nN’hésitez pas à retenter votre chance !
+Vous avez remporté [VAR 0201(0004)] victoire[VAR 1101(0004,0100)]s !\nRecommencez pour battre votre record !
+Vous avez remporté le défi en [VAR 0201(0005)]:[VAR 0201(0006)]:[VAR 0201(0007)],[VAR 0201(0008)] !
+Votre record est de [VAR 0201(0004)] victoire[VAR 1101(0004,0100)]s.
+Ça alors, vous avez vaincu tous les Pokémon !\nFélicitations ! C’est un véritable exploit !
+Vous avez remporté le défi en [VAR 0201(0005)]:[VAR 0201(0006)]:[VAR 0201(0007)],[VAR 0201(0008)] !
+Revenez me voir quand vous voulez pour\nrecommencer !
 ~~~~~~~~~~~~~~~
 Text File : coordination
 ~~~~~~~~~~~~~~~
@@ -17689,6 +17831,32 @@ Tu ne voudrais pas quelques\nmédailles ? [VAR BD0A(000A)]Text_icon1
 À la fédération, nous concourons pour savoir qui\npeut remporter le plus de médailles en une nuit.\r\nExceptionnellement, je vais partager avec toi.
 Vous avez reçu des médailles !
 [VAR BD06(0000)]Vous recevez\n[VAR 1402(0002,0000)][VAR FF00(0008)][VAR 010A(0002)][VAR FF00(0000)] !
+Qui veut des Baies\nextradimensionnelles ? [VAR BD0A(000A)]Text_icon1
+J’ai trouvé ces [VAR 1001][VAR 010A(0002)]\nà Extra Illumis ! Je te les offre !
+Qui a besoin de Baies\nextradimensionnelles ? [VAR BD0A(000A)]Text_icon1
+Pour faire honneur à tes aptitudes en combat,\nvoici des [VAR 1001][VAR 010A(0002)] !
+Voulez-vous que je soigne\nvos Pokémon ? [VAR BD0A(000A)]Text_icon1
+Les Pokémon ont toujours besoin de soins, même\ndans un lieu aussi étrange qu’Extra Illumis !
+Je vous offre un petit café\nextradimensionnel ? [VAR BD0A(000A)]Text_icon1
+Aussi étrange que cela puisse paraître, le café\nsoigne les Pokémon dans l’extradimension !
+Un petit café ? [VAR BD0A(000A)]Text_icon1
+C’est un café spécialement préparé pour\nl’extradimension. Il possède des vertus curatives.
+Goûtez au café\ndu Néo Café ! [VAR BD0A(000A)]Text_icon1
+Je ne sais pas ce que je fais ici, mais tant pis !\nSoignez vos Pokémon avec ce Café Déflagration !
+Essayez donc le café\ndu Néo Café ! [VAR BD0A(000A)]Text_icon1
+Extradimension ou pas, je vous prie de boire ce\nCafé Flamme Ultime pour soigner vos Pokémon !
+J’ai pas de cartes à donner,\nj’ai beaucoup mieux ! [VAR BD0A(000A)]Text_icon1
+Tu trouveras rien de plus rare que\nces [VAR 1001][VAR 010A(0002)] !
+J’ai des objets de luxe ! [VAR BD0A(000A)]Text_icon1
+Prends ces [VAR 1001][VAR 010A(0002)] !\nN’hésite pas, j’en ai encore plein chez moi !
+J’ai un joli cadeau pour toi ! [VAR BD0A(000A)]Text_icon1
+Ces [VAR 1001][VAR 010A(0002)] ont encore\nplus de valeur puisque c’est moi qui les donne !
+Je vais te faire\nun cadeau. [VAR BD0A(000A)]Text_icon1
+[VAR BD06(0000)]Même dans l’extradimension, la FRIM montre\nl’exemple.\r\nPrends ces [VAR 1001][VAR 010A(0002)].
+J’ai un cadeau d’une grande\nvaleur pour toi. [VAR BD0A(000A)]Text_icon1
+[VAR BD06(0000)]Je t’offre l’amour extradimensionnel de Dame\nVioline !\r\nEt ces quelques [VAR 1001][VAR 010A(0002)].
+Je ne suis qu’un hologramme,\nmais j’ai un joli cadeau pour toi. [VAR BD0A(000A)]Text_icon1
+Ça doit te faire bizarre qu’un hologramme t’offre\ndes [VAR 1001][VAR 010A(0002)] ici !
 ~~~~~~~~~~~~~~~
 Text File : pokemoncenter
 ~~~~~~~~~~~~~~~
@@ -17815,12 +17983,12 @@ Text File : change_deox_scr
 Text File : staffrollreplay
 ~~~~~~~~~~~~~~~
 Eh ben moi, j’ai une super mémoire ! Et quand\nje vois le nom de quelqu’un, je l’oublie jamais !\r\nTu veux que je te montre ?
-
+Eh ben moi, j’ai une super mémoire ! Et quand\nje vois le nom de quelqu’un, je l’oublie jamais !\c\nEt j’ai même appris des nouveaux noms depuis !\nTu veux que je te montre ?
 Oh oui, montre-moi !
-
-
-
-
+Montre-moi les noms d’avant !
+Montre-moi !
+Montre-moi les nouveaux noms !
+Montre-moi !
 Non, ça ira.
 Il va me falloir à peu près six minutes pour réciter\ntous ces noms. Ça te va toujours ?
 Oh que oui !

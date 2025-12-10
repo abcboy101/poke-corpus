@@ -382,6 +382,29 @@ Acqua scoppiettante
 Vuoi smettere di scattare fotografie?
 Sì
 No
+[~ 124]
+Benvenut[VAR 1100(00FF,0101)]oa al Caffè La Tazza Vuota.\nTi preghiamo di NON ordinare sushi con caffè.
+[~ 126]
+[VAR BD06(0000)]Salve, [VAR 0100(0000)]! Chi ha bisogno\ndi un bel sonno oggi?[VAR 0114(01BB)]
+[VAR 0100(0000)]
+[VAR 0102(0002)]
+[VAR 0102(0003)]
+[VAR 0102(0004)]
+[VAR 0102(0005)]
+[VAR 0102(0006)]
+[VAR 0102(0007)]
+Nessuno
+Speriamo di rivedervi presto.[VAR 0114(01BB)]
+Gentile [VAR 0100(0000)], si metta pure comod[VAR 1100(00FF,0101)]oa.\nPrenda anche un caffè, magari.\r\nMusharna, puoi procedere.[VAR 0114(01BB)]
+Mumumu! ♪
+Un bel sonno ristoratore! Speriamo di rivedervi\npresto![VAR 0114(01BB)]
+Musharna, puoi procedere.[VAR 0114(01BB)]
+Mumumu! ♪
+Vuole svegliare il suo Pokémon?
+Sì, è l’ora
+Non ancora
+Un bel sonno ristoratore! Speriamo di rivedervi\npresto![VAR 0114(01BB)]
+Muuuush...
 ~~~~~~~~~~~~~~~
 Text File : shop
 ~~~~~~~~~~~~~~~
@@ -426,7 +449,7 @@ Hai messo tutto nel Borsello.\c
 Hai ottenuto [VAR 1502(0000,0000)][VAR 010A(0000)]\ne l[VAR 1102(0000,0101,0202)]’’i e hai mess[VAR 1102(0000,0101,0101)]oaie nel Borsello.\c
 Hai ottenuto [VAR 0202(0001)] [VAR 1001][VAR 010A(0000)]\ne l[VAR 1100(0000,0101)]ie hai mess[VAR 1100(0000,0101)]ie nel Borsello.\c
 Hai messo tutto nel Borsello.\c
-[~ 41]
+Hai ottenuto una MT contenente la mossa\n[VAR 0107(0000)] e l’hai messa nel Borsello.\c
 [~ 42]
 [~ 43]
 [~ 44]
@@ -439,6 +462,7 @@ Hai messo tutto nel Borsello.\c
 [~ 51]
 [~ 52]
 [~ 53]
+[~ 54]
 Sì
 No
 Continua
@@ -456,15 +480,15 @@ Esci
 Scambia in blocco
 [VAR 0202(0000)]
 Potenza
-[~ 71]
 [~ 72]
 [~ 73]
+[~ 74]
 [VAR 0107(0000)]
 MT[VAR 0202(0000)]
 [VAR 0202(0000)]
 -
 ---
-[~ 79]
+[~ 80]
 Esaurito
 --
 Articoli
@@ -2518,6 +2542,8 @@ Non ti bastano i soldi, mi sa.
 Torna a trovarmi se ne hai voglia!
 Più di così, non credo che ci stia nel tuo Borsello.
 Ti serve qualche altra cosa?
+[~ 80]
+Gradisci un Porro? Ti consiglio di darlo a\nun Farfetch’d.
 ~~~~~~~~~~~~~~~
 Text File : byebye
 ~~~~~~~~~~~~~~~
@@ -2712,6 +2738,57 @@ Hai lottato con molto stile! C’era dell’eleganza: hai\nmostrato consapevolez
 Il tuo ricordo più bello di Luminopoli è la lotta che\nhai fatto contro di me, scommetto. Allora eccoti\r\nun bel regalo: ti farò rivivere quell’esperienza![VAR 0114(002C)]
 Io e i miei Pokémon non siamo stati con le mani\nin mano. Preparati a vedere la nostra nuova forza![VAR 0114(002C)]
 Ti sei fatt[VAR 1100(00FF,0101)]oa valere di nuovo, complimenti. Peccato\nche ciò non renda la sconfitta più dolce...[VAR 0114(002C)]
+[~ 158]
+Io e i miei Pokémon riverseremo tutti i nostri\nsentimenti in questa lotta![VAR 0114(0006)]
+È la tua presenza a spingermi a superare i miei\nlimiti![VAR 0114(0006)]
+Io e i miei Pokémon esprimeremo tutti i nostri\nsentimenti in questa lotta![VAR 0114(0005)]
+La tua presenza è ciò che mi spinge a superare\ni miei limiti![VAR 0114(0005)]
+Lascia che ti dimostri la vera forza dell’attuale\ne secondo capo dell’Agenzia Bellocchio![VAR 0114(0008)]
+Ho promesso che avrei difeso Luminopoli,\ne per farlo devo essere forte![VAR 0114(0008)]
+L’esperienza maturata nel Team MZ ci ha resi\npiù forti![VAR 0114(000B)]
+Vai, Scrafty! Trasforma la gratitudine che provo\nper te nel potere della megaevoluzione![VAR 0114(000B)]
+Tutti questi giorni fantastici passati a Luminopoli\nci hanno resi più forti![VAR 0114(000C)]
+Starmie! Vai a passo di megaevoluzione!\nFai vedere quanto siamo straordinari![VAR 0114(000C)]
+Luminopoli è una splendida città e io ambisco\na vincere per renderla ancora migliore![VAR 0114(000E)]
+Drampa! I nostri animi sono un tutt’uno! Mostra\na tutti il vero valore della megaevoluzione![VAR 0114(000E)]
+Ti batterò e obbligherò il Team MZ a entrare nei\nD1N4M0! Così poi saremo fortissimi![VAR 0114(000F)]
+Credi di sapere cos’è la megaevoluzione? Pover[VAR 1100(00FF,0101)]oa\nillus[VAR 1100(00FF,0101)]oa... Preparati alla batosta del secolo![VAR 0114(000F)]
+Creerò la città ideale per tutti portando a casa\nuna sfilza di vittorie nella Royale Z-A ∞![VAR 0114(0010)]
+Cosa lega me ed Excadrill? La smania di vittoria!\nVai, amico mio! Megaevolviti!![VAR 0114(0010)]
+Mi hai insegnato che la forza può avere più facce.\nTi affronterò con gratitudine![VAR 0114(0011)]
+Falinks! Dai forma al tuo irrefrenabile senso\ndel giusto! Megaevoluzione della giustizia![VAR 0114(0011)]
+Vincerò io.[VAR 0114(0012)]
+Chandelure... Megaevoluzione della giustizia...[VAR 0114(0012)]
+Metterò tutti sotto a lavora’ per il bene della città!\nE per farlo mi tocca darti una batosta![VAR 0114(0013)]
+Io e Scolipede abbiamo superato mille avversità.\nIl legame che ci unisce è autentico![VAR 0114(0013)]
+Ti sono grato per vari motivi, ma la mia\nriconoscenza non si applica alle lotte Pokémon.[VAR 0114(0014)]
+Forza, Skarmory. Facciamogli vedere che eravamo\nfenomenali anche prima del Clan Ruggine![VAR 0114(0014)]
+Affrontando sul serio un Allenatore e i suoi\nPokémon è impossibile non innamorarsene.\r\nÈ il fascino della lotta![VAR 0114(0015)]
+Megaevolviti, mio caro Pokémon, e mostra a tutti\nil vero potere di chi stringe le redini dei MLL![VAR 0114(0015)]
+Vincerò la Royale Z-A ∞ è ti dimostrerò cosa\nha significato per me il nostro incontro![VAR 0114(0016)]
+La nostra è una lotta costante per superare ogni\nlimite! Dragalge, fammi dono della tua vera forza![VAR 0114(0016)]
+Incontrarti ha fatto divampare un fuoco in me![VAR 0114(0017)]
+Vai, Charizard! Megaevolviti e brucia ogni cosa\ncon le tue fiamme accecanti![VAR 0114(0017)]
+La mia gratitudine è come una pira ardente!\nTe lo dimostrerò con una lotta senza riserve!![VAR 0114(0018)]
+"Nouveau" significa "nuovo"! Megaevolviti e\nnuova vita scorrerà nelle tue vene![VAR 0114(0018)]
+Le mie esperienze da tassista di primissima\ncategoria mi hanno fatto notare una cosa.\c\nLa cosa più importante, nella guida come nelle\nlotte, è mantenere il controllo. Se solo ci riuscissi\r\ncon i Pokémon come quando sono al volante...[VAR 0114(002F)]
+I miei Pokémon sono aumentati di un livello, ma\nin compenso io ho le ruote a terra...[VAR 0114(002F)]
+Vediamo di finirla in fretta.\c\nDi solito dico così... ma questa lotta ho intenzione\ndi godermela per bene![VAR 0114(0030)]
+Chi smette di correre non arriva mai al traguardo![VAR 0114(0030)]
+Adesso non abbiamo più a che fare con i ranghi,\nma con l’infinito! Siamo in un mondo di lotte\r\nPokémon infinite![VAR 0114(0031)]
+Spero solo di non essere in un mondo di infinite\nsconfitte...[VAR 0114(0031)]
+Perdonami se mi ripeto, ma trasformerò\nil Ristorante Bocca Buona in un ristorante\r\na tre stelle![VAR 0114(0032)]
+È solo grazie al confronto con l’ordinario che\nsi può capire cos’è buono e cos’è cattivo![VAR 0114(0032)]
+Non so se sono le mosse + a piacermi di più,\no i Semi padronanza... Quel che so è che il mio\r\nnome è Semina![VAR 0114(0033)]
+Lottiamo e vinciamo! Facciamolo per i Pokémon\nche sono già andati KO![VAR 0114(0033)]
+In questa lotta il sottoscritto metterà tutta la sua\nammirazione per lei, l’unica, la sola! Preparati\r\nordunque alla tenzone![VAR 0114(0035)]
+È giunto il momento cruciale... L’ultima mia\nchance... O la va o la spacca![VAR 0114(0035)]
+I modi di lottare sono come le mode: vanno e\nvengono.\c\nCi sono Allenatori che seguono l’ultima tendenza\nin fatto di tattica, e quelli che si concentrano sulle\r\nstrategie comprovate. E tu, che stile segui?[VAR 0114(003A)]
+Lo stile si vede anche con le spalle al muro!\nTesta alta, e si continua a lottare con eleganza![VAR 0114(003A)]
+Il tuo ricordo più bello di Luminopoli è la lotta che\nhai fatto contro di me, scommetto. Allora eccoti\r\nun bel regalo: ti farò rivivere quell’esperienza![VAR 0114(002C)]
+Io e i miei Pokémon non siamo stati con le mani\nin mano. Preparati a vedere la nostra nuova forza![VAR 0114(002C)]
+Ornella in arrivo![VAR 0114(0192)]
+Pokémon e Allenatore sfoderano tutto il loro\npotenziale diventando un tutt’uno...\r\nMettiamocela tutta!![VAR 0114(0192)]
 ~~~~~~~~~~~~~~~
 Text File : t1_A01
 ~~~~~~~~~~~~~~~
@@ -4565,7 +4642,12 @@ Con l’esercizio posso migliorare\ngrazie ai miei stessi sforzi.
 Mi sembra che di notte il tipo\nSpettro diventi più potente...
 Quando sto sveglia fino a tardi\nsono euforica!
 Il maestro Albis è incrollabile, mentre sua sorella\nè flessibile. Sono una coppia molto equilibrata!
-[~ 166]
+Ci sono degli scatoloni riempiti alla meno peggio\ncon le attrezzature del Gruppo Justice.
+Un manichino ispirato a Trevenant per allenarsi\na tirare calci e colpi.
+Una panca per addominali con un biglietto\nche dice in piccolo: "Albis, non toccare!".
+Una bandiera con sopra il logo del dojo.
+Un sacco per allenamenti con un biglietto\nche dice in piccolo: "Albis, non toccare!".
+[~ 171]
 Come facciamo se gli ologrammi\ndelle zone selvagge si rompono?
 Che squadra fantastica...\nL’hai allenata in modo perfetto...
 Che inquietudine la gente che\nvuole vedere il mio Pokémon...
@@ -4576,7 +4658,7 @@ Sableye è un Pokémon raro che ha come punto\ndebole soltanto il tipo Folletto.
 L’appartamento al piano di sopra\nè vuoto, ma si sentono rumori...
 Che sia abitato da dei Pokémon\nintrufolatisi in qualche modo...?
 Se un Magikarp salta verso di me\nlo rigetto subito nel fiume!
-[~ 177]
+[~ 182]
 Si dice che avere con sé un dente di Sharpedo\nprotegga dagli incidenti in mare.
 A volte il mio Delibird mi regala dei Pokémon\ndi tipo Coleottero...
 Allenandomi assieme a Machop è cresciuta in me\nla passione per le arti marziali!
@@ -4598,7 +4680,7 @@ Bisogna ricordare quel batticuore\ndi quando si incontra un Pokémon.
 Giocare sempre con loro, sempre!
 Cosa posso fare per aiutare\ni Pokémon?
 Rendo i Furfrou spettacolari! [VAR BD0A(000A)]Text_icon1
-[~ 199]
+[~ 204]
 Se si incrociano gli sguardi nella Royale Z-A,\nsi può annusare il pericolo...
 In alcune regioni si può salire in\ngroppa a un Pokémon e in altre no.
 Perditi di proposito, così potrai\ngoderti paesaggi inaspettati.
@@ -4640,7 +4722,7 @@ Io sono l’unico membro del gruppo\ndegli amanti del paranormale...
 Scalerò la Royale Z-A con il mio Beldum e farò\nrisorgere il Pokémon Fan Club!
 Ad Alola si usano le mosse Z... E sempre ad Alola\nsi dice si trovasse Zygarde...
 Ciao! Sono membro dell’Associazione per\nlo studio del Pokédex.\c\nEcco come avrei scritto io la voce del Pokédex\ndi Carbink:\c\n"Carbink, che dormiva sottoterra, è stato portato\nin superficie da fenomeni tettonici come vulcani\r\ne terremoti, e si è risvegliato."
-[~ 241]
+[~ 246]
 Ci stavamo dicendo le dieci cose che ci piacciono\ndi più dei rispettivi Pokémon.
 Io ero nel Pokémon Fan Club, ne posso elencare\nanche 100!
 È bello passeggiare\nintorno all’albergo.
@@ -4662,7 +4744,7 @@ Se non si scelgono avversari forti per allenare\nun Pokémon, non si avranno buo
 Se continuo a camminare,\nda qualche parte arriverò.
 Sbaglio o per entrare nel Team\nFlare ci volevano 5.000.000 ?
 Il dolce profumino di Victreebel\nè da squagliarsi...
-[~ 263]
+[~ 268]
 Da qualche parte abbiamo visto\nun tombino con Hawlucha, vero?
 Sì, è vero, l’abbiamo visto!\nAlmeno credo...
 Forse faremmo più affari\nvendendo ai Pokémon...
@@ -4673,7 +4755,7 @@ Ognuno avrà le sue ragioni per\ncatturare determinati Pokémon.
 Ammiro tanto i Corrieri, così\nmi sono vestito come loro.
 La categoria di Starmie è Pokémon Misterioso!\nCos’è, hanno rinunciato a saperne di più?!
 La mia presenza trasforma ogni luogo in cui\nmi reco in uno splendido palcoscenico!
-[~ 274]
+[~ 279]
 L’estate trascorsa con i Pokémon\normai è solo un ricordo.
 Le lamentele sui problemi dello\nsviluppo urbano vengono ignorate.
 Dicono che l’acquedotto colleghi tutte le parti\ndi Luminopoli!
@@ -4694,7 +4776,7 @@ Non basta che siano\nforti solo i Pokémon...
 Quale potrebbe essere il cibo ideale\nper i Pokémon?
 Dipende. Bisogna considerare tanti aspetti,\ncome la specie e il fabbisogno nutritivo.
 Quale sarà il pasto ideale per\nun Pokémon?
-[~ 295]
+[~ 300]
 Vorrei avere un po’ dell’energia\nvitale che hanno i Pokémon!
 Voglio giocare con i Pokémon\nmentre sono nei box! [VAR BD0A(000A)]Text_icon1
 Devo averli ancora i pattini,\nda qualche parte... [VAR BD0A(000A)]Text_icon1
@@ -4750,7 +4832,7 @@ Mi sono allenata con il Gruppo Justice, ma dubito\nche riuscirei a sconfiggere i
 Quando i Pokémon eseguono le\nmosse è la natura che diventa arte!
 Quanti Corrieri ci saranno a Luminopoli?\nNe incontro diversi mentre lavoro.
 Perdersi a Luminopoli? Pazienza!\nIo mi perdo nella vita! [VAR BD0A(000A)]Text_icon1
-[~ 351]
+[~ 356]
 È meglio usare più volte una mossa che si riattiva\nsubito, o una che richiede più tempo ma manda\r\nl’avversario KO in un colpo solo?
 Diventerò un Allenatore fortissimo, degno di\nvivere in questa città assieme ai Pokémon!
 Ti ha consigliato qualche posto?\nAndiamo a provarlo!
@@ -4760,7 +4842,7 @@ Volevo consegnare un pacco a un certo indirizzo,\nma sul posto mi son trovato da
 L’unica è distrarlo con il tuo Pokémon mentre\nconsegni la merce... Non puoi mica lottarci!
 Un Pokémon alfa cromatico...\nAh, come mi piacerebbe!
 Non amo stare in compagnia dei\nPokémon. Forse dovrei trasferirmi.
-[~ 361]
+[~ 366]
 Inkay... è ok.
 La nostra piazza è anche\nla piazza dei Pokémon! [VAR BD0A(000A)]Text_icon1
 Grande idea vestirsi uguali.
@@ -4780,7 +4862,7 @@ Tra lavoro e Pokémon,\nscelgo i Pokémon!
 Se sono incerta sulla strada apro la\nmappa, ma per le mosse che si fa?
 Se ti perdi, scegli una destinazione\nsulla mappa!
 Vado a destra o a sinistra? O forse\nmeglio andare dritto?
-[~ 381]
+[~ 386]
 Mi alleno a schivare le mosse avversarie! Qui da\nnoi anche gli Allenatori hanno da fare nelle lotte.
 Quando inizi a collezionare qualcosa, poi diventi\nossessionato da quello che ti manca.
 Ci sono varie scuole di pensiero\nsu come allenare i Pokémon.
@@ -4802,7 +4884,7 @@ Pensare troppo al successo nelle\nlotte e nell’arte fa diventare strani!
 In ogni regione ci sono posti belli e posti\nmeno belli.
 Gli Hippopotas maschi si distinguono dalle\nfemmine per il colore. Indovina se il mio è\r\nmaschio o femmina!
 Lo sapevi che i Pokémon selvatici\na volte perdono degli strumenti?
-[~ 403]
+[~ 408]
 Nelle lotte ti consiglio di usare\nle mosse con un certo ritmo!
 Con la lotta i Pokémon ottengono\nPunti Esperienza e diventano forti!
 Avere delle Poké Ball a portata\ndi mano è sempre utile.
@@ -9041,8 +9123,8 @@ L’evento più atteso alla Royale Z-A infinita è\nla rivincita tra me e te![VA
 Guarda che quando partecipo alla Royale Z-A\ninfinita sono solo la tua rivale, niente di più![VAR 0114(0005)]
 Sto cercando di non sfigurare come direttore.\c\nMa non sarei mai arrivato fin qui se tutti voi non\nmi foste stati accanto.[VAR 0114(0006)]
 Sto cercando di non sfigurare come direttrice.\c\nMa non sarei mai arrivata fin qui se tutti voi non\nmi foste stati accanto.[VAR 0114(0005)]
-
-
+È l’insegna del negozio di ciambelle di Anjabelle\ncreata da Virgil.
+Sono i libri collezionati da AZ. Sembra che a volte\nli legga anche Anjabelle.
 ~~~~~~~~~~~~~~~
 Text File : t1_i005
 ~~~~~~~~~~~~~~~
@@ -9061,7 +9143,7 @@ Stai usando la megaevoluzione? È molto efficace\ncontro i Pokémon megaevoluti 
 Nonostante tutte le mie indagini, non sono\nriuscita a scoprire gli intenti di E...\c\nNon sono degna di essere a capo di quest’ufficio\ninvestigativo.[VAR 0114(0008)]
 Non so cosa stia succedendo alla Torre Prisma,\nma proteggerò la pace di Luminopoli a ogni costo.\r\nGliel’ho promesso.[VAR 0114(0008)]
 A Luminopoli ci sono tanti Pokémon e tante\npersone che hanno bisogno d’aiuto![VAR 0114(0008)]
-
+Sulla lavagna sono riportate informazioni riguardo\na varie richieste.
 ~~~~~~~~~~~~~~~
 Text File : t1_i011
 ~~~~~~~~~~~~~~~
@@ -10248,6 +10330,7 @@ Sono sempre teso perché se non assicuriamo\nun buon servizio il prestigio dell�
 Text File : t1_i014_1
 ~~~~~~~~~~~~~~~
 È uno Sneasel della fortuna.\c\nSi dice che la zampa destra alzata e il colore\ndorato attirino i guadagni.
+Il signor Corvin non c’è. Torna un’altra volta.
 ~~~~~~~~~~~~~~~
 Text File : t1_i014_2
 ~~~~~~~~~~~~~~~
@@ -10263,11 +10346,13 @@ Io non posso perdere! Non ci crederai, ma pure io\nho delle faccende da sbriga�
 Non sta’ a bighellona’ qua in giro. Se hai tutto\nsto tempo da perdere, ti do io qualcosa da fa’.[VAR 0114(0013)]
 Dobbiamo fa’ qualcosa per quella torre, altrimenti\nla gente andrà nel panico![VAR 0114(0013)]
 Che ne dici di una bella gara fra team, tipo\nClan Ruggine contro Team MZ? Sarebbe\r\nintrigante assai. Altro che i tornei di Viola![VAR 0114(0013)]
+Continua a fa’ sopralluoghi per\ngli incarichi dimensionali.\c\nQuando avrai abbastanza punti,\nfa’ un fischio a Gypso.[VAR 0114(0013)]
 Le regole bizzare esistono perché qualcuno\nne trae vantaggio.\c\nLo stesso si può dire per i tassi di interesse\ndel Clan Ruggine.[VAR 0114(0014)]
 Dica a [VAR 018B(0001)] che aspetto con trepidazione di\nvedere il suo prossimo video.[VAR 0114(0014)]
 Il simbolo di Luminopoli ha qualcosa di anomalo?\nÈ quel che si definisce un presagio nefasto.[VAR 0114(0014)]
 Per qualche strano motivo, la sua presenza rende\nil capo di buon umore.[VAR 0114(0014)]
-
+L’ologramma mostra i punti di Luminopoli dove\nsi stanno verificando distorsioni dimensionali\r\ne vari dati relativi ad esse.
+Spero continueremo a mantenere i nostri rapporti\nattuali, cordiali ma non troppo.[VAR 0114(0014)]
 ~~~~~~~~~~~~~~~
 Text File : common_scr
 ~~~~~~~~~~~~~~~
@@ -17574,14 +17659,20 @@ Hai annotato i tuoi progressi negli appunti\nsulla [VAR 0109(0001)]!
 Hai uno scambio magico in sospeso.\nEffettua il collegamento a Internet.
 Vuoi tornare su in alto dov’eri prima?
 Ti affretti a tornare dagli altri!
-
-
-
-
-
-
-
-
+L’apporto energetico si è esaurito!
+Uscirai dalla Luminopoli dimensionale.\nVuoi procedere?
+Sì
+No
+MegaChimecho sta per attaccare!
+MegaGarchomp Z sta per attaccare!
+MegaGolurk sta per attaccare!
+MegaGolisopod sta per attaccare!
+MegaScovillain sta per attaccare!
+MegaGlimmora sta per attaccare!
+[~ 37]
+È stato rilevato il segnale di [VAR 0101(0002)]\nnelle tue vicinanze![VAR 0114(0007)]
+Cercalo e catturalo![VAR 0114(0007)]
+Dalla Poké Ball bonus dorata sono uscite\nun sacco di cose!
 ~~~~~~~~~~~~~~~
 Text File : field_trade
 ~~~~~~~~~~~~~~~
@@ -17635,6 +17726,57 @@ Eccellente! Ha battuto il suo record![VAR 0114(000E)]
 Questa è la sua ricompensa. Prego.[VAR 0114(000E)]
 Uno degli aspetti positivi delle simulazioni è che\npur perdendo non ci si fa male.\c\nSi prenda un attimo per schiarire la mente\ne riprovi.[VAR 0114(000E)]
 La aspetto per un’altra sfida.[VAR 0114(000E)]
+Absol Z
+Staraptor
+Tatsugiri
+Meowstic
+Heatran
+Darkrai
+Groudon
+Kyogre
+Rayquaza
+Zygarde
+Zeraora
+Ero venuta a consegnare del caffè, ma sono finita\nad aiutare il signor Muscat.\c\nLui è troppo occupato e mi ha chiesto di gestire\nil simulatore di megaevoluzioni ferox al posto suo!
+Quale Pokémon megaevoluto ferox vorresti\naffrontare nella simulazione?
+E ora quale Pokémon megaevoluto ferox vorresti\naffrontare nella simulazione?
+[VAR 0101(0002)], capito. Sei pront[VAR 1100(00FF,0101)]oa per la lotta?
+Il tuo tempo migliore contro [VAR 0101(0002)]\nè di [VAR 0201(0003)]:[VAR 0201(0004)].[VAR 0201(0005)]. Sei pront[VAR 1100(00FF,0101)]oa per la lotta?
+Fantastico! Il tuo tempo è di [VAR 0201(0003)]:[VAR 0201(0004)],[VAR 0201(0005)].
+Megafantastico! Hai battuto il tuo record!
+Questa è la ricompensa, prego.
+Bello che nelle simulazioni non ci si fa male\nanche se si perde, vero?
+Ti aspetto per un’altra sfida.
+Nuovi Pokémon sono stati aggiunti alla\nsimulazione di megaevoluzioni ferox.
+Congratulazioni!\c\nOra puoi affrontare il megassalto ferox.
+Quale sfida preferisci?
+Simulazione di megaevoluzioni ferox
+Megassalto ferox
+Niente, grazie!
+Vuoi affrontare il megassalto ferox?
+Sì
+Come funziona?
+Visualizza i record
+No, grazie
+Il [VAR FF00(0006)]megassalto ferox[VAR FF00(0000)] è una sfida che consiste in\nuna serie di lotte contro tutti i Pokémon ferox.\c\nNon potrai modificare la tua squadra, e se questa\nverrà sconfitta la sfida terminerà.\c\nTuttavia, potrai curare i tuoi Pokémon, anche se\nsolo tre volte.\c\nIl numero più alto di avversari mandati KO verrà\nregistrato.\c\nSe riesci a sconfiggere tutti i Pokémon ferox,\nverrà registrato anche il tempo impiegato.
+È una sfida piuttosto dura. Intendi davvero\nprocedere?
+Sì
+No
+Desideri affrontare il prossimo Pokémon?
+Sì
+Cura i Pokémon
+Abbandona
+Puoi curare i tuoi Pokémon ancora [VAR 0200(0003)] volt[VAR 1101(0003,0101)]ae.\nVuoi farlo?
+Sì
+No
+Il tuo risultato attuale verrà registrato, ma\nla prossima volta dovrai ricominciare da capo.\r\nVuoi comunque abbandonare la sfida?
+Peccato. Aspetterò la tua prossima visita.
+[VAR 0201(0004)] avversari[VAR 1101(0004,0001)]o mandat[VAR 1101(0004,0101)]oi KO! Ti auguro di superare\nil tuo record la prossima volta.
+Hai completato la sfida!\nIl tuo tempo è di [VAR 0201(0005)]:[VAR 0201(0006)]:[VAR 0201(0007)],[VAR 0201(0008)]!
+Hai mandato KO [VAR 0201(0004)] avversari[VAR 1101(0004,0001)]o.
+Ma quindi... li hai sconfitti tutti?!\nFantastico! Congratulazioni!
+Hai completato la sfida!\nIl tuo tempo è di [VAR 0201(0005)]:[VAR 0201(0006)]:[VAR 0201(0007)],[VAR 0201(0008)]!
+Ti aspetto per la prossima!
 ~~~~~~~~~~~~~~~
 Text File : coordination
 ~~~~~~~~~~~~~~~
@@ -17689,6 +17831,32 @@ Che c’è, vuoi per caso delle\nmonete premio? [VAR BD0A(000A)]Text_icon1
 Noi Magnati delle lotte di Luminopoli facciamo a\ngara per vedere chi riesce a ottenere più monete\r\nin una notte. Ma per stavolta potrai avere le mie.
 Hai ricevuto delle monete premio!
 Hai ricevuto [VAR 1502(0002,0000)][VAR FF00(0008)][VAR 0109(0002)][VAR FF00(0000)]!
+Ti regalo delle bacche\ndimensionali! [VAR BD0A(000A)]Text_icon1
+Ti regalo [VAR 1502(0002,0000)][VAR 0109(0002)] che ho\nraccolto in questa Luminopoli dimensionale!
+Vuoi delle bacche\ndimensionali? [VAR BD0A(000A)]Text_icon1
+[VAR BD06(0000)]Ti regalo [VAR 1502(0002,0000)][VAR 0109(0002)], in onore\ndella tua forza!
+Rimetto in sesto\ni[VAR 1101(00FD,0505)]l tuo tuoi Pokémon? [VAR BD0A(000A)]Text_icon1
+Rimettiamo in sesto i tuoi Pokémon anche nelle\nmisteriose Luminopoli dimensionali!
+Gradisci un caffè\ndimensionale? [VAR BD0A(000A)]Text_icon1
+Anche in questo misterioso posto bere caffè\nrimette in sesto i tuoi Pokémon.
+Un caffè? [VAR BD0A(000A)]Text_icon1
+È una miscela dimensionale. Berla rimette\nin sesto i Pokémon, per qualche motivo.
+Prova la famosa miscela\ndel Caffè Nouveau! [VAR BD0A(000A)]Text_icon1
+Non so perché mi trovo qui, ma so che la tostatura\nFuocobomba rimetterà in sesto la tua squadra.
+Prova la famosa miscela\ndel Caffè Nouveau! [VAR BD0A(000A)]Text_icon1
+Il nostro esclusivo caffè con tostatura Ultima\nFiamma è quel che ci vuole per rimettere in sesto\r\ni Pokémon, anche nelle Luminopoli dimensionali.
+Al posto di una carta, ti darò\nuna vera chicca! [VAR BD0A(000A)]Text_icon1
+Se permetti, [VAR 1500(0002,0000)][VAR 0109(0002)] [VAR 1101(0002,0401)]èsono\ndi una rarità superspeciale!
+Eccoti uno strumento\ndi estremo valore. [VAR BD0A(000A)]Text_icon1
+[VAR 1501(0002,0000)][VAR 0109(0002)] [VAR 1101(0002,0401)]èsono preziosissim[VAR 1102(0002,0101,0101)]oaie,\nsì... ma tanto io ne ho parecchi[VAR 1102(0002,0101,0101)]ieie.
+Ti regalo un vero tesoro. [VAR BD0A(000A)]Text_icon1
+[VAR 1501(0002,0000)][VAR 0109(0002)] acquisisc[VAR 1101(0002,0301)]eono ancora\npiù valore se sono io a possederl[VAR 1102(0002,0101,0101)]oaie!
+Ti faccio un regalo. [VAR BD0A(000A)]Text_icon1
+Noi dei MLL delle Luminopoli dimensionali siamo\ngenerosi. Eccoti [VAR 1502(0002,0000)][VAR 0109(0002)].
+Lo vuoi un premio\nmeraviglioso? [VAR BD0A(000A)]Text_icon1
+Ecco a te [VAR 1502(0002,0000)][VAR 0109(0002)], insieme\na tutto l’amore della signorina Viola, capace\r\npersino di oltrepassare le dimensioni.
+Sono un ologramma, ma ho\nlo stesso qualcosa per te. [VAR BD0A(000A)]Text_icon1
+Ricevere [VAR 1502(0002,0000)][VAR 0109(0002)] in un posto\ncosì misterioso e da un ologramma dev’essere\r\nun’esperienza bizzarra.
 ~~~~~~~~~~~~~~~
 Text File : pokemoncenter
 ~~~~~~~~~~~~~~~
@@ -17815,12 +17983,12 @@ Text File : change_deox_scr
 Text File : staffrollreplay
 ~~~~~~~~~~~~~~~
 Io ho una memoria di ferro! Ogni nome che vedo\nmi rimane impresso nella mente per sempre.\r\nVuoi mettermi alla prova?
-
+Io ho una memoria di ferro! Ogni nome che vedo\nmi rimane impresso nella mente per sempre.\c\nAnche quelli della gente nuova, per di più!\nVuoi mettermi alla prova?
 Ok, vediamo!
-
-
-
-
+Guardiamo quelli precedenti
+Vediamo un po’
+Guardiamo quelli nuovi
+Vediamoli
 Magari un’altra volta
 Ci vorranno circa sei minuti. Va bene?
 Ho già detto di sì!
