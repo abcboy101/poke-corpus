@@ -408,34 +408,34 @@ Shashasha.
 ~~~~~~~~~~~~~~~
 Text File : shop
 ~~~~~~~~~~~~~~~
-[~ 0]
-[~ 1]
-[~ 2]
-[~ 3]
-[~ 4]
-[~ 5]
+I’d like to buy
+I’d like to sell
+I’m good, thanks
+Welcome to the Poké Mart! Can I help you with\nsomething?
+Is there anything else I can do for you?
+Do come again!
 [~ 6]
-[~ 7]
+YOUR MONEY
 [~ 8]
-[~ 9]
-[~ 10]
-[~ 11]
-[~ 12]
-[~ 13]
-[~ 14]
+[VAR 0206(0000,002C)]
+[VAR 0203(0000,002C)]
++[VAR 0206(0000,002C)]
+−[VAR 0206(0000,002C)]
++[VAR 0202(0000)]
+−[VAR 0202(0000)]
 [~ 15]
-[~ 16]
-[~ 17]
-[~ 18]
-[~ 19]
-[~ 20]
-[~ 21]
-[~ 22]
-[~ 23]
-[~ 24]
-[~ 25]
-[~ 26]
-[~ 27]
+[VAR 0112(0000)]
+Add to List
+In stock:
+Sold out
+Bulk Trade Summary
+Trade
+[VAR 1000][VAR 0109(0000)]
+[VAR 0107(0000)]
+[VAR 0202(0000)]
+Total
+Bulk Buy Summary
+Bulk Sell Summary
 [~ 28]
 [~ 29]
 [~ 30]
@@ -443,13 +443,13 @@ Text File : shop
 [~ 32]
 [~ 33]
 [~ 34]
-[~ 35]
-[~ 36]
-[~ 37]
-[~ 38]
-[~ 39]
-[~ 40]
-[~ 41]
+[VAR BD06(0000)]You bought\n[VAR 1302(0000,0000)][VAR 010A(0000)]\r\nand\r\nput\r\nit\r\nin\r\nyour\r\nsatchel.\c
+[VAR BD06(0000)]You bought\n[VAR 0202(0001)] [VAR 1001][VAR 010A(0000)]\r\nand\r\nput\r\nthem\r\nin\r\nyour\r\nsatchel.\c
+You put all your new purchases in your satchel!\c
+[VAR BD06(0000)]You got\n[VAR 1302(0000,0000)][VAR 010A(0000)]\r\nand\r\nput\r\nit\r\nin\r\nyour\r\nsatchel.\c
+[VAR BD06(0000)]You got\n[VAR 0202(0001)] [VAR 1001][VAR 010A(0000)]\r\nand\r\nput\r\nthem\r\nin\r\nyour\r\nsatchel.\c
+You put your new items in your satchel!\c
+[VAR BD06(0000)]You got a TM for [VAR 0107(0000)] and put it in\nyour\r\nsatchel.\c
 [~ 42]
 [~ 43]
 [~ 44]
@@ -463,262 +463,74 @@ Text File : shop
 [~ 52]
 [~ 53]
 [~ 54]
-[~ 55]
-[~ 56]
-[~ 57]
-[~ 58]
-[~ 59]
-[~ 60]
-[~ 61]
-[~ 62]
-[~ 63]
-[~ 64]
-[~ 65]
-[~ 66]
-[~ 67]
-[~ 68]
-[~ 69]
-[~ 70]
-[~ 71]
+Yes
+No
+Keep shopping
+Leave
+Buy
+Sell
+Bulk Buy
+Bulk Sell
+Decide Quantities
+Deselect
+Confirm
+Sort
+Leave
+Quit
+Bulk Trade
+[VAR 0202(0000)]
+Power
 [~ 72]
 [~ 73]
 [~ 74]
-[~ 75]
-[~ 76]
-[~ 77]
-[~ 78]
-[~ 79]
-[~ 80]
-[~ 81]
-[~ 82]
-[~ 83]
-[~ 84]
-[~ 85]
-[~ 86]
-[~ 87]
-[~ 88]
-[~ 89]
-[~ 90]
-[~ 91]
-[~ 92]
-[~ 93]
-[~ 94]
-[~ 95]
-[~ 96]
-[~ 97]
-Get a whiff of that fragrance...\nHow about some incense for you, [VAR 1100(00FF,0403)]boygirl?
-Come back anytime.
-Would you care for any other varieties?
-The [VAR 010A(0000)], is it?\nAnd how many would you like?
-If you’d like [VAR 0202(0001)] [VAR 010A(0000)],\nit’s going to cost you [VAR 0206(0002,002C)]. All right?
-If you’d like [VAR 0202(0001)] [VAR 010A(0000)],\nit’s going to cost you [VAR 0206(0002,002C)]. All right?
-And here is your incense.\nI look forward to serving you again.\c
-I’m sorry, but it looks like you have no space\nto carry more incense.\c
-I’m sorry...\nYou simply don’t have the funds.\c
-You want [VAR 0202(0001)] [VAR 1000][VAR 010A(0000)]?\nThat’ll be [VAR 0206(0002,002C)] BP, all right?
-You want [VAR 0202(0001)] [VAR 1001][VAR 010A(0000)]?\nThat’ll be [VAR 0206(0002,002C)] BP, all right?
-Ey up, welcome to the Herb Shop!\nLet’s see what you buy, shall we?
-Cheers, mate!\nCome by again anytime!
-Need anything else?
-How many [VAR 1001][VAR 010A(0000)] do you want?
-Right, [VAR 0202(0001)] [VAR 1000][VAR 010A(0000)]!\nThat’ll be [VAR 0206(0002,002C)], mate!
-Right, [VAR 0202(0001)] [VAR 1001][VAR 010A(0000)]!\nThat’ll be [VAR 0206(0002,002C)], mate!
-And here you go!\nThey’ll work a treat—I promise!\c
-Come on, mate! Give us a break.\nYou can’t carry any more!\c
-Wot? You’re looking a bit light on cash, mate.\nSave up and come back later!\c
-You want [VAR 0202(0001)] [VAR 1000][VAR 010A(0000)]?\nThat’ll be [VAR 0206(0002,002C)] BP, all right?
-You want [VAR 0202(0001)] [VAR 1001][VAR 010A(0000)]?\nThat’ll be [VAR 0206(0002,002C)] BP, all right?
-Berries! I’ve got your fresh-picked Berries!\nWhat do you say? Interested in something?
-Thanks for stopping by! Come again!
-Would you care for any other kinds of Berries?
-How many [VAR 1001][VAR 0109(0000)] shall it be?
-So, just [VAR 0202(0001)] of those [VAR 1001][VAR 0109(0000)]...\nThat’ll be [VAR 0206(0002,002C)].
-So, [VAR 0202(0001)] of those [VAR 1001][VAR 0109(0000)]...\nThat’ll put you at [VAR 0206(0002,002C)].
-And here you are!\nGive one to your Pokémon, won’t you?\c
-Blimey, looks like you can’t carry any more of\nthose Berries, friend.\c
-Seems you can’t pay the bill!\nI’m sorry to say it, but I can’t give my goods away.\c
-You want [VAR 0202(0001)] [VAR 1000][VAR 010A(0000)]?\nThat’ll be [VAR 0206(0002,002C)] BP, all right?
-You want [VAR 0202(0001)] [VAR 1001][VAR 010A(0000)]?\nThat’ll be [VAR 0206(0002,002C)] BP, all right?
-[~ 131]
-[~ 132]
-[~ 133]
-[~ 134]
-[~ 135]
-[~ 136]
-[~ 137]
-[~ 138]
-[~ 139]
-[~ 140]
-[~ 141]
-[~ 142]
-[~ 143]
-[~ 144]
-[~ 145]
-[~ 146]
-[~ 147]
-[~ 148]
-Welcome to our boutique!\nAnything I can help you find?
-Thank you for coming by! And do feel free to use\nour changing room whenever you’d like to.
-Welcome to the uniform shop!\nAre you looking for anything in particular?
-Thanks for coming by!
-Ah! My goodness! Beg your pardon, but is that a\nStyle Card you have there?
-Those cards are the stuff of legend! Only the\nfreshest fashion mavens in all Galar carry them!
-Allow me to show you our finest selections! It’s only\nfitting for a customer so beloved by high fashion!
-For now, kindly accept this ensemble from us—\non the house!
-Anyway, with all that said...
-Cleared the Gym mission at Turffield Stadium,\ndid you, young Challenger?
-Cleared the Gym mission at Hulbury Stadium,\ndid you, young Challenger?
-Cleared the Gym mission at Motostoke Stadium,\ndid you, young Challenger?
-Cleared the Gym mission at Stow-on-Side Stadium,\ndid you, young Challenger?
-Cleared the Gym mission at Ballonlea Stadium,\ndid you, young Challenger?
-Cleared the Gym mission at Circhester Stadium,\ndid you, young Challenger?
-Cleared the Gym mission in Spikemuth,\ndid you, young Challenger?
-Cleared the Gym mission at Hammerlocke Stadium,\ndid you, young Challenger?
-Congratulations!\c\nNow you can purchase more items.\nSo...
-You’re the greatest Champion, the one who\nmanaged to defeat the undefeatable Leon!\c\nCongratulations on your victory!\nAnd thank you for visiting our little shop!\c\nAnd with that said...
-Welcome, Champion!\nHere to do a spot of shopping?
-Happy birthday to you!\nWe wish you many happy returns, and hope you\r\nwill continue to use the Poké Mart always!
-[~ 170]
-[~ 171]
-[~ 172]
-[~ 173]
-[~ 174]
-[~ 175]
-[~ 176]
-[~ 177]
-[~ 178]
-[~ 179]
-[~ 180]
-[~ 181]
-[~ 182]
-[~ 183]
-[~ 184]
-[~ 185]
-[~ 186]
-[~ 187]
-[~ 188]
-[~ 189]
-[~ 190]
-[~ 191]
-[~ 192]
-[~ 193]
-[~ 194]
-[~ 195]
-[~ 196]
-[~ 197]
-[~ 198]
-[~ 199]
-[~ 200]
-[~ 201]
-I’m here to buy
-I’m here to sell
-No, thanks
-Welcome to the Poké Mart!\nMay I help you?
-Is there anything else I can do for you?
-Do come again!
-We sell Technical Machines here!\nAre you in the market for a TM?
-YOUR MONEY
-Battle Points
-[VAR 0206(0000,002C)]
-[~ 212]
-[~ 213]
-[~ 214]
-Quit
-[VAR 0206(0000,002C)] BP
-[VAR 0109(0000)]
-[VAR 0109(0000)]
 [VAR 0107(0000)]
-[~ 220]
-[VAR 0206(0000,002C)]
-[VAR 0202(0000)]
-×
-So how many [VAR 1001][VAR 010A(0000)]?
-So you want [VAR 0202(0001)] [VAR 010A(0000)]?\nIt’ll be [VAR 0206(0002,002C)]. All right?
-Then here you are.\nThank you for your business!\c
-You don’t have enough money.\c
-I’m sorry, but it looks like you can’t carry any\nmore than you have now.\c
-You put [VAR 1300(0001,0000)][VAR 010A(0001)] in\nyour Bag’s [VAR FF00(0008)][VAR 0112(0002)][VAR FF00(0000)] pocket.\c
-You can’t carry any more!\c
-And have [VAR 0201(0000)] Premier Ball[VAR 1101(0000,0100)]s on the house!\c
-[VAR 0109(0000)], for the move [VAR 0107(0001)]?\nThat’ll be [VAR 0206(0002,002C)], OK?
-You already have that one!\c
-Welcome to the BP Shop!\nAnd how might I help you?
-So you want [VAR 0202(0001)] [VAR 010A(0000)]?\nIt’ll be [VAR 0206(0002,002C)]. All right?
-You want [VAR 0202(0001)] [VAR 1000][VAR 010A(0000)]?\nThat’ll be [VAR 0206(0002,002C)] BP, all right?
-You want [VAR 0202(0001)] [VAR 1001][VAR 010A(0000)]?\nThat’ll be [VAR 0206(0002,002C)] BP, all right?
-[~ 238]
-Come again!
-Anything else you need?
-How many [VAR 1001][VAR 010A(0000)], then?
-Here you are!\c
-You can’t carry any more!\c
-You don’t have enough BP for that.\c
-You’ve been doing some Link Battles, eh?\nHave some fun with Ranked Battles, too!\r\nI’ll even give you a special uniform for ’em!
-×
-[VAR 0206(0000,002C)]
-Yes
-No
-Quit
-Confirm
-[VAR 0202(0000)]
-Power
-Accuracy
-PP
-[VAR 0201(0000)]
-[VAR 0107(0000)]
-No. [VAR 0201(0000)]
+TM[VAR 0202(0000)]
 [VAR 0202(0000)]
 —
-[~ 261]
 ——
-Love to cook? You’ve come to the right place!\nI’ve got all the finest ingredients right here!
-Give us another visit tomorrow!
-I’ve got other ingredients, too, if you’re interested.\c
-How many [VAR 1001][VAR 010A(0000)], then?
-If it’s to be [VAR 0202(0001)] [VAR 010A(0000)]...\nI’ll be asking for [VAR 0206(0002,002C)]! All right by you?
-If it’s to be [VAR 0202(0001)] [VAR 010A(0000)]...\nI’ll be asking for [VAR 0206(0002,002C)]! All right by you?
-And here you are!\nCook up something scrummy, won’t you?\c
-Oh? Looks like you’re full up and can’t carry\nany more of those!\c
-You don’t seem to have enough money!\nSave up a bit and come again.\c
-YOUR WATTS
-[VAR 0206(0000,002C)] W
-Wotcher! Then I’m your Watt Trader!\nYou want to get something?
-Let me know anytime you want to trade\nsome Watts!
-Need anything else?
-And how many [VAR 1001][VAR 010A(0000)]?
-And how many copies did you want of [VAR 1000][VAR 0109(0000)],\nfor the move [VAR 1000][VAR 0107(0001)]?
-That’s [VAR 0202(0001)] [VAR 010A(0000)]...\nIt’ll be [VAR 0206(0002,002C)] W, all right?
-That’s [VAR 0202(0001)] [VAR 1001][VAR 010A(0000)]...\nIt’ll be [VAR 0206(0002,002C)] W, all right?
-Just [VAR 0202(0002)] of [VAR 0109(0000)] [VAR 0107(0001)]?\nIt’ll be [VAR 0206(0003,002C)] W, all right?
-So, [VAR 0202(0002)] of [VAR 1000][VAR 0109(0000)] [VAR 0107(0001)]?\nIt’ll be [VAR 0206(0003,002C)] W, all right?
-Here you are!\c
-You can’t carry any more!\c
-Wot! You don’t have the Watts!\c
-Wotcher! I’m your Watt Trader!\nYou want to get something?
-Do come again!
-×
-I’ve got wonderful items to offer you in exchange\nfor Dynite Ore!
-Do come again!
-For [VAR 0202(0001)] [VAR 010A(0000)],\nI’ll need [VAR 0202(0002)] piece[VAR 1101(0002,0100)]s of Dynite Ore.
-For [VAR 0202(0001)] [VAR 010A(0000)],\nI’ll need [VAR 0202(0002)] piece[VAR 1101(0002,0100)]s of Dynite Ore.
-Seems you’re a tad short on Dynite Ore...\c
-You can’t carry any more of that item.\c
-Here you are!\c
-How many [VAR 1001][VAR 010A(0000)]\nwould you like?
-Hello there! Welcome!\nI’ve some lovely goods for sale!
-Hello there! I’m your Watt Trader!\c\nAlong with my regular inventory, I highlight new\nand hard-to-come-by items for sale every day.\r\nYou ought to check what I’ve got daily!\c\nAnyway, with that said, can I interest you in\nanything today?
-Hello there! I’m your Watt Trader!\nCan I interest you in anything today?
-Regular inventory
-Today’s highlight
-Today’s highlight is...
-[VAR 1302(0000,0000)][VAR 010A(0000)]!\nFirst come, first served! Just [VAR 0206(0001,002C)] W!
-a set of [VAR 0202(0002)] [VAR 1001][VAR 010A(0000)]!\nGet ’em while supplies last! Just [VAR 0206(0001,002C)] W!
-Deal!
-No, thanks
-You’ve got a keen eye!\nThanks for your business.
-I’m fresh out of my daily highlight.\nCheck back tomorrow!
-Looking forward to your next visit!
-Anything else I can show you?
+[~ 80]
+Sold out
+—
+Shop Inventory
+Colorful Screw Exchange
+[VAR 0201(0000)]
+Lv. [VAR 0200(0000)]
+Lv. MAX
+Stone Emporium
+Poké Ball Boutique
+Mega Shard Exchange
+Pokémon Center
+You don’t have enough money for that, I’m afraid.\c
+I’m sorry, but it looks like you can’t carry any\nmore of those.\c
+I can offer you [VAR 0207(0000,002C)]. Would that be OK?
+[VAR BD06(0000)]Well, I can offer you [VAR 0206(0000,002C)], but it won’t fit\nin\r\nyour\r\nwallet!\c\nAny money you can’t receive will be lost. Do you\nwant to go ahead anyway?
+Thanks—here’s [VAR 0201(0000)] Premier Ball[VAR 1101(0000,0100)]s on the house!\c
+Do you want to put what you’ve selected back on\nthe shelves, then?
+Do you want to put what you’ve selected back and\nsell something instead?
+Do you want to hold off on selling for now?
+Do you want to hold off on selling for now and do\nsome shopping instead?
+So terribly sorry, but you don’t appear to have\nenough money for that purchase.\c
+So terribly sorry, but it appears you cannot carry\nany more of that particular item.\c
+Welcome, dear customer.\c
+Would you like to continue browsing?\c
+Thank you for visiting our establishment.\c
+I’m afraid we are completely out of that particular\nitem.\c
+Would you like to return what you’ve placed in\nyour cart?\c
+You don’t have enough money for that.\c
+Hey now, you can’t carry any more of those!\c
+Welcome in! Have a look around.\c
+Want to browse for a little longer?\c
+Thanks for coming by!\c
+Thanks—have [VAR 0201(0000)] Premier Ball[VAR 1101(0000,0100)]s on us!
+Want to put back what you’ve picked out?\c
+Sorry, but you don’t have enough Mega Shards.\c
+It doesn’t look like you can carry any more of\nthose.\c
+I’m afraid that one’s sold out.\c
+Would you like to return what you’ve picked out?\c
+Doesn’t look like you’ve got enough Colorful\nScrews there, kid.\c
+Yeah, there’s no way you can fit any more of that\none in your satchel, kid.\c
+You’ve already got that one, kid.\c
+You gonna put back the plush you’d picked up?\c
 ~~~~~~~~~~~~~~~
 Text File : t1_R
 ~~~~~~~~~~~~~~~
