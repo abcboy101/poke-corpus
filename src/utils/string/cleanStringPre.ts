@@ -308,8 +308,7 @@ function remap3DSVariables(s: string) {
 
 // Switch special characters
 function remapSwitchSpecialCharacters(s: string) {
-  s = remapLegendsZAEscapedCharacters(s);
-  return s.search(/[\uE104\uE300-\uE34C]/u) === -1 ? s : (s
+  return s.search(/[\uE104\uE300-\uE31C]/u) === -1 ? s : (s
     .replaceAll('\uE104', '✨︎') // BDSP sparkles
     .replaceAll('\uE300', '$') // Pokémon Dollar
 
@@ -342,11 +341,29 @@ function remapSwitchSpecialCharacters(s: string) {
     .replaceAll('\uE31A', 'Z') // Unown Z
     .replaceAll('\uE31B', '!') // Unown !
     .replaceAll('\uE31C', '?') // Unown ?
+  );
+}
 
-    // Z-A
+const escapedZA: ReadonlyMap<string, string> = new Map([
+  ['Text_icon1', '\uE340'],
+  ['Text_infinity', '\uE341'],
+]);
+
+// Legends: Z-A special characters
+function remapLegendsZASpecialCharacters(s: string, language: LanguageKey) {
+  // Escaped using VAR BD0A
+  if (s.search(/VAR BD0A/u) !== -1) {
+    for (const [name, c] of escapedZA.entries()) {
+      const len = name.length.toString(16).padStart(4, '0').toUpperCase();
+      s = s.replaceAll(new RegExp( `\\[VAR BD0A\\(${len}\\)\\]${name}`, 'gu'), c);
+    };
+  }
+
+  s = remapSwitchSpecialCharacters(s);
+  s = s.search(/[\uE340-\uE34E]/u) === -1 ? s : (s
     // U+E31D-E33F: buttons are handled in postprocess
     .replaceAll('\uE340', '▾') // Bottom-right down-pointing triangle
-    // U+E341 handled in postprocess
+    .replaceAll('\uE341', '∞') // Infinity (about 1.5× wider, always used in CHT)
     .replaceAll('\uE342', '綉') // CHT xiù (used in Valerie's name)
     .replaceAll('\uE343', '원') // KOR won (currency)
     .replaceAll('\uE344', '배') // KOR bae (times)
@@ -358,22 +375,17 @@ function remapSwitchSpecialCharacters(s: string) {
     .replaceAll('\uE34A', '倍') // CHS bèi (times)
     .replaceAll('\uE34B', '人') // CHS rén (people)
     .replaceAll('\uE34C', '枚') // CHS méi (counter)
+    .replaceAll('\uE34D', '個') // CHT gè (counter)
+    .replaceAll('\uE34E', '个') // CHS gè (counter)
   );
-}
 
-const escapedZA: ReadonlyMap<string, string> = new Map([
-  ['Text_icon1', '\uE340'],
-  ['Text_infinity', '\uE341'],
-]);
-
-// Legends: Z-A escaped private use characters
-function remapLegendsZAEscapedCharacters(s: string) {
-  if (s.search(/VAR BD0A/u) !== -1) {
-    for (const [name, c] of escapedZA.entries()) {
-      const len = name.length.toString(16).padStart(4, '0').toUpperCase();
-      s = s.replaceAll(new RegExp( `\\[VAR BD0A\\(${len}\\)\\]${name}`, 'gu'), c);
-    };
-  }
+  // Star rank (EFIGS digits clipping a star)
+  const isFullwidth = language === 'ja' || language === 'zh-Hans' || language === 'zh-Hant';
+  const isAfter = isFullwidth || language === 'ko';
+  s = s.replaceAll(/[\uE401-\uE405]/gu, (c) => {
+    const n = c.charCodeAt(0) - 0xE400;
+    return isAfter ? `★${isFullwidth ? String.fromCodePoint(0xFF10 + n) : n}` : `${n}★`;
+  });
   return s;
 }
 
@@ -445,8 +457,11 @@ export function preprocessString(s: string, collectionKey: CollectionKey, langua
     case "LegendsArceus":
     case "ScarletViolet":
     case "HOME":
-    case "LegendsZA":
       s = remapSwitchSpecialCharacters(s);
+      break;
+
+    case "LegendsZA":
+      s = remapLegendsZASpecialCharacters(s, language);
       break;
 
     case "Stadium":

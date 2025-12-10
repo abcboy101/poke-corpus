@@ -146,12 +146,6 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
     .replaceAll('\uE0A7', '<sup>P</sup><sub>K</sub>') // 3DS PK (unused)
     .replaceAll('\uE0A8', '<sup>M</sup><sub>N</sub>') // 3DS MN (unused)
   ) : s;
-  s = isSwitch ? (s
-    // Infinity
-    // The normal codepoint is the width of one CJK character, this one is about 1.5 wide
-    // Always used instead in Traditional Chinese due to the normal one being too small
-    .replaceAll('\uE341', '\u{F1102}<span class="literal-big">∞</span>\u{F1103}')
-  ) : s;
   s = isGen3 ? (s
     // POKé, POKéBLOCK
     .replaceAll('[POKE]', '<sup>P</sup><sub>O</sub><sup>K</sup><sub>é</sub>')
