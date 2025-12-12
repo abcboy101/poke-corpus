@@ -15,6 +15,7 @@ dialog[open] {
   text-wrap: balance;
   word-break: auto-phrase;
   line-break: strict;
+  filter: drop-shadow(0 0 8px var(--modal-shadow-color));
 }
 
 dialog::backdrop {

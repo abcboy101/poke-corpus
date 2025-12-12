@@ -12,6 +12,7 @@
   --progress-bar-border: var(--text);
   --progress-bar-color: light-dark(limegreen, green);
   --accent: light-dark(skyblue, teal);
+  --tutorial: light-dark(#EBA487, #800000);
   --line-height: 1.5;
   --line-height-narrow: 1.15;
   --gender-male-color: light-dark(#0000D3, #7192FB);
@@ -23,6 +24,7 @@
   --version-scarlet-color: light-dark(#9E2A22, #F7837B);
   --version-violet-color: light-dark(#552277, #AE7BD0);
   --modal-backdrop-color: light-dark(rgb(255 255 255 / 75%), rgb(0 0 0 / 75%));
+  --modal-shadow-color: light-dark(rgb(0 0 0 / 50%), black);
 }
 
 @media screen {

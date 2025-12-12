@@ -1,11 +1,11 @@
-import { ReactNode, useEffect, useRef, useState } from 'react';
+import { ButtonHTMLAttributes, ReactNode, useEffect, useRef, useState } from 'react';
 import './Modal.css';
 
-interface ModalButton {
+interface ModalButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   readonly message: ReactNode,
   readonly callback?: () => void,
   readonly checkboxCallback?: (checked: boolean) => void,
-  readonly autoFocus?: boolean,
+  readonly close?: boolean, // prevent flashes when the button opens another modal
 }
 
 interface ModalCheckbox {
@@ -19,37 +19,47 @@ export interface ModalArguments {
   readonly buttons?: readonly ModalButton[],
   readonly checkbox?: ModalCheckbox,
   readonly cancelCallback?: () => void,
+  readonly isModal?: boolean,
 }
 
 export type ShowModal = (args: ModalArguments) => void;
 
-function Modal({classes, message, buttons, checkbox, cancelCallback}: ModalArguments) {
-  const [open, setOpen] = useState(message !== undefined);
+function Modal({closeCallback, classes, message, buttons, checkbox, cancelCallback, isModal = true}: { closeCallback: () => void } & ModalArguments) {
+  const open = message !== undefined;
   const [checkboxChecked, setCheckboxChecked] = useState(checkbox?.checked ?? false);
   const modalRef = useRef<HTMLDialogElement>(null);
   const buttonsRef = useRef<HTMLDivElement>(null);
 
+  // Opening/closing the modal
   useEffect(() => {
     const modal = modalRef.current;
-    const buttonsElement = buttonsRef.current;
-    if (modal !== null) {
-      if (open) {
-        modal.showModal();
-        if (buttons) {
-          const autofocusIndex = buttons.findIndex((button) => button.autoFocus);
-          if (buttonsElement !== null && autofocusIndex !== -1)
-            Array.from(buttonsElement.children).filter((child) => child instanceof HTMLButtonElement)[autofocusIndex].focus();
-        }
-      }
-      else {
-        modal.close();
-      }
-    }
-  }, [open]);
+    if (modal === null)
+      return;
 
-  const onClick = (callback?: () => void, checkboxCallback?: (checked: boolean) => void) => (
+    if (modal.open)
+      modal.close();
+    if (open) {
+      if (isModal)
+        modal.showModal();
+      else
+        modal.show();
+    }
+  }, [open, isModal]);
+
+  // Autofocus
+  useEffect(() => {
+    const buttonsElement = buttonsRef.current;
+    if (open && buttons && buttonsElement !== null) {
+      const autofocusIndex = buttons.findIndex((button) => button.autoFocus);
+      if (autofocusIndex !== -1)
+        Array.from(buttonsElement.children).filter((child) => child instanceof HTMLButtonElement)[autofocusIndex].focus();
+    }
+  }, [message, open]);
+
+  const onClick = (callback?: () => void, checkboxCallback?: (checked: boolean) => void, close = true) => (
     () => {
-      setOpen(false);
+      if (close)
+        closeCallback();
       if (callback)
         callback();
       if (checkboxCallback)
@@ -60,7 +70,7 @@ function Modal({classes, message, buttons, checkbox, cancelCallback}: ModalArgum
   const onCancel = () => {
     if (cancelCallback)
       cancelCallback();
-    setOpen(false);
+    closeCallback();
   };
 
   if (!open) {
@@ -82,8 +92,8 @@ function Modal({classes, message, buttons, checkbox, cancelCallback}: ModalArgum
     }
     <div ref={buttonsRef} className="modal-button-group">
       {
-        buttons?.map(({message, callback, checkboxCallback, autoFocus}, i) =>
-          <button key={i} type="button" onClick={onClick(callback, checkboxCallback)} autoFocus={autoFocus}>{message}</button>)
+        buttons?.map(({message, callback, checkboxCallback, close, ...attr}, i) =>
+          <button key={i} type="button" onClick={onClick(callback, checkboxCallback, close)} {...attr} >{message}</button>)
       }
     </div>
   </dialog>;

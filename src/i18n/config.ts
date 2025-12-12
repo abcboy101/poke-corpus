@@ -8,6 +8,7 @@ import collections from './en/collections.json';
 import languages from './en/languages.json';
 import files from './en/files.json';
 import icons from './en/icons.json';
+import tutorial from './en/tutorial.json';
 import translation_enGB from './en-GB/translation.json';
 import { CollectionKey, FileKey, LanguageKey } from '../utils/corpus';
 import { logErrorToConsole } from '../utils/utils';
@@ -24,20 +25,27 @@ i18next.use(LanguageDetector)
       'languages',
       'files',
       'icons',
+      'tutorial',
     ],
 
     // Since English is the fallback language, we always need to load it.
     resources: {
       'en': {
-        translation: translation,
+        translation,
         collections: collections satisfies Record<CollectionKey, {name: string, short: string}>,
         languages: languages satisfies Record<LanguageKey, {name: string, code: string}>,
         files: files satisfies Record<FileKey, string>,
-        icons: icons,
+        icons,
+        tutorial,
       },
       'en-GB': {
         translation: translation_enGB,
       },
+    },
+
+    // Enable Trans component
+    react: {
+      hashTransKey: () => false,
     },
   })
   .catch(logErrorToConsole);

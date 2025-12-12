@@ -14,6 +14,7 @@ import './i18n/config';
 import { ErrorBoundary } from 'react-error-boundary';
 import ErrorWindow from './components/ErrorWindow';
 import { initializeLoader, Loader } from './utils/loader';
+import Tutorial from './components/Tutorial/Tutorial';
 
 declare global {
   /** Instantiates a Loader during SSR. See entry-server.tsx for definition. */
@@ -40,7 +41,7 @@ function Header({reset, ...optionsParams}: {reset: MouseEventHandler<HTMLAnchorE
   );
 }
 
-function Footer({view, switchView}: {view: View, switchView: () => void}) {
+function Footer({view, switchView, replaceModal}: {view: View, switchView: () => void, replaceModal: ShowModal}) {
   const { t } = useTranslation();
   return (
     <footer>
@@ -48,9 +49,11 @@ function Footer({view, switchView}: {view: View, switchView: () => void}) {
       <span className="separator" translate="no"> | </span>
       <span>{t('footerText')}</span>
       <span className="separator" translate="no"> | </span>
-      <span><button className="link" onClick={switchView}>{t(view !== 'Search' ? 'backToSearch' : 'manageCache')}</button></span>
+      <Tutorial replaceModal={replaceModal} />
       <span className="separator" translate="no"> | </span>
-      <span><a href="https://github.com/abcboy101/poke-corpus">{t('github')}</a></span>
+      <button className="link" onClick={switchView}>{t(view !== 'Search' ? 'backToSearch' : 'manageCache')}</button>
+      <span className="separator" translate="no"> | </span>
+      <a href="https://github.com/abcboy101/poke-corpus">{t('github')}</a>
     </footer>
   );
 }
@@ -61,8 +64,7 @@ function App() {
   const [limit, setLimit] = useState(getLimit);
   const [view, setView] = useState<View>(initialView);
   const [appKey, setAppKey] = useState(0);
-  const [modalKey, setModalKey] = useState(0);
-  const [modalArguments, setModalArguments] = useState<ModalArguments | null>(null);
+  const [modalArguments, setModalArguments] = useState<readonly ModalArguments[]>([]);
   const [cacheManagerLoaded, setCacheManagerLoaded] = useState(false);
   const [loader, setLoader] = useState<Loader | null | undefined>(import.meta.env.SSR ? getLoaderSSR() : undefined);
 
@@ -78,14 +80,16 @@ function App() {
     localStorageRemoveItem('corpus-params'); // clear saved search query
     setView(initialView);
     setAppKey((prev) => (prev + 1) & 0xFF); // force re-render
-    setModalKey(0);
-    setModalArguments(null);
+    setModalArguments([]);
     e.preventDefault();
   }, []);
 
   const showModal: ShowModal = useCallback((args) => {
-    setModalArguments(args);
-    setModalKey((prev) => (prev + 1) & 0xFF);
+    setModalArguments((prev) => prev.concat(args));
+  }, []);
+
+  const replaceModal: ShowModal = useCallback((args) => {
+    setModalArguments([args]);
   }, []);
 
   const switchView = useCallback(() => {
@@ -115,8 +119,8 @@ function App() {
           </ErrorBoundary>
         ) : <ErrorWindow />
       }
-      <Footer view={view} switchView={switchView} />
-      <Modal key={modalKey} {...modalArguments}/>
+      <Footer view={view} switchView={switchView} replaceModal={replaceModal} />
+      <Modal closeCallback={() => { setModalArguments((prev) => prev.slice(0, -1)); }} {...modalArguments.at(-1)} />
     </div>
   );
 }

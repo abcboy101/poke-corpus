@@ -213,7 +213,7 @@ function SearchForm({corpus, language, waiting, inProgress, postToWorker, termin
           <input id="submit" type="submit" className={inProgress ? 'invisible' : 'visible'} value={t('search')} disabled={submitDisabled}/>
           <button type="button" className={inProgress ? 'visible' : 'invisible'} onClick={onCancel} disabled={!inProgress}>{t('cancel')}</button>
         </div>
-        <button type="button" className={filtersVisible ? 'active' : undefined} onClick={toggleFiltersVisible}>{t('filters')}</button>
+        <button id="filters" type="button" className={filtersVisible ? 'active' : undefined} onClick={toggleFiltersVisible}>{t('filters')}</button>
         <select name="type" id="type" onChange={onTypeChange} value={type} title={t('searchType.searchType')} aria-label={t('searchType.searchType')}>
           {searchTypesDropdown.map((type) => <option key={type} value={type}>{t(`searchType.${type}`)}</option>)}
         </select>

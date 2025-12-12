@@ -1,0 +1,56 @@
+.tutorial {
+  position: fixed;
+  inset: 0;
+}
+
+@media (width < 36rem) {
+  .tutorial {
+    top: auto;
+    bottom: calc(2rem + env(safe-area-inset-bottom));
+  }
+}
+
+.tutorial .modal-message {
+  flex-direction: column;
+  gap: 1em;
+}
+
+.tutorial::backdrop {
+  opacity: 0;
+}
+
+@keyframes tutorial-highlight {
+  0% {
+    box-shadow: 0 0 4px 4px transparent,
+      inset 0 0 0 100vmax transparent;
+  }
+
+  70%, 100% {
+    box-shadow: 0 0 4px 4px var(--tutorial),
+      inset 0 0 0 100vmax var(--tutorial);
+  }
+}
+
+[data-tutorial-page="1"] #tutorial-next,
+[data-tutorial-page="2"] #filters,
+[data-tutorial-page="2"] .search-filters,
+[data-tutorial-page="3"] #query,
+[data-tutorial-page="3"] #submit,
+[data-tutorial-page="4"] .app-window,
+[data-tutorial-page="5"] #tutorial-skip {
+  animation: 1.5s ease-in-out infinite alternate tutorial-highlight;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-tutorial-page="1"] #tutorial-next,
+  [data-tutorial-page="2"] #filters,
+  [data-tutorial-page="2"] .search-filters,
+  [data-tutorial-page="3"] #query,
+  [data-tutorial-page="3"] #submit,
+  [data-tutorial-page="4"] .app-window,
+  [data-tutorial-page="5"] #tutorial-skip {
+    animation: none !important;
+    box-shadow: 0 0 4px 4px var(--tutorial),
+      inset 0 0 0 100vmax var(--tutorial);
+  }
+}

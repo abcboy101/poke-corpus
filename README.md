@@ -27,7 +27,9 @@ Visit at [abcboy101.github.io/poke-corpus/](https://abcboy101.github.io/poke-cor
      Click their name and click "Search" to view other lines said by the same person.
 
 Near the top right of the results window are several buttons.
-- The button with a "[ ]" icon will show/hide variables.
+- The button with a "[]" icon will show/hide variables/functions.
+  The available options are short descriptions for all variables/functions,
+  full details for all variables/functions, or short descriptions for variables only.
 - The button with a "¶" icon will show/hide all characters, including line breaks.
 - The button with a "⚥" icon will change whether lines displayed for the male player/using masculine grammatical gender,
   or lines displayed for the female player/using feminine grammatical gender are displayed.
@@ -41,7 +43,10 @@ By clicking the "Options" button in the top right, you can change:
 - The interface language
 - The colorscheme
 - Whether to use long URLs
+- Whether to show rich text
 - How many results to show per page
+
+By clicking the "Tutorial" link in the footer, you can view a tutorial on the basic functions.
 
 By clicking the "Manage cache" link in the footer, you can view and delete downloaded text files.
 
@@ -60,6 +65,8 @@ For example, you could use `WHERE ja = en` to find lines where the "Japanese (Ka
 or use `WHERE en <> en-GB` to find lines that differ between "English" and "English (UK)".
 The operators `==` and `!=` are also supported.
 A full list of supported language codes can be found [here](src/res/corpus.json).
+
+To search for special characters or variables, please follow the guidance [here](NOTES.md) describing how the text for each game is formatted.
 
 Please note that URLs are not guaranteed to be stable, and that a given URL may stop working in the future.
 URLs can be invalidated when new features, games, or languages are added.

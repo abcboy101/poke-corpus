@@ -7,6 +7,7 @@ import { getMode, isMode, isValidLimit, localStorageGetItem, localStorageSetItem
 
 import './Options.css';
 import supportedLngs from '../i18n/supportedLngs.json';
+import { Message } from './Message';
 
 export interface OptionsParams {
   readonly showModal: ShowModal,
@@ -34,8 +35,8 @@ function OptionsMenu({showModal, language, setLanguage, richText, richTextRef, l
       if (err?.some((e) => !e.message.includes('Unknown variable dynamic import'))) {
         console.error(err);
         showModal({
-          message: t('options.network'),
-          buttons: [{message: <OptionsClose/>, autoFocus: true}],
+          message: <Message i18nKey='options.network'/>,
+          buttons: [{message: <Message i18nKey='options.close'/>, autoFocus: true}],
         });
       }
       else {
@@ -90,11 +91,6 @@ function OptionsMenu({showModal, language, setLanguage, richText, richTextRef, l
   );
 }
 
-function OptionsClose() {
-  const { t } = useTranslation();
-  return t('options.close');
-}
-
 function Options(params: OptionsParams) {
   const { t } = useTranslation();
   const {showModal, setRichText, setLimit} = params;
@@ -121,7 +117,7 @@ function Options(params: OptionsParams) {
   const options: ModalArguments = {
     classes: ['modal-options'],
     message: <OptionsMenu {...params} richTextRef={richTextRef} limitRef={limitRef}/>,
-    buttons: [{message: <OptionsClose/>, callback: onClose}],
+    buttons: [{message: <Message i18nKey='options.close'/>, callback: onClose}],
     cancelCallback: onClose,
   };
   return (

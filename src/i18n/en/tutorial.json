@@ -1,0 +1,18 @@
+{
+  "link": "Tutorial",
+  "message": {
+    "welcome": "Welcome to Poké Corpus!",
+    "intro": "Poké Corpus is a tool that allows you to search text and dialogue from the Pokémon games.",
+    "filters": "First, select the games and languages that you would like to search within.",
+    "search": "Next, enter a word or phrase in the search box and hit \"Search\".",
+    "results": "Queries are run locally on your device. Matching results will appear in the lower window.",
+    "more": "For additional information about Poké Corpus, please visit <Link>this page</Link>.",
+    "done": "To view this tutorial again later, click the \"Tutorial\" link in the footer of the page."
+  },
+  "button": {
+    "skip": "Close",
+    "back": "Back",
+    "next": "Next"
+  },
+  "moreUrl": "https://github.com/abcboy101/poke-corpus/blob/main/README.md"
+}
