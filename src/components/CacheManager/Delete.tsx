@@ -1,8 +1,8 @@
-import { MouseEventHandler } from "react";
-import { useTranslation } from "react-i18next";
+import { MouseEventHandler, useContext } from "react";
+import LocalizationContext from "../LocalizationContext";
 
 function Delete({callback}: {callback: MouseEventHandler<HTMLButtonElement>}) {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   return (
     <button className="link" title={t('delete')} onClick={callback}>
       <svg className="icon">

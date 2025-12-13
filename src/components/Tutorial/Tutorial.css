@@ -1,8 +1,3 @@
-.tutorial {
-  position: fixed;
-  inset: 0;
-}
-
 @media (width < 36rem) {
   .tutorial {
     top: auto;
@@ -13,10 +8,6 @@
 .tutorial .modal-message {
   flex-direction: column;
   gap: 1em;
-}
-
-.tutorial::backdrop {
-  opacity: 0;
 }
 
 @keyframes tutorial-highlight {
@@ -32,23 +23,21 @@
 }
 
 [data-tutorial-page="1"] #tutorial-next,
-[data-tutorial-page="2"] #filters,
-[data-tutorial-page="2"] .search-filters,
-[data-tutorial-page="3"] #query,
-[data-tutorial-page="3"] #submit,
-[data-tutorial-page="4"] .app-window,
-[data-tutorial-page="5"] #tutorial-skip {
+[data-tutorial-page="2"] :is(#filters, .search-filters),
+[data-tutorial-page="3"] :is(#query, #submit),
+[data-tutorial-page="4"] .view-search .app-window,
+[data-tutorial-page="5"] #tutorial-skip,
+:is([data-tutorial-page="2"], [data-tutorial-page="3"], [data-tutorial-page="4"]) .view-cachemanager #view-switcher {
   animation: 1.5s ease-in-out infinite alternate tutorial-highlight;
 }
 
 @media (prefers-reduced-motion: reduce) {
   [data-tutorial-page="1"] #tutorial-next,
-  [data-tutorial-page="2"] #filters,
-  [data-tutorial-page="2"] .search-filters,
-  [data-tutorial-page="3"] #query,
-  [data-tutorial-page="3"] #submit,
-  [data-tutorial-page="4"] .app-window,
-  [data-tutorial-page="5"] #tutorial-skip {
+  [data-tutorial-page="2"] :is(#filters, .search-filters),
+  [data-tutorial-page="3"] :is(#query, #submit),
+  [data-tutorial-page="4"] .view-search .app-window,
+  [data-tutorial-page="5"] #tutorial-skip,
+  :is([data-tutorial-page="2"], [data-tutorial-page="3"], [data-tutorial-page="4"]) .view-cachemanager #view-switcher {
     animation: none !important;
     box-shadow: 0 0 4px 4px var(--tutorial),
       inset 0 0 0 100vmax var(--tutorial);

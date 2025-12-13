@@ -1,5 +1,4 @@
-import {  useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import {  useCallback, useEffect, useMemo, useRef, useState, useContext } from 'react';
 
 import SearchWorkerManager from '../../webWorker/searchWorkerManager.ts?worker';
 import TextWorker from '../../webWorker/textWorker.ts?worker';
@@ -17,11 +16,12 @@ import { TextResult, TextTask } from '../../webWorker/textWorker';
 import { Result, ParamsResult, initialResult } from '../../utils/searchResults';
 import { SearchTaskResultLines } from '../../webWorker/searchWorker';
 import { serializeCorpus } from '../../utils/corpus';
+import LocalizationContext from '../LocalizationContext';
 
 const searchModalWarn = 'corpus-warn';
 const searchModalThreshold = 20_000_000; // 20 MB
 function Search({loader, showModal, language, richText, limit}: {loader: Loader, showModal: ShowModal, language: string, richText: boolean, limit?: number}) {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   const searchWorkerManager = useRef<Worker>(null);
   const textWorker = useRef<Worker>(null);
   const responses = useRef<{index: number, params: SearchTaskResultLines}[]>([]);
@@ -53,8 +53,8 @@ function Search({loader, showModal, language, richText, limit}: {loader: Loader,
     addResult(e.data.index, {status: 'done', params: e.data, richText: e.data.richText});
     if (e.data.error) {
       showModal({
-        message: t(`statusModal.error`),
-        buttons: [{message: t('statusModal.buttons.ok'), autoFocus: true}],
+        message: `statusModal.error`,
+        buttons: [{message: 'statusModal.buttons.ok', autoFocus: true}],
       });
     }
   };
@@ -85,8 +85,8 @@ function Search({loader, showModal, language, richText, limit}: {loader: Loader,
     }
     if (e.data.complete && isStatusError(e.data.status)) {
       showModal({
-        message: t(`statusModal.${e.data.status}`),
-        buttons: [{message: t('statusModal.buttons.ok'), autoFocus: true}],
+        message: `statusModal.${e.data.status}`,
+        buttons: [{message: 'statusModal.buttons.ok', autoFocus: true}],
       });
     }
   };
@@ -140,14 +140,15 @@ function Search({loader, showModal, language, richText, limit}: {loader: Loader,
       }
 
       showModal({
-        message: t('searchModal.message', formatBytes(size)),
+        message: 'searchModal.message',
+        messageOptions: formatBytes(size),
         checkbox: {
           message: t('searchModal.checkboxDoNotShowAgain'),
           checked: false,
         },
         buttons: [
           {
-            message: t('searchModal.buttons.yes'),
+            message: 'searchModal.buttons.yes',
             callback: () => { postToWorker(params); },
             checkboxCallback: (checked) => {
               showSearchModal.current = !checked;
@@ -155,7 +156,7 @@ function Search({loader, showModal, language, richText, limit}: {loader: Loader,
             },
           },
           {
-            message: t('searchModal.buttons.no'),
+            message: 'searchModal.buttons.no',
             callback: () => { setStatus('initial'); },
             autoFocus: true,
           },

@@ -1,10 +1,10 @@
-import { ChangeEventHandler, FormEventHandler, MouseEventHandler, useCallback, useEffect, useMemo, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { ChangeEventHandler, FormEventHandler, MouseEventHandler, useCallback, useEffect, useMemo, useState, useContext } from 'react';
 
 import { SearchParams, searchTypes, isSearchType, getSearchParamsFactory, getDefaultSearchParams } from '../../utils/searchParams';
 import { Corpus, LanguageKey, codeId } from '../../utils/corpus';
 import SearchFilters from './SearchFilters';
 import { escapeRegex, ReadonlyExhaustiveArray, localStorageGetItem, localStorageSetItem, parseJSONNullable } from '../../utils/utils';
+import LocalizationContext from "../LocalizationContext";
 
 import './SearchForm.css';
 import '../../i18n/config';
@@ -55,7 +55,7 @@ const searchTypesDropdown = [
 searchTypesDropdown satisfies ReadonlyExhaustiveArray<typeof searchTypesDropdown, typeof searchTypes[number]>;
 
 function SearchForm({corpus, language, waiting, inProgress, postToWorker, terminateWorker}: {corpus: Corpus, language: string, waiting: boolean, inProgress: boolean, postToWorker: (params: SearchParams) => void, terminateWorker: () => void}) {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   const initial = useMemo(() => import.meta.env.SSR ? getDefaultSearchParams(corpus) : getSavedParamsPreferences(corpus, language), [corpus, language]);
   const [query, setQuery] = useState(initial.query);
   const [type, setType] = useState(initial.type);

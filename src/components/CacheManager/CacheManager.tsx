@@ -1,5 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useCallback, useEffect, useMemo, useRef, useState, useContext } from "react";
 
 import { CacheManagerParams, CacheManagerResult, RequestedCollection } from "../../webWorker/cacheManagerWorker";
 import CacheManagerWorker from '../../webWorker/cacheManagerWorker.ts?worker';
@@ -12,11 +11,12 @@ import { ShowModal } from '../Modal';
 import ProgressBar from "../ProgressBar";
 import './CacheManager.css';
 import Refresh from "./Refresh";
+import LocalizationContext from "../LocalizationContext";
 
 type CachedMetadataEntry = readonly [readonly [CollectionKey, LanguageKey, FileKey], number, boolean];
 
 function CacheStatus({cacheStorageEnabled, cachedMetadata}: {cacheStorageEnabled: boolean, cachedMetadata: readonly CachedMetadataEntry[]}) {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   const storageUsedAmount = useMemo(() => formatBytes(cachedMetadata.reduce((acc, [, size]) => acc + size, 0)), [cachedMetadata]);
   return (
     <ul>
@@ -28,7 +28,7 @@ function CacheStatus({cacheStorageEnabled, cachedMetadata}: {cacheStorageEnabled
 }
 
 function CacheProgress({loadedBytes, totalBytes, progress}: {loadedBytes: number, totalBytes: number, progress: number}) {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   return (
     <div className="cache-entry-notice">
       {
@@ -44,7 +44,7 @@ function CacheProgress({loadedBytes, totalBytes, progress}: {loadedBytes: number
 }
 
 function CacheEntryList({corpus, cachedMetadata, cacheCollections, clearCachedFile}: {corpus: Corpus, cachedMetadata: readonly CachedMetadataEntry[], cacheCollections: (collectionKey: CollectionKey) => void, clearCachedFile: (collectionKey: CollectionKey) => void}) {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   const metadataPerCollection = useMemo(() => {
     const value = corpus.collections.map((collectionKey) => {
       const collectionMetadata = cachedMetadata.filter(([[collection]]) => collectionKey === collection);
@@ -78,7 +78,7 @@ function CacheEntryList({corpus, cachedMetadata, cacheCollections, clearCachedFi
 }
 
 function CacheManager({active, loader, showModal}: {active: boolean, loader: Loader, showModal: ShowModal}) {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   const [cacheStorageEnabled, setCacheStorageEnabled] = useState(false);
   const [cachedMetadata, setCachedMetadata] = useState<readonly CachedMetadataEntry[]>([]);
   const [cacheInProgress, setCacheInProgress] = useState<boolean | null>(false);
@@ -244,14 +244,15 @@ function CacheManager({active, loader, showModal}: {active: boolean, loader: Loa
   const cacheAllModal = () => {
     loader.getDownloadSizeTotal().then((size) => {
       showModal({
-        message: t('cache.cacheAllModal.message', formatBytes(size)),
+        message: 'cache.cacheAllModal.message',
+        messageOptions: formatBytes(size),
         buttons: [
           {
-            message: t('cache.cacheAllModal.buttons.yes'),
+            message: 'cache.cacheAllModal.buttons.yes',
             callback: () => { cacheCollections('cacheAll'); },
           },
           {
-            message: t('cache.cacheAllModal.buttons.no'),
+            message: 'cache.cacheAllModal.buttons.no',
             callback: () => { setCacheInProgress(false); },
             autoFocus: true,
           },
@@ -263,10 +264,10 @@ function CacheManager({active, loader, showModal}: {active: boolean, loader: Loa
 
   const cacheAllFailedModal = () => {
     showModal({
-      message: t('cache.cacheAllFailedModal.message'),
+      message: 'cache.cacheAllFailedModal.message',
       buttons: [
         {
-          message: t('cache.cacheAllFailedModal.buttons.ok'),
+          message: 'cache.cacheAllFailedModal.buttons.ok',
           autoFocus: true,
         },
       ],
@@ -275,14 +276,14 @@ function CacheManager({active, loader, showModal}: {active: boolean, loader: Loa
 
   const clearCacheModal = () => {
     showModal({
-      message: t('cache.clearCacheModal.message'),
+      message: 'cache.clearCacheModal.message',
       buttons: [
         {
-          message: t('cache.clearCacheModal.buttons.yes'),
+          message: 'cache.clearCacheModal.buttons.yes',
           callback: clearCache,
         },
         {
-          message: t('cache.clearCacheModal.buttons.no'),
+          message: 'cache.clearCacheModal.buttons.no',
           autoFocus: true,
         },
       ],

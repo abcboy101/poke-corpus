@@ -1,5 +1,5 @@
-import { MouseEventHandler } from "react";
-import { useTranslation } from "react-i18next";
+import { MouseEventHandler, useContext } from "react";
+import LocalizationContext from "../LocalizationContext";
 
 const shareWithHash: MouseEventHandler<HTMLAnchorElement> = (e) => {
   if ("share" in navigator) {
@@ -15,9 +15,9 @@ const shareWithHash: MouseEventHandler<HTMLAnchorElement> = (e) => {
 };
 
 function Share({hash}: {hash: string}) {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   return (
-    <a href={hash} rel="bookmark noreferrer" target="_blank" title={t('share')} onClick={shareWithHash}>
+    <a href={hash} rel="noreferrer" target="_blank" title={t('share')} onClick={shareWithHash}>
       <svg className="icon">
         <use href="sprites.svg#share" />
       </svg>

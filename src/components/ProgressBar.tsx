@@ -1,10 +1,11 @@
-import { useTranslation } from 'react-i18next';
+import { useContext } from "react";
 
 import './ProgressBar.css';
 import { formatPercent } from '../utils/utils';
+import LocalizationContext from "./LocalizationContext";
 
 function ProgressBar({progress}: {progress: number}) {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   const percent = Math.min(Math.max(0, progress * 100), 100);
   return <div className="progress-bar-container" role="progressbar" aria-label={t('progressBar.title')} aria-valuenow={percent}>
     <div className="progress-bar">

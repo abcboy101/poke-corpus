@@ -1,5 +1,4 @@
-import { Dispatch, ReactNode, SetStateAction, startTransition, useCallback, useEffect, useMemo, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { Dispatch, ReactNode, SetStateAction, startTransition, useCallback, useEffect, useMemo, useState, useContext } from 'react';
 
 import Spinner from './Spinner';
 import ProgressBar from '../ProgressBar';
@@ -12,6 +11,7 @@ import '../../i18n/config';
 import { defaultLimit, localStorageGetItem, localStorageSetItem, parseJSONNullable } from '../../utils/utils';
 import { ResultsSections, ShowSectionCallback } from './ResultsSections';
 import { Result, SectionHeader } from '../../utils/searchResults';
+import LocalizationContext from "../LocalizationContext";
 
 /**
  * Scrolls the results window to the specified section.
@@ -27,7 +27,7 @@ function jumpTo(n: number) {
 }
 
 function JumpToSelect({headers}: {headers: readonly SectionHeader[]}) {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   return <nav className="results-jump">
     <select name="jump" id="jump" onChange={(e) => { jumpTo(Number(e.target.value)); }} value="">
       <option value="" disabled>{t('jumpTo')}</option>
@@ -37,7 +37,7 @@ function JumpToSelect({headers}: {headers: readonly SectionHeader[]}) {
 }
 
 function ResultsNav({count, offset, limit, setOffset}: {count: number, offset: number, limit: number, setOffset: Dispatch<SetStateAction<number>>}) {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   return (
     <div className="results-nav">
       <div>
@@ -93,7 +93,7 @@ const getSavedResultsPreferences = () => {
 };
 
 function Results({corpus, language, status, progress, results, showId = true, richText = true, limit = defaultLimit}: {corpus: Corpus, language: string, status: Status, progress: number, showId: boolean, richText: boolean, results: readonly Result[], limit?: number}) {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   const initial = useMemo(getSavedResultsPreferences, []);
   const [showVariables, setShowVariables] = useState(initial.showVariables);
   const [showAllCharacters, setShowAllCharacters] = useState(initial.showAllCharacters);

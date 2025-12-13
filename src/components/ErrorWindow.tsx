@@ -1,7 +1,8 @@
-import { useTranslation } from "react-i18next";
+import { useContext } from "react";
+import LocalizationContext from "./LocalizationContext";
 
 function ErrorWindow() {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   return <div className="app-window">
     <div className="app-window-inner">
       <section className="results-section">

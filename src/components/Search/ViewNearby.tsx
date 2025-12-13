@@ -1,10 +1,10 @@
-import { MouseEventHandler } from "react";
-import { useTranslation } from "react-i18next";
+import { MouseEventHandler, useContext } from "react";
+import LocalizationContext from "../LocalizationContext";
 
 function ViewNearby({hash, callback}: {hash: string, callback?: MouseEventHandler<HTMLAnchorElement>}) {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   return (
-    <a href={hash} rel="bookmark noreferrer" title={t('viewNearby')} onClick={callback}>
+    <a href={hash} title={t('viewNearby')} onClick={callback}>
       <svg className="icon">
         <use href="sprites.svg#file-lines" />
       </svg>

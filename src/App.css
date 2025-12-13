@@ -162,12 +162,12 @@ button.link {
   padding: 0;
   font-family: inherit;
   font-size: inherit;
-  cursor: pointer;
   text-decoration: none;
   height: auto;
 }
 
-button.link:hover, button.link:active, button.link:active:enabled {
+button.link:hover:enabled, button.link:active:enabled {
+  cursor: pointer;
   background: none;
   text-decoration: underline;
 }

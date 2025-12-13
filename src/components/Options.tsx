@@ -1,13 +1,12 @@
-import { ChangeEventHandler, Dispatch, RefObject, SetStateAction, useRef, useState } from 'react';
+import { ChangeEventHandler, Dispatch, RefObject, SetStateAction, useRef, useState, useContext } from 'react';
 import { changeLanguage } from 'i18next';
-import { useTranslation } from 'react-i18next';
 
 import { ModalArguments, ShowModal } from './Modal';
 import { getMode, isMode, isValidLimit, localStorageGetItem, localStorageSetItem, logErrorToConsole, Mode, modes } from '../utils/utils';
 
 import './Options.css';
 import supportedLngs from '../i18n/supportedLngs.json';
-import { Message } from './Message';
+import LocalizationContext from './LocalizationContext';
 
 export interface OptionsParams {
   readonly showModal: ShowModal,
@@ -25,7 +24,7 @@ interface OptionsMenuParams extends OptionsParams {
 }
 
 function OptionsMenu({showModal, language, setLanguage, richText, richTextRef, limit, limitRef}: OptionsMenuParams) {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   const [mode, setMode] = useState<Mode>(getMode);
 
   const onChangeLanguage: ChangeEventHandler<HTMLSelectElement> = (e) => {
@@ -35,8 +34,8 @@ function OptionsMenu({showModal, language, setLanguage, richText, richTextRef, l
       if (err?.some((e) => !e.message.includes('Unknown variable dynamic import'))) {
         console.error(err);
         showModal({
-          message: <Message i18nKey='options.network'/>,
-          buttons: [{message: <Message i18nKey='options.close'/>, autoFocus: true}],
+          message: 'options.network',
+          buttons: [{message: 'options.close', autoFocus: true}],
         });
       }
       else {
@@ -92,7 +91,7 @@ function OptionsMenu({showModal, language, setLanguage, richText, richTextRef, l
 }
 
 function Options(params: OptionsParams) {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   const {showModal, setRichText, setLimit} = params;
   const richTextRef = useRef<HTMLSelectElement>(null);
   const limitRef = useRef<HTMLInputElement>(null);
@@ -116,8 +115,8 @@ function Options(params: OptionsParams) {
 
   const options: ModalArguments = {
     classes: ['modal-options'],
-    message: <OptionsMenu {...params} richTextRef={richTextRef} limitRef={limitRef}/>,
-    buttons: [{message: <Message i18nKey='options.close'/>, callback: onClose}],
+    messageElement: <OptionsMenu {...params} richTextRef={richTextRef} limitRef={limitRef}/>,
+    buttons: [{message: 'options.close', callback: onClose}],
     cancelCallback: onClose,
   };
   return (

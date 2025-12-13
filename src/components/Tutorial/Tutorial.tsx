@@ -1,13 +1,13 @@
-import { Trans, useTranslation } from 'react-i18next';
+import { Trans } from 'react-i18next';
 
 import { ShowModal } from '../Modal';
 
 import './Tutorial.css';
 import '../../i18n/config';
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode, useContext, useEffect, useState } from 'react';
 import { localStorageGetItem, localStorageSetItem } from '../../utils/utils';
 import { Link } from '../Link';
-import { Message } from '../Message';
+import LocalizationContext from '../LocalizationContext';
 
 const key = 'corpus-tutorial';
 const closed = 0;
@@ -15,29 +15,29 @@ const first = 1;
 const last = 5;
 
 function TutorialMessage({page}: {page: number}) {
-  const { t } = useTranslation('tutorial');
+  const t = useContext(LocalizationContext);
   let message: ReactNode = '';
   switch (page) {
     case 1:
       message = <>
-        <div><b>{t('message.welcome')}</b></div>
-        <div>{t('message.intro')}</div>
+        <div><b>{t('tutorial:message.welcome')}</b></div>
+        <div>{t('tutorial:message.intro')}</div>
       </>;
       page satisfies typeof first;
       break;
     case 2:
-      message = t('message.filters');
+      message = t('tutorial:message.filters');
       break;
     case 3:
-      message = t('message.search');
+      message = t('tutorial:message.search');
       break;
     case 4:
-      message = t('message.results');
+      message = t('tutorial:message.results');
       break;
     case 5:
       message = <>
-        <div><Trans t={t} i18nKey='message.more' components={{ Link: <Link href={t('moreUrl')} /> }}/></div>
-        <div>{t('message.done')}</div>
+        <div><Trans t={t} i18nKey='tutorial:message.more' components={{ Link: <Link href={t('tutorial:moreUrl')} rel="noreferrer" target="_blank" /> }}/></div>
+        <div>{t('tutorial:message.done')}</div>
       </>;
       page satisfies typeof last;
       break;
@@ -46,7 +46,7 @@ function TutorialMessage({page}: {page: number}) {
 }
 
 function Tutorial({replaceModal}: {replaceModal: ShowModal}) {
-  const { t } = useTranslation('tutorial');
+  const t = useContext(LocalizationContext);
   const [page, setPage] = useState(localStorageGetItem(key) ? closed : first); // Check if tutorial has been completed, show it if it hasn't
 
   const dismiss = () => {
@@ -61,17 +61,17 @@ function Tutorial({replaceModal}: {replaceModal: ShowModal}) {
       replaceModal({
         isModal: false,
         classes: ['tutorial'],
-        message: <TutorialMessage page={page} />,
+        messageElement: <TutorialMessage page={page} />,
         buttons: [
           {
             id: 'tutorial-skip',
-            message: <Message ns='tutorial' i18nKey='button.skip' />,
+            message: 'tutorial:button.skip',
             autoFocus: page === last,
             callback: dismiss,
           },
           {
             id: 'tutorial-back',
-            message: <Message ns='tutorial' i18nKey='button.back' />,
+            message: 'tutorial:button.back',
             disabled: page === first,
             callback: () => {
               setPage((p) => p - 1);
@@ -80,7 +80,7 @@ function Tutorial({replaceModal}: {replaceModal: ShowModal}) {
           },
           {
             id: 'tutorial-next',
-            message: <Message ns='tutorial' i18nKey='button.next' />,
+            message: 'tutorial:button.next',
             autoFocus: page < last,
             disabled: page === last,
             callback: () => {
@@ -99,7 +99,7 @@ function Tutorial({replaceModal}: {replaceModal: ShowModal}) {
       setPage(first);
   };
 
-  return <button className="link" onClick={toggle}>{t('link')}</button>;
+  return <button className="link" disabled={page !== closed} onClick={toggle}>{t('tutorial:link')}</button>;
 }
 
 export default Tutorial;

@@ -1,6 +1,5 @@
-import { MouseEventHandler, useEffect, useMemo, useRef } from 'react';
+import { MouseEventHandler, useEffect, useMemo, useRef, useContext } from 'react';
 import i18next from 'i18next';
-import { useTranslation } from 'react-i18next';
 
 import { codeId, Corpus, langId } from '../../utils/corpus';
 import Share from './Share';
@@ -13,11 +12,12 @@ import { expandSpeakers } from '../../utils/speaker';
 import { SearchTaskResultLines } from '../../webWorker/searchWorker';
 import { ParamsResult, Result, SectionHeader } from '../../utils/searchResults';
 import { getSearchParamsFactory, SearchParamsFactory } from '../../utils/searchParams';
+import LocalizationContext from "../LocalizationContext";
 
 const addWordBreaksToID = (s: string, lang: string) => lang === codeId ? s.replaceAll(/([._/]|([a-z])(?=[A-Z])|([A-Za-z])(?=[0-9]))/gu, '$1<wbr>') : s;
 
 function Rendering() {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   return <div className="results-rendering">{t('status.rendering')}</div>;
 }
 
@@ -45,7 +45,7 @@ interface ResultsTableParams extends Omit<SearchTaskResultLines, 'speakers' | 'l
 }
 
 function ResultsTable({corpus, index, collection, file, languages, lines, start, end, showId, richText, sectionOffset, onShowSection, searchParamsFactory}: ResultsTableParams) {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   const idIndex = languages.indexOf(codeId);
   const displayLanguages = languages.map((lang) => lang === codeId ? langId : lang);
   const viewSpeaker = t('viewSpeaker');

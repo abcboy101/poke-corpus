@@ -1,7 +1,7 @@
-import { CSSProperties, Dispatch, SetStateAction, useEffect, useRef } from 'react';
-import { useTranslation } from 'react-i18next';
+import { CSSProperties, Dispatch, SetStateAction, useEffect, useRef, useContext } from 'react';
 
 import { CollectionKey, Corpus, LanguageKey } from '../../utils/corpus';
+import LocalizationContext from "../LocalizationContext";
 
 import './SearchFilters.css';
 import '../../i18n/config';
@@ -48,7 +48,7 @@ function getValidLanguages(corpus: Corpus, collections: readonly CollectionKey[]
 }
 
 function SearchCollections({corpus, language, collections, languages, setCollections}: {corpus: Corpus, language: string, collections: readonly CollectionKey[], languages: readonly LanguageKey[], setCollections: Dispatch<SetStateAction<readonly CollectionKey[]>>}) {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   const isFullwidth = ['ja', 'ko', 'zh'].some((lang) => language.startsWith(lang));
   const validCollections = getValidCollections(corpus, languages);
   return (
@@ -76,7 +76,7 @@ function SearchCollections({corpus, language, collections, languages, setCollect
 }
 
 function SearchLanguages({corpus, language, collections, languages, setLanguages}: {corpus: Corpus, language: string, collections: readonly CollectionKey[], languages: readonly LanguageKey[], setLanguages: Dispatch<SetStateAction<readonly LanguageKey[]>>}) {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   const isFullwidth = ['ja', 'ko', 'zh'].some((lang) => language.startsWith(lang));
   const validLanguages = getValidLanguages(corpus, collections);
   return (

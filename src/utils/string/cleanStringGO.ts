@@ -384,8 +384,8 @@ export function postprocessStringGO(s: string) {
     // Links
     .replaceAll(/\u{F0106}a href="\{(\d+)\}"\u{F0107}(.+?)\u{F0106}\/a\u{F0107}/gu, '<span class="link" title="\u{F0104}$1}">$2</span>')
     .replaceAll(/\u{F0106}a href="([0-9A-Za-z_]+)"\u{F0107}/gu, '<a class="link" href="#id=go.$1" title="$1">')
-    .replaceAll(/\u{F0106}a href=["“]((?:pokemongolive.com)\/[^"]+?)["”]\u{F0107}/gu, '<a class="link" href="http://$1" title="$1" target="_blank" rel="noopener noreferrer nofollow">')
-    .replaceAll(/\u{F0106}a href="+(https?:\/\/[^"]+?)"+\u{F0107}/gu, '<a class="link" href="$1" title="$1" target="_blank" rel="noopener noreferrer nofollow">')
+    .replaceAll(/\u{F0106}a href=["“]((?:pokemongolive.com)\/[^"]+?)["”]\u{F0107}/gu, '<a class="link" href="http://$1" title="$1" target="_blank" rel="external noopener noreferrer nofollow">')
+    .replaceAll(/\u{F0106}a href="+(https?:\/\/[^"]+?)"+\u{F0107}/gu, '<a class="link" href="$1" title="$1" target="_blank" rel="external noopener noreferrer nofollow">')
     .replaceAll(/\u{F0106}\/a\u{F0107}/gu, '</a>')
 
     // Other tags

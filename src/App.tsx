@@ -1,4 +1,4 @@
-import { MouseEventHandler, useCallback, useEffect, useState } from 'react';
+import { MouseEventHandler, useCallback, useContext, useEffect, useState } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
@@ -15,6 +15,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import ErrorWindow from './components/ErrorWindow';
 import { initializeLoader, Loader } from './utils/loader';
 import Tutorial from './components/Tutorial/Tutorial';
+import LocalizationContext from './components/LocalizationContext';
 
 declare global {
   /** Instantiates a Loader during SSR. See entry-server.tsx for definition. */
@@ -26,7 +27,7 @@ type View = 'Search' | 'CacheManager';
 const initialView = 'Search';
 
 function Header({reset, ...optionsParams}: {reset: MouseEventHandler<HTMLAnchorElement>} & OptionsParams) {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   return (
     <header className="header">
       <h1>
@@ -42,7 +43,7 @@ function Header({reset, ...optionsParams}: {reset: MouseEventHandler<HTMLAnchorE
 }
 
 function Footer({view, switchView, replaceModal}: {view: View, switchView: () => void, replaceModal: ShowModal}) {
-  const { t } = useTranslation();
+  const t = useContext(LocalizationContext);
   return (
     <footer>
       <span>{t('tagline')}</span>
@@ -51,7 +52,7 @@ function Footer({view, switchView, replaceModal}: {view: View, switchView: () =>
       <span className="separator" translate="no"> | </span>
       <Tutorial replaceModal={replaceModal} />
       <span className="separator" translate="no"> | </span>
-      <button className="link" onClick={switchView}>{t(view !== 'Search' ? 'backToSearch' : 'manageCache')}</button>
+      <button id="view-switcher" className="link" onClick={switchView}>{t(view !== 'Search' ? 'backToSearch' : 'manageCache')}</button>
       <span className="separator" translate="no"> | </span>
       <a href="https://github.com/abcboy101/poke-corpus">{t('github')}</a>
     </footer>
@@ -67,6 +68,7 @@ function App() {
   const [modalArguments, setModalArguments] = useState<readonly ModalArguments[]>([]);
   const [cacheManagerLoaded, setCacheManagerLoaded] = useState(false);
   const [loader, setLoader] = useState<Loader | null | undefined>(import.meta.env.SSR ? getLoaderSSR() : undefined);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const mode = getMode();
@@ -109,19 +111,21 @@ function App() {
   if (!import.meta.env.SSR && /^((?!chrome|android).)*safari/i.test(navigator.userAgent))
     classes.push('ua-safari');
   return (
-    <div key={appKey} className={classes.join(' ')} lang={language} dir={i18next.dir(language)}>
-      <Header showModal={showModal} language={language} setLanguage={setLanguage} richText={richText} setRichText={setRichText} limit={limit} setLimit={setLimit} reset={reset} />
-      {
-        loader !== null ? (
-          <ErrorBoundary FallbackComponent={ErrorWindow}>
-            <Search loader={loader} showModal={showModal} language={language} richText={richText} limit={limit}/>
-            <CacheManager active={view === 'CacheManager'} loader={loader} showModal={showModal}/>
-          </ErrorBoundary>
-        ) : <ErrorWindow />
-      }
-      <Footer view={view} switchView={switchView} replaceModal={replaceModal} />
-      <Modal closeCallback={() => { setModalArguments((prev) => prev.slice(0, -1)); }} {...modalArguments.at(-1)} />
-    </div>
+    <LocalizationContext value={t}>
+      <div key={appKey} className={classes.join(' ')} lang={language} dir={i18next.dir(language)}>
+        <Header showModal={showModal} language={language} setLanguage={setLanguage} richText={richText} setRichText={setRichText} limit={limit} setLimit={setLimit} reset={reset} />
+        {
+          loader !== null ? (
+            <ErrorBoundary FallbackComponent={ErrorWindow}>
+              <Search loader={loader} showModal={showModal} language={language} richText={richText} limit={limit}/>
+              <CacheManager active={view === 'CacheManager'} loader={loader} showModal={showModal}/>
+            </ErrorBoundary>
+          ) : <ErrorWindow />
+        }
+        <Footer view={view} switchView={switchView} replaceModal={replaceModal} />
+        <Modal closeCallback={() => { setModalArguments((prev) => prev.slice(0, -1)); }} {...modalArguments.at(-1)} />
+      </div>
+    </LocalizationContext>
   );
 }
 
