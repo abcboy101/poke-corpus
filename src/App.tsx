@@ -32,7 +32,7 @@ function Header({reset, ...optionsParams}: {reset: MouseEventHandler<HTMLAnchorE
     <header className="header">
       <h1>
         <a href="/poke-corpus/" onClick={reset}>
-          <img className="header-logo" src="logo.svg" alt="" height="40" width="40" /> {t('title', {version: t('version')})}
+          <img className="header-logo" src="logo.svg" alt="" height="40" width="40" /> {t('titleVersion', {title: t('title'), version: t('version')})}
         </a>
       </h1>
       <ErrorBoundary fallback={null}>
@@ -71,11 +71,23 @@ function App() {
   const { t } = useTranslation();
 
   useEffect(() => {
+    if (window.location.pathname !== import.meta.env.BASE_URL)
+      window.location.replace(import.meta.env.BASE_URL + window.location.search + window.location.hash); // redirect to canonical URL, otherwise ServiceWorker can show a broken page
+    else if (window.location.search)
+      window.history.replaceState(null, '', window.location.pathname + window.location.hash); // remove query param from URL so that internal links don't include it
+
     const mode = getMode();
     document.body.classList.add(`mode-${mode}`);
     setCacheManagerLoaded(true);
     initializeLoader(setLoader);
   }, []);
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+    document.documentElement.dir = i18next.dir(language);
+    document.title = t('title');
+    document.querySelector('meta[name="description"]')?.setAttribute("content", t('tutorial:message.intro'));
+  }, [language]);
 
   const reset: MouseEventHandler<HTMLAnchorElement> = useCallback((e) => {
     window.location.hash = '';
@@ -112,7 +124,7 @@ function App() {
     classes.push('ua-safari');
   return (
     <LocalizationContext value={t}>
-      <div key={appKey} className={classes.join(' ')} lang={language} dir={i18next.dir(language)}>
+      <div key={appKey} className={classes.join(' ')}>
         <Header showModal={showModal} language={language} setLanguage={setLanguage} richText={richText} setRichText={setRichText} limit={limit} setLimit={setLimit} reset={reset} />
         {
           loader !== null ? (

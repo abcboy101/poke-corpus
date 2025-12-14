@@ -17,7 +17,8 @@ i18next.use(LanguageDetector)
   .use(initReactI18next)
   .use(resourcesToBackend((language: string, namespace: string) => import(`./${language}/${namespace}.json`)))
   .init({
-    partialBundledLanguages: true,
+    keySeparator: '.',
+    nsSeparator: ':',
     fallbackLng: 'en',
     ns: [
       'translation',
@@ -41,6 +42,12 @@ i18next.use(LanguageDetector)
       'en-GB': {
         translation: translation_enGB,
       },
+    },
+    partialBundledLanguages: true,
+
+    // i18next-browser-languagedetector
+    detection: {
+      order: ['querystring', 'localStorage', 'navigator'],
     },
 
     // Enable Trans component

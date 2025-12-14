@@ -1,5 +1,6 @@
 {
-  "title": "ポケコーパス{{version}}",
+  "title": "ポケコーパス",
+  "titleVersion": "{{title}}{{version}}",
   "error": {
     "title": "エラーが発生しました",
     "message": "ブラウザの開発者コンソールで追加情報を確認してGitHubでバグを報告してください。"

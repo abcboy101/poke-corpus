@@ -1,5 +1,6 @@
 {
-  "title": "宝可语料库{{version}}",
+  "title": "宝可语料库",
+  "titleVersion": "{{title}}{{version}}",
   "error": {
     "title": "发生错误",
     "message": "请检查浏览器的 DevTools 以获取更多信息，并在 GitHub 上报告问题。"

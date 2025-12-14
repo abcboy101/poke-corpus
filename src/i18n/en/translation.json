@@ -1,6 +1,7 @@
 {
-  "title": "Poké Corpus {{version}}",
+  "title": "Poké Corpus",
   "version": "β",
+  "titleVersion": "{{title}} {{version}}",
   "error": {
     "title": "An error occurred",
     "message": "Check your browser's developer console for additional information, and please report the issue on GitHub."
