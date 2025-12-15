@@ -132,6 +132,34 @@ function cleanSpecialFactory(params: SearchParams): (s: string) => string {
   ) : (s) => s;
 }
 
+/**
+ * Normalizes a string by removing all whitespace, i.e. "ひとの こころ" -> "ひとのこころ".
+ * Intended for languages where whitespace is not significant such as Japanese, Korean, Chinese, and Thai.
+ */
+function removeWhitespace(s: string) {
+  return s.replaceAll(/\\[nrc]|\s/g, '');
+}
+
+/**
+ * Normalizes a string by replacing all whitespace with a standard space.
+ * Soft hyphens (hyphens followed by a newline) are removed, i.e. "break-\ning" -> "breaking".
+ */
+function normalizeWhitespaceRemoveHyphen(s: string) {
+  s = s.replaceAll(/(\p{L})-(?:\\[nrc])+(\p{L})/gu, '$1$2'); // words broken across lines
+  s = s.replaceAll(/(?:\\[nrc]|\s)+/g, ' '); // collapse whitespace to space
+  return s;
+}
+
+/**
+ * Normalizes a string by replacing all whitespace with a standard space.
+ * Newlines following a hyphen are removed preserving the hyphen, i.e. "must-\nhave" -> "must-have".
+ */
+function normalizeWhitespacePreserveHyphen(s: string) {
+  s = s.replaceAll(/(\p{L})-(?:\\[nrc])+(\p{L})/gu, '$1-$2'); // hyphenated compound broken across lines
+  s = s.replaceAll(/(?:\\[nrc]|\s)+/g, ' '); // collapse whitespace to space
+  return s;
+}
+
 self.onmessage = (task: MessageEvent<SearchTask>) => {
   const {index, params, collectionKey, fileKey, languages, files, speaker, speakerFiles: speakerData, literals} = task.data;
   const notifyIncomplete = (status: SearchTaskResultNotDone) => {
@@ -163,11 +191,13 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       const lineKeys: number[] = [];
 
       // Check selected languages for lines that satisfy the query
-      const ignoreSpaces = params.caseInsensitive && ['ja', 'ko', 'zh', 'th'].some((lang) => languageKey.startsWith(lang));
+      const match = (!params.caseInsensitive ? matchCondition : ['ja', 'ko', 'zh', 'th'].some((lang) => languageKey.startsWith(lang))
+        ? (line: string) => matchCondition(line) || matchCondition(removeWhitespace(cleanSpecial(line)))
+        : (line: string) => matchCondition(line) || matchCondition(cleanSpecial(normalizeWhitespacePreserveHyphen(line))) || matchCondition(cleanSpecial(normalizeWhitespaceRemoveHyphen(line)))
+      );
       if (params.languages.includes(languageKey)) {
         lines.forEach((line, i) => {
-          const clean = cleanSpecial(line);
-          if (matchCondition(clean) || (ignoreSpaces && matchCondition(clean.replaceAll(' ', '')))) {
+          if (match(line)) {
             lineKeys.push(i);
           }
         });
