@@ -127,6 +127,8 @@ function cleanSpecialFactory(params: SearchParams): (s: string) => string {
       .replaceAll('〜', '～') // wave dash -> fullwidth tilde
       .replaceAll('‥', '..') // two dot leader -> full stop (x2)
       .replaceAll('…', '...') // horizontal ellipsis -> full stop (x3)
+
+      .replaceAll(/[\u3041-\u3096\u309D\u309E]/gu, (c) => String.fromCodePoint(c.charCodeAt(0) + 0x60)) // hiragana -> katakana
       .normalize()
     )
   ) : (s) => s;
