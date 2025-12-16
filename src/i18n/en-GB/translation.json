@@ -1,5 +1,10 @@
 {
   "options": {
     "mode": "Colourscheme:"
+  },
+  "statusModal": {
+    "boolean": {
+      "where": "One of the languages specified in the WHERE clause was not recognised."
+    }
   }
 }

@@ -88,15 +88,13 @@
     }
   },
   "progressBar": {
-    "title": "进度",
-    "value": "{{amount, number}}"
+    "title": "进度"
   },
   "jumpTo": "跳转至…",
   "copy": "复制",
   "share": "分享",
   "viewNearby": "查看附近行",
   "viewSpeaker": "查看说话角色的行",
-  "tableHeader": "{{collection}} {{file}}",
   "tablePartial": "{{count, number}} 条结果未显示",
   "displayedRange": {
     "long": "显示第 {{start, number}}～{{end, number}} 条结果，共 {{count, number}} 条",
@@ -117,12 +115,7 @@
     "filesStored": "缓存文件数：$t(cache.files, {\"count\": {{count}} })",
     "files": "{{count}} 个",
     "storageUsed": "缓存已使用：{{amount, number}}",
-    "loading": "{{message}} ({{loaded}}/{{total}})",
     "inProgress": "正在缓存...",
-    "headerCollection": "Collection",
-    "headerSize": "大小",
-    "headerActions": "Actions",
-    "size": "{{amount, number}}",
     "cacheAllModal": {
       "message": "您确定要缓存所有文件吗？ （待下载大小: 大约 {{amount, number}}）",
       "buttons": {

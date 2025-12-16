@@ -1,5 +1,5 @@
 {
-  "title": "Pokékorpus",
+  "title": "Poké Corpus",
   "options": {
     "options": "Einstellungen",
     "language": "Sprache:",
@@ -9,16 +9,37 @@
       "light": "Hell",
       "dark": "Dunkel"
     },
+    "limit": "Ergebnisse pro Seite:",
+    "longURL": "Lange URLs:",
+    "longURLSelect": {
+      "true": "Aktiviert",
+      "false": "Deaktiviert"
+    },
+    "richText": "Formatierter Text:",
+    "richTextSelect": {
+      "true": "Aktiviert",
+      "false": "Deaktiviert"
+    },
     "close": "Schließen"
   },
   "query": "Abfrage:",
-  "regex": "Regex",
+  "searchType": {
+    "searchType": "Suchmodus",
+    "all": "Alle diese Wörter",
+    "exact": "Genau diese Wortgruppe",
+    "regex": "Regex",
+    "boolean": "Boolesch"
+  },
   "caseInsensitive": "Groß-/Kleinschreibung nicht beachten",
   "search": "Suche",
   "cancel": "Abbrechen",
   "common": "Gemeinsam",
   "script": "Skript",
+  "showAllLanguages": "Alle Sprachen anzeigen",
   "filters": "Filter",
+  "backToSearch": "Zurück zur Suche",
+  "manageCache": "Cache verwalten",
+  "cacheAll": "Alles im Cache speichern",
   "clearCache": "Cache löschen",
   "selectAll": "Alle auswählen",
   "deselectAll": "Alle abwählen",
@@ -33,11 +54,17 @@
     "error": "Es ist ein Fehler aufgetreten",
     "network": "Netzwerkfehler",
     "regex": "Ungültige Regex",
+    "boolean": "Ungültige Abfrage",
     "noMatch": "Keine passenden Dateien gefunden"
   },
+  "progressBar": {
+    "title": "Fortschritt"
+  },
   "jumpTo": "Wechseln zu...",
+  "copy": "Kopieren",
   "share": "Teilen",
-  "tableHeader": "{{collection}} {{file}}",
+  "viewNearby": "Text in der Nähe anzeigen",
+  "viewSpeaker": "Dialog des Charakters anzeigen",
   "tablePartial_one": "{{count, number}} Ergebnis nicht angezeigt",
   "tablePartial_other": "{{count, number}} Ergebnisse nicht angezeigt",
   "displayedRange": {
@@ -45,11 +72,27 @@
     "long_other": "{{start, number}} bis {{end, number}} von {{count, number}} Ergebnisse werden angezeigt",
     "short": "{{start, number}}\u2013{{end, number}} von {{count, number}}"
   },
+  "loadPrev": "Zurück",
+  "loadNext": "Weiter",
   "showVariables": "Variablen anzeigen",
   "showAllCharacters": "Alle Zeichen anzeigen",
+  "showFurigana": "Furigana anzeigen",
   "showGender": "Grammatikalisches Geschlecht ändern",
   "showPlural": "Singular und Plural ändern",
-  "tagline": "Ein Werkzeug zur Abfrage des Pokémon-Korpus",
+  "showGrammar": "Alle grammatikalischen Formen anzeigen",
+  "cache": {
+    "storageStatus": "Cache-Status: {{val}}",
+    "storageEnabled": "Aktiviert",
+    "storageDisabled": "Deaktiviert",
+    "filesStored": "Anzahl der gespeicherten Dateien: $t(cache.files, {\"count\": {{count}} })",
+    "files_one": "{{count}} Datei",
+    "files_other": "{{count}} Dateien",
+    "storageUsed": "Gesamtbelegter Speicherplatz: {{amount, number}}",
+    "inProgress": "Caching läuft..."
+  },
+  "refresh": "Aktualisieren",
+  "delete": "Löschen",
+  "tagline": "Ein Tool zur Abfrage des Pokémon-Korpus",
   "footerText": "Erstellt von abcboy",
   "github": "GitHub"
 }

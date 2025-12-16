@@ -88,15 +88,13 @@
     }
   },
   "progressBar": {
-    "title": "進度",
-    "value": "{{amount, number}}"
+    "title": "進度"
   },
   "jumpTo": "前往…",
   "copy": "拷貝",
   "share": "分享",
   "viewNearby": "查看附近行",
   "viewSpeaker": "查看說話角色的行",
-  "tableHeader": "{{collection}} {{file}}",
   "tablePartial": "{{count, number}} 個結果未顯示",
   "displayedRange": {
     "long": "顯示第 {{start, number}}～{{end, number}} 筆結果，共 {{count, number}} 筆",
@@ -117,12 +115,7 @@
     "filesStored": "快取文件數：$t(cache.files, {\"count\": {{count}} })",
     "files": "{{count}} 個",
     "storageUsed": "快取已使用：{{amount, number}}",
-    "loading": "{{message}} ({{loaded}}/{{total}})",
     "inProgress": "正在快取...",
-    "headerCollection": "Collection",
-    "headerSize": "大小",
-    "headerActions": "Actions",
-    "size": "{{amount, number}}",
     "cacheAllModal": {
       "message": "您確定要快取所有文件嗎？ （待下載大小: 大約 {{amount, number}}）",
       "buttons": {

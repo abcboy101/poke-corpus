@@ -75,8 +75,8 @@
     "network": "Un fichier ou plus n'ont pas pu être chargés et seuls des résultats partiels sont affichés. Vérifiez votre connexion Internet et réessayez.",
     "regex": "L'expession régulière que vous recherchez est invalide. Vérifiez sa syntaxe et réessayez.",
     "boolean": {
-      "parentheses": "Votre recheche Booléenne a des paranthèses manquantes ou en trop.",
-      "quote": "Votre recheche Booléenne a des guillemets manquants ou en trop.",
+      "parentheses": "Votre recheche Booléenne a des paranthèses manquantes ou en trop. Si vous recherchez littéralement des paranthèses, démarquez-les avec des antislashs.",
+      "quote": "Votre recheche Booléenne a des guillemets manquants ou en trop. Si vous recherchez littéralement des guillemets, démarquez-les avec des antislashs.",
       "slash": "Votre recheche Booléenne a des slashs manquants ou en trop. Si vous recherchez littéralement des slashs, démarquez-les avec des antislashs.",
       "regex": "Une expression régulière dans votre recherche Booléenne est invalide. Vérifiez la syntaxe de votre recherche et réessayez.",
       "operand": "Votre recheche Booléenne a un ou plusieurs arguments manquants. Si vous recherchez littéralement \"NOT\", \"AND\", ou \"OR\", placez-les entre guillemets.",
@@ -89,13 +89,13 @@
     }
   },
   "progressBar": {
-    "title": "Avancement",
-    "value": "{{amount, number}}"
+    "title": "Avancement"
   },
   "jumpTo": "Aller à...",
   "copy": "Copier",
   "share": "Partager",
-  "tableHeader": "{{collection}} {{file}}",
+  "viewNearby": "Voir le texte à proximité",
+  "viewSpeaker": "Voir le dialogue du personnage",
   "tablePartial_zero": "{{count, number}} résultat masqué",
   "tablePartial_one": "{{count, number}} résultat masqué",
   "tablePartial_other": "{{count, number}} résultats masqués",
@@ -121,14 +121,9 @@
     "files_one": "{{count}} fichier",
     "files_other": "{{count}} fichiers",
     "storageUsed": "Poids total utilisé\u00A0: {{amount, number}}",
-    "loading": "{{message}} ({{loaded}}/{{total}})",
     "inProgress": "Mise en cache en cours...",
-    "headerCollection": "Collection",
-    "headerSize": "Taille",
-    "headerActions": "Actions",
-    "size": "{{amount, number}}",
     "cacheAllModal": {
-      "message": "Êtes-vous sûr·e de mettre tous les fichiers en cache\u00A0? (Taille\u00A0: approximativement {{amount, number}})",
+      "message": "Êtes-vous sûr·e de mettre tous les fichiers en cache\u00A0? (Taille du téléchargement\u00A0: approximativement {{amount, number}})",
       "buttons": {
         "yes": "Oui",
         "no": "Non"

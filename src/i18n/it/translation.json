@@ -1,5 +1,9 @@
 {
   "title": "Poké Corpus",
+  "error": {
+    "title": "Si è verificato un errore",
+    "message": "Controlla la console di sviluppo del browser per ulteriori informazioni e segnala il problema su GitHub."
+  },
   "options": {
     "options": "Opzioni",
     "language": "Lingua:",
@@ -9,21 +13,49 @@
       "light": "Chiaro",
       "dark": "Scuro"
     },
+    "limit": "Risultati per pagina:",
+    "longURL": "URL lunghi:",
+    "longURLSelect": {
+      "true": "Attivati",
+      "false": "Disattivati"
+    },
+    "richText": "Testo formattato:",
+    "richTextSelect": {
+      "true": "Attivato",
+      "false": "Disattivato"
+    },
+    "network": "Impossibile caricare la lingua selezionata. Controlla la connessione a Internet e riprova.",
     "close": "Chiudi"
   },
   "query": "Richiesta:",
   "searchType": {
-    "regex": "Espressione regolare"
+    "searchType": "Modalità di ricerca",
+    "all": "Tutte queste parole",
+    "exact": "Frase esatta",
+    "regex": "Espressione regolare",
+    "boolean": "Booleano"
   },
   "caseInsensitive": "Insensibile alle maiuscole e minuscole",
   "search": "Cerca",
   "cancel": "Annulla",
   "common": "Comune",
   "script": "Sceneggiatura",
+  "showAllLanguages": "Mostra tutte le lingue",
   "filters": "Filtri",
+  "backToSearch": "Torna alla ricerca",
+  "manageCache": "Gestire la cache",
+  "cacheAll": "Memorizza tutti nella cache",
   "clearCache": "Cancella cache",
   "selectAll": "Seleziona tutto",
   "deselectAll": "Deseleziona tutto",
+  "searchModal": {
+    "message": "Per eseguire questa richiesta saranno scaricati circa {{amount, number}}. Continuare?",
+    "checkboxDoNotShowAgain": "Non mostrare più",
+    "buttons": {
+      "yes": "Sì",
+      "no": "No"
+    }
+  },
   "status": {
     "initial": "Fare clic su \"Cerca\" per iniziare.",
     "waiting": "Attendere prego...",
@@ -35,11 +67,35 @@
     "error": "Si è verificato un errore",
     "network": "Errore di rete",
     "regex": "L'espressione regolare non è valida",
+    "boolean": "La richiesta non è valida",
     "noMatch": "Nessun file corrisponde ai criteri"
   },
+  "statusModal": {
+    "error": "Si è verificato un errore. Controlla la console di sviluppo del browser per ulteriori informazioni e segnala il problema su GitHub.",
+    "network": "Impossibile caricare uno o più file. Vengono visualizzati solo risultati parziali. Controlla la connessione a Internet e riprova.",
+    "regex": "L'espressione regolare che hai inserito non è valida. Controlla la sintassi e riprova.",
+    "boolean": {
+      "parentheses": "La tua ricerca booleana contiene parentesi mancanti o in eccesso. Se desideri cercare letteralmente le parentesi, anteponi una barra rovesciata.",
+      "quote": "La tua ricerca booleana contiene virgolette mancanti o in eccesso. Se desideri cercare letteralmente le virgolette, anteponi una barra rovesciata.",
+      "slash": "La tua ricerca booleana contiene barre mancanti o in eccesso. Se desideri cercare letteralmente le barre, anteponi una barra rovesciata.",
+      "regex": "Un'espressione regolare nella ricerca booleana non è valida. Controlla la sintassi e riprova.",
+      "operand": "Alla tua ricerca booleana mancano uno o più argomenti. Se desideri cercare letteralmente \"NOT\", \"AND\" o \"OR\", inseriscili tra virgolette.",
+      "empty": "La tua ricerca booleana non contiene alcuna parola chiave. Se desideri cercare letteralmente questo testo, inseriscilo tra virgolette.",
+      "where": "Una delle lingue specificate nella clausola WHERE non è stata riconosciuta."
+    },
+    "noMatch": "Nessun file corrisponde ai filtri selezionati. Controlla che i giochi selezionati esistano nelle lingue scelte.",
+    "buttons": {
+      "ok": "OK"
+    }
+  },
+  "progressBar": {
+    "title": "Progresso"
+  },
   "jumpTo": "Vai a...",
+  "copy": "Copia",
   "share": "Condividi",
-  "tableHeader": "{{collection}} {{file}}",
+  "viewNearby": "Vedi testo vicino",
+  "viewSpeaker": "Vedi il dialogo del personaggio",
   "tablePartial_one": "{{count, number}} risultato non mostrato",
   "tablePartial_other": "{{count, number}} risultati non mostrati",
   "displayedRange": {
@@ -47,10 +103,44 @@
     "long_other": "Mostra {{start, number}}-{{end, number}} di {{count, number}} risultati",
     "short": "{{start, number}}-{{end, number}} di {{count, number}}"
   },
+  "loadPrev": "Precedente",
+  "loadNext": "Successivo",
   "showVariables": "Visualizza variabili",
   "showAllCharacters": "Visualizza tutti i caratteri",
   "showGender": "Cambia il genere grammaticale",
   "showPlural": "Cambia singolare e plurale",
+  "showGrammar": "Visualizza tutte le forme grammaticali",
+  "cache": {
+    "storageStatus": "Stato della cache: {{val}}",
+    "storageEnabled": "Attivato",
+    "storageDisabled": "Disattivato",
+    "filesStored": "Numero di file memorizzati: $t(cache.files, {\"count\": {{count}} })",
+    "files": "{{count}} file",
+    "storageUsed": "Totale spazio di archiviazione utilizzato: {{amount, number}}",
+    "inProgress": "Cache in corso...",
+    "cacheAllModal": {
+      "message": "Sei sicuro di voler memorizzare tutti i file nella cache? (Dimensione del download: circa {{amount, number}})",
+      "buttons": {
+        "yes": "Sì",
+        "no": "No"
+      }
+    },
+    "cacheAllFailedModal": {
+      "message": "Non è stato possibile salvare uno o più file nella cache. Controlla la connessione a Internet e assicurati che ci sia spazio sufficiente.",
+      "buttons": {
+        "ok": "OK"
+      }
+    },
+    "clearCacheModal": {
+      "message": "Sei sicuro di voler cancellare la cache?",
+      "buttons": {
+        "yes": "Sì",
+        "no": "No"
+      }
+    }
+  },
+  "refresh": "Aggiorna",
+  "delete": "Elimina",
   "tagline": "Uno strumento per cercare il corpus Pokémon",
   "footerText": "Creato da abcboy",
   "github": "GitHub"

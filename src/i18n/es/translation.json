@@ -1,5 +1,9 @@
 {
   "title": "Poké Corpus",
+  "error": {
+    "title": "Se ha producido un error",
+    "message": "Consulte la consola de desarrollador de su navegador para obtener información adicional e infórmenos del problema a GitHub."
+  },
   "options": {
     "options": "Opciones",
     "language": "Idioma:",
@@ -66,14 +70,32 @@
     "boolean": "Su consulta no es válida",
     "noMatch": "No hay archivos coincidentes"
   },
+  "statusModal": {
+    "error": "Se ha producido un error. Consulte la consola de desarrollador de su navegador para obtener información adicional e infórmenos del problema a GitHub.",
+    "network": "No se han podido cargar uno o varios archivos y solo se muestran resultados parciales. Compruebe su conexión a Internet e inténtelo de nuevo.",
+    "regex": "La expresión regular que ha introducido no es válida. Compruebe su sintaxis y inténtelo de nuevo.",
+    "boolean": {
+      "parentheses": "Su búsqueda booleana tiene paréntesis faltantes o sobrantes. Si desea buscar literalmente paréntesis, anteponga una barra invertida.",
+      "quote": "Su búsqueda booleana tiene comillas faltantes o sobrantes. Si desea buscar literalmente comillas, anteponga una barra invertida.",
+      "slash": "Su búsqueda booleana tiene barras faltantes o sobrantes. Si desea buscar literalmente barras, anteponga una barra invertida.",
+      "regex": "Una expresión regular en su búsqueda booleana no es válida. Compruebe su sintaxis y inténtelo de nuevo.",
+      "operand": "A su búsqueda booleana le faltan uno o varios argumentos. Si desea buscar literalmente \"NOT\", \"AND\" u \"OR\", colóquelos entre comillas.",
+      "empty": "Su búsqueda booleana no tiene ninguna palabra clave. Si desea buscar literalmente este texto, colóquelo entre comillas.",
+      "where": "No se ha reconocido uno de los idiomas especificados en la cláusula WHERE."
+    },
+    "noMatch": "No hay archivos que coincidan con los filtros seleccionados. Comprueba que los juegos seleccionados existen en los idiomas elegidos.",
+    "buttons": {
+      "ok": "OK"
+    }
+  },
   "progressBar": {
-    "title": "Progreso",
-    "value": "{{amount, number}}"
+    "title": "Progreso"
   },
   "jumpTo": "Saltar a...",
   "copy": "Copiar",
   "share": "Compartir",
-  "tableHeader": "{{collection}} {{file}}",
+  "viewNearby": "Ver texto cercano",
+  "viewSpeaker": "Ver el diálogo del personaje",
   "tablePartial_one": "{{count, number}} resultado no mostrado",
   "tablePartial_other": "{{count, number}} resultados no mostrados",
   "displayedRange": {
@@ -89,6 +111,36 @@
   "showGender": "Cambiar el género gramatical",
   "showPlural": "Cambiar los singulares y los plurales",
   "showGrammar": "Mostrar todas las formas gramaticales",
+  "cache": {
+    "storageStatus": "Estado de la caché: {{val}}",
+    "storageEnabled": "Activado",
+    "storageDisabled": "Desactivado",
+    "filesStored": "Número de archivos almacenados: $t(cache.files, {\"count\": {{count}} })",
+    "files_one": "{{count}} archivo",
+    "files_other": "{{count}} archivos",
+    "storageUsed": "Total de almacenamiento utilizado: {{amount, number}}",
+    "inProgress": "Almacenamiento en caché en curso...",
+    "cacheAllModal": {
+      "message": "¿Está seguro de que desea almacenar todos los archivos en la caché? (Tamaño de la descarga: aproximadamente {{amount, number}})",
+      "buttons": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "cacheAllFailedModal": {
+      "message": "No se han podido guardar uno o varios archivos en la caché. Compruebe su conexión a Internet y asegúrese de que hay espacio suficiente.",
+      "buttons": {
+        "ok": "OK"
+      }
+    },
+    "clearCacheModal": {
+      "message": "¿Está seguro de que desea vaciar la caché?",
+      "buttons": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    }
+  },
   "refresh": "Actualizar",
   "delete": "Borrar",
   "tagline": "Una herramienta para consultar el corpus Pokémon",

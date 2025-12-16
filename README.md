@@ -22,9 +22,9 @@ Visit at [abcboy101.github.io/poke-corpus/](https://abcboy101.github.io/poke-cor
 4. The search results will appear in the window.
    - If there are results from multiple games, you can jump to a particular game's results using the "Jump to..." dropdown.
    - You can share a link to a particular line using the arrow icon.
-   - You can view nearby lines using the paper with lines icon.
+   - You can view nearby text using the paper with lines icon.
    - For certain games, the speaker's name will be displayed in gray at the start of the line.
-     Click their name and click "Search" to view other lines said by the same person.
+     Click their name to view more dialogue said by the same character.
 
 Near the top right of the results window are several buttons.
 - The button with a "[]" icon will show/hide variables/functions.
