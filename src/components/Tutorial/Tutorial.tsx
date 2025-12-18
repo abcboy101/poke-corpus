@@ -47,7 +47,7 @@ function TutorialMessage({page}: {page: number}) {
 
 function Tutorial({replaceModal}: {replaceModal: ShowModal}) {
   const t = useContext(LocalizationContext);
-  const [page, setPage] = useState(localStorageGetItem(key) ? closed : first); // Check if tutorial has been completed, show it if it hasn't
+  const [page, setPage] = useState((import.meta.env.SSR || localStorageGetItem(key)) ? closed : first); // Check if tutorial has been completed, show it if it hasn't
 
   const dismiss = () => {
     setPage(closed);

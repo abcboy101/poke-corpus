@@ -7,6 +7,7 @@ import Options, { OptionsParams } from './components/Options';
 import Search from './components/Search/Search';
 import CacheManager from './components/CacheManager/CacheManager';
 import Modal, { ModalArguments, ShowModal } from './components/Modal';
+import NoScript from './components/Search/NoScript';
 
 import './App.css';
 import './safari.css';
@@ -65,7 +66,7 @@ function App() {
   const [limit, setLimit] = useState(getLimit);
   const [view, setView] = useState<View>(initialView);
   const [appKey, setAppKey] = useState(0);
-  const [modalArguments, setModalArguments] = useState<readonly ModalArguments[]>([]);
+  const [modalArguments, setModalArguments] = useState<readonly ModalArguments[]>(import.meta.env.SSR ? [{isModal: false, classes: ['noscript'], messageElement: <NoScript />}] : []);
   const [cacheManagerLoaded, setCacheManagerLoaded] = useState(false);
   const [loader, setLoader] = useState<Loader | null | undefined>(import.meta.env.SSR ? getLoaderSSR() : undefined);
   const { t } = useTranslation();

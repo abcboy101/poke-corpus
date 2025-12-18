@@ -2,7 +2,6 @@ import { Dispatch, ReactNode, SetStateAction, startTransition, useCallback, useE
 
 import Spinner from './Spinner';
 import ProgressBar from '../ProgressBar';
-import NoScript from './NoScript';
 import { isStatusInProgress, Status } from '../../utils/Status';
 import { Corpus } from '../../utils/corpus';
 
@@ -189,7 +188,7 @@ function Results({corpus, language, status, progress, results, showId = true, ri
         { resultsToggle }
       </div>
       <main id="results" className={classes}>
-        { import.meta.env.SSR ? <NoScript /> : sections }
+        { sections }
       </main>
     </>
   );
