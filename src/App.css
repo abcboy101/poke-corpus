@@ -11,7 +11,7 @@
   --progress-bar-background: var(--highlight);
   --progress-bar-border: var(--text);
   --progress-bar-color: light-dark(limegreen, green);
-  --accent: light-dark(skyblue, teal);
+  --accent: light-dark(#87CEEB, #006363);
   --tutorial: light-dark(#EBA487, #800000);
   --line-height: 1.5;
   --line-height-narrow: 1.15;

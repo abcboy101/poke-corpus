@@ -71,6 +71,7 @@
 .search-collection label, .search-language label {
   width: 100%;
   line-height: var(--line-height-narrow);
+  align-content: center;
 }
 
 .search-collection label {

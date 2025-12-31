@@ -36,4 +36,5 @@
   display: inline-block;
   white-space: wrap;
   line-height: var(--line-height-narrow);
+  align-content: center;
 }
