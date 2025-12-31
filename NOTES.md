@@ -62,18 +62,16 @@ The text dumps for *Pokémon Brilliant Diamond* and *Pokémon Shining Pearl* hav
 - The Unity rich text tags `<color>`, `<position>`, `<line-indent>`, and `<size>` are used to format text.
 - Speaker names are taken from `Dpr/masterdatas/MsgWindowData.json` and converted to the `[VAR 0114]` format used in other games.
 
-### GBA
-The text dumps from the GBA games are based on the format used by the [pret](https://github.com/pret) decompilations.
+### GB/GBC/GBA
+The text dumps from the GB, GBC, and GBA games are based on the format used by the [pret](https://github.com/pret) decompilations.
 They have been converted to the standard format, with the following extensions to the format:
 - The text data has been formatted to align based on the corresponding symbol in the decompilation.
-- Variables and special characters are marked with square brackets instead of curly braces.
+- For the GBA games, variables and special characters are marked with square brackets instead of curly braces.
+  Braille text is decoded to plain text.
+- For the GB/GBC games, assembly instructions are marked with curly braces.
+  Tiles not in the character map are represented according to their binary representation in hex (such as `\x60`).
 - <sup>P</sup><sub>K</sub><sup>M</sup><sub>N</sub> is encoded using `⒆⒇` as in the Generation V games.
-- Braille text is decoded to plain text.
-
-### GB/GBC
-The text dumps from the GB and GBC games were done by [RobbiRobb](https://robbirobb.de/spiele).
-As these games do not have a file system like later games, these text dumps include other data interpreted as text.
-These dumps are included unmodified.
+- `[NULL]` is used as a placeholder for lines and files which do not exist in a particular language version.
 
 ### GCN/Wii
 The text dumps from *Pokémon Colosseum* and *Pokémon XD: Gale of Darkness* were done by [Tiddlywinks](https://bulbapedia.bulbagarden.net/wiki/User:Tiddlywinks), with the following changes:

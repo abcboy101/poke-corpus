@@ -135,6 +135,29 @@ function cleanSpecialFactory(params: SearchParams): (s: string) => string {
 }
 
 /**
+ * Maps GB-era control characters to standard text-based equivalents.
+ *
+ * Line breaks are folded to their nearest equivalent ('\n', '\r', or '\c'),
+ * while the commands marking the start and end of strings are removed.
+ * This allows regexes containing `\s`, `\S`, `^`, or `$` to work as expected.
+ */
+function convertGBControlCharacters(s: string) {
+  return (s
+    .replaceAll('{text_start}', '')
+    .replaceAll('<PAGE>',   '\\c') // 49
+    .replaceAll('<_CONT>',  '\\r') // 4B
+    .replaceAll('<SCROLL>', '\\r') // 4C
+    .replaceAll('<NEXT>',   '\\n') // 4E
+    .replaceAll('<LINE>',   '\\n') // 4F
+    .replaceAll('@',        '')    // 50
+    .replaceAll('<PARA>',   '\\c') // 51
+    .replaceAll('<CONT>',   '\\r') // 55
+    .replaceAll('<DONE>',   '')    // 57
+    .replaceAll('<PROMPT>', '')    // 58
+  );
+}
+
+/**
  * Normalizes a string by removing all whitespace, i.e. "ひとの こころ" -> "ひとのこころ".
  * Intended for languages where whitespace is not significant such as Japanese, Korean, Chinese, and Thai.
  */
@@ -192,11 +215,21 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       const lines = data.split(/\r\n|\n/);
       const lineKeys: number[] = [];
 
-      // Check selected languages for lines that satisfy the query
-      const match = (!params.caseInsensitive ? matchCondition : ['ja', 'ko', 'zh', 'th'].some((lang) => languageKey.startsWith(lang))
+      // Determine matching strategy
+      // - For case-sensitive searches, only exact matches are allowed.
+      // - For case-insensitive searches:
+      //   - If whitespace is not significant, matches folding special characters and ignoring whitespace are also allowed.
+      //   - If whitespace is significant, matches folding special characters, collapsing whitespace, and allowing hyphens to break words across lines are allowed.
+      // - For GB games, both matches to the raw control characters and matches to the converted control characters are allowed.
+      const baseMatch = (!params.caseInsensitive ? matchCondition : ['ja', 'ko', 'zh', 'th'].some((lang) => languageKey.startsWith(lang))
         ? (line: string) => matchCondition(line) || matchCondition(removeWhitespace(cleanSpecial(line)))
         : (line: string) => matchCondition(line) || matchCondition(cleanSpecial(normalizeWhitespacePreserveHyphen(line))) || matchCondition(cleanSpecial(normalizeWhitespaceRemoveHyphen(line)))
       );
+      const match = ['RedBlue', 'Yellow'].includes(collectionKey)
+        ? (line: string) => baseMatch(line) || baseMatch(convertGBControlCharacters(line))
+        : baseMatch;
+
+      // Check selected languages for lines that satisfy the query
       if (params.languages.includes(languageKey)) {
         lines.forEach((line, i) => {
           if (match(line)) {
@@ -225,11 +258,13 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
     const messageIdIndex = languageKeys.indexOf(codeId);
     const lineKeysSorted = Array.from(lineKeysSet).sort((a, b) => a - b);
     const whereCondition = whereConditionFactory(fileData, languageKeys);
+    if (import.meta.env.DEV && messageIdIndex !== -1 && lineKeysSorted.length > 0 && lineKeysSorted[lineKeysSorted.length - 1] >= fileData[messageIdIndex].length)
+      throw new RangeError(`message IDs are incorrectly aligned (expected at least ${lineKeysSorted[lineKeysSorted.length - 1]} but found ${fileData[messageIdIndex].length})`);
     const fileResults: readonly string[][] = ((messageIdIndex === -1) ? lineKeysSorted
       : lineKeysSorted.filter((i) => {
         // Ignore lines that don't correspond to text data (blank lines, text file headers) based on the message ID file
         const messageId = fileData[messageIdIndex][i];
-        return messageId !== '' && messageId !== '~~~~~~~~~~~~~~~' && !messageId.startsWith('Text File : ');
+        return messageId && messageId !== '~~~~~~~~~~~~~~~' && !messageId.startsWith('Text File : ');
       }))
       .filter(whereCondition)
       .map((i) => fileData.map((lines) => lines[i]));

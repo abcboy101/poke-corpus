@@ -8,6 +8,7 @@ import { postprocessSpeaker } from '../speaker';
 import { grammarBranch, versionBranch, genderBranch, numberBranch, genderNumberBranch } from './branches';
 import { postprocessStringGO } from './cleanStringGO';
 import { postprocessStringMasters } from './cleanStringMasters';
+import * as g1 from './expandVariablesG1';
 import * as g3 from './expandVariablesG3';
 import { particlesKO, grammarEN, grammarFR, grammarIT, grammarDE, grammarES, remapBDSPGrammarIndex } from './grammar';
 
@@ -82,6 +83,7 @@ const textGradientOpenDec = (_: string, r1: string, g1: string, b1: string, a1: 
  * Returns the resulting HTML string.
  */
 export function postprocessString(s: string, collectionKey: CollectionKey | '' = '', language: LanguageKey = 'en', richText = true) {
+  const isGen1 = ["RedBlue", "Yellow"].includes(collectionKey);
   const isGen3 = ["RubySapphire", "FireRedLeafGreen", "Emerald"].includes(collectionKey);
   const isGen4 = ["DiamondPearl", "Platinum", "HeartGoldSoulSilver"].includes(collectionKey);
   const isGen5 = ["BlackWhite", "Black2White2"].includes(collectionKey);
@@ -93,6 +95,7 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
   const isMasters = collectionKey === "Masters";
   const isHOME = collectionKey === "HOME";
 
+  const isGB = isGen1;
   const isNDS = isGen4 || isGen5;
   const is3DS = ["XY", "OmegaRubyAlphaSapphire", "SunMoon", "UltraSunUltraMoon", "Bank"].includes(collectionKey);
   const isSwitch = ["LetsGoPikachuLetsGoEevee", "SwordShield", "BrilliantDiamondShiningPearl", "LegendsArceus", "ScarletViolet", "LegendsZA", "HOME"].includes(collectionKey);
@@ -132,13 +135,16 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
   s = isGen3 ? (s
     .replaceAll('\\e', '\u{F02FF}')
   ) : s;
+  s = isGB ? (s
+    .replaceAll('@', '\u{F0250}')
+  ) : s;
   s = isN64 ? (s
     .replaceAll('\u{F0100}n', '\u{F0200}') // Game Boy Tower
   ) : s;
   //#endregion
 
   //#region Literals
-  s = (isN64 || isGen3 || isNDS) ? (s
+  s = (isGB || isN64 || isGen3 || isNDS) ? (s
     .replaceAll('⒆', '<sup>P</sup><sub>K</sub>') // Gen 5 PK [also used privately for Gen 4 and earlier]
     .replaceAll('⒇', '<sup>M</sup><sub>N</sub>') // Gen 5 MN [also used privately for Gen 4 and earlier]
   ) : s;
@@ -148,8 +154,8 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
   ) : s;
   s = isGen3 ? (s
     // POKé, POKéBLOCK
-    .replaceAll('[POKE]', '<sup>P</sup><sub>O</sub><sup>K</sup><sub>é</sub>')
-    .replaceAll('[POKEBLOCK]', `<sup>P</sup><sub>O</sub><sup>K</sup><sub>é</sub>\u{F1102}${g3.expandBlock(language)}\u{F1103}`)
+    .replaceAll('[POKE]', '\u{F1102}<sup>P</sup><sub>O</sub><sup>K</sup><sub>é</sub>\u{F1103}')
+    .replaceAll('[POKEBLOCK]', `\u{F1102}<sup>P</sup><sub>O</sub><sup>K</sup><sub>é</sub>${g3.expandBlock(language)}\u{F1103}`)
     .replaceAll('[BLOCK]', `\u{F1102}${g3.expandBlock(language)}\u{F1103}`)
     .replaceAll('[POKEMELLA]', '\u{F1102}<sup>P</sup><sub>O</sub><sup>K</sup><sub>é</sub>MELLA\u{F1103}')
     .replaceAll('[MELLA]', '\u{F1102}MELLA\u{F1103}')
@@ -170,6 +176,16 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
     .replaceAll('[PP]', `\u{F1102}<span class="literal-small">${g3.expandPP(language)}</span>\u{F1103}`)
     .replaceAll('[ID]', `\u{F1102}<span class="literal-small">${g3.expandID()}</span>\u{F1103}`)
     .replaceAll('[NO]', `\u{F1102}<span class="literal-small">${g3.expandNo(language)}</span>\u{F1103}`)
+  ) : s;
+  s = isGB ? (s
+    .replaceAll('\u{F0106}DEXEND\u{F0107}', `\u{F1102}${g1.expandDexEnd(language)}\u{F0250}\u{F1103}`)
+    .replaceAll('\u{F0106}ID\u{F0107}', `\u{F1102}<span class="literal-small">${g1.expandID(language)}</span>\u{F1103}`)
+    .replaceAll('\u{F0106}NO\u{F0107}', `\u{F1102}<span class="literal-small">${g1.expandNo(language)}</span>\u{F1103}`)
+    .replaceAll('\u{F0106}ED\u{F0107}', () => {
+      const ed = g1.expandED(language);
+      return `<sup>${ed[0]}</sup><sub>${ed[1]}</sub>`;
+    })
+    .replaceAll('\u{F0106}DOT\u{F0107}', `\u{F1102}<span class="literal-small">${g1.expandDot(language)}</span>\u{F1103}`)
   ) : s;
   //#endregion
 
@@ -247,6 +263,20 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
   s = isGen4 ? (s
     .replaceAll('\u{F0207}', '<span class="c">[VAR 0207]</span><br>') // [VAR 0207]
     .replaceAll('\u{F0208}', '<span class="r">[VAR 0208]</span><br>') // [VAR 0208]
+  ) : s;
+  s = isGB ? (s
+    .replaceAll('\u{F0106}PAGE\u{F0107}',   '<span class="c">\u{F0106}PAGE\u{F0107}</span><br>')   // 49
+    .replaceAll('\u{F0106}_CONT\u{F0107}',  '<span class="r">\u{F0106}_CONT\u{F0107}</span><br>')  // 4B
+    .replaceAll('\u{F0106}SCROLL\u{F0107}', '<span class="r">\u{F0106}SCROLL\u{F0107}</span><br>') // 4C
+    .replaceAll('\u{F0106}NEXT\u{F0107}',   '<span class="n">\u{F0106}NEXT\u{F0107}</span><br>')   // 4E
+    .replaceAll('\u{F0106}LINE\u{F0107}',   '<span class="n">\u{F0106}LINE\u{F0107}</span><br>')   // 4F
+    .replaceAll('\u{F0106}PARA\u{F0107}',   '<span class="c">\u{F0106}PARA\u{F0107}</span><br>')   // 51
+    .replaceAll('\u{F0106}CONT\u{F0107}',   '<span class="r">\u{F0106}CONT\u{F0107}</span><br>')   // 55
+    .replaceAll('\u{F0106}DONE\u{F0107}',   '<span class="t">\u{F0106}DONE\u{F0107}</span><br>')   // 57
+    .replaceAll('\u{F0106}PROMPT\u{F0107}', '<span class="t">\u{F0106}PROMPT\u{F0107}</span><br>') // 58
+
+    // If at the start of the string, hide the line break unless whitespace is toggled to be visible
+    .replaceAll(/^((?:\{text_start\})?<span class="[ncrt]">\u{F0106}[A-Z_]+\u{F0107})(<\/span>)(<br>)/gu, '$1$3$2')
   ) : s;
   s = (s
     .replaceAll('\u{F0201}', '<span class="r">\\r</span><br>') // \r
@@ -432,6 +462,23 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
   //#endregion
 
   //#region Variables
+  s = isGB ? (s
+    // Terminator (50)
+    .replaceAll(/<br>(\u{F0250}+)/gu, '$1<br>')
+    .replaceAll(/\u{F0250}(?!\{text_|<br>|\u{F0250}|\u{F1103}|$)/gu, `<span class="t">@</span><br>`)
+    .replaceAll(/\u{F0250}/gu, `<span class="t">@</span>`)
+
+    .replaceAll(/(\{text_start\})/gu, '<span class="func text-start">$1</span>')
+    .replaceAll(/(\{text_ram [^}]+\})/gu, '<span class="var long">$1</span><span class="var short" title="$1">{text_ram}</span>')
+    .replaceAll(/(\{text_bcd [^}]+\})/gu, '<span class="var long">$1</span><span class="var short" title="$1">{text_bcd}</span>')
+    .replaceAll(/(\{text_decimal [^}]+\})/gu, '<span class="var long">$1</span><span class="var short" title="$1">{text_decimal}</span>')
+    .replaceAll(/(\\x[0-9A-F]{2})/gu, '<span class="var">$1</span>')
+
+    .replaceAll('\u{F0106}PLAYER\u{F0107}', '<span class="var">\u{F0106}PLAYER\u{F0107}</span>') // 52
+    .replaceAll('\u{F0106}RIVAL\u{F0107}',  '<span class="var">\u{F0106}RIVAL\u{F0107}</span>')  // 53
+    .replaceAll('\u{F0106}TARGET\u{F0107}', '<span class="var">\u{F0106}TARGET\u{F0107}</span>') // 59
+    .replaceAll('\u{F0106}USER\u{F0107}',   '<span class="var">\u{F0106}USER\u{F0107}</span>')   // 5A
+  ) : s;
   s = isGen3 ? (s
     .replaceAll(/(\[DYNAMIC \d+\])/gu, '<span class="var">$1</span>') // F7 xx
     .replaceAll(/(\[(?:(?:[ABLR]|START|SELECT)_BUTTON|DPAD_(?:UP|DOWN|LEFT|RIGHT|UPDOWN|LEFTRIGHT|NONE))\])/gu, '<span class="var">$1</span>') // F8 xx

@@ -22,6 +22,7 @@
  * - U+F0203: placeholder for tab `\t`
  * - U+F0207: placeholder for `[VAR 0207]`
  * - U+F0208: placeholder for `[VAR 0208]`
+ * - U+F0250: placeholder for end of text `@`
  * - U+F02FF: placeholder for end of text `\e`
  *
  * The following codepoints can be used in source documents for multivalued strings:
@@ -77,6 +78,16 @@ export function remapKoreanBraille(s: string) {
     .replaceAll(/([\u1100-\u115F])(?![\u1160-\u1175]|$)/gum, '$1\u1160') // filler for unmatched initials
     .replaceAll(/(?<![\u1160-\u1175])([\u11A8-\u11FF])/gum, '\u115F\u1160$1') // filler for unmatched finals
     .normalize()
+  );
+}
+
+// GB special characters
+function remapGBSpecialCharacters(s: string, language: LanguageKey) {
+  language satisfies LanguageKey;
+  return (s
+    .replaceAll('¥', '$') // Pokémon Dollar
+    .replaceAll('<PK>', '⒆') // Gen 1/2 PK
+    .replaceAll('<MN>', '⒇') // Gen 1/2 MN
   );
 }
 
@@ -423,6 +434,11 @@ export function preprocessMetadata(s: string) {
  */
 export function preprocessString(s: string, collectionKey: CollectionKey, language: LanguageKey) {
   switch (collectionKey) {
+    case "RedBlue":
+    case "Yellow":
+      s = remapGBSpecialCharacters(s, language);
+      break;
+
     case "RubySapphire":
     case "FireRedLeafGreen":
     case "Emerald":

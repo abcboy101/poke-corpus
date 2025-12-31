@@ -5,8 +5,9 @@ export const replaceLiteralsFactory = (literalsData: readonly ReadonlyMap<number
     if (literals === undefined || languageIndex === messageIdIndex)
       return s;
 
+    const isGB = ['RedBlue', 'Yellow'].includes(collectionKey);
     for (const [literalId, {branch, line}] of Object.entries(literals)) {
-      const searchValue = `[${literalId}]`;
+      const searchValue = isGB ? (literalId === '#' ? literalId : `<${literalId}>`) : `[${literalId}]`;
       let replaceValue = undefined;
       switch (branch) {
         case undefined:
@@ -31,6 +32,8 @@ export const replaceLiteralsFactory = (literalsData: readonly ReadonlyMap<number
       if (replaceValue === undefined)
         return s;
 
+      if (isGB)
+        replaceValue = replaceValue.replaceAll(/@+$/gu, '');
       if (collectionKey === 'BattleRevolution')
         replaceValue = replaceValue.substring('[FONT 0][SPACING 1]'.length).trim();
 
