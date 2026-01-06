@@ -1,3 +1,4 @@
+rb.pokemon.PrintStatusCondition.fnt
 rb.text.TMCharText
 rb.text.TrainerCharText
 rb.text.PCCharText
@@ -494,6 +495,7 @@ rb.name_pointers.TrainerNamePointers.ScientistName
 rb.name_pointers.TrainerNamePointers.RocketName
 rb.name_pointers.TrainerNamePointers.CooltrainerMName
 rb.name_pointers.TrainerNamePointers.CooltrainerFName
+rb.link_battle_versus_text.DisplayLinkBattleVersusTextBox
 rb.slot_machine.CoinMultiplierSlotMachineText
 rb.slot_machine.SlotReward300Text
 rb.slot_machine.SlotReward100Text
@@ -552,6 +554,7 @@ rb.core.WhichTechniqueString
 rb.core.DisabledText
 rb.core.TypeText
 rb.core.PrintEmptyString.emptyString
+rb.core.InitWildBattle.isGhost
 rb.core.InitBattleCommon.emptyString
 rb.stat_mod_names.StatModTextStrings.0
 rb.stat_mod_names.StatModTextStrings.1
@@ -925,6 +928,11 @@ rb.credits_text.CredNoEProdTest
 rb.credits_text.CredClub
 rb.credits_text.CredNoAProdTest
 rb.credits_text.CredPAAD
+rb.status_ailments.PrintStatusAilment.slp
+rb.status_ailments.PrintStatusAilment.psn
+rb.status_ailments.PrintStatusAilment.brn
+rb.status_ailments.PrintStatusAilment.frz
+rb.status_ailments.PrintStatusAilment.par
 rb.ViridianGym.ViridianGym_Script.CityName
 rb.ViridianGym.ViridianGym_Script.LeaderName
 rb.vending_machine.DrinkText

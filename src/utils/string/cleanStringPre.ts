@@ -88,6 +88,7 @@ function remapGBSpecialCharacters(s: string, language: LanguageKey) {
     .replaceAll('¥', '$') // Pokémon Dollar
     .replaceAll('<PK>', '⒆') // Gen 1/2 PK
     .replaceAll('<MN>', '⒇') // Gen 1/2 MN
+    .replaceAll('<do>', 'ど') // Single tile for PrintStatusAilment
   );
 }
 

@@ -1,3 +1,4 @@
+y.pokemon.PrintStatusCondition.fnt
 y.text.TMCharText
 y.text.TrainerCharText
 y.text.PCCharText
@@ -540,6 +541,11 @@ y.prize_menu.NoThanksText
 y.prize_menu.PrintPrizePrice.CoinString
 y.prize_menu.PrintPrizePrice.SixSpacesString
 y.FuchsiaGoodRodHouse.FuchsiaGoodRodHouseFishingGuruText.UnusedText
+y.status_ailments.PrintStatusAilment.slp
+y.status_ailments.PrintStatusAilment.psn
+y.status_ailments.PrintStatusAilment.brn
+y.status_ailments.PrintStatusAilment.frz
+y.status_ailments.PrintStatusAilment.par
 y.RedsHouse2F.RedsHouse2F_TextPointers
 y.PewterGym.PewterGym_Script.CityName
 y.PewterGym.PewterGym_Script.LeaderName
@@ -3834,6 +3840,7 @@ y.credits_text.CreditsText_HudsonAndBuechele
 y.credits_text.CreditsText_Fabri
 y.credits_text.CreditsText_Fleury
 y.credits_text.CreditsText_ZehAndThieret
+y.link_battle_versus_text.DisplayLinkBattleVersusTextBox
 y.link_menu.Text_f56f4
 y.link_menu.Text_f5728
 y.link_menu.Text_f575b
@@ -3841,6 +3848,7 @@ y.link_menu.Text_f5791
 y.link_menu.Text_f579c
 y.link_menu.TextTerminator_f5a16
 y.link_menu.TradeCenterText
+y.init_battle.InitWildBattle.isGhost
 y.slots_payout.SlotPayoutStrings.1
 y.slots_payout.SlotPayoutStrings.2
 y.slots_payout.SlotPayoutStrings.3
