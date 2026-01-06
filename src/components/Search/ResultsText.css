@@ -36,7 +36,7 @@
 }
 
 /* Line breaks, whitespace */
-.r, .c, .n, .t, .e, .vertoffset, .div {
+.r, .c, .n, .t, .e, .control {
   color: var(--text-gray);
 }
 
@@ -52,7 +52,7 @@ td[lang="zxx"] wbr {
   display: unset;
 }
 
-.control-hide :is(.r, .c, .n, .t, .vertoffset, .div, .text-start),
+.control-hide :is(.r, .c, .n, .t, .control),
 .control-show span.soft, .control-hide wbr.soft {
   display: none;
 }

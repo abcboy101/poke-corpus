@@ -351,7 +351,7 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
   // PBR
   s = isPBR ? (s
     .replaceAll(/\[COLOR (\d+)\](.*?)(?:\[COLOR \d+\]|[\u{F0201}\u{F0202}\u{F0200}]|$)/gu, '<span class="color" style="color: var(--color-$1)">$2</span>')
-    .replaceAll(/(\[VERTOFFSET -?[\d.]+\])/gu, '<span class="vertoffset">$1</span>') // '<span style="position: relative; top: $1px">$2</span>'
+    .replaceAll(/(\[VERTOFFSET -?[\d.]+\])/gu, '<span class="control">$1</span>') // '<span style="position: relative; top: $1px">$2</span>'
     .replaceAll(/\[FONT ([0126])\](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[FONT \d+\]|$)/gu, '<span class="font-pbr-$1">$2</span>')
     .replaceAll(/(\[FONT [\d.]+\])/gu, '<span class="func">$1</span>')
     .replaceAll(/\[SPACING (-?[\d.]+)\](.*?$)/gu, '<span class="spacing-$1">$2</span>')
@@ -468,7 +468,7 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
     .replaceAll(/\u{F0250}(?!\{text_|<br>|\u{F0250}|\u{F1103}|$)/gu, `<span class="t">@</span><br>`)
     .replaceAll(/\u{F0250}/gu, `<span class="t">@</span>`)
 
-    .replaceAll(/(\{text_start\})/gu, '<span class="func text-start">$1</span>')
+    .replaceAll(/(\{text_start\})/gu, '<span class="control">$1</span>')
     .replaceAll(/(\{text_ram [^}]+\})/gu, '<span class="var long">$1</span><span class="var short" title="$1">{text_ram}</span>')
     .replaceAll(/(\{text_bcd [^}]+\})/gu, '<span class="var long">$1</span><span class="var short" title="$1">{text_bcd}</span>')
     .replaceAll(/(\{text_decimal [^}]+\})/gu, '<span class="var long">$1</span><span class="var short" title="$1">{text_decimal}</span>')

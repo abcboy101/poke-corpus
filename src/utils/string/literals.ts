@@ -30,10 +30,10 @@ export const replaceLiteralsFactory = (literalsData: readonly ReadonlyMap<number
           branch satisfies never;
       }
       if (replaceValue === undefined)
-        return s;
+        continue;
 
       if (isGB)
-        replaceValue = replaceValue.replaceAll(/@+$/gu, '');
+        replaceValue = replaceValue.replaceAll(/@/gu, '');
       if (collectionKey === 'BattleRevolution')
         replaceValue = replaceValue.substring('[FONT 0][SPACING 1]'.length).trim();
 
