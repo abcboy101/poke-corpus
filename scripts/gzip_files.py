@@ -1,4 +1,5 @@
 import codecs
+import glob
 import gzip
 import json
 import os.path
@@ -13,12 +14,14 @@ with open(CORPUS_JSON, 'r', encoding='utf-8') as f:
     corpus = json.load(f)
 
 print('Checking corpus for changes...')
+outdated = set(pathlib.Path(p) for p in glob.iglob('/'.join([GZIP_FOLDER, '*', f'*.txt.gz'])))
 modified = []
 for collection_key, collection in corpus['collections'].items():
     for language in collection['languages']:
         for file in collection['files']:
             text_path = pathlib.Path('/'.join([TEXT_FOLDER, collection_key, f'{language}_{file}.txt']))
             gzip_path = pathlib.Path('/'.join([GZIP_FOLDER, collection_key, f'{language}_{file}.txt.gz']))
+            outdated.discard(gzip_path)
 
             # Check modified time
             try:
@@ -57,6 +60,14 @@ for collection_key, collection in corpus['collections'].items():
             with open(gzip_path, 'wb') as f:
                 f.write(cmp)
             modified.append(gzip_path)
+
+for path in outdated:
+    print(f'Deleting file {path}')
+    os.remove(path)
+for path in glob.iglob('/'.join([GZIP_FOLDER, '*'])):
+    if os.path.isdir(path) and not os.listdir(path):
+        print(f'Deleting folder {path}')
+        os.rmdir(path)
 
 # Optimize
 PATH_LEANIFY = './scripts/bin/Leanify.exe'
