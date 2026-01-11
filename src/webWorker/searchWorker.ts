@@ -222,7 +222,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       //   - If whitespace is significant, matches folding special characters, collapsing whitespace, and allowing hyphens to break words across lines are allowed.
       // - For GB games, both matches to the raw control characters and matches to the converted control characters are allowed.
       const baseMatch = (!params.caseInsensitive ? matchCondition : ['ja', 'ko', 'zh', 'th'].some((lang) => languageKey.startsWith(lang))
-        ? (line: string) => matchCondition(line) || matchCondition(removeWhitespace(cleanSpecial(line)))
+        ? (line: string) => matchCondition(line) || matchCondition(cleanSpecial(line)) || matchCondition(removeWhitespace(cleanSpecial(line)))
         : (line: string) => matchCondition(line) || matchCondition(cleanSpecial(normalizeWhitespacePreserveHyphen(line))) || matchCondition(cleanSpecial(normalizeWhitespaceRemoveHyphen(line)))
       );
       const match = ['RedBlue', 'Yellow'].includes(collectionKey)
