@@ -531,6 +531,7 @@ Doesn’t look like you’ve got enough Colorful\nScrews there, kid.\c
 Yeah, there’s no way you can fit any more of that\none in your satchel, kid.\c
 You’ve already got that one, kid.\c
 You gonna put back the plush you’d picked up?\c
+[VAR 0203(0000,002C)]
 ~~~~~~~~~~~~~~~
 Text File : t1_R
 ~~~~~~~~~~~~~~~
@@ -2484,8 +2485,21 @@ Never mind
 [VAR 1303(0013,0000)][VAR 0109(0013)]
 [VAR 1303(0014,0000)][VAR 0109(0014)]
 [VAR 1303(0015,0000)][VAR 0109(0015)]
+[VAR 1303(0016,0000)][VAR 0109(0016)]
+[VAR 1303(0017,0000)][VAR 0109(0017)]
+[VAR 1303(0018,0000)][VAR 0109(0018)]
+[VAR 1303(0019,0000)][VAR 0109(0019)]
+[VAR 1303(001A,0000)][VAR 0109(001A)]
+[VAR 1303(001B,0000)][VAR 0109(001B)]
+[VAR 1303(001C,0000)][VAR 0109(001C)]
+[VAR 1303(001D,0000)][VAR 0109(001D)]
+[VAR 1303(001E,0000)][VAR 0109(001E)]
+[VAR 1303(001F,0000)][VAR 0109(001F)]
+[VAR 1303(0020,0000)][VAR 0109(0020)]
+[VAR 1303(0021,0000)][VAR 0109(0021)]
+[VAR 1303(0022,0000)][VAR 0109(0022)]
 I think I’m good
-[~ 23]
+[~ 36]
 Welcome! I’ve got all kinds of Berries with\nwondrous effects. Need anything?
 [VAR BD06(0000)][VAR 1303(0002,0000)][VAR 010A(0002)] will cost\nyou\r\n[VAR 0204(0003,002C)].\r\nHow’s\r\nthat\r\nsound?
 I’ll take it!
@@ -2501,7 +2515,7 @@ Oh dear... It looks like that’s too much for your\nbudget right now.
 Looking forward to serving you again!
 Oopsie, looks like you can’t carry any more!
 Need anything else before you go?
-[~ 39]
+[~ 52]
 The famous flavor of Kalos that’s baked right here\nin Lumiose City! Yes, we’ve got Lumiose Galettes!\r\nWhat would you like, young Trainer?
 [VAR BD06(0000)]It’s [VAR 0204(0003,002C)] for [VAR 1302(0002,0000)][VAR 0109(0002)].\nThat\r\nsound\r\ngood\r\nto you?
 I’ll buy one!
@@ -2511,7 +2525,7 @@ Uh-oh... You don’t have enough money!
 The famous flavor of Kalos is famous thanks to\ncustomers like you! Please come again soon!
 Uh-oh... You don’t have space for any more treats!
 Do you still want to get any fresh treats today?
-[~ 49]
+[~ 62]
 Want something to drink?
 [VAR BD06(0000)][VAR 1303(0002,0000)][VAR 010A(0002)] costs\n[VAR 0204(0003,002C)].\r\nAll good?
 I’ll take it!
@@ -2521,7 +2535,7 @@ I’m sorry, but it looks like you don’t have enough\nto cover that purchase.
 Stop by anytime.
 Doesn’t look like you can carry that, does it?
 Anything else today?
-[~ 59]
+[~ 72]
 Would you be interested in any sprigs of mint?
 [VAR BD06(0000)][VAR 1303(0002,0000)][VAR 010A(0002)] costs\n[VAR 0204(0003,002C)].\r\nHow\r\ndoes\r\nthat\r\nsound,\r\nm[VAR 1100(00FF,0B07)]onsieurademoiselle?
 I’ll take it!
@@ -2531,7 +2545,7 @@ You don’t have enough money on hand, dear.
 Do come again!
 It looks to me like your satchel can’t hold any\nmore right now.
 Is there anything else I could get for you?
-[~ 69]
+[~ 82]
 I found some handy old things around the garage\nthat still have life in ’em. Interested in buying any?
 Want to buy some junk—I mean, treasures—that I\nfound around the garage?
 [VAR BD06(0000)]I can offer you this\n[VAR 010A(0002)]\r\nfor\r\n[VAR 0204(0003,002C)].\r\nHow\r\ndoes\r\nthat\r\nsound?
@@ -2542,8 +2556,27 @@ Looks like you’re a bit short.
 Come on back if you feel like buying!
 It looks to me like your satchel can’t hold any\nmore right now.
 Anything else you had your eye on?
-[~ 80]
+[~ 93]
 How about a fine Leek? Farfetch’d love to hold\nonto them. What’ll you have?
+[~ 95]
+Welcome! I’ve got all kinds of Berries.\nNeed anything?
+[VAR BD06(0000)][VAR 1001][VAR 1003][VAR 010A(0002)] are [VAR 0204(0003,002C)]\napiece.
+Yes, please
+What other Berries do you have?
+Actually, I’m good
+I’ll take one
+I’ll take 10
+I’ll take 50
+I’ll take 100
+It doesn’t look like you have room to carry that\nmany Berries!
+[VAR BD06(0000)]Here you go—[VAR 0202(0007)] [VAR 010A(0006)].\nThanks!\c\nNeed any other Berries while you’re here?
+What other Berries are you after?
+I’m afraid you’re a little short there.
+Come again!
+It looks like you can’t carry any more than you’ve\nalready got.
+[VAR BD06(0000)][VAR 1001][VAR 1003][VAR 010A(0002)] are [VAR 0204(0003,002C)]\napiece.
+It doesn’t seem like you have room to carry that\nmany Berries...
+[VAR BD06(0000)]Here you are—[VAR 0202(0007)] [VAR 010A(0006)].\nThank you!\c\nNeed any other Berries while you’re here?
 ~~~~~~~~~~~~~~~
 Text File : byebye
 ~~~~~~~~~~~~~~~
@@ -3769,7 +3802,8 @@ Ahh, my phone’s out of battery...\nGuess I used it too much today.
 Remember to recharge your own\nbatteries, too, once we’re home!
 Going on walks is more fun when\nyou can name the flowers you see!
 I thought working for Nouveau\nwould be more exciting than this...
-[~ 73]
+Making sweets or treats?\nBuy some Berries here! [VAR BD0A(000A)]Text_icon1
+[~ 74]
 I want to battle opponents I can beat!\c\nBut I can’t go around asking people what\nPokémon they use before I battle them...
 Want to win battles even when the type matchup\nisn’t in your favor? Then you gotta level up!
 What happens in Lumiose stays in Lumiose...so it\ndoesn’t matter if I lose all my battles here!
@@ -3790,7 +3824,7 @@ My backpack contains everything I need for travel.\nAnd my Poké Balls contain m
 Holovators and ladders are used for similar\npurposes, but they’re pretty different!
 What a gorgeous kimono. I wonder if it’s a\nvintage piece?
 This particular furisode is worth about 200\nBig Nuggets.
-[~ 94]
+[~ 95]
 Trubbish is cute, but you gotta be\ncareful of the toxic gas it belches.
 Apparently all the bamboo at the Rust Syndicate\noffice was planted for their Pangoro to use.
 I only listen to electronic music.
@@ -3824,7 +3858,7 @@ I just... I just wanted to battle\nthat Trainer one more time...
 Ohmygosh! I forgot to snap a\npic at the café for my socials.
 I don’t care about which café is\ntrending online. I go where I like!
 Lumiose City is enormous...
-[~ 128]
+[~ 129]
 Rule one: no mishaps! Rule two: read the\nsituation and act accordingly!
 One second of carelessness\ncan lead to a lifetime of regret.
 Yesterday was incident-free, but\nthat doesn’t mean today will be!
@@ -3832,7 +3866,7 @@ Safety first!
 Work equipment: checked!\nBag items: double-checked!
 Chasing off wild Pokémon is part of our job, too.
 There are more wild Pokémon\nstealing our electricity lately.
-[~ 136]
+[~ 137]
 I want to do a job that lets me test my skills\nagainst people from all over the world.
 You know what lets you take on the world?\nPokémon battling!
 Rooftops are THE place to\nspend your breaks, am I right?
@@ -3859,7 +3893,7 @@ It’s Team Flare’s fault for\ncausing that huge incident!
 I hear Mega Stones and Mega\nCrystals are made of similar stuff.
 How do I get my Pokémon\nto grow up strong?
 I owe my life to the\nRust Syndicate...
-[~ 163]
+[~ 164]
 I hate waking up in the mornings,\nand I hate falling asleep at night!
 I love pretty much\nanything I get to eat!
 It’s strange being on a rooftop and looking down\nat people below or at Pokémon in the wild zones.
@@ -3898,7 +3932,7 @@ I always feel great when\nthe weather’s nice!
 Trainers need to keep switching the best\nPokémon into battle as the situation changes.
 The number of wild Pokémon\naround the city is soaring.
 *sigh* Another day without being\nreincarnated as a Pokémon...
-[~ 202]
+[~ 203]
 I wanna play soccer with the\nPokémon in the wild zones!
 I wanna run all around\nLumiose and play tag!
 I’d rather play hide-and-seek,\nbut I don’t think it’d ever end.
@@ -3927,7 +3961,7 @@ My bed’s super effective at making\nme drowsy. Mornings are tough!
 Lumiose is a chic city, sure, but it’s tough living\nhere. Holding down a job, dealing with rent...\r\nand don’t even get me started on the people!
 I’m glad there’ll be more Pokémon around the\ncity, but we should first make sure that the needs\r\nof all the humans who live here are being met.
 It seems that sales of Poké Balls and other goods\nfor Pokémon are booming all over the city.
-[~ 231]
+[~ 232]
 My dad works for Quasartico, so I’m allowed to\nuse their battle court too.
 Vinnie is teaching me a lot about battling!
 I hear a lot of Quasartico’s employees are talented\nbattlers. It’s probably because the company deals\r\nin Pokémon goods.
@@ -3961,7 +3995,7 @@ I won’t let myself be outshone\nby those Dedenne guards...
 We need regulations to manage\nthe rise in Pokémon numbers.
 I wish someone would research\nthe Pokémon living in the city.
 With more Pokémon around, will\nthere be less room for people?
-[~ 265]
+[~ 266]
 What’s going to happen\nto Prism Tower?
 There’s no escaping from wild Pokémon if you\nrun into them on scaffolding.
 Nuh-uh! If you have a Rotom Phone, you can just\njump off like “look out belooow!”
@@ -3980,7 +4014,7 @@ You gotta throw lots of Poké Balls\nto earn a Pokémon’s respect!
 Pokémon and their\nTrainers are like family.
 I heard that some people leave Potions lying\naround to help injured Pokémon.
 My luggage was stolen right after I arrived in\nLumiose...\c\nLuckily, it was just a prank and I was able to get\nall my stuff back.
-[~ 284]
+[~ 285]
 Your Houndoom is an impressive specimen—it’s\njust as fearsome as it is adorable!
 Your Gabite is similarly delightful. You don’t see\nthat species too often, so I approve of the choice.
 Rumor has it a darkly colored\nPokémon appears at night.
@@ -4006,7 +4040,7 @@ I love my Pokémon! They come and rub their fur\nagainst me when I’m feeling s
 I heard that some of the Trainers competing in the\nZ-A Royale are gaining tons of fans lately.
 I’m not a battler myself, but I like hearing about\nstrong Trainers and their Pokémon.
 I never think about the past or future. Instead, I\ntreasure each moment of the present.
-[~ 310]
+[~ 311]
 Folks in Lumiose spend more time chatting after\nbattles than they do actually battling.
 If you want to make your Pokémon strong, you\nyourself must first be strong.
 No point having a huge place to\nyourself. A cozy room is just fine.
@@ -4061,7 +4095,7 @@ I...I can’t believe it.\nMy Pokémon lost?
 Kalos has Mega Evolution, and\nPaldea has Terastallization...
 Which would win: a Tera Pokémon\nor a Mega-Evolved Pokémon?
 If a Pokémon’s Speed increases,\nit’ll be able to use its moves faster!
-[~ 365]
+[~ 366]
 When push comes to shove,\npeople show their true colors.
 I could beat my manager in a\nbattle any day! It’s just not fair!
 Folks in Lumiose love their\ncomic books, don’t they?
@@ -4077,7 +4111,7 @@ The only furniture that fits in my\ntiny apartment is an old bed...
 I need to finish my deliveries while it’s still light\nout, or I’ll get caught up in the Z-A Royale.
 My room gets crowded if I let my\nPokémon loose, but I love it!
 If you see a chance to take down your opponent,\nuse a fast move rather than a supereffective one!
-[~ 381]
+[~ 382]
 How many steps would it take\nto do one full lap of Lumiose?
 Just another day humming\none of my unfinished songs.
 I keep having this dream where I’m competing in\na Pokémon race that loops around Lumiose.\c\nI know a race like that probably isn’t possible\nbecause of all the wild zones, but still...
@@ -4115,7 +4149,7 @@ If you want to know things that only a cab driver\nwould know, then you should h
 So many strange things happen when you live\naround Pokémon that meeting a guy over nine\r\nfeet tall starts to feel like nothing special.
 The soup comes with bread. We\nrecommend dipping generously.
 Life’s about sleeping and eating—\nfor people and Pokémon both.
-[~ 419]
+[~ 420]
 People say Team Flare was a bunch of villains,\nbut their leader, Lysandre, did also help people\r\nwho were in need.
 You’ll never know if you have an aptitude for\nsomething if you don’t try doing it.
 When you abbreviate South\nBoulevard, you get “SoBo.”
@@ -4144,7 +4178,7 @@ Flowers that grow from cracks\nin concrete are such fighters!
 How about a drink? [VAR BD0A(000A)]Text_icon1
 I always make sure to carry\nat least a few Super Potions.
 If my client wins our next battle,\nmy balance sheet takes a big hit...
-[~ 448]
+[~ 449]
 People start to lose their minds\nwhen they work too hard...
 Try our signature treat! [VAR BD0A(000A)]Text_icon1
 That dark, bitter manna...\c\nEspresso is the oil that keeps our gears running\nsmoothly!

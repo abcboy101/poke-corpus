@@ -259,6 +259,7 @@ Oui
 Non
 [VAR BD06(0000)]Vous donnez [VAR 1400(0000,0000)][VAR 010A(0000)]\nà [VAR 0102(0001)] !\c
 [VAR BD06(0000)][VAR 0102(0000)] tient déjà\n[VAR 1402(0001,0000)][VAR 010A(0001)].\c
+[VAR 0203(0000,0020)]
 ~~~~~~~~~~~~~~~
 Text File : box
 ~~~~~~~~~~~~~~~
@@ -3967,6 +3968,7 @@ Titre octroyé pour avoir dégusté le Café Ultimate\nSuper Premium : édition 
 Bienfaiteur de l’extradimension
 Bienfaitrice de l’extradimension
 Titre octroyé pour avoir accompli énormément\nde missions secondaires.
+[VAR 0203(0001,0020)]
 ~~~~~~~~~~~~~~~
 Text File : btl_app
 ~~~~~~~~~~~~~~~

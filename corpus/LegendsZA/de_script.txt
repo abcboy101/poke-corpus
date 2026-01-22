@@ -531,6 +531,7 @@ Dafür hast du nicht genug Bunte Schrauben.\c
 Für mehr hast du in deiner Tasche gar keinen\nPlatz mehr.\c
 Das besitzt du bereits, schon vergessen?\c
 Möchtest du die Anhänger doch wieder\nzurücklegen?\c
+[VAR 0203(0000,0000)]
 ~~~~~~~~~~~~~~~
 Text File : t1_R
 ~~~~~~~~~~~~~~~
@@ -2484,8 +2485,21 @@ Abbrechen
 [VAR 0109(0013)]
 [VAR 0109(0014)]
 [VAR 0109(0015)]
+[VAR 0109(0016)]
+[VAR 0109(0017)]
+[VAR 0109(0018)]
+[VAR 0109(0019)]
+[VAR 0109(001A)]
+[VAR 0109(001B)]
+[VAR 0109(001C)]
+[VAR 0109(001D)]
+[VAR 0109(001E)]
+[VAR 0109(001F)]
+[VAR 0109(0020)]
+[VAR 0109(0021)]
+[VAR 0109(0022)]
 Abbrechen
-[~ 23]
+[~ 36]
 Frische Beeren mit den verschiedensten Effekten!\nWas darf’s sein?
 [VAR 1603(0002,0000)][VAR 0109(0002)] kostet [VAR 0204(0003,002E)] .\nKommen wir ins Geschäft?
 Kaufen
@@ -2501,7 +2515,7 @@ Oh, du hast leider nicht genug Geld!
 Bitte beehre uns bald wieder!
 Tut mir leid, aber dafür ist in deiner Tasche\nwohl kein Platz.
 Darf es sonst noch etwas sein?
-[~ 39]
+[~ 52]
 Der Geschmack von Kalos, in Illumina verfeinert!\nWie wäre es mit einer Illumina-Galette?
 [VAR 1603(0002,0000)][VAR 0109(0002)] kostet [VAR 0204(0003,002E)] .\nMöchtest du zuschlagen?
 Kaufen
@@ -2511,7 +2525,7 @@ Hoppla, du hast leider nicht genug Geld dabei...
 Komm wieder, wenn sich dein Gaumen nach\ndem einzigartigen Geschmack von Kalos sehnt!
 Hoppla, mehr kannst du nicht tragen.
 Möchtest du dich noch weiter umschauen?
-[~ 49]
+[~ 62]
 Eine Erfrischung gefällig?
 [VAR BD06(0000)][VAR 1603(0002,0000)][VAR 010A(0002)] kostet\n[VAR 0204(0003,002E)] .\r\nIst dir das recht?
 Kaufen
@@ -2521,7 +2535,7 @@ Es tut mir leid, aber du scheinst nicht genug Geld\nzu haben...
 Komm bald wieder.
 Du scheinst nicht noch mehr tragen zu können.
 Darf es sonst noch was sein?
-[~ 59]
+[~ 72]
 Minze, frische Minze!
 [VAR 0109(0002)] kostet [VAR 0204(0003,002E)] .\nEinverstanden?
 Kaufen
@@ -2531,7 +2545,7 @@ Dafür hast du nicht genug Geld dabei.
 Komm bald wieder!
 Mehr passt in deine Tasche leider nicht rein.
 Kann ich sonst noch etwas für dich tun?
-[~ 69]
+[~ 82]
 Wir misten gerade die Garage aus.\nIst da für dich was Brauchbares dabei?
 Möchtest du uns diesen Ramsch-- äh, ich meine,\ndiese wertvollen Fundstücke abkaufen?
 [VAR BD06(0000)][VAR 1607(0002,0000)][VAR 010A(0002)] kann ich\ndir\r\nfür\r\n[VAR 0204(0003,002E)] \r\nanbieten.\r\nEinverstanden?
@@ -2542,8 +2556,27 @@ Du hast doch gar nicht genug Geld dabei...
 Komm gern wieder vorbei!
 Ähm, mehr scheint gerade nicht in deine\nTasche zu passen.
 Gibt’s sonst noch was, das dir gefällt?
-[~ 80]
+[~ 93]
 Wie wär’s mit einer Lauchstange? Porenta freuen\nsich, wenn man ihnen eine zum Tragen gibt.
+[~ 95]
+Beeren, frische Beeren! Was darf’s sein?
+Pro [VAR 0109(0002)] macht das [VAR 0204(0003,002E)] .\nKommen wir ins Geschäft?
+Kaufen
+Stehen noch andere Beeren zum Verkauf?
+Abbrechen
+Ich hätte gern eine!
+Ich hätte gern 10!
+Ich hätte gern 50!
+Ich hätte gern 100!
+Für so viele Beeren hast du doch gar keinen Platz!
+Besten Dank! Hier, [VAR 0202(0007)] [VAR 0109(0006)].\nDarf’s sonst noch was sein?
+Darf’s sonst noch was sein?
+Sorry, aber dafür reicht dein Geld nicht.
+Bitte be-beere uns bald wieder, haha!
+In deiner Tasche ist leider kein Platz mehr.
+Pro [VAR 0109(0002)] macht das [VAR 0204(0003,002E)] .\nKommen wir ins Geschäft?
+Für so viele Beeren hast du doch gar keinen Platz!
+Besten Dank! Hier, [VAR 0202(0007)] [VAR 0109(0006)].\nDarf’s sonst noch was sein?
 ~~~~~~~~~~~~~~~
 Text File : byebye
 ~~~~~~~~~~~~~~~
@@ -3769,7 +3802,8 @@ Oh, mein Handy-Akku ist alle...\nIch hab’s wohl zu viel benutzt.
 Vergiss nicht, zu Hause auch deine\neigene Batterie aufzuladen!
 Kennt man die Namen der Blumen,\nmacht ein Spaziergang mehr Spaß!
 Ich hatte mir die Arbeit beim Imbiss\nirgendwie aufregender vorgestellt.
-[~ 73]
+Brauchst du zufällig Beeren?\nFürs Backen oder so?[VAR BD0A(000A)]Text_icon1
+[~ 74]
 Ich will gegen jemanden kämpfen, gegen den ich\nauch gewinnen kann.\c\nAber man kann seine Gegner ja nicht vorher\nnach ihrem Team fragen...
 Du willst Kämpfe gewinnen, selbst wenn deine\nPokémon vom Typ her im Nachteil sind?\r\nTja, da hilft nur ein höherer Level!
 Man sagt ja, auf Reisen verliert man alle\nHemmungen.\c\nIch würde gern auch das Schamgefühl nach\neiner Niederlage verlieren...
@@ -3790,7 +3824,7 @@ In meinem Rucksack steckt alles, was ich für die\nReise brauche.\c\nUnd in mein
 Leitern und Holo-Lifts haben ähnliche Nutzen,\naber sie sind nicht dasselbe.
 Was für ein wunderschöner Kimono! Ist er eine\nAntiquität?
 Dieser Kimono ist etwa 200 Riesennuggets wert!
-[~ 94]
+[~ 95]
 Unratütox ist süß, aber Vorsicht\nvor dem Giftgas, das es ausspeit!
 Der Bambus beim Corrosio-Clansitz ist\nanscheinend für Pandagro gedacht.
 Wenn ich Musik höre,\ndann immer Techno.
@@ -3824,7 +3858,7 @@ Ich wollte noch mal gegen ihn\nkämpfen. Nur ein Mal noch!
 Och nö! Ich hab vergessen, im Café\nein Foto zum Posten zu machen.
 Mir ist egal, was gerade online\ntrendet. Ich geh dahin, wo ich will!
 Illumina City ist\necht riesig...
-[~ 128]
+[~ 129]
 Erstens: Keine Unfälle verursachen!\nZweitens: Sofort angemessene Maßnahmen\r\nergreifen!
 Eine Sekunde Unaufmerksamkeit\nkann lebenslange Folgen haben!
 Nur weil gestern alles glatt lief,\nmuss das heute nicht auch so sein.
@@ -3832,7 +3866,7 @@ Sicherheit geht vor!
 Ausrüstung: Gecheckt!\nItems im Beutel: Alle da!
 Es gehört auch zu unserer Arbeit, wilde Pokémon\nzu verscheuchen.
 Immer mehr wilde Pokémon\nhaben es auf Strom abgesehen.
-[~ 136]
+[~ 137]
 Ich möchte einen Job, bei dem ich es mit der\nganzen Welt aufnehmen kann.
 Bei Pokémon-Kämpfen kannst du’s mit der\nganzen Welt aufnehmen!
 Auf dem Dach kann man\nprima Pause machen!
@@ -3859,7 +3893,7 @@ Das ist, weil Team Flare diesen\nRiesenvorfall verursacht hat!
 Mega-Steine und Mega-Kristalle\nähneln sich in ihren Bestandteilen.
 Wie trainiert man Pokémon,\ndamit sie stärker werden?
 Ich verdanke dem\nCorrosio-Clan mein Leben...
-[~ 163]
+[~ 164]
 Morgens will ich nicht aufstehen\nund nachts nicht schlafen gehen!
 Egal, was ich esse,\nes ist fast immer lecker!
 Es ist ein seltsames Gefühl, von den Dächern aus\nauf die Menschen in der Stadt und die Pokémon\r\nin den Wildsektoren hinabzuschauen.
@@ -3898,7 +3932,7 @@ Bei schönem Wetter bin\nich immer bester Laune!
 Man sollte immer ganz schnell das jeweils beste\nPokémon für die Situation einwechseln.
 Die Zahl wilder Pokémon\nnimmt stetig zu.
 Auch heute wurde ich nicht\nals Pokémon wiedergeboren...
-[~ 202]
+[~ 203]
 Ich will in den Wildsektoren\nmit Pokémon Fußball spielen!
 Ich will in ganz Illumina\nFangen spielen!
 Ich wäre für Verstecken, aber\ndas würde niemals enden...
@@ -3927,7 +3961,7 @@ Bett setzt Müdigkeit ein...\nEs ist sehr effektiv... *gähn*
 Das Stadtleben mag zwar sehr toll sein, aber die\nBewohner haben es nicht leicht mit Arbeit,\r\nMiete und sozialen Kontakten...
 Ich hab ja prinzipiell nichts dagegen, dass es\nimmer mehr Pokémon in der Stadt geben soll...\c\nAber zuerst sollte sich mal jemand um die\nBedürfnisse von uns Menschen kümmern.
 Die Verkaufszahlen von Pokébällen und\ndergleichen steigen in der ganzen Stadt.
-[~ 231]
+[~ 232]
 Der Kampfplatz ist für die Quazar Corporation\ngedacht, aber mein Vater arbeitet da, deswegen\r\nnutze ich ihn.
 Vincent hat mir schon einiges übers Kämpfen\nbeigebracht.
 Viele Leute in der Quazar Corporation sollen\ngut im Pokémon-Kampf sein.\c\nOb das daran liegt, dass sie in dem Gebiet\narbeiten?
@@ -3961,7 +3995,7 @@ Ich lass mich doch nicht von den\nSecurity-Dedenne übertrumpfen...
 Es werden immer mehr Pokémon...\nWir brauchen neue Regelungen.
 Jemand sollte die Pokémon in der\nStadt mal genauer erforschen.
 Je mehr Pokémon, desto weniger\nLebensraum bleibt für uns übrig...
-[~ 265]
+[~ 266]
 Was wohl aus dem\nPrismaturm wird?
 Stell dir mal vor, du triffst ein wildes Pokémon,\nwährend du auf einem Gerüst rumläufst...\r\nDann gibt’s kein Entkommen!
 Hm... Wenn du ein Smart-Rotom hast, könntest\ndu einfach runterhüpfen! Schwups!
@@ -3980,7 +4014,7 @@ Der Respekt eines Pokémon kann\nTrainer viele Pokébälle kosten.
 Ein Trainer und seine Pokémon\nsind im Prinzip wie eine Familie.
 Ich hab gehört, dass manche Leute Tränke\nherumliegen lassen, um verletzten Pokémon\r\nzu helfen.
 Sobald ich in Illumina ankam, wurde mir mein\nRucksack weggeschnappt...\c\nAber zum Glück war es nur ein Streich und ich\nhab ihn wiederbekommen.
-[~ 284]
+[~ 285]
 Dein Hundemon ist so furchteinflößend, wie es\nniedlich ist!
 Und dein Knarksel erst... Eine seltene Wahl für\neinen Pokémon-Partner. Einfach bezaubernd!
 Angeblich treibt sich nachts ein\ndunkles Pokémon herum...
@@ -4006,7 +4040,7 @@ Ich liebe meine Pokémon! Wenn ich traurig bin,\nkuscheln sie sich mit ihrem wei
 In letzter Zeit scheinen die Teilnehmer des\nZ-A Royale immer mehr Fans zu gewinnen.
 Ich bestreite selbst keine Pokémon-Kämpfe,\ninteressiere mich aber sehr für starke Trainer\r\nund ihre Pokémon.
 Ich lebe im Hier und Jetzt. An die Vergangenheit\noder Zukunft verschwende ich keine Gedanken.
-[~ 310]
+[~ 311]
 In Illumina ist es Brauch, sich nach einem Kampf\nausführlich zu unterhalten. Das dauert meistens\r\nlänger als der Kampf selbst...
 Wenn du willst, dass deine Pokémon stark\nwerden, musst du auch selbst stark sein.
 Was nützt eine riesige Villa,\nwenn sie nicht gemütlich ist?
@@ -4061,7 +4095,7 @@ Ich fasse es nicht...\nMein Pokémon hat verloren?!
 Kalos hat die Mega-Entwicklung\nund Paldea die Terakristallisierung.
 Was ist besser, Terakristallisierung\noder Mega-Entwicklung?
 Je höher die Initiative, desto\nschneller greift ein Pokémon an!
-[~ 365]
+[~ 366]
 Wenn es hart auf hart kommt,\nzeigen Menschen ihr wahres Ich.
 Mein Chef nervt total! Dabei\nbin ich viel besser im Kämpfen!
 In Illumina gibt es ganz\nschön viele Comic-Fans.
@@ -4077,7 +4111,7 @@ Eine kleine Wohnung mit einem\nalten Bett... So ist das Leben...
 Ich muss bis zum Abend alle Pakete ausliefern...\nSonst schaff ich’s nicht zum Z-A Royale!
 Mit meinen Pokémon wird’s noch\nenger zu Hause, aber ich lieb’s!
 Wenn du die Gelegenheit hast, den Gegner zu\nbesiegen, eignet sich eine schnelle Attacke\r\nbesser als eine effektive.
-[~ 381]
+[~ 382]
 Wie viele Schritte es wohl braucht,\num Illumina zu umrunden?
 Was ich summe? Meinen\nneuen Song. Ist fast fertig.
 Ich träume von einem Pokémon-Rennen rund\num Illumina.\c\nWegen der Wildsektoren ist das vermutlich nicht\nmöglich, aber cool wär’s doch!
@@ -4115,7 +4149,7 @@ Wenn du das Wissen von Taxifahrern anzapfen\nwillst, solltest du mal mit dem Tax
 Wenn man tagtäglich mit Pokémon zu tun hat,\npassiert so viel abgedrehtes Zeug...\c\nDa kommt einem nicht mal mehr ein drei Meter\ngroßer Mann seltsam vor.
 Wir empfehlen, das Baguette\nin eine Suppe zu tunken.
 Leben heißt essen und schlafen,\nfür Menschen und Pokémon!
-[~ 419]
+[~ 420]
 Alle sagen immer, Team Flare sei eine böse\nOrganisation, aber ihr Boss Flordelis hat auch\r\nmanch einem aus der Klemme geholfen.
 Man weiß nie, ob man Talent für eine Sache hat,\nwenn man sich nicht daran versucht.
 Sieben salzige Scampisto surfen\nsicher samstags im Südring!
@@ -4144,7 +4178,7 @@ Blumen sind so stark, dass sie\nsogar Beton durchbrechen!
 Wie wäre es mit einem\nerfrischenden Getränk?[VAR BD0A(000A)]Text_icon1
 Man sollte immer ein paar\nSupertränke im Gepäck haben.
 Unsere Verhandlungen hängen\nvon einem Pokémon-Kampf ab...
-[~ 448]
+[~ 449]
 Wenn zu viel zu tun ist,\ndrehen alle durch.
 Unser Dauerbrenner,\nimmer im Angebot![VAR BD0A(000A)]Text_icon1
 Das bittere, schwarze Elixier namens Espresso...\nEs ist das Öl, das unseren Motor schmiert!

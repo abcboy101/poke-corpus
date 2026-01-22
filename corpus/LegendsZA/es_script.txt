@@ -531,6 +531,7 @@ Me temo que no tienes suficientes Tornillos\nColoridos.\c
 Vaya, creo que ya no puedes llevar más de esos.\c
 No puedes llevarte otro de esos.\c
 ¿Quieres dejar todo lo que habías seleccionado\nhasta ahora?\c
+[VAR 0203(0000,202F)]
 ~~~~~~~~~~~~~~~
 Text File : t1_R
 ~~~~~~~~~~~~~~~
@@ -2484,8 +2485,21 @@ Cancelar
 [VAR 0109(0013)]
 [VAR 0109(0014)]
 [VAR 0109(0015)]
+[VAR 0109(0016)]
+[VAR 0109(0017)]
+[VAR 0109(0018)]
+[VAR 0109(0019)]
+[VAR 0109(001A)]
+[VAR 0109(001B)]
+[VAR 0109(001C)]
+[VAR 0109(001D)]
+[VAR 0109(001E)]
+[VAR 0109(001F)]
+[VAR 0109(0020)]
+[VAR 0109(0021)]
+[VAR 0109(0022)]
 Cancelar
-[~ 23]
+[~ 36]
 ¡Bienvenid[VAR 1100(00FF,0101)]oa! ¡Tengo bayas de todo tipo!\n¿Qué te pongo?
 [VAR BD06(0000)]¿Te pongo\n[VAR 1702(0002,0000)][VAR 010A(0002)]?\r\nSerá[VAR 1101(0003,0100)]n [VAR 0204(0003,202F)] .
 Comprar
@@ -2501,7 +2515,7 @@ Vaya, parece que no te llega el dinero...
 ¡Vuelve siempre que quieras!
 ¡Pero si no te caben más!
 ¿Te interesa comprar alguna otra cosa?
-[~ 39]
+[~ 52]
 ¡Uno de los sabores más típicos de Kalos y\noriginario de Ciudad Luminalia!\c\n¿Te apetece una deliciosa Galette Luminalia?
 [VAR BD06(0000)]Sería[VAR 1101(0003,0100)]n [VAR 0204(0003,202F)] .
 Comprar
@@ -2511,7 +2525,7 @@ Mecachis... Me parece que tendrás que volver\ncuando tengas suficiente dinero.
 ¡Qué sería de este sabor tan típico sin nuestros\nqueridos clientes! Vuelve cuando quieras.
 Vaya, parece que no tienes espacio...
 ¿Quieres comprar una?
-[~ 49]
+[~ 62]
 ¿Te apetece una bebida?
 [VAR BD06(0000)][VAR 1701(0002,0000)][VAR 010A(0002)] cuesta[VAR 1101(0002,0100)]n\n[VAR 0204(0003,202F)] .\r\n¿Te llevas un[VAR 1102(0002,0101,0202)]oaosas?
 Comprar
@@ -2521,7 +2535,7 @@ Vaya, ya lo siento, pero parece que no te llega\nel dinero.
 Vuelve cuando quieras.
 ¡Anda, si no te cabe nada más!
 ¿Te gustaría comprar otra cosa?
-[~ 59]
+[~ 72]
 ¿Quieres un poco de menta?
 [VAR 1701(0002,0000)][VAR 010A(0002)] sale[VAR 1101(0002,0100)]n a [VAR 0204(0003,202F)] .\n¿Te l[VAR 1102(0002,0101,0202)]oaosas llevas?
 Comprar
@@ -2531,7 +2545,7 @@ Anda, no te llega para esto.
 ¡Aquí estaremos si necesitas cualquier cosa!
 Recórcholis... Parece que no tienes sitio para más.
 ¿Te interesa alguna otra cosa?
-[~ 69]
+[~ 82]
 Rebuscando en el garaje he dado con algunos\nobjetos que igual te son útiles. ¿Te interesa?
 ¿Te interesan las porquer... maravillas que\nhe encontrado en mi garaje?
 [VAR BD06(0000)]Te dejo [VAR 1700(0002,0000)][VAR 010A(0002)]\npor solo [VAR 0204(0003,202F)] .\r\n¿Te l[VAR 1100(0002,0101)]oa llevas?
@@ -2542,8 +2556,27 @@ Lo siento, pero no te llega el dinero.
 ¡Bueno, aquí seguiré si cambias de parecer!
 ¡Pero si no te caben más cosas en la Riñonera!
 ¿Quieres alguna otra cosa?
-[~ 80]
+[~ 93]
 ¿Te interesa un Puerro? ¡Haría las delicias de\ncualquier Farfetch’d!
+[~ 95]
+¡Bienvenid[VAR 1100(00FF,0101)]oa! ¿Te pongo unas bayas?
+[VAR BD06(0000)]Cada [VAR 1000][VAR 010A(0002)]\ncuesta [VAR 0204(0003,202F)] .\r\n¿Te pongo alguna?
+Comprar
+¿Tienes otro tipo de bayas?
+Cancelar
+Ponme 1
+Ponme 10
+Ponme 50
+Ponme 100
+No te van a caber tantas en la Riñonera.
+Muchas gracias. Muy bien, pues aquí tienes\ntu[VAR 1101(0006,0100)]s [VAR 010A(0006)].\c\n¿Te gustaría comprar algo más?
+¿Te gustaría comprar alguna otra cosa?
+Me parece que no tienes suficiente dinero.
+¡Espero volver a verte por aquí!
+Parece que no te cabe ni una más.
+[VAR BD06(0000)]Cada [VAR 1000][VAR 010A(0002)]\ncuesta [VAR 0204(0003,202F)] .\r\n¿Te pongo alguna?
+No te van a caber tantas en la Riñonera.
+Muchas gracias. Muy bien, pues aquí tienes\ntu[VAR 1101(0006,0100)]s [VAR 010A(0006)].\c\n¿Te gustaría comprar algo más?
 ~~~~~~~~~~~~~~~
 Text File : byebye
 ~~~~~~~~~~~~~~~
@@ -3769,7 +3802,8 @@ Me he quedado sin batería\nde tanto usar el móvil.
 En casa, recargaremos baterías...\ny la del móvil también.
 Cuando te sabes el nombre de las\nflores, disfrutas más de los paseos.
 Pensaba que nos dedicaríamos\na cosas más entretenidas...
-[~ 73]
+¿Quieres bayas para\nhacer postres?[VAR BD0A(000A)]Text_icon1
+[~ 74]
 Quiero enfrentarme a alguien a quien pueda\nganar, pero claro, no queda serio ir preguntando\r\na la gente qué equipo tiene antes del combate...
 Si no quieres tener que preocuparte por la\ncompatibilidad entre tipos, la solución es fácil:\r\n¡sube de nivel a saco!
 Cuando estás de viaje, todo es posible... incluso\nno ganar ni un mísero combate.
@@ -3790,7 +3824,7 @@ En la mochila llevo lo imprescindible para el viaje,\ny en la Poké Ball, a mi i
 Las escaleras y los Holotransportadores hacen lo\nmismo, pero no igual.
 ¡Qué kimono más bonito! ¿Es una antigüedad?
 Pues efectivamente. Me ha costado más de\n200 Maxipepitas de Oro, ¡y eso se nota!
-[~ 94]
+[~ 95]
 Los Trubbish son una monada,\npero ojo con sus gases tóxicos.
 Por lo visto, todo el bambú de la Sede del Clan\nCorrosión es pasto de Pangoro.
 Adoro la música\nelectrónica.
@@ -3824,7 +3858,7 @@ Ojalá pudiéramos haber\ncombatido juntos una vez más...
 ¡Ay, se me ha olvidado la foto del\ncafé! Qué dirán mis seguidores...
 Nunca leo las reseñas.\nVoy a donde me apetece.
 ¡Ciudad Luminalia\nes enorme!
-[~ 128]
+[~ 129]
 Regla número 1: Evitar a toda costa que se\nproduzcan accidentes.\c\nRegla número 2: Si ocurren, tomar rápidamente\nlas medidas pertinentes.
 Un segundo de descuido\ny se puede liar bien gorda.
 Ayer no hubo incidentes,\npero hoy, quién sabe...
@@ -3832,7 +3866,7 @@ Ayer no hubo incidentes,\npero hoy, quién sabe...
 Tengo mi equipo y mis objetos...\n¡Todo listo para la jornada!
 Parte de nuestro trabajo consiste en alejar de la\nobra a los Pokémon salvajes. Por seguridad, claro.
 Hay muchos Pokémon salvajes\nque nos roban la electricidad.
-[~ 136]
+[~ 137]
 Ojalá tuviera un trabajo que me permitiera viajar\npor el mundo y conocer a toda clase de gente...
 Si quieres viajar y conocer gente, lo tienes fácil:\n¡hazte Entrenadora Pokémon!
 Nada como el tejado\npara tomar un descanso.
@@ -3859,7 +3893,7 @@ Mira que confiar la urbanística\na una empresa extranjera...
 Megapiedras y megacristales...\nson un poco lo mismo... creo.
 ¿Qué tengo que hacer para que\nmis Pokémon se vuelvan fuertes?
 Le debo la vida al\nClan Corrosión.
-[~ 163]
+[~ 164]
 Por la noche no quiero ir a dormir\ny luego no hay quien me levante.
 Aquí casi todo\nestá buenísimo.
 Qué sensación más curiosa esto de mirar desde\nlos tejados a la gente paseando por la calle y a\r\nlos Pokémon de las zonas salvajes.
@@ -3898,7 +3932,7 @@ Es imposible no sentirse animada\ncuando hace buen tiempo.
 Hay que saber elegir al Pokémon que mejor se\nadapte a la situación del combate.
 La cifra de Pokémon salvajes\nmuestra una tendencia al alza...
 Me gustaría ser un Pokémon,\naunque fuera solo por un día.
-[~ 202]
+[~ 203]
 Quiero jugar al fútbol con los\nPokémon en las zonas salvajes.
 Pues yo quiero jugar al\npillapilla por toda la ciudad.
 Yo quiero jugar al escondite, pero\nlo mismo no acabaríamos nunca.
@@ -3927,7 +3961,7 @@ Mis sábanas son de Red Viscosa.\nSiempre se me pegan.
 La ciudad es muy bonita para visitar unos días,\npero, si vives aquí, te toca lidiar con el trabajo,\r\nel alquiler, la gente...
 Está bien que haya más Pokémon, pero sin\ndescuidar las necesidades de la gente, ¿eh?
 Según los últimos datos, la venta de artículos\npara Pokémon ha aumentado considerablemente.
-[~ 231]
+[~ 232]
 Tengo acceso a la arena de combate exclusiva de\nQuastelar S. A. porque mi padre trabaja para ellos.
 ¡Airén es genial! Siempre me da consejos para\nayudarme a mejorar como Entrenadora.
 Quizá sea porque su modelo de negocio gira\nen torno a los Pokémon, pero lo cierto es que\r\nmuchos de los empleados de Quastelar son\r\nEntrenadores experimentados.
@@ -3961,7 +3995,7 @@ No pienso dejar que los Dedenne\nde seguridad me ganen...
 Nuestras normas se han quedado\ndesfasadas con tanto Pokémon.
 Ojalá alguien estudiara a los\nPokémon que viven en la urbe.
 Con tanto Pokémon, las personas\nnos vamos a quedar sin sitio.
-[~ 265]
+[~ 266]
 ¿Qué van a hacer con\nla Torre Prisma?
 Si te encuentras con un Pokémon en un andamio,\n¡a ver quién es el guapo que huye de ahí!
 Si tienes un SmartRotom, es tan fácil como pegar\nun salto y, ¡hop!, dejarte caer.
@@ -3980,7 +4014,7 @@ Nos hacen lanzar varias Poké Balls\npara que nos ganemos su respeto.
 Tus Pokémon acaban siendo como\nmiembros de tu propia familia.
 ¿Sabías que hay gente que va dejando pociones\naquí y allá para ayudar a los Pokémon heridos?
 Me robaron el equipaje en cuanto puse el pie en\nCiudad Luminalia, ¿te lo puedes creer?\c\nPero tuve suerte porque solo se trataba de una\ntravesura, así que me lo devolvieron enseguida.
-[~ 284]
+[~ 285]
 Tu Houndoom es un espécimen de primera, con\nla proporción perfecta de intimidación y encanto.
 Uy, pues anda que tu Gabite... Una línea evolutiva\ntan chula no se ve todos los días.
 Dicen que por las noches aparece\nun Pokémon de color negruzco.
@@ -4006,7 +4040,7 @@ Cuando mis Pokémon me ven triste, se frotan\ncontra mí con su pelaje peludito 
 ¿Los participantes de los Juegos Z-A tienen cada\nvez más fans o es cosa mía?
 No soy fan de los combates, pero me llaman la\natención los Entrenadores con Pokémon fuertes.
 No sirve de nada darle vueltas a lo que ya pasó o\nlo que pueda pasar. Quiero disfrutar del presente.
-[~ 310]
+[~ 311]
 En Ciudad Luminalia, la sobremesa después de\nlos combates dura más que los combates en sí.
 Si quieres que tus Pokémon mejoren, primero\ntienes que mejorar tú.
 Es mejor un hogar pequeño pero\nacogedor que una mansión vacía.
@@ -4061,7 +4095,7 @@ No puede ser... Imposible...\n¿Cómo ha vencido a mi Pokémon?
 En Kalos está la megaevolución,\ny en Paldea, la teracristalización.
 ¿Un Pokémon megaevolucionado\nderrotaría a uno teracristalizado?
 Si la Velocidad del Pokémon sube,\nsus ataques se recargan antes.
-[~ 365]
+[~ 366]
 Cuando llega la hora de la verdad,\nla gente muestra su verdadero yo.
 ¡Mi supervisor combate mil veces\npeor que yo! ¡No es justooo!
 En Ciudad Luminalia hay mucha\ngente amante de los cómics, ¿no?
@@ -4077,7 +4111,7 @@ Mi piso es enano. Solo me cabe\nuna cama que se cae a pedazos...
 A ver si termino ya con los repartos de hoy, antes\nde que anochezca y comiencen los Juegos Z-A...
 Mis Pokémon me dejan sin apenas\nespacio en casa, ¡pero yo tan feliz!
 Cuando tengas a un rival a puntito de caramelo,\nte sugiero usar un movimiento rápido en vez de\r\nuno supereficaz para darle el golpe de gracia.
-[~ 381]
+[~ 382]
 ¿Cuántos pasos habrá que dar\npara rodear Ciudad Luminalia?
 Un día más tarareando una de\nmis canciones inacabadas.
 ¡Siempre he soñado con organizar una carrera\nPokémon que dé la vuelta entera a la ciudad!\c\nEs una pena que haya tantas zonas salvajes por\ntodas partes, que si no...
@@ -4115,7 +4149,7 @@ No pasa nada. Entiendo que Ciudad Luminalia\npiense en los Pokémon antes que en
 Estamos tan acostumbrados a los Pokémon y sus\nextravagancias que nadie se sorprende de ver\r\npor la ciudad a un hombre de tres metros.
 La sopa del día viene acompañada\nde una cestita de pan para mojar.
 Comer y dormir nos encanta tanto\na humanos como a Pokémon.
-[~ 419]
+[~ 420]
 El Team Flare tenía muy mala fama, pero su líder,\nese tal Lysson, ayudó a bastante gente en apuros.
 Puede que tengas mucho talento para algo,\npero no lo sabrás sin probar al menos una vez.
 "Bulevar Sur" es demasiado largo.\n¡Yo prefiero llamarlo "el Bulsur"!
@@ -4144,7 +4178,7 @@ Las flores que crecen en las grietas\nde la acera se merecen un aplauso.
 ¿Te apetece tomar algo?[VAR BD0A(000A)]Text_icon1
 Siempre procuro tener unas\ncuantas Superpociones a mano.
 Si el proveedor gana el combate,\ntendremos pérdidas históricas...
-[~ 448]
+[~ 449]
 La gente suele perder la cabeza\ncuando trabaja demasiado...
 ¡Siempre disponibles![VAR BD0A(000A)]Text_icon1
 Oh, ambrosía amarga y oscura...\c\nEl expreso, con ese aroma tan fuerte que lo\ncaracteriza, ¡es nuestra fuente de energía!

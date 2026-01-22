@@ -531,6 +531,7 @@ Guarda che le tue Viti colorate non bastano mica!\c
 Guarda che di questi ne hai già fin troppi!\c
 Guarda che questo strumento ce l’hai già!\c
 Che c’è, vuoi rimettere a posto tutti i peluche\nche avevi scelto?\c
+[VAR 0203(0000,002E)]
 ~~~~~~~~~~~~~~~
 Text File : t1_R
 ~~~~~~~~~~~~~~~
@@ -2484,8 +2485,21 @@ No, grazie
 [VAR 0109(0013)]
 [VAR 0109(0014)]
 [VAR 0109(0015)]
+[VAR 0109(0016)]
+[VAR 0109(0017)]
+[VAR 0109(0018)]
+[VAR 0109(0019)]
+[VAR 0109(001A)]
+[VAR 0109(001B)]
+[VAR 0109(001C)]
+[VAR 0109(001D)]
+[VAR 0109(001E)]
+[VAR 0109(001F)]
+[VAR 0109(0020)]
+[VAR 0109(0021)]
+[VAR 0109(0022)]
 No, grazie
-[~ 23]
+[~ 36]
 Ciao! Posso aiutarti?\nHo tante bacche con effetti diversi.
 [VAR BD06(0000)][VAR 1503(0002,0000)][VAR 010A(0002)]\ncosta[VAR 1101(0002,0200)]no [VAR 0204(0003,002E)] .\r\nTi interessa[VAR 1101(0002,0200)]no?
 Sì!
@@ -2501,7 +2515,7 @@ Oh, mi sa che non ti bastano i soldi...
 Torna a trovarmi!
 Più di così non puoi portarne!
 Serve altro?
-[~ 39]
+[~ 52]
 Vuoi assaggiare i famosi Pan di Lumi?\nSono una specialità di Luminopoli che racchiude\r\ntutta la delizia di Kalos!
 [VAR BD06(0000)]Sono [VAR 0204(0003,002E)]  per\n[VAR 1502(0002,0000)][VAR 010A(0002)].\r\nVa bene?
 Sì!
@@ -2511,7 +2525,7 @@ Ah, non ti bastano i soldi...
 Speriamo di rivederti presto! Questa delizia\ndi Kalos ha bisogno di clienti come te!
 Oh, che peccato! Non hai più spazio nella borsa.
 Vuoi comprare qualche altra cosa?
-[~ 49]
+[~ 62]
 Vuoi qualcosa da bere?
 [VAR BD06(0000)][VAR 1503(0002,0000)][VAR 010A(0002)]\ncosta[VAR 1101(0002,0200)]no [VAR 0204(0003,002E)] .\r\nVa bene?
 Sì!
@@ -2521,7 +2535,7 @@ Mi dispiace, ma non ti bastano i soldi.
 Torna a trovarmi!
 Più di così non puoi averne.
 Posso fare altro per te?
-[~ 59]
+[~ 72]
 Gradisci della menta?
 [VAR BD06(0000)][VAR 1503(0002,0000)][VAR 010A(0002)]\ncosta[VAR 1101(0002,0200)]no [VAR 0204(0003,002E)] .\r\nTi interessa[VAR 1101(0002,0200)]no?
 Sì!
@@ -2531,7 +2545,7 @@ Sembra proprio che non ti bastino i soldi.
 Torna a trovarmi!
 Più di così, non credo che ci stia nel tuo Borsello.
 Ti serve qualche altra cosa?
-[~ 69]
+[~ 82]
 Ho degli strumenti utili che ho trovato in garage.\nTi serve niente?
 Ho tutta roba buona, mica ciarpame recuperato\nin garage! Compri qualcosa?
 [VAR BD06(0000)][VAR 1503(0002,0000)][VAR 010A(0002)]\ncosta[VAR 1101(0002,0200)]no [VAR 0204(0003,002E)] .\r\nTi interessa[VAR 1101(0002,0200)]no?
@@ -2542,8 +2556,27 @@ Non ti bastano i soldi, mi sa.
 Torna a trovarmi se ne hai voglia!
 Più di così, non credo che ci stia nel tuo Borsello.
 Ti serve qualche altra cosa?
-[~ 80]
+[~ 93]
 Gradisci un Porro? Ti consiglio di darlo a\nun Farfetch’d.
+[~ 95]
+Ciao! Ti interessano delle bacche?
+[VAR BD06(0000)]Una [VAR 0109(0002)] costa [VAR 0204(0003,002E)] .\nTi interessa?
+Sì!
+Ci sono altre bacche in vendita?
+No, grazie
+Ne prendo una, grazie
+Ne prendo dieci, grazie
+Ne prendo 50, grazie
+Ne prendo 100, grazie
+Se ne compri così tante non ti entreranno\nnel Borsello.
+Grazie. Eccoti [VAR 0202(0007)] [VAR 0109(0006)]!\c\nVuoi comprare altre bacche?
+Vuoi comprare altre bacche?
+Mi sa che non ti bastano i soldi.
+Alla prossima!
+Non hai più spazio nel Borsello.
+[VAR BD06(0000)]Una [VAR 0109(0002)] costa [VAR 0204(0003,002E)] .\nTi interessa?
+Se ne compri così tante non ti staranno\nnel Borsello.
+Grazie! Eccoti [VAR 0202(0007)] [VAR 0109(0006)]!\c\nVuoi comprare altre bacche?
 ~~~~~~~~~~~~~~~
 Text File : byebye
 ~~~~~~~~~~~~~~~
@@ -3769,7 +3802,8 @@ Ho usato troppo il cellulare\ne mi è morta la batteria...
 Appena torniamo a casa\nricordati di ricaricarla!
 Conoscere i nomi dei fiori rende\nle passeggiate più piacevoli!
 Le attività del nostro team\nsono un po’ una noia...
-[~ 73]
+Gradiresti delle bacche per\npreparare dei dolci? [VAR BD0A(000A)]Text_icon1
+[~ 74]
 Voglio un avversario che posso battere! Però non\nho modo di sapere che squadra ha prima lottare...
 Avere Pokémon di livello alto è il trucco per vincere\nquando il rapporto fra i tipi non è dalla tua!
 In viaggio tutto è permesso. Anche perdere\nclamorosamente in una lotta Pokémon...
@@ -3790,7 +3824,7 @@ Nel mio zaino ho tutto l’essenziale per il viaggio,\nnelle Poké Ball i miei f
 Le scale e gli Holotrasporti hanno la stessa\nfunzione, però sono ben diversi!
 Ma che bellissimo kimono! È un pezzo vintage?
 Questo che porto addosso costa... più o meno\nquanto 200 Granpepite.
-[~ 94]
+[~ 95]
 Trubbish è adorabile, ma\nocchio ai suoi gas tossici!
 Ho sentito che il Clan Ruggine ha fatto piantare\ndei bambù nella sede per far contento Pangoro.
 Il mio genere musicale preferito?\nLa techno, ci mancherebbe!
@@ -3824,7 +3858,7 @@ Quanto avrei voluto fare un’ultima\nlotta contro di lui... Solo un’ultima!
 Nooo! Ho dimenticato di postare\nuna foto mentre ero al bar...
 Non m’importa dei locali famosi su\nInternet. Io scelgo quelli che mi va!
 Luminopoli... Ma quant’è grande\nquesta città...?
-[~ 128]
+[~ 129]
 Regola n° 1: non causare incidenti!\nRegola n° 2: prendere subito le misure opportune!
 Basta un attimo di disattenzione\nper finire subito all’ospedale!
 Ieri non ci sono stati incidenti!\nImpegniamoci anche oggi!
@@ -3832,7 +3866,7 @@ Mi raccomando! La sicurezza\nprima di tutto!
 Attrezzi: controllati!\nStrumenti nella borsa: controllati!
 Anche mandar via i Pokémon selvatici fa parte\ndel nostro lavoro.
 I Pokémon selvatici ghiotti di\nelettricità stanno aumentando.
-[~ 136]
+[~ 137]
 Ma io vorrei diventare famosa per il mio lavoro...
 Secondo me potresti diventare un’Allenatrice\nPokémon di fama mondiale!
 Quando ho una pausa dal lavoro,\nvengo sempre quassù.
@@ -3859,7 +3893,7 @@ Bella faccia tosta ad affidare lo\nsviluppo urbano a ditte straniere!
 Megapietre e megacristalli hanno\nuna struttura simile, o così dicono.
 Come posso far diventare\nforti i miei Pokémon...?
 Quasi ci lasciavo le penne...\nFortuna che c’era il Clan Ruggine!
-[~ 163]
+[~ 164]
 La mattina non voglio alzarmi e\nla notte non voglio dormire!
 Grosso modo, a me piace tutto\nquello che mangio...!
 Guardare dall’alto la gente a zonzo o i Pokémon\ndella zona selvaggia fa uno strano effetto.
@@ -3898,7 +3932,7 @@ Quando il tempo è bello,\nil mio umore è favoloso!
 È sempre bene sostituire i Pokémon con altri\npiù adatti alla situazione del momento.
 Il numero di Pokémon selvatici\nmostra una tendenza al rialzo.
 Sarebbe bello svegliarmi la mattina\nreincarnata in un Pokémon.
-[~ 202]
+[~ 203]
 Io voglio giocare a calcio con i\nPokémon nella zona selvaggia.
 Io voglio giocare ad acchiapparella\nin tutta Luminopoli.
 Io vorrei giocare a nascondino, ma\nmi sa che durerebbe una vita...
@@ -3927,7 +3961,7 @@ Il letto mi sferra un attacco di\nsonnolenza tale che alzarsi è dura.
 Per quanto Luminopoli sia una città elegante,\nviverci ha la sua bella dose di problemi, tra\r\nil lavoro, l’affitto, il rapporto con la gente...
 Mi fa piacere che aumentino i Pokémon, ma\nandrebbe prima migliorata la vita delle persone.
 Sembra che la vendita di Poké Ball e oggetti simili\nstia aumentando su scala cittadina.
-[~ 231]
+[~ 232]
 Mio padre lavora alla Q-asar Inc. perciò posso\nusare l’arena aziendale.
 Muscat mi insegna tantissime cose utili\nsulle lotte.
 Dicono che molta della gente che lavora alla\nQ-asar Inc. sia forte nelle lotte. Sarà perché\r\nlavorano con i Pokémon.
@@ -3961,7 +3995,7 @@ Non mi lascerò sconfiggere\ndai Dedenne di guardia...
 I Pokémon in città aumentano, ma\nle regolamentazioni latitano.
 Vorrei che qualcuno studiasse\ni Pokémon che popolano la città.
 Ma se i Pokémon aumentano, ci\nsarà meno spazio per le persone?
-[~ 265]
+[~ 266]
 Cosa ne sarà della Torre Prisma...?
 Se incontri un Pokémon proprio quando sei sulle\nimpalcature è impossibile scappare!
 Se hai uno Smart Rotom puoi anche saltare giù\ndai posti alti senza paura.
@@ -3980,7 +4014,7 @@ Se vuoi farti accettare dai Pokémon\nnon arrenderti dopo il primo lancio.
 Il legame tra Pokémon e Allenatori\nè come quello di una famiglia.
 Dicono che alcuni lasciano in giro Pozioni\nper aiutare i Pokémon feriti.
 Arrivato a Luminopoli mi hanno subito rubato\nil bagaglio. Per fortuna era solo uno scherzo.
-[~ 284]
+[~ 285]
 Il tuo Houndoom è un vero spettacolo: terrificante\ne adorabile allo stesso tempo.
 Ma vogliamo parlare del tuo Gabite? Non è una\nspecie che si vede spesso in giro. Bella scelta!
 Si mormora che ogni notte\ncompaia un Pokémon nerastro.
@@ -4006,7 +4040,7 @@ Mi piace il mio Pokémon perché quando sono\ntriste mi si struscia addosso con 
 Sembra che anche i fan degli Allenatori che\npartecipano alla Royale Z-A siano in aumento.
 Io non partecipo alle lotte Pokémon, però mi\ninteressa seguire Allenatori e Pokémon forti.
 Non penso mai né al passato, né al futuro.\nPreferisco vivere intensamente il presente.
-[~ 310]
+[~ 311]
 La gente di Luminopoli dedica più tempo alle\nchiacchiere dopo una sfida che alle lotte in sé.
 Per rendere forti i tuoi Pokémon devi prima\ndi tutto essere forte tu stess[VAR 1100(00FF,0101)]oa.
 Meglio un posticino accogliente\nche una casa enorme ma vuota.
@@ -4061,7 +4095,7 @@ Non riesco a crederci...\nIl mio Pokémon ha perso!
 A Kalos c’è la megaevoluzione.\nA Paldea, invece, il Teracristal.
 Che succederebbe in una lotta con\nmegaevoluzione e Teracristal?
 Se la Velocità aumenta, le mosse si\npossono eseguire più rapidamente.
-[~ 365]
+[~ 366]
 Quando arriva la resa dei conti si\nvede la vera natura delle persone.
 Sarà pure il mio superiore, ma non\nha il minimo talento nelle lotte!
 A Luminopoli ci sono molti\nappassionati di fumetti.
@@ -4077,7 +4111,7 @@ Nel mio minuscolo appartamento\nci sta solo un letto antidiluviano...
 Devo terminare le consegne finché è giorno,\nperché poi di notte c’è la Royale Z-A...
 La stanza si fa piccola se libero\ni Pokémon in casa, però che gioia!
 Se sai di poter vincere è meglio concentrarsi sulla\nvelocità delle mosse invece che sui punti deboli.
-[~ 381]
+[~ 382]
 Per fare tutto il giro di Luminopoli\na piedi quanti passi ci vorranno?
 E anche oggi canticchio una\ndelle mie canzoni lasciate a metà.
 Il mio sogno è organizzare una maratona\ndi Pokémon per tutta Luminopoli!\c\nSo che è irrealizzabile perché ci sono le zone\nselvagge, però sarebbe bello...
@@ -4115,7 +4149,7 @@ Se vuoi informazioni che solo un autista conosce,\nti conviene prendere un taxi.
 Viste le stranezze che accadono con i Pokémon,\nun uomo alto tre metri che vuoi che sia?
 Le nostre zuppe vengono sempre\nservite con del pane da intingere.
 Per persone e Pokémon, vivere\nvuol dire mangiare e dormire.
-[~ 419]
+[~ 420]
 Il Team Flare ha una brutta fama, però il loro capo\nElisio ha aiutato un bel po’ di persone.
 Per capire se si ha talento bisogna mettersi\nalla prova.
 Il nome in codice che usiamo per\nil Corso Basso è "Coso".
@@ -4144,7 +4178,7 @@ I fiori che crescono nelle fenditure\ndel cemento sono straforti!
 Ti andrebbe di bere qualcosa? [VAR BD0A(000A)]Text_icon1
 Torna sempre utile avere con sé\nqualche Superpozione.
 Se il cliente vince la prossima lotta\nsubiremo una perdita colossale...
-[~ 448]
+[~ 449]
 La gente comincia a dare di matto\nquando lavora troppo...
 Sempre a vostra disposizione! [VAR BD0A(000A)]Text_icon1
 Quel liquido nero e amaro...\c\nPer noi l’espresso è il carburante\nche ci dà la carica giusta!

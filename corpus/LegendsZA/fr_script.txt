@@ -531,6 +531,7 @@ T’as pas assez de Vis Colorées !\c
 T’en as déjà assez !\c
 Tu me l’as déjà achetée.\c
 T’en veux pas, finalement ?\c
+[VAR 0203(0000,0020)]
 ~~~~~~~~~~~~~~~
 Text File : t1_R
 ~~~~~~~~~~~~~~~
@@ -2484,8 +2485,21 @@ Finalement, non merci.
 [VAR 0109(0013)]
 [VAR 0109(0014)]
 [VAR 0109(0015)]
+[VAR 0109(0016)]
+[VAR 0109(0017)]
+[VAR 0109(0018)]
+[VAR 0109(0019)]
+[VAR 0109(001A)]
+[VAR 0109(001B)]
+[VAR 0109(001C)]
+[VAR 0109(001D)]
+[VAR 0109(001E)]
+[VAR 0109(001F)]
+[VAR 0109(0020)]
+[VAR 0109(0021)]
+[VAR 0109(0022)]
 Non, ça ira.
-[~ 23]
+[~ 36]
 Bienvenue ! Vous voulez des Baies ?\nElles ont toutes un effet différent !
 [VAR 1403(0002,0000)][VAR 010A(0002)] ?\nÇa fera [VAR 0204(0003,0020)] . Est-ce que ça vous convient ?
 Oui !
@@ -2501,7 +2515,7 @@ Je crois que vous n’avez pas assez d’argent.
 Merci de votre visite !\nÀ bientôt !
 J’ai bien peur que vous ne puissiez pas en porter\ndavantage...
 Voulez-vous autre chose ?
-[~ 39]
+[~ 52]
 Laissez-vous tenter par les saveurs de Kalos !\nOffrez-vous une des fameuses Galettes Illumis !
 [VAR BD06(0000)][VAR 1403(0002,0000)][VAR 010A(0002)] coûte\n[VAR 0204(0003,0020)] . Ça vous convient ?
 Oui !
@@ -2511,7 +2525,7 @@ Oh là là !\nIl vous faudrait un peu plus d’argent.
 Nous vous devons notre succès !\nEncore merci et à bientôt !
 Oh là là ! Votre Sacoche a l’air déjà bien pleine !\nIl vaudrait mieux la vider un peu, avant...
 Allez-vous vous laisser tenter par une autre\ndouceur ?
-[~ 49]
+[~ 62]
 Vous voulez quelque chose à boire ?
 [VAR BD06(0000)][VAR 1403(0002,0000)][VAR 010A(0002)],\nc’est [VAR 0204(0003,0020)] . Ça vous intéresse ?
 Oui !
@@ -2521,7 +2535,7 @@ Navrée, mais vous n’avez pas assez d’argent.
 Au plaisir !
 Je crois que vous n’avez plus assez de place\npour ça...
 Il vous faut autre chose ?
-[~ 59]
+[~ 72]
 Ça vous dit, des aromates ?
 [VAR BD06(0000)][VAR 1403(0002,0000)][VAR 010A(0002)]...\nÇa fera donc... [VAR 0204(0003,0020)] . Ça vous convient ?
 Oui !
@@ -2531,7 +2545,7 @@ Il vous faut plus d’argent.
 À bientôt !
 Votre Sacoche m’a déjà l’air bien pleine...
 Voulez-vous autre chose ?
-[~ 69]
+[~ 82]
 J’ai trouvé des trucs intéressants dans le garage.\nÇa te dit ?
 J’ai trouvé de la camelote... euh, je veux dire, des\ntrucs intéressants dans le garage. Ça te dit ?
 [VAR BD06(0000)][VAR 1403(0002,0000)][VAR 010A(0002)]...\nÇa fera donc... [VAR 0204(0003,0020)] .\r\nOn est bon ?
@@ -2542,8 +2556,27 @@ Il va falloir plus d’argent.
 À un de ces quatre !
 Y a pas assez de place dans ta Sacoche...
 Besoin d’autre chose ?
-[~ 80]
+[~ 93]
 Voulez-vous un Poireau ? Vous pourriez le faire\ntenir à un Canarticho !
+[~ 95]
+Bienvenue ! Vous voulez des Baies ?
+[VAR 1403(0002,0000)][VAR 010A(0002)] ?\nÇa fera [VAR 0204(0003,0020)] . Est-ce que ça vous convient ?
+Oui !
+Est-ce que vous avez d’autres Baies ?
+En fait, ça ira.
+J’en veux une.
+J’en veux 10.
+J’en veux 50.
+J’en veux 100.
+J’aurais été ravi de vous en vendre... mais vous\nn’avez pas assez de place dans votre Sacoche.
+Merci !\nEt voilà pour vous !\c\nDésirez-vous d’autres Baies ?
+Désirez-vous d’autres Baies ?
+Vous n’avez pas assez d’argent, on dirait.
+Merci ! À bientôt !
+Vous avez déjà l’air bien chargé[VAR 1100(00FF,0100)]e.\nJe crois que vous ne pouvez rien porter de plus.
+[VAR 1403(0002,0000)][VAR 010A(0002)]  ?\nÇa fera [VAR 0204(0003,0020)] . Ça vous va ?
+J’aurais été ravie de vous en vendre... mais vous\nn’avez pas assez de place dans votre Sacoche.
+Merci !\nEt voilà pour vous !\c\nDésirez-vous d’autres Baies ?
 ~~~~~~~~~~~~~~~
 Text File : byebye
 ~~~~~~~~~~~~~~~
@@ -3769,7 +3802,8 @@ J’ai trop utilisé mon téléphone...\nIl a plus de batterie.
 Toi aussi, tu devrais recharger\ntes propres batteries, un peu !
 J’aime deviner le nom des fleurs\nque je vois quand je me balade !
 Elles sont pas très passionnantes,\nles activités du Néo Café...
-[~ 73]
+Qui veut des Baies ? Elles sont\nparfaites pour la pâtisserie !
+[~ 74]
 Je veux gagner des combats, mais je peux pas\ninterroger les gens pour connaître leur équipe...
 T’as des problèmes d’affinité de type ?\nC’est pas grave, Il suffit de monter de niveau !
 Ce qui se passe à Illumis reste à Illumis...\nPersonne saura que j’ai perdu tous ces combats !
@@ -3790,7 +3824,7 @@ Dans mon sac, je n’ai mis que l’essentiel !\nEt dans mes Poké Balls, mes fi
 Les échelles et les Holoporteurs, ça fait la même\nchose, mais pas de la même manière !
 Quel magnifique kimono !\nJe me demande s’il est d’époque...
 Si le prix de mon kimono t’intéresse, sache qu’il\na coûté l’équivalent de 200 Maxi Pépites.
-[~ 94]
+[~ 95]
 Miamiasme est mignon, mais\ngare à ses gaz toxiques !
 On raconte que tous les bambous de l’Agence\nDérouillard seraient pour leurs Pandarbare.
 Je n’écoute que de la musique\nélectronique !
@@ -3824,7 +3858,7 @@ Je... J’aurais voulu l’affronter...\nJuste une dernière fois...
 Oh non ! J’ai pas pris de photo au\ncafé ! Je suis la risée des réseaux !
 Je me fiche de la popularité d’un\nendroit, tant que le café me plaît !
 Illumis...\nQuelle ville gigantesque !
-[~ 128]
+[~ 129]
 Règle nº 1 : éviter les accidents !\nRègle nº 2 : réagir vite et suivre les procédures !
 Une seconde d’inattention peut\ngâcher une vie à jamais.
 Tout s’est bien passé hier, mais\ntout peut arriver aujourd’hui !
@@ -3832,7 +3866,7 @@ On ne plaisante pas avec\nla sécurité !
 L’équipement, c’est bon !\nLes outils, c’est bon aussi !
 Chasser les Pokémon sauvages du chantier fait\naussi partie de notre métier.
 De plus en plus de Pokémon\nsauvages volent notre électricité !
-[~ 136]
+[~ 137]
 Moi, je veux voyager pour rencontrer des gens\ndu monde entier !
 C’est possible, si tu fais des combats Pokémon\nà l’international !
 Le toit, c’est « ZE » lieu pour\nprendre ses pauses !
@@ -3859,7 +3893,7 @@ Tout ça, c’est la faute des dégâts\ncausés par la Team Flare !
 La structure des Méga-Gemmes et\ndes Méga-cristaux serait similaire.
 Comment je fais pour que\nmes Pokémon deviennent forts ?
 Le Clan Dérouillard m’a sauvé\nla vie...
-[~ 163]
+[~ 164]
 J’ai horreur de me lever le matin !\nEt j’aime pas me coucher le soir !
 Je mange de tout.\nJe ne suis pas difficile !
 D’ici, les gens dans les rues et les Pokémon dans\nles zones sauvages ont quelque chose d’irréel...
@@ -3898,7 +3932,7 @@ Quand il fait beau, j’ai un moral\nà toute épreuve !
 Pour gagner, il faut apprendre à vite changer\nde Pokémon quand la situation le demande.
 Le nombre de Pokémon sauvages\naugmente en flèche !
 Ouf ! Je ne me suis pas réincarnée\nen Pokémon, ce matin...
-[~ 202]
+[~ 203]
 Je veux jouer au foot avec mes\nPokémon dans une zone sauvage !
 Un cache-cache géant dans toute\nla ville, ça serait trop génial !
 Ça serait marrant, mais on finirait\njamais la partie...
@@ -3927,7 +3961,7 @@ Le matin, c’est dur. Qui a mis de\nla Poudre Dodo dans mon lit ?
 J’adore Illumis, mais le taf est galère, les loyers\nsont exorbitants et les gens se plaignent toujours !
 Ça pullule de Pokémon, et c’est super, mais qui\ns’occupe de nous, dans tout ça ?
 Il paraît que les ventes de Poké Balls explosent\ndans toute la ville !
-[~ 231]
+[~ 232]
 Mon père travaille chez Quazar. Il me laisse\nutiliser leur terrain de combat, des fois. Hé hé !
 Monsieur Musquat me donne des conseils pour\nque je devienne meilleure en combat !
 On dit que le personnel de Quazar est doué en\ncombat Pokémon. Sûrement parce que cette boîte\r\ngère tout ce qui a trait aux Pokémon dans la ville.
@@ -3961,7 +3995,7 @@ Des colis pour Quazar par-ci...\nDes colis de Quazar par-là...
 Il faut des règles pour encadrer\nce foisonnement de Pokémon !
 J’aimerais qu’on étudie l’impact\nde la vie en ville sur les Pokémon.
 Plus de Pokémon... ça veut dire\nmoins de place pour nous ?
-[~ 265]
+[~ 266]
 Que va-t-il advenir de\nla Tour Prismatique... ?
 Si tu croises un Pokémon sur un échafaudage,\nbon courage pour t’enfuir !
 Tu risques rien si tu sautes dans le vide, tant que\nt’as un Motismart !
@@ -3980,7 +4014,7 @@ Gagner le respect d’un Pokémon,\nça peut coûter cher en Poké Balls.
 Je considère mon Pokémon\ncomme un membre de ma famille !
 Il paraît que des gens laissent des Potions ici et là\npour aider les Pokémon blessés.
 À mon arrivée à Illumis, on m’a volé mon sac...\nC’était qu’une mauvaise blague, mais bon...
-[~ 284]
+[~ 285]
 Ton Démolosse est à la fois adorable et intimidant.\nC’est tout bonnement remarquable !
 Ton Carmache est tout aussi exceptionnel. On ne\nvoit pas souvent de Pokémon de cette espèce !
 Il paraît qu’un Pokémon de couleur\nnoire apparaît parfois la nuit...
@@ -4006,7 +4040,7 @@ J’adore mes Pokémon ! Quand je suis triste,\nje caresse leur fourrure toute d
 Apparemment, certains grands noms du\nRoyale Z-A ont leur fan-club, maintenant !
 J’aime pas me battre, mais j’adore me renseigner\nsur les nouveaux talents et leurs équipes !
 L’instant présent est trop important pour\nse soucier du passé ou de l’avenir.
-[~ 310]
+[~ 311]
 À Illumis, les gens passent plus de temps à\ndiscuter après les combats qu’à se battre.
 Si tu veux que tes Pokémon deviennent plus forts,\nil faut déjà que tu sois fort[VAR 1100(00FF,0100)]e toi-même.
 Pas besoin d’un grand appart, tant\nque je me sens bien chez moi !
@@ -4061,7 +4095,7 @@ Mes Pokémon ont... perdu ?\nComment est-ce possible ?
 À Kalos, il y a la Méga-Évolution,\net à Paldea, la Téracristallisation !
 Qui gagnerait ? Un Pokémon\ntéracristallisé ou un méga-évolué ?
 Un Pokémon peut attaquer plus\nrapidement si sa Vitesse augmente.
-[~ 365]
+[~ 366]
 Les gens montrent leur vrai visage\ndans les moments difficiles.
 Dire que je pourrais battre ma\ncheffe en combat Pokémon...
 À Illumis, les gens lisent\nbeaucoup de BD.
@@ -4077,7 +4111,7 @@ Je n’ai qu’un vieux lit dans\nmon petit appartement...
 Je dois finir mes livraisons avant la nuit, sinon\nje vais me retrouver pris dans le Royale Z-A !
 Ma chambre paraît petite avec mes\nPokémon, mais elle est conviviale !
 Si l’adversaire est proche du K.O., utilise plutôt\nune capacité rapide que super efficace !
-[~ 381]
+[~ 382]
 Il faut faire combien de pas\npour faire le tour d’Illumis ?
 Parfois, je m’invente des\nmélodies en chantonnant.
 J’aimerais tellement qu’il y ait une course de\nPokémon qui fasse le tour d’Illumis.\c\nJe sais que c’est impossible à cause des zones\nsauvages, mais bon...
@@ -4115,7 +4149,7 @@ Si tu veux connaître les secrets de notre métier,\nje te conseille de prendre 
 Les Pokémon nous occupent tellement qu’un\nhomme de trois mètres de haut passe inaperçu !
 On recommande de tremper\nle pain dans la soupe.
 On a la même vie que les Pokémon.\nOn fait que manger et dormir.
-[~ 419]
+[~ 420]
 La Team Flare est considérée comme malfaisante.\nPourtant, leur boss, un dénommé Lysandre,\r\na aidé des gens. Ne l’oublions pas !
 On ne peut pas savoir si on a des facilités pour\nquelque chose avant d’avoir essayé.
 « Rue Méridionale », ça fait long.\nNous, on dit « la Mérid’ » !
@@ -4144,7 +4178,7 @@ C’est fou, les fleurs qui poussent\ndans les fissures du béton !
 Que diriez-vous d’un\nrafraîchissement ? [VAR BD0A(000A)]Text_icon1
 Il faut toujours avoir quelques\nSuper Potions sur soi.
 En affaires comme en combat,\nquand on perd, on perd gros !
-[~ 448]
+[~ 449]
 Les gens perdent la tête\nquand ils ont trop à faire...
 Venez goûter nos délices ! [VAR BD0A(000A)]Text_icon1
 Ce breuvage noir et amer, l’expresso...\nC’est notre combustible !
