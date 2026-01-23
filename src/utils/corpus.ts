@@ -47,7 +47,6 @@ interface LiteralInfoNoBranch {
 interface Collection {
   readonly id?: string,                        // used for looking up a specific line by ID
   readonly languages: readonly LanguageKey[],  // available languages
-  readonly structured: boolean,                // true if lines are aligned between languages, false otherwise
   readonly softWrap?: true,                    // true if lines are soft-wrapped, undefined otherwise
   readonly version?: string | Partial<Record<LanguageKey, string>> | Partial<Record<FileKey, string>>, // which version each language's files in the collection is from, can be a string if the version number is the same between languages
   readonly files: readonly FileKey[],          // what files the collection contains

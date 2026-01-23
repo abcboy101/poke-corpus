@@ -200,35 +200,21 @@ self.onmessage = async (message: MessageEvent<SearchManagerParams>) => {
       // Load all files in all needed languages in the collection
       const commonKeys = ['common', 'messages', 'ui'];
       const scriptKeys = ['script', 'talk'];
-      const languages = (collection.structured && params.showAllLanguages) ? collection.languages : collection.languages.filter((languageKey) => params.languages.includes(languageKey) || languageKey === codeId);
+      const languages = (params.showAllLanguages) ? collection.languages : collection.languages.filter((languageKey) => params.languages.includes(languageKey) || languageKey === codeId);
       collection.files.forEach((fileKey) => {
         if ((!params.common && commonKeys.includes(fileKey)) || (!params.script && scriptKeys.includes(fileKey)))
           return;
 
-        if (!collection.structured) {
-          languages.forEach((languageKey) => {
-            taskList.push({
-              index: taskCount,
-              params: params,
-              collectionKey: collectionKey,
-              fileKey: fileKey,
-              languages: [languageKey],
-            });
-            taskCount++;
-          });
-        }
-        else {
-          taskList.push({
-            index: taskCount,
-            params: params,
-            collectionKey: collectionKey,
-            fileKey: fileKey,
-            languages: languages,
-            speaker: collection.speaker,
-            literals: collection.literals,
-          });
-          taskCount++;
-        }
+        taskList.push({
+          index: taskCount,
+          params: params,
+          collectionKey: collectionKey,
+          fileKey: fileKey,
+          languages: languages,
+          speaker: collection.speaker,
+          literals: collection.literals,
+        });
+        taskCount++;
         fileCount += languages.length;
         cachedCount += languages.reduce((acc, languageKey) => acc + +isMemoryCached(loader, collectionKey, languageKey, fileKey), 0);
       });

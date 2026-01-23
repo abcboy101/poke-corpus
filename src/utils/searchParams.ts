@@ -47,7 +47,7 @@ const defaultSearchParams: Required<Omit<SearchParamsURL, 'collections' | 'langu
 
 export const getDefaultSearchParams = (corpus: Corpus): Required<SearchParamsURL> => ({
   ...defaultSearchParams,
-  collections: corpus.collections.filter((value) => corpus.getCollection(value).structured),
+  collections: corpus.collections,
   languages: corpus.languages,
 });
 
