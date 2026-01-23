@@ -123,8 +123,10 @@
         }
       }
     },
-    "Gold": {
+    "GoldSilver": {
+      "id": "gs",
       "languages": [
+        "qid",
         "ja-Hrkt",
         "en",
         "fr",
@@ -133,25 +135,105 @@
         "es",
         "ko"
       ],
-      "structured": false,
+      "structured": true,
+      "version": {
+        "ja-Hrkt": "1.0/1.1",
+        "en": "1.0",
+        "fr": "1.0",
+        "it": "1.0",
+        "de": "1.0",
+        "es": "1.0",
+        "ko": "1.0"
+      },
       "files": [
-        "data"
-      ]
-    },
-    "Silver": {
-      "languages": [
-        "ja-Hrkt",
-        "en",
-        "fr",
-        "it",
-        "de",
-        "es",
-        "ko"
+        "msg"
       ],
-      "structured": false,
-      "files": [
-        "data"
-      ]
+      "literals": {
+        "TM": {
+          "line": 3
+        },
+        "TRAINER": {
+          "line": 4
+        },
+        "PC": {
+          "line": 5
+        },
+        "ROCKET": {
+          "line": 6
+        },
+        "#": {
+          "line": 7
+        },
+        "KOUGEKI": {
+          "line": 8
+        },
+        "TA!": {
+          "branch": "language",
+          "line": {
+            "ja-Hrkt": 9
+          }
+        },
+        "……": {
+          "line": 10
+        },
+        "GA": {
+          "branch": "language",
+          "line": {
+            "ja-Hrkt": 12
+          }
+        },
+        "PKMN": {
+          "line": 12
+        },
+        "WA": {
+          "branch": "language",
+          "line": {
+            "ja-Hrkt": 13
+          }
+        },
+        "POKE": {
+          "line": 13
+        },
+        "NO": {
+          "branch": "language",
+          "line": {
+            "ja-Hrkt": 14
+          }
+        },
+        "WO": {
+          "branch": "language",
+          "line": {
+            "ja-Hrkt": 15
+          }
+        },
+        "NI": {
+          "branch": "language",
+          "line": {
+            "ja-Hrkt": 16
+          }
+        },
+        "TTE": {
+          "branch": "language",
+          "line": {
+            "ja-Hrkt": 17
+          }
+        },
+        "ROUTE": {
+          "branch": "language",
+          "line": {
+            "ja-Hrkt": 18
+          }
+        },
+        "WATASHI": {
+          "branch": "language",
+          "line": {
+            "ja-Hrkt": 19
+          }
+        },
+        "KOKO_WA": {
+          "line": 20
+        }
+      }
     },
     "Crystal": {
       "id": "c",
@@ -166,9 +248,104 @@
         "es"
       ],
       "structured": true,
+      "version": {
+        "ja-Hrkt": "1.0",
+        "en": "1.0/1.1",
+        "en-AU": "1.0",
+        "fr": "1.0",
+        "it": "1.0",
+        "de": "1.0",
+        "es": "1.0"
+      },
       "files": [
         "msg"
-      ]
+      ],
+      "literals": {
+        "TM": {
+          "line": 3
+        },
+        "TRAINER": {
+          "line": 4
+        },
+        "PC": {
+          "line": 5
+        },
+        "ROCKET": {
+          "line": 6
+        },
+        "#": {
+          "line": 7
+        },
+        "KOUGEKI": {
+          "line": 8
+        },
+        "TA!": {
+          "branch": "language",
+          "line": {
+            "ja-Hrkt": 9
+          }
+        },
+        "……": {
+          "line": 10
+        },
+        "GA": {
+          "branch": "language",
+          "line": {
+            "ja-Hrkt": 12
+          }
+        },
+        "PKMN": {
+          "line": 12
+        },
+        "WA": {
+          "branch": "language",
+          "line": {
+            "ja-Hrkt": 13
+          }
+        },
+        "POKE": {
+          "line": 13
+        },
+        "NO": {
+          "branch": "language",
+          "line": {
+            "ja-Hrkt": 14
+          }
+        },
+        "WO": {
+          "branch": "language",
+          "line": {
+            "ja-Hrkt": 15
+          }
+        },
+        "NI": {
+          "branch": "language",
+          "line": {
+            "ja-Hrkt": 16
+          }
+        },
+        "TTE": {
+          "branch": "language",
+          "line": {
+            "ja-Hrkt": 17
+          }
+        },
+        "ROUTE": {
+          "branch": "language",
+          "line": {
+            "ja-Hrkt": 18
+          }
+        },
+        "WATASHI": {
+          "branch": "language",
+          "line": {
+            "ja-Hrkt": 19
+          }
+        },
+        "KOKO_WA": {
+          "line": 20
+        }
+      }
     },
     "RubySapphire": {
       "id": "rs",

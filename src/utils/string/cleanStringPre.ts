@@ -89,6 +89,7 @@ function remapGBSpecialCharacters(s: string, language: LanguageKey) {
     .replaceAll('<PK>', '⒆') // Gen 1/2 PK
     .replaceAll('<MN>', '⒇') // Gen 1/2 MN
     .replaceAll('<do>', 'ど') // Single tile for PrintStatusAilment
+    .replaceAll('<zu>', 'ず') // Single tile for Pokedex_DrawMainScreenBG
   );
 }
 
@@ -437,6 +438,8 @@ export function preprocessString(s: string, collectionKey: CollectionKey, langua
   switch (collectionKey) {
     case "RedBlue":
     case "Yellow":
+    case "GoldSilver":
+    case "Crystal":
       s = remapGBSpecialCharacters(s, language);
       break;
 

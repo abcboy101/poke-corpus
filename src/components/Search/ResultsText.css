@@ -48,6 +48,10 @@ td[lang="zxx"] wbr {
   display: none;
 }
 
+td > br:last-child {
+  display: none;
+}
+
 .results-table.soft td[lang="zxx"] wbr {
   display: unset;
 }

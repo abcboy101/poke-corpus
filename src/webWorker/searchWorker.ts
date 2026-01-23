@@ -5,6 +5,7 @@ import { parseWhereClause, isBooleanQueryValid, getMatchConditionBoolean } from 
 import { extractSpeakers } from '../utils/speaker';
 import { SearchParams } from '../utils/searchParams';
 import { getMatchConditionAll, getMatchConditionExact, getMatchConditionRegex, MatchCondition } from './searchCondition';
+import { replaceLiteralsPreFactory } from '../utils/string/literals';
 
 export type WhereCondition = (i: number) => boolean;
 export type WhereConditionFactory = (fileData: readonly string[][], languageKeys: readonly string[]) => WhereCondition;
@@ -144,6 +145,11 @@ function cleanSpecialFactory(params: SearchParams): (s: string) => string {
 function convertGBControlCharacters(s: string) {
   return (s
     .replaceAll('{text_start}', '')
+    .replaceAll('{text_low}', '\\n')
+    .replaceAll('<SHY>',    '')    // 1E
+    .replaceAll('<BSP>',    ' ')   // 1F
+    .replaceAll('<LF>',     '\\n') // 22
+    .replaceAll('<WBR>',    '')    // 25
     .replaceAll('<PAGE>',   '\\c') // 49
     .replaceAll('<_CONT>',  '\\r') // 4B
     .replaceAll('<SCROLL>', '\\r') // 4C
@@ -205,15 +211,20 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
 
   try {
     // Load files
-    const preprocessedFiles = languages.map(((languageKey, i) => [languageKey, preprocessString(files[i], collectionKey, languageKey)] as const));
+    const fileData: string[][] = files.map((data, i) => preprocessString(data, collectionKey, languages[i]).split(/\r\n|\n/));
+
+    // Substituted string literals vary by language, so we need to look up what the string is in the appropriate language here
+    const literalsLine = literals ? Object.keys(literals).flatMap((id) => (literals[id].branch !== 'language') ? literals[id].line : Object.values(literals[id].line)) : undefined;
+    const literalsData = literalsLine ? fileData.map((lines) => new Map(literalsLine.map((i) => [i, lines[i - 1]]))) : [];
 
     // Process files
+    const lineKeys = new Set<number>();
     const cleanSpecial = cleanSpecialFactory(params);
     const [matchCondition, whereConditionFactory] = parseQuery({...params, query: cleanSpecial(params.query)});
-    const processedFiles = preprocessedFiles.map(([languageKey, data]) => {
+    const replaceLiterals = replaceLiteralsPreFactory(literalsData, languages.indexOf(codeId), collectionKey, languages, literals);
+    fileData.forEach((lines, languageIndex) => {
       notifyIncomplete('processing'); // for progress bar
-      const lines = data.split(/\r\n|\n/);
-      const lineKeys: number[] = [];
+      const languageKey = languages[languageIndex];
 
       // Determine matching strategy
       // - For case-sensitive searches, only exact matches are allowed.
@@ -221,43 +232,35 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       //   - If whitespace is not significant, matches folding special characters and ignoring whitespace are also allowed.
       //   - If whitespace is significant, matches folding special characters, collapsing whitespace, and allowing hyphens to break words across lines are allowed.
       // - For GB games, both matches to the raw control characters and matches to the converted control characters are allowed.
-      const baseMatch = (!params.caseInsensitive ? matchCondition : ['ja', 'ko', 'zh', 'th'].some((lang) => languageKey.startsWith(lang))
+      // - For games with substituted literals, both matches to the raw control characters and matches to the substituted text are allowed.
+      const subMatch1 = (!params.caseInsensitive ? matchCondition : ['ja', 'ko', 'zh', 'th'].some((lang) => languageKey.startsWith(lang))
         ? (line: string) => matchCondition(line) || matchCondition(cleanSpecial(line)) || matchCondition(removeWhitespace(cleanSpecial(line)))
         : (line: string) => matchCondition(line) || matchCondition(cleanSpecial(normalizeWhitespacePreserveHyphen(line))) || matchCondition(cleanSpecial(normalizeWhitespaceRemoveHyphen(line)))
       );
-      const match = ['RedBlue', 'Yellow'].includes(collectionKey)
-        ? (line: string) => baseMatch(line) || baseMatch(convertGBControlCharacters(line))
-        : baseMatch;
+      const subMatch2 = ['RedBlue', 'Yellow', 'GoldSilver', 'Crystal'].includes(collectionKey)
+        ? (line: string) => subMatch1(line) || subMatch1(convertGBControlCharacters(line))
+        : subMatch1;
+      const match = literals === undefined
+        ? subMatch2
+        : (line: string) => subMatch1(line) || subMatch1(replaceLiterals(line, languageIndex));
 
       // Check selected languages for lines that satisfy the query
       if (params.languages.includes(languageKey)) {
         lines.forEach((line, i) => {
           if (match(line)) {
-            lineKeys.push(i);
+            lineKeys.add(i);
           }
         });
       }
-      return [languageKey, lineKeys, lines] as const;
     });
 
     // Load speakers
     // Since all dialogue with speaker names are in the script file while the speaker names are in the common file, we always have to load it separately
     const speakers = (speaker === undefined || speakerData === undefined) ? [] : extractSpeakers(speakerData, speaker.textFile);
 
-    // Filter only the lines that matched
-    const languageKeys: LanguageKey[] = [];
-    const lineKeysSet = new Set<number>();
-    const fileData: string[][] = [];
-
-    processedFiles.forEach(([languageKey, lineKeys, lines]) => {
-      languageKeys.push(languageKey);
-      lineKeys.forEach((i) => lineKeysSet.add(i));
-      fileData.push(lines);
-    });
-
-    const messageIdIndex = languageKeys.indexOf(codeId);
-    const lineKeysSorted = Array.from(lineKeysSet).sort((a, b) => a - b);
-    const whereCondition = whereConditionFactory(fileData, languageKeys);
+    const messageIdIndex = languages.indexOf(codeId);
+    const lineKeysSorted = Array.from(lineKeys).sort((a, b) => a - b);
+    const whereCondition = whereConditionFactory(fileData, languages);
     if (import.meta.env.DEV && messageIdIndex !== -1 && lineKeysSorted.length > 0 && lineKeysSorted[lineKeysSorted.length - 1] >= fileData[messageIdIndex].length)
       throw new RangeError(`message IDs are incorrectly aligned (expected at least ${lineKeysSorted[lineKeysSorted.length - 1]} but found ${fileData[messageIdIndex].length})`);
     const fileResults: readonly string[][] = ((messageIdIndex === -1) ? lineKeysSorted
@@ -269,14 +272,10 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       .filter(whereCondition)
       .map((i) => fileData.map((lines) => lines[i]));
 
-    // Substituted string literals vary by language, so we need to look up what the string is in the appropriate language here
-    const literalsLine = literals ? Object.keys(literals).flatMap((id) => (literals[id].branch !== 'language') ? literals[id].line : Object.values(literals[id].line)) : undefined;
-    const literalsData = literalsLine ? fileData.map((lines) => new Map(literalsLine.map((i) => [i, lines[i - 1]]))) : [];
-
     notifyComplete('done', {
       collection: collectionKey,
       file: fileKey,
-      languages: languageKeys,
+      languages: languages,
       lines: fileResults,
       speakers: speakers,
       literals: literalsData,
