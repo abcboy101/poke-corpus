@@ -196,17 +196,6 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
     // Text commands
     .replaceAll(/\{text_dots (\d+)\}/gu, (_, count) => `\u{F1102}${'…'.repeat(Number(count))}\u{F1103}`)
   ) : s;
-  s = (isGen2 && language !== 'ja-Hrkt') ? (s
-    // Control characters for untranslated Japanese strings
-    // Since the strings are dummied out, they aren't handled by the literal replacement logic
-    .replaceAll('\u{F0106}TA!\u{F0107}', '\u{F1102}た！\u{F1103}') // 22
-    .replaceAll('\u{F0106}GA\u{F0107}',  '\u{F1102}が　\u{F1103}') // 4A
-    .replaceAll('\u{F0106}WA\u{F0107}',  '\u{F1102}は　\u{F1103}') // 24
-    .replaceAll('\u{F0106}NO\u{F0107}',  '\u{F1102}の　\u{F1103}') // 25
-    .replaceAll('\u{F0106}WO\u{F0107}',  '\u{F1102}を　\u{F1103}') // 1F
-    .replaceAll('\u{F0106}NI\u{F0107}',  '\u{F1102}に　\u{F1103}') // 1D
-    .replaceAll('\u{F0106}TTE\u{F0107}', '\u{F1102}って\u{F1103}') // 1E
-  ) : s;
   s = (isGen2 && language === 'ko') ? (s
     // Single tile hangul, regular hangul are two tiles tall
     // Text entry screen

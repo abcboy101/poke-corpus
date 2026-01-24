@@ -2,11 +2,16 @@ import { CollectionKey, LanguageKey, Literals } from "../corpus";
 
 /** Replaces literals with the corresponding substituted text values for searches. */
 export const replaceLiteralsPreFactory = (literalsData: readonly ReadonlyMap<number, string>[], messageIdIndex: number, collectionKey: CollectionKey, languages: readonly LanguageKey[], literals: Literals | undefined) => {
+  const isGB = ['RedBlue', 'Yellow', 'GoldSilver', 'Crystal'].includes(collectionKey);
+  const indexJA = languages.indexOf('ja-Hrkt');
   return (s: string, languageIndex: number) => {
     if (literals === undefined || languageIndex === messageIdIndex)
       return s;
 
-    const isGB = ['RedBlue', 'Yellow', 'GoldSilver', 'Crystal'].includes(collectionKey);
+    // Treat as Japanese instead if kana are present, for untranslated text in other languages
+    if (indexJA !== -1 && languageIndex !== indexJA && /[ぁ-んァ-ン]/gu.test(s))
+      languageIndex = indexJA;
+
     for (const [literalId, {branch, line}] of Object.entries(literals)) {
       const searchValue = isGB ? (literalId === '#' ? literalId : `<${literalId}>`) : `[${literalId}]`;
       let replaceValue = undefined;
@@ -43,11 +48,16 @@ export const replaceLiteralsPreFactory = (literalsData: readonly ReadonlyMap<num
 
 /** Replaces literals with the corresponding substituted text values for rich text display. */
 export const replaceLiteralsFactory = (literalsData: readonly ReadonlyMap<number, string>[], messageIdIndex: number, collectionKey: CollectionKey, languages: readonly LanguageKey[], literals: Literals | undefined) => {
+  const isGB = ['RedBlue', 'Yellow', 'GoldSilver', 'Crystal'].includes(collectionKey);
+  const indexJA = languages.indexOf('ja-Hrkt');
   return (s: string, languageIndex: number) => {
     if (literals === undefined || languageIndex === messageIdIndex)
       return s;
 
-    const isGB = ['RedBlue', 'Yellow', 'GoldSilver', 'Crystal'].includes(collectionKey);
+    // Treat as Japanese instead if kana are present, for untranslated text in other languages
+    if (indexJA !== -1 && languageIndex !== indexJA && /[ぁ-んァ-ン]/gu.test(s))
+      languageIndex = indexJA;
+
     for (const [literalId, {branch, line}] of Object.entries(literals)) {
       const searchValue = isGB ? (literalId === '#' ? literalId : `<${literalId}>`) : `[${literalId}]`;
       let replaceValue = undefined;
