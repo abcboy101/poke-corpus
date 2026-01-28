@@ -1209,7 +1209,7 @@ ZOOM
 {text_start}맡기셨던 포켓몬은<LINE>돌려드리겠습니다<DONE>
 {text_start}더 이상 포켓몬을 지닐 수 없어서<LINE>박스로 전송되었다<DONE>
 {text_start}@{text_ram wStringBuffer3}{text_start} 포켓몬 체육관<DONE>
-{text_start}@{text_ram wStringBuffer4}{text_start} 인정 트레이너<LINE><PARA><DONE>
+{text_start}@{text_ram wStringBuffer4}{text_start} 인정 트레이너<LINE><PLAYER><DONE>
 {text_start}어서오세요!<LINE>게임코너입니다!<DONE>
 {text_start}게임용 동전 말입니까?<PARA>엥? 동전을 넣을<LINE>동전케이스가 없어요!<DONE>
 {text_start}게임용 동전 말입니까?<PARA>50개 1000원 되겠습니다!<LINE>동전을 구입하시겠습니까?<DONE>
@@ -1226,20 +1226,20 @@ ZOOM
 {text_start}앗! 야생의<LINE>@{text_ram wMonOrItemNameBuffer}{text_start}(이)가<CONT>튀어나왔다!<PROMPT>
 {text_start}낚아올린 @{text_ram wMonOrItemNameBuffer}{text_start}<LINE>(이)가 덤벼들었다!<PROMPT>
 {text_start}흔든 나무로부터<LINE>@{text_ram wMonOrItemNameBuffer}{text_start}(이)가<CONT>떨어졌다!<PROMPT>
-{text_start}<LINE>(이)가<LINE>승부를 걸어왔다!<PROMPT>
+{text_start}<ENEMY>(이)가<LINE>승부를 걸어왔다!<PROMPT>
 {text_start}야생의 @{text_ram wMonOrItemNameBuffer}{text_start}는(은)<LINE>도망쳤다!<PROMPT>
 {text_start}적의 @{text_ram wMonOrItemNameBuffer}{text_start}는(은)<LINE>도망쳤다!<PROMPT>
-{text_start}<USER>는(은)<USER>독의 데미지를 입고 있다!<PROMPT>
-{text_start}<USER>는(은)<USER>화상의 데미지를 입었다!<PROMPT>
-{text_start}기생목이 <USER>의<USER>체력을 빼앗았다!<PROMPT>
-{text_start}<USER>는(은)<USER>악몽에 시달리고 있다!<PROMPT>
-{text_start}<USER>는(은)<USER>저주에 걸려있다!<PROMPT>
-{text_start}모래바람이 <USER>를(을)<USER>습격했다!<PROMPT>
-{text_start}<USER>의 멸망의<USER>카운트가 @{text_decimal wTextDecimalByte, 1, 1}{text_start}(으)로 되었다<PROMPT>
+{text_start}<USER>는(은)<LINE>독의 데미지를 입고 있다!<PROMPT>
+{text_start}<USER>는(은)<LINE>화상의 데미지를 입었다!<PROMPT>
+{text_start}기생목이 <USER>의<LINE>체력을 빼앗았다!<PROMPT>
+{text_start}<USER>는(은)<LINE>악몽에 시달리고 있다!<PROMPT>
+{text_start}<USER>는(은)<LINE>저주에 걸려있다!<PROMPT>
+{text_start}모래바람이 <USER>를(을)<LINE>습격했다!<PROMPT>
+{text_start}<USER>의 멸망의<LINE>카운트가 @{text_decimal wTextDecimalByte, 1, 1}{text_start}(으)로 되었다<PROMPT>
 {text_start}<TARGET>는(은)<LINE>@{text_ram wStringBuffer1}{text_start}(으)로<CONT>약간 회복<PROMPT>
-{text_start}<USER>는(은)<USER>@{text_ram wStringBuffer1}{text_start}(으)로 PP회복<PROMPT>
+{text_start}<USER>는(은)<LINE>@{text_ram wStringBuffer1}{text_start}(으)로 PP회복<PROMPT>
 {text_start}<TARGET>는(은) 미래예지의<LINE>공격을 받았다!<PROMPT>
-{text_start}<USER>를(을) 감싸고<USER>있던 신비의 베일이 사라졌다!<PROMPT>
+{text_start}<USER>를(을) 감싸고<LINE>있던 신비의 베일이 사라졌다!<PROMPT>
 {text_start}@{text_ram wStringBuffer1}{text_start}의 빛의 장막의<LINE>효과가 떨어졌다!<PROMPT>
 {text_start}@{text_ram wStringBuffer1}{text_start}의 리플렉터의<LINE>효과가 떨어졌다!<PROMPT>
 {text_start}비가 계속 내리고 있다!<PROMPT>
@@ -1250,8 +1250,8 @@ ZOOM
 {text_start}모래바람이 가라앉았다!<PROMPT>
 {text_start}적의 @{text_ram wMonOrItemNameBuffer}{text_start}는(은)<LINE>쓰러졌다!<PROMPT>
 {text_start}<PLAYER>는(은) 상금으로<LINE>@{text_decimal wBattleReward, 3, 6}{text_start}원 손에 넣었다!<PROMPT>
-{text_start}<LINE><LINE>와(과)의 승부에서 이겼다!<PROMPT>
-{text_start}<LINE><LINE>와(과)의 승부에서 비겼다!<PROMPT>
+{text_start}<ENEMY><LINE>와(과)의 승부에서 이겼다!<PROMPT>
+{text_start}<ENEMY><LINE>와(과)의 승부에서 비겼다!<PROMPT>
 {text_start}<PLAYER>는(은) 상금으로<LINE>@{text_decimal wBattleReward, 3, 6}{text_start}원 손에 넣었다!<CONT>어머니에게 약간 송금했다!<PROMPT>
 {text_start}어머니에게 반 송금했다!<PROMPT>
 {text_start}어머니에게 전부 송금했다!<PROMPT>
@@ -1259,19 +1259,19 @@ ZOOM
 {text_start}@{text_ram wBattleMonNickname}{text_start}는(은)<LINE>쓰러졌다!<PROMPT>
 {text_start}다음 포켓몬을 사용하겠습니까?<DONE>
 {text_start}<RIVAL>『됐어!<LINE>좋은 포켓몬을 골랐나보군!<PROMPT>
-{text_start}<LINE>와(과)의<LINE>승부에서 졌다!<PROMPT>
-{text_start}<LINE>는(은)<LINE>@{text_ram wMonOrItemNameBuffer}{text_start}를(을)<CONT>꺼내려 하고있다<PARA><PARA>(이)도 포켓몬을<LINE>바꾸겠습니까?<DONE>
-{text_start}<LINE>는(은)<LINE>@{text_ram wMonOrItemNameBuffer}{text_start}를(을)<CONT>차례로 꺼냈다<DONE>
+{text_start}<ENEMY>와(과)의<LINE>승부에서 졌다!<PROMPT>
+{text_start}<ENEMY>는(은)<LINE>@{text_ram wMonOrItemNameBuffer}{text_start}를(을)<CONT>꺼내려 하고있다<PARA><PLAYER>(이)도 포켓몬을<LINE>바꾸겠습니까?<DONE>
+{text_start}<ENEMY>는(은)<LINE>@{text_ram wMonOrItemNameBuffer}{text_start}를(을)<CONT>차례로 꺼냈다<DONE>
 {text_start}싸울 기력이 없다!<PROMPT>
 {text_start}알은 싸울 수 없다!<PROMPT>
 {text_start}도망칠 수 없다!<PROMPT>
 {text_start}안 되!<LINE>승부도중에<CONT>상대에게 등을 보일 수 없어!<PROMPT>
 {text_start}성공적으로 도망쳤다!<PROMPT>
-{text_start}<USER>는(은) 지니고 있던<USER>@{text_ram wStringBuffer1}{text_start}를(을)<CONT>사용하여 도망쳤다<PROMPT>
+{text_start}<USER>는(은) 지니고 있던<LINE>@{text_ram wStringBuffer1}{text_start}를(을)<CONT>사용하여 도망쳤다<PROMPT>
 {text_start}도망칠 수가 없다!<PROMPT>
-{text_start}<USER>는(은) 압정<USER>뿌리기의 데미지를 입었다!<PROMPT>
+{text_start}<USER>는(은) 압정<LINE>뿌리기의 데미지를 입었다!<PROMPT>
 {text_start}<TARGET>는(은) 지니고<LINE>있던 @{text_ram wStringBuffer1}{text_start}(으)로<CONT>회복했다!<PROMPT>
-{text_start}<USER>(이)가 지니고 있던<USER>@{text_ram wStringBuffer1}{text_start}(이)가<CONT>작동했다!<PROMPT>
+{text_start}<USER>(이)가 지니고 있던<LINE>@{text_ram wStringBuffer1}{text_start}(이)가<CONT>작동했다!<PROMPT>
 {text_start}여기서는 도구를<LINE>사용할 수 없습니다<PROMPT>
 {text_start}@{text_ram wBattleMonNickname}{text_start}는(은)<LINE>이미 나가 있습니다<PROMPT>
 {text_start}@{text_ram wBattleMonNickname}{text_start}를(을)<LINE>돌아오게 할 수 없다<PROMPT>
@@ -1282,31 +1282,31 @@ ZOOM
 {text_start}@{text_ram wStringBuffer1}{text_start}는(은)<LINE>레벨@{text_decimal wCurPartyLevel, 1, 3}{text_start}(으)로 올랐다!@{sound_dex_fanfare_50_79}@
 {text_start}야생의@{text_ram wMonOrItemNameBuffer}{text_start}는(은)<LINE>먹이를 먹고 있다!<PROMPT>
 {text_start}야생의@{text_ram wMonOrItemNameBuffer}{text_start}는(은)<LINE>화가 나있다!<PROMPT>
-{text_start}<USER>는(은)<USER>쿨쿨 자고 있다<PROMPT>
-{text_start}<USER>는(은)<USER>눈을 떴다!<PROMPT>
-{text_start}<USER>는(은)<USER>얼어버려서 움직일 수 없다!<PROMPT>
-{text_start}<USER>는(은)<USER>기가 죽었다<PROMPT>
-{text_start}공격의 반동으로<USER><USER>는(은) 꼼짝못한다<PROMPT>
-{text_start}<USER>의<USER>사슬묶기가 풀렸다!<PROMPT>
-{text_start}<USER>는(은)<USER>혼란에 빠져있다!<PROMPT>
+{text_start}<USER>는(은)<LINE>쿨쿨 자고 있다<PROMPT>
+{text_start}<USER>는(은)<LINE>눈을 떴다!<PROMPT>
+{text_start}<USER>는(은)<LINE>얼어버려서 움직일 수 없다!<PROMPT>
+{text_start}<USER>는(은)<LINE>기가 죽었다<PROMPT>
+{text_start}공격의 반동으로<LINE><USER>는(은) 꼼짝못한다<PROMPT>
+{text_start}<USER>의<LINE>사슬묶기가 풀렸다!<PROMPT>
+{text_start}<USER>는(은)<LINE>혼란에 빠져있다!<PROMPT>
 {text_start}영문도 모르고<LINE>자신을 공격했다!<PROMPT>
-{text_start}<USER>는(은)<USER>혼란이 풀렸다<PROMPT>
+{text_start}<USER>는(은)<LINE>혼란이 풀렸다<PROMPT>
 {text_start}<TARGET>는(은)<LINE>혼란해 있다!<PROMPT>
 {text_start}<TARGET>는(은)<LINE>@{text_ram wStringBuffer1}{text_start}(으)로<CONT>혼란을 치료했다!<PROMPT>
 {text_start}<TARGET>는(은)<LINE>이미 혼란에 빠져있다<PROMPT>
-{text_start}<USER>는(은)<USER>@{text_ram wStringBuffer1}{text_start}의<CONT>데미지를 받고 있다<PROMPT>
-{text_start}<USER>는(은)<USER>@{text_ram wStringBuffer1}{text_start}(으)로부터<CONT>풀려났다!<PROMPT>
-{text_start}<TARGET>는(은) <USER><USER>에게 조이기를 당했다!<PROMPT>
+{text_start}<USER>는(은)<LINE>@{text_ram wStringBuffer1}{text_start}의<CONT>데미지를 받고 있다<PROMPT>
+{text_start}<USER>는(은)<LINE>@{text_ram wStringBuffer1}{text_start}(으)로부터<CONT>풀려났다!<PROMPT>
+{text_start}<TARGET>는(은) <USER><LINE>에게 조이기를 당했다!<PROMPT>
 {text_start}<TARGET>는(은) 소용돌이<LINE>안에 감금되었다!<PROMPT>
-{text_start}<TARGET>는(은) 소용돌이<USER>안에 감금되었다!<PROMPT>
-{text_start}<TARGET>는(은) <USER><USER>에게 꽁꽁 감겨졌다!<PROMPT>
-{text_start}<TARGET>는(은) <USER><USER>의 껍데기에 꼈다<PROMPT>
-{text_start}<USER>는(은)<USER>꼼짝않고 있다<PROMPT>
+{text_start}<TARGET>는(은) 소용돌이<LINE>안에 감금되었다!<PROMPT>
+{text_start}<TARGET>는(은) <USER><LINE>에게 꽁꽁 감겨졌다!<PROMPT>
+{text_start}<TARGET>는(은) <USER><LINE>의 껍데기에 꼈다<PROMPT>
+{text_start}<USER>는(은)<LINE>꼼짝않고 있다<PROMPT>
 {text_start}<USER>의<LINE>참기가 풀렸다<PROMPT>
 {text_start}<TARGET>는(은)<LINE>@{text_ram wStringBuffer1}{text_start}에서 견뎌냈다!<PROMPT>
-{text_start}<TARGET>는(은) <USER>공격을 참았다!<PROMPT>
-{text_start}<USER>는(은)<USER><TARGET>에게 헤롱헤롱!<PROMPT>
-{text_start}<USER>는(은) 헤롱헤롱<USER>해서 기술을 펼칠 수 없었다!<PROMPT>
+{text_start}<TARGET>는(은) <LINE>공격을 참았다!<PROMPT>
+{text_start}<USER>는(은)<LINE><TARGET>에게 헤롱헤롱!<PROMPT>
+{text_start}<USER>는(은) 헤롱헤롱<LINE>해서 기술을 펼칠 수 없었다!<PROMPT>
 {text_start}<USER>는(은) 사슬묶기<LINE>때문에 @{text_ram wStringBuffer1}{text_start}를(을)<CONT>낼 수 없다!<PROMPT>
 {text_start}@{text_ram wBattleMonNickname}{text_start}는(은)<LINE>게으름을 피우고 있다<PROMPT>
 {text_start}@{text_ram wBattleMonNickname}{text_start}는(은)<LINE>낮잠자기 시작했다!<PROMPT>
@@ -1314,26 +1314,26 @@ ZOOM
 {text_start}@{text_ram wBattleMonNickname}{text_start}는(은)<LINE>외면했다<PROMPT>
 {text_start}@{text_ram wBattleMonNickname}{text_start}는(은)<LINE>모르는 채했다<PROMPT>
 {text_start}@{text_ram wBattleMonNickname}{text_start}는(은)<LINE>잠든 채로<CONT>명령을 무시했다<PROMPT>
-{text_start}그러나 기술 포인트가<USER>없었다!<PROMPT>
-{text_start}<USER>는(은) 포인트가떨어져서<USER>@{text_ram wStringBuffer2}{text_start}를(을)<CONT>낼 수 없다!<PROMPT>{text_start}<USER>는(은)<USER>잠들기 시작했다!<DONE>
-{text_start}<USER>는(은)<USER>건강해져서 잠자기 시작했다!<DONE>
-{text_start}<USER>는(은) 체력을<USER>회복했다!<PROMPT>
-{text_start}그러나 <USER>의<USER>공격은 빗나갔다!<PROMPT>
-{text_start}<USER>의<USER>공격은 빗나갔다!<PROMPT>
-{text_start}떠올랐다가 한계를 넘어<USER><USER>는(은)<CONT>지면에 부딪쳤다!<PROMPT>
+{text_start}그러나 기술 포인트가<LINE>없었다!<PROMPT>
+{text_start}<USER>는(은) 포인트가떨어져서<LINE>@{text_ram wStringBuffer2}{text_start}를(을)<CONT>낼 수 없다!<PROMPT>{text_start}<USER>는(은)<LINE>잠들기 시작했다!<DONE>
+{text_start}<USER>는(은)<LINE>건강해져서 잠자기 시작했다!<DONE>
+{text_start}<USER>는(은) 체력을<LINE>회복했다!<PROMPT>
+{text_start}그러나 <USER>의<LINE>공격은 빗나갔다!<PROMPT>
+{text_start}<USER>의<LINE>공격은 빗나갔다!<PROMPT>
+{text_start}떠올랐다가 한계를 넘어<LINE><USER>는(은)<CONT>지면에 부딪쳤다!<PROMPT>
 {text_start}<TARGET>에게는<LINE>전혀 효과가 없다!<PROMPT>
 {text_start}<TARGET>에게는<LINE>효과가 없는 듯 하다……<PROMPT>
 {text_start}급소에 맞았다!<PROMPT>
 {text_start}일격필살!<PROMPT>
 {text_start}효과는 뛰어났다!<PROMPT>
 {text_start}효과는 조금 부족한 듯 하다<PROMPT>
-{text_start}<TARGET>는(은)<USER><USER>를(을)<CONT>길동무로 삼았다!<PROMPT>
-{text_start}<USER>의 분노의<USER>볼티지가 올라간다!<PROMPT>
+{text_start}<TARGET>는(은)<LINE><USER>를(을)<CONT>길동무로 삼았다!<PROMPT>
+{text_start}<USER>의 분노의<LINE>볼티지가 올라간다!<PROMPT>
 {text_start}<TARGET>는(은)<LINE>앵콜을 당했다!<PROMPT>
 {text_start}서로 체력을<LINE>나누어 가졌다!<PROMPT>
-{text_start}<USER>는(은) <TARGET><USER>에 목표를 정했다!<PROMPT>
-{text_start}<USER>는(은)<USER>@{text_ram wStringBuffer1}{text_start}를(을)<CONT>스케치했다!<PROMPT>
-{text_start}<USER>는(은) 상대를<USER>길동무로 삼으려하고 있다<PROMPT>
+{text_start}<USER>는(은) <TARGET><LINE>에 목표를 정했다!<PROMPT>
+{text_start}<USER>는(은)<LINE>@{text_ram wStringBuffer1}{text_start}를(을)<CONT>스케치했다!<PROMPT>
+{text_start}<USER>는(은) 상대를<LINE>길동무로 삼으려하고 있다<PROMPT>
 {text_start}<TARGET>의<LINE>@{text_ram wStringBuffer1}{text_start}를(을)<CONT>@{text_decimal wTextDecimalByte, 1, 1}{text_start} 깎았다!<PROMPT>
 {text_start}방울소리가 울려왔다!<LINE><PROMPT>
 {text_start}<TARGET>는(은)<LINE>잠들어버렸다!<PROMPT>
@@ -1346,71 +1346,71 @@ ZOOM
 {text_start}<TARGET>는(은)<LINE>화상을 입었다!<PROMPT>
 {text_start}<TARGET>의<LINE>얼음이 녹았다!<PROMPT>
 {text_start}<TARGET>는(은)<LINE>꽁꽁 얼어버렸다!<PROMPT>
-{text_start}<USER>의<USER>@{text_ram wStringBuffer2}{text_start}는(은)<CONT>더 이상 오르지않는다<PROMPT>
+{text_start}<USER>의<LINE>@{text_ram wStringBuffer2}{text_start}는(은)<CONT>더 이상 오르지않는다<PROMPT>
 {text_start}<TARGET>의<LINE>@{text_ram wStringBuffer2}{text_start}는(은)<CONT>더이상 내려가지않는다!<PROMPT>
-{text_start}<USER>는(은) 전투에서<USER>이탈했다!<PROMPT>
+{text_start}<USER>는(은) 전투에서<LINE>이탈했다!<PROMPT>
 {text_start}<TARGET>는(은) 두려워져서<LINE>도망쳤다!<PROMPT>
 {text_start}<TARGET>는(은)<LINE>내동댕이쳐졌다!<PROMPT>
 {text_start}@{text_decimal wPlayerDamageTaken, 1, 1}{text_start}회 맞았다!<PROMPT>
 {text_start}@{text_decimal wEnemyDamageTaken, 1, 1}{text_start}회 맞았다!<PROMPT>
-{text_start}<USER>는(은)<USER>흰안개에 둘러싸였다!<PROMPT>
+{text_start}<USER>는(은)<LINE>흰안개에 둘러싸였다!<PROMPT>
 {text_start}<TARGET>는(은) 흰안개에<LINE>지켜지고 있다<PROMPT>
-{text_start}@{text_pause}{text_start}<USER>는(은)<USER>힘이 넘치고 있다<PROMPT>
-{text_start}<USER>는(은) 공격의<USER>반동을 입었다!<PROMPT>
-{text_start}<USER>의<USER>분신이 나타났다<PROMPT>
-{text_start}그러나 <USER>의<USER>대타출동은 이미 나와있다!<PROMPT>
+{text_start}@{text_pause}{text_start}<USER>는(은)<LINE>힘이 넘치고 있다<PROMPT>
+{text_start}<USER>는(은) 공격의<LINE>반동을 입었다!<PROMPT>
+{text_start}<USER>의<LINE>분신이 나타났다<PROMPT>
+{text_start}그러나 <USER>의<LINE>대타출동은 이미 나와있다!<PROMPT>
 {text_start}그러나 분신을 불러내기에는<LINE>체력이 부족했다!<PROMPT>
 {text_start}<TARGET>를(을) 대신해서<LINE>분신이 공격을 받았다!<PROMPT>
 {text_start}<TARGET>의 분신은<LINE>사라져버렸다……<PROMPT>
-{text_start}<USER>는(은)<USER>@{text_ram wStringBuffer1}{text_start}를(을) 배웠다<PROMPT>
+{text_start}<USER>는(은)<LINE>@{text_ram wStringBuffer1}{text_start}를(을) 배웠다<PROMPT>
 {text_start}<TARGET>에게<LINE>씨를 심었다!<PROMPT>
 {text_start}<TARGET>는(은)<LINE>공격을 피했다!<PROMPT>
 {text_start}<TARGET>의<LINE>@{text_ram wStringBuffer1}{text_start}를(을)<CONT>봉해버렸다!<PROMPT>
 {text_start}금화가 주변에 산산히 흩어졌다!<PROMPT>
-{text_start}<USER>는(은)<USER>@{text_ram wStringBuffer1}{text_start}타입이 되었다!<PROMPT>
+{text_start}<USER>는(은)<LINE>@{text_ram wStringBuffer1}{text_start}타입이 되었다!<PROMPT>
 {text_start}모든 스테이터스가<LINE>원래대로 되돌아왔다!<PROMPT>
-{text_start}<USER>는(은)<USER>@{text_ram wStringBuffer1}{text_start}(으)로<CONT>변신했다!<PROMPT>
-{text_start}<USER>는(은) 빛의 장막<USER>으로 특정 공격에 강하게되었다!<PROMPT>
-{text_start}<USER>는(은) 리플렉터로<USER>타격공격에 강하게되었다!<PROMPT>
+{text_start}<USER>는(은)<LINE>@{text_ram wStringBuffer1}{text_start}(으)로<CONT>변신했다!<PROMPT>
+{text_start}<USER>는(은) 빛의 장막<LINE>으로 특정 공격에 강하게되었다!<PROMPT>
+{text_start}<USER>는(은) 리플렉터로<LINE>타격공격에 강하게되었다!<PROMPT>
 {text_start}그러나 아무것도 일어나지 않는다!<PROMPT>
 {text_start}그러나 기술이 잘 먹히지 않았다!<PROMPT>
 {text_start}기술이 잘 먹히지 않았다!<PROMPT>
 {text_start}그러나 <TARGET>에는<LINE>듣지 않았다!<PROMPT>
 {text_start}<TARGET>에는<LINE>듣지 않았다!<PROMPT>
-{text_start}그러나 <USER>의<USER>체력은 가득이다!<PROMPT>
-{text_start}<USER>(이)가 전투에<USER>억지로 끌어내어졌다!<PROMPT>
+{text_start}그러나 <USER>의<LINE>체력은 가득이다!<PROMPT>
+{text_start}<USER>(이)가 전투에<LINE>억지로 끌어내어졌다!<PROMPT>
 {text_start}<TARGET>는(은) 마비되어서<LINE>기술을 펼치기 힘들게되었다!<PROMPT>
-{text_start}<USER>는(은)<USER>몸이 감전되어 움직일 수 없다!<PROMPT>
+{text_start}<USER>는(은)<LINE>몸이 감전되어 움직일 수 없다!<PROMPT>
 {text_start}<TARGET>는(은) 이미<LINE>마비되어있다<PROMPT>
 {text_start}<TARGET>는(은) <LINE>@{text_ram wStringBuffer1}{text_start}(으)로<CONT>지켜지고 있다!<PROMPT>
 {text_start}그러나 따라하기는<NEXT>실패로 끝났다!<PROMPT>
-{text_start}<USER>는(은) <TARGET><USER>(으)로부터 @{text_ram wStringBuffer1}{text_start}<CONT>를(을) 빼았았다!<PROMPT>
+{text_start}<USER>는(은) <TARGET><LINE>(으)로부터 @{text_ram wStringBuffer1}{text_start}<CONT>를(을) 빼았았다!<PROMPT>
 {text_start}<TARGET>는(은)<LINE>도망칠 수 없다!<PROMPT>
 {text_start}<TARGET>는(은)<LINE>악몽을 꾸기 시작했다!<PROMPT>
-{text_start}<USER>의<USER>얼음이 녹았다!<PROMPT>
-{text_start}<USER>는(은)<USER>자신의 체력을 깎아먹고<PARA><TARGET>에게<USER>저주를 걸었다!<PROMPT>
-{text_start}<USER>는(은)<USER>방어태세에 들어갔다!<PROMPT>
+{text_start}<USER>의<LINE>얼음이 녹았다!<PROMPT>
+{text_start}<USER>는(은)<LINE>자신의 체력을 깎아먹고<PARA><TARGET>에게<LINE>저주를 걸었다!<PROMPT>
+{text_start}<USER>는(은)<LINE>방어태세에 들어갔다!<PROMPT>
 {text_start}그러나 <TARGET><LINE>는(은) 방어하고 있다!<DONE>
 {text_start}<TARGET>의 발밑에<LINE>압정 뿌리기가 펼쳐졌다!<PROMPT>
-{text_start}<USER>는(은) <TARGET><USER>의 정체를 간파했다!<PROMPT>
+{text_start}<USER>는(은) <TARGET><LINE>의 정체를 간파했다!<PROMPT>
 {text_start}서로의 포켓몬은<LINE>3턴후에 끝나버린다!<PROMPT>
 {text_start}모래바람이 불기 시작했다!<PROMPT>
-{text_start}<USER>는(은) 견디기<USER>태세에 들어갔다!<PROMPT>
+{text_start}<USER>는(은) 견디기<LINE>태세에 들어갔다!<PROMPT>
 {text_start}<TARGET>는(은)<LINE>해롱해롱해졌다!<PROMPT>
-{text_start}<USER>는(은)<USER>신비의 베일에 감싸였다!<PROMPT>
+{text_start}<USER>는(은)<LINE>신비의 베일에 감싸였다!<PROMPT>
 {text_start}<TARGET>는(은)<LINE>신비의 베일에의해 지켜지고 있다!<PROMPT>
 {text_start}매그니튜드@{text_decimal wTextDecimalByte, 1, 1}{text_start}!!<PROMPT>
-{text_start}<USER>는(은) <TARGET><USER>의 공격으로부터 풀려났다!<PROMPT>
-{text_start}<USER>는(은)<USER>씨뿌리기 기술을 날렸다!<PROMPT>
-{text_start}<USER>는(은)압정 뿌리기<USER>를 펼쳤다!<PROMPT>
+{text_start}<USER>는(은) <TARGET><LINE>의 공격으로부터 풀려났다!<PROMPT>
+{text_start}<USER>는(은)<LINE>씨뿌리기 기술을 날렸다!<PROMPT>
+{text_start}<USER>는(은)압정 뿌리기<LINE>를 펼쳤다!<PROMPT>
 {text_start}큰 비가 되었다!<PROMPT>
 {text_start}햇살이 강해졌다!<PROMPT>
-{text_start}<USER>는(은) 체력을<USER>깎아먹고 풀파워가 되었다!<PROMPT>
-{text_start}<USER>는(은) <TARGET><USER>의 보조효과를 복사했다!<PROMPT>
-{text_start}<USER>는(은) 앞으로의<USER>공격을 예지했다!<PROMPT>
+{text_start}<USER>는(은) 체력을<LINE>깎아먹고 풀파워가 되었다!<PROMPT>
+{text_start}<USER>는(은) <TARGET><LINE>의 보조효과를 복사했다!<PROMPT>
+{text_start}<USER>는(은) 앞으로의<LINE>공격을 예지했다!<PROMPT>
 {text_start}@{text_ram wStringBuffer1}{text_start}의 공격!<DONE>
 {text_start}<TARGET>는(은) 프레젠트<LINE>를 받지 않았다!<PROMPT>
-{text_start}<USER>는(은)<USER>명령을 무시했다!<PROMPT>
+{text_start}<USER>는(은)<LINE>명령을 무시했다!<PROMPT>
 [NULL]
 [NULL]
 [NULL]
@@ -1437,59 +1437,59 @@ ZOOM
 [NULL]
 [NULL]
 {text_start}안녕<DONE>
-{text_start}여보세요…<PARA>아 <PARA>아니니!<LINE>잘 하고 있니?<DONE>
+{text_start}여보세요…<PARA>아 <PLAYER>아니니!<LINE>잘 하고 있니?<DONE>
 {text_start}그래 @{text_ram wStringBuffer3}{text_start}에 있니…<PARA>확실히 그곳에<LINE>@{text_ram wStringBuffer4}{text_start}(이)가<CONT>있다고 생각했는데<CONT>가봤니?<DONE>
-{text_start}흐음 @{text_ram wStringBuffer3}{text_start}에 있니?<LINE>엄마는 가본 적이 없구나<PARA><PARA>(이)는 대단하구나!<DONE>
+{text_start}흐음 @{text_ram wStringBuffer3}{text_start}에 있니?<LINE>엄마는 가본 적이 없구나<PARA><PLAYER>(이)는 대단하구나!<DONE>
 {text_start}뭐야 @{text_ram wStringBuffer3}{text_start}에 있니?<LINE>가끔은 얼굴 좀 내밀어라<DONE>
 {text_start}엥 @{text_ram wStringBuffer3}{text_start}에 있니?<LINE>연두마을에서 가까우니까<CONT>가끔은 집에 들리도록 해라<DONE>
 {text_start}지금 @{text_ram wStringBuffer3}{text_start} (이)야<LINE>포켓몬 모으기에 힘내거라!<DONE>
-{text_start}흐-음 여러가지로 힘들겠구나<PARA>하지만 <PARA>는(은)<LINE>늘 열심히 하니까<CONT>괜찮겠지<DONE>
+{text_start}흐-음 여러가지로 힘들겠구나<PARA>하지만 <PLAYER>는(은)<LINE>늘 열심히 하니까<CONT>괜찮겠지<DONE>
 {text_start}그건 그렇고 저금<LINE>@{text_ram wStringBuffer3}{text_start}원 모여있는데<CONT>계속 저금할꺼니?<DONE>
 {text_start}저금도 잘<LINE>모아놓지 않으면 안 되니까!<DONE>
-{text_start}그러고보니 <PARA><LINE>저금하지 않고 있지만 저금할꺼니?<DONE>
-{text_start}그러고보니 <PARA><LINE>엄마가 @{text_ram wStringBuffer3}{text_start}원<CONT>맡고 있는데<CONT>다시 저금 시작할래?<DONE>
+{text_start}그러고보니 <PLAYER><LINE>저금하지 않고 있지만 저금할꺼니?<DONE>
+{text_start}그러고보니 <PLAYER><LINE>엄마가 @{text_ram wStringBuffer3}{text_start}원<CONT>맡고 있는데<CONT>다시 저금 시작할래?<DONE>
 {text_start}그럼 저금해둘게<DONE>
 {text_start}그럼 저금하지 않을게<DONE>
 {text_start}<PLAYER>! 열심히 해야해!<LINE>엄마가 응원하고 있으니까!<DONE>
-{text_start}여보세요…<PARA>엥 <PARA><LINE>공박사님이 부르고 계시지<CONT>않았었니?<DONE>
-{text_start}여보세요…<PARA>엥 <PARA><LINE>공박사님으로부터<CONT>일을 부탁받았다고?<CONT>힘내거라!<DONE>
-{text_start}여보세요…<PARA>엥 <PARA><LINE>일이 끝났다면<CONT>놀지말고 돌아와야한다<DONE>
-{text_start}여보세요…<PARA>…… <PARA>?<LINE>공박사님께 들었단다<CONT>여행을 떠난다고…<PARA>엄마는 한가지 부탁이 있었는데…<PARA>돈 같은건 어떡게 할꺼니?<LINE>엄마가 저금을 해줄까?<DONE>
+{text_start}여보세요…<PARA>엥 <PLAYER><LINE>공박사님이 부르고 계시지<CONT>않았었니?<DONE>
+{text_start}여보세요…<PARA>엥 <PLAYER><LINE>공박사님으로부터<CONT>일을 부탁받았다고?<CONT>힘내거라!<DONE>
+{text_start}여보세요…<PARA>엥 <PLAYER><LINE>일이 끝났다면<CONT>놀지말고 돌아와야한다<DONE>
+{text_start}여보세요…<PARA>…… <PLAYER>?<LINE>공박사님께 들었단다<CONT>여행을 떠난다고…<PARA>엄마는 한가지 부탁이 있었는데…<PARA>돈 같은건 어떡게 할꺼니?<LINE>엄마가 저금을 해줄까?<DONE>
 {text_start}안녕!<PARA>이곳은 포켓몬 저장시스템<LINE>관리 서비스!<DONE>
 {text_start}안녕!<PARA>이곳은 포켓몬 저장시스템<LINE>관리 서비스!<DONE>
 {text_start}수고했어요!<PARA>이곳은 포켓몬 저장시스템<LINE>관리 서비스!<DONE>
-{text_start}이름은 뭐라고 하냐?<PARA>그래 <PARA>군인가<LINE>잠깐 기다려라!<PARA>…… …… …… …… ……<LINE> …… …… …… ……<DONE>
-{text_start}네 네 오래 기다렸어요!<PARA><PARA>군이 사용하는 박스<LINE>아직 @{text_ram wStringBuffer3}{text_start}마리<CONT>비어있어<PARA>점점 많이 맡겨줘!<DONE>
-{text_start}네 네 오래 기다렸어요!<PARA><PARA>군이 사용하는 박스<LINE>지금 @{text_ram wStringBuffer3}{text_start}마리밖에<CONT>비어있지 않아<PARA>슬슬 정리해두는 편이<LINE>좋지 않겠니?<DONE>
-{text_start}네 네 오래 기다렸어요!<PARA><PARA>군이 사용하는 박스<LINE>전혀 비어있지 않아!<PARA>정리해 주겠니<LINE>이젠 포켓몬을 맡길 수 없어!<DONE>
-{text_start}여보세요 <PARA>군?<PARA>나 이수재야!<LINE>늘 이용해줘서 고마워<PARA>지금 전송한 포켓몬으로<LINE>박스가 가득 찼어!<PARA>컴퓨터 정리를 하지 않으면<LINE>더 이상 맡길 수 없단다!<PARA>그럼 바이바이!<DONE>
-{text_start}여보세요 <PARA>군인가?<PARA>그다지 무리하지마<LINE>포켓몬이 상처를 입었다면<CONT>쉬게하는 것도 중요하니까<DONE>
-{text_start}여보세요 <PARA>군인가?<PARA>포켓몬 할아버지를 만났느냐?<LINE>그럼 조심해서<CONT>돌아오너라<DONE>
-{text_start}아아 <PARA>군……<PARA>포켓몬을 도둑맞았단다……<LINE>어떻게 이럴 수가 있을까……<DONE>
-{text_start}여보세요 <PARA>군인가?<PARA>지금 알을 조사하고 있는데<LINE>역시 포켓몬의 알 같단다<DONE>
-{text_start}여어 <PARA>군<PARA>도라지시티의 포켓몬 센터에 있는<LINE>조수랑은 만나주었는가?<DONE>
-{text_start}여보세요 <PARA>군인가?<PARA>알은 어떤 상태냐?<LINE>뭔가 변화 같은 것은 없느냐?<PARA>변한 것이 있으면<LINE>전화를 부탁하겠다<DONE>
-{text_start}여어 <PARA>군<LINE>알은 어떤 기분이냐?<PARA>엥 포켓몬이 태어났다고!<LINE>어 어떤 포켓몬일까<CONT>잠시 돌아오거라!<DONE>
-{text_start}여보세요 <PARA>군인가?<PARA>포켓몬의 종류에 따라서<LINE>알이 변할때 까지<CONT>시간의 차이가 있는 것 같구나<DONE>
-{text_start}여보세요 <PARA>군인가?<PARA>태어난 포켓몬이<LINE>어떤 기술을 알고 있는가<CONT>뭔가 비밀이 있는 것 같구나!<CONT>그것을 지금 조사하고 있단다<DONE>
-{text_start}아 <PARA>군!?<PARA>최근 알아낸 것인데<LINE>포켓몬에 달라붙는<CONT>포케러스라고 하는 녀석이 있단다<PARA>바이러스 같은 것이라서<LINE>포케러스라고 한다는구나<PARA>그래서 그 포케러스는<LINE>점점 늘어서 함께 있는<CONT>다른 포켓몬에게도 달라붙지만<CONT>단지 그렇기만 한다더구나<PARA>잠시 시간이 지나면<LINE>자연적으로 없어진다는 것 같다<PARA>그럼 열심히 하거라!<DONE>
-{text_start}여 여보세요 <PARA>군?<PARA>크 큰일났구나!!<LINE>에- 그러니까 뭐가 뭐였는지……<PARA>어떡하지……<LINE>아무튼 큰일이란다<CONT>지금 바로 돌아오너라!!<DONE>
-{text_start}여보세요 <PARA>군!<LINE>포켓몬의 알에 대해서<CONT>알아낸 것이 있단다!<PARA>도라지시티 포켓몬센터에서<LINE>내 조수가 기다리고 있을테니<CONT>말해보거라!<DONE>
-{text_start}<PARA>군<LINE>최근의 상태는 어떤가?<PARA>으음- 어쩐지<LINE>라디오 방송이 이상해서<CONT>걱정이되어 전화를 했단다<PARA>그러니까 라디오를 들으면<LINE>로켓단이……<CONT>라든가 이야기 하고 있단다<PARA><PARA>군<LINE>뭔가 모르겠느냐?<PARA>그게 아니면 혹시<LINE>로켓단이 부활을 했다던가?<CONT>그런 일은 없는가……<PARA>이상한 전화를 해서 미안하구나<LINE>그럼 몸조심하거라!<DONE>
-{text_start}여보세요 <PARA>군<LINE>전해줄 물건이 있단다<PARA>잠시<LINE>연구소에 와주지 않겠느냐<CONT>그럼 부탁한다!<DONE>
-{text_start}여보세요 <PARA>군<LINE>상태는 어떠냐?<PARA>실은<LINE>좋은 물건을 손에 넣었단다<CONT>괜찮다면 가지러 오너라<PARA>그럼!<DONE>
-{text_start}여보세요 @{text_ram wStringBuffer3}{text_start}인데요<PARA>여어 <PARA>군 안녕!<DONE>
-{text_start}여보세요 @{text_ram wStringBuffer3}{text_start}인데요<PARA>여어 <PARA>군 안녕!<DONE>
-{text_start}여보세요 @{text_ram wStringBuffer3}{text_start}인데…<PARA>여어 <PARA>군 안녕!<DONE>
-{text_start}네 @{text_ram wStringBuffer3}{text_start}입니다<PARA>엥 <PARA>군 안녕<DONE>
-{text_start}네 @{text_ram wStringBuffer3}{text_start}입니다<PARA>엥 <PARA>군 안녕<DONE>
-{text_start}네 @{text_ram wStringBuffer3}{text_start}입니다<PARA>엥 <PARA>군 안녕<DONE>
-{text_start}<PARA>군 안녕!<PARA>@{text_ram wStringBuffer3}{text_start}인데 잘 있니?<DONE>
-{text_start}<PARA>군 안녕!<PARA>@{text_ram wStringBuffer3}{text_start}인데<LINE>좋은 날씨구나!<DONE>
-{text_start}<PARA>군 안녕!<PARA>@{text_ram wStringBuffer3}{text_start}인데 시간있어?<DONE>
-{text_start}<PARA>군 안녕하세요<LINE>@{text_ram wStringBuffer3}{text_start}입니다만<CONT>잠자고 있었어요?<DONE>
-{text_start}<PARA>군 안녕하세요<LINE>@{text_ram wStringBuffer3}{text_start}입니다만<CONT>잘 지내나요?<DONE>
-{text_start}<PARA>군 안녕하세요<LINE>@{text_ram wStringBuffer3}{text_start}입니다만<CONT>일어났어요?<DONE>
+{text_start}이름은 뭐라고 하냐?<PARA>그래 <PLAYER>군인가<LINE>잠깐 기다려라!<PARA>…… …… …… …… ……<LINE> …… …… …… ……<DONE>
+{text_start}네 네 오래 기다렸어요!<PARA><PLAYER>군이 사용하는 박스<LINE>아직 @{text_ram wStringBuffer3}{text_start}마리<CONT>비어있어<PARA>점점 많이 맡겨줘!<DONE>
+{text_start}네 네 오래 기다렸어요!<PARA><PLAYER>군이 사용하는 박스<LINE>지금 @{text_ram wStringBuffer3}{text_start}마리밖에<CONT>비어있지 않아<PARA>슬슬 정리해두는 편이<LINE>좋지 않겠니?<DONE>
+{text_start}네 네 오래 기다렸어요!<PARA><PLAYER>군이 사용하는 박스<LINE>전혀 비어있지 않아!<PARA>정리해 주겠니<LINE>이젠 포켓몬을 맡길 수 없어!<DONE>
+{text_start}여보세요 <PLAYER>군?<PARA>나 이수재야!<LINE>늘 이용해줘서 고마워<PARA>지금 전송한 포켓몬으로<LINE>박스가 가득 찼어!<PARA>컴퓨터 정리를 하지 않으면<LINE>더 이상 맡길 수 없단다!<PARA>그럼 바이바이!<DONE>
+{text_start}여보세요 <PLAYER>군인가?<PARA>그다지 무리하지마<LINE>포켓몬이 상처를 입었다면<CONT>쉬게하는 것도 중요하니까<DONE>
+{text_start}여보세요 <PLAYER>군인가?<PARA>포켓몬 할아버지를 만났느냐?<LINE>그럼 조심해서<CONT>돌아오너라<DONE>
+{text_start}아아 <PLAYER>군……<PARA>포켓몬을 도둑맞았단다……<LINE>어떻게 이럴 수가 있을까……<DONE>
+{text_start}여보세요 <PLAYER>군인가?<PARA>지금 알을 조사하고 있는데<LINE>역시 포켓몬의 알 같단다<DONE>
+{text_start}여어 <PLAYER>군<PARA>도라지시티의 포켓몬 센터에 있는<LINE>조수랑은 만나주었는가?<DONE>
+{text_start}여보세요 <PLAYER>군인가?<PARA>알은 어떤 상태냐?<LINE>뭔가 변화 같은 것은 없느냐?<PARA>변한 것이 있으면<LINE>전화를 부탁하겠다<DONE>
+{text_start}여어 <PLAYER>군<LINE>알은 어떤 기분이냐?<PARA>엥 포켓몬이 태어났다고!<LINE>어 어떤 포켓몬일까<CONT>잠시 돌아오거라!<DONE>
+{text_start}여보세요 <PLAYER>군인가?<PARA>포켓몬의 종류에 따라서<LINE>알이 변할때 까지<CONT>시간의 차이가 있는 것 같구나<DONE>
+{text_start}여보세요 <PLAYER>군인가?<PARA>태어난 포켓몬이<LINE>어떤 기술을 알고 있는가<CONT>뭔가 비밀이 있는 것 같구나!<CONT>그것을 지금 조사하고 있단다<DONE>
+{text_start}아 <PLAYER>군!?<PARA>최근 알아낸 것인데<LINE>포켓몬에 달라붙는<CONT>포케러스라고 하는 녀석이 있단다<PARA>바이러스 같은 것이라서<LINE>포케러스라고 한다는구나<PARA>그래서 그 포케러스는<LINE>점점 늘어서 함께 있는<CONT>다른 포켓몬에게도 달라붙지만<CONT>단지 그렇기만 한다더구나<PARA>잠시 시간이 지나면<LINE>자연적으로 없어진다는 것 같다<PARA>그럼 열심히 하거라!<DONE>
+{text_start}여 여보세요 <PLAYER>군?<PARA>크 큰일났구나!!<LINE>에- 그러니까 뭐가 뭐였는지……<PARA>어떡하지……<LINE>아무튼 큰일이란다<CONT>지금 바로 돌아오너라!!<DONE>
+{text_start}여보세요 <PLAYER>군!<LINE>포켓몬의 알에 대해서<CONT>알아낸 것이 있단다!<PARA>도라지시티 포켓몬센터에서<LINE>내 조수가 기다리고 있을테니<CONT>말해보거라!<DONE>
+{text_start}<PLAYER>군<LINE>최근의 상태는 어떤가?<PARA>으음- 어쩐지<LINE>라디오 방송이 이상해서<CONT>걱정이되어 전화를 했단다<PARA>그러니까 라디오를 들으면<LINE>로켓단이……<CONT>라든가 이야기 하고 있단다<PARA><PLAYER>군<LINE>뭔가 모르겠느냐?<PARA>그게 아니면 혹시<LINE>로켓단이 부활을 했다던가?<CONT>그런 일은 없는가……<PARA>이상한 전화를 해서 미안하구나<LINE>그럼 몸조심하거라!<DONE>
+{text_start}여보세요 <PLAYER>군<LINE>전해줄 물건이 있단다<PARA>잠시<LINE>연구소에 와주지 않겠느냐<CONT>그럼 부탁한다!<DONE>
+{text_start}여보세요 <PLAYER>군<LINE>상태는 어떠냐?<PARA>실은<LINE>좋은 물건을 손에 넣었단다<CONT>괜찮다면 가지러 오너라<PARA>그럼!<DONE>
+{text_start}여보세요 @{text_ram wStringBuffer3}{text_start}인데요<PARA>여어 <PLAYER>군 안녕!<DONE>
+{text_start}여보세요 @{text_ram wStringBuffer3}{text_start}인데요<PARA>여어 <PLAYER>군 안녕!<DONE>
+{text_start}여보세요 @{text_ram wStringBuffer3}{text_start}인데…<PARA>여어 <PLAYER>군 안녕!<DONE>
+{text_start}네 @{text_ram wStringBuffer3}{text_start}입니다<PARA>엥 <PLAYER>군 안녕<DONE>
+{text_start}네 @{text_ram wStringBuffer3}{text_start}입니다<PARA>엥 <PLAYER>군 안녕<DONE>
+{text_start}네 @{text_ram wStringBuffer3}{text_start}입니다<PARA>엥 <PLAYER>군 안녕<DONE>
+{text_start}<PLAYER>군 안녕!<PARA>@{text_ram wStringBuffer3}{text_start}인데 잘 있니?<DONE>
+{text_start}<PLAYER>군 안녕!<PARA>@{text_ram wStringBuffer3}{text_start}인데<LINE>좋은 날씨구나!<DONE>
+{text_start}<PLAYER>군 안녕!<PARA>@{text_ram wStringBuffer3}{text_start}인데 시간있어?<DONE>
+{text_start}<PLAYER>군 안녕하세요<LINE>@{text_ram wStringBuffer3}{text_start}입니다만<CONT>잠자고 있었어요?<DONE>
+{text_start}<PLAYER>군 안녕하세요<LINE>@{text_ram wStringBuffer3}{text_start}입니다만<CONT>잘 지내나요?<DONE>
+{text_start}<PLAYER>군 안녕하세요<LINE>@{text_ram wStringBuffer3}{text_start}입니다만<CONT>일어났어요?<DONE>
 {text_start}너의 포켓몬 건강하냐?<PARA>내 @{text_ram wStringBuffer4}{text_start}는(은)<LINE>너무 건강해서 탈이 날<CONT>정도야<DONE>
 {text_start}포켓몬 상태는 어때?<PARA>내 @{text_ram wStringBuffer4}{text_start}는(은) 늘<LINE>포켓몬 센터에 다니고 있으니까<CONT>상태는 아주 좋아!<DONE>
 {text_start}내 @{text_ram wStringBuffer4}{text_start}는(은) 더<LINE>한층 멋있어졌다!<CONT>너한테도 보여주고 싶구나<DONE>
@@ -1501,16 +1501,16 @@ ZOOM
 {text_start}포켓몬 승부하지 않을래?<LINE>요전처럼은 되지 않을꺼야!<PARA>@{text_ram wStringBuffer5}{text_start}에 있을테니까<LINE>근처에 오면 이야기해라!<DONE>
 {text_start}포켓몬 승부하지 않을래?<LINE>이번엔 내가 이길테니까!<PARA>@{text_ram wStringBuffer5}{text_start}에 있을테니까<LINE>근처를 지나갈때 말해줘!<DONE>
 {text_start}여보세요 @{text_ram wStringBuffer3}{text_start}인데…<PARA>엣! 이광조군 아니니?<LINE>미안 미안 잘못걸었네요<DONE>
-{text_start}여보세요 @{text_ram wStringBuffer3}{text_start}인데요<LINE>지현이 잘 지내니?<PARA>엥 <PARA>군!?<LINE>잘못걸었다 미안해-<DONE>
+{text_start}여보세요 @{text_ram wStringBuffer3}{text_start}인데요<LINE>지현이 잘 지내니?<PARA>엥 <PLAYER>군!?<LINE>잘못걸었다 미안해-<DONE>
 {text_start}그럼 다음에!<DONE>
 {text_start}그럼 바이바이!<DONE>
 {text_start}저기 저기 굉장해!<PARA>@{text_ram wStringBuffer5}{text_start}에<LINE>@{text_ram wStringBuffer4}{text_start}(이)가 많아!<CONT>진짜야 너도 와서 보라니까!<DONE>
-{text_start}뭔지 굉장해!<PARA>@{text_ram wStringBuffer5}{text_start}에서<LINE>@{text_ram wStringBuffer4}{text_start}(이)가 잘잡혀<CONT><PARA>군도 낚시하러 올래?<DONE>
-{text_start}아까-<LINE>친구한테 들었는데<PARA>@{text_ram wStringBuffer5}{text_start}에서 많은<LINE>@{text_ram wStringBuffer4}{text_start}를(을) 발견<CONT>했다는 것 같다는데<PARA><PARA>군도 가본다면<LINE>어떻겠니?<DONE>
-{text_start}오늘은 확실히<LINE>공원에서 곤충채집 대회가<CONT>열리는 날이었지?<PARA><PARA>군은 갈꺼니?<DONE>
-{text_start}<PARA>군 알고 있니?<PARA>금빛시티의 라디오타워가<LINE>로켓단에게 점령당했대<PARA>근데 로켓단이라는건 뭐니?<DONE>
-{text_start}<PARA>군 소문 들었니?<PARA>금빛시티 라디오타워가<LINE>로켓단에게 빼았겼대!<PARA>안에 있는 사람들 괜찮을까?<DONE>
-{text_start}여어 <PARA>군<LINE>최근에 자전거 잘 팔리고 있어!<PARA>네가 자전거를 타고<LINE>선전을 해주기 때문이란다<PARA>고맙다는 답례로<LINE>빌려준 자전거<CONT>너에게 줄께!<PARA>정말 고마워!<DONE>
+{text_start}뭔지 굉장해!<PARA>@{text_ram wStringBuffer5}{text_start}에서<LINE>@{text_ram wStringBuffer4}{text_start}(이)가 잘잡혀<CONT><PLAYER>군도 낚시하러 올래?<DONE>
+{text_start}아까-<LINE>친구한테 들었는데<PARA>@{text_ram wStringBuffer5}{text_start}에서 많은<LINE>@{text_ram wStringBuffer4}{text_start}를(을) 발견<CONT>했다는 것 같다는데<PARA><PLAYER>군도 가본다면<LINE>어떻겠니?<DONE>
+{text_start}오늘은 확실히<LINE>공원에서 곤충채집 대회가<CONT>열리는 날이었지?<PARA><PLAYER>군은 갈꺼니?<DONE>
+{text_start}<PLAYER>군 알고 있니?<PARA>금빛시티의 라디오타워가<LINE>로켓단에게 점령당했대<PARA>근데 로켓단이라는건 뭐니?<DONE>
+{text_start}<PLAYER>군 소문 들었니?<PARA>금빛시티 라디오타워가<LINE>로켓단에게 빼았겼대!<PARA>안에 있는 사람들 괜찮을까?<DONE>
+{text_start}여어 <PLAYER>군<LINE>최근에 자전거 잘 팔리고 있어!<PARA>네가 자전거를 타고<LINE>선전을 해주기 때문이란다<PARA>고맙다는 답례로<LINE>빌려준 자전거<CONT>너에게 줄께!<PARA>정말 고마워!<DONE>
 {text_start}우리들이 이 탑을<LINE>지키고있는 것은<PARA>포켓몬에 대한 감사의 마음을<LINE>항상 잊지 않도록 하기 위함이오!<DONE>
 {text_start}아 고맙소!<DONE>
 {text_start}세상의 모든 생명체<LINE>서로 돕고 살아간다는……<PARA>감사의 마음을<LINE>잊는다면 아니 될 것이오<DONE>
@@ -1560,11 +1560,11 @@ ZOOM
 {text_start}옛날 엄청나게 빠른 속도로<LINE>여기저기의 길을 뛰어다녔던<CONT>포켓몬이 있었던 것 같다<PARA>바람처럼 재빠른것 같으니<LINE>우연히 풀숲에서 만나도<CONT>바로 도망가버리겠지!<DONE>
 {text_start}앤『부-우!!<DONE>
 {text_start}땅속으로부터 디그다가<LINE>엄청나게 많이 튀어나왔다!<CONT>우아~ 놀랬다-!<DONE>
-{text_start}…… …… ……<PARA>오래간만이로군 <PARA><PARA>…… 난 너에게 지고 나서부터<LINE>내 자신에게 무엇이 부족한가<CONT>이녀석들과 함께<CONT>계속 생각해왔다……<PARA>그리고 발견해냈다 대답을<LINE><PARA>!<CONT>너에게 보여주겠어<DONE>
+{text_start}…… …… ……<PARA>오래간만이로군 <PLAYER><PARA>…… 난 너에게 지고 나서부터<LINE>내 자신에게 무엇이 부족한가<CONT>이녀석들과 함께<CONT>계속 생각해왔다……<PARA>그리고 발견해냈다 대답을<LINE><PLAYER>!<CONT>너에게 보여주겠어<DONE>
 {text_start}…… …… ……<PARA>이녀석들이 지닌 힘<LINE>최대한으로 발휘할 수 있도록<CONT>키웠다 라고 생각했는데……<PARA>…… 아직 부족한 것인가<DONE>
-{text_start}…… …… ……<PARA>…… 확실히 나의 패배다<PARA>그건 인정하겠어<LINE>하지만 이것으로 끝은 아니야<PARA>언젠가 최강의<LINE>포켓몬 트레이너가 되어 보이겠어<PARA>…… 이녀석들도<LINE>내 의지에 따라와 줄 꺼야<PARA>…… 잘 들어둬 <PARA><LINE>언젠가 너를 쓰러뜨리고<CONT>나의 강함을 가르쳐줄 테니까<DONE>
+{text_start}…… …… ……<PARA>…… 확실히 나의 패배다<PARA>그건 인정하겠어<LINE>하지만 이것으로 끝은 아니야<PARA>언젠가 최강의<LINE>포켓몬 트레이너가 되어 보이겠어<PARA>…… 이녀석들도<LINE>내 의지에 따라와 줄 꺼야<PARA>…… 잘 들어둬 <PLAYER><LINE>언젠가 너를 쓰러뜨리고<CONT>나의 강함을 가르쳐줄 테니까<DONE>
 {text_start}…… …… ……<PARA>이것으로 빚은 갚았다<PARA>…… 다음은 이녀석들과 함께<LINE>챔피언을 쓰러뜨리고<CONT>세계 최강의<CONT>포켓몬 트레이너가 될꺼야<DONE>
-{text_start}기다렷<PARA>…… 지금부터 포켓몬 리그에<LINE>도전할건가?<PARA>…… 장난치지마<LINE>나보다도 약한 주제에<PARA>지금까지의 나라고 생각하지마!<PARA>마지막 최강의<LINE>포켓몬을 손에 넣었다<CONT>나에게는 누구도 이길 수 없어!<PARA><PARA>!<LINE>나하고 승부를 내자!<DONE>
+{text_start}기다렷<PARA>…… 지금부터 포켓몬 리그에<LINE>도전할건가?<PARA>…… 장난치지마<LINE>나보다도 약한 주제에<PARA>지금까지의 나라고 생각하지마!<PARA>마지막 최강의<LINE>포켓몬을 손에 넣었다<CONT>나에게는 누구도 이길 수 없어!<PARA><PLAYER>!<LINE>나하고 승부를 내자!<DONE>
 {text_start}…… 이기지 못했다<PARA>전력을 다해서 싸웠는데……<PARA>너는 지니고 있고<LINE>나에게는 없는 것……<PARA>그 드래곤 조련사에게 들은 이야기<LINE>어쩐지 알 것 같아……<DONE>
 {text_start}…… …… ……<PARA>나는 최강의 트레이너를<LINE>포기한건 아니야<PARA>지금의 내가 이기지 못하는 이유<LINE>반드시 발견해서 강해질꺼야<CONT>그리고 너와 싸우겠어<PARA>그때에는 있는 힘을 다해서<LINE>맛을 보여주마<PARA>…… 흥!<LINE>더욱 더 노력하는 것이 좋을꺼야<DONE>
 {text_start}…… 흥!<PARA>역시 중요한 것은 강함<LINE>다른 것은 아무것도 필요없어<DONE>
@@ -1592,7 +1592,7 @@ ZOOM
 {text_start}안락한 휴식의 장소<LINE>자연 공원<DONE>
 {text_start}전단지가 붙어 있군!<PARA>포켓몬 승부는<LINE>풀숲에서만 부탁드립니다<PARA>……자연 공원<LINE>관리사무소에서 알렸습니다……<DONE>
 {text_start}득이 되는 게시판!<PARA>메일화면에서<LINE>스타트 버튼을 누르면!<CONT>메일을 프린트할 수 있습니다!<DONE>
-『우승은 바로 나!<LINE>방해하지 말거라!<DONE>
+{text_start}미키『우승은 바로 나!<LINE>방해하지 말거라!<DONE>
 {text_start}태민『내 파라섹트는 <LINE>버섯의 포자를 사용해서<CONT>싸우러 나온 포켓몬을 잠재워버리지<DONE>
 {text_start}켄『대회를 위하여<LINE>날쌘 포켓몬을 키우고 있어!<DONE>
 {text_start}인명『우승은 어찌되었든<LINE>진귀한 포켓몬을 찾아 잡을꺼야<DONE>
@@ -1707,14 +1707,14 @@ ZOOM
 {text_start}진짜 국장은……<PARA>지하창고에 감금되어있다!<PARA>지하창고 알겠는가?<LINE>지하창고 뒷편의 더욱 뒷쪽<CONT>거기까지 갈 수 있을까?……<DONE>
 {text_start}오호! 꼬마?<LINE>황토마을의 아지트에서 만났었지<PARA>그때는 졌지만<LINE>이번에는 그렇게 안될 꺼야<DONE>
 {text_start}……!<PARA>전력을 다해 싸웠는데도……<LINE>이럴수가 패배라니……<DONE>
-{text_start}<PARA>(이)라고 했었지?<PARA>너 같은 꼬마에게는<LINE>우리들의 위대함을<CONT>이해하기 힘들것 같군<PARA>유감이군<LINE>너의 강함이 맘에 들었는데<DONE>
+{text_start}<PLAYER>(이)라고 했었지?<PARA>너 같은 꼬마에게는<LINE>우리들의 위대함을<CONT>이해하기 힘들것 같군<PARA>유감이군<LINE>너의 강함이 맘에 들었는데<DONE>
 {text_start}이런이런 이곳까지 왔단말인가<PARA>꽤나 우수한<LINE>트레이너 같군<PARA>우리들은 라디오 방송국을<LINE>점령해서 전국에<CONT>부활했다는 선전을 할 것입니다<PARA>그러고보니 어디선가<LINE>수행중의 비주기님도<CONT>돌아오실 것이 틀림없어<PARA>그 옛날의 영광을<LINE>되돌리는 것입니다……<CONT>더 이상 방해는 용서 않겠습니다!<DONE>
 {text_start}…… 크윽~<LINE>비주기님 용서를……<DONE>
 {text_start}……아아 이럴수가<PARA>모든 꿈이<LINE>지금 물거품이 되어버렸어요<CONT>역시 저에게는 무리였을까요?<PARA>알겠습니다<LINE>비주기님이 그렇게 한 것처럼<CONT>우리들 로켓단은<CONT>여기서 해산하지요<PARA>그럼 작별입니다<DONE>
-{text_start}국장『오오 <PARA>군<LINE>정말 고맙다<PARA>너의 용기있는 행동이<LINE>전국의 포켓몬을 구했단다<PARA>이것은 약소하지만<LINE>나의 마음이란다<DONE>
+{text_start}국장『오오 <PLAYER>군<LINE>정말 고맙다<PARA>너의 용기있는 행동이<LINE>전국의 포켓몬을 구했단다<PARA>이것은 약소하지만<LINE>나의 마음이란다<DONE>
 {text_start}금빛시티에도 탑이 있었지만 <LINE>너무 낡아서 쓰러질 것만 같아<CONT>라디오타워를 지은거야<PARA>그 공사때<LINE>탑의 제일 꼭대기에서<CONT>발견했던 것이 이 날개란다<PARA>옛날에는 금빛시티에서도<LINE>커다란 포켓몬이<CONT>날고있었다고 말하니까<PARA>어쩌면 인주시티에 있는<LINE>방울탑에 나타나는<CONT>포켓몬이 떨어뜨린 것인지도 몰라<PARA>그럼 나는<LINE>국장실로 돌아가겠네<DONE>
 {text_start}금빛시티에도 탑이 있었지만<LINE>너무 낡아서 쓰러질 것만 같아<CONT>라디오타워를 지은거야<PARA>그 공사때<LINE>탑의 제일 꼭대기에서<CONT>발견했던 것이 이 날개란다<PARA>엣날에는 금빌시티에도<LINE>커다란 포켓몬이<CONT>날고있었다고 말하니까<PARA>어쩌면 진청시티의 근처<LINE>소용돌이 섬에 나타난다고 하는<CONT>포켓몬이 떨어트린 것인지도 몰라<PARA>그럼 나는<LINE>국장실로 돌아가겠네<DONE>
-{text_start}국장『<PARA>군<LINE>나는 포켓몬이 너무너무 좋아서<CONT>그 감정을 전하고싶어<CONT>라디오 방송을 시작했단다!<PARA>모두가 방송을<LINE>즐거워해준다면 기쁘겠구나<DONE>
+{text_start}국장『<PLAYER>군<LINE>나는 포켓몬이 너무너무 좋아서<CONT>그 감정을 전하고싶어<CONT>라디오 방송을 시작했단다!<PARA>모두가 방송을<LINE>즐거워해준다면 기쁘겠구나<DONE>
 {text_start}준화『음악을 듣고있니?<DONE>
 {text_start}5층 …… 국장실<DONE>
 {text_start}5층 …… 제1스튜디오<DONE>
@@ -1794,8 +1794,8 @@ ZOOM
 {text_start}좋아하는 포켓몬이 있다면<LINE>어떠한 곳이든 갈꺼야<CONT>그것이 트레이너라는 것이지!<DONE>
 {text_start}나는 승부하는 것보다 포켓몬을<LINE>귀여워하는 것을 좋아하는지도 몰라<DONE>
 {text_start}매주 딱 한번씩만<LINE>물가에 포켓몬이 찾아와<PARA>그 포켓몬을 만나고싶은데……<LINE>라고 생각하고 있어<DONE>
-{text_start}강집『오오 <PARA>인가<PARA>위에서 망을보던 녀석은<LINE>큰소리로 혼쭐을 내니까<CONT>도망쳤지만……<PARA>나는 우물에서 떨어져버려<LINE>허리를 다쳐 움직일 수 없단다<PARA>젠장…… 다치지만 않았으면<LINE>내 포켓몬이<CONT>착착 혼을 낼 수 있을텐데……<PARA>이보게 <PARA>! <LINE>내 대신<CONT>트레이너의 정신을 보여주거라!<DONE>
-{text_start}강집『<PARA> 잘해주었다<LINE>로켓단녀석들<CONT>싹 도망쳤단다<PARA>허리 상태도 좋아졌구<LINE>나도 돌아가 봐야겠다<DONE>
+{text_start}강집『오오 <PLAYER>인가<PARA>위에서 망을보던 녀석은<LINE>큰소리로 혼쭐을 내니까<CONT>도망쳤지만……<PARA>나는 우물에서 떨어져버려<LINE>허리를 다쳐 움직일 수 없단다<PARA>젠장…… 다치지만 않았으면<LINE>내 포켓몬이<CONT>착착 혼을 낼 수 있을텐데……<PARA>이보게 <PLAYER>! <LINE>내 대신<CONT>트레이너의 정신을 보여주거라!<DONE>
+{text_start}강집『<PLAYER> 잘해주었다<LINE>로켓단녀석들<CONT>싹 도망쳤단다<PARA>허리 상태도 좋아졌구<LINE>나도 돌아가 봐야겠다<DONE>
 {text_start}젠장 위에서 감시하고 있었는데<LINE>뭐야 저 노인은<PARA>갑자기 큰소리를 지르니까<LINE>놀라서 우물에 떨어져버렸잖아<PARA>에-이 기분전환으로<LINE>너를 괴롭혀볼까!<DONE>
 {text_start}아- 이런-<LINE>전혀 안되겠군!<DONE>
 {text_start}그렇다 우리들이<LINE>야돈의 꼬리를 잘라서<CONT>팔고있었다<PARA>이것도 저것도 다 돈벌기 위해서<LINE>맞아 돈을 위해서라면<CONT>무엇이든 하는것이 바로 로켓단!<DONE>
@@ -1809,7 +1809,7 @@ ZOOM
 {text_start}이런 얄미운 녀석<DONE>
 {text_start}야돈의 꼬리 같은 거<LINE>금방 또다시 생기잖아<CONT>그것을 파는게 뭐가 나빠!<DONE>
 {text_start}야돈이다……<LINE>꼬리가 잘려있어……<PARA>오잉? 메일을 가지고있다<LINE>읽어볼까?<DONE>
-{text_start}<PARA>는(은)<LINE>메일을 읽어보았다!<PARA>할아버지랑 야돈이랑 사이좋게<LINE>집지키고 있거라! 아버지로부터<DONE>
+{text_start}<PLAYER>는(은)<LINE>메일을 읽어보았다!<PARA>할아버지랑 야돈이랑 사이좋게<LINE>집지키고 있거라! 아버지로부터<DONE>
 {text_start}야돈이다……<LINE>꼬리가 잘려있다……<DONE>
 {text_start}나는 여기서<LINE>야돈이 진화하는 순간을<CONT>기다리고 있단다<PARA>관찰을 하고 알아낸 것은<LINE>왕의 징표석을 지닌<CONT>야돈은 어떻게된건지<CONT>셀러에게 잘 물려진다<PARA>맞아 너에게도<LINE>왕의 징표석을 나누어주마!<DONE>
 {text_start}야돈을 따라서 느긋하게<LINE>진화하는 순간을 기다려<DONE>
@@ -1859,9 +1859,9 @@ ZOOM
 {text_start}헤헤헤!<LINE>실험은 대성공!<PARA>잉어킹은 팔리지 않지만<LINE>갸라도스라면 잘 팔릴꺼야<DONE>
 {text_start}우우……<PARA>녀석의 드래곤 포켓몬……<LINE>너무나도 강하다……<DONE>
 {text_start}목호『망나뇽 파괴광선<DONE>
-{text_start}늦었구나 <PARA>군!<PARA>역시 여기로부터<LINE>이상한 전파가 흘러나오고 있었어<DONE>
+{text_start}늦었구나 <PLAYER>군!<PARA>역시 여기로부터<LINE>이상한 전파가 흘러나오고 있었어<DONE>
 {text_start}계단은 여기다!<DONE>
-{text_start}목호『<PARA>군!<LINE>갈라져서 안으로 잠입하자!<CONT>나부터 먼저 가겠어!<DONE>
+{text_start}목호『<PLAYER>군!<LINE>갈라져서 안으로 잠입하자!<CONT>나부터 먼저 가겠어!<DONE>
 {text_start}오옷!<LINE>침입자 발견!<DONE>
 {text_start}젠장<LINE>물러날 때인가……<DONE>
 {text_start}다음은 내 차례닷!<LINE>놓치지 않겠어!<DONE>
@@ -1882,13 +1882,13 @@ ZOOM
 {text_start}어머 강하군<PARA>안타깝네<LINE>니가 로켓단에 있었다면<CONT>간부가 될 수 있었을 텐데<DONE>
 {text_start}…… 이 아지트도 끝이로군<PARA>뭐 좋아<LINE>전파의 실험도<CONT>잘 되었던 것 같고<CONT>이따위 아지트 어떻게되던 상관없어<PARA>우리들의<LINE>목표는 더욱 위대하다<PARA>로켓단의 무서움을<LINE>조만간에 알 수 있도록 해주겠다<PARA>그때를 즐겁게 기다려라……<LINE>후후후<DONE>
 {text_start}목호『후우 이것으로<LINE>아지트 안의 로켓단원의<CONT>모두를 쓰러뜨린건가!<PARA>도중에 싸웠던<LINE>소년이 걱정되는데……<DONE>
-{text_start}미안했다 <PARA>군<LINE>네가 열심히 싸우는 것을 보고<CONT>약간은 내가 나설 때를 기다렸단다<PARA>그건 그렇고 다음은<LINE>이상한 전파를 멈추는 것뿐인가……<DONE>
-{text_start}이것이 장치……<LINE>스위치는 발견되지 않는군<PARA>어쩔 수 없다<LINE>붐볼을 기절시켜보자<PARA>그렇게하면 이상한<LINE>전파도 나오지 않게 되겠지<PARA>포켓몬이 나쁜 것은 아니니까<LINE>약간은 걱정이 되지만<PARA><PARA>군<LINE>반씩 나눠서 해보자<DONE>
+{text_start}미안했다 <PLAYER>군<LINE>네가 열심히 싸우는 것을 보고<CONT>약간은 내가 나설 때를 기다렸단다<PARA>그건 그렇고 다음은<LINE>이상한 전파를 멈추는 것뿐인가……<DONE>
+{text_start}이것이 장치……<LINE>스위치는 발견되지 않는군<PARA>어쩔 수 없다<LINE>붐볼을 기절시켜보자<PARA>그렇게하면 이상한<LINE>전파도 나오지 않게 되겠지<PARA>포켓몬이 나쁜 것은 아니니까<LINE>약간은 걱정이 되지만<PARA><PLAYER>군<LINE>반씩 나눠서 해보자<DONE>
 {text_start}목호『이쪽은 나에게 맡겨 줘<DONE>
 {text_start}목호『드디어<LINE>이상한 전파가 멈췄다<PARA>이것으로 호수도<LINE>원래의 모습으로 돌아오겠지<CONT>이게 다 네 덕분이야<PARA>포켓몬을 대신해서<LINE>고맙다는 말을 하지!<PARA>그래!<LINE>이걸 가지고가!<PARA>좀전에 발견한 것인데<LINE>내게는 필요 없으니까<DONE>
 {text_start}<PLAYER>는(은) 목호에게서<LINE>비전머신06을 얻었다!<DONE>
 {text_start}그것은 바다 회오리!<PARA>포켓몬에게 가르치면<LINE>거친 바다 위라도 나아갈 수 있어<PARA>하지만 황토마을의<LINE>체육관 배지를 지니고 있지 않으면<CONT>사용할 수 없으니까 주의해<DONE>
-{text_start}<PARA>군!<PARA>포켓몬 마스터에의<LINE>길은 멀고도 험난하다고 말한다……<CONT>그래도 목표로 삼을 텐가?<PARA>…… …… …… ……<LINE>그래<CONT>그렇겠지<PARA>포기할 정도라면<LINE>처음부터 꿈을 갖지 않았겠지<PARA>자 그럼 또 만나자!<DONE>
+{text_start}<PLAYER>군!<PARA>포켓몬 마스터에의<LINE>길은 멀고도 험난하다고 말한다……<CONT>그래도 목표로 삼을 텐가?<PARA>…… …… …… ……<LINE>그래<CONT>그렇겠지<PARA>포기할 정도라면<LINE>처음부터 꿈을 갖지 않았겠지<PARA>자 그럼 또 만나자!<DONE>
 {text_start}목호『견딜만 하니?<PARA>너의 포켓몬<LINE>대부분 상처를 입은 것 같군<CONT>내 약을 나누어주마<DONE>
 {text_start}목호『자- <PLAYER>군<LINE>포켓몬을 위하여 힘을 내자!<DONE>
 {text_start}문이 열리지 않는다구?<PARA>그건 그럴꺼다<LINE>로켓단만이 알고있는<CONT>패스워드가 필요하기 때문이지<DONE>
@@ -1901,10 +1901,10 @@ ZOOM
 {text_start}우아아아……<DONE>
 {text_start}그쪽 문의 패스워드를<LINE>알고있는 것은 두목뿐이다<PARA>두목이 있는 곳?<LINE>글쎄 직접 찾아보시지<DONE>
 {text_start}문이 닫혀있다……<PARA>열기 위해서는<LINE>패스워드 1개가 필요하다<DONE>
-{text_start}문이 닫혀있다……<PARA><PARA>는(은)<LINE>패스워드를 입력했다<PARA>문이 열렸다!<DONE>
+{text_start}문이 닫혀있다……<PARA><PLAYER>는(은)<LINE>패스워드를 입력했다<PARA>문이 열렸다!<DONE>
 {text_start}괴전파 발생장치<LINE>쩌렁쩌렁 동작하고 있다<DONE>
 {text_start}괴전파 발생장치<LINE>어쩐지 멈춘 것 같다<DONE>
-{text_start}목호『두목의 방에 들어가기 위해선<LINE>문의 패스워드가<CONT>2개 필요한 것 같다<PARA>그 패스워드는<LINE>일부의 로켓단원에게만<CONT>알려져 있는 것 같아<PARA>그쪽의 로케단원이<LINE>정중하게 가르쳐주었단다<PARA><PARA>군! 힘을 내서<LINE>비밀을 알아내도록 해!<DONE>
+{text_start}목호『두목의 방에 들어가기 위해선<LINE>문의 패스워드가<CONT>2개 필요한 것 같다<PARA>그 패스워드는<LINE>일부의 로켓단원에게만<CONT>알려져 있는 것 같아<PARA>그쪽의 로케단원이<LINE>정중하게 가르쳐주었단다<PARA><PLAYER>군! 힘을 내서<LINE>비밀을 알아내도록 해!<DONE>
 {text_start}우우우……<LINE>망토의 사내놈 너무나도 강하군……<DONE>
 {text_start}…… …… ……<PARA>로켓단을 쳐부수는 것은<LINE>나역시 이야기했잖아<PARA>…… 그것보다도<LINE>그 망토의 드래곤 조련사<CONT>녀석은 도대체 어떤 놈이냐?<PARA>내 포켓몬이<LINE>전부 맥을 못 추고 당했어……<PARA>진건 어찌되었든 좋아<LINE>더욱더<CONT>강한 포켓몬을 손에 넣으면<CONT>녀석에게도 이길 수 있어<PARA>그것보다 맘에 들지 않는 것은<LINE>그 녀석의 대사……<PARA>너는 포켓몬에 대한<LINE>사랑과 신뢰가 부족하다 라고<PARA>그런 나약한 말을 하는 녀석에게<LINE>졌다고 생각하니까 열 받아!<PARA>…… 흥! 네녀석<LINE>상대 같은건 해줄 수 없어 <DONE>
 {text_start}뭐야 너는?<LINE>이곳은 우리들의 두목<CONT>비주기님의 방<PARA>비주기님은 3년전<LINE>해산을 시킨 후로 계속<CONT>지금도 수행중……<PARA>하지만 언젠가는<LINE>돌아오실 것을 믿고<CONT>이곳을 이렇게 지키고 있다<PARA>어떤 녀석이던<LINE>이곳을 소란 피우게 놔둘것 같냐!<DONE>
@@ -1924,7 +1924,7 @@ ZOOM
 {text_start}생각하는 것은 특기이지만<LINE>싸우는 것은 소질이 없다<DONE>
 {text_start}이상한 전파를 파워 업해서<LINE>전국에 흘려보내면……<PARA>상상하는 것 만으로도 두근거린다<DONE>
 {text_start}문이 닫혀있다……<PARA>열기 위해서는<LINE>패스워드가 2개 필요한 것 같다<DONE>
-{text_start}문이 닫혀있다……<PARA><PARA>는(은) 2개의<LINE>패스워드를 입력했다<PARA>문이 열렸다!<DONE>
+{text_start}문이 닫혀있다……<PARA><PLAYER>는(은) 2개의<LINE>패스워드를 입력했다<PARA>문이 열렸다!<DONE>
 {text_start}어떡한담!<LINE>스승님한테 혼나겠어!<PARA>숯의 재료가 될<LINE>나무를 베는 파오리가<CONT>행방불명이 되 버렸어!<PARA>어둡고도 넓은 너도밤나무 숲에<LINE>혼자서는 무서워서 갈 수 없어<DONE>
 {text_start}고마워!<PARA>난 배지를 가지고 있지 않으니까<LINE>스승님의 포켓몬이<CONT>내가 말하는 것을 듣지않아!<DONE>
 {text_start}길잃은 포켓몬이다!<DONE>
@@ -2037,7 +2037,7 @@ ZOOM
 {text_start}안에 들어있는 것은<LINE>용의 숨결<PARA>……별로 화려한 것은 아니야<LINE>필요없으면 무리해서<CONT>가지고 가지 않아도 좋아<DONE>
 {text_start}모든 배지가 전부 모인 것 같군 <PARA>향할 곳은 석영고원<LINE>포켓몬 리그<PARA>장소는 알고있니?<LINE>그렇군, 여기서부터라면<CONT>먼저 연두마을에 가야해<PARA>그곳에서 파도타기로<LINE>계속 동쪽으로 가면 될꺼야<CONT>단지 힘든 여정이 될꺼야<PARA>포켓몬 리그에서도<LINE>진다면 용서하지 않을 꺼니까!<PARA>그렇지않으면 패한<LINE>내가 비참해지잖아!<DONE>
 {text_start}용의 사당<PARA>용이 굴에 있다고 한다<LINE>드래곤 포켓몬을 받들어 모신다<DONE>
-{text_start}…… …… ……<LINE>뭐야 <PARA>(이)잖아……<PARA>…… 미안하지만 너의<LINE>상대가 되어줄 생각은 없다<PARA>지금의 이 녀석들로서는<LINE>너에게 이길 수 없으니까<CONT>그런 무책임한 짓은 시킬 수 없지<PARA>그렇게하지 않으면<LINE>최강의 트레이너는<CONT>될 수 없으니까……<DONE>
+{text_start}…… …… ……<LINE>뭐야 <PLAYER>(이)잖아……<PARA>…… 미안하지만 너의<LINE>상대가 되어줄 생각은 없다<PARA>지금의 이 녀석들로서는<LINE>너에게 이길 수 없으니까<CONT>그런 무책임한 짓은 시킬 수 없지<PARA>그렇게하지 않으면<LINE>최강의 트레이너는<CONT>될 수 없으니까……<DONE>
 {text_start}…… …… ……<PARA>후우……<LINE>사람의 방해를 해서는 안되지!<DONE>
 {text_start}<PLAYER>는(은)<LINE>@{text_ram wStringBuffer3}{text_start}를(을)<CONT>발견했다<DONE>
 {text_start}그러나 <PLAYER>는(은)<LINE>더 이상 도구를 지닐 수 없다!<DONE>
@@ -2046,9 +2046,9 @@ ZOOM
 {text_start}혼자서 어디 가니?<DONE>
 {text_start}이런! 포켓몬도 지니지 않고<LINE>도로에 나가다니 위험해!<PARA>근처의 마을까지는<LINE>야생의 포켓몬이 튀어 나오는<CONT>풀숲만 있으니까<DONE>
 {text_start}우와! 귀여운 포켓몬!<LINE>나도 가지고싶어<DONE>
-{text_start}이런 <PARA>군<LINE>또 밖에 나가니?<PARA>외출할 때는 엄마에게<LINE>꼭 이야기를 해야지!<DONE>
+{text_start}이런 <PLAYER>군<LINE>또 밖에 나가니?<PARA>외출할 때는 엄마에게<LINE>꼭 이야기를 해야지!<DONE>
 {text_start}포켓기어가 있으면<LINE>언제든지 엄마에게<PARA>건강한 목소리를<LINE>들려줄 수 있단다<DONE>
-{text_start}어이!<PARA><PARA>공박사님이 새로운<LINE>포켓몬을 발견하셨대<DONE>
+{text_start}어이!<PLAYER><PARA>공박사님이 새로운<LINE>포켓몬을 발견하셨대<DONE>
 {text_start}…… …… ……<PARA>이곳이 유명한<LINE>공박사 포켓몬 연구소……<DONE>
 {text_start}…… 뭐야<LINE>사람을 뚫어지게 쳐다보고<DONE>
 {text_start}이곳은 연두마을<LINE>시작을 알리는 바람이 부는 마을<DONE>
@@ -2188,8 +2188,8 @@ ZOOM
 {text_start}황토마을에 왔다면<LINE>명물「분노의 호도과자」!!<DONE>
 {text_start}황토마을 포켓몬 체육관<LINE>관장 류옹이<CONT>겨울의 혹독함을 가르쳐주는 자<DONE>
 {text_start}이 호수에는<LINE>갸라도스만 있구나……<PARA>역시 잉어킹은<LINE>누군가가 한 짓에 의해 강제로<CONT>진화하게 된 것인가……<DONE>
-{text_start}너도 소문을 듣고<LINE>찾아왔는가?<PARA>그래 <PARA>(이)라고 하는가<LINE>내 이름은 목호<CONT>너와 같은 트레이너란다<PARA>이곳의 소문을 듣고<LINE>진상을 조사하고 있었는데……<PARA><PARA>군!<LINE>좀 전의 싸움을 보니까<CONT>네가 상당한 실력의<CONT>트레이너라는 것을 알 수 있었다<PARA>괜찮다면 나와함께<LINE>조사를 해주겠는가?<DONE>
-{text_start}목호『그럼 한시름 놓았다!<PARA>호수의 잉어킹은<LINE>황토마을에서 흘러나오는<CONT>수수께끼의 전파에 의해 강제로<CONT>진화 되어지는 것 같단다<PARA><PARA>군!<LINE>먼저 가서 기다리겠다!<DONE>
+{text_start}너도 소문을 듣고<LINE>찾아왔는가?<PARA>그래 <PLAYER>(이)라고 하는가<LINE>내 이름은 목호<CONT>너와 같은 트레이너란다<PARA>이곳의 소문을 듣고<LINE>진상을 조사하고 있었는데……<PARA><PLAYER>군!<LINE>좀 전의 싸움을 보니까<CONT>네가 상당한 실력의<CONT>트레이너라는 것을 알 수 있었다<PARA>괜찮다면 나와함께<LINE>조사를 해주겠는가?<DONE>
+{text_start}목호『그럼 한시름 놓았다!<PARA>호수의 잉어킹은<LINE>황토마을에서 흘러나오는<CONT>수수께끼의 전파에 의해 강제로<CONT>진화 되어지는 것 같단다<PARA><PLAYER>군!<LINE>먼저 가서 기다리겠다!<DONE>
 {text_start}그런가……<LINE>마음이 변하면 언제든지 오너라<DONE>
 {text_start}목호『응?<LINE>도와주겠니?<DONE>
 {text_start}갸라도스『카- 갸오-!!<DONE>
@@ -2333,7 +2333,7 @@ ZOOM
 {text_start}이곳은 31번 도로<LINE>도라지시티 …… 무궁시티<DONE>
 {text_start}이곳은 어둠의 동굴<DONE>
 {text_start}카-악!!<LINE>다음에-익!!<DONE>
-{text_start}<PARA>(이)란 사람이 그댄가?<LINE>그대를 찾아다니는<CONT>안경쓴 사내가 있었다<PARA>포켓몬센터에서<LINE>그대를 기다리고 있을 것이다<CONT>그곳에 가 보거라!<DONE>
+{text_start}<PLAYER>(이)란 사람이 그댄가?<LINE>그대를 찾아다니는<CONT>안경쓴 사내가 있었다<PARA>포켓몬센터에서<LINE>그대를 기다리고 있을 것이다<CONT>그곳에 가 보거라!<DONE>
 {text_start}모다피의 탑에는 갔었는가?<LINE>도라지시티에 들리면 모다피의탑에서<CONT>수행하는 것이<PARA>트레이너의 상식이 아닌가<LINE>어서 가 보거라!<DONE>
 {text_start}포켓몬 체육관에는 갔었는가?<LINE>포켓몬 체육관에 들려서<CONT>너와 포켓몬을 단련시키는 것이<PARA>트레이너의 상식이 아닌가<LINE>어서 가 보거라!<DONE>
 {text_start}음 좋은 포켓몬을 데리고 있군!<LINE>이것도 저것도 도라지시티에서<CONT>여러가지로 단련시켰기 때문이지<PARA>특별히 포켓몬 체육관에서의<LINE>수행은 이득이 되었을 터<PARA>좋아! 도라지시티에 온 기념이다<LINE>이것을 가지고 가거라<PARA>포켓몬에게 지니게하면<LINE>풀타입 기술의 위력이<CONT>올라간다고 하는 상품이다!<DONE>
@@ -3068,7 +3068,7 @@ ZOOM
 {text_start}밀탱크는<LINE>거의 건강을 되찾았다!<DONE>
 {text_start}밀탱크는<LINE>매우 건강해졌다!<DONE>
 {text_start}<PLAYER>는(은)<LINE>나무열매를 가지고있지 않다<DONE>
-{text_start}<PARA>는(은) 나무열매를<LINE>주지않았기에 밀탱크는<CONT>슬픈 눈빛을 하고있다……<DONE>
+{text_start}<PLAYER>는(은) 나무열매를<LINE>주지않았기에 밀탱크는<CONT>슬픈 눈빛을 하고있다……<DONE>
 {text_start}나의 밀탱크<LINE>유유가 나오지 않게 되었단다!<PARA>우리집의 우유는 유명하다<LINE>모두 마시고싶다고 이야기하는데<PARA>나무열매를 많이 먹인다면<LINE>건강해져서<CONT>맛있는 우유를 많이<CONT>만들어 줄텐데말야<DONE>
 {text_start}목장의 자랑인<LINE>튼튼 우유는 필요없나?<PARA>포켓몬에게 마시게하면<LINE>체력을 회복한단다<PARA>지금이라면 500원이다<DONE>
 {text_start}많이 마시거라!<DONE>
@@ -3115,7 +3115,7 @@ ZOOM
 {text_start}이 앞에 있는 방울탑은<LINE>넓은 하늘을 나는 포켓몬이 쉬는<CONT>장소로서 만들어졌습니다<DONE>
 {text_start}방울탑이 흔들렸습니다!<PARA>틀림없이 제일 꼭대기에<LINE>포켓몬이 돌아왔을 것 입니다<DONE>
 {text_start}2개의 탑에<LINE>2마리의 포켓몬……<PARA>그러나 탑 하나가 불에 탄 뒤에<LINE>포켓몬도 날아간 채 돌아오지않아…<DONE>
-{text_start}나는 이수재<LINE>너는……?<PARA>후움 <PARA>(이)라고 하는가<LINE>좋을때 왔구나<DONE>
+{text_start}나는 이수재<LINE>너는……?<PARA>후움 <PLAYER>(이)라고 하는가<LINE>좋을때 왔구나<DONE>
 {text_start}지금 타임캡슐의<LINE>조정이 끝났단다<PARA>너도 알고있는 그대로<LINE>포켓몬을 교환할 수 있잖아<PARA>그래서 옛날의 사람들과도<LINE>교환할 수 있도록<CONT>타임캡슐이 만들어졌단다<PARA>…… 하지만<LINE>옛날 사람들이 모르는 것은<CONT>보낼 수 없단다<CONT>컴퓨터가 파손될 위험이 있어서<PARA>그렇기때문에 이쪽에서 옛날에<LINE>없었던 것을 빼지 않으면 안 되<PARA>확실히 이야기 한다면<LINE>새로운 포켓몬<CONT>새로운 기술은<CONT>타임캡슐에서는<CONT>통신교환을 할 수 없어<PARA>뭐 그 부분은 조정 했고<LINE>내일이 되면<CONT>전국의 포켓몬 센터에서<CONT>타임캡슐을 쓸 수 있을꺼야<PARA>그럼 나는 금빛시티에 돌아갈께<LINE>가끔은 부모님이랑도 지내야지<PARA>그럼 바이바이!<DONE>
 {text_start}전통 무용수는 춤도<LINE>포켓몬을 사용하는 모습도 아름다워<DONE>
 {text_start}체육관 관장인 유빈님<LINE>멋있어<CONT>그 냉정한 점이 좋아<PARA>게다가 포켓몬도<LINE>매우 강하니까<DONE>
@@ -3167,7 +3167,7 @@ ZOOM
 {text_start}이이 이럴 수가!<DONE>
 {text_start}좋다<LINE>보이지않는 마루의 비밀을 알려주마<PARA>우리들의 눈 앞<LINE>그곳에 길은 있다!<DONE>
 {text_start}이곳의 트레이너들은<LINE>비밀의 목적이 있어서<CONT>수행을 계속하고 있다고 한다<PARA>이기면 인주시티의 비밀에 대해<LINE>뭔가 가르쳐줄지도 모르지<DONE>
-{text_start}우와-<PARA><LINE>잘 이겼구나!<PARA>나 같은건 무서워서<LINE>구석에 숨어서 떨고 있었어<DONE>
+{text_start}우와-<PLAYER><LINE>잘 이겼구나!<PARA>나 같은건 무서워서<LINE>구석에 숨어서 떨고 있었어<DONE>
 {text_start}호오! 포켓몬과 함께<LINE>탐험의 여행을 하고 있느냐<PARA>탐험이라고 하면 보물찾기!<LINE>그렇게 생각하지?<DONE>
 {text_start}오오!<LINE>사나이의 로망을 알고 있구나<PARA>마음에 들었다!<LINE>이것을 가지고 가거라!<DONE>
 {text_start}보이지 않아도 여기저기<LINE>도구가 떨어져 있다<PARA>다우징머신을 사용하면<LINE>너의 근처에<CONT>도구가 떨어져 있을까 없을까<CONT>조사할 수 있다<PARA>단지 어디에 떨어져 있는가는<LINE>알 수 없으니까 직접 찾아보거라<PARA>그래!<LINE>인주시티의 불탄 탑에도<CONT>보물이 있다고 하는 소문이 있다<DONE>
@@ -3323,8 +3323,8 @@ ZOOM
 {text_start}파오리『파오-리<DONE>
 {text_start}움 수퍼볼이 없나<LINE>몬스터볼로 참을 수 밖에<PARA>사실은 강집 할아버지가<LINE>볼을 만들어 주셨으면 좋겠는데<DONE>
 {text_start}수퍼볼을 사용하면<LINE>몬스터볼 보다도<CONT>포켓몬을 잡기 쉬워진단다<PARA>하지만 때에 따라서는<LINE>강집 할아버지의 볼이 최고지<DONE>
-{text_start}엇 넌 누구냐?<PARA>그런가 <PARA>(이)라고 하는가<LINE>볼을 만들어줬으면 좋겠는가<CONT>미안하지만 그럴 때가 아니다<PARA>로켓단을 알고 있냐?<LINE>뭐 몰라도 좋아<CONT>이야기를 계속하겠다<PARA>로켓단이라고 하는 것은<LINE>포켓몬을 강제로 나쁜 짓에 사용한<CONT>아무 쓸모 없는 녀석들이지<PARA>3년전에<LINE>해산했을 텐데……<PARA>어쨌든 그녀석들이<LINE>우물에서 야돈의 꼬리를<CONT>잘라서 팔아먹고 있단다<PARA>그래서 내가 가서<LINE>확실히 야단치려고 한다!<PARA>좋아! 기다려라 야돈!<LINE>사나이 강집이 구하러 간다!<DONE>
-{text_start}강집『오오 <PARA><LINE>우물에서 네가 한 일<CONT>그것은 아주 훌륭했단다!<PARA>나는 네가 마음에 들었다!<LINE>너 같은 트레이너가 쓰겠다면<CONT>볼을 만들어 주고싶구나<PARA>지금 손에 있는 것은<LINE>이것뿐이지만 아무튼 가지고 가라!<DONE>
+{text_start}엇 넌 누구냐?<PARA>그런가 <PLAYER>(이)라고 하는가<LINE>볼을 만들어줬으면 좋겠는가<CONT>미안하지만 그럴 때가 아니다<PARA>로켓단을 알고 있냐?<LINE>뭐 몰라도 좋아<CONT>이야기를 계속하겠다<PARA>로켓단이라고 하는 것은<LINE>포켓몬을 강제로 나쁜 짓에 사용한<CONT>아무 쓸모 없는 녀석들이지<PARA>3년전에<LINE>해산했을 텐데……<PARA>어쨌든 그녀석들이<LINE>우물에서 야돈의 꼬리를<CONT>잘라서 팔아먹고 있단다<PARA>그래서 내가 가서<LINE>확실히 야단치려고 한다!<PARA>좋아! 기다려라 야돈!<LINE>사나이 강집이 구하러 간다!<DONE>
+{text_start}강집『오오 <PLAYER><LINE>우물에서 네가 한 일<CONT>그것은 아주 훌륭했단다!<PARA>나는 네가 마음에 들었다!<LINE>너 같은 트레이너가 쓰겠다면<CONT>볼을 만들어 주고싶구나<PARA>지금 손에 있는 것은<LINE>이것뿐이지만 아무튼 가지고 가라!<DONE>
 {text_start}강집『나는 규토리를 사용해서<LINE>특수한 볼을 만든단다<PARA>그 근처의 규토리 나무를 조사해서<LINE>열매를 모아오면 좋을꺼다<CONT>그러면 내가 볼을 만들어주겠다<DONE>
 {text_start}강집『오옷<LINE>규토리를 가지고 있구나!<PARA>좋아 볼을 만들어주겠다!<DONE>
 {text_start}강집『볼이 완성되려면<LINE>하루정도는 걸릴테니까<CONT>다음에 찾으러 오너라<DONE>
@@ -3404,8 +3404,8 @@ ZOOM
 {text_start}내 구구<LINE>딸기라고 하는 이름이야!<DONE>
 {text_start}딸기『구-구!<DONE>
 알@
-{text_start}<PARA>군 오래간만입니다<LINE>공박사님께 부탁을 받아서<CONT>당신을 찾고 있었어요<PARA>사실은……<PARA>포켓몬 알을<LINE>지니고 있어달라는 것입니다!<DONE>
-{text_start}공박사님이 조사한 바로는<LINE>포켓몬은 알 안에서<CONT>어느정도 키우지 않으면<CONT>태어나지 않는다고 합니다!<PARA>그것도 늘 활발한<LINE>포켓몬 곁에 있지 않으면<CONT>안 된다는 것 같아요<PARA>그러한 것을 부탁할 만한 사람은<LINE><PARA>군 뿐이니까<CONT>잘 부탁할께요!<PARA>태어난다면 공박사님에게<LINE>연락해주세요<DONE>
+{text_start}<PLAYER>군 오래간만입니다<LINE>공박사님께 부탁을 받아서<CONT>당신을 찾고 있었어요<PARA>사실은……<PARA>포켓몬 알을<LINE>지니고 있어달라는 것입니다!<DONE>
+{text_start}공박사님이 조사한 바로는<LINE>포켓몬은 알 안에서<CONT>어느정도 키우지 않으면<CONT>태어나지 않는다고 합니다!<PARA>그것도 늘 활발한<LINE>포켓몬 곁에 있지 않으면<CONT>안 된다는 것 같아요<PARA>그러한 것을 부탁할 만한 사람은<LINE><PLAYER>군 뿐이니까<CONT>잘 부탁할께요!<PARA>태어난다면 공박사님에게<LINE>연락해주세요<DONE>
 {text_start}포켓몬이 잔뜩 있어서<LINE>그 이상 데리고 다닐 수 없습니다<CONT>그럼 이곳에서 기다리겠습니다<DONE>
 {text_start}그 그런……<LINE>공박사님의 부탁이라니까요<DONE>
 {text_start}<PLAYER>군<LINE>알을 데리고 있어 주겠습니까?<DONE>
@@ -3496,7 +3496,7 @@ ZOOM
 {text_start}커다란 나무와 같은 모습의<LINE>포켓몬이 어딘가에 있다고한다<PARA>실프 스코프2가 있다면<LINE>정체를 알 수 있데<DONE>
 {text_start}곤충채집 대회가<LINE>열리는 것은……<CONT>화요일 목요일 토요일<PARA>참가상을 받는 것은 물론이고<LINE>잡은 벌레포켓몬을<CONT>자기가 가질 수 있습니다<DONE>
 {text_start}오잉?<LINE>짐이 가득찬 것 같군요…<PARA>오늘 가져갈 수 없다면<LINE>맡아두겠으니<CONT>짐을 정리하고 와주세요<DONE>
-{text_start}<PARA>씨죠?<PARA>여기<LINE>맡아두었던 상품입니다<DONE>
+{text_start}<PLAYER>씨죠?<PARA>여기<LINE>맡아두었던 상품입니다<DONE>
 {text_start}네-에!<LINE>내가 바로 꼭두!!<PARA>모두 포켓몬 하고 있잖아<LINE>나도 시작해보니까<CONT>뭐- 엄청 귀여워서!<PARA>으-응 도전할꺼니?<LINE>말해두겠는데 나<CONT>엄청 강하단다!<DONE>
 {text_start}우우……<PARA>…… 으앙!!<LINE>너무해 너무하다구!!<PARA>상대 못하겠어!!<LINE>꼬마니까……<DONE>
 {text_start}와앙!!<PARA>와-앙!!<PARA>…… 훌쩍 훌쩍<LINE>…… 너무해!!<DONE>
@@ -3537,7 +3537,7 @@ ZOOM
 {text_start}전혀 따르지 않는 것 같구나<LINE>어쩐지 눈빛이 안 좋아<DONE>
 {text_start}언제나 포켓몬 승부에 져서<LINE>기절만 시키고……<PARA>그것이 이유일까<LINE>포켓몬이 잘 따라주질 않아<DONE>
 {text_start}포켓몬에게 도구를 사용해주면<LINE>매우 기뻐하게 된단다!<DONE>
-{text_start}이수재『오오 <PARA>(이)냐<LINE>그래 부탁이 있어<CONT>이브이를 맡아줘<PARA>이녀석 타임캡슐을<LINE>조정했더니<CONT>갑자기 보내져왔단다<PARA>누군가 돌봐줘야 할텐데<LINE>나는 외출을 좋아해서 말야<CONT><PARA>(이)가 같이 잘 놀아줘<DONE>
+{text_start}이수재『오오 <PLAYER>(이)냐<LINE>그래 부탁이 있어<CONT>이브이를 맡아줘<PARA>이녀석 타임캡슐을<LINE>조정했더니<CONT>갑자기 보내져왔단다<PARA>누군가 돌봐줘야 할텐데<LINE>나는 외출을 좋아해서 말야<CONT><PLAYER>(이)가 같이 잘 놀아줘<DONE>
 {text_start}이수재『역시 <LINE>어이…… 바람둥이!<CONT>얄밉도록 마음에 드는<CONT>왕자님!<PARA>그럼 부탁해<LINE>많이 이뻐해줘!<DONE>
 {text_start}<PLAYER>는(은)<LINE>이브이를 얻었다!<DONE>
 {text_start}이수재『이브이에게는 새로운<LINE>진화의 가능성이 있다고<CONT>공박사님이 발표했단다<DONE>
@@ -3646,7 +3646,7 @@ ZOOM
 {text_start}그래!<LINE>그렇다면 바로 시작해 볼까<PARA>저기…… 내가 좋아하는<LINE>날쌩마가…… ……<PARA>…… 그래서…… 이……<LINE>…… …… 귀여워서……<CONT>참을 수 없어…… 크……<CONT>…… 더욱이…… 뭐……<CONT>대단해서…… …… 서……<CONT>…… 그렇게 생각하는가……<CONT>…… 하-!<PARA>…… …… 포옹하고……<LINE>나쁠 때도……<CONT>목욕할 때도……<CONT>…… 그렇지…… ……<CONT>…… …… 대단해……!<CONT>…… 아름다워……<CONT>…… …… 이야!<CONT>벌써 이렇게 시간이<CONT>좀 지나치게 길게 말했구나!<DONE>
 {text_start}나의 포켓몬 자랑을<LINE>얌전하게 들어준 선물로<CONT>……이것을 주마!<DONE>
 {text_start}포켓몬이 강해지는<LINE>이상한 사탕!<PARA>나는 함께 싸워서<LINE>강해지는 방법을<CONT>좋아해서<PARA>그 사탕을 너에게 주겠다<DONE>
-{text_start}이야- <PARA>군!<PARA>또 나의 포켓몬 자랑을<LINE>듣기위해 왔구나<PARA>……응? 아니야?<LINE>뭐야…… 쑥스럽게<DONE>
+{text_start}이야- <PLAYER>군!<PARA>또 나의 포켓몬 자랑을<LINE>듣기위해 왔구나<PARA>……응? 아니야?<LINE>뭐야…… 쑥스럽게<DONE>
 {text_start}뭐야 재미없게……<LINE>듣고싶어지면 오너라!<DONE>
 {text_start}우리 회장님은<LINE>정말 포켓몬에대해 시끄러워!<DONE>
 {text_start}손가락을 흔들고 있는<LINE>동작이라고 한다면……<CONT>므흣-!<CONT>삐삐 참을 수 없어!<DONE>
@@ -3687,7 +3687,7 @@ ZOOM
 {text_start}안녕!<PARA>레드는 계속 여행을 가있단다<LINE>지금까지 쭉 연락을<CONT>주지 않고있어<CONT>어디서 무엇을 하고 있다든가……<PARA>소식이 없다는 것은<LINE>잘 있다는 증거라지만<CONT>역시 걱정이야<DONE>
 {text_start}다치는 것이랑 병나는게 걱정인데<LINE>사나이에게는 건강이 제일!<DONE>
 {text_start}성도에서는 본적도 없는<LINE>방송을 하고 있어……!<DONE>
-{text_start}<PARA>는(은)<LINE>닌텐도64를 하고 있다!<CONT>…… …… 좋아!<CONT>이제 슬슬 나가볼까!<DONE>
+{text_start}<PLAYER>는(은)<LINE>닌텐도64를 하고 있다!<CONT>…… …… 좋아!<CONT>이제 슬슬 나가볼까!<DONE>
 {text_start}……긴 시간<LINE>지치지도 않은 것 같다<DONE>
 {text_start}남나리『내 남동생<LINE>상록시티 체육관의 관장이란다<PARA>종일 체육관을 비우고<LINE>모두를 곤란하게 만드는 것 같아<DONE>
 {text_start}남나리『어서와<LINE>마침 잘 되었어!<CONT>지금부터 녹차를 마실 시간이란다<PARA>응? 너의 포켓몬<LINE>엄청 더러워진 것 같구나!<CONT>내가 깨끗하게 해줄까<DONE>
@@ -3698,25 +3698,25 @@ ZOOM
 {text_start}남나리『이 시간은<LINE>매일 녹차를 마시고 있으니까<CONT>또 와!<DONE>
 {text_start}남나리『깨끗해지기 싫어?<LINE>그럼 차나 마시렴<DONE>
 {text_start}남나리『우후후!<LINE>알은 광이나 내렴<DONE>
-{text_start}오박사『오오 <PARA>군!<LINE>잘 와주었다!<PARA>어떠냐?<LINE>관동의 트레이너들도<CONT>상대하기가 벅차지!<DONE>
+{text_start}오박사『오오 <PLAYER>군!<LINE>잘 와주었다!<PARA>어떠냐?<LINE>관동의 트레이너들도<CONT>상대하기가 벅차지!<DONE>
 {text_start}어디 어디 포켓몬 도감은<LINE>어느정도나 완성했느냐<PARA>흐음 흠……<DONE>
 {text_start}이 근처까지 온다면<LINE>또 들리거라<DONE>
-{text_start}오박사『오오! 굉장하구나!<LINE>관동의  배지도 전부 모았느냐!<CONT>내가 생각한대로구나!<PARA>그래! <PARA>군이<LINE>은빛 산에 들어갈 수 있도록<CONT>연락을 해두마<PARA>은빛 산에는 야생 포켓몬이<LINE>많이 살고 있는 커다란 산이란다<PARA>보통의 트레이너에게는 위험해서<LINE>들어갈 수 없도록 해 놓았지만<CONT><PARA>군이라면 걱정 없겠지!<PARA>석영고원에 가 보거라<LINE>그곳에서 은빛 산으로 갈 수 있다<DONE>
+{text_start}오박사『오오! 굉장하구나!<LINE>관동의  배지도 전부 모았느냐!<CONT>내가 생각한대로구나!<PARA>그래! <PLAYER>군이<LINE>은빛 산에 들어갈 수 있도록<CONT>연락을 해두마<PARA>은빛 산에는 야생 포켓몬이<LINE>많이 살고 있는 커다란 산이란다<PARA>보통의 트레이너에게는 위험해서<LINE>들어갈 수 없도록 해 놓았지만<CONT><PLAYER>군이라면 걱정 없겠지!<PARA>석영고원에 가 보거라<LINE>그곳에서 은빛 산으로 갈 수 있다<DONE>
 {text_start}오박사『오잉?<LINE>관동의 배지를<CONT>모으지 않은 것 같구나<PARA>관동의 체육관 관장들도<LINE>성도에 지지 않을 정도로<CONT>기본이 잘 갖추어져 있단다<CONT>도전해 보는것이 어떻겠느냐?<DONE>
-{text_start}오박사『관동 배지를<LINE>모은 것 같구나!<PARA>힘들었겠지만<LINE>경험은 <PARA>군의<CONT>힘이 될꺼란다<PARA>전부 모았다면<LINE>또 놀러오너라<CONT>내가 선물을 주마<PARA><PARA>군<LINE>힘내거라!<DONE>
+{text_start}오박사『관동 배지를<LINE>모은 것 같구나!<PARA>힘들었겠지만<LINE>경험은 <PLAYER>군의<CONT>힘이 될꺼란다<PARA>전부 모았다면<LINE>또 놀러오너라<CONT>내가 선물을 주마<PARA><PLAYER>군<LINE>힘내거라!<DONE>
 {text_start}박사님의 포켓몬 강좌<LINE>관동에서는 방송하지 않습니다<CONT>듣고싶은데 유감이네요<DONE>
-{text_start}<PARA>군이<LINE>도감을 만들어주어서<CONT>박사님의 연구가<CONT>잘 진행되고 있어요!<DONE>
+{text_start}<PLAYER>군이<LINE>도감을 만들어주어서<CONT>박사님의 연구가<CONT>잘 진행되고 있어요!<DONE>
 {text_start}……여기서만의 이야기입니다!<PARA>오박사님의 포켓몬 강좌는<LINE>생방송이 아니랍니다!<DONE>
 {text_start}스타트 버튼을 누르자!<LINE>누르면 메뉴가 뜬다<DONE>
 {text_start}세이브를 함에는 포켓몬 레포트<LINE>자주 쓰면 좋다<DONE>
 {text_start}안은 텅 비었다……<DONE>
-{text_start}컴퓨터를 보면<LINE>전자메일이 와 있다!<PARA>…… …… ……<PARA>오박사님의 연구는<LINE>잘 진행되고 있습니까<PARA>내쪽은……<LINE>한창 힘내고 있는 중입니다<PARA>그건 그렇고<PARA>군이<LINE>열심히 하고 있다는 소문을 들어서<CONT>매우 기쁘답니다!<PARA>……연두마을의 공박사로부터<LINE>…… …… ……<DONE>
+{text_start}컴퓨터를 보면<LINE>전자메일이 와 있다!<PARA>…… …… ……<PARA>오박사님의 연구는<LINE>잘 진행되고 있습니까<PARA>내쪽은……<LINE>한창 힘내고 있는 중입니다<PARA>그건 그렇고<PLAYER>군이<LINE>열심히 하고 있다는 소문을 들어서<CONT>매우 기쁘답니다!<PARA>……연두마을의 공박사로부터<LINE>…… …… ……<DONE>
 {text_start}니드런 손!<DONE>
 {text_start}니드런『캬오 캬오오!<DONE>
 {text_start}웅『성도에서<LINE>도전하다니 특이하군<PARA>나는 회색시티 포켓몬 체육관<LINE>관장인 웅!<CONT>바위 타입의 전문가다!<PARA>약간 긁히는 정도의 공격은<LINE>내 포켓몬들에게는 효과가 없다<CONT>아프지도 가렵지도 않지!<PARA>오너라!<DONE>
 {text_start}웅『……방어를 웃도는<LINE>강렬한 공격……<CONT>내 예상을 넘어섰다……!<PARA>자 이 배지를<LINE>가지고 가라!<DONE>
 {text_start}<PLAYER>는(은) 웅으로부터<LINE>회색배지를 받았다!<DONE>
-{text_start}웅『고맙다<LINE><PARA>군!<CONT>좋은 시합이었어!<PARA>내 회색배지로<LINE>너의 포켓몬은<CONT>더욱 강해진단다<CONT>조금은 분하지만 말야!<DONE>
+{text_start}웅『고맙다<LINE><PLAYER>군!<CONT>좋은 시합이었어!<PARA>내 회색배지로<LINE>너의 포켓몬은<CONT>더욱 강해진단다<CONT>조금은 분하지만 말야!<DONE>
 {text_start}웅『세상은 참 넓구나……<LINE>이렇게 강한 트레이너가<CONT>아직도 많이 존재한다<PARA>나도 더욱 더<LINE>강한 트레이너가 되겠다!<DONE>
 {text_start}이곳은 바위 포켓몬을<LINE>다루는 트레이너의 체육관!<PARA>바위타입은 방어력이<LINE>높으니까!<PARA>싸움이 장기화될꺼다!<LINE>각오해랏!<DONE>
 {text_start}싸움은 마음먹은대로 되지 않는군<DONE>
@@ -3730,7 +3730,7 @@ ZOOM
 {text_start}푸린의 노래를 들으면……<LINE>거의 모든 포켓몬들은 잠들어버린다<PARA>잠들어 있을때 사용하는 기술이<LINE>몇 개정도 있단다!<DONE>
 {text_start}라디오를 들으면서<LINE>낮잠 자는 것을 좋아해……<CONT>쿨…… 음냐음냐……<DONE>
 {text_start}포켓몬 리그는<LINE>사천왕 4명에게 전부<CONT>이길 수 있는가를 시험한다<PARA>진다면 물론<LINE>처음부터 다시해야지!<DONE>
-{text_start}기다려랏!<PARA>…… 지금부터 포켓몬 리그에<LINE>도전하려구?<PARA>그건 무리야<PARA>애지중지하며 키워 온<LINE>내 포켓몬이<CONT>너를 쓰러뜨릴테니까<PARA><PARA>!<LINE>나랑 승부다!<DONE>
+{text_start}기다려랏!<PARA>…… 지금부터 포켓몬 리그에<LINE>도전하려구?<PARA>그건 무리야<PARA>애지중지하며 키워 온<LINE>내 포켓몬이<CONT>너를 쓰러뜨릴테니까<PARA><PLAYER>!<LINE>나랑 승부다!<DONE>
 {text_start}…… …… ……<PARA>나의 패배를 인정하겠다……<DONE>
 {text_start}…… 크웃<LINE>또 졌단말인가……<PARA>더욱……<LINE>더 포켓몬에대해<CONT>생각해볼 필요가 있다……<CONT>그런말인가<PARA>…… 흥!<LINE>전력을 다하는 것이 좋은거니까<DONE>
 {text_start}…… …… ……<PARA>후우……<LINE>다음엔 이녀석들과 함께<CONT>참피언이 되어 보이겠어!<DONE>
@@ -3744,28 +3744,28 @@ ZOOM
 {text_start}…… 하 하 하!<PARA>나는 사천왕인 독수!<LINE>현존하는 닌자다!<PARA>나의 싸움방식을<LINE>우습게 보면 큰코다칠 것이다<PARA>어지럽게 잠들게<LINE>독에 중독시키고……<PARA>바로 한마디로 줄이면<LINE>이상한 기술이지!<PARA>…… 하 하 하!<PARA>힘만으로는 해결할 수 없는<LINE>포켓몬의 깊은 내면을<CONT>듬뿍 맛보는게 좋을 것이다!<DONE>
 {text_start}오오!<LINE>너는 굉장하구나!<DONE>
 {text_start}가진 기술은 전부 펼쳤다<PARA>그래도 승복하지 못한다면<LINE>소인배란 소리를 듣겠지<PARA>너! 다음 관문으로 향하여<LINE>자신의 실력을 확인함이 좋을꺼다!<DONE>
-{text_start}나는 사천왕 시바!<PARA>나는 자신들이 지니고 있는<LINE>가능성을 믿고<CONT>언제나 한계까지 단련한다<PARA>그렇게해서 강해진<LINE>우릴 이길 수 있다고 생각하나?<PARA>호오 걱정할 필요는 없겠군<LINE>좋은 얼굴을 가지고 있구나<CONT>그것이야말로 싸움에 어울리지<PARA>간다! <PARA> 어찌되었든<LINE>우리들의 최강의 힘을<CONT>받아보는 것이 좋을 것이다!<PARA>우-! 하-앗!<DONE>
+{text_start}나는 사천왕 시바!<PARA>나는 자신들이 지니고 있는<LINE>가능성을 믿고<CONT>언제나 한계까지 단련한다<PARA>그렇게해서 강해진<LINE>우릴 이길 수 있다고 생각하나?<PARA>호오 걱정할 필요는 없겠군<LINE>좋은 얼굴을 가지고 있구나<CONT>그것이야말로 싸움에 어울리지<PARA>간다! <PLAYER> 어찌되었든<LINE>우리들의 최강의 힘을<CONT>받아보는 것이 좋을 것이다!<PARA>우-! 하-앗!<DONE>
 {text_start}어떡게 한 거지!<LINE>…… 우리들이 질 줄이야!<DONE>
 {text_start}패배한 나에게는<LINE>아무것도 말할 자격이 없다!<CONT>다음 관문으로 진행해도 좋다!<DONE>
-{text_start}나는 사천왕인 카렌<PARA>네가 <PARA>(이)로군<LINE>흐음 굉장히 재미있을 것 같네<PARA>내가 사랑하고 있는 것은<LINE>악 타입의 포켓몬!<PARA>와일드하고 터프한 느낌<LINE>멋있겠지?<CONT>게다가 엄-청나게 강하단다<PARA>네가 상대가 될 수 있을까?<LINE>힘을내서 우리들을<CONT>즐겁게 해 주었으면 좋겠다<PARA>자 그럼 시작할까!<DONE>
+{text_start}나는 사천왕인 카렌<PARA>네가 <PLAYER>(이)로군<LINE>흐음 굉장히 재미있을 것 같네<PARA>내가 사랑하고 있는 것은<LINE>악 타입의 포켓몬!<PARA>와일드하고 터프한 느낌<LINE>멋있겠지?<CONT>게다가 엄-청나게 강하단다<PARA>네가 상대가 될 수 있을까?<LINE>힘을내서 우리들을<CONT>즐겁게 해 주었으면 좋겠다<PARA>자 그럼 시작할까!<DONE>
 {text_start}흐음 잘하잖아<LINE>강하다는 것은 아주 멋있지<DONE>
 {text_start}강한 포켓몬<PARA>약한 포켓몬<PARA>그런것은 사람 나름<PARA>정말 강한 트레이너라면<LINE>좋아하는 포켓몬으로<CONT>승리 할 수 있도록 노력해야해<PARA>좋아 너는<LINE>중요한 것을 알고 있는 듯 하니까<PARA>다음 관문을 향해 가거라<LINE>챔피언이 너를 기다릴꺼야<DONE>
-{text_start}목호『기다리고 있었어!<PARA><PARA>군!<PARA>너의 실력이라면 당연히<LINE>여기까지 올 것이라고 알고 있었다<PARA>아무것도 말 할 필요는 없다!<PARA>단지 어느쪽이 강한가<LINE>싸워서 결정 할 뿐<PARA>최강의 트레이너로서<LINE>리그 챔피언으로서<PARA>드래곤 조련사 목호에게<LINE>어서 오너라!<DONE>
+{text_start}목호『기다리고 있었어!<PARA><PLAYER>군!<PARA>너의 실력이라면 당연히<LINE>여기까지 올 것이라고 알고 있었다<PARA>아무것도 말 할 필요는 없다!<PARA>단지 어느쪽이 강한가<LINE>싸워서 결정 할 뿐<PARA>최강의 트레이너로서<LINE>리그 챔피언으로서<PARA>드래곤 조련사 목호에게<LINE>어서 오너라!<DONE>
 {text_start}…… 끝났다<PARA>그렇지만 이상한 기분이 드는구나<PARA>패배했다는 분한 생각보다<LINE>새로운 챔피언의 탄생에<CONT>증인이 되었다는 기쁨이<CONT>크기때문일꺼야<DONE>
-{text_start}…… 후우<PARA>강해졌구나<LINE><PARA>군<CONT>정말 강해졌어<PARA>트레이너인 네가<LINE>올바르고 강한 마음을 가진다면<CONT>포켓몬도 거기에 응답 해 줄꺼야<PARA>그렇게해서 트레이너도 포켓몬도<LINE>점점 강해져 가는 것이야……<DONE>
+{text_start}…… 후우<PARA>강해졌구나<LINE><PLAYER>군<CONT>정말 강해졌어<PARA>트레이너인 네가<LINE>올바르고 강한 마음을 가진다면<CONT>포켓몬도 거기에 응답 해 줄꺼야<PARA>그렇게해서 트레이너도 포켓몬도<LINE>점점 강해져 가는 것이야……<DONE>
 {text_start}호두『아- 끝났잖아!<LINE>잉- 박사님이 꾸물대서 늦었어요!<DONE>
-{text_start}오박사『오오 <PARA>군!<LINE>오랜만이로구나<CONT>아야아 훌륭해졌구나<PARA>포켓몬 리그는<LINE>진정으로 대단한 것이지!<PARA>네가 포켓몬에게의<LINE>신뢰와 애정을 잊지 않고<CONT>쉬지않고 노력해온<CONT>결과가 나타난 것이란다<PARA>이야아 포켓몬들도 훌륭하기도 하지<LINE>포켓몬 트레이너를<CONT>믿고있기에 열심히 했단말이군<PARA><PARA>군<LINE>정말 축하한다!<DONE>
+{text_start}오박사『오오 <PLAYER>군!<LINE>오랜만이로구나<CONT>아야아 훌륭해졌구나<PARA>포켓몬 리그는<LINE>진정으로 대단한 것이지!<PARA>네가 포켓몬에게의<LINE>신뢰와 애정을 잊지 않고<CONT>쉬지않고 노력해온<CONT>결과가 나타난 것이란다<PARA>이야아 포켓몬들도 훌륭하기도 하지<LINE>포켓몬 트레이너를<CONT>믿고있기에 열심히 했단말이군<PARA><PLAYER>군<LINE>정말 축하한다!<DONE>
 {text_start}호두『자- 새로운<LINE>챔피언의 인터뷰를 하겠습니다<DONE>
-{text_start}목호『…… 어쩐지<LINE>소란해진 것 같군……<PARA><PARA>군 잠깐!<PARA>나를 따라와 주겠나<DONE>
+{text_start}목호『…… 어쩐지<LINE>소란해진 것 같군……<PARA><PLAYER>군 잠깐!<PARA>나를 따라와 주겠나<DONE>
 {text_start}호두『아- 인터뷰<LINE>아직이예요-<DONE>
-{text_start}목호『…… 이 방에 <LINE>들어온 것도 오랫만이군<PARA>이곳은 리그 챔피언의<LINE>영광을 기념하기 위해<CONT>힘든 싸움을 이겨낸<CONT>포켓몬들을 영원히<CONT>기록하는 장소란다!<PARA>지금 여기에<LINE>포켓몬을 향한 자상함과 신뢰<PARA>자신에대한 강함과 엄격함<PARA>소중한 것을 지닌 새로운<LINE>리그 챔피언이 탄생되었다!<PARA>자 <PARA>군!<LINE>너와 네 파트너들을<CONT>기록하자!<DONE>
+{text_start}목호『…… 이 방에 <LINE>들어온 것도 오랫만이군<PARA>이곳은 리그 챔피언의<LINE>영광을 기념하기 위해<CONT>힘든 싸움을 이겨낸<CONT>포켓몬들을 영원히<CONT>기록하는 장소란다!<PARA>지금 여기에<LINE>포켓몬을 향한 자상함과 신뢰<PARA>자신에대한 강함과 엄격함<PARA>소중한 것을 지닌 새로운<LINE>리그 챔피언이 탄생되었다!<PARA>자 <PLAYER>군!<LINE>너와 네 파트너들을<CONT>기록하자!<DONE>
 {text_start}이제 곧 출발합니다!<LINE>승선해주십시오<DONE>
 {text_start}배에는 탈 수 없습니다!<DONE>
 {text_start}어서오세요!<LINE>쾌속선 아쿠아호에!<CONT>승선하겠습니까?<DONE>
 {text_start}그럼 티켓을 보여주십시오<DONE>
 {text_start}그럼 다음에도 이용을<LINE>부탁드리겠습니다<DONE>
-{text_start}<PARA>는(은) 선원에게<LINE>승선티켓을 보였다!<PARA>예! 확인했습니다!<DONE>
-{text_start}<PARA>는(은) 선원에게<LINE>티켓을 보이려했다……<CONT>티켓이…… 없어……!<PARA>……대단히 죄송합니다!<PARA>들어가는 것은<LINE>티켓이 있는 분만 가능합니다<DONE>
+{text_start}<PLAYER>는(은) 선원에게<LINE>승선티켓을 보였다!<PARA>예! 확인했습니다!<DONE>
+{text_start}<PLAYER>는(은) 선원에게<LINE>티켓을 보이려했다……<CONT>티켓이…… 없어……!<PARA>……대단히 죄송합니다!<PARA>들어가는 것은<LINE>티켓이 있는 분만 가능합니다<DONE>
 {text_start}쾌속선의 출항은<LINE>다음 월요일입니다<DONE>
 {text_start}쾌속선의 출항은<LINE>다음 금요일입니다<DONE>
 {text_start}다른 곳에서는 잘 잡히지 않는<LINE>셀러가 잘 낚인단다!<DONE>
@@ -3778,8 +3778,8 @@ ZOOM
 {text_start}어서오세요!<LINE>쾌속선 아쿠아호에<CONT>승선하겠습니까?<DONE>
 {text_start}그럼 티켓을 확인하겠습니다<DONE>
 {text_start}다음에도 계속 이용을<LINE>부탁드립니다<DONE>
-{text_start}<PARA>는(은) 선원에게<LINE>승선티켓을 보였다!<PARA>예! 감사합니다!<DONE>
-{text_start}<PARA>는(은) 선원에게<LINE>티켓을 보이려했다……<CONT>티켓이…… 없어……!<PARA>……대단히 죄송합니다만<PARA>들어가는 것은<LINE>티켓이 있는 분에 한해서입니다<DONE>
+{text_start}<PLAYER>는(은) 선원에게<LINE>승선티켓을 보였다!<PARA>예! 감사합니다!<DONE>
+{text_start}<PLAYER>는(은) 선원에게<LINE>티켓을 보이려했다……<CONT>티켓이…… 없어……!<PARA>……대단히 죄송합니다만<PARA>들어가는 것은<LINE>티켓이 있는 분에 한해서입니다<DONE>
 {text_start}쾌속선의 출항은<LINE>다음 수요일입니다<DONE>
 {text_start}쾌속선의 출항은<LINE>다음 일요일입니다<DONE>
 {text_start}너는 성도에서 왔니?<LINE>거기에는 진귀한 포켓몬이<CONT>있다고 하던데<DONE>
@@ -3831,7 +3831,7 @@ ZOOM
 {text_start}이야- 살았어!<PARA>저 여자아이<LINE>놀이상대하기엔 지쳐서<CONT>곤란해하고 있던 중이란다<DONE>
 {text_start}우리 아쿠아호에<LINE>탄 기분은 어떤가!?<CONT>바다 위를 미끄러지듯<PARA>달리고 있지!<DONE>
 {text_start}어이 꼬마야……<LINE>손녀가 보이질 않는단다……<PARA>배의 어딘가에 있다면<LINE>그렇게 걱정은 아니지만<CONT>활발한 여자아이라서<CONT>누군가에게 실례를 범하고 있을지도<CONT>그렇게 생각하니까 걱정이다……<DONE>
-{text_start}그러니까 <PARA>군이었던가<LINE>손녀랑 놀아주었다지<CONT>고맙구나!<CONT>내게도 보답의 기회를 주련?<DONE>
+{text_start}그러니까 <PLAYER>군이었던가<LINE>손녀랑 놀아주었다지<CONT>고맙구나!<CONT>내게도 보답의 기회를 주련?<DONE>
 {text_start}그래! 만약 너만 좋다면<LINE>이것을 가지고 가주겠니!<DONE>
 {text_start}우리들은 세계 방방곡곡을<LINE>여행하며 돌고 있단다<DONE>
 {text_start}선장님<LINE>나랑 놀자!<PARA>시시해!<LINE>더 놀고싶어!<DONE>
@@ -3956,7 +3956,7 @@ ZOOM
 {text_start}대단히 죄송합니다<LINE>지금 이곳은<CONT>조정중입니다<DONE>
 {text_start}대단히 죄송합니다<LINE>지금 이쪽의 교환머신은<CONT>조정중입니다<DONE>
 {text_start}대단히 죄송합니다<LINE>지금 이쪽의 대전머신은<CONT>조정중입니다<DONE>
-{text_start}<PARA>님이군요?<LINE>전해드릴 물건이 있습니다<DONE>
+{text_start}<PLAYER>님이군요?<LINE>전해드릴 물건이 있습니다<DONE>
 {text_start}이것을 받으세요!<DONE>
 {text_start}에- 도장은 괜찮습니다<LINE>다음에도 이용을 부탁드립니다<DONE>
 {text_start}더이상은 지닐 수 없을 것 같군요<PARA>우리들은 전국의<LINE>포켓몬센터에 있으니까<CONT>언제든지 받으러 와주세요<DONE>
@@ -3985,7 +3985,7 @@ ZOOM
 {text_start}견학은 1층 플로어뿐입니다<PARA>성도의 라디오타워가<LINE>악당들에게 점령되어서<CONT>경비를 강화했습니다<DONE>
 {text_start}많은 사람들이<LINE>라디오타워에서 일하고 있데!<PARA>재미있는 방송을 만들기위해<LINE>모두 힘을내고 있지!<DONE>
 {text_start}아아 큰일이다!<PARA>발전소가 움직이지 않으면<LINE>라디오 방송도 할 수 없게된다!<PARA>겨우 라디오를 시작했는데<LINE>방송을 하지 못 하게 되면<CONT>나는 파멸이야-!<DONE>
-{text_start}오오!<LINE>네가 발전소 사건을<CONT>해결한 <PARA>군인가!<PARA>네 덕분으로 나는<LINE>짤리지 않고 살고 있단다<CONT>정말 살았단다!<PARA>내 마음의 선물이다<LINE>이것을 받아가거라!<DONE>
+{text_start}오오!<LINE>네가 발전소 사건을<CONT>해결한 <PLAYER>군인가!<PARA>네 덕분으로 나는<LINE>짤리지 않고 살고 있단다<CONT>정말 살았단다!<PARA>내 마음의 선물이다<LINE>이것을 받아가거라!<DONE>
 {text_start}그것이 있으면<LINE>새로운 라디오 방송이 생긴다<CONT>들을 수 있도록 된단다!<CONT>카하하하하핫!<DONE>
 {text_start}하아-이!<LINE>나는 음악 방송의<CONT>최고 감독!<PARA>……오잉 너의 포켓기어로는<LINE>유감이지만 내 방송을<CONT>수신할 수 없구나!<PARA>업그레이드를 한 라디오 카드를<LINE>끼우면 들을 수 있게 된단다!<DONE>
 {text_start}하아-이!<LINE>나는 음악 방송의<CONT>최고 감독!<PARA>아름다운 멜로디를<LINE>방송하고 있단다!<CONT>잘 부탁해!<DONE>
@@ -4073,7 +4073,7 @@ ZOOM
 {text_start}삐삐『삐 삐삐!<DONE>
 {text_start}니드런『니드 니드런!<DONE>
 {text_start}무지개 맨션<LINE>…… 관리인실<DONE>
-{text_start}<PARA>는(은)<LINE>컴퓨터의 스위치를 켰다!<PARA>…… …… ……<PARA>전자 메일을 쓰고 있는<LINE>도중인 것 같다!<PARA>…… …… ……<PARA>오랜만에 관동에<LINE>와주세요<PARA>꽤 변모해 있어서<LINE>놀랄꺼라 생각해요!<PARA>성도에서는 모습을 보이지 않는<LINE>포켓몬도 많이 있어요<PARA>……감독님께<PARA>…… …… ……<DONE>
+{text_start}<PLAYER>는(은)<LINE>컴퓨터의 스위치를 켰다!<PARA>…… …… ……<PARA>전자 메일을 쓰고 있는<LINE>도중인 것 같다!<PARA>…… …… ……<PARA>오랜만에 관동에<LINE>와주세요<PARA>꽤 변모해 있어서<LINE>놀랄꺼라 생각해요!<PARA>성도에서는 모습을 보이지 않는<LINE>포켓몬도 많이 있어요<PARA>……감독님께<PARA>…… …… ……<DONE>
 {text_start}게임 프리크 본관<LINE>응접실<DONE>
 {text_start}그렇습니까-!<PARA>나는 게임 디자이너<PARA>포켓몬 도감을 전부 모으는 것은<LINE>무척 힘들겠지만 용기를 내!<DONE>
 {text_start}와아 대단해!<LINE>이제 조금 있으면 포켓몬 도감에<CONT>페이지전부를 써넣을 수 있을꺼야!<PARA>축하해!<DONE>
@@ -4199,13 +4199,13 @@ ZOOM
 {text_start}체육관 관장이 되는 것이<LINE>내 꿈이란다!<DONE>
 {text_start}이야이야 잘 왔다!<LINE>오랜만의 손님이다!<PARA>아저씨는 매우 기쁘단다!<LINE>이것을 너에게 주마!<DONE>
 {text_start}그것은 아저씨의 금구슬!<LINE>유용한데 쓰거라!<CONT>아저씨의 금구슬이니까!<DONE>
-{text_start}네가 <PARA>군?<PARA>오박사님의 조수로<LINE>일하고 있는 사람입니다<PARA>벌써 여기까지 와있었군요!<LINE>오박사님의 연구소는<CONT>이 근처의 태초마을입니다<DONE>
+{text_start}네가 <PLAYER>군?<PARA>오박사님의 조수로<LINE>일하고 있는 사람입니다<PARA>벌써 여기까지 와있었군요!<LINE>오박사님의 연구소는<CONT>이 근처의 태초마을입니다<DONE>
 {text_start}여기서부터 앞은<LINE>진정 강한 포켓몬<CONT>트레이너만 지나갈 수 있습니다<DONE>
 {text_start}당신은 아직 성도의 배지를<LINE>전부 가지고있지 않습니다!<PARA>정해진 규칙이기때문에<LINE>지나가실 수 없습니다!<DONE>
 {text_start}오오-옷!<LINE>그것은 성도의 8개의 배지<CONT>자 어서 들어오십시오!<DONE>
 {text_start}이 앞은…… 은빛 산!<LINE>무서울 정도로 강한 포켓몬이<CONT>번식하고 있다!<DONE>
 {text_start}포켓몬 리그에 도전인가?<LINE>무서울 정도로 강한 사천왕이<CONT>도전을 기다리고 있다!<DONE>
-{text_start}공박사『여어 <PARA>군<LINE>기다리고 있었단다!<PARA>오늘 너를 부른 것은<LINE>부탁이 있어서란다!<PARA>내가 아는 사람중에<LINE>포켓몬 할아버지라고 하는<PARA>이상한것을 발견했을 때<LINE>대발견! 이라고 떠드는<CONT>할아버지가 있단다<PARA>그리고 전에<LINE>「이번만큼은 진짜야!」<CONT>라는 메일이 왔단다<PARA>호기심이 생기지만<LINE>나도 조수도 포켓몬<CONT>연구로 바빠서말이다<CONT>네가 대신 가줬으면 좋겠구나<PARA>물론 파트너가 될<LINE>포켓몬을 주겠다<PARA>최근에 발견한<LINE>진귀한 포켓몬이란다<CONT>자 고르거라!<DONE>
+{text_start}공박사『여어 <PLAYER>군<LINE>기다리고 있었단다!<PARA>오늘 너를 부른 것은<LINE>부탁이 있어서란다!<PARA>내가 아는 사람중에<LINE>포켓몬 할아버지라고 하는<PARA>이상한것을 발견했을 때<LINE>대발견! 이라고 떠드는<CONT>할아버지가 있단다<PARA>그리고 전에<LINE>「이번만큼은 진짜야!」<CONT>라는 메일이 왔단다<PARA>호기심이 생기지만<LINE>나도 조수도 포켓몬<CONT>연구로 바빠서말이다<CONT>네가 대신 가줬으면 좋겠구나<PARA>물론 파트너가 될<LINE>포켓몬을 주겠다<PARA>최근에 발견한<LINE>진귀한 포켓몬이란다<CONT>자 고르거라!<DONE>
 {text_start}포켓몬을 가지고 있다면<LINE>야생의 포켓몬이 나와도<CONT>싸우게하면 될꺼란다!<DONE>
 {text_start}공박사『잠깐 잠깐<LINE>어디에 가느냐!<DONE>
 {text_start}공박사『불꽃의 포켓몬<LINE>브케인으로 하겠니!?<DONE>
@@ -4218,48 +4218,48 @@ ZOOM
 {text_start}포켓몬이 상처를 입었다면<LINE>저쪽에 있는 기계로<CONT>포켓몬을 회복시켜주거라<DONE>
 {text_start}참 내 전화번호를<LINE>알려줄테니까<CONT>무슨 일이 있으면 연락하거라!<DONE>
 {text_start}<PLAYER>는(은) 공박사님의<LINE>전화번호를 등록했다<DONE>
-{text_start}포켓몬 할아버지는<LINE>여러 장소에 가서<CONT>희귀한 것을 발견한단다<PARA>희귀한 것만으로는<LINE>도움이 되지 않을테지만……<PARA>그럼<LINE><PARA>군 부탁하네!<DONE>
+{text_start}포켓몬 할아버지는<LINE>여러 장소에 가서<CONT>희귀한 것을 발견한단다<PARA>희귀한 것만으로는<LINE>도움이 되지 않을테지만……<PARA>그럼<LINE><PLAYER>군 부탁하네!<DONE>
 {text_start}공박사가 발견한<LINE>포켓몬이 들어있다!<DONE>
 {text_start}무슨 기계일까?<DONE>
 {text_start}포켓몬을 회복시키겠습니까?<DONE>
-{text_start}공박사『<PARA>군……<LINE>큰 일이 났었단다<PARA>아 그래 그래<LINE>포켓몬 할아버지의<CONT>대발견이란 것은 무엇이었느냐?<DONE>
+{text_start}공박사『<PLAYER>군……<LINE>큰 일이 났었단다<PARA>아 그래 그래<LINE>포켓몬 할아버지의<CONT>대발견이란 것은 무엇이었느냐?<DONE>
 {text_start}<PLAYER>는(은) 공박사에게<LINE>이상한 알을 전해주었다!<DONE>
 {text_start}공박사『이것은……<DONE>
 {text_start}…… 혹시<LINE>포켓몬의 알!?<PARA>만약 그렇다면 정말로<LINE>엄청난 대발견이구나!<DONE>
-{text_start}공박사『응? 오박사님께<LINE>포켓몬 도감을 받았다고!?<PARA><PARA>군 저 정말이니?<LINE>그 그것은 정말 굉장하구나!<PARA>누가 뭐라든 오박사님은<LINE>트레이너의 재능을 꿰뚫어보는<CONT>힘을 가지고 계시니까<PARA>그래 <PARA>군 너에게는<LINE>챔피언이 될 수 있는<CONT>소질이 있을지도 모르겠구나<PARA>포켓몬도 잘 따르는 것 같고<LINE>이대로 각지의 포켓몬 체육관에<CONT>도전 해보면 어떻겠느냐?<PARA>여기서부터라면 도라지시티의<LINE>포켓몬 체육관이 제일 가깝단다<DONE>
-{text_start}…… <PARA>군<LINE>챔피언을 목표로 하는 것은<CONT>길고 긴 여행이 될꺼라 생각한다<PARA>출발하기 전에<LINE>어머님께 잘 말씀드리거라<DONE>
+{text_start}공박사『응? 오박사님께<LINE>포켓몬 도감을 받았다고!?<PARA><PLAYER>군 저 정말이니?<LINE>그 그것은 정말 굉장하구나!<PARA>누가 뭐라든 오박사님은<LINE>트레이너의 재능을 꿰뚫어보는<CONT>힘을 가지고 계시니까<PARA>그래 <PLAYER>군 너에게는<LINE>챔피언이 될 수 있는<CONT>소질이 있을지도 모르겠구나<PARA>포켓몬도 잘 따르는 것 같고<LINE>이대로 각지의 포켓몬 체육관에<CONT>도전 해보면 어떻겠느냐?<PARA>여기서부터라면 도라지시티의<LINE>포켓몬 체육관이 제일 가깝단다<DONE>
+{text_start}…… <PLAYER>군<LINE>챔피언을 목표로 하는 것은<CONT>길고 긴 여행이 될꺼라 생각한다<PARA>출발하기 전에<LINE>어머님께 잘 말씀드리거라<DONE>
 {text_start}공박사『힘내거라!<LINE>나도 알에대해서 알게되면<CONT>연락을 하겠다<DONE>
-{text_start}공박사『엥 <PARA>군<LINE>내 조수랑 만나지 못 했느냐?<PARA>너에게 알을 전해주기위해<LINE>도라지시티의 포켓몬센터에<CONT>갔을텐데……<PARA>길이 어긋났나보구나<LINE>미안하지만 조수에게 가보거라<DONE>
+{text_start}공박사『엥 <PLAYER>군<LINE>내 조수랑 만나지 못 했느냐?<PARA>너에게 알을 전해주기위해<LINE>도라지시티의 포켓몬센터에<CONT>갔을텐데……<PARA>길이 어긋났나보구나<LINE>미안하지만 조수에게 가보거라<DONE>
 {text_start}공박사『어떤가<LINE>알에 변화는 있었느냐?<DONE>
-{text_start}응 <PARA>군<LINE>알이 부화했지 않느냐<CONT>포켓몬 어떻게하고 있느냐?<DONE>
+{text_start}응 <PLAYER>군<LINE>알이 부화했지 않느냐<CONT>포켓몬 어떻게하고 있느냐?<DONE>
 {text_start}공박사『<PLAYER>군<LINE>건강해 보이는구나<DONE>
 {text_start}엥?<LINE>그 포켓몬은……!<DONE>
 {text_start}알이 부화했구나!<PARA>그렇다면 포켓몬은<LINE>알에서 태어나는 것인가……<PARA>아냐아냐 모든 포켓몬이<LINE>그렇게 정해진 것은 아닐꺼다<PARA>우-음 아직도<LINE>조사할 것이 많이 있구나<DONE>
-{text_start}<PARA>군 고맙구나!<LINE>너의 덕분으로 포켓몬의<CONT>비밀을 알 수 있을 것 같구나<PARA>이것은 나의 답례란다<LINE>사양말고 가지고 가거라!<DONE>
+{text_start}<PLAYER>군 고맙구나!<LINE>너의 덕분으로 포켓몬의<CONT>비밀을 알 수 있을 것 같구나<PARA>이것은 나의 답례란다<LINE>사양말고 가지고 가거라!<DONE>
 {text_start}그것은 변함없는 돌!<PARA>포켓몬은 종류에 따라서<LINE>어느정도 키우면<CONT>진화해서 모습이 바뀐단다<PARA>그때 변함없는 돌을<LINE>가지고 있게하면 진화하지 않는단다<PARA>지금의 모습 그대로 키우고 싶은<LINE>포켓몬이 있다면 사용 해보거라<DONE>
 {text_start}공박사『그럼 <PLAYER>군<LINE>뭔가 알아내면 연락하겠다<DONE>
 {text_start}…… 휴우<LINE>…… 빼앗긴 포켓몬<CONT>지금쯤 뭘 하고 있을까……<PARA>나쁜 사람에게 키워지면<LINE>나쁜 포켓몬이 된다고 말하니까<DONE>
-{text_start}공박사『여어 <PARA>군!<LINE>네 덕분으로<CONT>연구도 척척 진행되고 있단다<PARA>이것은 나의 답례품<LINE>꼭 사용하거라!<DONE>
-{text_start}이 마스터볼은!!<PARA>어떤 포켓몬이라도<LINE>절대적으로 잡을 수 있는<CONT>궁극의 몬스터볼<PARA>포켓몬의 연구를<LINE>인정받는 사람에게<CONT>보내지는 것 같은데……<PARA>나보다는 네가<LINE>잘 사용할 수 있다고 생각한단다<CONT><PARA>군에게 주겠다!<DONE>
-{text_start}공박사『야아 <PARA>군<LINE>기다리고 있었단다!<PARA>오늘 너를 부른 것은<LINE>주고싶은 것이 있기때문이란다<PARA>이것!<LINE>승선 티켓<PARA>이것으로 관동지방의 포켓몬도<LINE>잡을 수 있게 되었구나!<DONE>
-{text_start}쾌속선에 탄다고 하면<LINE>담청시티란다!<PARA>……곤 하지만<PARA>군이<LINE> 더 잘 아는 것 같구나<PARA>포켓몬과 함께<LINE>여러 곳을 여행했으니까<PARA>그럼 관동지방에 가면<LINE>오박사님께 부탁한다!<DONE>
+{text_start}공박사『여어 <PLAYER>군!<LINE>네 덕분으로<CONT>연구도 척척 진행되고 있단다<PARA>이것은 나의 답례품<LINE>꼭 사용하거라!<DONE>
+{text_start}이 마스터볼은!!<PARA>어떤 포켓몬이라도<LINE>절대적으로 잡을 수 있는<CONT>궁극의 몬스터볼<PARA>포켓몬의 연구를<LINE>인정받는 사람에게<CONT>보내지는 것 같은데……<PARA>나보다는 네가<LINE>잘 사용할 수 있다고 생각한단다<CONT><PLAYER>군에게 주겠다!<DONE>
+{text_start}공박사『야아 <PLAYER>군<LINE>기다리고 있었단다!<PARA>오늘 너를 부른 것은<LINE>주고싶은 것이 있기때문이란다<PARA>이것!<LINE>승선 티켓<PARA>이것으로 관동지방의 포켓몬도<LINE>잡을 수 있게 되었구나!<DONE>
+{text_start}쾌속선에 탄다고 하면<LINE>담청시티란다!<PARA>……곤 하지만<PLAYER>군이<LINE> 더 잘 아는 것 같구나<PARA>포켓몬과 함께<LINE>여러 곳을 여행했으니까<PARA>그럼 관동지방에 가면<LINE>오박사님께 부탁한다!<DONE>
 {text_start}박사님이 연구하고 있는<LINE>포켓몬의 알이다!<DONE>
 {text_start}<PLAYER>군!<LINE>심부름을 해 주는 그대에게<CONT>이것을 줄께요!<DONE>
 {text_start}둘밖에 없으니까<LINE>약간의 일로도 당황스럽다……<PARA>아- 바빠요<DONE>
 {text_start}밖에서 커다란 소리가 나서……<PARA>박사님이랑 보러 나갔다가<LINE>포켓몬을 도둑맞은 것 같습니다……<PARA>다른 사람의 물건을 훔치다니<LINE>믿을 수가 없어요!<PARA>…… 휴우<LINE>…… 도둑맞은 포켓몬<CONT>지금쯤 어떻게 되었을까……<PARA>나쁜사람에게 키워지면<LINE>나쁜 포켓몬이 된다니까<DONE>
-{text_start}<PARA>군!<PARA>포켓몬 도감을 만드는 그대에게<LINE>이것을 전해주겠습니다!<DONE>
+{text_start}<PLAYER>군!<PARA>포켓몬 도감을 만드는 그대에게<LINE>이것을 전해주겠습니다!<DONE>
 {text_start}포켓몬 도감을 만들 때에는<LINE>포켓몬을 잡아야합니다!<PARA>몬스터볼을<LINE>야생의 포켓몬에게 던지면<CONT>잡을 수 있습니다!<DONE>
 {text_start}이 연구소<LINE>포켓몬을 도둑맞은 것 같아서……<PARA>지금 공박사님으로부터<LINE>말씀을 듣고있던 중입니다<CONT>뭐든지 빨갛고 긴<CONT>머리카락의 소년이었던 것 같아서<PARA>엣!<LINE>그런 트레이너랑 싸웠다고?<PARA>이름이라던가<LINE>말하지 않았던가요?<DONE>
 {text_start}알겠습니다!<LINE><RIVAL>(이)라고 하는군요!<PARA>협력해주셔서<LINE>고맙습니다!<DONE>
 {text_start}창문이 열려 있다<LINE>바람이 기분좋게 불어온다!<DONE>
 {text_start}이곳으로 들어왔구나!<DONE>
-{text_start}<PARA>는(은) 책을 꺼냈다<PARA>탐험지식 제1<PARA>스타트 버튼을 누른다!<LINE>메뉴가 펼쳐진다!<DONE>
-{text_start}<PARA>는(은) 책을 꺼냈다<PARA>탐험지식 제2<PARA>포켓몬 레포트로<LINE>기록을 할 수 있다!<DONE>
-{text_start}<PARA>는(은) 책을 꺼냈다<PARA>탐험지식 제3<PARA>가방을 열어서<LINE>셀렉트 버튼을 누른다!<CONT>도구를 교체할 수 있다!<DONE>
-{text_start}<PARA>는(은) 책을 꺼냈다<PARA>탐험지식 제4<PARA>포켓몬의 사용 기술을 보고<LINE>A버튼을 누른다!<CONT>기술을 교체할 수 있다!<DONE>
+{text_start}<PLAYER>는(은) 책을 꺼냈다<PARA>탐험지식 제1<PARA>스타트 버튼을 누른다!<LINE>메뉴가 펼쳐진다!<DONE>
+{text_start}<PLAYER>는(은) 책을 꺼냈다<PARA>탐험지식 제2<PARA>포켓몬 레포트로<LINE>기록을 할 수 있다!<DONE>
+{text_start}<PLAYER>는(은) 책을 꺼냈다<PARA>탐험지식 제3<PARA>가방을 열어서<LINE>셀렉트 버튼을 누른다!<CONT>도구를 교체할 수 있다!<DONE>
+{text_start}<PLAYER>는(은) 책을 꺼냈다<PARA>탐험지식 제4<PARA>포켓몬의 사용 기술을 보고<LINE>A버튼을 누른다!<CONT>기술을 교체할 수 있다!<DONE>
 {text_start}공박사님이 드셨던<LINE>과자봉지가 모두 있다……<DONE>
 포켓몬 기어@
-{text_start}아 <PARA>!<LINE>옆집의 공박사님이<CONT>찾아왔었단다<PARA>뭔지 너에게<LINE>부탁할 것이 있다고 하셔서<PARA>그래! 잊어먹을 뻔 했네<LINE>수리를 보냈던<CONT>포켓몬기어가 돌아왔단다<PARA>여기!<DONE>
+{text_start}아 <PLAYER>!<LINE>옆집의 공박사님이<CONT>찾아왔었단다<PARA>뭔지 너에게<LINE>부탁할 것이 있다고 하셔서<PARA>그래! 잊어먹을 뻔 했네<LINE>수리를 보냈던<CONT>포켓몬기어가 돌아왔단다<PARA>여기!<DONE>
 {text_start}포켓몬기어<LINE>줄여서 포켓기어<PARA>훌륭한 트레이너가<LINE>되려면 가지고 있지 않으면 않될껄<PARA>엥? 요일을 맞추지 않았네<LINE>사용하기 전에 오늘은<CONT>무슨 요일인가 정해놓지 않으면<DONE>
 [NULL]
 {text_start}그래 그래<LINE>전화의 사용방법 기억하고 있니?<DONE>
@@ -4268,7 +4268,7 @@ ZOOM
 {text_start}전화번호는<LINE>자동으로 등록되어지니까<CONT>기록하고 싶은 상대를 고르면 된다<PARA>이렇게 간단하게<LINE>전화를 할 수 있다니 대단하네<DONE>
 {text_start}공박사님이 부르셨단다<LINE>빨리 가봐야지!<DONE>
 {text_start}공박사님의<LINE>용무는 무엇이었니?<PARA>…… …… …… <PARA>그래 아주 힘들겠구나<LINE>그래도 다른사람에게 부탁을 받는건<CONT>중요한 것이란다!<DONE>
-{text_start}<PARA>! 힘내거라!<LINE>엄마가 응원할께!<DONE>
+{text_start}<PLAYER>! 힘내거라!<LINE>엄마가 응원할께!<DONE>
 {text_start}엄마의 특별요리<LINE>홍련섬 풍의 화산 햄버거!<DONE>
 {text_start}빤짝빤짝거리는 싱크대!<LINE>엄마는 깔끔쟁이<DONE>
 {text_start}냉장고 안에는……<PARA>맛있는 물이 가득<LINE>그리고 달콤한 후르츠 밀크!<DONE>
@@ -4282,7 +4282,7 @@ ZOOM
 {text_start}여기는 포켓몬 채널<DONE>
 {text_start}상대는<LINE>DJ 호두였습니다!<DONE>
 {text_start}포켓몬<LINE>포켓몬 채널……<DONE>
-{text_start}엥 <PARA>군!<PARA>우리 남편<LINE>어쩐지 바쁜 것 같아도<CONT>무리는 하고 있지 않겠지?<PARA>포켓몬 연구를 하게되면<LINE>푹 빠져서 식사도 하지 않는단다!<DONE>
+{text_start}엥 <PLAYER>군!<PARA>우리 남편<LINE>어쩐지 바쁜 것 같아도<CONT>무리는 하고 있지 않겠지?<PARA>포켓몬 연구를 하게되면<LINE>푹 빠져서 식사도 하지 않는단다!<DONE>
 {text_start}난 이다음에 크면<LINE>아버지를 도울꺼야!<PARA>그래서 훌륭한<LINE>포켓몬 박사가 될꺼다!<DONE>
 {text_start}식사 준비가 되어 있군<LINE>연구소 몫인가?<DONE>
 {text_start}식사 준비가 되어 있다<LINE>이건 포켓몬 식사인가?<DONE>
@@ -4345,14 +4345,14 @@ ZOOM
 {text_start}댁의 따님은<LINE>정말 제멋대로 키워서……<CONT>친구들도 그다지 많지 않아요<DONE>
 {text_start}3년전 남자아이에게 얻은<LINE>삐삐인형을 잃어버리고부터<PARA>점점 흉내내기에<LINE>자신이 없어져서……<DONE>
 {text_start}해피너스『해피!<DONE>
-{text_start}<PARA>『야아! 안녕!<LINE>너 포켓몬 좋아하니?<PARA><PARA>『내가 아니고<LINE>너에게 물어보고 있는건데<PARA><PARA>『…… 얼라리 뭐야!<LINE>이상한 녀석이구나!<DONE>
+{text_start}<PLAYER>『야아! 안녕!<LINE>너 포켓몬 좋아하니?<PARA><PLAYER>『내가 아니고<LINE>너에게 물어보고 있는건데<PARA><PLAYER>『…… 얼라리 뭐야!<LINE>이상한 녀석이구나!<DONE>
 {text_start}흉내내기 아가씨『…… 뭐?<LINE>사람들 흉내를 내지 말라고?<PARA>하지만 나는<LINE>흉내내기가 취미야!<DONE>
-{text_start}<PARA>『야아! 안녕!<LINE>삐삐인형을 잃어버리고<CONT>낙심하고 있는 것 같구나!<PARA><PARA>『찾아주면<LINE>정기권을 받을 수 있니?<PARA><PARA>『그럼 내가<LINE>찾아줄께!<PARA>갈색시티에 갔을 때<LINE>떨어뜨렸는지도 몰라!<DONE>
+{text_start}<PLAYER>『야아! 안녕!<LINE>삐삐인형을 잃어버리고<CONT>낙심하고 있는 것 같구나!<PARA><PLAYER>『찾아주면<LINE>정기권을 받을 수 있니?<PARA><PLAYER>『그럼 내가<LINE>찾아줄께!<PARA>갈색시티에 갔을 때<LINE>떨어뜨렸는지도 몰라!<DONE>
 {text_start}흉내내기 아가씨『…… 뭐?<LINE>맘대로 정하지말라구?<PARA>그치만 곤란하니까……<LINE>누군가 주워갔을까……?<DONE>
 {text_start}흉내내기 아가씨『와아-!<LINE>내 삐삐인형!<CONT>여기 오른쪽 다리의 상처<CONT>이게 증거야!<DONE>
 {text_start}약속대로 자 이거!<LINE>리니어 기차의 정기권이야!<DONE>
 {text_start}흉내내기 아가씨『리니어 기차에<LINE>탈 때 사용하는 정기권이야!<PARA>전에 살고있던 집이<LINE>리니어 기차역이 되었을 때<CONT>철도회사 사람이<CONT>준 것이야!<DONE>
-{text_start}<PARA>『야아! 아까는<LINE>리니어 기차 정기권 고마웠어!<PARA><PARA>『…… 뭐-야?<PARA><PARA>『내 흉내를 내면<LINE>그렇게 즐겁니?<DONE>
+{text_start}<PLAYER>『야아! 아까는<LINE>리니어 기차 정기권 고마웠어!<PARA><PLAYER>『…… 뭐-야?<PARA><PLAYER>『내 흉내를 내면<LINE>그렇게 즐겁니?<DONE>
 {text_start}흉내내기 아가씨『응……!<LINE>무척 재미있어!<DONE>
 {text_start}두트리오『두- 트리오!<DONE>
 {text_start}…… 거울아 거울아!<LINE>세계에서 제일 예쁜<CONT>여자아이는 누구?<DONE>
@@ -4376,7 +4376,7 @@ ZOOM
 {text_start}포켓몬의 모습이 변해버려?<PARA>갑자기 바뀌면<LINE>깜짝 놀라버릴꺼야!<DONE>
 {text_start}포켓몬이 나무열매를 먹는다는거<LINE>너 알고있니?<PARA>우리집의 포켓몬은<LINE>나무열매를 먹으면 건강해진다<CONT>그래! 너에게도 나누어줄께<DONE>
 {text_start}나무를 조사하면<LINE>나무열매가 떨어질꺼야<DONE>
-{text_start}이야이야<LINE>네가 <PARA>군이로군<PARA>공박사로부터<LINE>연락이 있어서 기다리고 있었단다<DONE>
+{text_start}이야이야<LINE>네가 <PLAYER>군이로군<PARA>공박사로부터<LINE>연락이 있어서 기다리고 있었단다<DONE>
 {text_start}이것이 공박사에게<LINE>조사를 의뢰하고싶은 것이란다!<DONE>
 {text_start}<PLAYER>는(은)<LINE>포켓몬 할아버지로부터<CONT>이상한 알을 맡았다!<DONE>
 {text_start}포켓몬을 맡아 기르고 있는<LINE>부부가 있는데<CONT>거기서 얻은 것이란다<PARA>혹시 그렇다면…… 라고 생각해서<LINE>공박사에게 메일을 보냈단다<PARA>포켓몬 진화의 연구라면<LINE>공박사가 최고니까!<DONE>
@@ -4385,10 +4385,10 @@ ZOOM
 {text_start}공박사가 계신곳에<LINE>돌아갈 작정인가?<PARA>약간 포켓몬을<LINE>쉬게 하는 것이 좋겠지!<DONE>
 {text_start}그럼 잘 부탁한다!<DONE>
 {text_start}이 세상은 참 재미있구나!<LINE>여러가지 발견이 있으니까!<DONE>
-{text_start}오박사『호오!<LINE>네가 <PARA>군인가!<PARA>나는 오박사<LINE>포켓몬 연구를 하고있단다!<PARA>오랜 친구인<LINE>포켓몬 할아버지를 방문 해보니까<CONT>공박사가 있는 곳으로부터<CONT>심부름꾼이 온다고 들어서<CONT>기다라고 있었단다!<PARA>호오-!<LINE>진귀한 포켓몬을 가지고 있구나!<PARA>게다가…… ……<PARA>흐음 역시!<PARA>공박사가 포켓몬을 줘서<LINE>너에게 심부름을 부탁한 이유를<CONT>잘 알겠구나!<PARA>나와 공박사같은<LINE>연구가에게 있어서 포켓몬은<CONT>소중한 친구이기 때문이란다!<PARA>너라면 포켓몬을 소중하게<LINE>키울 것 이라 생각한단다!<PARA>…… 그렇구나!<PARA>너에게 기대를 걸고 나도<LINE>한가지 부탁을 할까!<PARA>실은……<PARA>이것!<LINE>이 포켓몬 도감이란다!<PARA>발견한 포켓몬의 데이터가<LINE>자동적으로 기록되어져<CONT>페이지가 늘어간다고 하는<CONT>하이테크 도감이란다<DONE>
+{text_start}오박사『호오!<LINE>네가 <PLAYER>군인가!<PARA>나는 오박사<LINE>포켓몬 연구를 하고있단다!<PARA>오랜 친구인<LINE>포켓몬 할아버지를 방문 해보니까<CONT>공박사가 있는 곳으로부터<CONT>심부름꾼이 온다고 들어서<CONT>기다라고 있었단다!<PARA>호오-!<LINE>진귀한 포켓몬을 가지고 있구나!<PARA>게다가…… ……<PARA>흐음 역시!<PARA>공박사가 포켓몬을 줘서<LINE>너에게 심부름을 부탁한 이유를<CONT>잘 알겠구나!<PARA>나와 공박사같은<LINE>연구가에게 있어서 포켓몬은<CONT>소중한 친구이기 때문이란다!<PARA>너라면 포켓몬을 소중하게<LINE>키울 것 이라 생각한단다!<PARA>…… 그렇구나!<PARA>너에게 기대를 걸고 나도<LINE>한가지 부탁을 할까!<PARA>실은……<PARA>이것!<LINE>이 포켓몬 도감이란다!<PARA>발견한 포켓몬의 데이터가<LINE>자동적으로 기록되어져<CONT>페이지가 늘어간다고 하는<CONT>하이테크 도감이란다<DONE>
 {text_start}<PLAYER>는(은) 오박사로부터<LINE>포켓몬 도감을 얻었다!<DONE>
-{text_start}많은 포켓몬과 만나서<LINE>이 도감을 완전하게<CONT>만들어 주었으면 좋겠구나!<PARA>이런!<LINE>오랫동안 시간을 끌었구나!<PARA>이제부터 금빛시티에 가서<LINE>늘 그렇듯이 라디오 방송을<CONT>녹음하지 않으면 안 되겠구나<PARA>그럼 <PARA>군!<LINE>잘 부탁한다!<DONE>
-{text_start}응? 그 비늘은?<LINE>뭐라! 빨간 갸라도스?<PARA>그 그것 참 희귀하군!<LINE>가 가지고싶구나……<PARA><PARA>군<LINE>내가 오박사로부터 얻은<CONT>이 학습장치랑<CONT>교환하지 않겠느냐?<DONE>
+{text_start}많은 포켓몬과 만나서<LINE>이 도감을 완전하게<CONT>만들어 주었으면 좋겠구나!<PARA>이런!<LINE>오랫동안 시간을 끌었구나!<PARA>이제부터 금빛시티에 가서<LINE>늘 그렇듯이 라디오 방송을<CONT>녹음하지 않으면 안 되겠구나<PARA>그럼 <PLAYER>군!<LINE>잘 부탁한다!<DONE>
+{text_start}응? 그 비늘은?<LINE>뭐라! 빨간 갸라도스?<PARA>그 그것 참 희귀하군!<LINE>가 가지고싶구나……<PARA><PLAYER>군<LINE>내가 오박사로부터 얻은<CONT>이 학습장치랑<CONT>교환하지 않겠느냐?<DONE>
 {text_start}그런가 그것 참 유감이구나<LINE>꽤나 희귀한 것인데……<DONE>
 {text_start}전 세계의 잡지가<LINE>가득 진열되어있다!<PARA>…… ……<LINE>제목을 읽을 수 없다……<DONE>
 {text_start}커다란 컴퓨터!<LINE>……고장나있는 것 같다<DONE>
@@ -4422,8 +4422,8 @@ ZOOM
 {text_start}!<LINE>과연 어두운 것 같군!<DONE>
 {text_start}오늘은 무슨 요일?<DONE>
 {text_start}설마 틀리지는 않았겠지?<DONE>
-{text_start}<LINE>는(은)<LINE>@{text_ram wMonOrItemNameBuffer}{text_start}를(을)<CONT>도로 불러 들였다!<PROMPT>
-{text_start}<LINE>는(은)<LINE>@{text_ram wMonOrItemNameBuffer}{text_start}에게<PARA>@{text_ram wEnemyMonNickname}{text_start}를(을)<LINE>사용했다!<PROMPT>
+{text_start}<ENEMY>는(은)<LINE>@{text_ram wMonOrItemNameBuffer}{text_start}를(을)<CONT>도로 불러 들였다!<PROMPT>
+{text_start}<ENEMY>는(은)<LINE>@{text_ram wMonOrItemNameBuffer}{text_start}에게<PARA>@{text_ram wEnemyMonNickname}{text_start}를(을)<LINE>사용했다!<PROMPT>
 {text_start}현재 이 기능은<LINE>사용할 수 없습니다<PROMPT>
 {text_start}도구를 가방에<LINE>넣을 수 없습니다!<DONE>
 {text_start}@{text_ram wStringBuffer1}{text_start}를(을) <LINE>가방에 넣었습니다<DONE>
@@ -4611,7 +4611,7 @@ ZOOM
 {text_start}그렇게 많이 가지고 갈 수 없어<PROMPT>
 {text_start}그렇게 많이 지니고 있지 않잖아<PROMPT>
 {text_start}그렇게 맡아둘 수 없어<PROMPT>
-{text_start}저금한다고?<LINE>맡겨둬!<PARA><PARA>! 힘내라!<DONE>
+{text_start}저금한다고?<LINE>맡겨둬!<PARA><PLAYER>! 힘내라!<DONE>
 {text_start}소중히 맡아둘께<LINE>힘내!<DONE>
 {text_start}<PLAYER>! 힘내거라!<DONE>
 {text_start}무리하지 말거라<DONE>
@@ -4727,14 +4727,14 @@ ZOOM
 {text_start}이 나무는 어쩐지<LINE>베어질 것 같다!<DONE>
 {text_start}<PLAYER>는(은)<LINE>@{text_ram wStringBuffer3}{text_start}를(을)<CONT>발견했다!<DONE>
 {text_start}그러나 <PLAYER>는(은)<LINE>더 이상 도구를 지닐 수 없다!<DONE>
-{text_start}<PARA>의 곁에는<LINE>싸울 수 있는 포켓몬이 없다!<PARA><PARA>는(은)<LINE>눈앞이 깜깜해졌다!<DONE>
+{text_start}<PLAYER>의 곁에는<LINE>싸울 수 있는 포켓몬이 없다!<PARA><PLAYER>는(은)<LINE>눈앞이 깜깜해졌다!<DONE>
 {text_start}옷!<LINE>머신이 반응하고 있어!<CONT>근처에 도구가 묻혀있다!<PROMPT>
 {text_start}…… …… 후우!<LINE>…… 아무것도 반응하지 않는군<PROMPT>
 {text_start}@{text_ram wStringBuffer3}{text_start}는(은)<LINE>힘이 빠졌다<PROMPT>
-{text_start}<PARA>의 곁에는<LINE>싸울 수 있는 포켓몬이 없다!<PARA><PARA>는(은)<LINE>눈앞이 깜깜해졌다!<PROMPT>
+{text_start}<PLAYER>의 곁에는<LINE>싸울 수 있는 포켓몬이 없다!<PARA><PLAYER>는(은)<LINE>눈앞이 깜깜해졌다!<PROMPT>
 {text_start}@{text_ram wStringBuffer3}{text_start}는(은)<LINE>달콤한 향기를 사용했다!<DONE>
 {text_start}……이곳에는<LINE>아무것도 없는 것 같다……<DONE>
-{text_start}<PARA>는(은) 물을 뿌렸다!<LINE>……아무것도 일어나지 않는다<DONE>
+{text_start}<PLAYER>는(은) 물을 뿌렸다!<LINE>……아무것도 일어나지 않는다<DONE>
 {text_start}<PLAYER>의 포켓몬은<LINE>모두 건강해졌다!<DONE>
 {text_start}알에게는<LINE>물건을 지니게 할 수 없습니다!<PROMPT>
 {text_start}들고갈 수 없습니다<DONE>
@@ -4758,7 +4758,7 @@ ZOOM
 {text_start}를(을) 했다!<DONE>
 {text_start} 공격!<DONE>
 {text_start}!<DONE>
-{text_start}<USER>의<USER>@{text_ram wStringBuffer2}{text_start}(이)가@@
+{text_start}<USER>의<LINE>@{text_ram wStringBuffer2}{text_start}(이)가@@
 {text_start}@{text_pause}{text_start}<SCROLL>부쩍 올랐다!<PROMPT>
 {text_start} 올랐다!<PROMPT>
 {text_start}<TARGET>의<LINE>@{text_ram wStringBuffer2}{text_start}(이)가@@
@@ -4880,7 +4880,7 @@ ZOOM
 {text_start}사람은 포켓몬들과<LINE>정답게 지내거나<CONT>함께 싸우거나…………<CONT>서로 도와가며<CONT>살아가고 있단다<PROMPT>
 {text_start}하지만 우리들은 포켓몬 전부를<LINE>알고 있지는 못하다<PARA>포켓몬의 비밀은<LINE>아직도 잔뜩 있다!<PARA>나는 그것을 밝혀내기 위하여<LINE>매일 포켓몬의 연구를<CONT>계속하고 있다는 말이다!<PROMPT>
 {text_start}그럼……<LINE>슬슬 너의 이름을<CONT>가르쳐다오!<PROMPT>
-{text_start}<PARA>!<LINE>준비는 되었는가?<PARA>드디어 이제부터<LINE>너의 이야기가 시작되어진다<PARA>즐거운 것도 괴로운 것도<LINE>잔뜩 너를 기다리고 있을 것이다!<PARA>꿈과 모험과!<LINE>포켓몬스터의 세계에!<CONT>렛츠 고!<PARA>그럼 다음에 다시 만나자!<DONE>
+{text_start}<PLAYER>!<LINE>준비는 되었는가?<PARA>드디어 이제부터<LINE>너의 이야기가 시작되어진다<PARA>즐거운 것도 괴로운 것도<LINE>잔뜩 너를 기다리고 있을 것이다!<PARA>꿈과 모험과!<LINE>포켓몬스터의 세계에!<CONT>렛츠 고!<PARA>그럼 다음에 다시 만나자!<DONE>
 {text_start}시계의 시간이 넘어가<LINE>있는지도 모릅니다<PARA>시간을 맞춰주십시오<PROMPT>
 {text_start}십자키로 선택<LINE>A로 결정, B로 캔슬<DONE>
 {text_start}이것으로 결정하겠습니까?<DONE>
