@@ -185,7 +185,7 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
 
     // Special characters
     .replaceAll('\u{F0106}DEXEND\u{F0107}', `\u{F1102}${g1.expandDexEnd(language)}\u{F0250}\u{F1103}`)
-    .replaceAll('\u{F0106}ID\u{F0107}', `\u{F1102}<span class="literal-small">${g1.expandID(language)}</span>\u{F1103}`)
+    .replaceAll('\u{F0106}ID\u{F0107}', `\u{F1102}<span class="literal-small">${g1.expandID(language, isGen1)}</span>\u{F1103}`)
     .replaceAll('№', `\u{F1102}<span class="literal-small">${g1.expandNo(language)}</span>\u{F1103}`)
     .replaceAll('\u{F0106}ED\u{F0107}', () => {
       const ed = g1.expandED(language);

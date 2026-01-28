@@ -2,7 +2,10 @@ import { LanguageKey } from "../corpus";
 
 export const expandED = (language: LanguageKey) => language === 'fr' ? 'OK' : 'ED';
 
-export const expandID = (language: LanguageKey) => {
+export const expandID = (language: LanguageKey, isGen1: boolean) => {
+  if (!isGen1)
+    return 'ID'; // Gen 2
+
   switch (language) {
     case 'ja-Hrkt': return 'ID';
     case 'en':      return 'ID';
