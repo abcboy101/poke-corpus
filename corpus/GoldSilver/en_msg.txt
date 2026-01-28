@@ -3231,8 +3231,7 @@ DARK CAVE leads<NEXT>to another road@
 {text_start}Wow! This one is<LINE>outstanding!<PARA>…I wish I could<LINE>say that, but I've<PARA>seen a bigger one<LINE>before.<DONE>
 {text_start}What? That's not a<LINE>MAGIKARP!<DONE>
 {text_start}Oh… So you didn't<LINE>get one good<PARA>enough to show me?<LINE>Maybe next time.<DONE>
-{text_start}CURRENT RECORD<PARA>@{text_ram wStringBuffer3}{text_start} caught by<LINE>@{text_ram wStringBuffer4}@
-@
+{text_start}CURRENT RECORD<PARA>@{text_ram wStringBuffer3}{text_start} caught by<LINE>@{text_ram wStringBuffer4}@@
 {text_start}Only people headed<LINE>up to LAKE OF RAGE<PARA>have been through<LINE>here lately.<DONE>
 {text_start}Nobody goes up to<LINE>LAKE OF RAGE these<CONT>days.<DONE>
 {text_start}Hold it there,<LINE>mister!<PARA>The toll is ¥1000<LINE>to go through.<DONE>

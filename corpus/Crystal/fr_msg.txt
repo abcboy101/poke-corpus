@@ -6400,8 +6400,7 @@ LANCE-FLAMME@TONNERRE@LASER GLACE@RETOUR@
 {text_start}Whaou! C'est pas<LINE>mal du tout!<PARA>...J'aimerais pou-<LINE>voir te dire ça<PARA>mais j'en ai déjà<LINE>vu des plus gros.<DONE>
 {text_start}Quoi? Ce n'est pas<LINE>un MAGICARPE!<DONE>
 {text_start}Alors... Tu n'as<LINE>rien pris qui<PARA>vaille la peine<LINE>d'être montré?<CONT>Peut-être la<CONT>prochaine fois!<DONE>
-{text_start}RECORD ACTUEL<PARA>@{text_ram wStringBuffer3}{text_start}<LINE>a été attrapé par<CONT>@{text_ram wStringBuffer4}@
-@
+{text_start}RECORD ACTUEL<PARA>@{text_ram wStringBuffer3}{text_start}<LINE>a été attrapé par<CONT>@{text_ram wStringBuffer4}@@
 {text_start}Seuls ceux qui se<LINE>dirigent vers le<PARA>LAC COLERE passent<LINE>par ici.<DONE>
 {text_start}Personne ne va au<LINE>LAC COLERE de nos<CONT>jours.<DONE>
 {text_start}Minute, mon p'tit<LINE>bouchon!<PARA>Le péage est de<LINE>1000¥.<DONE>
