@@ -648,31 +648,31 @@
 グレン@
 カツラ@
 だい　　　かい　でんどういり@
-{text_start}<…>ピンポーン！@
+{text_start}<……>ピンポーン！@
 {text_start}<LINE>カードキーで　ロック　をはずした！<DONE>
-{text_start}<…>だめだ！<LINE>カードキーが　ないと　あかない！<DONE>
+{text_start}<……>だめだ！<LINE>カードキーが　ないと　あかない！<DONE>
 {text_ram wNameBuffer}{text_start}『@
-{text_start}つれないなー<…><PROMPT>
-{text_start}なにも　いない　みたい<…><PROMPT>
+{text_start}つれないなー<……><PROMPT>
+{text_start}なにも　いない　みたい<……><PROMPT>
 {text_start}おっ！<LINE>ひいてる　ひいてる！<PROMPT>
 {text_start}！<DONE>
 {text_start}どこかで　じめんがもりあがった！<DONE>
-{text_start}「かいりき」　で　うごかせるかも<…><DONE>
+{text_start}「かいりき」　で　うごかせるかも<……><DONE>
 {text_start}#　グッズが　いっぱい！<LINE>フレンドリィショップ<DONE>
 {text_start}#の　たいりょく　かいふく！<LINE>#センター<DONE>
 {text_start}<PLAYER>は<LINE>@{text_ram wStringBuffer}{text_start}を　みつけた！@
 {text_start}もちものが　いっぱい！<DONE>
-{text_start}ぼく　おぼえてます？<LINE>ほら<…>！<CONT>オーキド　はかせの　じょしゅ　です<PARA>#ずかんが　@{text_decimal hOaksAideRequirement, 1, 3}{text_start}しゅるい<LINE>あつまってる　ようなら<CONT>@{text_ram wOaksAideRewardItemName}{text_start}を　わたす　よう<CONT>はかせに　いわれ　ました<PARA><…>　それでは　さっそく<LINE><PLAYER>くん！<CONT>つかまえた　#は<CONT>@{text_decimal hOaksAideRequirement, 1, 3}{text_start}しゅるい　より　おおい　かな？<DONE>
-{text_start}<…>　<…>　えーと！<LINE>つかまえた　#は<…><CONT>あれれー？<CONT>まだ　@{text_decimal hOaksAideNumMonsOwned, 1, 3}{text_start}しゅるい　ですよ！<PARA>@{text_decimal hOaksAideRequirement, 1, 3}{text_start}しゅるいに　たりない　なら<LINE>@{text_ram wOaksAideRewardItemName}{text_start}は<CONT>また　こんど　ですね<DONE>
-{text_start}<…>　<…>　そう　ですか<PARA>@{text_decimal hOaksAideRequirement, 1, 3}{text_start}しゅるいに　たりない　なら<LINE>@{text_ram wOaksAideRewardItemName}{text_start}は<CONT>また　こんど　ですね<DONE>
-{text_start}<…>　<…>　なるほど！<LINE>つかまえた　#は<…><CONT>@{text_decimal hOaksAideNumMonsOwned, 1, 3}{text_start}しゅるい　ですね！<CONT>おめでとう！<PARA>それでは<LINE>これを　おわたし　します！<PROMPT>
+{text_start}ぼく　おぼえてます？<LINE>ほら<……>！<CONT>オーキド　はかせの　じょしゅ　です<PARA>#ずかんが　@{text_decimal hOaksAideRequirement, 1, 3}{text_start}しゅるい<LINE>あつまってる　ようなら<CONT>@{text_ram wOaksAideRewardItemName}{text_start}を　わたす　よう<CONT>はかせに　いわれ　ました<PARA><……>　それでは　さっそく<LINE><PLAYER>くん！<CONT>つかまえた　#は<CONT>@{text_decimal hOaksAideRequirement, 1, 3}{text_start}しゅるい　より　おおい　かな？<DONE>
+{text_start}<……>　<……>　えーと！<LINE>つかまえた　#は<……><CONT>あれれー？<CONT>まだ　@{text_decimal hOaksAideNumMonsOwned, 1, 3}{text_start}しゅるい　ですよ！<PARA>@{text_decimal hOaksAideRequirement, 1, 3}{text_start}しゅるいに　たりない　なら<LINE>@{text_ram wOaksAideRewardItemName}{text_start}は<CONT>また　こんど　ですね<DONE>
+{text_start}<……>　<……>　そう　ですか<PARA>@{text_decimal hOaksAideRequirement, 1, 3}{text_start}しゅるいに　たりない　なら<LINE>@{text_ram wOaksAideRewardItemName}{text_start}は<CONT>また　こんど　ですね<DONE>
+{text_start}<……>　<……>　なるほど！<LINE>つかまえた　#は<……><CONT>@{text_decimal hOaksAideNumMonsOwned, 1, 3}{text_start}しゅるい　ですね！<CONT>おめでとう！<PARA>それでは<LINE>これを　おわたし　します！<PROMPT>
 {text_start}<PLAYER>は　じょしゅ　から<LINE>@{text_ram wOaksAideRewardItemName}{text_start}を　もらった！@
-{text_start}<…>　<…>　と　おもった　けど<LINE>にもつが　いっぱい　だから<CONT>@{text_ram wOaksAideRewardItemName}{text_start}は<CONT>また　こんど　ですね<DONE>
+{text_start}<……>　<……>　と　おもった　けど<LINE>にもつが　いっぱい　だから<CONT>@{text_ram wOaksAideRewardItemName}{text_start}は<CONT>また　こんど　ですね<DONE>
 {text_start}ラッキー『ラッキー<DONE>
 {text_start}ともだちと　むし　#<LINE>とりに　きてるんだ！<PARA>#　しょうぶ　したくて<LINE>みんな　ウズウズ　してるよ！<DONE>
 {text_start}よーしッ！<LINE>きみは　#　もってるな？<CONT>しょうぶ　しようぜ！<DONE>
 {text_start}まけたあ！<LINE>キャタピー　なんか　じゃ　ダメか<PROMPT>
-{text_start}しッ<…>！<LINE>むしが　にげる　から　またな！<DONE>
+{text_start}しッ<……>！<LINE>むしが　にげる　から　またな！<DONE>
 {text_start}おーいッ！<LINE>#　<TRAINER>なら<CONT>しょうぶは　ことわれ　ないぜ！<DONE>
 {text_start}あれ？<LINE>もう　#が　ないや<PROMPT>
 {text_start}くやしいな！<LINE>つよいのを　つかまえて　こよう！<DONE>
@@ -683,31 +683,31 @@
 {text_start}うそでしょー！？<PROMPT>
 {text_start}こんなに　さがしても　ピカチュウ<LINE>ぜんぜん　みつからないの<CONT>きっと　ここには　いないのよ！<DONE>
 {text_start}さいきょうの　<TRAINER>を　めざす<LINE>ぼくに　かてるかな？<DONE>
-{text_start}<…>　せっかく<LINE>キャタピーから　そだてたのに<PROMPT>
+{text_start}<……>　せっかく<LINE>キャタピーから　そだてたのに<PROMPT>
 {text_start}かたくて　こうげき　できる<LINE>トランセルって　さいこうだよ！<DONE>
 {text_start}#　とろうとして<LINE>モンスターボール　なげてたら<CONT>すぐ　なくなっちゃった<PARA>きみも　おおめに<LINE>かって　おくと　いいよ<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>もってる　#が　よわって　きて<LINE>たたかわせたく　ない　ときは<CONT>くさむらを　よけて　かえろう！<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>もってる　#が　よわって　きて<LINE>たたかわせたく　ない　ときは<CONT>くさむらを　よけて　かえろう！<DONE>
 {text_start}どくを　くらったら　どくけし！<LINE>フレンドリィショップで！<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>#ずかんは<LINE><PC>つうしんで<CONT>オーキドはかせに　みてもらえる！<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>ひとの　#は　ひとの　もの！<LINE>やせいの　#に　だけ<CONT>モンスターボールを　なげて<CONT>つかまえよう！<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>#を　つかまえる　ときは<LINE>なるべく　よわらせてから！<PARA>#が　げんきだと<LINE>にげるかも　しれないよ！<DONE>
-{text_start}トキワの　もり　<…>　でぐち<LINE>このさき　ニビ　シティ<DONE>
-{text_start}うわーッ！<LINE>びっくり　した！<CONT><…>　なんだ　こどもか<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>#ずかんは<LINE><PC>つうしんで<CONT>オーキドはかせに　みてもらえる！<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>ひとの　#は　ひとの　もの！<LINE>やせいの　#に　だけ<CONT>モンスターボールを　なげて<CONT>つかまえよう！<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>#を　つかまえる　ときは<LINE>なるべく　よわらせてから！<PARA>#が　げんきだと<LINE>にげるかも　しれないよ！<DONE>
+{text_start}トキワの　もり　<……>　でぐち<LINE>このさき　ニビ　シティ<DONE>
+{text_start}うわーッ！<LINE>びっくり　した！<CONT><……>　なんだ　こどもか<DONE>
 {text_start}おどろいた！<PROMPT>
 {text_start}こどもが<LINE>こんな　くらい　ところを<CONT>ウロウロ　しちゃ　いかん　なあ<DONE>
 {text_start}きみも<LINE>どうくつ　たんけんに　きたのかい<DONE>
-{text_start}<…>　まける　なんて<LINE>カッコ　わるい<PROMPT>
+{text_start}<……>　まける　なんて<LINE>カッコ　わるい<PROMPT>
 {text_start}おんなのこに<LINE>イイ　とこ　みせようと<CONT>こんな　とこ　まで　きちゃった<DONE>
 {text_start}わあーッ！<LINE>どうくつの　なかって<CONT>いがいと　ひろいのねー！<DONE>
-{text_start}あ<…>　まけてる！<PROMPT>
+{text_start}あ<……>　まけてる！<PROMPT>
 {text_start}こんなに　ひろいと<LINE>どっちが　でぐちか　まよっちゃう<DONE>
 {text_start}うわッ！　なんだ？<LINE>きゅうに　こえを　かけるな！<DONE>
-{text_start}<…><LINE>こんな　#　では　ダメか<PROMPT>
-{text_start}えーと<…>！　どこかに<LINE>つよい　#　いないか<…>　な<DONE>
+{text_start}<……><LINE>こんな　#　では　ダメか<PROMPT>
+{text_start}えーと<……>！　どこかに<LINE>つよい　#　いないか<……>　な<DONE>
 {text_start}なによー！<LINE>どうくつで　はぐれた　ともだちを<CONT>ここで　まってるのよ<DONE>
 {text_start}わたし　まけたの？<PROMPT>
 {text_start}この　どうくつに<LINE>すごい　カセキが<CONT>あるって　きいて　きたの<DONE>
-{text_start}あやしい　おとこが<LINE>どうくつを　うろついてるんだ<CONT>きみは<…>？<DONE>
+{text_start}あやしい　おとこが<LINE>どうくつを　うろついてるんだ<CONT>きみは<……>？<DONE>
 {text_start}やられた！<PROMPT>
 {text_start}ぼくが　みた　やつ！<LINE>まちがい　ない！<CONT>あいつ　<ROCKET>　だぜ！<DONE>
 {text_start}ハナダ　シティに　いくには<LINE>どうくつを<CONT>ぬけないと　だめだよ！<DONE>
@@ -737,17 +737,17 @@
 {text_start}おうっ！<LINE>おとなの　せかいに<CONT>くびを　つっこむと　あぶないぜ！<DONE>
 {text_start}あたま　くるぜ<PROMPT>
 {text_start}にんげんが　うまれる　まえから<LINE>この　あたりには<CONT>#が　すんでた　らしいぜ<DONE>
-{text_start}ボン　ジュール！<LINE>わたしは　このふねの　ボーイです<PARA>ごようを　なんなりと<LINE>おもうしつけ　ください！<PARA><…>　<…>　<…><LINE><…>　むくちな　かた　ですね<DONE>
+{text_start}ボン　ジュール！<LINE>わたしは　このふねの　ボーイです<PARA>ごようを　なんなりと<LINE>おもうしつけ　ください！<PARA><……>　<……>　<……><LINE><……>　むくちな　かた　ですね<DONE>
 {text_start}この　ふねの　おきゃくは<LINE>ながたびに　たいくつ　してる！<PARA>ひま　つぶしに　たたかいを<LINE>いどんで　くる　ひとも　いるかも<DONE>
 {text_start}この　ふねは　せかい　かくちの<LINE>#　<TRAINER>が　のってる<CONT>あこがれの　ごうか　きゃくせん！<PARA>みなとに　つくたびに<LINE>しょうたい　された　<TRAINER>と<CONT>こうりゅう　パーティを　してます<DONE>
-{text_start}<RIVAL>『ボン　ジュール！<LINE><PLAYER>！<PARA>おやおや！　こんな　ところで<LINE>あう　とは<…>！<PARA><PLAYER><…><LINE>しょうたい　されてたっけ？<PARA>それで　#　ずかんの<LINE>データは　あつまったか！<PARA>おれ　なんか<LINE>もう　４０しゅるい　つかまえたぜ！<PARA>みち　いっぽん　ちがう　だけで<LINE>とれる　#も　ちがうぜ！<PARA>ちゃんと　くさむら　はいって<LINE>さがして　みろ！<DONE>
-{text_start}ふん<…>！<PARA>とにかく<…>　#は<LINE>そこそこ　そだててる　ようだな！<PROMPT>
-{text_start}<PLAYER><…>！<LINE>ふなよい　してるのか！<PARA>もっと　からだ<LINE>きたえた　ほうが　いいぜ！<PROMPT>
+{text_start}<RIVAL>『ボン　ジュール！<LINE><PLAYER>！<PARA>おやおや！　こんな　ところで<LINE>あう　とは<……>！<PARA><PLAYER><……><LINE>しょうたい　されてたっけ？<PARA>それで　#　ずかんの<LINE>データは　あつまったか！<PARA>おれ　なんか<LINE>もう　４０しゅるい　つかまえたぜ！<PARA>みち　いっぽん　ちがう　だけで<LINE>とれる　#も　ちがうぜ！<PARA>ちゃんと　くさむら　はいって<LINE>さがして　みろ！<DONE>
+{text_start}ふん<……>！<PARA>とにかく<……>　#は<LINE>そこそこ　そだててる　ようだな！<PROMPT>
+{text_start}<PLAYER><……>！<LINE>ふなよい　してるのか！<PARA>もっと　からだ<LINE>きたえた　ほうが　いいぜ！<PROMPT>
 {text_start}<RIVAL>『いあいぎりの　めいじんが<LINE>ふねに　のってるって　いう　からよ<PARA>あって　みたら<LINE>これが　ただの　ふなよい　おやじ！<PARA>でも　この　わざが<LINE>また　つかえるんだよなー！<PARA>おまえも　あって　みると　いいぜ！<LINE>じゃー　あばよ！<DONE>
 {text_start}せんちょうは　けんの　たつじん<LINE>いあいぎりが　とくい！<PARA>#にも　その　わざを<LINE>おしえるって　いうぜ！<DONE>
 {text_start}パーティも　そろそろ　おわるし<LINE>ふねの　しゅっぱつの　じかん　だな<DONE>
 {text_start}まったく！<LINE>デッキ　そうじは　らくじゃねえぜ<DONE>
-{text_start}うう<…>　きもち　わるい！<PARA><…>　ふなよい　したので<LINE>かぜに　あたってるんです<…><DONE>
+{text_start}うう<……>　きもち　わるい！<PARA><……>　ふなよい　したので<LINE>かぜに　あたってるんです<……><DONE>
 {text_start}おうおう！　<PARA>ふなのりの　おれと　しょうぶだ！<DONE>
 {text_start}つよいな<LINE>びっくり　したぜ<PROMPT>
 {text_start}なあ！　この　せかいに<LINE>#は　ぜんぶで　どのくらい<CONT>しゅるいが　あると　おもうか？<DONE>
@@ -757,23 +757,23 @@
 {text_start}ほら！<LINE>そこの　きみ　じゃまだよ！<CONT>どいた　どいた！<DONE>
 {text_start}ゴミばこに　へんなボールが<LINE>すてて　あったけど　なんだろう？<DONE>
 {text_start}いそがしくって　めが　まわる！<LINE>たのむ　から　あっち　いってくれ！<DONE>
-{text_start}せっせ　せっせ<…><PARA>おれは　まいにち<LINE>イモの　かわむきだ！<CONT>せっせ　せっせ<…><DONE>
+{text_start}せっせ　せっせ<……><PARA>おれは　まいにち<LINE>イモの　かわむきだ！<CONT>せっせ　せっせ<……><DONE>
 {text_start}そういえば　くいしんぼうの<LINE>カビゴン　しってる？<PARA>あんなに　よく　たべて　よく　ねる<LINE>#は　ほかに　いないよ！<DONE>
-{text_start}しくしく　しくしく<…><PARA>おれは　まいにち<LINE>タマネギの　かわむきだー<CONT>しくしく　しくしく<…><DONE>
+{text_start}しくしく　しくしく<……><PARA>おれは　まいにち<LINE>タマネギの　かわむきだー<CONT>しくしく　しくしく<……><DONE>
 {text_start}おっほん！<LINE>わたしが　ここの　シェフです！<PARA>きょうの　メイン　ディッシュは<PROMPT>
 {text_start}したびらめの　ムニエル！<PARA>しかし　おきゃくさんに<LINE>また　さかな？　と　いわれそうだ<DONE>
-{text_start}さんまの　しおやき！<PARA><…>じゃ　おきゃく　さんに<LINE>おこられるか？<DONE>
+{text_start}さんまの　しおやき！<PARA><……>じゃ　おきゃく　さんに<LINE>おこられるか？<DONE>
 {text_start}ぎゅう　フィレの　ステーキ！<PARA>でも　ざいりょう<LINE>にんずう　ぶん　あったかな？<DONE>
-{text_start}せんちょう『おえー<…>！<LINE>ふなよいで<…>　すっかり　ダウンだ<CONT>くるしい<…>　<…>　うえ！<PARA><PLAYER>は　せんちょうの<LINE>せなかを　さすって　あげた！<PARA>すりすり<…>　すりすり<…><LINE>すりすり<…>　すりすり<…>@
-{text_start}せんちょう『ふう<…>　ありがとう<LINE>だいぶ　ラクに　なった　みたいだ<PARA><…>なになに　なんだ<LINE>ひでんの　わざを　みに　きたのか<PARA>げんきな　ときなら　じまんの<LINE>いあいぎりを　みせるんだがなあ<…><PARA>そうだ！<LINE>かわりに　これを　あげよう！<PARA>これを　きみの　<LINE>#に　おしえれば<CONT>いつでも　いあいぎりが　みれる！<PROMPT>
+{text_start}せんちょう『おえー<……>！<LINE>ふなよいで<……>　すっかり　ダウンだ<CONT>くるしい<……>　<……>　うえ！<PARA><PLAYER>は　せんちょうの<LINE>せなかを　さすって　あげた！<PARA>すりすり<……>　すりすり<……><LINE>すりすり<……>　すりすり<……>@
+{text_start}せんちょう『ふう<……>　ありがとう<LINE>だいぶ　ラクに　なった　みたいだ<PARA><……>なになに　なんだ<LINE>ひでんの　わざを　みに　きたのか<PARA>げんきな　ときなら　じまんの<LINE>いあいぎりを　みせるんだがなあ<……><PARA>そうだ！<LINE>かわりに　これを　あげよう！<PARA>これを　きみの　<LINE>#に　おしえれば<CONT>いつでも　いあいぎりが　みれる！<PROMPT>
 {text_start}<PLAYER>は　せんちょう　から<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
-{text_start}せんちょう『<…>ふう！<PARA>らくに　なったし<…><LINE>そろそろ　じかんだ！<PARA>もうすぐ　サント・アンヌは<LINE>しゅっぱつ　するよ！<PARA>また　クチバに　くる　ときまで<LINE>ごきげんよう！<DONE>
+{text_start}せんちょう『<……>ふう！<PARA>らくに　なったし<……><LINE>そろそろ　じかんだ！<PARA>もうすぐ　サント・アンヌは<LINE>しゅっぱつ　するよ！<PARA>また　クチバに　くる　ときまで<LINE>ごきげんよう！<DONE>
 {text_start}なんとー！<LINE>にもつが　いっぱいだ！<DONE>
-{text_start}あんまり　みないほうが<LINE>いい　みたいだ<…><DONE>
-{text_start}ふなよい　しない<LINE>ふなのり　にゅうもん<…><CONT><…>これは<CONT>せんちょうが　よんでいる　ほんだ！<DONE>
+{text_start}あんまり　みないほうが<LINE>いい　みたいだ<……><DONE>
+{text_start}ふなよい　しない<LINE>ふなのり　にゅうもん<……><CONT><……>これは<CONT>せんちょうが　よんでいる　ほんだ！<DONE>
 {text_start}プクリン『ぷう　ぷぷうー@
-{text_start}わたしは　たびびと<…>！<PARA>たびさきで　とった　#　だけが<LINE>わたしの　ともだち<DONE>
-{text_start}と<…>ともだちが<…><PROMPT>
+{text_start}わたしは　たびびと<……>！<PARA>たびさきで　とった　#　だけが<LINE>わたしの　ともだち<DONE>
+{text_start}と<……>ともだちが<……><PROMPT>
 {text_start}あのね！<LINE>ともだちは　だいじに　しなさい！<DONE>
 {text_start}む　きみは？　だまって　はいって<LINE>しつれいな　こどもだ！<DONE>
 {text_start}ふん！<LINE>れいぎを　しらんよ　きみは<PROMPT>
@@ -782,14 +782,14 @@
 {text_start}うわあ！<LINE>つよいんだ　きみって<PROMPT>
 {text_start}ね　ね！<LINE>ぼくと　ともだちに　なってよ！<PARA>それでね！<LINE>#　こうかんとか　しようよ<DONE>
 {text_start}あたしが　せかい　じゅうから<LINE>あつめた　#　みてー！<DONE>
-{text_start}いやーん！<LINE>せかいの　#　なのに<…><PROMPT>
-{text_start}もう<…>！　わたしの<LINE>#　こんなに　しちゃって！<PARA>#　センターで<LINE>げんきに　してきて　ほしいわ！<DONE>
+{text_start}いやーん！<LINE>せかいの　#　なのに<……><PROMPT>
+{text_start}もう<……>！　わたしの<LINE>#　こんなに　しちゃって！<PARA>#　センターで<LINE>げんきに　してきて　ほしいわ！<DONE>
 {text_start}ねぇ　ボーイさん！<LINE>わたし　ケーキが　たべたいの<CONT>ミルフィーユを　おねがい！<DONE>
 {text_start}ふねで　かいがい　りょこう　なんて<LINE>ゆうがで　いいよー！<DONE>
 {text_start}あたしと　プクリンは<LINE>ずーっと　いっしょ　なの！<DONE>
 {text_start}わたくし　こども　たちと<LINE>せかいを　まわって　ますの　おほほ<DONE>
-{text_start}しー<…>！<LINE>わたしは　こくさい　けいさつ！<PARA><ROCKET>の　わるだくみを<LINE>おって　いる　ところだ！<DONE>
-{text_start}せかい　じゅうを　たび　してきたが<LINE>ねむって　ばかりの　あいつを<CONT>みつけたときは　ほんとに　あきれた<PARA>たしか<…>！<LINE>こんな　#　だった<PROMPT>
+{text_start}しー<……>！<LINE>わたしは　こくさい　けいさつ！<PARA><ROCKET>の　わるだくみを<LINE>おって　いる　ところだ！<DONE>
+{text_start}せかい　じゅうを　たび　してきたが<LINE>ねむって　ばかりの　あいつを<CONT>みつけたときは　ほんとに　あきれた<PARA>たしか<……>！<LINE>こんな　#　だった<PROMPT>
 {text_start}にんげんを　のせて<LINE>みずの　うえ　はしる　#<CONT>みたこと　ある　アルよ！<DONE>
 {text_start}ほそい　き　なら　#の<LINE>いあいぎりで　きりたおせる　じゃろ<DONE>
 {text_start}わかもの　との　しょうぶ　こそ<LINE>じんせいの　たのしみ！<DONE>
@@ -797,13 +797,13 @@
 {text_start}１５ねん　まえ　なら<LINE>わたしが　かって　いた　だろう！<DONE>
 {text_start}おれが　つった<LINE>じまんの　さかなを　みろ！<DONE>
 {text_start}もう　からっぽ！<PROMPT>
-{text_start}<…>　パーティ？<PARA>せんじょう　パーティは<LINE>もう　おわった　ころ　じゃないかな<DONE>
-{text_start}きみは<…>　つよい　#と<LINE>めずらしい　#<CONT>どっちに　かちを　かんじるかね？<DONE>
+{text_start}<……>　パーティ？<PARA>せんじょう　パーティは<LINE>もう　おわった　ころ　じゃないかな<DONE>
+{text_start}きみは<……>　つよい　#と<LINE>めずらしい　#<CONT>どっちに　かちを　かんじるかね？<DONE>
 {text_start}やる　ものだね！<PROMPT>
-{text_start}わたしは<…>　めずらしくて<LINE>つよい　#が　ほしいねえ<DONE>
-{text_start}あら　せんじょう　パーティでは<LINE>みかけ　なかった　けど<…>？<DONE>
+{text_start}わたしは<……>　めずらしくて<LINE>つよい　#が　ほしいねえ<DONE>
+{text_start}あら　せんじょう　パーティでは<LINE>みかけ　なかった　けど<……>？<DONE>
 {text_start}てかげん　してよ<PROMPT>
-{text_start}いいな　つよい　#！<LINE>いいな<…>　いいな<…>！<DONE>
+{text_start}いいな　つよい　#！<LINE>いいな<……>　いいな<……>！<DONE>
 {text_start}セキチク　シティ　サファリ　ゾーン<LINE>いった　こと　あるかね？<PARA>あそこは　めずらしい　#が<LINE>たくさん　いた！<DONE>
 {text_start}パパも　ぼくも<LINE>サファリ　ゾーン　だいすき！<CONT>また　あそびに　いきたいな！<DONE>
 {text_start}せんちょうさん　みたんだけど<LINE>ぐあい　わるいって<CONT>まっさおな　かお　してたよ！<DONE>
@@ -830,9 +830,9 @@
 {text_start}おれの　あいぼう　ゴーリキーは<LINE>ごっつい　ちから　もち！<PARA>すごく　おもい　いわ　だって<LINE>かいりきで　うごかせるぜ！<DONE>
 {text_start}やたらと　つよい　こどもが　いると<LINE>ウワサは　きいて　いるよ<DONE>
 {text_start}たいした　やつだ<PROMPT>
-{text_start}ロケットだんの　サカキを<LINE>たおしたのは　<…>　きみか！<DONE>
+{text_start}ロケットだんの　サカキを<LINE>たおしたのは　<……>　きみか！<DONE>
 {text_start}うえには　うえが　いるって<LINE>おしえて　あげます！<DONE>
-{text_start}<…>　くやしい！<PROMPT>
+{text_start}<……>　くやしい！<PROMPT>
 {text_start}あなた　わたしより　つよいわ！<LINE>うえには　うえが　いるって　ことか<DONE>
 {text_start}えらばれた　もの　だけが<LINE>ここを　ぬけられるのだ！<DONE>
 {text_start}まさかの　はいぼくだ<PROMPT>
@@ -841,28 +841,28 @@
 {text_start}ああッ　つよい！<PROMPT>
 {text_start}きびしい　たたかいを　つづけて<LINE>ほんとうの　つよさが　みに　つくわ<DONE>
 {text_start}なんで　じゃ@
-{text_start}<…>　おまえは　だれだ？<LINE>どうやって　ここに　はいった<DONE>
+{text_start}<……>　おまえは　だれだ？<LINE>どうやって　ここに　はいった<DONE>
 {text_start}あう！　やられた<PROMPT>
-{text_start}くそう<…>　おまえ<LINE><ROCKET>を　なめてるな！<DONE>
+{text_start}くそう<……>　おまえ<LINE><ROCKET>を　なめてるな！<DONE>
 {text_start}<ROCKET>に<LINE>しのび　こむ　とは　なんて　やつ<DONE>
-{text_start}ばったり<…>！<PROMPT>
+{text_start}ばったり<……>！<PROMPT>
 {text_start}くそう！　このまま　らくに<LINE>すすめると　おもうな！<DONE>
 {text_start}しんにゅうしゃを　はっけん！<DONE>
 {text_start}ああ！　だめか<PROMPT>
-{text_start}ふん<…>！<LINE>シルフスコープを　さがしてる？<CONT><…>　おれは　しらねえよ<DONE>
+{text_start}ふん<……>！<LINE>シルフスコープを　さがしてる？<CONT><……>　おれは　しらねえよ<DONE>
 {text_start}ここに　きた　ねらいは　なんだ？<DONE>
 {text_start}こりゃ　イカン<PROMPT>
-{text_start}わかった　いう<…><LINE>ボスに　あいたい　なら<CONT>エレベータに　のるんだな<DONE>
-{text_start}まいごの　まいごの<…><LINE>ぼうや　かな？<DONE>
+{text_start}わかった　いう<……><LINE>ボスに　あいたい　なら<CONT>エレベータに　のるんだな<DONE>
+{text_start}まいごの　まいごの<……><LINE>ぼうや　かな？<DONE>
 {text_start}あれ？　いまの　さわぎで<LINE>とびらが　あいて　しまった<DONE>
 {text_start}シルフスコープを　つかうと<LINE>みえない　ゆうれいも　みえるって<CONT>ボスが　いってたぞ<DONE>
 {text_start}まいった！<PROMPT>
 {text_start}<ROCKET>の　ほんぶは<LINE>ちか　４かい　まで　ある<CONT>ボスまで　たどり　つけるかな？<DONE>
 {text_start}あまり　<ROCKET>の<LINE>じゃまを　しない　ほうが<CONT>みの　ため　だぜ！<DONE>
 {text_start}くッ　やられた！<PROMPT>
-{text_start}<…>　シルフスコープ？　ああ！<LINE>ボスが　シルフ　カンパニーで<CONT>ぬすんで　きた　マシンの　ことか！<CONT><…>　どこかに　ある　はず　だぜ<DONE>
-{text_start}<…>　きたな？<LINE>うえの　フロア　から<CONT>れんらくが　きてるぜ！<DONE>
-{text_start}まけた<…>　ばかな！<PROMPT>
+{text_start}<……>　シルフスコープ？　ああ！<LINE>ボスが　シルフ　カンパニーで<CONT>ぬすんで　きた　マシンの　ことか！<CONT><……>　どこかに　ある　はず　だぜ<DONE>
+{text_start}<……>　きたな？<LINE>うえの　フロア　から<CONT>れんらくが　きてるぜ！<DONE>
+{text_start}まけた<……>　ばかな！<PROMPT>
 {text_start}いく　なら　いって　みろ！<LINE>しかし　エレベータは<CONT>カギが　ないと　つかえないぜ！<DONE>
 {text_start}ちょっと　まったー！！@
 {text_start}よくも　オツキミヤマでは<LINE>じゃまを　してくれたな！<PARA>このまえの　かりを　かえすぜ！<DONE>
@@ -870,12 +870,12 @@
 {text_start}やなかんじぃー！@
 {text_start}ほほうッ！<LINE>こんな　ところ　まで　よくきた<PARA>せかい　じゅうの　#を<LINE>わるだくみに　つかい　まくって<CONT>かねもうけ　する　<ROCKET>！<PARA>わたしが<LINE>その　リーダー　サカキだ！<PARA>わたしに　はむかう　なら<LINE>いたい　めに　あって　もらう！<DONE>
 {text_start}ぐ　ぐーッ！<LINE>そんな　ばかなーッ！<PROMPT>
-{text_start}<…>　きみは　とても　だいじに<LINE>#を　そだてて　いるな<PARA>そんな　こどもに<LINE>わたしの　かんがえは<CONT>とても　りかい　できないだろう<PARA>　<…>！<LINE>ここは　いちど　みを　ひこう！<PARA>きみとは　また　どこかで<LINE>たたかいたい　ものだ<…>！<DONE>
+{text_start}<……>　きみは　とても　だいじに<LINE>#を　そだてて　いるな<PARA>そんな　こどもに<LINE>わたしの　かんがえは<CONT>とても　りかい　できないだろう<PARA>　<……>！<LINE>ここは　いちど　みを　ひこう！<PARA>きみとは　また　どこかで<LINE>たたかいたい　ものだ<……>！<DONE>
 {text_start}はははーッ！<LINE>エレベータが　つかえないって？<CONT>カギは　だれが　もってるのかなー？<DONE>
-{text_start}そんな<…>！@
-{text_start}しまった<…>！<LINE>せっかく　かくして　おいた<CONT>エレベータの　カギが<…>！<DONE>
+{text_start}そんな<……>！@
+{text_start}しまった<……>！<LINE>せっかく　かくして　おいた<CONT>エレベータの　カギが<……>！<DONE>
 {text_start}カギが　ひつよう　みたいだな@
-{text_start}きゃあ！<LINE>だめよ　たすけてー！<PARA><…>　あら？<LINE><ROCKET>　じゃない<CONT>ごめんなさい<CONT>あたし　てっきり<…><CONT>これ　うちの　せいひん　なの<CONT>あげる　から　ゆるしてね<PROMPT>
+{text_start}きゃあ！<LINE>だめよ　たすけてー！<PARA><……>　あら？<LINE><ROCKET>　じゃない<CONT>ごめんなさい<CONT>あたし　てっきり<……><CONT>これ　うちの　せいひん　なの<CONT>あげる　から　ゆるしてね<PROMPT>
 {text_start}<PLAYER>は　おねえさんから<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
 {text_start}<TM>３６は　じばく！<PARA>この　わざは　きょうりょく　だけど<LINE>#は　わざの　あと<PARA>ひんしじょうたいに　なるわ<LINE>きを　つけて　つかって<DONE>
 {text_start}いっぱいで　もてないわ<DONE>
@@ -883,7 +883,7 @@
 {text_start}く！　ばれたか<PROMPT>
 {text_start}わたしは　シルフの　しゃいん<LINE>であると　どうじに<CONT><ROCKET>いん　でも　あるのさ<DONE>
 {text_start}ここは　たちいり　きんしだ<LINE>かえりなさい！<DONE>
-{text_start}なかなか<…><PROMPT>
+{text_start}なかなか<……><PROMPT>
 {text_start}ビルの　なかは　ふくざつだぞ<LINE>きみに　こうりゃく　できるかな？<DONE>
 {text_start}ここは　こどもの<LINE>くる　ところ　じゃない！<DONE>
 {text_start}つよい！<PROMPT>
@@ -891,18 +891,18 @@
 {text_start}そこの　こども！<LINE>うろうろ　するんじゃない！<DONE>
 {text_start}ぐ！　しくじった<PROMPT>
 {text_start}<ROCKET>は<LINE>シルフ　カンパニーと<CONT>ていけい　するのだ！<DONE>
-{text_start}ぼく　シルフ　カンパニーの<LINE>しゃいんです<…>　おろおろ<DONE>
+{text_start}ぼく　シルフ　カンパニーの<LINE>しゃいんです<……>　おろおろ<DONE>
 {text_start}<PLAYER>くんと<LINE>#の　おかげで<CONT>ほんと　たすかったよ<DONE>
 {text_start}おれたちの　じゃまを　する<LINE>やつは　じゃま　なのだ！<DONE>
 {text_start}まいった！<PROMPT>
-{text_start}<…>　では　ヒントだ！<LINE>しまってる　ドアの　カギは<CONT>カード　キーで　あけられる<DONE>
+{text_start}<……>　では　ヒントだ！<LINE>しまってる　ドアの　カギは<CONT>カード　キーで　あけられる<DONE>
 {text_start}わたしは<LINE>シルフ　カンパニーより<CONT><ROCKET>に　みかた　する！<DONE>
 {text_start}やるねえ！<PROMPT>
-{text_start}<…>　なに<PARA><ROCKET>の　れんちゅうが<LINE>おもう　ぞんぶん<CONT>#の　けんきゅうを<CONT>させて　くれるって　いったんでね<DONE>
-{text_start}びくびく<…>　こわくて<LINE>ここに　かくれてるんだ<…><DONE>
-{text_start}え<…><LINE><ROCKET>　もう　いないの？<DONE>
+{text_start}<……>　なに<PARA><ROCKET>の　れんちゅうが<LINE>おもう　ぞんぶん<CONT>#の　けんきゅうを<CONT>させて　くれるって　いったんでね<DONE>
+{text_start}びくびく<……>　こわくて<LINE>ここに　かくれてるんだ<……><DONE>
+{text_start}え<……><LINE><ROCKET>　もう　いないの？<DONE>
 {text_start}シルフ　カンパニーは<LINE><ROCKET>が　せんきょした！<DONE>
-{text_start}ぐぐぐ<…><PROMPT>
+{text_start}ぐぐぐ<……><PROMPT>
 {text_start}がはは！<LINE>ボスは　まえから<CONT>ここを　ねらってたのだ<DONE>
 {text_start}#は<LINE>おれの　ちゅうじつな　こぶんだぜ！<DONE>
 {text_start}くそ！<LINE>なさけない　#め<PROMPT>
@@ -910,28 +910,28 @@
 {text_start}ふしんな　やつを　はっけん！<DONE>
 {text_start}おまえ　なにものだ<PROMPT>
 {text_start}１１かいに　いる<LINE>ボスに　れんらく　しなくては！<DONE>
-{text_start}だれか　ビルに　しのび　こんだと<LINE><ROCKET>が　さわいでる<CONT><…>　きみの　こと　らしいね<DONE>
-{text_start}<ROCKET>は　にげたよ！<LINE>きみが　おっぱらったのかい<CONT><…>　ありがとう！<DONE>
+{text_start}だれか　ビルに　しのび　こんだと<LINE><ROCKET>が　さわいでる<CONT><……>　きみの　こと　らしいね<DONE>
+{text_start}<ROCKET>は　にげたよ！<LINE>きみが　おっぱらったのかい<CONT><……>　ありがとう！<DONE>
 {text_start}こどもが　うろついてると<LINE>さっき　れんらくが　あったぜ！<DONE>
-{text_start}ばったり<…><PROMPT>
+{text_start}ばったり<……><PROMPT>
 {text_start}<ROCKET>に<LINE>たてつかない　ほうが<CONT>みのため　だぜ<DONE>
 {text_start}この　フロアは<LINE>モンスターボールの<CONT>けんきゅう　セクションだ！<DONE>
 {text_start}ちくしょう！<PROMPT>
-{text_start}ここでは<…><LINE>でんせつの　#さえ　とれる<CONT>きゅうきょくの　モンスターボールを<CONT>けんきゅう　してたのだ<DONE>
+{text_start}ここでは<……><LINE>でんせつの　#さえ　とれる<CONT>きゅうきょくの　モンスターボールを<CONT>けんきゅう　してたのだ<DONE>
 {text_start}おかしいな？<LINE>こどもが　はいって　これる<CONT>わけが　ないんだが<DONE>
 {text_start}こりゃ　いかん<PROMPT>
-{text_start}ここは　５かい<…><LINE>ボスの　いる　ところ　まで<CONT>まだまだ　あるぜ！<DONE>
+{text_start}ここは　５かい<……><LINE>ボスの　いる　ところ　まで<CONT>まだまだ　あるぜ！<DONE>
 {text_start}<ROCKET>　あいてに<LINE>なめた　まねして　くれるぜ<DONE>
 {text_start}ふん　たまたまだ！<PROMPT>
-{text_start}たまたま<…>　おもいだした！<PARA>タマタマは<LINE>ナッシーに　しんか　するぞ<DONE>
-{text_start}<…>　#　レポートだ！<PARA>#　けんきゅうじょ　では<LINE>じんこうの　#<CONT>ポリゴンを　つくる　ことに<CONT>せいこう　した<…>　<…><DONE>
-{text_start}<…>　#　レポートだ！<PARA>#が　つかう　わざは<LINE>げんざい　わかって　いるだけで<CONT>１６０しゅるい　いじょうある<DONE>
-{text_start}<…>　#　レポートだ！<PARA>こうかん　ケーブルを　とおすと<LINE>しんかする　#が<CONT>４しゅるい　かくにん　された<DONE>
+{text_start}たまたま<……>　おもいだした！<PARA>タマタマは<LINE>ナッシーに　しんか　するぞ<DONE>
+{text_start}<……>　#　レポートだ！<PARA>#　けんきゅうじょ　では<LINE>じんこうの　#<CONT>ポリゴンを　つくる　ことに<CONT>せいこう　した<……>　<……><DONE>
+{text_start}<……>　#　レポートだ！<PARA>#が　つかう　わざは<LINE>げんざい　わかって　いるだけで<CONT>１６０しゅるい　いじょうある<DONE>
+{text_start}<……>　#　レポートだ！<PARA>こうかん　ケーブルを　とおすと<LINE>しんかする　#が<CONT>４しゅるい　かくにん　された<DONE>
 {text_start}やつらが　いきなり　やってきて<LINE>ビルを　のっとったんです<DONE>
-{text_start}<…>　さてと！<LINE>しごと　しなきゃ　しごと！<DONE>
-{text_start}ぶるぶる<…><LINE>かみさま　ほとけさま　たすけて<DONE>
-{text_start}ぼくたち　こんやく　したよ<LINE><…>　てれるなあ<DONE>
-{text_start}となりの　ひと<…><LINE>おとこ　なのに　なさけないわ<DONE>
+{text_start}<……>　さてと！<LINE>しごと　しなきゃ　しごと！<DONE>
+{text_start}ぶるぶる<……><LINE>かみさま　ほとけさま　たすけて<DONE>
+{text_start}ぼくたち　こんやく　したよ<LINE><……>　てれるなあ<DONE>
+{text_start}となりの　ひと<……><LINE>おとこ　なのに　なさけないわ<DONE>
 {text_start}このひとは<LINE>あたしが　ついてなきゃ<CONT>だめだって　おもったの<DONE>
 {text_start}<ROCKET>は<LINE>#　つかって<CONT>せかい　せいふく　したいのよ<DONE>
 {text_start}<ROCKET>が　にげたのは<LINE>あなたの　おかげね<DONE>
@@ -942,44 +942,44 @@
 {text_start}まあ　いい<LINE>おとうとが　かたきを　とって　くれる<DONE>
 {text_start}しゃちょうめー！<PARA>おれさまを<LINE>ポナヤツングスカ　してん<CONT>なんかに　とばし　やがるから<CONT><ROCKET>に　ねらわれるのだ！<DONE>
 {text_start}がっくしよ<PROMPT>
-{text_start}ポナヤツングスカ　してん？<LINE>ああ<…><CONT>ロシアの　おくの　ほうだよ<DONE>
+{text_start}ポナヤツングスカ　してん？<LINE>ああ<……><CONT>ロシアの　おくの　ほうだよ<DONE>
 {text_start}<ROCKET>を　うらぎって<LINE>ただで　すむと　おもうな！<DONE>
 {text_start}うらぎりもの　め<PROMPT>
 {text_start}うらぎり　じゃない？<LINE>せいぎの　みかた　なら<CONT>きみは　おれらの　うらぎりものだ<DONE>
-{text_start}あ<…>　ひとだ！<LINE><ROCKET>　じゃ　ないね<CONT>きみ<…><CONT>たすけに　きてくれたのか！<CONT>おお　ありがとう！<PARA>そうだ！<LINE>たすけに　きて　くれた　きみに<CONT>この　#を　わたそう！<PROMPT>
-{text_start}こいつは　ラプラスと　いって<LINE>とても　あたまのいい　#だ！<PARA>シルフの　けんきゅうしつで<LINE>かっていたが<…><CONT>ここに　いる　よりは<CONT>ずっと　いい　はずだ！<PARA>きみなら　かわいがって　くれそうだし<LINE>ラプラスも　よろこぶ　だろう！<PARA>およぎが　とくい　だから<LINE>うえに　のって<CONT>うみを　すすんでも　いいぞ！<DONE>
-{text_start}さっき　<ROCKET>の　ボスが<LINE>しゃちょうしつに　あがってったが<CONT><…>　しゃちょうが　しんぱいだ！<DONE>
+{text_start}あ<……>　ひとだ！<LINE><ROCKET>　じゃ　ないね<CONT>きみ<……><CONT>たすけに　きてくれたのか！<CONT>おお　ありがとう！<PARA>そうだ！<LINE>たすけに　きて　くれた　きみに<CONT>この　#を　わたそう！<PROMPT>
+{text_start}こいつは　ラプラスと　いって<LINE>とても　あたまのいい　#だ！<PARA>シルフの　けんきゅうしつで<LINE>かっていたが<……><CONT>ここに　いる　よりは<CONT>ずっと　いい　はずだ！<PARA>きみなら　かわいがって　くれそうだし<LINE>ラプラスも　よろこぶ　だろう！<PARA>およぎが　とくい　だから<LINE>うえに　のって<CONT>うみを　すすんでも　いいぞ！<DONE>
+{text_start}さっき　<ROCKET>の　ボスが<LINE>しゃちょうしつに　あがってったが<CONT><……>　しゃちょうが　しんぱいだ！<DONE>
 {text_start}たすかったよ　ありがと！<DONE>
-{text_start}<ROCKET>の　ねらいは<LINE>#が　かならず　とれる<CONT>モンスターボール！<CONT><…>　マスターボール　だろう<DONE>
-{text_start}じけんの　せいで<…><LINE>マスターボールは<CONT>はつばい　ちゅうしに　なったよ<DONE>
-{text_start}シルフも　#も<…><LINE><ROCKET>の　いいなりに<CONT>なったら　やだなあ<DONE>
+{text_start}<ROCKET>の　ねらいは<LINE>#が　かならず　とれる<CONT>モンスターボール！<CONT><……>　マスターボール　だろう<DONE>
+{text_start}じけんの　せいで<……><LINE>マスターボールは<CONT>はつばい　ちゅうしに　なったよ<DONE>
+{text_start}シルフも　#も<……><LINE><ROCKET>の　いいなりに<CONT>なったら　やだなあ<DONE>
 {text_start}すごいなあ！<LINE><ROCKET>の　れんちゅうを<CONT>おっぱらったんだって？<DONE>
-{text_start}あなた<…>！<CONT>ここは　あぶないわよ！<CONT>たすけに　きた？<CONT><…>　だめよ<DONE>
+{text_start}あなた<……>！<CONT>ここは　あぶないわよ！<CONT>たすけに　きた？<CONT><……>　だめよ<DONE>
 {text_start}たすかったわ　ありがと！<DONE>
 {text_start}おっとー！<LINE>こねずみを　みつけたぞ！<DONE>
 {text_start}がっくしだ！<PROMPT>
 {text_start}ちょろちょろ　してる　だけじゃ<LINE>ボスには　たどり　つけないぜ<DONE>
 {text_start}ふひゃひゃ！<PARA>シルフの　しゃいんだと<LINE>おもったかい？<DONE>
 {text_start}もう　#　ない<PROMPT>
-{text_start}こども　なのに<…><LINE>なかなかの　つかいて　だな<DONE>
+{text_start}こども　なのに<……><LINE>なかなかの　つかいて　だな<DONE>
 {text_start}おれこそは<LINE>ロケット　４きょうだいの　ひとり！<DONE>
 {text_start}にいさん　まけたよ！<PROMPT>
 {text_start}まあ　いい<LINE>あにきが　かたきを　とって　くれる<DONE>
-{text_start}シルフに　しんにゅうした　こども<LINE><…>　おまえの　こと　だな！<DONE>
+{text_start}シルフに　しんにゅうした　こども<LINE><……>　おまえの　こと　だな！<DONE>
 {text_start}まけました！<PROMPT>
 {text_start}ボスが　おこる　まえに<LINE>かえって　ねた　ほうが　いいぞ<DONE>
 {text_start}<RIVAL>『まってたぜ　<PLAYER>！<DONE>
-{text_start}<RIVAL>『ひゃはは！<LINE>ここで　まってれば<CONT>くるんじゃねえかと　おもったのさ<PARA>しかし　<ROCKET>　あいてに<LINE>てこずってる　みたいだな！<CONT>ま<…>　おれさまには<CONT>かんけいの　ないこと　だけど！<PARA>ヤマブキ　シティで　<PLAYER>が<LINE>あるいてんのを　ちょこっと<CONT>みかけた　もの　だからさ<PARA>すこしは<…>　つよくなったのか<LINE>なあーんちゃって　おもってさあ！<DONE>
+{text_start}<RIVAL>『ひゃはは！<LINE>ここで　まってれば<CONT>くるんじゃねえかと　おもったのさ<PARA>しかし　<ROCKET>　あいてに<LINE>てこずってる　みたいだな！<CONT>ま<……>　おれさまには<CONT>かんけいの　ないこと　だけど！<PARA>ヤマブキ　シティで　<PLAYER>が<LINE>あるいてんのを　ちょこっと<CONT>みかけた　もの　だからさ<PARA>すこしは<……>　つよくなったのか<LINE>なあーんちゃって　おもってさあ！<DONE>
 {text_start}おう　おうッ！<LINE><ROCKET>の　ボスに<CONT>いどむだけの　ことは　あるじゃん！<PROMPT>
-{text_start}<RIVAL>『おまえなあ<…><PARA>こんな　うでまえじゃ<LINE>まだまだ<…><CONT>いちにんまえ　とは　いえないぜ<PROMPT>
-{text_start}ほんじゃま　<PLAYER>！<PARA>おれさまは<LINE>ひとあし　さきに　いくぜ！<PARA>#ずかん　やってる　うちに<LINE>どういう　#が　つよい　とか<CONT>なにに　しんか　するか　とか<CONT>わかって　きちゃったんだよねえ！<CONT>おれって　てんさい？<PARA>ま<…>　そういう　ことで<LINE>これからは<CONT>#　リーグの　してんのうを<CONT>ばっさ　ばっさと　たおして<PARA>さいきょうの　<TRAINER>に<LINE>なってやろう　と　きめたのさ！<PARA><PLAYER>も<LINE>せいぜい　がんばって　くれい<CONT>じゃあな！<CONT>バイビー！<DONE>
-{text_start}シルフは　のっとられて<LINE><…>　おわりかな<DONE>
+{text_start}<RIVAL>『おまえなあ<……><PARA>こんな　うでまえじゃ<LINE>まだまだ<……><CONT>いちにんまえ　とは　いえないぜ<PROMPT>
+{text_start}ほんじゃま　<PLAYER>！<PARA>おれさまは<LINE>ひとあし　さきに　いくぜ！<PARA>#ずかん　やってる　うちに<LINE>どういう　#が　つよい　とか<CONT>なにに　しんか　するか　とか<CONT>わかって　きちゃったんだよねえ！<CONT>おれって　てんさい？<PARA>ま<……>　そういう　ことで<LINE>これからは<CONT>#　リーグの　してんのうを<CONT>ばっさ　ばっさと　たおして<PARA>さいきょうの　<TRAINER>に<LINE>なってやろう　と　きめたのさ！<PARA><PLAYER>も<LINE>せいぜい　がんばって　くれい<CONT>じゃあな！<CONT>バイビー！<DONE>
+{text_start}シルフは　のっとられて<LINE><……>　おわりかな<DONE>
 {text_start}ありがとう　たすかった！<DONE>
 {text_start}ここから　さきは　いかせ　ないぜ！<DONE>
 {text_start}きあいが　たりんか<PROMPT>
-{text_start}はやく　ひきかえさないと<LINE><…>　なかまを　よぶぜ！<DONE>
+{text_start}はやく　ひきかえさないと<LINE><……>　なかまを　よぶぜ！<DONE>
 {text_start}すき　かって　やられちゃ<LINE>こまるんだぜ！<DONE>
-{text_start}<…>？　まけたのか<PROMPT>
+{text_start}<……>？　まけたのか<PROMPT>
 {text_start}どうだね？<LINE>めいろの　ような<CONT>シルフ　ビルの　かんそうは？<DONE>
 {text_start}おれこそは<LINE>ロケット　４きょうだいの　ひとり！<DONE>
 {text_start}にいさん　まけたよ<PROMPT>
@@ -989,33 +989,33 @@
 {text_start}たすかったわ　ありがと<DONE>
 {text_start}こどもの　くせに　おまえの<LINE>#　ずいぶん　なついているな<DONE>
 {text_start}ぐうーッ！<PROMPT>
-{text_start}おまえ　くらいの　としから<LINE>#　やってれば　おれも<…><DONE>
-{text_start}きみの　#　には<LINE><…>　じゃくてんが　ある！<CONT>そこを　せめれば　おれ　かてるよ！<DONE>
-{text_start}じゃくてんを<…><LINE>つくまえに　やられたあ<PROMPT>
-{text_start}じゃくてんを<LINE>せめると　いいのは　じじつだ！<CONT>タイプの　あいしょう　とか<…><DONE>
+{text_start}おまえ　くらいの　としから<LINE>#　やってれば　おれも<……><DONE>
+{text_start}きみの　#　には<LINE><……>　じゃくてんが　ある！<CONT>そこを　せめれば　おれ　かてるよ！<DONE>
+{text_start}じゃくてんを<……><LINE>つくまえに　やられたあ<PROMPT>
+{text_start}じゃくてんを<LINE>せめると　いいのは　じじつだ！<CONT>タイプの　あいしょう　とか<……><DONE>
 {text_start}おれこそは<LINE>ロケット　４きょうだいの　ひとりだ！<DONE>
 {text_start}うー！<LINE>まけた　おとうとよ！<PROMPT>
 {text_start}まあ　いい<LINE>おとうとが　かたきを　とってくれる<DONE>
 {text_start}うえーん！<CONT>こわいよー！<DONE>
-{text_start}あたしが　ないてた　こと<…><CONT>ないしょに　してね<DONE>
+{text_start}あたしが　ないてた　こと<……><CONT>ないしょに　してね<DONE>
 {text_start}１０かいに　ようこそ！<LINE>よく　ここまで　たどり　ついたな！<DONE>
 {text_start}なんてこった<PROMPT>
 {text_start}ここまで　きたのは　ほめるが<LINE>しゃちょう　しつは<CONT>さらに　うえの　かい　だぜ<DONE>
-{text_start}もう<…><LINE>あそびは　おわりに　しよう！<DONE>
+{text_start}もう<……><LINE>あそびは　おわりに　しよう！<DONE>
 {text_start}あうーん<PROMPT>
 {text_start}おれに　かって　まんぞくか<LINE>じゃ　おうちに　かえんな<DONE>
 {text_start}ちょっと　まったー！！@
 {text_start}ボスは　だいじな　はなしちゅうだ！<LINE>じゃまは　させないからな！<DONE>
-{text_start}やっぱり<LINE>いつもどおり<…>なのね<PROMPT>
-{text_start}それでは　いつもの<LINE>まいりましょうか<…><PARA>やなかんじぃー！@
+{text_start}やっぱり<LINE>いつもどおり<……>なのね<PROMPT>
+{text_start}それでは　いつもの<LINE>まいりましょうか<……><PARA>やなかんじぃー！@
 {text_start}しゃちょう『おお　しょうねんよ！<LINE>たすけて　くれて　ありがとう！<PARA>わたしは<LINE>ピンチを　すくって　くれた<PARA>きみのことを　このさき<LINE>けして　わすれない　だろう！<PARA>おお！　そうだ<LINE>おれいを　さしあげなくては！<PARA>わたしは<LINE>ふとっぱらで　ある　からして<PARA>ほれ<LINE>こーんな　ものでは　いかがかな？<PROMPT>
 {text_start}<PLAYER>は　しゃちょうから<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
-{text_start}しゃちょう『それは<…><LINE>どこで　かうことも　できない<PARA>ひみつの<LINE>しさくひん　マスターボール！<PARA>なげれば　かならず<LINE>#を　つかまえられる！<PARA>こっそりと<…><LINE><…>　<…>　<CONT>つかって　みて　くれたまえ<DONE>
+{text_start}しゃちょう『それは<……><LINE>どこで　かうことも　できない<PARA>ひみつの<LINE>しさくひん　マスターボール！<PARA>なげれば　かならず<LINE>#を　つかまえられる！<PARA>こっそりと<……><LINE><……>　<……>　<CONT>つかって　みて　くれたまえ<DONE>
 {text_start}もちものが　いっぱいだぞ<DONE>
 {text_start}ひしょ『このたびは　たすけて<LINE>いただいて　ありがとう　ございます<PARA>しゃちょう　ともども<LINE>かんしゃの　きもちで　いっぱいです<DONE>
 {text_start}おお　<PLAYER>か？<LINE>また　あったな！<PARA>おれは　いま　シルフの　しゃちょうと<LINE>しごとの　はなしを　してるんだ<PARA>おとなの　せかいに<LINE>くちを　はさまないで　もらいたい<PARA>どうしても　というなら<LINE>いたいめに　あって　もらうぞ！<DONE>
 {text_start}はぐ！<LINE>この　おれが　まける　なんて！<PROMPT>
-{text_start}くそー　<…>しょうが　ない！<LINE>シルフは　ひとまず　あきらめよう！<PARA>しかし　<LINE>わが　<ROCKET>は　ふめつだ！<PARA><PLAYER>！　すべての　#は<LINE><ROCKET>の　ために<CONT>そんざい　するのだ！<CONT>そのことを　わすれるなよ！<PARA>では<…>！<LINE>おれは　たいさん　しよう！<DONE>
+{text_start}くそー　<……>しょうが　ない！<LINE>シルフは　ひとまず　あきらめよう！<PARA>しかし　<LINE>わが　<ROCKET>は　ふめつだ！<PARA><PLAYER>！　すべての　#は<LINE><ROCKET>の　ために<CONT>そんざい　するのだ！<CONT>そのことを　わすれるなよ！<PARA>では<……>！<LINE>おれは　たいさん　しよう！<DONE>
 {text_start}なんだ　おまえは<LINE>ボスに　なんの　ようだ！<DONE>
 {text_start}だあー！　やられた<PROMPT>
 {text_start}いって　おくが　ボスは　つよいぞ<LINE>くれぐれも　きを　つけな<DONE>
@@ -1025,37 +1025,37 @@
 {text_start}にっき　７がつ５か<LINE>ここは　みなみアメリカの　ギアナ<PARA>ジャングルの　おくちで<LINE>しんしゅの　#を　はっけん<DONE>
 {text_start}にっき　７がつ１０か<LINE>しんはっけんの　#を<CONT>わたしは　ミュウと　なづけた<DONE>
 {text_start}ひみつの　スイッチが　ある！<PARA>おして　みますか？<DONE>
-{text_start}おしてみよう！　<…>ポチッとな<PROMPT>
+{text_start}おしてみよう！　<……>ポチッとな<PROMPT>
 {text_start}おすのは　あきらめた<DONE>
 {text_start}それに　しても<LINE>でっけー　やしき　だねえ！<DONE>
 {text_start}どろどろ　ぼーん！<PROMPT>
-{text_start}<…>　あいぼうが　いたんだ<LINE>どこ　いったんだろ？<DONE>
+{text_start}<……>　あいぼうが　いたんだ<LINE>どこ　いったんだろ？<DONE>
 {text_start}ここは　かつて<LINE>わたしの　せんせいが　すんでいた<DONE>
 {text_start}なんと　つよい<PROMPT>
-{text_start}いきたい　ばしょに　いけなくて<LINE>こまってるのか<…>　そこから<CONT>おもいきって　とびおりて　みろ！<DONE>
-{text_start}にっき　２がつ６か<LINE>ミュウが　こどもを　うむ<PARA>うまれた　ばかりの　ジュニアを<LINE>ミュウツーと　よぶことに<…><DONE>
-{text_start}<…>　ありゃ　こまった<LINE>みちに　まよったぞ<DONE>
+{text_start}いきたい　ばしょに　いけなくて<LINE>こまってるのか<……>　そこから<CONT>おもいきって　とびおりて　みろ！<DONE>
+{text_start}にっき　２がつ６か<LINE>ミュウが　こどもを　うむ<PARA>うまれた　ばかりの　ジュニアを<LINE>ミュウツーと　よぶことに<……><DONE>
+{text_start}<……>　ありゃ　こまった<LINE>みちに　まよったぞ<DONE>
 {text_start}ひゅー　どろどろ<PROMPT>
 {text_start}まえに　すんでた　ひとの<LINE>どうぐが　けっこう　おちてるぜ<DONE>
 {text_start}ここは　ひろくて<LINE>けんきゅうするには　いい　ばしょだ<DONE>
 {text_start}なにを　するのかね<PROMPT>
-{text_start}きに　いったよ！<LINE>ここに　すめば<CONT>けんきゅうも　はかどるな<…><DONE>
-{text_start}にっき　９がつ１にち<LINE>#　ミュウツーは　つよすぎる<PARA>ダメだ<…><LINE>わたしの　てには　おえない！<DONE>
-{text_start}きゅうけい　ハウス　<…>　いこい<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>のこり　じかんは<LINE>あるく　ごとに　へって　いく！<DONE>
-{text_start}ここは　ちゅうおう　ひろば<LINE>きた　<…>　だい２　エリア<DONE>
-{text_start}きゅうけい　ハウス　<…>　いこい<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>トレジャー　ハウスは<LINE>まだ　さきだ！　がんばろう！<DONE>
+{text_start}きに　いったよ！<LINE>ここに　すめば<CONT>けんきゅうも　はかどるな<……><DONE>
+{text_start}にっき　９がつ１にち<LINE>#　ミュウツーは　つよすぎる<PARA>ダメだ<……><LINE>わたしの　てには　おえない！<DONE>
+{text_start}きゅうけい　ハウス　<……>　いこい<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>のこり　じかんは<LINE>あるく　ごとに　へって　いく！<DONE>
+{text_start}ここは　ちゅうおう　ひろば<LINE>きた　<……>　だい２　エリア<DONE>
+{text_start}きゅうけい　ハウス　<……>　いこい<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>トレジャー　ハウスは<LINE>まだ　さきだ！　がんばろう！<DONE>
 {text_start}ここは　だい２　エリア<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>#は　くさむらの　なかに<LINE>このんで　かくれる！<PARA>なかなか　みつからない　ときは<LINE>くさむらを　ジグザグに　あるこう！<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>トレジャー　ハウスを　みつけると<LINE>ひでんマシンが　もらえるぞ！<DONE>
-{text_start}きゅうけい　ハウス　<…>　いこい<DONE>
-{text_start}<…>　おねがいの　けいじばん！<PARA>サファリ　ゾーンの　えんちょうが<LINE>この　あたりで<CONT>いればを　なくし　ました！<PARA>みつけた　かたに　おれい　します<LINE><…>　サファリ　ゾーン　じむ　きょく<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>ゾーン　たんけん　キャンペーン！<LINE>トレジャー　ハウスを　さがそう！<DONE>
-{text_start}ここは　だい３　エリア<LINE>ひがし　<…>　ちゅうおう　ひろば<DONE>
-{text_start}きゅうけい　ハウス　<…>　いこい<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>スタート　ボタン　おして！<LINE>のこり　じかんの　かくにん！<DONE>
-{text_start}アツコ『#とりに　いこうって<LINE>いった　のに<…>コージ　どこなのよ！<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>#は　くさむらの　なかに<LINE>このんで　かくれる！<PARA>なかなか　みつからない　ときは<LINE>くさむらを　ジグザグに　あるこう！<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>トレジャー　ハウスを　みつけると<LINE>ひでんマシンが　もらえるぞ！<DONE>
+{text_start}きゅうけい　ハウス　<……>　いこい<DONE>
+{text_start}<……>　おねがいの　けいじばん！<PARA>サファリ　ゾーンの　えんちょうが<LINE>この　あたりで<CONT>いればを　なくし　ました！<PARA>みつけた　かたに　おれい　します<LINE><……>　サファリ　ゾーン　じむ　きょく<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>ゾーン　たんけん　キャンペーン！<LINE>トレジャー　ハウスを　さがそう！<DONE>
+{text_start}ここは　だい３　エリア<LINE>ひがし　<……>　ちゅうおう　ひろば<DONE>
+{text_start}きゅうけい　ハウス　<……>　いこい<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>スタート　ボタン　おして！<LINE>のこり　じかんの　かくにん！<DONE>
+{text_start}アツコ『#とりに　いこうって<LINE>いった　のに<……>コージ　どこなのよ！<DONE>
 {text_start}よーし！　#　とり　まくって<LINE>おみやげに　しようっと！<DONE>
 {text_start}おおッ！　きたか！<PARA>ここは　いちばん　おくち　の<LINE>トレジャー　ハウス　だよ！<PARA>サファリ　ゾーンの　キャンペーン<LINE>ひらいたは　いいが　だれも　こない<CONT>ふあんに　なってた　ところだ<PARA>いやー！　おめでとう！<LINE>しょうひんは　きみの　ものだ！<PROMPT>
 {text_start}<PLAYER>は　かかりいん　から<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
@@ -1066,67 +1066,67 @@
 {text_start}たくさん　あるいた　けど<LINE>とりたい　ポケモンが<CONT>なかなか　とびだして　こないの<DONE>
 {text_start}おたく　なんびき　つかまえた？<LINE>ぼくは　つかまえに　つかまえて<CONT>つかれて　しまったよ<DONE>
 {text_start}ラッキーを　つかまえたぜ！<PARA>これで<LINE>じゅーぶん　もとは　とった！<DONE>
-{text_start}はあ<…>！<LINE>はしゃぎ　すぎて　つかれちゃった<DONE>
+{text_start}はあ<……>！<LINE>はしゃぎ　すぎて　つかれちゃった<DONE>
 {text_start}サファリ　ゾーン　ないに<LINE>おちてる　アイテムは<CONT>もって　いって　いいんだよ！<PARA>でも　ぜんぶ　ひろって　たら<LINE>じかん　なくなっちゃう！<DONE>
 {text_start}いま　キャンペーン　ちゅう　だろ<LINE>ゾーン　いちばん　おくの　こやで<CONT>しょうひんを　くれるってさ！<DONE>
 {text_start}わたしの　イーブイ<LINE>ブースターに　しんか　しよった！<PARA>でも　ともだち　のは　シャワーズに<LINE>なったんだ！　なんでだろう？<DONE>
 {text_start}ミュー@
 {text_start}ふふ　あたし　じしん　あるわよ<LINE>あなたの　てに　おえるかな？<DONE>
-{text_start}まけたわ<…><PROMPT>
+{text_start}まけたわ<……><PROMPT>
 {text_start}おとこに　まけるの　だけは<LINE>いや　だったのに！<DONE>
 {text_start}なかなか　やりての　ようだな<LINE>おて　あわせ　ねがおうか！<DONE>
 {text_start}じしん　あったんだが<PROMPT>
-{text_start}ちっ！　うえには<LINE>うえが　いたって　ことか<…><DONE>
-{text_start}そうか！　きみが　<PLAYER>！<PARA>おれは　してんのうの　たいしょう！<LINE>ドラゴン　つかいの　ワタルだ！<PARA>しってるだろ　ドラゴンは<LINE>せいなる　でんせつの　いきものだ！<PARA>つかまえるのが　むずかしいけど<LINE>うまく　そだてりゃ<CONT>つよさは　てんか　いっぴんだ<PARA>からだも　じょうぶ　だし<LINE>こてさきの　こうげきも　むださ！<CONT><…>　さてと！<CONT>そろそろ　はじめよう！<PARA>それとも　いまから<LINE>シッポ　まいて　かえるかい！<CONT><PLAYER>！<DONE>
-{text_start}うう<…>！<PARA>くやしいが　きみの<LINE>#の　うでは　ほんものだ！<PROMPT>
-{text_start}ドラゴン　ぐんだんが<LINE>まける　なんて　しんじられない<CONT><PLAYER>！<PARA>これからは　きみが<LINE>#　リーグ　チャンピオンだ！<CONT><…>　<…>　<…><CONT><…>　と　いいたい　とこだが<PARA>じつは　きみは　もう　ひとり<LINE>たたかわなくては　ならない！<CONT>その　<TRAINER>の　なまえは<…><PARA><RIVAL>だ！<LINE>かれは<…>　きみ　よりも　はやく！<CONT>おれたち　してんのうに　かった！<PARA>いまや　かれこそ　#　リーグ<LINE>しんの　チャンピオン　なのだ！@
-{text_start}オーキド『<…>　おほんッ！<LINE>おめでとう！　<PLAYER>！<PARA>ここは<…><LINE>れきだいの　#　リーグ<CONT><TRAINER>の　もとで<…><PARA>かつやく　した　#　たちを<LINE>えいえんに　きろく　して<CONT>たたえる　フロア　である！<PARA>#　<TRAINER>は　ここに<LINE>きろく　される　よろこびを<CONT>でんどういり　と　よんで　いる！<PARA><PLAYER>！　おまえは<LINE>はげしい　たたかいの　すえ<CONT>リーグ　チャンピオンと　なった！<PARA>ここに　<PLAYER>の　なまえと<LINE>#　たちを　きろく　しよう！<DONE>
-{text_start}<RIVAL>『よおーッ！　<PLAYER>！<LINE><PLAYER>も　きたか！<CONT><…>　はッはッ　うれしいぜ！<PARA>ライバルの　おまえが　よわいと<LINE>はりあい　ないからな！<PARA>おれは　ずかん　あつめ　ながら<LINE>かんぺきな　#を　さがした！<PARA>いろんな　タイプの　#に<LINE>かち　まくる　ような<CONT>コンビネーションを　さがした！<PARA><…>　そして　いま！<PARA>おれは　#　リーグの<LINE>ちょうてんに　いる！<PARA><PLAYER>！<LINE>この　いみが　わかるか？<PARA><…>　<…>　<…><LINE><…>　わかった！　おしえてやる！<PARA>この　おれさまが！<LINE>せかいで　いちばん！<CONT>つよいって　こと　なんだよ！<DONE>
-{text_start}<…>　ばかな！<LINE>ほんとに　おわったのか！<CONT>ぜんりょくを　かけたのに　まけた！<PARA>せっかく　#　リーグの<LINE>ちょうてんに　たったのに　よう！<PARA>もう<…>！<LINE>おれさまの　てんかは　おわりかよ！<CONT><…>　そりゃ　ないぜ！<PROMPT>
+{text_start}ちっ！　うえには<LINE>うえが　いたって　ことか<……><DONE>
+{text_start}そうか！　きみが　<PLAYER>！<PARA>おれは　してんのうの　たいしょう！<LINE>ドラゴン　つかいの　ワタルだ！<PARA>しってるだろ　ドラゴンは<LINE>せいなる　でんせつの　いきものだ！<PARA>つかまえるのが　むずかしいけど<LINE>うまく　そだてりゃ<CONT>つよさは　てんか　いっぴんだ<PARA>からだも　じょうぶ　だし<LINE>こてさきの　こうげきも　むださ！<CONT><……>　さてと！<CONT>そろそろ　はじめよう！<PARA>それとも　いまから<LINE>シッポ　まいて　かえるかい！<CONT><PLAYER>！<DONE>
+{text_start}うう<……>！<PARA>くやしいが　きみの<LINE>#の　うでは　ほんものだ！<PROMPT>
+{text_start}ドラゴン　ぐんだんが<LINE>まける　なんて　しんじられない<CONT><PLAYER>！<PARA>これからは　きみが<LINE>#　リーグ　チャンピオンだ！<CONT><……>　<……>　<……><CONT><……>　と　いいたい　とこだが<PARA>じつは　きみは　もう　ひとり<LINE>たたかわなくては　ならない！<CONT>その　<TRAINER>の　なまえは<……><PARA><RIVAL>だ！<LINE>かれは<……>　きみ　よりも　はやく！<CONT>おれたち　してんのうに　かった！<PARA>いまや　かれこそ　#　リーグ<LINE>しんの　チャンピオン　なのだ！@
+{text_start}オーキド『<……>　おほんッ！<LINE>おめでとう！　<PLAYER>！<PARA>ここは<……><LINE>れきだいの　#　リーグ<CONT><TRAINER>の　もとで<……><PARA>かつやく　した　#　たちを<LINE>えいえんに　きろく　して<CONT>たたえる　フロア　である！<PARA>#　<TRAINER>は　ここに<LINE>きろく　される　よろこびを<CONT>でんどういり　と　よんで　いる！<PARA><PLAYER>！　おまえは<LINE>はげしい　たたかいの　すえ<CONT>リーグ　チャンピオンと　なった！<PARA>ここに　<PLAYER>の　なまえと<LINE>#　たちを　きろく　しよう！<DONE>
+{text_start}<RIVAL>『よおーッ！　<PLAYER>！<LINE><PLAYER>も　きたか！<CONT><……>　はッはッ　うれしいぜ！<PARA>ライバルの　おまえが　よわいと<LINE>はりあい　ないからな！<PARA>おれは　ずかん　あつめ　ながら<LINE>かんぺきな　#を　さがした！<PARA>いろんな　タイプの　#に<LINE>かち　まくる　ような<CONT>コンビネーションを　さがした！<PARA><……>　そして　いま！<PARA>おれは　#　リーグの<LINE>ちょうてんに　いる！<PARA><PLAYER>！<LINE>この　いみが　わかるか？<PARA><……>　<……>　<……><LINE><……>　わかった！　おしえてやる！<PARA>この　おれさまが！<LINE>せかいで　いちばん！<CONT>つよいって　こと　なんだよ！<DONE>
+{text_start}<……>　ばかな！<LINE>ほんとに　おわったのか！<CONT>ぜんりょくを　かけたのに　まけた！<PARA>せっかく　#　リーグの<LINE>ちょうてんに　たったのに　よう！<PARA>もう<……>！<LINE>おれさまの　てんかは　おわりかよ！<CONT><……>　そりゃ　ないぜ！<PROMPT>
 {text_start}はーはッ！<LINE>かった！　かった！　かった！<PARA><PLAYER>に　まける　ような<LINE>おれさま　では　なーい！<PARA>ま！　#の<LINE>てんさい　<RIVAL>さま　あいてに<CONT>ここまで　よく　がんばった！<PARA>ほめて　つかわす！<LINE>はーッ！　はーはッはッ！<PROMPT>
-{text_start}なぜ<…><LINE>なぜ　まけてしまったんだ<…><PARA>おれの　そだてかた<…><LINE>まちがってなんか　いないはずなのに<PARA>しょうが　ないぜ<…><LINE>おまえが　#　リーグ<CONT>しん　チャンピオンだ<…>！<PARA><…>　<…>　<…><LINE><…>　みとめたく　ねーけど<DONE>
+{text_start}なぜ<……><LINE>なぜ　まけてしまったんだ<……><PARA>おれの　そだてかた<……><LINE>まちがってなんか　いないはずなのに<PARA>しょうが　ないぜ<……><LINE>おまえが　#　リーグ<CONT>しん　チャンピオンだ<……>！<PARA><……>　<……>　<……><LINE><……>　みとめたく　ねーけど<DONE>
 {text_start}オーキド『<PLAYER>！<DONE>
-{text_start}オーキド『とうとう　かったな！<LINE>#　リーグ　せいは！<CONT>こころ　から　おめでとう！<PARA>はじめて　@{text_ram wNameBuffer}{text_start}を　もらって<LINE>#　ずかん　あつめに<CONT>でかけた　ころと　くらべると<CONT>たくましく　なったな！<PARA><…>　いやいや！<LINE><PLAYER>は　おとなに　なった！<DONE>
-{text_start}オーキド『<RIVAL><…>！<LINE><…>　ざんねんだ！<PARA>おまえが　してんのうに　かったと<LINE>きいて　ここに　とんで　きたのに<PARA>#　リーグに　ついて　みたら<LINE>おまえは　まけとった！<PARA><RIVAL>よ<…>！<LINE>なぜ　まけたのか　わかるか？<CONT><…>　<…>　<…><PARA>おまえが　#　たちへの<LINE>しんらいと　あいじょうを<CONT>わすれとる　からだ！<PARA>それでは　どんなに　がんばっても<LINE>トップ　には　たてんぞ！<DONE>
-{text_start}オーキド『<PLAYER>！<PARA>#　リーグを　せいは　したのは<LINE>ひとりの　ちから　では　ないことを<CONT><…>　おまえは　わかっとるな！<PARA><PLAYER>と　#の<LINE>ぜつみょうな　コンビネーション！<CONT>みごと　だったぞ！<PARA>それでは<…>　<PLAYER>！<LINE>わたしに　ついて　きなさい！<DONE>
-{text_start}#　リーグへ　ようこそ！<PARA>わたしが　してんのうの　カンナ！<PARA>こおり　#　つかわせたら<LINE>みぎに　でる　ものは　いないわ<PARA>あいてを　こおらせるって<LINE>とっても　きょうりょくよ！<PARA>だって　こおっちゃったら<LINE>あんたの　#<CONT>ぜんぜん　うごけ　ないんだから<PARA><…>　あははッ！<LINE>じゃ　かくごは　いいかしら！<DONE>
-{text_start}<…>　なんて　やつなの！<PROMPT>
-{text_start}すこしは　できる　みたいね！<LINE>わかった<…>！<CONT>つぎの　へやに　すすむと　いいわ！<PARA>#　リーグ　しんの　パワーは<LINE>まだまだ<…>！<CONT>こんな　ものじゃ　ないわよ！<DONE>
-{text_start}だれかの　こえが　きこえる<…><LINE>「にげては　ならん！」<DONE>
+{text_start}オーキド『とうとう　かったな！<LINE>#　リーグ　せいは！<CONT>こころ　から　おめでとう！<PARA>はじめて　@{text_ram wNameBuffer}{text_start}を　もらって<LINE>#　ずかん　あつめに<CONT>でかけた　ころと　くらべると<CONT>たくましく　なったな！<PARA><……>　いやいや！<LINE><PLAYER>は　おとなに　なった！<DONE>
+{text_start}オーキド『<RIVAL><……>！<LINE><……>　ざんねんだ！<PARA>おまえが　してんのうに　かったと<LINE>きいて　ここに　とんで　きたのに<PARA>#　リーグに　ついて　みたら<LINE>おまえは　まけとった！<PARA><RIVAL>よ<……>！<LINE>なぜ　まけたのか　わかるか？<CONT><……>　<……>　<……><PARA>おまえが　#　たちへの<LINE>しんらいと　あいじょうを<CONT>わすれとる　からだ！<PARA>それでは　どんなに　がんばっても<LINE>トップ　には　たてんぞ！<DONE>
+{text_start}オーキド『<PLAYER>！<PARA>#　リーグを　せいは　したのは<LINE>ひとりの　ちから　では　ないことを<CONT><……>　おまえは　わかっとるな！<PARA><PLAYER>と　#の<LINE>ぜつみょうな　コンビネーション！<CONT>みごと　だったぞ！<PARA>それでは<……>　<PLAYER>！<LINE>わたしに　ついて　きなさい！<DONE>
+{text_start}#　リーグへ　ようこそ！<PARA>わたしが　してんのうの　カンナ！<PARA>こおり　#　つかわせたら<LINE>みぎに　でる　ものは　いないわ<PARA>あいてを　こおらせるって<LINE>とっても　きょうりょくよ！<PARA>だって　こおっちゃったら<LINE>あんたの　#<CONT>ぜんぜん　うごけ　ないんだから<PARA><……>　あははッ！<LINE>じゃ　かくごは　いいかしら！<DONE>
+{text_start}<……>　なんて　やつなの！<PROMPT>
+{text_start}すこしは　できる　みたいね！<LINE>わかった<……>！<CONT>つぎの　へやに　すすむと　いいわ！<PARA>#　リーグ　しんの　パワーは<LINE>まだまだ<……>！<CONT>こんな　ものじゃ　ないわよ！<DONE>
+{text_start}だれかの　こえが　きこえる<……><LINE>「にげては　ならん！」<DONE>
 {text_start}おれは　してんのうの　シバ！<PARA>ひとも　#も<LINE>たたかい　きたえれば<CONT>どこまでも　つよくなる！<PARA>おれは　そんな　きたえ　ぬかれた<LINE>#と　ともに　いきてきた！<CONT>そして　これからもな！<PARA><PLAYER>と　いったな！<PARA>おれたちの　スーパー　パワーを<LINE>うけて　みるが　いい！<PARA>ウー！　ハーッ！<DONE>
-{text_start}どうした　ことだ！<LINE><…>　おれが　まけるとは！<PROMPT>
+{text_start}どうした　ことだ！<LINE><……>　おれが　まけるとは！<PROMPT>
 {text_start}まけちまったら<LINE>おれの　でばんは　おわりだ！<CONT>くそッ！　つぎに　いって　くれ！<DONE>
-{text_start}だれかの　こえが　きこえる<…><LINE>「にげては　ならん！」<DONE>
-{text_start}あたしは　してんのうの　キクコ！<PARA>あんた　オーキドの　ジジイに<LINE>かわいがられてんだって！<PARA>ジジイ　むかしは　つよくて<LINE>いい　おとこ　だった！<CONT>いまじゃ　みる　かげも　ないがね！<PARA>#　ずかん<LINE>つくってる　ようじゃ　だめだ！<CONT>#は　たたかわせる　ものさ<PARA><PLAYER><…>！　あんたにも<LINE>ホントの　たたかいって　ものを<CONT>おしえて　やる！<DONE>
+{text_start}だれかの　こえが　きこえる<……><LINE>「にげては　ならん！」<DONE>
+{text_start}あたしは　してんのうの　キクコ！<PARA>あんた　オーキドの　ジジイに<LINE>かわいがられてんだって！<PARA>ジジイ　むかしは　つよくて<LINE>いい　おとこ　だった！<CONT>いまじゃ　みる　かげも　ないがね！<PARA>#　ずかん<LINE>つくってる　ようじゃ　だめだ！<CONT>#は　たたかわせる　ものさ<PARA><PLAYER><……>！　あんたにも<LINE>ホントの　たたかいって　ものを<CONT>おしえて　やる！<DONE>
 {text_start}ほっほう！<LINE>たいした　もんだよ！<PROMPT>
 {text_start}あんたの　かち　だ！<LINE>ジジイが　めを　つける　だけの<CONT>ことは　ある！<PARA>もう　これ　いじょう<LINE>あたしが　いう　ことは　ない！<CONT>つぎの　へやに　すすみな！<DONE>
-{text_start}だれかの　こえが　きこえる<…><LINE>「にげては　ならん！」<DONE>
+{text_start}だれかの　こえが　きこえる<……><LINE>「にげては　ならん！」<DONE>
 {text_start}ガールスカウトは　やまで<LINE>まよわない　ように　めじるしの<CONT>こえだを　おいて　あるくの<DONE>
-{text_start}やーん<…>！<LINE>がんばったのに<PROMPT>
+{text_start}やーん<……>！<LINE>がんばったのに<PROMPT>
 {text_start}まけちゃったし<LINE>きょうは　おうちに　かえろう<DONE>
 {text_start}はははーッ！<LINE>おれの　パワーに　かてるか！<DONE>
 {text_start}おっとっと！<LINE>パワー　まけ　したか！<PROMPT>
 {text_start}パワーに　こだわるのは<LINE>かんがえながら　たたかうのが<CONT>にがて　だからだ！<DONE>
 {text_start}#　ずかん　つくってる？<LINE>くそう！　ぼくも　やりたい！<DONE>
 {text_start}ああ　もう！　くやしい<PROMPT>
-{text_start}<…>　だからさ<LINE>#　ずかん　かんせい　したら<CONT>ぼくに　くれない？<DONE>
-{text_start}あの<…><LINE>#　コスプレ　しってます？<DONE>
+{text_start}<……>　だからさ<LINE>#　ずかん　かんせい　したら<CONT>ぼくに　くれない？<DONE>
+{text_start}あの<……><LINE>#　コスプレ　しってます？<DONE>
 {text_start}しょうが　ない　ですね<PROMPT>
 {text_start}コスプレって　いうのは<LINE>ピッピの　きぐるみ　とか　つくって<CONT>#に　なりきるんです<DONE>
 {text_start}おれの<LINE>#　テクニックで<CONT>ひーひー　いわせるぜ！<DONE>
 {text_start}まいった！<LINE>おまえの　ほうが　テクニシャンだ<PROMPT>
-{text_start}そうだな<…><LINE>やまの　#　には<CONT>いわ　タイプが　おおいぞ<DONE>
-{text_start}たたかっても　いいけど<…><LINE>この　あたりには<CONT>あまり　きた　こと　ないの<DONE>
+{text_start}そうだな<……><LINE>やまの　#　には<CONT>いわ　タイプが　おおいぞ<DONE>
+{text_start}たたかっても　いいけど<……><LINE>この　あたりには<CONT>あまり　きた　こと　ないの<DONE>
 {text_start}まけちゃった<PROMPT>
 {text_start}ちっちゃい　#が　すき<LINE>おっきいのは　こわい　から　いや<DONE>
 {text_start}おとこ　なら<LINE>どーんと　ぶつかって　こい！<DONE>
 {text_start}どーんと！<LINE>こっちが　やられた！<PROMPT>
 {text_start}おれも　ぼうずに　まけない<LINE>#を　そだてて　おくぜ！<DONE>
 {text_start}いえに　いる　ときは<LINE>#の　イラスト　とか　かいてる<DONE>
-{text_start}ああ<…><LINE>ぼく　くたびれた<PROMPT>
+{text_start}ああ<……><LINE>ぼく　くたびれた<PROMPT>
 {text_start}ぼくは　たたかうの　むいて　ないな<LINE>かえって　イラスト　でも　かいてよう<DONE>
 {text_start}ギヤーオ！@
-{text_start}ヒント　いわで　ながれを<LINE>せきとめられるかも<…><DONE>
+{text_start}ヒント　いわで　ながれを<LINE>せきとめられるかも<……><DONE>
 {text_start}キケン！<LINE>ながれが　はやい！<DONE>
 {text_ram wTrainerName}{text_start}は<LINE>@{text_ram wEnemyMonNick}{text_start}をひっこめた！<PROMPT>
 {text_ram wTrainerName}{text_start}は　@{text_ram wEnemyMonNick}{text_start}に<LINE>@{text_ram wNameBuffer}{text_start}を　つかった<PROMPT>
@@ -1141,7 +1141,7 @@
 {text_start}これから<LINE>@{text_ram wLinkEnemyTrainerName}{text_start}の@{text_ram wNameBuffer}{text_start}と<DONE>
 {text_start}<PLAYER>の@{text_ram wStringBuffer}{text_start}を<LINE>こうかんします！<DONE>
 {text_start}スロットマシーンが　ある！<LINE>あそびますか？<DONE>
-{text_start}コインが<LINE>なくなっちゃった<…><DONE>
+{text_start}コインが<LINE>なくなっちゃった<……><DONE>
 {text_start}コインを<LINE>なんまい　かけますか？<DONE>
 {text_start}スタート！<DONE>
 {text_start}コインが　たりません！<PROMPT>
@@ -1154,19 +1154,19 @@
 {text_ram wGymCityName}{text_start}　#　ジム<LINE>@{text_ram wGymLeaderName}{text_start}　にんてい　<TRAINER>！<CONT><RIVAL><DONE>
 {text_ram wGymCityName}{text_start}　#　ジム<LINE>@{text_ram wGymLeaderName}{text_start}　にんてい　<TRAINER>！<CONT><RIVAL>　<PLAYER><DONE>
 {text_start}#センターに　あずけると<LINE>つかれて　うごけない<CONT>#も　げんきに　なるよ！<DONE>
-{text_start}ほぁーひゃ<…>！<PARA>プリンの　うたごえを　きくと<…><LINE>たいていの　#は　ねむくなる<PARA><…>そして<LINE>ぼくも<…>ぐー<…><DONE>
+{text_start}ほぁーひゃ<……>！<PARA>プリンの　うたごえを　きくと<……><LINE>たいていの　#は　ねむくなる<PARA><……>そして<LINE>ぼくも<……>ぐー<……><DONE>
 {text_start}マサキ　にいちゃん<LINE>#　いっぱい　もってるよ！<PARA>めずらしい　#も<LINE>あつめてるって<DONE>
 {text_start}カラカラの　しゅぞくは<LINE>ほねを　かぶってる　だろ？<PARA>あれが　たかく　うれるんだって<DONE>
 {text_start}#を　たくさん　つかまえて<LINE>もちきれない　ときは<PARA><PC>　つうしんで<LINE>あずけると　いいよ<DONE>
 {text_start}シオン　タウンで<LINE>ゆうれい　#が　でるって<CONT>みんな　さわいでるよ<DONE>
 {text_start}ぼくも　#とり　したいなー<DONE>
-{text_start}はしゃぎすぎて　つかれちゃった<…><DONE>
+{text_start}はしゃぎすぎて　つかれちゃった<……><DONE>
 {text_start}シルフのチーフが　サファリゾーンの<LINE>どこかに　かくれてるんだって！<DONE>
-{text_start}たしかに　レベルの　たかい<LINE>#は　つよい　けど<…><PARA>#の　タイプに　よって<LINE>にがてな　あいてが　ある　みたい<PARA>ぜったいに　つよい　#は<LINE>なかなか　いない　みたいだ<DONE>
+{text_start}たしかに　レベルの　たかい<LINE>#は　つよい　けど<……><PARA>#の　タイプに　よって<LINE>にがてな　あいてが　ある　みたい<PARA>ぜったいに　つよい　#は<LINE>なかなか　いない　みたいだ<DONE>
 {text_start}ぼくも　じてんしゃ　もってたら<LINE>サイクリング　ロード　いきたーい！<DONE>
 {text_start}にいちゃん<LINE>#　ずかん　つくってる　なら<CONT>サファリ　ゾーン　いくと　いいよ<PARA>めずらしい　#が<LINE>たくさん　はんしょく　してるって<DONE>
 {text_start}しんかキャンセル　した　あとも<LINE>#は　わざを　おぼえるよ<PARA>わざを　おぼえさせて　いってから<LINE>しんか　させるのも　コツさ<DONE>
-{text_start}あーあ<…><LINE>#　してんのうが　きて<CONT><ROCKET>を　やっつけて<CONT>くれると　いいな<DONE>
+{text_start}あーあ<……><LINE>#　してんのうが　きて<CONT><ROCKET>を　やっつけて<CONT>くれると　いいな<DONE>
 {text_start}<ROCKET>　にげてったね！<LINE>これからは　そと　あるいても<CONT>ちっとも　こわくない！<CONT>よかったね！<DONE>
 {text_start}わーい！　りょこう　だぞー！<LINE>おねえちゃん　だいすき！<DONE>
 {text_start}ほんだなに　ならんでいるのは<LINE>#の　ほん　ばかりだ<DONE>
@@ -1186,37 +1186,37 @@
 {text_start}おなじ　レベルの　おなじ　#<LINE>でも　つかまえる　たびに<CONT>つよさは　ちがう？<DONE>
 {text_start}「<TM>２８」とは<LINE>「しねしねこうせん」である？<DONE>
 {text_start}あたり　です！<PARA>さきへ　すすんで　いいです@
-{text_start}ばか　はずれです<…><PROMPT>
-{text_start}#　ざっしが　ならんでる！<PARA><…>#　てちょう<PARA><…>#　グラフ<DONE>
+{text_start}ばか　はずれです<……><PROMPT>
+{text_start}#　ざっしが　ならんでる！<PARA><……>#　てちょう<PARA><……>#　グラフ<DONE>
 {text_start}<PC>の　がめんに<LINE>てんそうマシンと　でてます！<DONE>
 {text_start}<PLAYER>は　てんそうマシンの<LINE>ぶんり　プログラムを　きどう　した！@
 {text_start}マサキくんの<LINE>おきにいり　#　リスト！<PROMPT>
 {text_start}どれを　みせて　もらい　ますか？<DONE>
-{text_start}<PC>を　みると<LINE>なんと　でんしメールが　きていた！<PARA><…>　<…>　<…><PARA>#を　つよく　そだてて<LINE>たたかう　#　<TRAINER>！<CONT>ここに　さいきょうの<CONT><TRAINER>が　あつまり　ました<PARA>ばしょは　セキエイ　こうげんの<LINE>#　リーグ　ほんぶ　です！<CONT>オーキドはかせも<CONT>いちど　ごらん　ください<CONT><…>　#　リーグ　より<CONT><…>　<…>　<…><DONE>
+{text_start}<PC>を　みると<LINE>なんと　でんしメールが　きていた！<PARA><……>　<……>　<……><PARA>#を　つよく　そだてて<LINE>たたかう　#　<TRAINER>！<CONT>ここに　さいきょうの<CONT><TRAINER>が　あつまり　ました<PARA>ばしょは　セキエイ　こうげんの<LINE>#　リーグ　ほんぶ　です！<CONT>オーキドはかせも<CONT>いちど　ごらん　ください<CONT><……>　#　リーグ　より<CONT><……>　<……>　<……><DONE>
 {text_start}コインケースを　もってない！<DONE>
 {text_start}コインを　もってない！<DONE>
-{text_start}こしょう　ちゅう！<LINE><…>　ざんねん　だけど　こわれてる<DONE>
-{text_start}おしょくじ　ちゅう！<LINE><…>　の　フダが　かけてある！<DONE>
-{text_start}カギが　おいてある<…><LINE>きっと　これは　だれかの　だいだ！<DONE>
+{text_start}こしょう　ちゅう！<LINE><……>　ざんねん　だけど　こわれてる<DONE>
+{text_start}おしょくじ　ちゅう！<LINE><……>　の　フダが　かけてある！<DONE>
+{text_start}カギが　おいてある<……><LINE>きっと　これは　だれかの　だいだ！<DONE>
 {text_start}ちょっと　まってね<DONE>
-{text_start}<TM>の　パンフレットだ！<LINE><…>　<…><PARA><TM>は<LINE>ぜんぶで　５０しゅるい！<PARA>ひでんマシンは<LINE>つかっても　なくならない　タイプ<CONT>ぜんぶで　５しゅるい　あります<PARA><…>　シルフ　カンパニー@
+{text_start}<TM>の　パンフレットだ！<LINE><……>　<……><PARA><TM>は<LINE>ぜんぶで　５０しゅるい！<PARA>ひでんマシンは<LINE>つかっても　なくならない　タイプ<CONT>ぜんぶで　５しゅるい　あります<PARA><……>　シルフ　カンパニー@
 {text_start}つぎのページ　あけちゃおうか？<DONE>
 {text_start}おんなのこ『あー！<LINE>ノート　みちゃ　だめ！@
-{text_start}ノートを　のぞいた！<PARA>１ページめ　<…><PARA>#は<LINE>モンスターボールで　つかまえて<CONT>６つまで　もち　あるける<PARA>#を　そだてて　たたかわせる<LINE>ひとを　#　<TRAINER>という<PROMPT>
-{text_start}２ページめ　<…><PARA>#を　つかまえる　ときは<LINE>まず　よわらせてから！<CONT>どくや　やけどで<PARA>よわらせても　いいよ！<LINE>げんきだと　うまく　とれないかも<PROMPT>
-{text_start}３ページめ　<…><PARA>#どうしを　たたかわせ<LINE>かつことは　<TRAINER>に　とって<CONT>さいこうの　よろこび　である！<PARA>かくちの　#　ジムでは<LINE>いつも　はげしい<CONT>たたかいが　くりひろげられてる！<PROMPT>
-{text_start}４ページめ　<…><PARA>#<TRAINER>の　もくひょうは<LINE>かくちの　ジムに　いる<PARA>つよい　<TRAINER><LINE>８にんしゅうを　たおすこと！<PARA>さらに　#リーグ　ほんぶには<LINE><…>　もうれつに　つよい！<PARA>してんのうが　くんりん　してる！<PROMPT>
+{text_start}ノートを　のぞいた！<PARA>１ページめ　<……><PARA>#は<LINE>モンスターボールで　つかまえて<CONT>６つまで　もち　あるける<PARA>#を　そだてて　たたかわせる<LINE>ひとを　#　<TRAINER>という<PROMPT>
+{text_start}２ページめ　<……><PARA>#を　つかまえる　ときは<LINE>まず　よわらせてから！<CONT>どくや　やけどで<PARA>よわらせても　いいよ！<LINE>げんきだと　うまく　とれないかも<PROMPT>
+{text_start}３ページめ　<……><PARA>#どうしを　たたかわせ<LINE>かつことは　<TRAINER>に　とって<CONT>さいこうの　よろこび　である！<PARA>かくちの　#　ジムでは<LINE>いつも　はげしい<CONT>たたかいが　くりひろげられてる！<PROMPT>
+{text_start}４ページめ　<……><PARA>#<TRAINER>の　もくひょうは<LINE>かくちの　ジムに　いる<PARA>つよい　<TRAINER><LINE>８にんしゅうを　たおすこと！<PARA>さらに　#リーグ　ほんぶには<LINE><……>　もうれつに　つよい！<PARA>してんのうが　くんりん　してる！<PROMPT>
 {text_start}しめん　そか<DONE>
 {text_start}いんが　おうほう<DONE>
 {text_start}かくとう　どうじょう！<DONE>
 {text_start}セキエイこうげん<LINE>#リーグ　ほんぶ<DONE>
-{text_start}<PLAYER>は<LINE>スーパーファミコンを　してる！<CONT><…>　<…>　よし！<CONT>そろそろ　でかけよう！<DONE>
-{text_start}ぼうえんきょうを　のぞいた<…><PARA>おおきな　とりが<LINE>キラキラ　ひかりながら<CONT>うみの　ほうへ　とんでいく<…><DONE>
+{text_start}<PLAYER>は<LINE>スーパーファミコンを　してる！<CONT><……>　<……>　よし！<CONT>そろそろ　でかけよう！<DONE>
+{text_start}ぼうえんきょうを　のぞいた<……><PARA>おおきな　とりが<LINE>キラキラ　ひかりながら<CONT>うみの　ほうへ　とんでいく<……><DONE>
 {text_start}めずらしい　こだい　#<LINE>プテラの　カセキ<DONE>
 {text_start}めずらしい　こだい　#<LINE>カブトプスの　カセキ<DONE>
 {text_start}わしの　かわいい　ギャロップ<DONE>
 {text_start}わしの　いとしい　オニドリル<DONE>
-{text_start}<…>　#　こうざ！<PARA>つうしん　ケーブルを　つかった<LINE>あそびかた　に　ついて<PROMPT>
+{text_start}<……>　#　こうざ！<PARA>つうしん　ケーブルを　つかった<LINE>あそびかた　に　ついて<PROMPT>
 {text_start}どの　こうもくを　よみますか？<DONE>
 {text_start}ともだちの　ゲームボーイと<LINE>ケーブルで　つないだら<CONT>ポケモンセンター　みぎがわの<CONT>カウンターの　おねえさんが<CONT>あんない　してくれます<PROMPT>
 {text_start}コロシアムは<LINE>ともだちと　たいせん　するとき<CONT>はいる　へや　です<PROMPT>
@@ -1228,11 +1228,11 @@
 {text_start}マヒすると　わざが<LINE>ときどき　でなく　なります！<PARA>たたかい　おわっても<LINE>マヒは　のこります<CONT>また　まひなおしで　なおります<PROMPT>
 {text_start}やけどは　たいりょくが　へって<LINE>こうげきりょくと　すばやさも<CONT>さがって　しまいます！<PARA>たたかい　おわっても<LINE>やけどは　のこります<CONT>また　やけどなおしで　なおります<PROMPT>
 {text_start}こおって　しまうと<LINE>まったく　うごけなく　なります！<PARA>たたかい　おわっても　こおってます<LINE>こおりなおしで　とかさないと<CONT>#が　かわいそう<PROMPT>
-{text_start}ガサゴソ<…>！<LINE>なかは　ゴミ　ばっかり！<DONE>
-{text_start}ガサゴソ<…>！<LINE>おっと！　ゴミばこの　そこに<CONT>スイッチが　あった！<CONT>おして　みよう！　<…>　ポチッとな<PARA>でんどうドアの<LINE>だい１　ロックが　はずれた！@
-{text_start}ガサゴソ<…>！<LINE>おっと！　ゴミばこの　そこに<CONT>また　スイッチが　あった！<CONT>おして　みよう！　<…>　ポチッとな<PROMPT>
+{text_start}ガサゴソ<……>！<LINE>なかは　ゴミ　ばっかり！<DONE>
+{text_start}ガサゴソ<……>！<LINE>おっと！　ゴミばこの　そこに<CONT>スイッチが　あった！<CONT>おして　みよう！　<……>　ポチッとな<PARA>でんどうドアの<LINE>だい１　ロックが　はずれた！@
+{text_start}ガサゴソ<……>！<LINE>おっと！　ゴミばこの　そこに<CONT>また　スイッチが　あった！<CONT>おして　みよう！　<……>　ポチッとな<PROMPT>
 {text_start}でんどうドアの<LINE>だい２　ロックが　はずれた！<PARA>おおきな　でんどうドアが<LINE>かんぜんに　ひらいた！@
-{text_start}ガサゴソ<…>！<LINE>なかは　ゴミ　ばっかり！<CONT>あッ！　でんどうドアの<CONT>ロックが　もどって　しまった！@
+{text_start}ガサゴソ<……>！<LINE>なかは　ゴミ　ばっかり！<CONT>あッ！　でんどうドアの<CONT>ロックが　もどって　しまった！@
 {text_start}<PLAYER>は<LINE>@{text_ram wNameBuffer}{text_start}を　みつけた！@
 {text_start}しかし　<PLAYER>は<LINE>どうぐを　もう　もてない！<DONE>
 {text_start}<PLAYER>は<LINE>コインを　@{text_bcd hCoins, 2 | LEADING_ZEROES | LEFT_ALIGN}{text_start}まい　みつけた！@
@@ -1242,7 +1242,7 @@
 {text_start}#　<TRAINER>の　ちょうてん！<LINE>#　リーグ　ほんぶ<DONE>
 {text_start}#の　さいこう　きかん<LINE>#　リーグ　ほんぶ<DONE>
 {text_start}#の　ほんが　いっぱい！<DONE>
-{text_start}ぶつだん　だ<…><DONE>
+{text_start}ぶつだん　だ<……><DONE>
 {text_start}ここは　エレベーターだ！<DONE>
 {text_start}タウンマップだ！@
 {text_start}わあ！　#グッズが<LINE>たくさん　そろってるぞ！<DONE>
@@ -1274,7 +1274,7 @@
 {text_ram wBattleMonNick}{text_start}は　だすことの　できる<LINE>わざが　ない！<DONE>
 {text_start}あいてに　@{text_decimal wPlayerNumHits, 1, 1}{text_start}かい　あたった！<PROMPT>
 {text_ram wBattleMonNick}{text_start}は　こわがっている！<LINE>わざを　だすことが　できない！<PROMPT>
-{text_start}ゆうれい『タチサレ<…>タチサレ<…><PROMPT>
+{text_start}ゆうれい『タチサレ<……>タチサレ<……><PROMPT>
 {text_start}<USER>は<LINE>ぐうぐう　ねむっている<PROMPT>
 {text_start}<USER>は　めをさました！<PROMPT>
 {text_start}<USER>は<LINE>こおって　しまって　うごかない！<PROMPT>
@@ -1304,7 +1304,7 @@
 {text_start}しかし　<USER>の<LINE>こうげきは　はずれた！<PROMPT>
 {text_start}いきおい　あまって<LINE><USER>は<CONT>じめんに　ぶつかった！<PROMPT>
 {text_start}<TARGET>には<LINE>ぜんぜんきいてない！<PROMPT>
-{text_start}<TARGET>には<LINE>こうかが　ない　みたいだ<…><PROMPT>
+{text_start}<TARGET>には<LINE>こうかが　ない　みたいだ<……><PROMPT>
 {text_start}きゅうしょに　あたった！<PROMPT>
 {text_start}いちげき　ひっさつ！<PROMPT>
 {text_ram wBattleMonNick}{text_start}は　なまけている<PROMPT>
@@ -1313,7 +1313,7 @@
 {text_ram wBattleMonNick}{text_start}は　そっぽを　むいた<PROMPT>
 {text_ram wBattleMonNick}{text_start}は　しらんぷりをした<PROMPT>
 {text_start}<TARGET>に　かわって<LINE>ぶんしんが　こうげきを　うけた！<PROMPT>
-{text_start}<TARGET>の　ぶんしんは<LINE>きえてしまった<…><PROMPT>
+{text_start}<TARGET>の　ぶんしんは<LINE>きえてしまった<……><PROMPT>
 {text_start}<USER>の　いかりの<LINE>ボルテージが　あがっていく！<PROMPT>
 {text_start}しかし　オウムがえしは<NEXT>しっぱいにおわった！<PROMPT>
 {text_decimal wEnemyNumHits, 1, 1}{text_start}かい　ダメージをうけた！<PROMPT>
@@ -1402,7 +1402,7 @@
 {text_start}おきゃくさん　もう　もてないよ@
 {text_start}あっ　そう@
 {text_start}げんざいの　#ずかんを<LINE>ひょうか　して　もらい　ますか？<DONE>
-{text_start}<…>　オーキドの　<PC>との<LINE>せつぞくを　おわった！@
+{text_start}<……>　オーキドの　<PC>との<LINE>せつぞくを　おわった！@
 {text_start}オーキドの　<PC>と　つないだ！<PARA>#　ずかん<LINE>ひょうか　システムを　よびだした！<PROMPT>
 [NULL]
 {text_start}イエローバージョンの<LINE>メモリガ　たりません<DONE>
@@ -1439,7 +1439,7 @@
 {text_decimal hTextID, 1, 2}{text_start}エラー<DONE>
 {text_start}<_CONT>@@
 {text_start}#が　はいっていません！<PROMPT>
-{text_start}イワヤマトンネルに　いったけど<LINE>まっくらで　こわいよ<PARA>#に　フラッシュで<LINE>あかるく　させればなあ<…><DONE>
+{text_start}イワヤマトンネルに　いったけど<LINE>まっくらで　こわいよ<PARA>#に　フラッシュで<LINE>あかるく　させればなあ<……><DONE>
 {text_start}もりや　どうくつ　しか<LINE>いない　#も　おおいよ<PARA>いろんな　#　とるなら<LINE>しつこく　さがしまわる　ことだね<DONE>
 {text_start}どうろの　あちこちに<LINE>ほそい　きが　あったろ？<PARA>あそこは　#の　わざで<LINE>きって　とおれる　そうじゃ<DONE>
 {text_start}#の　ひんし　じょうたいは<LINE>たたかう　げんきが　ない　だけで<PARA>いあいぎり　などの　わざは<LINE>いつもの　ように　つかえる！<DONE>
@@ -1447,25 +1447,25 @@
 {text_start}#が<LINE>フラッシュを　おぼえたら<CONT>イワヤマトンネルが　とおれるね<DONE>
 {text_start}トキワの　もりへ　いくの？<LINE>もりは　てんねんの　めいろよ<CONT>まよわないよう　きを　つけて<DONE>
 {text_start}いろんな　#を　あつめるなら<LINE>いろんな　ところを　あるかないとね<PARA>トキワのもり　いがいだと<LINE>また　べつの#が　みつかるわ<DONE>
-{text_start}ボールを　ベルトに　セット<LINE>１　２　３　４　５　６<…>　と！<PARA>うん<…>　つれて　いける<LINE>#は　６ひき　までだ<DONE>
-{text_start}ハナダ　シティの　みんか<LINE>おそわれる<…>　か！<PARA>しんぶんに　<ROCKET>の<LINE>じけんが　のらない　ひは　ないな<DONE>
+{text_start}ボールを　ベルトに　セット<LINE>１　２　３　４　５　６<……>　と！<PARA>うん<……>　つれて　いける<LINE>#は　６ひき　までだ<DONE>
+{text_start}ハナダ　シティの　みんか<LINE>おそわれる<……>　か！<PARA>しんぶんに　<ROCKET>の<LINE>じけんが　のらない　ひは　ないな<DONE>
 {text_start}<DONE>
-{text_start}おじさん『ぼっちゃん<LINE>あ・な・た・だけに<…>！<CONT>いい　おはなしが　ありまして<PARA>ひみつの　#　コイキングが<LINE>なんと　たったの　５００円！<CONT>どうだい　かうかね？<DONE>
-{text_start}そお？　ざんねんだねえ<…><DONE>
+{text_start}おじさん『ぼっちゃん<LINE>あ・な・た・だけに<……>！<CONT>いい　おはなしが　ありまして<PARA>ひみつの　#　コイキングが<LINE>なんと　たったの　５００円！<CONT>どうだい　かうかね？<DONE>
+{text_start}そお？　ざんねんだねえ<……><DONE>
 {text_start}おかね　たりない　みたいだねえ<DONE>
 {text_start}おじさん『そうそう　#の<LINE>へんぴんは　おことわり　だからな<DONE>
-{text_start}わたし　まじめな　けいびいん<LINE>はー<…><CONT>のどが　かわいた！<CONT>おっと　そっちは<CONT>いま　つうこう　きんしだよ<DONE>
-{text_start}あ　それは<LINE>おいしそうな　のみもの<…><CONT><…>　<…><CONT>え？<CONT>ぼくに　くれる？<CONT>サンキュー！@
-{text_start}<PARA><…>　<…><LINE>ゴクゴク<…><CONT><…><CONT>ゴクゴク<…>　<…><CONT>ヤマブキ　シティに<CONT>いく　なら<…><CONT><…><CONT><…>　<…><CONT>とおって　いいよ<CONT>ジュースを<CONT>むこうの　ゲートの<CONT>けいびいんにも　わけてあげよう<…><DONE>
-{text_start}あ<…><LINE>この　あいだは　どーも！<DONE>
+{text_start}わたし　まじめな　けいびいん<LINE>はー<……><CONT>のどが　かわいた！<CONT>おっと　そっちは<CONT>いま　つうこう　きんしだよ<DONE>
+{text_start}あ　それは<LINE>おいしそうな　のみもの<……><CONT><……>　<……><CONT>え？<CONT>ぼくに　くれる？<CONT>サンキュー！@
+{text_start}<PARA><……>　<……><LINE>ゴクゴク<……><CONT><……><CONT>ゴクゴク<……>　<……><CONT>ヤマブキ　シティに<CONT>いく　なら<……><CONT><……><CONT><……>　<……><CONT>とおって　いいよ<CONT>ジュースを<CONT>むこうの　ゲートの<CONT>けいびいんにも　わけてあげよう<……><DONE>
+{text_start}あ<……><LINE>この　あいだは　どーも！<DONE>
 {text_start}わたしは　そだてやさん<LINE>なにか　そだてて　みるかね？<DONE>
 {text_start}それでは<LINE>なにを　そだてて　みるかね？<PROMPT>
 {text_start}わかった<LINE>しばらく@{text_ram wNameBuffer}{text_start}を　あずかろう<PROMPT>
 {text_start}てきとうに　じかんが　たったら<LINE>また　きなさい<DONE>
 {text_start}おまえの　@{text_ram wNameBuffer}{text_start}<LINE>ずいぶんと　せいちょうしたぞ<PARA>そうだな　レベルで　いうと<LINE>@{text_decimal wDayCareNumLevelsGrown, 1, 3}{text_start}くらい　そだってるな<PARA>やっぱり　わたしは　てんさいだ！<PROMPT>
-{text_start}<…>で　#を　ひきとるなら<LINE>りょうきんは　@{text_bcd wDayCareTotalCost, 2 | LEADING_ZEROES | LEFT_ALIGN}{text_start}円　だよ<DONE>
+{text_start}<……>で　#を　ひきとるなら<LINE>りょうきんは　@{text_bcd wDayCareTotalCost, 2 | LEADING_ZEROES | LEFT_ALIGN}{text_start}円　だよ<DONE>
 {text_start}<PLAYER>は　そだてやさんから<LINE>@{text_ram wDayCareMonName}{text_start}を　ひきとった！<DONE>
-{text_start}なんだ　もう　きたのか<LINE>おまえの　@{text_ram wNameBuffer}{text_start}は<…><PARA>まだ　じかんが　かかるぞ<PROMPT>
+{text_start}なんだ　もう　きたのか<LINE>おまえの　@{text_ram wNameBuffer}{text_start}は<……><PARA>まだ　じかんが　かかるぞ<PROMPT>
 {text_start}そうか　それじゃ<LINE>@
 {text_start}また　きなさいよ<DONE>
 {text_start}だけど　つれていくには<LINE>#が　いっぱいのようだな<DONE>
@@ -1475,7 +1475,7 @@
 {text_start}かねが　たらんな<DONE>
 {text_start}ちかつうろは　うすぐらいから<LINE>おとしもの　おおいんですって<DONE>
 {text_start}この　ところ<LINE>タマムシ　シティの　ほう　でも<CONT>いねむり　#が<CONT>あらわれる　そうだよ<DONE>
-{text_start}「たまむし」シティの　デパートへ<NEXT>かいものに　いきたいんだけど<…><PARA>あのまちには　ガラのわるい　ひとが<LINE>おおくて　なんだか　こわいのよね<DONE>
+{text_start}「たまむし」シティの　デパートへ<NEXT>かいものに　いきたいんだけど<……><PARA>あのまちには　ガラのわるい　ひとが<LINE>おおくて　なんだか　こわいのよね<DONE>
 {text_start}「たまむし」シティに<NEXT>「<ROCKET>」のアジトが<CONT>あったんですって？<DONE>
 {text_start}おまえも　「たまむし」シティに<NEXT>かいものに　きたんだな<PARA>ドアから　でて<LINE>すぐ　にしがわのまちが　そうだよ<DONE>
 {text_start}かいだんの　したにある　つうろは<NEXT>「やまぶき」の　したを　とおって<CONT>「しおん」へ　つながっているんだ<PARA>「はなだ」へ　いきたいんなら<PARA>みちを　はさんで　むかいがわに<LINE>たってる　たてものに　いきなよ<DONE>
@@ -1493,9 +1493,9 @@
 {text_start}おまえ　みこみが　ある<LINE>やまおとこに　ならんか？<DONE>
 {text_start}#　ファイトー！<LINE>レディー　ゴー！<DONE>
 {text_start}やぶれたのか<PROMPT>
-{text_start}ズバットでも<LINE>とって　かえろうかな<…><DONE>
+{text_start}ズバットでも<LINE>とって　かえろうかな<……><DONE>
 {text_start}きゃ　びっくり！<LINE>うすぐらい　からって<CONT>へんな　こと　しないで！<DONE>
-{text_start}<…>　くらくて<LINE>よく　みえないんだもん<PROMPT>
+{text_start}<……>　くらくて<LINE>よく　みえないんだもん<PROMPT>
 {text_start}トンネルにも　#　いるのね<LINE>さっき　ワンリキーが　いたわ<DONE>
 {text_start}#　さがしに　きて<LINE>こんな　とこまで　きちゃった！<DONE>
 {text_start}もう　#　ないわ<PROMPT>
@@ -1503,17 +1503,17 @@
 {text_start}あ　それは　#！<LINE>さっそく　はじめましょ！<DONE>
 {text_start}でなおして　くるわ<PROMPT>
 {text_start}エキサイト　して<LINE>あせ　かいちゃったわ<DONE>
-{text_start}ここは　イワヤマ　トンネル<LINE>ハナダ　シティ　<…>　シオン　タウン<DONE>
+{text_start}ここは　イワヤマ　トンネル<LINE>ハナダ　シティ　<……>　シオン　タウン<DONE>
 {text_start}ビリリ！<DONE>
 {text_start}ギヤーオ！@
 {text_start}#を　たくさん　とると<LINE>なまえを　つけて　あげるのに<CONT>くろう　しちゃう　でしょ！<PARA>この　さきの　シオン　タウンに<LINE>#の　なまえを<CONT>うらなって　くれる　ひとが　いるよ<PARA>#に　もっと　いい　なまえを<LINE>つけ　なおす　ことも　できるよ<DONE>
 {text_start}めに　みえて　なくても<LINE>べんりな　どうぐが<CONT>あちこちに　おちて　います！<PARA>ダウジング　マシンで<LINE>ちかくに　なにか　おちてるか<CONT>どうかが　わかります！<PARA>くわしい　ばしょは<LINE>マシンでも　わかりません！<CONT>ちかくを　さがして　みて　ください<DONE>
 {text_start}ぼうえんきょうを　のぞいた！<PARA>どうろに　#が　ねてる！<DONE>
 {text_start}ぼうえんきょうを　のぞいた！<PARA>すばらしい　けしきだ！<DONE>
-{text_start}ぼうえんきょうを　のぞいた！<PARA>シオン　タウンに　いく　には<…><LINE>ハナダ　シティ　から<CONT>イワヤマを　ぬければ　よさそう<…><DONE>
+{text_start}ぼうえんきょうを　のぞいた！<PARA>シオン　タウンに　いく　には<……><LINE>ハナダ　シティ　から<CONT>イワヤマを　ぬければ　よさそう<……><DONE>
 {text_start}たまげた　もんだ！<LINE>この　ながーい　どうくつ！<CONT>ディグダが　ほったんだと！<PARA>トキワ　シティまで<LINE>つながっとる　そうだ！<DONE>
 {text_start}２かいは　みはらしの　よい<LINE>てんぼうだいに　なってます<DONE>
-{text_start}わたしが　かわいがってた　#<LINE>いまは　#　タワーで<CONT>ねむってるの<…><PARA><…>　そうだ　わたしの　<TM><LINE>おにいちゃんに　あげるわ<CONT>わたし<…>　もう　いらない　から<PROMPT>
+{text_start}わたしが　かわいがってた　#<LINE>いまは　#　タワーで<CONT>ねむってるの<……><PARA><……>　そうだ　わたしの　<TM><LINE>おにいちゃんに　あげるわ<CONT>わたし<……>　もう　いらない　から<PROMPT>
 {text_start}<PLAYER>は　おんなのこから<LINE><TM>３９を　もらった！@
 {text_start}<TM>３９は<LINE>スピードスター　という　わざよ<PARA>この　わざは　めいちゅうりつが<LINE>すごく　たかいの<CONT>まけられない　しょうぶの　とき<CONT>やくに　たつ　はずよ<DONE>
 {text_start}にもつ　いっぱいで　もてないよ<DONE>
@@ -1522,12 +1522,12 @@
 {text_start}わしは<LINE>つりおやじの　おとうと　じゃ！<PARA>もう　たまらん　ほど<LINE>つりが　すき　なんだが<PARA>きみは　つり　すき　かな？<DONE>
 {text_start}そうか！<LINE>きみとは　きが　あいそうだ！<PARA>これ　あげるから<LINE>きみも　つり　まくりなさいよ！<PARA><PLAYER>は　つりおやじから<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
 {text_start}<PARA>つり　こそ<LINE>おとこの　ロマン　だ！<PARA>うみでも　かわでも！<PARA>えんりょ　なく<LINE>つりざおを　つかって　くれい！<DONE>
-{text_start}なんじゃ<…>　がっかりだ<DONE>
+{text_start}なんじゃ<……>　がっかりだ<DONE>
 {text_start}やー　<PLAYER>くん！<PARA>すごいつりざおは<LINE>ばしょを　かえると<CONT>つれる　#も　かわる！<PARA>あっちこっちで<LINE>つり　まくって　くれい！<DONE>
 {text_start}ありゃー！<PARA>いいもの　あげようと　したのに<LINE>にもつが　いっぱいじゃ！<DONE>
 {text_start}#ずかん<LINE>つくってる　こ　って　きみ？<PARA>オーキドはかせの　じょしゅの<LINE>かたが　きてたよ<DONE>
 {text_start}がくしゅうそうちは<LINE>たたかわない　#も<CONT>けいけんちが　もらえます<PARA>でも　１ぴき　あたりの<LINE>わけまえが　すくなく　なるので<CONT>つかいたくない　ときは<CONT><PC>に　あずけて　ください<CONT>そうちは　どうさ　しません<DONE>
-{text_start}ぼうえんきょうを　のぞいた！<PARA>うみの　むこうに<…><LINE>ちいさな　しまが　みえる！<DONE>
+{text_start}ぼうえんきょうを　のぞいた！<PARA>うみの　むこうに<……><LINE>ちいさな　しまが　みえる！<DONE>
 {text_start}サイクリング　ロードは<LINE>あるいて　すすむと　キケンです！<CONT>じてんしゃに　のって　きてね<DONE>
 {text_start}サイクリング　ロードは<LINE>うみを　いく　さかみち！<CONT>かけおりると　きもち　いいよ！<DONE>
 {text_start}ちょっと　きみ　きみ！<DONE>
@@ -1536,17 +1536,17 @@
 {text_start}うふふ！<LINE>これから　サイクリングに　いくの<DONE>
 {text_start}ぼうえんきょうを　のぞいた！<PARA>タマムシ　デパートが　みえる！<DONE>
 {text_start}ぼうえんきょうを　のぞいた！<PARA>むこうに　うみの　うえを　とおる<LINE>ながーい　みちが　みえる！<DONE>
-{text_start}あらま<…>！<LINE>みつかっちゃったわね！<PARA>わたしの　こと<LINE>だれにも　いわないで<CONT>これ　あげる　から<CONT><…>　おねがいよ<PROMPT>
+{text_start}あらま<……>！<LINE>みつかっちゃったわね！<PARA>わたしの　こと<LINE>だれにも　いわないで<CONT>これ　あげる　から<CONT><……>　おねがいよ<PROMPT>
 {text_start}<PLAYER>は　おんなのこから<LINE>ひでんマシン０２を　もらった！@
 {text_start}ひでんマシン０２は　そらをとぶ！<LINE>とても　べんりな<CONT>すばらしい　わざ　なの！<PARA>だいじに　つかってね！<DONE>
 {text_start}あなた　にもつ　いっぱいよ<DONE>
 {text_start}オニドリル『キュイン！<DONE>
 {text_start}サイクリング　ロード　には<LINE>じてんしゃで　いって　ください！<DONE>
 {text_start}サイクリング　ロード<LINE>こちら　からは　のぼり　ざか　です<DONE>
-{text_start}<…>　ちょっと　すいません！<DONE>
+{text_start}<……>　ちょっと　すいません！<DONE>
 {text_start}ぼうえんきょうを　のぞいた！<PARA>にしに　マサラ　タウンが　みえる<DONE>
 {text_start}ぼうえんきょうを　のぞいた！<PARA>およいでる　ひとが　みえる！<DONE>
-{text_start}むむっ<PARA>そいつは　なみのりピカチュウ　だな！<LINE>わし　いがいにも<CONT>つれている　やつが　いるとは<…><PARA>よしっ！<LINE>きみだけ　とくべつに<CONT>なみのりで　あそばせて　やろう！<PARA>あそんでいくか？<DONE>
+{text_start}むむっ<PARA>そいつは　なみのりピカチュウ　だな！<LINE>わし　いがいにも<CONT>つれている　やつが　いるとは<……><PARA>よしっ！<LINE>きみだけ　とくべつに<CONT>なみのりで　あそばせて　やろう！<PARA>あそんでいくか？<DONE>
 {text_start}あそびたくなったら<LINE>いつでも　きなさい！<DONE>
 {text_start}なみのりで　あそんでいくか？<DONE>
 {text_start}ラーメン　やきソバ<LINE>いかがですかー？<DONE>
@@ -1557,7 +1557,7 @@
 {text_start}うみの　いえ<LINE>#　だいかんげい！<DONE>
 {text_start}なみのりの　こころえ　そのに！<PARA>ジャンプ　してる　あいだに<LINE>れんぞくして　かいてん　すると<CONT>すごく　かっこいいぞ！<DONE>
 {text_start}うみ　こそ　ロマン！<DONE>
-{text_start}なんだろう<…>？<LINE>なにかの　きかい　かな？@
+{text_start}なんだろう<……>？<LINE>なにかの　きかい　かな？@
 {text_start}サマービーチよう　プリントそうち<LINE>と　かかれている@
 {text_start}げんざいの　さいこう　きろくが<LINE>ひょうじ　されている！<PARA>プリント　しますか？<DONE>
 {text_start}サマービーチよう　プリントそうち<LINE>と　かかれている<PARA>げんざいの　さいこう　きろくが<LINE>ひょうじ　されている！<PARA>プリント　しますか？<DONE>
@@ -1571,35 +1571,35 @@
 {text_start}チェストー！<PROMPT>
 {text_start}ここも　いたる　ところに<LINE>しかけが　ある！　こまったときは<CONT>いわを　おして　みろ！<DONE>
 {text_start}ここに　きた　から　には<LINE>してんのうに　いどむ　つもりだな！<DONE>
-{text_start}<…>　できるッ！<PROMPT>
+{text_start}<……>　できるッ！<PROMPT>
 {text_start}そうだ！　<RIVAL>も<LINE>ここを　ぬけてったぜ！<DONE>
 {text_start}ピシッ　ピシーッ！<LINE>ムチが　しなるぜーッ！<DONE>
 {text_start}ひゅーッ！<PROMPT>
-{text_start}さすが　チャンピオン　ロードに<LINE>くる　だけの　ことは　あるな<…>！<DONE>
+{text_start}さすが　チャンピオン　ロードに<LINE>くる　だけの　ことは　あるな<……>！<DONE>
 {text_start}ここを　ぶじに　ぬければ<LINE>してんのうに　あえるぞ！<DONE>
-{text_start}<…>　ありー！<PROMPT>
+{text_start}<……>　ありー！<PROMPT>
 {text_start}#の　ちしき　だったら<LINE>ぼくは　まけないと　おもうぞ！<DONE>
 {text_start}どうだ！<LINE>チャンピオン　ロードは　きついか？<DONE>
 {text_start}よし　ごうかくだ！<PROMPT>
 {text_start}ここで　へばって<LINE>ひきかえす　やつも　おおいぜ！<DONE>
 {text_start}なんや　どこ　いくんや！<LINE>ちょっと　まちーな<DONE>
-{text_start}こんちわ！<LINE>ぼく　#<…>！<CONT><…>　ちゃうわい！<PARA>わいは　マサキ！<LINE>ひと　よんで　#マニアや！<CONT>あッ　なんや　そのめは？<CONT>あんさん　しんよう　してへんな<PARA>ホントやで！<LINE>じっけんに　しっぱい　して<CONT>#と　くっついて　もうたんや<PARA>なッ！<LINE>たすけて　くれへん？<DONE>
+{text_start}こんちわ！<LINE>ぼく　#<……>！<CONT><……>　ちゃうわい！<PARA>わいは　マサキ！<LINE>ひと　よんで　#マニアや！<CONT>あッ　なんや　そのめは？<CONT>あんさん　しんよう　してへんな<PARA>ホントやで！<LINE>じっけんに　しっぱい　して<CONT>#と　くっついて　もうたんや<PARA>なッ！<LINE>たすけて　くれへん？<DONE>
 {text_start}わいが<LINE>てんそう　マシンに　はいるさかい<CONT>ぶんり　プログラムを　たのむで！<CONT>そうや　そこの　<PC>や！<DONE>
-{text_start}そんなあ<…><LINE>つめたい　こと　いわんといて<CONT>よッ<…>　いろおとこ！<CONT>にくいねーッ<CONT>だいとうりょう！<CONT>ほな！　オッケー　やな！<CONT>きまりや！<PROMPT>
-{text_start}マサキ『やあー！<LINE>おおきに　おおきに　たすかったわ！<PARA>で<…>　あんさん！<LINE>わての　#　コレクション<CONT>みに　きたの　ちゃうんか？<CONT>なんや　おもろないなー<CONT>ああ　そや！<PARA>おれい　っちゅーのも<LINE>なんやけど<…>　これ　やるわ！<PROMPT>
+{text_start}そんなあ<……><LINE>つめたい　こと　いわんといて<CONT>よッ<……>　いろおとこ！<CONT>にくいねーッ<CONT>だいとうりょう！<CONT>ほな！　オッケー　やな！<CONT>きまりや！<PROMPT>
+{text_start}マサキ『やあー！<LINE>おおきに　おおきに　たすかったわ！<PARA>で<……>　あんさん！<LINE>わての　#　コレクション<CONT>みに　きたの　ちゃうんか？<CONT>なんや　おもろないなー<CONT>ああ　そや！<PARA>おれい　っちゅーのも<LINE>なんやけど<……>　これ　やるわ！<PROMPT>
 {text_start}<PLAYER>は　マサキから<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
 {text_start}にもつ　いっぱいで　もてへんよ<DONE>
 {text_start}いま　クチバの　みなとに<LINE>サント・アンヌ　ごうが　きとんのや<CONT>#　<TRAINER>も<CONT>ぎょうさん　くる　らしいで<PARA>チケット　もろたのは　ええんやけど<LINE>パーティとか　すきや　ないからな<CONT>かわりに　いって　あそんでえな<DONE>
 {text_start}マサキ『そや！<PARA>わての　#　コレクション<LINE>ちびっと　だけ　みせたろか？<CONT>わての　<PC>　みてみぃ<DONE>
-{text_start}わたし　フレンドリィショップの<LINE>てんいん　です<PARA>べんりな　どうぐや　ですから<LINE>トキワ　シティで<CONT>ぜひ　よって　くださいね！<PARA>そうだ！<LINE>みほんを　さしあげましょう<CONT><…>　どうぞ！<PROMPT>
+{text_start}わたし　フレンドリィショップの<LINE>てんいん　です<PARA>べんりな　どうぐや　ですから<LINE>トキワ　シティで<CONT>ぜひ　よって　くださいね！<PARA>そうだ！<LINE>みほんを　さしあげましょう<CONT><……>　どうぞ！<PROMPT>
 {text_start}<PLAYER>は<LINE>「@{text_ram wStringBuffer}{text_start}」を　もらった！@
 {text_start}#を　つかまえる<LINE>モンスターボール　かう　ときも<CONT>ショップへ　いらして　ください！<DONE>
 {text_start}にもつが　いっぱいだ！<DONE>
-{text_start}みちに　だんさが　あるだろ！<PARA>とび　おりるのは<LINE>ちょっと　こわいけど<…><PARA>マサラ　タウンに　かえる　ときは<LINE>はやく　かえれて　いいよ<DONE>
-{text_start}ここは　１ばん　どうろ<LINE>マサラ　タウン　<…>　トキワ　シティ<DONE>
-{text_start}ここは　２ばん　どうろ<LINE>トキワ　シティ　<…>　ニビ　シティ<DONE>
+{text_start}みちに　だんさが　あるだろ！<PARA>とび　おりるのは<LINE>ちょっと　こわいけど<……><PARA>マサラ　タウンに　かえる　ときは<LINE>はやく　かえれて　いいよ<DONE>
+{text_start}ここは　１ばん　どうろ<LINE>マサラ　タウン　<……>　トキワ　シティ<DONE>
+{text_start}ここは　２ばん　どうろ<LINE>トキワ　シティ　<……>　ニビ　シティ<DONE>
 {text_start}ここは　ディグダの　あな<DONE>
-{text_start}ふう<…><LINE>この　へんで<…><CONT><…>　ひとやすみ　して　いこう<PARA>ハナダ　シティから<LINE>どうくつを　ぬけて　きたら<CONT><…>　つかれた<DONE>
+{text_start}ふう<……><LINE>この　へんで<……><CONT><……>　ひとやすみ　して　いこう<PARA>ハナダ　シティから<LINE>どうくつを　ぬけて　きたら<CONT><……>　つかれた<DONE>
 {text_start}お　おまえは<LINE>トキワの　もりでも　あったな！<DONE>
 {text_start}くやしいけど　まけた<PROMPT>
 {text_start}この　あたりは<LINE>もり　とは　また　ちがった<CONT>#が　とれるんだ！<DONE>
@@ -1612,7 +1612,7 @@
 {text_start}きみ　#　<TRAINER>？<LINE>じゃ　さっそく！<DONE>
 {text_start}あたらしい　#<LINE>もって　くれば　かてたよ<PROMPT>
 {text_start}<PC>で　#　あずける<LINE>ボックスが　いっぱいに　なったら<CONT>ほかの　ボックスに<CONT>きりかえれば　いいんだよ<DONE>
-{text_start}きみの　しせん！<LINE><…>　なーんか　きに　なる！<DONE>
+{text_start}きみの　しせん！<LINE><……>　なーんか　きに　なる！<DONE>
 {text_start}おんなのこに<LINE>やさしく　できない？<PROMPT>
 {text_start}もし　たたかいたく　なかったら<LINE>しせんを　あわせなければ　いいの<DONE>
 {text_start}なんだよ！　おまえは<LINE>たんパン　はいて　ないじゃん<DONE>
@@ -1620,23 +1620,23 @@
 {text_start}なつも　ふゆも<LINE>たんパン　しか　はかない！<CONT>それが　おれの　ポリシー<DONE>
 {text_start}とって　きた　ばかりの　#<LINE>たたかわせよう　かな！<DONE>
 {text_start}ぼろまけだ<PROMPT>
-{text_start}やっぱり<…>　そだてた<LINE>#の　ほうが　つよいんだな<DONE>
-{text_start}<…>　きゃ！<LINE>いま　からだ　さわらなかった？<DONE>
+{text_start}やっぱり<……>　そだてた<LINE>#の　ほうが　つよいんだな<DONE>
+{text_start}<……>　きゃ！<LINE>いま　からだ　さわらなかった？<DONE>
 {text_start}もう　おわり？<PROMPT>
 {text_start}オツキミやまの　ふもと　からは<LINE>４ばん　どうろよ<DONE>
-{text_start}ここは　３ばん　どうろ<LINE><…>　このさき　オツキミやま<DONE>
+{text_start}ここは　３ばん　どうろ<LINE><……>　このさき　オツキミやま<DONE>
 {text_start}いたッ！<LINE>つまづいて　ころんじゃった<CONT>#の　イシツブテだわ！<DONE>
 {text_start}わたし　オツキミやまに<LINE>キノコの　#　とりに　きたの！<DONE>
 {text_start}せっかく　とったのに！<PROMPT>
 {text_start}このあたりは<LINE>もう　キノコ　みつかんないかも<PARA>だって　あたしが<LINE>ぜんぶ　とっちゃったもん<DONE>
-{text_start}ここは　オツキミやま<LINE><…>　どうくつ　いりぐち<DONE>
-{text_start}ここは　４ばん　どうろ<LINE>オツキミやま　<…>　ハナダ　シティ<DONE>
-{text_start}ここから　ちか　つうろ<LINE>ハナダ　シティ　<…>　クチバ　シティ<DONE>
+{text_start}ここは　オツキミやま<LINE><……>　どうくつ　いりぐち<DONE>
+{text_start}ここは　４ばん　どうろ<LINE>オツキミやま　<……>　ハナダ　シティ<DONE>
+{text_start}ここから　ちか　つうろ<LINE>ハナダ　シティ　<……>　クチバ　シティ<DONE>
 {text_start}これは　あいの　とっくん　なんだ<LINE>じゃま　しないでよ<DONE>
-{text_start}ば　ばかな<…><PROMPT>
-{text_start}これじゃ<LINE>かのじょに　きらわれちゃう<…><DONE>
+{text_start}ば　ばかな<……><PROMPT>
+{text_start}これじゃ<LINE>かのじょに　きらわれちゃう<……><DONE>
 {text_start}あいの　とっくんを　してるの<LINE>じゃま　しないで！<DONE>
-{text_start}そんな<…><LINE>きょうかしょに　のってなかったわ<PROMPT>
+{text_start}そんな<……><LINE>きょうかしょに　のってなかったわ<PROMPT>
 {text_start}けいさん　だけが　すべてじゃない<LINE>わかった　きが　するわ<DONE>
 {text_start}この　へんまで　くると<LINE>あんまり　むしも　いないんだ<DONE>
 {text_start}そんな　バカなあー<PROMPT>
@@ -1644,56 +1644,56 @@
 {text_start}なんだい<LINE>おれに　なんか　よう？<DONE>
 {text_start}なさけない<LINE>うられた　ケンカに　まけた<PROMPT>
 {text_start}もっと　たくさん<LINE>#　もって　あるいてた<CONT>ほうが　あんしんだな<DONE>
-{text_start}わたし？<LINE><…>　<…>　<…>　うーん<CONT>つきあっても　いいかな<DONE>
-{text_start}<…>　どうも<LINE>うまく　いかないわ<PROMPT>
+{text_start}わたし？<LINE><……>　<……>　<……>　うーん<CONT>つきあっても　いいかな<DONE>
+{text_start}<……>　どうも<LINE>うまく　いかないわ<PROMPT>
 {text_start}あたしも　つよく　なりたいの<LINE>コツを　おしえて　くれない　かしら<DONE>
 {text_start}おや？　みかけない　かお　だ！<LINE>つよいのかな？<DONE>
 {text_start}そりゃ　ないよ<PROMPT>
-{text_start}#が　よわいのか<LINE>ぼくの　うでが　わるいのか<…><CONT>どっちだと　おもう？<DONE>
-{text_start}ここから　ちかつうろ<LINE>ハナダ　シティ　<…>　クチバ　シティ<DONE>
-{text_start}ここから　ちかつうろ<LINE>タマムシ　<…>　シオン<DONE>
+{text_start}#が　よわいのか<LINE>ぼくの　うでが　わるいのか<……><CONT>どっちだと　おもう？<DONE>
+{text_start}ここから　ちかつうろ<LINE>ハナダ　シティ　<……>　クチバ　シティ<DONE>
+{text_start}ここから　ちかつうろ<LINE>タマムシ　<……>　シオン<DONE>
 {text_start}きみ　#　つよそう　だけど<LINE>りかは　とくい　なのかい？<DONE>
 {text_start}がーん！　ばったり<PROMPT>
 {text_start}ぼくは　やっぱり<LINE>べんきょうの　ほうが　あってる<DONE>
 {text_start}よっしゃ！<LINE>たたかって　うんだめし　するか<DONE>
-{text_start}<…>　きょうは<LINE>しょうぶ　うん　わるし！<PROMPT>
+{text_start}<……>　きょうは<LINE>しょうぶ　うん　わるし！<PROMPT>
 {text_start}どうも　きょうは　ついてねえ<LINE>じっと　してよう<DONE>
 {text_start}あのね<LINE>たたかい　には　せんりゃくが<CONT>ひつよう　なんだ<DONE>
 {text_start}りかい　できない！<PROMPT>
-{text_start}はじめに　ベトベター　だして<…><LINE>いいや　ほかので　いっきに<…><CONT><…>　うーん　ブツ　ブツ<…><DONE>
+{text_start}はじめに　ベトベター　だして<……><LINE>いいや　ほかので　いっきに<……><CONT><……>　うーん　ブツ　ブツ<……><DONE>
 {text_start}あたし　ニドラン　すき　だから<LINE>たくさん　あつめてるの<DONE>
 {text_start}なんで　なんでー<PROMPT>
 {text_start}#って　そだって　くると<LINE>かわいく　なくなって　きちゃう<CONT>しんか　しないほうが　かわいいわ！<DONE>
-{text_start}べんきょうも　いいけど<…><LINE>#も　いいね<DONE>
-{text_start}<…>　わかった<LINE>ぼくには　べんきょう　しか　ない<PROMPT>
+{text_start}べんきょうも　いいけど<……><LINE>#も　いいね<DONE>
+{text_start}<……>　わかった<LINE>ぼくには　べんきょう　しか　ない<PROMPT>
 {text_start}たまには　そとの　くうき　すいに<LINE>いこうと　おもったのに<CONT>ヤマブキの　ゲートの　せいで<CONT>みんな　ここで　あしどめだ<DONE>
 {text_start}ニャース　って<LINE>ちょー　かわいーの！<CONT>にゃー　にゃー　にゃー！<DONE>
 {text_start}そんにゃー！<PROMPT>
 {text_start}やーん！<LINE>ポッポも　コラッタも　かわいー<CONT>あたし　まよっちゃう！<DONE>
 {text_start}こうして　ならんでると<LINE>はないち　もんめ　してる　みたい<DONE>
 {text_start}ひどーい！<LINE>みんな　かわいい　#　なのに<PROMPT>
-{text_start}ヤマブキ　シティの　けいびいん<LINE>ゲート　とおらせて　くれないの<CONT>まじめ　だけど<…>　いじわるね<DONE>
+{text_start}ヤマブキ　シティの　けいびいん<LINE>ゲート　とおらせて　くれないの<CONT>まじめ　だけど<……>　いじわるね<DONE>
 {text_start}おれは　いまどき<LINE>さすらいの　ギャンブラー！<DONE>
-{text_start}<…>！<LINE>ここ　いちばんを　のがす　とは！<PROMPT>
+{text_start}<……>！<LINE>ここ　いちばんを　のがす　とは！<PROMPT>
 {text_start}ギャンブルも　#も<LINE>しょうぶには　かわりない！<CONT>はじめたら　やめられ　ないのさ<DONE>
-{text_start}まるくって　ふわふわで<LINE>ぬいぐるみ　みたいな　#！<CONT><…>　なーんだ？<DONE>
+{text_start}まるくって　ふわふわで<LINE>ぬいぐるみ　みたいな　#！<CONT><……>　なーんだ？<DONE>
 {text_start}やめてー！<PARA>わたしの　ピッピに<LINE>らんぼう　しないでよう！<PROMPT>
-{text_start}つきのいしで　ピッピが　なんかに<LINE>しんか　するって<CONT>#　ジャーナルで　よんだの<CONT><…>　ほんと　かしら？<DONE>
-{text_start}ここから　ちかつうろ<LINE>タマムシ　<…>　シオン<DONE>
-{text_start}あら　#　もってるわね<LINE><…>　カモ　だわ！<DONE>
+{text_start}つきのいしで　ピッピが　なんかに<LINE>しんか　するって<CONT>#　ジャーナルで　よんだの<CONT><……>　ほんと　かしら？<DONE>
+{text_start}ここから　ちかつうろ<LINE>タマムシ　<……>　シオン<DONE>
+{text_start}あら　#　もってるわね<LINE><……>　カモ　だわ！<DONE>
 {text_start}あら？　つよいわね<PROMPT>
 {text_start}この　さきの　トンネル<LINE>なかは　まっくら　だから<CONT>あかりが　ないと　すすめ　ないわ<DONE>
 {text_start}おれの　もくひょうは<LINE>きゅうきょくの　トレーナーだ！<DONE>
-{text_start}オレの<LINE>サンドが　まけるなんて<…><PROMPT>
+{text_start}オレの<LINE>サンドが　まけるなんて<……><PROMPT>
 {text_start}サンドとの　コンビで<LINE>また　１００れんしょうを　めざすぜ！<DONE>
-{text_start}イワヤマ　トンネル　ぬけて<LINE>シオン　タウンに<CONT>いく　ところ　なんだ　けど<…><DONE>
+{text_start}イワヤマ　トンネル　ぬけて<LINE>シオン　タウンに<CONT>いく　ところ　なんだ　けど<……><DONE>
 {text_start}どうも　だめだな<PROMPT>
 {text_start}なんだい　きみも<LINE>イワヤマ　トンネル　いくのか<DONE>
 {text_start}おんなのこ　だからって<LINE>てかげんは　なしね！<DONE>
 {text_start}だめ！　かなわないわ<PROMPT>
 {text_start}あなた　きっと<LINE>#の　さいのう　あるのよ<CONT>がんばってね！<DONE>
 {text_start}がはは！<LINE>ちょうど　いい！<CONT>たいくつ　してた　とこだ<DONE>
-{text_start}まだまだ！<LINE><…>　と　おもったら<CONT>もう　#が　ない<PROMPT>
+{text_start}まだまだ！<LINE><……>　と　おもったら<CONT>もう　#が　ない<PROMPT>
 {text_start}やまおとこに<LINE>びびらずに　たたかうとは<CONT>たいした　もんだ！<DONE>
 {text_start}はーっはっはッ！<LINE>げんきな　ぼうず　だ！<CONT>いっちょう　やったるか！<DONE>
 {text_start}おっとっと！<PROMPT>
@@ -1705,27 +1705,27 @@
 {text_start}はーっはっはッ！<LINE>ありゃ　まけた　ようだな<PROMPT>
 {text_start}はっはっはーッ！<LINE>やまおとこは　こころが　ひろいから<CONT>まけても　わらってるのだ！<DONE>
 {text_start}おいらの　かわいい　むし　ポケ！<LINE>それいけー！<DONE>
-{text_start}おいらの　むし<…><PROMPT>
+{text_start}おいらの　むし<……><PROMPT>
 {text_start}むし　#の　よさが<LINE>わからない　やつは　むし！<DONE>
-{text_start}ここは　９ばん　どうろ<LINE>ハナダ　<…>　イワヤマ　トンネル<DONE>
-{text_start}こんな　とこ　まで　くる　とは<LINE>きみも　マニア？　<…>　じゃ<CONT>ぼくの　コレクション　みる？<DONE>
-{text_start}へーん<…>！<LINE>くやしく　ないよ！<PROMPT>
+{text_start}ここは　９ばん　どうろ<LINE>ハナダ　<……>　イワヤマ　トンネル<DONE>
+{text_start}こんな　とこ　まで　くる　とは<LINE>きみも　マニア？　<……>　じゃ<CONT>ぼくの　コレクション　みる？<DONE>
+{text_start}へーん<……>！<LINE>くやしく　ないよ！<PROMPT>
 {text_start}うちに　かえれば　もっと<LINE>めずらしい　#　あるもん<DONE>
 {text_start}はーッ　はっはッ！<DONE>
-{text_start}はッ！<LINE>はーッ　ははッ<…>！　じつは<…><CONT>わらい　キノコ　たべて　しまってな<PROMPT>
-{text_start}はっはッ！<LINE>はーッ　はっ　はッ！<CONT><…>　はァ　はァ<…><DONE>
+{text_start}はッ！<LINE>はーッ　ははッ<……>！　じつは<……><CONT>わらい　キノコ　たべて　しまってな<PROMPT>
+{text_start}はっはッ！<LINE>はーッ　はっ　はッ！<CONT><……>　はァ　はァ<……><DONE>
 {text_start}ねー　ねー！<LINE>おたく　ぼくの　#　みる？<DONE>
 {text_start}ああー！<LINE>だいじな　#　ちゃんが！<PROMPT>
-{text_start}<…>　ぼく　より<LINE>つよい　ヤツは　キライ　だもん<DONE>
-{text_start}わたしも　たまに<LINE>#　ジムに　いくの！<CONT><…>　<…>　まけちゃう　けどね<DONE>
-{text_start}もお<…>！<LINE>とっくん　したのに<PROMPT>
-{text_start}ねえ<…>！<LINE>こんな　やま　みちに<CONT>マニアが　いる　のよ<…>　みた？<DONE>
+{text_start}<……>　ぼく　より<LINE>つよい　ヤツは　キライ　だもん<DONE>
+{text_start}わたしも　たまに<LINE>#　ジムに　いくの！<CONT><……>　<……>　まけちゃう　けどね<DONE>
+{text_start}もお<……>！<LINE>とっくん　したのに<PROMPT>
+{text_start}ねえ<……>！<LINE>こんな　やま　みちに<CONT>マニアが　いる　のよ<……>　みた？<DONE>
 {text_start}すーはー　すーはー！<LINE>やまの　くうきは　うまいッ！<DONE>
 {text_start}すーはーッ！<LINE>あー　まけたわい！<PROMPT>
 {text_start}やまの　くうき<LINE>すい　すぎて　はらが　ふくれた！<DONE>
-{text_start}はァ<…>！<LINE>やまみち　ひさしぶりに　あるいて<CONT>ひんけつ　ぎみ　なの<DONE>
-{text_start}<…>　<…>　たいちょうが<LINE>わるいから　しかた　ないわ<PROMPT>
-{text_start}やまの　#って<LINE>ごついの　ばっかり<…><CONT>ピンクの　はながらの<CONT>#が　いれば　いいのに<DONE>
+{text_start}はァ<……>！<LINE>やまみち　ひさしぶりに　あるいて<CONT>ひんけつ　ぎみ　なの<DONE>
+{text_start}<……>　<……>　たいちょうが<LINE>わるいから　しかた　ないわ<PROMPT>
+{text_start}やまの　#って<LINE>ごついの　ばっかり<……><CONT>ピンクの　はながらの<CONT>#が　いれば　いいのに<DONE>
 {text_start}ここは　イワヤマ　トンネル<DONE>
 {text_start}ここは　むじん　はつでんしょ<DONE>
 {text_start}かつか　まけるか　しょうぶ！<DONE>
@@ -1735,55 +1735,55 @@
 {text_start}くそッ！<LINE>かてると　ふんだ　が　だめか！<PROMPT>
 {text_start}まけを　こわがって　たら<LINE>#は　できねえ　もんな！<DONE>
 {text_start}#に　ずるは　なし　だよ！<LINE>せいせい　どうどう　やろう！<DONE>
-{text_start}ありゃ？<LINE>こんな　はずじゃ<…><PROMPT>
+{text_start}ありゃ？<LINE>こんな　はずじゃ<……><PROMPT>
 {text_start}せいせい　どうどう　やった！<LINE>こうかいは　しないよ！<DONE>
 {text_start}こんちは！<LINE>おたくの　でんき　あんぜん　ですか？<DONE>
 {text_start}おじさんを<LINE>まかす　なんて　すごいな！<PROMPT>
 {text_start}ひとこと　いい　わすれてた！<LINE>でんきは　たいせつに！<DONE>
 {text_start}ぼくは　#　<TRAINER>に<LINE>なった　ばかり　だ！<CONT>でも　かつ　じしん　あるよ！<DONE>
-{text_start}まける　なんて<…>　まだ<LINE>#　そだって　ないのか　なあ<PROMPT>
+{text_start}まける　なんて<……>　まだ<LINE>#　そだって　ないのか　なあ<PROMPT>
 {text_start}なんだよー<LINE>おまえなんか　あっちいけよー！<DONE>
 {text_start}ははーは！　わたしは<LINE>いままで　まけた　ことが　ないぞ！<DONE>
 {text_start}はッ！<LINE>はじめて　まけたーッ！<PROMPT>
 {text_start}しょうぶは　ときの　うん　だ！<LINE>そう　おもわないと　おちこむよ<DONE>
-{text_start}わたしは<LINE>いままで　かった　ことが　ない<…><DONE>
-{text_start}<…>　がく！<LINE>やっぱり　まけた！<PROMPT>
-{text_start}しょうぶは　ときの　うん　だ<…><LINE>そう　おもわないと　おちこむよ<DONE>
+{text_start}わたしは<LINE>いままで　かった　ことが　ない<……><DONE>
+{text_start}<……>　がく！<LINE>やっぱり　まけた！<PROMPT>
+{text_start}しょうぶは　ときの　うん　だ<……><LINE>そう　おもわないと　おちこむよ<DONE>
 {text_start}ぼくは　クラスで　いちばん　つよい！<LINE>まいあさ　れんしゅうも　してるんだ！<DONE>
-{text_start}あちゃー！　<…>　もっと<LINE>つよい　#　でなきゃ　だめだ！<PROMPT>
-{text_start}たまに　やまから　おりてくる<LINE>ふとった　#<…><PARA>あれ　つかまえたら<LINE>つよいんじゃ　ないかな？<DONE>
+{text_start}あちゃー！　<……>　もっと<LINE>つよい　#　でなきゃ　だめだ！<PROMPT>
+{text_start}たまに　やまから　おりてくる<LINE>ふとった　#<……><PARA>あれ　つかまえたら<LINE>つよいんじゃ　ないかな？<DONE>
 {text_start}オーッス！<LINE>でんきの　けしわすれ　して　ないか<DONE>
 {text_start}まいった！<LINE>さいきんの　こどもは　つよい！<PROMPT>
-{text_start}さてと<…><LINE>でんきこうじに　いかなくちゃ<DONE>
+{text_start}さてと<……><LINE>でんきこうじに　いかなくちゃ<DONE>
 {text_start}だいじに　そだてた　#！<LINE>そろそろ　たたかわせて　みよう！<DONE>
-{text_start}バイバイ<…>！<LINE>ありがとう　さようなら！<PROMPT>
-{text_start}ちえッ<…>！<LINE>もっと　つよいの　さがして　こよう<DONE>
+{text_start}バイバイ<……>！<LINE>ありがとう　さようなら！<PROMPT>
+{text_start}ちえッ<……>！<LINE>もっと　つよいの　さがして　こよう<DONE>
 {text_start}ディグダの　あな<DONE>
 {text_start}#が　とても<LINE>きもち　よさそうに　ねてます<DONE>
 {text_start}カビゴンが　めを　さました！<PARA>カビゴンは<LINE>ねぼけて　おそってきた！<DONE>
-{text_start}カビゴンは　おとなしく　なった<LINE>おおきな　あくびを　すると<…><CONT>やまおくへ　さって　いった！<DONE>
+{text_start}カビゴンは　おとなしく　なった<LINE>おおきな　あくびを　すると<……><CONT>やまおくへ　さって　いった！<DONE>
 {text_start}おっ　おーッ！<LINE>ひいてる　ひいてる！<DONE>
 {text_start}ちッ！<LINE>げどう　だったか<PROMPT>
 {text_start}まって　くれ！<LINE>つりいとが　こんがらがった！<DONE>
-{text_start}<…>　あわてるな！<LINE>まつ　ことも　また！<CONT>つりの　たのしみ　である<DONE>
-{text_start}おっと<…>！<LINE>ちょっと　まって　くれ<PROMPT>
-{text_start}いい　つりざおを　つかえば<LINE>いい　#が　つれるんだが<…><DONE>
+{text_start}<……>　あわてるな！<LINE>まつ　ことも　また！<CONT>つりの　たのしみ　である<DONE>
+{text_start}おっと<……>！<LINE>ちょっと　まって　くれ<PROMPT>
+{text_start}いい　つりざおを　つかえば<LINE>いい　#が　つれるんだが<……><DONE>
 {text_start}つきのいし　さがしてるんだ　けど<LINE>きみ　もって　ない？<DONE>
-{text_start}ありゃりゃ<…>！<PROMPT>
+{text_start}ありゃりゃ<……>！<PROMPT>
 {text_start}つきのいしが　あれば<LINE>#が　しんか　して<CONT>ぼく　かってた　かも　しれないよ<DONE>
 {text_start}ぼくの　せんもん　でんき　だから<LINE>うみ　#は　くわしく　ないよ<DONE>
-{text_start}ふにゃ　ふにゃ<…><PROMPT>
-{text_start}うーん<…>　たしか　みずは<LINE>でんきを　よく　とおす　から<CONT>わざが　きく　はず　だよね<…><DONE>
+{text_start}ふにゃ　ふにゃ<……><PROMPT>
+{text_start}うーん<……>　たしか　みずは<LINE>でんきを　よく　とおす　から<CONT>わざが　きく　はず　だよね<……><DONE>
 {text_start}おうッ！　つり　バカ<LINE>#　バカに　であう！<DONE>
 {text_start}さすが　つよい！<PROMPT>
-{text_start}すき　こそ<LINE>ものの　じょうず　なれ<…>　だな！<CONT>ぼくも　つり　なら　まけないぞ！<DONE>
-{text_start}つり　ばっかり　して　ないで<LINE>もっと　しごとも　できれば<CONT>さいこう　なんだが<…><DONE>
-{text_start}なかなか<…><LINE>うまく　いかん　もの　じゃ<PROMPT>
-{text_start}ははは<…>　だいじょうぶ！<LINE>まけた　くらいで　はらは　たてんよ<DONE>
-{text_start}<…>　なにが　つれるかって？<LINE>そりゃ　つって　みなけりゃ<CONT>わからんよ！<DONE>
+{text_start}すき　こそ<LINE>ものの　じょうず　なれ<……>　だな！<CONT>ぼくも　つり　なら　まけないぞ！<DONE>
+{text_start}つり　ばっかり　して　ないで<LINE>もっと　しごとも　できれば<CONT>さいこう　なんだが<……><DONE>
+{text_start}なかなか<……><LINE>うまく　いかん　もの　じゃ<PROMPT>
+{text_start}ははは<……>　だいじょうぶ！<LINE>まけた　くらいで　はらは　たてんよ<DONE>
+{text_start}<……>　なにが　つれるかって？<LINE>そりゃ　つって　みなけりゃ<CONT>わからんよ！<DONE>
 {text_start}しくじったな<PROMPT>
-{text_start}ああ　コイキング<…>　ね<LINE>よく　つれる　けど<CONT>よわすぎるんだよなあ<…><DONE>
-{text_start}ここは　１２ばん　どうろ<LINE>きた　<…>　シオン　タウン<DONE>
+{text_start}ああ　コイキング<……>　ね<LINE>よく　つれる　けど<CONT>よわすぎるんだよなあ<……><DONE>
+{text_start}ここは　１２ばん　どうろ<LINE>きた　<……>　シオン　タウン<DONE>
 {text_start}ここは　つりの　めいしょ<DONE>
 {text_start}ぼくの　とりポケが　きみたちと<LINE>たたかい　たがってる！<DONE>
 {text_start}ポッポと　ピジョン<LINE>コンビが　まける　なんて<PROMPT>
@@ -1793,35 +1793,35 @@
 {text_start}いつかは<LINE>つよい　<TRAINER>に　なりたい<CONT>きょうから　また　とっくんよ！<DONE>
 {text_start}あら！<LINE>かっこいい　バッジ　もってるね<DONE>
 {text_start}まだまだ　だわ<PROMPT>
-{text_start}そのバッジ<…><LINE>リーダー　から　もらったんでしょ<CONT><…>　しってるわよ<DONE>
+{text_start}そのバッジ<……><LINE>リーダー　から　もらったんでしょ<CONT><……>　しってるわよ<DONE>
 {text_start}かわいい　#　たちに<LINE>ごあいさつを　させるわ！<DONE>
 {text_start}おみごと！<LINE>わたしの　かんぱいね<PROMPT>
 {text_start}#は　こうやって<LINE>どんどん　たたかわせて<CONT>つよく　してかないと！<DONE>
 {text_start}どうくつ　たんけんに　いって<LINE>インドメタシンを　ひろったのよ<DONE>
-{text_start}<…>　ざんねん！<LINE>ちょうしが　でなかったわ<PROMPT>
+{text_start}<……>　ざんねん！<LINE>ちょうしが　でなかったわ<PROMPT>
 {text_start}そう　インドメタシン　あたえたら<LINE>#の　すばやさが　あがったの<DONE>
 {text_start}まけないよ！　かぜは<LINE>ぼくの　ほうに　ふいて　いる！<DONE>
-{text_start}<…>　かざむきが<LINE>かわった　みたい　だな<PROMPT>
+{text_start}<……>　かざむきが<LINE>かわった　みたい　だな<PROMPT>
 {text_start}たたかう　げんきも　ないや<LINE>とりに　のって　うちに　かえろう<DONE>
-{text_start}あら<…>　ぼうや<LINE>あいて　して　あげても　いいわよ<DONE>
+{text_start}あら<……>　ぼうや<LINE>あいて　して　あげても　いいわよ<DONE>
 {text_start}つよい！<LINE>おとこ　らしいわね！<PROMPT>
 {text_start}#の　せかい　では<LINE>オス　と　メス<CONT>どちらが　つよいの　かしら<DONE>
 {text_start}わたしと　#　したいの？<DONE>
-{text_start}<…>　もう<LINE>おわっちゃったのね<PROMPT>
+{text_start}<……>　もう<LINE>おわっちゃったのね<PROMPT>
 {text_start}わたし　ほんとは　#<LINE>よく　わからないの<CONT>つかう　#も<CONT>かっこう　だけで　きめちゃうのよ<DONE>
 {text_start}っだよ！　っせーな！<DONE>
 {text_start}ったくよ！<LINE>っざけんなよ！<PROMPT>
 {text_start}っせーな！<LINE>あっち　いけよ！<DONE>
 {text_start}ずーッと　とり　#に<LINE>こだわって　きた　ぼくです！<DONE>
-{text_start}ちから　つきた<…><PROMPT>
-{text_start}あーあ<…>　ぼくも<LINE>ポッポや　ピジョンの　ように<CONT>そらを　とんで　いきたい<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>そこ　そこ！<LINE>くいを　はさんで　ひだり　がわ<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>どうぐ　ウィンドウで<LINE>セレクト　ボタンを　おすと<CONT>どうぐの　ばしょを<CONT>いれかえる　ことが　できる！<DONE>
-{text_start}ここは　１３ばん　どうろ<LINE>きた　<…>　サイレンズ　ブリッジ<DONE>
+{text_start}ちから　つきた<……><PROMPT>
+{text_start}あーあ<……>　ぼくも<LINE>ポッポや　ピジョンの　ように<CONT>そらを　とんで　いきたい<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>そこ　そこ！<LINE>くいを　はさんで　ひだり　がわ<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>どうぐ　ウィンドウで<LINE>セレクト　ボタンを　おすと<CONT>どうぐの　ばしょを<CONT>いれかえる　ことが　できる！<DONE>
+{text_start}ここは　１３ばん　どうろ<LINE>きた　<……>　サイレンズ　ブリッジ<DONE>
 {text_start}つよい　#に　するなら<LINE>やっぱり　<TM>で<CONT>いい　わざを　おしえないとね！<DONE>
 {text_start}まだまだって　かんじだ<PROMPT>
 {text_start}きみ　ひでんマシンも　もってるね<LINE>あれで　おぼえた　わざは<CONT>#は　２どと　わすれないよ<DONE>
-{text_start}ぼくの　とり　#<LINE>そろそろ<…><CONT>たたかわせて　みようか！<DONE>
+{text_start}ぼくの　とり　#<LINE>そろそろ<……><CONT>たたかわせて　みようか！<DONE>
 {text_start}まだ　はやかった<PROMPT>
 {text_start}もっと　つよい　わざ<LINE>おしえて　から　たたかわせよう<DONE>
 {text_start}<TM>は<LINE>タマムシ　デパート　でも　かえる！<CONT>でも　ひでんマシン　もってる<CONT>ひとは　すくないね<DONE>
@@ -1829,12 +1829,12 @@
 {text_start}#の　タイプと　おなじ<LINE>タイプの　わざを　おしえると<CONT>わざの　いりょくが<CONT>おおきくなる　らしいよ<DONE>
 {text_start}きみの　とり　#は<LINE>きみを　のせて　そらを　とぶ<CONT>わざは　おぼえたかい？<DONE>
 {text_start}ぼろまけ！<PROMPT>
-{text_start}ぼくらは　とり#が<LINE>だいすき　だから<…><CONT>それしか　そだてたく　ないよ<DONE>
+{text_start}ぼくらは　とり#が<LINE>だいすき　だから<……><CONT>それしか　そだてたく　ないよ<DONE>
 {text_start}でんせつの　#　という<LINE>はなし　きいた　こと　ある？<DONE>
 {text_start}どうして　まけたかな<PROMPT>
 {text_start}でんせつの　#は<LINE>３しゅるい　いて<CONT>すべて　とり　#だ！<DONE>
-{text_start}きが　のらない　けど<…><LINE>しょうが　ない！　やるか！<DONE>
-{text_start}ああ<…>　やっぱりな<PROMPT>
+{text_start}きが　のらない　けど<……><LINE>しょうが　ない！　やるか！<DONE>
+{text_start}ああ<……>　やっぱりな<PROMPT>
 {text_start}そらの　ひろさに　くらべたら<LINE>かち　まけ　なんて<CONT>どうって　こと　ないのさ！<DONE>
 {text_start}おれ　おれは　せっかちだ！<LINE>はやく　はやく　はやく　しろ！<DONE>
 {text_start}まけた　まけた<LINE>おわりだ　じゃあな<PROMPT>
@@ -1844,42 +1844,42 @@
 {text_start}どうも　ちまちまと<LINE>そだてる　のは　にがてだぜ！<DONE>
 {text_start}この　あたりは<LINE>たてものが　すくねえ　から<CONT>よく　はしりに　くるぜ！<DONE>
 {text_start}おっと　こけちまった！<PROMPT>
-{text_start}よく　そこまで　そだてたな！<LINE>なんにしても<…><PARA>つよいって　ことは<LINE>たいした　もんだぜ！<DONE>
+{text_start}よく　そこまで　そだてたな！<LINE>なんにしても<……><PARA>つよいって　ことは<LINE>たいした　もんだぜ！<DONE>
 {text_start}#　たいけつか！<LINE>おもしろい！　つきあうぜ！<DONE>
 {text_start}なっとく　いかねえ<PROMPT>
 {text_start}おれと　おまえの<LINE>ちょくせつ　たいけつ　だったら<CONT>おれが　かつぜ！<DONE>
-{text_start}ここは　１４ばん　どうろ<LINE>にし　<…>　セキチク　シティ<DONE>
+{text_start}ここは　１４ばん　どうろ<LINE>にし　<……>　セキチク　シティ<DONE>
 {text_start}ともだちと　こうかん　した<LINE>おきにいりで　しょうぶ　するわ！<DONE>
 {text_start}だめだわ！<PROMPT>
-{text_start}ともだちと　こうかん　した<LINE>#の　ニックネーム<CONT>たとえ　きに　いらなくても<…><CONT>とった　ひとで　ないと<CONT>つけ　なおせない　のよね！<DONE>
+{text_start}ともだちと　こうかん　した<LINE>#の　ニックネーム<CONT>たとえ　きに　いらなくても<……><CONT>とった　ひとで　ないと<CONT>つけ　なおせない　のよね！<DONE>
 {text_start}きみ　やさしそう　だから<LINE>まける　きが　しない！<CONT>しょうぶ　してみるわ！<DONE>
 {text_start}あれ？　まけたの？<PROMPT>
-{text_start}ぼうそうぞく<…><LINE>よく　みかける　けど<CONT>こわそうで　いやだわ<DONE>
+{text_start}ぼうそうぞく<……><LINE>よく　みかける　けど<CONT>こわそうで　いやだわ<DONE>
 {text_start}ぼくが　くちぶえ　ふいたり　すると<LINE>とり　#が<CONT>とんで　きたり　するんだぜ！<DONE>
 {text_start}ふッ　かなしいね！<PROMPT>
-{text_start}ぼくの　ような　タイプは<LINE>しょうぶ　ごと　には<CONT>むいて　ないのかなあ<…><DONE>
-{text_start}おや<…>？<LINE>とりが　ふるえてる！<CONT>おまえ　もしかして<…>　つよいな？<DONE>
+{text_start}ぼくの　ような　タイプは<LINE>しょうぶ　ごと　には<CONT>むいて　ないのかなあ<……><DONE>
+{text_start}おや<……>？<LINE>とりが　ふるえてる！<CONT>おまえ　もしかして<……>　つよいな？<DONE>
 {text_start}おもった　とおりだ<PROMPT>
-{text_start}あったり　まえ　だけどさ<…><LINE>とり　#は<CONT>じしん　や　じわれ　には　つよいよ<DONE>
+{text_start}あったり　まえ　だけどさ<……><LINE>とり　#は<CONT>じしん　や　じわれ　には　つよいよ<DONE>
 {text_start}あらーん！<LINE>#　みたいに<CONT>かわいい　おとこのこ　ね！<DONE>
 {text_start}ゆだん　しちゃった<PROMPT>
 {text_start}くやしい　けど<LINE>おねえさんは　おとな　だから<CONT>ゆるして　あげるわね<DONE>
-{text_start}あのね<…>！<LINE>わたしは　ひとり　ぐらし　だから<CONT>#　かってる　わけ！<DONE>
-{text_start}<…>　#は<LINE>かち　まけ　じゃ　ないわ<PROMPT>
-{text_start}そう<…>！<LINE>うちに　かえった　とき<CONT>#が　いると　ほっと　するの<DONE>
+{text_start}あのね<……>！<LINE>わたしは　ひとり　ぐらし　だから<CONT>#　かってる　わけ！<DONE>
+{text_start}<……>　#は<LINE>かち　まけ　じゃ　ないわ<PROMPT>
+{text_start}そう<……>！<LINE>うちに　かえった　とき<CONT>#が　いると　ほっと　するの<DONE>
 {text_start}こら　ぼうず！　しょうぶだ！<LINE>その　へんの　やつ　から<CONT>むりやり　とって　きたぜ！<DONE>
 {text_start}なっとく　いかねえ<PROMPT>
-{text_start}みじかい　じんせい<…>！<LINE>ワルの　ほうが　かっこいいぜ！<CONT><ROCKET>　みたいに　な！<DONE>
+{text_start}みじかい　じんせい<……>！<LINE>ワルの　ほうが　かっこいいぜ！<CONT><ROCKET>　みたいに　な！<DONE>
 {text_start}おうッ！<LINE>まけたら　ありがね　ぜんぶ！<CONT>おいて　いって　もらおうか！<DONE>
 {text_start}そりゃ　ねえだろ<PROMPT>
 {text_start}ありがね　おいてく　なんて<LINE>じょうだんに　きまってる　だろ！<CONT>かるい　じょうだんだ！<DONE>
-{text_start}さいきん　はやってる　こと<…>？<LINE>そうねえ<…>！<CONT>#の　こうかん　かな！<DONE>
-{text_start}もうッ<…>！<LINE>しょうぶ　じゃ　なくて　こうかんよ<PROMPT>
+{text_start}さいきん　はやってる　こと<……>？<LINE>そうねえ<……>！<CONT>#の　こうかん　かな！<DONE>
+{text_start}もうッ<……>！<LINE>しょうぶ　じゃ　なくて　こうかんよ<PROMPT>
 {text_start}よく　わたしも　おともだちと<LINE>#　こうかん　するわ！<DONE>
 {text_start}しようよ　しようよ<LINE>#　しようよーッ！<DONE>
 {text_start}しょうぶ　あせり　すぎたわ<PROMPT>
 {text_start}もう　すこし　よわい　ひとと<LINE>れんしゅう　して　くるよ@@
-{text_start}ここは　１５ばん　どうろ<LINE>にし　<…>　セキチク　シティ<DONE>
+{text_start}ここは　１５ばん　どうろ<LINE>にし　<……>　セキチク　シティ<DONE>
 {text_start}っだと　こらあ！<DONE>
 {text_start}ってんじゃねえぞ！<PROMPT>
 {text_start}っせーな！<LINE>おれたちゃ　はしる　より<CONT>ここで　だらだら　してる　ほうが<CONT>たのしいんだよ！<DONE>
@@ -1900,13 +1900,13 @@
 {text_start}おう　おうッ！<LINE>#で　おどかしたり<CONT>かみつかせたり　いたずら　したり<CONT>するのが　すきだぜ！<DONE>
 {text_start}#が　とても<LINE>きもちよさそうに　ねています<DONE>
 {text_start}カビゴンは　めを　さました！<PARA>ねぼけた　カビゴンが<LINE>おそってきた！<DONE>
-{text_start}カビゴンは　おおきな　あくびをして<LINE>やまのおくへ　さっていった<…><DONE>
+{text_start}カビゴンは　おおきな　あくびをして<LINE>やまのおくへ　さっていった<……><DONE>
 {text_start}さかみちを　たのしもう！<LINE>サイクリング　ロード！<DONE>
-{text_start}ここは　１６ばん　どうろ<LINE>タマムシ　<…>　セキチク<DONE>
+{text_start}ここは　１６ばん　どうろ<LINE>タマムシ　<……>　セキチク<DONE>
 {text_start}こども　あいてに　たたかっても<LINE>しょうきんは　たまらねえ！<DONE>
 {text_start}もえつきたぜ<PROMPT>
 {text_start}サイクリング　ロードは<LINE>おとしものが　おおい！<CONT>ひろって　うれば　もうかるぜえ<DONE>
-{text_start}たいりょく　には<LINE>じしん　あるぜえ<…>　こいよ！<DONE>
+{text_start}たいりょく　には<LINE>じしん　あるぜえ<……>　こいよ！<DONE>
 {text_start}ぼよよーん！<PROMPT>
 {text_start}ついでに<LINE>おなかでも　さわって　みるか<DONE>
 {text_start}セキチク　シティに　いくのか？<DONE>
@@ -1914,9 +1914,9 @@
 {text_start}くだりざか　いっきに　おりると<LINE>きもち　いいぜ！<DONE>
 {text_start}おれたち　ぼうそう　ぞく！<LINE>なく　こも　だまらせるぜ！<DONE>
 {text_start}がまん　ならねえ<PROMPT>
-{text_start}なかなか<…><LINE>どきょう　ある　じゃねえか<DONE>
+{text_start}なかなか<……><LINE>どきょう　ある　じゃねえか<DONE>
 {text_start}うりゃあ！<LINE>ビリリダマに　しびれろ！<DONE>
-{text_start}ぐおッ<…>！<PROMPT>
+{text_start}ぐおッ<……>！<PROMPT>
 {text_start}この　ビリリダマは<LINE>むじん　はつでんしょで　とったぜ<DONE>
 {text_start}おれの　#　レベル　あげても<LINE>なかなか　しんか　しないぜえ！<DONE>
 {text_start}この　やろ！<PROMPT>
@@ -1930,25 +1930,25 @@
 {text_start}いかす　じてんしゃだな！<LINE>のりごこちは　どうだ？<DONE>
 {text_start}くそう！<PROMPT>
 {text_start}さかみちでの　ハンドル　さばき<LINE>むずかしい　だろ！<DONE>
-{text_start}<…>　だりいよ<…>　ねみいよ<LINE>めんどくせえ<…>！<DONE>
+{text_start}<……>　だりいよ<……>　ねみいよ<LINE>めんどくせえ<……>！<DONE>
 {text_start}おわったか<PROMPT>
 {text_start}もう　バックレて　ねてえよ<DONE>
-{text_start}チラシが　はってある！<PARA><…>　どうぐ　なげすて　ちゅうい！<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>おなじ　#　おなじ　レベルでも<LINE>とるたびに　パラメータが　すこし<CONT>ちがってて<…>　そだつと<CONT>ちがいが　おおきく　なる！<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>ボタンを　おしてれば<LINE>さかみちでも　じてんしゃの<CONT>タイヤが　すべらない！<DONE>
-{text_start}ここは　１７ばん　どうろ<LINE>タマムシ　<…>　セキチク<DONE>
+{text_start}チラシが　はってある！<PARA><……>　どうぐ　なげすて　ちゅうい！<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>おなじ　#　おなじ　レベルでも<LINE>とるたびに　パラメータが　すこし<CONT>ちがってて<……>　そだつと<CONT>ちがいが　おおきく　なる！<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>ボタンを　おしてれば<LINE>さかみちでも　じてんしゃの<CONT>タイヤが　すべらない！<DONE>
+{text_start}ここは　１７ばん　どうろ<LINE>タマムシ　<……>　セキチク<DONE>
 {text_start}チラシが　はってある！<PARA>ゲームを　なげるな！<LINE>モンスターボールを　なげろ！<DONE>
-{text_start}サイクリング　ロード<LINE><…>　さかみちは　ここまで！<DONE>
+{text_start}サイクリング　ロード<LINE><……>　さかみちは　ここまで！<DONE>
 {text_start}こういう　くさむらを　みつけては<LINE>あたらしい　#　いないか<CONT>さがしてるのさ！<DONE>
-{text_start}あう<…>！<PROMPT>
+{text_start}あう<……>！<PROMPT>
 {text_start}じてんしゃ　もって　いたら<LINE>ぼくも　サイクリング　したい<DONE>
-{text_start}クルック<…>ッ！<LINE>どう？　ぼくの　ゆびぶえ！<DONE>
+{text_start}クルック<……>ッ！<LINE>どう？　ぼくの　ゆびぶえ！<DONE>
 {text_start}きじも　なかずば<LINE>うたれまいに　って　ことか<PROMPT>
 {text_start}うみが　ちかい　から<LINE>しゅうまつは　うみどり　#<CONT>つかまえに　くるよ<DONE>
 {text_start}この　あたりは<LINE>ぼくらの　なわばりだ！<CONT>ちかよらないで　ほしいな！<DONE>
-{text_start}<…>　ふう！<PROMPT>
+{text_start}<……>　ふう！<PROMPT>
 {text_start}だれでも　おきにいりの<LINE>#を　とりに　いく<CONT>ばしょが　あるだろ！<DONE>
-{text_start}ここは　１８ばん　どうろ<LINE>タマムシ　<…>　セキチク<DONE>
+{text_start}ここは　１８ばん　どうろ<LINE>タマムシ　<……>　セキチク<DONE>
 {text_start}ここは　サイクリング　ロード<LINE>あるいての　つうこう　きんし<DONE>
 {text_start}みずに　はいる　まえに<LINE>じゅんび　たいそう　しなきゃ！<DONE>
 {text_start}たいそう　おわり！<PROMPT>
@@ -1956,40 +1956,40 @@
 {text_start}まて　あわてるな！<LINE>しんぞう　マヒに　なったら　どうする<DONE>
 {text_start}うー　さむい<PROMPT>
 {text_start}メノクラゲに　さされないよう<LINE>きを　つけて　およげよ！<DONE>
-{text_start}およぐの　だいすき！<LINE><…>　きみは　どうなの？<DONE>
+{text_start}およぐの　だいすき！<LINE><……>　きみは　どうなの？<DONE>
 {text_start}ドッポーン！<PROMPT>
 {text_start}およぎ　なら<LINE>うみの　#にも　まけない！<DONE>
-{text_start}すいへいせんの　むこう<LINE><…>　なにが　あるんだろ？<DONE>
-{text_start}ありゃりゃ<…><PROMPT>
-{text_start}<…>　むこうに<LINE>いくつか　しまが　みえるぞ！<DONE>
-{text_start}もぐって<…>　うみ　#<LINE>とろうとしたけど　だめ　みたいだ！<DONE>
+{text_start}すいへいせんの　むこう<LINE><……>　なにが　あるんだろ？<DONE>
+{text_start}ありゃりゃ<……><PROMPT>
+{text_start}<……>　むこうに<LINE>いくつか　しまが　みえるぞ！<DONE>
+{text_start}もぐって<……>　うみ　#<LINE>とろうとしたけど　だめ　みたいだ！<DONE>
 {text_start}ごぼ　ごぼッ<PROMPT>
 {text_start}うみの　#は　やっぱり<LINE>つりで　とる　しか　ないや<DONE>
 {text_start}あおい　うみを　みてれば<LINE>いやな　ことも　わすれるぞ！<DONE>
 {text_start}いやな　まけかただ<PROMPT>
-{text_start}あおい　うみを　みて<…><LINE>いやな　ことを　わすれよう<DONE>
+{text_start}あおい　うみを　みて<……><LINE>いやな　ことを　わすれよう<DONE>
 {text_start}ま！　いい　ものに　のってるわね<LINE>かったら　わたしに　ちょうだい！<DONE>
 {text_start}わたしの　まけか<PROMPT>
-{text_start}ふたごじま　まで<LINE>まだ　ありそうだし<…><CONT>セキチクに　かえりたいわ<DONE>
+{text_start}ふたごじま　まで<LINE>まだ　ありそうだし<……><CONT>セキチクに　かえりたいわ<DONE>
 {text_start}およぐの　すき　だけど<LINE>ひやけ　するのは　いやだわ！<DONE>
-{text_start}くらくら<…><PROMPT>
+{text_start}くらくら<……><PROMPT>
 {text_start}かれが　ふたごじま　まで<LINE>およごうって　いったのよ<DONE>
 {text_start}そこの　しょうねん！<LINE>この　うみは　きけんだ！<DONE>
 {text_start}あぶない　めに　あった<PROMPT>
-{text_start}あ　あしが　つった！<LINE>ぶく<…>　ぶくぶく<…><DONE>
-{text_start}みんなで　ここまで　およいで<LINE>きたけど<…>　くたびれたわ<DONE>
-{text_start}つかれた<…><PROMPT>
+{text_start}あ　あしが　つった！<LINE>ぶく<……>　ぶくぶく<……><DONE>
+{text_start}みんなで　ここまで　およいで<LINE>きたけど<……>　くたびれたわ<DONE>
+{text_start}つかれた<……><PROMPT>
 {text_start}うみで　#に　のるなら<LINE>ラプラスが　いいわ<CONT>おおきいから　ぬれない　もの<DONE>
-{text_start}ここは　１９ばん　すいどう<LINE>セキチク　<…>　ふたごじま<DONE>
+{text_start}ここは　１９ばん　すいどう<LINE>セキチク　<……>　ふたごじま<DONE>
 {text_start}とおあさに　なってる　から<LINE>およいでる　ひとも　おおいよ！<DONE>
 {text_start}うーみーッ！<PROMPT>
 {text_start}きみは　#に　のってて<LINE>つかれ　ないから　いいなあ<DONE>
 {text_start}ふたごじまに<LINE>リゾートに　きてるの　わたし<DONE>
 {text_start}ちょっと　やめてよ<PROMPT>
 {text_start}ふたごじまの　ちかに<LINE>しょうにゅうどうが　あるんだって<DONE>
-{text_start}なみまに　ぷかぷか　うかぶ<LINE><…>　あたしは　おさかな<DONE>
+{text_start}なみまに　ぷかぷか　うかぶ<LINE><……>　あたしは　おさかな<DONE>
 {text_start}うー　まんぼう！<PROMPT>
-{text_start}あなた　いっしょに<LINE><…>　ぷかぷか　しない？<DONE>
+{text_start}あなた　いっしょに<LINE><……>　ぷかぷか　しない？<DONE>
 {text_start}きみも　リゾートに　きてるの？<DONE>
 {text_start}てかげん　なしね<PROMPT>
 {text_start}ふたごじまは　むかしは<LINE>ふたつの　しま　だった　らしいね<DONE>
@@ -2001,11 +2001,11 @@
 {text_start}#に　のって　いくのも<LINE>たのしそうだなあ<DONE>
 {text_start}とり　#に　つかまって<LINE>ここまで　きたよ<DONE>
 {text_start}あ！　こまったな<PROMPT>
-{text_start}とりが　へばっちゃって　もどれないぞ<LINE><…>　どうしよう<DONE>
+{text_start}とりが　へばっちゃって　もどれないぞ<LINE><……>　どうしよう<DONE>
 {text_start}かれに<LINE>おっきな　しんじゅ　もらったわ！<DONE>
-{text_start}やーん！<LINE>しんじゅ　いり　なのに<…><PROMPT>
+{text_start}やーん！<LINE>しんじゅ　いり　なのに<……><PROMPT>
 {text_start}パルシェン　もっと　そだてたら<LINE>しんじゅも　おっきく　なるかしら<DONE>
-{text_start}グレン　じま　から<LINE>およいで　きたけど<…>　きついわ！<DONE>
+{text_start}グレン　じま　から<LINE>およいで　きたけど<……>　きついわ！<DONE>
 {text_start}がっかり<PROMPT>
 {text_start}グレン　じまの<LINE>だれも　すんでない　おやしき<CONT>いつからか　#が　すみついて<CONT>#　やしきと　よばれてる<DONE>
 {text_start}にしに　ある　グレン　じまは<LINE>#　けんきゅうの　しま！<CONT>あそこで　パパも　はたらいてるわ<DONE>
@@ -2028,8 +2028,8 @@
 {text_start}うー　みーッ！<PROMPT>
 {text_start}きみの　#は<LINE>どこで　とって　きたのかな？<DONE>
 {text_start}じつは　いま　トライアスロンの<LINE>まっさいちゅう　なのだ！<DONE>
-{text_start}は<…>　はーッ！<PROMPT>
-{text_start}ば　ばてた<…>！<LINE>あと<…>　じてんしゃと<CONT>マラソンが　あるのに<…>！<DONE>
+{text_start}は<……>　はーッ！<PROMPT>
+{text_start}ば　ばてた<……>！<LINE>あと<……>　じてんしゃと<CONT>マラソンが　あるのに<……>！<DONE>
 {text_start}あーッ！<LINE>ひざしが　きもちいーぜ！<DONE>
 {text_start}おれの　まけ！<PROMPT>
 {text_start}やけた　やけた！　まっくろだ！<DONE>
@@ -2038,30 +2038,30 @@
 {text_start}つれんなあ！<LINE>まさか　ここは　おっきな<CONT>プール　だったり　して<DONE>
 {text_start}あたりが　くるまで<LINE>おまえの　あいてでも　してよう<DONE>
 {text_start}ひまつぶしに　なった<PROMPT>
-{text_start}<…>　まて！　いま　あたりがッ！<LINE>あ<…>！　ひいてる　ひいてる！<DONE>
+{text_start}<……>　まて！　いま　あたりがッ！<LINE>あ<……>！　ひいてる　ひいてる！<DONE>
 {text_start}あーッ！<LINE>こいつ　なめた　マネを！<PROMPT>
 {text_start}<RIVAL>『なんだ？<LINE>#　２ひきも<CONT>もってるの　なぜか　だって？<PARA>おまえも<LINE>つかまえれば　いい　じゃん！<PROMPT>
-{text_start}あ　こら！<PARA>おれが　ちょっと<LINE>ゆだん　した　すきに<…>　くそう！<PROMPT>
+{text_start}あ　こら！<PARA>おれが　ちょっと<LINE>ゆだん　した　すきに<……>　くそう！<PROMPT>
 {text_start}<RIVAL>『ひゃははッ　<PLAYER>ー！<LINE>それで　がんばってるのかよ！<CONT>おれの　さいのうに　くらべりゃ<CONT><PLAYER>は　まだまだ　だな！<PARA>もっと　れんしゅう　こいよ！<LINE>あははーッ！<PROMPT>
-{text_start}<RIVAL>『あーッ！　<PLAYER>！<PARA>#　リーグに　いくのか？<LINE>やめとけ！<PARA>おまえ　どうせ<LINE>バッジ　もってねーだろ？<PARA>みはりの　おっさんが<LINE>とおして　くれねーよ！<PARA><…>　それよりさあ！<LINE>おまえの　#<CONT>すこしは　つよく　なったかよ？<DONE>
+{text_start}<RIVAL>『あーッ！　<PLAYER>！<PARA>#　リーグに　いくのか？<LINE>やめとけ！<PARA>おまえ　どうせ<LINE>バッジ　もってねーだろ？<PARA>みはりの　おっさんが<LINE>とおして　くれねーよ！<PARA><……>　それよりさあ！<LINE>おまえの　#<CONT>すこしは　つよく　なったかよ？<DONE>
 {text_start}どうやら　#　リーグには<LINE>つよくて　すごい　<TRAINER>が<CONT>ウジャウジャ　いるらしいぜ<PARA>どうにか<LINE>あそこを　とおりぬける<CONT>ほうほうを　かんがえなきゃな！<PARA>おまえも　いつまでも<LINE>ここらに　いないで<CONT>とっとと　さきに　すすめよ！<DONE>
-{text_start}<RIVAL>『なんだ？　<PLAYER>！<LINE>こんな　ところで　あうとは<CONT>またまた　ぐうぜんだ！<PARA>じゃあ<…>　おまえも<LINE>#　リーグに　いく　わけ？<PARA>バッジも<LINE>ぜんぶ　あつまったのか！<CONT>あ　そう<…>　やるじゃん！<PARA>それじゃ　#　リーグ<LINE>いくまえに　<PLAYER>で<CONT>ウォーミング　アップと　いくか！<PARA>かかって　きな！<DONE>
-{text_start}からだも　ほぐれたし<…>！<LINE>いよいよ　#　リーグ<CONT>せいはに　むかうと　するか！<PARA><PLAYER>は<…><LINE>もっと　れんしゅう　したほうが<CONT>いいんじゃないの！<PARA>おっと！　おせっかい　だったか！<LINE>とにかく<…>　おれは　さき　いくぜ<CONT>じゃあ！<…>　あーばよ！<DONE>
+{text_start}<RIVAL>『なんだ？　<PLAYER>！<LINE>こんな　ところで　あうとは<CONT>またまた　ぐうぜんだ！<PARA>じゃあ<……>　おまえも<LINE>#　リーグに　いく　わけ？<PARA>バッジも<LINE>ぜんぶ　あつまったのか！<CONT>あ　そう<……>　やるじゃん！<PARA>それじゃ　#　リーグ<LINE>いくまえに　<PLAYER>で<CONT>ウォーミング　アップと　いくか！<PARA>かかって　きな！<DONE>
+{text_start}からだも　ほぐれたし<……>！<LINE>いよいよ　#　リーグ<CONT>せいはに　むかうと　するか！<PARA><PLAYER>は<……><LINE>もっと　れんしゅう　したほうが<CONT>いいんじゃないの！<PARA>おっと！　おせっかい　だったか！<LINE>とにかく<……>　おれは　さき　いくぜ<CONT>じゃあ！<……>　あーばよ！<DONE>
 {text_start}ここは　#　リーグ<LINE>しょうめん　ゲート<DONE>
 {text_start}ここから　さきは　@{text_ram wNameBuffer}{text_start}バッジを<LINE>もった　もの　だけが　すすめる！<PARA>きみは　まだ<LINE>@{text_ram wNameBuffer}{text_start}バッジを　もって　いない<PARA>#　リーグを　めざす　なら<LINE>でなおして　きなさい@
-{text_start}ここから　さきは　@{text_ram wNameBuffer}{text_start}バッジを<LINE>もった　もの　だけが　すすめる！<PARA>むむッ<…>！<LINE>それは　@{text_ram wNameBuffer}{text_start}バッジ！@
-{text_start}<PARA>わかった<…>！<LINE>この　さきへ　すすみなさい！<DONE>
-{text_start}ここは　チャンピオン　ロード<LINE>ゲート　<…>　#リーグ<DONE>
+{text_start}ここから　さきは　@{text_ram wNameBuffer}{text_start}バッジを<LINE>もった　もの　だけが　すすめる！<PARA>むむッ<……>！<LINE>それは　@{text_ram wNameBuffer}{text_start}バッジ！@
+{text_start}<PARA>わかった<……>！<LINE>この　さきへ　すすみなさい！<DONE>
+{text_start}ここは　チャンピオン　ロード<LINE>ゲート　<……>　#リーグ<DONE>
 {text_start}おみごとーッ！<LINE>５にんぬき　おめでとう！@
 {text_start}<PARA>しょうひんに<LINE>これを　プレゼント　しよう！<PROMPT>
 {text_start}<PLAYER>は　なぞの<TRAINER>から<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
 {text_start}もちものが　いっぱいだ<DONE>
-{text_start}ところで<…>　ここだけの　はなし<LINE><ROCKET>に　はいらない？<PARA>おれたちは<LINE>#を　わるいことに<CONT>つかおうっていう　グループだ！<PARA>はいりなよ<PARA>はいらないの？<PARA>はいってよ！<PARA>はいれよ！<PARA><…>　ことわるって　かお　してんな<PARA>それなら<…>！<LINE>むりやり　いれて　やる！<CONT>うりゃーッ！<DONE>
-{text_start}こぞう<…>！<LINE>ホント　つええな！<PROMPT>
+{text_start}ところで<……>　ここだけの　はなし<LINE><ROCKET>に　はいらない？<PARA>おれたちは<LINE>#を　わるいことに<CONT>つかおうっていう　グループだ！<PARA>はいりなよ<PARA>はいらないの？<PARA>はいってよ！<PARA>はいれよ！<PARA><……>　ことわるって　かお　してんな<PARA>それなら<……>！<LINE>むりやり　いれて　やる！<CONT>うりゃーッ！<DONE>
+{text_start}こぞう<……>！<LINE>ホント　つええな！<PROMPT>
 {text_start}それだけの　うでが　あれば<LINE><ROCKET>　でも<CONT>えらく　なれるのに　もったいないぜ！<DONE>
-{text_start}ふふ<…>ッ！　くさむらから<LINE>きみの　かつやくを　みてたよ<DONE>
-{text_start}<…>　やっぱり　だめだ<PROMPT>
-{text_start}<…>　はしを　わたるのが　こわくて<LINE>ずっと　ここに　かくれてたんだ<DONE>
+{text_start}ふふ<……>ッ！　くさむらから<LINE>きみの　かつやくを　みてたよ<DONE>
+{text_start}<……>　やっぱり　だめだ<PROMPT>
+{text_start}<……>　はしを　わたるのが　こわくて<LINE>ずっと　ここに　かくれてたんだ<DONE>
 {text_start}きえーいッ！　５にんめ！<LINE>おれが　あいてだあ！<DONE>
 {text_start}たいした　もんだ！<PROMPT>
 {text_start}ベストを　つくしたんだ<LINE>くいは　ない！<DONE>
@@ -2077,9 +2077,9 @@
 {text_start}この　はしは　ひと　よんで<LINE>ゴールデンボール　ブリッジ！<PARA>５にん　かちぬけば<LINE>ごうかな　しょうひんが　もらえる！<PARA>さて！<LINE>おまえに　ぬけられるかな？<DONE>
 {text_start}なかなか　やるじゃん<PROMPT>
 {text_start}ベストを　つくしたんだ<LINE>くいは　ない！<DONE>
-{text_start}おれ<…><LINE>#　そだてるの　へた　なんだ<PARA>この　ヒトカゲも　よわいままで　<LINE>かわいそう　だから<CONT>にがしてやろうと　おもってる<…><PARA>ちゃんと　そだてて　くれるなら　<LINE>きみに　あげるけど？<DONE>
+{text_start}おれ<……><LINE>#　そだてるの　へた　なんだ<PARA>この　ヒトカゲも　よわいままで　<LINE>かわいそう　だから<CONT>にがしてやろうと　おもってる<……><PARA>ちゃんと　そだてて　くれるなら　<LINE>きみに　あげるけど？<DONE>
 {text_start}それじゃ　おねがい　するよ！@
-{text_start}そうか<…><LINE>じゃ　どこに　にがそうかな<…><DONE>
+{text_start}そうか<……><LINE>じゃ　どこに　にがそうかな<……><DONE>
 {text_start}あのときの　ヒトカゲ　そだってる？<DONE>
 {text_start}この　はやしは　きんじょの<LINE><TRAINER>が<CONT>れんしゅうに　くる　ばしょさ！<DONE>
 {text_start}なかなか　できるね<PROMPT>
@@ -2088,15 +2088,15 @@
 {text_start}くやしく　ないもん<PROMPT>
 {text_start}サント・アンヌ　ごう　は<LINE>せかいの　<TRAINER>が<CONT>いっぱい　いたよ<DONE>
 {text_start}ぼくは　ボーイスカウト<LINE>かのじょは　ミニスカート！<DONE>
-{text_start}トホホ<…><PROMPT>
-{text_start}ま<…>　いっか<LINE>かのじょに　なぐさめて　もらおう<DONE>
+{text_start}トホホ<……><PROMPT>
+{text_start}ま<……>　いっか<LINE>かのじょに　なぐさめて　もらおう<DONE>
 {text_start}わたしは　ミニスカート<LINE>かれは　ボーイスカウト！<DONE>
 {text_start}ちょうし　わるーい<PROMPT>
 {text_start}わたしの　かれも<LINE>きみ　くらい　つよいと　いいのに<DONE>
-{text_start}む<…>！<LINE>きみと　ぼくは　たたかう　よかん<DONE>
+{text_start}む<……>！<LINE>きみと　ぼくは　たたかう　よかん<DONE>
 {text_start}まけそうな<LINE>よかんが　したよ<PROMPT>
 {text_start}まきつきや　こんらんを　うけたら<LINE>さっさと　#を　とりかえる<CONT>さくせんも　いいね<DONE>
-{text_start}ともだちが　かわいい　#<LINE>いっぱい　もってるの<CONT><…>　くやしいわ！<DONE>
+{text_start}ともだちが　かわいい　#<LINE>いっぱい　もってるの<CONT><……>　くやしいわ！<DONE>
 {text_start}くやしく　ないもん<PROMPT>
 {text_start}オツキミやま　から　きたの？<LINE>じゃ　あたし　ピッピ　ほしーい！<CONT>ねえ　ちょうだい<DONE>
 {text_start}オツキミ　やま　から<LINE>おりてきた　ばかりだが<CONT>まだまだ　げんき！<DONE>
@@ -2108,18 +2108,18 @@
 {text_start}マサキの　いえに　いくのか？<LINE>そのまえに　しょうぶ　しよう！<DONE>
 {text_start}やるなあ<PROMPT>
 {text_start}ハナダ　シティに　かえる　ときは<LINE>したの　ほどうを　あるくと　はやい<DONE>
-{text_start}ここは　みさきの　こや<LINE><…>　マサキの　いえ<DONE>
+{text_start}ここは　みさきの　こや<LINE><……>　マサキの　いえ<DONE>
 {text_start}ファイルの　データが<LINE>こわれています！<PROMPT>
 {text_start}ここまでの　かつやくを<LINE>#レポートに　かきこみますか？<DONE>
 {text_start}#レポートに　かきこんでいます<DONE>
 {text_start}<PLAYER>は<LINE>レポートに　しっかり　かきのこした！<DONE>
 {text_start}まえに　かかれた　レポートが<LINE>きえて　しまいますが<CONT>うえから　かいても　いいですか？<DONE>
-{text_start}#　ボックスを　かえると<LINE>どうじに　レポートが　かかれます<PARA><…>　それでも　いいですか？<DONE>
+{text_start}#　ボックスを　かえると<LINE>どうじに　レポートが　かかれます<PARA><……>　それでも　いいですか？<DONE>
 {text_start}#　ボックスを　<LINE>えらんでください@@
 {text_start}おめでとう！　@{text_ram wStringBuffer}{text_start}は<DONE>
 {text_start}<LINE>@{text_ram wNameBuffer}{text_start}に　しんかした<DONE>
-{text_start}あれ<…>？<LINE>@{text_ram wStringBuffer}{text_start}の　へんかが　とまった！<PROMPT>
-{text_start}<…>　おや！？<LINE>@{text_ram wStringBuffer}{text_start}の　ようすが<…>！<DONE>
+{text_start}あれ<……>？<LINE>@{text_ram wStringBuffer}{text_start}の　へんかが　とまった！<PROMPT>
+{text_start}<……>　おや！？<LINE>@{text_ram wStringBuffer}{text_start}の　ようすが<……>！<DONE>
 {text_start}<TARGET>は<LINE>ねむってしまった！<PROMPT>
 {text_start}<TARGET>は　すでに<LINE>ねむっている<PROMPT>
 {text_start}<TARGET>は　どくをあびた！<PROMPT>
@@ -2173,18 +2173,18 @@
 {text_start}<TARGET>の<LINE>ゆめを　くった！<PROMPT>
 {text_start}！<DONE>
 {text_start}！<DONE>
-{text_start}おかあさん『<…>　そうね<LINE>おとこのこは　いつか<CONT>たびに　でるもの　なのよ<CONT>うん<…>　テレビの　はなしよ！<PARA>そういえば<LINE>となりの　オーキドはかせが<CONT>あなたを　さがしてたわよ<DONE>
-{text_start}おかあさん『<PLAYER><…>！<LINE>あんまり　むり　させてると<CONT>#に　きらわれるわよ<PARA>やすんで　いったら　どうかしら<…>？<PROMPT>
+{text_start}おかあさん『<……>　そうね<LINE>おとこのこは　いつか<CONT>たびに　でるもの　なのよ<CONT>うん<……>　テレビの　はなしよ！<PARA>そういえば<LINE>となりの　オーキドはかせが<CONT>あなたを　さがしてたわよ<DONE>
+{text_start}おかあさん『<PLAYER><……>！<LINE>あんまり　むり　させてると<CONT>#に　きらわれるわよ<PARA>やすんで　いったら　どうかしら<……>？<PROMPT>
 {text_start}おかあさん『あらあら！<LINE>あなたも　#も<CONT>げんき　いっぱいね！<CONT>それじゃ　きを　つけて！<CONT>いってらっしゃい！<DONE>
-{text_start}テレビで　えいがを　やってる！<LINE>おとこのこが　４にん<CONT>せんろのうえを　あるいてる<…><PARA><…>　ぼくも　もう　いかなきゃ！<DONE>
-{text_start}みえない<…><DONE>
+{text_start}テレビで　えいがを　やってる！<LINE>おとこのこが　４にん<CONT>せんろのうえを　あるいてる<……><PARA><……>　ぼくも　もう　いかなきゃ！<DONE>
+{text_start}みえない<……><DONE>
 {text_start}こんにちは　<PLAYER>くん！<LINE>おとうとの　<RIVAL>なら<CONT>おじいちゃんの　けんきゅうじょよ<DONE>
 {text_start}オーキドの　おじいちゃん<LINE>おしごと　たのんだんだって？<CONT>たいへんねー<CONT>これ　あげるから　つかって！<PROMPT>
 {text_start}<PLAYER>は　おねえさんから<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
 {text_start}にもつ　いっぱいよ<DONE>
 {text_start}じぶんの　いる　ばしょや<LINE>まちの　なまえが　しりたいとき<CONT>タウンマップ　つかうと　いいわよ<DONE>
 {text_start}いつも　いっしょに　いると<LINE>#とも　なかよく　なれるわよ<DONE>
-{text_start}カントー　ちほうの　ちずだ！<LINE><…>　もらえたら　うれしい？<DONE>
+{text_start}カントー　ちほうの　ちずだ！<LINE><……>　もらえたら　うれしい？<DONE>
 {text_start}<RIVAL>『よう　<PLAYER>！<LINE>オーキドの　じいさんなら　いないぜ<PARA>#を　くれるって　いうから<LINE>オレも　いそいで　きたんだけど…<DONE>
 {text_start}<RIVAL>『ふん！<LINE>おまえよりも　いい　#<CONT>あとで　もらうもんねー！<DONE>
 {text_start}<RIVAL>『おれの<LINE>#の　ほうが　つよそうだぜ<DONE>
@@ -2192,13 +2192,13 @@
 {text_start}オーキド『さあ<LINE>とるが　よい！<DONE>
 {text_start}オーキド『そうじゃ！<LINE>やせいの　#が　でて　きても<PARA>そいつを　たたかわせて　いけば<LINE>となりまちへ　いける！<DONE>
 {text_start}オーキド『たまには<LINE>そいつに　はなしかけて<CONT>ようすを　みると　いいじゃろう<DONE>
-{text_start}オーキド『おお！　<PLAYER><PARA>どーだい？<LINE>わしの　やった#は<…>ほう<PARA>だいぶ<LINE>なついた　みたいだな？<PARA>おまえ　#<TRAINER>の<LINE>さいのうが　あるな！<PARA><…>え　わしに　わたす　ものが？<PARA><PLAYER>は　オーキド　はかせに<LINE>とどけものを　わたした！@
-{text_start}<PARA>おお！　これは<LINE>わしが　ちゅうもん　してた<PARA>とくせいの　モンスターボールじゃ<LINE>どうも　ありがとよ！<PARA>ところで　さっき　いいわすれたが<LINE>おねがいが　あるんじゃ<…><DONE>
+{text_start}オーキド『おお！　<PLAYER><PARA>どーだい？<LINE>わしの　やった#は<……>ほう<PARA>だいぶ<LINE>なついた　みたいだな？<PARA>おまえ　#<TRAINER>の<LINE>さいのうが　あるな！<PARA><……>え　わしに　わたす　ものが？<PARA><PLAYER>は　オーキド　はかせに<LINE>とどけものを　わたした！@
+{text_start}<PARA>おお！　これは<LINE>わしが　ちゅうもん　してた<PARA>とくせいの　モンスターボールじゃ<LINE>どうも　ありがとよ！<PARA>ところで　さっき　いいわすれたが<LINE>おねがいが　あるんじゃ<……><DONE>
 {text_start}せかい　じゅうに　すんでいる<LINE>#たちが<CONT><PLAYER>を　まって　おるぞー！<DONE>
-{text_start}オーキド『#を<LINE>ただ　みつけただけ　では<CONT>くわしい　データを<CONT>てに　いれる　ことは　できん！<PARA>かならず<LINE>つかまえなければ　ならんのだ！<CONT>ほれ　そのために<…><CONT>モンスターボールをわたそう！<PARA><PLAYER>は　５こ<LINE>モンスターボールを　もらった！@
-{text_start}<PARA>やせいの　#が<LINE>とびだしてきたら　チャーンス！<PARA>わしが　やってみせたように<LINE>モンスターボールを<CONT>ポイ！っと　なげれば<CONT>#を　つかまえ　られる！<PARA>ただし<…>　うまく　とれるか<LINE>どうかは　わからんぞ！<PARA>げんきな　#は　にげやすいし<LINE>うんも　あるからな！<DONE>
+{text_start}オーキド『#を<LINE>ただ　みつけただけ　では<CONT>くわしい　データを<CONT>てに　いれる　ことは　できん！<PARA>かならず<LINE>つかまえなければ　ならんのだ！<CONT>ほれ　そのために<……><CONT>モンスターボールをわたそう！<PARA><PLAYER>は　５こ<LINE>モンスターボールを　もらった！@
+{text_start}<PARA>やせいの　#が<LINE>とびだしてきたら　チャーンス！<PARA>わしが　やってみせたように<LINE>モンスターボールを<CONT>ポイ！っと　なげれば<CONT>#を　つかまえ　られる！<PARA>ただし<……>　うまく　とれるか<LINE>どうかは　わからんぞ！<PARA>げんきな　#は　にげやすいし<LINE>うんも　あるからな！<DONE>
 {text_start}オーキド『ときどきは<LINE>わしの　とこに　かおを　だせ！<PARA>#ずかんの　ページが<LINE>きに　なるんでな！<DONE>
-{text_start}オーキド『よく　きた！<LINE>#ずかんの<CONT>ちょうしは　どうかな？<CONT>どれ<…>　ちょっと<CONT>みて　あげようか！<PROMPT>
+{text_start}オーキド『よく　きた！<LINE>#ずかんの<CONT>ちょうしは　どうかな？<CONT>どれ<……>　ちょっと<CONT>みて　あげようか！<PROMPT>
 {text_start}ずかん　みたいな　ものが　ある！<LINE>なかは　しろいページ　ばっかりだ！<DONE>
 {text_start}？<DONE>
 {text_start}ああ　みえても　オーキドはかせは<LINE>#の　オーソリティなの！<PARA>はかせを　そんけいする<LINE>#　<TRAINER>も　おおいわよ！<DONE>
@@ -2214,12 +2214,12 @@
 {text_start}オーキド『<PLAYER>！<LINE>こいつは　さっきの　#じゃ！<PARA>つかまえた　ばかりで<LINE>あまり　ひとには　なれておらんが<CONT>こいつを　かわりに　やろう！<PROMPT>
 {text_start}<PLAYER>は　オーキドから<LINE>@{text_ram wNameBuffer}{text_start}を　もらった！@
 {text_start}オーキド『こら　どこへいく！<LINE>もどってこんか！<DONE>
-{text_start}<RIVAL>『まてよ！　<PLAYER>！<LINE>せっかく　じーさんに<CONT>#　もらったんだぜ！<PARA><…>　ちょっと<LINE>おれの　あいて　してみろ！<DONE>
+{text_start}<RIVAL>『まてよ！　<PLAYER>！<LINE>せっかく　じーさんに<CONT>#　もらったんだぜ！<PARA><……>　ちょっと<LINE>おれの　あいて　してみろ！<DONE>
 {text_start}えー　そんな　バカな！<LINE>おまえの　#に<CONT>すりゃあ　よかった！<PROMPT>
 {text_start}<RIVAL>『やりー！<LINE>おれって　てんさい？<PROMPT>
 {text_start}<RIVAL>『よーし！<LINE>ほかの　#と　たたかわせて<CONT>もっと　もっと　つよくするぜ！<PARA><PLAYER>！　じいさん！<LINE>そんじゃ　あばよ！<DONE>
 {text_start}オーキド『おや？<DONE>
-{text_start}オーキド『ほう！<PARA>めずらしいこと　だが<LINE>そいつは　モンスターボールが<CONT>きらいな　ようじゃのう<…><PARA>ならば　つれて　あるいたらどうだ？<PARA>そのほうが　そいつも<LINE>よろこぶ　ことじゃろう！<PARA>はなしかけて　ようすを<LINE>みることも　できるからな！<DONE>
+{text_start}オーキド『ほう！<PARA>めずらしいこと　だが<LINE>そいつは　モンスターボールが<CONT>きらいな　ようじゃのう<……><PARA>ならば　つれて　あるいたらどうだ？<PARA>そのほうが　そいつも<LINE>よろこぶ　ことじゃろう！<PARA>はなしかけて　ようすを<LINE>みることも　できるからな！<DONE>
 {text_start}<RIVAL>『じいさん！<DONE>
 {text_start}<RIVAL>『じいさん<LINE>おれの　#　そだったぜ！<CONT>ちょっと　みてくれよ<DONE>
 {text_start}オーキド『おお　<RIVAL>か<LINE>ちょうど　いい！<PARA>おまえたちに　たのみが　あるんじゃ<DONE>
@@ -2228,24 +2228,24 @@
 {text_start}この　せかいの　すべての<LINE>#を　きろくした<CONT>かんぺきな　ずかんを　つくること！<PARA>それが　わしの　ゆめ　だった！<PARA>しかし　わしも　もう　ジジイ！<LINE>そこまで　ムリは　できん！<PARA>そこで　おまえ　たちには<LINE>わしの　かわりに<CONT>ゆめを　はたして　ほしいのじゃ！<PARA>さあ　ふたりとも<LINE>さっそく　しゅっぱつ　してくれい！<PARA>これは　#の　れきしに　のこる<LINE>いだいな　しごとじゃー！<DONE>
 {text_start}<RIVAL>『よーし！　じいさん！<LINE>ぜんぶ　おれに　まかせなー！<PARA><PLAYER>！<LINE>ざんねんだが　おまえの　でばんは<CONT>まったく　ねーぜ！<PARA>そうだ！　うちの　ねえちゃん　から<LINE>タウンマップを　かりて　いこう！<PARA><PLAYER>　には　かさない　ように<LINE>ねえちゃんに　いって　おくから<CONT>おれんちへ　きても　むだ　だからな！<DONE>
 {text_start}わたしも　はかせの　じょしゅ　として<LINE>#を　けんきゅう　してます<DONE>
-{text_start}<…>　<…>　#ずかんの<LINE>げんざいの　かんせいど　は<…><PARA>みつけた　#　@{text_decimal hDexRatingNumMonsSeen, 1, 3}{text_start}！<LINE>つかまえた　#　@{text_decimal hDexRatingNumMonsOwned, 1, 3}{text_start}！<PARA>オーキドはかせの　ひょうか<…><PROMPT>
-{text_start}まだまだ<…>　これからだ<LINE>あちこちの　くさむらに　はいって<CONT>#を　つかまえるのじゃ！<DONE>
+{text_start}<……>　<……>　#ずかんの<LINE>げんざいの　かんせいど　は<……><PARA>みつけた　#　@{text_decimal hDexRatingNumMonsSeen, 1, 3}{text_start}！<LINE>つかまえた　#　@{text_decimal hDexRatingNumMonsOwned, 1, 3}{text_start}！<PARA>オーキドはかせの　ひょうか<……><PROMPT>
+{text_start}まだまだ<……>　これからだ<LINE>あちこちの　くさむらに　はいって<CONT>#を　つかまえるのじゃ！<DONE>
 {text_start}どうにか　ちょうしが　でてきたな！<LINE>じょしゅに　フラッシュを<CONT>もたせたぞ！　もらって　くれい！<DONE>
 {text_start}#ずかんに　しては　まだ<LINE>ボリュームが　たりん！　いろいろな<CONT>しゅるいの　#を　とるのじゃ！<DONE>
-{text_start}ふむ<…>　がんばってるな！<LINE>じょしゅに　ダウジングマシンを<CONT>もたせたぞ！　もらって　くれい！<DONE>
+{text_start}ふむ<……>　がんばってるな！<LINE>じょしゅに　ダウジングマシンを<CONT>もたせたぞ！　もらって　くれい！<DONE>
 {text_start}いい　できばえ　じゃないか！<LINE>じょしゅに　がくしゅうそうちを<CONT>もたせたぞ！　もらって　くれい！<DONE>
-{text_start}ついに　５０しゅるいを　こえたか！<LINE><…>　この　ちょうし　じゃ！<DONE>
-{text_start}ほっほう！　<…>　こりゃ　いい<LINE>#ずかんに　なって　きとる！<DONE>
+{text_start}ついに　５０しゅるいを　こえたか！<LINE><……>　この　ちょうし　じゃ！<DONE>
+{text_start}ほっほう！　<……>　こりゃ　いい<LINE>#ずかんに　なって　きとる！<DONE>
 {text_start}ぜっこうちょう！　うみで　#<LINE>つれば　もっと　あつまり　そうじゃ！<DONE>
-{text_start}ワンダフル！　もしかして　きみは<LINE>ものを　あつめるの　すきなのか<…>？<DONE>
-{text_start}いやはや<…>　こりゃ　すごい！<LINE>あつめるのは　たいへん　だったろ！<DONE>
-{text_start}とうとう　１００しゅるい　こえたか！<LINE><…>　しんじられない　うでまえじゃ！<DONE>
-{text_start}#の　しんか　けいたいも<LINE>はいって　きとる<…>　すばらしい！<DONE>
+{text_start}ワンダフル！　もしかして　きみは<LINE>ものを　あつめるの　すきなのか<……>？<DONE>
+{text_start}いやはや<……>　こりゃ　すごい！<LINE>あつめるのは　たいへん　だったろ！<DONE>
+{text_start}とうとう　１００しゅるい　こえたか！<LINE><……>　しんじられない　うでまえじゃ！<DONE>
+{text_start}#の　しんか　けいたいも<LINE>はいって　きとる<……>　すばらしい！<DONE>
 {text_start}エクセレント！　ともだちと　こうかん<LINE>すると　もっと　あつまる　かもしれん<DONE>
 {text_start}ここまで　ずかんが　できたら<LINE>もはや　プロフェッショナル　じゃ！<DONE>
 {text_start}わしゃ　もう　いうことは　ない！<LINE>きみが　#はかせ　じゃ！<DONE>
-{text_start}ついに　パーフェクトな　ずかんの<LINE>かんせいじゃ！　<…>　おめでとう！<DONE>
-{text_start}すみに　ある　<PC>は　どうぞ<LINE>ごじゆうに　おつかいください！<PARA><…>と　うけつけの　ねーちゃんが<LINE>いっとった　しんせつやのう<DONE>
+{text_start}ついに　パーフェクトな　ずかんの<LINE>かんせいじゃ！　<……>　おめでとう！<DONE>
+{text_start}すみに　ある　<PC>は　どうぞ<LINE>ごじゆうに　おつかいください！<PARA><……>と　うけつけの　ねーちゃんが<LINE>いっとった　しんせつやのう<DONE>
 {text_start}#センターは　このさき<LINE>どこの　まちに　いっても　ある！<PARA>なんびき　あずけても　ただ　だし<LINE>こまめに　つかうと　いいよ！<DONE>
 {text_start}じゃ！<LINE>オーキド　はかせに　よろしく！<DONE>
 {text_start}お！　きみは<LINE>マサラ　タウンから　きたんだね？<DONE>
@@ -2255,47 +2255,47 @@
 {text_start}ふー<LINE>ノートの　なかの　こと<CONT>わたし　ぜんぶ　おぼえるの<DONE>
 {text_start}おねえちゃんが　いってたけど<LINE>#って　だいじに　してると<CONT>なついて　くれるんだって<DONE>
 {text_start}はい！<PARA>こくばんに　かかれてる　こと<LINE>ちゃんと　みて！<DONE>
-{text_start}ニックネームを　かんがえることは<LINE>たのしい<…>が　むずかしい！<PARA>こった　ニックネームも　いいが<LINE>おぼえやすいのが　いちばん　やな！<DONE>
+{text_start}ニックネームを　かんがえることは<LINE>たのしい<……>が　むずかしい！<PARA>こった　ニックネームも　いいが<LINE>おぼえやすいのが　いちばん　やな！<DONE>
 {text_start}うちの　とうちゃんも<LINE>#　だいすきなのよ！<DONE>
 {text_start}オニチャン『チュ　チュン！<DONE>
 {text_start}オニスズメ<LINE>めいめい　「オニチャン」<DONE>
-{text_start}ははははーッ！<LINE>ここは　おれの　かくれが　だ！<PARA><ROCKET>　ふっかつの　ひ　まで<LINE>この　ジムで<CONT>たいせいを　たてなおすのだ！<PARA>しかし<…>　きみに<LINE>みつかって　しまっては<CONT>しょうがない！<CONT>こんどは　てかげん　なしだ！<CONT>では<…><PARA>いま　いちど！<LINE>さいきょうの　<TRAINER><CONT>サカキの　うでまえを　みよ！<DONE>
-{text_start}はー　はーッ！<LINE>はげしい　たたかい　だった！<CONT>きみの　かちだ！<CONT>いま<…><CONT>その　あかしに<CONT>グリーン　バッジを　わたそう！@
-{text_start}このような　まけかたを　しては<LINE>ぶかたちに　しめしが　つかない！<CONT><ROCKET>は<…><CONT>ほんじつを　もって　かいさんする！<PARA>わたしは<LINE>#の　しゅぎょうを<CONT>いちから　しなおす　つもりだ！<PARA>いつの　ひか<…><LINE>また　あおう！<CONT><…>　さらばだ！@
-{text_start}グリーンバッジさえ　あれば<LINE>どんなに　レベルの　たかい<CONT>#も　いうことを　きく！<PARA>きみが　いちにんまえの<LINE><TRAINER>に　なった　あかしだ！<PARA>これで　#リーグに<LINE>いどむ　ことが　できるだろう<PARA>この　<TM>は<…>！<LINE>#リーグへ　いどむ<CONT>きみへ　せんべつだ！<DONE>
+{text_start}ははははーッ！<LINE>ここは　おれの　かくれが　だ！<PARA><ROCKET>　ふっかつの　ひ　まで<LINE>この　ジムで<CONT>たいせいを　たてなおすのだ！<PARA>しかし<……>　きみに<LINE>みつかって　しまっては<CONT>しょうがない！<CONT>こんどは　てかげん　なしだ！<CONT>では<……><PARA>いま　いちど！<LINE>さいきょうの　<TRAINER><CONT>サカキの　うでまえを　みよ！<DONE>
+{text_start}はー　はーッ！<LINE>はげしい　たたかい　だった！<CONT>きみの　かちだ！<CONT>いま<……><CONT>その　あかしに<CONT>グリーン　バッジを　わたそう！@
+{text_start}このような　まけかたを　しては<LINE>ぶかたちに　しめしが　つかない！<CONT><ROCKET>は<……><CONT>ほんじつを　もって　かいさんする！<PARA>わたしは<LINE>#の　しゅぎょうを<CONT>いちから　しなおす　つもりだ！<PARA>いつの　ひか<……><LINE>また　あおう！<CONT><……>　さらばだ！@
+{text_start}グリーンバッジさえ　あれば<LINE>どんなに　レベルの　たかい<CONT>#も　いうことを　きく！<PARA>きみが　いちにんまえの<LINE><TRAINER>に　なった　あかしだ！<PARA>これで　#リーグに<LINE>いどむ　ことが　できるだろう<PARA>この　<TM>は<……>！<LINE>#リーグへ　いどむ<CONT>きみへ　せんべつだ！<DONE>
 {text_start}<PLAYER>は　サカキから<LINE><TM>２７を　もらった！@
-{text_start}<PARA><TM>２７は　じわれ　だ！<LINE>じわれに　さそいこまれた　てきは<CONT>いちげきで　ダウン　する！<CONT>さいきょうの　わざだ！<PARA>おれが　むかし<…>　ここで<LINE>#　ジムを　やってる　とき<CONT>つくった　ものだ<…><DONE>
+{text_start}<PARA><TM>２７は　じわれ　だ！<LINE>じわれに　さそいこまれた　てきは<CONT>いちげきで　ダウン　する！<CONT>さいきょうの　わざだ！<PARA>おれが　むかし<……>　ここで<LINE>#　ジムを　やってる　とき<CONT>つくった　ものだ<……><DONE>
 {text_start}にもつが　いっぱいだ！<DONE>
-{text_start}<…>　さて！<LINE>そろそろ<…><CONT>バテて　きたんじゃないか<DONE>
-{text_start}<…>　ちから　つきた<PROMPT>
+{text_start}<……>　さて！<LINE>そろそろ<……><CONT>バテて　きたんじゃないか<DONE>
+{text_start}<……>　ちから　つきた<PROMPT>
 {text_start}たいりょくが　ないと<LINE>とても　リーダーには　かてないぜ！<DONE>
 {text_start}うおーッ！<LINE>おれの　イカリは<CONT>さいこうちょう　だあッ！<DONE>
 {text_start}ぬうおーッ！<PROMPT>
 {text_start}ウオースッ！<LINE>まだまだ　れんしゅう　たりないッス<DONE>
 {text_start}おれと　#の<LINE>コンビネーション！<CONT>バツグン　だぜ！<DONE>
-{text_start}<…>　おまえと<LINE>#も　いきが　あってるな<PROMPT>
-{text_start}おまえは　ここの　リーダーが<LINE>だれか　しって　いるのか<…>？<DONE>
+{text_start}<……>　おまえと<LINE>#も　いきが　あってるな<PROMPT>
+{text_start}おまえは　ここの　リーダーが<LINE>だれか　しって　いるのか<……>？<DONE>
 {text_start}カラテ　こそ！<LINE>せかい　さいきょうの　かくとうぎ！<DONE>
 {text_start}チェーストー！<PROMPT>
-{text_start}ウィオッス！<LINE>#が　おれ　くらい<CONT>カラテ　できれば　いいんだが<…><DONE>
+{text_start}ウィオッス！<LINE>#が　おれ　くらい<CONT>カラテ　できれば　いいんだが<……><DONE>
 {text_start}しんに　つよい　<TRAINER>は<LINE>かちかたも　うつくしい　ものだ！<DONE>
-{text_start}てが　すべった<…>！<PROMPT>
-{text_start}こんな　まけかた　したら<…><LINE><…>　リーダーに　おこられる！<DONE>
+{text_start}てが　すべった<……>！<PROMPT>
+{text_start}こんな　まけかた　したら<……><LINE><……>　リーダーに　おこられる！<DONE>
 {text_start}キング　オブ　カラテ！<CONT>ここから　さきへは<CONT>いかせないぜ！<DONE>
 {text_start}ドッセーッ！<PROMPT>
 {text_start}ウィース！<LINE>#　リーグ　めざしてるのか！<CONT>ませた　こどもだ！<DONE>
 {text_start}ピシ　ピシッ！<LINE>ほら！<CONT>ビビってるんじゃないよ！<DONE>
-{text_start}<…>　い　いてて！<PROMPT>
+{text_start}<……>　い　いてて！<PROMPT>
 {text_start}まあ　まて！<LINE>ゆだん　した　だけだ！<DONE>
 {text_start}トキワ　ジムは<LINE>ずっと　へいさ　していたが<CONT>リーダーが　かえってきて<CONT>きょうから　ふっかつだ！<DONE>
-{text_start}<…>　さすがだ！<PROMPT>
-{text_start}きみが<…><LINE>トキワ　リーダーに　かてれば<CONT>#リーグに　すすめる　だろう<DONE>
-{text_start}おーす！<LINE>みらいの　チャンピオン！<PARA>トキワ　リーダーの　しょうたいは<LINE>おれにも　わからん！<PARA>たしかなのは<LINE>いままでの　リーダーの<CONT>だれよりも　つよいって　ことだ！<PARA>それと<…><LINE>どうも　この　ジムには<CONT>じめん　タイプ　#の<CONT>つかいてが　あつまってる　らしいぜ<DONE>
+{text_start}<……>　さすがだ！<PROMPT>
+{text_start}きみが<……><LINE>トキワ　リーダーに　かてれば<CONT>#リーグに　すすめる　だろう<DONE>
+{text_start}おーす！<LINE>みらいの　チャンピオン！<PARA>トキワ　リーダーの　しょうたいは<LINE>おれにも　わからん！<PARA>たしかなのは<LINE>いままでの　リーダーの<CONT>だれよりも　つよいって　ことだ！<PARA>それと<……><LINE>どうも　この　ジムには<CONT>じめん　タイプ　#の<CONT>つかいてが　あつまってる　らしいぜ<DONE>
 {text_start}たまげたぜ！<LINE>トキワの　リーダーが<CONT>サカキ　だったとは！<DONE>
 {text_start}また　きてね<DONE>
 {text_start}はいはい　こどもは　<LINE>けんがくりょう　５０えん　です<PARA>けんがく　しますか？<DONE>
 {text_start}はい　たしかに<LINE>５０えん　いただき　ました！<DONE>
-{text_start}<…>あら<LINE>おかねが　ないよ<PROMPT>
+{text_start}<……>あら<LINE>おかねが　ないよ<PROMPT>
 {text_start}うらぐちから　タダで　はいろうなんて<LINE>ちゃっかりもの　だね<PARA>それより　きみ<LINE>コハクって　しってる？<DONE>
 {text_start}コハクに　まじった<LINE>むかしのいきものを　よみがえらせる<PARA>そうだいな　じっけんを　どこかの<LINE>けんきゅうじょが　してるんだって<DONE>
 {text_start}おおむかし　きから　でた　しるが<LINE>カセキのように　かたまった　ものを<CONT>コハクと　いうんだよ<DONE>
@@ -2304,63 +2304,63 @@
 {text_start}ありがたや！　ありがたや！<PARA>りゅうじん　さまの<LINE>ほねを　おがめる　とは！<DONE>
 {text_start}しー！<LINE>ないしょ　だけど　このコハク<PARA>ポケモンの　いでんしが　のこってると<LINE>おれは　にらんでるんだ！<PARA>もし　いきかえらせたら<LINE>#の　いちだい　はっけんだ！<PARA>でも　ここの　なかまは<LINE>おれの　いうこと　しんじないんだ<PARA>……それで<LINE>きみに　たのみが　ある！<PARA>これを　どこかの<LINE>けんきゅうじょに　もって　いって<PARA>しらべて　ほしいんだ！<PROMPT>
 {text_start}<PLAYER>は　おじさんから<LINE>ひみつのコハクを　もらった！@
-{text_start}<…>しー！<LINE>コハク　よろしく　たのむよ！<DONE>
+{text_start}<……>しー！<LINE>コハク　よろしく　たのむよ！<DONE>
 {text_start}もちものが　いっぱいだ<DONE>
 {text_start}ここでは　せかいでも　めずらしい<LINE>こだい　#の　カセキのうち<PARA>２しゅるいを　てんじ　してます！<DONE>
 {text_start}こがねいろに　すき　とおった<LINE>きれいな　コハクが　ある！<DONE>
-{text_start}つきの　いしね<…><PARA>そこらへんの　いしころと<LINE>どこが　ちがうんだろう？<DONE>
+{text_start}つきの　いしね<……><PARA>そこらへんの　いしころと<LINE>どこが　ちがうんだろう？<DONE>
 {text_start}１９６９ねん　７がつ　２０か！<PARA>じんるい<LINE>はじめて　つきに　たつ！<PARA>わしは　あの　ニュースが　みたくて<LINE>カラーテレビを　かったんじゃ！<DONE>
 {text_start}こんげつは<LINE>うちゅう　はくらんかいを　やってます<DONE>
 {text_start}わたしね　わたしね<LINE>かわいいから　ピカチュウ　ほしい！<PARA>おとうさんに　とってきてね　って<LINE>おねがい　してるの<DONE>
 {text_start}はい　はい！<LINE>ピカチュウだな！　こんどな！<DONE>
 {text_start}きみの　ピカチュウ<LINE>なついてないようだが　よかったら<CONT>むすめに　ゆずって　くれないか？<DONE>
-{text_start}きみの　ピカチュウが　ほしいんだが<LINE>そんなに　なついてちゃ<CONT>もらうわけには　いかないなぁ<…><DONE>
+{text_start}きみの　ピカチュウが　ほしいんだが<LINE>そんなに　なついてちゃ<CONT>もらうわけには　いかないなぁ<……><DONE>
 {text_start}スペース　シャトル　コロンビアごう<DONE>
-{text_start}オツキミやまに　らっかした　ぶったい<LINE>たぶん<…>　つきの　いし<DONE>
+{text_start}オツキミやまに　らっかした　ぶったい<LINE>たぶん<……>　つきの　いし<DONE>
 {text_start}きたな！<LINE>おれは　ニビ　#　ジム<CONT>リーダーの　タケシ！<PARA>おれの　かたい　いしは<LINE>おれの　#にも　あらわれる！<CONT>かたくて　がまん　づよい！<PARA>そう！　つかうのは<LINE>いわ　タイプ　ばっかりだ！<PARA>ふはは！<LINE>まけると　わかってて　たたかうか！<CONT>#　<TRAINER>の　さがだな<CONT>いいだろう！<CONT>かかって　こい！<DONE>
-{text_start}この　ひろい　せかいには<LINE>いろんな　やつが　いる！<CONT>#を<CONT>たたかわせたり　そだてたり<…><PARA>おれは　ここで<LINE>#を　そだてる　ブリーダーの<CONT>しゅぎょうを　しているんだ！<PARA>きみも　つよい<LINE>#　トレーナーを　めざすなら<CONT>ハナダ　シティの　ジムにも　いき<CONT>きみの　ちからを<CONT>ためして　みると　いい<DONE>
-{text_start}あと<…>　そうだ！<LINE>これを　きみに　あげよう！<DONE>
+{text_start}この　ひろい　せかいには<LINE>いろんな　やつが　いる！<CONT>#を<CONT>たたかわせたり　そだてたり<……><PARA>おれは　ここで<LINE>#を　そだてる　ブリーダーの<CONT>しゅぎょうを　しているんだ！<PARA>きみも　つよい<LINE>#　トレーナーを　めざすなら<CONT>ハナダ　シティの　ジムにも　いき<CONT>きみの　ちからを<CONT>ためして　みると　いい<DONE>
+{text_start}あと<……>　そうだ！<LINE>これを　きみに　あげよう！<DONE>
 {text_start}<PLAYER>は　タケシから<LINE><TM>３４を　もらった！@
-{text_start}<PARA><TM>を　つかうと　#は<LINE>すぐ　その　わざを　おぼえる！<CONT>ただし　マシンは　つかい　すてだ！<CONT>どの　#に　おぼえさせるか<CONT>よく　かんがえた　ほうが　いい<PARA>ところで<…><LINE><TM>３４には<CONT>がまん　が　はいっている！<PARA>こうげき　されてる　とき<LINE>じっと　たえて<…>　あとで<CONT>いっきに　２ばいにして　かえす！<CONT>おもしろい　わざだ！<DONE>
+{text_start}<PARA><TM>を　つかうと　#は<LINE>すぐ　その　わざを　おぼえる！<CONT>ただし　マシンは　つかい　すてだ！<CONT>どの　#に　おぼえさせるか<CONT>よく　かんがえた　ほうが　いい<PARA>ところで<……><LINE><TM>３４には<CONT>がまん　が　はいっている！<PARA>こうげき　されてる　とき<LINE>じっと　たえて<……>　あとで<CONT>いっきに　２ばいにして　かえす！<CONT>おもしろい　わざだ！<DONE>
 {text_start}もちものが　いっぱいだ<DONE>
 {text_start}きみを<LINE>みくびって　いた　ようだ<PARA>ぼくに　かった　あかしに<LINE>#　リーグ　こうにん<CONT>グレー　バッジを　さずけよう！<PARA><PLAYER>は　タケシから<LINE>グレー　バッジを　もらった！@
 {text_start}<PARA>グレー　バッジを　つけてると<LINE>それだけで<CONT>きみの　#は　つよくなる！<PARA>フラッシュ　という　わざを<LINE>もっている　#は<CONT>たたかって　なくても　フラッシュを<CONT>つかえる　ように　なる！<PROMPT>
 {text_start}まちなー！<PARA>こどもが　なんの　ようだ！<LINE>タケシさんに　ちょうせん　なんて<CONT>１００００こうねん　はやいんだよ！<DONE>
-{text_start}しまった！<PARA>１００００こうねんは<…>　<…><LINE>じかん　じゃない！<CONT><…>　<…>　きょり　だ！<PROMPT>
+{text_start}しまった！<PARA>１００００こうねんは<……>　<……><LINE>じかん　じゃない！<CONT><……>　<……>　きょり　だ！<PROMPT>
 {text_start}おまえ　なかなか　やるな！<LINE>タケシさん　ほどじゃ　ないけどな<DONE>
-{text_start}おっす！<LINE>#　チャンピオンを<CONT>めざして　みないか？<PARA>おれは　<TRAINER>　じゃない<LINE>しかし　かつ　ために　ばっちり<CONT>アドバイス　できるぜ！<PARA>な<…>！　いっしょに<LINE>#　チャンピオン　めざそうぜ<DONE>
-{text_start}よっしゃーッ！<LINE>じゃ　さっそく<…>！<PROMPT>
-{text_start}しょうぶの　さいしょに　とびだす<LINE>#は<…><CONT>#　リストの<CONT>いちばん　うえの　やつだ！<PARA>リストの　じゅんばんを　かえれば<LINE>ゆうりに　なることも　ある！<CONT>ためして　みなよ！<DONE>
-{text_start}えんりょは　いらんぜ！<LINE>じゃ　さっそく<…>！<PROMPT>
+{text_start}おっす！<LINE>#　チャンピオンを<CONT>めざして　みないか？<PARA>おれは　<TRAINER>　じゃない<LINE>しかし　かつ　ために　ばっちり<CONT>アドバイス　できるぜ！<PARA>な<……>！　いっしょに<LINE>#　チャンピオン　めざそうぜ<DONE>
+{text_start}よっしゃーッ！<LINE>じゃ　さっそく<……>！<PROMPT>
+{text_start}しょうぶの　さいしょに　とびだす<LINE>#は<……><CONT>#　リストの<CONT>いちばん　うえの　やつだ！<PARA>リストの　じゅんばんを　かえれば<LINE>ゆうりに　なることも　ある！<CONT>ためして　みなよ！<DONE>
+{text_start}えんりょは　いらんぜ！<LINE>じゃ　さっそく<……>！<PROMPT>
 {text_start}さすがだな！<LINE>この　ちょうしで　めざせ！<CONT>#　チャンピオン！<DONE>
-{text_start}よっしゃーッ！<LINE>じゃ　さっそく<…>！<PARA>んー　きみの　ピカチュウじゃ<LINE>このジムを　かちぬくのは<CONT>かなり　きびしいぜ！<PARA>タケシが　つかう　じめん#には<LINE>でんきこうげきは<CONT>まったく　つうじないからな！<DONE>
+{text_start}よっしゃーッ！<LINE>じゃ　さっそく<……>！<PARA>んー　きみの　ピカチュウじゃ<LINE>このジムを　かちぬくのは<CONT>かなり　きびしいぜ！<PARA>タケシが　つかう　じめん#には<LINE>でんきこうげきは<CONT>まったく　つうじないからな！<DONE>
 {text_start}ニドラン『バウバウ！@
 {text_start}ニドラン　おすわり！<DONE>
-{text_start}うちの　#　よそもの<LINE>だから　き　むずかしいよ<PARA>よそもの　ってのは　ひとと<LINE>こうかん　した　#だよ<PARA>そだつのは　はやいが<LINE>ちからのない　<TRAINER>の<CONT>いうことは　きかん！<PARA>バッジさえ　あれば<…><DONE>
-{text_start}インチキ　くさい　おじさんから<LINE>なんだか　ヘンな　#を<CONT>かっちゃったよ！<PARA>すっげー　よわいの！<LINE>５００円も　したのに<…><DONE>
+{text_start}うちの　#　よそもの<LINE>だから　き　むずかしいよ<PARA>よそもの　ってのは　ひとと<LINE>こうかん　した　#だよ<PARA>そだつのは　はやいが<LINE>ちからのない　<TRAINER>の<CONT>いうことは　きかん！<PARA>バッジさえ　あれば<……><DONE>
+{text_start}インチキ　くさい　おじさんから<LINE>なんだか　ヘンな　#を<CONT>かっちゃったよ！<PARA>すっげー　よわいの！<LINE>５００円も　したのに<……><DONE>
 {text_start}よわい　#でも<LINE>いっしょうけんめい　そだてれば<CONT>いいこと　あるさ！<DONE>
 {text_start}#を　そだてて　いくと<LINE>わざを　おぼえる！<PARA>しかし　ひとから　おそわらなければ<LINE>おぼえない　わざも　あるぞ<DONE>
-{text_start}ねむり　どく　やけど　マヒ<…><LINE>#の　たいちょうが　わるいと<CONT>つかまえ　やすいよ<CONT>でも<…>　かならず　とれる<CONT>わけじゃ　ないみたい<DONE>
-{text_start}なに！？<PARA><ROCKET>が　オツキミやまで<…><LINE><…>ん？　でんわ　してるんだ！<PARA>じゃま　しないで　くれ！<DONE>
+{text_start}ねむり　どく　やけど　マヒ<……><LINE>#の　たいちょうが　わるいと<CONT>つかまえ　やすいよ<CONT>でも<……>　かならず　とれる<CONT>わけじゃ　ないみたい<DONE>
+{text_start}なに！？<PARA><ROCKET>が　オツキミやまで<……><LINE><……>ん？　でんわ　してるんだ！<PARA>じゃま　しないで　くれ！<DONE>
 {text_start}#　センターって　いいわね<PARA>ねむり　どく　やけど　マヒなど<LINE>#の　たいちょう　も<CONT>なおして　くれるのよ<DONE>
 {text_start}プリン『ぷうー　ぷぷうー<DONE>
-{text_start}くう<…>！　<ROCKET>め！<PARA>おれの　いえを<LINE>こんなに　しちまいやがって！<PARA>ぬすまれた　<TM>は<LINE>マンキーや　サンドに<PARA>じめんに　あなを　ほる　わざを<LINE>おしえる　ものだ！<PARA>あれは　たかかったのに<DONE>
+{text_start}くう<……>！　<ROCKET>め！<PARA>おれの　いえを<LINE>こんなに　しちまいやがって！<PARA>ぬすまれた　<TM>は<LINE>マンキーや　サンドに<PARA>じめんに　あなを　ほる　わざを<LINE>おしえる　ものだ！<PARA>あれは　たかかったのに<DONE>
 {text_start}ぬすまれた　ものは<LINE>もどって　こないと　あきらめて<PARA>うちの　ディグダには<LINE>きながに　そだてながら<PARA>あなほりを<LINE>おしえる　ことに　したよ<DONE>
-{text_start}<ROCKET><…>！<LINE>#に　あなを　ほらせて<PARA>きっと　また<LINE>わるだくみを　かんがえてるのよ！<DONE>
+{text_start}<ROCKET><……>！<LINE>#に　あなを　ほらせて<PARA>きっと　また<LINE>わるだくみを　かんがえてるのよ！<DONE>
 {text_start}かべに　あなが　あいてる！<LINE>ここから　そとに　でられるぞ！<DONE>
 {text_start}わたしは　ここで　きずついた<LINE>#たちの　せわを　しています<PARA>この　フシギダネも<LINE>すっかり　げんきに　なったし<CONT>だいじに　してくれる<CONT>トレーナーを　さがしているの@
 {text_start}そうだ！<LINE>あなた　この　フシギダネの<CONT>めんどうを　みてくださらない？<DONE>
 {text_start}それじゃ　おねがいします！@
 {text_start}フシギダネ　がんばってます？@
-{text_start}そう<…><LINE>ざんねん　です<…>@
+{text_start}そう<……><LINE>ざんねん　です<……>@
 {text_start}フシギダネ『ダネ@
 {text_start}ナゾノクサ『ナゾー@
 {text_start}サンド『ピキー@
-{text_start}マサキの　ヤツ！<PARA>めずらしい　#を<LINE>てに　いれる　ためには<…><PARA>あんな　ことも　こんな　ことも<LINE>へいきで　するって　きいたよ！<DONE>
+{text_start}マサキの　ヤツ！<PARA>めずらしい　#を<LINE>てに　いれる　ためには<……><PARA>あんな　ことも　こんな　ことも<LINE>へいきで　するって　きいたよ！<DONE>
 {text_start}きみも<LINE>マサキの　うわさ　きいてるか？<PARA>みんなが　あいつを<LINE>#　マニアと　よんでるよ！<PARA>でも　ものを　あつめたり<LINE>じまん　したい　きもちは<CONT>だれでも　ある！<PARA>みんなも　うらやましいんだな！<DONE>
-{text_start}きみ！<PARA>きみは　ポケモン　そだてる　とき<LINE>なにか　ポリシーが　ある？<PARA>わたしの　ポリシーはね<…><LINE>みず　タイプ　ポケモンで　せめて<CONT>せめて　<…>せめまくる　ことよ！<PARA>さあ！　せかいの　びしょうじょ<LINE>カスミさまが　あいてに　なるわ！<PARA>いくわよ！<LINE>マーイ　ステディ！<DONE>
+{text_start}きみ！<PARA>きみは　ポケモン　そだてる　とき<LINE>なにか　ポリシーが　ある？<PARA>わたしの　ポリシーはね<……><LINE>みず　タイプ　ポケモンで　せめて<CONT>せめて　<……>せめまくる　ことよ！<PARA>さあ！　せかいの　びしょうじょ<LINE>カスミさまが　あいてに　なるわ！<PARA>いくわよ！<LINE>マーイ　ステディ！<DONE>
 {text_start}<TM>１１は　バブルこうせんを<LINE>#に　おしえるの<PARA>みずに　すむ　#に<LINE>つかって　あげて！<DONE>
-{text_start}ブルー　バッジが　あれば<LINE>レベル３０までの　#は<CONT>おとなしく　いうこと　きくわ！<PARA>それが　たとえ<LINE>ひとから　もらった　#でもね<PARA>それと　たたかって　なくても<LINE>いあいぎりが　つかえるわ<PARA>ほそい　きを　きりたおして<LINE>とおれる　ように　なるの<PARA><…>　あと　これは　わたしの<LINE>じまんの　<TM>よ！<DONE>
+{text_start}ブルー　バッジが　あれば<LINE>レベル３０までの　#は<CONT>おとなしく　いうこと　きくわ！<PARA>それが　たとえ<LINE>ひとから　もらった　#でもね<PARA>それと　たたかって　なくても<LINE>いあいぎりが　つかえるわ<PARA>ほそい　きを　きりたおして<LINE>とおれる　ように　なるの<PARA><……>　あと　これは　わたしの<LINE>じまんの　<TM>よ！<DONE>
 {text_start}<PLAYER>は　カスミから<LINE><TM>１１を　もらった！@
 {text_start}にもつ　いっぱいね<DONE>
 {text_start}えー！わたしの　まけ！？<PARA>しょうが　ない！<PARA>わたしに　かった　しょうこに<LINE>ブルー　バッジを　あげる！<PROMPT>
@@ -2370,23 +2370,23 @@
 {text_start}おわっぷ！<PARA>まずは　おれが　あいてだ！<LINE>かかって　こい！<DONE>
 {text_start}こんな　はずは　ない<PROMPT>
 {text_start}カスミは　これから　まだまだ<LINE>つよくなる　<TRAINER>だ！<PARA>おまえ　なんかにゃ<LINE>まけたり　しないよ<DONE>
-{text_start}おーす！<LINE>みらいの　チャンピオン！<PARA>アドバイス　しよう！<PARA>ここの　リーダー　カスミは<LINE>みずに　すむ　#を　つかう<CONT>プロフェッショナルだ！<PARA>こんな　ときは　しょくぶつ　タイプで<LINE>みずを　すいとる　さくせんだ<PARA><…>　それか　でんき　タイプで<LINE>しびれ　させるのも　いいぜ<DONE>
+{text_start}おーす！<LINE>みらいの　チャンピオン！<PARA>アドバイス　しよう！<PARA>ここの　リーダー　カスミは<LINE>みずに　すむ　#を　つかう<CONT>プロフェッショナルだ！<PARA>こんな　ときは　しょくぶつ　タイプで<LINE>みずを　すいとる　さくせんだ<PARA><……>　それか　でんき　タイプで<LINE>しびれ　させるのも　いいぜ<DONE>
 {text_start}カスミに　かったな！<LINE>おれの　いった　とおり　だったろ？<PARA>おまえも　すごいが<LINE>おれも　すごいだろ？<DONE>
 {text_start}はい　はい！　いらっしゃい！<LINE>ここは　ミラクル　じてんしゃや！<PARA>ほりだしもの　あるよー！<LINE>かってくー？<PROMPT>
 {text_start}かっこいい　じてんしゃ　あるけど<LINE>かって　いかない？<DONE>
 {text_start}おきゃくさん！<LINE>おかねが　たりませんなー！<PROMPT>
-{text_start}あー　それは<…>！<PARA>じてんしゃ　ひきかえけん！<PARA><…>わかりました！<LINE>ささっ　これを　どうぞ！<PROMPT>
+{text_start}あー　それは<……>！<PARA>じてんしゃ　ひきかえけん！<PARA><……>わかりました！<LINE>ささっ　これを　どうぞ！<PROMPT>
 {text_start}<PLAYER>は　ひきかえけんで<LINE>じてんしゃを　もらった！@
 {text_start}また　よろしく！<LINE>ありがとう　ございました！<DONE>
 {text_start}やあ　こんちは！　じてんしゃの<LINE>のりごこちは　いかが　です？<PARA>あの　じてんしゃ　なら<LINE>サイクリング　ロードは　もちろん<CONT>どうくつ　だって　はしれちゃうよ！<DONE>
 {text_start}じてんしゃを　もっていけないよ<DONE>
-{text_start}うーん<…>！<LINE>やっぱり　ママチャリ　かしら？<PARA>マウンテン　バイクに<LINE>かいものカゴ　にあわない　もん<DONE>
+{text_start}うーん<……>！<LINE>やっぱり　ママチャリ　かしら？<PARA>マウンテン　バイクに<LINE>かいものカゴ　にあわない　もん<DONE>
 {text_start}この　みせの　じてんしゃ<LINE>ものは　いいけど　たかいよ！<CONT>ぼくには　かえないね<DONE>
 {text_start}きみの　じてんしゃ　かっこいい<LINE>うらやましいなあ<DONE>
 {text_start}むしよけスプレーは<LINE>むし　どころか<CONT>#も　よって　こないよ<PARA>つよい　#を　いちばん<LINE>うえに　おいて　おけば<CONT>こうかは　ばいぞう　だ！<DONE>
 {text_start}おみせでは　みた　こと　ないけど<LINE>ふしぎなアメ　しってる？<PARA>#が　いっきに　そだって<LINE>レベルが　あがる　らしいの<DONE>
 {text_start}うでが　あがった<LINE>#<TRAINER>だけが　もらえる<CONT>#　バッジ<PARA>あなたも　いくつか　もってるね<PARA>その　バッジには<LINE>すごい　ひみつが　あるのです<PROMPT>
-{text_start}では<…><PARA>#　バッジ　８つの　ひみつ<LINE>どれに　ついて　はなし　ましょう？<DONE>
+{text_start}では<……><PARA>#　バッジ　８つの　ひみつ<LINE>どれに　ついて　はなし　ましょう？<DONE>
 {text_start}はなしを　ききたく　なったら<LINE>また　いらっしゃい<DONE>
 {text_start}すべての<LINE>#の　こうげき　りょくが<CONT>すこし　たかく　なります<PARA>それから　フラッシュの　わざは<LINE>たたかって　いない　ときでも<CONT>つかえるように　なります<PROMPT>
 {text_start}レベル３０までの　#は<LINE>おとなしく　いうことを　ききます<PARA>それいじょう　レベルが　たかいと<LINE>うまく　あつかえません<PARA>それから　いあいぎりの　わざは<LINE>たたかって　いない　ときでも<CONT>つかえるように　なります<PROMPT>
@@ -2396,88 +2396,88 @@
 {text_start}レベル７０までの　#は<LINE>おとなしく　いうことを　ききます<PARA>それいじょう　レベルが　たかいと<LINE>うまく　あつかえません<PROMPT>
 {text_start}すべての<LINE>#の　とくしゅ　のうりょくが<CONT>すこし　たかく　なります<PROMPT>
 {text_start}すべての　#は<LINE>おとなしく　いうことを　ききます<PROMPT>
-{text_start}<ROCKET>の　れんちゅう<…><LINE>おかね　もうけの　ためなら<CONT>どんな　わるい　ことでも　やるのさ<DONE>
-{text_start}カラカラの　おかあさんが<LINE><ROCKET>から　にげる　ところ<CONT>わたしも　みたわ<…><PARA>にげる　とちゅうで　ころされたわ<DONE>
+{text_start}<ROCKET>の　れんちゅう<……><LINE>おかね　もうけの　ためなら<CONT>どんな　わるい　ことでも　やるのさ<DONE>
+{text_start}カラカラの　おかあさんが<LINE><ROCKET>から　にげる　ところ<CONT>わたしも　みたわ<……><PARA>にげる　とちゅうで　ころされたわ<DONE>
 {text_start}#　タワーは<LINE>しんだ　#を　なぐさめるため<CONT>たてられた　とう　です<DONE>
 {text_start}あなたも<LINE>おはか　まいりに　きたの？<CONT>#　おもいの　おとこのこ　ね<DONE>
-{text_start}しんだ　ピッピの　コトが<LINE>わすれられん<…>！<PARA><…>イカン！<LINE>なみだが　でて　きおった<…><DONE>
-{text_start}ああ　わたしの　ガーディ<…><LINE>どうして　しんで　しまったの<…><DONE>
+{text_start}しんだ　ピッピの　コトが<LINE>わすれられん<……>！<PARA><……>イカン！<LINE>なみだが　でて　きおった<……><DONE>
+{text_start}ああ　わたしの　ガーディ<……><LINE>どうして　しんで　しまったの<……><DONE>
 {text_start}わたしは　きとうし！<LINE>どうも　うえの　かいに<CONT>まよえる　たましいを　かんじる<DONE>
-{text_start}<RIVAL>『おう！　<PLAYER>！<LINE>こんな　ところへ<CONT>なにしに　きたんだよ？<CONT>おまえの　#　しんだのか？<CONT><…>あほか！　いきてる　じゃん<PARA>だったら　せめて<LINE>せんとう　ふのうに　してやるか！<CONT>かかって　こいよ！<DONE>
+{text_start}<RIVAL>『おう！　<PLAYER>！<LINE>こんな　ところへ<CONT>なにしに　きたんだよ？<CONT>おまえの　#　しんだのか？<CONT><……>あほか！　いきてる　じゃん<PARA>だったら　せめて<LINE>せんとう　ふのうに　してやるか！<CONT>かかって　こいよ！<DONE>
 {text_start}あ！　ちくしょう！<LINE>やりやがったなー！<PARA>せっかく　てかげん　してやったのに<PROMPT>
-{text_start}<RIVAL>『あーあ<…>！<LINE>ほんとに　くたばっちまったぞ！<CONT>よわいなー！<CONT>もっと　ちゃんと　そだてて　やれよ<PROMPT>
-{text_start}おい　ところで<…>！<LINE>#ずかんは　どうだよ？<CONT>おれなんか　カラカラ<CONT>みつけた　もんね！<PARA>おっきい　ほうの　ガラガラが<LINE>みつからねえんだ！<CONT>どこかなー？<PARA>ああー　きっと<LINE>もう　このへんには　いないな！<CONT>じゃ　おれ　もう　いくわ！<CONT>おまえと　ちがって<CONT>おれ　いそがしいからよ！<PARA>じゃーな！<DONE>
-{text_start}おぬし！　まよい　さまよう<LINE>ゆうれいの　しょうたいは<…><CONT>われわれでも　つかめない！<PARA>もし　とくべつな　どうぐが<…><LINE>シルフ　スコープさえ　あれば<CONT>みやぶれるかも　しれないが<…><DONE>
-{text_start}<…>　<…>　ギ<…><LINE><…>　グググッ<…>！<DONE>
-{text_start}むう<…>！<LINE>たすかった！<PROMPT>
-{text_start}シルフ　スコープなる　マシンなら<LINE>ゆうれい　#の<CONT>しょうたいを　みやぶる　というが<…><DONE>
-{text_start}<…>　<…>　<…><LINE><…>　ケケーッ！<DONE>
-{text_start}<…>あれ？<LINE>わしは　なに　してたのじゃ<PROMPT>
+{text_start}<RIVAL>『あーあ<……>！<LINE>ほんとに　くたばっちまったぞ！<CONT>よわいなー！<CONT>もっと　ちゃんと　そだてて　やれよ<PROMPT>
+{text_start}おい　ところで<……>！<LINE>#ずかんは　どうだよ？<CONT>おれなんか　カラカラ<CONT>みつけた　もんね！<PARA>おっきい　ほうの　ガラガラが<LINE>みつからねえんだ！<CONT>どこかなー？<PARA>ああー　きっと<LINE>もう　このへんには　いないな！<CONT>じゃ　おれ　もう　いくわ！<CONT>おまえと　ちがって<CONT>おれ　いそがしいからよ！<PARA>じゃーな！<DONE>
+{text_start}おぬし！　まよい　さまよう<LINE>ゆうれいの　しょうたいは<……><CONT>われわれでも　つかめない！<PARA>もし　とくべつな　どうぐが<……><LINE>シルフ　スコープさえ　あれば<CONT>みやぶれるかも　しれないが<……><DONE>
+{text_start}<……>　<……>　ギ<……><LINE><……>　グググッ<……>！<DONE>
+{text_start}むう<……>！<LINE>たすかった！<PROMPT>
+{text_start}シルフ　スコープなる　マシンなら<LINE>ゆうれい　#の<CONT>しょうたいを　みやぶる　というが<……><DONE>
+{text_start}<……>　<……>　<……><LINE><……>　ケケーッ！<DONE>
+{text_start}<……>あれ？<LINE>わしは　なに　してたのじゃ<PROMPT>
 {text_start}すまぬ！　あくりょうが<LINE>のりうつって　あばれてるのじゃ！<DONE>
-{text_start}ええい　あくりょうめ！<LINE><…>うわっ！　ヘゲ<…>ケケーッ！<DONE>
-{text_start}ふう！<…><LINE><…>あくりょうは　にげたか<PROMPT>
+{text_start}ええい　あくりょうめ！<LINE><……>うわっ！　ヘゲ<……>ケケーッ！<DONE>
+{text_start}ふう！<……><LINE><……>あくりょうは　にげたか<PROMPT>
 {text_start}く！　うえに　いる　なかまも<LINE>あくりょうに　おそわれた　ようだ！<DONE>
-{text_start}うぐぐ<…>　ゆうれいめ<…><LINE><…>ケーッ！<DONE>
+{text_start}うぐぐ<……>　ゆうれいめ<……><LINE><……>ケーッ！<DONE>
 {text_start}はっ！<LINE>ゆ　ゆうれいは　どこじゃ<PROMPT>
-{text_start}むう<…><LINE>ゆめを　みてた　ようじゃ<DONE>
-{text_start}イッ<…>　ショ<…>　ニ<…><LINE><…>　ノロ<…>ワレ！<DONE>
-{text_start}<…>はっ！<PROMPT>
-{text_start}<…>どうしても　ゆうれいの<LINE>しょうたいが　わからない<…><DONE>
-{text_start}フフフッ<…>！<LINE><…>　カテ<…>　ルカーッ！<DONE>
-{text_start}<…>ん　わしは？<PROMPT>
-{text_start}ふう！　#の<LINE>さまよえる　れいよ　やすらかに<…><DONE>
+{text_start}むう<……><LINE>ゆめを　みてた　ようじゃ<DONE>
+{text_start}イッ<……>　ショ<……>　ニ<……><LINE><……>　ノロ<……>ワレ！<DONE>
+{text_start}<……>はっ！<PROMPT>
+{text_start}<……>どうしても　ゆうれいの<LINE>しょうたいが　わからない<……><DONE>
+{text_start}フフフッ<……>！<LINE><……>　カテ<……>　ルカーッ！<DONE>
+{text_start}<……>ん　わしは？<PROMPT>
+{text_start}ふう！　#の<LINE>さまよえる　れいよ　やすらかに<……><DONE>
 {text_start}さあ　こっちへ　きなさい！<LINE>ここには　けっかいを　はってある<PARA>やすんで　いくが　よい！<DONE>
-{text_start}<…>　タマ<…>　シ<…>　イ<LINE><…>　ヨ<…>　コセッ！<DONE>
-{text_start}ハア　ハア<…>！<PROMPT>
-{text_start}わたしは<…><LINE>とり　つかれて　おったか<DONE>
-{text_start}オ<…>　マ<…>　エモ<…><LINE><…>　ナカ<…>マニッ！<DONE>
+{text_start}<……>　タマ<……>　シ<……>　イ<LINE><……>　ヨ<……>　コセッ！<DONE>
+{text_start}ハア　ハア<……>！<PROMPT>
+{text_start}わたしは<……><LINE>とり　つかれて　おったか<DONE>
+{text_start}オ<……>　マ<……>　エモ<……><LINE><……>　ナカ<……>マニッ！<DONE>
 {text_start}なんとした　ことじゃ<PROMPT>
-{text_start}とり　つかれるとは<LINE>わしも　まだまだ<…><DONE>
-{text_start}<…>　ぞ<…>　ゾゾ<…><LINE><…>　ンビーッ<…>！<DONE>
-{text_start}<…>ゾ　ぞぞ？<PROMPT>
+{text_start}とり　つかれるとは<LINE>わしも　まだまだ<……><DONE>
+{text_start}<……>　ぞ<……>　ゾゾ<……><LINE><……>　ンビーッ<……>！<DONE>
+{text_start}<……>ゾ　ぞぞ？<PROMPT>
 {text_start}うう<LINE>しょうきに　もどった！<DONE>
-{text_start}<…>　ド<…>　ギャ<LINE><…>　ギ<…>　ギャ<…>ーン！<DONE>
-{text_start}ぶるぶる<…><PROMPT>
-{text_start}やまおくで　しゅぎょう　したのに<LINE><…>　なさけない<DONE>
+{text_start}<……>　ド<……>　ギャ<LINE><……>　ギ<……>　ギャ<……>ーン！<DONE>
+{text_start}ぶるぶる<……><PROMPT>
+{text_start}やまおくで　しゅぎょう　したのに<LINE><……>　なさけない<DONE>
 {text_start}せいなる　いのりに　まもられた<LINE>けっかいへ　はいった！<PARA><PLAYER>と　#は<LINE>ひと　やすみして　げんきに　なった！<DONE>
-{text_start}ゆうれいの　しょうたいは<…><PARA>カラカラの　おかあさんの<LINE>まよえる　たましい　だった！<DONE>
-{text_start}やさしい　カラカラの　おかあさんに<LINE>もどった　たましいは<CONT>ぶじ　てんに　のぼって<…><PARA><…>　<…>きえて　いきました<DONE>
-{text_start}<…>　チ<…>　ニ<…>　ウエッ！<LINE><…>　テ<…>　ルッ<…>！<DONE>
-{text_start}<…>ううーむ<PROMPT>
-{text_start}ああ<…>！　クラクラ　する！<LINE>ひんけつ　かも　しれん<…><DONE>
-{text_start}<…>　カッ<…>　ナ<…>　シッ！<LINE><…>　バ<…>　リッ！<DONE>
-{text_start}<…>なにかが<LINE>わしの　からだから　ぬけてく<PROMPT>
-{text_start}わしの　からだ　から　ぬけたもの<…><LINE>それは　かみのけ　では　ない！<CONT>あくりょう　じゃ<DONE>
-{text_start}<…>ヒヒ<…>　ヒ<…>　ヒッ！<LINE><…>　ヒ<…>　ヒヒ<…>ヒヒッ！<DONE>
+{text_start}ゆうれいの　しょうたいは<……><PARA>カラカラの　おかあさんの<LINE>まよえる　たましい　だった！<DONE>
+{text_start}やさしい　カラカラの　おかあさんに<LINE>もどった　たましいは<CONT>ぶじ　てんに　のぼって<……><PARA><……>　<……>きえて　いきました<DONE>
+{text_start}<……>　チ<……>　ニ<……>　ウエッ！<LINE><……>　テ<……>　ルッ<……>！<DONE>
+{text_start}<……>ううーむ<PROMPT>
+{text_start}ああ<……>！　クラクラ　する！<LINE>ひんけつ　かも　しれん<……><DONE>
+{text_start}<……>　カッ<……>　ナ<……>　シッ！<LINE><……>　バ<……>　リッ！<DONE>
+{text_start}<……>なにかが<LINE>わしの　からだから　ぬけてく<PROMPT>
+{text_start}わしの　からだ　から　ぬけたもの<……><LINE>それは　かみのけ　では　ない！<CONT>あくりょう　じゃ<DONE>
+{text_start}<……>ヒヒ<……>　ヒ<……>　ヒッ！<LINE><……>　ヒ<……>　ヒヒ<……>ヒヒッ！<DONE>
 {text_start}ひいーっ！<PROMPT>
-{text_start}<…>ヒ　ヒヒ　ぃっーくしょん！<LINE>あれ　わしは　どうしてたんじゃ？<DONE>
-{text_start}<…>　タチサレ！<LINE><…>　ココカラ　タチサレ<…><DONE>
+{text_start}<……>ヒ　ヒヒ　ぃっーくしょん！<LINE>あれ　わしは　どうしてたんじゃ？<DONE>
+{text_start}<……>　タチサレ！<LINE><……>　ココカラ　タチサレ<……><DONE>
 {text_start}おまち！！@
 {text_start}この　じいさん　うるさくて<LINE>こうして　はなしあってたの<PARA>あたしたちを　たおさなきゃ<LINE>じいさんは　たすけられないわよ！<DONE>
 {text_start}おぼえてろよー<PROMPT>
 {text_start}やなかんじぃー！@
-{text_start}フジ『え<…>　わたしを<LINE>たすけに　きたんですか？<PARA><…>　どうも　ありがとう<LINE>でも<…>　わたしは<…><PARA>カラカラの　おかあさん　ガラガラの<LINE>たましいを　なぐさめる　ために<CONT>すすんで　ここまで　きたのです<PARA><…>ああ　どうやら　ガラガラも<LINE>てんごくへ　むかった　ようですね<PARA>せっかく　ここまで　きてくれた<LINE>きみにも　おれいを　しなきゃね！<PARA>では　これから<LINE>いっしょに　うちへ　いきましょう<PARA>#ハウスは<LINE>この　タワーの　ふもとです！<DONE>
+{text_start}フジ『え<……>　わたしを<LINE>たすけに　きたんですか？<PARA><……>　どうも　ありがとう<LINE>でも<……>　わたしは<……><PARA>カラカラの　おかあさん　ガラガラの<LINE>たましいを　なぐさめる　ために<CONT>すすんで　ここまで　きたのです<PARA><……>ああ　どうやら　ガラガラも<LINE>てんごくへ　むかった　ようですね<PARA>せっかく　ここまで　きてくれた<LINE>きみにも　おれいを　しなきゃね！<PARA>では　これから<LINE>いっしょに　うちへ　いきましょう<PARA>#ハウスは<LINE>この　タワーの　ふもとです！<DONE>
 {text_start}おっかしいなー！<LINE>フジ　ろうじんが　いないぞ！<CONT>どこに　いったのかな？<DONE>
 {text_start}フジ　ろうじん　ガラガラの　れいを<LINE>なぐさめに　いってたんだね<DONE>
 {text_start}ここは　もともと<LINE>フジ　じいちゃんの　おうち　なの<PARA>じいちゃん　やさしいのよ！<PARA>すてられたり　かえなくなった<LINE>#を　あずかって<CONT>せわ　してるの<DONE>
-{text_start}はあ　あったかい<…>！<LINE>#って　だっこ　すると<CONT>あったかいんだよねー！<DONE>
+{text_start}はあ　あったかい<……>！<LINE>#って　だっこ　すると<CONT>あったかいんだよねー！<DONE>
 {text_start}コダック『ぐわっぱ！@
 {text_start}ニドリーノ『がぉーっ！@
-{text_start}フジ『さて　<PLAYER>くん<…><PARA>#ずかん　づくりは<LINE>#に　たいして<CONT>ふかい　あいじょうが　ないと<CONT>かんせいは　たいへん　むずかしい<PARA>その　たすけに　なるか　わからんが<LINE>これを　あなたに　さしあげよう！<PROMPT>
+{text_start}フジ『さて　<PLAYER>くん<……><PARA>#ずかん　づくりは<LINE>#に　たいして<CONT>ふかい　あいじょうが　ないと<CONT>かんせいは　たいへん　むずかしい<PARA>その　たすけに　なるか　わからんが<LINE>これを　あなたに　さしあげよう！<PROMPT>
 {text_start}<PLAYER>は　フジ　ろうじんから<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
 {text_start}<PARA>#のふえを　ふくと<LINE>グーグー　ねむってる　#でも<CONT>げんきが　わいて　とびおきる！<PARA>#が　いねむり　して<LINE>こまったら　つかって　みなさい<DONE>
 {text_start}にもつが　いっぱいだな<DONE>
 {text_start}フジ『このあいだ　さしあげた<LINE>ふえは　やくに　たってるかな？<DONE>
-{text_start}ごうか　しょうひんが　あたる！<LINE>げっかん　#の　とも<CONT>ビッグ・プレゼント！<PARA><…>おうぼ　ほうほうは<PARA><…>あら　きりとって　ある！<DONE>
-{text_start}おじさんが　さがしてる　のは<…><PARA>#が　たたかってる　とき<LINE>のうりょくを　いちじ　てきに<CONT>あげる　どうぐ　なんだが<…><PARA>プラスパワー　ディフェンダー<LINE>スピーダー　スペシャルアップ<…><PARA><…>という<LINE>なまえ　なんだが　しらんかな？<DONE>
+{text_start}ごうか　しょうひんが　あたる！<LINE>げっかん　#の　とも<CONT>ビッグ・プレゼント！<PARA><……>おうぼ　ほうほうは<PARA><……>あら　きりとって　ある！<DONE>
+{text_start}おじさんが　さがしてる　のは<……><PARA>#が　たたかってる　とき<LINE>のうりょくを　いちじ　てきに<CONT>あげる　どうぐ　なんだが<……><PARA>プラスパワー　ディフェンダー<LINE>スピーダー　スペシャルアップ<……><PARA><……>という<LINE>なまえ　なんだが　しらんかな？<DONE>
 {text_start}げんきのかけらは　かった？<LINE>ひんしじょうたいの　#を<CONT>げんきに　する　べんりな　どうぐさ<DONE>
 {text_start}この　あいだ　やまおくで<LINE>きんのたまを　ひろい　ましてね！<PARA>つかえない　しなもの　ですが<LINE>うったら　なんと　５０００円でした<DONE>
 {text_start}カラカラ『きゃるぐうーっ@
-{text_start}わたし<…>！<LINE><ROCKET>を　ゆるさないわ！<PARA>あそこに　いる　カラカラの<LINE>おかあさんが<…><PARA><ROCKET>に　つかまって<LINE>にげる　とちゅう<CONT>ころされ　ちゃったの<DONE>
+{text_start}わたし<……>！<LINE><ROCKET>を　ゆるさないわ！<PARA>あそこに　いる　カラカラの<LINE>おかあさんが<……><PARA><ROCKET>に　つかまって<LINE>にげる　とちゅう<CONT>ころされ　ちゃったの<DONE>
 {text_start}#　タワーの<LINE>ゆうれい　でなく　なったって！<PARA>だれかが　まよえる　たましいを<LINE>しずめて　くれたのね<DONE>
 {text_start}はい　はい！<LINE>わたしは　せいめい　はんだんし<CONT>いうなれば　なまえの　うらないです<PARA>はい　あなたの　#の<LINE>ニックネーム　うらなって　あげるよ<DONE>
 {text_start}どの　#の<LINE>ニックネームを　うらなうかね？<PROMPT>
-{text_start}うーむ　@{text_ram wNameBuffer}{text_start}か<…><LINE>なかなか<CONT>いい　ニックネームを　つけたね<PARA>でもねー<LINE>もう　すこしだけ　いい　なまえ<PARA>わたしが　つけて　あげようか？<LINE>どうかな？<DONE>
+{text_start}うーむ　@{text_ram wNameBuffer}{text_start}か<……><LINE>なかなか<CONT>いい　ニックネームを　つけたね<PARA>でもねー<LINE>もう　すこしだけ　いい　なまえ<PARA>わたしが　つけて　あげようか？<LINE>どうかな？<DONE>
 {text_start}そうか　では<LINE>どんな　ニックネームに　しようかな<PROMPT>
 {text_start}よし　これから<LINE>この　#は　@{text_ram wBuffer}{text_start}だ！<PARA>まえより　いい　なまえ　じゃないか<LINE>よかったな！<DONE>
 {text_start}そうか<LINE>わかった　また　きなさいよ<DONE>
@@ -2492,12 +2492,12 @@
 {text_start}わたしも　ケーブルを　つないで<LINE>パウワウちゃんの　しゃしんを<CONT>プリントして　もらうの！<DONE>
 {text_start}ピッピ『ぴっぴー<DONE>
 {text_start}パウワウ『きゅー<DONE>
-{text_start}#　だいすき　クラブの<LINE>かいちょうは　わし　じゃ！<PARA>だいじに　しとる#は<LINE>１００ぴきを　こえとる！<PARA>#に　かんしては<LINE>ホント　うるさい！　ですぞ！<PARA>で<…><PARA>きみは　わしの　#　じまんを<LINE>ききに　きたの　かね？<DONE>
-{text_start}そうか！<LINE>では　さっそく　はじめるか！<PARA>あのな<…>　わしの　おきにいりの<LINE>ギャロップがな<…>　<…><PARA><…>　でな<…>　が<…><LINE><…>　<…>　かわいくてな<…><CONT>たまらん<…>　くう<…><CONT><…>　さらに<…>　もう<…><CONT>すごすぎ<…>　<…>　で<…><CONT><…>　そう　おもうか<…><CONT>どうして<…>　<…>　すき<…><CONT><…>　はー！<PARA><…>　<…>　だきしめて<…><LINE>ねるときも<…><CONT><…>　じゃろ<…>　<…><CONT><…>　<…>　すばらし<…>！<CONT><…>　うつくし<…><CONT><…>　<…>　ありゃ！<CONT>もう　こんな　じかんか！<CONT>ちょっと　しゃべり　すぎたわい<PARA>わしの　#　じまんを<LINE>おとなしく　きいてた　おれいに<CONT><…>これは　きもち　じゃ！<PROMPT>
+{text_start}#　だいすき　クラブの<LINE>かいちょうは　わし　じゃ！<PARA>だいじに　しとる#は<LINE>１００ぴきを　こえとる！<PARA>#に　かんしては<LINE>ホント　うるさい！　ですぞ！<PARA>で<……><PARA>きみは　わしの　#　じまんを<LINE>ききに　きたの　かね？<DONE>
+{text_start}そうか！<LINE>では　さっそく　はじめるか！<PARA>あのな<……>　わしの　おきにいりの<LINE>ギャロップがな<……>　<……><PARA><……>　でな<……>　が<……><LINE><……>　<……>　かわいくてな<……><CONT>たまらん<……>　くう<……><CONT><……>　さらに<……>　もう<……><CONT>すごすぎ<……>　<……>　で<……><CONT><……>　そう　おもうか<……><CONT>どうして<……>　<……>　すき<……><CONT><……>　はー！<PARA><……>　<……>　だきしめて<……><LINE>ねるときも<……><CONT><……>　じゃろ<……>　<……><CONT><……>　<……>　すばらし<……>！<CONT><……>　うつくし<……><CONT><……>　<……>　ありゃ！<CONT>もう　こんな　じかんか！<CONT>ちょっと　しゃべり　すぎたわい<PARA>わしの　#　じまんを<LINE>おとなしく　きいてた　おれいに<CONT><……>これは　きもち　じゃ！<PROMPT>
 {text_start}<PLAYER>は　かいちょうから<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
 {text_start}<PARA>その　ひきかえけんで<LINE>タダで　じてんしゃが　もらえる！<PARA>なに　わしには　おきにいりの<LINE>とり#　オニドリルが　おる<CONT>いきたい　ところへ　ひとっとびじゃ<PARA>だから　じてんしゃ　など　いらん！<PARA>じてんしゃは　きみが<LINE>すきに　のったら　ええ！<DONE>
-{text_start}なんじゃ<…>　つまらん<LINE>きく　きに　なったら　きてくれい！<DONE>
-{text_start}やー　やー　<PLAYER>くん！<PARA>また　わしの　#　じまんを<LINE>ききに　きたの　かね！<PARA><…>　え　ちがう？<LINE>なんじゃ<…>　つまらん<DONE>
+{text_start}なんじゃ<……>　つまらん<LINE>きく　きに　なったら　きてくれい！<DONE>
+{text_start}やー　やー　<PLAYER>くん！<PARA>また　わしの　#　じまんを<LINE>ききに　きたの　かね！<PARA><……>　え　ちがう？<LINE>なんじゃ<……>　つまらん<DONE>
 {text_start}にもつが　いっぱい　じゃ！<DONE>
 {text_start}やー　やー　<PLAYER>くん！<LINE>わしの　#の　しゃしん<CONT>みて　くれた　かね？<PARA>ほれ！　そこの　かべに<LINE>はって　あるだろう！<PARA>そうだ！<PARA>きみの　#の　しゃしんを<LINE>プリントさせて　くれんかね？<DONE>
 {text_start}なんじゃ　<LINE>ざんねん　じゃのー<DONE>
@@ -2518,47 +2518,47 @@
 {text_start}へやが　あかないのか？<PARA>マチス　の　ようじん　ぶかさは<LINE>ぐんたいでも　ゆうめい　だったぜ！<DONE>
 {text_start}おれは　たいりょく　ないけど<LINE>でんきの　あつかいを　かわれて<CONT>ここに　きたのだ！<DONE>
 {text_start}ひゅー！　しびれた！<PROMPT>
-{text_start}わかった　いうよー！<PARA>マチスは　へやの　スイッチを<LINE>なにかの<…><CONT>そこに　かくしたと　いってたな<DONE>
+{text_start}わかった　いうよー！<PARA>マチスは　へやの　スイッチを<LINE>なにかの<……><CONT>そこに　かくしたと　いってたな<DONE>
 {text_start}いくら　#　うまい　からって<LINE>ここは　こどもが<CONT>くる　ところ　じゃないぜ！<DONE>
 {text_start}ほー　おどろきだ！<PROMPT>
-{text_start}マチス　しょうさは<LINE>へやを　２じゅう　ロック　してるぜ<CONT><…>　ヒントを　あげよう！<PARA>だい１　ロックを　はずしたら<LINE>だい２　ロックは　すぐ　そばだ<CONT>ふたつの　ロックは<CONT>となりあわせに　あるぜ<DONE>
+{text_start}マチス　しょうさは<LINE>へやを　２じゅう　ロック　してるぜ<CONT><……>　ヒントを　あげよう！<PARA>だい１　ロックを　はずしたら<LINE>だい２　ロックは　すぐ　そばだ<CONT>ふたつの　ロックは<CONT>となりあわせに　あるぜ<DONE>
 {text_start}おーす！<LINE>みらいの　チャンピオン！<PARA>マチス　しょうさの　あだなは<LINE>イナズマ　アメリカン！<PARA>でんき　#　つかわせたら<LINE>アメリカ　ナンバー１　らしいぜ！<PARA>ひこう　タイプ　みず　タイプは<LINE>あいしょうが　わるいぜ！<PARA>マヒ　させられないよう<LINE>きを　つけな！<PARA>それと　マチスは　ようじん　ぶかい！<LINE>かれの　へやは　ロック　されて<CONT>かんたんには　はいれないぜ！<DONE>
 {text_start}ふー　こくさい　じあいに<LINE>きんちょー　したぜ<DONE>
 {text_start}きたの　ヤマブキシティまで<LINE>ポッポに　てがみを<CONT>とどけて　もらうのさ！<DONE>
 {text_start}ポッポ『クルックー@
-{text_start}<…>ピピちゃん<LINE>こんど　あそびに　いきたい　です<PARA>ヤマブキ　シティでは　<ROCKET>の<LINE>じけんが　おおい　そうですね<PARA>クチバは　そうでも　ありません<…><DONE>
+{text_start}<……>ピピちゃん<LINE>こんど　あそびに　いきたい　です<PARA>ヤマブキ　シティでは　<ROCKET>の<LINE>じけんが　おおい　そうですね<PARA>クチバは　そうでも　ありません<……><DONE>
 {text_start}<DONE>
 {text_start}ひでんマシンで<LINE>おぼえさせた　わざは<CONT>わすれさせることが　できない<PARA>おぼえさせるときは<LINE>よく　かんがえた　ほうが　いいな<DONE>
 {text_start}わしは　つりおやじ　じゃ！<PARA>もう　しぬほど<LINE>つりが　すき　なんだが<PARA>きみは　つり　すき　かな？<DONE>
 {text_start}そうか！<LINE>きみとは　きが　あいそうだ！<PARA>これ　あげるから<LINE>きみも　つり　まくりなさいよ！<PARA><PLAYER>は　つりおやじから<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
 {text_start}<PARA>つり　こそ<LINE>おとこの　ロマン　だ！<PARA>うみでも　かわでも！<PARA>えんりょ　なく<LINE>つりざおを　つかって　くれい！<DONE>
-{text_start}なんじゃ<…>　がっかりだ<DONE>
+{text_start}なんじゃ<……>　がっかりだ<DONE>
 {text_start}やー　<PLAYER>くん！<PARA>つり　まくっとる　かね！<DONE>
 {text_start}ありゃー！<PARA>いいもの　あげようと　したのに<LINE>にもつが　いっぱいじゃ！<DONE>
 {text_start}いらっしゃいませ！<LINE>タマムシ　デパートに　ようこそ！<PARA>かく　フロアの　あんないは<LINE>みぎの　ボードを　ごらん　ください<DONE>
-{text_start}１かい<…>サービス・カウンター<PARA>２かい<…><TRAINER>ズ・マーケット<PARA>３かい<…>テレビ　ゲーム　ショップ<PARA>４かい<…>ワイズマン・ギフト<PARA>５かい<…>ドラッグ　ストア<PARA>おくじょう<…>じどう　はんばいき<DONE>
-{text_start}１かい<…>サービス・カウンター<DONE>
+{text_start}１かい<……>サービス・カウンター<PARA>２かい<……><TRAINER>ズ・マーケット<PARA>３かい<……>テレビ　ゲーム　ショップ<PARA>４かい<……>ワイズマン・ギフト<PARA>５かい<……>ドラッグ　ストア<PARA>おくじょう<……>じどう　はんばいき<DONE>
+{text_start}１かい<……>サービス・カウンター<DONE>
 {text_start}シルバースプレーは　よわい<LINE>#が　とびでて　こなくなる<PARA>ほう！　むしよけスプレーの<LINE>きょうりょくな　やつだな<DONE>
 {text_start}とおで　するなら<LINE>げんきのかけらは<CONT>かっといた　ほうが　いいわ<DONE>
-{text_start}<TRAINER>グッズが　いっぱい！<LINE>２かい<…><TRAINER>ズ・マーケット<DONE>
+{text_start}<TRAINER>グッズが　いっぱい！<LINE>２かい<……><TRAINER>ズ・マーケット<DONE>
 {text_start}とった　ひとの　なまえと<LINE>アイディが　#　ごとに<CONT>きろく　されてるよ<DONE>
 {text_start}やったー！<PARA>となりのこが　ゴーストと　ガルーラ<LINE>こうかん　してくれるって！<DONE>
-{text_start}はやく　きて！<LINE>ゴースト　ちゃーん！<PARA>ぼくは<LINE>ゴースト　マニア　なのね！<PARA><…>　あー？<PARA>てんそう　されて　きた　ゴーストが<LINE>べつの　#に！？<DONE>
+{text_start}はやく　きて！<LINE>ゴースト　ちゃーん！<PARA>ぼくは<LINE>ゴースト　マニア　なのね！<PARA><……>　あー？<PARA>てんそう　されて　きた　ゴーストが<LINE>べつの　#に！？<DONE>
 {text_start}ひとから　もらった　#は<LINE>アイディが　ちがうから　わかるよ<DONE>
 {text_start}スーパー　ファミコン　だ！<DONE>
-{text_start}ロールプレイング　ゲームだ！<LINE><…>　あそんでく　ひまが　ない<DONE>
-{text_start}これは　スポーツ　ゲームだ！<LINE><…>　おとうさんが　すきそう！<DONE>
-{text_start}パズル　ゲームだ<…>！<LINE><…>　はじめたら　やめられない<DONE>
-{text_start}たいせん　アクションゲームだ！<LINE><…>　ちょっと　むずかしそう！<DONE>
-{text_start}３かい<…>テレビ　ゲーム　ショップ<DONE>
+{text_start}ロールプレイング　ゲームだ！<LINE><……>　あそんでく　ひまが　ない<DONE>
+{text_start}これは　スポーツ　ゲームだ！<LINE><……>　おとうさんが　すきそう！<DONE>
+{text_start}パズル　ゲームだ<……>！<LINE><……>　はじめたら　やめられない<DONE>
+{text_start}たいせん　アクションゲームだ！<LINE><……>　ちょっと　むずかしそう！<DONE>
+{text_start}３かい<……>テレビ　ゲーム　ショップ<DONE>
 {text_start}あかと　みどり！<LINE>どっちも　ポケット　モンスター！<DONE>
 {text_start}いらっしゃい！<LINE>いやあー！<CONT>#　やっと　おわったよ！<PARA>きみは　まだ　なの？<LINE>それじゃあ<CONT>いい　もの　あげよう<PROMPT>
 {text_start}<PLAYER>は　てんいん　から<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
-{text_start}てんいんの　プレゼント　だけに<LINE><TM>１８の　わざは<CONT><…>　カウンター！　だよ！<CONT>それじゃ　がんばってね！<DONE>
+{text_start}てんいんの　プレゼント　だけに<LINE><TM>１８の　わざは<CONT><……>　カウンター！　だよ！<CONT>それじゃ　がんばってね！<DONE>
 {text_start}にもつが　いっぱいだ！<DONE>
 {text_start}ヤマブキの　モノマネむすめ　に<LINE>プレゼントを　かうんだ<PARA>やっぱり　ピッピにんぎょう　だな！<LINE>にんき　あるんだよね！<DONE>
 {text_start}ちょっと　いい　はなし　きいたよ<PARA>#が　とびだして　きた　とき<LINE>ピッピにんぎょうを　なげると<CONT>#は　それに　きを　とられる<PARA>つまり　にげれるって　ことだよ！<DONE>
-{text_start}４かい<…>まごころ　おくろう！<LINE>　　ワイズマン・ギフト　ショップ！<PARA>ただいま　#　しんかのいし<LINE>とくべつ　はんばい　ちゅう！<DONE>
+{text_start}４かい<……>まごころ　おくろう！<LINE>　　ワイズマン・ギフト　ショップ！<PARA>ただいま　#　しんかのいし<LINE>とくべつ　はんばい　ちゅう！<DONE>
 {text_start}どれを　あげますか？<DONE>
 {text_start}わーい！<PARA>おいしいみず　くれるの？<PARA>ごちそう　さま！<PARA>おれいに　わたしの　たからもの<LINE>これ　あげるね！@
 {text_start}<PLAYER>は　おんなのこ　から<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
@@ -2571,11 +2571,11 @@
 {text_start}<PARA><TM>４９の　なかは<LINE>トライアタック　なの！@
 {text_start}にもつ　いっぱいよ！@
 {text_start}うーん！<LINE>やっぱり　がまん　する！@
-{text_start}ウチの　いもうと　あれでも<LINE>#　<TRAINER>の　はしくれ！<PARA>だけど<…><LINE>わがままで　イヤんなっちゃうよ<DONE>
-{text_start}えーん<…>！<LINE>おにいちゃん！<CONT>ジュース　のみたいよー！<DONE>
-{text_start}えーん<…>！<LINE>おにいちゃん！<CONT>ジュース　のみたいよー！<PARA>のみものを　あげますか？<DONE>
-{text_start}おくじょう　<…>　いこいの　ひろば<LINE>　　　　　　<…>　じどう　はんばいき<DONE>
-{text_start}じどう　はんばいき　だ！<LINE>ほしい　のみものは<…>　<…><PROMPT>
+{text_start}ウチの　いもうと　あれでも<LINE>#　<TRAINER>の　はしくれ！<PARA>だけど<……><LINE>わがままで　イヤんなっちゃうよ<DONE>
+{text_start}えーん<……>！<LINE>おにいちゃん！<CONT>ジュース　のみたいよー！<DONE>
+{text_start}えーん<……>！<LINE>おにいちゃん！<CONT>ジュース　のみたいよー！<PARA>のみものを　あげますか？<DONE>
+{text_start}おくじょう　<……>　いこいの　ひろば<LINE>　　　　　　<……>　じどう　はんばいき<DONE>
+{text_start}じどう　はんばいき　だ！<LINE>ほしい　のみものは<……>　<……><PROMPT>
 {text_start}おかねが　たりないぞ！<DONE>
 {text_ram wStringBuffer}{text_start}が　でてきた！<DONE>
 {text_start}これ　いじょう　もてない！<DONE>
@@ -2583,9 +2583,9 @@
 {text_start}ニャース『にゃーご！@
 {text_start}ピッピ『ぴ　ぴっぴ！@
 {text_start}ニドラン『きゃ　きゃう！@
-{text_start}タマムシ　マンション<LINE><…>　かんりにん　しつ<DONE>
+{text_start}タマムシ　マンション<LINE><……>　かんりにん　しつ<DONE>
 {text_start}#に　かこまれてると<LINE>ひとり　ぐらしも　さびしく　ないわ<PARA>うちの　ニャース　なんか<LINE>たまに　おかね　ひろって　くるの@
-{text_start}<…>あら　あなたも　かわいい<LINE>ピカチュウを　つれてるわね@
+{text_start}<……>あら　あなたも　かわいい<LINE>ピカチュウを　つれてるわね@
 {text_start}だけど　ちっとも　あなたに<LINE>なついてないようね<DONE>
 {text_start}だけど　もうすこし　かわいがって<LINE>あげたら　どうかしら<DONE>
 {text_start}こんな　かわいい　#と<LINE>いっしょで　あなたも　しあわせね<DONE>
@@ -2600,23 +2600,23 @@
 {text_start}プリント　したく　なったら<LINE>こえを　かけてね<DONE>
 {text_start}おわったよ<DONE>
 {text_start}プリントは　ちゅうし　するよ<DONE>
-{text_start}ぼく　シナリオ　かいた！<LINE>あの<…>　エリカ　かわいい　でしょ<PARA>カスミも　いいよね！<PARA>ナツメも　いいよね！<DONE>
+{text_start}ぼく　シナリオ　かいた！<LINE>あの<……>　エリカ　かわいい　でしょ<PARA>カスミも　いいよね！<PARA>ナツメも　いいよね！<DONE>
 {text_start}ぼく　シナリオ　かいた！<PARA>ぜんぶの　#みつけてくれて<LINE>とても　うれしいよ！<DONE>
 {text_start}そーですかー！<PARA>ぼくは　ゲーム　デザイナー<PARA>#ずかん　ぜんぶ　あつめるの<LINE>たいへん　だけど　がんばって！<CONT>もし　ぜんぶ　あつめたら<PARA>おしえてね！<DONE>
-{text_start}わあ　すごい！<LINE>#ずかん　ぜんぶの　ページ<CONT>とうとう　あつめたんだね！<CONT>おめでとう！<CONT><…><…>@
+{text_start}わあ　すごい！<LINE>#ずかん　ぜんぶの　ページ<CONT>とうとう　あつめたんだね！<CONT>おめでとう！<CONT><……><……>@
 {text_start}かいはつの　みんなにも<LINE>ひょうしょうじょう　を<CONT>みせて　あげてよ！<DONE>
 {text_start}ゲームの　プログラムだ！<LINE>これ　かえたら　バグる　かも<DONE>
-{text_start}<PC>で　しごと　ちゅう<…><LINE>と　おもったら　ゲーム　だった！<DONE>
-{text_start}<…>　ポケモンの　シナリオだ！<LINE>これは　エンディングだ！<CONT>いまは　みないで　おこう<…>！<DONE>
+{text_start}<PC>で　しごと　ちゅう<……><LINE>と　おもったら　ゲーム　だった！<DONE>
+{text_start}<……>　ポケモンの　シナリオだ！<LINE>これは　エンディングだ！<CONT>いまは　みないで　おこう<……>！<DONE>
 {text_start}ゲームフリーク　かいはつ　しつ<DONE>
 {text_start}わしは　なんでも　おみとおし！<DONE>
-{text_start}こくばんにも　かいたが<…><LINE>わしに　わからぬ　ことは　ない<CONT>ゲームボーイの　なかに<CONT>せかいが　あることも！<PARA>ぜひ！　ともだちを　さそって<LINE>#の　こうかんを<CONT>たのしんで　くれたまえ！<DONE>
+{text_start}こくばんにも　かいたが<……><LINE>わしに　わからぬ　ことは　ない<CONT>ゲームボーイの　なかに<CONT>せかいが　あることも！<PARA>ぜひ！　ともだちを　さそって<LINE>#の　こうかんを<CONT>たのしんで　くれたまえ！<DONE>
 {text_start}#のふえで　ねてる　#が<LINE>とび　おきるのは<PARA>ひとには　きこえない<LINE>とくべつな　おとも　でてる　からだよ<DONE>
 {text_start}セキチク　シティから　きたんだけど<LINE>サイクリング　ロード<CONT>のぼりざか　だから　つかれちゃった！<DONE>
-{text_start}はあーい<…><LINE>よい　おてんきね<CONT>きもち　いい<…><PARA><…>　すー<…>　すー<LINE><…>　あら　いけない<CONT>ねて　しまったわ<…>　ようこそ<PARA>わたくし　タマムシ　ジムの<LINE>エリカと　もうします<PARA>おはなを　いけるのが　しゅみで<LINE>#は　くさタイプ　ばかり<PARA><…>　あら　やだ<LINE>しあいの　もうしこみ　ですの？<PARA>そんな<…><LINE>わたくし　まけませんわよ<DONE>
-{text_start}<…>！<LINE>まいり　ましたわ<PARA>さすが<LINE>とのがたは　おつよい　ですわ<PARA>この　レインボーバッジを<LINE>さしあげ　なくては　なりませんわね<PROMPT>
-{text_start}あら　まあ<…><LINE>ずかんを　つくって　ますのね<CONT>ほんとに　えらいですわ<PARA>わたし　でしたら<LINE>きれいな　ポケモンしか<CONT>ほしく　なりません　もの<DONE>
-{text_start}レインボー　バッジで<LINE>レベル５０　までの　#が<CONT>おとなしく　いうこと　きき　ます<PARA>そして<…>　かいりきの　わざが<LINE>たたかって　なくても　つかえますの<PARA>それから<…><LINE>よろしかったら<CONT>これも　おつかいに　なって！<DONE>
+{text_start}はあーい<……><LINE>よい　おてんきね<CONT>きもち　いい<……><PARA><……>　すー<……>　すー<LINE><……>　あら　いけない<CONT>ねて　しまったわ<……>　ようこそ<PARA>わたくし　タマムシ　ジムの<LINE>エリカと　もうします<PARA>おはなを　いけるのが　しゅみで<LINE>#は　くさタイプ　ばかり<PARA><……>　あら　やだ<LINE>しあいの　もうしこみ　ですの？<PARA>そんな<……><LINE>わたくし　まけませんわよ<DONE>
+{text_start}<……>！<LINE>まいり　ましたわ<PARA>さすが<LINE>とのがたは　おつよい　ですわ<PARA>この　レインボーバッジを<LINE>さしあげ　なくては　なりませんわね<PROMPT>
+{text_start}あら　まあ<……><LINE>ずかんを　つくって　ますのね<CONT>ほんとに　えらいですわ<PARA>わたし　でしたら<LINE>きれいな　ポケモンしか<CONT>ほしく　なりません　もの<DONE>
+{text_start}レインボー　バッジで<LINE>レベル５０　までの　#が<CONT>おとなしく　いうこと　きき　ます<PARA>そして<……>　かいりきの　わざが<LINE>たたかって　なくても　つかえますの<PARA>それから<……><LINE>よろしかったら<CONT>これも　おつかいに　なって！<DONE>
 {text_start}<PLAYER>は　エリカ　から<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
 {text_start}<PARA><TM>２１の　なかは<LINE>メガドレイン　です<PARA>あたえた　ダメージの　はんぶんが<LINE>#の　えいように　なる<CONT>すばらしい　わざ　です<DONE>
 {text_start}おにもつ　いっぱい　ですわ<DONE>
@@ -2629,82 +2629,82 @@
 {text_start}あれー！　あんた　さっき<LINE>ここ　のぞいてた　おとこ　じゃない？<DONE>
 {text_start}おめめ　ぱちくり<PROMPT>
 {text_start}あんた<LINE>ほんとに　のぞき　じゃない？<CONT>さいきん　おおい　のよ<DONE>
-{text_start}ねえ<…>　みて！<LINE>これ　わたしの　#！<PARA>くさ　タイプは　そだてる　のが<LINE>らくな　ところが　いいわ<DONE>
+{text_start}ねえ<……>　みて！<LINE>これ　わたしの　#！<PARA>くさ　タイプは　そだてる　のが<LINE>らくな　ところが　いいわ<DONE>
 {text_start}やーん！<PROMPT>
 {text_start}うちの　ジムは　つかう　#<LINE>ぜーんぶ　くさ　タイプ！<PARA>だって　#の　ほかに<LINE>いけばな　きょうしつ　やってるから<DONE>
 {text_start}こら！　むし　#　とか<LINE>ほのお　#　は　きらい　なの<CONT>ここに　もち　こまないでよ！<DONE>
 {text_start}あ！　こいつう！<PROMPT>
 {text_start}きみねー！　リーダーの　エリカさんは<LINE>おしとやか　だけど　このへん　じゃ<CONT>ゆうめいな　<TRAINER>　なんだから！<DONE>
-{text_start}あなた　ごしゅみは<…>？<LINE><…>　はい！<CONT>#を　しょうしょう<DONE>
+{text_start}あなた　ごしゅみは<……>？<LINE><……>　はい！<CONT>#を　しょうしょう<DONE>
 {text_start}けっこうな　おてまえで<PROMPT>
 {text_start}わたし　らいしゅう　おみあい　なの<LINE>#　さそわれても　はしたない<CONT>たたかい　しない　ように　しなきゃ<DONE>
 {text_start}タマムシ　ジムに　ようこそ！<PARA>おんなのこ　だからって<LINE>ゆだん　しない　ほうが　いいわよ！<DONE>
 {text_start}やる　じゃない！<PROMPT>
-{text_start}きょうは　つよい　#<LINE>もって　こなかった　から<…><PARA>こんど　やる　ときは　まけないわ<DONE>
+{text_start}きょうは　つよい　#<LINE>もって　こなかった　から<……><PARA>こんど　やる　ときは　まけないわ<DONE>
 {text_start}いらっしゃいませ！<PARA>ゲームで　ためた　コインは<LINE>そとの　こうかんじょで<CONT>すきな　けいひんと　かえてね！<DONE>
 {text_start}いらっしゃいませ！<LINE>ロケット　ゲーム　コーナーです<PARA>ゲームよう　コイン　ですか？<PARA>５０まい　１０００円に　なります！<LINE>コインを　かいますか？<DONE>
 {text_start}はい！　まいど　あり！<LINE>コイン　５０まい　どうぞ！<DONE>
-{text_start}<…>　いりませんか！<LINE>それでは　また　どうぞ！<DONE>
+{text_start}<……>　いりませんか！<LINE>それでは　また　どうぞ！<DONE>
 {text_start}おかね　たりないよ！<DONE>
-{text_start}おっと<…>！<LINE>コインケースが　まんたんだ！<DONE>
+{text_start}おっと<……>！<LINE>コインケースが　まんたんだ！<DONE>
 {text_start}あれ？　コインを　いれる<LINE>コインケースが　ないよ！<DONE>
-{text_start}<…>　ここだけの　はなし<…><PARA>この　ゲーム　じょうは<LINE><ROCKET>の　おみせ　らしい<…><CONT>みんな　うわさ　しちょる<…><DONE>
+{text_start}<……>　ここだけの　はなし<……><PARA>この　ゲーム　じょうは<LINE><ROCKET>の　おみせ　らしい<……><CONT>みんな　うわさ　しちょる<……><DONE>
 {text_start}ばしょに　よって　よく　でる<LINE>スロットが　あるようね<DONE>
-{text_start}<…>　ぼうず<LINE>ゲーム　やりたいのか？<PROMPT>
+{text_start}<……>　ぼうず<LINE>ゲーム　やりたいのか？<PROMPT>
 {text_start}<PLAYER>は　おじさんから<LINE>コイン　１０まい　もらった！@
 {text_start}やっぱり　やるの　やめた！<DONE>
 {text_start}かつ　ときは　かつんだけど<LINE>まける　ときは　まけちゃうんだな<DONE>
 {text_start}スロット　ゲームは　たのしい！<LINE>じかんが　たつのを　わすれるわ！<DONE>
-{text_start}おお<…>！<PARA>こんな　ところで<LINE>あぶら　うってて　いいのか！<CONT>みらいの　チャンピオン！<PARA>タマムシの　リーダー　エリカは<LINE>しぜんと　こころを　かよわす<CONT>しょくぶつ　#の　つかいて！<PARA>おはな　なんか　いけてる　から<LINE>おとなしそうに　みえるが<CONT>てごわい　あいてに　なるぞ！<DONE>
+{text_start}おお<……>！<PARA>こんな　ところで<LINE>あぶら　うってて　いいのか！<CONT>みらいの　チャンピオン！<PARA>タマムシの　リーダー　エリカは<LINE>しぜんと　こころを　かよわす<CONT>しょくぶつ　#の　つかいて！<PARA>おはな　なんか　いけてる　から<LINE>おとなしそうに　みえるが<CONT>てごわい　あいてに　なるぞ！<DONE>
 {text_start}いい　#が　けいひんに<LINE>あったからよー<PARA>がんばってるんだが<LINE>ぜんぜん　だめだ！<DONE>
-{text_start}ひょー<…>　ゲームは　こわい！<LINE>ちょっと　いきぬきの　つもりが<CONT>むちゅうに　なっちまう！<DONE>
-{text_start}<…>　なんだよ？<LINE>コイン　わけて　やろうか？<PROMPT>
+{text_start}ひょー<……>　ゲームは　こわい！<LINE>ちょっと　いきぬきの　つもりが<CONT>むちゅうに　なっちまう！<DONE>
+{text_start}<……>　なんだよ？<LINE>コイン　わけて　やろうか？<PROMPT>
 {text_start}<PLAYER>は　おにいさんから<LINE>コイン　２０まい　もらった！@
 {text_start}いっぱい　もってる　じゃん<DONE>
 {text_start}くそ　でないな！<LINE>ほしい　けいひんが　あるのに<DONE>
-{text_start}わ　ちょっと！<LINE><…>　てもとが　くるう<CONT>コイン　あげるから<CONT>あっち　いってくれ<PROMPT>
+{text_start}わ　ちょっと！<LINE><……>　てもとが　くるう<CONT>コイン　あげるから<CONT>あっち　いってくれ<PROMPT>
 {text_start}<PLAYER>は　おじさんから<LINE>コイン　２０まい　もらった！@
 {text_start}コイン　いっぱい　あるじゃん<DONE>
 {text_start}スロットの　えがらを　よおく　みて<LINE>ボタンを　おすのが　コツだよ<DONE>
 {text_start}おれは<LINE>この　ポスターを　みはってるのだ<CONT>じゃまを　すると<CONT>いたいめに　あわせるぞ！<DONE>
 {text_start}ち　ちくしょう！<PROMPT>
 {text_start}このままでは　<ROCKET><LINE>アジトの　そんざいが　ばれちまう<CONT>ボスに　れんらく　しなくては！<DONE>
-{text_start}あ！<PARA>ポスターの　うらに<LINE>ひみつの　スイッチを　みつけた<CONT>おしてみよう！　<…>ポチッとな！@
+{text_start}あ！<PARA>ポスターの　うらに<LINE>ひみつの　スイッチを　みつけた<CONT>おしてみよう！　<……>ポチッとな！@
 {text_start}しまった！<LINE>コインケースを　もっていない！<DONE>
 {text_start}#の　のうりょくを　あげる<LINE>アイテムは　ここでしか　かえない<PARA>リゾチウムは<LINE>とくしゅ　のうりょくを　アップ<PARA>インドメタシンは<LINE>すばやさを　アップ　させるのだ<DONE>
 {text_start}#の　のうりょくを　あげる<LINE>アイテムを　かいに　きたんだ！<PARA>タウリンは<LINE>こうげき　りょく　アップ！<PARA>ブロムヘキシンは<LINE>ぼうぎょ　りょく　アップ　だぜ！<DONE>
-{text_start}５かい<…>ドラッグ　ストア<DONE>
-{text_start}うーん<…>！　どうにか　して<LINE>あの　ポリゴンが　ほしいなあ！<PARA>しかし　スロット　ゲームで<LINE>かつ　のは　たいへんだ！<DONE>
-{text_start}がはは！　もうけた　もうけた<…>！<LINE>まいにち　こんな　だと　いいわい<DONE>
+{text_start}５かい<……>ドラッグ　ストア<DONE>
+{text_start}うーん<……>！　どうにか　して<LINE>あの　ポリゴンが　ほしいなあ！<PARA>しかし　スロット　ゲームで<LINE>かつ　のは　たいへんだ！<DONE>
+{text_start}がはは！　もうけた　もうけた<……>！<LINE>まいにち　こんな　だと　いいわい<DONE>
 {text_start}らっしゃい！<PARA>じょうれん　ばかりで　わるいね！<DONE>
-{text_start}うちで　かってる　#<…><LINE>たいりょく　ないから　いつも<CONT>デパートで　おくすり　かって　くるの<DONE>
-{text_start}ひそひそ<…>　むしゃ　むしゃ<…><LINE><…>　ゲーム　コーナーの　したに<CONT>ちかしつが　ある　らしいね<…><DONE>
-{text_start}もぐもぐ<…>！<PARA>あそこの　テーブルの　おっさん<LINE>スロットで　おかね　ぜんぶ<CONT>つかっちゃった　らしいよ！<DONE>
-{text_start}うおう<…>　わらってくれ！<PARA>ゲーム　コーナーで　すって<LINE>いちもん　なしに　なっちまった！<PARA>もう　スロットは　やらん！<LINE>じみちに　はたらくぞ！<PARA><…>　というわけで<LINE>これは　おまえに　やる！<PROMPT>
+{text_start}うちで　かってる　#<……><LINE>たいりょく　ないから　いつも<CONT>デパートで　おくすり　かって　くるの<DONE>
+{text_start}ひそひそ<……>　むしゃ　むしゃ<……><LINE><……>　ゲーム　コーナーの　したに<CONT>ちかしつが　ある　らしいね<……><DONE>
+{text_start}もぐもぐ<……>！<PARA>あそこの　テーブルの　おっさん<LINE>スロットで　おかね　ぜんぶ<CONT>つかっちゃった　らしいよ！<DONE>
+{text_start}うおう<……>　わらってくれ！<PARA>ゲーム　コーナーで　すって<LINE>いちもん　なしに　なっちまった！<PARA>もう　スロットは　やらん！<LINE>じみちに　はたらくぞ！<PARA><……>　というわけで<LINE>これは　おまえに　やる！<PROMPT>
 {text_start}<PLAYER>は　おっさん　から<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
 {text_start}にもつが　いっぱい　だぜ<DONE>
-{text_start}あーあ！<LINE>いつか　かならず　かてる！<CONT>と　おもったのに　この　ざまだ<…>！<DONE>
-{text_start}けへへ<…>！<LINE>スロットは　だい　はんじょう！<CONT>もうかって　しかたないわ！<DONE>
+{text_start}あーあ！<LINE>いつか　かならず　かてる！<CONT>と　おもったのに　この　ざまだ<……>！<DONE>
+{text_start}けへへ<……>！<LINE>スロットは　だい　はんじょう！<CONT>もうかって　しかたないわ！<DONE>
 {text_start}チーフ！<PARA>きょうも　スロットの　うりあげで<LINE>しいれた　#　２０００ひき<CONT>しゅっか　しやした！<DONE>
 {text_start}ゲーム　コーナーに　はって　ある<LINE>ポスターには　さわんな！<PARA>うらに　スイッチが　かくして　ある<LINE>なんて　こと　ないから！<DONE>
-{text_start}はあ　#<…>？<LINE>ああ<…>！　ここは<CONT>ひとが　とまる　りょかん　ですじゃ<PARA>あいにく　へや　いっぱい　でな<DONE>
+{text_start}はあ　#<……>？<LINE>ああ<……>！　ここは<CONT>ひとが　とまる　りょかん　ですじゃ<PARA>あいにく　へや　いっぱい　でな<DONE>
 {text_start}あたし！　おとうと　と　かれし<LINE>３にんで　りょこうに　きたの！<PARA>タマムシ　シティって<LINE>とても　きれいな　まち　なのね<DONE>
-{text_start}なんで<…>？　かのじょと<LINE>ふたり　きりの　りょこうの　はずが！<DONE>
+{text_start}なんで<……>？　かのじょと<LINE>ふたり　きりの　りょこうの　はずが！<DONE>
 {text_start}サファリ　ゾーン！　と　かかれた<LINE>ペナントは　ないのかね？<PARA>ちょうちんは？<LINE>カレンダーも　ないのか！<DONE>
 {text_start}スピーダーは　かって　みた？<LINE>たたかう　#の　すばやさを<CONT>いちじてきに　あげるの<DONE>
-{text_start}サファリ　ゾーンの　えんちょう<LINE>おとし　なのに　すごく　げんきよ<PARA>でも<…>「は」は<LINE>ぜんぶ　いれば　らしい　けど<DONE>
+{text_start}サファリ　ゾーンの　えんちょう<LINE>おとし　なのに　すごく　げんきよ<PARA>でも<……>「は」は<LINE>ぜんぶ　いれば　らしい　けど<DONE>
 {text_start}おや？　あんた<LINE>マサキの　ことを　しっとるのかね？<PARA>マサキは　わしの　まごじゃ！<PARA>ちいさい　ころから<LINE>ものを　あつめるのが　すきな<CONT>こども　じゃった！<DONE>
 {text_start}マサキ　にいちゃん<LINE>じぶんで　あつめた　#も<CONT><PC>の　データに　してるよ！<PARA>みせて　もらった？<DONE>
 {text_start}１ぴきだけ　そだてても<LINE>つよい　<TRAINER>に　なれない<PARA>おおくの　#を　<LINE>バランス　よく　そだてるのも<CONT>たいへん　だけどな<DONE>
 {text_start}トキワの　にしに<LINE>ほそい　みちが　ある　でしょう<PARA>その　おくに　たってるのが<LINE>すべての　#　<TRAINER>を<CONT>まとめる　そしき　#　リーグよ<DONE>
 {text_start}えんちょう『ふぁいへんひゃ<LINE>ふへほ　はんひ<PARA>ひへは　ほはへへ　ひほうはッ！<LINE>はッ　はふへへ　ふへ！<DONE>
 {text_start}よほひふ　はほひまふは！<LINE>はふは　はふぁりほーんひゃ！<DONE>
-{text_start}はひ？<LINE>ほは　ほうは<…><CONT>ひひ　ほはへには　はのはんはッ！<DONE>
+{text_start}はひ？<LINE>ほは　ほうは<……><CONT>ひひ　ほはへには　はのはんはッ！<DONE>
 {text_start}えんちょうは　<PLAYER>から<LINE>きんのいればを　もらった！@
 {text_start}<PARA>もらった　いればを<LINE>いそいで　くちに　はめた！<PROMPT>
 {text_start}えんちょう『すんまへん！<LINE>ほんま　たすかったわあ！<CONT>だれに　なに　いうても<CONT>ぜんぜん　つうじへんし<PARA>はずかしゅうて　じむしょも<LINE>かお　だせへん　かったんや<CONT>そや　ぼうず！<CONT>あんがとな<CONT>おれいに　ええもん　やるわ！<PROMPT>
 {text_start}<PLAYER>は　えんちょうから<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
-{text_start}えんちょう『ひでんマシン０４の<LINE>なかみは　かいりき　やで！<PARA>#が<LINE>ちから　もちに　なってな<CONT>たたかわん　ときは<CONT>いわを　おすように　なるで！<PARA>そや<…>　それから！<LINE>サファリ　ゾーンで<CONT>トレジャー　ハウスは　みつけたか？<CONT>ひでんマシンが　もらえるで！<PARA>めったに　てに　はいらん<LINE>なみのり　なんやで！<DONE>
+{text_start}えんちょう『ひでんマシン０４の<LINE>なかみは　かいりき　やで！<PARA>#が<LINE>ちから　もちに　なってな<CONT>たたかわん　ときは<CONT>いわを　おすように　なるで！<PARA>そや<……>　それから！<LINE>サファリ　ゾーンで<CONT>トレジャー　ハウスは　みつけたか？<CONT>ひでんマシンが　もらえるで！<PARA>めったに　てに　はいらん<LINE>なみのり　なんやで！<DONE>
 {text_start}なんや　にもつ<LINE>いっぱいやんけ！<DONE>
 {text_start}#の　カセキやら<LINE>しゃしんが　かざって　ある！<DONE>
 {text_start}ふるい　#　グッズが<LINE>かざって　ある！<DONE>
@@ -2714,61 +2714,61 @@
 {text_start}では　がんばって！<DONE>
 {text_start}ごくろうさま！<LINE>#　たくさん　とれたかな？<CONT>また　あそびに　きてね！<DONE>
 {text_start}この　ひろい　サファリで<LINE>いろんな　#　とりほうだいの<CONT>ゲームが　たった　５００円！<PARA>さっそく　やりますか？<DONE>
-{text_start}それでは<…>！<LINE>@{text_bcd wPriceTemp, 3 | LEADING_ZEROES | LEFT_ALIGN}{text_start}円　いただきまーす！<PARA>ここでは　サファリ　せんようの<LINE>モンスターボールを　つかいます！<CONT><…>　これです！<PARA><PLAYER>は　うけつけ　から<LINE>サファリボール　３０こ　もらった！@
-{text_start}<PARA>のこり　じかんが　なくなるか！<LINE>サファリボールが　なくなったら<CONT>メガホンで　しらせます！<CONT>では<…>！　ぐっど　らっく！<DONE>
-{text_start}そうか<…>！　また　きて　ください<DONE>
+{text_start}それでは<……>！<LINE>@{text_bcd wPriceTemp, 3 | LEADING_ZEROES | LEFT_ALIGN}{text_start}円　いただきまーす！<PARA>ここでは　サファリ　せんようの<LINE>モンスターボールを　つかいます！<CONT><……>　これです！<PARA><PLAYER>は　うけつけ　から<LINE>サファリボール　３０こ　もらった！@
+{text_start}<PARA>のこり　じかんが　なくなるか！<LINE>サファリボールが　なくなったら<CONT>メガホンで　しらせます！<CONT>では<……>！　ぐっど　らっく！<DONE>
+{text_start}そうか<……>！　また　きて　ください<DONE>
 {text_start}あッ　おかねが　たりない！<DONE>
 {text_start}こんちわ！<LINE>サファリ　ゲームは　はじめて？<DONE>
 {text_start}サファリ　ゲームは<LINE>４つの　ゾーンに　わかれてます！<PARA>それぞれに　めずらしい　#が<LINE>せいそく　してますから<CONT>せんようの　サファリボールで<CONT>つかまえて　ください！<PARA>ただし　じかんが　なくなるか<LINE>サファリボールを　ぜんぶ　なげたら<CONT>ゲームは　おわり　だよ！<DONE>
 {text_start}おっと　しつれい！<LINE>じょうれん　さん　だったね！<DONE>
-{text_start}<PARA><…>しょうがないなあ<LINE>あるだけでいいよ<PROMPT>
+{text_start}<PARA><……>しょうがないなあ<LINE>あるだけでいいよ<PROMPT>
 {text_start}でも　ボールは　へらしとくからね<DONE>
 {text_start}<PARA>まったく　しつこいな…<LINE>こんかいだけだからね<PARA>ラッキー！　ただで　いれてくれた！@
 {text_start}<DONE>
 {text_start}おかねを　もってない　ひとは<LINE>はいれません！<DONE>
 {text_start}おかねが　ないひとは　ダメです！<DONE>
 {text_start}おかねが　ないひとは　ダメって<LINE>いってるだろ！<DONE>
-{text_start}だめなものは　ダメだって<…><DONE>
-{text_start}キョウ『<…>　ファ　ファ　ファ！<PARA>こわっぱ　ごときが<LINE>せっしゃに　たたかいを　いどむとは<CONT>かたはら　いたいで　ござる！<PARA><…>　どくを　くらったら　じめつ！<LINE>ねむって　しまったら　むていこう<PARA><…>　しのびの　わざの　ごくいを<LINE>うけて　みよ！<DONE>
-{text_start}ほう<…>！<LINE>おぬし　やるで　ござるな<PARA>そら！　この<LINE>ピンク　バッジを　うけとるが　よい！<PROMPT>
+{text_start}だめなものは　ダメだって<……><DONE>
+{text_start}キョウ『<……>　ファ　ファ　ファ！<PARA>こわっぱ　ごときが<LINE>せっしゃに　たたかいを　いどむとは<CONT>かたはら　いたいで　ござる！<PARA><……>　どくを　くらったら　じめつ！<LINE>ねむって　しまったら　むていこう<PARA><……>　しのびの　わざの　ごくいを<LINE>うけて　みよ！<DONE>
+{text_start}ほう<……>！<LINE>おぬし　やるで　ござるな<PARA>そら！　この<LINE>ピンク　バッジを　うけとるが　よい！<PROMPT>
 {text_start}どくどくは　どくを　あびたら<LINE>１ターン　ごとに　どんどん<CONT>ダメージが　おおきく　なる！<PARA>これは　あいてに<LINE>きょうふを　あたえる　わざで　ござる<DONE>
-{text_start}ピンク　バッジを　もって　おれば<LINE>おぬしの　#の<CONT>ぼうぎょ　りょくを　あげる！<PARA>たたかって　ない　ときでも<LINE>なみのりの　わざを<CONT>つかえる　ように　なる！<PARA>そうだ<…>！　これを　おぬしに！<DONE>
+{text_start}ピンク　バッジを　もって　おれば<LINE>おぬしの　#の<CONT>ぼうぎょ　りょくを　あげる！<PARA>たたかって　ない　ときでも<LINE>なみのりの　わざを<CONT>つかえる　ように　なる！<PARA>そうだ<……>！　これを　おぬしに！<DONE>
 {text_start}<PLAYER>は　キョウ　から<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
 {text_start}<PARA>４００ねん　むかし　より<LINE>わがやに　つたわる　#　わざ<PARA><TM>０６には　ごくい！<LINE>どくどくが　ふういん　してある！<DONE>
 {text_start}にもつが　いっぱいで　ござる<DONE>
-{text_start}ただ　つよい　だけでは　だめだ！<LINE><…>　わかるか？<PARA>#は　テクニックだ！<PARA>この　ジムに　きた　から　には<LINE>そういう　#の　おく　ふかさ<CONT>タップリ　おしえて　やる！<DONE>
-{text_start}<…>！<LINE>ただもの　では　ない！<PROMPT>
+{text_start}ただ　つよい　だけでは　だめだ！<LINE><……>　わかるか？<PARA>#は　テクニックだ！<PARA>この　ジムに　きた　から　には<LINE>そういう　#の　おく　ふかさ<CONT>タップリ　おしえて　やる！<DONE>
+{text_start}<……>！<LINE>ただもの　では　ない！<PROMPT>
 {text_start}こどもの　<TRAINER>　とはいえ<LINE>パワー　だけでなく<CONT>テクニックも　みがいてるな！<DONE>
 {text_start}マジシャン　だった　おれは<LINE>ニンジャに　あこがれて<CONT>この　セキチク　ジムに　はいった！<DONE>
-{text_start}<…>　やられた！<PROMPT>
+{text_start}<……>　やられた！<PROMPT>
 {text_start}たとえ　まけても　おれは<LINE>ニンジャ　マスター<CONT>キョウの　おしえに　いきる　つもりだ<DONE>
 {text_start}おれの　#　あやしの　わざ<LINE>たっぷりと　あじわいな！<DONE>
-{text_start}<…>　そうか！<LINE>おまえも　わざ　つかいか？<PROMPT>
+{text_start}<……>　そうか！<LINE>おまえも　わざ　つかいか？<PROMPT>
 {text_start}たたかい　おわった　あとでも<LINE>どく　ねむり　といった　こうかは<CONT>のこる　ところが　すき　だぜ！<DONE>
 {text_start}おっと！　まちな！<PARA>セキチク　ジムの　めいぶつ<LINE>みえない　かべ　システムは　どうだ<DONE>
-{text_start}<…>　ほお！<LINE>やる　じゃないか！<PROMPT>
-{text_start}おまえは　ほねが　ありそう　だ！<LINE>とくべつに　ヒントを　おしえよう！<PARA>みえない　かべは　よく　みると<LINE>しきりが　みえて　くる<…>！<DONE>
+{text_start}<……>　ほお！<LINE>やる　じゃないか！<PROMPT>
+{text_start}おまえは　ほねが　ありそう　だ！<LINE>とくべつに　ヒントを　おしえよう！<PARA>みえない　かべは　よく　みると<LINE>しきりが　みえて　くる<……>！<DONE>
 {text_start}この　おれも<LINE>ニンジャ　キョウの　もんかせい！<PARA>ニンジャは　むかし　から<LINE>よく　どうぶつを　つかった　という<DONE>
-{text_start}がおーん<…>！<PROMPT>
+{text_start}がおーん<……>！<PROMPT>
 {text_start}まだ　まだ！<LINE>おれには　しゅぎょうが　たりない<DONE>
 {text_start}ここの　リーダー　キョウは<LINE>イガ　ニンジャの　しそんだ！<PARA>おいッ！<LINE>おまえは　なにの　しそん　なんだ？<DONE>
 {text_start}なかなか　できるな！<PROMPT>
-{text_start}<…>　ひかり　ある　ところに<LINE>かげが　ある！<PARA>ひかりと　かげ！<LINE>おまえは　どちらを　えらぶ？<DONE>
-{text_start}おーす！<LINE>みらいの　チャンピオン！<PARA>セキチク　ジムは　からくり　やしき<LINE>みえない　かべで　しきられてる！<PARA>キョウの　やつは　すぐ　そこに<LINE>いる　ように　みえるが<…><PARA>みえない　かべの　とぎれてる　とこを<LINE>さがし　ださないと　あえないぜ！<DONE>
+{text_start}<……>　ひかり　ある　ところに<LINE>かげが　ある！<PARA>ひかりと　かげ！<LINE>おまえは　どちらを　えらぶ？<DONE>
+{text_start}おーす！<LINE>みらいの　チャンピオン！<PARA>セキチク　ジムは　からくり　やしき<LINE>みえない　かべで　しきられてる！<PARA>キョウの　やつは　すぐ　そこに<LINE>いる　ように　みえるが<……><PARA>みえない　かべの　とぎれてる　とこを<LINE>さがし　ださないと　あえないぜ！<DONE>
 {text_start}げんだいに　なお　いき　のこる<LINE>ニンジャの　こわさを　みたな！<DONE>
 {text_start}ウチの　えんちょう<LINE>あだな　ヤドンって　いうんです<PARA>ほら！　#の　ヤドンって<LINE>とぼけた　かんじ　でしょ！<DONE>
 {text_start}ヤドンさんって<LINE>すごい　#　くわしいんだ！<PARA>みた　ことも　ない<LINE>#の　カセキとか　もってるし<DONE>
-{text_start}ウチの　ヤドン　なにやら<LINE>ふにゃふにゃ　いってたな<…><PARA>ボケた　のか？<DONE>
+{text_start}ウチの　ヤドン　なにやら<LINE>ふにゃふにゃ　いってたな<……><PARA>ボケた　のか？<DONE>
 {text_start}わしは　つりおやじの　あに　じゃ！<PARA>もう　しぬほど<LINE>つりが　すき　なんだが<PARA>きみは　つり　すき　かな？<DONE>
 {text_start}そうか！<LINE>きみとは　きが　あいそうだ！<PARA>これ　あげるから<LINE>きみも　つり　まくりなさいよ！<PARA><PLAYER>は　つりおやじから<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
-{text_start}なんじゃ<…>　がっかりだ<DONE>
+{text_start}なんじゃ<……>　がっかりだ<DONE>
 {text_start}やー　<PLAYER>くん！<PARA>つり　まくっとる　かね！<DONE>
 {text_start}ありゃー！<PARA>いいもの　あげようと　したのに<LINE>にもつが　いっぱいじゃ！<DONE>
 {text_start}だれも　いない　はずの<LINE>いえを　あるき　まわる<CONT>きみは　だれだね？<DONE>
 {text_start}まいったな<PROMPT>
-{text_start}<…>　なに？<LINE>カギを　さがして　いるのか<CONT>さあ　しらないねえ<…><DONE>
+{text_start}<……>　なに？<LINE>カギを　さがして　いるのか<CONT>さあ　しらないねえ<……><DONE>
 {text_start}ひみつの　スイッチが　ある！<PARA>おして　みますか？<DONE>
-{text_start}おしてみよう！　<…>ポチッとな<PROMPT>
+{text_start}おしてみよう！　<……>ポチッとな<PROMPT>
 {text_start}おすのは　あきらめた<DONE>
 {text_start}うおおーす！<PARA>わしは　もえる　おとこ！<LINE>グレンじま　#ジムの　カツラ<PARA>わしの　#は　すべてを<LINE>ほのおで　やいて　こがしまくる<CONT>つわもの　ばかり　なのだー！<PARA>うおおーす！<LINE>やけどなおしの　よういは　いいか！<DONE>
 {text_start}わしは　もえつきた！<PARA>おまえに　こそ！<LINE>クリムゾン　バッジは　ふさわしい！@
@@ -2778,17 +2778,17 @@
 {text_start}<PARA><TM>３８は<LINE>もえる　おおわざ！　だいもんじ！<PARA>だいもんじは<LINE>ほのお　タイプの　#！<PARA>ロコンや　リザードに<LINE>おぼえさせると　よいぞ！<DONE>
 {text_start}にもつが　いっぱいだ<DONE>
 {text_start}#が　はく　ほのおの　おんど<LINE>どの　くらいか　しってる？<DONE>
-{text_start}<…>　あち！　やられた<PROMPT>
-{text_start}もえる　っていう　のは<LINE>くうき　ちゅうの　さんそが<…><PARA>むにゃむにゃ<…>　ブツブツ<DONE>
+{text_start}<……>　あち！　やられた<PROMPT>
+{text_start}もえる　っていう　のは<LINE>くうき　ちゅうの　さんそが<……><PARA>むにゃむにゃ<……>　ブツブツ<DONE>
 {text_start}どろぼうと　なのって　おりやすが<LINE>あしを　あらって<CONT>#の　しゅぎょう　してまっせ<DONE>
 {text_start}まいりやした！<PROMPT>
 {text_start}ひとの　#　みると<LINE>つい　ぬすみたく　なっちゃうんでさ！<DONE>
 {text_start}#を　けんきゅう　しつくした<LINE>ぼくに　かてるかい！<DONE>
-{text_start}<…>！<LINE>もっと　けんきゅう　しなきゃ<PROMPT>
+{text_start}<……>！<LINE>もっと　けんきゅう　しなきゃ<PROMPT>
 {text_start}むずかしい　はなしは<LINE>きみに　いっても　わからないよ<DONE>
 {text_start}ただ　なんとなく　すき　なんで<LINE>ほのお　#　つかってるぜ！<DONE>
-{text_start}<…>　もえた！<PROMPT>
-{text_start}おいらの　ゆめ<…>？<PARA>どろぼう　#が　いりゃ<LINE>ぜひ　つかって　みたいねー！<DONE>
+{text_start}<……>　もえた！<PROMPT>
+{text_start}おいらの　ゆめ<……>？<PARA>どろぼう　#が　いりゃ<LINE>ぜひ　つかって　みたいねー！<DONE>
 {text_start}おれは　カツラが　#<LINE>はじめた　きっかけを　しってるぜ<DONE>
 {text_start}ありゃまあ<PROMPT>
 {text_start}リーダーの　カツラが<LINE>やま　のぼりで　そうなん　したとき<CONT>くらい　やまみちを　てらして<CONT>ひのとり　#が　とんでった！<PARA>その　おかげで　カツラは　ぶじ<LINE>やまを　おりることが　できたのさ<DONE>
@@ -2796,7 +2796,7 @@
 {text_start}あー　あつかった<PROMPT>
 {text_start}ギャロップ　キュウコン　あたりが<LINE>ほのお　タイプで　にんきが　あるよ<DONE>
 {text_start}ほのおの　じゃくてんは<LINE>エイチ　ツー　オー　と　いわれてる<DONE>
-{text_start}へろへろ<…><PROMPT>
+{text_start}へろへろ<……><PROMPT>
 {text_start}たしかに　ほのおは　みずに　よわい！<LINE>でも　とかして　しまうから<CONT>こおり　#には　つよいよ<DONE>
 {text_start}おーす！<LINE>みらいの　チャンピオン！<PARA>ねっけつ　カツラは<LINE>ほのおの　プロフェッショナルだ！<PARA>それなら　こっちは<LINE>クールに　みずで　きめろ！<PARA>あと　やけどなおしを<LINE>もって　いった　ほうが　いいぜ！<DONE>
 {text_start}<PLAYER>！　かったか！<LINE>あつ　くるしい　おやじ　だったな！<DONE>
@@ -2818,10 +2818,10 @@
 {text_start}ちッ　ちッちッ！<LINE>これは　ゆびをふる　おと　だぜ！<PARA>ゆびをふると　#は<LINE>のうみそが　しげき　されて<CONT>ふだん　やらないような　わざを<CONT>いろいろ　くりだすぜ！<DONE>
 {text_start}にもつが　おおくて　もてないぞ<DONE>
 {text_start}そう！　イーブイは<LINE>３しゅるいの　#に<CONT>しんか　する　かのうせいが　ある！<DONE>
-{text_start}<PC>に<LINE>でんしメールが　とどいてる！<PARA><…>　<…>　<…><PARA>でんせつの　とり#は<LINE>３しゅるい<…>　ファイヤー<CONT>サンダー　フリーザー<…><CONT>しかし　どこに　いるのか<CONT>まだ　わかって　ません<PARA>こんど　ハナダ　どうくつに<LINE>ちょうさに　いきます<CONT><…>　まずは　ほうこく　まで<CONT>#　ちょうさ　たい<PARA><…>　<…>　<…><DONE>
+{text_start}<PC>に<LINE>でんしメールが　とどいてる！<PARA><……>　<……>　<……><PARA>でんせつの　とり#は<LINE>３しゅるい<……>　ファイヤー<CONT>サンダー　フリーザー<……><CONT>しかし　どこに　いるのか<CONT>まだ　わかって　ません<PARA>こんど　ハナダ　どうくつに<LINE>ちょうさに　いきます<CONT><……>　まずは　ほうこく　まで<CONT>#　ちょうさ　たい<PARA><……>　<……>　<……><DONE>
 {text_start}コハクの　パイプが　ある！<DONE>
 {text_start}はいー！<PARA>わたしは　エラーイ　はかせ<PARA>いつも　めずらしい　カセキ<LINE>けんきゅう　してる　アルよ！<PARA>あなた！<LINE>いい　カセキ　もってるか？<PROMPT>
-{text_start}もってない　アルね<…><DONE>
+{text_start}もってない　アルね<……><DONE>
 {text_start}ちょっと　じかん　かかるよ！<PARA>そこらへんを　すこし　<LINE>ブラブラ　してくると　よろしー！<DONE>
 {text_start}おそいねー！<PARA>もう　カセキ　いきかえったよー！<PARA>やっぱり　カセキは<LINE>@{text_ram wStringBuffer}{text_start}　だった　アルね！<PROMPT>
 {text_start}おお！<LINE>それは　@{text_ram wNameBuffer}{text_start}！<PARA>おお　むかしの　#<LINE>@{text_ram wStringBuffer}{text_start}　いう　カセキね！<PARA>わたしの　つくった<LINE>カセキ　さいせい　マシンで<PARA>これ！<LINE>いきかえらせて　みせるね！<DONE>
@@ -2834,23 +2834,23 @@
 {text_start}いざ　という　ときの　ために<LINE>どうぐは　おおめに　かうべきだね<DONE>
 {text_start}おーす！<LINE>みらいの　チャンピオン！<PARA>#　リーグ　してんのうは<LINE>４にん　つづけて<CONT>しょうぶ　する　ルールだ！<PARA>まけたら　ひとりめ　から<LINE>やりなおしに　なるぞ！<CONT>これが　さいごだ！　がんばれよ！<DONE>
 {text_start}このさきは　してんのうと<LINE>ひとりずつ　たたかうの！<CONT>もし　かてたら　ドアが　ひらいて<CONT>おくの　へやに　すすめるわ！<CONT>がんばって！<DONE>
-{text_start}たくの　むすめは<LINE>ほんと　わがままに　そだって<…><CONT>おともだちも　あまり　おりませんの<DONE>
-{text_start}<…>　こまった　ことに　むすめは<LINE>ひとの　まねが　すきでな！<PARA>しょっちゅう　ひとを　からかう　ので<LINE>きんじょ　じゃ<CONT>モノマネ　むすめと　よばれとる！<DONE>
+{text_start}たくの　むすめは<LINE>ほんと　わがままに　そだって<……><CONT>おともだちも　あまり　おりませんの<DONE>
+{text_start}<……>　こまった　ことに　むすめは<LINE>ひとの　まねが　すきでな！<PARA>しょっちゅう　ひとを　からかう　ので<LINE>きんじょ　じゃ<CONT>モノマネ　むすめと　よばれとる！<DONE>
 {text_start}ラッキー『ラッ　きぃ！@
-{text_start}<PLAYER>『やあ！　こんにちは！<LINE>きみ　#　すきかい？<PARA><PLAYER>『ぼく　じゃなくって<LINE>きみに　きいてるんだ　けど<PARA><PLAYER>『<…>　えー　なんだよ！<LINE>ヘンな　やつ　だなあ！<PARA>モノマネむすめ『<…>　なに？<LINE>ひとの　マネ　すんなって？<PARA>だって　あたし　<LINE>ものまね　しゅみ　なんだ　もん！<PROMPT>
-{text_start}わあー！<LINE>ピッピにんぎょう　くれるのー！<PARA>うれしーい！<PARA><…>　じゃあねー！<LINE>わたし　からは　これ　あげるー！<PROMPT>
+{text_start}<PLAYER>『やあ！　こんにちは！<LINE>きみ　#　すきかい？<PARA><PLAYER>『ぼく　じゃなくって<LINE>きみに　きいてるんだ　けど<PARA><PLAYER>『<……>　えー　なんだよ！<LINE>ヘンな　やつ　だなあ！<PARA>モノマネむすめ『<……>　なに？<LINE>ひとの　マネ　すんなって？<PARA>だって　あたし　<LINE>ものまね　しゅみ　なんだ　もん！<PROMPT>
+{text_start}わあー！<LINE>ピッピにんぎょう　くれるのー！<PARA>うれしーい！<PARA><……>　じゃあねー！<LINE>わたし　からは　これ　あげるー！<PROMPT>
 {text_start}<PLAYER>は　むすめさんから<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
 {text_start}<PARA><TM>３１の　なかは<LINE>わたしの　だいすきな　ものまね！<PARA>あなたの　すきな　#に<LINE>つかって　あげて！@
-{text_start}<PLAYER>『やあ！　さっきは<LINE><TM>　ありがとう！<PARA><PLAYER>『<…>　なーに？<PARA><PLAYER>『ぼくの　まね　して<LINE>そんなに　たのしい　かい？<PARA>モノマネむすめ『うん<…>！<LINE>とっても　たのしいー！<DONE>
+{text_start}<PLAYER>『やあ！　さっきは<LINE><TM>　ありがとう！<PARA><PLAYER>『<……>　なーに？<PARA><PLAYER>『ぼくの　まね　して<LINE>そんなに　たのしい　かい？<PARA>モノマネむすめ『うん<……>！<LINE>とっても　たのしいー！<DONE>
 {text_start}にもつが　いっぱいね！@
-{text_start}ドードー『ギー　ギーッ！<PARA><…>　カガミ　ヨ　カガミ！<LINE>セカイデ　イチバン　カワイイ<CONT>オンナノコハ　ダーレ？<DONE>
-{text_start}これは　めずらしい　#！？<LINE><…>　あれ？　ぬいぐるみ　だった<DONE>
-{text_start}これは<…>！<LINE>マリオが　バケツを　かぶって<CONT>あるいて　いく　ゲームだ！<DONE>
-{text_start}<…>　<…>　<…><PARA>わたしの　ひみつ<…>！<PARA>とくいなもの　<…>　ものまね！<LINE>しゅみ　<…>　ぬいぐるみ！<CONT>すきなもの　<…>　ピッピ！<CONT><…>　<…>　<…><DONE>
-{text_start}？　みえないぞ<…><DONE>
+{text_start}ドードー『ギー　ギーッ！<PARA><……>　カガミ　ヨ　カガミ！<LINE>セカイデ　イチバン　カワイイ<CONT>オンナノコハ　ダーレ？<DONE>
+{text_start}これは　めずらしい　#！？<LINE><……>　あれ？　ぬいぐるみ　だった<DONE>
+{text_start}これは<……>！<LINE>マリオが　バケツを　かぶって<CONT>あるいて　いく　ゲームだ！<DONE>
+{text_start}<……>　<……>　<……><PARA>わたしの　ひみつ<……>！<PARA>とくいなもの　<……>　ものまね！<LINE>しゅみ　<……>　ぬいぐるみ！<CONT>すきなもの　<……>　ピッピ！<CONT><……>　<……>　<……><DONE>
+{text_start}？　みえないぞ<……><DONE>
 {text_start}オスッ！<PARA>わしが　かくとう　どうじょうの<LINE>しはん　カラテ　だいおう　である！<PARA>おぬしは　どうじょう　やぶりか！<LINE>ならば　ようしゃは　せんぞ！<PARA>トオリャー！<DONE>
 {text_start}ウオリャ！<LINE>だー！　やられたあー！<PROMPT>
-{text_start}わしは　たしかに　まけた！<PARA>しかし　どうじょうの　かんばん<LINE><…>　だけは！<CONT>もって　いかないで　くれい！<PARA>かわりに　わしの　だいじな<LINE>かくとう　#を　わたす！<PARA>どうか！<LINE>すきな　ほうを　えらんで　くれい！<DONE>
+{text_start}わしは　たしかに　まけた！<PARA>しかし　どうじょうの　かんばん<LINE><……>　だけは！<CONT>もって　いかないで　くれい！<PARA>かわりに　わしの　だいじな<LINE>かくとう　#を　わたす！<PARA>どうか！<LINE>すきな　ほうを　えらんで　くれい！<DONE>
 {text_start}オスッ！<PARA>どうだ？　ついでに　ここで<LINE>カラテ　れんしゅう　していくか！<DONE>
 {text_start}ウオースッ！<LINE>きさま！　どうじょう　やぶり　か！<DONE>
 {text_start}ま　まいった！<PROMPT>
@@ -2866,49 +2866,49 @@
 {text_start}ここは　ぜんこくの　かくとうか　が<LINE>あつまる　どうじょう　だ！　オスッ！<DONE>
 {text_start}ウスッ！　キック　わざのおに！<LINE>サワムラーを　とるか？<DONE>
 {text_start}ウスッ！　うなる　こぶし！<LINE>エビワラーに　するか？<DONE>
-{text_start}よくばるのは　よそう<…><DONE>
-{text_start}<…>　やっぱり　きたわ！<LINE>よかんが　したのよ！<PARA>なにげに　スプーンを　なげたら<LINE>まがって　いらい<…>　わたし<CONT>エスパー　しょうじょ　なの<PARA>たたかうの　すき　じゃない　けど<LINE>あなたが　のぞむ　なら<CONT>わたしの　ちから<CONT>みせて　あげる！<DONE>
-{text_start}まける　なんて<…>！<LINE>とても　ショック！<CONT>でも　まけは　まけ<…>！<PARA>わたしの　しょうぶの　あまさを<LINE>いさぎよく　みとめるわ！<PARA>かった　あかしに<LINE>ゴールド　バッジを<CONT>あなたに　さしあげ　ましょう@
+{text_start}よくばるのは　よそう<……><DONE>
+{text_start}<……>　やっぱり　きたわ！<LINE>よかんが　したのよ！<PARA>なにげに　スプーンを　なげたら<LINE>まがって　いらい<……>　わたし<CONT>エスパー　しょうじょ　なの<PARA>たたかうの　すき　じゃない　けど<LINE>あなたが　のぞむ　なら<CONT>わたしの　ちから<CONT>みせて　あげる！<DONE>
+{text_start}まける　なんて<……>！<LINE>とても　ショック！<CONT>でも　まけは　まけ<……>！<PARA>わたしの　しょうぶの　あまさを<LINE>いさぎよく　みとめるわ！<PARA>かった　あかしに<LINE>ゴールド　バッジを<CONT>あなたに　さしあげ　ましょう@
 {text_start}ちょうのうりょくは　かぎられた<LINE>ひとの　ちから　では　ないわ！<CONT>だれでも　もってるのよ！<CONT>ただ　それに　きが　つかない　だけ<DONE>
-{text_start}ゴールド　バッジで<LINE>レベル７０　までの　#が<CONT>いうことを　きくように　なります<PARA>それ　いじょう<LINE>つよい　#は<CONT>ソッポ　むいたり　ふてね　したり<CONT>あつかいが　たいへん　です！<PARA>だけど　そだて　すぎなきゃ<LINE>そういう　しんぱいは　ないわ！<PARA>それから<…>！<LINE>わざマシンを　もって　いって<DONE>
+{text_start}ゴールド　バッジで<LINE>レベル７０　までの　#が<CONT>いうことを　きくように　なります<PARA>それ　いじょう<LINE>つよい　#は<CONT>ソッポ　むいたり　ふてね　したり<CONT>あつかいが　たいへん　です！<PARA>だけど　そだて　すぎなきゃ<LINE>そういう　しんぱいは　ないわ！<PARA>それから<……>！<LINE>わざマシンを　もって　いって<DONE>
 {text_start}<PLAYER>は　ナツメから<LINE><TM>４６を　もらった！@
 {text_start}<PARA><TM>４６は　サイコウェーブ！<LINE>きょうりょくな　ねんぱが<CONT>おおきな　ダメージを　あたえるわ！<DONE>
 {text_start}あ　にもつが　いっぱいよ<DONE>
-{text_start}おーす！<LINE>みらいの　チャンピオン！<PARA>ナツメの　#は<LINE>ちょうのうりょくを　つかって<CONT>おまえの　#を　まどわすぜ！<PARA>とくに<…>！　かくとう　#は<LINE>あいしょうが　わるい！<PARA>パワーを　はっきする　まえに<LINE>エジキに　なっちまう　からな！<DONE>
-{text_start}ちょうのうりょく<…>　か！<PARA>おれに　そんな　ものが　あったら<LINE>スロットで　あてほうだい　だぜ！<DONE>
-{text_start}ナツメは<…>　わたし　より<LINE>だいぶ　としした　だが！<CONT>かのじょを　そんけい　している！<DONE>
+{text_start}おーす！<LINE>みらいの　チャンピオン！<PARA>ナツメの　#は<LINE>ちょうのうりょくを　つかって<CONT>おまえの　#を　まどわすぜ！<PARA>とくに<……>！　かくとう　#は<LINE>あいしょうが　わるい！<PARA>パワーを　はっきする　まえに<LINE>エジキに　なっちまう　からな！<DONE>
+{text_start}ちょうのうりょく<……>　か！<PARA>おれに　そんな　ものが　あったら<LINE>スロットで　あてほうだい　だぜ！<DONE>
+{text_start}ナツメは<……>　わたし　より<LINE>だいぶ　としした　だが！<CONT>かのじょを　そんけい　している！<DONE>
 {text_start}およばなかったか！<PROMPT>
 {text_start}しょうぶが　ごかくの　ときは<LINE>きもちが　つよい　ほうが　かつ！<PARA>ナツメに　かちたい　なら<LINE>きみも　かちたいッ！　と<CONT>つよく　ねんじた　ほうが　いい<DONE>
 {text_start}みえない　ちからを　つかう<LINE>エスパーを　こわいと　おもうか！<DONE>
-{text_start}こういう　ことも<LINE>あるのか<…><PROMPT>
-{text_start}エスパーに　ゆうりな　もの？<LINE><…>　はははーッ！<CONT>ゆうれい　や　むし　くらい　だぜ！<DONE>
-{text_start}#は<LINE>かいぬしに　にるって　しってるか？<PARA>という　ことは<…><LINE>おまえの　#は　つよいかな？<DONE>
+{text_start}こういう　ことも<LINE>あるのか<……><PROMPT>
+{text_start}エスパーに　ゆうりな　もの？<LINE><……>　はははーッ！<CONT>ゆうれい　や　むし　くらい　だぜ！<DONE>
+{text_start}#は<LINE>かいぬしに　にるって　しってるか？<PARA>という　ことは<……><LINE>おまえの　#は　つよいかな？<DONE>
 {text_start}わかった！<PROMPT>
-{text_start}わたしも　まだ　まだ　だ<…><LINE>サイコキネシスを　マスター　して<CONT>#に　おしえ　なくては！<DONE>
+{text_start}わたしも　まだ　まだ　だ<……><LINE>サイコキネシスを　マスター　して<CONT>#に　おしえ　なくては！<DONE>
 {text_start}きみは　わかってる　だろ？<LINE>#は　パワー　だけ<CONT>あったって　かて　ない　ことを！<DONE>
-{text_start}<…>　おれが<LINE>まける　なんて　ばかな！<PROMPT>
+{text_start}<……>　おれが<LINE>まける　なんて　ばかな！<PROMPT>
 {text_start}となりの　カラテ　だいおう　だって<LINE>うちの　ナツメさんに<CONT>コテンパンに　やられたんだぜ<DONE>
-{text_start}きみは　わたしと<LINE>#を　たたかわせる<…>！<DONE>
-{text_start}くっ<…>！<LINE>やはり　わたしが　やぶれたか<PROMPT>
-{text_start}こういう　けっかは　わかってた<…><LINE><…>　そう！<CONT>これが　よち　のうりょく　だ<DONE>
+{text_start}きみは　わたしと<LINE>#を　たたかわせる<……>！<DONE>
+{text_start}くっ<……>！<LINE>やはり　わたしが　やぶれたか<PROMPT>
+{text_start}こういう　けっかは　わかってた<……><LINE><……>　そう！<CONT>これが　よち　のうりょく　だ<DONE>
 {text_start}ナツメさんは　わかく　して<LINE>この　#　ジムを　しきる<CONT>じつりょくしゃ！<PARA>かんたん　には　あわせ　ないぜ！<DONE>
 {text_start}まけて　しまった！<PROMPT>
-{text_start}おしえて　やろう<…><LINE>かつて　ヤマブキ　には<CONT>ふたつの　#　ジムが　あった<PARA>とういつ　しあいに　まけた　のが<LINE>となりの　かくとう　どうじょうだ！<DONE>
-{text_start}ヤマブキ　ジム！<LINE>またの　なを<CONT>エスパー　ようせい　じょ<CONT>おまえ<…><PARA><…>　ナツメに　あおうと　してるな？<LINE>そうだろ！<CONT>わかってるんだ！<DONE>
-{text_start}ぐわああ<…>！<PROMPT>
-{text_start}<…>　そうだ！<LINE>ひとの　こころを　よむ<CONT>のうりょくを　テレパス　という！<DONE>
-{text_start}<…>　おてがみ　ありがとう！<LINE>はやく　あなたに　あいたいな<…><PARA>いやーん！<LINE>てがみ　かいてんだから　みないで！<DONE>
+{text_start}おしえて　やろう<……><LINE>かつて　ヤマブキ　には<CONT>ふたつの　#　ジムが　あった<PARA>とういつ　しあいに　まけた　のが<LINE>となりの　かくとう　どうじょうだ！<DONE>
+{text_start}ヤマブキ　ジム！<LINE>またの　なを<CONT>エスパー　ようせい　じょ<CONT>おまえ<……><PARA><……>　ナツメに　あおうと　してるな？<LINE>そうだろ！<CONT>わかってるんだ！<DONE>
+{text_start}ぐわああ<……>！<PROMPT>
+{text_start}<……>　そうだ！<LINE>ひとの　こころを　よむ<CONT>のうりょくを　テレパス　という！<DONE>
+{text_start}<……>　おてがみ　ありがとう！<LINE>はやく　あなたに　あいたいな<……><PARA>いやーん！<LINE>てがみ　かいてんだから　みないで！<DONE>
 {text_start}ポッポ『クルックー@
 {text_start}ものまね　むすめって　かわいい！<LINE>かのじょに　ピッピにんぎょう<CONT>プレゼント　するんだ！<DONE>
-{text_start}<…>　この　あいだ<LINE>ポイント　アップ　もらったの<PARA>すごく　つよい　わざって<LINE>パワー　ポイント　すくないけど<CONT>これで　ふやせば　いいのね<…>？<DONE>
+{text_start}<……>　この　あいだ<LINE>ポイント　アップ　もらったの<PARA>すごく　つよい　わざって<LINE>パワー　ポイント　すくないけど<CONT>これで　ふやせば　いいのね<……>？<DONE>
 {text_start}ゴールドスプレーは<LINE>よわい　#を　よせ　つけない<CONT>シルバースプレー　より<CONT>ながもち　するって<DONE>
 {text_start}げんきのかけら　たかい　けど<LINE>せんとうふのうの　#が<CONT>げんきに　なるの　すごいわ！<DONE>
 {text_start}いらっしゃいませ！<PARA>しゃちょう　でしたら　ただいま<LINE>１１かい　やくいんしつで　ございます<DONE>
 {text_start}#は　しゅるいに　よって<LINE>せいちょうする　テンポが<CONT>ちがう　らしいわ<DONE>
 {text_start}だれもが　みんな　しってる<LINE>シルフ　カンパニー　だが<CONT>ゆうめい　だと　それだけ<CONT>ねらわれる　きけんも　あるのだ<DONE>
-{text_start}<…>　<…>　わかった！<PARA>これが　ほしい　のか！<PROMPT>
+{text_start}<……>　<……>　わかった！<PARA>これが　ほしい　のか！<PROMPT>
 {text_start}<PLAYER>は　エスパー　から<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
-{text_start}<…>　わかってるな？<LINE><TM>２９は　サイコキネシス！<PARA><…>　うまく　いけば<LINE>あいての　とくしゅ　のうりょくを<CONT>さげられる　かも　しれない！<DONE>
+{text_start}<……>　わかってるな？<LINE><TM>２９は　サイコキネシス！<PARA><……>　うまく　いけば<LINE>あいての　とくしゅ　のうりょくを<CONT>さげられる　かも　しれない！<DONE>
 {text_start}もちものが　いっぱいだ！<DONE>
 {text_start}#！<DONE>
 {text_start}ようこそ！<NEXT>おさがしものですか？<DONE>
@@ -2923,17 +2923,17 @@
 {text_start}どれを　うっていただけますか？<DONE>
 {text_start}それでしたら　@{text_bcd hMoney, 3 | LEADING_ZEROES | LEFT_ALIGN}{text_start}円で　<LINE>おひきとりいたしましょう<DONE>
 {text_start}かいとれる　しなものは<LINE>おもちで　ないようです<PROMPT>
-{text_start}<…>そのしなものに　おねだんを<LINE>おつけするわけには　まいりません<PROMPT>
+{text_start}<……>そのしなものに　おねだんを<LINE>おつけするわけには　まいりません<PROMPT>
 {text_start}ありがとう　ございました<DONE>
 {text_start}そのほかに　わたくしどもで<LINE>おちからに　なれることは？<DONE>
 {text_ram wLearnMoveMonName}{text_start}は　あたらしく<LINE>@{text_ram wStringBuffer}{text_start}を　おぼえた！@
 {text_start}どの　わざを<NEXT>わすれさせたい？<DONE>
-{text_start}それでは<…>　@{text_ram wStringBuffer}{text_start}を<LINE>おぼえるのを　あきらめますか？<DONE>
+{text_start}それでは<……>　@{text_ram wStringBuffer}{text_start}を<LINE>おぼえるのを　あきらめますか？<DONE>
 {text_ram wLearnMoveMonName}{text_start}は　@{text_ram wStringBuffer}{text_start}を<LINE>おぼえずに　おわった！<PROMPT>
-{text_ram wLearnMoveMonName}{text_start}は　あたらしく<LINE>@{text_ram wStringBuffer}{text_start}を　おぼえたい<…>！<PARA>しかし　@{text_ram wLearnMoveMonName}{text_start}は　わざを　４つ<LINE>おぼえるので　せいいっぱいだ！<PARA>@{text_ram wStringBuffer}{text_start}の　かわりに<LINE>ほかの　わざを　わすれさせますか？<DONE>
-{text_start}１　２の　<…>@
+{text_ram wLearnMoveMonName}{text_start}は　あたらしく<LINE>@{text_ram wStringBuffer}{text_start}を　おぼえたい<……>！<PARA>しかし　@{text_ram wLearnMoveMonName}{text_start}は　わざを　４つ<LINE>おぼえるので　せいいっぱいだ！<PARA>@{text_ram wStringBuffer}{text_start}の　かわりに<LINE>ほかの　わざを　わすれさせますか？<DONE>
+{text_start}１　２の　<……>@
 {text_start}　ポカン！@
-{text_start}<PARA>@{text_ram wLearnMoveMonName}{text_start}は　@{text_ram wNameBuffer}{text_start}の<LINE>つかいかたを　きれいに　わすれた！<PARA>そして<…>！<PROMPT>
+{text_start}<PARA>@{text_ram wLearnMoveMonName}{text_start}は　@{text_ram wNameBuffer}{text_start}の<LINE>つかいかたを　きれいに　わすれた！<PARA>そして<……>！<PROMPT>
 {text_start}それは　たいせつなわざです<LINE>わすれさせることは　できません！<PROMPT>
 {text_start}ようこそ！<LINE>#センターへ<PARA>ここでは　#の<LINE>たいりょく　かいふくを　いたします<PROMPT>
 {text_start}モンスターボールを　<LINE>おあずけに　なりますか？<DONE>
@@ -2948,7 +2948,7 @@
 {text_start}まち　じかんが　ながいので<LINE>うけつけを　ちゅうし　いたします！<PARA>ともだちと　れんらくを　とって<LINE>もういちど　おこし　ください！<DONE>
 {text_start}それでは　また　おこしください<DONE>
 {text_start}こちらは　ただいま<LINE>じゅんびちゅうです<DONE>
-{text_start}まばゆい　ひかりが<LINE>あたりを　あかるく　てらす<…><PROMPT>
+{text_start}まばゆい　ひかりが<LINE>あたりを　あかるく　てらす<……><PROMPT>
 {text_start}さいごに　やすんだ<LINE>#センターへ　とびます！<DONE>
 {text_start}ここでは　@{text_ram wNameBuffer}{text_start}で<LINE>テレポートすることは　できません！<PROMPT>
 {text_start}ここでは　@{text_ram wNameBuffer}{text_start}で<LINE>そらを　とぶことは　できません！<PROMPT>
@@ -2959,14 +2959,14 @@
 {text_ram wNameBuffer}{text_start}は<LINE>かいりきを　はっきした！@
 {text_ram wNameBuffer}{text_start}の　かいりきの　おかげで<LINE>いわを　おせるように　なった！<PROMPT>
 {text_start}ながれが　はやくて<LINE>ダメだ！<PROMPT>
-{text_start}せっかくの　サイクリング！<LINE><…>　なみのりは　やめとこう<PROMPT>
+{text_start}せっかくの　サイクリング！<LINE><……>　なみのりは　やめとこう<PROMPT>
 {text_start}<PLAYER>は<LINE>@{text_ram wNameBuffer}{text_start}を　てにいれた！@
 {text_start}#を　もちきれないので<LINE><PC>の　ボックス@{text_ram wStringBuffer}{text_start}　に<CONT>@{text_ram wBoxMonNicks}{text_start}を　てんそうした！<DONE>
 {text_start}#を　もちきれません！<PARA>ボックスも　いっぱいで<LINE>てんそうできません！<PARA>#センターなどで<LINE>ボックスを　かえてきて　ください<DONE>
 {text_start}オーキド『おーい！<LINE>まてー！　まつんじゃあ！@
 {text_start}オーキド『あぶない　とこだった！<PARA>くさむらでは<LINE>やせいの　#が　とびだす！<DONE>
-{text_start}オーキド『ふう<…><DONE>
-{text_start}オーキド『このように　くさむらは<LINE>いつ　#が　とびだして<CONT>くるか　わからない！<PARA>こちらも　#を<LINE>もって　いれば<CONT>たたかえるのだが<…><CONT>そうじゃ！<PARA><…>　ちょっと<LINE>わしに　ついて　きなさい！<DONE>
+{text_start}オーキド『ふう<……><DONE>
+{text_start}オーキド『このように　くさむらは<LINE>いつ　#が　とびだして<CONT>くるか　わからない！<PARA>こちらも　#を<LINE>もって　いれば<CONT>たたかえるのだが<……><CONT>そうじゃ！<PARA><……>　ちょっと<LINE>わしに　ついて　きなさい！<DONE>
 {text_start}わたしも<LINE>#を　そだててるの！<PARA>つよく　なれば<LINE>ガードマンの　かわりに　なるしね<DONE>
 {text_start}かがくの　ちからって　すげー！<PARA>いまは　<PC>つうしんで<LINE>どうぐや　#を<CONT>データにして　おくれるんだと<DONE>
 {text_start}ここは　オーキド　はかせの<LINE>#　けんきゅうじょ<DONE>
@@ -2974,9 +2974,9 @@
 {text_start}ここは　<PLAYER>　のいえ<DONE>
 {text_start}ここは　<RIVAL>　のいえ<DONE>
 {text_start}はじめの　うちは<LINE>#を　よわらせてから<CONT>とるのが　コツじゃ！<DONE>
-{text_start}うーん<…><LINE>よっぱらってた　みたいじゃ！<PARA>あたまが　いたい<…><PARA><…>　なに？<LINE>わしが　じゃまで　とおれなかった？<PARA><…>　<…>　ほっほう<LINE>#ずかんを　つくっとるのか！<PARA>だったら　おわびに　#の<LINE>つかまえかたを　みせてやろう！<DONE>
+{text_start}うーん<……><LINE>よっぱらってた　みたいじゃ！<PARA>あたまが　いたい<……><PARA><……>　なに？<LINE>わしが　じゃまで　とおれなかった？<PARA><……>　<……>　ほっほう<LINE>#ずかんを　つくっとるのか！<PARA>だったら　おわびに　#の<LINE>つかまえかたを　みせてやろう！<DONE>
 {text_start}んー　しっぱい　じゃー<LINE>わしも　うでが　おちたのー<PARA>モンスターボールも<LINE>なくなって　しまったし<CONT>ちかくの　フレンドリィショップに<CONT>かいに　いくかな<DONE>
-{text_start}きみが　こしに　つけてる<LINE>その　モンスターボールは<…>！<CONT>まさしく　#だね！<PARA>いつでも　#の　だしいれが<LINE>じゆうに　できる　なんて<CONT>べんりな　よのなかだね<DONE>
+{text_start}きみが　こしに　つけてる<LINE>その　モンスターボールは<……>！<CONT>まさしく　#だね！<PARA>いつでも　#の　だしいれが<LINE>じゆうに　できる　なんて<CONT>べんりな　よのなかだね<DONE>
 {text_start}いつ　きても<LINE>この　#　ジムは　しまっとる<PARA>いったい　どんな　ヤツが<LINE>リーダーを　しとるんじゃろか？<DONE>
 {text_start}トキワ　ジムの　リーダーが<LINE>かえって　きたぞ！<DONE>
 {text_start}いもむし　#には<LINE>２しゅるい　いるって　しらない？<DONE>
@@ -2984,97 +2984,97 @@
 {text_start}キャタピーは　どくが　ないけど<LINE>ビードルには　どくが　あるよ<PARA>#が　さされないように<LINE>きを　つけようね<DONE>
 {text_start}あらら　じいちゃん！<LINE>こんな　ところで　ねちゃって<CONT>しょーが　ないわね！<CONT>よいが　さめるまで　まつしかないわ<DONE>
 {text_start}ときどき　ニビシティまで<LINE>おかいものに　いきますけど<PARA>トキワのもり　って<LINE>みちが　まがり　くねってるのよ<DONE>
-{text_start}ういーっ！　ひっく<…>　まちやがれ！<LINE>わしの　はなしを　きけ！<PARA><…>　こら！<LINE>いくな！　と　いっとろーが！<DONE>
-{text_start}ふあー！<LINE>ひなたぼっこ　してて<CONT>ねむって　しまった！<PARA><…>　へんな　ゆめを　みた<LINE>スリープが　ゆめを　くっていた！<CONT><…>およ？　ぼく　いつのまに<CONT><TM>　もってるけど？<PARA>うーん<LINE>きみが　わるい！<CONT>これ　きみに　あげる！<PROMPT>
+{text_start}ういーっ！　ひっく<……>　まちやがれ！<LINE>わしの　はなしを　きけ！<PARA><……>　こら！<LINE>いくな！　と　いっとろーが！<DONE>
+{text_start}ふあー！<LINE>ひなたぼっこ　してて<CONT>ねむって　しまった！<PARA><……>　へんな　ゆめを　みた<LINE>スリープが　ゆめを　くっていた！<CONT><……>およ？　ぼく　いつのまに<CONT><TM>　もってるけど？<PARA>うーん<LINE>きみが　わるい！<CONT>これ　きみに　あげる！<PROMPT>
 {text_start}<PLAYER>は　にいちゃんから<LINE><TM>４２を　もらった！@
-{text_start}<TM>４２の　なかみは<…><LINE>ゆめくい　だよ<…><CONT><…>　ぐー<…><DONE>
+{text_start}<TM>４２の　なかみは<……><LINE>ゆめくい　だよ<……><CONT><……>　ぐー<……><DONE>
 {text_start}にもつ　いっぱい　じゃん<DONE>
 {text_start}なんじゃ！？<LINE>また　つかまえかたの<CONT>おてほんを　みに　きたのか？<DONE>
-{text_start}ほっほう！<LINE>では<…>　わしが<CONT>おてほんを　みせて　やるかな！<DONE>
-{text_start}そうか<…><…><…><LINE>わしは　うまくないからなー<DONE>
+{text_start}ほっほう！<LINE>では<……>　わしが<CONT>おてほんを　みせて　やるかな！<DONE>
+{text_start}そうか<……><……><……><LINE>わしは　うまくないからなー<DONE>
 {text_start}ここは　トキワシティ<LINE>トキワは　みどり　えいえんのいろ<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>とにかく　#を　つかまえて<LINE>ドンドン　ふやそう！<CONT><TRAINER>との　しょうぶも<CONT>たくさん　もってると　ゆうり！<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>#には　たいりょくの　ほか<LINE>わざを　くりだす　げんきの　もと<CONT>パワーポイントが　あります<PARA>わざ　ごとの　パワーポイントが<LINE>なくなった　ときも<CONT>#センターで　やすませて！<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>とにかく　#を　つかまえて<LINE>ドンドン　ふやそう！<CONT><TRAINER>との　しょうぶも<CONT>たくさん　もってると　ゆうり！<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>#には　たいりょくの　ほか<LINE>わざを　くりだす　げんきの　もと<CONT>パワーポイントが　あります<PARA>わざ　ごとの　パワーポイントが<LINE>なくなった　ときも<CONT>#センターで　やすませて！<DONE>
 {text_start}トキワ　#ジム<DONE>
-{text_start}トキワ　ジムのドアには<LINE>カギが　かかって　いた<…>！<DONE>
+{text_start}トキワ　ジムのドアには<LINE>カギが　かかって　いた<……>！<DONE>
 {text_start}ピッピって　つきから　きたって<LINE>ウワサ　しってる？<PARA>オツキミやまに<LINE>つきのいしが　おちてから<CONT>みかける　ように　なったの<DONE>
 {text_start}ニビ　シティは<LINE>むしとり　しょうねん　みたいに<CONT>ただの　しゅみで　#<CONT>やってる　やつ　ばかり！<PARA>しかし　ニビ　#　ジムの<LINE>タケシは　ちがうぜ<DONE>
 {text_start}きみは　もう<LINE>はくぶつかん　けんがくした？<DONE>
 {text_start}オツキミやま　で　みつかった<LINE>カセキの　てんじ　すごかった！<DONE>
-{text_start}え<…>！<LINE>そりゃ　ぜったい<CONT>いった　ほうが　いい！<DONE>
-{text_start}ここだよ！<LINE>けんがくには<CONT>にゅうじょうりょうが　いるけど<CONT>じゃ<…>！<CONT>ぼくは　ここで！<DONE>
-{text_start}シュー<…>！<LINE>ぼくが<CONT>なに　やってるか　わかる？<DONE>
-{text_start}そう<…>　それ！<LINE>けっこう　ほねが　おれるよ<DONE>
+{text_start}え<……>！<LINE>そりゃ　ぜったい<CONT>いった　ほうが　いい！<DONE>
+{text_start}ここだよ！<LINE>けんがくには<CONT>にゅうじょうりょうが　いるけど<CONT>じゃ<……>！<CONT>ぼくは　ここで！<DONE>
+{text_start}シュー<……>！<LINE>ぼくが<CONT>なに　やってるか　わかる？<DONE>
+{text_start}そう<……>　それ！<LINE>けっこう　ほねが　おれるよ<DONE>
 {text_start}かだんに　やせいの　#が<LINE>はいらない　ように<CONT>むしよけスプレー　まいてるのさ<DONE>
-{text_start}おまえ<…>！<LINE>#　<TRAINER>　だろ？<CONT>タケシが　あいてを　さがしてる<CONT><…>　こっちに　こい！<DONE>
+{text_start}おまえ<……>！<LINE>#　<TRAINER>　だろ？<CONT>タケシが　あいてを　さがしてる<CONT><……>　こっちに　こい！<DONE>
 {text_start}かてる　じしんが　あるなら<LINE>タケシと　たたかって　みなよ！<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>しょうぶの　とき<LINE>ちょっとだけ　でも<CONT>かおを　だした　#は<CONT>けいけんちが　もらえる！<DONE>
-{text_start}<…>　チラシが　はって　ある！<PARA>さいきん　オツキミやまで<LINE>きちょうな　#の<CONT>カセキを　ぬすみ　まくる<CONT>あくとうが　います！<CONT>あやしい　ひとを　みたら<…>！<CONT><…>　ニビ　けいさつ　まで<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>しょうぶの　とき<LINE>ちょっとだけ　でも<CONT>かおを　だした　#は<CONT>けいけんちが　もらえる！<DONE>
+{text_start}<……>　チラシが　はって　ある！<PARA>さいきん　オツキミやまで<LINE>きちょうな　#の<CONT>カセキを　ぬすみ　まくる<CONT>あくとうが　います！<CONT>あやしい　ひとを　みたら<……>！<CONT><……>　ニビ　けいさつ　まで<DONE>
 {text_start}ニビ　かがく　はくぶつかん<DONE>
 {text_start}ニビシティ　#　ジム<LINE>リーダー　タケシ<CONT>つよくて　かたい　いしの　おとこ<DONE>
 {text_start}ここは　ニビシティ<LINE>ニビは　はいいろ　いしの　いろ<DONE>
-{text_start}<RIVAL>『よう　<PLAYER>！<PARA>こんな　とこ<LINE>うろちょろ　してたのか！<PARA>おれ　なんか　つよいの　すごいの<LINE>いろいろ　つかまえ　ちゃって<CONT>ぜっこうちょう　だぜ！<PARA><…>　どれどれ　<PLAYER>は<LINE>なんか　つかまえた？<CONT>みせて　みろよ！<DONE>
-{text_start}なんだよー！<LINE>ムキに　なっちゃって！<CONT><…>　わかった　わかった！<PROMPT>
+{text_start}<RIVAL>『よう　<PLAYER>！<PARA>こんな　とこ<LINE>うろちょろ　してたのか！<PARA>おれ　なんか　つよいの　すごいの<LINE>いろいろ　つかまえ　ちゃって<CONT>ぜっこうちょう　だぜ！<PARA><……>　どれどれ　<PLAYER>は<LINE>なんか　つかまえた？<CONT>みせて　みろよ！<DONE>
+{text_start}なんだよー！<LINE>ムキに　なっちゃって！<CONT><……>　わかった　わかった！<PROMPT>
 {text_start}なんたって！<LINE>おれは　てんさい　だからよ！<PROMPT>
-{text_start}<RIVAL>『へへーんッ！<PARA>おれ　マサキの　うちに　いって<LINE>めずらしい　#　たくさん<CONT>みせて　もらっちゃった　もんね！<PARA>おかげで　#　ずかんの<LINE>ページが　ふえたぜ！<PARA>なにしろ　マサキは　ゆうめいな<LINE>#　マニア　だからな！<PARA><PC>　つうしんの<LINE>#　あずかり　システム！<CONT>あれも　マサキが　つくったんだぜ<PARA>おまえも　つかってるんなら<LINE>いちど　おれいに　いけば？<PARA>おっと　みちくさ　くってる<LINE>ばあい　じゃ　ないぜ！<CONT><…>　じゃな　バイビー！<DONE>
-{text_start}あ　こら！<LINE>ひとんちの　にわ　はいるなよ！<CONT><…>　<…>　え　おれ？<PARA><…>　ただの　とおり　すがりだ<LINE>ぜーんぜん　あやしくないよ！<CONT><…>　<…>　あやしい？<DONE>
+{text_start}<RIVAL>『へへーんッ！<PARA>おれ　マサキの　うちに　いって<LINE>めずらしい　#　たくさん<CONT>みせて　もらっちゃった　もんね！<PARA>おかげで　#　ずかんの<LINE>ページが　ふえたぜ！<PARA>なにしろ　マサキは　ゆうめいな<LINE>#　マニア　だからな！<PARA><PC>　つうしんの<LINE>#　あずかり　システム！<CONT>あれも　マサキが　つくったんだぜ<PARA>おまえも　つかってるんなら<LINE>いちど　おれいに　いけば？<PARA>おっと　みちくさ　くってる<LINE>ばあい　じゃ　ないぜ！<CONT><……>　じゃな　バイビー！<DONE>
+{text_start}あ　こら！<LINE>ひとんちの　にわ　はいるなよ！<CONT><……>　<……>　え　おれ？<PARA><……>　ただの　とおり　すがりだ<LINE>ぜーんぜん　あやしくないよ！<CONT><……>　<……>　あやしい？<DONE>
 {text_start}<PLAYER>は　<ROCKET>いんから<LINE><TM>２８を　とりかえした！@
-{text_start}<PARA>そ　それじゃ<…>！<LINE>おれは　たいさん　するから！<CONT><…>　<…>　ばいばーい！@
-{text_start}にもつが　いっぱいだ！<PARA><…>　これ　わたさないと<LINE>おれ　にげられないよ！<DONE>
+{text_start}<PARA>そ　それじゃ<……>！<LINE>おれは　たいさん　するから！<CONT><……>　<……>　ばいばーい！@
+{text_start}にもつが　いっぱいだ！<PARA><……>　これ　わたさないと<LINE>おれ　にげられないよ！<DONE>
 {text_start}ひょえー　まいった！<LINE>もう　しないよ！<CONT>みのがして　くれい！<PROMPT>
-{text_start}<…>　わかった！<LINE>ぬすんだ　<TM>も　かえすよ<PROMPT>
+{text_start}<……>　わかった！<LINE>ぬすんだ　<TM>も　かえすよ<PROMPT>
 {text_start}きみも　#　やってるか！<LINE>あつめたり　たたかったり<CONT>いろいろ　たいへん　だな！<DONE>
-{text_start}みせの　まえの　うえきが　じゃまで<LINE>むこうへ　いけないよ！<PARA>でも　どこか　まわりみち　すると<LINE>いける　らしい　けど<…><DONE>
-{text_start}ほほう<…>！<LINE>#の　ずかんを　つくってる？<CONT>それは　たのしそう　だなあ！<DONE>
-{text_start}かわいそうに<…><PARA>この　いえは<LINE>ドロボーに　はいられたの！<CONT>はんにんは　わかっています！<CONT>ロケットだんの　しわざよ！<PARA>けいさつ　としても<LINE>ロケットだんの　あくじ　には<CONT>ほとほと　こまっているの！<DONE>
-{text_start}さあ　マルマイン！<LINE>ソニックブーム　よ！<CONT><…>　まる　ってば<CONT>わたしの　いうこと　きいて！<DONE>
-{text_start}マルマイン！　そこで　たいあたりっ！<LINE><…>　がっくし　また　ダメ！<DONE>
-{text_start}マルマイン！　スピードスター！<LINE>あん　<…>ちがーう！<CONT>#って　むずかしいわ！<PARA>#が<LINE>いうこと　きくか　どうかは<CONT>ひとの　うでまえ　しだい　なんだもの<DONE>
-{text_start}マルマインは　ひるね　してる<…><DONE>
-{text_start}マルマインは　なまけてる<…><DONE>
+{text_start}みせの　まえの　うえきが　じゃまで<LINE>むこうへ　いけないよ！<PARA>でも　どこか　まわりみち　すると<LINE>いける　らしい　けど<……><DONE>
+{text_start}ほほう<……>！<LINE>#の　ずかんを　つくってる？<CONT>それは　たのしそう　だなあ！<DONE>
+{text_start}かわいそうに<……><PARA>この　いえは<LINE>ドロボーに　はいられたの！<CONT>はんにんは　わかっています！<CONT>ロケットだんの　しわざよ！<PARA>けいさつ　としても<LINE>ロケットだんの　あくじ　には<CONT>ほとほと　こまっているの！<DONE>
+{text_start}さあ　マルマイン！<LINE>ソニックブーム　よ！<CONT><……>　まる　ってば<CONT>わたしの　いうこと　きいて！<DONE>
+{text_start}マルマイン！　そこで　たいあたりっ！<LINE><……>　がっくし　また　ダメ！<DONE>
+{text_start}マルマイン！　スピードスター！<LINE>あん　<……>ちがーう！<CONT>#って　むずかしいわ！<PARA>#が<LINE>いうこと　きくか　どうかは<CONT>ひとの　うでまえ　しだい　なんだもの<DONE>
+{text_start}マルマインは　ひるね　してる<……><DONE>
+{text_start}マルマインは　なまけてる<……><DONE>
 {text_start}マルマインは　そっぽを　むいた！<DONE>
-{text_start}マルマインは　しらんぷり　した<…><DONE>
+{text_start}マルマインは　しらんぷり　した<……><DONE>
 {text_start}わたしも　じてんしゃ　ほしい！<LINE>まっかな　じてんしゃ！<PARA>それで　よごすの　いや　だから<LINE>おうちに　かざるわ！<DONE>
-{text_start}ここは<…>　ハナダ　どうくつ！<LINE>こわい　ほど　つよい　#が<CONT>せいそく　してるぞ！<PARA>#　リーグ　にんてい<LINE>チャンピオン　しか　はいれないのだ！<DONE>
+{text_start}ここは<……>　ハナダ　どうくつ！<LINE>こわい　ほど　つよい　#が<CONT>せいそく　してるぞ！<PARA>#　リーグ　にんてい<LINE>チャンピオン　しか　はいれないのだ！<DONE>
 {text_start}ここは　ハナダシティ<LINE>ハナダは　みずいろ　しんぴのいろ<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>しんかの　さいちゅうに<LINE>ビー　ボタンを　おすと<CONT>しんかは　とまって　しまいます<DONE>
-{text_start}くさむらも　どうくつも　スイスイ！<LINE><…>　<…>　ミラクル・サイクル<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>しんかの　さいちゅうに<LINE>ビー　ボタンを　おすと<CONT>しんかは　とまって　しまいます<DONE>
+{text_start}くさむらも　どうくつも　スイスイ！<LINE><……>　<……>　ミラクル・サイクル<DONE>
 {text_start}ハナダ　シティ　#　ジム<LINE>リーダー　カスミ<CONT>おてんば　にんぎょ<DONE>
 {text_start}あなた<LINE>ゆうれいは　いると　おもう？<DONE>
-{text_start}<…>ふーん<LINE>しんじてる　ひとって　いるんだ<DONE>
-{text_start}あはは　そうよね！<PARA>あなたの　みぎかたに<LINE>しろい　てが　おかれてる　なんて<CONT><…>あたしの　みまちがいよね<DONE>
-{text_start}ここは　#の　おはかで<LINE>ゆうめいな　タウンだ<…><PARA>かっていた　#が　しんだとき<LINE>#　タワーに　もっていって<CONT>めいふくを　いのるのさ<…><DONE>
-{text_start}さいきん　#　タワーに<LINE>ゆうれいが　でる　らしいんだ<…><PARA>どうも　<ROCKET>に　ころされた<LINE>#の　ゆうれい　らしい<…><DONE>
+{text_start}<……>ふーん<LINE>しんじてる　ひとって　いるんだ<DONE>
+{text_start}あはは　そうよね！<PARA>あなたの　みぎかたに<LINE>しろい　てが　おかれてる　なんて<CONT><……>あたしの　みまちがいよね<DONE>
+{text_start}ここは　#の　おはかで<LINE>ゆうめいな　タウンだ<……><PARA>かっていた　#が　しんだとき<LINE>#　タワーに　もっていって<CONT>めいふくを　いのるのさ<……><DONE>
+{text_start}さいきん　#　タワーに<LINE>ゆうれいが　でる　らしいんだ<……><PARA>どうも　<ROCKET>に　ころされた<LINE>#の　ゆうれい　らしい<……><DONE>
 {text_start}ここは　シオン　タウン<LINE>シオンは　むらさき　とうとい　いろ<DONE>
-{text_start}みえない　#も　よくみえる？<LINE>しん　せいひん！　シルフスコープ！<PARA><…>　シルフ　カンパニー<DONE>
+{text_start}みえない　#も　よくみえる？<LINE>しん　せいひん！　シルフスコープ！<PARA><……>　シルフ　カンパニー<DONE>
 {text_start}ここは　あいの　ボランティア<LINE>#　ハウス<DONE>
 {text_start}ここは　#の　れいはい　とう<LINE>#　タワー<DONE>
-{text_start}わたし　スポーツの　あとは<LINE>あせで　ベトベター！<PARA><…>しってる？　ベトベターって<LINE>うみの　ヘドロから　うまれたの<DONE>
+{text_start}わたし　スポーツの　あとは<LINE>あせで　ベトベター！<PARA><……>しってる？　ベトベターって<LINE>うみの　ヘドロから　うまれたの<DONE>
 {text_start}みたかね！　いま　みなとに<LINE>サント・アンヌごう　という<CONT>ふねが　きとるぞ！<DONE>
-{text_start}おお！　サント・アンヌごう<LINE>しゅっぱつ　して　いったか！<PARA>つぎに　クチバに　くる　のは<LINE>らいねんの　いまごろ　じゃな<…><DONE>
+{text_start}おお！　サント・アンヌごう<LINE>しゅっぱつ　して　いったか！<PARA>つぎに　クチバに　くる　のは<LINE>らいねんの　いまごろ　じゃな<……><DONE>
 {text_start}ようこそ　サント・アンヌ　ごうへ！<DONE>
 {text_start}ようこそ　サント・アンヌ　ごうへ！<PARA>ちょっと　まって！<LINE>おきゃくさん　チケットは？<PROMPT>
 {text_start}<PLAYER>は　せんいんに<LINE>ふねのチケットを　みせた！<PARA>はい！　けっこう　です！<LINE>ようこそ　サント・アンヌ　ごうへ！<DONE>
-{text_start}<PLAYER>は　せんいんに<LINE>チケットを　みせようとした<…><CONT>チケットが<…>　ない<…>！<PARA><…>もうしわけ　ありません！<PARA>はいれる　のは<LINE>チケットの　ある　かた　だけです<DONE>
+{text_start}<PLAYER>は　せんいんに<LINE>チケットを　みせようとした<……><CONT>チケットが<……>　ない<……>！<PARA><……>もうしわけ　ありません！<PARA>はいれる　のは<LINE>チケットの　ある　かた　だけです<DONE>
 {text_start}ふねは　しゅっこうしました<DONE>
 {text_start}わし　じぬし！<LINE>この　しかくの　ばしょ<CONT>ぜーんぶ　わしの　とち！<PARA>ここに　ビル　たてようと　おもって<LINE>#に　じならし　させとる！<DONE>
 {text_start}ワンリキー『ごおーっ　ごごごー@
 {text_start}<PARA>ワンリキーは　うなりながら<LINE>じめんを　ならしている！<DONE>
 {text_start}サント・アンヌごうは<LINE>ゆうめいな　ごうか　きゃくせん！<PARA>１ねんに　１ど　だけ<LINE>クチバこう　に　とまるんだ！<DONE>
-{text_start}さいきん　いたずら　ばかりする<LINE>ゼニガメを　つかまえたの！<PARA>うでのいい　トレーナーが　いたら<LINE>このこを　まかせたいんだけど<…><DONE>
-{text_start}その　オレンジバッジ！<LINE>あなた<…><PARA>うでのいい　トレーナーのようね！<PARA>さいきん　いたずら　ばかりする<LINE>ゼニガメを　つかまえたの！<CONT>あなた　ひきとって　くれない？<DONE>
+{text_start}さいきん　いたずら　ばかりする<LINE>ゼニガメを　つかまえたの！<PARA>うでのいい　トレーナーが　いたら<LINE>このこを　まかせたいんだけど<……><DONE>
+{text_start}その　オレンジバッジ！<LINE>あなた<……><PARA>うでのいい　トレーナーのようね！<PARA>さいきん　いたずら　ばかりする<LINE>ゼニガメを　つかまえたの！<CONT>あなた　ひきとって　くれない？<DONE>
 {text_start}まかせたわ！<LINE>だいじに　そだてて　あげてね！@
-{text_start}どうしようかしら<…><LINE>こまったわ<DONE>
+{text_start}どうしようかしら<……><LINE>こまったわ<DONE>
 {text_start}ゼニガメ　げんきで　やっている？<DONE>
 {text_start}ここは　クチバ　シティ<LINE>クチバは　オレンジ　ゆうやけのいろ<DONE>
-{text_start}<…>　おしらせの　チラシだ！<PARA>さいきん<…>　１２ばん　どうろに<LINE>いねむり　#が　しゅつぼつ<CONT>とおれない　ことが　あります！<PARA>そういう　とき　シオン　タウンへ<LINE>いく　かたは　いわやま　トンネルを<CONT>とおって　ください！<PARA><…>　クチバ　けいさつ　より<DONE>
+{text_start}<……>　おしらせの　チラシだ！<PARA>さいきん<……>　１２ばん　どうろに<LINE>いねむり　#が　しゅつぼつ<CONT>とおれない　ことが　あります！<PARA>そういう　とき　シオン　タウンへ<LINE>いく　かたは　いわやま　トンネルを<CONT>とおって　ください！<PARA><……>　クチバ　けいさつ　より<DONE>
 {text_start}こちら　#　だいすき　クラブ<LINE>#ずき　だれでも　かんげい！<DONE>
 {text_start}クチバ　シティ　#　ジム<LINE>リーダー　マチス<CONT>イナズマ　アメリカン！<DONE>
 {text_start}クチバ　みなと　いりぐち<DONE>
 {text_start}わたしの　ドガース！<LINE>ともだちから　もらったの！<PARA>なかよく　なるために<LINE>いろいろ　やさしくして　あげたのよ！<DONE>
 {text_start}にひひ！　この　ジムは　ええ！<LINE>おんなのこ　ばっかし　じゃ！<DONE>
 {text_start}きれいな　まちづくりが　じまんの<LINE>タマムシに　ゲーム　コーナーが<CONT>できちゃって！　こまった　ものよ！<DONE>
-{text_start}トホホ<…>！<LINE>スロットで　また　まけた！<PARA>コインが　たまったら<LINE>けいひんに　した　ほうが　ええと<CONT>わかって　おったのに<…>！<DONE>
+{text_start}トホホ<……>！<LINE>スロットで　また　まけた！<PARA>コインが　たまったら<LINE>けいひんに　した　ほうが　ええと<CONT>わかって　おったのに<……>！<DONE>
 {text_start}やあ　やあ！<PARA>わたしは　いつも　きみが<LINE>そこを　とおるのを　みてたが<CONT>やっと　あう　ことが　できた！<PARA>それでは　とっておきの<LINE>これを！　きみに　あげよう！<PROMPT>
 {text_start}<PLAYER>は　おじさんから<LINE>@{text_ram wStringBuffer}{text_start}を　もらった！@
 {text_start}<TM>４１の　なかは<LINE>タマゴうみ　である！<PARA>これを　つかえる　#は<LINE>１しゅるい　だけ　である！<PARA>そういう　#は<LINE>ラッキー　である！<DONE>
@@ -3087,17 +3087,17 @@
 {text_start}タマムシ　シティ　#　ジム<LINE>リーダー　エリカ<CONT>しぜんを　あいする　おじょうさま！<DONE>
 {text_start}タマムシ　マンション<DONE>
 {text_start}ほしいもの　きっと　みつかる！<LINE>タマムシ　デパート<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>エフェクトガードは<LINE>ほのお　や　みず　でんき　など<PARA>とくしゅな　こうげき　から<LINE>#を　まもって　くれる！<PARA>アイテムの　おかいもとめは<LINE>タマムシ　デパートで　どうぞ！<DONE>
-{text_start}コインを　ビッグな　けいひんに！<LINE><…>　けいひん　こうかんじょ<DONE>
-{text_start}おとなの　あそびば！<LINE><…>　ロケット・　ゲーム　コーナー<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>ヨクアタールは　わざの<LINE>めいちゅう　りつ　を　あげる！<PARA>クリティカッターは　わざが<LINE>きゅうしょに　あたり　やすくなる<PARA>アイテムの　おかいもとめは<LINE>タマムシ　デパートで　どうぞ！<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>エフェクトガードは<LINE>ほのお　や　みず　でんき　など<PARA>とくしゅな　こうげき　から<LINE>#を　まもって　くれる！<PARA>アイテムの　おかいもとめは<LINE>タマムシ　デパートで　どうぞ！<DONE>
+{text_start}コインを　ビッグな　けいひんに！<LINE><……>　けいひん　こうかんじょ<DONE>
+{text_start}おとなの　あそびば！<LINE><……>　ロケット・　ゲーム　コーナー<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>ヨクアタールは　わざの<LINE>めいちゅう　りつ　を　あげる！<PARA>クリティカッターは　わざが<LINE>きゅうしょに　あたり　やすくなる<PARA>アイテムの　おかいもとめは<LINE>タマムシ　デパートで　どうぞ！<DONE>
 {text_start}サファリ　ゲーム　もう　やった？<LINE>あそこでしか　とれない<CONT>めずらしい　#も　いるよ！<DONE>
 {text_start}サファリ　ゾーンは<LINE>いりぐち　ふきんは　どうぶつえんで<PARA>おくに　いくと　#が<LINE>とりほうだいの　サファリ　ゲームじゃ<DONE>
-{text_start}コージ『おかしいな？　アツコと<LINE>#とりで　まちあわせって<…><CONT>とり#が　みつからない！<DONE>
-{text_start}あの　アイテム　ボール<LINE>ほしいって　おもった？<CONT><…>　<…>　<…>　ぼくもさ！<CONT><…>　え　あれ　いきものなの？<DONE>
+{text_start}コージ『おかしいな？　アツコと<LINE>#とりで　まちあわせって<……><CONT>とり#が　みつからない！<DONE>
+{text_start}あの　アイテム　ボール<LINE>ほしいって　おもった？<CONT><……>　<……>　<……>　ぼくもさ！<CONT><……>　え　あれ　いきものなの？<DONE>
 {text_start}！<DONE>
 {text_start}ここは　セキチク　シティ<LINE>セキチクは　ピンク　はなやかな　いろ<DONE>
-{text_start}めいぶつ！　サファリ　ゲーム！<LINE><…>　<…>　#　とりほうだい！<DONE>
+{text_start}めいぶつ！　サファリ　ゲーム！<LINE><……>　<……>　#　とりほうだい！<DONE>
 {text_start}サファリ　ゾーン<LINE>えんちょうの　いえ<DONE>
 {text_start}いろんな　#　いっぱい！<LINE>サファリ　ゾーンに　ようこそ！<DONE>
 {text_start}セキチク　シティ　#　ジム<LINE>リーダー　キョウ<CONT>どくの　ことなら　なんでも　ござれ<DONE>
@@ -3108,8 +3108,8 @@
 {text_start}なまえ　ラプラス<LINE>シー　ドラゴン　とも　よばれる<CONT>うみの　おうじゃ　です！<PROMPT>
 {text_start}なまえ　オムナイト<LINE>カセキ　から　いき　かえった<CONT>めずらしい　#！<PROMPT>
 {text_start}なまえ　カブト<LINE>カセキ　から　いき　かえった<CONT>めずらしい　#！<PROMPT>
-{text_start}<…><DONE>
-{text_start}ドアには<LINE>カギが　かかって　いた<…>！<DONE>
+{text_start}<……><DONE>
+{text_start}ドアには<LINE>カギが　かかって　いた<……>！<DONE>
 {text_start}グレン　ジムの　カツラは<LINE>けんきゅうじょが　できる　まえから<CONT>すんでて　へんじん　なんだって<DONE>
 {text_start}#　やしきは<LINE>けんきゅうの　ため　かがくしゃが<CONT>たまに　でいり　しとる　ようだ<DONE>
 {text_start}ここは　グレン　タウン<LINE>グレンの　あかは　じょうねつの　いろ<DONE>
@@ -3122,22 +3122,22 @@
 {text_start}わるい　こと　やりまくると<LINE>スカッと　するぜ！<DONE>
 {text_start}いてッ！　この　やろ！<LINE>どこ　みて　あるいてんだよ！<DONE>
 {text_start}シルフ　カンパニー　のっとったら<LINE>せかい　じゅうに　#　うって<CONT>ガバガバ　おお　もうけ　だぜ！<DONE>
-{text_start}<ROCKET>　やっつけたの<LINE>たった　ひとり　だって<…>　すごいな<DONE>
+{text_start}<ROCKET>　やっつけたの<LINE>たった　ひとり　だって<……>　すごいな<DONE>
 {text_start}ばんざーい！<LINE><ROCKET>が　いなくなった！<CONT>ビビらないで　そと　あるけるんだ！<DONE>
 {text_start}ヤマブキ　シティも　いちじは<LINE>ひとが　にげて　へっちゃった　けど<CONT>にぎやかな　まちに　もどるわ！<DONE>
-{text_start}<ROCKET>が　シルフ　おそって<LINE>だいじけんって　きいて！<CONT>ピジョットで　とんで　きたッス<PARA>かいけつ　した<…>？<LINE>すんません！<CONT>ねっからの　ヤジウマ　で！<DONE>
+{text_start}<ROCKET>が　シルフ　おそって<LINE>だいじけんって　きいて！<CONT>ピジョットで　とんで　きたッス<PARA>かいけつ　した<……>？<LINE>すんません！<CONT>ねっからの　ヤジウマ　で！<DONE>
 {text_start}ピジョット『ビビーッ！@
 {text_start}おれ　みたぜ！　シルフの　ビル　から<LINE>ロケットの　ボスが　にげて　いくの！<DONE>
 {text_start}わたしは　けいびいんだが<LINE>あやしい　こどもは<PARA>とおせんぼ　することに　してるのだ<DONE>
-{text_start}<…>　<…>　<…><LINE><…>こっくり　こっくり<PARA>しめしめ！　いねむり　しているぞ<DONE>
+{text_start}<……>　<……>　<……><LINE><……>こっくり　こっくり<PARA>しめしめ！　いねむり　しているぞ<DONE>
 {text_start}ここは　ヤマブキ　シティ<LINE>ヤマブキ　きんいろ　かがやきのいろ<DONE>
 {text_start}かくとう　どうじょう！<DONE>
 {text_start}ヤマブキ　シティ　#　ジム<LINE>リーダー　ナツメ<CONT>エスパー　しょうじょ！<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>なんでもなおしは<LINE>ねむり　どく　やけど　こおり<…><CONT>なんでも　なおします！<PARA>すこし　たかい　けど<LINE>ねむけざまし　どくけし　などを<CONT>バラバラに　かうより　らくちん！<DONE>
-{text_start}<…>　おとくな　けいじばん！<PARA>しんせいひん　スーパーボールは<LINE>モンスターボール　より　かくじつに<CONT>#を　つかまえます！<PARA>なかなか　つかまえ　られない<LINE>#には　こちらを　ためそう！<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>なんでもなおしは<LINE>ねむり　どく　やけど　こおり<……><CONT>なんでも　なおします！<PARA>すこし　たかい　けど<LINE>ねむけざまし　どくけし　などを<CONT>バラバラに　かうより　らくちん！<DONE>
+{text_start}<……>　おとくな　けいじばん！<PARA>しんせいひん　スーパーボールは<LINE>モンスターボール　より　かくじつに<CONT>#を　つかまえます！<PARA>なかなか　つかまえ　られない<LINE>#には　こちらを　ためそう！<DONE>
 {text_start}シルフ　カンパニー　ほんしゃ　ビル<DONE>
 {text_start}エスパー　おやじの　いえ<DONE>
-{text_start}シルフ　うわさの　しんせいひん！<LINE><…>　はつばいび　みてい<DONE>
+{text_start}シルフ　うわさの　しんせいひん！<LINE><……>　はつばいび　みてい<DONE>
 {text_start}よけられた！<LINE>こいつは　つかまりそうにないぞ！<PROMPT>
 {text_start}#に<LINE>うまく　あたらなかった！<PROMPT>
 {text_start}ざんねん！　#が<LINE>ボールから　でてしまった！<PROMPT>
@@ -3159,7 +3159,7 @@
 {text_start}<PLAYER>は<LINE>#のふえを　ふいてみた！@
 {text_start}あなたの　コイン<LINE>@{text_bcd wPlayerCoins, 2 | LEADING_ZEROES | LEFT_ALIGN}{text_start}まい<PROMPT>
 {text_start}おッ！<LINE>マシンが　はんのう　してるぞ！<CONT>ちかくに　アイテムが　うまってる！<PROMPT>
-{text_start}<…>　<…>　ふう！<LINE><…>　なんにも　はんのう　しない<PROMPT>
+{text_start}<……>　<……>　ふう！<LINE><……>　なんにも　はんのう　しない<PROMPT>
 {text_start}どのわざの<LINE>ポイントをふやす？<DONE>
 {text_start}どのわざを<LINE>かいふくする？<DONE>
 {text_ram wStringBuffer}{text_start}は　これいじょう<LINE>ふやすことが　できません<PROMPT>
@@ -3169,7 +3169,7 @@
 {text_start}ひでんマシンを　きどうした！<PROMPT>
 {text_start}なかには　@{text_ram wStringBuffer}{text_start}が<LINE>きろくされていた！<PARA>@{text_ram wStringBuffer}{text_start}を<LINE>#に　おぼえさせますか？<DONE>
 {text_ram wNameBuffer}{text_start}と　@{text_ram wStringBuffer}{text_start}は<LINE>あいしょうが　わるかった！<PARA>@{text_ram wStringBuffer}{text_start}は　おぼえられない！<PROMPT>
-{text_start}オーキドの　ことば<…><LINE><PLAYER>よ！　こういうものには<CONT>つかいどきが　あるのじゃ！<PROMPT>
+{text_start}オーキドの　ことば<……><LINE><PLAYER>よ！　こういうものには<CONT>つかいどきが　あるのじゃ！<PROMPT>
 {text_start}たいせつな　あずかりものです！<NEXT>つかうことは　できません！<PROMPT>
 {text_start}つかっても　こうかがないよ<PROMPT>
 {text_start}<TRAINER>に　ボールを　はじかれた！<PROMPT>
@@ -3188,21 +3188,21 @@
 {text_ram wStringBuffer}{text_start}を　すてます<LINE>ほんとに　よろしいですか？<PROMPT>
 {text_start}それは　とても　たいせつなモノです<LINE>すてることは　できません！<PROMPT>
 {text_ram wNameBuffer}{text_start}は　すでに<LINE>@{text_ram wStringBuffer}{text_start}を　おぼえています<PROMPT>
-{text_start}じゃあ<LINE>ケーブルを　つないで<…>と<PROMPT>
+{text_start}じゃあ<LINE>ケーブルを　つないで<……>と<PROMPT>
 {text_start}<PLAYER>は　@{text_ram wInGameTradeGiveMonName}{text_start}と<LINE>@{text_ram wInGameTradeReceiveMonName}{text_start}を　こうかんした！@
 {text_start}おれ　@{text_ram wInGameTradeGiveMonName}{text_start}　さがしてるんだ！<PARA>きみ　もってたら　@{text_ram wInGameTradeReceiveMonName}{text_start}と<LINE>こうかんしようぜ？<DONE>
-{text_start}そんなー<LINE><…>まっ　いっか<DONE>
-{text_start}<…>なんだ<LINE>@{text_ram wInGameTradeGiveMonName}{text_start}じゃ　ないじゃん<PARA>もし　つかまえたら<LINE>まっさきに　ここへ　こいよ！<DONE>
+{text_start}そんなー<LINE><……>まっ　いっか<DONE>
+{text_start}<……>なんだ<LINE>@{text_ram wInGameTradeGiveMonName}{text_start}じゃ　ないじゃん<PARA>もし　つかまえたら<LINE>まっさきに　ここへ　こいよ！<DONE>
 {text_start}サンキュー<DONE>
 {text_start}おれの　やった<LINE>@{text_ram wInGameTradeReceiveMonName}{text_start}　イイだろ？<DONE>
 {text_start}これこれ<LINE>きみ　@{text_ram wInGameTradeGiveMonName}{text_start}　もっとる？<PARA>わしの　@{text_ram wInGameTradeReceiveMonName}{text_start}と<LINE>こうかん　しないか？<DONE>
-{text_start}まー　ムリに　とは　いわんが<…><DONE>
-{text_start}<…>む？<LINE>@{text_ram wInGameTradeGiveMonName}{text_start}では　ないじゃないか<PARA>てに　いれた　ときは<LINE>よろしく　たのむよ<DONE>
+{text_start}まー　ムリに　とは　いわんが<……><DONE>
+{text_start}<……>む？<LINE>@{text_ram wInGameTradeGiveMonName}{text_start}では　ないじゃないか<PARA>てに　いれた　ときは<LINE>よろしく　たのむよ<DONE>
 {text_start}ありがとよ<DONE>
 {text_start}こうかんした　@{text_ram wInGameTradeGiveMonName}{text_start}が<LINE>しんか　しおった<DONE>
 {text_start}ねー　きみ<LINE>@{text_ram wInGameTradeGiveMonName}{text_start}　もってる？<PARA>わたしの　@{text_ram wInGameTradeReceiveMonName}{text_start}と<LINE>とりかえて　くれない？<DONE>
 {text_start}イヤなら　しょーがないな<DONE>
-{text_start}<…>　これ<LINE>@{text_ram wInGameTradeGiveMonName}{text_start}じゃ　ないわー<PARA>てに　いれたら<LINE>ぜったい　とりかえてよねっ！<DONE>
+{text_start}<……>　これ<LINE>@{text_ram wInGameTradeGiveMonName}{text_start}じゃ　ないわー<PARA>てに　いれたら<LINE>ぜったい　とりかえてよねっ！<DONE>
 {text_start}ありがとね<DONE>
 {text_ram wInGameTradeReceiveMonName}{text_start}　げんき？<LINE>わたしの　@{text_ram wInGameTradeGiveMonName}{text_start}は　げんきよ<DONE>
 {text_start}いあいぎりで<LINE>きれそうな　ものが　ありません！<PROMPT>
