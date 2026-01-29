@@ -100,5 +100,5 @@ Additional notes for *My Pokémon Ranch*:
 - The `farm_items` file was split from the `pokemonfarm` file in the PAL version and the Japanese Platinum update.
   The equivalent lines are moved in the USA version to match.
 - Some of the lines in `farm_event` were moved to `pokemonfarm` in the Japanese Platinum update
-  (specifically, lines 275-302 in `pokemonfarm` were originally beyween lines 538 and 539 in `farm_event`).
+  (specifically, lines 275-302 in `pokemonfarm` were originally between lines 538 and 539 in `farm_event`).
   The equivalent lines in the USA/PAL versions are moved to match.

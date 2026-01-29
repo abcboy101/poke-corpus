@@ -511,21 +511,22 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
     // Terminator (50)
     .replaceAll(/<br>(\u{F0250}+)/gu, '$1<br>')
     .replaceAll(/\u{F0250}(?!\{text_|\{sound_|<br>|\u{F0250}|\u{F1103}|\\x00|$)/gu, `\u{F0250}<br>`)
+    .replaceAll(/(\{nts_(?:switch)[^}]+\})(\u{F0106}MOBILE\u{F0107})/gu, '$1<br>$2')
     .replaceAll(/(\u{F0106}MOBILE\u{F0107})(\{.+?\})(\u{F0250})(?:<br>)?/gu, '$1$2$3')
     .replaceAll(/(\u{F0106}MOBILE\u{F0107})/gu, '<span class="control">$1</span>')
     .replaceAll(/\u{F0250}/gu, `<span class="t">@</span>`)
 
     .replaceAll(/(\{text_(?:start|waitbutton|promptbutton|linkwaitbutton|pause)\})/gu, '<span class="control">$1</span>')
     .replaceAll(/(?:<br>)?(\{text_low\})/gu, '<span class="n">$1</span>')
-    .replaceAll(/(\{text_ram [^}]+\})/gu, '<span class="var long">$1</span><span class="var short" title="$1">{text_ram}</span>')
-    .replaceAll(/(\{text_bcd [^}]+\})/gu, '<span class="var long">$1</span><span class="var short" title="$1">{text_bcd}</span>')
-    .replaceAll(/(\{text_decimal [^}]+\})/gu, '<span class="var long">$1</span><span class="var short" title="$1">{text_decimal}</span>')
+    .replaceAll(/(\{text_ram [^}]+\})/gu, '<span class="var"><span class="long">$1</span><span class="short" title="$1">{text_ram}</span></span>')
+    .replaceAll(/(\{text_bcd [^}]+\})/gu, '<span class="var"><span class="long">$1</span><span class="short" title="$1">{text_bcd}</span></span>')
+    .replaceAll(/(\{text_decimal [^}]+\})/gu, '<span class="var"><span class="long">$1</span><span class="short" title="$1">{text_decimal}</span></span>')
     .replaceAll(/(\{text_today\})/gu, '<span class="var">$1</span>')
-    .replaceAll(/(\{sound_[^}]+\})/gu, '<span class="func long">$1</span><span class="func short" title="$1">{sound}</span>')
+    .replaceAll(/(\{sound_[^}]+\})/gu, '<span class="func"><span class="long">$1</span><span class="short" title="$1">{sound}</span></span>')
     .replaceAll(/(\{(nts_(?:placement|next))[^}]+\})/gu,
-      (_, s1: string, s2: string) => `<span class="func long">${s1.replaceAll(/"/gu, '&quot;').replaceAll(/\{/gu, '\u{F0104}').replaceAll(/</gu, '&lt;')}</span><span class="func short" title="${s1.replaceAll(/"/gu, '&quot;').replaceAll(/\{/gu, '\u{F0104}').replaceAll(/</gu, '&lt;')}">{${s2.replaceAll(/"/gu, '&quot;').replaceAll(/</gu, '&lt;')}}</span>`)
+      (_, s1: string, s2: string) => `<span class="func"><span class="long">${s1.replaceAll(/"/gu, '&quot;').replaceAll(/\{/gu, '\u{F0104}').replaceAll(/</gu, '&lt;')}</span><span class="short" title="${s1.replaceAll(/"/gu, '&quot;').replaceAll(/\{/gu, '\u{F0104}').replaceAll(/</gu, '&lt;')}">{${s2.replaceAll(/"/gu, '&quot;').replaceAll(/</gu, '&lt;')}}</span></span>`)
     .replaceAll(/(\{(nts_(?:ranking_(?:number|string|ezchat|region|pokemon|gender|item)|placement|player_(?:name|region|region_backup|zip|zip_backup)|switch|next|number))[^}]+\})/gu,
-      (_, s1: string, s2: string) => `<span class="var long">${s1.replaceAll(/"/gu, '&quot;').replaceAll(/\{/gu, '\u{F0104}').replaceAll(/</gu, '&lt;')}</span><span class="var short" title="${s1.replaceAll(/"/gu, '&quot;').replaceAll(/\{/gu, '\u{F0104}').replaceAll(/</gu, '&lt;')}">{${s2.replaceAll(/"/gu, '&quot;').replaceAll(/</gu, '&lt;')}}</span>`)
+      (_, s1: string, s2: string) => `<span class="var"><span class="long">${s1.replaceAll(/"/gu, '&quot;').replaceAll(/\{/gu, '\u{F0104}').replaceAll(/</gu, '&lt;')}</span><span class="short" title="${s1.replaceAll(/"/gu, '&quot;').replaceAll(/\{/gu, '\u{F0104}').replaceAll(/</gu, '&lt;')}">{${s2.replaceAll(/"/gu, '&quot;').replaceAll(/</gu, '&lt;')}}</span></span>`)
     .replaceAll(/(\\x[0-9A-F]{2})/gu, '<span class="var">$1</span>')
 
     .replaceAll('\u{F0106}ENEMY\u{F0107}',   '<span class="var">\u{F0106}ENEMY\u{F0107}</span>') // 3F
@@ -567,22 +568,22 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
     .replaceAll(/(\[B_[^\]]+?\])/gu, '<span class="var">$1</span>') // FD xx (battle string placeholders)
   ) : s;
   s = isGen4 ? (s
-    .replaceAll(/\[(VAR 013[2-9A-B][^\]]+?\])/gu, '<span class="var long">\u{F0102}$1</span><span class="var short" title="\u{F0102}$1">\u{F0102}Digit]</span>')
-    .replaceAll(/\[(VAR (?:0[1346]|34)[^\]]+?\])/gu, '<span class="var long">\u{F0102}$1</span><span class="var short" title="\u{F0102}$1">\u{F0102}Name]</span>')
-    .replaceAll(/\[(VAR 02[^\]]+?\])/gu, '<span class="func long">\u{F0102}$1</span><span class="func short" title="\u{F0102}$1">\u{F0102}Ctrl1]</span>')
-    .replaceAll(/\[(VAR FF[^\]]+?\])/gu, '<span class="func long">\u{F0102}$1</span><span class="func short" title="\u{F0102}$1">\u{F0102}Ctrl2]</span>')
+    .replaceAll(/\[(VAR 013[2-9A-B][^\]]+?\])/gu, '<span class="var"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}Digit]</span></span>')
+    .replaceAll(/\[(VAR (?:0[1346]|34)[^\]]+?\])/gu, '<span class="var"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}Name]</span></span>')
+    .replaceAll(/\[(VAR 02[^\]]+?\])/gu, '<span class="func"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}Ctrl1]</span></span>')
+    .replaceAll(/\[(VAR FF[^\]]+?\])/gu, '<span class="func"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}Ctrl2]</span></span>')
   ) : s;
   s = isModern ? (s
-    .replaceAll(/\[(VAR 01[^\]]+?\])/gu, '<span class="var long">\u{F0102}$1</span><span class="var short" title="\u{F0102}$1">\u{F0102}Name]</span>')
-    .replaceAll(/\[(VAR 02[^\]]+?\])/gu, '<span class="var long">\u{F0102}$1</span><span class="var short" title="\u{F0102}$1">\u{F0102}Digit]</span>')
-    .replaceAll(/\[(VAR 1[0-9A][^\]]+?\])/gu, '<span class="func long">\u{F0102}$1</span><span class="func short" title="\u{F0102}$1">\u{F0102}Grm]</span>')
-    .replaceAll(/\[(VAR BD[^\]]+?\])/gu, '<span class="func long">\u{F0102}$1</span><span class="func short" title="\u{F0102}$1">\u{F0102}Ctrl1]</span>')
-    .replaceAll(/\[(VAR BE[^\]]+?\])/gu, '<span class="func long">\u{F0102}$1</span><span class="func short" title="\u{F0102}$1">\u{F0102}Ctrl2]</span>')
+    .replaceAll(/\[(VAR 01[^\]]+?\])/gu, '<span class="var"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}Name]</span></span>')
+    .replaceAll(/\[(VAR 02[^\]]+?\])/gu, '<span class="var"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}Digit]</span></span>')
+    .replaceAll(/\[(VAR 1[0-9A][^\]]+?\])/gu, '<span class="func"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}Grm]</span></span>')
+    .replaceAll(/\[(VAR BD[^\]]+?\])/gu, '<span class="func"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}Ctrl1]</span></span>')
+    .replaceAll(/\[(VAR BE[^\]]+?\])/gu, '<span class="func"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}Ctrl2]</span></span>')
   ) : s;
   s = isDreamRadar ? (s
-    .replaceAll(/\[(VAR 02[^\]]+?\])/gu, '<span class="var long">\u{F0102}$1</span><span class="var short" title="\u{F0102}$1">\u{F0102}Character]</span>')
-    .replaceAll(/\[(VAR 03[^\]]+?\])/gu, '<span class="var long">\u{F0102}$1</span><span class="var short" title="\u{F0102}$1">\u{F0102}Digit]</span>')
-    .replaceAll(/\[(VAR 04[^\]]+?\])/gu, '<span class="var long">\u{F0102}$1</span><span class="var short" title="\u{F0102}$1">\u{F0102}Name]</span>')
+    .replaceAll(/\[(VAR 02[^\]]+?\])/gu, '<span class="var"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}Character]</span></span>')
+    .replaceAll(/\[(VAR 03[^\]]+?\])/gu, '<span class="var"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}Digit]</span></span>')
+    .replaceAll(/\[(VAR 04[^\]]+?\])/gu, '<span class="var"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}Name]</span></span>')
   ) : s;
   s = (s
     .replaceAll('[NULL]', '<span class="null">[NULL]</span>')

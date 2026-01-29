@@ -88,10 +88,6 @@ ruby > rt {
   font-size: 50%;
 }
 
-dt {
-  font-style: italic;
-}
-
 sup {
   vertical-align: top;
   font-size: 80%;
@@ -176,8 +172,16 @@ input[type="text"]:disabled, input:not([type]):disabled, input[type="number"]:di
   opacity: 0.7;
 }
 
+select:hover:enabled, input[type="submit"]:hover:enabled, input[type="button"]:hover:enabled, button:hover:enabled {
+  background: color-mix(in oklab, var(--highlight), var(--text) 7.5%);
+}
+
 .active:enabled, input[type="submit"]:active:enabled, input[type="button"]:active:enabled, button:active:enabled {
   background: var(--accent);
+}
+
+.active:hover:enabled {
+  background: color-mix(in oklab, var(--accent), var(--text) 7.5%);
 }
 
 .button-square {

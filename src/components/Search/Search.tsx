@@ -113,6 +113,12 @@ function Search({loader, showModal, language, richText, limit}: {loader: Loader,
     setResults([]);
     responses.current = [];
     if (params.query.length > 0 && params.collections.length > 0 && params.languages.length > 0) {
+      if (textWorker.current !== null) {
+        console.log('Terminating TextWorker!');
+        textWorker.current.removeEventListener("message", onMessage);
+        textWorker.current.terminate();
+        textWorker.current = null;
+      }
       if (searchWorkerManager.current === null) {
         console.log('Creating new SearchWorkerManager...');
         searchWorkerManager.current = new SearchWorkerManager();

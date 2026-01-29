@@ -2,7 +2,12 @@
 import { genderBranch, numberBranch, grammarBranch } from './branches';
 
 export function preprocessStringMasters(s: string) {
-  return s;
+  return (s
+    // Escaped characters
+    .replaceAll('\\\\[', '\\[') // literal "["
+    .replaceAll('\\\\]', ']') // literal "]"
+    .replaceAll('\\\\n', '\\n') // literal "\n", rather than a line feed
+  );
 }
 
 const particlesKO: Record<string, readonly [string, string]> = {
@@ -27,11 +32,6 @@ export function postprocessStringMasters(s: string) {
     .replaceAll(/\u{F0106}span class=""?word"?"\u{F0107}/gu, '<span class="word">')
     .replaceAll(/\u{F0106}\/span\u{F0107}/gu, '</span>')
     .replaceAll(/\u{F0106}br\u{F0107}/gu, '<br>')
-
-    // Escaped characters
-    .replaceAll(/\u{F0100}\[/gu, '\u{F0102}') // literal "["
-    .replaceAll(/\u{F0100}\]/gu, ']') // literal "]"
-    .replaceAll(/(\u{F0100}n)/gu, '<span class="literal n">$1</span><br>') // literal "\n", rather than a line feed
 
     // Variables
     .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):Gen Ref="255" M="([^"]*?)" F="([^"]*?)" \]/gu, (_, male, female) => genderBranch(male, female))

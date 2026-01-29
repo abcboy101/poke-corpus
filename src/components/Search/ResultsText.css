@@ -4,15 +4,10 @@
   white-space: nowrap;
 }
 
-.variables-hide :is(.var, .func),
-.variables-short :is(.var.long, .func.long),
-.var.short, .func.short {
+.variables-short :is(.long),
+.variables-show :is(.short),
+.variables-hide :is(.var .long, .func) {
   display: none;
-}
-
-.variables-hide .var.short,
-.variables-short :is(.var.short, .func.short) {
-  display: unset;
 }
 
 /* Literals */
@@ -62,6 +57,10 @@ td[lang="zxx"] wbr {
   background-color: var(--accent);
 }
 
+.results-table dt {
+  font-style: italic;
+}
+
 /* Font size */
 .line-font-size-200 {
   line-height: calc(2 * var(--line-height));
@@ -79,24 +78,23 @@ td[lang="zxx"] wbr {
 }
 
 /* Spacing (ignored in non-Japanese games) */
-td:lang(ja) .spacing-0 {
-  letter-spacing: 0;
+/* Stadium 2 default is 0, PBR default is 1 */
+.collection-pbr .spacing-0:lang(ja) {
+  letter-spacing: -1px;
 }
 
-td:lang(ja) .spacing-1 {
+.collection-stad2 .spacing-0:lang(ja),
+.collection-pbr .spacing-1:lang(ja) {
+  letter-spacing: normal;
+}
+
+.collection-stad2 .spacing-1:lang(ja),
+.collection-pbr .spacing-2:lang(ja) {
   letter-spacing: 1px;
 }
 
-td:lang(ja) .spacing-2 {
+.collection-pbr .spacing-3:lang(ja) {
   letter-spacing: 2px;
-}
-
-td:lang(ja) .spacing-3 {
-  letter-spacing: 3px;
-}
-
-td:lang(ja) :is(.spacing-0, .spacing-1, .spacing-2, .spacing-3) .var {
-  letter-spacing: normal;
 }
 
 /* Text alignment */

@@ -223,7 +223,7 @@ export function preprocessHindi(value: string, fixMalformed = true) {
 
   if (fixMalformed) {
     // De-duplicate vowel marks (except short i)
-    value = value.replace(/([\u093E\u0940-\u094C])\1/gu, '$1');
+    value = value.replace(/([\u093E\u0940-\u094C]){2}/gu, '$1');
   }
 
   // Perform all simple mappings
@@ -378,6 +378,7 @@ export function postprocessStringGO(s: string) {
     // Unity rich text tags
     .replaceAll(/\u{F0106}(\/?[bi]) *\u{F0107}/gu, '<$1>') // b, i
     .replaceAll(/\u{F0106}size=(\d+)\u{F0107}/gu, '<span style="font-size: calc($1 / 32 * 100%)">') // size
+    .replaceAll(/\u{F0106}color=#\{(\d+)\}\u{F0107}/gu, '<span class="color" style="color: var(--color-$1)">') // color
     .replaceAll(/\u{F0106}color=(.*?)\u{F0107}/gu, '<span class="color" style="color: $1">') // color
     .replaceAll(/\u{F0106}\/(size|color)\u{F0107}/gu, '</span>') // size, color (closing tag)
 
