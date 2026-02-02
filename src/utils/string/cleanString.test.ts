@@ -1,5 +1,6 @@
-import { remapChineseChars, remapKoreanBraille, remapGBABrailleJapanese, remapGBABrailleWestern, preprocessMetadata } from "./cleanStringPre";
-import { postprocessMetadata, postprocessString } from './cleanStringPost';
+import { remapChineseChars, remapKoreanBraille, remapGBABrailleJapanese, remapGBABrailleWestern } from "./cleanStringPre";
+import { postprocessString } from './cleanStringPost';
+import { convertFurigana } from "../../webWorker/searchWorker";
 
 const remapChineseCharsTestCases = [
   ["\uE801\uE802\uE803\uE804", "妙蛙种子"],
@@ -97,11 +98,10 @@ const metadataTestCases = [
 describe("metadata", () => {
   test.each(metadataTestCases)(
     "%s", (s, kanji, kana) => {
-      const preprocess = preprocessMetadata(s);
-      expect(preprocess).toContain(kanji);
-      expect(preprocess).toContain(kana);
-      const postprocess = postprocessMetadata(preprocess);
-      expect(postprocess).toEqual(s);
+      const converted = convertFurigana(s);
+      expect(converted).toContain(kanji);
+      expect(converted).toContain(kana);
+      expect(converted).toContain(s);
     }
   );
 });

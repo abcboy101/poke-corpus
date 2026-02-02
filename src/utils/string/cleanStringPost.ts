@@ -13,16 +13,6 @@ import * as g3 from './expandVariablesG3';
 import { particlesKO, grammarEN, grammarFR, grammarIT, grammarDE, grammarES, remapBDSPGrammarIndex } from './grammar';
 
 //#region Post-processing
-/**
- * Strips additional metadata from each string:
- * - Converted ruby text marked with `U+F0000` and `U+F0001`
- *
- * Returns the resulting string.
- */
-export function postprocessMetadata(s: string) {
-  return s.split('\u{F0000}')[0];
-}
-
 function multiLine(s: string) {
   if (s.search(/[\u{F1000}\u{F1001}]/u) === -1) {
     return s;
@@ -104,7 +94,6 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
   const isGCN = ["Colosseum", "XD"].includes(collectionKey);
   const isModern = isGen5 || is3DS || isSwitch;
 
-  s = postprocessMetadata(s);
   if (!richText) {
     s = (s
       .replaceAll('<', '&lt;')

@@ -409,23 +409,6 @@ function remapChinaLGPEPixelFont(s: string) {
     .replaceAll(/\b(cd|gh|kl)\b/gu, '战力')
   );
 }
-
-/**
- * Appends additional metadata to each string:
- * - For strings with ruby, appends copies of the strings with the ruby text converted to kana/kanji so that they can be searched.
- *   These copies are separated by `U+F0000` and `U+F0001` so that they can be stripped before display.
- *
- * Returns the resulting string.
- */
-export function preprocessMetadata(s: string) {
-  return s.search(/\{[^|}]+\|[^|}]+\}/u) === -1 ? s : (
-    s.replaceAll(/^.*\{[^|}]+\|[^|}]+\}.*$/gum, (line) => {
-      const lineKanji = line.replaceAll(/\{([^|}]+)\|[^|}]+\}/gu, '$1');
-      const lineKana = line.replaceAll(/\{[^|}]+\|([^|}]+)\}/gu, '$1');
-      return [line, '\u{F0000}', lineKanji, '\u{F0001}', lineKana].join('');
-    })
-  );
-}
 //#endregion
 
 /**
@@ -511,7 +494,7 @@ export function preprocessString(s: string, collectionKey: CollectionKey, langua
       s = preprocessStringMasters(s);
       break;
   }
-  return preprocessMetadata(s);
+  return s;
 }
 
 /**

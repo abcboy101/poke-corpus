@@ -191,6 +191,19 @@ function normalizeWhitespacePreserveHyphen(s: string) {
   return s;
 }
 
+/**
+ * Converts furigana syntax in a string to kana or kanji, if present.
+ * Returns an array with the original string, the string with kanji, and the string with kana to match against.
+ */
+export function convertFurigana(s: string): string[] {
+  if (!/\{[^|}]+\|[^|}]+\}/u.test(s))
+    return [s]; // no ruby syntax
+
+  const kanji = s.replaceAll(/\{([^|}]+)\|[^|}]+\}/gu, '$1');
+  const kana = s.replaceAll(/\{[^|}]+\|([^|}]+)\}/gu, '$1');
+  return [kanji, kana, s]; // most searches will expect kanji
+}
+
 self.onmessage = (task: MessageEvent<SearchTask>) => {
   const {index, params, collectionKey, fileKey, languages, files, speaker, speakerFiles: speakerData, literals} = task.data;
   const notifyIncomplete = (status: SearchTaskResultNotDone) => {
@@ -212,6 +225,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
   try {
     // Load files
     const fileData: string[][] = files.map((data, i) => preprocessString(data, collectionKey, languages[i]).split(/\r\n|\n/));
+    const hasFurigana: boolean[] = files.map((s) => /\{[^|}]+\|[^|}]+\}/u.test(s));
 
     // Substituted string literals vary by language, so we need to look up what the string is in the appropriate language here
     const literalsLine = literals ? Object.keys(literals).flatMap((id) => (literals[id].branch !== 'language') ? literals[id].line : Object.values(literals[id].line)) : undefined;
@@ -233,6 +247,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       //   - If whitespace is significant, matches folding special characters, collapsing whitespace, and allowing hyphens to break words across lines are allowed.
       // - For GB games, both matches to the raw control characters and matches to the converted control characters are allowed.
       // - For games with substituted literals, both matches to the raw control characters and matches to the substituted text are allowed.
+      // - For text with furigana, both matches to the kanji and matches to the kana are also allowed.
       const subMatch1 = (!params.caseInsensitive ? matchCondition : ['ja', 'ko', 'zh', 'th'].some((lang) => languageKey.startsWith(lang))
         ? (line: string) => matchCondition(line) || matchCondition(cleanSpecial(line)) || matchCondition(removeWhitespace(cleanSpecial(line)))
         : (line: string) => matchCondition(line) || matchCondition(cleanSpecial(normalizeWhitespacePreserveHyphen(line))) || matchCondition(cleanSpecial(normalizeWhitespaceRemoveHyphen(line)))
@@ -240,9 +255,12 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
       const subMatch2 = ['RedBlue', 'Yellow', 'GoldSilver', 'Crystal'].includes(collectionKey)
         ? (line: string) => subMatch1(line) || subMatch1(convertGBControlCharacters(line))
         : subMatch1;
-      const match = literals === undefined
+      const subMatch3 = literals === undefined
         ? subMatch2
         : (line: string) => subMatch1(line) || subMatch1(replaceLiterals(line, languageIndex));
+      const match = hasFurigana[languageIndex]
+        ? (line: string) => convertFurigana(line).some(subMatch3)
+        : subMatch3;
 
       // Check selected languages for lines that satisfy the query
       if (params.languages.includes(languageKey)) {

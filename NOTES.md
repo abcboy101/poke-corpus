@@ -7,8 +7,9 @@ For all text dumps in the standard format, the following brackets mark modified 
     When using regular expressions, you will need to escape the syntax as `\[VAR 0100\(0000\)\]`.
 - Text within curly brackets represent furigana in the `{kanji|kana}` format.
   - When searching, the string will match if the furigana syntax matches, the kanji match, or the kana match.
-    For example, if you were searching for a line that includes <ruby>一<rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>つ, all three of these queries will match: `{一|ひと}つ`, `ひとつ`, `一つ`.
-  - When using regular expressions, you will need to escape the syntax, such as `\{一\|ひと\}つ`.
+  - For example, if you were searching for a line that includes <ruby>一<rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>つ<ruby>目<rp>(</rp><rt>め</rt><rp>)</rp></ruby>, all three of these queries will match: `{一|ひと}つ{目|め}`, `ひとつめ`, `一つ目`.
+    Note that `ひとつ目` or `一つめ` would *not* match, however.
+  - When using regular expressions, you will need to escape the syntax, such as `\{一\|ひと\}つ\{目\|め\}`.
 
 ### Escape sequences
 For all text dumps in the standard format, there are six escape sequences:
