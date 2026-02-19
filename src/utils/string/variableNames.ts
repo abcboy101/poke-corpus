@@ -322,3 +322,40 @@ export const variableNameToCode = (variableName: string) => {
 };
 
 export const variableCodeToName = (variableCode: string) => variables3DS.get(variableCode);
+
+export const variableNameToCodeBDSP = (variableName: string) => {
+  for (const [code, name] of variablesBDSP)
+    if (name === variableName)
+      return code;
+  return undefined;
+};
+
+export const variableCodeToNameBDSP = (variableCode: string) => variablesBDSP.get(variableCode);
+
+const remapVariablesBDSP: ((string | undefined)[] | undefined)[] = [
+  /* 13XX (EN)  */ ["1100", "1101", "1102", "1300", "1301", "1302", "1303", "1000", "1001", "1003", "1105"],
+  /* 14XX (FR)  */ ["1100", "1101", "1102", "1400", "1401", "1402", "1403", "1404", "1405", "1406", "1407", "1408", "1409", "1000", "1001", "140A", "140B", "1104", "1003", "1105"],
+  /* 15XX (IT)  */ ["1100", "1101", "1102", "1500", "1501", "1502", "1503", "1504", "1505", "1506", "1507", "1508", "1509", "1000", "1001", "1002", "150A", "150B", "150C", "150D", "150E", "150F", "1003", "1105", "1106"],
+  /* 16XX (DE)  */ ["1100", "1101", "1102", "1600", "1601", "1602", "1603", "1604", "1605", "1606", "1607", "1000", "1001", "1003", "1105", "010B", "0110"],
+  /* 17XX (ES)  */ ["1100", "1101", "1102", "1700", "1701", "1702", "1703", "1704", "1705", "1706", "1707", "1708", "1709", "170A", "170B", "1000", "1001", "1003", "1105", "170C", "170D", "170E", "170F"],
+  /* 18XX       */ [],
+  /* 19XX (Kor) */ ["1900", "1100", "1101", "1102", "1105"],
+  /* 1AXX (SC)  */ ["1100"],
+];
+
+/**
+ * Remap variable codes in BDSP to the standard codes used in the Game Freak games.
+ */
+export function remapBDSPVariableCode(variableCode: string): string {
+  const n = parseInt(variableCode, 16);
+  const groupIndex = n >> 8;
+  const tagIndex = n & 0xFF;
+  return remapVariablesBDSP[groupIndex - 0x13]?.[tagIndex] ?? variableCode;
+}
+
+/**
+ * Remap indices for grammar tags in BDSP to the standard indices used in the Game Freak games.
+ */
+export const remapBDSPGrammarIndex = (variableCode: string): number => {
+  return parseInt(remapBDSPVariableCode(variableCode), 16) & 0xFF;
+};

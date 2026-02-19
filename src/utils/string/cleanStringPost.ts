@@ -10,7 +10,8 @@ import { postprocessStringGO } from './cleanStringGO';
 import { postprocessStringMasters } from './cleanStringMasters';
 import * as g1 from './expandVariablesG1';
 import * as g3 from './expandVariablesG3';
-import { particlesKO, grammarEN, grammarFR, grammarIT, grammarDE, grammarES, remapBDSPGrammarIndex } from './grammar';
+import { particlesKO, grammarEN, grammarFR, grammarIT, grammarDE, grammarES } from './grammar';
+import { remapBDSPGrammarIndex } from "./variableNames";
 
 //#region Post-processing
 function multiLine(s: string) {
@@ -415,11 +416,11 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
     .replaceAll(/\[VAR 16(0[0-7])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarDE)) // German
     .replaceAll(/\[VAR 17(0[0-9A-F])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarES)) // Spanish
   ) : (s
-    .replaceAll(/\[VAR 13(0[3-6])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(parseInt(index, 16)), grammarEN)) // English
-    .replaceAll(/\[VAR 14(0[3-9A-CF]|10)[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(parseInt(index, 16)), grammarFR)) // French
-    .replaceAll(/\[VAR 15(0[3-9A-CF]|1[0-5])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(parseInt(index, 16)), grammarIT)) // Italian
-    .replaceAll(/\[VAR 16(0[3-9A])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(parseInt(index, 16)), grammarDE)) // German
-    .replaceAll(/\[VAR 17(0[3-9A-E]|1[3-6])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(parseInt(index, 16), true), grammarES)) // Spanish
+    .replaceAll(/\[VAR (13(?:0[3-6]))[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(index), grammarEN)) // English
+    .replaceAll(/\[VAR (14(?:0[3-9A-CF]|10))[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(index), grammarFR)) // French
+    .replaceAll(/\[VAR (15(?:0[3-9A-CF]|1[0-5]))[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(index), grammarIT)) // Italian
+    .replaceAll(/\[VAR (16(?:0[3-9A]))[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(index), grammarDE)) // German
+    .replaceAll(/\[VAR (17(?:0[3-9A-E]|1[3-6]))[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(index), grammarES)) // Spanish
   )) : s;
 
   // Korean particle
