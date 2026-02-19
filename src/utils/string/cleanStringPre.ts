@@ -296,6 +296,8 @@ function remap3DSSpecialCharacters(s: string) {
       .replaceAll('\uE092', '♥') // Halfwidth black heart suit
       .replaceAll('\uE09A', '♪') // Halfwidth eighth note
       .replaceAll('\uE0A6', 'ᵉ') // Superscript e
+      .replaceAll('\uE0A7', '⒆') // PK
+      .replaceAll('\uE0A8', '⒇') // MN
 
       // ORAS Braille
       .replaceAll('\uE081', '.') // French period (dots-256) [UNUSED]

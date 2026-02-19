@@ -117,13 +117,10 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
   //#endregion
 
   //#region Literals
-  s = (isGB || isN64 || isGen3 || isNDS) ? (s
-    .replaceAll('⒆', '<sup>P</sup><sub>K</sub>') // Gen 5 PK [also used privately for Gen 4 and earlier]
-    .replaceAll('⒇', '<sup>M</sup><sub>N</sub>') // Gen 5 MN [also used privately for Gen 4 and earlier]
-  ) : s;
-  s = is3DS ? (s
-    .replaceAll('\uE0A7', '<sup>P</sup><sub>K</sub>') // 3DS PK (unused)
-    .replaceAll('\uE0A8', '<sup>M</sup><sub>N</sub>') // 3DS MN (unused)
+  s = (isGB || isN64 || isGen3 || isNDS || is3DS) ? (s
+    // Gen 5 PKMN [also used privately for Gen 4 and earlier]
+    .replaceAll('⒆', '<sup>P</sup><sub>K</sub>')
+    .replaceAll('⒇', '<sup>M</sup><sub>N</sub>')
   ) : s;
   s = isGen3 ? (s
     // POKé, POKéBLOCK
