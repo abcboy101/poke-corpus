@@ -43,12 +43,13 @@
  */
 
 import { CollectionKey, LanguageKey } from '../corpus';
+import { getCorpusGroups } from "../corpusGroups";
 import chineseChars from './chineseChars';
 import { preprocessStringGO } from './cleanStringGO';
 import { preprocessStringMasters } from './cleanStringMasters';
 import { variables3DS } from './variableNames';
 
-//#region Pre-processing
+//#region Pre-processing helper functions
 // SMUSUM Chinese Pokémon names
 export function remapChineseChars(s: string) {
   return s.replaceAll(/[\uE800-\uEE26]/gu, (c: string) => chineseChars[c.charCodeAt(0) - 0xE800]);
@@ -372,7 +373,6 @@ function remapLegendsZASpecialCharacters(s: string, language: LanguageKey) {
     };
   }
 
-  s = remapSwitchSpecialCharacters(s);
   s = s.search(/[\uE340-\uE34E]/u) === -1 ? s : (s
     // U+E31D-E33F: buttons are handled in postprocess
     .replaceAll('\uE340', '▾') // Bottom-right down-pointing triangle
@@ -418,82 +418,49 @@ function remapChinaLGPEPixelFont(s: string) {
  * Returns the resulting string.
  */
 export function preprocessString(s: string, collectionKey: CollectionKey, language: LanguageKey) {
-  switch (collectionKey) {
-    case "RedBlue":
-    case "Yellow":
-    case "GoldSilver":
-    case "Crystal":
-      s = remapGBSpecialCharacters(s, language);
-      break;
+  const { isGB, isGen3, isNDS, is3DS, isSwitch, isN64, isGCN, isPBR, isRanch, isDreamRadar, isGO, isMasters } = getCorpusGroups(collectionKey);
 
-    case "RubySapphire":
-    case "FireRedLeafGreen":
-    case "Emerald":
-      s = remapGBASpecialCharacters(s, language);
-      break;
-
-    case "DiamondPearl":
-    case "Platinum":
-    case "HeartGoldSoulSilver":
-    case "BlackWhite":
-    case "Black2White2":
-      s = remapNDSSpecialCharacters(s);
-      break;
-
-    case "XY":
-    case "OmegaRubyAlphaSapphire":
-    case "SunMoon":
-    case "UltraSunUltraMoon":
-    case "Bank":
-      s = remap3DSSpecialCharacters(s);
-      s = remap3DSVariables(s);
-      break;
-
-    case "LetsGoPikachuLetsGoEevee":
-      s = remapSwitchSpecialCharacters(s);
-      if (language === 'zh-Hans-CN')
-        s = remapChinaLGPEPixelFont(s);
-      break;
-
-    case "SwordShield":
-    case "BrilliantDiamondShiningPearl":
-    case "LegendsArceus":
-    case "ScarletViolet":
-    case "HOME":
-      s = remapSwitchSpecialCharacters(s);
-      break;
-
-    case "LegendsZA":
-      s = remapLegendsZASpecialCharacters(s, language);
-      break;
-
-    case "Stadium":
-    case "Stadium2":
-      s = remapN64SpecialCharacters(s);
-      break;
-
-    case "Colosseum":
-    case "XD":
-      s = remapGCNSpecialCharacters(s);
-      break;
-
-    case "BattleRevolution":
-    case "Ranch":
-      s = remapWiiSpecialCharacters(s);
-      break;
-
-    case "DreamRadar":
-      s = remapDreamRadarSpecialCharacters(s);
-      break;
-
-    case "GO":
-      s = preprocessStringGO(s, language);
-      break;
-
-    case "Masters":
-      s = preprocessStringMasters(s);
-      break;
+  if (isGB) {
+    s = remapGBSpecialCharacters(s, language);
   }
+  else if (isGen3) {
+    s = remapGBASpecialCharacters(s, language);
+  }
+  else if (isNDS) {
+    s = remapNDSSpecialCharacters(s);
+  }
+  else if (is3DS) {
+    s = remap3DSSpecialCharacters(s);
+    s = remap3DSVariables(s);
+  }
+  else if (isSwitch) {
+    s = remapSwitchSpecialCharacters(s);
+    if (collectionKey === "LetsGoPikachuLetsGoEevee" && language === 'zh-Hans-CN') {
+      s = remapChinaLGPEPixelFont(s);
+    }
+    else if (collectionKey === "LegendsZA") {
+      s = remapLegendsZASpecialCharacters(s, language);
+    }
+  }
+  else if (isN64) {
+    s = remapN64SpecialCharacters(s);
+  }
+  else if (isGCN) {
+    s = remapGCNSpecialCharacters(s);
+  }
+  else if (isPBR || isRanch) {
+    s = remapWiiSpecialCharacters(s);
+  }
+  else if (isDreamRadar) {
+    s = remapDreamRadarSpecialCharacters(s);
+  }
+  else if (isGO) {
+    s = preprocessStringGO(s, language);
+  }
+  else if (isMasters) {
+    s = preprocessStringMasters(s);
+  }
+
   return s;
 }
 

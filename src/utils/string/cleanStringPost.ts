@@ -11,6 +11,7 @@ import { postprocessStringMasters } from './cleanStringMasters';
 import * as g1 from './expandVariablesG1';
 import * as g3 from './expandVariablesG3';
 import { particlesKO, grammarEN, grammarFR, grammarIT, grammarDE, grammarES } from './grammar';
+import { getCorpusGroups } from "../corpusGroups";
 import { remapBDSPGrammarIndex } from "./variableNames";
 
 //#region Post-processing
@@ -74,26 +75,7 @@ const textGradientOpenDec = (_: string, r1: string, g1: string, b1: string, a1: 
  * Returns the resulting HTML string.
  */
 export function postprocessString(s: string, collectionKey: CollectionKey | '' = '', language: LanguageKey = 'en', richText = true) {
-  const isGen1 = ["RedBlue", "Yellow"].includes(collectionKey);
-  const isGen2 = ["GoldSilver", "Crystal"].includes(collectionKey);
-  const isGen3 = ["RubySapphire", "FireRedLeafGreen", "Emerald"].includes(collectionKey);
-  const isGen4 = ["DiamondPearl", "Platinum", "HeartGoldSoulSilver"].includes(collectionKey);
-  const isGen5 = ["BlackWhite", "Black2White2"].includes(collectionKey);
-  const isBDSP = collectionKey === "BrilliantDiamondShiningPearl";
-  const isPBR = collectionKey === "BattleRevolution";
-  const isRanch = collectionKey === "Ranch";
-  const isDreamRadar = collectionKey === "DreamRadar";
-  const isGO = collectionKey === "GO";
-  const isMasters = collectionKey === "Masters";
-  const isHOME = collectionKey === "HOME";
-
-  const isGB = isGen1 || isGen2;
-  const isNDS = isGen4 || isGen5;
-  const is3DS = ["XY", "OmegaRubyAlphaSapphire", "SunMoon", "UltraSunUltraMoon", "Bank"].includes(collectionKey);
-  const isSwitch = ["LetsGoPikachuLetsGoEevee", "SwordShield", "BrilliantDiamondShiningPearl", "LegendsArceus", "ScarletViolet", "LegendsZA", "HOME"].includes(collectionKey);
-  const isN64 = ["Stadium", "Stadium2"].includes(collectionKey);
-  const isGCN = ["Colosseum", "XD"].includes(collectionKey);
-  const isModern = isGen5 || is3DS || isSwitch;
+  const { isGen1, isGen2, isGen3, isGen4, isGen5, isBDSP, isPBR, isRanch, isDreamRadar, isGO, isMasters, isHOME, isGB, isNDS, is3DS, isN64, isGCN, isModern } = getCorpusGroups(collectionKey);
 
   if (!richText) {
     s = (s
