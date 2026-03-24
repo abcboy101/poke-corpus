@@ -1,4 +1,4 @@
-import { ChangeEventHandler, FormEventHandler, MouseEventHandler, useCallback, useEffect, useMemo, useState, useContext } from 'react';
+import { ChangeEventHandler, SubmitEventHandler, MouseEventHandler, useCallback, useEffect, useMemo, useState, useContext } from 'react';
 
 import { SearchParams, searchTypes, isSearchType, getSearchParamsFactory, getDefaultSearchParams } from '../../utils/searchParams';
 import { Corpus, LanguageKey, codeId } from '../../utils/corpus';
@@ -161,7 +161,7 @@ function SearchForm({corpus, language, waiting, inProgress, postToWorker, termin
     localStorageSetItem('corpus-params', JSON.stringify(params));
   }, [query, type, caseInsensitive, common, script, showAllLanguages, collections, languages]);
 
-  const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
+  const onSubmit: SubmitEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
 
     // If there's no saved preference, save current filters status

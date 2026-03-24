@@ -91,7 +91,7 @@ const getSavedResultsPreferences = () => {
   return toggleDefault;
 };
 
-function Results({corpus, language, status, progress, results, showId = true, richText = true, limit = defaultLimit}: {corpus: Corpus, language: string, status: Status, progress: number, showId: boolean, richText: boolean, results: readonly Result[], limit?: number}) {
+function Results({corpus, language, status, progress, results, showId = true, richText = true, limit = defaultLimit}: {corpus: Corpus, language: string, status: Status, progress: number, showId?: boolean, richText?: boolean, results: readonly Result[], limit?: number}) {
   const t = useContext(LocalizationContext);
   const initial = useMemo(getSavedResultsPreferences, []);
   const [showVariables, setShowVariables] = useState(initial.showVariables);
