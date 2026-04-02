@@ -20,6 +20,7 @@ def convert_lang(lang: str) -> str:
         'kor': 'ko',
         'sch': 'zh-Hans',
         'tch': 'zh-Hant',
+        'las': 'es-419',
     }
     return lang_codes[lang]
 
