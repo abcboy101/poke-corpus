@@ -1065,6 +1065,30 @@
         "megaturtle_sp"
       ]
     },
+    "Champions": {
+      "id": "cmp",
+      "languages": [
+        "qid",
+        "ja",
+        "en",
+        "fr",
+        "it",
+        "de",
+        "es",
+        "es-419",
+        "ko",
+        "zh-Hans",
+        "zh-Hant"
+      ],
+      "version": "1.0.2",
+      "files": [
+        "ms"
+      ],
+      "speaker": {
+        "file": "ms",
+        "textFile": "trname"
+      }
+    },
     "GO": {
       "id": "go",
       "languages": [

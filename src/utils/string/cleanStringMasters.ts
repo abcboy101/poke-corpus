@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
-import { genderBranch, numberBranch, grammarBranch } from './branches';
+import { grammarBranch } from './branches';
 
 export function preprocessStringMasters(s: string) {
   return (s
@@ -34,14 +34,6 @@ export function postprocessStringMasters(s: string) {
     .replaceAll(/\u{F0106}br\u{F0107}/gu, '<br>')
 
     // Variables
-    .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):Gen Ref="255" M="([^"]*?)" F="([^"]*?)" \]/gu, (_, male, female) => genderBranch(male, female))
-    .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):Gen Ref="255" M="([^"]*?)" \]/gu, (_, male) => genderBranch('', male))
-    .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):Gen Ref="255" F="([^"]*?)" \]/gu, (_, female) => genderBranch('', female))
-    .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):Qty (?:Ref="\d+" )?S="([^"]*?)" P="([^"]*?)" \]/gu, (_, singular, plural) => numberBranch(singular, plural))
-    .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):Qty (?:Ref="\d+" )?S="([^"]*?)" \]/gu, (_, singular) => numberBranch(singular, ''))
-    .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):Qty (?:Ref="\d+" )?P="([^"]*?)" \]/gu, (_, plural) => numberBranch('', plural))
     .replaceAll(/\[Kor:Particle char="(ha|wo|ga|to|ni|ya)" \]/gu, (_, char) => particleBranchFromChar(char))
-    .replaceAll(/(\[(?:Name:.+?) [^[]*?\])/gu, '<span class="var long">$1</span><span class="var short" title="$1">[Name]</span>')
-    .replaceAll(/(\[(?:Digit:.+?) [^[]*?\])/gu, '<span class="var long">$1</span><span class="var short" title="$1">[Digit]</span>')
   );
 }

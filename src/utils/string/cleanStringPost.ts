@@ -10,9 +10,9 @@ import { postprocessStringGO } from './cleanStringGO';
 import { postprocessStringMasters } from './cleanStringMasters';
 import * as g1 from './expandVariablesG1';
 import * as g3 from './expandVariablesG3';
-import { particlesKO, grammarEN, grammarFR, grammarIT, grammarDE, grammarES } from './grammar';
+import { particlesKO, grammarEN, grammarFR, grammarIT, grammarDE, grammarES, particlesKONames } from './grammar';
 import { getCorpusGroups } from "../corpusGroups";
-import { remapBDSPGrammarIndex } from "./variableNames";
+import { remapMsgStdGrammarIndex, variableNameToCodeChampions } from "./variableNames";
 
 //#region Post-processing
 function multiLine(s: string) {
@@ -75,7 +75,7 @@ const textGradientOpenDec = (_: string, r1: string, g1: string, b1: string, a1: 
  * Returns the resulting HTML string.
  */
 export function postprocessString(s: string, collectionKey: CollectionKey | '' = '', language: LanguageKey = 'en', richText = true) {
-  const { isGen1, isGen2, isGen3, isGen4, isGen5, isBDSP, isPBR, isRanch, isDreamRadar, isGO, isMasters, isHOME, isGB, isNDS, is3DS, isN64, isGCN, isModern } = getCorpusGroups(collectionKey);
+  const { isGen1, isGen2, isGen3, isGen4, isGen5, isBDSP, isPBR, isRanch, isDreamRadar, isGO, isMasters, isHOME, isChampions, isGB, isNDS, is3DS, isN64, isGCN, isModern } = getCorpusGroups(collectionKey);
 
   if (!richText) {
     s = (s
@@ -200,6 +200,10 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
     .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\u{F0106}pos=(.*?)\u{F0107}(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>') // BDSP pos
     .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\u{F0106}line-indent=(.*?)\u{F0107}(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>') // BDSP line-indent
   ) : s;
+  s = isChampions ? (s
+    .replaceAll(/\[System:Color (?:r="(\d+)" )?(?:g="(\d+)" )?(?:b="(\d+)" )?(?:a="(\d+)" )?\](.*?)(\[System:Color a="255" \]|(?=\[System:Color ))/gu, (_, r, g, b, a, text) => `<span class="color" style="color: rgb(${r ?? 0} ${g ?? 0} ${b ?? 0}${a === '255' ? '' : ` / ${Number(a ?? '0') / 255}`})">${text}</span>`) // font color
+    .replaceAll(/\[System:Color a="255" \]/gu, '') // font color (reset)
+  ) : s;
   s = (isGen4 || isModern) ? (s
     .replaceAll(/\[VAR FF00\((?!0000)([0-9A-F]{4})\)\](.+?)(?=\[VAR FF00\([0-9A-F]{4}\)\]|$)/gu, (_, color, text) => `<span class="color" style="color: var(--color-${parseInt(color, 16)})">${text}</span>`) // font color
     .replaceAll(/\[VAR FF00\(0000\)\]/gu, '') // font color (reset)
@@ -250,9 +254,10 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
       // In LGPE and SwSh, it affects the next \n (as long as \r or \c does not occur prior to the line break), and it can now be anywhere in the string and affect the following two lines.
       s = s.replaceAll(/\[VAR BD06\([0-9A-F]{4}\)\]([^\u{F0201}\u{F0202}\u{F0200}]*?)\u{F0200}/gu, (_, line) => `${line}\u{F0200}\u{F1300}`);
       break;
+    case "Champions":
     default:
       // Starting in LA, it affects all subsequent \n and \r\n (but not \c\n).
-      s = s.replaceAll(/\[VAR BD06\([0-9A-F]{4}\)\](.*)$/gu, (_, text) => text.replaceAll(/(?<!\u{F0202})\u{F0200}/gu, '\u{F0200}\u{F1300}'));
+      s = s.replaceAll(/(?:\[VAR BD06\([0-9A-F]{4}\)\]|\[Ctrl1:battle_oneline \])(.*)$/gu, (_, text) => text.replaceAll(/(?<!\u{F0202})\u{F0200}/gu, '\u{F0200}\u{F1300}'));
   }
   s = isGen4 ? (s
     .replaceAll('\u{F0207}\u{F0200}', '<span class="c">[VAR 0207]</span><span class="n">\\n</span><br>') // [VAR 0207]\n
@@ -380,27 +385,38 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
     .replaceAll(/\[VAR 0003\(0000\)\]/gu, '') // font color (reset)
   ) : s;
 
-  // GO
+  // Separate files
   s = isGO ? postprocessStringGO(s) : s;
-
-  // Masters
   s = isMasters ? postprocessStringMasters(s) : s;
   //#endregion
 
   //#region Grammar
-  s = isModern ? (!isBDSP ? (s
-    .replaceAll(/\[VAR 13(0[0-3])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarEN)) // English
-    .replaceAll(/\[VAR 14(0[0-9A-B])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarFR)) // French
-    .replaceAll(/\[VAR 15(0[0-9A-F])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarIT)) // Italian
-    .replaceAll(/\[VAR 16(0[0-7])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarDE)) // German
-    .replaceAll(/\[VAR 17(0[0-9A-F])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarES)) // Spanish
-  ) : (s
-    .replaceAll(/\[VAR (13(?:0[3-6]))[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(index), grammarEN)) // English
-    .replaceAll(/\[VAR (14(?:0[3-9A-CF]|10))[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(index), grammarFR)) // French
-    .replaceAll(/\[VAR (15(?:0[3-9A-CF]|1[0-5]))[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(index), grammarIT)) // Italian
-    .replaceAll(/\[VAR (16(?:0[3-9A]))[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(index), grammarDE)) // German
-    .replaceAll(/\[VAR (17(?:0[3-9A-E]|1[3-6]))[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapBDSPGrammarIndex(index), grammarES)) // Spanish
-  )) : s;
+  if (isModern) {
+    if (isBDSP)
+      s = (s
+        .replaceAll(/\[VAR (13(?:0[3-6]))[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapMsgStdGrammarIndex(index), grammarEN)) // English
+        .replaceAll(/\[VAR (14(?:0[3-9A-CF]|10))[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapMsgStdGrammarIndex(index), grammarFR)) // French
+        .replaceAll(/\[VAR (15(?:0[3-9A-CF]|1[0-5]))[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapMsgStdGrammarIndex(index), grammarIT)) // Italian
+        .replaceAll(/\[VAR (16(?:0[3-9A]))[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapMsgStdGrammarIndex(index), grammarDE)) // German
+        .replaceAll(/\[VAR (17(?:0[3-9A-E]|1[3-6]))[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(remapMsgStdGrammarIndex(index), grammarES)) // Spanish
+      );
+    else if (isChampions)
+      s = (s
+        .replaceAll(/\[(EN:(?!Force|Gen|Qty|Elision|DateIT|Version)[^ ]+) [^\]]*?\]/gu, (_, tag) => grammarBranchFromIndex(remapMsgStdGrammarIndex(variableNameToCodeChampions(tag)), grammarEN)) // English
+        .replaceAll(/\[(FR:(?!Force|Gen|Qty|Elision|DateIT|Version)[^ ]+) [^\]]*?\]/gu, (_, tag) => grammarBranchFromIndex(remapMsgStdGrammarIndex(variableNameToCodeChampions(tag)), grammarFR)) // French
+        .replaceAll(/\[(IT:(?!Force|Gen|Qty|Elision|DateIT|Version)[^ ]+) [^\]]*?\]/gu, (_, tag) => grammarBranchFromIndex(remapMsgStdGrammarIndex(variableNameToCodeChampions(tag)), grammarIT)) // Italian
+        .replaceAll(/\[(DE:(?!Force|Gen|Qty|Elision|DateIT|Version)[^ ]+) [^\]]*?\]/gu, (_, tag) => grammarBranchFromIndex(remapMsgStdGrammarIndex(variableNameToCodeChampions(tag)), grammarDE)) // German
+        .replaceAll(/\[(ES:(?!Force|Gen|Qty|Elision|DateIT|Version)[^ ]+) [^\]]*?\]/gu, (_, tag) => grammarBranchFromIndex(remapMsgStdGrammarIndex(variableNameToCodeChampions(tag)), grammarES)) // Spanish
+      );
+    else
+      s = (s
+        .replaceAll(/\[VAR 13(0[0-3])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarEN)) // English
+        .replaceAll(/\[VAR 14(0[0-9A-B])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarFR)) // French
+        .replaceAll(/\[VAR 15(0[0-9A-F])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarIT)) // Italian
+        .replaceAll(/\[VAR 16(0[0-7])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarDE)) // German
+        .replaceAll(/\[VAR 17(0[0-9A-F])[^\]]*?\]/gu, (_, index) => grammarBranchFromIndex(parseInt(index, 16), grammarES)) // Spanish
+      );
+  }
 
   // Korean particle
   if (language === 'ko' && isGen4)
@@ -411,6 +427,8 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
     s = s.replaceAll(/\[VAR 3400\(([0-9A-F]{4})\)\]/gu, (_, index) => particleBranchFromIndex(parseInt(index, 16) % 8));
   else if (isBDSP)
     s = s.replaceAll(/\[VAR 1900\(tagParameter=(\d+)\)\]/gu, (_, index) => particleBranchFromIndex(index));
+  else if (isChampions)
+    s = s.replaceAll(/\[Kor:Particle char="(none|ha|wo|ga|to|ni|ya|san|desu)" \]/gu, (_, char) => particleBranchFromIndex(particlesKONames.indexOf(char)));
   else if (isModern)
     s = s.replaceAll(/\[VAR 1900\(([0-9A-F]{4})\)\]/gu, (_, index) => particleBranchFromIndex(parseInt(index, 16)));
   else if (isDreamRadar)
@@ -472,6 +490,14 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
     .replaceAll(/\[VAR (?:1[3-7]02|1903)\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)\|([^[<{]*?)\|([^[<{]*?)\|([^[<{]*?)\)\]/gu, (_, maleSingular, femaleSingular, malePlural, femalePlural) => genderNumberBranch(maleSingular, femaleSingular, malePlural, femalePlural))
     .replaceAll(/\[VAR (?:130A|1413|1517|160E|1712|1904)\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)(?:\|([^[<{]*?))?(?:\|([^[<{]*?))?\)\]/gu, (_, singular, plural, zero) => numberBranch(singular, plural ?? '', zero ?? ''))
     .replaceAll(/\[VAR (?:1411|1518)\((?:tagParameter=\d+,)?tagWordArray=([^[<{]*?)(?:\|([^[<{]*?))?(?:,forceGrmID=\d+)?\)\]/gu, (_, form1, form2) => grammarBranch(form1, form2 ?? ''))
+  ) : s;
+  s = (isChampions || isMasters) ? (s
+    .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):Gen Ref="255" (?:M="([^"]*?)" )?(?:F="([^"]*?)" )?\]/gu, (_, male, female) => genderBranch(male ?? '', female ?? ''))
+    .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):Qty (?:Ref="\d+" )?(?:S="([^"]*?)" )?(?:P="([^"]*?)" )?\]/gu, (_, singular, plural) => numberBranch(singular ?? '', plural ?? ''))
+    .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):GenQty (?:Ref="\d+" )?(?:MS="([^"]*?)" )?(?:FS="([^"]*?)" )?(?:MP="([^"]*?)" )?(?:FP="([^"]*?)" )?\]/gu, (_, maleSingular, femaleSingular, malePlural, femalePlural) => genderNumberBranch(maleSingular ?? '', femaleSingular ?? '', malePlural ?? '', femalePlural ?? ''))
+    .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):QtyZero (?:Ref="\d+" )?(?:S="([^"]*?)" )?(?:P="([^"]*?)" )?(?:Z="([^"]*?)" )?\]/gu, (_, singular, plural, zero) => numberBranch(singular ?? '', plural ?? '', zero ?? ''))
+    .replaceAll(/\[(?:FR):Elision (?:Ref="\d+" )?(?:N="([^"]*?)" )?(?:Y="([^"]*?)" )?\]/gu, (_, no, yes) => grammarBranch(no ?? '', yes ?? ''))
+    .replaceAll(/\[(?:IT):DateIT (?:Ref="\d+" )?(?:V="([^"]*?)" )?(?:C="([^"]*?)" )?\]/gu, (_, vowel, consonant) => grammarBranch(vowel ?? '', consonant ?? ''))
   ) : s;
   //#endregion
 
@@ -548,6 +574,13 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
     .replaceAll(/\[(VAR 1[0-9A][^\]]+?\])/gu, '<span class="func"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}Grm]</span></span>')
     .replaceAll(/\[(VAR BD[^\]]+?\])/gu, '<span class="func"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}Ctrl1]</span></span>')
     .replaceAll(/\[(VAR BE[^\]]+?\])/gu, '<span class="func"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}Ctrl2]</span></span>')
+  ) : s;
+  s = (isChampions || isMasters) ? (s
+    .replaceAll(/\[(Name:.+? [^[]*?\])/gu, '<span class="var"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}Name]</span></span>')
+    .replaceAll(/\[(Digit:.+? [^[]*?\])/gu, '<span class="var"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}Digit]</span></span>')
+    .replaceAll(/\[((?:Grm:|(?:JP|EN|FR|IT|DE|ES|Kor|SC):Force).+? [^[]*?\])/gu, '<span class="func"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}Grm]</span></span>')
+    .replaceAll(/\[(Ctrl2:Wait.+? [^[]*?\])/gu, '<span class="func wait"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}Ctrl2]</span></span>')
+    .replaceAll(/\[(PKB:.+? [^[]*?\])/gu, '<span class="func"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}PKB]</span></span>')
   ) : s;
   s = isDreamRadar ? (s
     .replaceAll(/\[(VAR 02[^\]]+?\])/gu, '<span class="var"><span class="long">\u{F0102}$1</span><span class="short" title="\u{F0102}$1">\u{F0102}Character]</span></span>')

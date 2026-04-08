@@ -1,5 +1,5 @@
 /* Grammar string arrays from romfs/bin/message/grammar, with duplicates removed */
-// English: VAR 1300-03 (VAR 1303-06 in BDSP)
+// English: VAR 1300-03 (VAR 1303-06 in MsgStd games)
 export const grammarEN = [
   ["the "],          // DefArt
   ["The "],          // DefArtCap
@@ -7,7 +7,7 @@ export const grammarEN = [
   ["A ", "An ", ""], // IndArtCap
 ];
 
-// French: VAR 1400-0B (VAR 1403-0C,0F-10 in BDSP)
+// French: VAR 1400-0B (VAR 1403-0C,0F-10 in MsgStd games)
 export const grammarFR = [
   ["le ", "l’", "la ", "les "],           // DefArt
   ["Le ", "L’", "La ", "Les "],           // DefArtCap
@@ -23,7 +23,7 @@ export const grammarFR = [
   ["Que ", "Qu’"],                        // QueCap
 ];
 
-// Italian: VAR 1500-0F (VAR 1403-0C,10-15 in BDSP)
+// Italian: VAR 1500-0F (VAR 1403-0C,10-15 in MsgStd games)
 export const grammarIT = [
   ["il ", "l’", "lo ", "la ", "i ", "gli ", "le "],                                                // DefArt
   ["Il ", "L’", "Lo ", "La ", "I ", "Gli ", "Le "],                                                // DefArtCap
@@ -43,7 +43,7 @@ export const grammarIT = [
   ["A ", "Ad "],                                                                                   // AdCap
 ];
 
-// German: VAR 1600-07 (VAR 1603-0A in BDSP)
+// German: VAR 1600-07 (VAR 1603-0A in MsgStd games)
 export const grammarDE = [
   ["der ", "die ", "das "],        // DefArtNom
   ["Der ", "Die ", "Das "],        // DefArtNomCap
@@ -55,7 +55,7 @@ export const grammarDE = [
   ["Einen ", "Eine ", "Ein ", ""], // IndArtAccCap
 ];
 
-// Spanish: VAR 1700-0F (VAR 1703-0E,13-16 in BDSP)
+// Spanish: VAR 1700-0F (VAR 1703-0E,13-16 in MsgStd games)
 export const grammarES = [
   ["el ", "la ", "los ", "las "],                  // DefArt
   ["El ", "La ", "Los ", "Las "],                  // DefArtCap
@@ -86,3 +86,4 @@ export const particlesKO = [
   ['', '이'], // (이), optional "i" in particles such as 이다/이랑/이야
   ['야', '아'], // 아(야), vocative particle
 ];
+export const particlesKONames = ["none", "ha", "wo", "ga", "to", "ni", "ya", "san", "desu"];

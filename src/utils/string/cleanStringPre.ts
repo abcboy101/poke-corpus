@@ -411,6 +411,22 @@ function remapChinaLGPEPixelFont(s: string) {
     .replaceAll(/\b(cd|gh|kl)\b/gu, '战力')
   );
 }
+
+// Champions special characters
+function remapChampionsSpecialCharacters(s: string) {
+  s = s.search(/\[Character[12]:/u) === -1 ? s : (s
+    .replaceAll('[Character1:music ]', '♪') // VAR 3201
+    .replaceAll('[Character1:male ]', '♂') // VAR 3202
+    .replaceAll('[Character1:female ]', '♀') // VAR 3203
+    .replaceAll('[Character2:L_DoubleQuot. ]', '“') // VAR 3302
+    .replaceAll('[Character2:R_DoubleQuot. ]', '”') // VAR 3303
+    .replaceAll('[Character2:StraightSingleQuot. ]', "'") // VAR 3306
+    .replaceAll('[Character2:StraightDoubleQuot. ]', '"') // VAR 3307
+    .replaceAll('[Character2:Upper_e ]', 'ᵉ') // VAR 330D
+    .replaceAll('[Character2:null ]', '') // VAR 3312
+  );
+  return s;
+}
 //#endregion
 
 /**
@@ -442,6 +458,9 @@ export function preprocessString(s: string, collectionKey: CollectionKey, langua
     }
     else if (collectionKey === "LegendsZA") {
       s = remapLegendsZASpecialCharacters(s, language);
+    }
+    else if (collectionKey === "Champions") {
+      s = remapChampionsSpecialCharacters(s);
     }
   }
   else if (isN64) {
