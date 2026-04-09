@@ -201,7 +201,7 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
     .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\u{F0106}line-indent=(.*?)\u{F0107}(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>') // BDSP line-indent
   ) : s;
   s = isChampions ? (s
-    .replaceAll(/\[System:Color (?:r="(\d+)" )?(?:g="(\d+)" )?(?:b="(\d+)" )?(?:a="(\d+)" )?\](.*?)(\[System:Color a="255" \]|(?=\[System:Color ))/gu, (_, r, g, b, a, text) => `<span class="color" style="color: rgb(${r ?? 0} ${g ?? 0} ${b ?? 0}${a === '255' ? '' : ` / ${Number(a ?? '0') / 255}`})">${text}</span>`) // font color
+    .replaceAll(/\[System:Color (?!a="255" \])(?:r="(\d+)" )?(?:g="(\d+)" )?(?:b="(\d+)" )?(?:a="(\d+)" )?\](.*?)(\[System:Color a="255" \]|(?=\[System:Color ))/gu, (_, r, g, b, a, text) => `<span class="color" style="color: rgb(${r ?? 0} ${g ?? 0} ${b ?? 0}${a === '255' ? '' : ` / ${Number(a ?? '0') / 255}`})">${text}</span>`) // font color
     .replaceAll(/\[System:Color a="255" \]/gu, '') // font color (reset)
   ) : s;
   s = (isGen4 || isModern) ? (s
