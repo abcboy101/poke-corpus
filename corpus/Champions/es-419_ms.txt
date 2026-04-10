@@ -228,6 +228,7 @@ Combates Individuales
 En un [System:Color r="255" g="128" b="128" a="255" ]Combate Individual[System:Color a="255" ], ambos participantes deben elegir\n[System:Color r="255" g="128" b="128" a="255" ]tres Pokémon [System:Color a="255" ]de sus Equipos de Combate y sacarlos a combatir\n[System:Color r="255" g="128" b="128" a="255" ]uno a la vez[System:Color a="255" ]. El primero que debilite a todos los Pokémon del\nrival ganará.
 Selecciona [System:Color r="255" g="128" b="128" a="255" ]Combatir [System:Color a="255" ]en la parte inferior derecha de la pantalla\npara acceder al menú de selección de los [System:Color r="255" g="128" b="128" a="255" ]movimientos [System:Color a="255" ]de\ntus Pokémon.
 Una vez en el menú de selección de [System:Color r="255" g="128" b="128" a="255" ]movimientos[System:Color a="255" ], elige\n[System:Color r="255" g="128" b="128" a="255" ]Golpe de Cuerpo [System:Color a="255" ]de entre los movimientos de tu Pokémon para\n[System:Color r="255" g="128" b="128" a="255" ]atacar [System:Color a="255" ]al Pokémon rival.
+[~ 66]
 En los combates Pokémon, los Pokémon de ambos lados\nusan movimientos por turnos con el fin de [System:Color r="255" g="128" b="128" a="255" ]reducir los PS\nde los Pokémon rivales a 0[System:Color a="255" ] hasta derrotarlos a todos.
 A continuación hablaremos sobre la [System:Color r="255" g="128" b="128" a="255" ]compatibilidad entre tipos[System:Color a="255" ],\nun elemento clave para derrotar a tus rivales.\n\nTanto los Pokémon como los movimientos que utilizan pueden\nser de distintos [System:Color r="255" g="128" b="128" a="255" ]tipos[System:Color a="255" ].
 Veamos un ejemplo para ilustrar cómo funciona: los Pokémon\nde [System:Color r="255" g="128" b="128" a="255" ]tipo Planta [System:Color a="255" ]reciben el doble de daño de movimientos de\n[System:Color r="255" g="128" b="128" a="255" ]tipo Fuego[System:Color a="255" ], mientras que los Pokémon de [System:Color r="255" g="128" b="128" a="255" ]tipo Fuego[System:Color a="255" ] reciben\nla mitad de daño de movimientos de [System:Color r="255" g="128" b="128" a="255" ]tipo Planta[System:Color a="255" ].
@@ -318,6 +319,7 @@ Parar
 Aleatoria
 ¡Combate! (Pabellón de combate)
 ¡Combate! (Arena del gimnasio)
+[~ 15]
 Para poder seleccionar esta música de combate es necesario\ntener una membresía. ¿Quieres comprar una?
 Se necesita una membresía de pago.
 No tienes ninguna música de combate de este juego.
@@ -394,6 +396,7 @@ Alcanzaste el límite de etiquetas que puedes asignar.
 Elige un nombre para el Equipo de Combate.
 Elige un nombre para esta etiqueta.
 Pokémon
+[~ 41]
 Cambiar Pokémon
 Dar objeto
 Vaciar espacio
@@ -409,6 +412,7 @@ Text File : btl_app
 [Name:TrainerName ]
 Retirarse del combate cuenta como una derrota.\n¿De verdad quieres abandonar?
 Omniaro
+[~ 3]
 [Name:Move ]
 [Digit:2digits ]
 /[Digit:4digits Sep="0" ]
@@ -446,12 +450,14 @@ Detalles
 Estados, campo y tiempo atmosférico
 [Digit:1digit ] turno[ES:Qty P="s" ]
 Ninguno
+[~ 41]
 Megaevolución
 [Name:StateInfo ]
 ×[Digit:1digit ].[Digit:2digits Idx="1" ]
 [Name:Item Idx="1" ]\nde [Name:PokemonNickname ]
 TIEMPO DE TURNO
 [Name:Effective ]
+[~ 48]
 [Digit:3digits ]
 /[Digit:3digits ]
 [Digit:2digits Idx="1" ]
@@ -672,6 +678,8 @@ Ocultar datos
 [Digit:3digits ]
 [Digit:2digits ]
 Preparando combate
+[~ 64]
+[~ 65]
 Selecciona [Digit:1digit ] Pokémon para el combate.
 ~~~~~~~~~~~~~~~
 Text File : btl_preparation
@@ -703,6 +711,7 @@ Reglamento
 Combate Clasificatorio
 Combate Amistoso
 Combate Privado
+[~ 7]
 Datos de combate
 ¡Ya puedes participar en Combates Clasificatorios para\nla temporada [Name:SeasonName ]-[Digit:2digits Idx="1" ]!
 Calculando resultados
@@ -828,8 +837,14 @@ No afecta al [Name:PokemonNickname ] rival...
 ¡El [Name:PokemonNickname ] rival ya está dormido!
 ¡[Name:PokemonNickname ] no se puede dormir!
 ¡El [Name:PokemonNickname ] rival no se puede dormir!
+[~ 96]
+[~ 97]
+[~ 98]
+[~ 99]
 ¡[Name:PokemonNickname ] se enamoró!
 ¡El [Name:PokemonNickname ] rival se enamoró!
+[~ 102]
+[~ 103]
 ¡[Name:PokemonNickname ] está enamorado de [Name:PokemonNickname Idx="1" ]!
 ¡El [Name:PokemonNickname ] rival está enamorado de [Name:PokemonNickname Idx="1" ]!
 ¡El enamoramiento impide que [Name:PokemonNickname ] reaccione!
@@ -854,6 +869,8 @@ No afecta al [Name:PokemonNickname ] rival...
 ¡El [Name:PokemonNickname ] rival se atemorizó y no puede atacar!
 ¡[Name:PokemonNickname ] perdió la concentración y no puede atacar!
 ¡El [Name:PokemonNickname ] rival perdió la concentración y no\npuede atacar!
+[~ 128]
+[~ 129]
 ¡[Name:Move Idx="1" ] hirió a [Name:PokemonNickname ]!
 ¡[Name:Move Idx="1" ] hirió al [Name:PokemonNickname ] rival!
 ¡[Name:PokemonNickname ] se liberó de [Name:Move Idx="1" ]!
@@ -874,24 +891,36 @@ No afecta al [Name:PokemonNickname ] rival...
 ¡El [Name:PokemonNickname ] rival fue herido!
 ¡La habilidad de [Name:PokemonNickname ] cambió a [Name:Ability Idx="1" ]!
 [Ctrl1:battle_oneline ]¡La habilidad del [Name:PokemonNickname ] rival cambió a\n[Name:Ability Idx="1" ]!
+[~ 150]
+[~ 151]
 ¡Explotó el Globo con Helio de [Name:PokemonNickname ]!
 ¡Explotó el Globo con Helio del [Name:PokemonNickname ] rival!
 ¡[Name:PokemonNickname ] regresa gracias al Botón de Escape!
 ¡El [Name:PokemonNickname ] rival regresa gracias al Botón de Escape!
+[~ 156]
+[~ 157]
+[~ 158]
+[~ 159]
 [Ctrl1:battle_oneline ]¡La potencia de los movimientos de tipo Fuego de [Name:PokemonNickname ]\naumentó!
 [Ctrl1:battle_oneline ]¡La potencia de los movimientos de tipo Fuego del [Name:PokemonNickname ]\nrival aumentó!
+[~ 162]
+[~ 163]
 ¡[Name:PokemonNickname ] se estremeció!
 ¡El [Name:PokemonNickname ] rival se estremeció!
 [Ctrl1:battle_oneline ]¡[Name:PokemonNickname ] inspeccionó a [Name:PokemonNickname Idx="1" ] y encontró\n[ES:IndArt Ref="2" ][Name:ItemClassified Idx="2" ]!
 [Ctrl1:battle_oneline ]¡El [Name:PokemonNickname ] rival inspeccionó a [Name:PokemonNickname Idx="1" ] y\nencontró [ES:IndArt Ref="2" ][Name:ItemClassified Idx="2" ]!
 ¡[Name:PokemonNickname ] rompe el molde!
 ¡El [Name:PokemonNickname ] rival rompe el molde!
+[~ 170]
+[~ 171]
 ¡[Name:PokemonNickname ] atrajo el ataque!
 ¡El [Name:PokemonNickname ] rival atrajo el ataque!
 ¡[Name:PokemonNickname ] se mantiene despierto!
 ¡El [Name:PokemonNickname ] rival se mantiene despierto!
 ¡[Name:PokemonNickname ] se aferra al suelo gracias a la habilidad Ventosas!
 ¡El [Name:PokemonNickname ] rival se aferra al suelo gracias a la habilidad Ventosas!
+[~ 178]
+[~ 179]
 [Ctrl1:battle_oneline ]¡Le robaron [ES:DefArt Ref="1" ][Name:ItemClassified Idx="1" ] a\n[Name:PokemonNickname ]!
 [Ctrl1:battle_oneline ]¡Le robaron [ES:DefArt Ref="1" ][Name:ItemClassified Idx="1" ] al\n[Name:PokemonNickname ] rival!
 ¡La habilidad de [Name:PokemonNickname ] ahora es Momia!
@@ -908,12 +937,24 @@ No afecta al [Name:PokemonNickname ] rival...
 ¡La ilusión del [Name:PokemonNickname ] rival se desvaneció!
 ¡El Ataque de [Name:PokemonNickname ] aumentó al máximo!
 ¡El Ataque del [Name:PokemonNickname ] rival aumentó al máximo!
+[~ 196]
+[~ 197]
 ¡[Name:PokemonNickname ] ejerce presión!
 ¡El [Name:PokemonNickname ] rival ejerce presión!
 ¡[Name:PokemonNickname ] encontró [ES:IndArt Ref="1" ][Name:ItemClassified Idx="1" ]!
 [Ctrl1:battle_oneline ]¡El [Name:PokemonNickname ] rival encontró\n[ES:IndArt Ref="1" ][Name:ItemClassified Idx="1" ]!
 ¡Es imposible robarle objetos a [Name:PokemonNickname ]!
 ¡Es imposible robarle objetos al [Name:PokemonNickname ] rival!
+[~ 204]
+[~ 205]
+[~ 206]
+[~ 207]
+[~ 208]
+[~ 209]
+[~ 210]
+[~ 211]
+[~ 212]
+[~ 213]
 ¡[Name:PokemonNickname ] intercambió su habilidad con la del otro Pokémon!
 [Ctrl1:battle_oneline ]¡El [Name:PokemonNickname ] rival intercambió su habilidad con la del otro\nPokémon!
 ¡[Name:PokemonNickname ] se prepara para resistir los ataques!
@@ -1012,6 +1053,8 @@ No afecta al [Name:PokemonNickname ] rival...
 ¡El [Name:PokemonNickname ] rival está somnoliento!
 ¡[Name:PokemonNickname ] se convirtió en el centro de atención!
 ¡El [Name:PokemonNickname ] rival se convirtió en el centro\nde atención!
+[~ 312]
+[~ 313]
 [Ctrl1:battle_oneline ]¡[Name:PokemonNickname ] intercambió los cambios en el Ataque y\nel Ataque Especial\r\ncon los del objetivo!
 [Ctrl1:battle_oneline ]¡El [Name:PokemonNickname ] rival intercambió los cambios en el Ataque\ny el Ataque Especial\r\ncon los del objetivo!
 [Ctrl1:battle_oneline ]¡[Name:PokemonNickname ] intercambió los cambios en la Defensa y\nla Defensa Especial\r\ncon los del objetivo!
@@ -1020,6 +1063,8 @@ No afecta al [Name:PokemonNickname ] rival...
 ¡El [Name:PokemonNickname ] rival intercambió su objeto con el de su\nobjetivo!
 ¡[Name:PokemonNickname ] obtuvo [ES:IndArt Ref="1" ][Name:ItemClassified Idx="1" ]!
 [Ctrl1:battle_oneline ]¡El [Name:PokemonNickname ] rival obtuvo\n[ES:IndArt Ref="1" ][Name:ItemClassified Idx="1" ]!
+[~ 322]
+[~ 323]
 ¡El deseo de curación se hizo realidad para [Name:PokemonNickname ]!
 ¡El deseo de curación se hizo realidad para el [Name:PokemonNickname ] rival!
 ¡El deseo de [Name:PokemonNickname ] se hizo realidad!
@@ -1046,6 +1091,10 @@ No afecta al [Name:PokemonNickname ] rival...
 ¡El [Name:PokemonNickname ] rival absorbió nutrientes a través de las\nraíces!
 ¡[Name:PokemonNickname ] se fijó al suelo con sus raíces!
 ¡El [Name:PokemonNickname ] rival se fijó al suelo con sus raíces!
+[~ 350]
+[~ 351]
+[~ 352]
+[~ 353]
 ¡[Name:PokemonNickname ] volvió con [ES:DefArt Ref="1" ][Name:TrainerName Idx="1" ]!
 ¡El [Name:PokemonNickname ] rival volvió con [ES:DefArt Ref="1" ][Name:TrainerName Idx="1" ]!
 [Ctrl1:battle_oneline ]¡[Name:PokemonNickname ] intercambió el valor de su Ataque por el de su\nDefensa!
@@ -1080,6 +1129,8 @@ No afecta al [Name:PokemonNickname ] rival...
 ¡El [Name:PokemonNickname ] rival quedó atrapado dentro del torbellino!
 ¡[Name:PokemonNickname ] quedó atrapado en un torbellino de fuego!
 ¡El [Name:PokemonNickname ] rival quedó atrapado en un torbellino de fuego!
+[~ 388]
+[~ 389]
 ¡Tumba de Arena atrapó a [Name:PokemonNickname ]!
 ¡Tumba de Arena atrapó al [Name:PokemonNickname ] rival!
 ¡A [Name:PokemonNickname ] no le quedan más movimientos!
@@ -1098,6 +1149,10 @@ No afecta al [Name:PokemonNickname ] rival...
 ¡El [Name:PokemonNickname ] rival alteró las dimensiones!
 ¡La cuenta regresiva de Canto Mortal de [Name:PokemonNickname ] bajó a [Digit:1digit Idx="1" ]!
 ¡La cuenta regresiva de Canto Mortal del [Name:PokemonNickname ] rival bajó a [Digit:1digit Idx="1" ]!
+[~ 408]
+[~ 409]
+[~ 410]
+[~ 411]
 ¡[Name:PokemonNickname ] ya no puede escapar!
 ¡El [Name:PokemonNickname ] rival ya no puede escapar!
 ¡[Name:PokemonNickname ] no puede escapar!
@@ -1147,6 +1202,8 @@ No afecta al [Name:PokemonNickname ] rival...
 ¡El [Name:PokemonNickname ] rival perdió unos pocos PS!
 ¡Pero [Name:PokemonNickname ] no tiene ningún objeto que pueda usar!
 ¡Pero el [Name:PokemonNickname ] rival no tiene ningún objeto que pueda usar!
+[~ 461]
+[~ 462]
 [Ctrl1:battle_oneline ]¡[Name:PokemonNickname ] puede actuar más rápido de lo normal gracias\n[ES:A_DefArt Ref="1" ][Name:ItemClassified Idx="1" ]!
 [Ctrl1:battle_oneline ]¡El [Name:PokemonNickname ] rival puede actuar más rápido de lo normal gracias\na [ES:IndArt Ref="1" ][Name:ItemClassified Idx="1" ]!
 [Ctrl1:battle_oneline ]¡La precisión del próximo movimiento de [Name:PokemonNickname ] aumentó\ngracias\r\n[ES:A_DefArt Ref="1" ][Name:ItemClassified Idx="1" ]!
@@ -1173,6 +1230,8 @@ No afecta al [Name:PokemonNickname ] rival...
 ¡El [Name:PokemonNickname ] rival es víctima de una maldición!
 ¡[Name:PokemonNickname ] previó un ataque!
 ¡El [Name:PokemonNickname ] rival previó un ataque!
+[~ 489]
+[~ 490]
 ¡[Name:PokemonNickname ] fue alcanzado por [Name:Move Idx="1" ]!
 ¡El [Name:PokemonNickname ] rival fue alcanzado por [Name:Move Idx="1" ]!
 [Ctrl1:battle_oneline ]¡[Name:PokemonNickname ] no pudo mantenerse en el aire debido al efecto\nde la gravedad!
@@ -1213,10 +1272,14 @@ No afecta al [Name:PokemonNickname ] rival...
 [Ctrl1:battle_oneline ]¡Electrificación hace que el siguiente movimiento del [Name:PokemonNickname ] rival\nsea\r\nde tipo Eléctrico!
 [Ctrl1:battle_oneline ]¡[Name:Move Idx="2" ] no afectó a [Name:PokemonNickname ] debido\n[ES:A_DefArt Ref="1" ][Name:ItemClassified Idx="1" ]!
 [Ctrl1:battle_oneline ]¡[Name:Move Idx="2" ] no afectó al [Name:PokemonNickname ] rival debido a\n[ES:IndArt Ref="1" ][Name:ItemClassified Idx="1" ]!
+[~ 531]
+[~ 532]
 ¡[Name:PokemonNickname ] irradia un aura feérica!
 ¡El [Name:PokemonNickname ] rival irradia un aura feérica!
 ¡El campo eléctrico protegió a [Name:PokemonNickname ]!
 ¡El campo eléctrico protegió al [Name:PokemonNickname ] rival!
+[~ 537]
+[~ 538]
 ¡[Name:PokemonNickname ] se hirió!
 ¡El [Name:PokemonNickname ] rival se hirió!
 [Ctrl1:battle_oneline ]¡[Name:PokemonNickname ] le dio [ES:DefArt Ref="1" ][Name:ItemClassified Idx="1" ] a\n[Name:PokemonNickname Idx="2" ]!
@@ -1225,34 +1288,159 @@ No afecta al [Name:PokemonNickname ] rival...
 ¡El [Name:PokemonNickname ] rival cayó en una red pegajosa!
 ¡El campo de niebla protegió a [Name:PokemonNickname ]!
 ¡El campo de niebla protegió al [Name:PokemonNickname ] rival!
+[~ 547]
+[~ 548]
 ¡[Name:PokemonNickname ] fue infestado por [Name:PokemonNickname Idx="1" ]!
 ¡[Name:PokemonNickname ] fue infestado por el [Name:PokemonNickname Idx="1" ] rival!
 ¡El [Name:PokemonNickname ] rival fue infestado por [Name:PokemonNickname Idx="1" ]!
 ¡El [Name:PokemonNickname ] fue infestado por el [Name:PokemonNickname Idx="1" ] rival!
+[~ 553]
+[~ 554]
+[~ 555]
+[~ 556]
+[~ 557]
+[~ 558]
+[~ 559]
+[~ 560]
+[~ 561]
+[~ 562]
+[~ 563]
+[~ 564]
+[~ 565]
+[~ 566]
+[~ 567]
+[~ 568]
+[~ 569]
+[~ 570]
+[~ 571]
+[~ 572]
+[~ 573]
+[~ 574]
+[~ 575]
+[~ 576]
+[~ 577]
+[~ 578]
+[~ 579]
+[~ 580]
+[~ 581]
+[~ 582]
+[~ 583]
+[~ 584]
+[~ 585]
+[~ 586]
+[~ 587]
+[~ 588]
+[~ 589]
+[~ 590]
+[~ 591]
+[~ 592]
+[~ 593]
+[~ 594]
+[~ 595]
+[~ 596]
+[~ 597]
+[~ 598]
+[~ 599]
+[~ 600]
+[~ 601]
+[~ 602]
+[~ 603]
+[~ 604]
+[~ 605]
+[~ 606]
+[~ 607]
+[~ 608]
+[~ 609]
+[~ 610]
+[~ 611]
+[~ 612]
+[~ 613]
+[~ 614]
+[~ 615]
+[~ 616]
+[~ 617]
+[~ 618]
+[~ 619]
+[~ 620]
+[~ 621]
+[~ 622]
+[~ 623]
+[~ 624]
+[~ 625]
+[~ 626]
+[~ 627]
+[~ 628]
+[~ 629]
+[~ 630]
+[~ 631]
+[~ 632]
+[~ 633]
 ¡[Name:PokemonNickname ] cambia su Velocidad por la de su objetivo!
 ¡El [Name:PokemonNickname ] rival cambia su Velocidad por la de su objetivo!
 ¡El fuego interior de [Name:PokemonNickname ] se extinguió!
 ¡El fuego interior del [Name:PokemonNickname ] rival se extinguió!
 ¡El efecto de Golpe al Cuello le impide a [Name:PokemonNickname ] usar\nel movimiento!
 [Ctrl1:battle_oneline ]¡El efecto de Golpe al Cuello le impide al [Name:PokemonNickname ] rival usar\nel movimiento!
+[~ 640]
+[~ 641]
+[~ 642]
+[~ 643]
 ¡El campo psíquico protegió a [Name:PokemonNickname ]!
 ¡El campo psíquico protegió al [Name:PokemonNickname ] rival!
 ¡[Name:PokemonNickname ] empieza a calentar su pico!
 ¡El [Name:PokemonNickname ] rival empieza a calentar su pico!
+[~ 648]
+[~ 649]
+[~ 650]
+[~ 651]
+[~ 652]
 [Ctrl1:battle_oneline ]¡[Name:PokemonNickname Idx="1" ] sigue el mandato de [Name:PokemonNickname ] y repite su último\nmovimiento!
 [Ctrl1:battle_oneline ]¡El [Name:PokemonNickname Idx="1" ] rival sigue el mandato de [Name:PokemonNickname ] y repite\nsu último movimiento!
 [Ctrl1:battle_oneline ]¡[Name:PokemonNickname Idx="1" ] sigue el mandato del [Name:PokemonNickname ] rival y repite\nsu último\r\nmovimiento!
 [Ctrl1:battle_oneline ]¡El [Name:PokemonNickname Idx="1" ] rival sigue el mandato del [Name:PokemonNickname ] rival y repite\nsu último\r\nmovimiento!
 [Ctrl1:battle_oneline ]¡El Pokémon recibió la habilidad [Name:Ability Idx="1" ]\nde [Name:PokemonNickname ]!
 [Ctrl1:battle_oneline ]¡El Pokémon recibió la habilidad [Name:Ability Idx="1" ]\ndel [Name:PokemonNickname ] rival!
+[~ 659]
+[~ 660]
+[~ 661]
 ¡El disfraz de [Name:PokemonNickname ] se rompió!
 ¡El disfraz del [Name:PokemonNickname ] rival se rompió!
+[~ 664]
+[~ 665]
+[~ 666]
+[~ 667]
+[~ 668]
+[~ 669]
 ¡[Name:PokemonNickname ] no se pudo proteger del ataque y recibió daño!
 [Ctrl1:battle_oneline ]¡El [Name:PokemonNickname ] rival no se pudo proteger del ataque y recibió daño!
+[~ 672]
+[~ 673]
+[~ 674]
+[~ 675]
+[~ 676]
+[~ 677]
+[~ 678]
+[~ 679]
 [Ctrl1:battle_oneline ]¡[Name:PokemonNickname ] ya no puede ser cambiado por otro porque usó\nBastión Final!
 [Ctrl1:battle_oneline ]¡El [Name:PokemonNickname ] rival ya no puede ser cambiado por otro porque\nusó\r\nBastión Final!
+[~ 682]
+[~ 683]
+[~ 684]
+[~ 685]
+[~ 686]
+[~ 687]
+[~ 688]
+[~ 689]
 ¡[Name:PokemonNickname ] quedó atrapado en una trampa de presión!
 ¡El [Name:PokemonNickname ] rival quedó atrapado en una trampa de presión!
+[~ 692]
+[~ 693]
+[~ 694]
+[~ 695]
+[~ 696]
+[~ 697]
+[~ 698]
+[~ 699]
 ¡[Name:PokemonNickname ] regresa gracias a la Mochila de Escape!
 ¡El [Name:PokemonNickname ] rival regresa gracias a la Mochila de Escape!
 ¡[Name:PokemonNickname ] recuperó su tipo original!
@@ -1267,10 +1455,20 @@ No afecta al [Name:PokemonNickname ] rival...
 [Ctrl1:battle_oneline ]¡[Name:PokemonNickname ] derritió [ES:DefArt Ref="2" ][Name:ItemClassified Idx="2" ]\ndel [Name:PokemonNickname Idx="1" ] rival!
 [Ctrl1:battle_oneline ]¡El [Name:PokemonNickname ] rival derritió\n[ES:DefArt Ref="2" ][Name:ItemClassified Idx="2" ]\r\nde [Name:PokemonNickname Idx="1" ]!
 [Ctrl1:battle_oneline ]¡El [Name:PokemonNickname ] rival derritió\n[ES:DefArt Ref="2" ][Name:ItemClassified Idx="2" ]\r\ndel [Name:PokemonNickname Idx="1" ] rival!
+[~ 714]
+[~ 715]
+[~ 716]
+[~ 717]
 [Ctrl1:battle_oneline ]¡[Name:PokemonNickname ] ataca primero gracias a la habilidad\n[Name:Ability Idx="1" ]!
 [Ctrl1:battle_oneline ]¡El [Name:PokemonNickname ] rival ataca primero gracias a la habilidad\n[Name:Ability Idx="1" ]!
 No afecta a [Name:PokemonNickname ]...
 No afecta al [Name:PokemonNickname ] rival...
+[~ 722]
+[~ 723]
+[~ 724]
+[~ 725]
+[~ 726]
+[~ 727]
 ¡[Name:PokemonNickname ] ya no está somnoliento!
 ¡El [Name:PokemonNickname ] rival ya no está somnoliento!
 ¡[Name:PokemonNickname ] ya está somnoliento!
@@ -1289,14 +1487,77 @@ No afecta al [Name:PokemonNickname ] rival...
 El [Name:PokemonNickname ] rival se prepara para contar un chiste malo...
 ¡[Name:PokemonNickname ] descargó toda su electricidad!
 ¡El [Name:PokemonNickname ] rival descargó toda su electricidad!
+[~ 746]
+[~ 747]
+[~ 748]
+[~ 749]
 ¡[Name:PokemonNickname ] volvió con una transformación heroica!
 ¡El [Name:PokemonNickname ] rival volvió con una transformación heroica!
+[~ 752]
+[~ 753]
+[~ 754]
+[~ 755]
+[~ 756]
+[~ 757]
+[~ 758]
+[~ 759]
+[~ 760]
+[~ 761]
+[~ 762]
+[~ 763]
+[~ 764]
+[~ 765]
+[~ 766]
+[~ 767]
+[~ 768]
+[~ 769]
+[~ 770]
+[~ 771]
+[~ 772]
+[~ 773]
+[~ 774]
+[~ 775]
+[~ 776]
+[~ 777]
 ¡[Name:PokemonNickname ] recibe fuerzas de los aliados caídos!
 ¡El [Name:PokemonNickname ] rival recibe fuerzas de los aliados caídos!
+[~ 780]
+[~ 781]
+[~ 782]
+[~ 783]
+[~ 784]
+[~ 785]
+[~ 786]
 [Ctrl1:battle_oneline ]¡[Name:PokemonNickname ] usó una Hierba Copia y copió los cambios\nen las características\r\ndel rival!
 ¡El [Name:PokemonNickname ] rival usó una Hierba Copia y copió\nlos cambios en las características del rival!
+[~ 789]
+[~ 790]
+[~ 791]
+[~ 792]
+[~ 793]
+[~ 794]
+[~ 795]
+[~ 796]
+[~ 797]
+[~ 798]
+[~ 799]
+[~ 800]
+[~ 801]
+[~ 802]
+[~ 803]
+[~ 804]
+[~ 805]
+[~ 806]
 ¡[Name:PokemonNickname Idx="1" ] se tomó el té que preparó [Name:PokemonNickname ]!
 [Ctrl1:battle_oneline ]¡[Name:PokemonNickname Idx="1" ] se tomó el té que preparó el [Name:PokemonNickname ]\nrival!
+[~ 809]
+[~ 810]
+[~ 811]
+[~ 812]
+[~ 813]
+[~ 814]
+[~ 815]
+[~ 816]
 ¡[Name:PokemonNickname ] está caramelizado!
 ¡El [Name:PokemonNickname ] rival está caramelizado!
 ¡El néctar de [Name:PokemonNickname ] desprende un aroma dulzón!
@@ -1304,6 +1565,9 @@ El [Name:PokemonNickname ] rival se prepara para contar un chiste malo...
 ¡[Name:PokemonNickname ] está acumulando electricidad!
 ¡El [Name:PokemonNickname ] rival está acumulando electricidad!
 ¡[Name:PokemonNickname ] lo dio todo!
+[~ 824]
+[~ 825]
+[~ 826]
 ¡[ES:DefArtCap Ref="4" ][Name:Status Idx="4" ] de [Name:PokemonNickname ] aumentó!
 [Ctrl1:battle_oneline ]¡[ES:DefArtCap Ref="4" ][Name:Status Idx="4" ] y [ES:DefArt Ref="5" ][Name:Status Idx="5" ] de [Name:PokemonNickname ]\naumentaron!
 [Ctrl1:battle_oneline ]¡[ES:DefArtCap Ref="4" ][Name:Status Idx="4" ], [ES:DefArt Ref="5" ][Name:Status Idx="5" ] y [ES:DefArt Ref="6" ][Name:Status Idx="6" ]\nde [Name:PokemonNickname ]\r\naumentaron!
@@ -1569,18 +1833,40 @@ El Pokémon pasa a estar en contacto con el suelo\ny le afectan los movimientos 
 Derribado
 Ningún Pokémon puede ser cambiado por otro\nhasta el final del turno siguiente en el que haya\nusado el movimiento Cerrojo Feérico.
 Cerrojo Feérico
+[~ 102]
+[~ 103]
+[~ 104]
+[~ 105]
+[~ 106]
+[~ 107]
 Aumenta un 30 % la potencia de los movimientos\nde tipo Psíquico de los Pokémon que están en\ncontacto con el suelo e impide que sean\nalcanzados por movimientos de prioridad alta.
 Campo psíquico
 El Pokémon no puede utilizar movimientos\nque usan sonido durante dos turnos.
 Golpe al Cuello
 Reduce un 50 % el daño recibido de ataques\nfísicos y especiales. En los Combates Dobles,\nse reduce un 33.3 %.
 Velo Aurora
+[~ 114]
+[~ 115]
+[~ 116]
+[~ 117]
+[~ 118]
+[~ 119]
+[~ 120]
+[~ 121]
+[~ 122]
+[~ 123]
+[~ 124]
+[~ 125]
+[~ 126]
+[~ 127]
 El Pokémon pierde un 6.25 % de sus PS máximos\nal final de cada turno, o un 12.5 % si es de tipo\nAcero o Agua.
 Salación
 Reduce un nivel la Velocidad del Pokémon al\nfinal de cada turno.
 Caramelizado
 El Pokémon no puede recuperar PS usando\nmovimientos, habilidades o el objeto\nque lleve.
 Curación anulada
+[~ 134]
+[~ 135]
 El Pokémon no puede actuar durante un turno.
 Descansando
 El Pokémon debe cargar su movimiento durante\nun turno antes de usarlo.
@@ -1599,6 +1885,12 @@ Se intercambian los valores del Ataque y\nla Defensa del Pokémon.
 Ataque y Defensa invertidos
 Aumenta un 50 % la potencia de los movimientos\nde tipo Fuego del Pokémon.
 Absorbefuego
+[~ 154]
+[~ 155]
+[~ 156]
+[~ 157]
+[~ 158]
+[~ 159]
 Aumenta un 20 % la precisión del siguiente\nmovimiento que use el Pokémon.
 Baya Lagro
 ~~~~~~~~~~~~~~~
@@ -1695,6 +1987,9 @@ Al rival se le acabó el tiempo.\n¡Fin del combate!
 Se te acabó el tiempo.\n¡Fin del combate!
 ¡Pasaste demasiado tiempo sin realizar ninguna acción!\n¡Fin del combate!
 ¡El rival pasó demasiado tiempo sin realizar ninguna acción!\n¡Fin del combate!
+[~ 91]
+[~ 92]
+[~ 93]
 El combate finalizó por una retirada.
 ¡El terreno de combate se cubrió de césped!
 El césped desapareció.
@@ -1708,11 +2003,51 @@ La red pegajosa que rodeaba tu lado desapareció.
 La red pegajosa que rodeaba al lado rival desapareció.
 El Pokémon no puede ejecutar este movimiento, porque no comió\nninguna baya.
 [Ctrl1:battle_oneline ]¡Al revisar a [Name:PokemonNickname ] se descubrió que tiene\n[ES:IndArt Ref="1" ][Name:ItemClassified Idx="1" ]!
+[~ 107]
 Ningún Pokémon podrá ser cambiado por otro durante el próximo turno.
+[~ 109]
+[~ 110]
+[~ 111]
+[~ 112]
+[~ 113]
+[~ 114]
+[~ 115]
+[~ 116]
+[~ 117]
+[~ 118]
+[~ 119]
+[~ 120]
+[~ 121]
+[~ 122]
+[~ 123]
+[~ 124]
+[~ 125]
+[~ 126]
+[~ 127]
+[~ 128]
+[~ 129]
+[~ 130]
+[~ 131]
+[~ 132]
+[~ 133]
+[~ 134]
+[~ 135]
+[~ 136]
+[~ 137]
+[~ 138]
+[~ 139]
+[~ 140]
 ¡El terreno de combate se puso muy extraño!
 Desapareció la extraña sensación que se percibía en el terreno\nde combate.
+[~ 143]
+[~ 144]
+[~ 145]
+[~ 146]
 ¡Es la hora del té! A comer bayas se ha dicho.
 Pero no sucedió nada.
+[~ 149]
+[~ 150]
+[~ 151]
 El Pokémon no puede ejecutar este movimiento, ya que no lleva ninguna baya.
 ¡No se puede usar este movimiento!
 ¡Limpieza general completada!
@@ -2081,6 +2416,7 @@ Desbloquear
 Confirmar
 Combate Individual
 Combate Doble
+[~ 41]
 ¿Quieres salir de la aplicación?
 Ir a la tienda
 Borrando caché...
@@ -2338,6 +2674,8 @@ Estilo [Digit:2digits ]
 Leggings a media pierna
 Leggings cortos
 Camisa Pokémon informal
+[~ 216]
+[~ 217]
 Pantalón Pokémon corto
 Pantalón Pokémon recto
 Camiseta con cuello en V
@@ -2601,8 +2939,22 @@ Morado
 Blanco
 Marrón
 Rosa y verde
+[~ 247]
+[~ 248]
+[~ 249]
+[~ 250]
+[~ 251]
 Dragonite
+[~ 253]
+[~ 254]
+[~ 255]
+[~ 256]
+[~ 257]
+[~ 258]
+[~ 259]
+[~ 260]
 Meganium
+[~ 262]
 Rojo
 Blanco
 Logo del Equipo MZ
@@ -2638,6 +2990,7 @@ No se pudo vincular la cuenta.\nPrueba a seleccionar una cuenta de nuevo.
 ¿Quieres transferir los datos asociados al nombre de usuario\n[Character2:StraightDoubleQuot. ][Name:TrainerName ][Character2:StraightDoubleQuot. ] y continuar la partida?
 Se transferirán los datos especificados para empezar el juego.
 Si vinculas una cuenta a Pokémon Champions, podrás compartir\ntus datos de uso con otros dispositivos. Si la misma cuenta está\nvinculada a Pokémon HOME, también podrás enviar a algunos\nPokémon de visita al juego.
+[~ 29]
 [System:Color r="200" g="54" b="106" a="255" ]No podrás cambiar tu apariencia base más adelante.[System:Color a="255" ]
 enero
 ene.
@@ -3192,6 +3545,13 @@ Z
 ~~~~~~~~~~~~~~~
 Text File : iteminfo_syn
 ~~~~~~~~~~~~~~~
+[~ 0]
+[~ 1]
+[~ 2]
+[~ 3]
+[~ 4]
+[~ 5]
+[~ 6]
 Elimina la parálisis del portador. Se puede usar una vez\npor combate.
 Elimina el sueño del portador. Se puede usar una vez por\ncombate.
 Elimina el envenenamiento y el envenenamiento grave\ndel portador. Se puede usar una vez por combate.
@@ -3219,12 +3579,26 @@ Reduce un 50 % el daño de un ataque supereficaz\nde tipo Dragón que reciba e
 Reduce un 50 % el daño de un ataque supereficaz\nde tipo Siniestro que reciba el portador. Se puede usar\nuna vez por combate.
 Reduce un 50 % el daño de un ataque supereficaz\nde tipo Acero que reciba el portador. Se puede usar\nuna vez por combate.
 Reduce un 50 % el daño de un ataque de tipo Normal\nque reciba el portador. Se puede usar una vez\npor combate.
+[~ 34]
+[~ 35]
+[~ 36]
+[~ 37]
+[~ 38]
+[~ 39]
+[~ 40]
+[~ 41]
+[~ 42]
+[~ 43]
+[~ 44]
+[~ 45]
 Reduce un 10 % la precisión de los movimientos\nque el rival usa contra el portador.
 Restaura las características del portador que hayan sido\nreducidas. Se puede usar una vez por combate.
 Hace que el portador tenga una probabilidad del 20 %\nde actuar primero cuando su movimiento tiene la misma\nprioridad que otros.
 Elimina los estados Enamorado, Provocación, Repetición\nanulada, Movimiento anulado, Curación anulada y\nOtra Vez que afectan al portador. Se puede usar una vez\npor combate.
+[~ 50]
 Hace que el portador tenga una probabilidad del\n10 % de atemorizar al objetivo al causarle daño con\nun movimiento.
 Aumenta un 20 % la potencia de los movimientos de tipo\nInsecto del portador.
+[~ 53]
 Hace que el portador tenga una probabilidad del 10 %\nde aguantar con 1 PS un ataque que lo debilitaría.
 Aumenta un nivel la probabilidad de lanzar golpes\ncríticos del portador.
 Aumenta un 20 % la potencia de los movimientos de tipo\nAcero del portador.
@@ -3246,14 +3620,74 @@ Aumenta un 20 % la potencia de los movimientos de tipo\nFuego del portador.
 Aumenta un 20 % la potencia de los movimientos de tipo\nDragón del portador.
 Aumenta un 20 % la potencia de los movimientos de tipo\nNormal del portador.
 Hace que el portador recupere una cantidad de\nPS equivalente a un 12.5 % del daño que cause\ncon un movimiento.
+[~ 75]
+[~ 76]
+[~ 77]
+[~ 78]
+[~ 79]
+[~ 80]
+[~ 81]
+[~ 82]
+[~ 83]
+[~ 84]
+[~ 85]
 Si el portador tiene los PS al máximo, aguanta con\n1 PS un movimiento que lo debilitaría de un golpe.\nSe puede usar una vez por combate.
+[~ 87]
+[~ 88]
+[~ 89]
+[~ 90]
+[~ 91]
+[~ 92]
+[~ 93]
+[~ 94]
+[~ 95]
 Aumenta un 50 % la Velocidad del portador, pero,\nuna vez que haya utilizado un movimiento, solo\npodrá usar el mismo hasta que sea cambiado por\notro Pokémon.
+[~ 97]
+[~ 98]
+[~ 99]
+[~ 100]
+[~ 101]
+[~ 102]
+[~ 103]
+[~ 104]
+[~ 105]
+[~ 106]
+[~ 107]
+[~ 108]
+[~ 109]
+[~ 110]
+[~ 111]
+[~ 112]
+[~ 113]
+[~ 114]
+[~ 115]
+[~ 116]
+[~ 117]
+[~ 118]
+[~ 119]
+[~ 120]
+[~ 121]
+[~ 122]
+[~ 123]
+[~ 124]
+[~ 125]
+[~ 126]
+[~ 127]
+[~ 128]
+[~ 129]
+[~ 130]
+[~ 131]
+[~ 132]
+[~ 133]
 Si la lleva Gengar, le permite megaevolucionar.
 Si la lleva Gardevoir, le permite megaevolucionar.
 Si la lleva Ampharos, le permite megaevolucionar.
 Si la lleva Venusaur, le permite megaevolucionar.
 Si la lleva Charizard, le permite megaevolucionar\na Mega-Charizard X.
 Si la lleva Blastoise, le permite megaevolucionar.
+[~ 140]
+[~ 141]
+[~ 142]
 Si la lleva Medicham, le permite megaevolucionar.
 Si la lleva Houndoom, le permite megaevolucionar.
 Si la lleva Aggron, le permite megaevolucionar.
@@ -3270,22 +3704,110 @@ Si la lleva Absol, le permite megaevolucionar.
 Si la lleva Charizard, le permite megaevolucionar\na Mega-Charizard Y.
 Si la lleva Alakazam, le permite megaevolucionar.
 Si la lleva Heracross, le permite megaevolucionar.
+[~ 159]
 Si la lleva Manectric, le permite megaevolucionar.
 Si la lleva Garchomp, le permite megaevolucionar.
+[~ 162]
+[~ 163]
 Reduce un 50 % el daño de un ataque supereficaz\nde tipo Hada que reciba el portador. Se puede usar\nuna vez por combate.
+[~ 165]
+[~ 166]
+[~ 167]
+[~ 168]
 Si la lleva Sableye, le permite megaevolucionar.
 Si la lleva Altaria, le permite megaevolucionar.
 Si la lleva Gallade, le permite megaevolucionar.
 Si la lleva Audino, le permite megaevolucionar.
+[~ 173]
 Si la lleva Sharpedo, le permite megaevolucionar.
 Si la lleva Slowbro, le permite megaevolucionar.\nNo tiene efecto en el Slowbro de Galar.
 Si la lleva Steelix, le permite megaevolucionar.
 Si la lleva Pidgeot, le permite megaevolucionar.
 Si la lleva Glalie, le permite megaevolucionar.
+[~ 179]
 Si la lleva Camerupt, le permite megaevolucionar.
 Si la lleva Lopunny, le permite megaevolucionar.
+[~ 182]
 Si la lleva Beedrill, le permite megaevolucionar.
+[~ 184]
+[~ 185]
+[~ 186]
+[~ 187]
+[~ 188]
+[~ 189]
+[~ 190]
+[~ 191]
+[~ 192]
+[~ 193]
+[~ 194]
+[~ 195]
+[~ 196]
+[~ 197]
+[~ 198]
+[~ 199]
+[~ 200]
+[~ 201]
+[~ 202]
+[~ 203]
+[~ 204]
+[~ 205]
+[~ 206]
+[~ 207]
+[~ 208]
+[~ 209]
+[~ 210]
+[~ 211]
+[~ 212]
+[~ 213]
+[~ 214]
+[~ 215]
+[~ 216]
+[~ 217]
+[~ 218]
+[~ 219]
+[~ 220]
+[~ 221]
+[~ 222]
+[~ 223]
+[~ 224]
+[~ 225]
+[~ 226]
+[~ 227]
+[~ 228]
+[~ 229]
+[~ 230]
+[~ 231]
+[~ 232]
+[~ 233]
+[~ 234]
+[~ 235]
+[~ 236]
+[~ 237]
+[~ 238]
+[~ 239]
+[~ 240]
+[~ 241]
+[~ 242]
+[~ 243]
+[~ 244]
+[~ 245]
+[~ 246]
+[~ 247]
+[~ 248]
+[~ 249]
+[~ 250]
+[~ 251]
+[~ 252]
+[~ 253]
+[~ 254]
+[~ 255]
+[~ 256]
+[~ 257]
+[~ 258]
 Aumenta un 20 % la potencia de los movimientos de tipo\nHada del portador.
+[~ 260]
+[~ 261]
+[~ 262]
 Si la lleva Clefable, le permite megaevolucionar.
 Si la lleva Victreebel, le permite megaevolucionar.
 Si la lleva Starmie, le permite megaevolucionar.
@@ -3294,24 +3816,53 @@ Si la lleva Meganium, le permite megaevolucionar.
 Si la lleva Feraligatr, le permite megaevolucionar.
 Si la lleva Skarmory, le permite megaevolucionar.
 Si la lleva Froslass, le permite megaevolucionar.
+[~ 271]
+[~ 272]
 Si la lleva Emboar, le permite megaevolucionar.
 Si la lleva Excadrill, le permite megaevolucionar.
+[~ 275]
+[~ 276]
+[~ 277]
 Si la lleva Chandelure, le permite megaevolucionar.
 Si la lleva Chesnaught, le permite megaevolucionar.
 Si la lleva Delphox, le permite megaevolucionar.
 Si la lleva Greninja, le permite megaevolucionar.
+[~ 282]
 Si la lleva Floette Flor Eterna, le permite\nmegaevolucionar.
+[~ 284]
+[~ 285]
+[~ 286]
 Si la lleva Hawlucha, le permite megaevolucionar.
+[~ 288]
 Si la lleva Drampa, le permite megaevolucionar.
+[~ 290]
+[~ 291]
+[~ 292]
+[~ 293]
 Si la lleva Chimecho, le permite megaevolucionar.
+[~ 295]
+[~ 296]
+[~ 297]
+[~ 298]
 Si la lleva Golurk, le permite megaevolucionar.
 Si la lleva Meowstic, le permite megaevolucionar.
 Si la lleva Crabominable, le permite megaevolucionar.
+[~ 302]
+[~ 303]
 Si la lleva Scovillain, le permite megaevolucionar.
+[~ 305]
+[~ 306]
 Si la lleva Glimmora, le permite megaevolucionar.
 ~~~~~~~~~~~~~~~
 Text File : itemname
 ~~~~~~~~~~~~~~~
+[~ 0]
+[~ 1]
+[~ 2]
+[~ 3]
+[~ 4]
+[~ 5]
+[~ 6]
 Baya Zreza
 Baya Atania
 Baya Duraz
@@ -3339,12 +3890,26 @@ Baya Anjiro
 Baya Dillo
 Baya Baribá
 Baya Chilan
+[~ 34]
+[~ 35]
+[~ 36]
+[~ 37]
+[~ 38]
+[~ 39]
+[~ 40]
+[~ 41]
+[~ 42]
+[~ 43]
+[~ 44]
+[~ 45]
 Polvo Brillo
 Hierba Blanca
 Garra Rápida
 Hierba Mental
+[~ 50]
 Roca del Rey
 Polvo Plata
+[~ 53]
 Cinta Aguante
 Periscopio
 Revest. Metálico
@@ -3366,14 +3931,74 @@ Carbón
 Colmillo Dragón
 Pañuelo de Seda
 Cascabel Nácar
+[~ 75]
+[~ 76]
+[~ 77]
+[~ 78]
+[~ 79]
+[~ 80]
+[~ 81]
+[~ 82]
+[~ 83]
+[~ 84]
+[~ 85]
 Banda Aguante
+[~ 87]
+[~ 88]
+[~ 89]
+[~ 90]
+[~ 91]
+[~ 92]
+[~ 93]
+[~ 94]
+[~ 95]
 Pañuelo Elección
+[~ 97]
+[~ 98]
+[~ 99]
+[~ 100]
+[~ 101]
+[~ 102]
+[~ 103]
+[~ 104]
+[~ 105]
+[~ 106]
+[~ 107]
+[~ 108]
+[~ 109]
+[~ 110]
+[~ 111]
+[~ 112]
+[~ 113]
+[~ 114]
+[~ 115]
+[~ 116]
+[~ 117]
+[~ 118]
+[~ 119]
+[~ 120]
+[~ 121]
+[~ 122]
+[~ 123]
+[~ 124]
+[~ 125]
+[~ 126]
+[~ 127]
+[~ 128]
+[~ 129]
+[~ 130]
+[~ 131]
+[~ 132]
+[~ 133]
 Gengarita
 Gardevoirita
 Ampharosita
 Venusaurita
 Charizardita X
 Blastoisita
+[~ 140]
+[~ 141]
+[~ 142]
 Medichamita
 Houndoomita
 Aggronita
@@ -3390,22 +4015,110 @@ Absolita
 Charizardita Y
 Alakazamita
 Heracrossita
+[~ 159]
 Manectricita
 Garchompita
+[~ 162]
+[~ 163]
 Baya Hibis
+[~ 165]
+[~ 166]
+[~ 167]
+[~ 168]
 Sableynita
 Altarianita
 Galladita
 Audinita
+[~ 173]
 Sharpedonita
 Slowbronita
 Steelixita
 Pidgeotita
 Glalita
+[~ 179]
 Cameruptita
 Lopunnita
+[~ 182]
 Beedrillita
+[~ 184]
+[~ 185]
+[~ 186]
+[~ 187]
+[~ 188]
+[~ 189]
+[~ 190]
+[~ 191]
+[~ 192]
+[~ 193]
+[~ 194]
+[~ 195]
+[~ 196]
+[~ 197]
+[~ 198]
+[~ 199]
+[~ 200]
+[~ 201]
+[~ 202]
+[~ 203]
+[~ 204]
+[~ 205]
+[~ 206]
+[~ 207]
+[~ 208]
+[~ 209]
+[~ 210]
+[~ 211]
+[~ 212]
+[~ 213]
+[~ 214]
+[~ 215]
+[~ 216]
+[~ 217]
+[~ 218]
+[~ 219]
+[~ 220]
+[~ 221]
+[~ 222]
+[~ 223]
+[~ 224]
+[~ 225]
+[~ 226]
+[~ 227]
+[~ 228]
+[~ 229]
+[~ 230]
+[~ 231]
+[~ 232]
+[~ 233]
+[~ 234]
+[~ 235]
+[~ 236]
+[~ 237]
+[~ 238]
+[~ 239]
+[~ 240]
+[~ 241]
+[~ 242]
+[~ 243]
+[~ 244]
+[~ 245]
+[~ 246]
+[~ 247]
+[~ 248]
+[~ 249]
+[~ 250]
+[~ 251]
+[~ 252]
+[~ 253]
+[~ 254]
+[~ 255]
+[~ 256]
+[~ 257]
+[~ 258]
 Pluma Feérica
+[~ 260]
+[~ 261]
+[~ 262]
 Clefablita
 Victreebelita
 Starmita
@@ -3414,24 +4127,53 @@ Meganiumita
 Feraligatrita
 Skarmorita
 Froslassita
+[~ 271]
+[~ 272]
 Emboarita
 Excadrillita
+[~ 275]
+[~ 276]
+[~ 277]
 Chandelurita
 Chesnaughtita
 Delphoxita
 Greninjanita
+[~ 282]
 Floettita
+[~ 284]
+[~ 285]
+[~ 286]
 Hawluchanita
+[~ 288]
 Drampanita
+[~ 290]
+[~ 291]
+[~ 292]
+[~ 293]
 Chimechita
+[~ 295]
+[~ 296]
+[~ 297]
+[~ 298]
 Golurkita
 Meowsticita
 Crabominablita
+[~ 302]
+[~ 303]
 Scovillainita
+[~ 305]
+[~ 306]
 Glimmoranita
 ~~~~~~~~~~~~~~~
 Text File : itemname_acc
 ~~~~~~~~~~~~~~~
+[~ 0]
+[~ 1]
+[~ 2]
+[~ 3]
+[~ 4]
+[~ 5]
+[~ 6]
 Baya Zreza
 Baya Atania
 Baya Duraz
@@ -3459,12 +4201,26 @@ Baya Anjiro
 Baya Dillo
 Baya Baribá
 Baya Chilan
+[~ 34]
+[~ 35]
+[~ 36]
+[~ 37]
+[~ 38]
+[~ 39]
+[~ 40]
+[~ 41]
+[~ 42]
+[~ 43]
+[~ 44]
+[~ 45]
 Polvo Brillo
 Hierba Blanca
 Garra Rápida
 Hierba Mental
+[~ 50]
 Roca del Rey
 Polvo Plata
+[~ 53]
 Cinta Aguante
 Periscopio
 Revest. Metálico
@@ -3486,14 +4242,74 @@ Carbón
 Colmillo Dragón
 Pañuelo de Seda
 Cascabel Nácar
+[~ 75]
+[~ 76]
+[~ 77]
+[~ 78]
+[~ 79]
+[~ 80]
+[~ 81]
+[~ 82]
+[~ 83]
+[~ 84]
+[~ 85]
 Banda Aguante
+[~ 87]
+[~ 88]
+[~ 89]
+[~ 90]
+[~ 91]
+[~ 92]
+[~ 93]
+[~ 94]
+[~ 95]
 Pañuelo Elección
+[~ 97]
+[~ 98]
+[~ 99]
+[~ 100]
+[~ 101]
+[~ 102]
+[~ 103]
+[~ 104]
+[~ 105]
+[~ 106]
+[~ 107]
+[~ 108]
+[~ 109]
+[~ 110]
+[~ 111]
+[~ 112]
+[~ 113]
+[~ 114]
+[~ 115]
+[~ 116]
+[~ 117]
+[~ 118]
+[~ 119]
+[~ 120]
+[~ 121]
+[~ 122]
+[~ 123]
+[~ 124]
+[~ 125]
+[~ 126]
+[~ 127]
+[~ 128]
+[~ 129]
+[~ 130]
+[~ 131]
+[~ 132]
+[~ 133]
 Gengarita
 Gardevoirita
 Ampharosita
 Venusaurita
 Charizardita X
 Blastoisita
+[~ 140]
+[~ 141]
+[~ 142]
 Medichamita
 Houndoomita
 Aggronita
@@ -3510,22 +4326,110 @@ Absolita
 Charizardita Y
 Alakazamita
 Heracrossita
+[~ 159]
 Manectricita
 Garchompita
+[~ 162]
+[~ 163]
 Baya Hibis
+[~ 165]
+[~ 166]
+[~ 167]
+[~ 168]
 Sableynita
 Altarianita
 Galladita
 Audinita
+[~ 173]
 Sharpedonita
 Slowbronita
 Steelixita
 Pidgeotita
 Glalita
+[~ 179]
 Cameruptita
 Lopunnita
+[~ 182]
 Beedrillita
+[~ 184]
+[~ 185]
+[~ 186]
+[~ 187]
+[~ 188]
+[~ 189]
+[~ 190]
+[~ 191]
+[~ 192]
+[~ 193]
+[~ 194]
+[~ 195]
+[~ 196]
+[~ 197]
+[~ 198]
+[~ 199]
+[~ 200]
+[~ 201]
+[~ 202]
+[~ 203]
+[~ 204]
+[~ 205]
+[~ 206]
+[~ 207]
+[~ 208]
+[~ 209]
+[~ 210]
+[~ 211]
+[~ 212]
+[~ 213]
+[~ 214]
+[~ 215]
+[~ 216]
+[~ 217]
+[~ 218]
+[~ 219]
+[~ 220]
+[~ 221]
+[~ 222]
+[~ 223]
+[~ 224]
+[~ 225]
+[~ 226]
+[~ 227]
+[~ 228]
+[~ 229]
+[~ 230]
+[~ 231]
+[~ 232]
+[~ 233]
+[~ 234]
+[~ 235]
+[~ 236]
+[~ 237]
+[~ 238]
+[~ 239]
+[~ 240]
+[~ 241]
+[~ 242]
+[~ 243]
+[~ 244]
+[~ 245]
+[~ 246]
+[~ 247]
+[~ 248]
+[~ 249]
+[~ 250]
+[~ 251]
+[~ 252]
+[~ 253]
+[~ 254]
+[~ 255]
+[~ 256]
+[~ 257]
+[~ 258]
 Pluma Feérica
+[~ 260]
+[~ 261]
+[~ 262]
 Clefablita
 Victreebelita
 Starmita
@@ -3534,24 +4438,53 @@ Meganiumita
 Feraligatrita
 Skarmorita
 Froslassita
+[~ 271]
+[~ 272]
 Emboarita
 Excadrillita
+[~ 275]
+[~ 276]
+[~ 277]
 Chandelurita
 Chesnaughtita
 Delphoxita
 Greninjanita
+[~ 282]
 Floettita
+[~ 284]
+[~ 285]
+[~ 286]
 Hawluchanita
+[~ 288]
 Drampanita
+[~ 290]
+[~ 291]
+[~ 292]
+[~ 293]
 Chimechita
+[~ 295]
+[~ 296]
+[~ 297]
+[~ 298]
 Golurkita
 Meowsticita
 Crabominablita
+[~ 302]
+[~ 303]
 Scovillainita
+[~ 305]
+[~ 306]
 Glimmoranita
 ~~~~~~~~~~~~~~~
 Text File : itemname_acc_classified
 ~~~~~~~~~~~~~~~
+[~ 0]
+[~ 1]
+[~ 2]
+[~ 3]
+[~ 4]
+[~ 5]
+[~ 6]
 Baya Zreza
 Baya Atania
 Baya Duraz
@@ -3579,12 +4512,26 @@ Baya Anjiro
 Baya Dillo
 Baya Baribá
 Baya Chilan
+[~ 34]
+[~ 35]
+[~ 36]
+[~ 37]
+[~ 38]
+[~ 39]
+[~ 40]
+[~ 41]
+[~ 42]
+[~ 43]
+[~ 44]
+[~ 45]
 bolsita de Polvo Brillo
 Hierba Blanca
 Garra Rápida
 Hierba Mental
+[~ 50]
 Roca del Rey
 puñado de Polvo Plata
+[~ 53]
 Cinta Aguante
 Periscopio
 Revestimiento Metálico
@@ -3606,14 +4553,74 @@ fragmento de Carbón
 Colmillo Dragón
 Pañuelo de Seda
 Cascabel Nácar
+[~ 75]
+[~ 76]
+[~ 77]
+[~ 78]
+[~ 79]
+[~ 80]
+[~ 81]
+[~ 82]
+[~ 83]
+[~ 84]
+[~ 85]
 Banda Aguante
+[~ 87]
+[~ 88]
+[~ 89]
+[~ 90]
+[~ 91]
+[~ 92]
+[~ 93]
+[~ 94]
+[~ 95]
 Pañuelo Elección
+[~ 97]
+[~ 98]
+[~ 99]
+[~ 100]
+[~ 101]
+[~ 102]
+[~ 103]
+[~ 104]
+[~ 105]
+[~ 106]
+[~ 107]
+[~ 108]
+[~ 109]
+[~ 110]
+[~ 111]
+[~ 112]
+[~ 113]
+[~ 114]
+[~ 115]
+[~ 116]
+[~ 117]
+[~ 118]
+[~ 119]
+[~ 120]
+[~ 121]
+[~ 122]
+[~ 123]
+[~ 124]
+[~ 125]
+[~ 126]
+[~ 127]
+[~ 128]
+[~ 129]
+[~ 130]
+[~ 131]
+[~ 132]
+[~ 133]
 Gengarita
 Gardevoirita
 Ampharosita
 Venusaurita
 Charizardita X
 Blastoisita
+[~ 140]
+[~ 141]
+[~ 142]
 Medichamita
 Houndoomita
 Aggronita
@@ -3630,22 +4637,110 @@ Absolita
 Charizardita Y
 Alakazamita
 Heracrossita
+[~ 159]
 Manectricita
 Garchompita
+[~ 162]
+[~ 163]
 Baya Hibis
+[~ 165]
+[~ 166]
+[~ 167]
+[~ 168]
 Sableynita
 Altarianita
 Galladita
 Audinita
+[~ 173]
 Sharpedonita
 Slowbronita
 Steelixita
 Pidgeotita
 Glalita
+[~ 179]
 Cameruptita
 Lopunnita
+[~ 182]
 Beedrillita
+[~ 184]
+[~ 185]
+[~ 186]
+[~ 187]
+[~ 188]
+[~ 189]
+[~ 190]
+[~ 191]
+[~ 192]
+[~ 193]
+[~ 194]
+[~ 195]
+[~ 196]
+[~ 197]
+[~ 198]
+[~ 199]
+[~ 200]
+[~ 201]
+[~ 202]
+[~ 203]
+[~ 204]
+[~ 205]
+[~ 206]
+[~ 207]
+[~ 208]
+[~ 209]
+[~ 210]
+[~ 211]
+[~ 212]
+[~ 213]
+[~ 214]
+[~ 215]
+[~ 216]
+[~ 217]
+[~ 218]
+[~ 219]
+[~ 220]
+[~ 221]
+[~ 222]
+[~ 223]
+[~ 224]
+[~ 225]
+[~ 226]
+[~ 227]
+[~ 228]
+[~ 229]
+[~ 230]
+[~ 231]
+[~ 232]
+[~ 233]
+[~ 234]
+[~ 235]
+[~ 236]
+[~ 237]
+[~ 238]
+[~ 239]
+[~ 240]
+[~ 241]
+[~ 242]
+[~ 243]
+[~ 244]
+[~ 245]
+[~ 246]
+[~ 247]
+[~ 248]
+[~ 249]
+[~ 250]
+[~ 251]
+[~ 252]
+[~ 253]
+[~ 254]
+[~ 255]
+[~ 256]
+[~ 257]
+[~ 258]
 Pluma Feérica
+[~ 260]
+[~ 261]
+[~ 262]
 Clefablita
 Victreebelita
 Starmita
@@ -3654,24 +4749,53 @@ Meganiumita
 Feraligatrita
 Skarmorita
 Froslassita
+[~ 271]
+[~ 272]
 Emboarita
 Excadrillita
+[~ 275]
+[~ 276]
+[~ 277]
 Chandelurita
 Chesnaughtita
 Delphoxita
 Greninjanita
+[~ 282]
 Floettita
+[~ 284]
+[~ 285]
+[~ 286]
 Hawluchanita
+[~ 288]
 Drampanita
+[~ 290]
+[~ 291]
+[~ 292]
+[~ 293]
 Chimechita
+[~ 295]
+[~ 296]
+[~ 297]
+[~ 298]
 Golurkita
 Meowsticita
 Crabominablita
+[~ 302]
+[~ 303]
 Scovillainita
+[~ 305]
+[~ 306]
 Glimmoranita
 ~~~~~~~~~~~~~~~
 Text File : itemname_classified
 ~~~~~~~~~~~~~~~
+[~ 0]
+[~ 1]
+[~ 2]
+[~ 3]
+[~ 4]
+[~ 5]
+[~ 6]
 Baya Zreza
 Baya Atania
 Baya Duraz
@@ -3699,12 +4823,26 @@ Baya Anjiro
 Baya Dillo
 Baya Baribá
 Baya Chilan
+[~ 34]
+[~ 35]
+[~ 36]
+[~ 37]
+[~ 38]
+[~ 39]
+[~ 40]
+[~ 41]
+[~ 42]
+[~ 43]
+[~ 44]
+[~ 45]
 bolsita de Polvo Brillo
 Hierba Blanca
 Garra Rápida
 Hierba Mental
+[~ 50]
 Roca del Rey
 puñado de Polvo Plata
+[~ 53]
 Cinta Aguante
 Periscopio
 Revestimiento Metálico
@@ -3726,14 +4864,74 @@ fragmento de Carbón
 Colmillo Dragón
 Pañuelo de Seda
 Cascabel Nácar
+[~ 75]
+[~ 76]
+[~ 77]
+[~ 78]
+[~ 79]
+[~ 80]
+[~ 81]
+[~ 82]
+[~ 83]
+[~ 84]
+[~ 85]
 Banda Aguante
+[~ 87]
+[~ 88]
+[~ 89]
+[~ 90]
+[~ 91]
+[~ 92]
+[~ 93]
+[~ 94]
+[~ 95]
 Pañuelo Elección
+[~ 97]
+[~ 98]
+[~ 99]
+[~ 100]
+[~ 101]
+[~ 102]
+[~ 103]
+[~ 104]
+[~ 105]
+[~ 106]
+[~ 107]
+[~ 108]
+[~ 109]
+[~ 110]
+[~ 111]
+[~ 112]
+[~ 113]
+[~ 114]
+[~ 115]
+[~ 116]
+[~ 117]
+[~ 118]
+[~ 119]
+[~ 120]
+[~ 121]
+[~ 122]
+[~ 123]
+[~ 124]
+[~ 125]
+[~ 126]
+[~ 127]
+[~ 128]
+[~ 129]
+[~ 130]
+[~ 131]
+[~ 132]
+[~ 133]
 Gengarita
 Gardevoirita
 Ampharosita
 Venusaurita
 Charizardita X
 Blastoisita
+[~ 140]
+[~ 141]
+[~ 142]
 Medichamita
 Houndoomita
 Aggronita
@@ -3750,22 +4948,110 @@ Absolita
 Charizardita Y
 Alakazamita
 Heracrossita
+[~ 159]
 Manectricita
 Garchompita
+[~ 162]
+[~ 163]
 Baya Hibis
+[~ 165]
+[~ 166]
+[~ 167]
+[~ 168]
 Sableynita
 Altarianita
 Galladita
 Audinita
+[~ 173]
 Sharpedonita
 Slowbronita
 Steelixita
 Pidgeotita
 Glalita
+[~ 179]
 Cameruptita
 Lopunnita
+[~ 182]
 Beedrillita
+[~ 184]
+[~ 185]
+[~ 186]
+[~ 187]
+[~ 188]
+[~ 189]
+[~ 190]
+[~ 191]
+[~ 192]
+[~ 193]
+[~ 194]
+[~ 195]
+[~ 196]
+[~ 197]
+[~ 198]
+[~ 199]
+[~ 200]
+[~ 201]
+[~ 202]
+[~ 203]
+[~ 204]
+[~ 205]
+[~ 206]
+[~ 207]
+[~ 208]
+[~ 209]
+[~ 210]
+[~ 211]
+[~ 212]
+[~ 213]
+[~ 214]
+[~ 215]
+[~ 216]
+[~ 217]
+[~ 218]
+[~ 219]
+[~ 220]
+[~ 221]
+[~ 222]
+[~ 223]
+[~ 224]
+[~ 225]
+[~ 226]
+[~ 227]
+[~ 228]
+[~ 229]
+[~ 230]
+[~ 231]
+[~ 232]
+[~ 233]
+[~ 234]
+[~ 235]
+[~ 236]
+[~ 237]
+[~ 238]
+[~ 239]
+[~ 240]
+[~ 241]
+[~ 242]
+[~ 243]
+[~ 244]
+[~ 245]
+[~ 246]
+[~ 247]
+[~ 248]
+[~ 249]
+[~ 250]
+[~ 251]
+[~ 252]
+[~ 253]
+[~ 254]
+[~ 255]
+[~ 256]
+[~ 257]
+[~ 258]
 Pluma Feérica
+[~ 260]
+[~ 261]
+[~ 262]
 Clefablita
 Victreebelita
 Starmita
@@ -3774,24 +5060,53 @@ Meganiumita
 Feraligatrita
 Skarmorita
 Froslassita
+[~ 271]
+[~ 272]
 Emboarita
 Excadrillita
+[~ 275]
+[~ 276]
+[~ 277]
 Chandelurita
 Chesnaughtita
 Delphoxita
 Greninjanita
+[~ 282]
 Floettita
+[~ 284]
+[~ 285]
+[~ 286]
 Hawluchanita
+[~ 288]
 Drampanita
+[~ 290]
+[~ 291]
+[~ 292]
+[~ 293]
 Chimechita
+[~ 295]
+[~ 296]
+[~ 297]
+[~ 298]
 Golurkita
 Meowsticita
 Crabominablita
+[~ 302]
+[~ 303]
 Scovillainita
+[~ 305]
+[~ 306]
 Glimmoranita
 ~~~~~~~~~~~~~~~
 Text File : itemname_plural
 ~~~~~~~~~~~~~~~
+[~ 0]
+[~ 1]
+[~ 2]
+[~ 3]
+[~ 4]
+[~ 5]
+[~ 6]
 Bayas Zreza
 Bayas Atania
 Bayas Duraz
@@ -3819,12 +5134,26 @@ Bayas Anjiro
 Bayas Dillo
 Bayas Baribá
 Bayas Chilan
+[~ 34]
+[~ 35]
+[~ 36]
+[~ 37]
+[~ 38]
+[~ 39]
+[~ 40]
+[~ 41]
+[~ 42]
+[~ 43]
+[~ 44]
+[~ 45]
 Polvos Brillo
 Hierbas Blancas
 Garras Rápidas
 Hierbas Mentales
+[~ 50]
 Rocas del Rey
 Polvos Plata
+[~ 53]
 Cintas Aguante
 Periscopios
 Revest. Metálicos
@@ -3846,14 +5175,74 @@ Carbones
 Colmillos Dragón
 Pañuelos de Seda
 Cascabeles Nácar
+[~ 75]
+[~ 76]
+[~ 77]
+[~ 78]
+[~ 79]
+[~ 80]
+[~ 81]
+[~ 82]
+[~ 83]
+[~ 84]
+[~ 85]
 Bandas Aguante
+[~ 87]
+[~ 88]
+[~ 89]
+[~ 90]
+[~ 91]
+[~ 92]
+[~ 93]
+[~ 94]
+[~ 95]
 Pañuelos Elección
+[~ 97]
+[~ 98]
+[~ 99]
+[~ 100]
+[~ 101]
+[~ 102]
+[~ 103]
+[~ 104]
+[~ 105]
+[~ 106]
+[~ 107]
+[~ 108]
+[~ 109]
+[~ 110]
+[~ 111]
+[~ 112]
+[~ 113]
+[~ 114]
+[~ 115]
+[~ 116]
+[~ 117]
+[~ 118]
+[~ 119]
+[~ 120]
+[~ 121]
+[~ 122]
+[~ 123]
+[~ 124]
+[~ 125]
+[~ 126]
+[~ 127]
+[~ 128]
+[~ 129]
+[~ 130]
+[~ 131]
+[~ 132]
+[~ 133]
 Gengaritas
 Gardevoiritas
 Ampharositas
 Venusauritas
 Charizarditas X
 Blastoisitas
+[~ 140]
+[~ 141]
+[~ 142]
 Medichamitas
 Houndoomitas
 Aggronitas
@@ -3870,22 +5259,110 @@ Absolitas
 Charizarditas Y
 Alakazamitas
 Heracrossitas
+[~ 159]
 Manectricitas
 Garchompitas
+[~ 162]
+[~ 163]
 Bayas Hibis
+[~ 165]
+[~ 166]
+[~ 167]
+[~ 168]
 Sableynitas
 Altarianitas
 Galladitas
 Audinitas
+[~ 173]
 Sharpedonitas
 Slowbronitas
 Steelixitas
 Pidgeotitas
 Glalitas
+[~ 179]
 Cameruptitas
 Lopunnitas
+[~ 182]
 Beedrillitas
+[~ 184]
+[~ 185]
+[~ 186]
+[~ 187]
+[~ 188]
+[~ 189]
+[~ 190]
+[~ 191]
+[~ 192]
+[~ 193]
+[~ 194]
+[~ 195]
+[~ 196]
+[~ 197]
+[~ 198]
+[~ 199]
+[~ 200]
+[~ 201]
+[~ 202]
+[~ 203]
+[~ 204]
+[~ 205]
+[~ 206]
+[~ 207]
+[~ 208]
+[~ 209]
+[~ 210]
+[~ 211]
+[~ 212]
+[~ 213]
+[~ 214]
+[~ 215]
+[~ 216]
+[~ 217]
+[~ 218]
+[~ 219]
+[~ 220]
+[~ 221]
+[~ 222]
+[~ 223]
+[~ 224]
+[~ 225]
+[~ 226]
+[~ 227]
+[~ 228]
+[~ 229]
+[~ 230]
+[~ 231]
+[~ 232]
+[~ 233]
+[~ 234]
+[~ 235]
+[~ 236]
+[~ 237]
+[~ 238]
+[~ 239]
+[~ 240]
+[~ 241]
+[~ 242]
+[~ 243]
+[~ 244]
+[~ 245]
+[~ 246]
+[~ 247]
+[~ 248]
+[~ 249]
+[~ 250]
+[~ 251]
+[~ 252]
+[~ 253]
+[~ 254]
+[~ 255]
+[~ 256]
+[~ 257]
+[~ 258]
 Plumas Feéricas
+[~ 260]
+[~ 261]
+[~ 262]
 Clefablitas
 Victreebelitas
 Starmitas
@@ -3894,24 +5371,53 @@ Meganiumitas
 Feraligatritas
 Skarmoritas
 Froslassitas
+[~ 271]
+[~ 272]
 Emboaritas
 Excadrillitas
+[~ 275]
+[~ 276]
+[~ 277]
 Chandeluritas
 Chesnaughtitas
 Delphoxitas
 Greninjanitas
+[~ 282]
 Floettitas
+[~ 284]
+[~ 285]
+[~ 286]
 Hawluchanitas
+[~ 288]
 Drampanitas
+[~ 290]
+[~ 291]
+[~ 292]
+[~ 293]
 Chimechitas
+[~ 295]
+[~ 296]
+[~ 297]
+[~ 298]
 Golurkitas
 Meowsticitas
 Crabominablitas
+[~ 302]
+[~ 303]
 Scovillainitas
+[~ 305]
+[~ 306]
 Glimmoranitas
 ~~~~~~~~~~~~~~~
 Text File : itemname_plural_classified
 ~~~~~~~~~~~~~~~
+[~ 0]
+[~ 1]
+[~ 2]
+[~ 3]
+[~ 4]
+[~ 5]
+[~ 6]
 Bayas Zreza
 Bayas Atania
 Bayas Duraz
@@ -3939,12 +5445,26 @@ Bayas Anjiro
 Bayas Dillo
 Bayas Baribá
 Bayas Chilan
+[~ 34]
+[~ 35]
+[~ 36]
+[~ 37]
+[~ 38]
+[~ 39]
+[~ 40]
+[~ 41]
+[~ 42]
+[~ 43]
+[~ 44]
+[~ 45]
 bolsitas de Polvo Brillo
 Hierbas Blancas
 Garras Rápidas
 Hierbas Mentales
+[~ 50]
 Rocas del Rey
 puñados de Polvo Plata
+[~ 53]
 Cintas Aguante
 Periscopios
 Revestimientos Metálicos
@@ -3966,14 +5486,74 @@ fragmentos de Carbón
 Colmillos Dragón
 Pañuelos de Seda
 Cascabeles Nácar
+[~ 75]
+[~ 76]
+[~ 77]
+[~ 78]
+[~ 79]
+[~ 80]
+[~ 81]
+[~ 82]
+[~ 83]
+[~ 84]
+[~ 85]
 Bandas Aguante
+[~ 87]
+[~ 88]
+[~ 89]
+[~ 90]
+[~ 91]
+[~ 92]
+[~ 93]
+[~ 94]
+[~ 95]
 Pañuelos Elección
+[~ 97]
+[~ 98]
+[~ 99]
+[~ 100]
+[~ 101]
+[~ 102]
+[~ 103]
+[~ 104]
+[~ 105]
+[~ 106]
+[~ 107]
+[~ 108]
+[~ 109]
+[~ 110]
+[~ 111]
+[~ 112]
+[~ 113]
+[~ 114]
+[~ 115]
+[~ 116]
+[~ 117]
+[~ 118]
+[~ 119]
+[~ 120]
+[~ 121]
+[~ 122]
+[~ 123]
+[~ 124]
+[~ 125]
+[~ 126]
+[~ 127]
+[~ 128]
+[~ 129]
+[~ 130]
+[~ 131]
+[~ 132]
+[~ 133]
 Gengaritas
 Gardevoiritas
 Ampharositas
 Venusauritas
 Charizarditas X
 Blastoisitas
+[~ 140]
+[~ 141]
+[~ 142]
 Medichamitas
 Houndoomitas
 Aggronitas
@@ -3990,22 +5570,110 @@ Absolitas
 Charizarditas Y
 Alakazamitas
 Heracrossitas
+[~ 159]
 Manectricitas
 Garchompitas
+[~ 162]
+[~ 163]
 Bayas Hibis
+[~ 165]
+[~ 166]
+[~ 167]
+[~ 168]
 Sableynitas
 Altarianitas
 Galladitas
 Audinitas
+[~ 173]
 Sharpedonitas
 Slowbronitas
 Steelixitas
 Pidgeotitas
 Glalitas
+[~ 179]
 Cameruptitas
 Lopunnitas
+[~ 182]
 Beedrillitas
+[~ 184]
+[~ 185]
+[~ 186]
+[~ 187]
+[~ 188]
+[~ 189]
+[~ 190]
+[~ 191]
+[~ 192]
+[~ 193]
+[~ 194]
+[~ 195]
+[~ 196]
+[~ 197]
+[~ 198]
+[~ 199]
+[~ 200]
+[~ 201]
+[~ 202]
+[~ 203]
+[~ 204]
+[~ 205]
+[~ 206]
+[~ 207]
+[~ 208]
+[~ 209]
+[~ 210]
+[~ 211]
+[~ 212]
+[~ 213]
+[~ 214]
+[~ 215]
+[~ 216]
+[~ 217]
+[~ 218]
+[~ 219]
+[~ 220]
+[~ 221]
+[~ 222]
+[~ 223]
+[~ 224]
+[~ 225]
+[~ 226]
+[~ 227]
+[~ 228]
+[~ 229]
+[~ 230]
+[~ 231]
+[~ 232]
+[~ 233]
+[~ 234]
+[~ 235]
+[~ 236]
+[~ 237]
+[~ 238]
+[~ 239]
+[~ 240]
+[~ 241]
+[~ 242]
+[~ 243]
+[~ 244]
+[~ 245]
+[~ 246]
+[~ 247]
+[~ 248]
+[~ 249]
+[~ 250]
+[~ 251]
+[~ 252]
+[~ 253]
+[~ 254]
+[~ 255]
+[~ 256]
+[~ 257]
+[~ 258]
 Plumas Feéricas
+[~ 260]
+[~ 261]
+[~ 262]
 Clefablitas
 Victreebelitas
 Starmitas
@@ -4014,20 +5682,42 @@ Meganiumitas
 Feraligatritas
 Skarmoritas
 Froslassitas
+[~ 271]
+[~ 272]
 Emboaritas
 Excadrillitas
+[~ 275]
+[~ 276]
+[~ 277]
 Chandeluritas
 Chesnaughtitas
 Delphoxitas
 Greninjanitas
+[~ 282]
 Floettitas
+[~ 284]
+[~ 285]
+[~ 286]
 Hawluchanitas
+[~ 288]
 Drampanitas
+[~ 290]
+[~ 291]
+[~ 292]
+[~ 293]
 Chimechitas
+[~ 295]
+[~ 296]
+[~ 297]
+[~ 298]
 Golurkitas
 Meowsticitas
 Crabominablitas
+[~ 302]
+[~ 303]
 Scovillainitas
+[~ 305]
+[~ 306]
 Glimmoranitas
 ~~~~~~~~~~~~~~~
 Text File : itemtag_syn
@@ -4039,7 +5729,9 @@ Mejora de características
 Prolongación de efectos
 Baya
 Otro
+[~ 7]
 Megapiedra
+[~ 9]
 Potencia ↑
 Curación
 Defensa
@@ -4047,6 +5739,7 @@ Característ. ↑
 Prol. efectos
 Baya
 Otro
+[~ 17]
 Megapiedra
 ~~~~~~~~~~~~~~~
 Text File : item_ticket
@@ -4071,9 +5764,11 @@ Boleto de encuentro Hielo
 Boleto de encuentro Dragón
 Boleto de encuentro Siniestro
 Boleto de encuentro Hada
+[~ 20]
 Boleto predeterminado Ultrabola
 Boleto predeterminado Superbola
 Boleto predeterminado Pokébola
+[~ 24]
 Boleto predeterminado Mallabola
 Boleto predeterminado Buceobola
 Boleto predeterminado Nidobola
@@ -4084,6 +5779,16 @@ Boleto predeterminado Honorbola
 Boleto predeterminado Ocasobola
 Boleto predeterminado Sanabola
 Boleto predeterminado Velozbola
+[~ 35]
+[~ 36]
+[~ 37]
+[~ 38]
+[~ 39]
+[~ 40]
+[~ 41]
+[~ 42]
+[~ 43]
+[~ 44]
 Boleto de entrenamiento
 Boleto predeterminado Pokébola poco común
 ~~~~~~~~~~~~~~~
@@ -4109,9 +5814,11 @@ Boleto que permite que aparezcan más Pokémon\nde tipo Hielo en un encuentro.
 Boleto que permite que aparezcan más Pokémon\nde tipo Dragón en un encuentro.
 Boleto que permite que aparezcan más Pokémon\nde tipo Siniestro en un encuentro.
 Boleto que permite que aparezcan más Pokémon\nde tipo Hada en un encuentro.
+[~ 20]
 Boleto que garantiza que los Pokémon de un encuentro\nestén almacenados dentro de Ultrabolas.
 Boleto que garantiza que los Pokémon de un encuentro\nestén almacenados dentro de Superbolas.
 Boleto que garantiza que los Pokémon de un encuentro\nestén almacenados dentro de Pokébolas.
+[~ 24]
 Boleto que garantiza que los Pokémon de un encuentro\nestén almacenados dentro de Mallabolas.
 Boleto que garantiza que los Pokémon de un encuentro\nestén almacenados dentro de Buceobolas.
 Boleto que garantiza que los Pokémon de un encuentro\nestén almacenados dentro de Nidobolas.
@@ -4122,6 +5829,16 @@ Boleto que garantiza que los Pokémon de un encuentro\nestén almacenados dentro
 Boleto que garantiza que los Pokémon de un encuentro\nestén almacenados dentro de Ocasobolas.
 Boleto que garantiza que los Pokémon de un encuentro\nestén almacenados dentro de Sanabolas.
 Boleto que garantiza que los Pokémon de un encuentro\nestén almacenados dentro de Velozbolas.
+[~ 35]
+[~ 36]
+[~ 37]
+[~ 38]
+[~ 39]
+[~ 40]
+[~ 41]
+[~ 42]
+[~ 43]
+[~ 44]
 Boleto que permite entrenar un Pokémon sin gastar PV.
 Boleto que garantiza que los Pokémon de un encuentro\nestén almacenados dentro de Pokébolas poco comunes.
 ~~~~~~~~~~~~~~~
@@ -4212,6 +5929,7 @@ Tus datos ya se transfirieron a otro dispositivo.
 El nombre de Entrenador no es válido.
 El nombre incluye una combinación de caracteres o ciertas\npalabras que no están permitidas. Cámbialo, por favor.
 Alcanzaste el límite máximo permitido de cambios de\ninformación de Entrenador por el día de hoy.
+[~ 56]
 El combate ya terminó. No puedes realizar ninguna acción.
 El torneo no está disponible.
 No se permiten combates fuera de las horas establecidas\nen este torneo.
@@ -5417,20 +7135,32 @@ Mostrar nombre de Entrenador
 Mostrar información de combate
 Nombre de Entrenador
 Idioma
+[~ 13]
+[~ 14]
 Cuenta Nintendo
+[~ 16]
 Permitir solicitudes de amistad
 Hacer público el perfil
 [Name:PlayerNickname ]
 Vinculada
 Sin vincular
 [Digit:2digits ]
+[~ 23]
+[~ 24]
+[~ 25]
 Vincular
 ¿Quieres cambiar a este idioma?\n\n[System:Color r="255" g="128" b="128" a="255" ]El juego se reiniciará después de este cambio.[System:Color a="255" ]
 Vibración
+[~ 29]
+[~ 30]
+[~ 31]
 Ingresa un nuevo nombre.
+[~ 33]
 No se pudo vincular la cuenta.
 Esta cuenta ya está en uso. Vincula otra cuenta.
 ¿Quieres vincular una cuenta Nintendo?\n\n[System:Color r="255" g="128" b="128" a="255" ]Una vez vinculada una cuenta Nintendo, no será posible\ncambiarla más adelante.[System:Color a="255" ]
+[~ 37]
+[~ 38]
 Permitir seguimiento/intercambio datos
 Ajusta el volumen de los gritos de los Pokémon.
 Ajusta el volumen de los efectos de sonido.
@@ -5441,8 +7171,12 @@ Elige si quieres que se muestre información variada durante\nel combate, como e
 Activa o desactiva la función de vibración en el juego.
 Cambia tu nombre de Entrenador.
 Elige en qué idioma quieres que se muestren los textos.
+[~ 49]
+[~ 50]
 Vincula una cuenta Nintendo (opcional).
 Cuenta Nintendo
+[~ 53]
+[~ 54]
 Elige si quieres permitir que otros Entrenadores te envíen\nsolicitudes de amistad.
 Elige si quieres mostrar ciertas partes de tu perfil a otros\nEntrenadores.
 ~~~~~~~~~~~~~~~
@@ -5759,6 +7493,7 @@ Tu bandeja de entrada está llena y no puede recibir\nmás mensajes. Borra los m
 [Name:FreeWord ]
 [Name:FreeWord ]
 Código 2D
+[~ 53]
 Escanea este código 2D para visitar el siguiente sitio:\n[Name:FreeWord ]
 [Digit:7digits Sep="default" ] PV
 [Digit:5digits Sep="default" ]
@@ -5820,6 +7555,7 @@ Modificar parámetros de acceso
 Lista de invitaciones
 Ninguna
 Crear sala
+[~ 51]
 [Digit:1digit ]
 Registro de combates
 [Digit:2digits ]/[Digit:2digits Idx="1" ]
@@ -5995,6 +7731,7 @@ Reclutamiento de prueba
 Periodo: 7 días\n[System:Color r="255" g="128" b="128" a="255" ]No puedes entrenar a estos Pokémon.[System:Color a="255" ]
 Reclutamiento permanente
 Periodo: ilimitado\n[System:Color r="255" g="128" b="128" a="255" ]Para reclutar de forma permanente, es necesario usar PV.[System:Color a="255" ]
+[~ 17]
 M-A
 ~~~~~~~~~~~~~~~
 Text File : rental_poke_select
@@ -6014,6 +7751,8 @@ No puedes reclutar a más Pokémon porque la caja está llena.\n¿Quieres devolv
 [Digit:7digits Sep="default" ] PV
 ¿Qué tipo de reclutamiento quieres hacer?
 [Digit:5digits Sep="default" ] PV
+[~ 15]
+[~ 16]
 ¿Qué tipo de reclutamiento quieres hacer?\n[System:Color r="255" g="128" b="128" a="255" ]Debes reclutar a este Pokémon de forma permanente si \nquieres entrenarlo.[System:Color a="255" ]
 ~~~~~~~~~~~~~~~
 Text File : rental_reception
@@ -6190,6 +7929,7 @@ Recompensa para quien quede en el puesto n.º [Digit:5digits Sep="default" ]\nde
 Recompensa para quien quede en el puesto n.º [Digit:5digits Sep="default" ]\ndel Campeonato Mundial Pokémon.
 Recompensa para quien quede entre el puesto n.º [Digit:5digits Sep="default" ]\ny el n.º [Digit:5digits Idx="1" Sep="default" ] del Campeonato Mundial Pokémon.
 Recompensa para quien participe en el Campeonato Mundial\nPokémon.
+[~ 165]
 Recompensa para quien quede entre el puesto n.º [Digit:5digits Idx="2" Sep="default" ] y el n.º [Digit:5digits Idx="3" Sep="default" ]\ndel torneo [Name:TournamentAbb Idx="10" ] de [Name:MonthName Idx="1" ] de [Digit:4digits Sep="0" ].
 Recompensa para quien participe en el torneo\n[Name:TournamentAbb Idx="10" ] de [Name:MonthName Idx="1" ] de [Digit:4digits Sep="0" ].
 Recompensa para quien quede en el puesto n.º 1\nen uno de los torneos Monarca de los Comienzos.
@@ -6198,7 +7938,10 @@ Ultrabola
 Masterbola
 Ícono de Entrenador
 Medalla
+[~ 174]
 NAIC
+[~ 176]
+[~ 177]
 PJCS
 PTC
 TWMBL
@@ -6351,13 +8094,37 @@ Acerca del pase de combate prémium
 Acerca de la membresía
 Aceptar y continuar
 No puedes cambiar el plan de tu membresía mientras tengas uno activo.\n\nSi deseas cambiar a un plan distinto, primero debes cancelar la renovación\nautomática del plan actual.\n\nUna vez haya caducado el plan que tienes ahora y tu membresía ya no esté activa,\npodrás comprar el plan que desees.
+[~ 56]
 Restaurar transacciones
+[~ 58]
+[~ 59]
 Se restauraron todas las transacciones.
 ・ Detalles y cantidad del producto\nPase de combate prémium ×1\nComprar un pase de combate prémium te permitirá recibir recompensas adicionales\nal subir el nivel del pase de combate.\nPara conocer más detalles sobre las recompensas, consulta la pantalla del pase de\ncombate. Puedes acceder a ella desde la pantalla principal del gimnasio.\n\nUn pase de combate prémium es válido mientras dure la temporada en curso.\nCuando termine la temporada, el pase caducará y podrás comprar un nuevo pase\nde combate prémium para la temporada siguiente.\nPuedes comprobar el periodo concreto de cada temporada desde la pantalla del pase\nde combate. Puedes acceder a ella desde la pantalla principal del gimnasio.\n\nEs posible que las recompensas que sean idénticas a objetos que ya tienes se conviertan\nen PV.\n\nEn el momento de la compra del pase de combate prémium, obtendrás todas las\nrecompensas del pase de combate prémium que te correspondan según el nivel que\nya hayas alcanzado en el pase de combate.\n\nEs posible que las recompensas obtenidas con el pase de combate prémium puedan\ncomprarse más adelante en la tienda u obtenerse de alguna otra manera.\n\n\n・ Precio\nPara ver el precio del producto, selecciona [Character2:StraightDoubleQuot. ]Atrás[Character2:StraightDoubleQuot. ] para regresar a la pantalla anterior\ny consulta la información que encontrarás allí.\n\n\n・ Periodo de venta\nPuedes comprar un pase de combate prémium hasta el final de la temporada durante la que\nse vende dicho pase.\nSolo es posible comprar un pase de combate prémium por periodo de venta.\n\nSi intentas comprar un pase de combate prémium justo antes de que finalice el periodo de\nventa, es posible que la compra no se complete correctamente debido a problemas de pago\nen la plataforma.\n\nAsegúrate de realizar la compra del pase de combate prémium con suficiente antelación\ndentro del periodo de venta.\n
+[~ 62]
+[~ 63]
+[~ 64]
+[~ 65]
 1. Beneficios de tener una membresía (precio y otros detalles)\nSe ofrecen dos planes distintos para las membresías: el plan de 1 mes y el plan de 12 meses.\nPara ver el precio de estos productos, selecciona [Character2:StraightDoubleQuot. ]Atrás[Character2:StraightDoubleQuot. ] para regresar a la pantalla anterior\ny consulta la información que encontrarás allí.\n\nDependiendo del territorio, comprar una membresía te permitirá disfrutar de los\nsiguientes beneficios:\n\n・ El número de Pokémon que puedes almacenar en la caja aumentará en 1,000.\n・ El número de Equipos de Combate que puedes usar aumentará en 15.\n・ Se desbloquearán misiones exclusivas (se puede consultar cuáles son en la pantalla\nde misiones).\n・ Se desbloqueará música de combate exclusiva (se muestra con un marco dorado y\naparecerá en la pantalla de selección de música).\n\nEstos beneficios estarán disponibles inmediatamente tras la compra de la membresía.\n\nSi cancelas la membresía, podrás seguir disfrutando de estos beneficios hasta que esta\ncaduque, pero ten en cuenta que no se te reembolsará el dinero.\n\n\n2. Renovación automática de la membresía\nUna vez comprada una membresía, esta se renovará de forma automática con el mismo plan\nal finalizar su periodo de validez, y se realizará el pago correspondiente.\nTen en cuenta que el periodo de validez de la membresía puede variar según el método de\ncompra utilizado.\n\n------------------------------------------------------------------------------------\nPeriodo de validez de la membresía para los jugadores de la versión para Nintendo Switch\ndel juego que tengan la renovación automática activada\n\nPlan de 1 mes: hasta la misma hora 30 días después de la compra.\nPlan de 12 meses: hasta la misma hora 365 días después de la compra (donde se permita).\n\nPor ejemplo:\nSi compras el plan de 1 mes (30 días) el 1 de enero de 2026 a las 15:00, se renovará\nautomáticamente por otros 30 días el 31 de enero de 2026 a las 15:00.\n\nSi compras el plan de 12 meses (365 días) el 1 de enero de 2026 a las 05:00, se renovará\nautomáticamente por otros 12 meses el 1 de enero de 2027 a las 05:00.\n\n\nPeriodo de validez de la membresía para los jugadores de la versión para dispositivos\nmóviles del juego que tengan la renovación automática activada\n\nPlan de 1 mes: un mes desde la fecha de la compra (es decir, hasta la misma hora\ndel mismo día del mes siguiente).\nPlan de 12 meses: un año desde la fecha de la compra (es decir, hasta la misma\nhora del mismo día del año siguiente) (donde se permita).\nEn caso de comprar la membresía a finales de mes, si no existe un día equivalente en el mes\no año siguiente, la membresía se renovará a la misma hora del último día del mes \nque corresponda.\n\nPor ejemplo:\nSi compras el plan de 1 mes el 1 de enero de 2026 a las 15:00, se renovará\nautomáticamente por otro mes el 1 de febrero de 2026 a las 15:00.\n\nSi compras el plan de 12 meses el 1 de enero de 2026 a las 05:00, se renovará\nautomáticamente por otros 12 meses el 1 de enero de 2027 a las 05:00 (donde se permita).\n------------------------------------------------------------------------------------\n\nCuando tu membresía caduque, dejarás de disfrutar de sus beneficios.\nEs posible que la renovación automática no funcione en ciertos países o territorios\ndependiendo de la edad del jugador.\nEn caso de jugar a la versión para dispositivos móviles, inicia sesión con un dispositivo\ncompatible con la plataforma en la que compraste la membresía.\nSi inicias sesión con un dispositivo que usa una plataforma diferente, es posible que la\nrenovación automática de la membresía no se efectúe correctamente.\n\nSi no quieres que tu membresía se renueve automáticamente, cancela la renovación\nautomática en la plataforma en la que compraste la membresía al menos 48 horas antes\ndel final del periodo de validez de la membresía actual en el caso de la versión para\nNintendo Switch y al menos 24 horas antes del final del periodo de validez de la membresía\nactual para la versión para dispositivos móviles.\n\nPara obtener información acerca de la cancelación de la renovación automática,\nconsulta la página oficial de atención al cliente de Pokémon Champions.\n\n\n3. Información sobre la cancelación de la membresía\nSi cancelas tu membresía, dejarás de disfrutar de las ventajas que ofrece\ny se producirán los siguientes cambios en ciertas funciones del juego.\n\n・ El número de espacios de la caja se revertirá a 30, además de contar con los espacios\nadicionales que hayas obtenido por otros medios.\n・ Los Pokémon que excedan el límite de la caja quedarán bloqueados y no podrás hacer\nlo siguiente:\n① Registrarlos en Equipos de Combate.\n② Hacer que participen en combates.\n③ Entrenarlos.\n④ Cambiar su apodo de combate.\n⑤ Cambiar su título.\n⑥ Generar ni usar los ID de equipo para equipos de los que formen parte.\n\n・ Cosas que sí puedes hacer con los Pokémon bloqueados:\n① Devolverlos al centro de reclutamiento.\n② Devolverlos a Pokémon HOME.\n③ Añadirlos o quitarlos de favoritos.\n④ Asignarles o quitarles etiquetas.\n\n・ Aunque devuelvas Pokémon al centro de reclutamiento o a Pokémon HOME, los Pokémon\nbloqueados no se desbloquearán para ocupar los espacios libres de la caja.\n・ Los Pokémon que se hayan reclutado de forma permanente en Pokémon Champions y que\nactualmente puedan participar en los Combates Clasificatorios serán los últimos en\nser bloqueados.\n・ Los Pokémon bloqueados se desbloquearán cuando vuelvas a comprar una membresía.\n\n・ El número de Equipos de Combate que puedes usar se reducirá en 15.\n\n・ No podrás obtener recompensas de misiones exclusivas (se puede\nconsultar cuáles son en la pantalla de misiones).\n\n・ No podrás seleccionar música de combate exclusiva (se muestra con un marco dorado\ny aparecerá en la pantalla de selección de música).\n\n\n4. Plataforma para comprar la membresía\nSi usas la misma cuenta para jugar a la versión para Nintendo Switch y a la versión para\ndispositivos móviles de Pokémon Champions, podrás comprar la membresía en una\nu otra versión, pero no en ambas a la vez.\nLos beneficios se aplicarán a ambas versiones, independientemente de si compraste\nla membresía en la versión para Nintendo Switch o en la versión para dispositivos móviles.\n\n\n5. Otros\n・ Si reinstalas el juego por haber cambiado de dispositivo o por algún otro motivo,\nasegúrate de vincular la cuenta correspondiente e iniciar sesión con la cuenta que quieras\nque se asocie con la membresía antes de comprarla.\n・ Si se produce algún error en el procesamiento del pago en la plataforma, es posible que\nsurjan problemas en la activación de la membresía. No cierres la aplicación mientras se está\nrealizando un pago.\n・ Si juegas a la versión para dispositivos móviles de Pokémon Champions y no se aplican\nlos beneficios tras comprar la membresía, prueba a seleccionar las siguientes opciones desde\nel menú principal del gimnasio:\nTienda > Tienda prémium > Membresía > Restaurar transacciones anteriores
+[~ 67]
+[~ 68]
+[~ 69]
+[~ 70]
+[~ 71]
+[~ 72]
+[~ 73]
+[~ 74]
+[~ 75]
+[~ 76]
+[~ 77]
+[~ 78]
 [Name:SeriesName ]
 [Name:BGMName ]
+[~ 81]
+[~ 82]
 Términos de uso
+[~ 84]
+[~ 85]
+[~ 86]
 Renovación automática
 [Name:FreeWord ]
 [Name:FreeWord ]
@@ -6478,11 +8245,16 @@ Versión [Digit:4digits Sep="0" ].[Digit:4digits Idx="1" Sep="0" ].[Digit:4digit
 [Name:SupportID ]
 Se van a descargar los datos del juego.
 [System:Color r="255" g="128" b="128" a="255" ]Se recomienda descargar los datos mediante Wi-Fi.[System:Color a="255" ]
+[~ 5]
+[~ 6]
 Esta cuenta no se puede usar.
 ID de usuario:
 Hay una versión más reciente disponible.\nCierra el juego para actualizarlo.
+[~ 10]
 —
 [Digit:5digits Sep="default" ] MB
+[~ 13]
+[~ 14]
 Es posible jugar al juego completo de forma gratuita, pero en\nél se pueden encontrar artículos de pago. Asegúrate de tener\nel permiso de un tutor legal antes de realizar cualquier compra,\no de realizarlas juntos.\n\nPara obtener más información, consulta los términos de uso\ny léelos detenidamente junto a un tutor legal antes de empezar\na jugar.
 Paquete inicial
 ~~~~~~~~~~~~~~~
@@ -6515,6 +8287,7 @@ Aceptar
 ~~~~~~~~~~~~~~~
 Text File : tokusei
 ~~~~~~~~~~~~~~~
+[~ 0]
 Hedor
 Llovizna
 Impulso
@@ -6530,6 +8303,7 @@ Despistado
 Aclimatación
 Ojo Compuesto
 Insomnio
+[~ 16]
 Inmunidad
 Absorbefuego
 Polvo Escudo
@@ -6538,11 +8312,14 @@ Ventosas
 Intimidación
 Sombra Trampa
 Piel Tosca
+[~ 25]
 Levitación
+[~ 27]
 Sincronía
 Cuerpo Puro
 Curación Natural
 Pararrayos
+[~ 32]
 Nado Rápido
 Clorofila
 Iluminación
@@ -6551,6 +8328,8 @@ Potencia
 Punto Tóxico
 Fuerza Mental
 Escudo de Magma
+[~ 41]
+[~ 42]
 Insonorización
 Curación Pluvial
 Chorro de Arena
@@ -6558,9 +8337,11 @@ Presión
 Sebo
 Madrugador
 Cuerpo de Fuego
+[~ 50]
 Perspicacia
 Corte Fuerte
 Recolección
+[~ 54]
 Entusiasmo
 Gran Encanto
 Más
@@ -6570,16 +8351,19 @@ Viscosidad
 Mudar
 Agallas
 Escama Especial
+[~ 64]
 Espesura
 Mar de Llamas
 Torrente
 Enjambre
 Cabeza Roca
 Sequía
+[~ 71]
 Espíritu Vital
 Humo Blanco
 Energía Pura
 Caparazón
+[~ 76]
 Tambaleo
 Electromotor
 Rivalidad
@@ -6591,6 +8375,7 @@ Liviano
 Ignífugo
 Simple
 Piel Seca
+[~ 88]
 Puño Férreo
 Antídoto
 Adaptable
@@ -6598,6 +8383,7 @@ Encadenado
 Hidratación
 Poder Solar
 Pies Rápidos
+[~ 96]
 Puntería
 Muro Mágico
 Indefenso
@@ -6609,19 +8395,28 @@ Rompemoldes
 Supersuerte
 Secuela
 Anticipación
+[~ 108]
 Ignorancia
+[~ 110]
 Filtro
+[~ 112]
 Intrépido
+[~ 114]
 Cuerpo de Hielo
 Roca Sólida
 Nevada
+[~ 118]
 Inspección
 Audaz
+[~ 121]
+[~ 122]
+[~ 123]
 Hurto
 Potencia Bruta
 Respondón
 Nerviosismo
 Competitivo
+[~ 129]
 Cuerpo Maldito
 Alma Sanadora
 Compiescolta
@@ -6629,6 +8424,8 @@ Armadura Frágil
 Metal Pesado
 Metal Liviano
 Multiescamas
+[~ 137]
+[~ 138]
 Cosecha
 Telepatía
 Temperamental
@@ -6637,6 +8434,7 @@ Contacto Tóxico
 Regeneración
 Sacapecho
 Ímpetu Arena
+[~ 147]
 Cálculo Final
 Ilusión
 Impostor
@@ -6644,10 +8442,16 @@ Allanamiento
 Momia
 Autoestima
 Justiciero
+[~ 155]
 Espejo Mágico
 Herbívoro
 Timador
 Poder Arenoso
+[~ 160]
+[~ 161]
+[~ 162]
+[~ 163]
+[~ 164]
 Velo Aromático
 Velo Florido
 Mejillas
@@ -6662,52 +8466,145 @@ Velo Dulce
 Cambio Táctico
 Alas Vendaval
 Megalanzador
+[~ 179]
 Simbiosis
 Garra Dura
 Piel Feérica
 Baba
 Piel Celeste
 Amor Filial
+[~ 186]
 Aura Feérica
+[~ 188]
+[~ 189]
+[~ 190]
+[~ 191]
 Firmeza
+[~ 193]
+[~ 194]
+[~ 195]
 Ensañamiento
+[~ 197]
+[~ 198]
 Acuaburbuja
+[~ 200]
 Ira
 Quitanieves
 Remoto
 Voz Fluida
+[~ 205]
+[~ 206]
 Cola Surf
+[~ 208]
 Disfraz
+[~ 210]
+[~ 211]
 Corrosión
+[~ 213]
 Regia Presencia
 Revés
+[~ 216]
+[~ 217]
+[~ 218]
+[~ 219]
+[~ 220]
+[~ 221]
 Receptor
+[~ 223]
+[~ 224]
+[~ 225]
+[~ 226]
+[~ 227]
+[~ 228]
+[~ 229]
+[~ 230]
+[~ 231]
+[~ 232]
+[~ 233]
+[~ 234]
+[~ 235]
+[~ 236]
+[~ 237]
+[~ 238]
+[~ 239]
 Coraza Reflejo
+[~ 241]
 Acérrimo
+[~ 243]
+[~ 244]
 Expulsarena
+[~ 246]
 Maduración
+[~ 248]
+[~ 249]
 Mimetismo
 Antibarrera
+[~ 252]
+[~ 253]
 Alma Errante
+[~ 255]
+[~ 256]
+[~ 257]
 Mutapetito
 Mano Rápida
 Puño Invisible
 Medicina Extraña
+[~ 262]
+[~ 263]
+[~ 264]
+[~ 265]
+[~ 266]
+[~ 267]
+[~ 268]
+[~ 269]
+[~ 270]
+[~ 271]
 Sal Purificadora
+[~ 273]
+[~ 274]
+[~ 275]
+[~ 276]
+[~ 277]
 Cambio Heroico
+[~ 279]
 Dínamo
+[~ 281]
+[~ 282]
+[~ 283]
+[~ 284]
+[~ 285]
+[~ 286]
+[~ 287]
+[~ 288]
+[~ 289]
 Oportunista
 Rumia
 Cortante
 General Supremo
+[~ 294]
 Capa Tóxica
 Cola Armadura
 Geofagia
+[~ 298]
 Hospitalidad
+[~ 300]
+[~ 301]
+[~ 302]
+[~ 303]
+[~ 304]
+[~ 305]
 Néctar Dulce
+[~ 307]
+[~ 308]
+[~ 309]
+[~ 310]
 Turbotaladro
 Piel Dracónica
+[~ 313]
+[~ 314]
 Megasolar
+[~ 316]
+[~ 317]
 Salpicante
 ~~~~~~~~~~~~~~~
 Text File : tokuseiinfo_syn
@@ -6727,6 +8624,7 @@ Evita que el Pokémon adquiera los estados Enamorado y\nProvocación y que se si
 Anula todos los efectos del tiempo atmosférico.
 Aumenta un 30 % la precisión de los movimientos del Pokémon.
 Evita que el Pokémon pueda quedarse dormido o somnoliento.
+[~ 15]
 Evita que el Pokémon pueda ser envenenado o gravemente\nenvenenado.
 Hace al Pokémon inmune a los movimientos de tipo Fuego\ny le provoca el estado Absorbefuego si recibe uno.
 Hace al Pokémon inmune a los efectos secundarios de\nlos ataques.
@@ -6735,11 +8633,14 @@ Hace al Pokémon inmune a los movimientos y objetos de otros\nPokémon que lo ob
 Reduce un nivel el Ataque del rival cuando el Pokémon entra\nen combate.
 Impide que el rival sea cambiado por otro Pokémon.
 Hace que el atacante pierda 12.5 % de sus PS máximos\nsi el Pokémon es alcanzado por un movimiento de contacto.
+[~ 24]
 Hace que el Pokémon flote y deje de estar en contacto con\nel suelo, lo que impide que le afecten los movimientos de tipo\nTierra y los estados Púas, Púas tóxicas y Red Pegajosa.
+[~ 26]
 Si el Pokémon es quemado, envenenado, gravemente\nenvenenado o paralizado por un movimiento o la habilidad\nde otro Pokémon, le provoca el mismo problema de estado.
 Evita que los movimientos o la habilidad de otros Pokémon\nreduzcan las características del Pokémon.
 Elimina los problemas de estado del Pokémon cuando se retira\ndel combate.
 Atrae hacia el Pokémon los movimientos de tipo Eléctrico\ny lo hace inmune a ellos. Además, aumenta un nivel su Ataque\nEspecial si recibe uno.
+[~ 31]
 Duplica la Velocidad del Pokémon cuando llueve.
 Duplica la Velocidad del Pokémon cuando hace sol.
 Evita que la Precisión del Pokémon pueda ser reducida\ne ignora los cambios en la Evasión del objetivo.
@@ -6748,6 +8649,8 @@ Duplica la potencia de los ataques físicos del Pokémon.
 Tiene una probabilidad del 30 % de envenenar al atacante\nsi el Pokémon es alcanzado por un movimiento de contacto.
 Evita que el Pokémon se atemorice ante los ataques de otros\nPokémon y que se sienta intimidado.
 Evita que el Pokémon pueda ser congelado.
+[~ 40]
+[~ 41]
 Hace al Pokémon inmune a los movimientos que usan sonido.
 Restaura un 6.25 % de los PS máximos del Pokémon al final\nde cada turno cuando llueve.
 Provoca una tormenta de arena que dura cinco turnos cuando\nel Pokémon entra en combate.
@@ -6755,9 +8658,11 @@ Hace que los movimientos que el rival use contra el Pokémon\nconsuman 1 PP más
 Reduce un 50 % el daño que recibe de movimientos de tipo\nFuego o Hielo.
 Si el Pokémon se duerme, tardará un 50 % menos de tiempo\nen despertarse.
 Tiene una probabilidad del 30 % de quemar al atacante\nsi el Pokémon es alcanzado por un movimiento de contacto.
+[~ 49]
 Evita que la Precisión del Pokémon pueda ser reducida\ne ignora los cambios en la Evasión del objetivo.
 Evita que los movimientos o la habilidad de otros Pokémon\nreduzcan el Ataque del Pokémon.
 Si el Pokémon no lleva un objeto, al final del turno recoge\nel que otro Pokémon haya consumido.
+[~ 53]
 Cuando el Pokémon usa un ataque físico, aumenta un 50 %\nsu Ataque, pero reduce un 20 % su Precisión.
 Tiene una probabilidad del 30 % de enamorar al atacante\nsi el Pokémon es alcanzado por un movimiento de contacto.\nSolo tiene efecto si el atacante es del sexo opuesto al\ndel Pokémon.
 Aumenta un 50 % el Ataque Especial del Pokémon si un \naliado presente en combate tiene la habilidad Más o la \nhabilidad Menos.
@@ -6767,16 +8672,19 @@ Impide que el objeto que lleva el Pokémon pueda ser robado\no se pierda.
 Tiene una probabilidad del 30 % de eliminar los problemas\nde estado del Pokémon al final de cada turno.
 Aumenta un 50 % el Ataque del Pokémon si sufre un problema\nde estado. Ignora la reducción del 50 % del daño que causan\nlos ataques físicos provocada por las quemaduras.
 Aumenta un 50 % la Defensa del Pokémon si sufre un problema\nde estado.
+[~ 63]
 Aumenta un 50 % la potencia de los movimientos de tipo\nPlanta del Pokémon cuando sus PS máximos son reducidos\na 33.3 % o menos.
 Aumenta un 50 % la potencia de los movimientos de tipo \nFuego del Pokémon cuando sus PS máximos son reducidos \na 33.3 % o menos.
 Aumenta un 50 % la potencia de los movimientos de tipo Agua\ndel Pokémon cuando sus PS máximos son reducidos a 33.3 %\no menos.
 Aumenta un 50 % la potencia de los movimientos de tipo\nInsecto del Pokémon cuando sus PS máximos son reducidos\na 33.3 % o menos.
 Evita que el Pokémon pierda PS al usar movimientos que\ntambién hieren al usuario.
 Hace que salga el sol durante cinco turnos cuando el Pokémon\nentra en combate.
+[~ 70]
 Evita que el Pokémon pueda quedarse dormido o somnoliento.
 Evita que los movimientos o la habilidad de otros Pokémon\nreduzcan las características del Pokémon.
 Duplica la potencia de los ataques físicos del Pokémon.
 Evita que el Pokémon reciba golpes críticos.
+[~ 75]
 Duplica la Evasión del Pokémon si está confundido.
 Hace al Pokémon inmune a los movimientos de tipo Eléctrico\ny aumenta un nivel su Velocidad si recibe uno.
 Aumenta un 25 % la potencia de los movimientos del Pokémon\nsi el objetivo es del mismo sexo o la reduce un 25 % si es del\nsexo opuesto. Se mantiene igual si se desconoce el sexo del\nPokémon o del objetivo.
@@ -6788,6 +8696,7 @@ Duplica la Velocidad del Pokémon si consume o pierde\nel objeto que lleva.
 Reduce un 50 % el daño que el Pokémon recibe de\nmovimientos de tipo Fuego y por quemaduras.
 Duplica los cambios en las características.
 Hace al Pokémon inmune a los movimientos de tipo Agua\ny restaura un 25 % de sus PS máximos si recibe uno, pero\naumenta un 25 % el daño que recibe de movimientos de tipo\nFuego. Restaura un 12.5 % de sus PS máximos al final de\ncada turno cuando llueve, pero resta un 12.5 % de sus PS\nmáximos al final de cada turno cuando hace sol.
+[~ 87]
 Aumenta un 20 % la potencia de los movimientos con los puños\ndel Pokémon.
 Restaura 12.5 % de los PS máximos del Pokémon al final\nde cada turno en vez de restárselos si es envenenado\no gravemente envenenado.
 Aumenta un 100 %, en vez de un 50 %, la potencia de\nlos movimientos cuyo tipo coincida con el del Pokémon.
@@ -6795,6 +8704,7 @@ Permite ejecutar siempre los movimientos de ataque múltiple\ncon el número má
 Elimina todos los problemas de estado del Pokémon al final de\ncada turno cuando llueve.
 Aumenta un 50 % el Ataque Especial del Pokémon cuando hace\nsol, pero le hace perder 12.5 % de sus PS máximos al final\nde cada turno.
 Aumenta un 50 % la Velocidad del Pokémon si sufre un\nproblema de estado. Ignora la reducción de la Velocidad\nprovocada por la parálisis.
+[~ 95]
 Aumenta un 125 % la potencia de los golpes críticos del\nPokémon en vez de un 50 %.
 El Pokémon solo recibe daño de ataques.
 Los movimientos del Pokémon y los de su atacante tienen una\nprecisión del 100 %.
@@ -6806,19 +8716,28 @@ Los movimientos del Pokémon no se ven afectados por\nla habilidad del objetivo,
 Aumenta un nivel la probabilidad de lanzar golpes críticos\ndel Pokémon.
 Hace que el atacante pierda un 25 % de sus PS máximos\nsi debilita al Pokémon con un movimiento de contacto.
 Permite prever los movimientos del rival que sean fulminantes o\nsupereficaces contra el Pokémon cuando este entra en combate.
+[~ 107]
 Ignora los cambios en las características del objetivo,\na excepción de la Velocidad, cuando el Pokémon ataca\no recibe daño.
+[~ 109]
 Reduce un 25 % el daño que el Pokémon recibe de movimientos\nsupereficaces.
+[~ 111]
 Permite alcanzar a Pokémon de tipo Fantasma con movimientos\nde tipo Normal o Pelea. Además, evita que el Pokémon se\nsienta intimidado.
+[~ 113]
 Recupera un 6.25 % de sus PS máximos al final de cada\nturno cuando nieva.
 Reduce un 25 % el daño que el Pokémon recibe de movimientos\nsupereficaces.
 Hace que nieve durante cinco turnos cuando el Pokémon entra\nen combate.
+[~ 117]
 Permite identificar el objeto que lleva el rival cuando el\nPokémon entra en combate.
 Aumenta un 20 % la potencia de los movimientos del Pokémon\nque también hieren al usuario.
+[~ 120]
+[~ 121]
+[~ 122]
 Si el Pokémon no lleva un objeto, roba el del Pokémon que\nlo ataque con un movimiento de contacto.
 Aumenta un 30 % la potencia de los movimientos del Pokémon,\npero anula sus efectos secundarios.
 Invierte los cambios en las características que sufra el Pokémon:\nse reducen en vez de aumentar y aumentan en vez de reducirse.
 Impide que el rival consuma bayas.
 Aumenta dos niveles el Ataque del Pokémon cuando el rival\nle reduce cualquiera de sus características.
+[~ 128]
 Tiene una probabilidad del 30 % de provocar el estado\nMovimiento anulado en el atacante durante cuatro turnos\nsi el Pokémon recibe daño de un movimiento.
 Tiene una probabilidad del 50 % de eliminar los problemas\nde estado de un aliado al final de cada turno.
 Reduce un 25 % el daño que reciben los aliados.
@@ -6826,6 +8745,8 @@ Reduce un nivel la Defensa del Pokémon y aumenta dos niveles\nsu Velocidad cuan
 Duplica el peso del Pokémon.
 Reduce un 50 % el peso del Pokémon.
 Reduce un 50 % el daño que recibe el Pokémon cuando sus\nPS están al máximo.
+[~ 136]
+[~ 137]
 Luego de consumir una baya, el Pokémon tiene una\nprobabilidad del 50 % de recolectar otra al final de cada\nturno. La probabilidad es del 100 % cuando hace sol.
 Permite evadir los ataques de los aliados.
 Aumenta dos niveles una de las características del Pokémon y\nreduce un nivel de otra al final de cada turno.
@@ -6834,6 +8755,7 @@ Tiene una probabilidad del 30 % de envenenar al objetivo al\nque el Pokémon a
 Recupera 33.3 % de sus PS máximos cuando se retira\ndel combate.
 Evita que los movimientos o la habilidad de otros Pokémon\nreduzcan la Defensa del Pokémon.
 Duplica la Velocidad del Pokémon durante las tormentas \nde arena.
+[~ 146]
 Aumenta un 30 % la potencia del movimiento del Pokémon\nsi es el último en atacar en ese turno.
 El Pokémon adopta el aspecto del último Pokémon del equipo\nantes de entrar en combate. Si recibe daño de un movimiento,\nla ilusión termina.
 Transforma al Pokémon en el que tiene enfrente. Copia todos\nlos valores de las características de ese Pokémon a\nexcepción de los PS.
@@ -6841,10 +8763,16 @@ Cuando el Pokémon usa un movimiento, ignora los efectos\nde Pantalla de Luz, Re
 Sustituye la habilidad del atacante por Momia si el Pokémon\nes alcanzado por un movimiento de contacto.
 Aumenta un nivel el Ataque del Pokémon cuando debilita a\nun objetivo con un ataque.
 Aumenta un nivel el Ataque del Pokémon si recibe daño de\nun movimiento de tipo Siniestro.
+[~ 154]
 Devuelve los movimientos de estado al atacante sin que\nel Pokémon sea afectado por ellos.
 Hace al Pokémon inmune a los movimientos de tipo Planta\ny aumenta un nivel su Ataque si recibe uno.
 Aumenta un nivel la prioridad de los movimientos de estado\ndel Pokémon.
 Aumenta un 30 % la potencia de los movimientos de tipo Roca,\nTierra y Acero del Pokémon durante las tormentas de arena.
+[~ 159]
+[~ 160]
+[~ 161]
+[~ 162]
+[~ 163]
 Protege al Pokémon y a sus aliados de los estados Enamorado,\nProvocación, Repetición anulada, Movimiento anulado,\nCuración anulada y Otra Vez.
 Evita que los Pokémon de tipo Planta aliados sufran problemas\nde estado o que les reduzcan sus características.
 Restaura un 33.3 % de los PS máximos del Pokémon cuando\nconsume una baya, además de beneficiarse de su \nefecto habitual.
@@ -6859,52 +8787,145 @@ Ni el Pokémon ni sus aliados pueden quedarse dormidos \no somnolientos.
 Adopta la Forma Espada al atacar, o la Forma Escudo si\nusa el movimiento Escudo Real.
 Aumenta un nivel la prioridad de los movimientos de tipo\nVolador del Pokémon cuando sus PS están al máximo.
 Aumenta un 50 % la potencia de los movimientos del Pokémon\nque usan pulsos.
+[~ 178]
 Pasa el objeto del Pokémon a un aliado cuando este último\nconsume su propio objeto.
 Aumenta un 30 % la potencia de los movimientos de contacto\ndel Pokémon.
 Convierte los movimientos de tipo Normal del Pokémon en\nmovimientos de tipo Hada y aumenta un 20 % su potencia.
 Reduce un nivel la Velocidad del atacante si el Pokémon\nes alcanzado por un movimiento de contacto.
 Convierte los movimientos de tipo Normal del Pokémon en\nmovimientos de tipo Volador y aumenta un 20 % su potencia.
 Hace que el Pokémon una fuerzas con su cría en un ataque\ndoble. La potencia del ataque de la cría equivale al 25 % de\nla de su madre.
+[~ 185]
 Aumenta un 33 % la potencia de los movimientos de tipo Hada\nde todos los Pokémon.
+[~ 187]
+[~ 188]
+[~ 189]
+[~ 190]
 Aumenta un nivel la Defensa del Pokémon si recibe daño de\nun movimiento.
+[~ 192]
+[~ 193]
+[~ 194]
 Hace que el Pokémon siempre lance un golpe crítico al atacar\nsi el objetivo está envenenado o gravemente envenenado.
+[~ 196]
+[~ 197]
 Reduce un 50 % el daño que el Pokémon recibe de\nmovimientos de tipo Fuego y duplica la potencia de sus\nmovimientos de tipo Agua. Además, evita que pueda \nser quemado.
+[~ 199]
 Aumenta un nivel el Ataque Especial del Pokémon cuando\nsus PS máximos son reducidos un 50 % o menos debido\na algún ataque.
 Duplica la Velocidad del Pokémon cuando nieva.
 Permite usar cualquier movimiento sin que el Pokémon entre en\ncontacto con el objetivo.
 Convierte los movimientos del Pokémon que usan sonido\nen movimientos de tipo Agua.
+[~ 204]
+[~ 205]
 Duplica la Velocidad del Pokémon cuando hay un campo\neléctrico activo en el terreno de combate.
+[~ 207]
 Si el Pokémon recibe un ataque cuando está en su Forma\nEncubierta, pierde 12.5 % de sus PS máximos en vez de recibir\ndaño y cambia a su Forma Descubierta.
+[~ 209]
+[~ 210]
 Permite envenenar o envenenar gravemente incluso a Pokémon\nde tipo Acero o Veneno.
+[~ 212]
 Impide que el rival use movimientos de prioridad alta contra\nel Pokémon y sus aliados.
 Si el Pokémon recibe daño de un movimiento y se debilita,\nle devuelve al atacante la misma cantidad de daño.
+[~ 215]
+[~ 216]
+[~ 217]
+[~ 218]
+[~ 219]
+[~ 220]
 Hace que el Pokémon adquiera la habilidad de un\naliado debilitado.
+[~ 222]
+[~ 223]
+[~ 224]
+[~ 225]
+[~ 226]
+[~ 227]
+[~ 228]
+[~ 229]
+[~ 230]
+[~ 231]
+[~ 232]
+[~ 233]
+[~ 234]
+[~ 235]
+[~ 236]
+[~ 237]
+[~ 238]
 Devuelve los efectos de reducción de características dirigidos\nal Pokémon sin que sea afectado por ellos.
+[~ 240]
 Ignora los efectos de las habilidades o los movimientos que\nle permiten a un Pokémon centrar la atención sobre sí mismo.
+[~ 242]
+[~ 243]
 Cuando el Pokémon recibe daño de un movimiento, provoca \nuna tormenta de arena que dura cinco turnos.
+[~ 245]
 Duplica los efectos de las bayas que consume el Pokémon.
+[~ 247]
+[~ 248]
 Cambia el tipo del Pokémon según el campo que haya en\nel terreno de combate.
 Elimina los estados Pantalla de Luz, Reflejo y Velo Aurora\ncuando el Pokémon entra en combate.
+[~ 251]
+[~ 252]
 Intercambia las habilidades del Pokémon y el objetivo\nsi el Pokémon recibe un movimiento de contacto.
+[~ 254]
+[~ 255]
+[~ 256]
 El Pokémon alterna entre su Forma Saciada y su Forma Voraz\nal final de cada turno.
 Hace que el Pokémon tenga una probabilidad del 30 % de\nactuar primero cuando su movimiento tiene la misma prioridad\nque otros.
 Cuando el Pokémon ataca con un movimiento de contacto,\nes capaz de alcanzar incluso a objetivos que están protegidos\ny les causa un 25 % del daño original. El resto de efectos no son\nafectados por esta habilidad y se activarán de forma habitual.
 Elimina los cambios en las características de los aliados cuando\nel Pokémon entra en combate.
+[~ 261]
+[~ 262]
+[~ 263]
+[~ 264]
+[~ 265]
+[~ 266]
+[~ 267]
+[~ 268]
+[~ 269]
+[~ 270]
 Hace al Pokémon inmune a los problemas de estado y reduce\nun 50 % el daño que recibe de movimientos de tipo Fantasma.
+[~ 272]
+[~ 273]
+[~ 274]
+[~ 275]
+[~ 276]
 El Pokémon adopta su Forma Heroica cuando se retira \ndel combate.
+[~ 278]
 El Pokémon adquiere el estado Cargado de electricidad\nsi recibe daño de un movimiento.
+[~ 280]
+[~ 281]
+[~ 282]
+[~ 283]
+[~ 284]
+[~ 285]
+[~ 286]
+[~ 287]
+[~ 288]
 Si el rival aumenta sus características, el Pokémon aumenta\nlas suyas de igual manera.
 Si el Pokémon consume una baya, vuelve a consumirla una vez\nmás al final del siguiente turno.
 Aumenta un 50 % la potencia de los movimientos cortantes\ndel Pokémon.
 Cuando el Pokémon entra en combate, aumenta un 10 %\nla potencia de sus movimientos por cada miembro del equipo\nque se haya debilitado, hasta un máximo del 50 %.
+[~ 293]
 Provoca el estado Púas tóxicas en el lado rival cuando\nel Pokémon recibe daño de un ataque físico.
 Impide que el rival use movimientos de prioridad alta contra\nel Pokémon y sus aliados.
 Hace al Pokémon inmune a los movimientos de tipo Tierra\ny restaura 25 % de sus PS máximos si recibe uno.
+[~ 297]
 Restaura 25 % de los PS máximos de su aliado cuando el\nPokémon entra en combate.
+[~ 299]
+[~ 300]
+[~ 301]
+[~ 302]
+[~ 303]
+[~ 304]
 Reduce un nivel la Evasión del rival cuando el Pokémon entra\nen combate. Solo tiene efecto una vez por combate.
+[~ 306]
+[~ 307]
+[~ 308]
+[~ 309]
 Cuando el Pokémon ataca con un movimiento de contacto,\nes capaz de alcanzar incluso a objetivos que están protegidos\ny les causa un 25 % del daño original. El resto de efectos no son\nafectados por esta habilidad y se activarán de forma habitual.
 Convierte los movimientos de tipo Normal del Pokémon en\nmovimientos de tipo Dragón y aumenta un 20 % su potencia.
+[~ 312]
+[~ 313]
 El Pokémon puede usar movimientos con los mismos resultados\nque cuando hace sol, aunque realmente ese no sea el tiempo\natmosférico actual.
+[~ 315]
+[~ 316]
 Si el Pokémon recibe daño de un movimiento, quema al\natacante.
 ~~~~~~~~~~~~~~~
 Text File : tournament_mode
@@ -7266,8 +9287,10 @@ Duerme al objetivo.
 Aumenta dos niveles la Defensa del usuario.
 Aumenta un nivel la probabilidad de lanzar golpes críticos\ndel usuario durante este ataque.
 El usuario se debilita luego de usar este movimiento.
+[~ 69]
 Restaura todos los PS y elimina todos los problemas de\nestado del usuario, pero lo duerme durante dos turnos.\nFalla si el usuario tiene los PS al máximo.
 Tiene una probabilidad del 30 % de atemorizar al objetivo.
+[~ 72]
 Tiene una probabilidad del 20 % de paralizar, quemar\no congelar al objetivo.
 El objetivo pierde un 50 % de sus PS restantes.\nSi solo le queda 1 PS, pierde 1 PS.
 El usuario sacrifica un 25 % de sus PS máximos para crear un\nsustituto. El sustituto recibirá los movimientos dirigidos al\nusuario en su lugar y desaparecerá cuando haya recibido una\ncantidad de daño equivalente a un 25 % de los PS máximos\ndel usuario.
@@ -7276,6 +9299,8 @@ Solo se puede usar si el usuario está dormido. Tiene una\nprobabilidad del 30�
 Sacrifica un 50 % de los PS máximos del usuario para provocar\nel estado Maldición en el objetivo.
 Reduce un nivel la Velocidad del usuario y aumenta un nivel\nsu Ataque y su Defensa.
 Tiene mayor potencia entre menos PS tenga el usuario,\ncon un rango entre 20 y 200.
+[~ 81]
+[~ 82]
 Reduce dos niveles la Velocidad del objetivo.
 Tiene mayor potencia entre menos PS tenga el usuario,\ncon un rango entre 20 y 200.
 Reduce 4 PP del último movimiento que usó el objetivo.
@@ -7285,6 +9310,7 @@ Confunde al objetivo.
 Sacrifica un 50 % de los PS máximos del usuario para aumentar\nhasta el sexto nivel su Ataque. Falla si el usuario no tiene\nsuficientes PS.
 Tiene una probabilidad del 30 % de envenenar al objetivo.
 Reduce un nivel la Precisión del objetivo.
+[~ 92]
 Provoca el estado Púas en el lado rival.
 Paraliza al objetivo.
 Provoca el estado Lazo del Destino en el usuario.\nFalla si se usa de forma consecutiva.
@@ -7305,6 +9331,7 @@ Provoca el estado Huida imposible en el objetivo.
 Provoca el estado Enamorado en el objetivo. Falla\ncontra objetivos del mismo sexo que el usuario o de\nsexo desconocido.
 Solo se puede usar si el usuario está dormido. El usuario usa\nal azar uno de los otros movimientos que conoce.
 Elimina los problemas de estado de todos los Pokémon del\nequipo del usuario, incluyendo al usuario y a sus aliados.
+[~ 113]
 Provoca el estado Velo Sagrado en el lado del usuario durante\ncinco turnos.
 Combina los PS restantes del usuario con los del objetivo\ny los reparte en partes iguales.
 Confunde al objetivo.
@@ -7357,6 +9384,9 @@ Tiene menor potencia entre menos PS tenga el usuario,\ncon un rango entre 1 y 15
 Intercambia las habilidades del usuario y el objetivo.
 Provoca el estado Sellar en el usuario.
 El usuario adquiere el estado Sumergido en el turno en el que\nusa este movimiento y ataca en el siguiente.
+[~ 166]
+[~ 167]
+[~ 168]
 Reduce dos niveles el Ataque del objetivo.
 Confunde a todos los Pokémon en combate menos al usuario.
 Tiene una probabilidad del 10 % de quemar al objetivo.\nAumenta un nivel la probabilidad de lanzar golpes críticos\ndel usuario durante este ataque.
@@ -7397,6 +9427,8 @@ Aumenta un nivel la probabilidad de lanzar golpes críticos\ndel usuario durante
 Aumenta un nivel el Ataque y la Velocidad del usuario.
 Ataca de dos a cinco veces seguidas.
 Tiene una probabilidad del 20 % de confundir al objetivo.
+[~ 209]
+[~ 210]
 Restaura un 50 % de los PS máximos del usuario. Si el usuario es\nde tipo Volador, deja de serlo durante ese turno.
 Provoca el estado Gravedad en ambos lados durante\ncinco turnos.
 Reduce un nivel la Velocidad del usuario.
@@ -7421,6 +9453,7 @@ Falla si el usuario no usa antes todos los demás\nmovimientos que conoce.
 Sustituye la habilidad del objetivo por Insomnio.
 Falla si el objetivo no seleccionó un ataque o si ya\natacó en ese turno.
 Provoca el estado Púas tóxicas en el lado rival.
+[~ 235]
 Provoca el estado Acuaanillo en el usuario.
 El usuario es afectado por Superimán.
 El usuario recibe un 33.3 % del daño que causa y se libra de la\ncongelación. Este movimiento tiene una probabilidad del 10 %\nde quemar al objetivo.
@@ -7461,11 +9494,23 @@ Tiene una probabilidad del 20 % de atemorizar al objetivo.
 Aumenta un nivel la probabilidad de lanzar golpes críticos\ndel usuario durante este ataque.
 Provoca el estado Trampa de Rocas en el lado rival.
 Tiene mayor potencia entre más pesado sea el objetivo,\ncon un rango entre 20 y 120.
+[~ 276]
+[~ 277]
 Si el objetivo lleva una baya, el usuario la consume y obtiene\nsus efectos.
 Tiene una probabilidad del 70 % de aumentar un nivel\nel Ataque Especial del usuario.
 El usuario recibe un 33.3 % del daño que causa.
+[~ 281]
+[~ 282]
 El usuario recibe un 50 % del daño que causa.
 Ataca dos veces seguidas.
+[~ 285]
+[~ 286]
+[~ 287]
+[~ 288]
+[~ 289]
+[~ 290]
+[~ 291]
+[~ 292]
 Protege al usuario y a sus aliados de los movimientos que\nafectarían a todos los aliados durante ese turno.
 Combina los valores de la Defensa y la Defensa Especial\ndel usuario con los del objetivo y los reparte en partes iguales.
 Combina los valores del Ataque y el Ataque Especial del usuario\ncon los del objetivo y los reparte en partes iguales.
@@ -7498,6 +9543,7 @@ Tiene una probabilidad del 30 % de quemar al objetivo.\nElimina la congelació
 Reduce un nivel la Defensa y la Defensa Especial del usuario\ny aumenta dos niveles su Ataque, su Ataque Especial\ny su Velocidad.
 Restaura un 50 % de los PS máximos del objetivo.
 Su potencia se duplica si el objetivo sufre un problema de\nestado.
+[~ 325]
 Obliga al objetivo a ser cambiado por otro Pokémon de su\nequipo al azar si hay alguno que pueda sustituirlo.
 Hace que el objetivo actúe de último en ese turno.
 Su potencia se duplica si el usuario no lleva un objeto.
@@ -7518,11 +9564,26 @@ Tiene una probabilidad del 50 % de reducir un nivel\nla Defensa del objetivo.
 Tiene mayor potencia entre más pesado sea el usuario en\ncomparación con el objetivo, con un rango entre 40 y 120.\nSu potencia se duplica y nunca falla contra objetivos con\nel estado Reducido.
 Aumenta tres niveles la Defensa del usuario.
 Tiene una probabilidad del 40 % de reducir un nivel la Precisión\ndel objetivo.
+[~ 346]
 Ataca de dos a cinco veces seguidas.
 Tiene una probabilidad del 30 % de confundir al objetivo.\nNunca falla cuando llueve. Puede golpear a objetivos con\nel estado A gran altitud.
+[~ 349]
+[~ 350]
+[~ 351]
+[~ 352]
+[~ 353]
+[~ 354]
+[~ 355]
+[~ 356]
+[~ 357]
 Tiene una probabilidad del 50 % de aumentar un nivel\nel Ataque Especial del usuario.
+[~ 359]
+[~ 360]
 Reduce un nivel el Ataque Especial del objetivo.
 Tiene una probabilidad del 30 % de atemorizar al objetivo.
+[~ 363]
+[~ 364]
+[~ 365]
 El daño que causa se calcula con la compatibilidad entre tipos\ndel tipo de este movimiento y la del tipo Volador. Su potencia\nse duplica y nunca falla contra objetivos con el \nestado Reducido.
 Falla si el usuario consumió una baya durante\nel combate.
 Provoca el estado Red Pegajosa en el lado rival.
@@ -7534,6 +9595,7 @@ El usuario recupera una cantidad de PS equivalente al 50 %\ndel daño que caus
 Provoca el estado Condena Silvana en el objetivo.
 Es supereficaz contra Pokémon de tipo Agua.
 El usuario cambia a otro Pokémon del equipo luego de\nreducir un nivel el Ataque y el Ataque Especial del objetivo.
+[~ 377]
 El usuario recupera una cantidad de PS equivalente al 75 % \ndel daño que causa.
 Crea un campo de césped en el terreno de combate durante\ncinco turnos.
 Crea un campo de niebla en el terreno de combate durante\ncinco turnos.
@@ -7542,28 +9604,79 @@ Tiene una probabilidad del 10 % de reducir un nivel el Ataque\ndel objetivo.
 Tiene una probabilidad del 10 % de reducir un nivel\nel Ataque Especial del objetivo.
 Provoca el estado Cerrojo Feérico en todos los Pokémon\nen combate.
 El usuario cambia a su Forma Escudo y se protege de los\nataques durante ese turno. Reduce un nivel el Ataque del\nPokémon que golpee al usuario con un movimiento de contacto.\nSi se usa de forma consecutiva, su probabilidad de éxito\nse reduce a 33.3 % con respecto a la probabilidad\nanterior.
+[~ 386]
+[~ 387]
+[~ 388]
 Ataca de dos a cinco veces seguidas.
 Reduce un nivel el Ataque Especial del objetivo.
 El usuario se protege de los ataques durante ese turno.\nEl Pokémon que golpee al usuario con un movimiento de\ncontacto pierde un 12.5 % de sus PS máximos. Si se usa de\nforma consecutiva, la probabilidad de éxito del movimiento\nse reduce a 33.3 % con respecto a la probabilidad anterior.
 Aumenta un nivel la Defensa Especial de un aliado.
 Reduce dos niveles el Ataque Especial del objetivo.
+[~ 394]
 Aumenta un nivel la Defensa y la Defensa Especial del usuario\ny sus aliados si tienen la habilidad Más o la habilidad Menos.
 Crea un campo eléctrico en el terreno de combate durante\ncinco turnos.
 Reduce un nivel el Ataque del objetivo.
 Paraliza al objetivo.
 Provoca el estado Apresado en el objetivo.
+[~ 400]
+[~ 401]
+[~ 402]
+[~ 403]
 El usuario recibe un 50 % del daño que causa.
+[~ 405]
+[~ 406]
+[~ 407]
+[~ 408]
+[~ 409]
+[~ 410]
+[~ 411]
+[~ 412]
+[~ 413]
+[~ 414]
+[~ 415]
+[~ 416]
+[~ 417]
+[~ 418]
+[~ 419]
+[~ 420]
+[~ 421]
+[~ 422]
+[~ 423]
+[~ 424]
+[~ 425]
+[~ 426]
+[~ 427]
+[~ 428]
+[~ 429]
+[~ 430]
+[~ 431]
+[~ 432]
+[~ 433]
+[~ 434]
+[~ 435]
+[~ 436]
+[~ 437]
+[~ 438]
+[~ 439]
+[~ 440]
+[~ 441]
+[~ 442]
+[~ 443]
+[~ 444]
+[~ 445]
 Falla si no es el primer movimiento que el usuario utiliza\nluego de entrar en combate.
 Protege al usuario de los movimientos de los demás Pokémon\ndurante ese turno. Envenena al Pokémon que ataque al usuario\ncon un movimiento de contacto. Si se usa de forma consecutiva,\nsu probabilidad de éxito se reduce a 33.3 % con respecto a la\nprobabilidad anterior.
 Provoca el estado Huida imposible en el objetivo.
 Ignora los cambios en las características del objetivo al\ncausar daño.
 Elimina las quemaduras del objetivo.
 Reduce un nivel la Velocidad del usuario.
+[~ 452]
 El usuario recupera una cantidad de PS equivalente al valor\ndel Ataque del objetivo. Además, este movimiento reduce\nun nivel el Ataque del objetivo.
 El usuario adquiere el estado Cargando en el turno en el que\nusa este movimiento y ataca en el siguiente. Si hace sol,\nno adquiere este estado y ataca inmediatamente. Si hay otro\ntiempo atmosférico activo, la potencia del movimiento se\nreduce un 50 %.
 Reduce dos niveles la Velocidad del objetivo y lo envenena.
 Provoca el estado Golpe al Cuello en el objetivo.
 Si se usa contra un aliado, restaura un 50 % de sus PS máximos\nen vez de causarle daño.
+[~ 458]
 Crea un campo psíquico en el terreno de combate durante\ncinco turnos.
 Reduce un nivel el Ataque del objetivo.
 Reduce un nivel la Defensa del objetivo.
@@ -7571,28 +9684,99 @@ Aumenta en 20 su potencia por cada nivel de incremento\nen las características 
 El usuario deja de ser de tipo Fuego y se libra de la\ncongelación. Este movimiento falla si el usuario no es de \ntipo Fuego.
 Intercambia la Velocidad del usuario y el objetivo.
 Nunca falla.
+[~ 466]
+[~ 467]
+[~ 468]
 Reduce un nivel el Ataque del objetivo.
 Fuerza al objetivo a repetir inmediatamente su último\nmovimiento.
 Si el usuario es alcanzado por un movimiento de contacto antes\nde golpear con este movimiento, quema al atacante.
 Reduce un nivel la Defensa del usuario.
 Provoca el estado Velo Aurora en el lado del usuario durante\ncinco turnos. Solo se puede usar cuando nieva.
+[~ 474]
+[~ 475]
+[~ 476]
+[~ 477]
+[~ 478]
+[~ 479]
+[~ 480]
+[~ 481]
+[~ 482]
+[~ 483]
+[~ 484]
 Elimina los estados Pantalla de Luz, Reflejo y Velo Aurora\nen el lado del objetivo antes de causar daño.
 Su potencia se duplica si el usuario no pudo actuar o falló\nsu movimiento en el turno anterior.
+[~ 487]
 Tiene una probabilidad del 20 % de reducir un nivel la Defensa\ndel objetivo.
+[~ 489]
+[~ 490]
+[~ 491]
+[~ 492]
 Reduce un nivel el Ataque y el Ataque Especial del objetivo.\nIgnora la Evasión del objetivo y puede golpear a objetivos\nque hayan usado movimientos como Protección.
+[~ 494]
+[~ 495]
+[~ 496]
+[~ 497]
+[~ 498]
+[~ 499]
+[~ 500]
+[~ 501]
+[~ 502]
+[~ 503]
+[~ 504]
+[~ 505]
+[~ 506]
+[~ 507]
+[~ 508]
+[~ 509]
+[~ 510]
+[~ 511]
 El usuario consume la baya que lleva, lo que aumenta dos\nniveles su Defensa. Este movimiento no se puede usar si el\nusuario no lleva una baya.
+[~ 513]
+[~ 514]
 Cambia el tipo del objetivo al tipo Psíquico.
 Ataca dos veces seguidas. Si hay dos rivales, ataca una vez\na cada uno.
 Todos los Pokémon en combate consumen las bayas que llevan.
+[~ 518]
+[~ 519]
+[~ 520]
+[~ 521]
+[~ 522]
+[~ 523]
+[~ 524]
+[~ 525]
+[~ 526]
+[~ 527]
+[~ 528]
+[~ 529]
+[~ 530]
+[~ 531]
+[~ 532]
+[~ 533]
+[~ 534]
+[~ 535]
+[~ 536]
+[~ 537]
+[~ 538]
+[~ 539]
 Sacrifica un 33.3 % de los PS máximos del usuario para\naumentar un nivel su Ataque, su Defensa, su Ataque Especial,\nsu Defensa Especial y su Velocidad. Falla si el usuario no tiene\nsuficientes PS.
 El daño que causa se calcula con el valor de la Defensa del\nusuario en vez del de su Ataque.
 Aumenta dos niveles el Ataque y el Ataque Especial \ndel objetivo.
+[~ 543]
 Provoca el estado Apresado en el objetivo.
+[~ 545]
+[~ 546]
+[~ 547]
 Aumenta un nivel la Velocidad del usuario. Su tipo varía según\nla forma que adopte Morpeko.
 Reduce un nivel el Ataque del objetivo.
+[~ 550]
 Reduce un nivel la Defensa Especial del objetivo.
 Reduce un nivel la Defensa del objetivo. Aumenta un 50 %\nsu potencia si el estado Gravedad está activo.
+[~ 553]
+[~ 554]
 Restaura 25 % de los PS máximos del usuario y sus aliados.
+[~ 556]
+[~ 557]
+[~ 558]
 El usuario recibe daño equivalente a un 50 % de sus PS máximos\nluego de atacar.
 Aumenta un 50 % su potencia y ataca a todos los rivales\nsi el usuario está en contacto con un campo psíquico.
 Elimina el campo activo en el terreno de combate.\nFalla si no hay ninguno.
@@ -7613,34 +9797,70 @@ El usuario se cambia por otro Pokémon del equipo luego\nde atacar.
 Ataca tres veces seguidas. La potencia del primer golpe\nes de 20; la del segundo, de 40; y la del tercero, de 60.\nSe detiene si falla.
 Ataca dos veces seguidas.
 Tiene una probabilidad del 30 % de quemar al objetivo.\nElimina la congelación del usuario y el objetivo.
+[~ 579]
+[~ 580]
+[~ 581]
+[~ 582]
+[~ 583]
+[~ 584]
+[~ 585]
+[~ 586]
+[~ 587]
+[~ 588]
 Reduce 3 PP del último movimiento que usó el objetivo.
 Tiene una probabilidad del 30 % de envenenar, paralizar\no dormir al objetivo.
 Aumenta un nivel la Defensa del usuario.
 Provoca el estado Ataque y Defensa invertidos en el usuario.
 Provoca el estado Trampa de Rocas en el lado rival.
+[~ 594]
+[~ 595]
 Provoca el estado Enojado en el usuario.
 El usuario recibe un 33.3 % del daño que causa.
+[~ 598]
 Tiene una probabilidad del 30 % de atemorizar al objetivo.
+[~ 600]
 Reduce un nivel la Defensa y la Defensa Especial del usuario.
+[~ 602]
+[~ 603]
 Reduce un nivel el Ataque del objetivo.
 Aumenta dos niveles la Defensa del usuario.
 Tiene una probabilidad del 50 % de reducir un nivel la Defensa\ndel objetivo y una probabilidad del 30 % de atemorizarlo.\nAumenta un nivel la probabilidad de lanzar golpes críticos\ndel usuario durante este ataque.
 Tiene una probabilidad del 30 % de quemar al objetivo.\nSu potencia se duplica si el objetivo sufre un problema\nde estado.
 Provoca el estado Púas en el lado rival.
+[~ 609]
+[~ 610]
+[~ 611]
+[~ 612]
+[~ 613]
+[~ 614]
+[~ 615]
+[~ 616]
 Tiene una probabilidad del 30 % de confundir al objetivo.\nEl usuario recibe daño equivalente al 50 % de sus PS máximos\nsi falla.
 Aumenta en 50 su potencia cada vez que se debilita\nun Pokémon del equipo del usuario.
 Reduce dos niveles la Defensa Especial del objetivo.
+[~ 620]
 Reduce dos niveles la Defensa y aumenta dos niveles el Ataque\ndel objetivo.
+[~ 622]
 Ataca de una a diez veces seguidas. Se detiene si falla.
 Elimina el campo activo en el terreno de combate.
+[~ 625]
 Revive a un Pokémon del equipo del usuario que se haya\ndebilitado y le restaura el 50 % de sus PS máximos.
 Provoca el estado Salación en el objetivo.
+[~ 628]
 Elimina los estados Apresado y Drenadoras del usuario, así\ncomo los estados Púas, Púas tóxicas, Red Pegajosa y Trampa\nde Rocas en el lado del usuario. Envenena al objetivo.
+[~ 630]
+[~ 631]
 Nunca falla.
 Nunca falla y siempre lanza un golpe crítico.
 Aumenta un nivel el Ataque Especial del usuario.
 Aumenta un nivel la Velocidad del usuario.
 Su tipo varía según la forma del usuario. Elimina los estados\nPantalla de Luz, Reflejo y Velo Aurora en el lado del objetivo.
+[~ 637]
+[~ 638]
+[~ 639]
+[~ 640]
+[~ 641]
+[~ 642]
 El usuario sacrifica un 50 % de sus PS máximos para crear un\nsustituto y se cambia por otro Pokémon del equipo. El sustituto\nrecibirá los movimientos dirigidos al Pokémon en su lugar y\ndesaparecerá cuando haya recibido una cantidad de daño\nequivalente al 25 % de los PS máximos del usuario.
 Hace que nieve durante cinco turnos. El usuario se cambia por\notro Pokémon del equipo luego de atacar.
 Elimina los estados Red Pegajosa, Trampa de Rocas,\nPúas tóxicas y Púas, así como los sustitutos, en ambos lados.\nAdemás, aumenta un nivel el Ataque y la Velocidad del usuario.
@@ -7648,17 +9868,26 @@ Hace que nieve durante cinco turnos.
 Reduce un nivel la Velocidad del objetivo.
 Aumenta un nivel la Velocidad del usuario.
 Reduce un nivel el Ataque del objetivo.
+[~ 650]
 Ataca dos veces seguidas.
+[~ 652]
 Reduce un nivel la Defensa y la Defensa Especial del usuario.
 El usuario recupera una cantidad de PS equivalente al 50 %\ndel daño que causa.
 El usuario deja de ser de tipo Eléctrico. Este movimiento\nfalla si el usuario no es de tipo Eléctrico.
 No se puede usar dos veces seguidas.
 Si el usuario recibió daño de un ataque en ese turno,\nle devuelve al rival el 150 % del daño causado.
 Aumenta un nivel la probabilidad de lanzar golpes críticos\ndel usuario durante este ataque.
+[~ 659]
 El usuario recupera una cantidad de PS equivalente al 50 %\ndel daño que causa. Este movimiento tiene una probabilidad\ndel 20 % de quemar al objetivo.
 Provoca el estado Caramelizado en el objetivo durante\ntres turnos.
+[~ 662]
 El usuario adquiere el estado Cargando en el turno en el que\nusa este movimiento y ataca en el siguiente. Si llueve, no\nadquiere este estado y ataca inmediatamente.\nSu Ataque Especial aumenta un nivel al usar el movimiento.
+[~ 664]
 Tiene una probabilidad del 30 % de que su potencia\nse duplique.
+[~ 666]
+[~ 667]
+[~ 668]
+[~ 669]
 Tiene mayor potencia entre más PS tenga el objetivo,\ncon un rango entre 1 y 100.
 Provoca el estado Más Críticos +1 en los aliados. Si son\nde tipo Dragón, les provoca el estado Más Críticos +2.
 Confunde al objetivo si sus características aumentaron en\nese turno.
@@ -8290,6 +10519,43 @@ Pulso Primigenio
 Filo del Abismo
 Ascenso Dracónico
 Cerco Dimensión
+[~ 621]
+[~ 622]
+[~ 623]
+[~ 624]
+[~ 625]
+[~ 626]
+[~ 627]
+[~ 628]
+[~ 629]
+[~ 630]
+[~ 631]
+[~ 632]
+[~ 633]
+[~ 634]
+[~ 635]
+[~ 636]
+[~ 637]
+[~ 638]
+[~ 639]
+[~ 640]
+[~ 641]
+[~ 642]
+[~ 643]
+[~ 644]
+[~ 645]
+[~ 646]
+[~ 647]
+[~ 648]
+[~ 649]
+[~ 650]
+[~ 651]
+[~ 652]
+[~ 653]
+[~ 654]
+[~ 655]
+[~ 656]
+[~ 657]
 Recogearena
 Escaramuza
 Búnker
@@ -8326,6 +10592,15 @@ Fragor Escamas
 Martillo Dragón
 Giro Vil
 Velo Aurora
+[~ 694]
+[~ 695]
+[~ 696]
+[~ 697]
+[~ 698]
+[~ 699]
+[~ 700]
+[~ 701]
+[~ 702]
 Trampa Coraza
 Cañón Floral
 Psicocolmillo
@@ -8341,10 +10616,31 @@ Ojos Llorosos
 Electropunzada
 Ira Natural
 Multiataque
+[~ 718]
 Cabeza Sorpresa
 Puños Plasma
 Géiser Fotónico
+[~ 722]
+[~ 723]
+[~ 724]
+[~ 725]
+[~ 726]
+[~ 727]
+[~ 728]
+[~ 729]
+[~ 730]
+[~ 731]
+[~ 732]
+[~ 733]
+[~ 734]
+[~ 735]
+[~ 736]
+[~ 737]
+[~ 738]
+[~ 739]
+[~ 740]
 Ferropuño Doble
+[~ 742]
 Cañón Dinamax
 Disparo Certero
 Presa Maxilar
@@ -8358,6 +10654,24 @@ Octopresa
 Electropico
 Branquibocado
 Cambio de Cancha
+[~ 756]
+[~ 757]
+[~ 758]
+[~ 759]
+[~ 760]
+[~ 761]
+[~ 762]
+[~ 763]
+[~ 764]
+[~ 765]
+[~ 766]
+[~ 767]
+[~ 768]
+[~ 769]
+[~ 770]
+[~ 771]
+[~ 772]
+[~ 773]
 Estruendo Escama
 Plancha Corporal
 Decoración
@@ -8521,247 +10835,1204 @@ Especial
 ~~~~~~~~~~~~~~~
 Text File : zkn_form_syn
 ~~~~~~~~~~~~~~~
+[~ 0]
+[~ 1]
+[~ 2]
+
+[~ 4]
+[~ 5]
+
+[~ 7]
+[~ 8]
+
+[~ 10]
+[~ 11]
+[~ 12]
+[~ 13]
+[~ 14]
+
+[~ 16]
+[~ 17]
+
+[~ 19]
+[~ 20]
+[~ 21]
+[~ 22]
+[~ 23]
 
 
 
-
-
-
-
-
+[~ 27]
+[~ 28]
+[~ 29]
+[~ 30]
+[~ 31]
+[~ 32]
+[~ 33]
+[~ 34]
+[~ 35]
+[~ 36]
+[~ 37]
 
 Mega-Clefable
+[~ 40]
 
+[~ 42]
+[~ 43]
+[~ 44]
+[~ 45]
+[~ 46]
+[~ 47]
+[~ 48]
+[~ 49]
+[~ 50]
+[~ 51]
+[~ 52]
+[~ 53]
+[~ 54]
+[~ 55]
+[~ 56]
+[~ 57]
+[~ 58]
+[~ 59]
+[~ 60]
+[~ 61]
 
+[~ 63]
+[~ 64]
+[~ 65]
+[~ 66]
+[~ 67]
 
+[~ 69]
+[~ 70]
 
+[~ 72]
+[~ 73]
 
 Mega-Victreebel
+[~ 76]
+[~ 77]
+[~ 78]
+[~ 79]
+[~ 80]
+[~ 81]
+[~ 82]
+[~ 83]
 
+[~ 85]
+[~ 86]
+[~ 87]
+[~ 88]
+[~ 89]
+[~ 90]
+[~ 91]
+[~ 92]
+[~ 93]
+[~ 94]
+[~ 95]
+[~ 96]
+[~ 97]
 
+[~ 99]
+[~ 100]
+[~ 101]
+[~ 102]
+[~ 103]
+[~ 104]
+[~ 105]
+[~ 106]
+[~ 107]
+[~ 108]
+[~ 109]
+[~ 110]
+[~ 111]
+[~ 112]
+[~ 113]
+[~ 114]
+[~ 115]
+[~ 116]
+[~ 117]
+[~ 118]
 
+[~ 120]
+[~ 121]
+[~ 122]
+[~ 123]
+[~ 124]
 
 Mega-Starmie
+[~ 127]
+[~ 128]
+[~ 129]
+[~ 130]
+[~ 131]
+
+
+[~ 134]
+
+[~ 136]
+
+[~ 138]
 
 
 
+[~ 142]
+[~ 143]
+[~ 144]
+[~ 145]
+[~ 146]
 
 
-
-
-
-
+[~ 149]
+[~ 150]
+[~ 151]
+[~ 152]
+[~ 153]
 
 Mega-Dragonite
+[~ 156]
+[~ 157]
+[~ 158]
+[~ 159]
 
 Mega-Meganium
+[~ 162]
+[~ 163]
 
+[~ 165]
+[~ 166]
 
 Mega-Feraligatr
+[~ 169]
+[~ 170]
+[~ 171]
+[~ 172]
+[~ 173]
+[~ 174]
+[~ 175]
+
+[~ 177]
+[~ 178]
+[~ 179]
+[~ 180]
+[~ 181]
+[~ 182]
+[~ 183]
+[~ 184]
+[~ 185]
+[~ 186]
+[~ 187]
+[~ 188]
+
+[~ 190]
+[~ 191]
+
+[~ 193]
+
+[~ 195]
+[~ 196]
+[~ 197]
+[~ 198]
+[~ 199]
+[~ 200]
+[~ 201]
+[~ 202]
+[~ 203]
 
 
+[~ 206]
 
+[~ 208]
+[~ 209]
+[~ 210]
+[~ 211]
+[~ 212]
 
+[~ 214]
+[~ 215]
 
+[~ 217]
+[~ 218]
+[~ 219]
 
+[~ 221]
 
-
-
-
-
+[~ 223]
+[~ 224]
+[~ 225]
+[~ 226]
+[~ 227]
+[~ 228]
+[~ 229]
+[~ 230]
+[~ 231]
+[~ 232]
+[~ 233]
+[~ 234]
 
 Mega-Skarmory
+[~ 237]
+
+[~ 239]
+[~ 240]
+[~ 241]
+[~ 242]
+[~ 243]
+[~ 244]
+[~ 245]
+[~ 246]
+[~ 247]
+[~ 248]
+[~ 249]
+[~ 250]
+[~ 251]
+[~ 252]
+[~ 253]
+[~ 254]
+[~ 255]
+[~ 256]
+
+[~ 258]
+[~ 259]
+[~ 260]
+[~ 261]
+[~ 262]
+[~ 263]
+[~ 264]
+[~ 265]
+[~ 266]
+[~ 267]
+[~ 268]
+[~ 269]
+[~ 270]
+[~ 271]
+[~ 272]
+[~ 273]
+[~ 274]
+[~ 275]
+[~ 276]
+[~ 277]
+[~ 278]
+[~ 279]
+[~ 280]
+[~ 281]
+[~ 282]
+[~ 283]
+[~ 284]
+[~ 285]
+[~ 286]
+[~ 287]
+
+[~ 289]
+[~ 290]
+
+[~ 292]
+[~ 293]
+[~ 294]
+[~ 295]
+[~ 296]
+[~ 297]
+[~ 298]
+[~ 299]
+[~ 300]
+[~ 301]
+[~ 302]
+[~ 303]
+[~ 304]
+[~ 305]
+[~ 306]
+[~ 307]
+[~ 308]
+[~ 309]
+[~ 310]
+
+[~ 312]
+[~ 313]
+[~ 314]
+
+[~ 316]
+
+[~ 318]
+
+[~ 320]
+[~ 321]
+[~ 322]
+[~ 323]
+[~ 324]
+[~ 325]
+[~ 326]
+[~ 327]
+
+[~ 329]
+[~ 330]
+[~ 331]
 
 
+[~ 334]
+[~ 335]
+[~ 336]
+[~ 337]
+[~ 338]
+[~ 339]
+[~ 340]
+[~ 341]
+[~ 342]
 
-
-
-
-
-
-
-
-
-
+[~ 344]
+[~ 345]
+[~ 346]
+[~ 347]
+[~ 348]
+[~ 349]
+[~ 350]
+[~ 351]
+[~ 352]
+[~ 353]
+[~ 354]
+[~ 355]
+[~ 356]
+[~ 357]
+[~ 358]
 
 Forma de Castform
+[~ 361]
+[~ 362]
 
+[~ 364]
+[~ 365]
+[~ 366]
 
 Mega-Chimecho
 
+[~ 370]
+[~ 371]
+[~ 372]
+
+[~ 374]
+[~ 375]
+[~ 376]
+[~ 377]
+[~ 378]
+[~ 379]
+[~ 380]
+[~ 381]
+[~ 382]
+[~ 383]
+[~ 384]
+[~ 385]
+[~ 386]
+[~ 387]
+[~ 388]
+[~ 389]
+[~ 390]
+[~ 391]
+[~ 392]
+[~ 393]
+[~ 394]
+[~ 395]
+[~ 396]
+[~ 397]
+[~ 398]
+[~ 399]
+
+[~ 401]
+[~ 402]
+
+[~ 404]
+[~ 405]
+
+[~ 407]
+[~ 408]
+[~ 409]
+[~ 410]
+[~ 411]
+[~ 412]
+[~ 413]
+[~ 414]
+[~ 415]
+[~ 416]
+
+[~ 418]
+
+[~ 420]
+
+[~ 422]
+
+[~ 424]
+[~ 425]
+[~ 426]
+[~ 427]
+[~ 428]
+[~ 429]
+[~ 430]
+[~ 431]
+[~ 432]
+[~ 433]
+[~ 434]
+[~ 435]
+[~ 436]
+[~ 437]
+[~ 438]
+[~ 439]
+
+[~ 441]
+[~ 442]
+[~ 443]
+[~ 444]
+[~ 445]
+[~ 446]
+[~ 447]
+[~ 448]
+[~ 449]
+[~ 450]
+[~ 451]
+[~ 452]
+[~ 453]
+
+[~ 455]
+[~ 456]
+
+[~ 458]
+[~ 459]
+[~ 460]
+
+[~ 462]
+[~ 463]
+
+[~ 465]
+[~ 466]
+[~ 467]
+
+[~ 469]
+[~ 470]
+[~ 471]
+[~ 472]
+[~ 473]
+
+
+[~ 476]
+[~ 477]
+
+[~ 479]
+[~ 480]
+[~ 481]
+[~ 482]
+[~ 483]
 
 
 
 
+[~ 488]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[~ 490]
+[~ 491]
 
 Mega-Froslass
 Forma de Rotom
+[~ 495]
+[~ 496]
+[~ 497]
+[~ 498]
+[~ 499]
+[~ 500]
+[~ 501]
+[~ 502]
+[~ 503]
+[~ 504]
+[~ 505]
+[~ 506]
+[~ 507]
+[~ 508]
+[~ 509]
+[~ 510]
+[~ 511]
+[~ 512]
+[~ 513]
 
+[~ 515]
+[~ 516]
 
 Mega-Emboar
+[~ 519]
+[~ 520]
 
+[~ 522]
 
+[~ 524]
+[~ 525]
+[~ 526]
+[~ 527]
 
+[~ 529]
 
+[~ 531]
 
+[~ 533]
 
+[~ 535]
+[~ 536]
+[~ 537]
+[~ 538]
+[~ 539]
+[~ 540]
+[~ 541]
+[~ 542]
+[~ 543]
+[~ 544]
+[~ 545]
+[~ 546]
+[~ 547]
 
 Mega-Excadrill
 
+[~ 551]
+[~ 552]
 
+[~ 554]
+[~ 555]
+[~ 556]
+[~ 557]
+[~ 558]
+[~ 559]
+[~ 560]
+[~ 561]
+[~ 562]
+[~ 563]
+[~ 564]
+[~ 565]
+[~ 566]
 
+[~ 568]
+[~ 569]
+[~ 570]
+[~ 571]
+[~ 572]
 
+[~ 574]
+[~ 575]
+[~ 576]
+[~ 577]
+[~ 578]
+[~ 579]
+[~ 580]
+[~ 581]
+[~ 582]
+[~ 583]
 
+[~ 585]
+[~ 586]
+[~ 587]
+[~ 588]
+[~ 589]
 
+[~ 591]
 
+[~ 593]
+[~ 594]
+[~ 595]
+[~ 596]
+[~ 597]
+[~ 598]
+[~ 599]
 
+[~ 601]
+[~ 602]
+[~ 603]
+[~ 604]
 
+[~ 606]
+[~ 607]
 
+[~ 609]
+[~ 610]
+[~ 611]
+[~ 612]
+[~ 613]
+[~ 614]
+[~ 615]
+[~ 616]
+[~ 617]
+[~ 618]
+[~ 619]
+[~ 620]
+[~ 621]
+[~ 622]
+[~ 623]
+[~ 624]
+[~ 625]
+[~ 626]
+[~ 627]
+[~ 628]
+[~ 629]
+[~ 630]
 
 Mega-Chandelure
+[~ 633]
+[~ 634]
+[~ 635]
+[~ 636]
 
+[~ 638]
+[~ 639]
+[~ 640]
 
+[~ 642]
+[~ 643]
+[~ 644]
+[~ 645]
 
 Mega-Golurk
+[~ 648]
+[~ 649]
+[~ 650]
+[~ 651]
+[~ 652]
+[~ 653]
+[~ 654]
+[~ 655]
+[~ 656]
+[~ 657]
+[~ 658]
 
+[~ 660]
 
+[~ 662]
+[~ 663]
+[~ 664]
+[~ 665]
+[~ 666]
+[~ 667]
+[~ 668]
+[~ 669]
+[~ 670]
+[~ 671]
+[~ 672]
+[~ 673]
+[~ 674]
+[~ 675]
 
 Mega-Chesnaught
+[~ 678]
+[~ 679]
 
 Mega-Delphox
+[~ 682]
+[~ 683]
 
 Mega-Greninja
+[~ 686]
 
+[~ 688]
+[~ 689]
 
+[~ 691]
+[~ 692]
 Motivo Polar
+[~ 694]
+[~ 695]
+[~ 696]
+[~ 697]
+[~ 698]
 Mega-Floette
 Flor Roja
+[~ 701]
+[~ 702]
+[~ 703]
 
 Forma Salvaje
+[~ 706]
 Macho
 Mega-Meowstic
+[~ 709]
+[~ 710]
 Forma Escudo
+[~ 712]
 
+[~ 714]
 
+[~ 716]
+[~ 717]
+[~ 718]
+[~ 719]
+[~ 720]
+[~ 721]
+[~ 722]
+[~ 723]
+[~ 724]
+[~ 725]
 
+[~ 727]
 
+[~ 729]
 
+[~ 731]
 
 
 
 Mega-Hawlucha
 
+[~ 737]
+[~ 738]
+[~ 739]
 
 
+[~ 742]
 
+[~ 744]
 Variante Mediana
+[~ 746]
 
+[~ 748]
 
+[~ 750]
+[~ 751]
+[~ 752]
+[~ 753]
+[~ 754]
+[~ 755]
+[~ 756]
+[~ 757]
+[~ 758]
 
+[~ 760]
+[~ 761]
 
+[~ 763]
+[~ 764]
 
+[~ 766]
+[~ 767]
 
+[~ 769]
+[~ 770]
+[~ 771]
+[~ 772]
+[~ 773]
+[~ 774]
 
 Mega-Crabominable
+[~ 777]
+[~ 778]
+[~ 779]
+[~ 780]
 Forma Diurna
+[~ 782]
+[~ 783]
+
+[~ 785]
+
+[~ 787]
+
+[~ 789]
+[~ 790]
+[~ 791]
+[~ 792]
+[~ 793]
+
+[~ 795]
+[~ 796]
+[~ 797]
+[~ 798]
+
+[~ 800]
 
 
-
-
-
-
-
+[~ 803]
+[~ 804]
+[~ 805]
+[~ 806]
+[~ 807]
+[~ 808]
+[~ 809]
+[~ 810]
+[~ 811]
+[~ 812]
+[~ 813]
+[~ 814]
 Forma Encubierta
+[~ 816]
 
 Mega-Drampa
+[~ 819]
+[~ 820]
+[~ 821]
+
+[~ 823]
+[~ 824]
+[~ 825]
+[~ 826]
+[~ 827]
+[~ 828]
+[~ 829]
+[~ 830]
+[~ 831]
+[~ 832]
+[~ 833]
+[~ 834]
+[~ 835]
+[~ 836]
+[~ 837]
+[~ 838]
+[~ 839]
+[~ 840]
+[~ 841]
+[~ 842]
+[~ 843]
+[~ 844]
+[~ 845]
+[~ 846]
+[~ 847]
+[~ 848]
+[~ 849]
+[~ 850]
+[~ 851]
+[~ 852]
+[~ 853]
+[~ 854]
+[~ 855]
+[~ 856]
+[~ 857]
+[~ 858]
+[~ 859]
+[~ 860]
+[~ 861]
+[~ 862]
+[~ 863]
+
+[~ 865]
+[~ 866]
+[~ 867]
+[~ 868]
+[~ 869]
+[~ 870]
+[~ 871]
+[~ 872]
+[~ 873]
+[~ 874]
+[~ 875]
+[~ 876]
+[~ 877]
+[~ 878]
+[~ 879]
+[~ 880]
+[~ 881]
 
 
+[~ 884]
 
-
-
+[~ 886]
+[~ 887]
+[~ 888]
+[~ 889]
+[~ 890]
+[~ 891]
+[~ 892]
+[~ 893]
+[~ 894]
+[~ 895]
 Forma Falsificada
+[~ 897]
+[~ 898]
+
+[~ 900]
+[~ 901]
+[~ 902]
+[~ 903]
+[~ 904]
+[~ 905]
+[~ 906]
 
 
-
+[~ 909]
 Crema de Vainilla
+[~ 911]
+[~ 912]
+[~ 913]
+[~ 914]
+[~ 915]
+[~ 916]
+[~ 917]
+[~ 918]
 Forma Saciada
+[~ 920]
+[~ 921]
+[~ 922]
+[~ 923]
+[~ 924]
+[~ 925]
+[~ 926]
+[~ 927]
+[~ 928]
+
+[~ 930]
+[~ 931]
+[~ 932]
+[~ 933]
+[~ 934]
+[~ 935]
+[~ 936]
+[~ 937]
+[~ 938]
+[~ 939]
+[~ 940]
 
 
-
+[~ 943]
 Macho
 
+[~ 946]
+[~ 947]
+[~ 948]
+[~ 949]
+
+[~ 951]
+[~ 952]
+
+[~ 954]
+[~ 955]
+
+[~ 957]
+[~ 958]
+[~ 959]
+[~ 960]
+[~ 961]
+[~ 962]
+[~ 963]
+[~ 964]
+[~ 965]
+[~ 966]
+[~ 967]
+[~ 968]
 
 
-
-
-
+[~ 971]
+[~ 972]
+[~ 973]
+[~ 974]
+[~ 975]
 Forma Ingenua
+[~ 977]
+[~ 978]
+[~ 979]
+[~ 980]
 
 Mega-Scovillain
+[~ 983]
 
+[~ 985]
+[~ 986]
 
+[~ 988]
 Familia de Tres
+[~ 990]
+[~ 991]
+[~ 992]
+[~ 993]
 
+[~ 995]
+[~ 996]
+[~ 997]
+[~ 998]
+[~ 999]
+[~ 1000]
+[~ 1001]
+[~ 1002]
 
+[~ 1004]
+[~ 1005]
+[~ 1006]
+[~ 1007]
+[~ 1008]
+[~ 1009]
+[~ 1010]
+[~ 1011]
 
+[~ 1013]
 
 Mega-Glimmora
+[~ 1016]
+[~ 1017]
+[~ 1018]
+[~ 1019]
+[~ 1020]
+[~ 1021]
+[~ 1022]
+[~ 1023]
+[~ 1024]
+
+[~ 1026]
+[~ 1027]
+[~ 1028]
+[~ 1029]
+[~ 1030]
+[~ 1031]
+[~ 1032]
+[~ 1033]
+[~ 1034]
+[~ 1035]
+[~ 1036]
+[~ 1037]
+[~ 1038]
+[~ 1039]
+[~ 1040]
+[~ 1041]
+[~ 1042]
+[~ 1043]
+[~ 1044]
+[~ 1045]
+[~ 1046]
+[~ 1047]
+[~ 1048]
+[~ 1049]
+
+[~ 1051]
 
 
+[~ 1054]
+[~ 1055]
 
+[~ 1057]
+[~ 1058]
+[~ 1059]
+[~ 1060]
 
+[~ 1062]
+[~ 1063]
+[~ 1064]
+[~ 1065]
+[~ 1066]
+[~ 1067]
+[~ 1068]
+[~ 1069]
+[~ 1070]
 
-
-
+[~ 1072]
 Forma Mediocre
 Mega-Venusaur
+[~ 1075]
 Mega-Charizard X
 Mega-Charizard Y
+[~ 1078]
 Mega-Blastoise
+[~ 1080]
+[~ 1081]
 Mega-Beedrill
 Mega-Pidgeot
+[~ 1084]
+[~ 1085]
+[~ 1086]
+[~ 1087]
+[~ 1088]
+[~ 1089]
+[~ 1090]
+[~ 1091]
+[~ 1092]
+[~ 1093]
+[~ 1094]
+[~ 1095]
+[~ 1096]
 Forma de Alola
+[~ 1098]
+[~ 1099]
+[~ 1100]
 Forma de Alola
+[~ 1102]
+[~ 1103]
+[~ 1104]
+[~ 1105]
+[~ 1106]
+[~ 1107]
+[~ 1108]
 Forma de Hisui
+[~ 1110]
 Mega-Alakazam
+[~ 1112]
+[~ 1113]
+[~ 1114]
+[~ 1115]
+[~ 1116]
+[~ 1117]
+[~ 1118]
 Mega-Slowbro
 Forma de Galar
+[~ 1121]
+[~ 1122]
+[~ 1123]
 Mega-Gengar
+[~ 1125]
+[~ 1126]
+[~ 1127]
+[~ 1128]
+[~ 1129]
+[~ 1130]
+[~ 1131]
+[~ 1132]
+[~ 1133]
 Mega-Kangaskhan
+[~ 1135]
 Mega-Pinsir
 Forma de Paldea (Variedad Combatiente)
 Forma de Paldea (Variedad Abrasadora)
 Forma de Paldea (Variedad Acuática)
 Mega-Gyarados
+[~ 1141]
+[~ 1142]
+[~ 1143]
 Mega-Aerodactyl
+[~ 1145]
+[~ 1146]
+[~ 1147]
+[~ 1148]
+[~ 1149]
+[~ 1150]
 Forma de Hisui
 Mega-Ampharos
+[~ 1153]
 Forma de Galar
+[~ 1155]
+[~ 1156]
+[~ 1157]
+[~ 1158]
+[~ 1159]
+[~ 1160]
+[~ 1161]
+[~ 1162]
+[~ 1163]
+[~ 1164]
+[~ 1165]
+[~ 1166]
+[~ 1167]
+[~ 1168]
+[~ 1169]
+[~ 1170]
+[~ 1171]
+[~ 1172]
+[~ 1173]
+[~ 1174]
+[~ 1175]
+[~ 1176]
+[~ 1177]
+[~ 1178]
+[~ 1179]
+[~ 1180]
+[~ 1181]
 Mega-Steelix
+[~ 1183]
 Mega-Scizor
 Mega-Heracross
+[~ 1186]
+[~ 1187]
 Mega-Houndoom
 Mega-Tyranitar
+[~ 1190]
+[~ 1191]
+[~ 1192]
+[~ 1193]
+[~ 1194]
 Mega-Gardevoir
 Mega-Sableye
+[~ 1197]
 Mega-Aggron
 Mega-Medicham
 Mega-Manectric
@@ -8774,6 +12045,25 @@ Forma Nieve
 Mega-Banette
 Mega-Absol
 Mega-Glalie
+[~ 1210]
+[~ 1211]
+[~ 1212]
+[~ 1213]
+[~ 1214]
+[~ 1215]
+[~ 1216]
+[~ 1217]
+[~ 1218]
+[~ 1219]
+[~ 1220]
+[~ 1221]
+[~ 1222]
+[~ 1223]
+[~ 1224]
+[~ 1225]
+[~ 1226]
+[~ 1227]
+[~ 1228]
 Mega-Lopunny
 Mega-Garchomp
 Mega-Lucario
@@ -8784,10 +12074,103 @@ Rotom Lavado
 Rotom Frío
 Rotom Ventilador
 Rotom Podadora
+[~ 1239]
+[~ 1240]
+[~ 1241]
+[~ 1242]
+[~ 1243]
+[~ 1244]
+[~ 1245]
+[~ 1246]
+[~ 1247]
+[~ 1248]
+[~ 1249]
+[~ 1250]
+[~ 1251]
+[~ 1252]
+[~ 1253]
+[~ 1254]
+[~ 1255]
+[~ 1256]
+[~ 1257]
+[~ 1258]
+[~ 1259]
 Forma de Hisui
+[~ 1261]
 Mega-Audino
+[~ 1263]
+[~ 1264]
+[~ 1265]
+[~ 1266]
+[~ 1267]
+[~ 1268]
+[~ 1269]
+[~ 1270]
+[~ 1271]
+[~ 1272]
+[~ 1273]
 Forma de Hisui
+[~ 1275]
+[~ 1276]
+[~ 1277]
+[~ 1278]
+[~ 1279]
+[~ 1280]
+[~ 1281]
+[~ 1282]
 Forma de Galar
+[~ 1284]
+[~ 1285]
+[~ 1286]
+[~ 1287]
+[~ 1288]
+[~ 1289]
+[~ 1290]
+[~ 1291]
+[~ 1292]
+[~ 1293]
+[~ 1294]
+[~ 1295]
+[~ 1296]
+[~ 1297]
+[~ 1298]
+[~ 1299]
+[~ 1300]
+[~ 1301]
+[~ 1302]
+[~ 1303]
+[~ 1304]
+[~ 1305]
+[~ 1306]
+[~ 1307]
+[~ 1308]
+[~ 1309]
+[~ 1310]
+[~ 1311]
+[~ 1312]
+[~ 1313]
+[~ 1314]
+[~ 1315]
+[~ 1316]
+[~ 1317]
+[~ 1318]
+[~ 1319]
+[~ 1320]
+[~ 1321]
+[~ 1322]
+[~ 1323]
+[~ 1324]
+[~ 1325]
+[~ 1326]
+[~ 1327]
+[~ 1328]
+[~ 1329]
+[~ 1330]
+[~ 1331]
+[~ 1332]
+[~ 1333]
+[~ 1334]
+[~ 1335]
 Motivo Taiga
 Motivo Tundra
 Motivo Continental
@@ -8831,18 +12214,96 @@ Corte Kabuki
 Corte Faraónico
 Hembra
 Forma Espada
+[~ 1379]
 Forma de Hisui
+[~ 1381]
+[~ 1382]
+[~ 1383]
 Variante Pequeña
 Variante Grande
 Variante Enorme
 Forma de Hisui
+[~ 1388]
+[~ 1389]
+[~ 1390]
+[~ 1391]
+[~ 1392]
+[~ 1393]
+[~ 1394]
+[~ 1395]
 Forma de Hisui
+[~ 1397]
+[~ 1398]
+[~ 1399]
+[~ 1400]
+[~ 1401]
+[~ 1402]
+[~ 1403]
 Forma Nocturna
 Forma Crepuscular
+[~ 1406]
+[~ 1407]
+[~ 1408]
+[~ 1409]
+[~ 1410]
+[~ 1411]
+[~ 1412]
+[~ 1413]
+[~ 1414]
+[~ 1415]
+[~ 1416]
+[~ 1417]
+[~ 1418]
+[~ 1419]
+[~ 1420]
+[~ 1421]
+[~ 1422]
+[~ 1423]
+[~ 1424]
+[~ 1425]
+[~ 1426]
+[~ 1427]
+[~ 1428]
+[~ 1429]
+[~ 1430]
+[~ 1431]
+[~ 1432]
+[~ 1433]
+[~ 1434]
+[~ 1435]
+[~ 1436]
+[~ 1437]
+[~ 1438]
+[~ 1439]
+[~ 1440]
 Forma Descubierta
 
 
+[~ 1444]
+[~ 1445]
+[~ 1446]
+[~ 1447]
+[~ 1448]
+[~ 1449]
+[~ 1450]
+[~ 1451]
+[~ 1452]
+[~ 1453]
+[~ 1454]
+[~ 1455]
+[~ 1456]
+[~ 1457]
+[~ 1458]
+[~ 1459]
+[~ 1460]
+[~ 1461]
+[~ 1462]
+[~ 1463]
+[~ 1464]
+[~ 1465]
 Forma Genuina
+[~ 1467]
+[~ 1468]
 Crema Rosa
 Crema de Té
 Crema de Menta
@@ -8851,217 +12312,1252 @@ Crema Salada
 Mezcla Rosa
 Mezcla Caramelo
 Tres Sabores
+[~ 1477]
+[~ 1478]
+[~ 1479]
 Forma Voraz
+[~ 1481]
+[~ 1482]
+[~ 1483]
+[~ 1484]
+[~ 1485]
+[~ 1486]
+[~ 1487]
+[~ 1488]
+[~ 1489]
+[~ 1490]
+[~ 1491]
+[~ 1492]
+[~ 1493]
 Hembra
+[~ 1495]
+[~ 1496]
+[~ 1497]
 Forma Heroica
 Familia de Cuatro
+[~ 1500]
+[~ 1501]
+[~ 1502]
+[~ 1503]
+[~ 1504]
+[~ 1505]
+[~ 1506]
+[~ 1507]
+[~ 1508]
+[~ 1509]
 Forma Exquisita
 ~~~~~~~~~~~~~~~
 Text File : zkn_weight
 ~~~~~~~~~~~~~~~
+[~ 0]
+[~ 1]
 100.0 kg
+[~ 3]
+[~ 4]
 90.5 kg
+[~ 6]
+[~ 7]
 85.5 kg
+[~ 9]
+[~ 10]
+[~ 11]
+[~ 12]
+[~ 13]
 29.5 kg
+[~ 15]
+[~ 16]
 39.5 kg
+[~ 18]
+[~ 19]
+[~ 20]
+[~ 21]
+[~ 22]
 65.0 kg
 6.0 kg
 30.0 kg
+[~ 26]
+[~ 27]
+[~ 28]
+[~ 29]
+[~ 30]
+[~ 31]
+[~ 32]
+[~ 33]
+[~ 34]
 40.0 kg
+[~ 36]
 19.9 kg
+[~ 38]
+[~ 39]
+[~ 40]
+[~ 41]
+[~ 42]
+[~ 43]
+[~ 44]
+[~ 45]
+[~ 46]
+[~ 47]
+[~ 48]
+[~ 49]
+[~ 50]
+[~ 51]
+[~ 52]
+[~ 53]
+[~ 54]
+[~ 55]
+[~ 56]
+[~ 57]
 155.0 kg
+[~ 59]
+[~ 60]
+[~ 61]
+[~ 62]
+[~ 63]
 48.0 kg
+[~ 65]
+[~ 66]
 130.0 kg
+[~ 68]
+[~ 69]
 15.5 kg
+[~ 71]
+[~ 72]
+[~ 73]
+[~ 74]
+[~ 75]
+[~ 76]
+[~ 77]
+[~ 78]
 78.5 kg
+[~ 80]
+[~ 81]
+[~ 82]
+[~ 83]
+[~ 84]
+[~ 85]
+[~ 86]
+[~ 87]
+[~ 88]
+[~ 89]
+[~ 90]
+[~ 91]
+[~ 92]
 40.5 kg
+[~ 94]
+[~ 95]
+[~ 96]
+[~ 97]
+[~ 98]
+[~ 99]
+[~ 100]
+[~ 101]
+[~ 102]
+[~ 103]
+[~ 104]
+[~ 105]
+[~ 106]
+[~ 107]
+[~ 108]
+[~ 109]
+[~ 110]
+[~ 111]
+[~ 112]
+[~ 113]
 80.0 kg
+[~ 115]
+[~ 116]
+[~ 117]
+[~ 118]
+[~ 119]
 80.0 kg
+[~ 121]
+[~ 122]
+[~ 123]
+[~ 124]
+[~ 125]
 55.0 kg
 88.4 kg
+[~ 128]
 235.0 kg
+[~ 130]
 4.0 kg
+[~ 132]
 29.0 kg
 24.5 kg
 25.0 kg
+[~ 136]
+[~ 137]
+[~ 138]
+[~ 139]
+[~ 140]
 59.0 kg
 460.0 kg
+[~ 143]
+[~ 144]
+[~ 145]
+[~ 146]
+[~ 147]
 210.0 kg
+[~ 149]
+[~ 150]
+[~ 151]
+[~ 152]
 100.5 kg
+[~ 154]
+[~ 155]
 79.5 kg
+[~ 157]
+[~ 158]
 88.8 kg
+[~ 160]
+[~ 161]
+[~ 162]
+[~ 163]
+[~ 164]
+[~ 165]
+[~ 166]
 33.5 kg
+[~ 168]
+[~ 169]
+[~ 170]
+[~ 171]
+[~ 172]
+[~ 173]
+[~ 174]
+[~ 175]
+[~ 176]
+[~ 177]
+[~ 178]
+[~ 179]
 61.5 kg
+[~ 181]
+[~ 182]
 28.5 kg
+[~ 184]
 33.9 kg
+[~ 186]
+[~ 187]
+[~ 188]
+[~ 189]
+[~ 190]
+[~ 191]
+[~ 192]
+[~ 193]
+[~ 194]
 26.5 kg
 27.0 kg
+[~ 197]
 79.5 kg
+[~ 199]
+[~ 200]
+[~ 201]
+[~ 202]
+[~ 203]
 125.8 kg
+[~ 205]
+[~ 206]
 400.0 kg
+[~ 208]
+[~ 209]
+[~ 210]
 118.0 kg
+[~ 212]
 54.0 kg
+[~ 214]
+[~ 215]
+[~ 216]
+[~ 217]
+[~ 218]
+[~ 219]
+[~ 220]
+[~ 221]
+[~ 222]
+[~ 223]
+[~ 224]
+[~ 225]
 50.5 kg
+[~ 227]
 35.0 kg
+[~ 229]
+[~ 230]
+[~ 231]
+[~ 232]
+[~ 233]
+[~ 234]
+[~ 235]
+[~ 236]
+[~ 237]
+[~ 238]
+[~ 239]
+[~ 240]
+[~ 241]
+[~ 242]
+[~ 243]
+[~ 244]
+[~ 245]
+[~ 246]
 202.0 kg
+[~ 248]
+[~ 249]
+[~ 250]
+[~ 251]
+[~ 252]
+[~ 253]
+[~ 254]
+[~ 255]
+[~ 256]
+[~ 257]
+[~ 258]
+[~ 259]
+[~ 260]
+[~ 261]
+[~ 262]
+[~ 263]
+[~ 264]
+[~ 265]
+[~ 266]
+[~ 267]
+[~ 268]
+[~ 269]
+[~ 270]
+[~ 271]
+[~ 272]
+[~ 273]
+[~ 274]
+[~ 275]
+[~ 276]
+[~ 277]
 28.0 kg
+[~ 279]
+[~ 280]
 48.4 kg
+[~ 282]
+[~ 283]
+[~ 284]
+[~ 285]
+[~ 286]
+[~ 287]
+[~ 288]
+[~ 289]
+[~ 290]
+[~ 291]
+[~ 292]
+[~ 293]
+[~ 294]
+[~ 295]
+[~ 296]
+[~ 297]
+[~ 298]
+[~ 299]
+[~ 300]
 11.0 kg
+[~ 302]
+[~ 303]
+[~ 304]
 360.0 kg
+[~ 306]
 31.5 kg
+[~ 308]
 40.2 kg
+[~ 310]
+[~ 311]
+[~ 312]
+[~ 313]
+[~ 314]
+[~ 315]
+[~ 316]
+[~ 317]
 88.8 kg
+[~ 319]
+[~ 320]
+[~ 321]
 220.0 kg
 80.4 kg
+[~ 324]
+[~ 325]
+[~ 326]
+[~ 327]
+[~ 328]
+[~ 329]
+[~ 330]
+[~ 331]
+[~ 332]
 20.6 kg
+[~ 334]
+[~ 335]
+[~ 336]
+[~ 337]
+[~ 338]
+[~ 339]
+[~ 340]
+[~ 341]
+[~ 342]
+[~ 343]
+[~ 344]
+[~ 345]
+[~ 346]
+[~ 347]
+[~ 348]
 162.0 kg
 0.8 kg
+[~ 351]
+[~ 352]
 12.5 kg
+[~ 354]
+[~ 355]
+[~ 356]
 1.0 kg
 47.0 kg
+[~ 359]
+[~ 360]
 256.5 kg
+[~ 362]
+[~ 363]
+[~ 364]
+[~ 365]
+[~ 366]
+[~ 367]
+[~ 368]
+[~ 369]
+[~ 370]
+[~ 371]
+[~ 372]
+[~ 373]
+[~ 374]
+[~ 375]
+[~ 376]
+[~ 377]
+[~ 378]
+[~ 379]
+[~ 380]
+[~ 381]
+[~ 382]
+[~ 383]
+[~ 384]
+[~ 385]
+[~ 386]
+[~ 387]
 310.0 kg
+[~ 389]
+[~ 390]
 55.0 kg
+[~ 392]
+[~ 393]
 84.5 kg
+[~ 395]
+[~ 396]
+[~ 397]
+[~ 398]
+[~ 399]
+[~ 400]
+[~ 401]
+[~ 402]
+[~ 403]
 42.0 kg
+[~ 405]
 14.5 kg
+[~ 407]
 102.5 kg
+[~ 409]
 149.5 kg
+[~ 411]
+[~ 412]
+[~ 413]
+[~ 414]
+[~ 415]
+[~ 416]
+[~ 417]
+[~ 418]
+[~ 419]
+[~ 420]
+[~ 421]
+[~ 422]
+[~ 423]
+[~ 424]
+[~ 425]
+[~ 426]
 33.3 kg
+[~ 428]
+[~ 429]
+[~ 430]
+[~ 431]
+[~ 432]
+[~ 433]
+[~ 434]
+[~ 435]
+[~ 436]
+[~ 437]
+[~ 438]
+[~ 439]
+[~ 440]
 108.0 kg
+[~ 442]
+[~ 443]
 95.0 kg
+[~ 445]
+[~ 446]
 54.0 kg
+[~ 448]
 300.0 kg
+[~ 450]
+[~ 451]
+[~ 452]
 44.4 kg
+[~ 454]
+[~ 455]
+[~ 456]
+[~ 457]
+[~ 458]
 135.5 kg
 34.0 kg
+[~ 461]
+[~ 462]
 282.8 kg
+[~ 464]
+[~ 465]
+[~ 466]
+[~ 467]
+[~ 468]
 25.5 kg
 25.9 kg
 42.5 kg
 291.0 kg
+[~ 473]
 52.0 kg
+[~ 475]
+[~ 476]
 26.6 kg
 0.3 kg
+[~ 479]
+[~ 480]
+[~ 481]
+[~ 482]
+[~ 483]
+[~ 484]
+[~ 485]
+[~ 486]
+[~ 487]
+[~ 488]
+[~ 489]
+[~ 490]
+[~ 491]
+[~ 492]
+[~ 493]
+[~ 494]
+[~ 495]
 63.0 kg
+[~ 497]
+[~ 498]
 150.0 kg
+[~ 500]
+[~ 501]
 94.6 kg
+[~ 503]
 27.0 kg
+[~ 505]
+[~ 506]
+[~ 507]
+[~ 508]
 37.5 kg
+[~ 510]
 30.5 kg
+[~ 512]
 28.0 kg
+[~ 514]
 29.0 kg
+[~ 516]
+[~ 517]
+[~ 518]
+[~ 519]
+[~ 520]
+[~ 521]
+[~ 522]
+[~ 523]
+[~ 524]
+[~ 525]
+[~ 526]
+[~ 527]
+[~ 528]
 40.4 kg
 31.0 kg
+[~ 531]
+[~ 532]
 87.0 kg
+[~ 534]
+[~ 535]
+[~ 536]
+[~ 537]
+[~ 538]
+[~ 539]
+[~ 540]
+[~ 541]
+[~ 542]
+[~ 543]
+[~ 544]
+[~ 545]
 6.6 kg
+[~ 547]
+[~ 548]
+[~ 549]
+[~ 550]
+[~ 551]
 96.3 kg
+[~ 553]
+[~ 554]
+[~ 555]
+[~ 556]
+[~ 557]
+[~ 558]
+[~ 559]
+[~ 560]
+[~ 561]
 76.5 kg
+[~ 563]
+[~ 564]
+[~ 565]
+[~ 566]
+[~ 567]
 107.3 kg
+[~ 569]
 81.1 kg
+[~ 571]
+[~ 572]
+[~ 573]
+[~ 574]
+[~ 575]
+[~ 576]
+[~ 577]
 20.1 kg
+[~ 579]
+[~ 580]
+[~ 581]
+[~ 582]
 57.5 kg
+[~ 584]
+[~ 585]
 5.0 kg
+[~ 587]
+[~ 588]
+[~ 589]
+[~ 590]
+[~ 591]
+[~ 592]
+[~ 593]
+[~ 594]
+[~ 595]
+[~ 596]
+[~ 597]
+[~ 598]
+[~ 599]
+[~ 600]
+[~ 601]
+[~ 602]
+[~ 603]
+[~ 604]
+[~ 605]
+[~ 606]
+[~ 607]
 34.3 kg
+[~ 609]
+[~ 610]
+[~ 611]
+[~ 612]
 260.0 kg
+[~ 614]
+[~ 615]
+[~ 616]
 11.0 kg
+[~ 618]
+[~ 619]
+[~ 620]
+[~ 621]
 330.0 kg
+[~ 623]
+[~ 624]
+[~ 625]
+[~ 626]
+[~ 627]
+[~ 628]
+[~ 629]
+[~ 630]
+[~ 631]
+[~ 632]
+[~ 633]
 160.0 kg
+[~ 635]
 46.0 kg
+[~ 637]
+[~ 638]
+[~ 639]
+[~ 640]
+[~ 641]
+[~ 642]
+[~ 643]
+[~ 644]
+[~ 645]
+[~ 646]
+[~ 647]
+[~ 648]
+[~ 649]
+[~ 650]
 90.0 kg
+[~ 652]
+[~ 653]
 39.0 kg
+[~ 655]
+[~ 656]
 40.0 kg
+[~ 658]
 42.4 kg
+[~ 660]
+[~ 661]
 24.5 kg
+[~ 663]
+[~ 664]
 17.0 kg
+[~ 666]
+[~ 667]
+[~ 668]
+[~ 669]
 10.0 kg
+[~ 671]
+[~ 672]
+[~ 673]
 136.0 kg
 28.0 kg
+[~ 676]
 8.5 kg
+[~ 678]
+[~ 679]
 53.0 kg
+[~ 681]
 15.5 kg
+[~ 683]
 5.0 kg
+[~ 685]
+[~ 686]
+[~ 687]
+[~ 688]
+[~ 689]
+[~ 690]
+[~ 691]
 35.3 kg
+[~ 693]
 21.0 kg
+[~ 695]
 270.0 kg
+[~ 697]
 225.0 kg
 23.5 kg
 21.5 kg
 2.2 kg
+[~ 702]
+[~ 703]
+[~ 704]
 150.5 kg
 3.0 kg
+[~ 707]
 71.0 kg
+[~ 709]
 12.5 kg
+[~ 711]
 505.0 kg
+[~ 713]
 85.0 kg
+[~ 715]
+[~ 716]
+[~ 717]
+[~ 718]
+[~ 719]
+[~ 720]
+[~ 721]
+[~ 722]
 36.6 kg
+[~ 724]
+[~ 725]
 83.0 kg
+[~ 727]
+[~ 728]
 44.0 kg
+[~ 730]
+[~ 731]
 26.0 kg
+[~ 733]
+[~ 734]
+[~ 735]
+[~ 736]
+[~ 737]
+[~ 738]
 180.0 kg
+[~ 740]
+[~ 741]
+[~ 742]
+[~ 743]
 25.0 kg
+[~ 745]
+[~ 746]
 14.5 kg
+[~ 748]
 920.0 kg
+[~ 750]
 82.0 kg
+[~ 752]
+[~ 753]
+[~ 754]
+[~ 755]
+[~ 756]
 22.2 kg
+[~ 758]
+[~ 759]
+[~ 760]
+[~ 761]
 21.4 kg
+[~ 763]
 76.0 kg
 82.8 kg
+[~ 766]
+[~ 767]
+[~ 768]
+[~ 769]
+[~ 770]
+[~ 771]
+[~ 772]
+[~ 773]
+[~ 774]
+[~ 775]
+[~ 776]
 0.7 kg
+[~ 778]
 185.0 kg
+[~ 780]
+[~ 781]
+[~ 782]
 78.2 kg
+[~ 784]
+[~ 785]
+[~ 786]
+[~ 787]
+[~ 788]
+[~ 789]
+[~ 790]
+[~ 791]
+[~ 792]
+[~ 793]
+[~ 794]
+[~ 795]
+[~ 796]
+[~ 797]
+[~ 798]
+[~ 799]
+[~ 800]
+[~ 801]
+[~ 802]
+[~ 803]
+[~ 804]
+[~ 805]
+[~ 806]
+[~ 807]
+[~ 808]
+[~ 809]
+[~ 810]
+[~ 811]
+[~ 812]
+[~ 813]
+[~ 814]
+[~ 815]
+[~ 816]
+[~ 817]
+[~ 818]
+[~ 819]
+[~ 820]
+[~ 821]
 75.0 kg
+[~ 823]
+[~ 824]
+[~ 825]
+[~ 826]
+[~ 827]
+[~ 828]
+[~ 829]
+[~ 830]
+[~ 831]
+[~ 832]
+[~ 833]
+[~ 834]
+[~ 835]
+[~ 836]
+[~ 837]
+[~ 838]
+[~ 839]
 1.0 kg
 13.0 kg
+[~ 842]
 65.5 kg
+[~ 844]
+[~ 845]
+[~ 846]
+[~ 847]
+[~ 848]
+[~ 849]
+[~ 850]
+[~ 851]
+[~ 852]
+[~ 853]
 0.4 kg
+[~ 855]
+[~ 856]
 5.1 kg
+[~ 858]
+[~ 859]
+[~ 860]
+[~ 861]
+[~ 862]
+[~ 863]
+[~ 864]
 58.2 kg
 66.6 kg
+[~ 867]
 0.5 kg
+[~ 869]
+[~ 870]
+[~ 871]
+[~ 872]
+[~ 873]
+[~ 874]
+[~ 875]
 3.0 kg
+[~ 877]
+[~ 878]
+[~ 879]
+[~ 880]
+[~ 881]
+[~ 882]
+[~ 883]
+[~ 884]
+[~ 885]
 50.0 kg
+[~ 887]
+[~ 888]
+[~ 889]
+[~ 890]
+[~ 891]
+[~ 892]
+[~ 893]
+[~ 894]
+[~ 895]
+[~ 896]
+[~ 897]
 95.1 kg
 89.0 kg
+[~ 900]
 110.0 kg
 43.0 kg
+[~ 903]
+[~ 904]
+[~ 905]
+[~ 906]
 31.2 kg
+[~ 908]
+[~ 909]
 326.5 kg
+[~ 911]
+[~ 912]
 61.9 kg
+[~ 914]
+[~ 915]
+[~ 916]
+[~ 917]
+[~ 918]
+[~ 919]
+[~ 920]
+[~ 921]
+[~ 922]
+[~ 923]
+[~ 924]
+[~ 925]
 90.0 kg
 160.0 kg
+[~ 928]
+[~ 929]
+[~ 930]
+[~ 931]
+[~ 932]
 60.2 kg
+[~ 934]
+[~ 935]
+[~ 936]
+[~ 937]
 15.0 kg
+[~ 939]
 113.0 kg
+[~ 941]
+[~ 942]
 310.0 kg
+[~ 944]
 2.3 kg
+[~ 946]
+[~ 947]
+[~ 948]
+[~ 949]
+[~ 950]
+[~ 951]
+[~ 952]
+[~ 953]
+[~ 954]
 41.0 kg
+[~ 956]
+[~ 957]
+[~ 958]
+[~ 959]
+[~ 960]
+[~ 961]
+[~ 962]
+[~ 963]
 240.0 kg
+[~ 965]
 45.0 kg
+[~ 967]
+[~ 968]
+[~ 969]
+[~ 970]
+[~ 971]
+[~ 972]
+[~ 973]
+[~ 974]
+[~ 975]
+[~ 976]
+[~ 977]
+[~ 978]
+[~ 979]
+[~ 980]
+[~ 981]
+[~ 982]
+[~ 983]
+[~ 984]
+[~ 985]
+[~ 986]
+[~ 987]
+[~ 988]
+[~ 989]
+[~ 990]
+[~ 991]
+[~ 992]
+[~ 993]
+[~ 994]
+[~ 995]
+[~ 996]
+[~ 997]
+[~ 998]
+[~ 999]
+[~ 1000]
 112.8 kg
+[~ 1002]
 85.0 kg
 62.0 kg
+[~ 1005]
+[~ 1006]
 120.0 kg
+[~ 1008]
+[~ 1009]
+[~ 1010]
+[~ 1011]
+[~ 1012]
+[~ 1013]
+[~ 1014]
+[~ 1015]
+[~ 1016]
+[~ 1017]
+[~ 1018]
+[~ 1019]
+[~ 1020]
 21.0 kg
+[~ 1022]
+[~ 1023]
+[~ 1024]
 19.9 kg
+[~ 1026]
+[~ 1027]
+[~ 1028]
+[~ 1029]
+[~ 1030]
+[~ 1031]
 168.0 kg
+[~ 1033]
+[~ 1034]
+[~ 1035]
+[~ 1036]
+[~ 1037]
+[~ 1038]
 70.5 kg
+[~ 1040]
+[~ 1041]
+[~ 1042]
+[~ 1043]
+[~ 1044]
+[~ 1045]
+[~ 1046]
+[~ 1047]
+[~ 1048]
+[~ 1049]
 115.0 kg
 85.0 kg
 110.0 kg
+[~ 1053]
+[~ 1054]
+[~ 1055]
+[~ 1056]
 69.8 kg
+[~ 1058]
 79.5 kg
+[~ 1060]
+[~ 1061]
+[~ 1062]
+[~ 1063]
+[~ 1064]
+[~ 1065]
+[~ 1066]
+[~ 1067]
+[~ 1068]
+[~ 1069]
+[~ 1070]
+[~ 1071]
+[~ 1072]
+[~ 1073]
+[~ 1074]
+[~ 1075]
+[~ 1076]
+[~ 1077]
+[~ 1078]
+[~ 1079]
+[~ 1080]
+[~ 1081]
+[~ 1082]
+[~ 1083]
+[~ 1084]
+[~ 1085]
+[~ 1086]
+[~ 1087]
+[~ 1088]
+[~ 1089]
+[~ 1090]
+[~ 1091]
 0.8 kg
 0.8 kg
 0.8 kg
+[~ 1095]
+[~ 1096]
+[~ 1097]
+[~ 1098]
+[~ 1099]
+[~ 1100]
+[~ 1101]
+[~ 1102]
+[~ 1103]
+[~ 1104]
+[~ 1105]
+[~ 1106]
+[~ 1107]
+[~ 1108]
+[~ 1109]
 0.3 kg
 0.3 kg
 0.3 kg
 0.3 kg
 0.3 kg
+[~ 1115]
+[~ 1116]
+[~ 1117]
+[~ 1118]
+[~ 1119]
+[~ 1120]
+[~ 1121]
+[~ 1122]
+[~ 1123]
+[~ 1124]
+[~ 1125]
+[~ 1126]
+[~ 1127]
+[~ 1128]
+[~ 1129]
+[~ 1130]
+[~ 1131]
+[~ 1132]
+[~ 1133]
+[~ 1134]
+[~ 1135]
 58.2 kg
+[~ 1137]
+[~ 1138]
+[~ 1139]
+[~ 1140]
+[~ 1141]
+[~ 1142]
+[~ 1143]
+[~ 1144]
+[~ 1145]
+[~ 1146]
 73.0 kg
+[~ 1148]
+[~ 1149]
+[~ 1150]
+[~ 1151]
+[~ 1152]
+[~ 1153]
+[~ 1154]
+[~ 1155]
 20.5 kg
+[~ 1157]
+[~ 1158]
+[~ 1159]
+[~ 1160]
+[~ 1161]
+[~ 1162]
+[~ 1163]
+[~ 1164]
+[~ 1165]
+[~ 1166]
+[~ 1167]
+[~ 1168]
+[~ 1169]
+[~ 1170]
+[~ 1171]
+[~ 1172]
+[~ 1173]
+[~ 1174]
+[~ 1175]
+[~ 1176]
+[~ 1177]
+[~ 1178]
+[~ 1179]
+[~ 1180]
+[~ 1181]
+[~ 1182]
+[~ 1183]
+[~ 1184]
+[~ 1185]
+[~ 1186]
+[~ 1187]
+[~ 1188]
+[~ 1189]
+[~ 1190]
+[~ 1191]
+[~ 1192]
+[~ 1193]
+[~ 1194]
+[~ 1195]
+[~ 1196]
+[~ 1197]
+[~ 1198]
+[~ 1199]
+[~ 1200]
+[~ 1201]
+[~ 1202]
+[~ 1203]
+[~ 1204]
+[~ 1205]
+[~ 1206]
+[~ 1207]
+[~ 1208]
 17.0 kg
 17.0 kg
 17.0 kg
@@ -9081,6 +13577,14 @@ Text File : zkn_weight
 17.0 kg
 17.0 kg
 17.0 kg
+[~ 1228]
+[~ 1229]
+[~ 1230]
+[~ 1231]
+[~ 1232]
+[~ 1233]
+[~ 1234]
+[~ 1235]
 0.9 kg
 10.0 kg
 10.0 kg
@@ -9097,14 +13601,77 @@ Text File : zkn_weight
 28.0 kg
 8.5 kg
 53.0 kg
+[~ 1252]
 334.1 kg
+[~ 1254]
+[~ 1255]
+[~ 1256]
 9.5 kg
 14.0 kg
 39.0 kg
 262.4 kg
+[~ 1261]
+[~ 1262]
+[~ 1263]
+[~ 1264]
+[~ 1265]
+[~ 1266]
+[~ 1267]
 37.0 kg
+[~ 1269]
+[~ 1270]
+[~ 1271]
+[~ 1272]
+[~ 1273]
+[~ 1274]
 25.0 kg
 25.0 kg
+[~ 1277]
+[~ 1278]
+[~ 1279]
+[~ 1280]
+[~ 1281]
+[~ 1282]
+[~ 1283]
+[~ 1284]
+[~ 1285]
+[~ 1286]
+[~ 1287]
+[~ 1288]
+[~ 1289]
+[~ 1290]
+[~ 1291]
+[~ 1292]
+[~ 1293]
+[~ 1294]
+[~ 1295]
+[~ 1296]
+[~ 1297]
+[~ 1298]
+[~ 1299]
+[~ 1300]
+[~ 1301]
+[~ 1302]
+[~ 1303]
+[~ 1304]
+[~ 1305]
+[~ 1306]
+[~ 1307]
+[~ 1308]
+[~ 1309]
+[~ 1310]
+[~ 1311]
+[~ 1312]
+[~ 1313]
+[~ 1314]
+[~ 1315]
+[~ 1316]
+[~ 1317]
+[~ 1318]
+[~ 1319]
+[~ 1320]
+[~ 1321]
+[~ 1322]
 0.4 kg
 0.5 kg
 0.5 kg
@@ -9114,11 +13681,55 @@ Text File : zkn_weight
 0.5 kg
 0.5 kg
 0.5 kg
+[~ 1332]
+[~ 1333]
 3.0 kg
+[~ 1335]
+[~ 1336]
+[~ 1337]
+[~ 1338]
+[~ 1339]
+[~ 1340]
 110.0 kg
+[~ 1342]
+[~ 1343]
+[~ 1344]
 97.4 kg
 2.8 kg
+[~ 1347]
+[~ 1348]
+[~ 1349]
+[~ 1350]
+[~ 1351]
+[~ 1352]
+[~ 1353]
+[~ 1354]
+[~ 1355]
+[~ 1356]
+[~ 1357]
+[~ 1358]
+[~ 1359]
+[~ 1360]
+[~ 1361]
+[~ 1362]
 93.0 kg
+[~ 1364]
+[~ 1365]
+[~ 1366]
+[~ 1367]
+[~ 1368]
+[~ 1369]
+[~ 1370]
+[~ 1371]
+[~ 1372]
 60.0 kg
+[~ 1374]
 2.2 kg
+[~ 1376]
+[~ 1377]
+[~ 1378]
+[~ 1379]
+[~ 1380]
+[~ 1381]
+[~ 1382]
 2.2 kg
