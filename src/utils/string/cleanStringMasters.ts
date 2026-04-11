@@ -1,6 +1,4 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
-import { grammarBranch } from './branches';
-
 export function preprocessStringMasters(s: string) {
   return (s
     // Escaped characters
@@ -10,19 +8,8 @@ export function preprocessStringMasters(s: string) {
   );
 }
 
-const particlesKO: Record<string, readonly [string, string]> = {
-  ha: ['는', '은'],
-  wo: ['를', '을'],
-  ga: ['가', '이'],
-  to: ['와', '과'],
-  ni: ['로', '으로'], // differs from GF
-  ya: ['', '이'],
-};
-const particleBranchFromChar = (char: string) => grammarBranch(...particlesKO[char]);
-
 export function postprocessStringMasters(s: string) {
   return (s
-    // Tags
     .replaceAll(/\u{F0106}attr font=['"]fallback['"]\u{F0107}(.+?)\u{F0106}\/attr\u{F0107}/gu, '<span class="fallback">$1</span>') // font
     .replaceAll(/\u{F0106}attr color=['"]([0-9A-Fa-f]{6})['"]\u{F0107}(.+?)\u{F0106}\/attr\u{F0107}/gu, '<span class="color" style="color: #$1">$2</span>') // color
     .replaceAll(/\u{F0106}attr size=['"](\d+?)['"]\u{F0107}(.+?)\u{F0106}\/attr\u{F0107}/gu, '<span style="font-size: $1px">$2</span>') // size
@@ -32,8 +19,5 @@ export function postprocessStringMasters(s: string) {
     .replaceAll(/\u{F0106}span class=""?word"?"\u{F0107}/gu, '<span class="word">')
     .replaceAll(/\u{F0106}\/span\u{F0107}/gu, '</span>')
     .replaceAll(/\u{F0106}br\u{F0107}/gu, '<br>')
-
-    // Variables
-    .replaceAll(/\[Kor:Particle char="(ha|wo|ga|to|ni|ya)" \]/gu, (_, char) => particleBranchFromChar(char))
   );
 }

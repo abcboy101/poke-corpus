@@ -1,3 +1,5 @@
+import { CollectionKey } from "../corpus";
+
 /* Variable names used by pk3DS, from https://github.com/kwsch/pk3DS/blob/master/pk3DS.Core/Game/TextVariableCode.cs */
 export const variables3DS: ReadonlyMap<string, string> = new Map([
   ["0100", "TRNAME"],
@@ -67,7 +69,7 @@ export const variablesBDSP: ReadonlyMap<string, string> = new Map([
   ["0109", "Name:Item"],
   ["010A", "Name:ItemClassified"],
   ["010B", "Name:ItemAcc"],
-  ["010C", "Name:PokemonNicknameTwo"],
+  ["010C", "Name:PokemonNickname2"],
   ["010D", "Name:Status"],
   ["010E", "Name:TrainerType"],
   ["010F", "Name:Poffin"],
@@ -141,16 +143,16 @@ export const variablesBDSP: ReadonlyMap<string, string> = new Map([
   ["0153", "Name:PoffinAcc"],
   ["0154", "Name:StyleName"],
   ["0155", "Name:BattleRule"],
-  ["0200", "Digit:OneDigit"],
-  ["0201", "Digit:TwoDigits"],
-  ["0202", "Digit:ThreeDigits"],
-  ["0203", "Digit:FourDigits"],
-  ["0204", "Digit:FiveDigits"],
-  ["0205", "Digit:SixDigits"],
-  ["0206", "Digit:SevenDigits"],
-  ["0207", "Digit:EightDigits"],
-  ["0208", "Digit:NineDigits"],
-  ["0209", "Digit:TenDigits"],
+  ["0200", "Digit:1digit"],
+  ["0201", "Digit:2digits"],
+  ["0202", "Digit:3digits"],
+  ["0203", "Digit:4digits"],
+  ["0204", "Digit:5digits"],
+  ["0205", "Digit:6digits"],
+  ["0206", "Digit:7digits"],
+  ["0207", "Digit:8digits"],
+  ["0208", "Digit:9digits"],
+  ["0209", "Digit:10digits"],
   ["1000", "Grm:ForceSingular"],
   ["1001", "Grm:ForcePlural"],
   ["1002", "Grm:ForceMasculine"],
@@ -247,10 +249,10 @@ export const variablesBDSP: ReadonlyMap<string, string> = new Map([
   ["1710", "ES:ForcePlural"],
   ["1711", "ES:ForceInitialCap"],
   ["1712", "ES:QtyZero"],
-  ["1713", "ES:y_e"],
-  ["1714", "ES:Y_E"],
-  ["1715", "ES:o_u"],
-  ["1716", "ES:O_U"],
+  ["1713", "ES:y/e"],
+  ["1714", "ES:Y/E"],
+  ["1715", "ES:o/u"],
+  ["1716", "ES:O/U"],
   ["1900", "Kor:Particle"],
   ["1901", "Kor:Gen"],
   ["1902", "Kor:Qty"],
@@ -281,14 +283,14 @@ export const variablesBDSP: ReadonlyMap<string, string> = new Map([
   ["3215", "Character1:RightDirection"],
   ["3216", "Character1:DownDirection"],
   ["3217", "Character1:Sparkles"],
-  ["3300", "Character2:L_SingleQuot_"],
-  ["3301", "Character2:R_SingleQuot_"],
-  ["3302", "Character2:L_DoubleQuot_"],
-  ["3303", "Character2:R_DoubleQuot_"],
-  ["3304", "Character2:DE_L_DoubleQuot_"],
-  ["3305", "Character2:DE_R_DoubleQuot_"],
-  ["3306", "Character2:StraightSingleQuot_"],
-  ["3307", "Character2:StraightDoubleQuot_"],
+  ["3300", "Character2:L_SingleQuot."],
+  ["3301", "Character2:R_SingleQuot."],
+  ["3302", "Character2:L_DoubleQuot."],
+  ["3303", "Character2:R_DoubleQuot."],
+  ["3304", "Character2:DE_L_DoubleQuot."],
+  ["3305", "Character2:DE_R_DoubleQuot."],
+  ["3306", "Character2:StraightSingleQuot."],
+  ["3307", "Character2:StraightDoubleQuot."],
   ["3308", "Character2:HalfSpace"],
   ["3309", "Character2:QuarterSpace"],
   ["330A", "Character2:Upper_er"],
@@ -296,10 +298,10 @@ export const variablesBDSP: ReadonlyMap<string, string> = new Map([
   ["330C", "Character2:Upper_r"],
   ["330D", "Character2:Upper_e"],
   ["330E", "Character2:Upper_a"],
-  ["330F", "Character2:Abbrev_"],
+  ["330F", "Character2:Abbrev."],
   ["3310", "Character2:Center_dot"],
   ["3311", "Character2:PKMN"],
-  ["3312", "Character2:NULL"],
+  ["3312", "Character2:null"],
   ["3313", "Character2:ModifierLetterCapitalO"],
   ["3314", "Character2:SixPerEmSpace"],
   ["BD03", "Ctrl1:xright"],
@@ -625,32 +627,37 @@ export const variablesChampions: ReadonlyMap<string, string> = new Map([
   ["C801", "RS:I_MSG_"],
 ]);
 
-export const variableNameToCode = (variableName: string) => {
+export const variableNameToCode3DS = (variableName: string) => {
   for (const [code, name] of variables3DS)
     if (name === variableName)
       return code;
   return undefined;
 };
 
-export const variableCodeToName = (variableCode: string) => variables3DS.get(variableCode);
+export const variableCodeToName3DS = (variableCode: string) => variables3DS.get(variableCode);
 
-export const variableNameToCodeBDSP = (variableName: string) => {
-  for (const [code, name] of variablesBDSP)
+const getVariables = (collectionKey: CollectionKey | '') => {
+  switch (collectionKey) {
+    case 'BrilliantDiamondShiningPearl': return variablesBDSP;
+    case 'Champions': return variablesChampions;
+  }
+  if (import.meta.env.DEV)
+    throw Error(`unknown collection key: ${collectionKey}`);
+  return new Map<string, string>();
+};
+
+export const variableNameToCode = (variableName: string, collectionKey: CollectionKey | '') => {
+  for (const [code, name] of getVariables(collectionKey))
     if (name === variableName)
       return code;
+
+  if (import.meta.env.DEV)
+    throw Error(`unknown variable name: ${variableName}`);
   return '';
 };
 
-export const variableCodeToNameBDSP = (variableCode: string) => variablesBDSP.get(variableCode);
-
-export const variableNameToCodeChampions = (variableName: string) => {
-  for (const [code, name] of variablesChampions)
-    if (name === variableName)
-      return code;
-  return '';
-};
-
-export const variableCodeToNameChampions = (variableCode: string) => variablesChampions.get(variableCode);
+export const variableCodeToName = (variableCode: string, collectionKey: CollectionKey | '') =>
+  getVariables(collectionKey).get(variableCode);
 
 const remapVariablesMsgStd: ((string | undefined)[] | undefined)[] = [
   /* 13XX (EN)  */ ["1100", "1101", "1102", "1300", "1301", "1302", "1303", "1000", "1001", "1003", "1105", "1107"],
@@ -666,16 +673,26 @@ const remapVariablesMsgStd: ((string | undefined)[] | undefined)[] = [
 /**
  * Remap variable codes in MsgStd games to the standard codes used in the Game Freak games.
  */
-export function remapMsgStdVariableCode(variableCode: string): string {
+function remapMsgStdVariableCode(variableCode: string): string {
   const n = parseInt(variableCode, 16);
   const groupIndex = n >> 8;
   const tagIndex = n & 0xFF;
-  return remapVariablesMsgStd[groupIndex - 0x13]?.[tagIndex] ?? variableCode;
+  const newCode = remapVariablesMsgStd[groupIndex - 0x13]?.[tagIndex];
+  if (import.meta.env.DEV && newCode === undefined)
+    throw Error(`unknown variable code: ${variableCode}`);
+  return newCode ?? variableCode;
 }
 
 /**
  * Remap indices for grammar tags in MsgStd games to the standard indices used in the Game Freak games.
  */
-export const remapMsgStdGrammarIndex = (variableCode: string): number => {
+const remapMsgStdGrammarIndex = (variableCode: string): number => {
   return parseInt(remapMsgStdVariableCode(variableCode), 16) & 0xFF;
+};
+
+/**
+ * Remap grammar tag names in MsgStd games to the standard indices used in the Game Freak games.
+ */
+export const remapMsgStdVariableName = (variableName: string, collectionKey: CollectionKey | ''): number => {
+  return remapMsgStdGrammarIndex(variableNameToCode(variableName, collectionKey));
 };

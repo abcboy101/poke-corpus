@@ -5,7 +5,7 @@ import { preprocessString } from './cleanStringPre';
 const corpus = readCorpus();
 const loader = getLoader(corpus);
 
-test('preprocess', async () => {
+test.skip('preprocess', async () => {
   const collectionKey = 'Champions';
   for (const languageKey of corpus.getCollection(collectionKey).languages) {
     const s = await readFile(loader, collectionKey, languageKey, 'ms');

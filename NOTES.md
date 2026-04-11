@@ -54,14 +54,11 @@ The text dumps from the NDS games have been converted to the standard format, wi
 - <sup>P</sup><sub>K</sub><sup>M</sup><sub>N</sub> is encoded using `⒆⒇` as in the Generation V games.
 - The bag icons in the Generation IV games are encoded using `㌇㌈㌉㌊㌋㌌㌍㌎` as in the Wii games.
 
-### BDSP
-The text dumps for *Pokémon Brilliant Diamond* and *Pokémon Shining Pearl* have been converted to the standard format, with the following extensions to the format:
-- The arguments for variables may include named parameters and `|`-delimited arrays of strings, such as in `[VAR 1300(tagParameter=255,tagWordArray=he|she)]`.
-  (This is equivalent to `[VAR 1100(00FF,0100)]she` in other games.)
-- `[WAIT]` takes a float as an argument instead of an integer.
-- `[SFX]` takes a float as an argument. (This is equivalent to `[VAR BE05]` in other games.)
-- The Unity rich text tags `<color>`, `<position>`, `<line-indent>`, and `<size>` are used to format text.
-- Speaker names are taken from `Dpr/masterdatas/MsgWindowData.json` and converted to the `[VAR 0114]` format used in other games.
+### BDSP/Champions
+The text dumps for *Pokémon Brilliant Diamond*, *Pokémon Shining Pearl*, and *Pokémon Champions* have been converted to the MsgStd format (also used in *Pokémon Masters EX*):
+- In BDSP, the Unity rich text tags `<color>`, `<position>`, `<line-indent>`, and `<size>` are used to format text.
+- Speaker names are taken from `Dpr/masterdatas/MsgWindowData.json` (in BDSP) or `Data\StreamingAssets\AssetAssistant\syn\eventscript` (in Champions)
+  and converted to the `[Name:TrainerNameField ]` format (equivalent to the `[VAR 0114]` format used in other games).
 
 ### GB/GBC/GBA
 The text dumps from the GB, GBC, and GBA games are based on the format used by the [pret](https://github.com/pret) decompilations.
