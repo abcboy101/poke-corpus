@@ -77,13 +77,14 @@ export const grammarES = [
 
 // Korean: VAR 1900
 export const particlesKO = [
-  ['', ''], // no particle
-  ['는', '은'], // 은(는), topic particle, equivalent to Japanese "ha"
-  ['를', '을'], // 을(를), object particle, equivalent to Japanese "wo"
-  ['가', '이'], // 이(가), subject particle, equivalent to Japanese "ga"
-  ['와', '과'], // 와(과), conjunctive particle, equivalent to Japanese "to"
-  ['', '으'], // (으)로, directional particle, equivalent to Japanese "ni"
-  ['', '이'], // (이), optional "i" in particles such as 이다/이랑/이야
-  ['야', '아'], // 아(야), vocative particle
+  ['', ''], // none
+  ['은', '는'], // 은/는, topic particle
+  ['을', '를'], // 을/를, object particle
+  ['이', '가'], // 이/가, subject particle
+  ['과', '와'], // 과/와, formal conjunctive particle
+  ['으', ''], // 으로/로, directional particle (also the instrumental particle)
+  ['이', ''], // 이랑/랑, informal conjunctive particle (also used for 이다/이라고/이여/etc.)
+  ['아', '야'], // 아/야, vocative particle
+  ['이에', '예'], // 이에요/예요, informal polite copula
 ];
 export const particlesKONames = ["none", "ha", "wo", "ga", "to", "ni", "ya", "san", "desu"];

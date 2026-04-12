@@ -325,7 +325,13 @@ function remap3DSVariables(s: string) {
 // Switch special characters
 function remapSwitchSpecialCharacters(s: string) {
   return s.search(/[\uE104\uE300-\uE31C]/u) === -1 ? s : (s
-    .replaceAll('\uE104', '✨︎') // BDSP sparkles
+    // BDSP
+    .replaceAll('\uE100', '🡄') // LeftDirection
+    .replaceAll('\uE101', '🡅') // UpDirection
+    .replaceAll('\uE102', '🡆') // RightDirection
+    .replaceAll('\uE103', '🡇') // DownDirection
+    .replaceAll('\uE104', '✨︎') // Sparkles
+
     .replaceAll('\uE300', '$') // Pokémon Dollar
 
     // PLA
@@ -415,15 +421,33 @@ function remapChinaLGPEPixelFont(s: string) {
 // Champions special characters
 function remapChampionsSpecialCharacters(s: string) {
   s = s.search(/\[Character[12]:/u) === -1 ? s : (s
-    .replaceAll('[Character1:music ]', '♪') // VAR 3201
-    .replaceAll('[Character1:male ]', '♂') // VAR 3202
-    .replaceAll('[Character1:female ]', '♀') // VAR 3203
-    .replaceAll('[Character2:L_DoubleQuot. ]', '“') // VAR 3302
-    .replaceAll('[Character2:R_DoubleQuot. ]', '”') // VAR 3303
-    .replaceAll('[Character2:StraightSingleQuot. ]', "'") // VAR 3306
-    .replaceAll('[Character2:StraightDoubleQuot. ]', '"') // VAR 3307
-    .replaceAll('[Character2:Upper_e ]', 'ᵉ') // VAR 330D
-    .replaceAll('[Character2:null ]', '') // VAR 3312
+    .replaceAll('[Character1:heart ]', '♥')
+    .replaceAll('[Character1:music ]', '♪')
+    .replaceAll('[Character1:male ]', '♂')
+    .replaceAll('[Character1:female ]', '♀')
+    .replaceAll('[Character1:PokeDollar ]', '$') // U+E300
+
+    .replaceAll('[Character2:L_SingleQuot. ]', '‘')
+    .replaceAll('[Character2:R_SingleQuot. ]', '’')
+    .replaceAll('[Character2:L_DoubleQuot. ]', '“')
+    .replaceAll('[Character2:R_DoubleQuot. ]', '”')
+    .replaceAll('[Character2:DE_L_DoubleQuot. ]', '„')
+    .replaceAll('[Character2:DE_R_DoubleQuot. ]', '⹂') // '“' in BDSP
+    .replaceAll('[Character2:StraightSingleQuot. ]', "'")
+    .replaceAll('[Character2:StraightDoubleQuot. ]', '"')
+    .replaceAll('[Character2:HalfSpace ]', ' ')
+    .replaceAll('[Character2:QuarterSpace ]', '\u202F')
+    .replaceAll('[Character2:Upper_er ]', 'ᵉʳ')
+    .replaceAll('[Character2:Upper_re ]', 'ʳᵉ')
+    .replaceAll('[Character2:Upper_r ]', 'ʳ')
+    .replaceAll('[Character2:Upper_e ]', 'ᵉ')
+    .replaceAll('[Character2:Upper_a ]', 'ª')
+    .replaceAll('[Character2:Abbrev. ]', '…')
+    .replaceAll('[Character2:Center_dot ]', '･')
+    // [Character2:PKMN ] is unimplemented
+    .replaceAll('[Character2:null ]', '')
+    .replaceAll('[Character2:ModifierLetterCapitalO ]', 'ᴼ')
+    .replaceAll('[Character2:SixPerEmSpace ]', '\u2006')
   );
   return s;
 }
