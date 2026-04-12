@@ -52,6 +52,7 @@
 }
 
 body {
+  height: 100vh; /* fallback */
   height: 100dvh;
   margin: 0;
   overflow: auto;
@@ -223,6 +224,7 @@ table th, table td {
   display: grid;
   grid-template-rows: auto 1fr auto;
   gap: 0.5em;
+  min-height: 100vh; /* fallback */
   min-height: 100dvh;
   width: 100%;
   padding: 1rem;
@@ -262,6 +264,8 @@ table th, table td {
 .app-window {
   flex: 1;
   position: relative;
+  min-height: 12em; /* fallback */
+  min-height: max(12em, 50vh); /* fallback */
   min-height: max(12em, 50dvh);
   overflow: auto;
   border: 1px solid var(--text);
