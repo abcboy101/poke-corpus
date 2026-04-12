@@ -23,17 +23,17 @@ export function extractSpeakers(speakerData: readonly string[], textFile: string
 }
 
 /* Looks up the speaker's name by index, and prepend it to the string. */
-export function replaceSpeaker(s: string, speakerNames: readonly string[], language: LanguageKey) {
+export function replaceSpeaker(s: string, speakerNames: readonly string[]) {
   return s.replace(/(.*?)(\[VAR 0114\(([0-9A-F]{4})\)\]|\[Name:TrainerNameField Idx="(\d+)" \])(?:$|(?=\u{F0000}))/u, (_, rest: string, tag: string, speakerIndexHex?: string, speakerIndexDecimal?: string) => {
     const speakerIndex = speakerIndexHex !== undefined ? parseInt(speakerIndexHex, 16) : Number(speakerIndexDecimal);
     const speakerName = speakerNames[speakerIndex];
-    return `${tag.replaceAll('[', '\\[')}\u{F1100}${speakerName}${speakerDelimiter(language)}\u{F1101}${rest}`;
+    return `${tag}\u{F1100}${speakerName}\u{F1101}${rest}`;
   });
 }
 
 /* Converts the speaker's name to basic HTML. */
-export function postprocessSpeaker(s: string) {
-  return s.replaceAll(/^(.+)\u{F1100}(.+?)\u{F1101}/gu, '<a class="speaker" data-var="$1">$2</a>');
+export function postprocessSpeaker(s: string, language: LanguageKey) {
+  return s.replaceAll(/^(.+)\u{F1100}(.+?)\u{F1101}/gu, `<a class="speaker" data-var="$1">$2${speakerDelimiter(language)}</a>`);
 }
 
 /* Converts the speaker's name to a context-dependent link. */

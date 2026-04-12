@@ -95,6 +95,13 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
     return multiLine(s);
   }
 
+  // Process speaker string separately
+  const speakerNameStart = s.indexOf('\u{F1100}');
+  const speakerDivider = s.indexOf('\u{F1101}');
+  const speakerTag = (speakerDivider >= 0) ? s.slice(0, speakerNameStart) : '';
+  const speakerName = (speakerDivider >= 0) ? postprocessString(s.slice(speakerNameStart + '\u{F1100}'.length, speakerDivider), collectionKey, language, richText) : '';
+  s = (speakerDivider >= 0) ? s.slice(speakerDivider + '\u{F1101}'.length) : s;
+
   // Replace literal special characters with a placeholder so they don't match other rules
   s = (s
     .replaceAll('\\\\', '\u{F0100}')
@@ -203,16 +210,12 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
   //#endregion
 
   //#region Formatting
-  s = isBDSP ? (s
-    .replaceAll(/\u{F0106}color=(.*?)\u{F0107}(.*?)\u{F0106}\/color\u{F0107}/gu, textColor) // BDSP color
-    .replaceAll('\u{F0106}/color\u{F0107}', '') // BDSP color (extra closing tag)
-    .replaceAll(/\u{F0106}size=(.*?)\u{F0107}(.*?)\u{F0106}\/size\u{F0107}/gu, '<span style="font-size: $1">$2</span>') // BDSP size
-    .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\u{F0106}pos=(.*?)\u{F0107}(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>') // BDSP pos
-    .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\u{F0106}line-indent=(.*?)\u{F0107}(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span style="tab-size: $2">$1\t$3</span>') // BDSP line-indent
-  ) : s;
-  s = isChampions ? (s
+  s = (isBDSP || isChampions) ? (s
+    .replaceAll(/\[System:Size percent="(\d+)" \](.*?)\[System:Size percent="100" \]/gu, '<span style="font-size: $1%">$2</span>') // font size
     .replaceAll(/\[System:Color (?!a="255" \])(?:r="(\d+)" )?(?:g="(\d+)" )?(?:b="(\d+)" )?(?:a="(\d+)" )?\](.*?)(\[System:Color a="255" \]|(?=\[System:Color ))/gu, (_, r, g, b, a, text) => `<span class="color" style="color: rgb(${r ?? 0} ${g ?? 0} ${b ?? 0}${a === '255' ? '' : ` / ${Number(a ?? '0') / 255}`})">${text}</span>`) // font color
     .replaceAll(/\[System:Color a="255" \]/gu, '') // font color (reset)
+    .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\[Ctrl1:xadd value="(\d+)" \](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span style="tab-size: $2px">$1\t$3</span>') // xadd
+    .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)\[Ctrl1:xset value="(\d+)" \](.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, '<span style="tab-size: $2px">$1\t$3</span>') // xset
   ) : s;
   s = (isGen4 || isModern) ? (s
     .replaceAll(/\[VAR FF00\((?!0000)([0-9A-F]{4})\)\](.+?)(?=\[VAR FF00\([0-9A-F]{4}\)\]|$)/gu, (_, color, text) => `<span class="color" style="color: var(--color-${parseInt(color, 16)})">${text}</span>`) // font color
@@ -588,10 +591,12 @@ export function postprocessString(s: string, collectionKey: CollectionKey | '' =
     .replaceAll(/(\[SFX [\d.]+\])/gu, '<span class="func sfx">$1</span>') // BDSP
     .replaceAll(/(\[~ \d+\])/gu, '<span class="unused">$1</span>')
     .replaceAll(/\{([^|}]+)\|([^|}]+)\}/gu, '<ruby>$1<rp>(</rp><rt>$2</rt><rp>)</rp></ruby>') // Switch furigana
+  );
+  s = isModern && speakerName ? postprocessSpeaker(`${speakerTag}\u{F1100}${speakerName}\u{F1101}${s}`, language) : s;
+  s = (s
     .replaceAll(/(\s+$)/gu, '<span class="whitespace-trailing">$1</span>') // Trailing whitespace
     .replaceAll(/(^\s+)/gu, '<span class="whitespace-leading">$1</span>') // Leading whitespace
   );
-  s = isModern ? postprocessSpeaker(s) : s;
   //#endregion
 
   // Format literals

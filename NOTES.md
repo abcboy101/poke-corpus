@@ -56,7 +56,6 @@ The text dumps from the NDS games have been converted to the standard format, wi
 
 ### BDSP/Champions
 The text dumps for *Pokémon Brilliant Diamond*, *Pokémon Shining Pearl*, and *Pokémon Champions* have been converted to the MsgStd format (also used in *Pokémon Masters EX*):
-- In BDSP, the Unity rich text tags `<color>`, `<position>`, `<line-indent>`, and `<size>` are used to format text.
 - Speaker names are taken from `Dpr/masterdatas/MsgWindowData.json` (in BDSP) or `Data\StreamingAssets\AssetAssistant\syn\eventscript` (in Champions)
   and converted to the `[Name:TrainerNameField ]` format (equivalent to the `[VAR 0114]` format used in other games).
 

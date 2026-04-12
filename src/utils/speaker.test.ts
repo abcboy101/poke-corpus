@@ -18,8 +18,8 @@ test('speaker names', () => {
   const viewSpeaker = "View Speaker's Lines";
   const speakerNames = ["Nemona", "Arven", "Penny", "Carmine", "Kieran"];
 
-  const lines2 = lines.map((s) => replaceSpeaker(s, speakerNames, language));
-  const lines3 = lines2.map((s) => postprocessSpeaker(s));
+  const lines2 = lines.map((s) => replaceSpeaker(s, speakerNames));
+  const lines3 = lines2.map((s) => postprocessSpeaker(s, language));
   const lines4 = lines3.map((s) => expandSpeakers(s, factory, collection, language, viewSpeaker));
   lines4.forEach((s, i) => {
     expect(s.indexOf('<a class="speaker"')).toEqual(0);
