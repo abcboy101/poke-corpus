@@ -89,7 +89,7 @@ export const replaceLiteralsFactory = (literalsData: readonly ReadonlyMap<number
       if (collectionKey === 'BattleRevolution')
         replaceValue = replaceValue.substring('[FONT 0][SPACING 1]'.length).trim();
 
-      s = s.replaceAll(searchValue, `\u{F1102}${replaceValue}\u{F1103}`);
+      s = s.replaceAll(searchValue, `\u{F1102}${searchValue}\u{F1105}${replaceValue}\u{F1103}`);
     }
     return s;
   };

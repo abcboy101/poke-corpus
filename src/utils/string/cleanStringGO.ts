@@ -1,4 +1,5 @@
 import { LanguageKey } from "../corpus";
+import { TextInfo } from "./TextInfo";
 
 //#region Hindi
 const REPH = '\u{10F306}';
@@ -373,30 +374,29 @@ export function preprocessStringGO(s: string, language: LanguageKey) {
   }
 }
 
-export function postprocessStringGO(s: string) {
+export function postprocessStringGO(s: string, ti: TextInfo) {
   return (s
     // Unity rich text tags
-    .replaceAll(/\u{F0106}(\/?[bi]) *\u{F0107}/gu, '<$1>') // b, i
-    .replaceAll(/\u{F0106}size=(\d+)\u{F0107}/gu, '<span style="font-size: calc($1 / 32 * 100%)">') // size
-    .replaceAll(/\u{F0106}color=#\{(\d+)\}\u{F0107}/gu, '<span class="color" style="color: var(--color-$1)">') // color
-    .replaceAll(/\u{F0106}color=(.*?)\u{F0107}/gu, '<span class="color" style="color: $1">') // color
-    .replaceAll(/\u{F0106}\/(size|color)\u{F0107}/gu, '</span>') // size, color (closing tag)
+    .replaceAll(/<(\/?[bi]) *>/gui, (code: string) => ti.html(code)) // b, i
+    .replaceAll(/(<size=(.*?)>)(.*?)(<\/size>|(?=<size=))/gu, (_, start: string, value: string, text: string, end: string) => ti.as({ kind: 'tag', start, style: `font-size: ${+value / 32 * 100}%`, children: text, end })) // size
+    .replaceAll(/(<color=#\{(\d+)\}>)(.*?)(<\/color>|(?=<color=))/gu, (_, start: string, index: string, text: string, end: string) => ti.as({ kind: 'tag', start, className: 'color', style: `color: var(--color-${index})`, children: text, end }))
+    .replaceAll(/(<color=(.*?)>)(.*?)(<\/color>|(?=<color=))/gu, (_, start: string, value: string, text: string, end: string) => ti.as({ kind: 'tag', start, className: 'color', style: `color: ${value}`, children: text, end })) // color
 
     // Links
-    .replaceAll(/\u{F0106}a href="\{(\d+)\}"\u{F0107}(.+?)\u{F0106}\/a\u{F0107}/gu, '<span class="link" title="\u{F0104}$1}">$2</span>')
-    .replaceAll(/\u{F0106}a href="([0-9A-Za-z_]+)"\u{F0107}/gu, '<a class="link" href="#id=go.$1" title="$1">')
-    .replaceAll(/\u{F0106}a href=["“]((?:pokemongolive.com)\/[^"]+?)["”]\u{F0107}/gu, '<a class="link" href="http://$1" title="$1" target="_blank" rel="external noopener noreferrer nofollow">')
-    .replaceAll(/\u{F0106}a href="+(https?:\/\/[^"]+?)"+\u{F0107}/gu, '<a class="link" href="$1" title="$1" target="_blank" rel="external noopener noreferrer nofollow">')
-    .replaceAll(/\u{F0106}\/a\u{F0107}/gu, '</a>')
+    .replaceAll(/(<a href="[^"{}]*\{\d+\}[^"{}]*">)(.+?)(<\/a>)/gu, (_, start: string, children: string, end: string) => ti.as({ kind: 'tag', start, className: 'link', children, end }))
+    .replaceAll(/<a href="([0-9A-Za-z_]+)">/gu, ti.html('<a class="link" href="#id=go.$1" title="$1">'))
+    .replaceAll(/<a href=["“]((?:pokemongolive.com)\/[^"]+?)["”]>/gu, ti.html('<a class="link" href="http://$1" title="$1" target="_blank" rel="external noopener noreferrer nofollow">'))
+    .replaceAll(/<a href="+(https?:\/\/[^"]+?)"+>/gu, ti.html('<a class="link" href="$1" title="$1" target="_blank" rel="external noopener noreferrer nofollow">'))
+    .replaceAll(/<\/a>/gu, (code: string) => ti.html(code))
 
     // Other tags
-    .replaceAll(/\u{F0106}br\u{F0107}/gu, '<br>')
-    .replaceAll(/\u{F0106}(taunt|intimidate)\u{F0107}/gu, '<span class="var">\u{F0106}$1\u{F0107}</span>')
+    .replaceAll(/<br>/gu, '\u{FF000}')
+    .replaceAll(/<(taunt|intimidate)>/gu, ti.func())
 
     // Substitutions
-    .replaceAll(/(%BREAK%)/gu, '<span class="c">$1</span><br>')
-    .replaceAll(/(%PLAYERNAME%)/gu, '<span class="var">$1</span>')
-    .replaceAll(/(%(\d+\$)?s)/gu, '<span class="var">$1</span>')
-    .replaceAll(/(\{\d+(?::[^\]]+?)?\})/gu, '<span class="var">$1</span>')
+    .replaceAll(/(%BREAK%)/gu, (code) => `${ti.asFunc(code)}\u{FF000}`)
+    .replaceAll(/%PLAYERNAME%/gu, ti.var())
+    .replaceAll(/%(\d+\$)?s/gu, ti.var())
+    .replaceAll(/\{\d+(?::[^\]]+?)?\}/gu, ti.var())
   );
 }

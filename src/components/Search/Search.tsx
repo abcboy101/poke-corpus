@@ -178,8 +178,8 @@ function Search({loader, showModal, language, richText, limit}: {loader: Loader,
     <SearchForm corpus={loader.corpus} language={language} inProgress={inProgress} waiting={waiting} postToWorker={postToWorkerModal} terminateWorker={terminateWorker} />
   ), [loader.corpus, language, inProgress, waiting, postToWorkerModal, terminateWorker]);
   const searchResults = useMemo(() => (
-    <Results corpus={loader.corpus} language={language} status={status} progress={progress} showId={showId} richText={richText} results={results} limit={limit} />
-  ), [loader.corpus, language, status, progress, showId, richText, results, limit]);
+    <Results corpus={loader.corpus} language={language} status={status} progress={progress} showId={showId} richText={richText} results={results} limit={limit} showModal={showModal} />
+  ), [loader.corpus, language, status, progress, showId, richText, results, limit, showModal]);
 
   return (
     <div className="search">

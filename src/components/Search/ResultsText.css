@@ -1,3 +1,18 @@
+/* Text info */
+text-info {
+  cursor: help;
+}
+
+text-info:hover:not(:has(text-info:hover)),
+text-info:focus-visible:not(:has(text-info:focus-visible)) {
+  background: var(--background);
+}
+
+text-info:active:not(:has(text-info:active)),
+text-info:focus-visible.active:not(:has(text-info:focus-visible.active)) {
+  background: var(--accent);
+}
+
 /* Variables */
 .var, .func, .null, .unused, .speaker, .grammar, .gender, .number, .version {
   color: var(--text-gray);
@@ -17,6 +32,12 @@
 
 .literal-small {
   font-size: 80%;
+}
+
+.literal-fixed {
+  display: inline-block;
+  text-align: center;
+  width: calc(var(--outer) * 1ic);
 }
 
 /* Buttons */

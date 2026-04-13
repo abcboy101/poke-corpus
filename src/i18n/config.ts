@@ -9,6 +9,7 @@ import languages from './en/languages.json';
 import files from './en/files.json';
 import icons from './en/icons.json';
 import tutorial from './en/tutorial.json';
+import info from './en/info.json';
 import translation_enGB from './en-GB/translation.json';
 import { CollectionKey, FileKey, LanguageKey } from '../utils/corpus';
 import { logErrorToConsole } from '../utils/utils';
@@ -27,6 +28,7 @@ i18next.use(LanguageDetector)
       'files',
       'icons',
       'tutorial',
+      'info',
     ],
 
     // Since English is the fallback language, we always need to load it.
@@ -38,6 +40,7 @@ i18next.use(LanguageDetector)
         files: files satisfies Record<FileKey, string>,
         icons,
         tutorial,
+        info,
       },
       'en-GB': {
         translation: translation_enGB,

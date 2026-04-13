@@ -1,10 +1,7 @@
 /**
  * Various string handling functions.
  *
- * Note that the following codepoints are used internally, and may produce unexpected output if present in input text:
- * - U+F0000: delimiter for copy of string with ruby text converted to kanji
- * - U+F0001: delimiter for copy of string with ruby text converted to kana
- *
+ * Note that the following codepoints are used internally, and may produce unexpected output if present in input text: *
  * - U+F0100: placeholder for literal backslash `\\`
  * - U+F0101: placeholder for literal slash `\/`
  * - U+F0102: placeholder for literal left square bracket `\[`
@@ -25,21 +22,24 @@
  * - U+F0250: placeholder for end of text `@`
  * - U+F02FF: placeholder for end of text `\e`
  *
- * The following codepoints can be used in source documents for multivalued strings:
- * - U+F1000: delimiter between multivalued strings
- * - U+F1001: delimiter between the discriminator and the string itself
- *
  * - U+F1100: delimiter between speaker ID and speaker name
  * - U+F1101: delimiter between speaker name and dialogue
- *
  * - U+F1102: start of replaced literal
  * - U+F1103: end of replaced literal
  * - U+F1104: delimiter between branches in a literal
+ * - U+F1105: start of text info tag
+ * - U+F1106: end of text info tag
  *
  * - U+F1200: mark a gender branch in a literal
  * - U+F1207: mark a version branch in a literal
  *
  * - U+F1300: mark a soft line break
+ *
+ * - U+F1400-F14FF: reserved for text info sigils
+ *
+ * The following codepoints can be used in source documents for multivalued strings:
+ * - U+F1000: delimiter between multivalued strings
+ * - U+F1001: delimiter between the discriminator and the string itself
  */
 
 import { CollectionKey, LanguageKey } from '../corpus';
@@ -83,8 +83,7 @@ export function remapKoreanBraille(s: string) {
 }
 
 // GB special characters
-function remapGBSpecialCharacters(s: string, language: LanguageKey) {
-  language satisfies LanguageKey;
+function remapGBSpecialCharacters(s: string) {
   return (s
     .replaceAll('¥', '$') // Pokémon Dollar
     .replaceAll('<PK>', '⒆') // Gen 1/2 PK
@@ -463,7 +462,7 @@ export function preprocessString(s: string, collectionKey: CollectionKey, langua
   const { isGB, isGen3, isNDS, is3DS, isSwitch, isN64, isGCN, isPBR, isRanch, isDreamRadar, isGO, isMasters } = getCorpusGroups(collectionKey);
 
   if (isGB) {
-    s = remapGBSpecialCharacters(s, language);
+    s = remapGBSpecialCharacters(s);
   }
   else if (isGen3) {
     s = remapGBASpecialCharacters(s, language);

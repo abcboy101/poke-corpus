@@ -1,18 +1,19 @@
 import { MouseEventHandler, useEffect, useMemo, useRef, useContext } from 'react';
 import i18next from 'i18next';
 
-import { codeId, Corpus, langId } from '../../utils/corpus';
+import { codeId, Corpus, langId, LanguageKey } from '../../utils/corpus';
 import Share from './Share';
 import ViewNearby from './ViewNearby';
 import Copy from './Copy';
 
 import './ResultsText.css';
 import './ResultsTextColor.css';
-import { expandSpeakers } from '../../utils/speaker';
 import { SearchTaskResultLines } from '../../webWorker/searchWorker';
 import { ParamsResult, Result, SectionHeader } from '../../utils/searchResults';
 import { getSearchParamsFactory, SearchParamsFactory } from '../../utils/searchParams';
 import LocalizationContext from "../LocalizationContext";
+import { ShowModal } from '../Modal';
+import { getTextInfo } from './ResultsTextInfo';
 
 const addWordBreaksToID = (s: string, lang: string) => lang === codeId ? s.replaceAll(/([._/]|([a-z])(?=[A-Z])|([A-Za-z])(?=[0-9]))/gu, '$1<wbr>') : s;
 
@@ -42,14 +43,13 @@ interface ResultsTableParams extends Omit<SearchTaskResultLines, 'speakers' | 'l
   readonly sectionOffset: number,
   readonly onShowSection: ShowSectionCallback,
   readonly searchParamsFactory: SearchParamsFactory,
+  readonly showModal: ShowModal,
 }
 
-function ResultsTable({corpus, index, collection, file, languages, lines, start, end, showId, richText, sectionOffset, onShowSection, searchParamsFactory}: ResultsTableParams) {
+function ResultsTable({corpus, index, collection, file, languages, lines, start, end, showId, richText, sectionOffset, onShowSection, searchParamsFactory, showModal}: ResultsTableParams) {
   const t = useContext(LocalizationContext);
   const idIndex = languages.indexOf(codeId);
   const displayLanguages = languages.map((lang) => lang === codeId ? langId : lang);
-  const viewSpeaker = t('viewSpeaker');
-  const hasSpeakers = corpus.getCollection(collection).speaker !== undefined;
 
   // RTL support: if the interface language uses a different direction, make sure to tag each cell with its direction
   const displayDirs = displayLanguages.map((lang) => i18next.dir(lang));
@@ -71,6 +71,26 @@ function ResultsTable({corpus, index, collection, file, languages, lines, start,
   if (corpus.getCollection(collection).softWrap === true)
     classes.push('soft');
 
+  useEffect(() => {
+    const elements = Array.from(tableRef.current?.getElementsByTagName('text-info') ?? []) as HTMLElement[];
+    const listeners = elements.map((element) => {
+      const onClick: EventListener = (ev) => {
+        const lang = element.closest('td')?.lang as LanguageKey | 'zxx' | undefined;
+        if (lang) {
+          ev.stopPropagation();
+          showModal(getTextInfo(t, searchParamsFactory, element, collection, lang === langId ? codeId : lang));
+        }
+      };
+      element.addEventListener('click', onClick);
+      return [element, onClick] as const;
+    });
+    return () => {
+      listeners.forEach(([element, listener]) => {
+        element.removeEventListener('click', listener);
+      });
+    };
+  });
+
   const table = (
     <div className="results-table-container">
       <table ref={tableRef} className={classes.join(' ')}>
@@ -87,7 +107,7 @@ function ResultsTable({corpus, index, collection, file, languages, lines, start,
               {row.map((s, j) => {
                 if (showId || languages[j] !== codeId) {
                   return <td key={j} lang={displayLanguages[j]} dir={sameDir ? undefined : displayDirs[j]}
-                    dangerouslySetInnerHTML={{__html: addWordBreaksToID(hasSpeakers ? expandSpeakers(s, searchParamsFactory, collection, languages[j], viewSpeaker) : s, languages[j])}}></td>;
+                    dangerouslySetInnerHTML={{__html: addWordBreaksToID(s, languages[j])}}></td>;
                 }
               })}
             </tr>
@@ -132,7 +152,7 @@ function ResultsSection(params: ResultsSectionParams) {
 }
 
 type ResultsSectionsParamsPassed = (
-  Pick<ResultsTableParams, 'corpus' | 'showId' | 'richText' | 'onShowSection' | 'searchParamsFactory'>
+  Pick<ResultsTableParams, 'corpus' | 'showId' | 'richText' | 'onShowSection' | 'searchParamsFactory' | 'showModal'>
   & Pick<ResultsSectionParams, 'offset' | 'limit'>
 );
 
@@ -140,6 +160,43 @@ interface ResultsSectionsParams extends Omit<ResultsSectionsParamsPassed, 'richT
   readonly results: readonly Result[],
   readonly headers: readonly SectionHeader[],
   readonly jumpTo: (n: number) => void,
+}
+
+if (!customElements.get('text-info')) {
+  class TextInfoElement extends HTMLElement {
+    connectedCallback() {
+      this.setAttribute('role', 'button');
+      this.tabIndex = 0;
+      this.addEventListener('keydown', this);
+      this.addEventListener('keyup', this);
+      this.addEventListener('blur', this);
+    }
+
+    disconnectedCallback() {
+      this.removeEventListener('keydown', this);
+      this.removeEventListener('keyup', this);
+      this.removeEventListener('blur', this);
+    }
+
+    handleEvent(ev: Event) {
+      if (ev instanceof KeyboardEvent) {
+        if ((ev.type === 'keydown' && ev.key === 'Enter') || (ev.type === 'keyup' && ev.key === ' ')) {
+          ev.preventDefault();
+          ev.stopPropagation();
+          this.click();
+        }
+        else if (ev.type === 'keydown' && ev.key === ' ') {
+          ev.preventDefault();
+          ev.stopPropagation();
+          this.classList.add('active');
+        }
+      }
+      else if (ev.type === 'blur') {
+        this.classList.remove('active');
+      }
+    }
+  }
+  customElements.define('text-info', TextInfoElement);
 }
 
 /** Results section, including its header. */

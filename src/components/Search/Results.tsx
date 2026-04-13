@@ -11,6 +11,7 @@ import { defaultLimit, localStorageGetItem, localStorageSetItem, parseJSONNullab
 import { ResultsSections, ShowSectionCallback } from './ResultsSections';
 import { Result, SectionHeader } from '../../utils/searchResults';
 import LocalizationContext from "../LocalizationContext";
+import { ShowModal } from '../Modal';
 
 /**
  * Scrolls the results window to the specified section.
@@ -91,7 +92,7 @@ const getSavedResultsPreferences = () => {
   return toggleDefault;
 };
 
-function Results({corpus, language, status, progress, results, showId = true, richText = true, limit = defaultLimit}: {corpus: Corpus, language: string, status: Status, progress: number, showId?: boolean, richText?: boolean, results: readonly Result[], limit?: number}) {
+function Results({corpus, language, status, progress, results, showId = true, richText = true, limit = defaultLimit, showModal}: {corpus: Corpus, language: string, status: Status, progress: number, showId?: boolean, richText?: boolean, results: readonly Result[], limit?: number, showModal: ShowModal}) {
   const t = useContext(LocalizationContext);
   const initial = useMemo(getSavedResultsPreferences, []);
   const [showVariables, setShowVariables] = useState(initial.showVariables);
@@ -168,7 +169,7 @@ function Results({corpus, language, status, progress, results, showId = true, ri
   useEffect(() => {
     // Wrap in startTransition to allow it to be rendered in the background.
     startTransition(() => {
-      setSections(<ResultsSections corpus={corpus} results={results} headers={headers} showId={showId} offset={offset} limit={limit} onShowSection={onShowSection} jumpTo={jumpTo} />);
+      setSections(<ResultsSections corpus={corpus} results={results} headers={headers} showId={showId} offset={offset} limit={limit} onShowSection={onShowSection} showModal={showModal} jumpTo={jumpTo} />);
     });
   }, [corpus, results, headers, showId, offset, limit, onShowSection, jumpTo]);
 

@@ -1,0 +1,23 @@
+.text-info {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  width: 100%;
+  gap: 0.25rem 0.5rem;
+  align-items: center;
+  margin-block: 0;
+}
+
+.text-info dt {
+  font-weight: bold;
+  font-style: initial;
+  text-align: end;
+}
+
+.text-info dd {
+  text-align: start;
+  margin-inline-start: 0;
+}
+
+.text-info p, .text-info ul {
+  margin-block: 0;
+}

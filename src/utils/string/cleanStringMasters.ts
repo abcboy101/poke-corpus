@@ -1,4 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
+import { TextInfo } from './TextInfo';
+
 export function preprocessStringMasters(s: string) {
   return (s
     // Escaped characters
@@ -8,16 +9,15 @@ export function preprocessStringMasters(s: string) {
   );
 }
 
-export function postprocessStringMasters(s: string) {
+export function postprocessStringMasters(s: string, ti: TextInfo) {
   return (s
-    .replaceAll(/\u{F0106}attr font=['"]fallback['"]\u{F0107}(.+?)\u{F0106}\/attr\u{F0107}/gu, '<span class="fallback">$1</span>') // font
-    .replaceAll(/\u{F0106}attr color=['"]([0-9A-Fa-f]{6})['"]\u{F0107}(.+?)\u{F0106}\/attr\u{F0107}/gu, '<span class="color" style="color: #$1">$2</span>') // color
-    .replaceAll(/\u{F0106}attr size=['"](\d+?)['"]\u{F0107}(.+?)\u{F0106}\/attr\u{F0107}/gu, '<span style="font-size: $1px">$2</span>') // size
-    .replaceAll(/\u{F0106}attr color=['"]([0-9A-Fa-f]{6})['"] size=['"](\d+?)['"]\u{F0107}(.+?)\u{F0106}\/attr\u{F0107}/gu, '<span class="color" style="color: #$1; font-size: $2px">$3</span>') // color
-    .replaceAll(/\u{F0106}attr size=['"](\d+?)['"] height=['"](\d+?)['"]\u{F0107}(.+?)\u{F0106}\/attr\u{F0107}/gu, '<span style="font-size: $1px; line-height: $2px">$3</span>') // size, height
-    .replaceAll(/(\u{F0106}\/?div\u{F0107})/gu, '<span class="control">$1</span>') // div (treat as whitespace)
-    .replaceAll(/\u{F0106}span class=""?word"?"\u{F0107}/gu, '<span class="word">')
-    .replaceAll(/\u{F0106}\/span\u{F0107}/gu, '</span>')
-    .replaceAll(/\u{F0106}br\u{F0107}/gu, '<br>')
+    .replaceAll(/(<attr font=['"]fallback['"]>)(.+?)(<\/attr>)/gu, (_, start: string, children: string, end: string) => ti.as({ kind: 'tag', start, className: 'fallback', children, end })) // font
+    .replaceAll(/(<attr color=['"]([0-9A-Fa-f]{6})['"]>)(.+?)(<\/attr>)/gu, (_, start: string, value: string, children: string, end: string) => ti.as({ kind: 'tag', start, className: 'color', style: `color: #${value}`, children, end })) // color
+    .replaceAll(/(<attr size=['"](\d+?)['"]>)(.+?)(<\/attr>)/gu, (_, start: string, value: string, children: string, end: string) => ti.as({ kind: 'tag', start, style: `font-size: ${value}px`, children, end })) // size
+    .replaceAll(/(<attr color=['"]([0-9A-Fa-f]{6})['"] size=['"](\d+?)['"]>)(.+?)(<\/attr>)/gu, (_, start: string, color: string, size: string, children: string, end: string) => ti.as({ kind: 'tag', start, className: 'color', style: `color: #${color}; font-size: ${size}px`, children, end })) // color, size
+    .replaceAll(/(<attr size=['"](\d+?)['"] height=['"](\d+?)['"]>)(.+?)(<\/attr>)/gu, (_, start: string, size: string, height: string, children: string, end: string) => ti.as({ kind: 'tag', start, style: `font-size: ${size}px; line-height: ${height}px`, children, end })) // size, height
+    .replaceAll(/(<\/?div>)/gu, (code) => ti.as({ kind: 'tag', start: code, className: 'control', children: code })) // div (treat as whitespace)
+    .replaceAll(/(<span class=""?word"?">)(.+?)(<\/span>)/gu, (_, start: string, children: string, end: string) => ti.as({ kind: 'tag', start, className: 'word', children, end }))
+    .replaceAll(/<br>/gu, (code) => ti.as({ kind: 'tag', start: code, className: 'n', children: code }) + '<br>')
   );
 }

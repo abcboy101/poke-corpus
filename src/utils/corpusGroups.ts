@@ -30,3 +30,19 @@ export function getCorpusGroups(collectionKey: string) {
     isGB, isNDS, is3DS, isSwitch, isN64, isGCN, isModern,
   };
 }
+
+/**
+ * Returns the description namespace for the given collection.
+ */
+export function getNamespace(collectionKey: string) {
+  const { isGB, isGen3, isGen4, isModern, isN64, isGCN, isPBR } = getCorpusGroups(collectionKey);
+
+  if (isGB) return 'gb';
+  if (isGen3) return 'g3';
+  if (isGen4) return 'g4';
+  if (isModern) return 'modern';
+  if (isN64) return 'n64';
+  if (isGCN) return 'gcn';
+  if (isPBR) return 'pbr';
+  return collectionKey.toLowerCase();
+}

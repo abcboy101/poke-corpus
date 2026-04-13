@@ -51,8 +51,6 @@ export const expandLv3 = (language: LanguageKey) => {
 
 export const expandPP = (language: LanguageKey) => language === 'de' ? 'AP' : 'PP';
 
-export const expandID = () => 'ID';
-
 export const expandNo = (language: LanguageKey) => {
   switch (language) {
     case 'ja-Hrkt': return 'No';
@@ -64,6 +62,3 @@ export const expandNo = (language: LanguageKey) => {
     default:        return 'No';
   }
 };
-
-// French BP (Battle Points)
-export const expandPco = () => 'Pco';
