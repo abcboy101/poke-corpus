@@ -9,7 +9,7 @@ export const replaceLiteralsPreFactory = (literalsData: readonly ReadonlyMap<num
       return s;
 
     // Treat as Japanese instead if kana are present, for untranslated text in other languages
-    if (indexJA !== -1 && languageIndex !== indexJA && /[ぁ-んァ-ン]/gu.test(s))
+    if (indexJA !== -1 && languageIndex !== indexJA && /[ぁ-んァ-ン]/g.test(s))
       languageIndex = indexJA;
 
     for (const [literalId, {branch, line}] of Object.entries(literals)) {
@@ -36,7 +36,7 @@ export const replaceLiteralsPreFactory = (literalsData: readonly ReadonlyMap<num
         continue;
 
       if (isGB)
-        replaceValue = replaceValue.replaceAll(/@/gu, '');
+        replaceValue = replaceValue.replaceAll(/@/g, '');
       if (collectionKey === 'BattleRevolution')
         replaceValue = replaceValue.substring('[FONT 0][SPACING 1]'.length).trim();
 
@@ -55,7 +55,7 @@ export const replaceLiteralsFactory = (literalsData: readonly ReadonlyMap<number
       return s;
 
     // Treat as Japanese instead if kana are present, for untranslated text in other languages
-    if (indexJA !== -1 && languageIndex !== indexJA && /[ぁ-んァ-ン]/gu.test(s))
+    if (indexJA !== -1 && languageIndex !== indexJA && /[ぁ-んァ-ン]/g.test(s))
       languageIndex = indexJA;
 
     for (const [literalId, {branch, line}] of Object.entries(literals)) {
@@ -85,7 +85,7 @@ export const replaceLiteralsFactory = (literalsData: readonly ReadonlyMap<number
         continue;
 
       if (isGB)
-        replaceValue = replaceValue.replaceAll(/@/gu, '');
+        replaceValue = replaceValue.replaceAll(/@/g, '');
       if (collectionKey === 'BattleRevolution')
         replaceValue = replaceValue.substring('[FONT 0][SPACING 1]'.length).trim();
 

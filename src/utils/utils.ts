@@ -3,7 +3,7 @@ export type Mutable<T> = {
   -readonly [P in keyof T]: T[P];
 };
 
-export const escapeRegex = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/gu, '\\$&');
+export const escapeRegex = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 /* Wrappers for localStorage access, in case localStorage is blocked. */
 export function localStorageGetItem(key: string) {

@@ -10,6 +10,6 @@ test.skip('preprocess', async () => {
   for (const languageKey of corpus.getCollection(collectionKey).languages) {
     const s = await readFile(loader, collectionKey, languageKey, 'ms');
     const preprocess = preprocessString(s, collectionKey, languageKey);
-    expect(preprocess).not.toMatch(/.*\[Character[12]:[^ ]+ \].*/gu);
+    expect(preprocess).not.toMatch(/.*\[Character[12]:[^ ]+ \].*/g);
   }
 }, 10000);

@@ -46,9 +46,9 @@ export class TextInfo {
 
   private getSigil() {
     let value = this.counter++;
-    const sigil = [String.fromCodePoint(0xF1400 | (value & 0xFF))];
+    const sigil = [String.fromCodePoint(0xE700 | (value & 0xFF))];
     while (value > 0xFF) {
-      sigil.push(String.fromCodePoint(0xF1400 | (value & 0xFF)));
+      sigil.push(String.fromCodePoint(0xE700 | (value & 0xFF)));
       value >>= 8;
     }
     return sigil.join('');
@@ -58,7 +58,7 @@ export class TextInfo {
    * Replaces placeholders with a text-info tag corresponding to the saved annotations.
    */
   public apply(s: string) {
-    for (const [tag, sigil] of s.matchAll(/\u{F1105}([\u{F1400}-\u{F14FF}]+)\u{F1106}/gu)) {
+    for (const [tag, sigil] of s.matchAll(/\x98([\uE700-\uE7FF]+)\x9C/g)) {
       const html = this.dataHtml.get(sigil);
       if (html !== undefined) {
         s = s.replace(tag, html);
@@ -91,7 +91,7 @@ export class TextInfo {
    * Replaces placeholders with a text-info tag corresponding to the saved annotations.
    */
   public applyInner(s: string) {
-    for (const [tag, sigil] of s.matchAll(/\u{F1105}([\u{F1400}-\u{F14FF}]+)\u{F1106}/gu)) {
+    for (const [tag, sigil] of s.matchAll(/\x98([\uE700-\uE7FF]+)\x9C/g)) {
       const html = this.dataHtml.get(sigil);
       if (html !== undefined) {
         s = s.replace(tag, html);
@@ -119,7 +119,7 @@ export class TextInfo {
   public as(args: TextInfoEntry | SpanEntry) {
     const sigil = this.getSigil();
     this.data.set(sigil, args);
-    return `\u{F1105}${sigil}\u{F1106}${args.children ?? ''}\u{F1105}${sigil}\u{F1106}`;
+    return `\x98${sigil}\x9C${args.children ?? ''}\x98${sigil}\x9C`;
   }
 
   /**
@@ -128,7 +128,7 @@ export class TextInfo {
   public html(html: string) {
     const sigil = this.getSigil();
     this.dataHtml.set(sigil, html);
-    return `\u{F1105}${sigil}\u{F1106}`;
+    return `\x98${sigil}\x9C`;
   }
 
   //#region String functions

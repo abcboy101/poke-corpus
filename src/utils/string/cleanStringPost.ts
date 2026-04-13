@@ -1,3 +1,7 @@
+/**
+ * String handling functions for converting the search results to HTML for display.
+ */
+
 import { CollectionKey, LanguageKey } from '../corpus';
 import { postprocessSpeaker } from '../speaker';
 import { grammarBranch, versionBranch, genderBranch, numberBranch, genderNumberBranch } from './branches';
@@ -11,13 +15,6 @@ import { getCorpusGroups } from "../corpusGroups";
 import { remapMsgStdVariableName } from "./variableNames";
 
 //#region Post-processing helper functions
-function multiLine(s: string) {
-  if (s.search(/[\u{F1000}\u{F1001}]/u) === -1) {
-    return s;
-  }
-  return ['<dl>', ...s.split('\u{F1000}').map((line) => line.split('\u{F1001}')).map(([location, str]) => `<dt>${location}</dt><dd>${str}</dd>`), '</dl>'].join('');
-}
-
 function escapeHTML(s: string) {
   return (s
     .replaceAll('&', '&amp;')
@@ -83,12 +80,20 @@ const rgbaColor = (r: string, g: string, b: string, a: string) => `#${dec2Hex(r)
  *
  * Returns the resulting HTML string.
  */
-export function postprocessString(s: string, collectionKey: CollectionKey, language: LanguageKey, richText = true) {
-  const { isGen1, isGen2, isGen3, isGen4, isGen5, isBDSP, isPBR, isRanch, isDreamRadar, isGO, isMasters, isHOME, isChampions, isGB, isNDS, is3DS, isN64, isGCN, isModern } = getCorpusGroups(collectionKey);
+export function postprocessString(s: string, collectionKey: CollectionKey, language: LanguageKey, richText = true): string {
+  // Multiline
+  if (s.includes('\u{F1000}') && s.includes('\u{F1001}')) {
+    const entries = s.split('\u{F1000}').map((line) => {
+      const [location, value] = line.split('\u{F1001}');
+      return `<dt>${location}</dt><dd>${postprocessString(value, collectionKey, language, richText)}</dd>`;
+    });
+    return `<dl>${entries.join('')}</dl>`;
+  }
 
   if (!richText)
-    return multiLine(escapeHTML(s));
+    return escapeHTML(s);
 
+  const { isGen1, isGen2, isGen3, isGen4, isGen5, isBDSP, isPBR, isRanch, isDreamRadar, isGO, isMasters, isHOME, isChampions, isGB, isNDS, is3DS, isN64, isGCN, isModern } = getCorpusGroups(collectionKey);
   const ti = new TextInfo();
 
   // Replace literal special characters with a placeholder so they don't match other rules
@@ -107,7 +112,7 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
 
     // Escape C0 and C1 control codes
     // eslint-disable-next-line no-control-regex
-    .replaceAll(/[\x00-\x1F\x7F-\x9F]/gu, (c) => `\\x${dec2Hex(c.charCodeAt(0))}`)
+    .replaceAll(/[\x00-\x1F\x7F-\x9F]/g, (c) => `\\x${dec2Hex(c.charCodeAt(0))}`)
   );
   s = isGen4 ? (s
     .replaceAll('[VAR 0207]', '\u{F0207}')
@@ -210,29 +215,29 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
 
   //#region Formatting
   s = (isBDSP || isChampions) ? (s
-    .replaceAll(/(\[System:Size percent="(\d+)" \])(.*?)(\[System:Size percent="100" \])/gu, (_, start: string, value: string, children: string, end: string) => ti.as({ kind: 'tag', start, style: `font-size: ${value}%`, children, end })) // font size
-    .replaceAll(/\[System:Size percent="100" \]/gu, ti.func()) // font size (reset)
-    .replaceAll(/(\[System:Color (?!a="255" \])(?:r="(\d+)" )?(?:g="(\d+)" )?(?:b="(\d+)" )?(?:a="(\d+)" )?\])(.*?)(\[System:Color a="255" \]|(?=\[System:Color ))/gu, (_, start: string, r: string | undefined, g: string | undefined, b: string | undefined, a: string | undefined, children: string, end: string) => ti.as({ kind: 'tag', start, className: 'color', style: `color: ${rgbaColor(r ?? '', g ?? '', b ?? '', a ?? '')}`, children, end })) // font color
-    .replaceAll(/\[System:Color a="255" \]/gu, ti.func()) // font color (reset)
+    .replaceAll(/(\[System:Size percent="(\d+)" \])(.*?)(\[System:Size percent="100" \])/g, (_, start: string, value: string, children: string, end: string) => ti.as({ kind: 'tag', start, style: `font-size: ${value}%`, children, end })) // font size
+    .replaceAll(/\[System:Size percent="100" \]/g, ti.func()) // font size (reset)
+    .replaceAll(/(\[System:Color (?!a="255" \])(?:r="(\d+)" )?(?:g="(\d+)" )?(?:b="(\d+)" )?(?:a="(\d+)" )?\])(.*?)(\[System:Color a="255" \]|(?=\[System:Color ))/g, (_, start: string, r: string | undefined, g: string | undefined, b: string | undefined, a: string | undefined, children: string, end: string) => ti.as({ kind: 'tag', start, className: 'color', style: `color: ${rgbaColor(r ?? '', g ?? '', b ?? '', a ?? '')}`, children, end })) // font color
+    .replaceAll(/\[System:Color a="255" \]/g, ti.func()) // font color (reset)
     .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)(\[Ctrl1:xadd value="(\d+)" \])(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, (_, before: string, start: string, value: string, after: string) => ti.as({ span: true, style: `tab-size: ${value}px`, children: `${before}${ti.as({ kind: 'tag', start, content: '\t' })}${after}` })) // xadd
     .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)(\[Ctrl1:xset value="(\d+)" \])(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, (_, before: string, start: string, value: string, after: string) => ti.as({ span: true, style: `tab-size: ${value}px`, children: `${before}${ti.as({ kind: 'tag', start, content: '\t' })}${after}` })) // xset
   ) : s;
   s = (isGen4 || isModern) ? (s
-    .replaceAll(/(\[VAR FF00\((?!0000)([0-9A-F]{4})\)\])(.+?)(\[VAR FF00\(0000\)\]|(?=\[VAR FF00\((?!0000)[0-9A-F]{4}\)\])|$)/gu, (_, code: string, color: string, children: string, end: string) => ti.as({ kind: 'var', start: code, className: 'color', style: `color: var(--color-${parseInt(color, 16)})`, children, end })) // font color
-    .replaceAll(/\[VAR FF00\(0000\)\]/gu, ti.func()) // font color (reset)
+    .replaceAll(/(\[VAR FF00\((?!0000)([0-9A-F]{4})\)\])(.+?)(\[VAR FF00\(0000\)\]|(?=\[VAR FF00\((?!0000)[0-9A-F]{4}\)\])|$)/g, (_, code: string, color: string, children: string, end: string) => ti.as({ kind: 'var', start: code, className: 'color', style: `color: var(--color-${parseInt(color, 16)})`, children, end })) // font color
+    .replaceAll(/\[VAR FF00\(0000\)\]/g, ti.func()) // font color (reset)
   ) : s;
   s = (isGen5 || is3DS) ? (s
-    .replaceAll(/(\[VAR BD00\(([0-9A-F]{4}),([0-9A-F]{4}),([0-9A-F]{4})\)\])(.+?)(\[VAR BD00\(0001,0002,0000\)\]|\[VAR BD01\]|$)/gu, (_, code: string, color1: string, color2: string, color3: string, children: string, end: string) => ti.as({ kind: 'var', start: code, className: 'color', style: `color: var(--color-${parseInt(color1, 16)}-${parseInt(color2, 16)}-${parseInt(color3, 16)})`, children, end })) // font color
+    .replaceAll(/(\[VAR BD00\(([0-9A-F]{4}),([0-9A-F]{4}),([0-9A-F]{4})\)\])(.+?)(\[VAR BD00\(0001,0002,0000\)\]|\[VAR BD01\]|$)/g, (_, code: string, color1: string, color2: string, color3: string, children: string, end: string) => ti.as({ kind: 'var', start: code, className: 'color', style: `color: var(--color-${parseInt(color1, 16)}-${parseInt(color2, 16)}-${parseInt(color3, 16)})`, children, end })) // font color
     .replaceAll('[VAR BD01]', ti.func()) // font color (reset)
   ) : s;
   s = isGen4 ? (s
-    .replaceAll(/(\[VAR FF01\(00C8\)\])(\[VAR FF01\(0064\)\])/gu, (_, start: string, end: string) => ti.as({ kind: 'var', start, end })) // Gen 4 font size (empty string at 200%)
-    .replaceAll(/(\[VAR FF01\(00C8\)\])(.+?)(\[VAR FF01\(0064\)\]|$)/gu, (_, start: string, children: string, end: string) => ti.as({ span: true, className: 'line-font-size-200', children: ti.as({ kind: 'var', start, className: 'text-font-size-200', children, end }) })) // Gen 4 font size (text at 200%)
+    .replaceAll(/(\[VAR FF01\(00C8\)\])(\[VAR FF01\(0064\)\])/g, (_, start: string, end: string) => ti.as({ kind: 'var', start, end })) // Gen 4 font size (empty string at 200%)
+    .replaceAll(/(\[VAR FF01\(00C8\)\])(.+?)(\[VAR FF01\(0064\)\]|$)/g, (_, start: string, children: string, end: string) => ti.as({ span: true, className: 'line-font-size-200', children: ti.as({ kind: 'var', start, className: 'text-font-size-200', children, end }) })) // Gen 4 font size (text at 200%)
     .replaceAll('[VAR FF01(0064)]', ti.func()) // Gen 4 font size (set to 100%)
 
     .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)(\[VAR 0203\(([0-9A-F]{4})\)\])(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, (_, before: string, start: string, size: string, after: string) => ti.as({ span: true, style: `tab-size: ${parseInt(size, 16)}pt`, children: `${before}${ti.as({ kind: 'var', start, content: '\t' })}${after}` })) // Gen 4 X coords
-    .replaceAll(/\[VAR 0203\(([0-9A-F]{4})\)\]/gu, (start) => ti.as({ kind: 'var', start, content: '\t' })) // can't really have multiple tab sizes, so approximate the rest as tabs
-    .replaceAll(/\[VAR 0204\(([0-9A-F]{4})\)\]/gu, (start, pad: string) => ti.as({ kind: 'var', start, style: `display: block; height: ${parseInt(pad, 16)}pt` })) // Gen 4 Y coords
+    .replaceAll(/\[VAR 0203\(([0-9A-F]{4})\)\]/g, (start) => ti.as({ kind: 'var', start, content: '\t' })) // can't really have multiple tab sizes, so approximate the rest as tabs
+    .replaceAll(/\[VAR 0204\(([0-9A-F]{4})\)\]/g, (start, pad: string) => ti.as({ kind: 'var', start, style: `display: block; height: ${parseInt(pad, 16)}pt` })) // Gen 4 Y coords
     .replaceAll(/(\[VAR 0205\])(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, (_, code: string, children: string) => ti.as({ kind: 'var', start: code, className: 'line-align-center', children })) // HGSS
     .replaceAll(/(\[VAR 0206\])(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, (_, code: string, children: string) => ti.as({ kind: 'var', start: code, className: 'line-align-right', children })) // HGSS
   ) : s;
@@ -241,18 +246,18 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
     .replaceAll(/(\[VAR BD03\(([0-9A-F]{4})\)\])(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, (_, code: string, pad: string, children: string) => ti.as({ kind: 'var', start: code, className: 'line-align-right', style: `padding-right: ${parseInt(pad, 16)}pt`, children })) // Gen 5+
     .replaceAll(/(\[VAR BD04\(([0-9A-F]{4})\)\])(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, (_, code: string, pad: string, children: string) => ti.as({ kind: 'var', start: code, className: 'line-align-left', style: `padding-left: ${parseInt(pad, 16)}pt`, children })) // Gen 5+
     .replaceAll(/((?<=^|[\u{F0201}\u{F0202}\u{F0200}]).*?)(\[VAR BD05\(([0-9A-F]{4})\)\])(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)/gu, (_, before: string, start: string, size: string, after: string) => ti.as({ span: true, style: `tab-size: ${parseInt(size, 16)}pt`, children: `${before}${ti.as({ kind: 'var', start, content: '\t' })}${after}` })) // Gen 5 X coords
-    .replaceAll(/\[VAR BD05\(([0-9A-F]{4})\)\]/gu, (start) => ti.as({ kind: 'var', start, content: '\t' })) // can't really have multiple tab sizes, so approximate the rest as tabs
-    .replaceAll(/(\[VAR BD0A\(([0-9A-F]{4})\)\])([^[<{]*)/gu, (_, code: string, len: string, rest: string) => buttonFromName(ti, code, len, rest)) // buttons
+    .replaceAll(/\[VAR BD05\(([0-9A-F]{4})\)\]/g, (start) => ti.as({ kind: 'var', start, content: '\t' })) // can't really have multiple tab sizes, so approximate the rest as tabs
+    .replaceAll(/(\[VAR BD0A\(([0-9A-F]{4})\)\])([^[<{]*)/g, (_, code: string, len: string, rest: string) => buttonFromName(ti, code, len, rest)) // buttons
   ) : s;
   s = isPBR ? (s
-    .replaceAll(/^(.*?)(\[ALIGN ([1-3])\])(.*)$/gu, (_, before: string, code: string, value: string, children: string) => ti.as({ span: true, className: `line-align-${{1: 'left', 2: 'center', 3: 'right'}[value]}`, children: `${before}${ti.asControl(code)}${children}` }))
-    .replaceAll(/^(.*?)(\[SPACING (-?[\d.]+)\])(.*)$/gu, (_, before: string, code: string, value: string, children: string) => ti.as({ span: true, className: `spacing-${value}`, children: `${before}${ti.asControl(code)}${children}` }))
-    .replaceAll(/^(.*?)(\[FONT (\d+)\])(.*)$/gu, (_, before: string, code: string, index: string, children: string) => ti.as({ span: true, className: `font-pbr-${index}`, children: `${before}${ti.asControl(code)}${children}` })) // technically called once per line, but all strings have the same alignment for each line
-    .replaceAll(/(\[COLOR (\d+)\])(.*?)((?=(?:\[FONT2 \d+\])?\[COLOR \d+\])|$)/gu, (_, code: string, color: string, children: string, end: string) => ti.as({ kind: 'var', start: code, end, className: 'color', style: `color: var(--color-${color})`, children }))
-    .replaceAll(/(\[COLOR [05]\])/gu, ti.func())
-    .replaceAll(/(\[FONT2 (\d+)\])(.*?)(?=\[FONT2 \d+\]|$)/gu, (_, code: string, index: string, children: string) => ti.as({ kind: 'var', start: code, className: `font-pbr-${Number(index) - 1}`, children }))
-    .replaceAll(/(\[VERTOFFSET -?[\d.]+\])/gu, ti.control())
-    .replaceAll(/(\[ALIGN [1-3]\])/gu, ti.control())
+    .replaceAll(/^(.*?)(\[ALIGN ([1-3])\])(.*)$/g, (_, before: string, code: string, value: string, children: string) => ti.as({ span: true, className: `line-align-${{1: 'left', 2: 'center', 3: 'right'}[value]}`, children: `${before}${ti.asControl(code)}${children}` }))
+    .replaceAll(/^(.*?)(\[SPACING (-?[\d.]+)\])(.*)$/g, (_, before: string, code: string, value: string, children: string) => ti.as({ span: true, className: `spacing-${value}`, children: `${before}${ti.asControl(code)}${children}` }))
+    .replaceAll(/^(.*?)(\[FONT (\d+)\])(.*)$/g, (_, before: string, code: string, index: string, children: string) => ti.as({ span: true, className: `font-pbr-${index}`, children: `${before}${ti.asControl(code)}${children}` })) // technically called once per line, but all strings have the same alignment for each line
+    .replaceAll(/(\[COLOR (\d+)\])(.*?)((?=(?:\[FONT2 \d+\])?\[COLOR \d+\])|$)/g, (_, code: string, color: string, children: string, end: string) => ti.as({ kind: 'var', start: code, end, className: 'color', style: `color: var(--color-${color})`, children }))
+    .replaceAll(/(\[COLOR [05]\])/g, ti.func())
+    .replaceAll(/(\[FONT2 (\d+)\])(.*?)(?=\[FONT2 \d+\]|$)/g, (_, code: string, index: string, children: string) => ti.as({ kind: 'var', start: code, className: `font-pbr-${Number(index) - 1}`, children }))
+    .replaceAll(/(\[VERTOFFSET -?[\d.]+\])/g, ti.control())
+    .replaceAll(/(\[ALIGN [1-3]\])/g, ti.control())
   ) : s;
   s = isHOME ? (s
     .replaceAll(/<(\/?[bu]) *>/giu, (code: string) => ti.html(code)) // HOME mobile b, u
@@ -276,7 +281,7 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
     case "Champions":
     default:
       // Starting in LA, it affects all subsequent \n and \r\n (but not \c\n).
-      s = s.replaceAll(/(\[VAR BD06\([0-9A-F]{4}\)\]|\[Ctrl1:battle_oneline \])(.*)$/gu, (_, code: string, children: string) => `${code}${children.replaceAll(/(?<!\u{F0202})\u{F0200}/gu, '\u{F0200}\u{F1300}')}`);
+      s = s.replaceAll(/(\[VAR BD06\([0-9A-F]{4}\)\]|\[Ctrl1:battle_oneline \])(.*)$/g, (_, code: string, children: string) => `${code}${children.replaceAll(/(?<!\u{F0202})\u{F0200}/gu, '\u{F0200}\u{F1300}')}`);
   }
   s = isGen4 ? (s
     .replaceAll('\u{F0207}\u{F0200}', `${ti.asWhitespace('c', '[VAR 0207]')}${ti.asWhitespace('n')}`) // [VAR 0207]\n
@@ -312,7 +317,7 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
     .replaceAll(/\u{F0250}/gu, ti.asWhitespace('t', '@'))
     .replaceAll('<DEXEND>', ti.literal(`${g1.expandDexEnd(language)}<span class="t">@</span>`))
     .replaceAll('{text_low}', `{text_low}${BR}`)
-    .replaceAll(/(\{nts_(?:switch)[^}]+\})(<MOBILE>)/gu, '$1\u{FF000}$2')
+    .replaceAll(/(\{nts_(?:switch)[^}]+\})(<MOBILE>)/g, '$1\u{FF000}$2')
   ) : s;
   s = (s
     .replaceAll('\u{F0201}', `${ti.asWhitespace('r')}${BR}`) // \r
@@ -337,41 +342,41 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
   if (isN64) {
     s = (s
       // Color animation
-      .replaceAll(/(#71)(.*?)(<COL1,POP><COL2,POP>|$)/gu,
+      .replaceAll(/(#71)(.*?)(<COL1,POP><COL2,POP>|$)/g,
         (_, start: string, children: string, end: string) =>
           ti.as({ kind: 'tag', start, className: 'color color-animation', children, end }))
 
       // Color gradient
-      .replaceAll(/(<COL1,PUSH,(\d+),(\d+),(\d+),(\d+)><COL2,PUSH,(\d+),(\d+),(\d+),(\d+)>)(.*?)(<COL1,POP><COL2,POP>|$)/gu,
+      .replaceAll(/(<COL1,PUSH,(\d+),(\d+),(\d+),(\d+)><COL2,PUSH,(\d+),(\d+),(\d+),(\d+)>)(.*?)(<COL1,POP><COL2,POP>|$)/g,
         (_: string, start: string, r1: string, g1: string, b1: string, a1: string, r2: string, g2: string, b2: string, a2: string, children: string, end: string) =>
           ti.as({ kind: 'tag', start, children: ti.as({ span: true, className: 'color gradient', style: `--top: ${rgbaColor(r1, g1, b1, a1)}; --bottom: ${rgbaColor(r2, g2, b2, a2)}`, children }), end }))
 
       // Color push/pop (at most two levels deep)
-      .replaceAll(/(<COL1,PUSH,(\d+),(\d+),(\d+),(\d+)>)((?:(?!<COL1).)*?)(<COL[12],POP>|(?=<COL1,LOAD)|$)/gu,
+      .replaceAll(/(<COL1,PUSH,(\d+),(\d+),(\d+),(\d+)>)((?:(?!<COL1).)*?)(<COL[12],POP>|(?=<COL1,LOAD)|$)/g,
         (_, start: string, r: string, g: string, b: string, a: string, children: string, end: string) =>
           ti.as({ kind: 'tag', start, className: 'color', style: `color: ${rgbaColor(r, g, b, a)}`, children, end }))
-      .replaceAll(/(<COL1,PUSH,(\d+),(\d+),(\d+),(\d+)>)(.*?)(<COL1,POP>|(?=<COL1,LOAD)|$)/gu,
+      .replaceAll(/(<COL1,PUSH,(\d+),(\d+),(\d+),(\d+)>)(.*?)(<COL1,POP>|(?=<COL1,LOAD)|$)/g,
         (_, start: string, r: string, g: string, b: string, a: string, children: string, end: string) =>
           ti.as({ kind: 'tag', start, className: 'color', style: `color: ${rgbaColor(r, g, b, a)}`, children, end }))
-      .replaceAll(/(<COL[12],POP>)/gu, ti.func())
+      .replaceAll(/(<COL[12],POP>)/g, ti.func())
 
       // Color load
-      .replaceAll(/(<COL1,LOAD,(\d+),(\d+),(\d+),(\d+)>)(.*?)(?=<COL1,LOAD|$)/gu,
+      .replaceAll(/(<COL1,LOAD,(\d+),(\d+),(\d+),(\d+)>)(.*?)(?=<COL1,LOAD|$)/g,
         (_, start: string, r: string, g: string, b: string, a: string, children: string) =>
           ti.as({ kind: 'tag', start, className: 'color', style: `color: ${rgbaColor(r, g, b, a)}`, children }))
 
       // Spacing
-      .replaceAll(/(<DIST,([\d.]+)>)(.*?)(?=<DIST,([\d.]+)>|$)/gu, (_, start: string, value: string, children: string) => ti.as({ span: true, className: `spacing-${value}`, children: `${ti.asControl(start)}${children}` }))
+      .replaceAll(/(<DIST,([\d.]+)>)(.*?)(?=<DIST,([\d.]+)>|$)/g, (_, start: string, value: string, children: string) => ti.as({ span: true, className: `spacing-${value}`, children: `${ti.asControl(start)}${children}` }))
 
-      .replaceAll(/<FONT,(?:LOAD,\d+|PUSH,\d+|POP)>/gu, ti.func())
-      .replaceAll(/<TEX, ?[\d０-９]+>/gu, ti.var())
-      .replaceAll(/<LINE,[\d０-９]+>/gu, ti.func())
-      .replaceAll(/<FACE,\d+,[\dZ]+>/gu, ti.func())
-      .replaceAll(/<WAZA,?\d+,\d+>/gu, ti.func())
-      .replaceAll(/<(?:KOKA|NEMURI|DOKU|DOKUDOKU|YAKEDO|KOHRI|MAHI|HIRUM[IU]|SHIBARI|KONRAN|MEROMERO|NOROI|AKUMU|YADORIGI|HARE|AME|SUNA), ?\d+>/gu, ti.func())
+      .replaceAll(/<FONT,(?:LOAD,\d+|PUSH,\d+|POP)>/g, ti.func())
+      .replaceAll(/<TEX, ?[\d０-９]+>/g, ti.var())
+      .replaceAll(/<LINE,[\d０-９]+>/g, ti.func())
+      .replaceAll(/<FACE,\d+,[\dZ]+>/g, ti.func())
+      .replaceAll(/<WAZA,?\d+,\d+>/g, ti.func())
+      .replaceAll(/<(?:KOKA|NEMURI|DOKU|DOKUDOKU|YAKEDO|KOHRI|MAHI|HIRUM[IU]|SHIBARI|KONRAN|MEROMERO|NOROI|AKUMU|YADORIGI|HARE|AME|SUNA), ?\d+>/g, ti.func())
 
-      .replaceAll(/#\d{2}/gu, ti.var())
-      .replaceAll(/%%/gu, ti.literal('%')) // printf
+      .replaceAll(/#\d{2}/g, ti.var())
+      .replaceAll(/%%/g, ti.literal('%')) // printf
 
       // Game Boy Tower
       .replaceAll(/(\u{F0100}(?:CU|CR|B|R))/gu, ti.var())
@@ -380,8 +385,8 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
 
   // GCN
   s = isGCN ? (s
-    .replaceAll(/(<SCOL=0x0d0e0f>)/gu, ti.func())
-    .replaceAll(/(\[unknown5_08_([0-9a-f]{2})_([0-9a-f]{2})_([0-9a-f]{2})_([0-9a-f]{2})\])(.*?)(\[unknown5_08_ff_ff_ff_ff\]|$|(?=\u{F1000}))/gu, (_, start: string, r: string, g: string, b: string, a: string, children: string, end: string) => ti.as({ kind: 'var', start, className: 'color', style: `color: #${r}${g}${b}${a === 'ff' ? '' : a}`, children, end }))
+    .replaceAll(/(<SCOL=0x0d0e0f>)/g, ti.func())
+    .replaceAll(/(\[unknown5_08_([0-9a-f]{2})_([0-9a-f]{2})_([0-9a-f]{2})_([0-9a-f]{2})\])(.*?)(\[unknown5_08_ff_ff_ff_ff\]|$)/gu, (_, start: string, r: string, g: string, b: string, a: string, children: string, end: string) => ti.as({ kind: 'var', start, className: 'color', style: `color: #${r}${g}${b}${a === 'ff' ? '' : a}`, children, end }))
     .replaceAll('[Player]', ti.var())
     .replaceAll('[Player_alt]', ti.var())
     .replaceAll('[Rui]', ti.var())
@@ -399,22 +404,22 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
     .replaceAll('[furi_kanji]', ti.func())
     .replaceAll('[furi_kana]', ti.func())
     .replaceAll('[furi_close]', ti.func())
-    .replaceAll(/(\[some_[^\]]+?\])/gu, ti.var())
-    .replaceAll(/(\[unknown[^\]]+?\])/gu, ti.var())
-    .replaceAll(/(\[var_[^\]]\])/gu, ti.var())
+    .replaceAll(/(\[some_[^\]]+?\])/g, ti.var())
+    .replaceAll(/(\[unknown[^\]]+?\])/g, ti.var())
+    .replaceAll(/(\[var_[^\]]\])/g, ti.var())
     .replaceAll('<SCOL=0x0d0e0f>', ti.func())
   ) : s;
 
   // Ranch
   s = isRanch ? (s
-    .replaceAll(/(%((\d+\$)?(\d*d|\d*\.\d+[fs]m?|ls)|(\(\d+\)%|\d+\$)?\{\}|\(\d+\)))/gu, ti.var())
-    .replaceAll(/(\$\d+\$)/gu, ti.var())
+    .replaceAll(/(%((\d+\$)?(\d*d|\d*\.\d+[fs]m?|ls)|(\(\d+\)%|\d+\$)?\{\}|\(\d+\)))/g, ti.var())
+    .replaceAll(/(\$\d+\$)/g, ti.var())
   ) : s;
 
   // Dream Radar
   s = isDreamRadar ? (s
-    .replaceAll(/(\[VAR 0003\(([0-9A-F]{2})[0-9A-F]{2}\)\])(.*?)(\[VAR 0003\([0-9A-F]{4}\)\]|$)/gu, (_, code: string, color: string, children: string, end: string) => ti.as({ kind: 'var', start: code, className: 'color', style: `color: var(--color-${parseInt(color, 16)})`, children, end })) // font color
-    .replaceAll(/\[VAR 0003\(0000\)\]/gu, '') // font color (reset)
+    .replaceAll(/(\[VAR 0003\(([0-9A-F]{2})[0-9A-F]{2}\)\])(.*?)(\[VAR 0003\([0-9A-F]{4}\)\]|$)/g, (_, code: string, color: string, children: string, end: string) => ti.as({ kind: 'var', start: code, className: 'color', style: `color: var(--color-${parseInt(color, 16)})`, children, end })) // font color
+    .replaceAll(/\[VAR 0003\(0000\)\]/g, '') // font color (reset)
   ) : s;
 
   // Separate files
@@ -426,35 +431,35 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
   if (isModern) {
     if (isBDSP || isChampions)
       s = (s
-        .replaceAll(/\[(EN:(?!Force|Gen|Qty|Version)[^ ]+) [^\]]*?\]/gu,         (code, tag: string) => ti.asBranch(code, grammarBranchFromIndex(remapMsgStdVariableName(tag, collectionKey), grammarEN))) // English
-        .replaceAll(/\[(FR:(?!Force|Gen|Qty|Version|Elision)[^ ]+) [^\]]*?\]/gu, (code, tag: string) => ti.asBranch(code, grammarBranchFromIndex(remapMsgStdVariableName(tag, collectionKey), grammarFR))) // French
-        .replaceAll(/\[(IT:(?!Force|Gen|Qty|Version|DateIT)[^ ]+) [^\]]*?\]/gu,  (code, tag: string) => ti.asBranch(code, grammarBranchFromIndex(remapMsgStdVariableName(tag, collectionKey), grammarIT))) // Italian
-        .replaceAll(/\[(DE:(?!Force|Gen|Qty|Version|ItemAcc)[^ ]+) [^\]]*?\]/gu, (code, tag: string) => ti.asBranch(code, grammarBranchFromIndex(remapMsgStdVariableName(tag, collectionKey), grammarDE))) // German
-        .replaceAll(/\[(ES:(?!Force|Gen|Qty|Version)[^ ]+) [^\]]*?\]/gu,         (code, tag: string) => ti.asBranch(code, grammarBranchFromIndex(remapMsgStdVariableName(tag, collectionKey), grammarES))) // Spanish
+        .replaceAll(/\[(EN:(?!Force|Gen|Qty|Version)[^ ]+) [^\]]*?\]/g,         (code, tag: string) => ti.asBranch(code, grammarBranchFromIndex(remapMsgStdVariableName(tag, collectionKey), grammarEN))) // English
+        .replaceAll(/\[(FR:(?!Force|Gen|Qty|Version|Elision)[^ ]+) [^\]]*?\]/g, (code, tag: string) => ti.asBranch(code, grammarBranchFromIndex(remapMsgStdVariableName(tag, collectionKey), grammarFR))) // French
+        .replaceAll(/\[(IT:(?!Force|Gen|Qty|Version|DateIT)[^ ]+) [^\]]*?\]/g,  (code, tag: string) => ti.asBranch(code, grammarBranchFromIndex(remapMsgStdVariableName(tag, collectionKey), grammarIT))) // Italian
+        .replaceAll(/\[(DE:(?!Force|Gen|Qty|Version|ItemAcc)[^ ]+) [^\]]*?\]/g, (code, tag: string) => ti.asBranch(code, grammarBranchFromIndex(remapMsgStdVariableName(tag, collectionKey), grammarDE))) // German
+        .replaceAll(/\[(ES:(?!Force|Gen|Qty|Version)[^ ]+) [^\]]*?\]/g,         (code, tag: string) => ti.asBranch(code, grammarBranchFromIndex(remapMsgStdVariableName(tag, collectionKey), grammarES))) // Spanish
       );
     else
       s = (s
-        .replaceAll(/\[VAR 13(0[0-3])[^\]]*?\]/gu,    (code, index: string) => ti.asBranch(code, grammarBranchFromIndex(parseInt(index, 16), grammarEN))) // English
-        .replaceAll(/\[VAR 14(0[0-9A-B])[^\]]*?\]/gu, (code, index: string) => ti.asBranch(code, grammarBranchFromIndex(parseInt(index, 16), grammarFR))) // French
-        .replaceAll(/\[VAR 15(0[0-9A-F])[^\]]*?\]/gu, (code, index: string) => ti.asBranch(code, grammarBranchFromIndex(parseInt(index, 16), grammarIT))) // Italian
-        .replaceAll(/\[VAR 16(0[0-7])[^\]]*?\]/gu,    (code, index: string) => ti.asBranch(code, grammarBranchFromIndex(parseInt(index, 16), grammarDE))) // German
-        .replaceAll(/\[VAR 17(0[0-9A-F])[^\]]*?\]/gu, (code, index: string) => ti.asBranch(code, grammarBranchFromIndex(parseInt(index, 16), grammarES))) // Spanish
+        .replaceAll(/\[VAR 13(0[0-3])[^\]]*?\]/g,    (code, index: string) => ti.asBranch(code, grammarBranchFromIndex(parseInt(index, 16), grammarEN))) // English
+        .replaceAll(/\[VAR 14(0[0-9A-B])[^\]]*?\]/g, (code, index: string) => ti.asBranch(code, grammarBranchFromIndex(parseInt(index, 16), grammarFR))) // French
+        .replaceAll(/\[VAR 15(0[0-9A-F])[^\]]*?\]/g, (code, index: string) => ti.asBranch(code, grammarBranchFromIndex(parseInt(index, 16), grammarIT))) // Italian
+        .replaceAll(/\[VAR 16(0[0-7])[^\]]*?\]/g,    (code, index: string) => ti.asBranch(code, grammarBranchFromIndex(parseInt(index, 16), grammarDE))) // German
+        .replaceAll(/\[VAR 17(0[0-9A-F])[^\]]*?\]/g, (code, index: string) => ti.asBranch(code, grammarBranchFromIndex(parseInt(index, 16), grammarES))) // Spanish
       );
   }
 
   // Korean particle
   if (language === 'ko' && isGen4)
-    s = s.replaceAll(/\[VAR (?:0[1346]|34)[0-9A-F]{2}\([0-9A-F]{4},([0-9A-F]{4})\)\]/gu, (code, index: string) => ti.asVarSuffix(code, particleBranchFromIndex(parseInt(index, 16) % 8)));
+    s = s.replaceAll(/\[VAR (?:0[1346]|34)[0-9A-F]{2}\([0-9A-F]{4},([0-9A-F]{4})\)\]/g, (code, index: string) => ti.asVarSuffix(code, particleBranchFromIndex(parseInt(index, 16) % 8)));
   else if (language === 'ko' && collectionKey === 'BlackWhite')
-    s = s.replaceAll(/\[VAR 0[12][0-9A-F]{2}\([0-9A-F]{4},([0-9A-F]{4})\)\]/gu, (code, index: string) => ti.asVarSuffix(code, particleBranchFromIndex(parseInt(index, 16) % 8)));
+    s = s.replaceAll(/\[VAR 0[12][0-9A-F]{2}\([0-9A-F]{4},([0-9A-F]{4})\)\]/g, (code, index: string) => ti.asVarSuffix(code, particleBranchFromIndex(parseInt(index, 16) % 8)));
   else if (collectionKey === 'Black2White2')
-    s = s.replaceAll(/\[VAR 3400\(([0-9A-F]{4})\)\]/gu, (code, index: string) => ti.asBranch(code, particleBranchFromIndex(parseInt(index, 16) % 8)));
+    s = s.replaceAll(/\[VAR 3400\(([0-9A-F]{4})\)\]/g, (code, index: string) => ti.asBranch(code, particleBranchFromIndex(parseInt(index, 16) % 8)));
   else if (isBDSP || isChampions || isMasters)
-    s = s.replaceAll(/\[Kor:Particle char="(none|ha|wo|ga|to|ni|ya|san|desu)" \]/gu, (code, char: string) => ti.asBranch(code, particleBranchFromIndex(particlesKONames.indexOf(char), isMasters)));
+    s = s.replaceAll(/\[Kor:Particle char="(none|ha|wo|ga|to|ni|ya|san|desu)" \]/g, (code, char: string) => ti.asBranch(code, particleBranchFromIndex(particlesKONames.indexOf(char), isMasters)));
   else if (isModern)
-    s = s.replaceAll(/\[VAR 1900\(([0-9A-F]{4})\)\]/gu, (code, index: string) => ti.asBranch(code, particleBranchFromIndex(parseInt(index, 16))));
+    s = s.replaceAll(/\[VAR 1900\(([0-9A-F]{4})\)\]/g, (code, index: string) => ti.asBranch(code, particleBranchFromIndex(parseInt(index, 16))));
   else if (isDreamRadar)
-    s = s.replaceAll(/\[VAR 0600\((0[0-9A-F])[0-9A-F]{2}\)\]/gu, (code, index: string) => ti.asBranch(code, particleBranchFromIndex(parseInt(index, 16))));
+    s = s.replaceAll(/\[VAR 0600\((0[0-9A-F])[0-9A-F]{2}\)\]/g, (code, index: string) => ti.asBranch(code, particleBranchFromIndex(parseInt(index, 16))));
   //#endregion
 
   //#region Branches
@@ -466,69 +471,69 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
     .replaceAll(/\u{F1102}([^\u{F1102}]*?)\u{F1105}\u{F1207}([^\u{F1102}]*?)\u{F1104}([^\u{F1102}]*?)\u{F1103}/gu, (_, code: string, form1: string, form2: string) => ti.asLiteral(code, versionBranchRS(form1, form2))) // FD 07 - FD 0D
   ) : s;
   s = isModern ? (s
-    .replaceAll(/(\[VAR 1100\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\])([^[<{]*)/gu, (_, code: string, lenF: string, lenM: string, rest: string) => {
+    .replaceAll(/(\[VAR 1100\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\])([^[<{]*)/g, (_, code: string, lenF: string, lenM: string, rest: string) => {
       const endM = parseInt(lenM, 16);
       const endF = endM + parseInt(lenF, 16);
       return `${ti.asBranch(code, genderBranch(rest.substring(0, endM), rest.substring(endM, endF)))}${rest.substring(endF)}`;
     })
-    .replaceAll(/(\[VAR 1100\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),00([0-9A-F]{2})\)\])([^[<{]*)/gu, (_, code: string, lenF: string, lenM: string, lenN: string, rest: string) => {
+    .replaceAll(/(\[VAR 1100\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),00([0-9A-F]{2})\)\])([^[<{]*)/g, (_, code: string, lenF: string, lenM: string, lenN: string, rest: string) => {
       const endM = parseInt(lenM, 16);
       const endF = endM + parseInt(lenF, 16);
       const endN = endF + parseInt(lenN, 16);
       return `${ti.asBranch(code, genderBranch(rest.substring(0, endM), rest.substring(endM, endF), rest.substring(endF, endN)))}${rest.substring(endN)}`;
     })
-    .replaceAll(/(\[VAR 1101\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\])([^[<{]*)/gu, (_, code: string, lenP: string, lenS: string, rest: string) => {
+    .replaceAll(/(\[VAR 1101\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\])([^[<{]*)/g, (_, code: string, lenP: string, lenS: string, rest: string) => {
       const endS = parseInt(lenS, 16);
       const endP = endS + parseInt(lenP, 16);
       return `${ti.asBranch(code, numberBranch(rest.substring(0, endS), rest.substring(endS, endP)))}${rest.substring(endP)}`;
     })
-    .replaceAll(/(\[VAR 1102\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),([0-9A-F]{2})([0-9A-F]{2})\)\])([^[<{]*)/gu, (_, code: string, lenFS: string, lenMS: string, lenFP: string, lenMP: string, rest: string) => {
+    .replaceAll(/(\[VAR 1102\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),([0-9A-F]{2})([0-9A-F]{2})\)\])([^[<{]*)/g, (_, code: string, lenFS: string, lenMS: string, lenFP: string, lenMP: string, rest: string) => {
       const endMS = parseInt(lenMS, 16);
       const endFS = endMS + parseInt(lenFS, 16);
       const endMP = endFS + parseInt(lenMP, 16);
       const endFP = endMP + parseInt(lenFP, 16);
       return `${ti.asBranch(code, genderNumberBranch(rest.substring(0, endMS), rest.substring(endMS, endFS), rest.substring(endFS, endMP), rest.substring(endMP, endFP)))}${rest.substring(endFP)}`;
     })
-    .replaceAll(/(\[VAR (?:1104|1106)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\])([^[<{]*)/gu, (_, code: string, len2: string, len1: string, rest: string) => {
+    .replaceAll(/(\[VAR (?:1104|1106)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\])([^[<{]*)/g, (_, code: string, len2: string, len1: string, rest: string) => {
       const end1 = parseInt(len1, 16);
       const end2 = end1 + parseInt(len2, 16);
       return `${ti.asBranch(code, grammarBranch(rest.substring(0, end1), rest.substring(end1, end2)))}${rest.substring(end2)}`;
     })
-    .replaceAll(/(\[VAR 1105\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),00([0-9A-F]{2})\)\])([^[<{]*)/gu, (_, code: string, lenP: string, lenS: string, lenZ: string, rest: string) => {
+    .replaceAll(/(\[VAR 1105\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),00([0-9A-F]{2})\)\])([^[<{]*)/g, (_, code: string, lenP: string, lenS: string, lenZ: string, rest: string) => {
       const endS = parseInt(lenS, 16);
       const endP = endS + parseInt(lenP, 16);
       const endZ = endP + parseInt(lenZ, 16);
       return `${ti.asBranch(code, numberBranch(rest.substring(0, endS), rest.substring(endS, endP), rest.substring(endP, endZ)))}${rest.substring(endZ)}`;
     })
-    .replaceAll(/(\[VAR 1107\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\])([^[<{]*)/gu, (_, code: string, len2: string, len1: string, rest: string) => {
+    .replaceAll(/(\[VAR 1107\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\])([^[<{]*)/g, (_, code: string, len2: string, len1: string, rest: string) => {
       const end1 = parseInt(len1, 16);
       const end2 = end1 + parseInt(len2, 16);
       return `${ti.asBranch(code, versionBranchSV(rest.substring(0, end1), rest.substring(end1, end2)))}${rest.substring(end2)}`;
     })
   ) : s;
   s = (isBDSP || isChampions || isMasters) ? (s
-    .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):Gen (?:Ref="\d+" )?(?:M="([^"]*?)" )?(?:F="([^"]*?)" )?\]/gu, (code, male?: string, female?: string) => ti.asBranch(code, genderBranch(male ?? '', female ?? '')))
-    .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):Qty (?:Ref="\d+" )?(?:S="([^"]*?)" )?(?:P="([^"]*?)" )?\]/gu, (code, singular?: string, plural?: string) => ti.asBranch(code, numberBranch(singular ?? '', plural ?? '')))
-    .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):GenQty (?:Ref="\d+" )?(?:MS="([^"]*?)" )?(?:FS="([^"]*?)" )?(?:MP="([^"]*?)" )?(?:FP="([^"]*?)" )?\]/gu, (code, maleSingular?: string, femaleSingular?: string, malePlural?: string, femalePlural?: string) => ti.asBranch(code, genderNumberBranch(maleSingular ?? '', femaleSingular ?? '', malePlural ?? '', femalePlural ?? '')))
-    .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):QtyZero (?:Ref="\d+" )?(?:S="([^"]*?)" )?(?:P="([^"]*?)" )?(?:Z="([^"]*?)" )?\]/gu, (code, singular?: string, plural?: string, zero?: string) => ti.asBranch(code, numberBranch(singular ?? '', plural ?? '', zero ?? '')))
-    .replaceAll(/\[(?:FR):Elision (?:Ref="\d+" )?(?:N="([^"]*?)" )?(?:Y="([^"]*?)" )?\]/gu, (code, no?: string, yes?: string) => ti.asBranch(code, grammarBranch(no ?? '', yes ?? '')))
-    .replaceAll(/\[(?:IT):DateIT (?:Ref="\d+" )?(?:V="([^"]*?)" )?(?:C="([^"]*?)" )?\]/gu, (code, vowel?: string, consonant?: string) => ti.asBranch(code, grammarBranch(vowel ?? '', consonant ?? '')))
+    .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):Gen (?:Ref="\d+" )?(?:M="([^"]*?)" )?(?:F="([^"]*?)" )?\]/g, (code, male?: string, female?: string) => ti.asBranch(code, genderBranch(male ?? '', female ?? '')))
+    .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):Qty (?:Ref="\d+" )?(?:S="([^"]*?)" )?(?:P="([^"]*?)" )?\]/g, (code, singular?: string, plural?: string) => ti.asBranch(code, numberBranch(singular ?? '', plural ?? '')))
+    .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):GenQty (?:Ref="\d+" )?(?:MS="([^"]*?)" )?(?:FS="([^"]*?)" )?(?:MP="([^"]*?)" )?(?:FP="([^"]*?)" )?\]/g, (code, maleSingular?: string, femaleSingular?: string, malePlural?: string, femalePlural?: string) => ti.asBranch(code, genderNumberBranch(maleSingular ?? '', femaleSingular ?? '', malePlural ?? '', femalePlural ?? '')))
+    .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):QtyZero (?:Ref="\d+" )?(?:S="([^"]*?)" )?(?:P="([^"]*?)" )?(?:Z="([^"]*?)" )?\]/g, (code, singular?: string, plural?: string, zero?: string) => ti.asBranch(code, numberBranch(singular ?? '', plural ?? '', zero ?? '')))
+    .replaceAll(/\[(?:FR):Elision (?:Ref="\d+" )?(?:N="([^"]*?)" )?(?:Y="([^"]*?)" )?\]/g, (code, no?: string, yes?: string) => ti.asBranch(code, grammarBranch(no ?? '', yes ?? '')))
+    .replaceAll(/\[(?:IT):DateIT (?:Ref="\d+" )?(?:V="([^"]*?)" )?(?:C="([^"]*?)" )?\]/g, (code, vowel?: string, consonant?: string) => ti.asBranch(code, grammarBranch(vowel ?? '', consonant ?? '')))
   ) : s;
   //#endregion
 
   //#region Variables
   s = isGB ? (s
-    .replaceAll(/(\{text_(?:start|waitbutton|promptbutton|linkwaitbutton|pause)\})/gu, ti.control())
-    .replaceAll(/(\{text_low\})/gu, ti.asWhitespace('n', '{text_low}'))
-    .replaceAll(/(\{text_ram [^}]+\})/gu, ti.var('{text_ram}'))
-    .replaceAll(/(\{text_bcd [^}]+\})/gu, ti.var('{text_bcd}'))
-    .replaceAll(/(\{text_decimal [^}]+\})/gu, ti.var('{text_decimal}'))
-    .replaceAll(/\{text_dots (\d+)\}/gu, (code, count: string) => ti.as({ start: code, kind: 'var', children: '…'.repeat(Number(count)) }))
-    .replaceAll(/(\{text_today\})/gu, ti.var())
-    .replaceAll(/(\{sound_[^}]+\})/gu, ti.func('{sound}'))
-    .replaceAll(/\{(nts_(?:placement|next))[^}]+\}/gu, (code, name: string) => ti.func(`{${name}}`)(code))
-    .replaceAll(/\{(nts_(?:ranking_(?:number|string|ezchat|region|pokemon|gender|item)|placement|player_(?:name|region|region_backup|zip|zip_backup)|switch|next|number))[^}]+\}/gu, (code, name: string) => ti.var(`{${name}}`)(code))
-    .replaceAll(/(\\x[0-9A-F]{2})/gu, ti.var())
+    .replaceAll(/(\{text_(?:start|waitbutton|promptbutton|linkwaitbutton|pause)\})/g, ti.control())
+    .replaceAll(/(\{text_low\})/g, ti.asWhitespace('n', '{text_low}'))
+    .replaceAll(/(\{text_ram [^}]+\})/g, ti.var('{text_ram}'))
+    .replaceAll(/(\{text_bcd [^}]+\})/g, ti.var('{text_bcd}'))
+    .replaceAll(/(\{text_decimal [^}]+\})/g, ti.var('{text_decimal}'))
+    .replaceAll(/\{text_dots (\d+)\}/g, (code, count: string) => ti.as({ start: code, kind: 'var', children: '…'.repeat(Number(count)) }))
+    .replaceAll(/(\{text_today\})/g, ti.var())
+    .replaceAll(/(\{sound_[^}]+\})/g, ti.func('{sound}'))
+    .replaceAll(/\{(nts_(?:placement|next))[^}]+\}/g, (code, name: string) => ti.func(`{${name}}`)(code))
+    .replaceAll(/\{(nts_(?:ranking_(?:number|string|ezchat|region|pokemon|gender|item)|placement|player_(?:name|region|region_backup|zip|zip_backup)|switch|next|number))[^}]+\}/g, (code, name: string) => ti.var(`{${name}}`)(code))
+    .replaceAll(/(\\x[0-9A-F]{2})/g, ti.var())
 
     .replaceAll('<MOBILE>', ti.control()) // 15
     .replaceAll('<ENEMY>',  ti.var()) // 52
@@ -538,27 +543,27 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
     .replaceAll('<USER>',   ti.var()) // 5A
   ) : s;
   s = isGen3 ? (s
-    .replaceAll(/(\[DYNAMIC \d+\])/gu, ti.var()) // F7 xx
-    .replaceAll(/(\[(?:(?:[ABLR]|START|SELECT)_BUTTON|DPAD_(?:UP|DOWN|LEFT|RIGHT|UPDOWN|LEFTRIGHT|NONE))\])/gu, ti.var()) // F8 xx
-    .replaceAll(/(\[EMOJI_[^\]]+?\])/gu, ti.var()) // F9 D0 - F9 FE
+    .replaceAll(/(\[DYNAMIC \d+\])/g, ti.var()) // F7 xx
+    .replaceAll(/(\[(?:(?:[ABLR]|START|SELECT)_BUTTON|DPAD_(?:UP|DOWN|LEFT|RIGHT|UPDOWN|LEFTRIGHT|NONE))\])/g, ti.var()) // F8 xx
+    .replaceAll(/(\[EMOJI_[^\]]+?\])/g, ti.var()) // F9 D0 - F9 FE
 
     .replaceAll('[NOP]', ti.var()) // FC 00 (no-op; in Western RS only, it's used to shorten city/town names in the Trainer's Eyes feature of the PokéNav, and as a placeholder for one-digit numbers in Contests)
-    .replaceAll(/(\[COLOR [^\]]+?\])/gu, ti.func()) // FC 01 xx
+    .replaceAll(/(\[COLOR [^\]]+?\])/g, ti.func()) // FC 01 xx
     .replaceAll('[COLOR]', ti.func()) // FC 01
-    .replaceAll(/(\[HIGHLIGHT [^\]]+?\])/gu, ti.func()) // FC 02 xx
-    .replaceAll(/(\[SHADOW [^\]]+?\])/gu, ti.func()) // FC 03 xx
-    .replaceAll(/(\[COLOR_HIGHLIGHT_SHADOW [^\]]+?\])/gu, ti.func()) // FC 04 xx xx xx
-    .replaceAll(/(\[PALETTE [^\]]+?\])/gu, ti.func()) // FC 05 xx
-    .replaceAll(/(\[(?:FONT [^\]]+?|FONT_[^\]]+?)\])/gu, ti.func()) // FC 06 xx
-    .replaceAll(/(\[PAUSE \d+\])/gu, ti.func()) // FC 08 xx
+    .replaceAll(/(\[HIGHLIGHT [^\]]+?\])/g, ti.func()) // FC 02 xx
+    .replaceAll(/(\[SHADOW [^\]]+?\])/g, ti.func()) // FC 03 xx
+    .replaceAll(/(\[COLOR_HIGHLIGHT_SHADOW [^\]]+?\])/g, ti.func()) // FC 04 xx xx xx
+    .replaceAll(/(\[PALETTE [^\]]+?\])/g, ti.func()) // FC 05 xx
+    .replaceAll(/(\[(?:FONT [^\]]+?|FONT_[^\]]+?)\])/g, ti.func()) // FC 06 xx
+    .replaceAll(/(\[PAUSE \d+\])/g, ti.func()) // FC 08 xx
     .replaceAll('[PAUSE_UNTIL_PRESS]', ti.func()) // FC 09 xx
     .replaceAll('[WAIT_SE]', ti.func()) // FC 0A xx
-    .replaceAll(/(\[PLAY_BGM [^\]]+?\])/gu, ti.func()) // FC 0B xx
-    .replaceAll(/(\[ESCAPE \d+\])/gu, ti.var()) // FC 0C xx
-    .replaceAll(/(\[PLAY_SE [^\]]+?\])/gu, ti.func()) // FC 10 xx
-    .replaceAll(/(\[CLEAR \d+\])/gu, ti.func()) // FC 11 xx
-    .replaceAll(/(\[CLEAR_TO \d+\])/gu, ti.func()) // FC 13 xx
-    .replaceAll(/(\[MIN_LETTER_SPACING \d+\])/gu, ti.func()) // FC 14 xx
+    .replaceAll(/(\[PLAY_BGM [^\]]+?\])/g, ti.func()) // FC 0B xx
+    .replaceAll(/(\[ESCAPE \d+\])/g, ti.var()) // FC 0C xx
+    .replaceAll(/(\[PLAY_SE [^\]]+?\])/g, ti.func()) // FC 10 xx
+    .replaceAll(/(\[CLEAR \d+\])/g, ti.func()) // FC 11 xx
+    .replaceAll(/(\[CLEAR_TO \d+\])/g, ti.func()) // FC 13 xx
+    .replaceAll(/(\[MIN_LETTER_SPACING \d+\])/g, ti.func()) // FC 14 xx
     .replaceAll('[PAUSE_MUSIC]', ti.func()) // FC 17
     .replaceAll('[RESUME_MUSIC]', ti.func()) // FC 18
 
@@ -567,42 +572,42 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
     .replaceAll('[STR_VAR_2]', ti.var()) // FD 03
     .replaceAll('[STR_VAR_3]', ti.var()) // FD 04
     .replaceAll('[RIVAL]', ti.var()) // FD 06 (FRLG)
-    .replaceAll(/(\[B_[^\]]+?\])/gu, ti.var()) // FD xx (battle string placeholders)
+    .replaceAll(/(\[B_[^\]]+?\])/g, ti.var()) // FD xx (battle string placeholders)
   ) : s;
   s = isGen4 ? (s
-    .replaceAll(/\[(VAR 013[2-9A-B][^\]]+?\])/gu, ti.var('[Digit]'))
-    .replaceAll(/\[(VAR (?:0[1346]|34)[^\]]+?\])/gu, ti.var('[Name]'))
-    .replaceAll(/\[(VAR 02[^\]]+?\])/gu, ti.func('[Ctrl1]'))
-    .replaceAll(/\[(VAR FF[^\]]+?\])/gu, ti.func('[Ctrl2]'))
+    .replaceAll(/\[(VAR 013[2-9A-B][^\]]+?\])/g, ti.var('[Digit]'))
+    .replaceAll(/\[(VAR (?:0[1346]|34)[^\]]+?\])/g, ti.var('[Name]'))
+    .replaceAll(/\[(VAR 02[^\]]+?\])/g, ti.func('[Ctrl1]'))
+    .replaceAll(/\[(VAR FF[^\]]+?\])/g, ti.func('[Ctrl2]'))
   ) : s;
   s = isModern ? (s
-    .replaceAll(/\[(VAR 01[^\]]+?\])/gu, ti.var('[Name]'))
-    .replaceAll(/\[(VAR 02[^\]]+?\])/gu, ti.var('[Digit]'))
-    .replaceAll(/\[(VAR 1[0-9A][^\]]+?\])/gu, ti.func('[Grm]'))
-    .replaceAll(/\[(VAR BD[^\]]+?\])/gu, ti.func('[Ctrl1]'))
-    .replaceAll(/\[(VAR BE[^\]]+?\])/gu, ti.func('[Ctrl2]'))
+    .replaceAll(/\[(VAR 01[^\]]+?\])/g, ti.var('[Name]'))
+    .replaceAll(/\[(VAR 02[^\]]+?\])/g, ti.var('[Digit]'))
+    .replaceAll(/\[(VAR 1[0-9A][^\]]+?\])/g, ti.func('[Grm]'))
+    .replaceAll(/\[(VAR BD[^\]]+?\])/g, ti.func('[Ctrl1]'))
+    .replaceAll(/\[(VAR BE[^\]]+?\])/g, ti.func('[Ctrl2]'))
   ) : s;
   s = (isBDSP || isChampions || isMasters) ? (s
-    .replaceAll(/\[((?:Name:.+?|DE:ItemAcc(?:Classified)?) [^[]*?\])/gu, ti.var('[Name]'))
-    .replaceAll(/\[(Digit:.+? [^[]*?\])/gu, ti.var('[Digit]'))
-    .replaceAll(/\[((?:Grm:|(?:JP|EN|FR|IT|DE|ES|Kor|SC):Force).+? [^[]*?\])/gu, ti.func('[Grm]'))
-    .replaceAll(/\[(Ctrl1:.+? [^[]*?\])/gu, ti.func('[Ctrl1]'))
-    .replaceAll(/\[(Ctrl2:.+? [^[]*?\])/gu, ti.func('[Ctrl2]'))
-    .replaceAll(/\[(PKB:.+? [^[]*?\])/gu, ti.func('[PKB]'))
+    .replaceAll(/\[((?:Name:.+?|DE:ItemAcc(?:Classified)?) [^[]*?\])/g, ti.var('[Name]'))
+    .replaceAll(/\[(Digit:.+? [^[]*?\])/g, ti.var('[Digit]'))
+    .replaceAll(/\[((?:Grm:|(?:JP|EN|FR|IT|DE|ES|Kor|SC):Force).+? [^[]*?\])/g, ti.func('[Grm]'))
+    .replaceAll(/\[(Ctrl1:.+? [^[]*?\])/g, ti.func('[Ctrl1]'))
+    .replaceAll(/\[(Ctrl2:.+? [^[]*?\])/g, ti.func('[Ctrl2]'))
+    .replaceAll(/\[(PKB:.+? [^[]*?\])/g, ti.func('[PKB]'))
   ) : s;
   s = isDreamRadar ? (s
-    .replaceAll(/\[(VAR 02[^\]]+?\])/gu, ti.var('[Character]'))
-    .replaceAll(/\[(VAR 03[^\]]+?\])/gu, ti.var('[Digit]'))
-    .replaceAll(/\[(VAR 04[^\]]+?\])/gu, ti.var('[Name]'))
+    .replaceAll(/\[(VAR 02[^\]]+?\])/g, ti.var('[Character]'))
+    .replaceAll(/\[(VAR 03[^\]]+?\])/g, ti.var('[Digit]'))
+    .replaceAll(/\[(VAR 04[^\]]+?\])/g, ti.var('[Name]'))
   ) : s;
   s = (s
     .replaceAll('[NULL]', ti.class('null', 'null'))
     .replaceAll('[COMP]', ti.class('var', 'func compressed'))
-    .replaceAll(/\[VAR [^\]]+?\]/gu, ti.var())
-    .replaceAll(/\[WAIT [\d.]+\]/gu, ti.class('var', 'func wait'))
-    .replaceAll(/\[SFX [\d.]+\]/gu, ti.class('var', 'func sfx')) // BDSP
-    .replaceAll(/\[~ \d+\]/gu, ti.class('var', 'unused'))
-    .replaceAll(/\{([^|}]+)\|([^|}]+)\}/gu, (_, base: string, ruby: string) => ti.html(`<ruby>${base}<rp>(</rp><rt>${ruby}</rt><rp>)</rp></ruby>`)) // Switch furigana
+    .replaceAll(/\[VAR [^\]]+?\]/g, ti.var())
+    .replaceAll(/\[WAIT [\d.]+\]/g, ti.class('var', 'func wait'))
+    .replaceAll(/\[SFX [\d.]+\]/g, ti.class('var', 'func sfx')) // BDSP
+    .replaceAll(/\[~ \d+\]/g, ti.class('var', 'unused'))
+    .replaceAll(/\{([^|}]+)\|([^|}]+)\}/g, (_, base: string, ruby: string) => ti.html(`<ruby>${base}<rp>(</rp><rt>${ruby}</rt><rp>)</rp></ruby>`)) // Switch furigana
   );
   //#endregion
 
@@ -620,10 +625,10 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
   s = isModern ? postprocessSpeaker(s) : s;
 
   // Substitute all text info
-  s = ti.apply(multiLine(s));
+  s = ti.apply(s);
   s = (s
-    .replaceAll(/(\s+)$/gu, '<span class="whitespace-trailing">$1</span>') // Trailing whitespace
-    .replaceAll(/^(\s+)/gu, '<span class="whitespace-leading">$1</span>') // Leading whitespace
+    .replaceAll(/(\s+)$/g, '<span class="whitespace-trailing">$1</span>') // Trailing whitespace
+    .replaceAll(/^(\s+)/g, '<span class="whitespace-leading">$1</span>') // Leading whitespace
     .replaceAll(BR, '<br>')
   );
   return s;

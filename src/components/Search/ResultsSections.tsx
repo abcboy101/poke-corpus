@@ -15,7 +15,7 @@ import LocalizationContext from "../LocalizationContext";
 import { ShowModal } from '../Modal';
 import { getTextInfo } from './ResultsTextInfo';
 
-const addWordBreaksToID = (s: string, lang: string) => lang === codeId ? s.replaceAll(/([._/]|([a-z])(?=[A-Z])|([A-Za-z])(?=[0-9]))/gu, '$1<wbr>') : s;
+const addWordBreaksToID = (s: string, lang: string) => lang === codeId ? s.replaceAll(/([._/]|([a-z])(?=[A-Z])|([A-Za-z])(?=[0-9]))/g, '$1<wbr>') : s;
 
 function Rendering() {
   const t = useContext(LocalizationContext);

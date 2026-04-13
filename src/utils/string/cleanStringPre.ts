@@ -1,45 +1,5 @@
 /**
- * Various string handling functions.
- *
- * Note that the following codepoints are used internally, and may produce unexpected output if present in input text: *
- * - U+F0100: placeholder for literal backslash `\\`
- * - U+F0101: placeholder for literal slash `\/`
- * - U+F0102: placeholder for literal left square bracket `\[`
- * - U+F0104: placeholder for literal left curly bracket `\{`
- * - U+F0106: placeholder for less-than sign `<`
- * - U+F0107: placeholder for greater-than sign `>`
- * - U+F0108: placeholder for left parenthesis `(`
- * - U+F0109: placeholder for right parenthesis `)`
- *
- * - U+F0180: placeholder for literal quotation mark `\"`
- *
- * - U+F0200: placeholder for new line `\n`
- * - U+F0201: placeholder for scroll `\r`
- * - U+F0202: placeholder for clear `\c`
- * - U+F0203: placeholder for tab `\t`
- * - U+F0207: placeholder for `[VAR 0207]`
- * - U+F0208: placeholder for `[VAR 0208]`
- * - U+F0250: placeholder for end of text `@`
- * - U+F02FF: placeholder for end of text `\e`
- *
- * - U+F1100: delimiter between speaker ID and speaker name
- * - U+F1101: delimiter between speaker name and dialogue
- * - U+F1102: start of replaced literal
- * - U+F1103: end of replaced literal
- * - U+F1104: delimiter between branches in a literal
- * - U+F1105: start of text info tag
- * - U+F1106: end of text info tag
- *
- * - U+F1200: mark a gender branch in a literal
- * - U+F1207: mark a version branch in a literal
- *
- * - U+F1300: mark a soft line break
- *
- * - U+F1400-F14FF: reserved for text info sigils
- *
- * The following codepoints can be used in source documents for multivalued strings:
- * - U+F1000: delimiter between multivalued strings
- * - U+F1001: delimiter between the discriminator and the string itself
+ * String handling functions for converting the corpus to a standard, searchable format.
  */
 
 import { CollectionKey, LanguageKey } from '../corpus';
@@ -52,7 +12,7 @@ import { variables3DS } from './variableNames';
 //#region Pre-processing helper functions
 // SMUSUM Chinese Pokémon names
 export function remapChineseChars(s: string) {
-  return s.replaceAll(/[\uE800-\uEE26]/gu, (c: string) => chineseChars[c.charCodeAt(0) - 0xE800]);
+  return s.replaceAll(/[\uE800-\uEE26]/g, (c: string) => chineseChars[c.charCodeAt(0) - 0xE800]);
 }
 
 // ORAS Korean Braille
@@ -72,12 +32,12 @@ export function remapKoreanBraille(s: string) {
     .replaceAll('\uE0C7ᄇ', 'ᄈ') // pp
     .replaceAll('\uE0C7ᄌ', 'ᄍ') // jj
     .replaceAll('\uE0C7', 'ᄉ') // unmatched double consonant
-    .replaceAll(/([\u1100-\u115F])([억옹울옥연운온언얼열인영을은])/gu, (_, initial: string, syllable: string) => initial + syllable.normalize("NFD").substring(1)) // combine initial with abbreviations
-    .replaceAll(/([가나다마바사자카타파하])([\u11A8-\u11FF])/gu, (_, syllable: string, final: string) => syllable.normalize("NFD") + final) // combine abbreviations with final
-    .replaceAll(/^[\u1160-\u1175]+$/gum, (match) => '\u115F' + match.split('').join('\u115F')) // filler for unmatched vowels in strings of unmatched vowels
-    .replaceAll(/(?<![\u1100-\u115F])([\u1160-\u1175])/gu, 'ᄋ$1') // add null initial to all other unmatched vowels
-    .replaceAll(/([\u1100-\u115F])(?![\u1160-\u1175]|$)/gum, '$1\u1160') // filler for unmatched initials
-    .replaceAll(/(?<![\u1160-\u1175])([\u11A8-\u11FF])/gum, '\u115F\u1160$1') // filler for unmatched finals
+    .replaceAll(/([\u1100-\u115F])([억옹울옥연운온언얼열인영을은])/g, (_, initial: string, syllable: string) => initial + syllable.normalize("NFD").substring(1)) // combine initial with abbreviations
+    .replaceAll(/([가나다마바사자카타파하])([\u11A8-\u11FF])/g, (_, syllable: string, final: string) => syllable.normalize("NFD") + final) // combine abbreviations with final
+    .replaceAll(/^[\u1160-\u1175]+$/gm, (match) => '\u115F' + match.split('').join('\u115F')) // filler for unmatched vowels in strings of unmatched vowels
+    .replaceAll(/(?<![\u1100-\u115F])([\u1160-\u1175])/g, 'ᄋ$1') // add null initial to all other unmatched vowels
+    .replaceAll(/([\u1100-\u115F])(?![\u1160-\u1175]|$)/gm, '$1\u1160') // filler for unmatched initials
+    .replaceAll(/(?<![\u1160-\u1175])([\u11A8-\u11FF])/gm, '\u115F\u1160$1') // filler for unmatched finals
     .normalize()
   );
 }
@@ -98,8 +58,8 @@ const brailleJapanese = '　アッイワナ⠆ニ⠈ウオエヤヌノネ⠐ラ�
 const brailleWestern = ' A,B.K⠆L⠈CIF⠌MSP,E⠒H⠔O⠖R⠘DJGÄNTQ⠠⠡⠢⠣-U⠦V⠨⠩Ö⠫⠬X⠮⠯⠰⠱.Ü⠴Z⠶⠷⠸⠹W⠻⠼Y⠾⠿';
 
 export function remapGBABrailleJapanese(s: string) {
-  return (s.replaceAll(/[\u2800-\u283F]/gu, (c: string) => brailleJapanese[c.charCodeAt(0) - 0x2800])
-    .replaceAll(/([\u2808\u2810\u2818\u2820\u2828])(.)/gu, (_, prefix: string, base: string) => {
+  return (s.replaceAll(/[\u2800-\u283F]/g, (c: string) => brailleJapanese[c.charCodeAt(0) - 0x2800])
+    .replaceAll(/([\u2808\u2810\u2818\u2820\u2828])(.)/g, (_, prefix: string, base: string) => {
       // Japanese braille encodes yōon, dakuten, and handakuten in the preceding cell
       // " ^dh CV" (braille) -> "CV^dh" (kana)
       // "y^dh CV" (braille) -> "Ci^dh yV" (kana)
@@ -126,12 +86,12 @@ export function remapGBABrailleJapanese(s: string) {
 export function remapGBABrailleWestern(s: string, language: LanguageKey) {
   // In German/Spanish, the period/comma are incorrectly written with a preceding '⠿'
   if (language === 'de' || language === 'es')
-    s = s.replaceAll(/\u283F([\u2802\u2804])/gu, '$1');
-  return s.replaceAll(/[\u2800-\u283F]/gu, (c: string) => brailleWestern[c.charCodeAt(0) - 0x2800]);
+    s = s.replaceAll(/\u283F([\u2802\u2804])/g, '$1');
+  return s.replaceAll(/[\u2800-\u283F]/g, (c: string) => brailleWestern[c.charCodeAt(0) - 0x2800]);
 }
 
 function remapGBABraille(s: string, language: LanguageKey) {
-  s = s.replaceAll(/(\[BRAILLE_FORMAT(?: \d+){6}\])/gu, ''); // Strip RSE braille format
+  s = s.replaceAll(/(\[BRAILLE_FORMAT(?: \d+){6}\])/g, ''); // Strip RSE braille format
   return language === 'ja-Hrkt' ? remapGBABrailleJapanese(s) : remapGBABrailleWestern(s, language);
 }
 
@@ -402,7 +362,7 @@ function remapLegendsZASpecialCharacters(s: string, language: LanguageKey) {
   // Star rank (EFIGS digits clipping a star)
   const isFullwidth = language === 'ja' || language === 'zh-Hans' || language === 'zh-Hant';
   const isAfter = isFullwidth || language === 'ko';
-  s = s.replaceAll(/[\uE401-\uE405]/gu, (c) => {
+  s = s.replaceAll(/[\uE401-\uE405]/g, (c) => {
     const n = c.charCodeAt(0) - 0xE400;
     return isAfter ? `★${isFullwidth ? String.fromCodePoint(0xFF10 + n) : n}` : `${n}★`;
   });
@@ -412,8 +372,8 @@ function remapLegendsZASpecialCharacters(s: string, language: LanguageKey) {
 // Pixel font used to display level in battle
 function remapChinaLGPEPixelFont(s: string) {
   return (s
-    .replaceAll(/\b(ab|ef|ij)\b/gu, '等级')
-    .replaceAll(/\b(cd|gh|kl)\b/gu, '战力')
+    .replaceAll(/\b(ab|ef|ij)\b/g, '等级')
+    .replaceAll(/\b(cd|gh|kl)\b/g, '战力')
   );
 }
 

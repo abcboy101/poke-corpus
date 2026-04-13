@@ -78,8 +78,17 @@ td[lang="zxx"] wbr {
   background-color: var(--accent);
 }
 
+.results-table dl {
+  margin: 0;
+}
+
 .results-table dt {
+  color: var(--text-gray);
   font-style: italic;
+}
+
+.results-table dd {
+  margin-inline-start: 1ic;
 }
 
 /* Font size */
