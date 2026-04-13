@@ -104,6 +104,10 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
     .replaceAll('\\r', '\u{F0201}')
     .replaceAll('\\c', '\u{F0202}')
     .replaceAll('\t', '\u{F0203}')
+
+    // Escape C0 and C1 control codes
+    // eslint-disable-next-line no-control-regex
+    .replaceAll(/[\x00-\x1F\x7F-\x9F]/gu, (c) => `\\x${dec2Hex(c.charCodeAt(0))}`)
   );
   s = isGen4 ? (s
     .replaceAll('[VAR 0207]', '\u{F0207}')

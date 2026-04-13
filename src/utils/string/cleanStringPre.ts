@@ -515,6 +515,11 @@ export function preprocessString(s: string, collectionKey: CollectionKey, langua
  */
 export function convertWhitespace(s: string) {
   return (s
+    // Escape existing literal whitespace
+    .replaceAll('\n', '\\x0A')
+    .replaceAll('\f', '\\x0C')
+    .replaceAll('\r', '\\x0D')
+
     .replaceAll('\\\\', '\u{F0100}')
     .replaceAll('\\n', '\n')
     .replaceAll('\\r', '\r')
