@@ -11414,7 +11414,7 @@
 [FONT 1][SPACING 1]めいこやく
 [FONT 1][SPACING 1]おませさん
 [FONT 1][SPACING 1]へんなおじさん
-[FONT 0][SPACING 1][ALIGN 2][VAR 0004]スタイル・コーディネート
+[FONT 0][SPACING 1][ALIGN 2][FONT2 1]スタイル・コーディネート
 [FONT 0][SPACING 1][ALIGN 2]ベーススタイルを　えらんでください
 [FONT 0][SPACING 1][ALIGN 2]どのカテゴリーを　つけますか？
 [FONT 0][SPACING 1][ALIGN 2][VAR 000E]を　えらんでください
@@ -11428,7 +11428,7 @@
 [FONT 1][SPACING 1]{前|まえ}のベーススタイルに　きりかえます
 [FONT 1][SPACING 1]{次|つぎ}のベーススタイルに　きりかえます
 [FONT 1][SPACING 1]スタイル・コーディネートに　{戻|もど}ります
-[FONT 1][SPACING 1][VAR 0004][COLOR 3][VAR 000F]から　このスタイルに　{変更|へんこう}します
+[FONT 1][SPACING 1][FONT2 2][COLOR 3][VAR 000F]から　このスタイルに　{変更|へんこう}します
 [FONT 0][SPACING 1]しょうねん
 [FONT 0][SPACING 1]しょうじょ
 [FONT 0][SPACING 1]おにいさん
@@ -11605,7 +11605,7 @@
 [FONT 0][SPACING 1][ALIGN 2]プリントタイプを　えらんでください
 [FONT 1][SPACING 1][ALIGN 2]ぜんしん
 [FONT 1][SPACING 1][ALIGN 2]バストアップ
-[FONT 6][SPACING 1][ALIGN 2][VAR 0004][COLOR 3]せんたくちゅう
+[FONT 6][SPACING 1][ALIGN 2][FONT2 7][COLOR 3]せんたくちゅう
 [FONT 1][SPACING 1]{全身|ぜんしん}の　{写真|しゃしん}が　プリントされます
 [FONT 1][SPACING 1]バストアップの　{写真|しゃしん}が　プリントされます
 [FONT 1][SPACING 1]エディット{項目|こうもく}へもどります
@@ -11831,15 +11831,15 @@
 [FONT 1][SPACING 0][VAR 0017]{回|かい}クリア
 [FONT 1][SPACING 0][VAR 0017]{回|かい}クリア
 [FONT 1][SPACING 1]せってい{項目|こうもく}の　せんたくに　もどります
-[FONT 1][SPACING 1][ALIGN 2][VAR 0004][COLOR 3]せんたくちゅう
-[FONT 1][SPACING 1][ALIGN 2][VAR 0004][COLOR 3]ステレオ
-[FONT 1][SPACING 1][ALIGN 2][VAR 0004][COLOR 3]モノラル
-[FONT 1][SPACING 1][ALIGN 2][VAR 0004][COLOR 3]あり
-[FONT 1][SPACING 1][ALIGN 2][VAR 0004][COLOR 3]なし
-[FONT 1][SPACING 1][ALIGN 2][VAR 0004][COLOR 3]タイプＡ
-[FONT 1][SPACING 1][ALIGN 2][VAR 0004][COLOR 3]タイプＢ
-[FONT 1][SPACING 1][ALIGN 2][VAR 0004][COLOR 3]よこ
-[FONT 1][SPACING 1][ALIGN 2][VAR 0004][COLOR 3]Now Selection
+[FONT 1][SPACING 1][ALIGN 2][FONT2 7][COLOR 3]せんたくちゅう
+[FONT 1][SPACING 1][ALIGN 2][FONT2 7][COLOR 3]ステレオ
+[FONT 1][SPACING 1][ALIGN 2][FONT2 7][COLOR 3]モノラル
+[FONT 1][SPACING 1][ALIGN 2][FONT2 7][COLOR 3]あり
+[FONT 1][SPACING 1][ALIGN 2][FONT2 7][COLOR 3]なし
+[FONT 1][SPACING 1][ALIGN 2][FONT2 7][COLOR 3]タイプＡ
+[FONT 1][SPACING 1][ALIGN 2][FONT2 7][COLOR 3]タイプＢ
+[FONT 1][SPACING 1][ALIGN 2][FONT2 7][COLOR 3]よこ
+[FONT 1][SPACING 1][ALIGN 2][FONT2 7][COLOR 3]Now Selection
 [FONT 1][SPACING 1][ALIGN 2][COLOR 3]Jetzt Auswahl
 [FONT 1][SPACING 1][ALIGN 2][COLOR 3]Maintenant Sélection
 [FONT 1][SPACING 1][ALIGN 2][COLOR 3]Ahora la Selección
@@ -12467,7 +12467,7 @@
 [FONT 1][SPACING 1][COLOR 3]ダウンロードパスを　もっていません！
 [FONT 1][SPACING 1][COLOR 3]ＸＸＸＸＸＸＸＸＸＸ
 [FONT 1][SPACING 1]{作成|さくせい}を{中止|ちゅうし}し　ブランクパス{選択|せんたく}へ　{戻|もど}ります
-[FONT 1][SPACING 1][VAR 0004]このベーススタイルに　けっていします
+[FONT 1][SPACING 1][FONT2 2]このベーススタイルに　けっていします
 [FONT 1][SPACING 1]オリジナルパスが　{発行|はっこう}されました！
 [FONT 1][SPACING 1][ALIGN 2]てもちボックス
 [FONT 2][SPACING 1][ALIGN 2][VAR 0017]
@@ -18105,7 +18105,7 @@
 [FONT 1][SPACING 1]Ｗｉｉリモコンの　{操作|そうさ}{方法|ほうほう}を\n３{種類|しゅるい}の{中|なか}から　えらびます
 [FONT 1][SPACING 1]not use japanese
 [FONT 0][SPACING 1][ALIGN 2]コマンドを　にゅうりょくして　ください
-[FONT 0][SPACING 1][ALIGN 2][VAR 0004][COLOR 3]にゅうりょくちゅう
+[FONT 0][SPACING 1][ALIGN 2][FONT2 7][COLOR 3]にゅうりょくちゅう
 [FONT 1][SPACING 1][ALIGN 2]もういちど{対戦|たいせん}する
 [FONT 1][SPACING 1][ALIGN 2]{参加者|さんかしゃ}をかえる
 [FONT 1][SPACING 1][ALIGN 2]ロビーへもどる
@@ -18155,7 +18155,7 @@
 [FONT 0][SPACING 1][ALIGN 2]{組|く}み{合|あ}わせを　えらんでください
 [FONT 6][SPACING 1][ALIGN 2][COLOR 2][VAR 000E]
 [FONT 6][SPACING 1][ALIGN 2][COLOR 1][VAR 000E]
-[FONT 1][SPACING 1][VAR 0004]ＶＳ
+[FONT 1][SPACING 1][FONT2 7]ＶＳ
 [FONT 0][SPACING 1][ALIGN 2]ＤＳから　ポケモンを　えらんでください
 [FONT 0][SPACING 1][ALIGN 2]ミックスポケモン　{選択中|せんたくちゅう}…
 [FONT 1][SPACING 1]ＤＳの　{画面|がめん}に　したがって\nミックスする　ポケモンを　えらんでください
@@ -20662,8 +20662,8 @@
 [FONT 1][SPACING 1]["Lv."]５０フラット
 [FONT 1][SPACING 1]{固定|こてい}ルール{予備|よび}
 [FONT 1][SPACING 1][VAR 000E]
-[FONT 0][SPACING 1][ALIGN 2][COLOR 3]{対戦|たいせん}{相手|あいて}{出現|しゅつげん}！\n[ALIGN 2][VAR 0004][COLOR 1][VAR 000E][COLOR 5]が　{対戦|たいせん}を　{申|もう}し{込|こ}んできた！
-[FONT 0][SPACING 1][ALIGN 2][COLOR 3][VAR 000E]の　{募集|ぼしゅう}は　{中止|ちゅうし}されました\n[ALIGN 2][VAR 0004][COLOR 5]{決定|けってい}のボタンを{押|お}すと　ロビーヘ{戻|もど}ります
+[FONT 0][SPACING 1][ALIGN 2][COLOR 3]{対戦|たいせん}{相手|あいて}{出現|しゅつげん}！\n[ALIGN 2][FONT2 2][COLOR 1][VAR 000E][COLOR 5]が　{対戦|たいせん}を　{申|もう}し{込|こ}んできた！
+[FONT 0][SPACING 1][ALIGN 2][COLOR 3][VAR 000E]の　{募集|ぼしゅう}は　{中止|ちゅうし}されました\n[ALIGN 2][FONT2 2][COLOR 5]{決定|けってい}のボタンを{押|お}すと　ロビーヘ{戻|もど}ります
 [FONT 0][SPACING 1][ALIGN 2]Ｗｉ－Ｆｉバトル
 [FONT 1][SPACING 1][VERTOFFSET -17]\n[ALIGN 2]だれかとバトル
 [FONT 1][SPACING 1][VERTOFFSET -17]\n[ALIGN 2]ともだちとバトル
@@ -20678,12 +20678,12 @@
 [FONT 0][SPACING 1][ALIGN 2]だれかとバトル
 [FONT 0][SPACING 1][ALIGN 2]{対戦|たいせん}{相手|あいて}を　{探|さが}しています…
 [FONT 0][SPACING 1][ALIGN 2]やめる
-[FONT 0][SPACING 1][ALIGN 2][COLOR 3]{対戦|たいせん}{相手|あいて}が　{見|み}つかりました！\n[ALIGN 2][VAR 0004][COLOR 5]Ｗｉ－Ｆｉバトルを　{開始|かいし}します\n[ALIGN 2]コロシアムは\n[ALIGN 2][VAR 000E]が　えらばれました
-[FONT 0][SPACING 1][ALIGN 2][COLOR 3]{対戦|たいせん}{相手|あいて}が　{見|み}つかりませんでした\n[ALIGN 2][VAR 0004][COLOR 5]{条件|じょうけん}を{変更|へんこう}して　{探|さが}しなおしてください
+[FONT 0][SPACING 1][ALIGN 2][COLOR 3]{対戦|たいせん}{相手|あいて}が　{見|み}つかりました！\n[ALIGN 2][FONT2 2][COLOR 5]Ｗｉ－Ｆｉバトルを　{開始|かいし}します\n[ALIGN 2]コロシアムは\n[ALIGN 2][VAR 000E]が　えらばれました
+[FONT 0][SPACING 1][ALIGN 2][COLOR 3]{対戦|たいせん}{相手|あいて}が　{見|み}つかりませんでした\n[ALIGN 2][FONT2 2][COLOR 5]{条件|じょうけん}を{変更|へんこう}して　{探|さが}しなおしてください
 [FONT 0][SPACING 1][ALIGN 2]{対戦|たいせん}{相手|あいて}を　{探|さが}すのを　やめます\n[ALIGN 2]よろしいですか？
 [FONT 0][SPACING 1][ALIGN 2][COLOR 3]{対戦|たいせん}{相手|あいて}を　{探|さが}すのを　やめました！
 [FONT 0][SPACING 1][ALIGN 2]ともだちとバトル
-[FONT 0][SPACING 1][ALIGN 2][COLOR 3]{正式|せいしき}に　{登録|とうろく}された　ともだちが　いません\n[ALIGN 2][VAR 0004][COLOR 5]\n[ALIGN 2][VAR 0004]このモードを　プレイするには\n[ALIGN 2][VAR 0004]お{互|たが}いに　フレンドコードを　{登録|とうろく}している\n[ALIGN 2][VAR 0004]{他|ほか}のプレイヤーが　{必要|ひつよう}です
+[FONT 0][SPACING 1][ALIGN 2][COLOR 3]{正式|せいしき}に　{登録|とうろく}された　ともだちが　いません\n[ALIGN 2][FONT2 2][COLOR 5]\n[ALIGN 2][FONT2 2]このモードを　プレイするには\n[ALIGN 2][FONT2 2]お{互|たが}いに　フレンドコードを　{登録|とうろく}している\n[ALIGN 2][FONT2 2]{他|ほか}のプレイヤーが　{必要|ひつよう}です
 [FONT 0][SPACING 1][ALIGN 2]ともだちとバトル　ロビー
 [FONT 1][SPACING 1][ALIGN 2]{対戦|たいせん}{相手|あいて}をぼしゅう
 [FONT 1][SPACING 1][ALIGN 2]{対戦条件|たいせんじょうけん}{変更|へんこう}
@@ -20755,7 +20755,7 @@
 [FONT 0][SPACING 1][ALIGN 2]セーブ{中|ちゅう}
 [FONT 0][SPACING 1][ALIGN 2]レポートに　かきこんでいます...\n[ALIGN 2]{電源|でんげん}を　{切|き}ったり　しないで　ください
 [FONT 0][SPACING 1][ALIGN 2]レポートに　しっかり　かきのこした！
-[FONT 0][SPACING 1][ALIGN 2][COLOR 3]{通信|つうしん}エラーが　{発生|はっせい}しました！\n[ALIGN 2][VAR 0004][COLOR 5]{決定|けってい}のボタンを{押|お}すと　{受付|うけつけ}にもどります
+[FONT 0][SPACING 1][ALIGN 2][COLOR 3]{通信|つうしん}エラーが　{発生|はっせい}しました！\n[ALIGN 2][FONT2 2][COLOR 5]{決定|けってい}のボタンを{押|お}すと　{受付|うけつけ}にもどります
 [FONT 0][SPACING 1][ALIGN 2]ダウンロードパス{一覧|いちらん}
 [FONT 1][SPACING 1][VAR 000E]
 [FONT 1][SPACING 1][VAR 000E]
@@ -20767,7 +20767,7 @@
 [FONT 1][SPACING 1][VAR 000F]
 [FONT 1][SPACING 1]バトルパスの　ダウンロード
 [FONT 0][SPACING 1][ALIGN 2][COLOR 3]{現在|げんざい}{配布|はいふ}{中|ちゅう}の　バトルパスはありません
-[FONT 0][SPACING 1][ALIGN 2][COLOR 3]バトルパスを　ダウンロードしています…\n[ALIGN 2][VAR 0004][COLOR 5][VAR 000E]
+[FONT 0][SPACING 1][ALIGN 2][COLOR 3]バトルパスを　ダウンロードしています…\n[ALIGN 2][FONT2 2][COLOR 5][VAR 000E]
 [FONT 1][SPACING 1]{中止|ちゅうし}する
 [FONT 0][SPACING 1][ALIGN 2][COLOR 3]ダウンロードに　{成功|せいこう}しました
 [FONT 0][SPACING 1][ALIGN 2][COLOR 3]ダウンロードに　{失敗|しっぱい}しました

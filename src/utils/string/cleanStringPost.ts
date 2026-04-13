@@ -72,7 +72,7 @@ const buttonFromName = (ti: TextInfo, code: string, len: string, rest: string) =
 };
 
 /* Text color */
-const dec2Hex = (n: string) => Number(n).toString(16).padStart(2, '0').toUpperCase();
+const dec2Hex = (n: string | number) => Number(n).toString(16).padStart(2, '0').toUpperCase();
 const rgbaColor = (r: string, g: string, b: string, a: string) => `#${dec2Hex(r)}${dec2Hex(g)}${dec2Hex(b)}${a === '255' ? '' : dec2Hex(a)}`;
 //#endregion
 
@@ -241,9 +241,14 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
     .replaceAll(/(\[VAR BD0A\(([0-9A-F]{4})\)\])([^[<{]*)/gu, (_, code: string, len: string, rest: string) => buttonFromName(ti, code, len, rest)) // buttons
   ) : s;
   s = isPBR ? (s
-    .replaceAll(/(\[ALIGN 1\])(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[ALIGN \d+\]|$)/gu, (_, code: string, children: string) => ti.as({ kind: 'var', start: code, className: 'line-align-left', children })) // PBR
-    .replaceAll(/(\[ALIGN 2\])(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[ALIGN \d+\]|$)/gu, (_, code: string, children: string) => ti.as({ kind: 'var', start: code, className: 'line-align-center', children })) // PBR
-    .replaceAll(/(\[ALIGN 3\])(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[ALIGN \d+\]|$)/gu, (_, code: string, children: string) => ti.as({ kind: 'var', start: code, className: 'line-align-right', children })) // PBR
+    .replaceAll(/^(.*?)(\[ALIGN ([1-3])\])(.*)$/gu, (_, before: string, code: string, value: string, children: string) => ti.as({ span: true, className: `line-align-${{1: 'left', 2: 'center', 3: 'right'}[value]}`, children: `${before}${ti.asControl(code)}${children}` }))
+    .replaceAll(/^(.*?)(\[SPACING (-?[\d.]+)\])(.*)$/gu, (_, before: string, code: string, value: string, children: string) => ti.as({ span: true, className: `spacing-${value}`, children: `${before}${ti.asControl(code)}${children}` }))
+    .replaceAll(/^(.*?)(\[FONT (\d+)\])(.*)$/gu, (_, before: string, code: string, index: string, children: string) => ti.as({ span: true, className: `font-pbr-${index}`, children: `${before}${ti.asControl(code)}${children}` })) // technically called once per line, but all strings have the same alignment for each line
+    .replaceAll(/(\[COLOR (\d+)\])(.*?)((?=(?:\[FONT2 \d+\])?\[COLOR \d+\])|$)/gu, (_, code: string, color: string, children: string, end: string) => ti.as({ kind: 'var', start: code, end, className: 'color', style: `color: var(--color-${color})`, children }))
+    .replaceAll(/(\[COLOR [05]\])/gu, ti.func())
+    .replaceAll(/(\[FONT2 (\d+)\])(.*?)(?=\[FONT2 \d+\]|$)/gu, (_, code: string, index: string, children: string) => ti.as({ kind: 'var', start: code, className: `font-pbr-${Number(index) - 1}`, children }))
+    .replaceAll(/(\[VERTOFFSET -?[\d.]+\])/gu, ti.control())
+    .replaceAll(/(\[ALIGN [1-3]\])/gu, ti.control())
   ) : s;
   s = isHOME ? (s
     .replaceAll(/<(\/?[bu]) *>/giu, (code: string) => ti.html(code)) // HOME mobile b, u
@@ -394,14 +399,6 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
     .replaceAll(/(\[unknown[^\]]+?\])/gu, ti.var())
     .replaceAll(/(\[var_[^\]]\])/gu, ti.var())
     .replaceAll('<SCOL=0x0d0e0f>', ti.func())
-  ) : s;
-
-  // PBR
-  s = isPBR ? (s
-    .replaceAll(/(\[COLOR (\d+)\])(.*?)(?:\[COLOR \d+\]|[\u{F0201}\u{F0202}\u{F0200}]|$)/gu, (_, code: string, color: string, children: string) => ti.as({ kind: 'var', start: code, className: 'color', style: `color: var(--color-${color})`, children }))
-    .replaceAll(/(\[VERTOFFSET -?[\d.]+\])/gu, ti.control())
-    .replaceAll(/(\[FONT (\d+)\])(.*?(?:[\u{F0201}\u{F0202}\u{F0200}]|$)+)(?=\[FONT \d+\]|$)/gu, (_, code: string, index: string, children: string) => ti.as({ span: true, className: `font-pbr-${index}`, children: `${ti.asControl(code)}${children}` }))
-    .replaceAll(/(\[SPACING (-?[\d.]+)\])(.*?$)/gu, (_, code: string, value: string, children: string) => ti.as({ span: true, className: `spacing-${value}`, children: `${ti.asControl(code)}${children}` }))
   ) : s;
 
   // Ranch

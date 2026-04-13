@@ -237,21 +237,25 @@ td[lang="zxx"] wbr {
 
 /* PBR font size */
 .font-pbr-0 {
-  font-size: 125%;
+  font-size: 1.25rem;
 }
 
 .font-pbr-1 {
-  font-size: 100%;
+  font-size: 1rem;
 }
 
 .font-pbr-2 {
-  font-size: 75%;
+  font-size: 0.75rem;
 }
 
 .font-pbr-6 {
   -webkit-text-stroke: 3px black;
   -webkit-text-fill-color: white;
   paint-order: stroke;
+}
+
+.font-pbr-6 .color {
+  -webkit-text-fill-color: currentcolor;
 }
 
 /* Masters */
