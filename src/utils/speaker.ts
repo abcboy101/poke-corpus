@@ -21,18 +21,18 @@ export function extractSpeakers(speakerData: readonly string[], textFile: string
   });
 }
 
-/* Looks up the speaker's name by index, and prepend it to the string. */
+/* Looks up the speaker's name by index, and append it to the string. */
 export function replaceSpeaker(s: string, speakerNames: readonly string[], language: LanguageKey) {
-  return s.replace(/(\[VAR 0114\(([0-9A-F]{4})\)\]|\[Name:TrainerNameField Idx="(\d+)" \])(?:$|(?=\u{F0000}))/u, (_, tag: string, speakerIndexHex?: string, speakerIndexDecimal?: string) => {
+  return s.replace(/(\[VAR 0114\(([0-9A-F]{4})\)\]|\[Name:TrainerNameField Idx="(\d+)" \])$/, (_, tag: string, speakerIndexHex?: string, speakerIndexDecimal?: string) => {
     const speakerIndex = speakerIndexHex !== undefined ? parseInt(speakerIndexHex, 16) : Number(speakerIndexDecimal);
     const speakerName = speakerNames[speakerIndex];
-    return `\u{F1101}${tag.replaceAll('[', '\\[')}\u{F1100}${speakerName}${speakerDelimiter(language)}`;
+    return `\uE701${tag.replaceAll('[', '\\[')}\uE700${speakerName}${speakerDelimiter(language)}`;
   });
 }
 
 /* Converts the speaker's name to basic HTML. */
 export function postprocessSpeaker(s: string) {
-  const match = /\u{F1101}(.+)\u{F1100}(.+)$/gu.exec(s);
+  const match = /\uE701([^\uE700]+)\uE700(.+)$/.exec(s);
   if (match === null)
     return s;
   const [, tag, name] = match;
@@ -40,6 +40,6 @@ export function postprocessSpeaker(s: string) {
 }
 
 export function getSpeaker(s: string) {
-  const match = s.match(/\u{F1101}(.+)\u{F1100}(.+)$/gu);
+  const match = s.match(/\uE701[^\uE700]+\uE700.+$/g);
   return match === null ? null : [match[1], match[2]] as const;
 }

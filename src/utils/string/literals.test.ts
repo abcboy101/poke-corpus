@@ -19,7 +19,7 @@ async function getReplaceLiterals(collectionKey: CollectionKey): Promise<(...par
   return (s, j) => {
     s = replaceLiterals(s, j);
     s = postprocessString(s, collectionKey, languages[j], true);
-    return /<text-info .+?>(.*)<\/text-info>/.exec(s)?.[1] ?? null;
+    return /<text-info [^>]+>(.*)<\/text-info>/.exec(s)?.[1] ?? null;
   };
 }
 

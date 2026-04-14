@@ -196,7 +196,7 @@ function normalizeWhitespacePreserveHyphen(s: string) {
  * Returns an array with the original string, the string with kanji, and the string with kana to match against.
  */
 export function convertFurigana(s: string): string[] {
-  if (!/\{[^|}]+\|[^|}]+\}/u.test(s))
+  if (!/\{[^|}]+\|[^|}]+\}/.test(s))
     return [s]; // no ruby syntax
 
   const kanji = s.replaceAll(/\{([^|}]+)\|[^|}]+\}/g, '$1');
@@ -225,7 +225,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
   try {
     // Load files
     const fileData: string[][] = files.map((data, i) => preprocessString(data, collectionKey, languages[i]).split(/\r\n|\n/));
-    const hasFurigana: boolean[] = files.map((s) => /\{[^|}]+\|[^|}]+\}/u.test(s));
+    const hasFurigana: boolean[] = files.map((s) => /\{[^|}]+\|[^|}]+\}/.test(s));
 
     // Substituted string literals vary by language, so we need to look up what the string is in the appropriate language here
     const literalsLine = literals ? Object.keys(literals).flatMap((id) => (literals[id].branch !== 'language') ? literals[id].line : Object.values(literals[id].line)) : undefined;

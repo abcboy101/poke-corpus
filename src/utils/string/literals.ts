@@ -9,7 +9,7 @@ export const replaceLiteralsPreFactory = (literalsData: readonly ReadonlyMap<num
       return s;
 
     // Treat as Japanese instead if kana are present, for untranslated text in other languages
-    if (indexJA !== -1 && languageIndex !== indexJA && /[ぁ-んァ-ン]/g.test(s))
+    if (indexJA !== -1 && languageIndex !== indexJA && /[ぁ-んァ-ン]/.test(s))
       languageIndex = indexJA;
 
     for (const [literalId, {branch, line}] of Object.entries(literals)) {
@@ -55,7 +55,7 @@ export const replaceLiteralsFactory = (literalsData: readonly ReadonlyMap<number
       return s;
 
     // Treat as Japanese instead if kana are present, for untranslated text in other languages
-    if (indexJA !== -1 && languageIndex !== indexJA && /[ぁ-んァ-ン]/g.test(s))
+    if (indexJA !== -1 && languageIndex !== indexJA && /[ぁ-んァ-ン]/.test(s))
       languageIndex = indexJA;
 
     for (const [literalId, {branch, line}] of Object.entries(literals)) {
@@ -66,10 +66,10 @@ export const replaceLiteralsFactory = (literalsData: readonly ReadonlyMap<number
           replaceValue = literalsData[languageIndex].get(line);
           break;
         case 'gender':
-          replaceValue = `\u{F1200}${line.map((lineNo) => literalsData[languageIndex].get(lineNo)).join('\u{F1104}')}`;
+          replaceValue = `\uE706${line.map((lineNo) => literalsData[languageIndex].get(lineNo)).join('\uE704')}`;
           break;
         case 'version':
-          replaceValue = `\u{F1207}${line.map((lineNo) => literalsData[languageIndex].get(lineNo)).join('\u{F1104}')}`;
+          replaceValue = `\uE707${line.map((lineNo) => literalsData[languageIndex].get(lineNo)).join('\uE704')}`;
           break;
         case 'language':
         {
@@ -89,7 +89,7 @@ export const replaceLiteralsFactory = (literalsData: readonly ReadonlyMap<number
       if (collectionKey === 'BattleRevolution')
         replaceValue = replaceValue.substring('[FONT 0][SPACING 1]'.length).trim();
 
-      s = s.replaceAll(searchValue, `\u{F1102}${searchValue}\u{F1105}${replaceValue}\u{F1103}`);
+      s = s.replaceAll(searchValue, `\uE702${searchValue}\uE705${replaceValue}\uE703`);
     }
     return s;
   };

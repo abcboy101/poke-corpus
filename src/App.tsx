@@ -121,7 +121,7 @@ function App() {
   }
 
   const classes = ['app', `view-${view.toLowerCase()}`];
-  if (!import.meta.env.SSR && /^((?!chrome|android).)*safari/i.test(navigator.userAgent))
+  if (!import.meta.env.SSR && /^(?:(?!chrome|android).)*safari/i.test(navigator.userAgent))
     classes.push('ua-safari');
   return (
     <LocalizationContext value={t}>

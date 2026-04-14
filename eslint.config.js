@@ -3,6 +3,7 @@ import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
 import importPlugin from "eslint-plugin-import";
 import pluginReact from "eslint-plugin-react";
+import regexpPlugin from "eslint-plugin-regexp";
 import stylistic from "@stylistic/eslint-plugin";
 import compat from "eslint-plugin-compat";
 
@@ -35,6 +36,7 @@ export default [
   importPlugin.flatConfigs.recommended,
   importPlugin.flatConfigs.typescript,
   pluginReact.configs.flat.recommended,
+  regexpPlugin.configs.recommended,
   {
     plugins: { "@stylistic": stylistic },
     rules: {
@@ -67,6 +69,9 @@ export default [
       "@stylistic/quote-props": ["error", "consistent-as-needed"],
       "@typescript-eslint/restrict-template-expressions": ["error", { allowNumber: true }],
       "@typescript-eslint/no-unnecessary-condition": ["error", { allowConstantLoopConditions: 'only-allowed-literals' }],
+      "regexp/no-obscure-range": ["error", { "allowed": "all" }],
+      "no-misleading-character-class": ["error", { "allowEscape": true }],
+      "no-control-regex": "off",
     },
   },
   {

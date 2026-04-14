@@ -21,11 +21,11 @@ test('preprocessHindi', async () => {
   expect(preprocess).not.toMatch(/[\uE000-\uF8FF]/g);
   expect(preprocess).not.toMatch(/\u094E/g); // historical character, was used in malformed ṭya (Buizel)
 
-  expect(preprocess).not.toMatch(/(^|\s)([\u0900\u0901\u0902\u0903\u093D]|\u093C|[\u093E-\u094C]|\u094D)/gm); // modifier/nukta/vowel mark/halant at start of word
-  expect(preprocess).not.toMatch(/\u094D([\u0900\u0901\u0902\u0903\u093D]|\u093C|[\u0904-\u0914]|[\u093E-\u094C]|\u094D)/gm); // halant followed by modifier/nukta/vowel/vowel mark/halant
-  expect(preprocess).not.toMatch(/(?<![\u0904-\u0914]|[\u0915-\u0939\u0958-\u095F]\u093C?|[\u093E-\u094C])([\u0900\u0901\u0902\u0903\u093D])/gm); // modifier without preceding letter
-  expect(preprocess).not.toMatch(/(?<![\u0915-\u0939\u0958-\u095F])\u093C/gm); // nukta without preceding consonant
-  expect(preprocess).not.toMatch(/(?<![\u0915-\u0939\u0958-\u095F]\u093C?)([\u093E-\u094C]|\u094D)/gm); // vowel mark/halant without preceding consonant
+  expect(preprocess).not.toMatch(/(^|\s)([\u0900\u0901\u0902\u0903\u093D\u093C\u093E-\u094C\u094D])/gm); // modifier/nukta/vowel mark/halant at start of word
+  expect(preprocess).not.toMatch(/\u094D([\u0900\u0901\u0902\u0903\u093D\u093C\u0904-\u0914\u093E-\u094C\u094D])/g); // halant followed by modifier/nukta/vowel/vowel mark/halant
+  expect(preprocess).not.toMatch(/(?<![\u0904-\u0914\u093E-\u094C]|[\u0915-\u0939\u0958-\u095F]\u093C?)([\u0900\u0901\u0902\u0903\u093D])/g); // modifier without preceding letter
+  expect(preprocess).not.toMatch(/(?<![\u0915-\u0939\u0958-\u095F])\u093C/g); // nukta without preceding consonant
+  expect(preprocess).not.toMatch(/(?<![\u0915-\u0939\u0958-\u095F]\u093C?)([\u093E-\u094C\u094D])/g); // vowel mark/halant without preceding consonant
 });
 
 test('preprocessHindi, malformed', async () => {
@@ -35,11 +35,11 @@ test('preprocessHindi, malformed', async () => {
   const preprocess = preprocessHindi(s, false);
   expect(preprocess).not.toMatch(/\u094E/g); // historical character, was used in malformed ṭya (Buizel)
 
-  expect(preprocess).toMatch(/(^|\s)([\u0900\u0901\u0902\u0903\u093D]|\u093C|[\u093E-\u094C]|\u094D)/gm); // modifier/nukta/vowel mark/halant at start of word
-  expect(preprocess).toMatch(/\u094D([\u0900\u0901\u0902\u0903\u093D]|\u093C|[\u0904-\u0914]|[\u093E-\u094C]|\u094D)/gm); // halant followed by modifier/nukta/vowel/vowel mark/halant
-  expect(preprocess).toMatch(/(?<![\u0904-\u0914]|[\u0915-\u0939\u0958-\u095F]\u093C?|[\u093E-\u094C])([\u0900\u0901\u0902\u0903\u093D])/gm); // modifier without preceding letter
-  expect(preprocess).toMatch(/(?<![\u0915-\u0939\u0958-\u095F])\u093C/gm); // nukta without preceding consonant
-  expect(preprocess).toMatch(/(?<![\u0915-\u0939\u0958-\u095F]\u093C?)([\u093E-\u094C]|\u094D)/gm); // vowel mark/halant without preceding consonant
+  expect(preprocess).toMatch(/(^|\s)([\u0900\u0901\u0902\u0903\u093D\u093C\u093E-\u094C\u094D])/gm); // modifier/nukta/vowel mark/halant at start of word
+  expect(preprocess).toMatch(/\u094D([\u0900\u0901\u0902\u0903\u093D\u093C\u0904-\u0914\u093E-\u094C\u094D])/g); // halant followed by modifier/nukta/vowel/vowel mark/halant
+  expect(preprocess).toMatch(/(?<![\u0904-\u0914\u093E-\u094C]|[\u0915-\u0939\u0958-\u095F]\u093C?)([\u0900\u0901\u0902\u0903\u093D])/g); // modifier without preceding letter
+  expect(preprocess).toMatch(/(?<![\u0915-\u0939\u0958-\u095F])\u093C/g); // nukta without preceding consonant
+  expect(preprocess).toMatch(/(?<![\u0915-\u0939\u0958-\u095F]\u093C?)([\u093E-\u094C\u094D])/g); // vowel mark/halant without preceding consonant
 
   // Visually identical
   expect(preprocess).toContain('जाेगा'); // jā+e.gā -> jo.gā

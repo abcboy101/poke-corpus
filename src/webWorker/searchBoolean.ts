@@ -19,9 +19,9 @@ const queryParseResultSuccess = (result: readonly string[]): QueryParseResultSuc
 const queryParseResultError = (message: BooleanError): QueryParseResultError => ({success: false, message: message});
 
 // Handle escaped quote marks and parentheses
-const escapeQuery = (s: string) => s.replaceAll('\\\\', '\u{F0100}').replaceAll('\\/', '\u{F0101}').replaceAll('\\(', '\u{F0108}').replaceAll('\\)', '\u{F0109}').replaceAll('\\"', '\u{F0180}');
-const unescapeQuery = (s: string) => s.replaceAll('\u{F0108}', '(').replaceAll('\u{F0109}', ')').replaceAll('\u{F0180}', '"').replaceAll('\u{F0101}', '/').replaceAll('\u{F0100}', '\\\\');
-const unescapeQueryRegex = (s: string) => s.replaceAll('\u{F0108}', '\\(').replaceAll('\u{F0109}', '\\)').replaceAll('\u{F0180}', '\\"').replaceAll('\u{F0101}', '/').replaceAll('\u{F0100}', '\\\\');
+const escapeQuery = (s: string) => s.replaceAll('\\\\', '\u{F005C}').replaceAll('\\/', '\u{F002F}').replaceAll('\\(', '\u{F0028}').replaceAll('\\)', '\u{F0029}').replaceAll('\\"', '\u{F0022}');
+const unescapeQuery = (s: string) => s.replaceAll('\u{F0028}', '(').replaceAll('\u{F0029}', ')').replaceAll('\u{F0022}', '"').replaceAll('\u{F002F}', '/').replaceAll('\u{F005C}', '\\\\');
+const unescapeQueryRegex = (s: string) => s.replaceAll('\u{F0028}', '\\(').replaceAll('\u{F0029}', '\\)').replaceAll('\u{F0022}', '\\"').replaceAll('\u{F002F}', '/').replaceAll('\u{F005C}', '\\\\');
 
 /**
  * Convert a boolean query string in infix notation to an array of tokens in postfix notation using the shunting yard algorithm.
@@ -31,7 +31,7 @@ const unescapeQueryRegex = (s: string) => s.replaceAll('\u{F0108}', '\\(').repla
  */
 export function queryToPostfix(query: string): QueryParseResult {
   query = escapeQuery(query);
-  const tokens = query.split(/(\b(?:NOT|AND|OR)\b|\\?[/"()])/u).filter((s) => s.length > 0);
+  const tokens = query.split(/(\b(?:NOT|AND|OR)\b|\\?[/"()])/).filter((s) => s.length > 0);
   const operators: Operator[] = [];
   const output: string[] = [];
   let regex = false;
@@ -234,5 +234,5 @@ export function isBooleanQueryValid(query: string, caseInsensitive: boolean): Bo
 }
 
 export function parseWhereClause(query: string) {
-  return /(.*)\bWHERE\s+([0-9A-Za-z-]+)\s*(=|==|<>|!=)\s*([0-9A-Za-z-]+)/u.exec(query);
+  return /(.*)\bWHERE\s+([0-9A-Za-z-]+)\s*(=|==|<>|!=)\s*([0-9A-Za-z-]+)/.exec(query);
 }

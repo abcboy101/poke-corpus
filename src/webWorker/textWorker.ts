@@ -23,7 +23,7 @@ self.onmessage = (task: MessageEvent<TextTask>) => {
       lines: lines.map((row) => row.map((s, j) => {
         if (richText) {
           if (speakers.length > 0)
-            s = replaceSpeaker(s, speakers[j]);
+            s = replaceSpeaker(s, speakers[j], languages[j]);
           s = replaceLiterals(s, j);
         }
         s = postprocessString(s, collection, languages[j], richText);

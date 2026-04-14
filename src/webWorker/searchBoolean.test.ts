@@ -47,13 +47,13 @@ test('queryToPostfix, OR', () => {
 test('queryToPostfix, regex', () => {
   const {success, postfix} = queryToPostfixExpectSuccess(' / foo.*(bar) "\\d\\"  / OR /\\// ');
   expect(success).toBe(true);
-  expect(postfix).toEqual(['/ foo.*(bar) "\\d\u{F0180}  /', '/\u{F0101}/', 'OR']);
+  expect(postfix).toEqual(['/ foo.*(bar) "\\d\u{F0022}  /', '/\u{F002F}/', 'OR']);
 });
 
 test('queryToPostfix, quotation marks', () => {
   const {success, postfix} = queryToPostfixExpectSuccess(' "  foo \\"bar\\" (AND)  /baz/  " OR "" ');
   expect(success).toBe(true);
-  expect(postfix).toEqual(['"  foo \u{F0180}bar\u{F0180} (AND)  /baz/  "', '""', 'OR']);
+  expect(postfix).toEqual(['"  foo \u{F0022}bar\u{F0022} (AND)  /baz/  "', '""', 'OR']);
 });
 
 test('queryToPostfix, precedence', () => {

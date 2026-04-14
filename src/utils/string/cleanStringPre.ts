@@ -17,7 +17,7 @@ export function remapChineseChars(s: string) {
 
 // ORAS Korean Braille
 export function remapKoreanBraille(s: string) {
-  return s.search(/[\u1100-\u11FF\uE0C0-\uE0C7]/u) === -1 ? s : (s
+  return s.search(/[\u1100-\u11FF\uE0C0-\uE0C7]/) === -1 ? s : (s
     .replaceAll('\uE0C0', '그래서') // geuraeseo
     .replaceAll('\uE0C1', '그러나') // geureona
     .replaceAll('\uE0C2', '그러면') // geureomyeon
@@ -37,7 +37,7 @@ export function remapKoreanBraille(s: string) {
     .replaceAll(/^[\u1160-\u1175]+$/gm, (match) => '\u115F' + match.split('').join('\u115F')) // filler for unmatched vowels in strings of unmatched vowels
     .replaceAll(/(?<![\u1100-\u115F])([\u1160-\u1175])/g, 'ᄋ$1') // add null initial to all other unmatched vowels
     .replaceAll(/([\u1100-\u115F])(?![\u1160-\u1175]|$)/gm, '$1\u1160') // filler for unmatched initials
-    .replaceAll(/(?<![\u1160-\u1175])([\u11A8-\u11FF])/gm, '\u115F\u1160$1') // filler for unmatched finals
+    .replaceAll(/(?<![\u1160-\u1175])([\u11A8-\u11FF])/g, '\u115F\u1160$1') // filler for unmatched finals
     .normalize()
   );
 }
@@ -91,7 +91,7 @@ export function remapGBABrailleWestern(s: string, language: LanguageKey) {
 }
 
 function remapGBABraille(s: string, language: LanguageKey) {
-  s = s.replaceAll(/(\[BRAILLE_FORMAT(?: \d+){6}\])/g, ''); // Strip RSE braille format
+  s = s.replaceAll(/\[BRAILLE_FORMAT(?: \d+){6}\]/g, ''); // Strip RSE braille format
   return language === 'ja-Hrkt' ? remapGBABrailleJapanese(s) : remapGBABrailleWestern(s, language);
 }
 
@@ -173,7 +173,7 @@ function remapGCNSpecialCharacters(s: string) {
 
 // NDS special characters
 function remapNDSSpecialCharacters(s: string) {
-  return s.search(/[\u2460-\u2487]/u) === -1 ? s : (s
+  return s.search(/[\u2460-\u2487]/) === -1 ? s : (s
     .replaceAll('⑩', 'ᵉʳ') // Gen 5 superscript er [also used privately for Gen 4]
     .replaceAll('⑪', 'ʳᵉ') // Gen 5 superscript re [also used privately for Gen 4]
     .replaceAll('⑫', 'ʳ') // Gen 5 superscript r [also used privately for Gen 4]
@@ -237,7 +237,7 @@ function remapDreamRadarSpecialCharacters(s: string) {
 // 3DS special characters
 function remap3DSSpecialCharacters(s: string) {
   return remapChineseChars(remapKoreanBraille(
-    s.search(/[\uE000-\uE0A8]/u) === -1 ? s : (s
+    s.search(/[\uE000-\uE0A8]/) === -1 ? s : (s
       // System
       .replaceAll('\uE000', 'Ⓐ') // A Button
       .replaceAll('\uE001', 'Ⓑ') // B Button
@@ -273,17 +273,17 @@ function remap3DSSpecialCharacters(s: string) {
 
 // 3DS variable names
 function remap3DSVariables(s: string) {
-  s = s.replaceAll('\\[', '\u{F0102}');
+  s = s.replaceAll('\\[', '\u{F005B}');
   for (const [code, name] of variables3DS.entries()) {
     s = s.replaceAll(new RegExp(`\\[VAR ${name}\\b`, 'gu'), `[VAR ${code}`);
   };
-  s = s.replaceAll('\u{F0102}', '\\[');
+  s = s.replaceAll('\u{F005B}', '\\[');
   return s;
 }
 
 // Switch special characters
 function remapSwitchSpecialCharacters(s: string) {
-  return s.search(/[\uE104\uE300-\uE31C]/u) === -1 ? s : (s
+  return s.search(/[\uE100-\uE104\uE300-\uE31C]/) === -1 ? s : (s
     // BDSP
     .replaceAll('\uE100', '🡄') // LeftDirection
     .replaceAll('\uE101', '🡅') // UpDirection
@@ -333,14 +333,14 @@ const escapedZA: ReadonlyMap<string, string> = new Map([
 // Legends: Z-A special characters
 function remapLegendsZASpecialCharacters(s: string, language: LanguageKey) {
   // Escaped using VAR BD0A
-  if (s.search(/VAR BD0A/u) !== -1) {
+  if (s.search(/VAR BD0A/) !== -1) {
     for (const [name, c] of escapedZA.entries()) {
       const len = name.length.toString(16).padStart(4, '0').toUpperCase();
       s = s.replaceAll(new RegExp( `\\[VAR BD0A\\(${len}\\)\\]${name}`, 'gu'), c);
     };
   }
 
-  s = s.search(/[\uE340-\uE34E]/u) === -1 ? s : (s
+  s = s.search(/[\uE340-\uE34E]/) === -1 ? s : (s
     // U+E31D-E33F: buttons are handled in postprocess
     .replaceAll('\uE340', '▾') // Bottom-right down-pointing triangle
     .replaceAll('\uE341', '∞') // Infinity (about 1.5× wider, always used in CHT)
@@ -372,14 +372,14 @@ function remapLegendsZASpecialCharacters(s: string, language: LanguageKey) {
 // Pixel font used to display level in battle
 function remapChinaLGPEPixelFont(s: string) {
   return (s
-    .replaceAll(/\b(ab|ef|ij)\b/g, '等级')
-    .replaceAll(/\b(cd|gh|kl)\b/g, '战力')
+    .replaceAll(/\b(?:ab|ef|ij)\b/g, '等级')
+    .replaceAll(/\b(?:cd|gh|kl)\b/g, '战力')
   );
 }
 
 // Champions special characters
 function remapChampionsSpecialCharacters(s: string) {
-  s = s.search(/\[Character[12]:/u) === -1 ? s : (s
+  s = s.search(/\[Character[12]:/) === -1 ? s : (s
     .replaceAll('[Character1:heart ]', '♥')
     .replaceAll('[Character1:music ]', '♪')
     .replaceAll('[Character1:male ]', '♂')
@@ -480,10 +480,10 @@ export function convertWhitespace(s: string) {
     .replaceAll('\f', '\\x0C')
     .replaceAll('\r', '\\x0D')
 
-    .replaceAll('\\\\', '\u{F0100}')
+    .replaceAll('\\\\', '\u{F005C}')
     .replaceAll('\\n', '\n')
     .replaceAll('\\r', '\r')
     .replaceAll('\\c', '\f')
-    .replaceAll('\u{F0100}', '\\\\')
+    .replaceAll('\u{F005C}', '\\\\')
   );
 }
