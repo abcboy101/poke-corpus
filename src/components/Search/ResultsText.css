@@ -186,6 +186,11 @@ td[lang="zxx"] wbr {
   color: color-mix(in oklab, var(--gender-female-color) 75%, var(--number-singular-color));
 }
 
+.gender-2.number-0 .branch.neuter.singular {
+  border-bottom: 1px dotted var(--text);
+  color: color-mix(in oklab, color-mix(in oklab, var(--gender-male-color), var(--gender-female-color)) 75%, var(--number-singular-color));
+}
+
 .gender-2.number-0 .branch.male.plural {
   border-bottom: 1px dotted var(--text);
   color: color-mix(in oklab, var(--gender-male-color) 50%, var(--number-plural-color));

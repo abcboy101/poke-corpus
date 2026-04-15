@@ -4,7 +4,7 @@
 
 import { CollectionKey, LanguageKey } from '../corpus';
 import { postprocessSpeaker } from '../speaker';
-import { grammarBranch, versionBranch, genderBranch, numberBranch, genderNumberBranch } from './branches';
+import { grammarBranch, versionBranch, genderBranch, numberBranch, genderNumberBranch, genderNumberDEBranch } from './branches';
 import { postprocessStringGO } from './cleanStringGO';
 import { postprocessStringMasters } from './cleanStringMasters';
 import * as g1 from './expandVariablesG1';
@@ -459,11 +459,12 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
       const endF = endM + parseInt(lenF, 16);
       return `${ti.asBranch(code, genderBranch(rest.substring(0, endM), rest.substring(endM, endF)))}${rest.substring(endF)}`;
     })
-    .replaceAll(/(\[VAR 1100\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),00([0-9A-F]{2})\)\])([^[<{]*)/g, (_, code: string, lenF: string, lenM: string, lenN: string, rest: string) => {
-      const endM = parseInt(lenM, 16);
-      const endF = endM + parseInt(lenF, 16);
-      const endN = endF + parseInt(lenN, 16);
-      return `${ti.asBranch(code, genderBranch(rest.substring(0, endM), rest.substring(endM, endF), rest.substring(endF, endN)))}${rest.substring(endN)}`;
+    .replaceAll(/(\[VAR 1100\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),([0-9A-F]{2})([0-9A-F]{2})\)\])([^[<{]*)/g, (_, code: string, lenFS: string, lenMS: string, lenP: string, lenNS: string, rest: string) => {
+      const endMS = parseInt(lenMS, 16);
+      const endFS = endMS + parseInt(lenFS, 16);
+      const endNS = endFS + parseInt(lenNS, 16);
+      const endP = endNS + parseInt(lenP, 16);
+      return `${ti.asBranch(code, genderNumberDEBranch(rest.substring(0, endMS), rest.substring(endMS, endFS), rest.substring(endFS, endNS), rest.substring(endNS, endP)))}${rest.substring(endP)}`;
     })
     .replaceAll(/(\[VAR 1101\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\])([^[<{]*)/g, (_, code: string, lenP: string, lenS: string, rest: string) => {
       const endS = parseInt(lenS, 16);
@@ -497,7 +498,8 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
   s = (isBDSP || isChampions || isMasters) ? (s
     .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):Gen (?:Ref="\d+" )?(?:M="([^"]*)" )?(?:F="([^"]*)" )?\]/g, (code, male?: string, female?: string) => ti.asBranch(code, genderBranch(male ?? '', female ?? '')))
     .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):Qty (?:Ref="\d+" )?(?:S="([^"]*)" )?(?:P="([^"]*)" )?\]/g, (code, singular?: string, plural?: string) => ti.asBranch(code, numberBranch(singular ?? '', plural ?? '')))
-    .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):GenQty (?:Ref="\d+" )?(?:MS="([^"]*)" )?(?:FS="([^"]*)" )?(?:MP="([^"]*)" )?(?:FP="([^"]*)" )?\]/g, (code, maleSingular?: string, femaleSingular?: string, malePlural?: string, femalePlural?: string) => ti.asBranch(code, genderNumberBranch(maleSingular ?? '', femaleSingular ?? '', malePlural ?? '', femalePlural ?? '')))
+    .replaceAll(/\[(?:JP|EN|FR|IT|ES|Kor|SC):GenQty (?:Ref="\d+" )?(?:MS="([^"]*)" )?(?:FS="([^"]*)" )?(?:MP="([^"]*)" )?(?:FP="([^"]*)" )?\]/g, (code, maleSingular?: string, femaleSingular?: string, malePlural?: string, femalePlural?: string) => ti.asBranch(code, genderNumberBranch(maleSingular ?? '', femaleSingular ?? '', malePlural ?? '', femalePlural ?? '')))
+    .replaceAll(/\[DE:GenQty (?:Ref="\d+" )?(?:MS="([^"]*)" )?(?:FS="([^"]*)" )?(?:NS="([^"]*)" )?(?:P="([^"]*)" )?\]/g, (code, maleSingular?: string, femaleSingular?: string, neuterSingular?: string, plural?: string) => ti.asBranch(code, genderNumberDEBranch(maleSingular ?? '', femaleSingular ?? '', neuterSingular ?? '', plural ?? '')))
     .replaceAll(/\[(?:JP|EN|FR|IT|DE|ES|Kor|SC):QtyZero (?:Ref="\d+" )?(?:S="([^"]*)" )?(?:P="([^"]*)" )?(?:Z="([^"]*)" )?\]/g, (code, singular?: string, plural?: string, zero?: string) => ti.asBranch(code, numberBranch(singular ?? '', plural ?? '', zero ?? '')))
     .replaceAll(/\[FR:Elision (?:Ref="\d+" )?(?:N="([^"]*)" )?(?:Y="([^"]*)" )?\]/g, (code, no?: string, yes?: string) => ti.asBranch(code, grammarBranch(no ?? '', yes ?? '')))
     .replaceAll(/\[IT:DateIT (?:Ref="\d+" )?(?:V="([^"]*)" )?(?:C="([^"]*)" )?\]/g, (code, vowel?: string, consonant?: string) => ti.asBranch(code, grammarBranch(vowel ?? '', consonant ?? '')))

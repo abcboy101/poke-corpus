@@ -48,6 +48,25 @@ export function genderNumberBranch(maleSingular: string, femaleSingular: string,
 }
 
 /**
+ * Converts the male singular, female singular, neuter singular, and plural forms of a string to HTML, separated by a slash.
+ *
+ * Returns the resulting string.
+ */
+export function genderNumberDEBranch(maleSingular: string, femaleSingular: string, neuterSingular: string, plural: string) {
+  if (!plural)
+    return genderBranch(maleSingular, femaleSingular, neuterSingular);
+
+  const singularResults = [];
+  if (maleSingular.length > 0) singularResults.push(`<span class="branch male singular">${maleSingular}</span>`);
+  if (femaleSingular.length > 0) singularResults.push(`<span class="branch female singular">${femaleSingular}</span>`);
+  if (neuterSingular.length > 0) singularResults.push(`<span class="branch neuter singular">${neuterSingular}</span>`);
+  const singular = singularResults.join('<span class="gender singular">/</span>');
+
+  const pluralResults = `<span class="branch plural">${plural}</span>`;
+  return [singular, pluralResults].join(`<span class="number male female">/</span>`);
+}
+
+/**
  * Converts the context-dependent forms of a string to HTML, separated by a slash.
  * Used for definite articles, indefinite articles, prepositions, French elision, Italian dates, and Korean particles.
  *
