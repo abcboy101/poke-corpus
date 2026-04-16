@@ -162,7 +162,7 @@ interface ResultsSectionsParams extends Omit<ResultsSectionsParamsPassed, 'richT
   readonly jumpTo: (n: number) => void,
 }
 
-if (!customElements.get('text-info')) {
+if (!import.meta.env.SSR && !customElements.get('text-info')) {
   class TextInfoElement extends HTMLElement {
     connectedCallback() {
       this.setAttribute('role', 'button');
