@@ -206,8 +206,8 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
     .replaceAll(/\[System:Size percent="100" \]/g, ti.func()) // font size (reset)
     .replaceAll(/(\[System:Color (?!a="255" \])(?:r="(\d+)" )?(?:g="(\d+)" )?(?:b="(\d+)" )?(?:a="(\d+)" )?\])(.*?)(\[System:Color a="255" \]|(?=\[System:Color ))/g, (_, start: string, r: string | undefined, g: string | undefined, b: string | undefined, a: string | undefined, children: string, end: string) => ti.as({ kind: 'tag', start, className: 'color', style: `color: ${rgbaColor(r ?? '', g ?? '', b ?? '', a ?? '')}`, children, end })) // font color
     .replaceAll(/\[System:Color a="255" \]/g, ti.func()) // font color (reset)
-    .replaceAll(/((?<=^|[\x80\x81\x82]).*?)(\[Ctrl1:xadd value="(\d+)" \])(.*?(?:[\x80\x81\x82]|$)+)/g, (_, before: string, start: string, value: string, after: string) => ti.as({ span: true, style: `tab-size: ${value}px`, children: `${before}${ti.as({ kind: 'tag', start, content: '\t' })}${after}` })) // xadd
-    .replaceAll(/((?<=^|[\x80\x81\x82]).*?)(\[Ctrl1:xset value="(\d+)" \])(.*?(?:[\x80\x81\x82]|$)+)/g, (_, before: string, start: string, value: string, after: string) => ti.as({ span: true, style: `tab-size: ${value}px`, children: `${before}${ti.as({ kind: 'tag', start, content: '\t' })}${after}` })) // xset
+    .replaceAll(/(^|[^\x80\x81\x82]*)(\[Ctrl1:xadd value="(\d+)" \])([^\x80\x81\x82]*(?:[\x80\x81\x82]+|$))/g, (_, before: string, start: string, value: string, after: string) => ti.as({ span: true, style: `tab-size: calc(${value} / 36 * 1em)`, children: `${before}${ti.as({ kind: 'tag', start, content: '\t' })}${after}` })) // xadd
+    .replaceAll(/(^|[^\x80\x81\x82]*)(\[Ctrl1:xset value="(\d+)" \])([^\x80\x81\x82]*(?:[\x80\x81\x82]+|$))/g, (_, before: string, start: string, value: string, after: string) => ti.as({ span: true, style: `tab-size: calc(${value} / 36 * 1em)`, children: `${before}${ti.as({ kind: 'tag', start, content: '\t' })}${after}` })) // xset
   ) : s;
   s = (isGen4 || isModern) ? (s
     .replaceAll(/(\[VAR FF00\((?!0000)([0-9A-F]{4})\)\])(.+?)(\[VAR FF00\(0000\)\]|(?=\[VAR FF00\((?!0000)[0-9A-F]{4}\)\])|$)/g, (_, code: string, color: string, children: string, end: string) => ti.as({ kind: 'var', start: code, className: 'color', style: `color: var(--color-${parseInt(color, 16)})`, children, end })) // font color
@@ -222,24 +222,24 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
     .replaceAll(/(\[VAR FF01\(00C8\)\])(.+?)(\[VAR FF01\(0064\)\]|$)/g, (_, start: string, children: string, end: string) => ti.as({ span: true, className: 'line-font-size-200', children: ti.as({ kind: 'var', start, className: 'text-font-size-200', children, end }) })) // Gen 4 font size (text at 200%)
     .replaceAll('[VAR FF01(0064)]', ti.func()) // Gen 4 font size (set to 100%)
 
-    .replaceAll(/((?<=^|[\x80\x81\x82]).*?)(\[VAR 0203\(([0-9A-F]{4})\)\])(.*?(?:[\x80\x81\x82]|$)+)/g, (_, before: string, start: string, size: string, after: string) => ti.as({ span: true, style: `tab-size: ${parseInt(size, 16)}pt`, children: `${before}${ti.as({ kind: 'var', start, content: '\t' })}${after}` })) // Gen 4 X coords
+    .replaceAll(/(^|[^\x80\x81\x82]*)(\[VAR 0203\(([0-9A-F]{4})\)\])([^\x80\x81\x82]*(?:[\x80\x81\x82]+|$))/g, (_, before: string, start: string, size: string, after: string) => ti.as({ span: true, style: `tab-size: ${parseInt(size, 16)}pt`, children: `${before}${ti.as({ kind: 'var', start, content: '\t' })}${after}` })) // Gen 4 X coords
     .replaceAll(/\[VAR 0203\([0-9A-F]{4}\)\]/g, (start) => ti.as({ kind: 'var', start, content: '\t' })) // can't really have multiple tab sizes, so approximate the rest as tabs
     .replaceAll(/\[VAR 0204\(([0-9A-F]{4})\)\]/g, (start, pad: string) => ti.as({ kind: 'var', start, style: `display: block; height: ${parseInt(pad, 16)}pt` })) // Gen 4 Y coords
-    .replaceAll(/(\[VAR 0205\])(.*?(?:[\x80\x81\x82]|$)+)/g, (_, code: string, children: string) => ti.as({ kind: 'var', start: code, className: 'line-align-center', children })) // HGSS
-    .replaceAll(/(\[VAR 0206\])(.*?(?:[\x80\x81\x82]|$)+)/g, (_, code: string, children: string) => ti.as({ kind: 'var', start: code, className: 'line-align-right', children })) // HGSS
+    .replaceAll(/(^|[^\x80\x81\x82]*)(\[VAR 0205\])([^\x80\x81\x82]*(?:[\x80\x81\x82]+|$))/g, (_, before: string, code: string, children: string) => ti.as({ kind: 'var', start: code, className: 'line-align-center', children: `${before}${children}` })) // HGSS
+    .replaceAll(/(^|[^\x80\x81\x82]*)(\[VAR 0206\])([^\x80\x81\x82]*(?:[\x80\x81\x82]+|$))/g, (_, before: string, code: string, children: string) => ti.as({ span: true, className: 'line-align', children: `${ti.as({ span: true, className: 'line-align-left', children: before })}${ti.as({ kind: 'var', start: code, className: 'line-align-right', children })}`})) // HGSS
   ) : s;
   s = isModern ? (s
-    .replaceAll(/(\[VAR BD02\])(.*?(?:[\x80\x81\x82]|$)+)/g, (_, code: string, children: string) => ti.as({ kind: 'var', start: code, className: 'line-align-center', children })) // Gen 5+
-    .replaceAll(/(\[VAR BD03\(([0-9A-F]{4})\)\])(.*?(?:[\x80\x81\x82]|$)+)/g, (_, code: string, pad: string, children: string) => ti.as({ kind: 'var', start: code, className: 'line-align-right', style: `padding-right: ${parseInt(pad, 16)}pt`, children })) // Gen 5+
-    .replaceAll(/(\[VAR BD04\(([0-9A-F]{4})\)\])(.*?(?:[\x80\x81\x82]|$)+)/g, (_, code: string, pad: string, children: string) => ti.as({ kind: 'var', start: code, className: 'line-align-left', style: `padding-left: ${parseInt(pad, 16)}pt`, children })) // Gen 5+
-    .replaceAll(/((?<=^|[\x80\x81\x82]).*?)(\[VAR BD05\(([0-9A-F]{4})\)\])(.*?(?:[\x80\x81\x82]|$)+)/g, (_, before: string, start: string, size: string, after: string) => ti.as({ span: true, style: `tab-size: ${parseInt(size, 16)}pt`, children: `${before}${ti.as({ kind: 'var', start, content: '\t' })}${after}` })) // Gen 5 X coords
+    .replaceAll(/(^|[^\x80\x81\x82]*)(\[VAR BD02\])([^\x80\x81\x82]*(?:[\x80\x81\x82]+|$))/g, (_, before: string, code: string, children: string) => ti.as({ kind: 'var', start: code, className: 'line-align-center', children: `${before}${children}` })) // Gen 5+
+    .replaceAll(/(^|[^\x80\x81\x82]*)(\[VAR BD03\(([0-9A-F]{4})\)\])([^\x80\x81\x82]*(?:[\x80\x81\x82]+|$))/g, (_, before: string, code: string, pad: string, children: string) => ti.as({ span: true, className: 'line-align', children: `${ti.as({ span: true, className: 'line-align-left', children: before })}${ti.as({ kind: 'var', start: code, className: 'line-align-right', style: `padding-right: ${parseInt(pad, 16)}pt`, children })}`})) // Gen 5+
+    .replaceAll(/\[VAR BD04\(([0-9A-F]{4})\)\]/g, (code: string, pad: string) => ti.as({ kind: 'var', start: code, style: `padding-left: ${parseInt(pad, 16)}pt` })) // Gen 5+
+    .replaceAll(/(^|[^\x80\x81\x82]*)(\[VAR BD05\(([0-9A-F]{4})\)\])([^\x80\x81\x82]*(?:[\x80\x81\x82]+|$))/g, (_, before: string, start: string, size: string, after: string) => ti.as({ span: true, style: `tab-size: ${parseInt(size, 16)}pt`, children: `${before}${ti.as({ kind: 'var', start, content: '\t' })}${after}` })) // Gen 5 X coords
     .replaceAll(/\[VAR BD05\([0-9A-F]{4}\)\]/g, (start) => ti.as({ kind: 'var', start, content: '\t' })) // can't really have multiple tab sizes, so approximate the rest as tabs
     .replaceAll(/(\[VAR BD0A\(([0-9A-F]{4})\)\])([^[<{]*)/g, (_, code: string, len: string, rest: string) => buttonFromName(ti, code, len, rest)) // buttons
   ) : s;
   s = isPBR ? (s
-    .replaceAll(/^(.*?)(\[ALIGN ([1-3])\])(.*)$/g, (_, before: string, code: string, value: string, children: string) => ti.as({ span: true, className: `line-align-${{1: 'left', 2: 'center', 3: 'right'}[value]}`, children: `${before}${ti.asControl(code)}${children}` }))
+    .replaceAll(/^(.*?)(\[ALIGN ([1-3])\])(.*)$/g, (_, before: string, code: string, value: string, children: string) => ti.as({ span: true, className: `line-align-${{1: 'left', 2: 'center', 3: 'right'}[value]}`, children: `${before}${ti.asControl(code)}${children}` })) // technically called once per line, but all strings have the same alignment for each line
     .replaceAll(/^(.*?)(\[SPACING (-?[\d.]+)\])(.*)$/g, (_, before: string, code: string, value: string, children: string) => ti.as({ span: true, className: `spacing-${value}`, children: `${before}${ti.asControl(code)}${children}` }))
-    .replaceAll(/^(.*?)(\[FONT (\d+)\])(.*)$/g, (_, before: string, code: string, index: string, children: string) => ti.as({ span: true, className: `font-pbr-${index}`, children: `${before}${ti.asControl(code)}${children}` })) // technically called once per line, but all strings have the same alignment for each line
+    .replaceAll(/^(.*?)(\[FONT (\d+)\])(.*)$/g, (_, before: string, code: string, index: string, children: string) => ti.as({ span: true, className: `font-pbr-${index}`, children: `${before}${ti.asControl(code)}${children}` }))
     .replaceAll(/(\[COLOR (\d+)\])(.*?)(?=(?:\[FONT2 \d+\])?\[COLOR \d+\]|$)/g, (_, code: string, color: string, children: string) => ti.as({ kind: 'var', start: code, className: 'color', style: `color: var(--color-${color})`, children }))
     .replaceAll(/(\[COLOR [05]\])/g, ti.func())
     .replaceAll(/(\[FONT2 (\d+)\])(.*?)(?=\[FONT2 \d+\]|$)/g, (_, code: string, index: string, children: string) => ti.as({ kind: 'var', start: code, className: `font-pbr-${Number(index) - 1}`, children }))
@@ -457,42 +457,42 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
     .replaceAll(/(\[VAR 1100\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\])([^[<{]*)/g, (_, code: string, lenF: string, lenM: string, rest: string) => {
       const endM = parseInt(lenM, 16);
       const endF = endM + parseInt(lenF, 16);
-      return `${ti.asBranch(code, genderBranch(rest.substring(0, endM), rest.substring(endM, endF)))}${rest.substring(endF)}`;
+      return `${ti.asBranch(code + rest.substring(0, endF), genderBranch(rest.substring(0, endM), rest.substring(endM, endF)))}${rest.substring(endF)}`;
     })
     .replaceAll(/(\[VAR 1100\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),([0-9A-F]{2})([0-9A-F]{2})\)\])([^[<{]*)/g, (_, code: string, lenFS: string, lenMS: string, lenP: string, lenNS: string, rest: string) => {
       const endMS = parseInt(lenMS, 16);
       const endFS = endMS + parseInt(lenFS, 16);
       const endNS = endFS + parseInt(lenNS, 16);
       const endP = endNS + parseInt(lenP, 16);
-      return `${ti.asBranch(code, genderNumberDEBranch(rest.substring(0, endMS), rest.substring(endMS, endFS), rest.substring(endFS, endNS), rest.substring(endNS, endP)))}${rest.substring(endP)}`;
+      return `${ti.asBranch(code + rest.substring(0, endP), genderNumberDEBranch(rest.substring(0, endMS), rest.substring(endMS, endFS), rest.substring(endFS, endNS), rest.substring(endNS, endP)))}${rest.substring(endP)}`;
     })
     .replaceAll(/(\[VAR 1101\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\])([^[<{]*)/g, (_, code: string, lenP: string, lenS: string, rest: string) => {
       const endS = parseInt(lenS, 16);
       const endP = endS + parseInt(lenP, 16);
-      return `${ti.asBranch(code, numberBranch(rest.substring(0, endS), rest.substring(endS, endP)))}${rest.substring(endP)}`;
+      return `${ti.asBranch(code + rest.substring(0, endP), numberBranch(rest.substring(0, endS), rest.substring(endS, endP)))}${rest.substring(endP)}`;
     })
     .replaceAll(/(\[VAR 1102\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),([0-9A-F]{2})([0-9A-F]{2})\)\])([^[<{]*)/g, (_, code: string, lenFS: string, lenMS: string, lenFP: string, lenMP: string, rest: string) => {
       const endMS = parseInt(lenMS, 16);
       const endFS = endMS + parseInt(lenFS, 16);
       const endMP = endFS + parseInt(lenMP, 16);
       const endFP = endMP + parseInt(lenFP, 16);
-      return `${ti.asBranch(code, genderNumberBranch(rest.substring(0, endMS), rest.substring(endMS, endFS), rest.substring(endFS, endMP), rest.substring(endMP, endFP)))}${rest.substring(endFP)}`;
+      return `${ti.asBranch(code + rest.substring(0, endFP), genderNumberBranch(rest.substring(0, endMS), rest.substring(endMS, endFS), rest.substring(endFS, endMP), rest.substring(endMP, endFP)))}${rest.substring(endFP)}`;
     })
     .replaceAll(/(\[VAR (?:1104|1106)\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\])([^[<{]*)/g, (_, code: string, len2: string, len1: string, rest: string) => {
-      const end1 = parseInt(len1, 16);
-      const end2 = end1 + parseInt(len2, 16);
-      return `${ti.asBranch(code, grammarBranch(rest.substring(0, end1), rest.substring(end1, end2)))}${rest.substring(end2)}`;
+      const end1 = parseInt(len1, 16); // FR:Elision No, IT:DateIT Vowel
+      const end2 = end1 + parseInt(len2, 16); // FR:Elision Yes, IT:DateIT Consonant
+      return `${ti.asBranch(code + rest.substring(0, end2), grammarBranch(rest.substring(0, end1), rest.substring(end1, end2)))}${rest.substring(end2)}`;
     })
     .replaceAll(/(\[VAR 1105\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2}),00([0-9A-F]{2})\)\])([^[<{]*)/g, (_, code: string, lenP: string, lenS: string, lenZ: string, rest: string) => {
       const endS = parseInt(lenS, 16);
       const endP = endS + parseInt(lenP, 16);
       const endZ = endP + parseInt(lenZ, 16);
-      return `${ti.asBranch(code, numberBranch(rest.substring(0, endS), rest.substring(endS, endP), rest.substring(endP, endZ)))}${rest.substring(endZ)}`;
+      return `${ti.asBranch(code + rest.substring(0, endZ), numberBranch(rest.substring(0, endS), rest.substring(endS, endP), rest.substring(endP, endZ)))}${rest.substring(endZ)}`;
     })
-    .replaceAll(/(\[VAR 1107\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\])([^[<{]*)/g, (_, code: string, len2: string, len1: string, rest: string) => {
-      const end1 = parseInt(len1, 16);
-      const end2 = end1 + parseInt(len2, 16);
-      return `${ti.asBranch(code, versionBranchSV(rest.substring(0, end1), rest.substring(end1, end2)))}${rest.substring(end2)}`;
+    .replaceAll(/(\[VAR 1107\([0-9A-F]{4},([0-9A-F]{2})([0-9A-F]{2})\)\])([^[<{]*)/g, (_, code: string, lenB: string, lenA: string, rest: string) => {
+      const endA = parseInt(lenA, 16);
+      const endB = endA + parseInt(lenB, 16);
+      return `${ti.asBranch(code + rest.substring(0, endB), versionBranchSV(rest.substring(0, endA), rest.substring(endA, endB)))}${rest.substring(endB)}`;
     })
   ) : s;
   s = (isBDSP || isChampions || isMasters) ? (s

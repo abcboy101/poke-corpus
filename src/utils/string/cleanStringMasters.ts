@@ -18,6 +18,6 @@ export function postprocessStringMasters(s: string, ti: TextInfo) {
     .replaceAll(/(<attr size=['"](\d+)['"] height=['"](\d+)['"]>)(.+?)(<\/attr>)/g, (_, start: string, size: string, height: string, children: string, end: string) => ti.as({ kind: 'tag', start, style: `font-size: ${size}px; line-height: ${height}px`, children, end })) // size, height
     .replaceAll(/<\/?div>/g, (code) => ti.as({ kind: 'tag', start: code, className: 'control', children: code })) // div (treat as whitespace)
     .replaceAll(/(<span class=""?word"?">)(.+?)(<\/span>)/g, (_, start: string, children: string, end: string) => ti.as({ kind: 'tag', start, className: 'word', children, end }))
-    .replaceAll(/<br>/g, (code) => ti.as({ kind: 'tag', start: code, className: 'n', children: code }) + '<br>')
+    .replaceAll(/<br>/g, (code) => ti.as({ kind: 'tag', start: code, className: 'n', children: code }) + '\x83')
   );
 }

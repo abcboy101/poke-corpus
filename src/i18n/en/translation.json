@@ -98,7 +98,12 @@
   "copy": "Copy",
   "share": "Share",
   "viewNearby": "View Nearby Text",
-  "viewSpeaker": "View Character's Dialogue",
+  "infoModal": {
+    "viewLines": "View All Lines",
+    "close": "Close",
+    "codeHeader": "Code:",
+    "groupHeader": "Group:"
+  },
   "tableHeader": "{{collection}} {{file}}",
   "tablePartial_one": "{{count, number}} result not shown",
   "tablePartial_other": "{{count, number}} results not shown",

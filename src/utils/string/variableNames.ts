@@ -1,5 +1,126 @@
 import { CollectionKey } from "../corpus";
 
+/* Variable names for Game Freak games */
+export const variablesGeneral: ReadonlyMap<string, string> = new Map([
+  ["0100", "Name:TrainerName"],
+  ["0101", "Name:PokemonName"],
+  ["0102", "Name:PokemonNickname"],
+  ["0103", "Name:Type"],
+  ["0104", "Name:PokedexType"],
+  ["0105", "Name:Place"],
+  ["0106", "Name:Ability"],
+  ["0107", "Name:Move"],
+  ["0108", "Name:Nature"],
+  ["0109", "Name:Item"],
+  ["010A", "Name:ItemClassified"],
+  ["010B", "Name:ItemAcc"],
+  ["010C", "Name:PokemonNickname2"],
+  ["010D", "Name:Status"],
+  ["010E", "Name:TrainerType"],
+  ["0114", "Name:TrainerNameField"],
+  ["0200", "Digit:1digit"],
+  ["0201", "Digit:2digits"],
+  ["0202", "Digit:3digits"],
+  ["0203", "Digit:4digits"],
+  ["0204", "Digit:5digits"],
+  ["0205", "Digit:6digits"],
+  ["0206", "Digit:7digits"],
+  ["0207", "Digit:8digits"],
+  ["0208", "Digit:9digits"],
+  ["0209", "Digit:10digits"],
+  ["1000", "Grm:ForceSingular"],
+  ["1001", "Grm:ForcePlural"],
+  ["1002", "Grm:ForceMasculine"],
+  ["1003", "Grm:ForceInitialCap"],
+  ["1100", "StrSel:Gen"],
+  ["1101", "StrSel:Qty"],
+  ["1102", "StrSel:GenQty"],
+  ["1103", "StrSel:GenQtyDE"],
+  ["1104", "StrSel:Elision"],
+  ["1105", "StrSel:QtyZero"],
+  ["1106", "StrSel:DateIT"],
+  ["1107", "StrSel:Version"],
+  ["1300", "EN:DefArt"],
+  ["1301", "EN:DefArtCap"],
+  ["1302", "EN:IndArt"],
+  ["1303", "EN:IndArtCap"],
+  ["1400", "FR:DefArt"],
+  ["1401", "FR:DefArtCap"],
+  ["1402", "FR:IndArt"],
+  ["1403", "FR:IndArtCap"],
+  ["1404", "FR:A_DefArt"],
+  ["1405", "FR:A_DefArtCap"],
+  ["1406", "FR:De_DefArt"],
+  ["1407", "FR:De_DefArtCap"],
+  ["1408", "FR:De"],
+  ["1409", "FR:DeCap"],
+  ["140A", "FR:Que"],
+  ["140B", "FR:QueCap"],
+  ["1500", "IT:DefArt"],
+  ["1501", "IT:DefArtCap"],
+  ["1502", "IT:IndArt"],
+  ["1503", "IT:IndArtCap"],
+  ["1504", "IT:Di_DefArt"],
+  ["1505", "IT:Di_DefArtCap"],
+  ["1506", "IT:Su_DefArt"],
+  ["1507", "IT:Su_DefArtCap"],
+  ["1508", "IT:A_DefArt"],
+  ["1509", "IT:A_DefArtCap"],
+  ["150A", "IT:In_DefArt"],
+  ["150B", "IT:In_DefArtCap"],
+  ["150C", "IT:Ed"],
+  ["150D", "IT:EdCap"],
+  ["150E", "IT:Ad"],
+  ["150F", "IT:AdCap"],
+  ["1600", "DE:DefArtNom"],
+  ["1601", "DE:DefArtNomCap"],
+  ["1602", "DE:IndArtNom"],
+  ["1603", "DE:IndArtNomCap"],
+  ["1604", "DE:DefArtAcc"],
+  ["1605", "DE:DefArtAccCap"],
+  ["1606", "DE:IndArtAcc"],
+  ["1607", "DE:IndArtAccCap"],
+  ["1700", "ES:DefArt"],
+  ["1701", "ES:DefArtCap"],
+  ["1702", "ES:IndArt"],
+  ["1703", "ES:IndArtCap"],
+  ["1704", "ES:De_DefArt"],
+  ["1705", "ES:De_DefArtCap"],
+  ["1706", "ES:A_DefArt"],
+  ["1707", "ES:A_DefArtCap"],
+  ["1708", "ES:DefArt_TrTypeAndName"],
+  ["1709", "ES:DefArtCap_TrTypeAndName"],
+  ["170A", "ES:A_DefArt_TrTypeAndName"],
+  ["170B", "ES:De_DefArt_TrTypeAndName"],
+  ["170C", "ES:y/e"],
+  ["170D", "ES:Y/E"],
+  ["170E", "ES:o/u"],
+  ["170F", "ES:O/U"],
+  ["1900", "Kor:Particle"],
+  ["3400", "Kor:Particle"], // B2W2
+  ["BD00", "Ctrl1:Color"],
+  ["BD01", "Ctrl1:ColorReset"],
+  ["BD02", "Ctrl1:xcenter"],
+  ["BD03", "Ctrl1:xright"],
+  ["BD04", "Ctrl1:xadd"],
+  ["BD05", "Ctrl1:xset"],
+  ["BD06", "Ctrl1:battle_oneline"],
+  ["BD0A", "Ctrl1:KeyCode"],
+  ["BDFF", "Ctrl1:NotUsed"],
+  ["BE00", "Ctrl2:LineFeed"],
+  ["BE01", "Ctrl2:PageClear"],
+  ["BE02", "Ctrl2:WaitOne"],
+  ["BE03", "Ctrl2:WaitCont"],
+  ["BE04", "Ctrl2:WaitReset"],
+  ["BE05", "Ctrl2:CallBackOne"],
+  ["BE06", "Ctrl2:CallBackCont"],
+  ["BE07", "Ctrl2:CallBackReset"],
+  ["BE08", "Ctrl2:ClearWin"],
+  ["BE09", "Ctrl2:CtrlSpeed"],
+  ["FF00", "System:Color"],
+  ["FF01", "System:Ruby"],
+]);
+
 /* Variable names used by pk3DS, from https://github.com/kwsch/pk3DS/blob/master/pk3DS.Core/Game/TextVariableCode.cs */
 export const variables3DS: ReadonlyMap<string, string> = new Map([
   ["0100", "TRNAME"],
@@ -605,8 +726,8 @@ export const variablesChampions: ReadonlyMap<string, string> = new Map([
   ["BD04", "Ctrl1:xadd"],
   ["BD05", "Ctrl1:xset"],
   ["BD06", "Ctrl1:battle_oneline"],
-  ["BD07", "Ctrl1:KeyCode"],
-  ["BD08", "Ctrl1:NotUsed"],
+  ["BD0A", "Ctrl1:KeyCode"],
+  ["BDFF", "Ctrl1:NotUsed"],
   ["BE00", "Ctrl2:LineFeed"],
   ["BE01", "Ctrl2:PageClear"],
   ["BE02", "Ctrl2:WaitOne"],
@@ -638,21 +759,19 @@ export const variableCodeToName3DS = (variableCode: string) => variables3DS.get(
 
 const getVariables = (collectionKey: CollectionKey | '') => {
   switch (collectionKey) {
-    case 'BrilliantDiamondShiningPearl': return variablesBDSP;
-    case 'Champions': return variablesChampions;
+    case 'BrilliantDiamondShiningPearl':
+    case 'Masters':
+      return variablesBDSP;
+    case 'Champions':
+      return variablesChampions;
   }
-  if (import.meta.env.DEV)
-    throw Error(`unknown collection key: ${collectionKey}`);
-  return new Map<string, string>();
+  return variablesGeneral;
 };
 
 export const variableNameToCode = (variableName: string, collectionKey: CollectionKey | '') => {
   for (const [code, name] of getVariables(collectionKey))
     if (name === variableName)
       return code;
-
-  if (import.meta.env.DEV)
-    throw Error(`unknown variable name: ${variableName}`);
   return '';
 };
 

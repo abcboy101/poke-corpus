@@ -96,7 +96,12 @@
   "copy": "コピー",
   "share": "共有",
   "viewNearby": "近くのテキストを見る",
-  "viewSpeaker": "キャラのセリフを見る",
+  "infoModal": {
+    "viewLines": "他を見る",
+    "close": "閉じる",
+    "codeHeader": "コード：",
+    "groupHeader": "グループ："
+  },
   "tableHeader": "{{collection}}の{{file}}",
   "tablePartial": "{{count, number}}件が表示されない",
   "displayedRange": {

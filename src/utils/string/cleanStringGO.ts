@@ -387,9 +387,9 @@ export function postprocessStringGO(s: string, ti: TextInfo) {
 
     // Links
     .replaceAll(/(<a href="[^"{}]*\{\d+\}[^"{}]*">)(.+?)(<\/a>)/g, (_, start: string, children: string, end: string) => ti.as({ kind: 'tag', start, className: 'link', children, end }))
-    .replaceAll(/<a href="(\w+)">/g, ti.html('<a class="link" href="#id=go.$1" title="$1">'))
-    .replaceAll(/<a href=["“](pokemongolive.com\/[^"]+?)["”]>/g, ti.html('<a class="link" href="http://$1" title="$1" target="_blank" rel="external noopener noreferrer nofollow">'))
-    .replaceAll(/<a href="+(https?:\/\/[^"]+)"+>/g, ti.html('<a class="link" href="$1" title="$1" target="_blank" rel="external noopener noreferrer nofollow">'))
+    .replaceAll(/<a href="(\w+)">/g, (_, url: string) => ti.html(`<a class="link" href="#id=go.${url}" title="${url}">`))
+    .replaceAll(/<a href=["“](pokemongolive.com\/[^"”]+)["”]>/g, (_, url: string) => ti.html(`<a class="link" href="http://${url}" title="${url}" target="_blank" rel="external noopener noreferrer nofollow">`))
+    .replaceAll(/<a href="+(https?:\/\/[^"]+)"+>/g, (_, url: string) => ti.html(`<a class="link" href="${url}" title="${url}" target="_blank" rel="external noopener noreferrer nofollow">`))
     .replaceAll(/<\/a>/g, (code: string) => ti.html(code))
 
     // Other tags

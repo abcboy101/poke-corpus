@@ -143,6 +143,13 @@ td[lang="zxx"] wbr {
   text-align: left;
 }
 
+.line-align {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  clear: both;
+  align-items: baseline;
+}
+
 /* Gender branches */
 .gender-2 .branch.male {
   border-bottom: 1px dotted var(--text);
