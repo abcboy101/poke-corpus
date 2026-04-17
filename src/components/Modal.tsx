@@ -43,7 +43,7 @@ function Modal({closeCallback, classes, message = '', messageOptions, messageEle
   // Opening/closing the modal
   useEffect(() => {
     const modal = modalRef.current;
-    if (modal === null)
+    if (modal === null || !('show' in modal))
       return;
 
     if (modal.open)

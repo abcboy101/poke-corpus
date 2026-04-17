@@ -4,6 +4,7 @@ import { readFile, readCorpus } from '../corpusFs';
 import { getLoader } from '../loader';
 import { replaceLiteralsFactory } from './literals';
 import { postprocessString } from './cleanStringPost';
+import runLong from '../runLong';
 
 const corpus = readCorpus();
 const loader = getLoader(corpus);
@@ -31,7 +32,7 @@ function versionBranch(form1: string, form2: string) {
   return `<span class="branch version-ruby">${form1}</span><span class="version">/</span><span class="branch version-sapphire">${form2}</span>`;
 }
 
-test('replaceLiterals, RubySapphire', async () => {
+(runLong ? test : test.skip)('replaceLiterals, RubySapphire', async () => {
   const collectionKey = 'RubySapphire';
   const ja = corpus.getCollection(collectionKey).languages.indexOf('ja-Hrkt');
   const en = corpus.getCollection(collectionKey).languages.indexOf('en');
@@ -42,7 +43,7 @@ test('replaceLiterals, RubySapphire', async () => {
   expect(replaceLiterals('[EVIL_TEAM]', en)).toEqual(versionBranch('MAGMA', 'AQUA'));
 });
 
-test('replaceLiterals, FireRedLeafGreen', async () => {
+(runLong ? test : test.skip)('replaceLiterals, FireRedLeafGreen', async () => {
   const collectionKey = 'FireRedLeafGreen';
   const ja = corpus.getCollection(collectionKey).languages.indexOf('ja-Hrkt');
   const en = corpus.getCollection(collectionKey).languages.indexOf('en');
@@ -51,7 +52,7 @@ test('replaceLiterals, FireRedLeafGreen', async () => {
   expect(replaceLiterals('[KUN]', en)).toEqual('');
 });
 
-test('replaceLiterals, Emerald', async () => {
+(runLong ? test : test.skip)('replaceLiterals, Emerald', async () => {
   const collectionKey = 'Emerald';
   const ja = corpus.getCollection(collectionKey).languages.indexOf('ja-Hrkt');
   const en = corpus.getCollection(collectionKey).languages.indexOf('en');
