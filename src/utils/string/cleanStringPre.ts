@@ -164,10 +164,11 @@ function remapN64SpecialCharacters(s: string) {
 // GCN special characters
 function remapGCNSpecialCharacters(s: string) {
   return (s
-    .replaceAll('[..]', '‥')
-    .replaceAll('[゛]', '゛')
-    .replaceAll('[゜]', '゜')
-    .replaceAll('[^er]', 'ᵉʳ')
+    .replaceAll('[゛]', '゛') // U+2018
+    .replaceAll('[゜]', '゜') // U+FF3E
+    .replaceAll('[^er]', 'ᵉʳ') // U+03B3
+    .replaceAll('[..]', '‥') // U+2030
+    .replaceAll('[speechbubble]', '🗨') // U+2031
   );
 }
 

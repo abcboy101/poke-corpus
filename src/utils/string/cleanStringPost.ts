@@ -368,29 +368,29 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
 
   // GCN
   s = isGCN ? (s
-    .replaceAll(/(<SCOL=0x0d0e0f>)/g, ti.func())
-    .replaceAll(/(\[unknown5_08_([0-9a-f]{2})_([0-9a-f]{2})_([0-9a-f]{2})_([0-9a-f]{2})\])(.*?)(\[unknown5_08_ff_ff_ff_ff\]|$)/g, (_, start: string, r: string, g: string, b: string, a: string, children: string, end: string) => ti.as({ kind: 'var', start, className: 'color', style: `color: #${r}${g}${b}${a === 'ff' ? '' : a}`, children, end }))
-    .replaceAll('[Player]', ti.var())
-    .replaceAll('[Player_alt]', ti.var())
-    .replaceAll('[Rui]', ti.var())
-    .replaceAll('[opp_trainer_class]', ti.var())
-    .replaceAll('[opp_trainer_name]', ti.var())
-    .replaceAll('[sent_out_pokemon_1]', ti.var())
-    .replaceAll('[sent_out_pokemon_2]', ti.var())
-    .replaceAll('[speechbubble]', ti.var())
-    .replaceAll('[bubble_or_speaker]', ti.var())
-    .replaceAll('[maybe_speaker_ID_toggle]', ti.var())
-    .replaceAll('[maybe_location]', ti.var())
+    .replaceAll('[large_e+]', ti.literal('ｅ＋')) // U+337C, U+03B1
+    .replaceAll('[large_e]', ti.literal(language === 'ja' ? 'ｅ' : 'e')) // U+337D, U+03B2
+
+    .replaceAll('<SCOL=0x0d0e0f>', ti.func())
+    .replaceAll(/<[^>]+>/g, ti.var())
     .replaceAll('[dialogue_end]', ti.func())
-    .replaceAll('[large_e]', ti.var())
-    .replaceAll('[large_e+]', ti.var())
     .replaceAll('[furi_kanji]', ti.func())
     .replaceAll('[furi_kana]', ti.func())
     .replaceAll('[furi_close]', ti.func())
+    .replaceAll(/(\[unknown5_08_([0-9a-f]{2})_([0-9a-f]{2})_([0-9a-f]{2})_([0-9a-f]{2})\])(.*?)(\[unknown5_08_ff_ff_ff_ff\]|$)/g, (_, start: string, r: string, g: string, b: string, a: string, children: string, end: string) => ti.as({ kind: 'var', start, className: 'color', style: `color: #${r}${g}${b}${a === 'ff' ? '' : a}`, children, end }))
+    .replaceAll('[Player_alt]', ti.var())
+    .replaceAll('[sent_out_pokemon_2]', ti.var())
+    .replaceAll('[sent_out_pokemon_1]', ti.var())
+    .replaceAll('[opp_trainer_class]', ti.var())
+    .replaceAll('[opp_trainer_name]', ti.var())
+    .replaceAll('[Player]', ti.var())
+    .replaceAll('[Rui]', ti.var())
+    .replaceAll('[maybe_location]', ti.var())
+    .replaceAll('[bubble_or_speaker]', ti.var())
+    .replaceAll('[maybe_speaker_ID_toggle]', ti.var())
     .replaceAll(/(\[some_[^\]]+\])/g, ti.var())
     .replaceAll(/(\[unknown[^\]]+\])/g, ti.var())
     .replaceAll(/(\[var_[^\]]\])/g, ti.var())
-    .replaceAll('<SCOL=0x0d0e0f>', ti.func())
   ) : s;
 
   // Ranch

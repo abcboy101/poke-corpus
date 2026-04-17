@@ -91,9 +91,10 @@ function SearchForm({corpus, language, waiting, inProgress, postToWorker, termin
       setLanguages(params.languages);
 
     if (params.id !== undefined && params.id !== '') {
-      const collectionId = params.id.split('.')[0];
+      const idFields = params.id.split('.');
+      const collectionId = idFields[0];
       postToWorker({
-        query: `^${escapeRegex(params.id)}$`,
+        query: idFields.length > 2 ? `^${escapeRegex(params.id)}$` : `^${escapeRegex(idFields[0])}(?=\\.).*\\.${escapeRegex(idFields[1])}$`,
         type: 'regex',
         caseInsensitive: false,
         common: true,
