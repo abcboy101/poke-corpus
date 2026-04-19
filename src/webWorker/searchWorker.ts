@@ -226,6 +226,7 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
     // Load files
     const fileData: string[][] = files.map((data, i) => preprocessString(data, collectionKey, languages[i]).split(/\r\n|\n/));
     const hasFurigana: boolean[] = files.map((s) => /\{[^|}]+\|[^|}]+\}/.test(s));
+    const hasMultiLine: boolean = files.some((s) => s.includes('\u{F1001}'));
 
     // Substituted string literals vary by language, so we need to look up what the string is in the appropriate language here
     const literalsLine = literals ? Object.keys(literals).flatMap((id) => (literals[id].branch !== 'language') ? literals[id].line : Object.values(literals[id].line)) : undefined;
@@ -239,36 +240,40 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
 
     /** Determine matching strategy. */
     function getMatchStrategy(languageKey: string, languageIndex: number) {
+      const match = matchCondition;
+
       // For case-sensitive searches, only exact matches are allowed.
       // For case-insensitive searches:
       // - If whitespace is not significant, matches folding special characters and ignoring whitespace are also allowed.
       // - If whitespace is significant, matches folding special characters, collapsing whitespace, and allowing hyphens to break words across lines are allowed.
-      const subMatch1 = (!params.caseInsensitive ? matchCondition : ['ja', 'ko', 'zh', 'th'].some((lang) => languageKey.startsWith(lang))
-        ? (line: string) => matchCondition(line) || matchCondition(cleanSpecial(line)) || matchCondition(removeWhitespace(cleanSpecial(line)))
-        : (line: string) => matchCondition(line) || matchCondition(cleanSpecial(normalizeWhitespacePreserveHyphen(line))) || matchCondition(cleanSpecial(normalizeWhitespaceRemoveHyphen(line)))
+      const match1 = (!params.caseInsensitive ? match : ['ja', 'ko', 'zh', 'th'].some((lang) => languageKey.startsWith(lang))
+        ? (line: string) => match(line) || match(cleanSpecial(line)) || match(removeWhitespace(cleanSpecial(line)))
+        : (line: string) => match(line) || match(cleanSpecial(normalizeWhitespacePreserveHyphen(line))) || match(cleanSpecial(normalizeWhitespaceRemoveHyphen(line)))
       );
 
       // For GB games, both matches to the raw control characters and matches to the converted control characters are allowed.
-      const subMatch2 = ['RedBlue', 'Yellow', 'GoldSilver', 'Crystal'].includes(collectionKey)
-        ? (line: string) => subMatch1(line) || subMatch1(convertGBControlCharacters(line))
-        : subMatch1;
+      const match2 = ['RedBlue', 'Yellow', 'GoldSilver', 'Crystal'].includes(collectionKey)
+        ? (line: string) => match1(line) || match1(convertGBControlCharacters(line))
+        : match1;
 
       // For games with substituted literals, both matches to the raw control characters and matches to the substituted text are allowed.
-      const subMatch3 = literals === undefined
-        ? subMatch2
-        : (line: string) => subMatch1(line) || subMatch1(replaceLiterals(line, languageIndex));
+      const match3 = literals !== undefined
+        ? (line: string) => match2(line) || match2(replaceLiterals(line, languageIndex))
+        : match2;
 
       // For text with furigana, both matches to the kanji and matches to the kana are also allowed.
-      const subMatch4 = hasFurigana[languageIndex]
-        ? (line: string) => convertFurigana(line).some(subMatch3)
-        : subMatch3;
+      const match4 = hasFurigana[languageIndex]
+        ? (line: string) => convertFurigana(line).some(match3)
+        : match3;
 
       // For multi-valued strings, matches to any value are allowed.
-      const subMatch5 = (line: string) => (line.includes('\u{F1000}') && line.includes('\u{F1001}'))
-        ? line.split('\u{F1000}').some((entry) => subMatch4(entry.slice(entry.indexOf('\u{F1001}') + '\u{F1001}'.length)))
-        : subMatch4(line);
+      const match5 = hasMultiLine
+        ? (line: string) => (line.split('\u{F1000}').some((entry) => entry.includes('\u{F1001}')
+          ? match4(entry.slice(entry.indexOf('\u{F1001}') + '\u{F1001}'.length))
+          : match4(entry)))
+        : match4;
 
-      return subMatch5;
+      return match5;
     }
 
     notifyIncomplete('processing'); // for progress bar
