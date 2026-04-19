@@ -19,7 +19,7 @@
     "predeploy": "npm run pull && npm run hash && npm run ci && npm run build",
     "deploy": "gh-pages -d dist",
     "start": "npm run hash && vite",
-    "build": "tsc -b && vite build && npm run build:ssr && npm run build:minify",
+    "build": "tsc -b && vite build && (npm run build:ssr || npm run build:ssr) && npm run build:minify",
     "build:ssr": "npx tsx gen-static.ts",
     "build:minify": "minify dist/index.ssr.html > dist/index.min.html && python scripts/run_minify.py",
     "serve": "vite preview",
