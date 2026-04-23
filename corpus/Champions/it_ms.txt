@@ -1815,7 +1815,7 @@ Fa sì che chi manda KO questo Pokémon finisca\nKO a sua volta.
 Destino obbligato
 Rende il Pokémon anche di tipo Erba.
 Malocchio del bosco
-Alla fine di ogni turno, infligge al Pokémon danni\npari a 1/16 dei suoi PS massimi e fa recuperare\nPS in quantità uguale a chi si trova nella\nposizione di chi ha causato lo stato.
+Alla fine di ogni turno, infligge al Pokémon danni\npari a 1/8 dei suoi PS massimi e fa recuperare\nPS in quantità uguale a chi si trova nella\nposizione di chi ha causato lo stato.
 Seme parassita
 Alla fine di ogni turno per 4 o 5 turni, infligge\ndanni al Pokémon pari a 1/8 dei suoi PS massimi\ne impedisce inoltre la sostituzione.
 Imprigionamento
@@ -1909,6 +1909,8 @@ Hai sconfitto [IT:DefArt ][Name:TrainerName ]!
 [IT:DefArtCap ][Name:TrainerName ] ha vinto la sfida!
 La sfida contro [IT:DefArt ][Name:TrainerName ] si è conclusa in parità!
 La sfida si è conclusa in parità!
+[~ 13]
+[~ 14]
 Ma fallisce!
 È iperefficace!!
 È superefficace!
@@ -1987,9 +1989,9 @@ L’altro giocatore ha esaurito il tempo a sua disposizione!\nLa lotta finisce q
 Hai esaurito il tempo a tua disposizione!\nLa lotta finisce qui!
 Sei rimast[IT:Gen Ref="255" M="o" F="a" ] inattiv[IT:Gen Ref="255" M="o" F="a" ] per troppo tempo. La lotta finisce qui!
 L’altro giocatore è rimasto inattivo per troppo tempo. La lotta finisce qui!
-[~ 91]
-[~ 92]
 [~ 93]
+[~ 94]
+[~ 95]
 La lotta finisce per abbandono.
 Ai piedi dei Pokémon cresce rigogliosa l’erba.
 L’erba sparisce.
@@ -2003,10 +2005,8 @@ La Rete Vischiosa ai piedi della tua squadra svanisce!
 La Rete Vischiosa ai piedi della squadra avversaria svanisce!
 Il Pokémon non può usare la mossa perché non ha mangiato una bacca!
 [Ctrl1:battle_oneline ]La perquisizione rivela che [Name:PokemonNickname ]\nha [IT:IndArt Ref="1" Force="1" ][Name:Item Idx="1" ]!
-[~ 107]
-Nel prossimo turno sarà impossibile scappare!
 [~ 109]
-[~ 110]
+Nel prossimo turno sarà impossibile scappare!
 [~ 111]
 [~ 112]
 [~ 113]
@@ -2037,17 +2037,19 @@ Nel prossimo turno sarà impossibile scappare!
 [~ 138]
 [~ 139]
 [~ 140]
+[~ 141]
+[~ 142]
 Nel campo si avverte una strana sensazione...
 La strana sensazione nel campo è svanita!
-[~ 143]
-[~ 144]
 [~ 145]
 [~ 146]
+[~ 147]
+[~ 148]
 È l’ora del tè e tutti mangiano la loro bacca!
 Ma non succede nulla!
-[~ 149]
-[~ 150]
 [~ 151]
+[~ 152]
+[~ 153]
 Non esegue la mossa perché non ha una bacca con sé!
 Questa mossa non si può usare!
 Le pulizie sono terminate!
@@ -2962,7 +2964,7 @@ Logo del Team MZ
 Text File : first_start
 ~~~~~~~~~~~~~~~
 Seleziona la lingua desiderata.
-Vuoi avviare il gioco in questa lingua?\n\n[System:Color r="255" g="128" b="128" a="255" ]Nota: potrai cambiare queste impostazioni in seguito.[System:Color a="255" ]
+Vuoi avviare il gioco in questa lingua?\n[System:Color r="255" g="128" b="128" a="255" ]Nota: la lingua scelta all’inizio definisce le opzioni disponibili\nper la tastiera in maniera permanente.[System:Color a="255" ]
 Scegli la tua area di residenza.
 [Name:Location ] - [Name:Area Idx="1" ]\nVa bene?
 Verifica dell’età
@@ -3123,7 +3125,8 @@ Gli esiti delle Lotte Amichevoli [System:Color r="255" g="128" b="128" a="255" ]
 A differenza delle Lotte Competitive, vincere una Lotta\nAmichevole [System:Color r="255" g="128" b="128" a="255" ]non ti permetterà di guadagnare PV[System:Color a="255" ].
 Le Lotte Private
 Tramite le [System:Color r="255" g="128" b="128" a="255" ]Lotte Private[System:Color a="255" ] puoi divertirti a lottare con altri\nAllenatori o amici, creando stanze con varie regole di lotta.
-Per invitare i tuoi amici in una stanza creata da te, basta fargli\n[System:Color r="255" g="128" b="128" a="255" ]digitare[System:Color a="255" ] il relativo [System:Color r="255" g="128" b="128" a="255" ]ID stanza[System:Color a="255" ].\n\nPotrai anche [System:Color r="255" g="128" b="128" a="255" ]inviargli un invito[System:Color a="255" ], e potranno accedere alla stanza\nsenza doverne digitare l’ID.
+Per entrare in una stanza, bisogna [System:Color r="255" g="128" b="128" a="255" ]digitare[System:Color a="255" ] il relativo [System:Color r="255" g="128" b="128" a="255" ]ID stanza[System:Color a="255" ].
+[~ 31]
 Puoi anche [System:Color r="255" g="128" b="128" a="255" ]assistere a delle sfide[System:Color a="255" ] che si tengono\nnella stanza in cui ti trovi.
 Le Lotte in Singolo
 Nelle [System:Color r="255" g="128" b="128" a="255" ]Lotte in Singolo[System:Color a="255" ], entrambi gli avversari mandano in campo\n[System:Color r="255" g="128" b="128" a="255" ]un Pokémon alla volta [System:Color a="255" ]dalla propria Squadra Lotta.\nVince chi sconfigge per primo tutti i Pokémon avversari.
@@ -7684,6 +7687,7 @@ Ok
 Codice errore: [Digit:5digits Sep="0" ]
 La comunicazione è stata ristabilita con successo.\nLa lotta potrà riprendere.
 La connessione Internet è instabile.
+Non è stato possibile comunicare la tua scelta al server.\nÈ stata selezionata automaticamente una mossa.
 ~~~~~~~~~~~~~~~
 Text File : rentalclub_select
 ~~~~~~~~~~~~~~~
@@ -8712,7 +8716,7 @@ Permette di usare le mosse dopo le altre con la stessa priorità.
 Potenzia del 50% le mosse con potenza pari o inferiore a 60.
 Rende il Pokémon immune ai problemi di stato se lo stato\nattivo è Sole intenso.
 Annulla gli effetti degli strumenti che il Pokémon ha con sé.
-Fa sì che le mosse del Pokémon ignorino l’abilità altrui.
+Fa sì che le mosse del Pokémon ignorino l’abilità altrui,\ncon l’eccezione di alcune abilità.
 Causa lo stato Brutto colpo+1.
 Permette al Pokémon, quando va KO per effetto di una mossa\nda contatto, di causare a chi gliel’ha inferta danni pari a 1/4\ndei PS massimi di quest’ultimo.
 Rivela se gli avversari hanno mosse superefficaci o che causano\nKO immediato quando il Pokémon entra in campo.
@@ -8967,8 +8971,11 @@ Text File : tournament_rule
 ~~~~~~~~~~~~~~~
 Periodo di iscrizione
 [Digit:2digits Idx="2" ]/[Digit:2digits Idx="1" ]/[Digit:4digits Sep="0" ] ([Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ]) - [Digit:2digits Idx="7" ]/[Digit:2digits Idx="6" ]/[Digit:4digits Idx="5" Sep="0" ] ([Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ]) (UTC +[Digit:2digits Idx="10" ]:[Digit:2digits Idx="11" ])
+[~ 2]
 [Digit:2digits Idx="2" ]/[Digit:2digits Idx="1" ]/[Digit:4digits Sep="0" ] ([Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ]) - [Digit:2digits Idx="7" ]/[Digit:2digits Idx="6" ]/[Digit:4digits Idx="5" Sep="0" ] ([Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ]) (UTC -[Digit:2digits Idx="10" ]:[Digit:2digits Idx="11" ])
+[~ 4]
 [Digit:2digits Idx="2" ]/[Digit:2digits Idx="1" ]/[Digit:4digits Sep="0" ] ([Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ]) - [Digit:2digits Idx="7" ]/[Digit:2digits Idx="6" ]/[Digit:4digits Idx="5" Sep="0" ] ([Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ]) (UTC)
+[~ 6]
 Periodo
 Formato di lotta
 Lotta in Singolo
@@ -8978,7 +8985,7 @@ Posti [Digit:6digits Sep="default" ]º-[Digit:6digits Idx="1" Sep="default" ]º
 [Digit:6digits Sep="default" ]º posto
 Premio partecipazione
 Nota: devi portare a termine almeno [Digit:2digits ] lott[IT:Qty S="a" P="e" ].
-Nota: le ricompense saranno ottenibili solo dopo la fine\ndella gara e il calcolo dei risultati.
+Nota: le ricompense saranno ottenibili solo dopo il calcolo\ndei risultati.
 Nota: non verranno fatte eccezioni nel caso in cui i requisiti\nnecessari non fossero soddisfatti, o nel caso in cui\nle ricompense non fossero ritirate.
 Regole sui Pokémon
 Pokémon ammessi
@@ -9324,7 +9331,7 @@ Il Pokémon causa lo stato Tempesta di sabbia per 5 turni.
 Il Pokémon recupera PS pari alla metà dei danni inflitti\nal bersaglio.
 Il Pokémon resiste a una mossa che lo manderebbe KO e\nrimane invece con 1 PS. Con ogni uso consecutivo,\nla probabilità che questa mossa vada a segno diminuisce di 2/3\nrispetto all’uso precedente.
 Il Pokémon riduce di 2 gradi l’Attacco del bersaglio.
-Il Pokémon riduce di 2 gradi l’Attacco del bersaglio e gli causa\nlo stato Confusione.
+Il Pokémon aumenta di 2 gradi l’Attacco del bersaglio e\ngli causa lo stato Confusione.
 Il Pokémon recupera metà dei suoi PS massimi.
 Il Pokémon ha il 10% di probabilità di aumentare di 1 grado\nla sua Difesa.
 Il Pokémon causa lo stato Antifuga al bersaglio.
@@ -9530,7 +9537,7 @@ Il Pokémon aumenta di 1 grado la sua Velocità.
 Il Pokémon aumenta di 1 grado il suo Attacco, la sua Difesa\ne la sua precisione.
 Il Pokémon riduce di 1 grado la Velocità del bersaglio.
 Il Pokémon riduce di 2 gradi la Difesa Speciale del bersaglio.
-I danni di questa mossa non vengono calcolati in base\nall’Attacco del Pokémon che la usa ma in base alla Difesa\ndel bersaglio.
+I danni di questa mossa non vengono calcolati in base\nall’Attacco del Pokémon che la usa ma in base all’Attacco\ndel bersaglio.
 Il Pokémon cambia l’abilità del bersaglio in Disinvoltura.
 Il Pokémon cambia l’abilità del bersaglio, copiando la propria.\n
 Il Pokémon costringe il bersaglio ad agire subito dopo di sé.

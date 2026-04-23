@@ -1815,7 +1815,7 @@ Text File : btl_state_syn
 길동무 상태
 풀타입이 추가된다.
 숲의저주 상태
-턴 종료 시\n최대 HP의 1/16만큼 데미지를 입고\n그만큼 기술을 사용한 포켓몬이 있던\n자리에 있는 상대가 회복한다.
+턴 종료 시\n최대 HP의 1/8만큼 데미지를 입고\n그만큼 기술을 사용한 포켓몬이 있던\n자리에 있는 상대가 회복한다.
 씨뿌리기 상태
 4~5턴 동안 턴 종료 시\n최대 HP의 1/8만큼 데미지를 입는다.\n교체할 수 없다.
 바인드 상태
@@ -1909,6 +1909,8 @@ Text File : btl_std
 [Name:TrainerName ][Kor:Particle char="to" ]의\n승부에서 졌다!
 [Name:TrainerName ][Kor:Particle char="to" ]의\n승부에서 비겼다!
 [Name:TrainerName ][Kor:Particle char="to" ]의\n승부에서 비겼다!
+[~ 13]
+[~ 14]
 그러나 실패하고 말았다!!
 효과가 매우 굉장했다!!
 효과가 굉장했다!
@@ -1987,9 +1989,9 @@ Text File : btl_std
 당신의 제한 시간이 되었습니다!\n대전을 종료합니다!
 일정 시간 동안 조작하지 않았습니다!\n대전을 종료합니다!
 일정 시간 동안 상대가 조작하지 않았습니다!\n대전을 종료합니다!
-[~ 91]
-[~ 92]
 [~ 93]
+[~ 94]
+[~ 95]
 항복으로 대전이 중지되었습니다.
 발밑에 풀이 무성해졌다!
 발밑의 풀이 사라졌다!
@@ -2003,10 +2005,8 @@ Text File : btl_std
 상대 발밑의\n끈적끈적네트가 사라졌다!
 나무열매를 안 먹었기 때문에\n기술을 쓸 수 없다!
 [Name:PokemonNickname ]의\n[Name:Item Idx="1" ]도 통찰했다!
-[~ 107]
-다음 턴은 도망갈 수 없다!
 [~ 109]
-[~ 110]
+다음 턴은 도망갈 수 없다!
 [~ 111]
 [~ 112]
 [~ 113]
@@ -2037,17 +2037,19 @@ Text File : btl_std
 [~ 138]
 [~ 139]
 [~ 140]
+[~ 141]
+[~ 142]
 발밑에서 이상한 느낌이 든다!
 발밑의 이상한 느낌이 사라졌다!
-[~ 143]
-[~ 144]
 [~ 145]
 [~ 146]
+[~ 147]
+[~ 148]
 다과회를 열어서\n다 같이 나무열매를 먹었다!
 그러나 아무 일도 일어나지 않았다!
-[~ 149]
-[~ 150]
 [~ 151]
+[~ 152]
+[~ 153]
 나무열매를 지니고 있지 않아 기술을 쓸 수 없다!
 이 기술은 쓸 수 없다!
 정리정돈 끝!
@@ -2962,7 +2964,7 @@ MZ단 로고
 Text File : first_start
 ~~~~~~~~~~~~~~~
 어떤 언어로 플레이하겠습니까?
-아래 언어로 게임을 시작하겠습니까?\n[System:Color r="255" g="128" b="128" a="255" ]※나중에 변경할 수 있습니다.[System:Color a="255" ]
+아래 언어로 게임을 시작하겠습니까?[System:Color r="255" g="128" b="128" a="255" ]\n※문자 입력 언어는 나중에 변경할 수 없습니다.[System:Color a="255" ]
 거주하는 국가/지역을 선택해 주십시오.
 [Name:Area Idx="1" ]/[Name:Location ][Kor:Particle char="ni" ]로\n괜찮겠습니까?
 연령 확인
@@ -3123,7 +3125,8 @@ Pokémon HOME에 맡겨 둔 포켓몬을\nPokémon Champions로\n[System:Color r
 랭크배틀과는 다르게 캐주얼배틀에서는\n[System:Color r="255" g="128" b="128" a="255" ]대전하더라도 VP를 획득할 수 없습니다.[System:Color a="255" ]
 프라이빗배틀
 [System:Color r="255" g="128" b="128" a="255" ]프라이빗배틀[System:Color a="255" ]에서는 룸을 만들고\n다른 트레이너나 친구와\n다양한 룰로 배틀을 즐길 수 있습니다.
-만들어진 룸의 [System:Color r="255" g="128" b="128" a="255" ]룸 ID를 입력[System:Color a="255" ]하면\n룸에 들어갈 수 있습니다.\n\n[System:Color r="255" g="128" b="128" a="255" ]친구에게 초대[System:Color a="255" ]를 보내면 그 친구는\nID를 입력하지 않고 룸에 들어올 수 있습니다.
+만들어진 룸의 [System:Color r="255" g="128" b="128" a="255" ]룸 ID를 입력[System:Color a="255" ]하면\n룸에 들어갈 수 있습니다.
+[~ 31]
 룸에서 진행 중인\n[System:Color r="255" g="128" b="128" a="255" ]대전을 관전[System:Color a="255" ]할 수도 있습니다.
 싱글배틀
 [System:Color r="255" g="128" b="128" a="255" ]싱글배틀[System:Color a="255" ]은 서로 배틀팀에서\n[System:Color r="255" g="128" b="128" a="255" ]1마리씩 [System:Color a="255" ]내보내서 싸우며\n먼저 상대의 포켓몬을 모두 쓰러뜨린 쪽이\n승리하는 룰입니다.
@@ -7684,6 +7687,7 @@ OK
 에러 코드: [Digit:5digits Sep="0" ]
 재접속했습니다.\n대전으로 복귀합니다.
 통신 환경이 불안정합니다.
+서버에 입력이 전달되지 않아\n기술이 자동으로 선택되었습니다.
 ~~~~~~~~~~~~~~~
 Text File : rentalclub_select
 ~~~~~~~~~~~~~~~
@@ -8967,8 +8971,11 @@ Text File : tournament_rule
 ~~~~~~~~~~~~~~~
 엔트리 기간
 [Digit:4digits Sep="0" ]/[Digit:2digits Idx="1" ]/[Digit:2digits Idx="2" ] [Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ]~[Digit:4digits Idx="5" Sep="0" ]/[Digit:2digits Idx="6" ]/[Digit:2digits Idx="7" ] [Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ]\n(UTC+[Digit:2digits Idx="10" ]:[Digit:2digits Idx="11" ])
+[~ 2]
 [Digit:4digits Sep="0" ]/[Digit:2digits Idx="1" ]/[Digit:2digits Idx="2" ] [Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ]~[Digit:4digits Idx="5" Sep="0" ]/[Digit:2digits Idx="6" ]/[Digit:2digits Idx="7" ] [Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ]\n(UTC-[Digit:2digits Idx="10" ]:[Digit:2digits Idx="11" ])
+[~ 4]
 [Digit:4digits Sep="0" ]/[Digit:2digits Idx="1" ]/[Digit:2digits Idx="2" ] [Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ]~[Digit:4digits Idx="5" Sep="0" ]/[Digit:2digits Idx="6" ]/[Digit:2digits Idx="7" ] [Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ]\n(UTC)
+[~ 6]
 개최 기간
 배틀 룰
 싱글배틀
@@ -8978,7 +8985,7 @@ Text File : tournament_rule
 [Digit:6digits Sep="0" ]위
 참가상
 ※[Digit:2digits ]회 이상 대전해야 합니다.
-※대회가 종료되고 결과가 발표되면\n 선물을 받을 수 있습니다.
+※결과가 발표되면 선물을 받을 수 있습니다.
 ※조건 미달성 등의 이유로 선물을 받지 못한 경우,\n 개별 대응하지 않습니다.
 포켓몬에 대하여
 참가할 수 있는 포켓몬

@@ -1815,7 +1815,7 @@ Text File : btl_state_syn
 同命状态
 会被追加草属性。
 森林咒术状态
-回合结束时，会受到最大HP1/16的伤害。\n在使用了该招式的宝可梦所在位置的对手\n会回复相当于伤害量的HP。
+回合结束时，会受到最大HP1/8的伤害。\n在使用了该招式的宝可梦所在位置的对手\n会回复相当于伤害量的HP。
 寄生种子状态
 在4～5回合内，回合结束时\n会受到最大HP的1/8的伤害。\n无法进行替换。
 束缚状态
@@ -1909,6 +1909,8 @@ Text File : btl_std
 被[Name:TrainerName ]\n打败了！
 和[Name:TrainerName ]\n打成了平局！
 和[Name:TrainerName ]\n打成了平局！
+[~ 13]
+[~ 14]
 但是，没有起到效果！！
 效果无比绝佳！！
 效果绝佳！
@@ -1987,9 +1989,9 @@ Text File : btl_std
 你的限制时间到了！\n对战结束！
 您在一定时间内没有操作！\n对战结束！
 对手在一定时间内没有操作！\n对战结束！
-[~ 91]
-[~ 92]
 [~ 93]
+[~ 94]
+[~ 95]
 有一方选择了投降。
 脚下青草如茵！
 脚下的青草消失不见了！
@@ -2003,10 +2005,8 @@ Text File : btl_std
 对手脚下的\n黏黏网消失不见了！
 因为没有食用树果，\n所以无法使出招式！
 连[Name:PokemonNickname ]携带的\n[Name:Item Idx="1" ]也察觉到了！
-[~ 107]
-下回合无法逃走！
 [~ 109]
-[~ 110]
+下回合无法逃走！
 [~ 111]
 [~ 112]
 [~ 113]
@@ -2037,17 +2037,19 @@ Text File : btl_std
 [~ 138]
 [~ 139]
 [~ 140]
+[~ 141]
+[~ 142]
 脚下传来了奇妙的感觉！
 脚下的奇妙感觉消失了！
-[~ 143]
-[~ 144]
 [~ 145]
 [~ 146]
+[~ 147]
+[~ 148]
 大家开茶会，吃了树果！
 但是什么都没有发生！
-[~ 149]
-[~ 150]
 [~ 151]
+[~ 152]
+[~ 153]
 没有携带树果，无法使出招式！
 无法使出这个招式！
 大扫除完毕！
@@ -2962,7 +2964,7 @@ Text File : dressup_sub
 Text File : first_start
 ~~~~~~~~~~~~~~~
 要使用哪种语言？
-确定要用以下语言开始游戏吗？\n[System:Color r="255" g="128" b="128" a="255" ]※可在之后变更。[System:Color a="255" ]
+确定要用以下语言开始游戏吗？\n[System:Color r="255" g="128" b="128" a="255" ]※输入文字所使用的语言无法在之后变更。[System:Color a="255" ]
 请选择您所居住的国家／地区。
 确定要选择\n[Name:Area Idx="1" ]／[Name:Location ]吗？
 年龄确认
@@ -3123,7 +3125,8 @@ Text File : help_syn
 和级别对战不同，在自由对战中，\n[System:Color r="255" g="128" b="128" a="255" ]即使进行对战也不会获得VP[System:Color a="255" ]。
 私人对战
 在[System:Color r="255" g="128" b="128" a="255" ]私人对战[System:Color a="255" ]中，能够创建房间，\n和其他训练家、好友\n以各种规则享受对战的乐趣。
-[System:Color r="255" g="128" b="128" a="255" ]输入[System:Color a="255" ]该房间的[System:Color r="255" g="128" b="128" a="255" ]房间ID[System:Color a="255" ]\n即可进入创建好的房间。\n\n向[System:Color r="255" g="128" b="128" a="255" ]好友[System:Color a="255" ]发送[System:Color r="255" g="128" b="128" a="255" ]邀请[System:Color a="255" ]后，该好友\n无需输入ID即可进入房间。
+[System:Color r="255" g="128" b="128" a="255" ]输入[System:Color a="255" ]该房间的[System:Color r="255" g="128" b="128" a="255" ]房间ID[System:Color a="255" ]\n即可进入创建好的房间。
+[~ 31]
 还可以对正在房间内进行的\n[System:Color r="255" g="128" b="128" a="255" ]对战[System:Color a="255" ]进行[System:Color r="255" g="128" b="128" a="255" ]观战[System:Color a="255" ]。
 单打对战
 在[System:Color r="255" g="128" b="128" a="255" ]单打对战[System:Color a="255" ]这种规则中，\n双方需各自从对战队伍中\n[System:Color r="255" g="128" b="128" a="255" ]每次[System:Color a="255" ]派出[System:Color r="255" g="128" b="128" a="255" ]1只[System:Color a="255" ]宝可梦进行战斗，\n先将对手的宝可梦全部打倒的一方将获胜。
@@ -7684,6 +7687,7 @@ OK
 错误代码：[Digit:5digits Sep="0" ]
 已重新连线。\n即将回到对战。
 网络环境不稳定。
+输入的操作指令未能送达服务器，\n已自动选择招式。
 ~~~~~~~~~~~~~~~
 Text File : rentalclub_select
 ~~~~~~~~~~~~~~~
@@ -8967,8 +8971,11 @@ Text File : tournament_rule
 ~~~~~~~~~~~~~~~
 报名期间
 [Digit:4digits Sep="0" ]/[Digit:2digits Idx="1" ]/[Digit:2digits Idx="2" ]　[Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ]～[Digit:4digits Idx="5" Sep="0" ]/[Digit:2digits Idx="6" ]/[Digit:2digits Idx="7" ]　[Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ]\n(UTC+[Digit:2digits Idx="10" ]:[Digit:2digits Idx="11" ])
+[~ 2]
 [Digit:4digits Sep="0" ]/[Digit:2digits Idx="1" ]/[Digit:2digits Idx="2" ]　[Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ]～[Digit:4digits Idx="5" Sep="0" ]/[Digit:2digits Idx="6" ]/[Digit:2digits Idx="7" ]　[Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ]\n(UTC-[Digit:2digits Idx="10" ]:[Digit:2digits Idx="11" ])
+[~ 4]
 [Digit:4digits Sep="0" ]/[Digit:2digits Idx="1" ]/[Digit:2digits Idx="2" ]　[Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ]～[Digit:4digits Idx="5" Sep="0" ]/[Digit:2digits Idx="6" ]/[Digit:2digits Idx="7" ]　[Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ]\n(UTC)
+[~ 6]
 举办期间
 对战规则
 单打对战
@@ -8978,7 +8985,7 @@ Text File : tournament_rule
 第[Digit:6digits Sep="0" ]名
 参加奖
 ※需要进行[Digit:2digits ]次对战。
-※大赛结束且成绩确定后即可领取。
+※成绩确定后即可领取。
 ※若因未达成条件而无法领取，\n　恕无法个别处理。
 关于宝可梦
 可参加的宝可梦

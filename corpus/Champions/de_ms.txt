@@ -1815,7 +1815,7 @@ Wird das Pokémon durch einen Gegner besiegt,\nwird auch dieser kampfunfähig.
 Abgangsbund
 Das Pokémon nimmt zusätzlich den Typ Pflanze an.
 Waldesfluch
-Das Pokémon erleidet am Ende jeder Runde\nSchaden in Höhe von 1/16 seiner maximalen KP.\nAnschließend werden die KP des Pokémon,\ndas sich an der Stelle des Anwenders der Attacke\nbefindet, in dieser Höhe aufgefüllt.
+Das Pokémon erleidet am Ende jeder Runde\nSchaden in Höhe von 1/8 seiner maximalen KP.\nAnschließend werden die KP des Pokémon,\ndas sich an der Stelle des Anwenders der Attacke\nbefindet, in dieser Höhe aufgefüllt.
 Egelsamen
 Das Pokémon erleidet 4 bis 5 Runden lang am\nEnde jeder Runde Schaden in Höhe von 1/8\nseiner maximalen KP und kann nicht\nausgewechselt werden.
 Umschlingung
@@ -1909,6 +1909,8 @@ Du verlierst gegen [DE:DefArtAcc ][Name:TrainerName ]!
 [DE:DefArtNomCap ][Name:TrainerName ] gewinnt den Kampf!
 Der Kampf gegen [DE:DefArtAcc ][Name:TrainerName ] geht unentschieden aus!
 Der Kampf gegen [DE:DefArtAcc ][Name:TrainerName ] geht unentschieden aus!
+[~ 13]
+[~ 14]
 Es ist fehlgeschlagen!
 Das ist extrem effektiv!!
 Das ist sehr effektiv!
@@ -1987,9 +1989,9 @@ Die Zeit des anderen Spielers ist abgelaufen!\nDer Kampf wird beendet.
 Deine Zeit ist abgelaufen!\nDer Kampf wird beendet.
 Du hast zu lange keine Eingabe vorgenommen!\nDer Kampf wird beendet.
 Der andere Spieler hat zu lange keine Eingabe vorgenommen!\nDer Kampf wird beendet.
-[~ 91]
-[~ 92]
 [~ 93]
+[~ 94]
+[~ 95]
 Der Kampf wurde aufgegeben.
 Dichtes Gras schießt aus dem Boden!
 Das Grasfeld ist wieder verschwunden!
@@ -2003,10 +2005,8 @@ Das Klebenetz auf deiner Seite ist wieder verschwunden!
 Das Klebenetz auf der gegnerischen Seite ist wieder verschwunden!
 Die Attacke kann nicht eingesetzt werden, weil das Pokémon\nkeine Beere gegessen hat!
 Bei [Name:PokemonNickname ] wurde das Item\n[Name:Item Idx="1" ] erschnüffelt!
-[~ 107]
-Während der nächsten Runde ist keine Flucht möglich!
 [~ 109]
-[~ 110]
+Während der nächsten Runde ist keine Flucht möglich!
 [~ 111]
 [~ 112]
 [~ 113]
@@ -2037,17 +2037,19 @@ Während der nächsten Runde ist keine Flucht möglich!
 [~ 138]
 [~ 139]
 [~ 140]
+[~ 141]
+[~ 142]
 Der Boden fühlt sich seltsam an!
 Das Psychofeld ist wieder verschwunden!
-[~ 143]
-[~ 144]
 [~ 145]
 [~ 146]
+[~ 147]
+[~ 148]
 Alle Pokémon auf dem Kampffeld beschließen,\nsich ein Tässchen Tee und eine Beere zu gönnen!
 Aber nichts geschieht!
-[~ 149]
-[~ 150]
 [~ 151]
+[~ 152]
+[~ 153]
 Es kann diese Attacke nicht einsetzen,\nweil es keine Beere trägt!
 Diese Attacke kann nicht eingesetzt werden!
 Fertig aufgeräumt!
@@ -2962,7 +2964,7 @@ Logo von Team MZ
 Text File : first_start
 ~~~~~~~~~~~~~~~
 Wähle deine bevorzugte Sprache aus.
-Möchtest du das Spiel in dieser Sprache beginnen?\n\n[System:Color r="255" g="128" b="128" a="255" ]Hinweis: Du kannst die Sprache später ändern.[System:Color a="255" ]
+Möchtest du das Spiel in dieser Sprache beginnen?\n[System:Color r="255" g="128" b="128" a="255" ]Hinweis: Deine anfängliche Sprachauswahl legt die[System:Color a="255" ]\n[System:Color r="255" g="128" b="128" a="255" ]für dich verfügbaren Eingabeoptionen permanent fest.[System:Color a="255" ]
 Wähle die Region aus, in der du wohnhaft bist.
 Deine Auswahl:\n[Name:Area Idx="1" ] ([Name:Location ])\nIst das korrekt?
 Altersbestätigung
@@ -3123,7 +3125,8 @@ Dabei hat [System:Color r="255" g="128" b="128" a="255" ]das Ergebnis dieser Kä
 Anders als bei Rangkämpfen kannst du bei Zwanglosen Kämpfen\n[System:Color r="255" g="128" b="128" a="255" ]keine VP erhalten[System:Color a="255" ].
 Privatkämpfe
 Bei [System:Color r="255" g="128" b="128" a="255" ]Privatkämpfen[System:Color a="255" ] kannst du eine Lobby erstellen,\nin der du gegen andere Trainer und Freunde in\nverschiedenen Kampfformaten antrittst.
-Um eine Lobby zu betreten, muss man [System:Color r="255" g="128" b="128" a="255" ]die entsprechende[System:Color a="255" ]\n[System:Color r="255" g="128" b="128" a="255" ]Lobby-ID[System:Color a="255" ] eingeben.\n\nWenn du aber [System:Color r="255" g="128" b="128" a="255" ]Freunden eine Einladung[System:Color a="255" ] schickst,\nkönnen sie sie auch ohne Eingabe der ID betreten.
+Um eine Lobby zu betreten, muss man [System:Color r="255" g="128" b="128" a="255" ]die entsprechende[System:Color a="255" ]\n[System:Color r="255" g="128" b="128" a="255" ]Lobby-ID[System:Color a="255" ] eingeben.
+[~ 31]
 Es ist außerdem möglich, anderen Trainern in einer Lobby beim\nKämpfen [System:Color r="255" g="128" b="128" a="255" ]zuzuschauen[System:Color a="255" ].
 Einzelkämpfe
 Bei einem [System:Color r="255" g="128" b="128" a="255" ]Einzelkampf[System:Color a="255" ] schickt jeder Trainer [System:Color r="255" g="128" b="128" a="255" ]jeweils ein Pokémon[System:Color a="255" ]\naus seinem Kampfteam in den Kampf.\nWer zuerst alle gegnerischen Pokémon besiegt, hat gewonnen.
@@ -7684,6 +7687,7 @@ OK
 Fehlercode: [Digit:5digits Sep="0" ]
 Die Verbindung wurde wiederhergestellt.\nDu kehrst zum Kampf zurück.
 Deine Verbindung ist instabil.
+Da deine Eingabe den Server nicht rechtzeitig erreicht hat,\nwurde die Attackenauswahl automatisch vorgenommen.
 ~~~~~~~~~~~~~~~
 Text File : rentalclub_select
 ~~~~~~~~~~~~~~~
@@ -8967,8 +8971,11 @@ Text File : tournament_rule
 ~~~~~~~~~~~~~~~
 Anmeldezeitraum
 [Digit:2digits Idx="2" ].[Digit:2digits Idx="1" ].[Digit:4digits Sep="0" ], [Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ] Uhr bis [Digit:2digits Idx="7" ].[Digit:2digits Idx="6" ].[Digit:4digits Idx="5" Sep="0" ], [Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ] Uhr\n(UTC +[Digit:2digits Idx="10" ]:[Digit:2digits Idx="11" ])
+[~ 2]
 [Digit:2digits Idx="2" ].[Digit:2digits Idx="1" ].[Digit:4digits Sep="0" ], [Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ] Uhr bis [Digit:2digits Idx="7" ].[Digit:2digits Idx="6" ].[Digit:4digits Idx="5" Sep="0" ], [Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ] Uhr\n(UTC −[Digit:2digits Idx="10" ]:[Digit:2digits Idx="11" ])
+[~ 4]
 [Digit:2digits Idx="2" ].[Digit:2digits Idx="1" ].[Digit:4digits Sep="0" ], [Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ] Uhr bis [Digit:2digits Idx="7" ].[Digit:2digits Idx="6" ].[Digit:4digits Idx="5" Sep="0" ], [Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ] Uhr\n(UTC)
+[~ 6]
 Austragungszeitraum
 Kampfformat
 Einzelkampf
@@ -8978,7 +8985,7 @@ Geschenke
 [Digit:6digits Sep="8239" ]. Platz
 Teilnahmegeschenk
 Hinweis: Du musst an mindestens [Digit:2digits ] [DE:Qty S="Kampf" P="Kämpfen" ] teilnehmen.
-Hinweis: Geschenke können abgeholt werden, wenn das\nTurnier beendet ist und die Ergebnisse feststehen.
+Hinweis: Geschenke können abgeholt werden, wenn die\nErgebnisse feststehen.
 Hinweis: Wenn du die Bedingungen nicht erfüllt hast oder das\nGeschenk nicht abholen konntest, können leider keine\nindividuellen Lösungen angeboten werden.
 Regeln zu Pokémon
 Zugelassene Pokémon

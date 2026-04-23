@@ -1815,7 +1815,7 @@ Si le Pokémon est mis K.O., le Pokémon\nresponsable est également mis K.O.
 Lien du Destin
 Le Pokémon obtient le type Plante.
 Maléfice Sylvain
-À la fin de chaque tour, le Pokémon subit\ndes dégâts équivalents à 1/16 de ses PV max,\net l’adversaire qui se trouve à l’endroit\nd’où la capacité Vampigraine a été lancée\nrécupère la même quantité de PV.
+À la fin de chaque tour, le Pokémon subit\ndes dégâts équivalents à 1/8 de ses PV max,\net l’adversaire qui se trouve à l’endroit depuis\nlequel la capacité Vampigraine a été lancée\nrécupère la même quantité de PV.
 Vampigraine
 Le Pokémon subit des dégâts équivalents à\n1/8 de ses PV max à la fin de chaque tour,\net il ne peut pas quitter le terrain pendant\n4 à 5 tours.
 Piégé
@@ -1909,6 +1909,8 @@ Touché [Digit:2digits ] fois !
 [FR:DefArtCap ][Name:TrainerName ] a gagné !
 Le combat se termine sur une égalité entre vous et [FR:DefArt ][Name:TrainerName ] !
 Le combat se termine sur une égalité !
+[~ 13]
+[~ 14]
 Mais cela échoue !
 C’est hyper efficace !!!
 C’est super efficace !
@@ -1987,9 +1989,9 @@ Votre adversaire a dépassé sa limite de temps !\nFin du combat !
 Vous avez dépassé votre limite de temps !\nFin du combat !
 Vous n’avez pas effectué d’action depuis un certain temps.\nFin du combat !
 Votre adversaire n’a pas effectué d’action depuis un certain temps.\nFin du combat !
-[~ 91]
-[~ 92]
 [~ 93]
+[~ 94]
+[~ 95]
 Le combat se termine par un forfait.
 Un beau gazon pousse sur le terrain !
 Le gazon disparaît...
@@ -2003,10 +2005,8 @@ La toile gluante du côté de votre équipe a disparu !
 La toile gluante du côté de l’équipe ennemie a disparu !
 Impossible d’utiliser cette capacité sans avoir mangé de Baie !
 [Name:PokemonNickname ] a été fouillé !\nIl tient [FR:IndArt Ref="1" ][Name:ItemClassified Idx="1" ] !
-[~ 107]
-Il sera impossible de fuir au tour suivant !
 [~ 109]
-[~ 110]
+Il sera impossible de fuir au tour suivant !
 [~ 111]
 [~ 112]
 [~ 113]
@@ -2037,17 +2037,19 @@ Il sera impossible de fuir au tour suivant !
 [~ 138]
 [~ 139]
 [~ 140]
+[~ 141]
+[~ 142]
 Le sol se met à réagir de façon bizarre...
 Le sol redevient normal !
-[~ 143]
-[~ 144]
 [~ 145]
 [~ 146]
+[~ 147]
+[~ 148]
 C’est l’heure du thé !\nTout le monde mange sa Baie.
 Mais rien ne se passe !
-[~ 149]
-[~ 150]
 [~ 151]
+[~ 152]
+[~ 153]
 Il doit tenir une Baie pour utiliser cette capacité !
 Vous ne pouvez pas utiliser cette capacité !
 Le grand nettoyage est terminé !
@@ -2962,7 +2964,7 @@ Logo Team MZ
 Text File : first_start
 ~~~~~~~~~~~~~~~
 Choisissez votre langue d’usage.
-Voulez-vous commencer le jeu dans la langue ci-dessous ?\n\n[System:Color r="255" g="128" b="128" a="255" ]Remarque : vous pourrez changer ce paramètre plus tard.[System:Color a="255" ]
+Voulez-vous commencer à jouer dans la langue ci-dessous ?\n[System:Color r="255" g="128" b="128" a="255" ]Remarque : votre choix de langue initial détermine de façon\npermanente l’ensemble des options de clavier disponibles.[System:Color a="255" ]
 Choisissez l’endroit dans lequel vous vivez.
 Les choix ci-dessous vous conviennent-ils ?\n[Name:Area Idx="1" ]\n[Name:Location ]
 Vérification de l’âge
@@ -3123,7 +3125,8 @@ L’issue de ces combats n’a [System:Color r="255" g="128" b="128" a="255" ]au
 À la différence des combats classés, [System:Color r="255" g="128" b="128" a="255" ]participer aux combats\namicaux ne permet pas d’obtenir de PdV[System:Color a="255" ].
 Les combats privés
 Pour mener des [System:Color r="255" g="128" b="128" a="255" ]combats privés[System:Color a="255" ] contre vos contacts ou d’autres\nDresseurs et Dresseuses, il suffit de créer un salon et de choisir\nles modalités des combats en changeant les règles.
-N’importe qui peut rejoindre votre salon en saisissant\nl’[System:Color r="255" g="128" b="128" a="255" ]ID du salon[System:Color a="255" ].\n\n[System:Color r="255" g="128" b="128" a="255" ]Si vous invitez des contacts[System:Color a="255" ], ces derniers n’auront pas besoin\nde saisir cet ID pour rejoindre votre salon.
+N’importe qui peut rejoindre votre salon en saisissant\nl’[System:Color r="255" g="128" b="128" a="255" ]ID du salon[System:Color a="255" ].
+[~ 31]
 Dans un salon, il est également possible de [System:Color r="255" g="128" b="128" a="255" ]regarder\nles combats des autres[System:Color a="255" ].
 Les Combats Solo
 Les [System:Color r="255" g="128" b="128" a="255" ]Combats Solo[System:Color a="255" ] consistent à envoyer vos Pokémon\nse battre en [System:Color r="255" g="128" b="128" a="255" ]un contre un[System:Color a="255" ].\nLa victoire vous revient si tous les Pokémon adverses sont K.O.\navant les vôtres.
@@ -7684,6 +7687,7 @@ OK
 Code d’erreur : [Digit:5digits Sep="0" ]
 Reconnexion réussie.\nVous allez rejoindre le combat en cours.
 Votre connexion Internet est instable.
+Votre choix n’a pas été transmis au serveur à temps.\nUne capacité a donc été sélectionnée automatiquement.
 ~~~~~~~~~~~~~~~
 Text File : rentalclub_select
 ~~~~~~~~~~~~~~~
@@ -8967,8 +8971,11 @@ Text File : tournament_rule
 ~~~~~~~~~~~~~~~
 Période d’inscription
 Du [Digit:2digits Idx="2" ]/[Digit:2digits Idx="1" ]/[Digit:4digits Sep="0" ] à [Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ] au [Digit:2digits Idx="7" ]/[Digit:2digits Idx="6" ]/[Digit:4digits Idx="5" Sep="0" ] à [Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ] (UTC + [Digit:2digits Idx="10" ]:[Digit:2digits Idx="11" ])
+[~ 2]
 Du [Digit:2digits Idx="2" ]/[Digit:2digits Idx="1" ]/[Digit:4digits Sep="0" ] à [Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ] au [Digit:2digits Idx="7" ]/[Digit:2digits Idx="6" ]/[Digit:4digits Idx="5" Sep="0" ] à [Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ] (UTC - [Digit:2digits Idx="10" ]:[Digit:2digits Idx="11" ])
+[~ 4]
 Du [Digit:2digits Idx="2" ]/[Digit:2digits Idx="1" ]/[Digit:4digits Sep="0" ] à [Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ] au [Digit:2digits Idx="7" ]/[Digit:2digits Idx="6" ]/[Digit:4digits Idx="5" Sep="0" ] à [Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ] (UTC)
+[~ 6]
 Période
 Format de combat
 Combat Solo
@@ -8978,7 +8985,7 @@ Nº [Digit:6digits Sep="default" ] à [Digit:6digits Idx="1" Sep="default" ]
 Nº [Digit:6digits Sep="default" ]
 Prix de participation
 Remarque : vous devez avoir participé à au moins [Digit:2digits ] combat[FR:Qty P="s" ].
-Remarque : vous pourrez récupérer vos cadeaux une fois\nla compétition terminée et ses résultats calculés.
+Remarque : vous pourrez récupérer vos récompenses\naprès le calcul des résultats.
 Attention : nous ne serons pas en mesure de faire d’exception\nsi vous ne remplissez pas les conditions nécessaires ou\nsi vous ne récupérez pas vos cadeaux à temps.
 Règles liées aux Pokémon
 Pokémon autorisés

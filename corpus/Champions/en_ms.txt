@@ -1815,7 +1815,7 @@ If the Pokémon is knocked out by an opponent,\nthat opponent will also be knock
 Destiny Bound
 The Pokémon gains the Grass type.
 Forest Cursed
-The Pokémon takes damage equal to 1/16 of\nits max HP at the end of every turn. Whichever\nPokémon is in the spot of the Pokémon that\ncaused the Leech Seeded status has its HP\nrestored by the same amount.
+The Pokémon takes damage equal to 1/8 of\nits max HP at the end of every turn. Whichever\nPokémon is in the spot of the Pokémon that\ncaused the Leech Seeded status has its HP\nrestored by the same amount.
 Leech Seeded
 For 4–5 turns, the Pokémon takes damage equal\nto 1/8 of its max HP at the end of every turn. It\ncannot be switched out of battle.
 Bound
@@ -1909,6 +1909,8 @@ You lost to [EN:DefArt ][Name:TrainerName ]!
 [EN:DefArtCap ][Name:TrainerName ] won!
 You battled to a draw against [EN:DefArt ][Name:TrainerName ]!
 The Trainers battled to a draw!
+[~ 13]
+[~ 14]
 But it failed!
 It’s extremely effective!
 It’s super effective!
@@ -1987,9 +1989,9 @@ The opposing player’s time has run out!\nThe battle is over!
 Your time has run out!\nThe battle is over!
 You have been idle for too long!\nThe battle is over!
 The opposing player has been idle for too long!\nThe battle is over!
-[~ 91]
-[~ 92]
 [~ 93]
+[~ 94]
+[~ 95]
 The battle has ended due to a forfeit.
 Grass grew to cover the battlefield!
 The grass disappeared from the battlefield.
@@ -2003,10 +2005,8 @@ The sticky web has disappeared from the ground on your side!
 The sticky web has disappeared from the ground on the opposing side!
 Your Pokémon can’t use this move because it hasn’t eaten any Berries!
 [Ctrl1:battle_oneline ][Name:PokemonNickname ] was frisked, revealing\nits [Name:Item Idx="1" ]!
-[~ 107]
-No one will be able to leave the battlefield during the next turn!
 [~ 109]
-[~ 110]
+No one will be able to leave the battlefield during the next turn!
 [~ 111]
 [~ 112]
 [~ 113]
@@ -2037,17 +2037,19 @@ No one will be able to leave the battlefield during the next turn!
 [~ 138]
 [~ 139]
 [~ 140]
+[~ 141]
+[~ 142]
 The battlefield got weird!
 The weirdness disappeared from the battlefield!
-[~ 143]
-[~ 144]
 [~ 145]
 [~ 146]
+[~ 147]
+[~ 148]
 It’s teatime! Everyone dug in to their Berries!
 But nothing happened!
-[~ 149]
-[~ 150]
 [~ 151]
+[~ 152]
+[~ 153]
 It can’t use the move because it doesn’t have a Berry!
 This move can’t be used!
 Tidying up complete!
@@ -2962,7 +2964,7 @@ Team MZ Logo
 Text File : first_start
 ~~~~~~~~~~~~~~~
 Select your preferred language.
-Would you like to begin playing in the language below?\n[System:Color r="255" g="128" b="128" a="255" ]Note: You can change this setting later.[System:Color a="255" ]
+Would you like to begin playing in the language below?\n[System:Color r="255" g="128" b="128" a="255" ]Note: Your initial language choice permanently determines the[System:Color a="255" ]\n[System:Color r="255" g="128" b="128" a="255" ]set of available keyboard options.[System:Color a="255" ]
 Select the part of the world that you reside in.
 [Name:Area Idx="1" ] ([Name:Location ])\nIs this correct?
 Age Confirmation
@@ -3123,7 +3125,8 @@ In [System:Color r="255" g="128" b="128" a="255" ]Casual Battles[System:Color a=
 And unlike Ranked Battles, Casual Battles [System:Color r="255" g="128" b="128" a="255" ]won’t[System:Color a="255" ]\n[System:Color r="255" g="128" b="128" a="255" ]earn you any VP for your battle efforts[System:Color a="255" ].
 Private Battles
 [System:Color r="255" g="128" b="128" a="255" ]Private Battles[System:Color a="255" ] allow you to create a room of your own to\nenjoy battling with your friends or other Trainers using\nbattle rules of your choice.
-Trainers can join a room by [System:Color r="255" g="128" b="128" a="255" ]entering the correct Room ID[System:Color a="255" ].\n\nYou can also [System:Color r="255" g="128" b="128" a="255" ]send invitations to your friends[System:Color a="255" ] so that those\nfriends can enter your room without needing to input the ID.
+Trainers can join a room by [System:Color r="255" g="128" b="128" a="255" ]entering the correct Room ID[System:Color a="255" ].
+[~ 31]
 Once you’re in the room, you can choose to battle or to\n[System:Color r="255" g="128" b="128" a="255" ]spectate[System:Color a="255" ] if you’d rather just watch the battles taking place.
 Single Battles
 In [System:Color r="255" g="128" b="128" a="255" ]Single Battles[System:Color a="255" ], you and an opponent will each send out\n[System:Color r="255" g="128" b="128" a="255" ]one Pokémon at a time[System:Color a="255" ] to do battle. Victory will go to the\nTrainer who first defeats all of their opponent’s Pokémon.
@@ -7684,6 +7687,7 @@ OK
 Error Code: [Digit:5digits Sep="0" ]
 Connection reestablished!\nReturning to your battle.
 Your internet connection is unstable.
+The server did not receive your input, so\na move was automatically chosen for you.
 ~~~~~~~~~~~~~~~
 Text File : rentalclub_select
 ~~~~~~~~~~~~~~~
@@ -8967,8 +8971,11 @@ Text File : tournament_rule
 ~~~~~~~~~~~~~~~
 Entry Period
 From [Name:MonthName Idx="1" ] [Digit:2digits Idx="2" ], [Digit:4digits Sep="0" ], at [Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ]\nto [Name:MonthName Idx="6" ] [Digit:2digits Idx="7" ], [Digit:4digits Idx="5" Sep="0" ], at [Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ] (UTC+[Digit:2digits Idx="10" ]:[Digit:2digits Idx="11" ])
+[~ 2]
 From [Name:MonthName Idx="1" ] [Digit:2digits Idx="2" ], [Digit:4digits Sep="0" ], at [Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ]\nto [Name:MonthName Idx="6" ] [Digit:2digits Idx="7" ], [Digit:4digits Idx="5" Sep="0" ], at [Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ] (UTC−[Digit:2digits Idx="10" ]:[Digit:2digits Idx="11" ])
+[~ 4]
 From [Name:MonthName Idx="1" ] [Digit:2digits Idx="2" ], [Digit:4digits Sep="0" ], at [Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ]\nto [Name:MonthName Idx="6" ] [Digit:2digits Idx="7" ], [Digit:4digits Idx="5" Sep="0" ], at [Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ] (UTC)
+[~ 6]
 Event Period
 Battle Format
 Single Battle
@@ -8978,7 +8985,7 @@ Places #[Digit:6digits Sep="44" ] to #[Digit:6digits Idx="1" Sep="44" ]
 Place #[Digit:6digits Sep="44" ]
 Participation Prize
 ・ You must complete at least [Digit:2digits ] [EN:Qty S="battle" P="battles" ].
-・ Rewards can be claimed after the competition ends and the\nfinal results are tallied.
+・ Rewards can be claimed after the final results are tallied.
 ・ Special accommodations cannot be made if you fail to meet\nthe necessary requirements or fail to claim your reward.
 Pokémon-Related Rules
 Eligible Pokémon

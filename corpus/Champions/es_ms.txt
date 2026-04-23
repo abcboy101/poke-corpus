@@ -1815,7 +1815,7 @@ Si el Pokémon se debilita por un ataque del\nrival, este también se debilitar�
 Mismo Destino
 El Pokémon adquiere el tipo Planta además de\nconservar sus propios tipos.
 Condena Silvana
-El Pokémon pierde 1/16 de sus PS máximos\nal final de cada turno. Cualquier Pokémon que\nocupe la posición del usuario de Drenadoras\nrecupera esa misma cantidad de PS.
+El Pokémon pierde 1/8 de sus PS máximos\nal final de cada turno. Cualquier Pokémon que\nocupe la posición del usuario de Drenadoras\nrecupera esa misma cantidad de PS.
 Drenadoras
 El Pokémon pierde 1/8 de sus PS máximos al\nfinal de cada turno durante cuatro o cinco turnos\ny no puede ser cambiado por otro.
 Apresado
@@ -1909,6 +1909,8 @@ N.º de golpes: [Digit:2digits ].
 ¡[ES:DefArtCap ][Name:TrainerName ] ha ganado!
 ¡Has empatado con [ES:DefArt ][Name:TrainerName ]!
 ¡El combate ha terminado en empate!
+[~ 13]
+[~ 14]
 ¡Pero ha fallado!
 ¡Es hipereficaz!
 ¡Es supereficaz!
@@ -1987,9 +1989,9 @@ Los efectos de Zona Mágica sobre los objetos de los Pokémon han\ndesaparecido.
 ¡Se te ha acabado el tiempo!\n¡Fin del combate!
 ¡Has pasado demasiado tiempo sin realizar ninguna acción!\n¡Fin del combate!
 ¡El rival ha pasado demasiado tiempo sin realizar ninguna acción!\n¡Fin del combate!
-[~ 91]
-[~ 92]
 [~ 93]
+[~ 94]
+[~ 95]
 El combate ha finalizado por una retirada.
 ¡El terreno de combate se ha cubierto de hierba!
 La hierba ha desaparecido.
@@ -2003,10 +2005,8 @@ La red viscosa que rodeaba a tu lado ha desaparecido.
 La red viscosa que rodeaba al lado rival ha desaparecido.
 El Pokémon no puede ejecutar este movimiento, ya que no ha comido\nninguna baya.
 [Ctrl1:battle_oneline ]¡Al cachear a [Name:PokemonNickname ] se ha descubierto que tiene\n[ES:IndArt Ref="1" ][Name:ItemClassified Idx="1" ]!
-[~ 107]
-Ningún Pokémon podrá ser cambiado por otro durante el próximo turno.
 [~ 109]
-[~ 110]
+Ningún Pokémon podrá ser cambiado por otro durante el próximo turno.
 [~ 111]
 [~ 112]
 [~ 113]
@@ -2037,17 +2037,19 @@ Ningún Pokémon podrá ser cambiado por otro durante el próximo turno.
 [~ 138]
 [~ 139]
 [~ 140]
+[~ 141]
+[~ 142]
 ¡El terreno de combate se ha vuelto muy extraño!
 Ha desaparecido la extraña sensación que se percibía en el terreno\nde combate.
-[~ 143]
-[~ 144]
 [~ 145]
 [~ 146]
+[~ 147]
+[~ 148]
 ¡Es la hora del té! A comer bayas se ha dicho.
 Pero no ha sucedido nada.
-[~ 149]
-[~ 150]
 [~ 151]
+[~ 152]
+[~ 153]
 El Pokémon no puede ejecutar este movimiento, ya que no lleva ninguna baya.
 ¡No se puede usar este movimiento!
 ¡Limpieza general completada!
@@ -2962,7 +2964,7 @@ Logo del Equipo MZ
 Text File : first_start
 ~~~~~~~~~~~~~~~
 Idioma
-¿Quieres comenzar a jugar en este idioma?\n[System:Color r="255" g="128" b="128" a="255" ]Podrás cambiarlo más adelante.[System:Color a="255" ]
+¿Quieres comenzar a jugar en este idioma?\n[System:Color r="255" g="128" b="128" a="255" ]El primer idioma que selecciones determinará permanentemente\nlos idiomas disponibles para el teclado.[System:Color a="255" ]
 Lugar de residencia
 Has seleccionado [Character2:StraightDoubleQuot. ][Name:Location ] - [Name:Area Idx="1" ][Character2:StraightDoubleQuot. ].\n¿Te parece bien?
 Verificación de edad
@@ -3123,7 +3125,8 @@ Los resultados que obtengas en este tipo de combates\n[System:Color r="255" g="1
 A diferencia de los Combates Clasificatorios, [System:Color r="255" g="128" b="128" a="255" ]en los Combates\nAmistosos no obtienes PV[System:Color a="255" ] tras luchar contra otros.
 Combates Privados
 Los [System:Color r="255" g="128" b="128" a="255" ]Combates Privados[System:Color a="255" ] te permiten crear una sala para\nenfrentarte a tus amigos o a otros Entrenadores en combates\nregidos por las reglas que vosotros mismos decidáis.
-Para acceder a una sala, basta con introducir el [System:Color r="255" g="128" b="128" a="255" ]ID de la sala[System:Color a="255" ]\no bien [System:Color r="255" g="128" b="128" a="255" ]enviar una invitación [System:Color a="255" ]a los amigos que quieras que se\nunan. Aquellos que reciban una invitación, no necesitarán\nintroducir el ID.
+Para acceder a una sala, basta con introducir el [System:Color r="255" g="128" b="128" a="255" ]ID de la sala[System:Color a="255" ].
+[~ 31]
 Y si no te apetece combatir, en las salas también puedes\n[System:Color r="255" g="128" b="128" a="255" ]ver combates como espectador[System:Color a="255" ].
 Combates Individuales
 En los [System:Color r="255" g="128" b="128" a="255" ]Combates Individuales[System:Color a="255" ], cada Entrenador saca a los\nPokémon [System:Color r="255" g="128" b="128" a="255" ]uno a uno[System:Color a="255" ] para combatir. La victoria será para quien\nlogre derrotar antes a todos los Pokémon del equipo rival.
@@ -7684,6 +7687,7 @@ Aceptar
 Error: [Digit:5digits Sep="0" ]
 Conexión restablecida.\nRetomando el combate...
 Tu conexión es inestable.
+Tu selección no se ha comunicado al servidor a tiempo,\npor lo que se ha elegido un movimiento automáticamente.
 ~~~~~~~~~~~~~~~
 Text File : rentalclub_select
 ~~~~~~~~~~~~~~~
@@ -8967,8 +8971,11 @@ Text File : tournament_rule
 ~~~~~~~~~~~~~~~
 Período de inscripción
 Del [Digit:2digits Idx="2" ]/[Digit:2digits Idx="1" ]/[Digit:4digits Sep="0" ] ([Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ]) al [Digit:2digits Idx="7" ]/[Digit:2digits Idx="6" ]/[Digit:4digits Idx="5" Sep="0" ] ([Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ]) (UTC +[Digit:2digits Idx="10" ]:[Digit:2digits Idx="11" ])
+[~ 2]
 Del [Digit:2digits Idx="2" ]/[Digit:2digits Idx="1" ]/[Digit:4digits Sep="0" ] ([Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ]) al [Digit:2digits Idx="7" ]/[Digit:2digits Idx="6" ]/[Digit:4digits Idx="5" Sep="0" ] ([Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ]) (UTC −[Digit:2digits Idx="10" ]:[Digit:2digits Idx="11" ])
+[~ 4]
 Del [Digit:2digits Idx="2" ]/[Digit:2digits Idx="1" ]/[Digit:4digits Sep="0" ] ([Digit:2digits Idx="3" ]:[Digit:2digits Idx="4" ]) al [Digit:2digits Idx="7" ]/[Digit:2digits Idx="6" ]/[Digit:4digits Idx="5" Sep="0" ] ([Digit:2digits Idx="8" ]:[Digit:2digits Idx="9" ]) (UTC)
+[~ 6]
 Período
 Modalidad de combate
 Combate Individual
@@ -8978,7 +8985,7 @@ Puestos n.º [Digit:6digits Sep="default" ]-[Digit:6digits Idx="1" Sep="default"
 Puesto n.º [Digit:6digits Sep="default" ]
 Premio de participación
 Debes participar en un mínimo de [Digit:2digits ] combate[ES:Qty P="s" ].
-Las recompensas estarán disponibles una vez que se hayan\ncalculado los resultados tras finalizar el torneo.
+Las recompensas estarán disponibles una vez que se hayan\ncalculado los resultados.
 No se harán excepciones si no cumples con los requisitos\nnecesarios o si te olvidas de aceptar las recompensas.
 Reglas sobre los Pokémon
 Pokémon permitidos
