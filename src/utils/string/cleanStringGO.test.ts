@@ -1,12 +1,11 @@
 import { readCorpus, readFile } from '../corpusFs';
 import { preprocessHindi, preprocessThai } from './cleanStringGO';
 import { getLoader } from '../loader';
-import runLong from '../runLong';
 
 const corpus = readCorpus();
 const loader = getLoader(corpus);
 
-(runLong ? test : test.skip)('preprocessThai', async () => {
+test('preprocessThai', async () => {
   const collectionKey = 'GO';
   const languageKey = 'th';
   const s = await readFile(loader, collectionKey, languageKey, 'text');
@@ -14,7 +13,7 @@ const loader = getLoader(corpus);
   expect(preprocess).not.toMatch(/[\uE000-\uF8FF]/g);
 });
 
-(runLong ? test : test.skip)('preprocessHindi', async () => {
+test('preprocessHindi', async () => {
   const collectionKey = 'GO';
   const languageKey = 'hi';
   const s = await readFile(loader, collectionKey, languageKey, 'text');
@@ -29,7 +28,7 @@ const loader = getLoader(corpus);
   expect(preprocess).not.toMatch(/(?<![\u0915-\u0939\u0958-\u095F]\u093C?)([\u093E-\u094C\u094D])/g); // vowel mark/halant without preceding consonant
 });
 
-(runLong ? test : test.skip)('preprocessHindi, malformed', async () => {
+test('preprocessHindi, malformed', async () => {
   const collectionKey = 'GO';
   const languageKey = 'hi';
   const s = await readFile(loader, collectionKey, languageKey, 'text');

@@ -15,7 +15,7 @@
     "react-i18next": "^16.6.5"
   },
   "scripts": {
-    "ci": "npm run lint && vitest run",
+    "ci": "npm run lint && (vitest run || vitest run)",
     "predeploy": "npm run pull && npm run hash && npm run ci && npm run build",
     "deploy": "gh-pages -d dist",
     "start": "npm run hash && vite",

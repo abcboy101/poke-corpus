@@ -212,11 +212,20 @@ function preprocessHindiHeuristic(lineOld: string, lineNew: string): string {
     return lineOld;
 
   // In development builds/tests, ensure full coverage by running a heuristic for the reverse case to check if the old line is correct.
+  const keywords = [
+    'सेटिंग', // setting
+    'फ़िटनेस', // fitness
+    'विकसित', // viksit
+    'अधिक', // adhik
+    'मिल', // mil
+    'इसीलिए', // isiliye
+    'चलिए', // chaliye
+  ];
   if (/\u093F(?:$|\s)/m.test(lineOld) // short i at end of word
       || /(?<![\u0915-\u0939\u0958-\u095F]\u093C?)[\u093E-\u094C\u094D]/.test(lineNew) // vowel mark/halant without preceding consonant
-      || lineOld.includes('सेटिंग') // check keyword: "setting"
-      || lineOld.includes('फ़िटनेस') // check keyword: "fitness"
-      || lineOld.includes('स्पिन')) // check keyword: "spin"
+      || new RegExp(`र्${CONSONANT}`).test(lineOld) // unencoded reph
+      || Object.values(replaceHindi).filter((s) => s.length > 1).some((s) => lineOld.includes(s.replace(ZWJ, ''))) // unencoded conjunct
+      || keywords.some((s) => lineOld.includes(s))) // keywords that contain short i
     return lineOld;
   throw new Error(`could not determine whether to decode "${lineOld}"`);
 }
