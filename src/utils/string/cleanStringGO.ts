@@ -231,60 +231,60 @@ function preprocessHindiHeuristic(lineOld: string, lineNew: string): string {
 }
 
 export function preprocessHindi(value: string, fixMalformed = true) {
-  const linesOld = value.split(/\r\n|\n/);
+  // const linesOld = value.split(/\r\n|\n/);
 
-  if (fixMalformed) {
-    // De-duplicate vowel marks (except short i)
-    value = value.replace(/([\u093E\u0940-\u094C]){2}/g, '$1');
-  }
+  // if (fixMalformed) {
+  //   // De-duplicate vowel marks (except short i)
+  //   value = value.replace(/([\u093E\u0940-\u094C]){2}/g, '$1');
+  // }
 
-  // Perform all simple mappings
-  value = value.replace(/\u094D/g, '\u094D\u200C'); // explicit halant
-  value = value.replace(/\u093F/g, SHORT_I); // short i
-  value = value.replace(/[\uF000-\uF633]/g, (c) => replaceHindi[c] ?? c); // Private Use
+  // // Perform all simple mappings
+  // value = value.replace(/\u094D/g, '\u094D\u200C'); // explicit halant
+  // value = value.replace(/\u093F/g, SHORT_I); // short i
+  // value = value.replace(/[\uF000-\uF633]/g, (c) => replaceHindi[c] ?? c); // Private Use
 
-  // Reorder marks to canonical order, so that the nukta is first
-  // consonant + halant + ZWNJ/ZWJ + nukta -> consonant + nukta + halant + ZWNJ/ZWJ
-  value = value.replace(new RegExp(`(${HALANT}${JOINER}?|${JOINER}${HALANT})${NUKTA}`, 'gu'), `${NUKTA}$1`);
+  // // Reorder marks to canonical order, so that the nukta is first
+  // // consonant + halant + ZWNJ/ZWJ + nukta -> consonant + nukta + halant + ZWNJ/ZWJ
+  // value = value.replace(new RegExp(`(${HALANT}${JOINER}?|${JOINER}${HALANT})${NUKTA}`, 'gu'), `${NUKTA}$1`);
 
-  if (fixMalformed) {
-    // short i + short i + consonant cluster + consonant cluster (malformed)
-    // short i + consonant cluster + short i + consonant cluster (visual)
-    // consonant cluster + short i + consonant cluster + short i (logical)
-    value = value.replace(new RegExp(`${SHORT_I}${SHORT_I}(${INITIAL}${FINAL}${REPH}?${RAKAR}?)`, 'gu'), `${SHORT_I}$1${SHORT_I}`);
+  // if (fixMalformed) {
+  //   // short i + short i + consonant cluster + consonant cluster (malformed)
+  //   // short i + consonant cluster + short i + consonant cluster (visual)
+  //   // consonant cluster + short i + consonant cluster + short i (logical)
+  //   value = value.replace(new RegExp(`${SHORT_I}${SHORT_I}(${INITIAL}${FINAL}${REPH}?${RAKAR}?)`, 'gu'), `${SHORT_I}$1${SHORT_I}`);
 
-    // consonant cluster + short i + reph + [rakar] (malformed)
-    // short i + consonant cluster + reph + [rakar] (visual)
-    // reph + consonant cluster + [rakar] + short i (logical)
-    value = value.replace(new RegExp(`(${INITIAL})${SHORT_I}${REPH}(${RAKAR}?)`, 'gu'), 'र्$1$2\u093F');
-  }
+  //   // consonant cluster + short i + reph + [rakar] (malformed)
+  //   // short i + consonant cluster + reph + [rakar] (visual)
+  //   // reph + consonant cluster + [rakar] + short i (logical)
+  //   value = value.replace(new RegExp(`(${INITIAL})${SHORT_I}${REPH}(${RAKAR}?)`, 'gu'), 'र्$1$2\u093F');
+  // }
 
-  // short i + consonant cluster + reph + [rakar] (visual)
-  // reph + consonant cluster + [rakar] + short i (logical)
-  // Example: ि + क + र् = र्कि (i + k + r = rki)
-  // Example: ि + ट + र् + ◌्र = र्ट्रि (i + t + r + r = rtri)
-  value = value.replace(new RegExp(`${SHORT_I}(${INITIAL})(${FINAL})${REPH}(${RAKAR}?)`, 'gu'), 'र्$1$3\u093F$2');
+  // // short i + consonant cluster + reph + [rakar] (visual)
+  // // reph + consonant cluster + [rakar] + short i (logical)
+  // // Example: ि + क + र् = र्कि (i + k + r = rki)
+  // // Example: ि + ट + र् + ◌्र = र्ट्रि (i + t + r + r = rtri)
+  // value = value.replace(new RegExp(`${SHORT_I}(${INITIAL})(${FINAL})${REPH}(${RAKAR}?)`, 'gu'), 'र्$1$3\u093F$2');
 
-  // short i + consonant cluster (visual)
-  // consonant cluster + short i (logical)
-  // Example: ि + क = कि (i + k = ki)
-  value = value.replace(new RegExp(`${SHORT_I}(${INITIAL})(${FINAL})`, 'gu'), '$1\u093F$2');
+  // // short i + consonant cluster (visual)
+  // // consonant cluster + short i (logical)
+  // // Example: ि + क = कि (i + k = ki)
+  // value = value.replace(new RegExp(`${SHORT_I}(${INITIAL})(${FINAL})`, 'gu'), '$1\u093F$2');
 
-  // consonant cluster + reph + [rakar] (visual)
-  // reph + consonant cluster + [rakar] (logical)
-  // Example: क + र् = र्क (k + r = rk)
-  // Example: ट + र् + ◌्र = र्ट्र (t + r + r = rtr)
-  value = value.replace(new RegExp(`(${INITIAL})(${FINAL})${REPH}(${RAKAR}?)`, 'gu'), 'र्$1$3$2');
+  // // consonant cluster + reph + [rakar] (visual)
+  // // reph + consonant cluster + [rakar] (logical)
+  // // Example: क + र् = र्क (k + r = rk)
+  // // Example: ट + र् + ◌्र = र्ट्र (t + r + r = rtr)
+  // value = value.replace(new RegExp(`(${INITIAL})(${FINAL})${REPH}(${RAKAR}?)`, 'gu'), 'र्$1$3$2');
 
-  value = value.replaceAll(SHORT_I, 'ि');
-  value = value.replaceAll(REPH, 'र्');
-  value = value.replaceAll(ZWNJ, '');
-  value = value.replaceAll(ZWJ, '');
-  value = value.replace(/[\u0901\u0902]{2,}/g, '\u0902'); // chandrabindu overstrike
-  value = value.replace(/\u093C{2,}/g, '\u093C'); // consecutive nukta
+  // value = value.replaceAll(SHORT_I, 'ि');
+  // value = value.replaceAll(REPH, 'र्');
+  // value = value.replaceAll(ZWNJ, '');
+  // value = value.replaceAll(ZWJ, '');
+  // value = value.replace(/[\u0901\u0902]{2,}/g, '\u0902'); // chandrabindu overstrike
+  // value = value.replace(/\u093C{2,}/g, '\u093C'); // consecutive nukta
 
-  // Use original line based on heuristics
-  value = value.split(/\r\n|\n/).map((lineNew, i) => preprocessHindiHeuristic(linesOld[i], lineNew)).join('\n');
+  // // Use original line based on heuristics
+  // value = value.split(/\r\n|\n/).map((lineNew, i) => preprocessHindiHeuristic(linesOld[i], lineNew)).join('\n');
 
   if (fixMalformed) {
     // Visually identical
