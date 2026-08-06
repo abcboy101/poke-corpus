@@ -177,7 +177,7 @@ td[lang="zxx"] wbr {
   color: var(--number-plural-color);
 }
 
-.number-0 .branch.zero {
+.number-0 .branch.zero, .number-0 .branch.dual {
   border-bottom: 1px dotted var(--text);
   color: color-mix(in oklab, var(--number-singular-color), var(--number-plural-color));
 }
@@ -287,4 +287,26 @@ td[lang="zxx"] wbr {
 .fallback {
   color: var(--text-gray);
   border-bottom: 1px dotted var(--text-gray);
+}
+
+/* TCG Pocket */
+.no-break {
+  white-space: nowrap;
+  border-bottom: 1px dotted var(--text-gray);
+}
+
+/* stylelint-disable-next-line plugin/no-unsupported-browser-features */
+@counter-style circled-decimal {
+  system: fixed 0;
+  symbols: '⓪' '①' '②' '③' '④' '⑤' '⑥' '⑦' '⑧' '⑨' '⑩' '⑪' '⑫' '⑬' '⑭' '⑮' '⑯' '⑰' '⑱' '⑲' '⑳' '㉑' '㉒' '㉓' '㉔' '㉕' '㉖' '㉗' '㉘' '㉙' '㉚' '㉛' '㉜' '㉝' '㉞' '㉟' '㊱' '㊲' '㊳' '㊴' '㊵' '㊶' '㊷' '㊸' '㊹' '㊺' '㊻' '㊼' '㊽' '㊾' '㊿';
+  suffix: ' ';
+}
+
+.results-table ol {
+  margin: 0;
+  padding-inline-start: 1.25ic;
+}
+
+.results-table li {
+  list-style-type: circled-decimal;
 }

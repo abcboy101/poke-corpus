@@ -91,3 +91,26 @@ code {
     local('Noto Emoji Regular');
   unicode-range: U+2640, U+2642;
 }
+
+/* Italics */
+/* Force oblique font synthesis by preventing italic fonts without italic Japanese glyphs (Meiryo Italic) from being chosen. */
+@font-face {
+  font-family: --italics-ja;
+  src:
+    local('ヒラギノ角ゴ Pro W3'),
+    local('Hiragino Kaku Gothic Pro'),
+    local('Osaka'),
+    local('メイリオ'),
+    local('Meiryo'),
+    local('ＭＳ Ｐゴシック'),
+    local('MS PGothic'),
+    local('Noto Sans CJK JP'),
+    local('Noto Sans JP');
+  font-style: normal;
+}
+
+i:lang(ja), em:lang(ja) {
+  font-style: oblique;
+  font-synthesis-style: oblique-only;
+  font-family: --fullwidth-ja, var(--font-family-latin), --italics-ja, sans-serif;
+}

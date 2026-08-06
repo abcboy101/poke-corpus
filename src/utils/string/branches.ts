@@ -16,9 +16,10 @@ export function genderBranch(male: string, female: string, neuter = '') {
  *
  * Returns the resulting string.
  */
-export function numberBranch(singular: string, plural: string, zero = '') {
+export function numberBranch(singular: string, plural: string, zero = '', dual = '') {
   const results = [];
   if (singular.length > 0) results.push(`<span class="branch singular">${singular}</span>`);
+  if (dual.length > 0) results.push(`<span class="branch dual">${dual}</span>`); // TCG Pocket
   if (plural.length > 0) results.push(`<span class="branch plural">${plural}</span>`);
   if (zero.length > 0) results.push(`<span class="branch zero">${zero}</span>`);
   return results.join('<span class="number">/</span>');

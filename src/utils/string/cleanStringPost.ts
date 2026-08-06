@@ -13,6 +13,7 @@ import { particlesKO, grammarEN, grammarFR, grammarIT, grammarDE, grammarES, par
 import { TextInfo } from './TextInfo';
 import { getCorpusGroups } from "../corpusGroups";
 import { remapMsgStdVariableName } from "./variableNames";
+import { postprocessStringTCGPocket } from './cleanStringTCGPocket';
 
 //#region Post-processing helper functions
 function escapeHTML(s: string) {
@@ -82,18 +83,24 @@ const rgbaColor = (r: string, g: string, b: string, a: string) => `#${dec2Hex(r)
  */
 export function postprocessString(s: string, collectionKey: CollectionKey, language: LanguageKey, richText = true): string {
   // Multiline
-  if (s.includes('\u{F1000}') && s.includes('\u{F1001}')) {
-    const entries = s.split('\u{F1000}').map((line) => {
-      const [location, value] = line.split('\u{F1001}');
-      return `<dt>${location}</dt><dd>${postprocessString(value, collectionKey, language, richText)}</dd>`;
-    });
-    return `<dl>${entries.join('')}</dl>`;
+  if (s.includes('\u{F1000}')) {
+    if (s.includes('\u{F1001}')) {
+      const entries = s.split('\u{F1000}').map((line) => {
+        const [location, value] = line.split('\u{F1001}');
+        return `<dt>${location}</dt><dd>${postprocessString(value, collectionKey, language, richText)}</dd>`;
+      });
+      return `<dl>${entries.join('')}</dl>`;
+    }
+    else {
+      const entries = s.split('\u{F1000}').map((value) => postprocessString(value, collectionKey, language, richText));
+      return grammarBranch(...entries);
+    }
   }
 
   if (!richText)
     return escapeHTML(s);
 
-  const { isGen1, isGen2, isGen3, isGen4, isGen5, isBDSP, isPBR, isRanch, isDreamRadar, isGO, isMasters, isHOME, isChampions, isGB, isNDS, is3DS, isN64, isGCN, isModern } = getCorpusGroups(collectionKey);
+  const { isGen1, isGen2, isGen3, isGen4, isGen5, isBDSP, isPBR, isRanch, isDreamRadar, isGO, isMasters, isTCGPocket, isHOME, isChampions, isGB, isNDS, is3DS, isN64, isGCN, isModern } = getCorpusGroups(collectionKey);
   const ti = new TextInfo();
 
   // Replace literal special characters with a placeholder so they don't match other rules
@@ -408,6 +415,7 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
   // Separate files
   s = isGO ? postprocessStringGO(s, ti) : s;
   s = isMasters ? postprocessStringMasters(s, ti) : s;
+  s = isTCGPocket ? postprocessStringTCGPocket(s, ti) : s;
   //#endregion
 
   //#region Grammar

@@ -1133,6 +1133,26 @@
         "talk",
         "ui"
       ]
+    },
+    "TCGPocket": {
+      "id": "tcgp",
+      "languages": [
+        "qid",
+        "ja",
+        "en",
+        "fr",
+        "it",
+        "de",
+        "es",
+        "ko",
+        "zh-Hant",
+        "pt-BR"
+      ],
+      "version": "1.7.1",
+      "softWrap": true,
+      "files": [
+        "text"
+      ]
     }
   }
 }
