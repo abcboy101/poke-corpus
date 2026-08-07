@@ -1,6 +1,6 @@
 import { CSSProperties, Dispatch, SetStateAction, useEffect, useRef, useContext } from 'react';
 
-import { CollectionKey, Corpus, LanguageKey } from '../../utils/corpus';
+import { CollectionKey, commonKeys, Corpus, FileKey, LanguageKey, scriptKeys } from '../../utils/corpus';
 import LocalizationContext from "../LocalizationContext";
 
 import './SearchFilters.css';
@@ -20,16 +20,30 @@ function collectionLabelStyle(text: string, maxWidth = 4): CSSProperties | undef
   return width <= maxWidth ? undefined : {fontSize: `${(maxWidth * 100) / width}%`, scale: `1 ${width / maxWidth}`, whiteSpace: 'nowrap'};
 }
 
-function getValidCollections(corpus: Corpus, languages: readonly string[]) {
+function hasValidFile(files: readonly FileKey[], common: boolean, script: boolean) {
+  if (common && script)
+    return true;
+
+  const validFiles = new Set(files);
+  if (!common) commonKeys.forEach((fileKey) => validFiles.delete(fileKey));
+  if (!script) scriptKeys.forEach((fileKey) => validFiles.delete(fileKey));
+  return validFiles.size > 0;
+}
+
+function getValidCollections(corpus: Corpus, languages: readonly string[], common: boolean, script: boolean) {
   // If no languages are selected, no collection is invalid yet.
-  if (languages.length === 0)
-    return new Set(corpus.collections);
+  const validCollections = new Set<string>();
+  if (languages.length === 0) {
+    for (const [collectionKey, collection] of corpus.entries)
+      if (hasValidFile(collection.files, common, script))
+        validCollections.add(collectionKey);
+    return validCollections;
+  }
 
   // Otherwise, include all valid collections with at least one selected language.
-  const validCollections = new Set<string>();
   const languageSet = new Set(languages);
   for (const [collectionKey, collection] of corpus.entries)
-    if (collection.languages.some((languageKey) => languageSet.has(languageKey)))
+    if (collection.languages.some((languageKey) => languageSet.has(languageKey)) && hasValidFile(collection.files, common, script))
       validCollections.add(collectionKey);
   return validCollections;
 }
@@ -47,10 +61,10 @@ function getValidLanguages(corpus: Corpus, collections: readonly CollectionKey[]
   return validLanguages;
 }
 
-function SearchCollections({corpus, language, collections, languages, setCollections}: {corpus: Corpus, language: string, collections: readonly CollectionKey[], languages: readonly LanguageKey[], setCollections: Dispatch<SetStateAction<readonly CollectionKey[]>>}) {
+function SearchCollections({corpus, language, collections, languages, setCollections, common, script}: {corpus: Corpus, language: string, collections: readonly CollectionKey[], languages: readonly LanguageKey[], setCollections: Dispatch<SetStateAction<readonly CollectionKey[]>>, common: boolean, script: boolean}) {
   const t = useContext(LocalizationContext);
   const isFullwidth = ['ja', 'ko', 'zh'].some((lang) => language.startsWith(lang));
-  const validCollections = getValidCollections(corpus, languages);
+  const validCollections = getValidCollections(corpus, languages, common, script);
   return (
     <>
       <div className="search-collections">
@@ -112,7 +126,7 @@ function SearchLanguages({corpus, language, collections, languages, setLanguages
   );
 }
 
-function SearchFilters({corpus, language, filtersVisible, collections, setCollections, languages, setLanguages}: {corpus: Corpus, language: string, filtersVisible: boolean, collections: readonly CollectionKey[], setCollections: Dispatch<SetStateAction<readonly CollectionKey[]>>, languages: readonly LanguageKey[], setLanguages: Dispatch<SetStateAction<readonly LanguageKey[]>>}) {
+function SearchFilters({corpus, language, filtersVisible, collections, setCollections, languages, setLanguages, common, script}: {corpus: Corpus, language: string, filtersVisible: boolean, collections: readonly CollectionKey[], setCollections: Dispatch<SetStateAction<readonly CollectionKey[]>>, languages: readonly LanguageKey[], setLanguages: Dispatch<SetStateAction<readonly LanguageKey[]>>, common: boolean, script: boolean}) {
   const filtersRef = useRef<HTMLDivElement>(null);
   const updateFiltersHeight = () => filtersRef.current?.style.setProperty('--search-filters-height', `${filtersRef.current.scrollHeight}px`);
   useEffect(() => {
@@ -127,7 +141,7 @@ function SearchFilters({corpus, language, filtersVisible, collections, setCollec
     <div ref={filtersRef} className={`search-filters search-filters-${filtersVisible ? 'show' : 'hide'}`}>
       { !import.meta.env.SSR && (
         <>
-          <SearchCollections corpus={corpus} language={language} collections={collections} languages={languages} setCollections={setCollections}/>
+          <SearchCollections corpus={corpus} language={language} collections={collections} languages={languages} setCollections={setCollections} common={common} script={script}/>
           <div className="search-filters-divider"></div>
           <SearchLanguages corpus={corpus} language={language} collections={collections} languages={languages} setLanguages={setLanguages}/>
         </>

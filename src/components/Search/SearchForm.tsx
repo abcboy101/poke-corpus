@@ -203,8 +203,8 @@ function SearchForm({corpus, language, waiting, inProgress, postToWorker, termin
   // done or error: submit enabled
   const submitDisabled = waiting || inProgress || query.length === 0 || collections.length === 0 || languages.length === 0;
   const filters = useMemo(() => (
-    <SearchFilters corpus={corpus} language={language} filtersVisible={filtersVisible} collections={collections} setCollections={setCollections} languages={languages} setLanguages={setLanguages} />
-  ), [language, filtersVisible, collections, languages]);
+    <SearchFilters corpus={corpus} language={language} filtersVisible={filtersVisible} collections={collections} setCollections={setCollections} languages={languages} setLanguages={setLanguages} common={common} script={script} />
+  ), [language, filtersVisible, collections, languages, common, script]);
   return <form className="search-form" role="search" onSubmit={onSubmit}>
     <div className="search-bar">
       <div className="item-group">

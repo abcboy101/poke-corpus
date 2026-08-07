@@ -132,6 +132,9 @@ export const getCorpus = (source: CorpusSource) => {
  */
 export const getFilePath = (collectionKey: CollectionKey, languageKey: LanguageKey, fileKey: FileKey) => `corpus/${collectionKey}/${languageKey}_${fileKey}.txt.gz`;
 
+export const commonKeys: FileKey[] = ['common', 'messages', 'ui'];
+export const scriptKeys: FileKey[] = ['script', 'talk'];
+
 //#region Serialization
 export interface SerializedCorpus {
   readonly corpus: CorpusData,

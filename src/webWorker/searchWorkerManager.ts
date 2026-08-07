@@ -1,5 +1,5 @@
 import 'compression-streams-polyfill';
-import { codeId, CollectionKey, LanguageKey, FileKey, deserializeCorpus, SerializedCorpus } from '../utils/corpus';
+import { codeId, CollectionKey, LanguageKey, FileKey, deserializeCorpus, SerializedCorpus, commonKeys, scriptKeys } from '../utils/corpus';
 import { getLoader, Loader } from '../utils/loader';
 import SearchWorker from "./searchWorker.ts?worker";
 import { SearchParams } from '../utils/searchParams';
@@ -198,8 +198,6 @@ self.onmessage = async (message: MessageEvent<SearchManagerParams>) => {
       }
 
       // Load all files in all needed languages in the collection
-      const commonKeys = ['common', 'messages', 'ui'];
-      const scriptKeys = ['script', 'talk'];
       const languages = (params.showAllLanguages) ? collection.languages : collection.languages.filter((languageKey) => params.languages.includes(languageKey) || languageKey === codeId);
       collection.files.forEach((fileKey) => {
         if ((!params.common && commonKeys.includes(fileKey)) || (!params.script && scriptKeys.includes(fileKey)))
