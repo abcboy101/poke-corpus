@@ -80,6 +80,6 @@ export function postprocessStringTCGPocket(s: string, ti: TextInfo) {
     .replaceAll(/<\/?[bi] *>/gi, (code: string) => ti.html(code)) // b, i
     .replaceAll(/(<color="?([^>"]*)"?>)(.*?)(<\/color>|(?=<color=))/g, (_, start: string, value: string, text: string, end: string) => ti.as({ kind: 'tag', start, className: 'color', style: `color: ${value}`, children: text, end })) // color
     .replaceAll(/<\/?(?:size|space|voffset|scale|line-indent)(?:=([^>"]*))?>/gi, ti.control())
-    .replaceAll(/<br>/g, '\x83')
+    .replaceAll(/<br>/g, (code) => ti.as({ kind: 'tag', start: code, className: 'n', children: code }) + '\x83')
   );
 }
