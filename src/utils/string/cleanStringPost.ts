@@ -7,13 +7,14 @@ import { postprocessSpeaker } from '../speaker';
 import { grammarBranch, versionBranch, genderBranch, numberBranch, genderNumberBranch, genderNumberDEBranch } from './branches';
 import { postprocessStringGO } from './cleanStringGO';
 import { postprocessStringMasters } from './cleanStringMasters';
+import { postprocessStringSleep } from './cleanStringSleep';
+import { postprocessStringTCGPocket } from './cleanStringTCGPocket';
 import * as g1 from './expandVariablesG1';
 import * as g3 from './expandVariablesG3';
 import { particlesKO, grammarEN, grammarFR, grammarIT, grammarDE, grammarES, particlesKONames } from './grammar';
 import { TextInfo } from './TextInfo';
 import { getCorpusGroups } from "../corpusGroups";
 import { remapMsgStdVariableName } from "./variableNames";
-import { postprocessStringTCGPocket } from './cleanStringTCGPocket';
 
 //#region Post-processing helper functions
 function escapeHTML(s: string) {
@@ -100,7 +101,7 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
   if (!richText)
     return escapeHTML(s);
 
-  const { isGen1, isGen2, isGen3, isGen4, isGen5, isBDSP, isPBR, isRanch, isDreamRadar, isGO, isMasters, isTCGPocket, isHOME, isChampions, isGB, isNDS, is3DS, isN64, isGCN, isModern } = getCorpusGroups(collectionKey);
+  const { isGen1, isGen2, isGen3, isGen4, isGen5, isBDSP, isPBR, isRanch, isDreamRadar, isGO, isMasters, isSleep, isTCGPocket, isHOME, isChampions, isGB, isNDS, is3DS, isN64, isGCN, isModern } = getCorpusGroups(collectionKey);
   const ti = new TextInfo();
 
   // Replace literal special characters with a placeholder so they don't match other rules
@@ -208,7 +209,7 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
   //#endregion
 
   //#region Formatting
-  s = (isBDSP || isChampions) ? (s
+  s = (isBDSP || isChampions || isSleep) ? (s
     .replaceAll(/(\[System:Size percent="(\d+)" \])(.*?)(\[System:Size percent="100" \])/g, (_, start: string, value: string, children: string, end: string) => ti.as({ kind: 'tag', start, style: `font-size: ${value}%`, children, end })) // font size
     .replaceAll(/\[System:Size percent="100" \]/g, ti.func()) // font size (reset)
     .replaceAll(/(\[System:Color (?!a="255" \])(?:r="(\d+)" )?(?:g="(\d+)" )?(?:b="(\d+)" )?(?:a="(\d+)" )?\])(.*?)(\[System:Color a="255" \]|(?=\[System:Color ))/g, (_, start: string, r: string | undefined, g: string | undefined, b: string | undefined, a: string | undefined, children: string, end: string) => ti.as({ kind: 'tag', start, className: 'color', style: `color: ${rgbaColor(r ?? '', g ?? '', b ?? '', a ?? '')}`, children, end })) // font color
@@ -415,6 +416,7 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
   // Separate files
   s = isGO ? postprocessStringGO(s, ti) : s;
   s = isMasters ? postprocessStringMasters(s, ti) : s;
+  s = isSleep ? postprocessStringSleep(s, language, ti) : s;
   s = isTCGPocket ? postprocessStringTCGPocket(s, ti) : s;
   //#endregion
 

@@ -1,6 +1,6 @@
 .search-filters {
   display: grid;
-  grid-template-columns: 4fr 1px 6fr;
+  grid-template-columns: 42fr 1px 58fr;
   grid-template-rows: auto auto;
   grid-auto-flow: column;
   gap: 0.5em 0.75em;
@@ -95,9 +95,9 @@
 }
 
 /* On smaller screens, show language codes instead of the full names. */
-@media (width < 62rem) {
+@media (width < 70rem) {
   .search-filters {
-    grid-template-columns: 55fr 1px minmax(14em, 45fr);
+    grid-template-columns: 57fr 1px minmax(14em, 43fr);
   }
 
   .search-languages {
