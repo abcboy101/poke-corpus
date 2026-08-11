@@ -268,9 +268,11 @@ self.onmessage = (task: MessageEvent<SearchTask>) => {
 
       // For multi-valued strings, matches to any value are allowed.
       const match5 = hasMultiLine
-        ? (line: string) => (line.split('\u{F1000}').some((entry) => entry.includes('\u{F1001}')
-          ? match4(entry.slice(entry.indexOf('\u{F1001}') + '\u{F1001}'.length))
-          : match4(entry)))
+        ? (line: string) => (line.includes('\u{F1000}')
+          ? line.includes('\u{F1001}')
+            ? line.split('\u{F1000}').some((entry) => match4(entry.slice(entry.indexOf('\u{F1001}') + '\u{F1001}'.length)))
+            : line.split('\u{F1000}').some((entry) => match4(entry))
+          : match4(line))
         : match4;
 
       return match5;
