@@ -3503,6 +3503,26 @@ Nelle aree in cui si svolge l'evento si attiveranno gli effetti indicati di segu
 — Tutti i giorni —
 • <strong>Alcuni Pokémon avranno più probabilità di apparire</strong> durante la ricerca sul sonno.
 • Durante la ricerca sul sonno <strong>appariranno alcuni Pokémon con vari tipi di sonno</strong> indipendentemente dal proprio tipo di sonno di quel giorno.
+Durante la settimana di questo evento avrai la speciale opportunità di veder apparire con più probabilità i <strong>Pokémon associati alla collaborazione</strong>!
+Durante l'evento potresti perfino incontrare i nuovi arrivati, <strong>[News:PokemonName ]</strong> e <strong>[News:PokemonName idx="1" ] con un cappello da capitano</strong>!
+Inoltre, al primo spuntino del giorno, <strong>un Pokémon avrà sicuramente fame</strong>.
+Buon divertimento!
+Periodo dell'evento:
+• [News:Date_mdahm ] - [News:Date_mdahm idx="1" ]
+Aree dell'evento:
+• Tutte le aree
+Periodo delle missioni:
+• [News:Date_mdahm ] - [News:Date_mdahm idx="1" ]
+Nell'area in cui si svolge l'evento si attiveranno gli effetti indicati di seguito.
+— Tutti i giorni —
+• La <strong>probabilità di attivazione dell'abilità principale</strong> dei Pokémon aiutanti sarà <strong>moltiplicata per [News:Num_Count ]</strong>.
+• PE sonno Pokémon aiutanti <strong>×[News:Num_Count ]</strong>
+• Durante la prima ricerca sul sonno del giorno, <strong>un Pokémon avrà sicuramente fame</strong>.
+• La potenza ottenuta con i piatti verrà <strong>moltiplicata per [News:Num_Count ]</strong> (<b>[News:Num_Count idx="1" ] in caso di vera bontà, che diventerà [News:Num_Count idx="2" ] la domenica</b>).
+• <strong>Alcuni Pokémon avranno più probabilità di apparire</strong> durante la ricerca sul sonno.
+• Durante la ricerca sul sonno <strong>appariranno alcuni Pokémon con vari tipi di sonno</strong> indipendentemente dal proprio tipo di sonno di quel giorno.
+— [News:Date_mda ] - [News:Date_mda idx="1" ] —
+• Potere sonno <strong>×[News:Num_Count ]</strong>
 Ottieni bacche a non finire durante la settimana bacche à gogo!
 Durante la settimana di questo evento avrai la speciale possibilità di <strong>tirare fuori il meglio dai Pokémon aiutanti con specialità "Bacche"</strong>.
 In più, <strong>alcuni Pokémon con la specialità "Bacche"</strong> e <strong>i Pokémon con abilità principali come Bacche a iosa</strong> avranno più probabilità di apparire!
@@ -4934,6 +4954,7 @@ Settimana tipo Drago in evidenza
 Latios e la Cuorugiada
 Evento in vista del 3° anniversario
 Festa 3° anniversario
+Settimana della collaborazione
 Eevee
 Capodanno 1
 Capodanno 2
@@ -4983,6 +5004,7 @@ Latios 1
 Latios 2
 Terzo\nanniversario 1
 Terzo\nanniversario 2
+Collaborazione
 ~~~~~~~~~~~~~~~
 Text File : MD_event_item_packs
 ~~~~~~~~~~~~~~~
@@ -5181,6 +5203,9 @@ Pacchetto terzo anniversario L
 Pacchetto festa d'estate 2026 S
 Pacchetto festa d'estate 2026 M
 Pacchetto festa d'estate 2026 L
+Pacchetto per la collaborazione S
+Pacchetto per la collaborazione M
+Pacchetto per la collaborazione L
 Pacchetto Pokémon ([Name:PokemonName ]) n° [Digit:Digit2 idx="1" ]
 ~~~~~~~~~~~~~~~
 Text File : MD_event_purchase_item_packs
@@ -5359,6 +5384,7 @@ Standard
 Variante
 Halloween
 Feste
+Speciale
 ~~~~~~~~~~~~~~~
 Text File : MD_fields
 ~~~~~~~~~~~~~~~
@@ -6072,6 +6098,9 @@ Pokémon Ballerino
 Pokémon Topo
 Pokémon Topo
 Pokémon Toccasana
+Pokémon Forgiatore
+Pokémon Martello
+Pokémon Martello
 Pokémon Balenotterra
 Pokémon Balenotterra
 Pokémon Pescespine
@@ -6303,6 +6332,9 @@ Con la sua danza esotica, cattura lo sguardo di\nchiunque lo veda. Anche mentre 
 Le sacche elettriche sulle sue guance non si sono\nsviluppate del tutto e per generare energia deve\nsfregarle vigorosamente con le zampe anteriori.\nA volte scarica elettricità sfregando i cuscinetti\ndelle zampe sulle guance anche mentre dorme,\nforse perché si esercita a produrla.
 Utilizza una tecnica speciale di lotta corpo a corpo:\ncolpisce il nemico con le zampe anteriori rilasciando\nal contempo elettricità dai cuscinetti. A volte dorme\nnella sua posizione di lotta caratteristica, forse\nperché anche in sogno si allena nelle sue mosse.
 Di indole pacifica, a volte guarisce i Pokémon\nferiti emettendo elettricità dalle zampe anteriori.\nSe lo si vede sollevare le zampe mentre dorme,\nforse sta sognando di prendersi cura di un Pokémon.
+Tinkatink regge un martello che ha forgiato\nlui stesso colpendo ripetutamente dei pezzi\ndi ferraglia. A volte, lo si può vedere stringerlo\na sé affettuosamente mentre dorme.
+Tinkatuff porta sempre con sé un grosso\nmartello. Non si tratta solo di uno strumento\nper lottare; infatti, sembra fungere anche\nda cuscino quando dorme.
+Tinkaton possiede una notevole intelligenza e\nun'indole ardita. Lo si vede spesso dormire\nadagiato sul suo martello gigante. Il duro metallo\ndello strumento sembra essere, per Tinkaton,\nun comodo posticino su cui dormire.
 Cetoddle vive in regioni fredde in piccoli branchi.\nA volte diventa irritabile e colpisce il suolo\nmentre dorme, come se fosse nel panico.\nProbabilmente sogna di essere lasciato indietro\ndal branco.
 Non solo il corno sulla mascella superiore è in\ngrado di congelare ciò che ha intorno, ma può\nanche emettere onde sonore per comunicare con\ngli altri nel branco. In rari casi, capita che emetta\nqueste onde anche nel sonno, forse perché chiama\ni suoi compagni in maniera inconscia.
 Vive in stagni e paludi. Si carica i Wooper\nsulla schiena e li traghetta da una sponda\nall’altra. Raramente si può vedere mentre\ndorme nel fango, forse perché gli è venuto\nsonno mentre trasportava dei Wooper.
@@ -6538,6 +6570,9 @@ Quaquaval
 Pawmi
 Pawmo
 Pawmot
+Tinkatink
+Tinkatuff
+Tinkaton
 Cetoddle
 Cetitan
 Clodsire
@@ -6559,6 +6594,8 @@ Eevee
 Eevee (Halloween)
 Spheal
 Spheal (Feste)
+Pikachu
+Pikachu (Capitano)
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_incense
 ~~~~~~~~~~~~~~~
@@ -6747,6 +6784,7 @@ Aroma Pikachu (Feste)
 Aroma Eevee (Feste)
 Aroma Eevee (Halloween)
 Aroma Spheal (Feste)
+Aroma Pikachu (Capitano)
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_main_skills
 ~~~~~~~~~~~~~~~
@@ -6903,6 +6941,7 @@ Arancione
 Viola
 Cappello rosso
 Ghirlanda festiva
+Cappello\nda capitano
 Varietà Media
 Varietà Piccola
 Varietà Grande
@@ -7674,6 +7713,15 @@ Stile scariche elettriche
 Stile rannicchiato
 Stile guarigione onirica
 Stile scariche elettriche
+Stile stringimartello
+Stile gran sbadiglio
+Stile impugnamartello
+Stile posamento
+Stile pesatroppo
+Stile martello guanciale
+Stile martellogiaciglio
+Stile alzamartello
+Stile coccolamartello
 Stile braccia aperte
 Stile altalenante
 Stile piagnisteo
@@ -7696,6 +7744,7 @@ Stile seduto
 Stile bassista onirico
 Stile rilassato
 Stile rannicchiato
+Stile in punta di coda
 Stile sopralapancia
 Stile regalo
 ~~~~~~~~~~~~~~~
@@ -9258,6 +9307,9 @@ Text File : PokemonHeight
 0,3 m
 0,4 m
 0,9 m
+0,4 m
+0,7 m
+0,7 m
 1,2 m
 4,5 m
 1,8 m
@@ -9621,6 +9673,9 @@ Text File : PokemonWeight
 2,5 kg
 6,5 kg
 41,0 kg
+8,9 kg
+59,1 kg
+112,8 kg
 45,0 kg
 700,0 kg
 223,0 kg
@@ -9680,6 +9735,7 @@ Regalo tutorial\nFiori celebrativi
 Menta bularasa\nnon ricevuta
 Strumento non ricevuto
 Bonus ricerca sul sonno\nGarmin
+Regalo per la\ncollaborazione
 ~~~~~~~~~~~~~~~
 Text File : PresentBox_SCENE
 ~~~~~~~~~~~~~~~

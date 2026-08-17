@@ -3503,6 +3503,26 @@ Vous trouverez ci-dessous la liste des effets s'appliquant aux zones de recherch
 — Tous les jours —
 • <strong>Apparition plus probable de certains Pokémon</strong> pendant vos recherches sur le sommeil
 • <strong>Apparition de quelques Pokémon aux types de dodo variés</strong> pendant vos recherches sur le sommeil (quel que soit le vôtre ce jour-là)
+Lors de cet évènement spécial d'une semaine, les <strong>Pokémon associés à la collaboration</strong> seront plus susceptibles d'apparaître&nbsp;!
+Au cours de l'évènement, vous pourriez même croiser de nouveaux Pokémon comme <strong>[News:PokemonName ]</strong> et <strong>[News:PokemonName idx="1" ] portant une casquette de capitaine</strong>&nbsp;!
+De plus, au cours de l'évènement, <strong>un Pokémon affamé apparaîtra à coup sûr</strong> lors de la première heure du goûter du jour.
+Nous espérons que ce contenu vous plaira&nbsp;!
+Période de l'évènement&nbsp;:
+• Du&nbsp;[News:Date_mdahm ] au&nbsp;[News:Date_mdahm idx="1" ]
+Zones de l'évènement&nbsp;:
+• Toutes
+Période des missions&nbsp;:
+• Du&nbsp;[News:Date_mdahm ] au&nbsp;[News:Date_mdahm idx="1" ]
+Vous trouverez ci-dessous la liste des effets s'appliquant aux zones de recherche concernées par l'évènement.
+—&nbsp;Tous les jours&nbsp;—
+• Probabilité de déclenchement de la compétence principale <strong>×&nbsp;[News:Num_Count ]</strong> pour tous les Pokémon de soutien
+• Bonus Dodo pour les Pokémon de soutien <strong>×&nbsp;[News:Num_Count ]</strong>
+• <strong>Apparition à coup sûr d'un Pokémon affamé</strong> pendant la première session de recherches sur le sommeil du jour
+• Puissance obtenue grâce aux préparations culinaires <strong>×&nbsp;[News:Num_Count ]</strong> (<b>×&nbsp;[News:Num_Count idx="1" ] pour celles qui obtiennent la mention «&nbsp;Super bon&nbsp;!&nbsp;» et ×&nbsp;[News:Num_Count idx="2" ] pour celles qui obtiennent la mention «&nbsp;Super bon&nbsp;!&nbsp;» le dimanche</b>)
+• <strong>Apparition plus probable de certains Pokémon</strong> pendant vos recherches sur le sommeil
+• <strong>Apparition de quelques Pokémon aux types de dodo variés</strong> pendant vos recherches sur le sommeil (quel que soit le vôtre ce jour-là)
+—&nbsp;du&nbsp;[News:Date_mda ]&nbsp;au&nbsp;[News:Date_mda idx="1" ]&nbsp;—
+• Dodoforce <strong>×&nbsp;[News:Num_Count ]</strong>
 Obtenez plein de Baies durant la Semaine Baies à foison&nbsp;!
 Cet évènement spécial d'une semaine met à l'honneur les <strong>Pokémon de soutien dotés de la spécialité «&nbsp;Baies&nbsp;»</strong>.
 En effet, <strong>certains des Pokémon dotés de la spécialité «&nbsp;Baies&nbsp;»</strong> et des <strong>Pokémon ayant une compétence principale telle que Baies à gogo</strong> sont plus susceptibles d'apparaître&nbsp;!
@@ -4048,7 +4068,7 @@ Vous trouverez ci-dessous la liste des effets s'appliquant aux zones de recherch
 • Apparition d'un énorme Ronflex possédant déjà une certaine puissance et pouvant être renforcé à partir de là
 —&nbsp;Dernier jour de l'évènement ([News:Date_md ])&nbsp;—
 • Dodoforce <strong>×&nbsp;[News:Num_Count ]</strong>
-Remarque&nbsp;: s'il y a plus d'un bonus de dodoforce disponibles, seul le bonus le plus élevé sera appliqué.
+Remarque&nbsp;: s'il y a plus d'un bonus de dodoforce disponible, seul le bonus le plus élevé sera appliqué.
 Lors de cet évènement spécial d'une durée d'un mois, vous pouvez terminer les <strong>missions des clichés miraculeux de [News:PokemonName ]</strong>.
 Pendant cet évènement, <strong>[News:PokemonName ] apparaîtra sur des photos</strong> lorsque vous recherchez les styles de dodo des Pokémon. Vous pouvez progresser dans les missions des clichés miraculeux en fonction du nombre de photos prises dans lesquelles [News:PokemonName ] apparaît.
 De plus, d'autres bonus seront disponibles lorsque vous obtenez un cliché miraculeux.
@@ -4934,6 +4954,7 @@ Semaine Pokémon de type Dragon en vedette
 Latios et la Rosée Âme
 Évènement à l'approche du 3e anniversaire
 Fête 3e anniversaire
+Semaine de collaboration
 Évoli
 Nouvel An 1
 Nouvel An 2
@@ -4983,6 +5004,7 @@ Latios 1
 Latios 2
 3e anniversaire 1
 3e anniversaire 2
+Semaine\nde collab
 ~~~~~~~~~~~~~~~
 Text File : MD_event_item_packs
 ~~~~~~~~~~~~~~~
@@ -5181,6 +5203,9 @@ Lot 3e anniversaire L
 Lot fête de l'été 2026 S
 Lot fête de l'été 2026 M
 Lot fête de l'été 2026 L
+Lot collaboration S
+Lot collaboration M
+Lot collaboration L
 Lot renforcement Pokémon ([Name:PokemonName ]) [Digit:Digit2 idx="1" ]
 ~~~~~~~~~~~~~~~
 Text File : MD_event_purchase_item_packs
@@ -5359,6 +5384,7 @@ Ordinaire
 Variété(s)
 Halloween
 Fêtes
+Spécial
 ~~~~~~~~~~~~~~~
 Text File : MD_fields
 ~~~~~~~~~~~~~~~
@@ -6072,6 +6098,9 @@ Pokémon Danseur
 Pokémon Souris
 Pokémon Souris
 Pokémon Pose Paume
+Pokémon Forge
+Pokémon Marteau
+Pokémon Marteau
 Pokémon Baleinapied
 Pokémon Baleinapied
 Pokémon Poissépine
@@ -6303,6 +6332,9 @@ Sa danse insolite est captivante. Même endormi,\nil balance son corps à la moi
 Les poches sur ses joues sont peu développées.\nElles ne produisent de l'électricité que lorsque Pohm\nles frotte énergiquement avec les coussinets de\nses pattes avant, chose qu'il fait parfois pendant\nqu'il dort. Peut-être s'entraîne-t-il ainsi à produire\nde l'électricité.
 Pohmotte utilise un style de combat unique qui\nconsiste à frapper ses adversaires avec ses paumes,\ntout en les électrocutant avec ses coussinets.\nIl s'endort parfois dans sa posture de combat\ncaractéristique. Peut-être qu'il travaille sur\nses techniques martiales pendant son sommeil.
 D'ordinaire, ce Pokémon est plutôt calme. Il soigne\nparfois des Pokémon blessés en émettant des\ndécharges électriques depuis ses pattes avant.\nOn peut parfois l'apercevoir levant les pattes dans\nson sommeil, comme s'il soignait des Pokémon\ndans ses rêves.
+Le marteau que tient Forgerette a été fabriqué\nen frappant des copeaux de ferraille. On trouve\nparfois Forgerette en train de le tenir\naffectueusement dans son sommeil.
+Forgella se déplace toujours avec son énorme\nmarteau. Ce marteau n'est pas qu'un outil\npour le combat, il lui sert aussi d'oreiller\nquand Forgella fait un petit somme.
+Forgelina est un Pokémon brave et intelligent.\nOn peut parfois l'apercevoir en train de se\nreposer sur son marteau géant. Forgelina trouve\npeut-être son métal dur assez confortable\npour s'endormir dessus.
 Piétacé vit en petit groupe dans les régions\nfroides. Il lui arrive occasionnellement de devenir\nirritable et de frapper le sol dans son sommeil,\ncomme s'il était pris de panique. Peut-être\nrêve-t-il d'avoir été séparé de son groupe.
 En plus de pouvoir geler ses environs grâce à\nla corne située sur sa mâchoire supérieure, il peut\négalement émettre des ondes sonores afin de\ncommuniquer avec les membres de son groupe.\nDans de rares cas, il émet ces ondes en dormant,\nlançant des appels inconscients à ses congénères.
 Terraiste vit dans les étangs et les marais. Il porte\ndes Axoloto sur son dos et nage jusqu'à la rive\nopposée pour les aider à traverser. En de rares\noccasions, on peut le voir endormi dans la boue.\nSans doute qu'il s'est assoupi au beau milieu\nde ses fonctions de batelier.
@@ -6538,6 +6570,9 @@ Palmaval
 Pohm
 Pohmotte
 Pohmarmotte
+Forgerette
+Forgella
+Forgelina
 Piétacé
 Balbalèze
 Terraiste
@@ -6559,6 +6594,8 @@ Pikachu (Fêtes)
 Évoli (Halloween)
 Obalie
 Obalie (Fêtes)
+Pikachu
+Pikachu (Capitaine)
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_incense
 ~~~~~~~~~~~~~~~
@@ -6747,6 +6784,7 @@ Encens Pikachu (Fêtes)
 Encens Évoli (Fêtes)
 Encens Évoli (Halloween)
 Encens Obalie (Fêtes)
+Encens Pikachu (Capitaine)
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_main_skills
 ~~~~~~~~~~~~~~~
@@ -6903,6 +6941,7 @@ Orange
 Violet
 Chapeau rouge
 Couronne\nde houx festive
+Casquette\nde capitaine
 Variété Moyenne
 Variété Petite
 Variété Grande
@@ -7674,6 +7713,15 @@ Dodo Électrifié
 Dodo en Boule
 Dodo Toucher\nGuérisseur
 Dodo Électrifié
+Dodo\nMarteau Câlin
+Dodo Gros\nBâilleur
+Dodo\nAttrape-Marteau
+Dodo\nRepose-Menton
+Dodo Trop Lourd
+Dodo\nMarteau Oreiller
+Dodo\nsur Marteau
+Dodo\nHisse-Marteau
+Dodo\nMarteau Gros Câlin
 Dodo Hourra
 Dodo Chancelant
 Dodo Pleurnichard
@@ -7696,6 +7744,7 @@ Dodo sur Séant
 Dodo Solo de Basse
 Dodo Paresseux
 Dodo en Boule
+Dodo\nsur Queue
 Dodo sur Gros Bidou
 Dodo Cadeau
 ~~~~~~~~~~~~~~~
@@ -9258,6 +9307,9 @@ Text File : PokemonHeight
 0,3 m
 0,4 m
 0,9 m
+0,4 m
+0,7 m
+0,7 m
 1,2 m
 4,5 m
 1,8 m
@@ -9621,6 +9673,9 @@ Text File : PokemonWeight
 2,5 kg
 6,5 kg
 41,0 kg
+8,9 kg
+59,1 kg
+112,8 kg
 45,0 kg
 700,0 kg
 223,0 kg
@@ -9680,6 +9735,7 @@ Cadeau de tutoriel :\nPanier Floral
 Aromate Neutre non reçu
 Objet non reçu
 Bonus de recherche\nGarmin
+Cadeau de collaboration
 ~~~~~~~~~~~~~~~
 Text File : PresentBox_SCENE
 ~~~~~~~~~~~~~~~

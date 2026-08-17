@@ -3503,6 +3503,26 @@ Die folgenden Effekte werden in den relevanten Gebieten während des Events akti
 - Alle Tage
 • <strong>Bestimmte Pokémon werden</strong> bei der Schlafforschung <strong>häufiger erscheinen</strong>.
 • Bei der Schlafforschung werden <strong>einige Pokémon verschiedener Schlaftypen auftauchen</strong>, unabhängig vom Schlaftyp des Forschers an diesem Tag.
+Dieses einwöchige Event bietet eine besondere Gelegenheit, bei der <strong>Pokémon mit Bezug zur Kollaboration</strong> häufiger erscheinen!
+Vielleicht begegnest du während des Events sogar den neuen Pokémon <strong>[News:PokemonName ]</strong> und <strong>[News:PokemonName idx="1" ] mit einer Kapitänsmütze</strong>!
+Zusätzlich <strong>wird ein Pokémon</strong> zur ersten Snackzeit des Tages garantiert hungrig sein.
+Wir hoffen, dass du dich darauf freust!
+Eventzeitraum:
+- [News:Date_mdahm ] bis [News:Date_mdahm idx="1" ]
+Event-Gebiete:
+- Alle Gebiete
+Missionszeitraum:
+- [News:Date_mdahm ] bis [News:Date_mdahm idx="1" ]
+Die folgenden Effekte werden in den relevanten Gebieten während des Events aktiviert.
+- Alle Tage
+• Die Wahrscheinlichkeit, mit der das <strong>Haupttalent</strong> eines Helfer-Pokémon <strong>ausgelöst</strong> wird, wird <strong>mit [News:Num_Count ] multipliziert</strong>.
+• Schlaf-EP für Helfer-Pokémon <strong>×[News:Num_Count ]</strong>
+• Während der ersten Schlafforschung des Tages wird <strong>ein Pokémon garantiert hungrig sein</strong>.
+• Die durch Gerichte erhaltene Stärke wird <strong>mit [News:Num_Count ] multipliziert</strong> (<b>oder mit [News:Num_Count idx="1" ] bei köstlichen Gerichten bzw. mit [News:Num_Count idx="2" ] bei köstlichen Gerichten an Sonntagen</b>).
+• <strong>Bestimmte Pokémon werden</strong> bei der Schlafforschung <strong>häufiger erscheinen</strong>.
+• Bei der Schlafforschung werden <strong>einige Pokémon verschiedener Schlaftypen auftauchen</strong>, unabhängig vom Schlaftyp des Forschers an diesem Tag.
+- [News:Date_mda ] bis [News:Date_mda idx="1" ]
+• Schlafkraft <strong>×[News:Num_Count ]</strong>
 Lass es während der Beerenwoche Beeren regnen!
 Während dieses einwöchigen Events <strong>stehen Helfer-Pokémon mit einer auf Beeren bezogenen Spezialität im Vordergrund</strong>.
 Außerdem erscheinen <strong>einige Pokémon mit der Spezialität „Beeren“</strong> und <strong>Pokémon mit Haupttalenten wie Beerenregen</strong> häufiger!
@@ -4934,6 +4954,7 @@ Drachen-Fokuswoche
 Latios und der Seelentau
 Vorfeier zum 3. Jubiläum
 Fest zum 3. Jubiläum
+Kollaborationswoche
 Evoli
 Neujahr 1
 Neujahr 2
@@ -4983,6 +5004,7 @@ Latios 1
 Latios 2
 3. Jubiläum 1
 3. Jubiläum 2
+Kollab.-Woche
 ~~~~~~~~~~~~~~~
 Text File : MD_event_item_packs
 ~~~~~~~~~~~~~~~
@@ -5181,6 +5203,9 @@ Set zur Vorfeier zum 3. Jubiläum L
 Sommerfestival-Set S (2026)
 Sommerfestival-Set M (2026)
 Sommerfestival-Set L (2026)
+Kollaborations-Set S
+Kollaborations-Set M
+Kollaborations-Set L
 Pokémon-Stärkungs-Set ([Name:PokemonName ]) Nr. [Digit:Digit2 idx="1" ]
 ~~~~~~~~~~~~~~~
 Text File : MD_event_purchase_item_packs
@@ -5359,6 +5384,7 @@ Gewöhnlich
 Variation
 Halloween
 Festtage
+Spezial
 ~~~~~~~~~~~~~~~
 Text File : MD_fields
 ~~~~~~~~~~~~~~~
@@ -6072,6 +6098,9 @@ Tänzer-Pokémon
 Maus-Pokémon
 Maus-Pokémon
 Behandlungs-Pokémon
+Schmied-Pokémon
+Hammer-Pokémon
+Hammer-Pokémon
 Landwal-Pokémon
 Landwal-Pokémon
 Dornfisch-Pokémon
@@ -6303,6 +6332,9 @@ Mit seinen ausgefallenen Tänzen, die an ferne\nLänder erinnern, betört Bailon
 Seine elektrischen Backentaschen sind nicht ganz\nausgebildet. Um Strom zu erzeugen, muss es mit den\nBallen der Vorderpfoten kräftig daran reiben.\nManchmal entlädt es sogar Elektrizität, wenn es\nseine Pfoten im Schlaf an seinen Wangen reibt.\nVielleicht übt es ja, Strom zu erzeugen.
 Es nutzt eine besondere Kampftechnik, bei der es\nmit den Vorderpfoten zuschlägt und zeitgleich\nElektroschocks aus den Pfotenballen schießt.\nManchmal schläft es in typischer Kampfhaltung.\nVielleicht trainiert es im Traum seine Attacken.
 Es ist sehr gelassen und heilt gelegentlich verletzte\nPokémon, indem es Elektrizität aus seinen\nVorderpfoten entlädt. Siehst du es im Schlaf seine\nPfoten heben, kümmert es sich vielleicht um andere\nPokémon in seinem Traum.
+Der Hammer, den Forgita in der Hand hält, stellt\nes her, indem es Eisenspäne zusammenstampft.\nManchmal sieht man Forgita auch, wie es ihn im\nSchlaf an sich drückt.
+Tafforgita läuft immer mit einem großen Hammer\nherum. Er eignet sich nicht nur für den Kampf,\nsondern scheint auch als Kopfkissen zu dienen,\nwann immer Tafforgita sich schlafen legt.
+Granforgita ist intelligent und sehr wagemutig.\nMan sieht es häufig auf seinem riesigen Hammer\nliegend schlummern. Das harte Metall scheint für\nGranforgita ein gemütlicher Schlafplatz zu sein.
 Flaniwal bewohnt frostige Gebiete in kleinen\nHerden. Zuweilen wird es unruhig und stampft\nim Schlaf auf den Boden, als wäre es in Panik.\nWomöglich träumt es davon, von der Herde\nzurückgelassen zu werden.
 Das Horn an seinem Oberkiefer kann nicht nur\nsein Umfeld einfrieren, sondern auch Schallwellen\naussenden, um mit Mitgliedern seiner Herde zu\nkommunizieren. Ganz selten tut es dies auch im\nSchlaf, vielleicht, um unbewusst nach seinen\nArtgenossen zu rufen.
 Es lebt auf dem Grund von Teichen und Sümpfen. Man\nkann beobachten, wie es Felino auf seinem Rücken\nvon einem Ufer zum anderen befördert. Selten kann\nman es im Schlamm schlafen sehen. Vielleicht ist es\nbeim Tragen von Felino müde geworden.
@@ -6538,6 +6570,9 @@ Bailonda
 Pamo
 Pamamo
 Pamomamo
+Forgita
+Tafforgita
+Granforgita
 Flaniwal
 Kolowal
 Suelord
@@ -6559,6 +6594,8 @@ Evoli
 Evoli (Halloween)
 Seemops
 Seemops (Festtage)
+Pikachu
+Pikachu (Flugkapitän)
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_incense
 ~~~~~~~~~~~~~~~
@@ -6747,6 +6784,7 @@ Pikachu-Rauch (Festtage)
 Evoli-Rauch (Festtage)
 Evoli-Rauch (Halloween)
 Seemops-Rauch (Festtage)
+Pikachu-Rauch (Flugkapitän)
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_main_skills
 ~~~~~~~~~~~~~~~
@@ -6903,6 +6941,7 @@ Orange
 Lila
 Rote Mütze
 Festtagskranz
+Kapitänsmütze
 Mittelgroße Sorte
 Kleine Sorte
 Große Sorte
@@ -7674,6 +7713,15 @@ Ladepose
 Einkugelpose
 Traumheilungspose
 Ladepose
+Hammerkuschelpose
+Gähnpose
+Hammergriffpose
+Kinnstützpose
+Unhebbarpose
+Hammerkissenpose
+Hammerliegepose
+Hammerhebpose
+Hammerknuddelpose
 Armstreckpose
 Schwankpose
 Quengelpose
@@ -7696,6 +7744,7 @@ Päuschenpose
 Bassistenpose
 Fläzpose
 Einkugelpose
+Schweifstandpose
 Bauchkissenpose
 Geschenkpose
 ~~~~~~~~~~~~~~~
@@ -9258,6 +9307,9 @@ Text File : PokemonHeight
 0,3 m
 0,4 m
 0,9 m
+0,4 m
+0,7 m
+0,7 m
 1,2 m
 4,5 m
 1,8 m
@@ -9621,6 +9673,9 @@ Text File : PokemonWeight
 2,5 kg
 6,5 kg
 41,0 kg
+8,9 kg
+59,1 kg
+112,8 kg
 45,0 kg
 700,0 kg
 223,0 kg
@@ -9680,6 +9735,7 @@ Tutorial-Geschenk:\nBlumenpracht
 Nicht erhaltene\nNeutral-Minze
 Nicht erhaltenes Item
 Schlafforschungsbonus\nGarmin
+Kollaborations-Geschenk
 ~~~~~~~~~~~~~~~
 Text File : PresentBox_SCENE
 ~~~~~~~~~~~~~~~

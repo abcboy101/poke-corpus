@@ -3503,6 +3503,26 @@ The following effects will trigger in the applicable areas during this event.
 — All Days —
 • <strong>Certain Pokémon will be more likely to appear</strong> during sleep research.
 • <strong>A few Pokémon of different sleep types will appear</strong> during sleep research regardless of your sleep type for that day.
+This week-long event is a special opportunity when <strong>Pokémon associated with the collaboration</strong> are more likely to appear!
+During the event, you may even meet the new arrivals, <strong>[News:PokemonName ]</strong> and <strong>[News:PokemonName idx="1" ] wearing a captain’s hat</strong>!
+In addition, <strong>one Pokémon will for sure be hungry</strong> during the first snack time of the day.
+We hope you’re looking forward to this!
+Event Period:
+• [News:Date_mdahm ] to [News:Date_mdahm idx="1" ]
+Event Areas:
+• All areas
+Mission Period:
+• [News:Date_mdahm ] to [News:Date_mdahm idx="1" ]
+The following effects will trigger in the applicable areas during this event.
+— All Days —
+• The chance of each helper Pokémon’s main skill triggering will be <strong>multiplied by [News:Num_Count ]</strong>.
+• Helper Pokémon Sleep EXP <strong>×[News:Num_Count ]</strong>
+• During the first sleep research of the day, <strong>one Pokémon will for sure arrive hungry</strong>
+• Final Strength gains from dishes will be <strong>multiplied by [News:Num_Count ]</strong> (<b>or [News:Num_Count idx="1" ] for Extra Tasty dishes or [News:Num_Count idx="2" ] for Extra Tasty dishes on Sunday only</b>).
+• <strong>Certain Pokémon will be more likely to appear</strong> during sleep research.
+• <strong>A few Pokémon of different sleep types will appear</strong> during sleep research regardless of your sleep type for that day.
+— [News:Date_mda ] to [News:Date_mda idx="1" ] —
+• Drowsy Power <strong>×[News:Num_Count ]</strong>
 Get lots of Berries during Buncha Berries Week!
 This week-long event is a special opportunity where <strong>helper Pokémon with a specialty related to Berries will shine</strong>.
 On top of that, <strong>some Pokémon with the Berries specialty</strong> and <strong>Pokémon with main skills such as Berry Burst</strong>, are more likely to appear!
@@ -4934,6 +4954,7 @@ Dragon-Type Pokémon Spotlight Week
 Latios and the Soul Dew
 Third Anniversary Prelude Event
 Third Anniversary Fest
+Collaboration Week
 Eevee
 New Year 1
 New Year 2
@@ -4983,6 +5004,7 @@ Latios 1
 Latios 2
 Third\nAnniversary 1
 Third\nAnniversary 2
+Collab Week
 ~~~~~~~~~~~~~~~
 Text File : MD_event_item_packs
 ~~~~~~~~~~~~~~~
@@ -5181,6 +5203,9 @@ Third Anniversary Bundle L
 Summer Festival 2026 Bundle S
 Summer Festival 2026 Bundle M
 Summer Festival 2026 Bundle L
+Collab Bundle S
+Collab Bundle M
+Collab Bundle L
 Pokémon Raising Bundle ([Name:PokemonName ]) Vol. [Digit:Digit2 idx="1" ]
 ~~~~~~~~~~~~~~~
 Text File : MD_event_purchase_item_packs
@@ -5359,6 +5384,7 @@ Usual
 Variety
 Halloween
 Holiday
+Special
 ~~~~~~~~~~~~~~~
 Text File : MD_fields
 ~~~~~~~~~~~~~~~
@@ -6072,6 +6098,9 @@ Dancer Pokémon
 Mouse Pokémon
 Mouse Pokémon
 Hands-On Pokémon
+Metalsmith Pokémon
+Hammer Pokémon
+Hammer Pokémon
 Terra Whale Pokémon
 Terra Whale Pokémon
 Spiny Fish Pokémon
@@ -6303,6 +6332,9 @@ Dancing in ways that evoke far-away places,\nQuaquaval mesmerizes all that see i
 It has underdeveloped electric sacs on its cheeks.\nThese sacs can produce electricity only if Pawmi\nrubs them furiously with the pads on its forepaws.\nIt sometimes discharges electricity by rubbing its\ncheeks with its palms while sleeping—perhaps\nit’s practicing how to generate electricity.
 Pawmo uses a unique fighting technique in which it\nuses its forepaws to strike foes and zap them with\nelectricity from its paw pads simultaneously.\nIt sometimes sleeps in its characteristic battle\nstance—perhaps it’s training its fighting moves in\nits dreams.
 Pawmot has a peaceful personality and sometimes\nheals injured Pokémon by discharging electricity\nfrom its forepaws. If you see it raising its paws\nwhile it sleeps, it may be tending to other Pokémon\nin its dreams.
+The hammer Tinkatink holds is made by hand\nthrough the pounding of scrap iron. Tinkatink is\nalso sometimes found holding it with care when\nit sleeps.
+Tinkatuff is always walking around with a large\nhammer. The hammer isn’t just a tool for battle\nbut also seems to serve as a pillow whenever\nTinkatuff sleeps.
+Tinkaton is intelligent and very daring. It is often\nseen sleeping with its body resting on top of its\ngigantic hammer. The hard metal may be a comfy\nplace to sleep for Tinkaton.
 Cetoddle lives in cold regions, in small pods.\nSometimes it gets cranky and pounds the ground\nin its sleep, like it’s in a panic, possibly because\nit’s dreaming of being left behind by the group.
 Not only can the horn on its upper jaw freeze its\nsurroundings, but it can also emit sound waves to\ncommunicate with others in its pod. On very rare\noccasions, it emits sound waves in its sleep,\npossibly unconsciously calling out to its friends.
 Clodsire lives in ponds and swamps. It will carry\nWooper on its back and ferry them from one shore to\nthe other. On rare occasions, it can be seen sleeping\nin the mud; this may be because it got sleepy\nwhile ferrying Wooper.
@@ -6538,6 +6570,9 @@ Quaquaval
 Pawmi
 Pawmo
 Pawmot
+Tinkatink
+Tinkatuff
+Tinkaton
 Cetoddle
 Cetitan
 Clodsire
@@ -6559,6 +6594,8 @@ Eevee
 Eevee (Halloween)
 Spheal
 Spheal (Holiday)
+Pikachu
+Pikachu (Captain)
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_incense
 ~~~~~~~~~~~~~~~
@@ -6747,6 +6784,7 @@ Pikachu (Holiday) Incense
 Eevee (Holiday) Incense
 Eevee (Halloween) Incense
 Spheal (Holiday) Incense
+Pikachu (Captain) Incense
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_main_skills
 ~~~~~~~~~~~~~~~
@@ -6903,6 +6941,7 @@ Orange
 Purple
 Red Hat
 Holiday Wreath
+Captain’s Hat
 Medium Variety
 Small Variety
 Large Variety
@@ -7674,6 +7713,15 @@ Electrifying Sleep
 Curled-Up Sleep
 Dreamy Healing Sleep
 Electrifying Sleep
+Hammer Hug Sleep
+Big-Yawn Sleep
+Hammer Grabbing Sleep
+Chin Resting Sleep
+Unliftable Sleep
+Hammer-Pillow Sleep
+Hammer-Top Sleep
+Hammer Hoisting Sleep
+Hammer Cradling Sleep
 Outflung Sleep
 Wobbly Sleep
 Fussy Sleep
@@ -7696,6 +7744,7 @@ Seated Sleep
 Bass-Strumming Sleep
 Loafing Sleep
 Curled-Up Sleep
+Tail-Stand Sleep
 Atop-Belly Sleep
 Gift-Giving Sleep
 ~~~~~~~~~~~~~~~
@@ -9258,6 +9307,9 @@ Text File : PokemonHeight
 1'
 1'4"
 2'11"
+1'4"
+2'4"
+2'4"
 3'11"
 14'9"
 5'11"
@@ -9621,6 +9673,9 @@ Text File : PokemonWeight
 5.5 lbs.
 14.3 lbs.
 90.4 lbs.
+19.6 lbs.
+130.3 lbs.
+248.7 lbs.
 99.2 lbs.
 1543.2 lbs.
 491.6 lbs.
@@ -9680,6 +9735,7 @@ Festive Flowers\nTutorial Gift
 Unreceived\nNeutralizing Mint
 Unreceived item
 Garmin\nSleep Research Bonus
+Collab Gift
 ~~~~~~~~~~~~~~~
 Text File : PresentBox_SCENE
 ~~~~~~~~~~~~~~~

@@ -3503,6 +3503,26 @@ Los siguientes efectos se aplicarán en la zona correspondiente durante el event
 - Todos los días:
 • <strong>Ciertos Pokémon tendrán más probabilidades de aparecer</strong> durante el estudio.
 • <strong>Algunos Pokémon con distintos tipos de sueño se dejarán ver</strong> durante el estudio, sin importar cuál sea el tuyo.
+¡Este evento dura una semana y es una ocasión especial de encontrarte con más <strong>Pokémon relacionados con la colaboración</strong>!
+¡Durante el evento, podrías toparte con los recién llegados, <strong>[News:PokemonName ]</strong> y <strong>[News:PokemonName idx="1" ] con gorra de capitán</strong>!
+Además, <strong>un Pokémon estará especialmente hambriento</strong> durante la primera hora del picoteo del día.
+¡Esperamos veros a todos!
+Período del evento:
+• Del [News:Date_mdahm ] al [News:Date_mdahm idx="1" ].
+Zona:
+• Todas las zonas.
+Período de las misiones:
+• Del [News:Date_mdahm ] al [News:Date_mdahm idx="1" ].
+Los siguientes efectos se aplicarán en la zona correspondiente durante el evento.
+- Todos los días:
+• La probabilidad de activación de la habilidad principal de todos los Pokémon ayudantes <strong>se multiplicará por&nbsp;[News:Num_Count ]</strong>.
+• EXP al dormir de los Pokémon ayudantes&nbsp;<strong>×[News:Num_Count ]</strong>.
+• Se sumará a tu primer estudio del sueño del día <strong>un Pokémon que estará hambriento</strong>.
+• El vigor final obtenido por los platos <strong>se multiplicará por&nbsp;[News:Num_Count ]</strong> (<b>o por&nbsp;[News:Num_Count idx="1" ] en los platos riquísimos y por&nbsp;[News:Num_Count idx="2" ] en los platos riquísimos que prepares el domingo</b>).
+• <strong>Ciertos Pokémon tendrán más probabilidades de aparecer</strong> durante el estudio.
+• <strong>Algunos Pokémon con distintos tipos de sueño se dejarán ver</strong> durante el estudio, sin importar cuál sea el tuyo.
+— Del [News:Date_mda ] al [News:Date_mda idx="1" ] —
+• Poder&nbsp;Zzz&nbsp;<strong>×[News:Num_Count ]</strong>.
 ¡Hazte con un montón de bayas durante la Semana de las bayas a tutiplén!
 Durante este evento de una semana, ¡<strong>los Pokémon ayudantes con la especialidad "Bayas" destacarán más que nunca</strong>!
 ¡También tendrás más probabilidades de encontrarte con <strong>Pokémon con la especialidad "Bayas"</strong> y con <strong>Pokémon con habilidades principales como Bayamanía</strong>!
@@ -4934,6 +4954,7 @@ Semana de la especialidad "tipo Dragón"
 Latios y el Rocío Bondad
 Evento preludio al tercer aniversario
 Fiesta tercer aniversario
+Semana de colaboración
 Eevee
 Año Nuevo 1
 Año Nuevo 2
@@ -4983,6 +5004,7 @@ Latios 1
 Latios 2
 Tercer\naniversario 1
 Tercer\naniversario 2
+Semana de\ncolaboración
 ~~~~~~~~~~~~~~~
 Text File : MD_event_item_packs
 ~~~~~~~~~~~~~~~
@@ -5181,6 +5203,9 @@ Lote del tercer aniversario L
 Lote Fiesta estival 2026 S
 Lote Fiesta estival 2026 M
 Lote Fiesta estival 2026 L
+Lote de la colaboración S
+Lote de la colaboración M
+Lote de la colaboración L
 Lote cuidados Pokémon ([Name:PokemonName ]) vol. [Digit:Digit2 idx="1" ]
 ~~~~~~~~~~~~~~~
 Text File : MD_event_purchase_item_packs
@@ -5359,6 +5384,7 @@ Común
 Variedad
 Halloween
 Festivo
+Especial
 ~~~~~~~~~~~~~~~
 Text File : MD_fields
 ~~~~~~~~~~~~~~~
@@ -6072,6 +6098,9 @@ Pokémon Bailarín
 Pokémon Ratón
 Pokémon Ratón
 Pokémon Palmada
+Pokémon Forja
+Pokémon Martillo
+Pokémon Martillo
 Pokémon Geoballena
 Pokémon Geoballena
 Pokémon Pez Púas
@@ -6303,6 +6332,9 @@ Embelesa a quien lo ve con una danza que rebosa de\nexotismo. Incluso dormido, s
 Las bolsas de sus mejillas están poco desarrolladas,\npor lo que genera electricidad frotándolas con las\nalmohadillas de sus patas delanteras. A veces libera\nelectricidad frotando las palmas incluso dormido.\nQuizás esté practicando cómo generarla.
 Usa un arte marcial caracterizado por emplear las\npatas delanteras para asestar golpes y liberar\ndescargas eléctricas al mismo tiempo. A veces\nduerme en su postura de combate característica.\nQuizás esté practicando en sueños sus movimientos\nde combate.
 Es bastante calmado y a veces cura a Pokémon\nheridos descargando electricidad por las patas\ndelanteras. Si lo ves durmiendo con las patas en\nalto, tal vez esté cuidando en sueños de algún\nPokémon.
+El martillo de Tinkatink está forjado a mano\na base de golpear residuos metálicos. Lo sujeta\ncon cuidado incluso mientras duerme.
+Tinkatuff siempre lleva un martillo gigante.\nNo solo lo utiliza en combate, sino que también le\nsirve de almohada al dormir.
+Tinkaton posee una notable inteligencia y una\nexacerbada personalidad. Parece ser que el metal\nle resulta cómodo, ya que suele dormir encima de\nsu gigantesco martillo.
 Vive en manadas de pocos individuos en regiones\ngélidas. Mientras duerme, a veces se pone de mal\nhumor y golpea el suelo como si hubiese entrado\nen pánico. Esto indica que probablemente esté\nsoñando que el resto del grupo lo ha abandonado.
 No solo acumula energía gélida en el cuerno del\nmaxilar superior, sino que también puede usarlo\npara emitir ondas sonoras que le permiten\ncomunicarse con otros miembros de su manada.\nEn raras ocasiones lo hace en sueños, quizá para\nllamar a sus amigos de forma inconsciente.
 Vive en estanques y pantanos. Nada con Wooper\nsobre el lomo para ayudarlos a cruzar de una orilla\na otra. En raras ocasiones, se lo puede ver durmiendo\nen el barro. Tal vez se quedara dormido mientras\ntransportaba algún Wooper.
@@ -6538,6 +6570,9 @@ Quaquaval
 Pawmi
 Pawmo
 Pawmot
+Tinkatink
+Tinkatuff
+Tinkaton
 Cetoddle
 Cetitan
 Clodsire
@@ -6559,6 +6594,8 @@ Eevee
 Eevee (Halloween)
 Spheal
 Spheal (Festivo)
+Pikachu
+Pikachu (Capitán)
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_incense
 ~~~~~~~~~~~~~~~
@@ -6747,6 +6784,7 @@ Incienso Pikachu (Festivo)
 Incienso Eevee (Festivo)
 Incienso Eevee (Halloween)
 Incienso Spheal (Festivo)
+Incienso Pikachu (Capitán)
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_main_skills
 ~~~~~~~~~~~~~~~
@@ -6903,6 +6941,7 @@ Naranja
 Morado
 Gorro rojo
 Corona festiva
+Gorra de capitán
 Variante Mediana
 Variante Pequeña
 Variante Grande
@@ -7674,6 +7713,15 @@ Electrizante
 Ovillo
 Bamboleo onírico
 Electrizante
+Abrazamartillo
+Gran bostezo
+Agarramartillo
+Reposabarbilla
+Imblandible
+Martillo-almohada
+Sobremartillo
+Alzamartillo
+Acunamartillo
 Brazos abiertos
 Oscilante
 Mohína
@@ -7696,6 +7744,7 @@ Sentadita
 Bajo onírico
 Holgazán
 Ovillo
+Cola-equilibrio
 Sobre la panza
 Regalo
 ~~~~~~~~~~~~~~~
@@ -9258,6 +9307,9 @@ Text File : PokemonHeight
 0,3 m
 0,4 m
 0,9 m
+0,4 m
+0,7 m
+0,7 m
 1,2 m
 4,5 m
 1,8 m
@@ -9621,6 +9673,9 @@ Text File : PokemonWeight
 2,5 kg
 6,5 kg
 41,0 kg
+8,9 kg
+59,1 kg
+112,8 kg
 45,0 kg
 700,0 kg
 223,0 kg
@@ -9680,6 +9735,7 @@ Regalo del tutorial\nde la cesta floral
 Menta Neutra no recibida
 Objeto no recibido
 Bonus de estudio del sueño\nGarmin
+Regalo de la colaboración
 ~~~~~~~~~~~~~~~
 Text File : PresentBox_SCENE
 ~~~~~~~~~~~~~~~
