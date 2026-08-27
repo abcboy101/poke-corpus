@@ -135,6 +135,11 @@
 이 포켓몬은 「포켓몬의 도구」를 [Num:Int id="0" max_length="1" ]장까지 붙일 수 있다.
 이 포켓몬이 벤치에 있다면 자신의 차례에 1번 사용할 수 있다. 자신의 트래쉬에서 에너지를 [Num:Int id="0" max_length="1" ]개 선택해서 배틀필드의 [Img:Element id="1" ]포켓몬에게 붙인다.
 자신의 차례에 이 카드를 패에서 꺼내서 진화시켰을 때 [Ctrl:NoBreak]1번[/Ctrl:NoBreak] 사용할 수 있다. 자신의 덱을 위에서부터 [Ctrl:NoBreak][Num:Int id="0" max_length="1" ]장[/Ctrl:NoBreak] 보고 그 중에서 아이템을 모두 패로 가져온다. 남은 카드는 덱으로 되돌린다.
+이 포켓몬이 배틀필드에 있다면 자신의 차례에 1번 사용할 수 있다. 자신의 덱을 [Num:Int id="0" max_length="1" ]장 뽑는다.
+자신의 차례에 이 카드를 패에서 꺼내서 진화시켰을 때 [Ctrl:NoBreak ]1번[/Ctrl:NoBreak] 사용할 수 있다. 상대의 배틀 포켓몬을 [Ctrl:Bold][Text:SpecialCondition id="0" ][/Ctrl:Bold][Gr:Patchim v="gwa_wa" ] [Ctrl:Bold][Text:SpecialCondition id="1" ][/Ctrl:Bold][Gr:Patchim v="eu_" ]로 만든다.
+자신의 차례에 자신의 트레이너스의 효과로 동전을 던졌을 때 1번 사용할 수 있다. 그 동전의 결과를 모두 없애고 처음부터 동전을 다시 던진다. 이 특성은 다른 「[Text:AbilityName id="0" suffix="Short" ]」[Gr:Patchim v="eul_reul" ] 사용한 차례는 사용할 수 없다.
+자신의 차례에 이 카드를 패에서 꺼내서 진화시켰을 때 [Ctrl:NoBreak ]1번[/Ctrl:NoBreak] 사용할 수 있다. 상대의 배틀 포켓몬에서 에너지를 랜덤으로 [Ctrl:NoBreak ][Num:Int id="0" max_length="1" ]개[/Ctrl:NoBreak] 이 포켓몬에게 바꿔 붙인다.
+자신의 차례에 1번 사용할 수 있다. 상대의 패에서 랜덤으로 [Num:Int id="0" max_length="1" ]장 앞면을 본다.
 파우더 힐
 향기의 덫
 반격
@@ -294,6 +299,14 @@ POWER
 더블 커스텀
 용의 은혜
 보물 모으기
+로열 블룸
+길동무봄버
+나쁜 번뜩임
+보일러 스모그
+럭셔리 동전
+마하 스텔스
+도둑질 앞니
+스파이 활동
 새벽의 날개
 알로라
 빗방울의 모습
@@ -307,6 +320,7 @@ POWER
 오리진
 팔데아
 연격
+로켓단의
 태양의 모습
 황혼의 갈기
 설운의 모습
@@ -637,6 +651,16 @@ POWER
 상대 배틀 포켓몬의 남은 HP가 이 포켓몬의 남은 HP보다 적다면 [Num:Int id="0" max_length="3" ]데미지를 추가한다.
 이 포켓몬에서 [Img:Element id="0" ][Gr:Patchim v="gwa_wa" ] [Img:Element id="1" ]에너지를 모두 트래쉬하고 트래쉬한 에너지의 개수 × [Num:Int id="2" max_length="3" ]데미지를 준다.
 자신의 필드의 포켓몬에서 에너지를 원하는 만큼 선택해서 자신의 포켓몬에게 원하는 대로 바꿔 붙인다.
+자신의 덱을 위에서부터 [Num:Int id="0" max_length="2" ]장 앞면으로 해서 그 중에 있는 이름에 「로켓단」이 적힌 포켓몬의 장수 × [Num:Int id="1" max_length="3" ]데미지를 준다. 앞면으로 한 카드는 덱으로 되돌린다.
+상대의 배틀 포켓몬이 이름에 「로켓단」이 적힌 포켓몬이라면 [Num:Int id="0" max_length="3" ]데미지를 추가한다.
+상대의 배틀 포켓몬이 받고 있는 특수 상태의 수 × [Num:Int id="0" max_length="3" ]데미지를 추가한다.
+동전을 [Num:Int id="0" max_length="2" ]번 던져서 앞면이 나온 수만큼의 [Img:Element id="1" ]에너지를 자신의 에너지존에서 내보내 이 포켓몬에게 붙인다.
+데미지를 받고 있는 상대의 벤치 포켓몬 1마리에게도 [Num:Int id="0" max_length="3" ]데미지를 준다.
+자신의 트래쉬에서 아이템을 랜덤으로 [Num:Int id="0" max_length="2" ]장 패로 가져온다.
+자신의 패의 장수 × [Num:Int id="0" max_length="3" ]데미지를 준다.
+상대의 배틀 포켓몬이 [Ctrl:Bold][Text:SpecialCondition id="0" ][/Ctrl:Bold][Gr:Patchim v="i_" ]라면 이 포켓몬의 HP를 [Num:Int id="1" max_length="3" ]회복.
+이 포켓몬이 데미지를 받고 있다면 이 기술의 데미지를 -[Num:Int id="0" max_length="3" ]한다.
+상대의 이전 차례에 상대가 가져간 포인트의 수 × [Num:Int id="0" max_length="3" ]데미지를 추가한다.
 덩굴채찍
 잎날가르기
 메가드레인
@@ -1717,6 +1741,36 @@ V플레임
 원수갚기
 골드브레이크
 헬하운드 플레어
+로켓피버
+혼내주기
+반딧불의분노
+잎날부메랑
+조롱태우기
+히트차지
+지옥불의날개
+독열엄니
+빙설의폭풍
+소울카운터
+천둥 갈고리손톱
+쓰레기 뒤지기
+핸드키네시스
+함정에 빠트리기
+사이킥봄
+펀치&드로
+가이아임팩트
+섀도시커
+오물공격
+독빨기
+역분사
+혼란가스
+말뚝박기해머
+드래곤슬램
+부스트대시
+데스로그
+치고숨기
+탱탱옐
+히프드롭
+냉혹한회오리
 [Ctrl:Bold]잠듦[/Ctrl:Bold]
 자신의 포켓몬에게 에너지를 [Num:Int id="0" max_length="2" ]개 붙인다
 피카츄 실루엣 이펙트(배틀)
@@ -1848,6 +1902,7 @@ V플레임
 진격 패러독스 엠블럼 이벤트
 천공의 지배자 엠블럼 이벤트
 미라클 데이즈 엠블럼 이벤트
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 엠블럼 이벤트
 어니부기 덱(최강의 유전자)
 이상해풀 덱(최강의 유전자)
 리자드 덱(최강의 유전자)
@@ -2312,8 +2367,21 @@ V플레임
 [Text:CardName v="MEGARAYQUAZA_EX" ] 덱(천공의 지배자)
 [Text:CardName v="SWANNA_EX" ] 덱(천공의 지배자)
 [Text:CardName v="WHALOH_EX" ] 덱(천공의 지배자)
+[Text:CardName v="ROCKETDANNOBACHINUNI" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNOBARRIERD" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNONYULA" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNOMEWTWO" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNOBETBETON" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNOPERSIAN" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNOFIRE_EX" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNOFREEZER_EX" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNOTHUNDER_EX" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNOYADOKING_EX" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNOMATADOGAS_EX" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNORATTA_EX" ] 덱(로켓단의 야망)
 [Text:CardName v="HELLGAR" ] 덱(천공의 지배자)
 [Text:CardName v="MEGAHELLGAR_EX" ] 덱(천공의 지배자)
+[Text:CardName v="ROCKETDANNOLAPLACE" ] 덱(로켓단의 야망)
 [Text:CardName v="SHIRONA" ] 덱(몽환 퍼레이드)
 [Text:CardName v="KAIRYU" ] 덱(몽환 퍼레이드)
 [Text:CardName v="SILVADY" ] 덱(몽환 퍼레이드)
@@ -2516,6 +2584,12 @@ V플레임
 [Text:CardName v="MEGAMETAGROSS_EX" ] 덱(천공의 지배자)
 [Text:CardName v="MEGARAYQUAZA_EX" ] 덱(천공의 지배자)
 [Text:CardName v="SWANNA_EX" ] 덱(천공의 지배자)
+[Text:CardName v="ROCKETDANNOFIRE_EX" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNOFREEZER_EX" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNOTHUNDER_EX" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNOYADOKING_EX" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNOMATADOGAS_EX" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNORATTA_EX" ] 덱(로켓단의 야망)
 엘리트 덱([Text:CardName v="MEGALIZARDONY_EX" ])
 엘리트 덱([Text:CardName v="MEGALUCARIO_EX" ])
 배틀에 사용할 수 있는 렌탈 덱입니다\n덱에 포함된 카드를 가지고 있지 않아도\n배틀에서 사용할 수 있습니다
@@ -2704,6 +2778,12 @@ V플레임
 [Text:CardName v="MEGAMETAGROSS_EX" ] 덱(천공의 지배자)
 [Text:CardName v="MEGARAYQUAZA_EX" ] 덱(천공의 지배자)
 [Text:CardName v="SWANNA_EX" ] 덱(천공의 지배자)
+[Text:CardName v="ROCKETDANNOFIRE_EX" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNOFREEZER_EX" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNOTHUNDER_EX" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNOYADOKING_EX" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNOMATADOGAS_EX" ] 덱(로켓단의 야망)
+[Text:CardName v="ROCKETDANNORATTA_EX" ] 덱(로켓단의 야망)
 엘리트 덱([Text:CardName v="MEGALIZARDONY_EX" ])
 엘리트 덱([Text:CardName v="MEGALUCARIO_EX" ])
 덱 기능에서 사용할 수 있는 테마 덱 레시피입니다\n레시피에 적힌 카드를 모으면\n덱을 생성하여 플레이할 수 있습니다
@@ -2769,6 +2849,7 @@ Vickie
 [Text:CardName v="SOUBLADES_EX" ] 드롭 이벤트
 [Text:CardName v="HISUIZORUA" ] 드롭 이벤트
 [Text:CardName v="MEGAHELLGAR_EX" ] 드롭 이벤트
+[Text:CardName v="ROCKETDANNOLAPLACE" ] 드롭 이벤트
 랜덤 배틀(B2)
 랜덤 배틀(B2a)
 랜덤 배틀(B2b)
@@ -2776,6 +2857,7 @@ Vickie
 랜덤 배틀(B3a)
 랜덤 배틀(B3b)
 랜덤 배틀(B4)
+랜덤 배틀(B4a)
 [Ctrl:Bold]화상[/Ctrl:Bold]
 금색 프레임
 컬렉션 파일, 컬렉션 보드,\n배틀에서 표시할 수 있는 금색 프레임입니다
@@ -4112,6 +4194,55 @@ Vickie
 치유의 바닷가
 무지갯빛 동굴
 메가헬가 ex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]스라크
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]라프라스
+갈모매
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]마자용
+푸호꼬
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]마그마
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]파이어 ex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]델빌
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]헬가
+테르나
+마폭시
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]프리져 ex
+패리퍼
+[Text:AdditionalName v="ADDITIONAL_NAME_Hisui" type="A" space="post" ]배쓰나이
+[Text:AdditionalName v="ADDITIONAL_NAME_Hisui" type="A" space="post" ]대쓰여너
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]찌리리공
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]붐볼
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]썬더 ex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]찌르성게
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]야돈
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]야도킹 ex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]슬리프
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]슬리퍼
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]마임맨
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]뮤츠
+랜드로스
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]아보
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]아보크
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]질퍽이
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]질뻐기
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]또가스
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]또도가스 ex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]포푸니
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]어리짱
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]벼리짱
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]두드리짱
+레지드래고
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]꼬렛
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]레트라 ex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]나옹
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]페르시온
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]켈리몬
+핑복
+로켓단의 도둑질 머신
+로켓단의 끈적끈적 바주카
+로켓단의 연구원
+로켓단의 대작전
+로켓단의 보스
+게임센터
 캠페인에서 입수
 겟 챌린지에서 입수
 미션에서 입수
@@ -4134,6 +4265,7 @@ Vickie
 메가엘레이드
 테라파고스
 메가디안시
+로켓단
 아랍에미리트
 앤티가 바부다
 앵귈라
@@ -4524,14 +4656,18 @@ Vickie
 시즌 A3a 마스터볼 랭크(TOP 5000)
 메가라이징 엠블럼 이벤트에서 획득할 수 있는\n은상 엠블럼입니다
 메가라이징 엠블럼 이벤트 은상
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ](엠블럼)
 랭크 매치 시즌 A3a에서\nTOP 1000을 달성하면 획득할 수 있는\n마스터볼 랭크의 엠블럼입니다
 시즌 A3a 마스터볼 랭크(TOP 1000)
 메가라이징 엠블럼 이벤트에서 획득할 수 있는\n금상 엠블럼입니다
 메가라이징 엠블럼 이벤트 금상
+[Text:CardName v="ROCKETDANNOSHITAPPA" ](엠블럼)
 랭크 매치 시즌 A3a에서 획득할 수 있는\n하이퍼볼 랭크1의 엠블럼입니다
 시즌 A3a 하이퍼볼 랭크1
+[Text:CardName v="ROCKETDANNOKENKYUUIN" ](엠블럼)
 랭크 매치 시즌 A3a에서 획득할 수 있는\n하이퍼볼 랭크2의 엠블럼입니다
 시즌 A3a 하이퍼볼 랭크2
+[Text:CardName v="ROCKETDANNOBOSS" ](엠블럼)
 랭크 매치 시즌 A3a에서 획득할 수 있는\n하이퍼볼 랭크3의 엠블럼입니다
 시즌 A3a 하이퍼볼 랭크3
 랭크 매치 시즌 A3a에서 획득할 수 있는\n하이퍼볼 랭크4의 엠블럼입니다
@@ -4754,12 +4890,20 @@ Vickie
 천공의 지배자 엠블럼 이벤트 금상
 랭크 매치 시즌 A4b에서 획득할 수 있는\n하이퍼볼 랭크1의 엠블럼입니다
 시즌 A4b 하이퍼볼 랭크1
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 엠블럼 이벤트에서\n획득할 수 있는 참가상 엠블럼입니다
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 엠블럼 이벤트 참가상
 랭크 매치 시즌 A4b에서 획득할 수 있는\n하이퍼볼 랭크2의 엠블럼입니다
 시즌 A4b 하이퍼볼 랭크2
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 엠블럼 이벤트에서\n획득할 수 있는 동상 엠블럼입니다
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 엠블럼 이벤트 동상
 랭크 매치 시즌 A4b에서 획득할 수 있는\n하이퍼볼 랭크3의 엠블럼입니다
 시즌 A4b 하이퍼볼 랭크3
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 엠블럼 이벤트에서\n획득할 수 있는 은상 엠블럼입니다
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 엠블럼 이벤트 은상
 랭크 매치 시즌 A4b에서 획득할 수 있는\n하이퍼볼 랭크4의 엠블럼입니다
 시즌 A4b 하이퍼볼 랭크4
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 엠블럼 이벤트에서\n획득할 수 있는 금상 엠블럼입니다
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 엠블럼 이벤트 금상
 랭크 매치 시즌 A4b에서 획득할 수 있는\n슈퍼볼 랭크1의 엠블럼입니다
 시즌 A4b 슈퍼볼 랭크1
 랭크 매치 시즌 A4b에서 획득할 수 있는\n슈퍼볼 랭크2의 엠블럼입니다
@@ -4984,6 +5128,26 @@ Vickie
 시즌 B4 비기너 랭크2
 시즌 B4 비기너 랭크3
 시즌 B4 비기너 랭크4
+시즌 B4a 마스터볼 랭크
+시즌 B4a 마스터볼 랭크(TOP 10000)
+시즌 B4a 마스터볼 랭크(TOP 5000)
+시즌 B4a 마스터볼 랭크(TOP 1000)
+시즌 B4a 하이퍼볼 랭크1
+시즌 B4a 하이퍼볼 랭크2
+시즌 B4a 하이퍼볼 랭크3
+시즌 B4a 하이퍼볼 랭크4
+시즌 B4a 슈퍼볼 랭크1
+시즌 B4a 슈퍼볼 랭크2
+시즌 B4a 슈퍼볼 랭크3
+시즌 B4a 슈퍼볼 랭크4
+시즌 B4a 몬스터볼 랭크1
+시즌 B4a 몬스터볼 랭크2
+시즌 B4a 몬스터볼 랭크3
+시즌 B4a 몬스터볼 랭크4
+시즌 B4a 비기너 랭크1
+시즌 B4a 비기너 랭크2
+시즌 B4a 비기너 랭크3
+시즌 B4a 비기너 랭크4
 1주년
 스페셜 이벤트 2025 기념 엠블럼입니다
 스페셜 이벤트 2025(엠블럼)
@@ -5047,6 +5211,7 @@ B3
 B3a
 B3b
 B4
+B4a
 최강의 유전자
 환상이 있는 섬
 시공의 격투
@@ -5067,6 +5232,7 @@ B4
 진격 패러독스
 미라클 데이즈
 천공의 지배자
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망
 #마이컬렉션
 #좋아하는포켓몬
 #마음에드는일러스트
@@ -6520,6 +6686,39 @@ UB의 일종. 이 세계의\n물건에 불결함을 느끼는 것인지\n전혀 
 신화 속 포켓몬을 모델로\n만들었지만 힘이 폭주하는 것을\n억제하는 마스크를 쓰고 있다.
 본래의 힘을 해방하게 하는\n마지막 요소는 신뢰하는\n트레이너와의 유대였다.
 어느 과학자의 연구로\n태어났다. 그 힘은\n싸움에 특화되어 있다.
+바닷바람을 타고 글라이더처럼 활공한다.\n겨울이 되면 둥지 주변에 먹이를 숨긴다.
+진화로 인해 쓰고 있던\n어미의 뼈는 일체화되었고\n성격은 더욱 난폭해졌다.
+지열로 데워진 구멍에서 지낸다.\n적이 가까이 오면 구멍에서 뛰쳐나와\n커다란 입으로 물어 버린다.
+반짝반짝 빛나는 것을\n아주 좋아하기에 동굴 안에서 발견한\n보물을 자신의 둥지에 모아 둔다.
+잔가지는 푸호꼬의 간식이다.\n아작아작 먹다 보면\n강한 적에 맞설 용기가 솟아난다.
+귀 안쪽의 눈알 모양에서\n사이코 파워를 내지만\n너무나도 강력하여 귀를 막고 있다.
+무리를 짓는 것을 선호하지 않는다.\n짧은 팔 대신 덩굴을\n능숙하게 다뤄서 생활하고 있다.
+지나치게 높은 자존심이 옥에 티다.\n다른 포켓몬과 연계하기까지\n많은 시간이 걸린다.
+상대를 움츠러들게 하는 눈빛과\n위풍당당한 자태로 인해\n숲의 군주라고 불리고 있다.
+나뭇가지를 꼬리에서 뽑을 때\n불이 붙는다. 그 불꽃을 불씨 삼아\n강력한 기술을 내보낸다.
+염력으로 불꽃을 조종한다.\n섭씨 3000도의 불꽃으로 된 소용돌이로\n상대를 휘감은 다음 태워 버린다.
+부리 안에 새끼를 넣어서\n적으로부터 보호한다.\n파도가 조용한 날은 바다에 떠서 잠시 쉰다.
+생태가 너무나도 다른 탓에 최근에는\n배쓰나이와 다른 종이라는 설이\n유력해지고 있다.
+가공할 만한 점프력을 가졌다.\n죽은 동료들의 분노가\n몸을 붉게 물들였다.
+발전소 등에서 나타난다.\n몬스터볼과 헷갈려서\n만지고 마비되는 사람이 많다.
+작은 자극에도 반응해서 폭발한다.\n폭탄볼이라 불리며\n두려움의 대상이 되고 있다.
+벼락이 많이 떨어지는 곳을 선호한다.\n갈기로 벼락을 받아 내서\n몸에 전기를 비축한다.
+우렛소리를 들으면 무리의 줄뮤마가\n벼락을 통해 충전할 수 있게\n무리 지어 뇌운을 뒤쫓는다.
+해초가 닿기만 해도 놀라서\n방전해 버릴 정도로 겁쟁이다.\n입술은 전기가 통하지 않는다.
+위험을 감지하면 사이코 파워를\n최대 출력으로 방출한다.\n상대가 어떻게 되든 신경 쓰지 않는다.
+숲속 깊은 곳에서 조용히 지낸다.\n망토처럼 생긴 보랏빛 털은\n나이를 먹을수록 점점 길어진다.
+바람이나 번개를 거둬들여 바꾼\n에너지가 흙에 영양을\n주어 대지를 풍족하게 한다.
+풀밭 등에 많이 서식한다.\n혀를 날름거리며\n주위의 위험을 감지한다.
+매우 집념이 강한 성격이다.\n한번 타깃으로 정한 먹이는\n어디든지 쫓아간다.
+체내의 독가스는 공기보다\n약간 가벼운 성분이다.\n그래서 항상 공중에 살짝 떠 있다.
+위기에 처하면 몸을 둥글게 말고\n등의 가시를 곤두세워\n마구잡이로 전격을 쏘아댄다.
+코인이 쌓여서 만들어진 몸은\n상당히 튼튼하다.\n코인을 연속으로 발사해서 상대를 압도한다.
+머리에 달린 2개의 돌기는\n센서 역할을 한다. 저 멀리 있는\n먹이의 모습도 알 수 있다.
+온몸이 드래곤 에너지의\n결정체다. 모든 드래곤포켓몬의\n힘을 가지고 있는 듯하다.
+생명력이 강해서 더러운\n곳에서도 사는데 문제없다.\n내버려두면 점점 수가 불어난다.
+하얗고 둥근 돌을 알이라고\n생각하고는 소중히 가지고 있다.\n말려 있는 머리 모양을 신경 쓰고 있다.
+가만히 두면 털이 점점\n자라지만 신뢰하는 자가 아니면\n커트를 허락하지 않는다.
+깔끔한 것을 좋아하고 꼼꼼하다.\n꽃향기 같은 향기를 풍기며\n주위의 포켓몬들을 치유한다.
 머리에 돋아난 가시는 이빨이\n변화한 것이다. 상처 입고 부러져도\n그 자리에 몇 번이고 생겨난다.
 강력한 영력으로 사람과\n포켓몬을 조종해 킬가르도의\n입맛에 맞는 나라를 만들게 했다.
 방대한 에너지가 세포를\n격렬하게 자극한다. 잠들었던\n드래곤의 피가 깨어났다고 한다.
@@ -6783,6 +6982,7 @@ UKUMO uiti
 Yoshimoto Yoshimon
 Akino Fukuji
 Iwamoto05
+Kazuki Minami
 Coming Soon
 챌린지 파워 대기 시간을 단축하는 플레이\n아이템입니다. 사용하면 겟 챌린지까지 필요한 시간이\n1시간 단축됩니다. 미션 정보 등에서 획득 가능합니다.
 일부 「혼자서」 배틀이나 이벤트에\n도전할 때 필요한 플레이 아이템입니다\n사용하면 도전하기까지 시간을 단축할 수 있습니다
@@ -6794,12 +6994,14 @@ Coming Soon
 자신의 카드 화면에서 레어도가 높은 카드를\n소비하면 획득할 수 있습니다. 숍에서 특별한 주변 상품\n혹은 플레이 아이템과 교환할 수 있습니다
 프리미엄 미션에서 획득할 수 있습니다\n숍에서 주변 상품 혹은 프로모 카드와\n교환할 수 있습니다
 모으면 플레이어 레벨을 올릴 수 있는\n플레이 아이템입니다
+오랫동안 사용했던\n로켓단의 조무래기의 양말\n냄새가 조금 난다
 기한이 지난 겟 챌린지를 부활시키기 위한\n플레이 아이템입니다. 1번에 1개, 챌린지 파워와 함께\n소비해야 합니다
 숍에서 덱(20장 카드)과 교환할 수 있습니다\nex 스타트 덱 미션에서 획득할 수 있습니다\n교환 기간이 지나면 삭제됩니다
 테마 컬렉션 혹은 도감 미션을 달성하면\n획득할 수 있습니다\n숍에서 특정 엠블럼과 교환할 수 있습니다
 숍에서 주변 상품이나 플레이 아이템과\n교환할 수 있습니다\n이벤트 미션을 달성하면 획득할 수 있습니다\n교환 기간이 지나면 삭제됩니다
 지금은 쓸 수 없는 티켓입니다\n기대해 주세요!
 숍에서 프로모 카드와 교환할 수 있습니다\n이벤트 미션을 달성하면 획득할 수 있습니다\n교환 기간이 지나면 삭제됩니다
+로켓단의 특별 임무를 달성하면 획득할 수 있습니다\n어딘가에 쓰일 것 같습니다...
 뷰티
 쿨
 큐트
@@ -6819,6 +7021,7 @@ Coming Soon
 스페셜 숍 티켓
 프리미엄 티켓
 EXP
+로켓단의 조무래기의 양말
 부활 시계
 엠블럼 티켓(최강의 유전자)
 엠블럼 티켓(환상이 있는 섬)
@@ -6877,6 +7080,8 @@ EXP
 프로모 카드 교환 티켓([Text:CardName v="MEGAHELLGAR_EX" ] 드롭 이벤트)
 프로모 카드 교환 티켓([Text:CardName v="SOUBLADES_EX" ] 드롭 이벤트)
 프로모 카드 교환 티켓([Text:CardName v="HISUIZORUA" ] 드롭 이벤트)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 괴상한 티켓
+프로모 카드 교환 티켓([Text:CardName v="ROCKETDANNOLAPLACE" ] 드롭 이벤트)
 언젠가 쓰일 티켓
 비눗방울 물색 이펙트(반짝이)
 비눗방울 핑크 이펙트(반짝이)
@@ -7002,6 +7207,9 @@ EXP
 렌탈 덱 「[Mst:RentalDeckName id="0" ]」[Gr:Patchim v="eu_" ]로 「혼자서」 배틀을 [Num:Int id="1" max_length="3" ]번 하자
 나눠주기를 [Num:Int id="0" max_length="3" ]번 하자
 「혼자서」 배틀에서 [Num:Int id="0" max_length="3" ]포인트 획득하자
+로그인 하라!([Num:Int id="0" max_length="3" ]일차)
+배틀을 [Num:Int id="0" max_length="3" ]번 하라!
+겟 챌린지를 [Num:Int id="0" max_length="3" ]번 플레이하라!
 첫 선택
 에레브와 마그마
 상록숲
@@ -7409,6 +7617,29 @@ ex 컴플리트!
 미라클 데이즈 뮤지엄②
 강아지포켓몬 총집합!
 컬러풀 댄스 쇼!
+전설의 포켓몬을 수색하라!
+연구소에 잠입하라!
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] 가입을 권유하라!
+보스와 파트너
+연구원의 괴상한 발명품
+[Text:CardName v="ILLUMISE" ][Gr:Patchim v="gwa_wa" ] [Text:CardName v="BARUBEAT" ]
+긴 코 포켓몬
+[Text:CardName v="ROCKETDANNOSHITAPPA" ]①
+[Text:CardName v="ROCKETDANNOSHITAPPA" ]②
+독가스 주의
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 포켓몬들
+손에 물건을 들고 있는 포켓몬
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 뮤지엄①
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 뮤지엄②
+[Text:CardName v="ROCKETDANNOSHITAPPA" ] 총집합
+괴상한 발명품 컬렉터
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] 카드 컴플리트
+[Text:CardNameWithSubName id="0" ] 카드를 [Num:Int id="1" max_length="3" ]장 입수하라!
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] 카드를 [Num:Int id="1" max_length="3" ]장 입수하라!
+[Text:CardName v="TRIMMIEN" ]의 패션 쇼
+[Text:CardName v="PIKACHU" ]의 모험
+수컷과 암컷의 [Text:CardName v="NYAONIX" ]
+4마리의 「화신」들
 덱 미션
 덱 미션
 최강의 유전자 엠블럼 이벤트1
@@ -7498,6 +7729,12 @@ ex 스타트 덱 미션
 [Text:CardName v="HISUIZORUA" ] 드롭 이벤트
 미라클 데이즈 엠블럼 이벤트
 복수 시리즈①
+[Text:CardName v="ROCKETDANNOLAPLACE" ] 드롭 이벤트
+[Text:CardName v="ROCKETDANNOLAPLACE" ] 드롭 이벤트
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 엠블럼 이벤트
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 엠블럼 이벤트
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 특별 임무
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 특별 임무
 초급
 고급
 일일
@@ -7529,6 +7766,7 @@ ex 스타트 덱
 편리한 카드
 일람
 복귀
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]
 랜덤 배틀(고급)
 랜덤 배틀(초급)
 랜덤 배틀(엑스퍼트)
@@ -7569,6 +7807,7 @@ TOP 10000
 진격 패러독스 확장팩
 미라클 데이즈 확장팩
 천공의 지배자 확장팩
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 확장팩
 A시리즈의 제1탄 프로모 카드 팩
 A시리즈의 제2탄 프로모 카드 팩
 A시리즈 제3탄 프로모 카드 팩
@@ -7593,6 +7832,7 @@ B시리즈 제8탄 프로모 카드 팩
 B시리즈 제9탄 프로모 카드 팩
 B시리즈 제10탄 프로모 카드 팩
 B시리즈 제11탄 프로모 카드 팩
+B시리즈 제12탄 프로모 카드 팩
 [Mst:Rarity v="RARITY_MSID_RR" ] 이상 1장 확정
 최강의 유전자 뮤츠
 최강의 유전자 뮤츠([Mst:Rarity v="RARITY_MSID_RR" ] 이상 1장 확정)
@@ -7624,6 +7864,7 @@ B시리즈 제11탄 프로모 카드 팩
 진격 패러독스
 미라클 데이즈
 천공의 지배자
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망
 프로모 카드 팩 A시리즈 제1탄
 프로모 카드 팩 A시리즈 제2탄
 프로모 카드 팩 A시리즈 제3탄
@@ -7648,6 +7889,7 @@ B시리즈 제11탄 프로모 카드 팩
 프로모 카드 팩 B시리즈 제9탄
 프로모 카드 팩 B시리즈 제10탄
 프로모 카드 팩 B시리즈 제11탄
+프로모 카드 팩 B시리즈 제12탄
 [Mst:Rarity v="RARITY_MSID_RR" ] 이상 확정
 기본 확률
 기본 확률 +1장
@@ -7976,6 +8218,8 @@ B시리즈 제11탄 프로모 카드 팩
 전국도감No. 0275 부정하기포켓몬 키：1.3m 몸무게：59.6kg
 전국도감No. 0276 아기제비포켓몬 키：0.3m 몸무게：2.3kg
 전국도감No. 0277 제비포켓몬 키：0.7m 몸무게：19.8kg
+전국도감No. 0278 괭이갈매기포켓몬 키：0.6m 몸무게：9.5kg
+전국도감No. 0279 물새포켓몬 키：1.2m 몸무게：28.0kg
 전국도감No. 0280 느낌포켓몬 키：0.4m 몸무게：6.6kg
 전국도감No. 0281 감정포켓몬 키：0.8m 몸무게：20.2kg
 전국도감No. 0282 포용포켓몬 키：1.6m 몸무게：48.4kg
@@ -8148,6 +8392,7 @@ B시리즈 제11탄 프로모 카드 팩
 전국도감No. 0437 동탁포켓몬 키：1.3m 몸무게：187.0kg
 전국도감No. 0438 분재포켓몬 키：0.5m 몸무게：15.0kg
 전국도감No. 0439 따라하기포켓몬 키：0.6m 몸무게：13.0kg
+전국도감No. 0440 소꿉놀이포켓몬 키：0.6m 몸무게：24.4kg
 전국도감No. 0441 음표포켓몬 키：0.5m 몸무게：1.9kg
 전국도감No. 0442 봉인포켓몬 키：1.0m 몸무게：108.0kg
 전국도감No. 0443 육지상어포켓몬 키：0.7m 몸무게：20.5kg
@@ -8268,6 +8513,7 @@ B시리즈 제11탄 프로모 카드 팩
 전국도감No. 0549 꽃장식포켓몬 키：1.1m 몸무게：16.3kg
 전국도감No. 0549 스핀포켓몬 키：1.2m 몸무게：19.2kg
 전국도감No. 0550 흉포포켓몬 키：1.0m 몸무게：18.0kg
+전국도감No. 0550 온후포켓몬 키：1.0m 몸무게：18.0kg
 전국도감No. 0551 사막악어포켓몬 키：0.7m 몸무게：15.2kg
 전국도감No. 0552 사막악어포켓몬 키：1.0m 몸무게：33.4kg
 전국도감No. 0553 위협포켓몬 키：1.5m 몸무게：96.3kg
@@ -8362,6 +8608,7 @@ B시리즈 제11탄 프로모 카드 팩
 전국도감No. 0642 뇌격포켓몬 키：1.5m 몸무게：61.0kg
 전국도감No. 0643 백양포켓몬 키：3.2m 몸무게：330.0kg
 전국도감No. 0644 흑음포켓몬 키：2.9m 몸무게：345.0kg
+전국도감No. 0645 풍요포켓몬 키：1.5m 몸무게：68.0kg
 전국도감No. 0647 망아지포켓몬 키：1.4m 몸무게：48.5kg
 전국도감No. 0648 선율포켓몬 키：0.6m 몸무게：6.5kg
 전국도감No. 0648 선율포켓몬 키：0.6m 몸무게：6.5kg
@@ -8369,6 +8616,9 @@ B시리즈 제11탄 프로모 카드 팩
 전국도감No. 0650 밤송이포켓몬 키：0.4m 몸무게：9.0kg
 전국도감No. 0651 가시갑옷포켓몬 키：0.7m 몸무게：29.0kg
 전국도감No. 0652 가시갑옷포켓몬 키：1.6m 몸무게：90.0kg
+전국도감No. 0653 여우포켓몬 키：0.4m 몸무게：9.4kg
+전국도감No. 0654 여우포켓몬 키：1.0m 몸무게：14.5kg
+전국도감No. 0655 여우포켓몬 키：1.5m 몸무게：39.0kg
 전국도감No. 0656 거품개구리포켓몬 키：0.3m 몸무게：7.0kg
 전국도감No. 0657 거품개구리포켓몬 키：0.6m 몸무게：10.9kg
 전국도감No. 0658 시노비포켓몬 키：1.5m 몸무게：40.0kg
@@ -8398,7 +8648,9 @@ B시리즈 제11탄 프로모 카드 팩
 전국도감No. 0676 푸들포켓몬 키：1.2m 몸무게：28.0kg
 전국도감No. 0676 푸들포켓몬 키：1.2m 몸무게：28.0kg
 전국도감No. 0676 푸들포켓몬 키：1.2m 몸무게：28.0kg
+전국도감No. 0676 푸들포켓몬 키：1.2m 몸무게：28.0kg
 전국도감No. 0677 자제포켓몬 키：0.3m 몸무게：3.5kg
+전국도감No. 0678 억제포켓몬 키：0.6m 몸무게：8.5kg
 전국도감No. 0678 억제포켓몬 키：0.6m 몸무게：8.5kg
 전국도감No. 0679 도검포켓몬 키：0.8m 몸무게：2.0kg
 전국도감No. 0680 도검포켓몬 키：0.8m 몸무게：4.5kg
@@ -8609,7 +8861,9 @@ B시리즈 제11탄 프로모 카드 팩
 전국도감No. 0892 권법포켓몬 키：1.9m 몸무게：105.0kg
 전국도감No. 0892 권법포켓몬 키：1.9m 몸무게：105.0kg
 전국도감No. 0893 나쁜원숭이포켓몬 키：1.8m 몸무게：70.0kg
+전국도감No. 0895 용옥포켓몬 키：2.1m 몸무게：200.0kg
 전국도감No. 0901 이탄포켓몬 키：2.4m 몸무게：290.0kg
+전국도감No. 0902 큰물고기포켓몬 키：3.0m 몸무게：110.0kg
 전국도감No. 0905 애증포켓몬 키：1.6m 몸무게：48.0kg
 전국도감No. 0906 풀고양이포켓몬 키：0.4m 몸무게：4.1kg
 전국도감No. 0907 풀고양이포켓몬 키：0.9m 몸무게：12.2kg
@@ -8621,6 +8875,7 @@ B시리즈 제11탄 프로모 카드 팩
 전국도감No. 0913 레슨포켓몬 키：1.2m 몸무게：21.5kg
 전국도감No. 0914 댄서포켓몬 키：1.8m 몸무게：61.9kg
 전국도감No. 0915 돼지포켓몬 키：0.5m 몸무게：10.2kg
+전국도감No. 0916 돼지포켓몬 키：1.0m 몸무게：120.0kg
 전국도감No. 0916 돼지포켓몬 키：1.0m 몸무게：120.0kg
 전국도감No. 0917 실타래포켓몬 키：0.3m 몸무게：4.0kg
 전국도감No. 0918 트랩포켓몬 키：1.0m 몸무게：16.5kg
@@ -8841,6 +9096,34 @@ B시리즈 제11탄 프로모 카드 팩
 천공의 지배자 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ](아이콘)
 [Text:CardName v="ABSOL" ](아이콘)
 [Text:CardName v="RALTS" ](아이콘)
+[Text:CardName v="FOKKO" ](아이콘)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 [Text:CardName v="ROCKETDANNOBOSS" ](아이콘)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 [Text:CardName v="SLEEPE" ](아이콘)
+[Text:CardName v="ROCKETDANNOSHITAPPA" ](아이콘)
+[Text:CardName v="ROCKETDANNOSHITAPPA" ] Ver.2(아이콘)
+[Text:CardName v="ROCKETDANNOSHITAPPA" ] Ver.3(아이콘)
+[Text:CardName v="ROCKETDANNOKENKYUUIN" ](아이콘)
+[Text:CardName v="ROCKETDANNOBOSS" ](아이콘)
+[Text:CardName v="PIKACHU" ] Ver.2(아이콘)
+[Text:CardName v="PIKACHU" ] Ver.3(아이콘)
+[Text:CardName v="PIKACHU" ] Ver.4(아이콘)
+[Text:CardName v="PIKACHU" ] Ver.5(아이콘)
+[Text:CardName v="PIKACHU" ] Ver.6(아이콘)
+[Text:CardName v="PIKACHU" ] Ver.7(아이콘)
+[Text:CardName v="PIKACHU" ] Ver.8(아이콘)
+[Text:CardName v="PIKACHU" ] Ver.9(아이콘)
+[Text:CardName v="PIKACHU" ] Ver.10(아이콘)
+[Text:CardName v="PIKACHU" ] Ver.11(아이콘)
+[Text:CardName v="TRIMMIEN" ] 야생의 모습(아이콘)
+[Text:CardName v="TRIMMIEN" ] 하트컷(아이콘)
+[Text:CardName v="TRIMMIEN" ] 킹덤컷(아이콘)
+[Text:CardName v="TRIMMIEN" ] 가부키컷(아이콘)
+[Text:CardName v="TRIMMIEN" ] 마담컷(아이콘)
+[Text:CardName v="TRIMMIEN" ] 스타컷(아이콘)
+[Text:CardName v="TRIMMIEN" ] 다이아컷(아이콘)
+[Text:CardName v="TRIMMIEN" ] 레이디컷(아이콘)
+[Text:CardName v="TRIMMIEN" ] 젠틀컷(아이콘)
+[Text:CardName v="TRIMMIEN" ] 퀸컷(아이콘)
 잘 부탁해요
 초보입니다!
 귀여운 포켓몬을 좋아해요
@@ -9126,6 +9409,18 @@ PROMO-B
 타이틀 화면
 캘린더(보드)
 캘린더
+[Text:CardName v="THUNDER" ]&[Text:CardName v="FREEZER" ]&[Text:CardName v="FIRE" ](보드)
+[Text:CardName v="THUNDER" ]&[Text:CardName v="FREEZER" ]&[Text:CardName v="FIRE" ]
+[Text:CardName v="FOKKO" ](보드)
+[Text:CardName v="FOKKO" ]
+[Text:CardName v="ROCKETDANNOBOSS" ](보드)
+[Text:CardName v="ROCKETDANNOBOSS" ]
+빨간 각광(보드)
+빨간 각광
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ](보드)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
+무게 비교(보드)
+무게 비교
 레트로 서머(보드)
 레트로 서머
 컬렉션 보드 기능에서 사용할\n카드를 꾸미는 배경지입니다.
@@ -9225,6 +9520,10 @@ PROMO-B
 [Text:CardName v="METAGROSS" ](포켓몬 동전)
 [Text:CardName v="MIJUMARU" ](포켓몬 동전)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ](포켓몬 동전)
+[Text:CardName v="THUNDER" ](포켓몬 동전)
+[Text:CardName v="FOKKO" ](포켓몬 동전)
+[Text:CardName v="ROCKETDANNOBOSS" ](포켓몬 동전)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ](포켓몬 동전)
 배틀 시에 사용할 수 있는 동전입니다.\n덱 기능에서 설정할 수 있습니다.
 이브이(카드 실드)
 이브이
@@ -9315,6 +9614,10 @@ PROMO-B
 [Text:CardName v="METAGROSS" ](카드 실드)
 [Text:CardName v="MIJUMARU" ](카드 실드)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ](카드 실드)
+[Text:CardName v="THUNDER" ]&[Text:CardName v="FREEZER" ]&[Text:CardName v="FIRE" ](카드 실드)
+[Text:CardName v="FOKKO" ](카드 실드)
+[Text:CardName v="ROCKETDANNOBOSS" ](카드 실드)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ](카드 실드)
 카드에 붙일 수 있는 주변 상품입니다\n덱 기능에서 설정할 수 있습니다
 컬렉션 파일 기능에서 사용하는\n파일의 표지입니다
 이브이(파일)
@@ -9456,6 +9759,11 @@ PROMO-B
 [Text:CardName v="MIJUMARU" ](파일)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ](파일)
 천공의 지배자 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ](파일)
+[Text:CardName v="THUNDER" ]&[Text:CardName v="FREEZER" ]&[Text:CardName v="FIRE" ](파일)
+[Text:CardName v="FOKKO" ](파일)
+[Text:CardName v="ROCKETDANNOBOSS" ]&[Text:CardName v="PERSIAN" ](파일)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ](파일)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ](파일)
 이브이(플레이매트)
 이브이
 나옹(플레이매트)
@@ -9546,6 +9854,10 @@ PROMO-B
 [Text:CardName v="METAGROSS" ](플레이매트)
 [Text:CardName v="MIJUMARU" ](플레이매트)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ](플레이매트)
+[Text:CardName v="THUNDER" ]&[Text:CardName v="FREEZER" ]&[Text:CardName v="FIRE" ](플레이매트)
+[Text:CardName v="FOKKO" ](플레이매트)
+[Text:CardName v="ROCKETDANNOBOSS" ]&[Text:CardName v="PERSIAN" ](플레이매트)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ](플레이매트)
 배틀 시에 필드에 펼치는 주변 상품입니다\n덱 기능에서 설정할 수 있습니다
 자신의 필드에 기본 포켓몬을 [Num:Int id="0" max_length="2" ]마리 낸다
 자신의 필드에 포켓몬 ex를 [Num:Int id="0" max_length="2" ]마리 낸다
@@ -9583,6 +9895,7 @@ B3
 B3a
 B3b
 B4
+B4a
 [Num:Int id="0" max_length="3" ]포인트 이상을 획득한다
 [Num:Int id="0" max_length="5" ]데미지 이상을 준다
 [Num:Int id="0" max_length="3" ]번 이상 승리한다
@@ -9622,6 +9935,7 @@ ex 스타트 덱
 팔데아 원더
 파동 비트
 샤이닝 메가
+레어한 플레이 아이템
 나옹(포켓몬 동전)
 나옹(카드 실드)
 나옹(플레이매트)
@@ -10080,6 +10394,7 @@ ex 스타트 덱
 [Mst:CardCharacterName v="CARD_NAME_271"](046/P-B)
 [Mst:CardCharacterName v="CARD_NAME_120"](047/P-B)
 [Mst:CardCharacterName v="CARD_NAME_194"](048/P-B)
+로켓단의 조무래기의 양말
 [Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101190_MIRAIDON"]
 [Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101310_MIRAIDON"]
 [Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100760_MIRAIDON"]
@@ -10110,6 +10425,21 @@ ex 스타트 덱
 [Mst:CardCharacterName v="CARD_NAME_95"](074/P-B)
 [Mst:CardCharacterName v="CARD_NAME_718"](075/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1262"](076/P-B)
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101290_SAKAKI_PERSIAN"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101490_SAKAKI"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100850_SAKAKI"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101040_SAKAKI"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100850_SAKAKI_PERSIAN"]
+[Mst:CardCharacterName v="CARD_NAME_1340"](088/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1341"](089/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1342"](090/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1343"](091/P-B)
+[Mst:CardCharacterName v="CARD_NAME_152"](092/P-B)
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101050_TEAM_ROCKET" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100860_TEAM_ROCKET"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100860_TEAM_ROCKET"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101510_TEAM_ROCKET"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101310_TEAM_ROCKET"]
 포켓골드
 포켓골드 + 주변 상품
 포켓골드 + 증정분
@@ -10169,6 +10499,7 @@ ex 스타트 덱
 서머 세일 특별 포켓골드(유료)×15
 서머 세일 특별 포켓골드(유료)×200
 포켓골드(유료)×115 + 주변 상품 「[Text:CardName v="KAMITSURE" ]」
+포켓골드(유료)×115 + 주변 상품 「[Text:CardName v="THUNDER" ]&[Text:CardName v="FREEZER" ]&[Text:CardName v="FIRE" ]」
 포켓골드
 티켓
 스페셜
@@ -10180,6 +10511,7 @@ ex 스타트 덱
 복각 드롭
 복각 겟 챌린지
 프로모 카드
+로켓단
 [Mst:Rarity v="RARITY_MSID_RR" ] 이상 1장 확정
 [Mst:PackName v="PACK_NAME_PROMO_A_1"]
 [Mst:PackName v="PACK_NAME_PROMO_A_2"]
@@ -10204,6 +10536,7 @@ ex 스타트 덱
 [Mst:PackName v="PACK_NAME_PROMO_B_9" ]
 [Mst:PackName v="PACK_NAME_PROMO_B_10" ]
 [Mst:PackName v="PACK_NAME_PROMO_B_11" ]
+[Mst:PackName v="PACK_NAME_PROMO_B_12" ]
 폐지된 플레이 아이템입니다\n숍에서 다른 플레이 아이템과 교환해 주십시오
 트레이드 메달
 갖고 싶은 카드 외에도 트레이드 희망
@@ -10352,6 +10685,12 @@ ex 스타트 덱
 자신의 에너지존에서 [Ctrl:NoBreak ][Img:Element id="0" ]에[/Ctrl:NoBreak]너지를 [Ctrl:NoBreak ]1개[/Ctrl:NoBreak] 내보내 [Ctrl:Bold][Ctrl:NoBreak]2진화[/Ctrl:NoBreak][/Ctrl:Bold] 포켓몬에게 붙인다.
 서로의 플레이어는 자신의 차례의 마지막에 [Img:Element id="0" ]에너지가 붙어 있는 자신의 포켓몬 전원의 HP를 [Num:Int id="1" max_length="3" ]회복.
 서로의 플레이어는 자신의 차례에 1번 사용할 수 있다. 자신의 에너지존에 발생한 에너지를 트래쉬한다. 그 경우, 다음 에너지를 내보낸다.
+상대의 트래쉬에서 아이템(「[Text:CardName id="0" ]」[Gr:Patchim v="eun_neun" ] 제외)을 랜덤으로 [Num:Int id="1" max_length="2" ]장 자신의 패로 가져온다.
+상대의 다음 차례가 끝날 때까지 상대 배틀 포켓몬의 [Ctrl:Bold]후퇴[/Ctrl:Bold]에 필요한 에너지를 [Num:Int id="0" max_length="2" ]개 많게 한다.
+상대의 패의 앞면을 모두 보고 그 중에서 [Ctrl:Bold]기본[/Ctrl:Bold] 포켓몬을 원하는 만큼 선택해서 상대의 벤치로 내보낸다.
+서로의 플레이어는 자신의 차례에 1번 사용할 수 있다. 동전을 [Num:Int id="0" max_length="2" ]번 던져서 모두 앞면이 나오면 자신의 패가 [Num:Int id="1" max_length="2" ]장이 되도록 덱을 뽑는다.
+뒷면이 나올 때까지 동전을 던져서 앞면이 나온 수만큼 자신의 덱에서 이름에 「로켓단」이 적힌 포켓몬을 랜덤으로 패로 가져온다.
+상대의 배틀 포켓몬을 [Ctrl:Bold][Text:SpecialCondition id="0" ][/Ctrl:Bold][Gr:Patchim v="eu_" ]로 만든다. 동전을 1번 던져서 뒷면이 나오면 자신의 배틀 포켓몬도 [Ctrl:Bold][Text:SpecialCondition id="0" ][/Ctrl:Bold][Gr:Patchim v="eu_" ]로 만든다.
 포켓몬의 도구
 아이템(화석)
 아이템
@@ -10422,6 +10761,7 @@ ex 스타트 덱
 [Mst:CollectionBoardHashTag]
 [Mst:CollectionFileHashTag]
 [Mst:CommonCharacterName]
+[Mst:CommonGroupName]
 [Mst:CountryName]
 [Mst:CurrencyDescription]
 [Mst:CurrencyName]
@@ -10435,6 +10775,8 @@ ex 스타트 덱
 [Mst:ExpansionName]
 [Mst:ExpansionNameLong]
 [Mst:FixedNotice]
+[Mst:HiddenEventItemDescription]
+[Mst:HiddenEventItemName]
 [Mst:ItemExchangeSubCategory]
 [Mst:ItemShopCategoryName]
 [Mst:ItemShopProductName]
@@ -11146,6 +11488,8 @@ HP가 회복되지 않는다
 「[Text:AbilityName id="0" ]」의 효과로\n[Text:CardName id="1" ][Gr:Patchim v="eun_neun" ] 기술을 사용할 수 없습니다
 패에서 포켓몬을 꺼내서 진화시킬 수 없다
 「포켓몬의 도구」를\n[Num:Int id="0" max_length="2" ]장까지 붙일 수 있다
+자신의 트레이너스로 동전을 던졌을 때\n처음부터 동전을 다시 던질 수 있다
+[Text:EvolutionPokemon id="0" style="plain" ][Gr:Patchim v="eul_reul" ] 원하는 만큼 선택해 주십시오
 「[Text:AttackName id="0" ]」[Gr:Patchim v="eu_" ]로\n상대의 포켓몬이 선택되는 횟수를 +[Num:Int id="1" max_length="2" ]
 상대의 다음 차례 마지막에\n선택한 [Num:Int id="0" visible="0" max_length="1" ]장소에 있는 포켓몬을 기절시킨다
 에너지를 바꿔 붙일 수 있는\n포켓몬이 없었습니다
@@ -11357,6 +11701,7 @@ HP가 회복되지 않는다
 자신의 [Mst:EnergyTypeNamePokemon id="0" ]의 기술로 동전을 던졌을 때 처음부터 동전을 다시 던질 수 있다
 패에서 포켓몬을 꺼내서 진화시킬 수 없다
 「포켓몬의 도구」를 [Num:Int id="0" max_length="2" ]장까지 붙일 수 있다
+자신의 트레이너스로 동전을 던졌을 때 처음부터 동전을 다시 던질 수 있다
 「[Text:AttackName id="0" ]」[Gr:Patchim v="eu_" ]로 상대의 포켓몬이 선택되는 횟수를 +[Num:Int id="1" max_length="2" ]
 상대의 다음 차례 마지막에 선택한 [Num:Int id="0" visible="0" max_length="1" ]장소에 있는 포켓몬을 기절시킨다
 상대의 트래쉬
@@ -12988,6 +13333,7 @@ OK
 구입 에러
 미성년자의 경우\n유료 플레이 아이템을 구입할 때는\n반드시 보호자(아빠나 엄마 등)에게\n허락을 받거나 함께 구입하십시오\n\n그 외 주의 사항은 이용 약관에 적혀있습니다\n반드시 보호자와 함께 읽고\n서비스를 이용해 주십시오\n\n숍을 이용하시는 분에게\n정상적으로 상품이 구입되지 않는 경우에는\n아래 내용을 시도하여 주십시오
 주의 사항
+로켓단의 은밀 교환소
 보유
 플레이 아이템이 없습니다
 메인
@@ -13033,6 +13379,7 @@ OK
 OK
 더 이상 보유할 수 없습니다
 한 번에 교환할 수 있는 개수 상한에 도달했습니다
+비밀 스위치를 발견했다\n눌러보자! ...꾸욱!
 취소
 아래 미션을 달성한다
 미션으로

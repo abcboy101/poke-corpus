@@ -135,6 +135,11 @@ Wenn du ein weiteres [Text:CardName id="0" ] im Spiel hast, verringern sich die 
 An dieses Pokémon können bis zu [Num:Int id="0" max_length="1" ][C:Nbsp ]Pokémon[C:Nbh ]Ausrüstungen angelegt sein.
 Einmal während deines Zuges, wenn sich dieses Pokémon auf deiner Bank befindet, kannst du [Num:Int id="0" max_length="1" ][C:Nbsp ][Gr:Count s="Energie" p="Energien" ] aus deinem Ablagestapel an dein Aktives [Img:Element id="1" ][C:Nbh ]Pokémon anlegen.
 Einmal während deines Zuges, wenn du dieses Pokémon von deiner Hand spielst, um 1 deiner Pokémon zu entwickeln, kannst du dir die [Gr:Count s="oberste" p="obersten " ][Num:Int plural_only="" ][C:Nbsp ][Gr:Count s="Karte" p="Karten" ] deines Decks anschauen und alle Itemkarten, die du dort findest, auf deine Hand nehmen. Mische die anderen Karten zurück in dein Deck.
+Einmal während deines Zuges, wenn dieses Pokémon in der Aktiven Position ist, kannst du [Num:Int id="0" max_length="1" ][C:Nbsp ][Gr:Count s="Karte" p="Karten" ] ziehen.
+Einmal während deines Zuges, wenn du dieses Pokémon von deiner Hand spielst, um 1 deiner Pokémon zu entwickeln, kannst du entscheiden, ob das Aktive Pokémon deines Gegners nun [Text:SpecialCondition v0="{} ist" v1="{}" ] und [Text:SpecialCondition id="1" v0="{} ist" v1="{}" ].
+Einmal während deines Zuges, nachdem du Münzen für einen Effekt von 1 deiner Trainerkarten geworfen hast, kannst du alle daraus resultierenden Effekte ignorieren und die Münzen erneut werfen. Du kannst die Fähigkeit [Text:AbilityName id="0" suffix="Short" ] nur einmal pro Zug einsetzen.
+Einmal während deines Zuges, wenn du dieses Pokémon von deiner Hand spielst, um 1 deiner Pokémon zu entwickeln, kannst du [Num:Int id="0" max_length="1" ][C:Nbsp ]zufällige [Gr:Count s="Energie" p="Energien" ] vom Aktiven Pokémon deines Gegners auf dieses Pokémon verschieben.
+Einmal während deines Zuges kannst du dir [Num:Int id="0" max_length="1" ][C:Nbsp ]zufällige [Gr:Count s="Karte" p="Karten" ] aus der Hand deines Gegners anschauen.
 Puderheilung
 Aromafalle
 Gegenangriff
@@ -294,6 +299,14 @@ Leitender Körper
 Doppel-Modifizierung
 Drachensegen
 Schatzsammler
+Hoheitliches Blühen
+Schicksalssalve
+Boshafte Inspiration
+Siedender Smog
+Luxusmünze
+Rasantes Tarnen
+Diebesnager
+Spionage
 Morgenschwingen-
 Alola-
 Regenform
@@ -307,6 +320,7 @@ Türkisgrüne-Maske-
 Ur-
 Paldea-
 Fließender-Angriff-
+Team Rockets
 Sonnenform
 Abendmähne-
 Schneeform
@@ -637,6 +651,16 @@ Ziehe 1 Karte für jedes [Text:CardName id="0" ], das du im Spiel hast.
 Wenn das Aktive Pokémon deines Gegners weniger verbleibende KP als dieses Pokémon hat, fügt diese Attacke [Num:Int id="0" max_length="3" ][C:Nbsp ]Schadenspunkte mehr zu.
 Lege alle [Img:Element id="0" ][C:Nbh ] und [Img:Element id="1" ][C:Nbh ]Energien von diesem Pokémon ab, und diese Attacke fügt für jede auf diese Weise abgelegte Energie [Num:Int id="2" max_length="3" ][C:Nbsp ]Schadenspunkte zu.
 Du kannst beliebig viele Energien von deinen Pokémon im Spiel beliebig auf deine anderen Pokémon verschieben.
+Decke die [Gr:Count s="oberste" p="obersten " ref="0" ][Num:Int id="0" max_length="2" plural_only="" ][C:Nbsp ][Gr:Count s="Karte" p="Karten" ref="0" ] deines Decks auf. Diese Attacke fügt für jedes Pokémon, das du dort findest und bei dem „Team Rocket“ zum Namen gehört, [Num:Int id="1" max_length="3" ][C:Nbsp ]Schadenspunkte zu. Mische die [Gr:Count s="aufgedeckte Karte" p="aufgedeckten Karten" ref="0" ] zurück in dein Deck.
+Wenn „Team Rocket“ zum Namen des Aktiven Pokémon deines Gegners gehört, fügt diese Attacke [Num:Int id="0" max_length="3" ][C:Nbsp ]Schadenspunkte mehr zu.
+Diese Attacke fügt für jeden Speziellen Zustand, von dem das Aktive Pokémon deines Gegners betroffen ist, [Num:Int id="0" max_length="3" ][C:Nbsp ]Schadenspunkte mehr zu.
+Wirf [Num:Int id="0" max_length="2"][C:Nbsp ][Gr:Count s="Münze" p="Münzen" ]. Generiere [Gr:Count s="bei Kopf" p="pro Kopf" two="" ] 1[C:Nbsp ][Img:Element id="1" ][C:Nbh ]Energie in deinem Energiebereich und lege sie an dieses Pokémon an.
+Diese Attacke fügt auch 1 Pokémon auf der Bank deines Gegners, dem bereits Schaden zugefügt wurde, [Num:Int id="0" max_length="3" ][C:Nbsp ]Schadenspunkte zu.
+Nimm [Num:Int id="0" max_length="2" ] zufällige [Gr:Count s="Itemkarte" p="Itemkarten" ] aus deinem Ablagestapel auf deine Hand.
+Diese Attacke fügt für jede Karte auf deiner Hand [Num:Int id="0" max_length="3" ][C:Nbsp ]Schadenspunkte zu.
+Wenn das Aktive Pokémon deines Gegners [Text:SpecialCondition v0="{} ist" v1="{}" ], heile [Num:Int id="1" max_length="3" ][C:Nbsp ]Schadenspunkte bei diesem Pokémon.
+Wenn diesem Pokémon bereits Schaden zugefügt wurde, fügt diese Attacke −[C:Nbsp ][Num:Int id="0" max_length="3" ][C:Nbsp ]Schadenspunkte zu.
+Diese Attacke fügt für jeden Punkt, den dein Gegner während seines letzten Zugs erhalten hat, [Num:Int id="0" max_length="3" ][C:Nbsp ]Schadenspunkte mehr zu.
 Rankenhieb
 Rasierblatt
 Megasauger
@@ -1717,6 +1741,36 @@ Jet-Flügel
 Heimzahlung
 Goldbrecher
 Schattenhund-Fackel
+Rocket-Fieber
+Bestrafung
+Zorniger Leuchtkäfer
+Blätter-Bumerang
+Höhnisches Rösten
+Hitzeaufladung
+Infernale Flügel
+Giftfeuerfänge
+Eisiger Sturm
+Seelenkonter
+Donnernde Klaue
+Aasfresser
+Handkinese
+Falle stellen
+Psycho-Explosion
+Schlagen und ziehen
+Gaia-Einschlag
+Schattensucher
+Schlammbad
+Giftabsorption
+Umkehrschub
+Verwirrgas
+Rammender Hammer
+Dracowucht
+Boost-Sprint
+Gaunergefahr
+Versteckschlag
+Kugeljubel
+Platzierter Platscher
+Grausamer Strudel
 schläft
 Lege [Num:Int id="0" max_length="2" ][C:Nbsp ][Gr:Count s="Energie" p="Energien" ] an deine Pokémon an.
 Pikachu-Silhouetten (Kampf)
@@ -1848,6 +1902,7 @@ Emblem-Event (Mega-Schillern)
 Emblem-Event (Paradoxansturm)
 Emblem-Event (Herrscher der Lüfte)
 Emblem-Event (Wunder des Alltags)
+Emblem-Event ([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne)
 Schillok-Deck (Unschlagbare Gene)
 Bisaknosp-Deck (Unschlagbare Gene)
 Glutexo-Deck (Unschlagbare Gene)
@@ -2312,8 +2367,21 @@ Süße Staffel-Deck (Evoli-Hain)
 [Text:CardName v="MEGARAYQUAZA_EX" lang="de_DE" ]-Deck (Herrscher der Lüfte)
 [Text:CardName v="SWANNA_EX" lang="de_DE" ]-Deck (Herrscher der Lüfte)
 [Text:CardName v="WHALOH_EX" lang="de_DE" ]-Deck (Herrscher der Lüfte)
+[Text:CardName v="ROCKETDANNOBACHINUNI" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNOBARRIERD" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNONYULA" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNOMEWTWO" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNOBETBETON" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNOPERSIAN" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNOFIRE_EX" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNOFREEZER_EX" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNOTHUNDER_EX" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNOYADOKING_EX" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNOMATADOGAS_EX" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNORATTA_EX" ]-Deck (Team Rockets Pläne)
 [Text:CardName v="HELLGAR" lang="de_DE" ]-Deck (Herrscher der Lüfte)
 [Text:CardName v="MEGAHELLGAR_EX" lang="de_DE" ]-Deck (Herrscher der Lüfte)
+[Text:CardName v="ROCKETDANNOLAPLACE" ]-Deck (Team Rockets Pläne)
 [Text:CardName v="SHIRONA" ]-Deck (Traumhafte Parade)
 [Text:CardName v="KAIRYU" ]-Deck (Traumhafte Parade)
 [Text:CardName v="SILVADY" ]-Deck (Traumhafte Parade)
@@ -2516,6 +2584,12 @@ Elite-Deck ([Text:CardName v="MEGABURSYAMO_EX" ])
 [Text:CardName v="MEGAMETAGROSS_EX" lang="de_DE" ]-Deck (Herrscher der Lüfte)
 [Text:CardName v="MEGARAYQUAZA_EX" lang="de_DE" ]-Deck (Herrscher der Lüfte)
 [Text:CardName v="SWANNA_EX" lang="de_DE" ]-Deck (Herrscher der Lüfte)
+[Text:CardName v="ROCKETDANNOFIRE_EX" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNOFREEZER_EX" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNOTHUNDER_EX" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNOYADOKING_EX" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNOMATADOGAS_EX" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNORATTA_EX" ]-Deck (Team Rockets Pläne)
 Elite-Deck ([Text:CardName v="MEGALIZARDONY_EX" lang="de_DE" ])
 Elite-Deck ([Text:CardName v="MEGALUCARIO_EX" lang="de_DE" ])
 Ein Leihdeck, das du in Kämpfen einsetzen kannst.\nDieses Deck kannst du verwenden, auch wenn du\nnicht alle Karten daraus besitzt.
@@ -2704,6 +2778,12 @@ Elite-Deck ([Text:CardName v="MEGABURSYAMO_EX" ])
 [Text:CardName v="MEGAMETAGROSS_EX" lang="de_DE" ]-Deck (Herrscher der Lüfte)
 [Text:CardName v="MEGARAYQUAZA_EX" lang="de_DE" ]-Deck (Herrscher der Lüfte)
 [Text:CardName v="SWANNA_EX" lang="de_DE" ]-Deck (Herrscher der Lüfte)
+[Text:CardName v="ROCKETDANNOFIRE_EX" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNOFREEZER_EX" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNOTHUNDER_EX" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNOYADOKING_EX" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNOMATADOGAS_EX" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="ROCKETDANNORATTA_EX" ]-Deck (Team Rockets Pläne)
 Elite-Deck ([Text:CardName v="MEGALIZARDONY_EX" lang="de_DE" ])
 Elite-Deck ([Text:CardName v="MEGALUCARIO_EX" lang="de_DE" ])
 Themendeck-Vorlage, die unter „Decks“ zu finden\nist. Um dieses Deck erstellen und mit ihm spielen zu\nkönnen, musst du alle enthaltenen Karten sammeln.
@@ -2769,6 +2849,7 @@ Drop-Event ([Text:CardName v="MEGAHERACROS_EX" lang="de_DE" ])
 Drop-Event ([Text:CardName v="SOUBLADES_EX" lang="de_DE" ])
 Drop-Event ([Text:CardName v="HISUIZORUA" lang="de_DE" ])
 Drop-Event ([Text:CardName v="MEGAHELLGAR_EX" lang="de_DE" ])
+Drop-Event ([Text:CardName v="ROCKETDANNOLAPLACE" ])
 Zufallskampf (B2)
 Zufallskampf (B2a)
 Zufallskampf (B2b)
@@ -2776,6 +2857,7 @@ Zufallskampf (B3)
 Zufallskampf (B3a)
 Zufallskampf (B3b)
 Zufallskampf (B4)
+Zufallskampf (B4a)
 verbrannt
 Goldrahmen
 Ein Goldrahmen, der in deinen Alben, Galerien\nund im Kampf angezeigt wird.
@@ -4112,6 +4194,55 @@ Heiko
 Heilende Küste
 Regenbogenhöhle
 Mega-Hundemon-ex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Sichlor
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Lapras
+Wingull
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Woingenau
+Fynx
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Magmar
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Lavados-ex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Hunduster
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Hundemon
+Rutena
+Fennexis
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Arktos-ex
+Pelipper
+[Text:AdditionalName v="ADDITIONAL_NAME_Hisui" type="A" ]Barschuft
+[Text:AdditionalName v="ADDITIONAL_NAME_Hisui" type="A" ]Salmagnis
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Voltobal
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Lektrobal
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Zapdos-ex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Britzigel
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Flegmon
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Laschoking-ex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Traumato
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Hypno
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Pantimos
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Mewtu
+Demeteros
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Rettan
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Arbok
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Sleima
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Sleimok
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Smogon
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Smogmog-ex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Sniebel
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Forgita
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Tafforgita
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Granforgita
+Regidrago
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Rattfratz
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Rattikarl-ex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Mauzi
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Snobilikat
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Kecleon
+Wonneira
+Team Rockets Raubmaschine
+Team Rockets Schleim-Bazooka
+Forscherin von Team Rocket
+Team Rockets Großer Plan
+Boss von Team Rocket
+Gamer-Paradies
 Bei einer Aktion
 Bei der Wunderwahl
 Bei Missionen
@@ -4134,6 +4265,7 @@ Mega-Metagross
 Mega-Galagladi
 Terapagos
 Mega-Diancie
+Team Rocket
 Vereinigte Arabische Emirate
 Antigua und Barbuda
 Anguilla
@@ -4524,14 +4656,18 @@ Ein Meisterball-Rang-Emblem, das erhalten werden\nkann, wenn man bei Rangmatches
 Meisterball-Rang – Top[C:Nbsp ]5000 (Saison A3a)
 Ein Silber-Emblem, das beim Emblem-Event\n(Mega-Aufstieg) erhalten werden kann.
 Silber-Emblem für Emblem-Event (Mega-Aufstieg)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] (Emblem)
 Ein Meisterball-Rang-Emblem, das erhalten werden\nkann, wenn man bei Rangmatches der Saison A3a\ndie Top 1000 erreicht.
 Meisterball-Rang – Top[C:Nbsp ]1000 (Saison A3a)
 Ein Gold-Emblem, das beim Emblem-Event\n(Mega-Aufstieg) erhalten werden kann.
 Gold-Emblem für Emblem-Event (Mega-Aufstieg)
+[Text:CardName v="ROCKETDANNOSHITAPPA" ] (Emblem)
 Ein Hyperball-Rang-1-Emblem, das bei\nRangmatches der Saison A3a erhalten\nwerden kann.
 Hyperball-Rang-1 (Saison A3a)
+[Text:CardName v="ROCKETDANNOKENKYUUIN" ] (Emblem)
 Ein Hyperball-Rang-2-Emblem, das bei\nRangmatches der Saison A3a erhalten\nwerden kann.
 Hyperball-Rang-2 (Saison A3a)
+[Text:CardName v="ROCKETDANNOBOSS" ] (Emblem)
 Ein Hyperball-Rang-3-Emblem, das bei\nRangmatches der Saison A3a erhalten\nwerden kann.
 Hyperball-Rang-3 (Saison A3a)
 Ein Hyperball-Rang-4-Emblem, das bei\nRangmatches der Saison A3a erhalten\nwerden kann.
@@ -4754,12 +4890,20 @@ Ein Gold-Emblem, das beim Emblem-Event\n(Herrscher der Lüfte) erhalten werden k
 Gold-Emblem für Emblem-Event (Herrscher der Lüfte)
 Ein Hyperball-Rang-1-Emblem, das bei\nRangmatches der Saison A4b erhalten\nwerden kann.
 Hyperball-Rang-1 (Saison A4b)
+Ein Teilnahme-Emblem, das beim Emblem-Event\n([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne) erhalten werden kann.
+Teilnahme-Emblem für Emblem-Event ([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne)
 Ein Hyperball-Rang-2-Emblem, das bei\nRangmatches der Saison A4b erhalten\nwerden kann.
 Hyperball-Rang-2 (Saison A4b)
+Ein Bronze-Emblem, das beim Emblem-Event\n([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne) erhalten werden kann.
+Bronze-Emblem für Emblem-Event ([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne)
 Ein Hyperball-Rang-3-Emblem, das bei\nRangmatches der Saison A4b erhalten\nwerden kann.
 Hyperball-Rang-3 (Saison A4b)
+Ein Silber-Emblem, das beim Emblem-Event\n([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne) erhalten werden kann.
+Silber-Emblem für Emblem-Event ([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne)
 Ein Hyperball-Rang-4-Emblem, das bei\nRangmatches der Saison A4b erhalten\nwerden kann.
 Hyperball-Rang-4 (Saison A4b)
+Ein Gold-Emblem, das beim Emblem-Event\n([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne) erhalten werden kann.
+Gold-Emblem für Emblem-Event ([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne)
 Ein Superball-Rang-1-Emblem, das bei\nRangmatches der Saison A4b erhalten\nwerden kann.
 Superball-Rang-1 (Saison A4b)
 Ein Superball-Rang-2-Emblem, das bei\nRangmatches der Saison A4b erhalten\nwerden kann.
@@ -4984,6 +5128,26 @@ Anfänger-Rang-1 (Saison B4)
 Anfänger-Rang-2 (Saison B4)
 Anfänger-Rang-3 (Saison B4)
 Anfänger-Rang-4 (Saison B4)
+Meisterball-Rang (Saison B4a)
+Meisterball-Rang – Top[C:Nbsp ]10[C:Nbsp ]000 (Saison B4a)
+Meisterball-Rang – Top[C:Nbsp ]5000 (Saison B4a)
+Meisterball-Rang – Top[C:Nbsp ]1000 (Saison B4a)
+Hyperball-Rang-1 (Saison B4a)
+Hyperball-Rang-2 (Saison B4a)
+Hyperball-Rang-3 (Saison B4a)
+Hyperball-Rang-4 (Saison B4a)
+Superball-Rang-1 (Saison B4a)
+Superball-Rang-2 (Saison B4a)
+Superball-Rang-3 (Saison B4a)
+Superball-Rang-4 (Saison B4a)
+Pokéball-Rang-1 (Saison B4a)
+Pokéball-Rang-2 (Saison B4a)
+Pokéball-Rang-3 (Saison B4a)
+Pokéball-Rang-4 (Saison B4a)
+Anfänger-Rang-1 (Saison B4a)
+Anfänger-Rang-2 (Saison B4a)
+Anfänger-Rang-3 (Saison B4a)
+Anfänger-Rang-4 (Saison B4a)
 1.\nJub.
 Ein Emblem zur Feier des Spezial-Events 2025.
 Spezial-Event 2025 (Emblem)
@@ -5047,6 +5211,7 @@ B3
 B3a
 B3b
 B4
+B4a
 Unschlagbare Gene
 Mysteriöse Insel
 Kollision von Raum und Zeit
@@ -5067,6 +5232,7 @@ Pulsierende Aura
 Paradoxansturm
 Wunder des Alltags
 Herrscher der Lüfte
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne
 #MeineSammlung
 #LieblingsPokémon
 #Lieblingsillustrationen
@@ -6520,6 +6686,39 @@ Trimmt man sein Fell nicht regelmäßig, wächst\nes ohne Unterlass. Allerdings 
 Typ:Null ist eine künstliche Nachbildung eines\nPokémon aus einer alten Sage. Die Maske dient\ndazu, seine Kräfte unter Kontrolle zu halten.
 Der entscheidende Faktor, durch den es seine\nwahren Kräfte freisetzen kann, ist die enge\nBindung zu einem Trainer, dem es vertraut.
 Dieses Pokémon ist das Resultat der\nExperimente eines gewissen Forschers.\nEs setzt all seine Kraft fürs Kämpfen ein.
+Es nutzt den Seewind, um wie ein Segelflugzeug\ndurch die Lüfte zu gleiten. Im Winter versteckt\nes Nahrung bei seinem Nest.
+Durch die Entwicklung wurde der Schädel seiner\nMutter, den es stets trug, zu einem Teil von ihm\nund es bekam einen aggressiven Charakter.
+Dieses Pokémon lebt in Höhlen, die Erdwärme\nausgesetzt sind. Wenn Feinde sich nähern, springt\nes heraus und beißt mit seinem großen Maul zu.
+Es liebt funkelnde Dinge und sucht in Höhlen\nnach Schätzen, die es dann in seinem Nest hortet.
+Zweige sind ein Snack für Fynx. Wenn es auf\nihnen herumkaut, fasst es den Mut, sich starken\nGegnern entgegenzustellen.
+Über das Augenmuster auf der Innenseite seiner Ohren\nsetzt es seine Psycho-Kräfte frei. Da diese aber viel zu\nstark sind, hält es das Muster bedeckt.
+Es schließt sich nicht gern zu Gruppen zusammen.\nStatt seiner kurzen Arme nutzt es im Alltag seine\nRanken, die es geschickt kontrollieren kann.
+Sein übermäßiger Stolz ist sein einziger Makel.\nEs braucht Zeit, bis es mit anderen Pokémon\nzusammenarbeiten kann.
+Dank seines würdevollen Aussehens und seines\nstechenden Blicks, der andere erstarren lässt,\nnennt man es auch den „Herrscher des Waldes“.
+Es entzündet seinen Zweig beim Herausziehen\naus dem Schweif und nutzt diese Flamme,\num mächtige Attacken zu befeuern.
+Es kontrolliert Flammen mithilfe von Telekinese\nund hüllt Gegner in 3000 °C heiße Wirbel aus\nFeuer, die sie zu Asche verbrennen.
+Es trägt seine Jungen zum Schutz vor Feinden im\nSchnabel. Bei Windstille treibt es auf den Wellen,\num sich auszuruhen.
+Wegen ihrer anderen Lebensweise fand jüngst\ndie These Zuspruch, dass es sich hierbei um eine\nvöllig andere Pokémon-Art als Barschuft handele.
+Es verfügt über eine nahezu unheimliche\nSprungkraft. Der Zorn von verstorbenen\nArtgenossen färbt seinen Körper rot.
+Viele Menschen verwechseln Voltobal mit einem\nPokéball und erhalten beim Anfassen einen\nStromschlag. Es lebt vorwiegend in Kraftwerken.
+Es explodiert schon bei kleinsten Reizen und ist\nunter dem Spitznamen „Bombenkugel“ gefürchtet.
+Es bevorzugt Gebiete, in denen häufig Blitze\neinschlagen. Diese fängt es mit seiner Mähne,\num ihre Energie in seinem Körper zu horten.
+Hören sie Donnergrollen, jagen sie in der Herde\nden Gewitterwolken hinterher, damit die Elezeba\nin ihren Reihen daraus Strom tanken können.
+Es ist so furchtsam, dass es schon durch die bloße\nBerührung mit einer Alge vor Schreck Strom\nentlädt. Seine Lippen leiten keine Elektrizität.
+Wenn es Gefahr wittert, setzt es die maximale\nLadung seiner Psycho-Kräfte frei. Auf Gegner\nnimmt es keine Rücksicht.
+Es lebt friedlich in den Tiefen des Waldes.\nSein lilafarbenes, umhangähnliches Fell wird\nimmer länger, je älter das Pokémon wird.
+Seine aus Wind und Donner gewonnene Energie\nsorgt für reiche Ernten, da sie den Boden mit\nNährstoffen anreichert.
+Ein Pokémon, das in hohem Gras weit verbreitet\nist. Es schnellt mit seiner Zunge vor und zurück,\num Gefahr in seiner Umgebung aufzuspüren.
+Es ist sehr hartnäckig und verfolgt seine Beute\nüberallhin, wenn es sie einmal erspäht hat.
+Das giftige Gas in seinem Inneren ist etwas\nleichter als Luft. Dadurch schwebt es stets\nin geringer Höhe.
+Bei Gefahr rollt es sich zusammen, stellt seine\nRückenstacheln auf und schießt willkürlich mit\nElektrizität um sich.
+Sein robuster Körper besteht aus gestapelten\nMünzen, die es in rascher Folge auf Feinde\nschießt, um sie zu überwältigen.
+Die beiden Fortsätze an seinem Kopf haben die\nFunktion eines Sensors. Mit ihnen kann es auch\nweit entfernte Beute aufspüren.
+Sein ganzer Körper besteht aus kristallisierter\nDrachen-Energie. Es soll über die Kräfte aller\nDrachen-Pokémon verfügen.
+Sie strotzen vor Lebenskraft und können selbst\nan schmutzigen Orten problemlos überleben.\nBleiben sie ungestört, vermehren sie sich rasch.
+Es hält den runden, weißen Stein für ein Ei und kümmert\nsich um ihn. Es achtet sehr auf seine Haarlocke.
+Trimmt man sein Fell nicht regelmäßig, wächst es\nohne Unterlass. Allerdings lässt es sich nur von\njemandem frisieren, dem es traut.
+Dieses Pokémon ist penibel und liebt Sauberkeit.\nEs hüllt sich in einen blumigen Duft, der Pokémon\nin seiner Umgebung beruhigt.
 Die Stacheln an seinem Kopf haben sich aus\nZähnen entwickelt. Werden sie beschädigt oder\nbrechen ab, wachsen sie immer wieder nach.
 Mithilfe seiner mysteriösen Kräfte kontrollierte es\nMenschen und Pokémon und ließ sie ein Land\nnach seinen Vorstellungen erschaffen.
 Riesige Energiemengen haben seine Zellen stark\nstimuliert. Es scheint, als sei das Drachenblut\nerwacht, das so lange in ihm schlummerte.
@@ -6783,6 +6982,7 @@ UKUMO uiti
 Yoshimoto Yoshimon
 Akino Fukuji
 Iwamoto05
+Kazuki Minami
 Coming Soon
 Verkürzt die Zeit bis zur nächsten Wunderwahl\num eine Stunde. Unter anderem erhältlich\nals Missionsbelohnung.
 Wird eingesetzt, um in bestimmten CPU-Kämpfen\noder Events anzutreten und kann die Zeit\nverkürzen, in der diese wieder verfügbar werden.
@@ -6794,12 +6994,14 @@ Erhältlich durch das Abschließen von Event-\nMissionen oder Stufenkämpfen. Ei
 Erhältlich durch den Verbrauch von Karten mit\ngroßer Seltenheit in „Meine Karten“. Eintauschbar\ngegen spezielles Zubehör oder Items im Shop.
 Erhältlich durch das Abschließen von Premium-\nMissionen. Eintauschbar gegen Zubehör oder\nPromokarten im Shop.
 Ein Item, das gesammelt werden kann, um den\nSpielerlevel zu erhöhen.
+Socken eines Rüpels von Team Rocket,\ndie ziemlich lange getragen wurden.\nSie müffeln ein bisschen...
 Reaktiviert eine abgelaufene Wunderwahl.\nDabei muss neben Wunder-Ausdauer jeweils ein\nExemplar verbraucht werden.
 Erhältlich durch das Abschließen von\nex-Startdeck-Missionen.\nEintauschbar gegen Decks (20 Karten) im Shop.\nWird nach Ende des Tauschzeitraums gelöscht.
 Erhältlich durch das Vervollständigen von\nFokus-Sammlungen oder das Abschließen von\nDex-Missionen. Eintauschbar gegen bestimmte\nEmbleme im Shop.
 Erhältlich durch das Abschließen von Event-\nMissionen. Eintauschbar gegen Zubehör und Items\nim Shop. Wird nach Ende des Tauschzeitraums\ngelöscht.
 Dieses Ticket kann noch nicht verwendet werden.\nEs wird sich noch zeigen, wozu es gut ist!
 Erhältlich durch das Abschließen von Event-\nMissionen. Eintauschbar gegen Promokarten\nim Shop. Wird nach Ende des Tauschzeitraums\ngelöscht.
+Erhältlich durch das Abschließen von\nTeam Rockets Spezialaufträgen.\nAnscheinend kann man es irgendwo nutzen...
 Elegant
 Cool
 Niedlich
@@ -6819,6 +7021,7 @@ Shop-Ticket
 Spezial-Shop-Ticket
 Premium-Ticket
 EXP
+Socken eines Rüpels von Team Rocket
 Zeitsprung-Uhr
 Emblem-Ticket (Unschlagbare Gene)
 Emblem-Ticket (Mysteriöse Insel)
@@ -6877,6 +7080,8 @@ Promokarten-Tausch-Ticket (Wunderwahl-Event ([Mst:CommonCharacterName v="COMMON_
 Promokarten-Tausch-Ticket (Drop-Event ([Text:CardName v="MEGAHELLGAR_EX" lang="de_DE" ]))
 Promokarten-Tausch-Ticket (Drop-Event ([Text:CardName v="SOUBLADES_EX" lang="de_DE" ]))
 Promokarten-Tausch-Ticket (Drop-Event ([Text:CardName v="HISUIZORUA" lang="de_DE" ]))
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s dubioses Ticket
+Promokarten-Tausch-Ticket (Drop-Event ([Text:CardName v="ROCKETDANNOLAPLACE" ]))
 Vorabticket
 Blubberblasen: Hellblau (Deko)
 Blubberblasen: Rosa (Deko)
@@ -7002,6 +7207,9 @@ Stelle Karten von deiner Wunschliste auf deinem\nProfil aus
 Nimm an [Num:Int id="1" max_length="3" ] [Gr:Count s="CPU-Kampf" p="CPU-Kämpfen" ref="1" ] mit dem Leihdeck  „[Mst:RentalDeckName id="0" ]“ teil
 Nutze die Abgabe-Funktion [Num:Int id="0" max_length="3" ] Mal
 Erhalte [Num:Int id="0" max_length="3" ] [Gr:Count s="Punkt" p="Punkte" id="1" ] in CPU-Kämpfen
+Auftrag: Melde dich an! (Tag [Num:Int id="0" max_length="3" ])
+Auftrag: Schließe [Num:Int id="0" max_length="3" ] [Gr:Count s="Kampf" p="Kämpfe" ] ab!
+Auftrag: Führe [Num:Int id="0" max_length="3" ] [Gr:Count s="Wunderwahl" p="Wunderwahlen" ] durch!
 Erste Wahl
 Elektek und Magmar
 Vertania-Wald
@@ -7409,6 +7617,29 @@ Museum 1 (Wunder des Alltags)
 Museum 2 (Wunder des Alltags)
 Ein Rudel Welpen-Pokémon!
 Bunte Tanz-Show!
+Suche nach Legendären Pokémon!
+Dringe ins Labor ein!
+Finde Rekruten für [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]!
+Der Boss und sein Partner
+Die dubiosen Erfindungen der Forscherin
+[Text:CardName v="ILLUMISE" ] und [Text:CardName v="BARUBEAT" ]
+Pokémon mit langen Nasen
+[Text:CardName v="ROCKETDANNOSHITAPPA" ] 1
+[Text:CardName v="ROCKETDANNOSHITAPPA" ] 2
+Achtung: Giftgas!
+Pokémon von [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
+Pokémon, die Dinge halten
+Museum 1 ([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne)
+Museum 2 ([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne)
+Eine Horde [Text:CardName v="ROCKETDANNOSHITAPPA" ]!
+Sammler dubioser Erfindungen
+Alle Karten von [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] komplett!
+Erhalte [Num:Int id="1" max_length="3" ] [Gr:Count s="Exemplar" p="Exemplare" ref="1" ] der Karte [Text:CardNameWithSubName id="0" ]
+Erhalte [Num:Int id="1" max_length="3" ] [Gr:Count s="Exemplar" p="Exemplare" ref="1" ] von [Text:CardNameWithSubName id="0" ] aus [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne
+Ein modisches Rudel [Text:CardName v="TRIMMIEN" ]
+[Text:CardName v="PIKACHU" ]s Abenteuer
+Männliches und weibliches [Text:CardName v="NYAONIX" ]
+Die vier Inkarnationsformen
 Deck-Missionen
 Deck-Missionen
 Emblem-Event 1\n(Unschlagbare Gene)
@@ -7498,6 +7729,12 @@ Emblem-Event\n(Herrscher der Lüfte)
 Drop-Event\n([Text:CardName v="HISUIZORUA" ])
 Emblem-Event\n(Wunder des Alltags)
 Verschiedene Serien 1
+Drop-Event\n([Text:CardName v="ROCKETDANNOLAPLACE" ])
+Drop-Event ([Text:CardName v="ROCKETDANNOLAPLACE" ])
+Emblem-Event\n([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne)
+Emblem-Event\n([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s\nSpezialaufträge
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s\nSpezialaufträge
 Anfänger
 Profi
 Täglich
@@ -7529,6 +7766,7 @@ Gesch. für 30 Tage
 Nützliche Karte
 Liste
 Willkommen zurück
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]
 Zufallskampf (Profi)
 Zufallskampf (Anfänger)
 Zufallskampf (Meister)
@@ -7569,6 +7807,7 @@ Pulsierende Aura-Boosterpack
 Paradoxansturm-Boosterpack
 Wunder des Alltags-Boosterpack
 Herrscher der Lüfte-Boosterpack
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne-Boosterpack
 Ein Promopack aus Serie A, Vol. 1
 Ein Promopack aus Serie A, Vol. 2
 Ein Promopack aus Serie A, Vol. 3
@@ -7593,6 +7832,7 @@ Ein Promopack aus Serie B, Vol. 8
 Ein Promopack aus Serie B, Vol. 9
 Ein Promopack aus Serie B, Vol. 10
 Ein Promopack aus Serie B, Vol. 11
+Ein Promopack aus Serie B, Vol. 12
 1 Karte mit\nSeltenheit [Mst:Rarity v="RARITY_MSID_RR" ] oder\nseltener garantiert.
 Unschlagbare Gene: Mewtu
 Unschlagbare Gene: Mewtu (1[C:Nbsp ]Karte mit Seltenheit [Mst:Rarity v="RARITY_MSID_RR" ] oder seltener garantiert)
@@ -7624,6 +7864,7 @@ Pulsierende Aura
 Paradoxansturm
 Wunder des Alltags
 Herrscher der Lüfte
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne
 Promopack Serie A, Vol. 1
 Promopack Serie A, Vol. 2
 Promopack Serie A, Vol. 3
@@ -7648,6 +7889,7 @@ Promopack aus Serie B, Vol. 8
 Promopack aus Serie B, Vol. 9
 Promopack aus Serie B, Vol. 10
 Promopack aus Serie B, Vol. 11
+Promopack aus Serie B, Vol. 12
 [Mst:Rarity v="RARITY_MSID_RR" ] o. seltener garant.
 Normales Pack
 Norm. Pack +[C:Nbsp ]1[C:Nbsp ]Karte
@@ -7976,6 +8218,8 @@ Nr. 0274 Hinterlist-Pokémon Größe: 1,0 m Gewicht: 28,0 kg
 Nr. 0275 Verschlagen-Pokémon Größe: 1,3 m Gewicht: 59,6 kg
 Nr. 0276 Schwälblein-Pokémon Größe: 0,3 m Gewicht: 2,3 kg
 Nr. 0277 Schwalben-Pokémon Größe: 0,7 m Gewicht: 19,8 kg
+Nr. 0278 Seemöwen-Pokémon Größe: 0,6 m Gewicht: 9,5 kg
+Nr. 0279 Wasservogel-Pokémon Größe: 1,2 m Gewicht: 28,0 kg
 Nr. 0280 Gefühls-Pokémon Größe: 0,4 m Gewicht: 6,6 kg
 Nr. 0281 Emotions-Pokémon Größe: 0,8 m Gewicht: 20,2 kg
 Nr. 0282 Umarmungs-Pokémon Größe: 1,6 m Gewicht: 48,4 kg
@@ -8148,6 +8392,7 @@ Nr. 0436 Bronze-Pokémon Größe: 0,5 m Gewicht: 60,5 kg
 Nr. 0437 Bronzeglocken-Pokémon Größe: 1,3 m Gewicht: 187,0 kg
 Nr. 0438 Bonsai-Pokémon Größe: 0,5 m Gewicht: 15,0 kg
 Nr. 0439 Mimen-Pokémon Größe: 0,6 m Gewicht: 13,0 kg
+Nr. 0440 Spielhaus-Pokémon Größe: 0,6 m Gewicht: 24,4 kg
 Nr. 0441 Musiknoten-Pokémon Größe: 0,5 m Gewicht: 1,9 kg
 Nr. 0442 Verboten-Pokémon Größe: 1,0 m Gewicht: 108,0 kg
 Nr. 0443 Landhai-Pokémon Größe: 0,7 m Gewicht: 20,5 kg
@@ -8268,6 +8513,7 @@ Nr. 0548 Wurzel-Pokémon Größe: 0,5 m Gewicht: 6,6 kg
 Nr. 0549 Blumenzier-Pokémon Größe: 1,1 m Gewicht: 16,3 kg
 Nr. 0549 Pirouetten-Pokémon Größe: 1,2 m Gewicht: 19,2 kg
 Nr. 0550 Grobheits-Pokémon Größe: 1,0 m Gewicht: 18,0 kg
+Nr. 0550 Sanftheits-Pokémon Größe: 1,0 m Gewicht: 18,0 kg
 Nr. 0551 Wüstenkroko-Pokémon Größe: 0,7 m Gewicht: 15,2 kg
 Nr. 0552 Wüstenkroko-Pokémon Größe: 1,0 m Gewicht: 33,4 kg
 Nr. 0553 Abschreckungs-Pokémon Größe: 1,5 m Gewicht: 96,3 kg
@@ -8362,6 +8608,7 @@ Nr. 0641 Wirbelsturm-Pokémon Größe: 1,5 m Gewicht: 63,0 kg
 Nr. 0642 Torpedo-Pokémon Größe: 1,5 m Gewicht: 61,0 kg
 Nr. 0643 Wahres Weiß-Pokémon Größe: 3,2 m Gewicht: 330,0 kg
 Nr. 0644 Reines Schwarz-Pokémon Größe: 2,9 m Gewicht: 345,0 kg
+Nr. 0645 Reichtums-Pokémon Größe: 1,5 m Gewicht: 68,0 kg
 Nr. 0647 Fohlen-Pokémon Größe: 1,4 m Gewicht: 48,5 kg
 Nr. 0648 Melodie-Pokémon Größe: 0,6 m Gewicht: 6,5 kg
 Nr. 0648 Melodie-Pokémon Größe: 0,6 m Gewicht: 6,5 kg
@@ -8369,6 +8616,9 @@ Nr. 0649 Paläozoikums-Pokémon Größe: 1,5 m Gewicht: 82,5 kg
 Nr. 0650 Stachelkopf-Pokémon Größe: 0,4 m Gewicht: 9,0 kg
 Nr. 0651 Spitzpanzer-Pokémon Größe: 0,7 m Gewicht: 29,0 kg
 Nr. 0652 Spitzpanzer-Pokémon Größe: 1,6 m Gewicht: 90,0 kg
+Nr. 0653 Fuchs-Pokémon Größe: 0,4 m Gewicht: 9,4 kg
+Nr. 0654 Fuchs-Pokémon Größe: 1,0 m Gewicht: 14,5 kg
+Nr. 0655 Fuchs-Pokémon Größe: 1,5 m Gewicht: 39,0 kg
 Nr. 0656 Blubbfrosch-Pokémon Größe: 0,3 m Gewicht: 7,0 kg
 Nr. 0657 Blubbfrosch-Pokémon Größe: 0,6 m Gewicht: 10,9 kg
 Nr. 0658 Ninja-Pokémon Größe: 1,5 m Gewicht: 40,0 kg
@@ -8398,7 +8648,9 @@ Nr. 0676 Pudel-Pokémon Größe: 1,2 m Gewicht: 28,0 kg
 Nr. 0676 Pudel-Pokémon Größe: 1,2 m Gewicht: 28,0 kg
 Nr. 0676 Pudel-Pokémon Größe: 1,2 m Gewicht: 28,0 kg
 Nr. 0676 Pudel-Pokémon Größe: 1,2 m Gewicht: 28,0 kg
+Nr. 0676 Pudel-Pokémon Größe: 1,2 m Gewicht: 28,0 kg
 Nr. 0677 Zügelungs-Pokémon Größe: 0,3 m Gewicht: 3,5 kg
+Nr. 0678 Fassungs-Pokémon Größe: 0,6 m Gewicht: 8,5 kg
 Nr. 0678 Fassungs-Pokémon Größe: 0,6 m Gewicht: 8,5 kg
 Nr. 0679 Klingenkraft-Pokémon Größe: 0,8 m Gewicht: 2,0 kg
 Nr. 0680 Klingenkraft-Pokémon Größe: 0,8 m Gewicht: 4,5 kg
@@ -8609,7 +8861,9 @@ Nr. 0891 Kung-Fu-Pokémon Größe: 0,6 m Gewicht: 12,0 kg
 Nr. 0892 Kung-Fu-Pokémon Größe: 1,9 m Gewicht: 105,0 kg
 Nr. 0892 Kung-Fu-Pokémon Größe: 1,9 m Gewicht: 105,0 kg
 Nr. 0893 Finsteraffen-Pokémon Größe: 1,8 m Gewicht: 70,0 kg
+Nr. 0895 Drachenkugel-Pokémon Größe: 2,1 m Gewicht: 200,0 kg
 Nr. 0901 Torf-Pokémon Größe: 2,4 m Gewicht: 290,0 kg
+Nr. 0902 Großfisch-Pokémon Größe: 3,0 m Gewicht: 110,0 kg
 Nr. 0905 Hassliebe-Pokémon Größe: 1,6 m Gewicht: 48,0 kg
 Nr. 0906 Florakatzen-Pokémon Größe: 0,4 m Gewicht: 4,1 kg
 Nr. 0907 Florakatzen-Pokémon Größe: 0,9 m Gewicht: 12,2 kg
@@ -8621,6 +8875,7 @@ Nr. 0912 Jungenten-Pokémon Größe: 0,5 m Gewicht: 6,1 kg
 Nr. 0913 Übungs-Pokémon Größe: 1,2 m Gewicht: 21,5 kg
 Nr. 0914 Tänzer-Pokémon Größe: 1,8 m Gewicht: 61,9 kg
 Nr. 0915 Schwein-Pokémon Größe: 0,5 m Gewicht: 10,2 kg
+Nr. 0916 Schwein-Pokémon Größe: 1,0 m Gewicht: 120,0 kg
 Nr. 0916 Schwein-Pokémon Größe: 1,0 m Gewicht: 120,0 kg
 Nr. 0917 Fadenkugel-Pokémon Größe: 0,3 m Gewicht: 4,0 kg
 Nr. 0918 Falle-Pokémon Größe: 1,0 m Gewicht: 16,5 kg
@@ -8841,6 +9096,34 @@ Paradoxansturm: [Text:CardName v="KORAIDON" lang="de_DE" ] (Icon)
 Herrscher der Lüfte: [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (Icon)
 [Text:CardName v="ABSOL" lang="de_DE" ] (Icon)
 [Text:CardName v="RALTS" lang="de_DE" ] (Icon)
+[Text:CardName v="FOKKO" ] (Icon)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne: [Text:CardName v="ROCKETDANNOBOSS" ] (Icon)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s [Text:CardName v="SLEEPE" ] (Icon)
+[Text:CardName v="ROCKETDANNOSHITAPPA" ] (Icon)
+[Text:CardName v="ROCKETDANNOSHITAPPA" ] Ver.[C:Nbsp ]2 (Icon)
+[Text:CardName v="ROCKETDANNOSHITAPPA" ] Ver.[C:Nbsp ]3 (Icon)
+[Text:CardName v="ROCKETDANNOKENKYUUIN" ] (Icon)
+[Text:CardName v="ROCKETDANNOBOSS" ] (Icon)
+[Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]2 (Icon)
+[Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]3 (Icon)
+[Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]4 (Icon)
+[Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]5 (Icon)
+[Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]6 (Icon)
+[Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]7 (Icon)
+[Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]8 (Icon)
+[Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]9 (Icon)
+[Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]10 (Icon)
+[Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]11 (Icon)
+[Text:CardName v="TRIMMIEN" ] Zottelform (Icon)
+[Text:CardName v="TRIMMIEN" ] Herzchenschnitt (Icon)
+[Text:CardName v="TRIMMIEN" ] Herrscherschnitt (Icon)
+[Text:CardName v="TRIMMIEN" ] Kabuki-Schnitt (Icon)
+[Text:CardName v="TRIMMIEN" ] Damenschnitt (Icon)
+[Text:CardName v="TRIMMIEN" ] Sternchenschnitt (Icon)
+[Text:CardName v="TRIMMIEN" ] Diamantenschnitt (Icon)
+[Text:CardName v="TRIMMIEN" ] Fräuleinschnitt (Icon)
+[Text:CardName v="TRIMMIEN" ] Kavaliersschnitt (Icon)
+[Text:CardName v="TRIMMIEN" ] Königinnenschnitt (Icon)
 Schön, dich kennenzulernen!
 Ich bin Anfänger!
 Ich mag niedliche Pokémon!
@@ -9126,6 +9409,18 @@ Titelbildschirm (Hintergrund)
 Titelbildschirm
 Kalender (Hintergrund)
 Kalender
+[Text:CardName v="THUNDER" ] & [Text:CardName v="FREEZER" ] & [Text:CardName v="FIRE" ] (Hintergrund)
+[Text:CardName v="THUNDER" ] & [Text:CardName v="FREEZER" ] & [Text:CardName v="FIRE" ]
+[Text:CardName v="FOKKO" ] (Hintergrund)
+[Text:CardName v="FOKKO" ]
+[Text:CardName v="ROCKETDANNOBOSS" ] (Hintergrund)
+[Text:CardName v="ROCKETDANNOBOSS" ]
+Rotes Spotlight (Hintergrund)
+Rotes Spotlight
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] (Hintergrund)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]
+Goldene Waage (Hintergrund)
+Goldene Waage
 Retro-Sommer (Hintergrund)
 Retro-Sommer
 Ein Hintergrund für das Ausstellen von Karten in\ndeinen Galerien.
@@ -9225,6 +9520,10 @@ Schillerndes [Mst:CommonCharacterName v="COMMON_CARD_NAME_5" ] (Münze)
 [Text:CardName v="METAGROSS" lang="de_DE" ] (Münze)
 [Text:CardName v="MIJUMARU" lang="de_DE" ] (Münze)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (Münze)
+[Text:CardName v="THUNDER" ] (Münze)
+[Text:CardName v="FOKKO" ] (Münze)
+[Text:CardName v="ROCKETDANNOBOSS" ] (Münze)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] (Münze)
 Eine Münze, die im Kampf verwendet werden\nkann. Du kannst sie auswählen, wenn du auf deine\nDecks zugreifst.
 Evoli (Kartenhüllen)
 Evoli
@@ -9315,6 +9614,10 @@ Pokémon im Wald (Kartenhüllen)
 [Text:CardName v="METAGROSS" lang="de_DE" ] (Kartenhüllen)
 [Text:CardName v="MIJUMARU" lang="de_DE" ] (Kartenhüllen)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (Kartenhüllen)
+[Text:CardName v="THUNDER" ] & [Text:CardName v="FREEZER" ] & [Text:CardName v="FIRE" ] (Kartenhüllen)
+[Text:CardName v="FOKKO" ] (Kartenhüllen)
+[Text:CardName v="ROCKETDANNOBOSS" ] (Kartenhüllen)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] (Kartenhüllen)
 Dieses Zubehör kann an Karten angebracht\nwerden. Du kannst es auswählen, wenn du auf\ndeine Decks zugreifst.
 Dieses Cover für Alben kannst du nutzen,\nwenn du auf deine Alben zugreifst.
 Evoli (Cover)
@@ -9456,6 +9759,11 @@ Das Ökosystem von [Text:CardName v="ERIAZERO" lang="de_DE" ] (Cover)
 [Text:CardName v="MIJUMARU" lang="de_DE" ] (Cover)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (Cover)
 Herrscher der Lüfte: [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (Cover)
+[Text:CardName v="THUNDER" ] & [Text:CardName v="FREEZER" ] & [Text:CardName v="FIRE" ] (Cover)
+[Text:CardName v="FOKKO" ] (Cover)
+[Text:CardName v="ROCKETDANNOBOSS" ] & [Text:CardName v="PERSIAN" ] (Cover)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne: [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] (Cover)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] (Cover)
 Evoli (Spielunterlage)
 Evoli
 Mauzi (Spielunterlage)
@@ -9546,6 +9854,10 @@ Pokémon im Wald (Spielunterlage)
 [Text:CardName v="METAGROSS" lang="de_DE" ] (Spielunterlage)
 [Text:CardName v="MIJUMARU" lang="de_DE" ] (Spielunterlage)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (Spielunterlage)
+[Text:CardName v="THUNDER" ] & [Text:CardName v="FREEZER" ] & [Text:CardName v="FIRE" ] (Spielunterlage)
+[Text:CardName v="FOKKO" ] (Spielunterlage)
+[Text:CardName v="ROCKETDANNOBOSS" ] & [Text:CardName v="PERSIAN" ] (Spielunterlage)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] (Spielunterlage)
 Dieses Zubehör wird im Kampf auf das Spielfeld\ngelegt. Du kannst es auswählen, wenn du auf deine\nDecks zugreifst.
 Bringe [Num:Int max_length="2" plural_only=" " ][Gr:Count s="ein Basis-Pokémon" p="Basis-Pokémon" ] ins Spiel.
 Bringe [Num:Int max_length="2" plural_only=" " ][Gr:Count s="ein Pokémon-ex" p="Pokémon-ex" ] ins Spiel.
@@ -9583,6 +9895,7 @@ B3
 B3a
 B3b
 B4
+B4a
 Erhalte [Num:Int id="0" max_length="3" ] oder mehr Punkte.
 Füge [Num:Int id="0" max_length="5" ] oder mehr Schadenspunkte zu.
 Gewinne [Num:Int id="0" max_length="3" ] oder mehr Kämpfe.
@@ -9622,6 +9935,7 @@ Neuauflagen-Wunderwahl-Event
 Wundervolles Paldea
 Pulsierende Aura
 Mega-Schillern
+Seltene Items
 Mauzi (Münze)
 Mauzi (Kartenhüllen)
 Mauzi (Spielunterlage)
@@ -10080,6 +10394,7 @@ Funkelstaub ×[C:Nbsp ]1000
 [Mst:CardCharacterName v="CARD_NAME_271" ] (046/P-B)
 [Mst:CardCharacterName v="CARD_NAME_120" ] (047/P-B)
 [Mst:CardCharacterName v="CARD_NAME_194" ] (048/P-B)
+Socken eines Rüpels von Team Rocket
 [Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101190_MIRAIDON" ]
 [Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101310_MIRAIDON" ]
 [Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100760_MIRAIDON" ]
@@ -10110,6 +10425,21 @@ Funkelstaub ×[C:Nbsp ]1000
 [Mst:CardCharacterName v="CARD_NAME_95" ] (074/P-B)
 [Mst:CardCharacterName v="CARD_NAME_718" ] (075/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1262" ] (076/P-B)
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101290_SAKAKI_PERSIAN" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101490_SAKAKI" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100850_SAKAKI" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101040_SAKAKI" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100850_SAKAKI_PERSIAN" ]
+[Mst:CardCharacterName v="CARD_NAME_1340" ] (088/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1341" ] (089/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1342" ] (090/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1343" ] (091/P-B)
+[Mst:CardCharacterName v="CARD_NAME_152" ] (092/P-B)
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101050_TEAM_ROCKET" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100860_TEAM_ROCKET" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100860_TEAM_ROCKET" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101510_TEAM_ROCKET" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101310_TEAM_ROCKET" ]
 PokéGold
 PokéGold + Zubehör
 PokéGold + Boni
@@ -10169,6 +10499,7 @@ PokéGold (gekauft) × 115 + Zubehör ([Text:CardName v="METAGROSS" lang="de_DE"
 Sommer-Aktion: Ang. für PokéGold (gekauft) × 15
 Sommer-Aktion: Ang. für PokéGold (gekauft) × 200
 PokéGold (gekauft) × 115 + Zubehör ([Text:CardName v="KAMITSURE" lang="de_DE" ])
+PokéGold (gekauft) ×[C:Nbsp ]115 + Zubehör ([Text:CardName v="THUNDER" ] & [Text:CardName v="FREEZER" ] & [Text:CardName v="FIRE" ])
 PokéGold
 Tickets
 Spezial
@@ -10180,6 +10511,7 @@ ex-Startdecks
 Neuauflagen-Drop
 Neuauflagen-Wunderwahl
 Promokarten
+Team Rocket
 1 Karte mit Seltenheit [Mst:Rarity v="RARITY_MSID_RR" ] oder seltener garantiert
 [Mst:PackName v="PACK_NAME_PROMO_A_1"]
 [Mst:PackName v="PACK_NAME_PROMO_A_2"]
@@ -10204,6 +10536,7 @@ Promokarten
 [Mst:PackName v="PACK_NAME_PROMO_B_9" ]
 [Mst:PackName v="PACK_NAME_PROMO_B_10" ]
 [Mst:PackName v="PACK_NAME_PROMO_B_11" ]
+[Mst:PackName v="PACK_NAME_PROMO_B_12" ]
 Dieses Item wird nicht mehr verwendet.\nBitte tausche es im Shop gegen andere Items ein.
 Tausch-Marke󱀀Tausch-Marken
 Suche alle Karten
@@ -10352,6 +10685,12 @@ Tausche dein Aktives Phase-1-Pokémon gegen 1[C:Nbsp ]Pokémon auf deiner Bank a
 Lege 1[C:Nbsp ][Img:Element id="0" ][C:Nbh ]Energie aus deinem Energiebereich an 1 deiner Phase-2-Pokémon an.
 Am Ende des Zuges jedes Spielers heilt jener Spieler [Num:Int id="1" max_length="3" ][C:Nbsp ]Schadenspunkte bei jedem seiner Pokémon, an das mindestens 1[C:Nbsp ][Img:Element id="0" ][C:Nbh ]Energie angelegt ist.
 Einmal während des Zuges jedes Spielers kann jener Spieler die Energie, die in seinem Energiebereich generiert wurde, ablegen. Wenn er das macht, wird die nächste Energie generiert.
+Nimm [Num:Int id="1" max_length="2" ] zufällige [Gr:Count s="Itemkarte" p="Itemkarten" ref="1" ], außer [Text:CardName id="0" ], aus dem Ablagestapel deines Gegners auf deine Hand.
+Bis zum Ende des nächsten Zuges deines Gegners erhöhen sich die Rückzugskosten des Aktiven Pokémon deines Gegners um [Num:Int id="0" max_length="2" ].
+Schau dir die Hand deines Gegners an und lege beliebig viele Basis-Pokémon, die du dort findest, auf die Bank deines Gegners.
+Einmal während des Zuges jedes Spielers kann jener Spieler [Num:Int id="0" max_length="2" ][C:Nbsp ][Gr:Count s="Münze" p="Münzen" ref="0" ] werfen. [Gr:Count p="Zeigen alle Münzen Kopf," one="Bei Kopf" two="Zeigen beide Münzen Kopf," ref="0" ] zieht jener Spieler so lange Karten, bis er [Num:Int id="1" max_length="2" ][C:Nbsp ][Gr:Count s="Karte" p="Karten" ref="1" ] auf der Hand hat.
+Wirf so lange 1 Münze, bis sie Zahl zeigt. Nimm pro Kopf 1 zufälliges Pokémon, bei dem „Team[C:Nbsp ]Rocket“ zum Namen gehört, aus deinem Deck auf deine Hand.
+Das Aktive Pokémon deines Gegners [Text:SpecialCondition v0="ist jetzt {}" v1="{} jetzt" ]. Wirf 1 Münze. Bei Zahl [Text:SpecialCondition v0="ist dein Aktives Pokémon jetzt auch {}" v1="{} dein Aktives Pokémon jetzt auch" ].
 Pokémon-Ausrüstung
 Item (Fossil)
 Item
@@ -10422,6 +10761,7 @@ Gewinne, ohne dass dein Gegner Punkte erhält.
 [Mst:CollectionBoardHashTag]
 [Mst:CollectionFileHashTag]
 [Mst:CommonCharacterName]
+[Mst:CommonGroupName]
 [Mst:CountryName]
 [Mst:CurrencyDescription]
 [Mst:CurrencyName]
@@ -10435,6 +10775,8 @@ Gewinne, ohne dass dein Gegner Punkte erhält.
 [Mst:ExpansionName]
 [Mst:ExpansionNameLong]
 [Mst:FixedNotice]
+[Mst:HiddenEventItemDescription]
+[Mst:HiddenEventItemName]
 [Mst:ItemExchangeSubCategory]
 [Mst:ItemShopCategoryName]
 [Mst:ItemShopProductName]
@@ -11146,6 +11488,8 @@ Bitte verschiebe [Num:Int ] [Gr:Count s="Energie" p="Energien" id="2" ] auf [Num
 Die Attacke [Text:AbilityName id="0" ] verhindert, dass\n[Text:CardName id="1" ]  Attacken einsetzen kann.
 Es kann kein Pokémon von der Hand gespielt\nwerden, um ein Pokémon zu entwickeln.
 Bis zu [Num:Int id="0" max_length="2" ] [Gr:Count s="Pokémon-Ausrüstung" p="Pokémon-Ausrüstungen" ] [Gr:Count s="kann" p="können" ]\nangelegt sein.
+Wenn für einen Effekt der Trainerkarte des\nSpielers Münzen geworfen werden, kann der\nSpieler diese Münzen erneut werfen.
+Bitte wähle eine beliebige Anzahl an\n[Text:EvolutionPokemon id="0" style="plain" ].
 Bei der Attacke [Text:AttackName id="0" ] wird\n1 Pokémon des Gegners [Num:Int id="1" max_length="2" ] Mal mehr\nausgewählt.
 [Gr:Count s="Das" p="Die" ] Pokémon auf [Num:Int id="0" visible="0" max_length="1" ][Gr:Count s="der ausgewählten" p="den ausgewählten" ]\n[Gr:Count s="Position wird" p="Positionen werden" ] am Ende des nächsten\nZuges des Gegners kampfunfähig gemacht.
 Es gibt keine Pokémon, die für das\nVerschieben von Energie in Frage kommen.
@@ -11357,6 +11701,7 @@ Stadionkarten können nicht von der Hand gespielt werden.
 Wenn für die Attacke eines [Mst:EnergyTypeNamePokemon id="0" ] des Spielers Münzen geworfen werden, kann der Spieler diese Münzen erneut werfen.
 Es kann kein Pokémon von der Hand gespielt werden, um ein Pokémon zu entwickeln.
 Bis zu [Num:Int id="0" max_length="2" ] [Gr:Count s="Pokémon-Ausrüstung" p="Pokémon-Ausrüstungen" ] [Gr:Count s="kann" p="können" ] angelegt sein.
+Wenn für einen Effekt der Trainerkarte des Spielers Münzen geworfen werden, kann der Spieler diese Münzen erneut werfen.
 Bei der Attacke [Text:AttackName id="0" ] wird 1 Pokémon des Gegners [Num:Int id="1" max_length="2" ] Mal mehr ausgewählt.
 [Gr:Count s="Das" p="Die" ] Pokémon auf [Num:Int id="0" visible="0" max_length="1" ][Gr:Count s="der ausgewählten Position" p="den ausgewählten Positionen" ] [Gr:Count s="wird" p="werden" ] am Ende des nächsten Zuges des Gegners kampfunfähig gemacht.
 Ablagestapel des Gegners
@@ -12988,6 +13333,7 @@ Fehler
 Fehler beim Kauf
 An minderjährige Nutzer: Stelle bei Käufen immer\nsicher, dass du die Erlaubnis eines Elternteils\noder Erziehungsberechtigten hast, oder tätigt\nKäufe zusammen.\n\nIn den Nutzungsbedingungen findest du weitere\nwichtige Hinweise. Lies diese bitte gemeinsam\nmit einem Elternteil oder Erziehungsberechtigten\ndurch, bevor du zu spielen beginnst.\n\nAn Nutzer des Shops: Wenn ein Kauf nicht\nerfolgreich war, tippe auf die untere Schaltfläche.
 Hinweise
+Team Rockets\nGeheim-Shop
 Im Besitz
 Keine Items verfügbar
 Hauptshop
@@ -13033,6 +13379,7 @@ Eintauschbar:
 OK
 Du kannst keine weiteren Exemplare besitzen.
 Du kannst nicht mehr Exemplare auf einmal\neintauschen.
+Ein Geheimschalter?!\nDu entschließt dich, ihn zu betätigen...
 Abbrechen
 Schließe die folgenden Missionen ab:
 Missionen

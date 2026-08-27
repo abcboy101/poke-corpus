@@ -135,6 +135,11 @@
 このポケモンは、「ポケモンのどうぐ」を[Num:Int id="0" max_length="1"]枚までつけられる。
 このポケモンがベンチにいるなら、自分の番に1回使える。自分のトラッシュからエネルギーを[Num:Int id="0" max_length="1"]個選び、バトル場の[Img:Element id="1"]ポケモンにつける。
 自分の番に、このカードを手札から出して進化させたとき、[Ctrl:NoBreak]1回[/Ctrl:NoBreak]使える。自分の山札を上から[Ctrl:NoBreak][Num:Int id="0" max_length="1"]枚[/Ctrl:NoBreak]見て、その中からグッズをすべて手札に加える。残りのカードは山札にもどす。
+このポケモンがバトル場にいるなら、自分の番に1回使える。自分の山札を[Num:Int id="0" max_length="1"]枚引く。
+自分の番に、このカードを手札から出して進化させたとき、[Ctrl:NoBreak]1回[/Ctrl:NoBreak]使える。相手のバトルポケモンを[Ctrl:Bold][Text:SpecialCondition id="0"][/Ctrl:Bold]と[Ctrl:Bold][Text:SpecialCondition id="1"][/Ctrl:Bold]にする。
+自分の番に、自分のトレーナーズの効果でコインを投げたとき、1回使える。そのコインの結果をすべてなくし、はじめからコインを投げなおす。この特性は別の「[Text:AbilityName id="0" suffix="Short"]」を使った番は使えない。
+自分の番に、このカードを手札から出して進化させたとき、[Ctrl:NoBreak]1回[/Ctrl:NoBreak]使える。相手のバトルポケモンからエネルギーをランダムに[Ctrl:NoBreak][Num:Int id="0" max_length="1"]個[/Ctrl:NoBreak]、このポケモンにつけ替える。
+自分の番に1回使える。相手の手札からランダムに[Num:Int id="0" max_length="1"]枚、オモテを見る。
 パウダーヒール
 かおりのわな
 はんげき
@@ -294,6 +299,14 @@ POWER
 ダブルカスタム
 りゅうのめぐみ
 おたからあつめ
+ロイヤルブルーム
+みちづれボンバー
+わるいひらめき
+ボイラースモッグ
+ゴージャスコイン
+マッハステルス
+どろぼうまえば
+スパイかつどう
 あかつきのつばさ
 アローラ
 あまみずのすがた
@@ -307,6 +320,7 @@ POWER
 オリジン
 パルデア
 れんげき
+ロケット団の
 たいようのすがた
 たそがれのたてがみ
 ゆきぐものすがた
@@ -637,6 +651,16 @@ POWER
 相手のバトルポケモンの残りHPが、このポケモンの残りHPより少ないなら、[Num:Int id="0" max_length="3"]ダメージ追加。
 このポケモンから[Img:Element id="0"]と[Img:Element id="1"]エネルギーをすべてトラッシュし、トラッシュしたエネルギーの数×[Num:Int id="2" max_length="3"]ダメージ。
 自分の場のポケモンからエネルギーを好きなだけ選び、自分のポケモンに好きなようにつけ替える。
+自分の山札を上から[Num:Int id="0" max_length="2"]枚オモテにして、その中にある名前に「ロケット団」とつくポケモンの枚数×[Num:Int id="1" max_length="3"]ダメージ。オモテにしたカードは山札にもどす。
+相手のバトルポケモンが名前に「ロケット団」とつくポケモンなら、[Num:Int id="0" max_length="3"]ダメージ追加。
+相手のバトルポケモンが受けている特殊状態の数×[Num:Int id="0" max_length="3"]ダメージ追加。
+コインを[Num:Int id="0" max_length="2"]回投げ、オモテの数ぶんの[Img:Element id="1"]エネルギーを自分のエネルギーゾーンから出し、このポケモンにつける。
+ダメージを受けている相手のベンチポケモン1匹にも[Num:Int id="0" max_length="3"]ダメージ。
+自分のトラッシュからグッズをランダムに[Num:Int id="0" max_length="2"]枚、手札に加える。
+自分の手札の枚数×[Num:Int id="0" max_length="3"]ダメージ。
+相手のバトルポケモンが[Ctrl:Bold][Text:SpecialCondition id="0"][/Ctrl:Bold]なら、このポケモンのHPを[Num:Int id="1" max_length="3"]回復。
+このポケモンがダメージを受けているなら、このワザのダメージを-[Num:Int id="0" max_length="3"]する。
+前の相手の番、相手がとったポイントの数×[Num:Int id="0" max_length="3"]ダメージ追加。
 つるのムチ
 はっぱカッター
 メガドレイン
@@ -1717,6 +1741,36 @@ Vフレイム
 かたきうち
 ゴールドブレイク
 ヘルハウンドフレア
+ロケットフィーバー
+こらしめる
+ほたるのいかり
+はっぱブーメラン
+なぶりやき
+ヒートチャージ
+ごくえんのつばさ
+どくねつのキバ
+ひょうせつのあらし
+ソウルカウンター
+らいめいのかぎづめ
+ゴミあさり
+ハンドキネシス
+わなにはめる
+サイキックボム
+パンチ&ドロー
+ガイアインパクト
+シャドーシーカー
+ヘドロこうげき
+どくしゃぶり
+ぎゃくふんしゃ
+こんらんガス
+くいうちハンマー
+ドラゴンスラム
+ブーストダッシュ
+デスローグ
+なぐってかくれる
+ぷくぷくエール
+ヒップドロップ
+れいこくなうず
 [Ctrl:Bold]ねむり[/Ctrl:Bold]
 自分のポケモンにエネルギーを[Num:Int id="0" max_length="2"]個つける
 ピカチュウのシルエット エフェクト(バトル)
@@ -1848,6 +1902,7 @@ Vフレイム
 進撃パラドックス エンブレムイベント
 天空の支配者 エンブレムイベント
 ミラクルデイズ エンブレムイベント
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望 エンブレムイベント
 カメールデッキ(最強の遺伝子)
 フシギソウデッキ(最強の遺伝子)
 リザードデッキ(最強の遺伝子)
@@ -2312,8 +2367,21 @@ Vフレイム
 [Text:CardName v="MEGARAYQUAZA_EX"]デッキ(天空の支配者)
 [Text:CardName v="SWANNA_EX"]デッキ(天空の支配者)
 [Text:CardName v="WHALOH_EX"]デッキ(天空の支配者)
+[Text:CardName v="ROCKETDANNOBACHINUNI"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNOBARRIERD"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNONYULA"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNOMEWTWO"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNOBETBETON"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNOPERSIAN"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNOFIRE_EX"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNOFREEZER_EX"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNOTHUNDER_EX"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNOYADOKING_EX"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNOMATADOGAS_EX"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNORATTA_EX"]デッキ(ロケット団の野望)
 [Text:CardName v="HELLGAR"]デッキ(天空の支配者)
 [Text:CardName v="MEGAHELLGAR_EX"]デッキ(天空の支配者)
+[Text:CardName v="ROCKETDANNOLAPLACE"]デッキ(ロケット団の野望)
 [Text:CardName v="SHIRONA"]デッキ(夢幻パレード)
 [Text:CardName v="KAIRYU"]デッキ(夢幻パレード)
 [Text:CardName v="SILVADY"]デッキ(夢幻パレード)
@@ -2516,6 +2584,12 @@ Vフレイム
 [Text:CardName v="MEGAMETAGROSS_EX"]デッキ(天空の支配者)
 [Text:CardName v="MEGARAYQUAZA_EX"]デッキ(天空の支配者)
 [Text:CardName v="SWANNA_EX"]デッキ(天空の支配者)
+[Text:CardName v="ROCKETDANNOFIRE_EX"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNOFREEZER_EX"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNOTHUNDER_EX"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNOYADOKING_EX"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNOMATADOGAS_EX"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNORATTA_EX"]デッキ(ロケット団の野望)
 エリートデッキ([Text:CardName v="MEGALIZARDONY_EX"])
 エリートデッキ([Text:CardName v="MEGALUCARIO_EX"])
 バトルで使えるレンタルデッキです\nデッキに含まれるカードを所持していなくても\nバトルで使用できます
@@ -2704,6 +2778,12 @@ Vフレイム
 [Text:CardName v="MEGAMETAGROSS_EX"]デッキ(天空の支配者)
 [Text:CardName v="MEGARAYQUAZA_EX"]デッキ(天空の支配者)
 [Text:CardName v="SWANNA_EX"]デッキ(天空の支配者)
+[Text:CardName v="ROCKETDANNOFIRE_EX"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNOFREEZER_EX"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNOTHUNDER_EX"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNOYADOKING_EX"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNOMATADOGAS_EX"]デッキ(ロケット団の野望)
+[Text:CardName v="ROCKETDANNORATTA_EX"]デッキ(ロケット団の野望)
 エリートデッキ([Text:CardName v="MEGALIZARDONY_EX"])
 エリートデッキ([Text:CardName v="MEGALUCARIO_EX"])
 デッキ機能で使えるテーマデッキレシピです\nレシピに書かれたカードを集めることで\nデッキを作成して遊ぶことができます
@@ -2769,6 +2849,7 @@ Vickie
 [Text:CardName v="SOUBLADES_EX"]ドロップイベント
 [Text:CardName v="HISUIZORUA"]ドロップイベント
 [Text:CardName v="MEGAHELLGAR_EX"]ドロップイベント
+[Text:CardName v="ROCKETDANNOLAPLACE"]ドロップイベント
 ランダムバトル(B2)
 ランダムバトル(B2a)
 ランダムバトル(B2b)
@@ -2776,6 +2857,7 @@ Vickie
 ランダムバトル(B3a)
 ランダムバトル(B3b)
 ランダムバトル(B4)
+ランダムバトル(B4a)
 [Ctrl:Bold]やけど[/Ctrl:Bold]
 金フレーム
 コレクションファイル・コレクションボード・\nバトルで表示できる金フレームです
@@ -4112,6 +4194,55 @@ Vickie
 いやしの海辺
 にじいろの洞窟
 メガヘルガーex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ストライク
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ラプラス
+キャモメ
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ソーナンス
+フォッコ
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ブーバー
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ファイヤーex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]デルビル
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ヘルガー
+テールナー
+マフォクシー
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]フリーザーex
+ペリッパー
+[Text:AdditionalName v="ADDITIONAL_NAME_Hisui" type="A" space="post"]バスラオ
+[Text:AdditionalName v="ADDITIONAL_NAME_Hisui" type="A" space="post"]イダイトウ
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ビリリダマ
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]マルマイン
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]サンダーex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]バチンウニ
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ヤドン
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ヤドキングex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]スリープ
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]スリーパー
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]バリヤード
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ミュウツー
+ランドロス
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]アーボ
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]アーボック
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ベトベター
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ベトベトン
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ドガース
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]マタドガスex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ニューラ
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]カヌチャン
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ナカヌチャン
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]デカヌチャン
+レジドラゴ
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]コラッタ
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ラッタex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ニャース
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ペルシアン
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]カクレオン
+ピンプク
+ロケット団のどろぼうマシン
+ロケット団のベトベトバズーカ
+ロケット団の研究員
+ロケット団の大作戦
+ロケット団のボス
+ゲームセンター
 キャンペーンで入手
 ゲットチャレンジで入手
 ミッションで入手
@@ -4134,6 +4265,7 @@ Vickie
 メガエルレイド
 テラパゴス
 メガディアンシー
+ロケット団
 アラブ首長国連邦
 アンティグア・バーブーダ
 アンギラ
@@ -4524,14 +4656,18 @@ Vickie
 シーズンA3a マスターボールランク(TOP5000)
 メガライジング エンブレムイベントで獲得できる\n銀賞のエンブレムです
 メガライジング エンブレムイベント 銀賞
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"](エンブレム)
 ランクマッチ シーズンA3aで\nTOP1000にランクインすると獲得できる\nマスターボールランクのエンブレムです
 シーズンA3a マスターボールランク(TOP1000)
 メガライジング エンブレムイベントで獲得できる\n金賞のエンブレムです
 メガライジング エンブレムイベント 金賞
+[Text:CardName v="ROCKETDANNOSHITAPPA"](エンブレム)
 ランクマッチ シーズンA3aで獲得できる\nハイパーボールランク1のエンブレムです
 シーズンA3a ハイパーボールランク1
+[Text:CardName v="ROCKETDANNOKENKYUUIN"](エンブレム)
 ランクマッチ シーズンA3aで獲得できる\nハイパーボールランク2のエンブレムです
 シーズンA3a ハイパーボールランク2
+[Text:CardName v="ROCKETDANNOBOSS"](エンブレム)
 ランクマッチ シーズンA3aで獲得できる\nハイパーボールランク3のエンブレムです
 シーズンA3a ハイパーボールランク3
 ランクマッチ シーズンA3aで獲得できる\nハイパーボールランク4のエンブレムです
@@ -4754,12 +4890,20 @@ Vickie
 天空の支配者 エンブレムイベント 金賞
 ランクマッチ シーズンA4bで獲得できる\nハイパーボールランク1のエンブレムです
 シーズンA4b ハイパーボールランク1
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望 エンブレムイベントで\n獲得できる参加賞のエンブレムです
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望 エンブレムイベント 参加賞
 ランクマッチ シーズンA4bで獲得できる\nハイパーボールランク2のエンブレムです
 シーズンA4b ハイパーボールランク2
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望 エンブレムイベントで\n獲得できる銅賞のエンブレムです
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望 エンブレムイベント 銅賞
 ランクマッチ シーズンA4bで獲得できる\nハイパーボールランク3のエンブレムです
 シーズンA4b ハイパーボールランク3
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望 エンブレムイベントで\n獲得できる銀賞のエンブレムです
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望 エンブレムイベント 銀賞
 ランクマッチ シーズンA4bで獲得できる\nハイパーボールランク4のエンブレムです
 シーズンA4b ハイパーボールランク4
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望 エンブレムイベントで\n獲得できる金賞のエンブレムです
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望 エンブレムイベント 金賞
 ランクマッチ シーズンA4bで獲得できる\nスーパーボールランク1のエンブレムです
 シーズンA4b スーパーボールランク1
 ランクマッチ シーズンA4bで獲得できる\nスーパーボールランク2のエンブレムです
@@ -4984,6 +5128,26 @@ Vickie
 シーズンB4 ビギナーランク2
 シーズンB4 ビギナーランク3
 シーズンB4 ビギナーランク4
+シーズンB4a マスターボールランク
+シーズンB4a マスターボールランク(TOP10000)
+シーズンB4a マスターボールランク(TOP5000)
+シーズンB4a マスターボールランク(TOP1000)
+シーズンB4a ハイパーボールランク1
+シーズンB4a ハイパーボールランク2
+シーズンB4a ハイパーボールランク3
+シーズンB4a ハイパーボールランク4
+シーズンB4a スーパーボールランク1
+シーズンB4a スーパーボールランク2
+シーズンB4a スーパーボールランク3
+シーズンB4a スーパーボールランク4
+シーズンB4a モンスターボールランク1
+シーズンB4a モンスターボールランク2
+シーズンB4a モンスターボールランク3
+シーズンB4a モンスターボールランク4
+シーズンB4a ビギナーランク1
+シーズンB4a ビギナーランク2
+シーズンB4a ビギナーランク3
+シーズンB4a ビギナーランク4
 1周年
 スペシャルイベント2025の記念エンブレムです
 スペシャルイベント2025(エンブレム)
@@ -5047,6 +5211,7 @@ B3
 B3a
 B3b
 B4
+B4a
 最強の遺伝子
 幻のいる島
 時空の激闘
@@ -5067,6 +5232,7 @@ B4
 進撃パラドックス
 ミラクルデイズ
 天空の支配者
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望
 #マイコレクション
 #好きなポケモン
 #お気に入りのイラスト
@@ -6520,6 +6686,39 @@ B4
 神話の　ポケモンを　モデルに\nつくられたが　力の　暴走を\n抑える　マスクを　着けられている｡
 本来の　力を　解き放つ\n最後の　ファクターは　信頼する\nトレーナーとの　絆　だった｡
 ある　科学者が　研究の\n末に　生み出した｡　その力は\n戦うことに　特化　している｡
+海風を　受けて　グライダーのように\n滑空する｡　冬になると\n巣の　まわりに　エサを　隠す｡
+進化して　被っていた　母親の　骨が\n一体化して　そのうえ\n凶暴な　性格に　変わった｡
+地熱で　温められた　横穴で　暮らす｡\n敵が　近づくと　穴を　飛び出して\n大口で　噛みつく｡
+光り輝く　ものが　大好きで\n洞窟の　中で　見つけた\n宝を　自分の　巣に　溜めこむ｡
+小枝は　フォッコの　おやつ｡\nポリポリ　かじると　強敵に\n立ち向かう　勇気が　湧いてくる｡
+耳の　内側の　目玉模様から\nサイコパワーを　出すが　\nあまりにも　強力なので　ふさいでいる｡
+群れることを　好まない　性質｡\n短い　腕の　代わりに　ツルを\n器用に　操り　暮らしている｡
+高すぎる　プライドが　玉にきず｡\nほかの　ポケモンと　連携できる\nようになるまで　時間が　かかる｡
+相手を　すくませる　眼光と\n威風堂々たる　その　姿から\n森の君主　と　呼ばれている｡
+木の枝を　尻尾から　引き抜くとき\n着火｡　その　炎を　火種に\n強力な　技を　繰りだす｡
+念力で　炎を　操る｡\n摂氏３０００度の　炎の　渦が\n相手を　包みこみ　焼きつくす｡
+くちばしの　中に　子どもを　入れて\n守っている｡　波の　穏やかな　日は\n海に　浮かんで　ひと休み｡
+生態が　あまりにも　異なるため\nバスラオとは　別種という　説が\n近年は　有力視されている｡
+凄まじい　ジャンプ力を　持つ｡\n死んでいった　仲間たちの　怒りが\n体を　赤く　染めあげている｡
+発電所などに　現れる｡\nモンスターボールと　間違えて\n触って　しびれる　人が　多い｡
+少しの　刺激に　反応して\n爆発する｡　バクダンボールという\nあだ名で　怖がられている｡
+落雷の　多い　土地を　好む｡\nたてがみで　雷を　受け止め\n体に　電気を　溜めこむのだ｡
+雷鳴を　聞くと　群れの　シママが\n雷から　充電できるように\n群れで　雷雲を　追いかける｡
+藻屑が　触っただけで　驚き\n放電してしまうほど　臆病｡\n唇は　電気を　通さない｡
+危険を　感じると　サイコパワーを\n最大出力で　放射｡\n相手のことなど　気にしていない｡
+森の奥で　静かに　暮らす｡\nマントのような　紫の　毛は\n歳を　重ねるほどに　長くなる｡
+風や　雷を　取りこみ　変えた\nエネルギーが　土に　栄養を\n与えて　大地を　豊かに　する｡
+草地などに　多く　生息する｡\n舌を　チロチロ　させて\nまわりの　危険を　感じとる｡
+とても　執念深い　性格｡\n一度　ターゲットに　決めた\n獲物は　どこまでも　追い続ける｡
+体内の　毒ガスは　空気より\n少し　軽い　成分｡　だから\nいつも　少しだけ　浮かんでいる｡
+ピンチになると　体を　丸めて\n背中の　とげとげを　逆立てると\nでたらめに　電撃を　撃ちまくる｡
+コインが　積みあがって　作られた\n体は　頑丈｡　コインを　連射して\n敵を　圧倒する｡
+頭に　ついた　２つの　突起は\nセンサーの　役目｡　遥か　先の\n獲物の　様子も　わかる｡
+全身が　ドラゴンエネルギーの\n結晶｡　すべての　ドラゴン\nポケモンの　力を　持つらしい｡
+生命力が　強く　汚い\n場所でも　平気で　暮らす｡\nほっておくと　どんどん　増えていく｡
+白くて　丸い　石を　タマゴと\n思いこんで　大事に　持っている｡\n巻き毛の　形を　気にしている｡
+放っておくと　体毛は　どんどん\n伸び続けるが　信頼した\n者にしか　カットは　許さない｡
+きれい好きで　几帳面｡\nフローラルな　香りを　まとって\nまわりの　ポケモンたちを　癒す｡
 頭部に　生える　トゲは　キバが\n変化したもの｡　傷つき　折れても\nその場で　何度でも　生え変わる｡
 強力な　霊力で　人や\nポケモンを　操り　ギルガルドに\n都合の　良い　国を　つくらせた｡
 膨大な　エネルギーが　細胞を\n激しく　刺激｡　眠っていた\nドラゴンの　血が　目覚めたらしい｡
@@ -6783,6 +6982,7 @@ UKUMO uiti
 Yoshimoto Yoshimon
 Akino Fukuji
 Iwamoto05
+Kazuki Minami
 Coming Soon
 チャレンジパワーを待ち時間短縮するアイテムです\n使用するとゲットチャレンジまでの時間が1時間\n短縮します　ミッション報酬などで入手できます
 一部の「ひとりで」のバトルやイベントに\n挑戦するためのアイテムです\n使用すると挑戦までの時間を短縮します
@@ -6794,12 +6994,14 @@ Coming Soon
 自分のカード画面でレアリティの高いカードを消費\nすると入手できます  ショップで特別な周辺グッズ\nやアイテムと交換できます
 プレミアムミッションで入手できます\nショップで周辺グッズやプロモカードと\n交換できます
 集めることでプレイヤーレベルをアップさせる\nことができるアイテムです
+長い間　使い込まれた\nロケット団のしたっぱのくつ下\nちょっと臭う…
 期限切れのゲットチャレンジを復活するための\nアイテムです　1回につき1個　チャレンジパワーと\n一緒に消費する必要があります
 ショップでデッキ(20枚のカード)と交換できます\nexスタートデッキミッションで入手できます\n交換期間を過ぎると削除されます
 テーマコレクションや図鑑ミッションを達成すると\n入手できます\nショップで特定のエンブレムと交換できます
 ショップで周辺グッズやアイテムと交換できます\nイベントミッションを達成すると入手できます\n交換期間を過ぎると削除されます
 今はまだ使えないチケットです\nお楽しみに！
 ショップでプロモカードと交換できます\nイベントミッションを達成すると入手できます\n交換期間を過ぎると削除されます
+ロケット団の特別任務を達成すると入手できます\nどこかで使うことができるらしい...
 ビューティ
 クール
 キュート
@@ -6819,6 +7021,7 @@ Coming Soon
 スペシャルショップチケット
 プレミアムチケット
 EXP
+ロケット団のしたっぱのくつ下
 ふっかつ時計
 エンブレムチケット(最強の遺伝子)
 エンブレムチケット(幻のいる島)
@@ -6877,6 +7080,8 @@ EXP
 プロモカード交換チケット([Text:CardName v="MEGAHELLGAR_EX"]ドロップイベント)
 プロモカード交換チケット([Text:CardName v="SOUBLADES_EX"]ドロップイベント)
 プロモカード交換チケット([Text:CardName v="HISUIZORUA"]ドロップイベント)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]のあやしいチケット
+プロモカード交換チケット([Text:CardName v="ROCKETDANNOLAPLACE"]ドロップイベント)
 いつかのチケット
 シャボン玉 水色 エフェクト(キラ)
 シャボン玉 ピンク エフェクト(キラ)
@@ -7002,6 +7207,9 @@ EXP
 レンタルデッキ「[Mst:RentalDeckName id="0"]」で「ひとりで」のバトルを[Num:Int id="1" max_length="3"]回しよう
 おすそわけを[Num:Int id="0" max_length="3"]回しよう
 「ひとりで」のバトルで[Num:Int id="0" max_length="3"]ポイント獲得しよう
+ログインせよ！([Num:Int id="0" max_length="3"]日目)
+バトルを[Num:Int id="0" max_length="3"]回せよ！
+ゲットチャレンジを[Num:Int id="0" max_length="3"]回プレイせよ！
 はじめての選択
 エレブーとブーバー
 トキワの森
@@ -7409,6 +7617,29 @@ exコンプリート！
 ミラクルデイズミュージアム②
 こいぬポケモン大集合！
 カラフルダンスショー！
+伝説のポケモンを捜索せよ！
+研究所に潜入せよ！
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]に勧誘せよ！
+ボスと相棒
+研究員のあやしい発明品
+[Text:CardName v="ILLUMISE"]と[Text:CardName v="BARUBEAT"]
+ながい鼻のポケモン
+[Text:CardName v="ROCKETDANNOSHITAPPA"]①
+[Text:CardName v="ROCKETDANNOSHITAPPA"]②
+毒ガスに注意
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]のポケモンたち
+手にモノを持っているポケモン
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望ミュージアム①
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望ミュージアム②
+[Text:CardName v="ROCKETDANNOSHITAPPA"]大集合
+あやしい発明品コレクター
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]のカードコンプリート
+[Text:CardNameWithSubName id="0"]のカードを[Num:Int id="1" max_length="3"]枚入手せよ！
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望の[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]のカードを[Num:Int id="1" max_length="3"]枚入手せよ！
+[Text:CardName v="TRIMMIEN"]のファッションショー
+[Text:CardName v="PIKACHU"]の冒険
+オスとメスの[Text:CardName v="NYAONIX"]
+4匹の「けしん」たち
 デッキミッション
 デッキミッション
 最強の遺伝子 エンブレムイベント1
@@ -7498,6 +7729,12 @@ exスタートデッキミッション
 [Text:CardName v="HISUIZORUA"]ドロップイベント
 ミラクルデイズ エンブレムイベント
 複数シリーズ①
+[Text:CardName v="ROCKETDANNOLAPLACE"]ドロップイベント
+[Text:CardName v="ROCKETDANNOLAPLACE"]ドロップイベント
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望 エンブレムイベント
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望 エンブレムイベント
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の特別任務
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の特別任務
 初級
 上級
 デイリー
@@ -7529,6 +7766,7 @@ exスタートデッキ
 便利カード
 一覧
 おかえり
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]
 ランダムバトル(上級)
 ランダムバトル(初級)
 ランダムバトル(エキスパート)
@@ -7569,6 +7807,7 @@ TOP10000
 進撃パラドックスの拡張パック
 ミラクルデイズの拡張パック
 天空の支配者の拡張パック
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望の拡張パック
 Aシリーズ 第1弾のプロモカードパック 
 Aシリーズ 第2弾のプロモカードパック 
 Aシリーズ 第3弾のプロモカードパック 
@@ -7593,6 +7832,7 @@ Bシリーズ 第8弾のプロモカードパック
 Bシリーズ 第9弾のプロモカードパック 
 Bシリーズ 第10弾のプロモカードパック 
 Bシリーズ 第11弾のプロモカードパック 
+Bシリーズ 第12弾のプロモカードパック 
 [Mst:Rarity v="RARITY_MSID_RR"]以上1枚確定
 最強の遺伝子 ミュウツー
 最強の遺伝子 ミュウツー([Mst:Rarity v="RARITY_MSID_RR"]以上1枚確定)
@@ -7624,6 +7864,7 @@ Bシリーズ 第11弾のプロモカードパック
 進撃パラドックス
 ミラクルデイズ
 天空の支配者
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望
 プロモカードパック Aシリーズ 第1弾
 プロモカードパック Aシリーズ 第2弾
 プロモカードパック Aシリーズ 第3弾
@@ -7648,6 +7889,7 @@ Bシリーズ 第11弾のプロモカードパック
 プロモカードパック Bシリーズ 第9弾
 プロモカードパック Bシリーズ 第10弾
 プロモカードパック Bシリーズ 第11弾
+プロモカードパック Bシリーズ 第12弾
 [Mst:Rarity v="RARITY_MSID_RR"]以上確定
 通常封入
 通常封入+1枚
@@ -7976,6 +8218,8 @@ Bシリーズ 第11弾のプロモカードパック
 全国図鑑NO.0275　よこしまポケモン　高さ：1.3m　重さ：59.6kg
 全国図鑑NO.0276　こツバメポケモン　高さ：0.3m　重さ：2.3kg
 全国図鑑NO.0277　ツバメポケモン　高さ：0.7m　重さ：19.8kg
+全国図鑑NO.0278　うみねこポケモン　高さ：0.6m　重さ：9.5kg
+全国図鑑NO.0279　みずどりポケモン　高さ：1.2m　重さ：28.0kg
 全国図鑑NO.0280　きもちポケモン　高さ：0.4m　重さ：6.6kg
 全国図鑑NO.0281　かんじょうポケモン　高さ：0.8m　重さ：20.2kg
 全国図鑑NO.0282　ほうようポケモン　高さ：1.6m　重さ：48.4kg
@@ -8148,6 +8392,7 @@ Bシリーズ 第11弾のプロモカードパック
 全国図鑑NO.0437　どうたくポケモン　高さ：1.3m　重さ：187.0kg
 全国図鑑NO.0438　ぼんさいポケモン　高さ：0.5m　重さ：15.0kg
 全国図鑑NO.0439　マイムポケモン　高さ：0.6m　重さ：13.0kg
+全国図鑑NO.0440　ままごとポケモン　高さ：0.6m　重さ：24.4kg
 全国図鑑NO.0441　おんぷポケモン　高さ：0.5m　重さ：1.9kg
 全国図鑑NO.0442　ふういんポケモン　高さ：1.0m　重さ：108.0kg
 全国図鑑NO.0443　りくザメポケモン　高さ：0.7m　重さ：20.5kg
@@ -8268,6 +8513,7 @@ Bシリーズ 第11弾のプロモカードパック
 全国図鑑NO.0549　はなかざりポケモン　高さ：1.1m　重さ：16.3kg
 全国図鑑NO.0549　スピンポケモン　高さ：1.2m　重さ：19.2kg
 全国図鑑NO.0550　らんぼうポケモン　高さ：1.0m　重さ：18.0kg
+全国図鑑NO.0550　おんこうポケモン　高さ：1.0m　重さ：18.0kg
 全国図鑑NO.0551　さばくワニポケモン　高さ：0.7m　重さ：15.2kg
 全国図鑑NO.0552　さばくワニポケモン　高さ：1.0m　重さ：33.4kg
 全国図鑑NO.0553　いかくポケモン　高さ：1.5m　重さ：96.3kg
@@ -8362,6 +8608,7 @@ Bシリーズ 第11弾のプロモカードパック
 全国図鑑NO.0642　らいげきポケモン　高さ：1.5m　重さ：61.0kg
 全国図鑑NO.0643　はくようポケモン　高さ：3.2m　重さ：330.0kg
 全国図鑑NO.0644　こくいんポケモン　高さ：2.9m　重さ：345.0kg
+全国図鑑NO.0645　ほうじょうポケモン　高さ：1.5m　重さ：68.0kg
 全国図鑑NO.0647　わかごまポケモン　高さ：1.4m　重さ：48.5kg
 全国図鑑NO.0648　せんりつポケモン　高さ：0.6m　重さ：6.5kg
 全国図鑑NO.0648　せんりつポケモン　高さ：0.6m　重さ：6.5kg
@@ -8369,6 +8616,9 @@ Bシリーズ 第11弾のプロモカードパック
 全国図鑑NO.0650　いがぐりポケモン　高さ：0.4m　重さ：9.0kg
 全国図鑑NO.0651　とげよろいポケモン　高さ：0.7m　重さ：29.0kg
 全国図鑑NO.0652　とげよろいポケモン　高さ：1.6m　重さ：90.0kg
+全国図鑑NO.0653　キツネポケモン　高さ：0.4m　重さ：9.4kg
+全国図鑑NO.0654　キツネポケモン　高さ：1.0m　重さ：14.5kg
+全国図鑑NO.0655　キツネポケモン　高さ：1.5m　重さ：39.0kg
 全国図鑑NO.0656　あわがえるポケモン　高さ：0.3m　重さ：7.0kg
 全国図鑑NO.0657　あわがえるポケモン　高さ：0.6m　重さ：10.9kg
 全国図鑑NO.0658　しのびポケモン　高さ：1.5m　重さ：40.0kg
@@ -8398,7 +8648,9 @@ Bシリーズ 第11弾のプロモカードパック
 全国図鑑NO.0676　プードルポケモン　高さ：1.2m　重さ：28.0kg
 全国図鑑NO.0676　プードルポケモン　高さ：1.2m　重さ：28.0kg
 全国図鑑NO.0676　プードルポケモン　高さ：1.2m　重さ：28.0kg
+全国図鑑NO.0676　プードルポケモン　高さ：1.2m　重さ：28.0kg
 全国図鑑NO.0677　じせいポケモン　高さ：0.3m　重さ：3.5kg
+全国図鑑NO.0678　よくせいポケモン　高さ：0.6m　重さ：8.5kg
 全国図鑑NO.0678　よくせいポケモン　高さ：0.6m　重さ：8.5kg
 全国図鑑NO.0679　とうけんポケモン　高さ：0.8m　重さ：2.0kg
 全国図鑑NO.0680　とうけんポケモン　高さ：0.8m　重さ：4.5kg
@@ -8609,7 +8861,9 @@ Bシリーズ 第11弾のプロモカードパック
 全国図鑑NO.0892　けんぽうポケモン　高さ：1.9m　重さ：105.0kg
 全国図鑑NO.0892　けんぽうポケモン　高さ：1.9m　重さ：105.0kg
 全国図鑑NO.0893　わるざるポケモン　高さ：1.8m　重さ：70.0kg
+全国図鑑NO.0895　りゅうぎょくポケモン　高さ：2.1m　重さ：200.0kg
 全国図鑑NO.0901　でいたんポケモン　高さ：2.4m　重さ：290.0kg
+全国図鑑NO.0902　おおうおポケモン　高さ：3.0m　重さ：110.0kg
 全国図鑑NO.0905　あいぞうポケモン　高さ：1.6m　重さ：48.0kg
 全国図鑑NO.0906　くさねこポケモン　高さ：0.4m　重さ：4.1kg
 全国図鑑NO.0907　くさねこポケモン　高さ：0.9m　重さ：12.2kg
@@ -8621,6 +8875,7 @@ Bシリーズ 第11弾のプロモカードパック
 全国図鑑NO.0913　レッスンポケモン　高さ：1.2m　重さ：21.5kg
 全国図鑑NO.0914　ダンサーポケモン　高さ：1.8m　重さ：61.9kg
 全国図鑑NO.0915　ぶたポケモン　高さ：0.5m　重さ：10.2kg
+全国図鑑NO.0916　ぶたポケモン　高さ：1.0m　重さ：120.0kg
 全国図鑑NO.0916　ぶたポケモン　高さ：1.0m　重さ：120.0kg
 全国図鑑NO.0917　いとだまポケモン　高さ：0.3m　重さ：4.0kg
 全国図鑑NO.0918　トラップポケモン　高さ：1.0m　重さ：16.5kg
@@ -8841,6 +9096,34 @@ Bシリーズ 第11弾のプロモカードパック
 天空の支配者 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14"](アイコン)
 [Text:CardName v="ABSOL"](アイコン)
 [Text:CardName v="RALTS"](アイコン)
+[Text:CardName v="FOKKO"](アイコン)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望 [Text:CardName v="ROCKETDANNOBOSS"](アイコン)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の[Text:CardName v="SLEEPE"](アイコン)
+[Text:CardName v="ROCKETDANNOSHITAPPA"](アイコン)
+[Text:CardName v="ROCKETDANNOSHITAPPA"] Ver.2(アイコン)
+[Text:CardName v="ROCKETDANNOSHITAPPA"] Ver.3(アイコン)
+[Text:CardName v="ROCKETDANNOKENKYUUIN"](アイコン)
+[Text:CardName v="ROCKETDANNOBOSS"](アイコン)
+[Text:CardName v="PIKACHU"] Ver.2(アイコン)
+[Text:CardName v="PIKACHU"] Ver.3(アイコン)
+[Text:CardName v="PIKACHU"] Ver.4(アイコン)
+[Text:CardName v="PIKACHU"] Ver.5(アイコン)
+[Text:CardName v="PIKACHU"] Ver.6(アイコン)
+[Text:CardName v="PIKACHU"] Ver.7(アイコン)
+[Text:CardName v="PIKACHU"] Ver.8(アイコン)
+[Text:CardName v="PIKACHU"] Ver.9(アイコン)
+[Text:CardName v="PIKACHU"] Ver.10(アイコン)
+[Text:CardName v="PIKACHU"] Ver.11(アイコン)
+[Text:CardName v="TRIMMIEN"] やせいのすがた(アイコン)
+[Text:CardName v="TRIMMIEN"] ハートカット(アイコン)
+[Text:CardName v="TRIMMIEN"] キングダムカット(アイコン)
+[Text:CardName v="TRIMMIEN"] カブキカット(アイコン)
+[Text:CardName v="TRIMMIEN"] マダムカット(アイコン)
+[Text:CardName v="TRIMMIEN"] スターカット(アイコン)
+[Text:CardName v="TRIMMIEN"] ダイヤカット(アイコン)
+[Text:CardName v="TRIMMIEN"] レディカット(アイコン)
+[Text:CardName v="TRIMMIEN"] ジェントルカット(アイコン)
+[Text:CardName v="TRIMMIEN"] クイーンカット(アイコン)
 よろしくお願いします
 初心者です！
 かわいいポケモンが好き
@@ -9126,6 +9409,18 @@ PROMO-B
 タイトル画面
 カレンダー(ボード)
 カレンダー
+[Text:CardName v="THUNDER"]＆[Text:CardName v="FREEZER"]＆[Text:CardName v="FIRE"](ボード)
+[Text:CardName v="THUNDER"]＆[Text:CardName v="FREEZER"]＆[Text:CardName v="FIRE"]
+[Text:CardName v="FOKKO"](ボード)
+[Text:CardName v="FOKKO"]
+[Text:CardName v="ROCKETDANNOBOSS"](ボード)
+[Text:CardName v="ROCKETDANNOBOSS"]
+赤い脚光(ボード)
+赤い脚光
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"](ボード)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]
+重さくらべ(ボード)
+重さくらべ
 レトロサマー(ボード)
 レトロサマー
 コレクションボード機能で使う\nカードを飾るための台紙です
@@ -9225,6 +9520,10 @@ PROMO-B
 [Text:CardName v="METAGROSS"](ポケモンコイン)
 [Text:CardName v="MIJUMARU"](ポケモンコイン)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14"](ポケモンコイン)
+[Text:CardName v="THUNDER"](ポケモンコイン)
+[Text:CardName v="FOKKO"](ポケモンコイン)
+[Text:CardName v="ROCKETDANNOBOSS"](ポケモンコイン)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"](ポケモンコイン)
 バトル時に使用できるコインです\nデッキ機能で設定できます
 イーブイ(デッキシールド)
 イーブイ
@@ -9315,6 +9614,10 @@ PROMO-B
 [Text:CardName v="METAGROSS"](デッキシールド)
 [Text:CardName v="MIJUMARU"](デッキシールド)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14"](デッキシールド)
+[Text:CardName v="THUNDER"]＆[Text:CardName v="FREEZER"]＆[Text:CardName v="FIRE"](デッキシールド)
+[Text:CardName v="FOKKO"](デッキシールド)
+[Text:CardName v="ROCKETDANNOBOSS"](デッキシールド)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"](デッキシールド)
 カードに装着する周辺グッズです\nデッキ機能で設定できます
 コレクションファイル機能で使う\nファイルの表紙です
 イーブイ(ファイル)
@@ -9456,6 +9759,11 @@ PROMO-B
 [Text:CardName v="MIJUMARU"](ファイル)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14"](ファイル)
 天空の支配者 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14"](ファイル)
+[Text:CardName v="THUNDER"]＆[Text:CardName v="FREEZER"]＆[Text:CardName v="FIRE"](ファイル)
+[Text:CardName v="FOKKO"](ファイル)
+[Text:CardName v="ROCKETDANNOBOSS"]＆[Text:CardName v="PERSIAN"](ファイル)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"](ファイル)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"](ファイル)
 イーブイ(プレイマット)
 イーブイ
 ニャース(プレイマット)
@@ -9546,6 +9854,10 @@ PROMO-B
 [Text:CardName v="METAGROSS"](プレイマット)
 [Text:CardName v="MIJUMARU"](プレイマット)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14"](プレイマット)
+[Text:CardName v="THUNDER"]＆[Text:CardName v="FREEZER"]＆[Text:CardName v="FIRE"](プレイマット)
+[Text:CardName v="FOKKO"](プレイマット)
+[Text:CardName v="ROCKETDANNOBOSS"]＆[Text:CardName v="PERSIAN"](プレイマット)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"](プレイマット)
 バトル時に場に広げる周辺グッズです\nデッキ機能で設定できます
 自分の場にたねポケモンを[Num:Int id="0" max_length="2"]匹出す
 自分の場にポケモンexを[Num:Int id="0" max_length="2"]匹出す
@@ -9583,6 +9895,7 @@ B3
 B3a
 B3b
 B4
+B4a
 獲得したポイント数が[Num:Int id="0" max_length="3"]ポイント以上になる
 与えたダメージが[Num:Int id="0" max_length="5"]ダメージ以上になる
 獲得した勝利数が[Num:Int id="0" max_length="3"]回以上になる
@@ -9622,6 +9935,7 @@ exスタートデッキ
 パルデアワンダー
 波動ビート
 シャイニングメガ
+レアなアイテム
 ニャース(ポケモンコイン)
 ニャース(デッキシールド)
 ニャース(プレイマット)
@@ -10080,6 +10394,7 @@ exスタートデッキ
 [Mst:CardCharacterName v="CARD_NAME_271"](046/P-B)
 [Mst:CardCharacterName v="CARD_NAME_120"](047/P-B)
 [Mst:CardCharacterName v="CARD_NAME_194"](048/P-B)
+ロケット団のしたっぱのくつ下
 [Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101190_MIRAIDON"]
 [Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101310_MIRAIDON"]
 [Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100760_MIRAIDON"]
@@ -10110,6 +10425,21 @@ exスタートデッキ
 [Mst:CardCharacterName v="CARD_NAME_95"](074/P-B)
 [Mst:CardCharacterName v="CARD_NAME_718"](075/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1262"](076/P-B)
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101290_SAKAKI_PERSIAN"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101490_SAKAKI"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100850_SAKAKI"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101040_SAKAKI"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100850_SAKAKI_PERSIAN"]
+[Mst:CardCharacterName v="CARD_NAME_1340"](088/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1341"](089/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1342"](090/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1343"](091/P-B)
+[Mst:CardCharacterName v="CARD_NAME_152"](092/P-B)
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101050_TEAM_ROCKET"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100860_TEAM_ROCKET"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100860_TEAM_ROCKET"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101510_TEAM_ROCKET"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101310_TEAM_ROCKET"]
 ポケゴールド
 周辺グッズつきポケゴールド
 おまけつきポケゴールド
@@ -10169,6 +10499,7 @@ exスタートデッキ
 サマーセール　お得なポケゴールド(有償)×15
 サマーセール　お得なポケゴールド(有償)×200
 周辺グッズ「[Text:CardName v="KAMITSURE"]」つきポケゴールド(有償)×115
+周辺グッズ「[Text:CardName v="THUNDER"]＆[Text:CardName v="FREEZER"]＆[Text:CardName v="FIRE"]」つきポケゴールド(有償)×115
 ポケゴールド
 チケット
 スペシャル
@@ -10180,6 +10511,7 @@ exスタートデッキ
 復刻ドロップ
 復刻ゲットチャレンジ
 プロモカード
+ロケット団
 [Mst:Rarity v="RARITY_MSID_RR"]以上1枚確定
 [Mst:PackName v="PACK_NAME_PROMO_A_1"]
 [Mst:PackName v="PACK_NAME_PROMO_A_2"]
@@ -10204,6 +10536,7 @@ exスタートデッキ
 [Mst:PackName v="PACK_NAME_PROMO_B_9"]
 [Mst:PackName v="PACK_NAME_PROMO_B_10"]
 [Mst:PackName v="PACK_NAME_PROMO_B_11"]
+[Mst:PackName v="PACK_NAME_PROMO_B_12"]
 廃止されたアイテムです\nショップで他のアイテムと交換してください
 トレードメダル
 ほしいカード以外でもトレード希望
@@ -10352,6 +10685,12 @@ exスタートデッキ
 自分のエネルギーゾーンから[Ctrl:NoBreak][Img:Element id="0"]エ[/Ctrl:NoBreak]ネルギーを[Ctrl:NoBreak]1個[/Ctrl:NoBreak]出し、[Ctrl:Bold][Ctrl:NoBreak]2進化[/Ctrl:NoBreak][/Ctrl:Bold]ポケモンにつける。
 おたがいのプレイヤーは、自分の番の終わりに、[Img:Element id="0"]エネルギーがついている自分のポケモン全員のHPを[Num:Int id="1" max_length="3"]回復。
 おたがいのプレイヤーは、自分の番に1回使える。自分のエネルギーゾーンに発生しているエネルギーをトラッシュ。その場合、次のエネルギーを出す。
+相手のトラッシュからグッズ（「[Text:CardName id="0"]」をのぞく）をランダムに[Num:Int id="1" max_length="2"]枚、自分の手札に加える。
+次の相手の番の終わりまで、相手のバトルポケモンの[Ctrl:Bold]にげる[/Ctrl:Bold]ためのエネルギーを、[Num:Int id="0" max_length="2"]個多くする。
+相手の手札のオモテをすべて見て、その中から[Ctrl:Bold]たね[/Ctrl:Bold]ポケモンを好きなだけ選び、相手のベンチに出す。
+おたがいのプレイヤーは、自分の番に1回使える。コインを[Num:Int id="0" max_length="2"]回投げ、すべてオモテなら、自分の手札が[Num:Int id="1" max_length="2"]枚になるように、山札を引く。
+ウラが出るまでコインを投げ、オモテの数ぶん、自分の山札から名前に「ロケット団」とつくポケモンをランダムに手札に加える。
+相手のバトルポケモンを[Ctrl:Bold][Text:SpecialCondition id="0"][/Ctrl:Bold]にする。コインを1回投げウラなら、自分のバトルポケモンも[Ctrl:Bold][Text:SpecialCondition id="0"][/Ctrl:Bold]にする。
 ポケモンのどうぐ
 グッズ(化石)
 グッズ
@@ -10422,6 +10761,7 @@ exスタートデッキ
 [Mst:CollectionBoardHashTag]
 [Mst:CollectionFileHashTag]
 [Mst:CommonCharacterName]
+[Mst:CommonGroupName]
 [Mst:CountryName]
 [Mst:CurrencyDescription]
 [Mst:CurrencyName]
@@ -10435,6 +10775,8 @@ exスタートデッキ
 [Mst:ExpansionName]
 [Mst:ExpansionNameLong]
 [Mst:FixedNotice]
+[Mst:HiddenEventItemDescription]
+[Mst:HiddenEventItemName]
 [Mst:ItemExchangeSubCategory]
 [Mst:ItemShopCategoryName]
 [Mst:ItemShopProductName]
@@ -11146,6 +11488,8 @@ HPが回復しない
 「[Text:AbilityName id="0"]」の効果で\n[Text:CardName id="1"]はワザが使えません
 手札からポケモンを出して進化できない
 「ポケモンのどうぐ」を\n[Num:Int id="0" max_length="2"]枚までつけられる
+自分のトレーナーズでコインを投げたとき\nはじめからコインを投げなおすことができる
+[Text:EvolutionPokemon id="0" style="plain"]を好きなだけ選んでください
 「[Text:AttackName id="0"]」で\n相手のポケモンが選ばれる回数を+[Num:Int id="1" max_length="2"]
 次の相手の番の終わりに\n選んだ[Num:Int id="0" visible="0" max_length="1"]場所にいるポケモンをきぜつさせる
 エネルギーをつけ替えられる\nポケモンがいませんでした
@@ -11357,6 +11701,7 @@ HPが回復しない
 自分の[Mst:EnergyTypeNamePokemon id="0"]のワザでコインを投げたときはじめからコインを投げなおすことができる
 手札からポケモンを出して進化できない
 「ポケモンのどうぐ」を[Num:Int id="0" max_length="2"]枚までつけられる
+自分のトレーナーズでコインを投げたときはじめからコインを投げなおすことができる
 「[Text:AttackName id="0"]」で相手のポケモンが選ばれる回数を+[Num:Int id="1" max_length="2"]
 次の相手の番の終わりに選んだ[Num:Int id="0" visible="0" max_length="1"]場所にいるポケモンをきぜつさせる
 相手のトラッシュ
@@ -12988,6 +13333,7 @@ OK
 購入エラー
 未成年の方へ\n有料アイテムを買うときは\n必ず保護者(お父さんやお母さんなど)に\nお許しをもらうか一緒に買うようにしてください\n\nその他の注意事項は利用規約に書いてあります\n必ず保護者と一緒に読んでから\nサービスを利用してください\n\nショップご利用の方へ\n正常に商品を購入できなかった場合は\n以下をお試しください
 注意事項
+ロケット団の隠し交換所
 所持
 アイテムがありません
 メイン
@@ -13033,6 +13379,7 @@ OK
 OK
 これ以上所持できません
 一度に交換できる上限に達しました
+ひみつの　スイッチを　みつけた\nおしてみよう！　…ポチッとな！
 キャンセル
 以下のミッションを達成する
 ミッションへ

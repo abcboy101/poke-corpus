@@ -135,6 +135,11 @@ If you have another [Text:CardName id="0"] in play, this Pokémon’s Retreat Co
 This Pokémon may have up to [Num:Int id="0" max_length="1"] Pokémon Tool cards attached to it.
 Once during your turn, if this Pokémon is on your Bench, you may attach [Gr:Count s="an " ref="0" ][Num:Int id="0" max_length="1" plural_only=" " ]Energy from your discard pile to your Active [Img:Element id="1"] Pokémon.
 Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may look at the top [Num:Int id="0" max_length="1"] cards of your deck and put all Item cards you find there into your hand. Shuffle the other cards back into your deck.
+Once during your turn, if this Pokémon is in the Active Spot, you may draw [Num:Int id="0" max_length="1" plural_only=" "][Gr:Count s="a card" p="cards" ref="0" ].
+Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may make your opponent’s Active Pokémon [Text:SpecialCondition id="0"] and [Text:SpecialCondition id="1"].
+Once during your turn, when you flip any coins for an effect of your Trainer cards, you may ignore all results of those coin flips and begin flipping those coins again. You can’t use more than 1 [Text:AbilityName id="0" suffix="Short"] Ability each turn.
+Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may move [Num:Int id="0" plural_only=" " ][Gr:Count s="a " ref="0" ]random Energy from your opponent’s Active Pokémon to this Pokémon.
+Once during your turn, you may look at [Num:Int id="0" plural_only=" " ][Gr:Count s="a random card" p="random cards" id="0" ref="0" ] from your opponent’s hand.
 Powder Heal
 Fragrance Trap
 Counterattack
@@ -294,6 +299,14 @@ Conductive Body
 Dual Customization
 Dragon’s Blessing
 Treasure Collecting
+Regal Bloom
+Destiny Burst
+Evil Inspiration
+Boiler Smog
+Luxury Coin
+Mach Stealth
+Thieving Incisors
+Spy Ops
 Dawn Wings
 Alolan
 Rainy Form
@@ -307,6 +320,7 @@ Teal Mask
 Origin Forme
 Paldean
 Rapid Strike
+Team Rocket’s
 Sunny Form
 Dusk Mane
 Snowy Form
@@ -637,6 +651,16 @@ Draw a card for each [Text:CardName id="0"] you have in play.
 If your opponent’s Active Pokémon has less remaining HP than this Pokémon, this attack does [Num:Int id="0" max_length="3"] more damage.
 Discard all [Img:Element id="0"] and [Img:Element id="1"] Energy from this Pokémon, and this attack does [Num:Int id="2" max_length="3"] damage for each Energy you discarded in this way.
 You may move any amount of Energy from your Pokémon in play to your other Pokémon in any way you like.
+Reveal the top [Num:Int id= "0" plural_only=" " max_length="2" ][Gr:Count s="card" p="cards" ref="0" ] of your deck. This attack does [Num:Int id="1" max_length="3"] damage for each Pokémon you find there that has “Team Rocket” in its name. Shuffle the revealed [Gr:Count s="card" p="cards" ref="0" ] back into your deck.
+If your opponent’s Active Pokémon has “Team Rocket” in its name, this attack does [Num:Int id="0" max_length="3"] more damage.
+This attack does [Num:Int id="0" max_length="3"] more damage for each Special Condition affecting your opponent’s Active Pokémon.
+Flip [Num:Int id= "0" plural_only=" " max_length="2" ][Gr:Count s="a coin" p="coins" ref="0" ]. [Gr:Count s="If heads" p="For each heads" ref="0" ], produce a [Img:Element id="1"] Energy from your Energy Zone and attach it to this Pokémon.
+This attack also does [Num:Int id="0" max_length="3"] damage to 1 of your opponent’s Benched Pokémon that has damage on it.
+Put [Num:Int id= "0" plural_only=" " max_length="2" ][Gr:Count s="a " ref="0" ]random Item [Gr:Count s="card" p="cards" ref="0" ] from your discard pile into your hand.
+This attack does [Num:Int id="0" max_length="3"] damage for each card in your hand.
+If your opponent’s Active Pokémon is [Text:SpecialCondition id="0"], heal [Num:Int id="1" max_length="3"] damage from this Pokémon.
+If this Pokémon has damage on it, this attack does −[Num:Int id="0" max_length="3"] damage.
+This attack does [Num:Int id="0" max_length="3"] more damage for each point your opponent got during their last turn.
 Vine Whip
 Razor Leaf
 Mega Drain
@@ -1717,6 +1741,36 @@ Jet Wing
 Retaliate
 Gold Breaker
 Grimhound Flare
+Rocket Frenzy
+Punish
+Ire-Fly
+Leaf Boomerang
+Derisive Roasting
+Heat Charged
+Netherwing
+Toxfire Fang
+Hailstorm
+Soul Counter
+Thunderclaw
+Scavenge
+Hand Kinesis
+Entrap
+Psychic Explosion
+Punch and Draw
+Gaia Impact
+Shadow Seeker
+Sludge
+Poison Absorption
+Reverse Thrust
+Confusion Gas
+Pile-Driving Hammer
+Draconic Slam
+Boost Dash
+Dangerous Rogue
+Hit and Hide
+Chubby Cheer
+Sitdown Splash
+Ruthless Whirlpool
 Asleep
 Attach [Num:Int id="0" max_length="2" ] Energy to your Pokémon
 Pikachu Silhouettes Flair (Battle)
@@ -1848,6 +1902,7 @@ Mega Shine Emblem Event
 Paradox Drive Emblem Event
 Ruler of the Skies Emblem Event
 Everyday Wonders Emblem Event
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition Emblem Event
 Wartortle Deck (Genetic Apex)
 Ivysaur Deck (Genetic Apex)
 Charmeleon Deck (Genetic Apex)
@@ -2312,8 +2367,21 @@ Sweets Relay Deck (Eevee Grove)
 [Text:CardName v="MEGARAYQUAZA_EX" ] Deck (Ruler of the Skies)
 [Text:CardName v="SWANNA_EX" ] Deck (Ruler of the Skies)
 [Text:CardName v="WHALOH_EX" ] Deck (Ruler of the Skies)
+[Text:CardName v="ROCKETDANNOBACHINUNI" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNOBARRIERD" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNONYULA" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNOMEWTWO" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNOBETBETON" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNOPERSIAN" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNOFIRE_EX" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNOFREEZER_EX" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNOTHUNDER_EX" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNOYADOKING_EX" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNOMATADOGAS_EX" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNORATTA_EX" ] Deck (Team Rocket’s Ambition)
 [Text:CardName v="HELLGAR" ] Deck (Ruler of the Skies)
 [Text:CardName v="MEGAHELLGAR_EX" ] Deck (Ruler of the Skies)
+[Text:CardName v="ROCKETDANNOLAPLACE" ] Deck (Team Rocket’s Ambition)
 [Text:CardName v="SHIRONA" ] Deck (Fantastical Parade)
 [Text:CardName v="KAIRYU" ] Deck (Fantastical Parade)
 [Text:CardName v="SILVADY" ] Deck (Fantastical Parade)
@@ -2516,6 +2584,12 @@ Elite Deck ([Text:CardName v="MEGABURSYAMO_EX" ])
 [Text:CardName v="MEGAMETAGROSS_EX" ] Deck (Ruler of the Skies)
 [Text:CardName v="MEGARAYQUAZA_EX" ] Deck (Ruler of the Skies)
 [Text:CardName v="SWANNA_EX" ] Deck (Ruler of the Skies)
+[Text:CardName v="ROCKETDANNOFIRE_EX" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNOFREEZER_EX" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNOTHUNDER_EX" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNOYADOKING_EX" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNOMATADOGAS_EX" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNORATTA_EX" ] Deck (Team Rocket’s Ambition)
 Elite Deck ([Text:CardName v="MEGALIZARDONY_EX" ])
 Elite Deck ([Text:CardName v="MEGALUCARIO_EX" ])
 A rental deck that you can use in battles.\nThis deck can be used in battle even if you do not\nown all of the cards included in it.
@@ -2704,6 +2778,12 @@ Elite Deck ([Text:CardName v="MEGABURSYAMO_EX" ])
 [Text:CardName v="MEGAMETAGROSS_EX" ] Deck (Ruler of the Skies)
 [Text:CardName v="MEGARAYQUAZA_EX" ] Deck (Ruler of the Skies)
 [Text:CardName v="SWANNA_EX" ] Deck (Ruler of the Skies)
+[Text:CardName v="ROCKETDANNOFIRE_EX" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNOFREEZER_EX" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNOTHUNDER_EX" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNOYADOKING_EX" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNOMATADOGAS_EX" ] Deck (Team Rocket’s Ambition)
+[Text:CardName v="ROCKETDANNORATTA_EX" ] Deck (Team Rocket’s Ambition)
 Elite Deck ([Text:CardName v="MEGALIZARDONY_EX" ])
 Elite Deck ([Text:CardName v="MEGALUCARIO_EX" ])
 A theme deck list that can be used when accessing\nyour decks. You will be able to build and play with\nthis deck by collecting the cards in this list.
@@ -2769,6 +2849,7 @@ Special Drop Event 2026
 [Text:CardName v="SOUBLADES_EX" ] Drop Event
 [Text:CardName v="HISUIZORUA" ] Drop Event
 [Text:CardName v="MEGAHELLGAR_EX" ] Drop Event
+[Text:CardName v="ROCKETDANNOLAPLACE" ] Drop Event
 Random Battles (B2)
 Random Battles (B2a)
 Random Battles (B2b)
@@ -2776,6 +2857,7 @@ Random Battles (B3)
 Random Battles (B3a)
 Random Battles (B3b)
 Random Battles (B4)
+Random Battles (B4a)
 Burned
 Gold Frame
 A gold frame that is displayed in your binders,\ndisplay boards, and battles.
@@ -4112,6 +4194,55 @@ Wally
 Soothing Shore
 Rainbow Cave
 Mega Houndoom ex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Scyther
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Lapras
+Wingull
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Wobbuffet
+Fennekin
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Magmar
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Moltres ex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Houndour
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Houndoom
+Braixen
+Delphox
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Articuno ex
+Pelipper
+[Text:AdditionalName v="ADDITIONAL_NAME_Hisui" type="A" space="post" ]Basculin
+[Text:AdditionalName v="ADDITIONAL_NAME_Hisui" type="A" space="post" ]Basculegion
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Voltorb
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Electrode
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Zapdos ex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Pincurchin
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Slowpoke
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Slowking ex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Drowzee
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Hypno
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Mr. Mime
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Mewtwo
+Landorus
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Ekans
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Arbok
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Grimer
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Muk
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Koffing
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Weezing ex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Sneasel
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Tinkatink
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Tinkatuff
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Tinkaton
+Regidrago
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Rattata
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Raticate ex
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Meowth
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Persian
+[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Kecleon
+Happiny
+Team Rocket’s Thieving Machine
+Team Rocket’s Goo-zooka
+Team Rocket’s Researcher
+Team Rocket’s Master Plan
+Team Rocket’s Boss
+Arcade
 Obtained from a campaign
 Obtained from a wonder pick
 Obtained from a mission
@@ -4134,6 +4265,7 @@ Mega Metagross
 Mega Gallade
 Terapagos
 Mega Diancie
+Team Rocket
 United Arab Emirates
 Antigua and Barbuda
 Anguilla
@@ -4524,14 +4656,18 @@ A Master Ball Rank emblem that can be obtained\nby ranking in the TOP 5,000 for 
 Season A3a Master Ball Rank (TOP[C:Nbsp ]5,000)
 A silver emblem that can be obtained from\nthe Mega Rising Emblem Event.
 Mega Rising Emblem Event Silver Emblem
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] (emblem)
 A Master Ball Rank emblem that can be obtained\nby ranking in the TOP 1,000 for Ranked Match\nSeason A3a.
 Season A3a Master Ball Rank (TOP[C:Nbsp ]1,000)
 A gold emblem that can be obtained from\nthe Mega Rising Emblem Event.
 Mega Rising Emblem Event Gold Emblem
+[Text:CardName v="ROCKETDANNOSHITAPPA" ] (emblem)
 An Ultra Ball Rank 1 emblem that can be obtained\nin Ranked Match Season A3a.
 Season A3a Ultra Ball Rank 1
+[Text:CardName v="ROCKETDANNOKENKYUUIN" ] (emblem)
 An Ultra Ball Rank 2 emblem that can be obtained\nin Ranked Match Season A3a.
 Season A3a Ultra Ball Rank 2
+[Text:CardName v="ROCKETDANNOBOSS" ] (emblem)
 An Ultra Ball Rank 3 emblem that can be obtained\nin Ranked Match Season A3a.
 Season A3a Ultra Ball Rank 3
 An Ultra Ball Rank 4 emblem that can be obtained\nin Ranked Match Season A3a.
@@ -4754,12 +4890,20 @@ A gold emblem that can be obtained from\nthe Ruler of the Skies Emblem Event.
 Ruler of the Skies Emblem Event Gold Emblem
 An Ultra Ball Rank 1 emblem that can be obtained\nin Ranked Match Season A4b.
 Season A4b Ultra Ball Rank 1
+A participation emblem that can be obtained from\nthe [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition Emblem Event.
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition Emblem Event Participation Emblem
 An Ultra Ball Rank 2 emblem that can be obtained\nin Ranked Match Season A4b.
 Season A4b Ultra Ball Rank 2
+A bronze emblem that can be obtained from\nthe [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition Emblem Event.
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition Emblem Event Bronze Emblem
 An Ultra Ball Rank 3 emblem that can be obtained\nin Ranked Match Season A4b.
 Season A4b Ultra Ball Rank 3
+A silver emblem that can be obtained from\nthe [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition Emblem Event.
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition Emblem Event Silver Emblem
 An Ultra Ball Rank 4 emblem that can be obtained\nin Ranked Match Season A4b.
 Season A4b Ultra Ball Rank 4
+A gold emblem that can be obtained from\nthe [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition Emblem Event.
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition Emblem Event Gold Emblem
 A Great Ball Rank 1 emblem that can be obtained\nin Ranked Match Season A4b.
 Season A4b Great Ball Rank 1
 A Great Ball Rank 2 emblem that can be obtained\nin Ranked Match Season A4b.
@@ -4984,6 +5128,26 @@ Season B4 Beginner Rank 1
 Season B4 Beginner Rank 2
 Season B4 Beginner Rank 3
 Season B4 Beginner Rank 4
+Season B4a Master Ball Rank
+Season B4a Master Ball Rank (TOP[C:Nbsp ]10,000)
+Season B4a Master Ball Rank (TOP[C:Nbsp ]5,000)
+Season B4a Master Ball Rank (TOP[C:Nbsp ]1,000)
+Season B4a Ultra Ball Rank 1
+Season B4a Ultra Ball Rank 2
+Season B4a Ultra Ball Rank 3
+Season B4a Ultra Ball Rank 4
+Season B4a Great Ball Rank 1
+Season B4a Great Ball Rank 2
+Season B4a Great Ball Rank 3
+Season B4a Great Ball Rank 4
+Season B4a Poké Ball Rank 1
+Season B4a Poké Ball Rank 2
+Season B4a Poké Ball Rank 3
+Season B4a Poké Ball Rank 4
+Season B4a Beginner Rank 1
+Season B4a Beginner Rank 2
+Season B4a Beginner Rank 3
+Season B4a Beginner Rank 4
 1st\nAnniv.
 A commemorative emblem from\nSpecial Event 2025.
 Special Event 2025 (emblem)
@@ -5047,6 +5211,7 @@ B3
 B3a
 B3b
 B4
+B4a
 Genetic Apex
 Mythical Island
 Space-Time Smackdown
@@ -5067,6 +5232,7 @@ Pulsing Aura
 Paradox Drive
 Everyday Wonders
 Ruler of the Skies
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition
 #MyCollection
 #FavoritePokemon
 #FavoriteIllustrations
@@ -6520,6 +6686,39 @@ Left alone, its fur will grow longer and longer,\nbut it will only allow someone
 It was modeled after a mighty Pokémon of myth.\nThe mask placed upon it limits its power in order\nto keep it under control.
 The final factor needed to release this\nPokémon’s true power was a strong bond\nwith a Trainer it trusts.
 The research efforts of a certain scientist\nultimately resulted in this Pokémon.\nIts powers are dedicated to battling.
+It rides upon ocean winds as if it were a\nglider. In the winter, it hides food around\nits nest.
+When this Pokémon evolved, the skull of its\nmother fused to it. Marowak’s temperament also\nturned vicious at the same time.
+It nests in horizontal holes warmed by geothermal\nheat. Foes who get too close can expect to be\npounced on and bitten.
+It loves sparkly things. It seeks treasures in\ncaves and hoards the loot in its nest.
+Twigs make for Fennekin’s snacks. When it\nnibbles on twigs, it finds the courage to face\nstrong foes.
+The eyeball patterns on the interior of its ears\nemit psychic energy. It keeps the patterns tightly\ncovered because that power is too immense.
+It prefers to avoid groups. In its day-to-day life,\nit dexterously controls its vines to compensate\nfor its short arms.
+Servine’s one weakness is its inflated sense of\npride. It takes a while for Servine to be able to\ncooperate with other Pokémon.
+An intimidating gaze and majestic appearance\nhave caused this Pokémon to be known as the\nLord of the Forest.
+Braixen’s branch ignites as it’s pulled from the\nPokémon’s tail. Braixen then uses the flame to\nspark powerful attacks.
+It controls flames telekinetically, trapping its\nfoes in a fiery vortex surpassing 5,400 degrees\nFahrenheit and burning them to a crisp.
+It protects its young in its beak. It bobs on\nwaves, resting on them on days when the waters\nare calm.
+Its ecology is starkly different from that of other\nBasculin, so theories that it’s a totally different\nspecies have gained traction in recent years.
+It can jump with incredible power. Parts of its\nbody are tinged red by the rage of its fallen\nfriends.
+It’s usually found in power plants. Easily mistaken\nfor a Poké Ball, it has zapped many people.
+It explodes in response to even minor stimuli.\nIt is feared, with the nickname of the Bomb Ball.
+This Pokémon prefers places with lots of lightning\nstrikes. It catches lightning with its mane and\nstores the electricity within its body.
+Once the herd hears thunder, it chases after the\nstorm clouds so that the Blitzle in the group can\nuse the lightning to charge up.
+This Pokémon is so timid that even brushing\nagainst seaweed will make it discharge electricity\nin surprise. Its lips do not conduct electricity.
+When they sense danger, they exert their psychic\npower at its maximum output. They have no\nregard for their opponents.
+This Pokémon lives quietly in the depths of the\nforest. The purple, cape-like fur gets longer\nand longer as Oranguru ages.
+From the forces of lightning and wind, it creates\nenergy to give nutrients to the soil and make the\nland abundant.
+A very common sight in grasslands and such.\nIt flicks its tongue in and out to sense danger\nin its surroundings.
+This Pokémon is very tenacious. Once it targets\nits prey, it won’t give up the chase, no matter\nhow far the prey goes.
+The poisonous gases it contains are a little bit\nlighter than air. That’s why it’s always slightly\nairborne.
+When it’s in trouble, it curls up into a ball, makes\nits fur spikes stand on end, and then discharges\nelectricity indiscriminately.
+It has a sturdy body made up of stacked coins.\nGholdengo overwhelms its enemies by firing coin\nafter coin at them in quick succession.
+The protuberances on its head serve as\nsensors. It can even detect distant prey.
+Its body is composed of crystallized dragon\nenergy. Regidrago is said to have the powers of\nevery dragon Pokémon.
+With their strong capacity for survival, they can\nlive in dirty places without concern. Left\nunchecked, their numbers multiply rapidly.
+It carefully carries a round, white rock that it thinks\nis an egg. It’s bothered by how curly its hair looks.
+Left alone, its fur will grow longer and longer,\nbut it will only allow someone it trusts to cut it.
+This is a meticulous Pokémon that likes to keep\nthings tidy. It shrouds itself in a floral aroma that\nsoothes the Pokémon around it.
 The spines sprouting from its head are\ntransformed fangs. If they’re injured or broken\noff, the spines will regenerate countless times.
 Its potent spectral powers allow it to manipulate\nothers. It once used its powers to force people\nand Pokémon to build a kingdom to its liking.
 Massive amounts of energy intensely stimulated\nAmpharos’s cells, apparently awakening its\nlong-sleeping dragon’s blood.
@@ -6783,6 +6982,7 @@ UKUMO uiti
 Yoshimoto Yoshimon
 Akino Fukuji
 Iwamoto05
+Kazuki Minami
 Coming Soon
 Used to reduce the time to get wonder stamina.\nReduces the time to wonder pick by one hour.\nObtainable as mission rewards and so forth.
 Used to attempt select solo battles or events.\nThis item can reduce the time it takes for these\nbattles to become available again.
@@ -6794,12 +6994,14 @@ Obtainable by completing event missions or\nfrom step-up battles. Used to exchan
 Obtainable by consuming high rarity cards in\nMy Cards. Used to exchange for special\naccessories or items at the shop.
 Obtainable by doing premium missions.\nUsed to exchange for accessories or promo cards\nat the Shop.
 An item that can be gathered to increase\nplayer level.
+Team Rocket Grunt’s socks\nthat were worn for a long time.\nThey’re a little smelly...
 Used to restore an expired wonder pick. One\nmust be consumed each time, along with wonder\nstamina.
 Exchangeable for 20-card decks at the shop.\nObtainable by doing ex Starter Deck missions.\nIt will be deleted after the exchange period ends.
 Obtainable by completing themed collections or\ndex missions.\nExchangeable for specific emblems at the Shop.
 Exchangeable for accessories and items at\nthe Shop.\nObtainable by completing event missions.\nIt will be deleted after the exchange period ends.
 This ticket cannot be used yet. Wait and see what\nit’s for!
 Exchangeable for promo cards at the Shop.\nObtainable by completing event missions.\nIt will be deleted after the exchange period ends.
+Obtainable by completing Team Rocket’s\nspecial assignments. Apparently it can be\nused somewhere...
 Beautiful
 Cool
 Cute
@@ -6819,6 +7021,7 @@ Shop ticket
 Special shop ticket
 Premium ticket
 EXP
+Team Rocket Grunt’s Socks
 Rewind Watch
 Emblem Ticket (Genetic Apex)
 Emblem Ticket (Mythical Island)
@@ -6877,6 +7080,8 @@ Promo Card Exchange Ticket ([Mst:CommonCharacterName v="COMMON_CARD_NAME_4" ] Wo
 Promo Card Exchange Ticket ([Text:CardName v="MEGAHELLGAR_EX" ] Drop Event)
 Promo Card Exchange Ticket ([Text:CardName v="SOUBLADES_EX" ] Drop Event)
 Promo Card Exchange Ticket ([Text:CardName v="HISUIZORUA" ] Drop Event)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Shady Ticket
+Promo Card Exchange Ticket ([Text:CardName v="ROCKETDANNOLAPLACE" ] Drop Event)
 Advance Ticket
 Bubbles Flair: Light blue (Cosmetic)
 Bubbles Flair: Pink (Cosmetic)
@@ -7002,6 +7207,9 @@ Set wishlisted cards on your profile
 Participate in [Num:Int id="1" max_length="3" ] solo [Gr:Count s="battle" p="battles" ref="1" ] with the [Mst:RentalDeckName id="0" ] rental deck
 Share [Num:Int id="0" max_length="3" ] [Gr:Count s="time" p="times" ]
 Get [Num:Int id="0" max_length="3" ] [Gr:Count s="point" p="points" id="1" ] in solo battles
+Assignment: Log in! (Day [Num:Int id="0" max_length="3" ])
+Assignment: Participate in [Num:Int id="0" max_length="3" ] [Gr:Count s="battle" p="battles" id="1" ]!
+Assignment: Wonder pick [Num:Int id="0" max_length="3" ] [Gr:Count s="time" p="times" id="1" ]!
 First Choice
 Electabuzz and Magmar
 Viridian Forest
@@ -7409,6 +7617,29 @@ Everyday Wonders Museum 1
 Everyday Wonders Museum 2
 A Pack of Puppy Pokémon!
 Colorful Dance Show!
+Search for Legendary Pokémon!
+Infiltrate the lab!
+Find recruits for [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]!
+Boss and Partner
+The Researcher’s Shady Inventions
+[Text:CardName v="ILLUMISE" ] and [Text:CardName v="BARUBEAT" ]
+Pokémon with Long Noses
+[Text:CardName v="ROCKETDANNOSHITAPPA" ] 1
+[Text:CardName v="ROCKETDANNOSHITAPPA" ] 2
+Beware of Poison Gas!
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Pokémon
+Pokémon Holding Things in Their Hands
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition Museum 1
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition Museum 2
+[Text:CardName v="ROCKETDANNOSHITAPPA" ] Army!
+Shady Invention Collector
+All [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] Cards Complete!
+Obtain [Num:Int id="1" max_length="3" ] [Text:CardNameWithSubName id="0" ] [Gr:Count s="card" p="cards" id="2" ref="1" ]!
+Obtain [Num:Int id="1" max_length="3" ] [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] [Gr:Count s="card" p="cards" id="2" ref="1" ] from [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition!
+[Text:CardName v="TRIMMIEN" ]’s Fashion Show
+[Text:CardName v="PIKACHU" ]’s Adventures
+Male and Female [Text:CardName v="NYAONIX" ]
+The Four Incarnate Formes
 Deck Missions
 Deck Missions
 Genetic Apex\nEmblem Event 1
@@ -7498,6 +7729,12 @@ Ruler of the Skies\nEmblem Event
 [Text:CardName v="HISUIZORUA" ]\nDrop Event
 Everyday Wonders\nEmblem Event
 Multiple Series 1
+[Text:CardName v="ROCKETDANNOLAPLACE" ]\nDrop Event
+[Text:CardName v="ROCKETDANNOLAPLACE" ] Drop Event
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition\nEmblem Event
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition Emblem Event
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s\nSpecial Assignments
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Special Assignments
 Beginner
 Advanced
 Daily
@@ -7529,6 +7766,7 @@ Elite Deck
 Handy Card
 List
 Welcome Back
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
 Random Battle (Advanced)
 Random Battle (Beginner)
 Random Battle (Expert)
@@ -7569,6 +7807,7 @@ Pulsing Aura booster pack
 Paradox Drive booster pack
 Everyday Wonders booster pack
 Ruler of the Skies booster pack
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition booster pack
 An A series vol. 1 promo pack
 An A series vol. 2 promo pack
 An A series vol. 3 promo pack
@@ -7593,6 +7832,7 @@ A B series vol. 8 promo pack
 A B series vol. 9 promo pack
 A B series vol. 10 promo pack
 A B series vol. 11 promo pack
+A B series vol. 12 promo pack
 1 [Mst:Rarity v="RARITY_MSID_RR" ] or higher\ncard guaranteed
 Genetic Apex: Mewtwo
 Genetic Apex: Mewtwo (1 [Mst:Rarity v="RARITY_MSID_RR" ] or higher card guaranteed)
@@ -7624,6 +7864,7 @@ Pulsing Aura
 Paradox Drive
 Everyday Wonders
 Ruler of the Skies
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition
 Promo Pack A Series Vol. 1
 Promo Pack A Series Vol. 2
 Promo Pack A Series Vol. 3
@@ -7648,6 +7889,7 @@ Promo Pack B Series Vol. 8
 Promo Pack B Series Vol. 9
 Promo Pack B Series Vol. 10
 Promo Pack B Series Vol. 11
+Promo Pack B Series Vol. 12
 [Mst:Rarity v="RARITY_MSID_RR" ] or higher guaranteed
 Regular pack
 Regular pack + 1 card
@@ -7976,6 +8218,8 @@ NO. 0274 Wily Pokémon HT: 3'3" WT: 61.7 lbs.
 NO. 0275 Wicked Pokémon HT: 4'3" WT: 131.4 lbs.
 NO. 0276 Tiny Swallow Pokémon HT: 1' WT: 5.1 lbs.
 NO. 0277 Swallow Pokémon HT: 2'4" WT: 43.7 lbs.
+NO. 0278 Seagull Pokémon HT: 2' WT: 20.9 lbs.
+NO. 0279 Water Bird Pokémon HT: 3'11" WT: 61.7 lbs.
 NO. 0280 Feeling Pokémon HT: 1'4" WT: 14.6 lbs.
 NO. 0281 Emotion Pokémon HT: 2'7" WT: 44.5 lbs.
 NO. 0282 Embrace Pokémon HT: 5'3" WT: 106.7 lbs.
@@ -8148,6 +8392,7 @@ NO. 0436 Bronze Pokémon HT: 1'8" WT: 133.4 lbs.
 NO. 0437 Bronze Bell Pokémon HT: 4'3" WT: 412.3 lbs.
 NO. 0438 Bonsai Pokémon HT: 1'8" WT: 33.1 lbs.
 NO. 0439 Mime Pokémon HT: 2' WT: 28.7 lbs.
+NO. 0440 Playhouse Pokémon HT: 2' WT: 53.8 lbs.
 NO. 0441 Music Note Pokémon HT: 1'8" WT: 4.2 lbs.
 NO. 0442 Forbidden Pokémon HT: 3'3" WT: 238.1 lbs.
 NO. 0443 Land Shark Pokémon HT: 2'4" WT: 45.2 lbs.
@@ -8268,6 +8513,7 @@ NO. 0548 Bulb Pokémon HT: 1'8" WT: 14.6 lbs.
 NO. 0549 Flowering Pokémon HT: 3'7" WT: 35.9 lbs.
 NO. 0549 Spinning Pokémon HT: 3'11" WT: 42.3 lbs.
 NO. 0550 Hostile Pokémon HT: 3'3" WT: 39.7 lbs.
+NO. 0550 Mellow Pokémon HT: 3'3" WT: 39.7 lbs.
 NO. 0551 Desert Croc Pokémon HT: 2'4" WT: 33.5 lbs.
 NO. 0552 Desert Croc Pokémon HT: 3'3" WT: 73.6 lbs.
 NO. 0553 Intimidation Pokémon HT: 4'11" WT: 212.3 lbs.
@@ -8362,6 +8608,7 @@ NO. 0641 Cyclone Pokémon HT: 4'11" WT: 138.9 lbs.
 NO. 0642 Bolt Strike Pokémon HT: 4'11" WT: 134.5 lbs.
 NO. 0643 Vast White Pokémon HT: 10'6" WT: 727.5 lbs.
 NO. 0644 Deep Black Pokémon HT: 9'6" WT: 760.6 lbs.
+NO. 0645 Abundance Pokémon HT: 4'11" WT: 149.9 lbs.
 NO. 0647 Colt Pokémon HT: 4'7" WT: 106.9 lbs.
 NO. 0648 Melody Pokémon HT: 2' WT: 14.3 lbs.
 NO. 0648 Melody Pokémon HT: 2' WT: 14.3 lbs.
@@ -8369,6 +8616,9 @@ NO. 0649 Paleozoic Pokémon HT: 4'11" WT: 181.9 lbs.
 NO. 0650 Spiny Nut Pokémon HT: 1'4" WT: 19.8 lbs.
 NO. 0651 Spiny Armor Pokémon HT: 2'4" WT: 63.9 lbs.
 NO. 0652 Spiny Armor Pokémon HT: 5'3" WT: 198.4 lbs.
+NO. 0653 Fox Pokémon HT: 1'4" WT: 20.7 lbs.
+NO. 0654 Fox Pokémon HT: 3'3" WT: 32 lbs.
+NO. 0655 Fox Pokémon HT: 4'11" WT: 86 lbs.
 NO. 0656 Bubble Frog Pokémon HT: 1' WT: 15.4 lbs.
 NO. 0657 Bubble Frog Pokémon HT: 2' WT: 24 lbs.
 NO. 0658 Ninja Pokémon HT: 4'11" WT: 88.2 lbs.
@@ -8398,7 +8648,9 @@ NO. 0676 Poodle Pokémon HT: 3'11" WT: 61.7 lbs.
 NO. 0676 Poodle Pokémon HT: 3'11" WT: 61.7 lbs.
 NO. 0676 Poodle Pokémon HT: 3'11" WT: 61.7 lbs.
 NO. 0676 Poodle Pokémon HT: 3'11" WT: 61.7 lbs.
+NO. 0676 Poodle Pokémon HT: 3'11" WT: 61.7 lbs.
 NO. 0677 Restraint Pokémon HT: 1' WT: 7.7 lbs.
+NO. 0678 Constraint Pokémon HT: 2' WT: 18.7 lbs.
 NO. 0678 Constraint Pokémon HT: 2' WT: 18.7 lbs.
 NO. 0679 Sword Pokémon HT: 2'7" WT: 4.4 lbs.
 NO. 0680 Sword Pokémon HT: 2'7" WT: 9.9 lbs.
@@ -8609,7 +8861,9 @@ NO. 0891 Wushu Pokémon HT: 2' WT: 26.5 lbs.
 NO. 0892 Wushu Pokémon HT: 6'3" WT: 231.5 lbs.
 NO. 0892 Wushu Pokémon HT: 6'3" WT: 231.5 lbs.
 NO. 0893 Rogue Monkey Pokémon HT: 5'11" WT: 154.3 lbs.
+NO. 0895 Dragon Orb Pokémon HT: 6'11" WT: 440.9 lbs.
 NO. 0901 Peat Pokémon HT: 7'10" WT: 639.3 lbs.
+NO. 0902 Big Fish Pokémon HT: 9'10" WT: 242.5 lbs.
 NO. 0905 Love-Hate Pokémon HT: 5'3" WT: 105.8 lbs.
 NO. 0906 Grass Cat Pokémon HT: 1'4" WT: 9 lbs.
 NO. 0907 Grass Cat Pokémon HT: 2'11" WT: 26.9 lbs.
@@ -8621,6 +8875,7 @@ NO. 0912 Duckling Pokémon HT: 1'8" WT: 13.4 lbs.
 NO. 0913 Practicing Pokémon HT: 3'11" WT: 47.4 lbs.
 NO. 0914 Dancer Pokémon HT: 5'11" WT: 136.5 lbs.
 NO. 0915 Hog Pokémon HT: 1'8" WT: 22.5 lbs.
+NO. 0916 Hog Pokémon HT: 3'3" WT: 264.6 lbs.
 NO. 0916 Hog Pokémon HT: 3'3" WT: 264.6 lbs.
 NO. 0917 String Ball Pokémon HT: 1' WT: 8.8 lbs.
 NO. 0918 Trap Pokémon HT: 3'3" WT: 36.4 lbs.
@@ -8841,6 +9096,34 @@ Paradox Drive: [Text:CardName v="KORAIDON" ] (icon)
 Ruler of the Skies: [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (icon)
 [Text:CardName v="ABSOL" ] (icon)
 [Text:CardName v="RALTS" ] (icon)
+[Text:CardName v="FOKKO" ] (icon)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition: [Text:CardName v="ROCKETDANNOBOSS" ] (icon)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s [Text:CardName v="SLEEPE" ] (icon)
+[Text:CardName v="ROCKETDANNOSHITAPPA" ] (icon)
+[Text:CardName v="ROCKETDANNOSHITAPPA" ] ver.[C:Nbsp ]2 (icon)
+[Text:CardName v="ROCKETDANNOSHITAPPA" ] ver.[C:Nbsp ]3 (icon)
+[Text:CardName v="ROCKETDANNOKENKYUUIN" ] (icon)
+[Text:CardName v="ROCKETDANNOBOSS" ] (icon)
+[Text:CardName v="PIKACHU" ] ver.[C:Nbsp ]2 (icon)
+[Text:CardName v="PIKACHU" ] ver.[C:Nbsp ]3 (icon)
+[Text:CardName v="PIKACHU" ] ver.[C:Nbsp ]4 (icon)
+[Text:CardName v="PIKACHU" ] ver.[C:Nbsp ]5 (icon)
+[Text:CardName v="PIKACHU" ] ver.[C:Nbsp ]6 (icon)
+[Text:CardName v="PIKACHU" ] ver.[C:Nbsp ]7 (icon)
+[Text:CardName v="PIKACHU" ] ver.[C:Nbsp ]8 (icon)
+[Text:CardName v="PIKACHU" ] ver.[C:Nbsp ]9 (icon)
+[Text:CardName v="PIKACHU" ] ver.[C:Nbsp ]10 (icon)
+[Text:CardName v="PIKACHU" ] ver.[C:Nbsp ]11 (icon)
+[Text:CardName v="TRIMMIEN" ] Natural Form (icon)
+[Text:CardName v="TRIMMIEN" ] Heart Trim (icon)
+[Text:CardName v="TRIMMIEN" ] Pharaoh Trim (icon)
+[Text:CardName v="TRIMMIEN" ] Kabuki Trim (icon)
+[Text:CardName v="TRIMMIEN" ] Matron Trim (icon)
+[Text:CardName v="TRIMMIEN" ] Star Trim (icon)
+[Text:CardName v="TRIMMIEN" ] Diamond Trim (icon)
+[Text:CardName v="TRIMMIEN" ] Debutante Trim (icon)
+[Text:CardName v="TRIMMIEN" ] Dandy Trim (icon)
+[Text:CardName v="TRIMMIEN" ] La Reine Trim (icon)
 Nice to meet you
 I’m a beginner!
 I like cute Pokémon
@@ -9126,6 +9409,18 @@ Title Screen (backdrop)
 Title Screen
 Calendar (backdrop)
 Calendar
+[Text:CardName v="THUNDER" ], [Text:CardName v="FREEZER" ], and [Text:CardName v="FIRE" ] (backdrop)
+[Text:CardName v="THUNDER" ], [Text:CardName v="FREEZER" ], and [Text:CardName v="FIRE" ]
+[Text:CardName v="FOKKO" ] (backdrop)
+[Text:CardName v="FOKKO" ]
+[Text:CardName v="ROCKETDANNOBOSS" ] (backdrop)
+[Text:CardName v="ROCKETDANNOBOSS" ]
+Red Spotlight (backdrop)
+Red Spotlight
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] (backdrop)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
+Weight Comparison (backdrop)
+Weight Comparison
 Retro Summer (backdrop)
 Retro Summer
 A backdrop used to place cards on when using the\nDisplay Boards feature.
@@ -9225,6 +9520,10 @@ Pokémon 30th Celebration Design (Pokémon coin)
 [Text:CardName v="METAGROSS" ] (Pokémon coin)
 [Text:CardName v="MIJUMARU" ] (Pokémon coin)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (Pokémon coin)
+[Text:CardName v="THUNDER" ] (Pokémon coin)
+[Text:CardName v="FOKKO" ] (Pokémon coin)
+[Text:CardName v="ROCKETDANNOBOSS" ] (Pokémon coin)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] (Pokémon coin)
 A coin that can be used during battle.\nYou can select it when using the Decks feature.
 Eevee (card sleeve)
 Eevee
@@ -9315,6 +9614,10 @@ Pokémon 30th Celebration Design (card sleeve)
 [Text:CardName v="METAGROSS" ] (card sleeve)
 [Text:CardName v="MIJUMARU" ] (card sleeve)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (card sleeve)
+[Text:CardName v="THUNDER" ], [Text:CardName v="FREEZER" ], and [Text:CardName v="FIRE" ] (card sleeve)
+[Text:CardName v="FOKKO" ] (card sleeve)
+[Text:CardName v="ROCKETDANNOBOSS" ] (card sleeve)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] (card sleeve)
 An accessory that is attached to cards.\nYou can select it when using the Decks feature.
 A cover for binders that can be used when\nusing the Binders feature.
 Eevee (cover)
@@ -9456,6 +9759,11 @@ Pokémon 30th Celebration Design (cover)
 [Text:CardName v="MIJUMARU" ] (cover)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (cover)
 Ruler of the Skies: [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (cover)
+[Text:CardName v="THUNDER" ], [Text:CardName v="FREEZER" ], and [Text:CardName v="FIRE" ] (cover)
+[Text:CardName v="FOKKO" ] (cover)
+[Text:CardName v="ROCKETDANNOBOSS" ] & [Text:CardName v="PERSIAN" ] (cover)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition: [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] (cover)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] (cover)
 Eevee (playmat)
 Eevee
 Meowth (playmat)
@@ -9546,6 +9854,10 @@ Pokémon 30th Celebration Design (playmat)
 [Text:CardName v="METAGROSS" ] (playmat)
 [Text:CardName v="MIJUMARU" ] (playmat)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (playmat)
+[Text:CardName v="THUNDER" ], [Text:CardName v="FREEZER" ], and [Text:CardName v="FIRE" ] (playmat)
+[Text:CardName v="FOKKO" ] (playmat)
+[Text:CardName v="ROCKETDANNOBOSS" ] & [Text:CardName v="PERSIAN" ] (playmat)
+[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] (playmat)
 An accessory that is laid out on the in-play zone\nduring battle.\nYou can select it when using the Decks feature.
 Put [Num:Int max_length="2" plural_only=" " ][Gr:Count s="a Basic Pokémon" p="Basic Pokémon" ] into play
 Put [Num:Int max_length="2" plural_only=" " ][Gr:Count s="a Pokémon ex" p="Pokémon ex" ] into play
@@ -9583,6 +9895,7 @@ B3
 B3a
 B3b
 B4
+B4a
 Get [Num:Int id="0" max_length="3" ] or more points
 Deal [Num:Int id="0" max_length="5" ] or more damage
 Win [Num:Int id="0" max_length="3" ] or more battles
@@ -9622,6 +9935,7 @@ Reissue Wonder Pick Event
 Paldean Wonders
 Pulsing Aura
 Mega Shine
+Rare Items
 Meowth (Pokémon coin)
 Meowth (card sleeve)
 Meowth (playmat)
@@ -10080,6 +10394,7 @@ Shinedust ×1,000
 [Mst:CardCharacterName v="CARD_NAME_271" ] (046/P-B)
 [Mst:CardCharacterName v="CARD_NAME_120" ] (047/P-B)
 [Mst:CardCharacterName v="CARD_NAME_194" ] (048/P-B)
+Team Rocket Grunt’s Socks
 [Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101190_MIRAIDON"]
 [Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101310_MIRAIDON"]
 [Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100760_MIRAIDON"]
@@ -10110,6 +10425,21 @@ Shinedust ×1,000
 [Mst:CardCharacterName v="CARD_NAME_95" ] (074/P-B)
 [Mst:CardCharacterName v="CARD_NAME_718" ] (075/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1262" ] (076/P-B)
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101290_SAKAKI_PERSIAN" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101490_SAKAKI" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100850_SAKAKI" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101040_SAKAKI" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100850_SAKAKI_PERSIAN" ]
+[Mst:CardCharacterName v="CARD_NAME_1340" ] (088/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1341" ] (089/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1342" ] (090/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1343" ] (091/P-B)
+[Mst:CardCharacterName v="CARD_NAME_152" ] (092/P-B)
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101050_TEAM_ROCKET" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100860_TEAM_ROCKET" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100860_TEAM_ROCKET" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101510_TEAM_ROCKET" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101310_TEAM_ROCKET" ]
 Poké Gold
 Poké Gold + Accessories
 Poké Gold + Bonuses
@@ -10169,6 +10499,7 @@ Poké Gold (paid) ×115 + Accessories ([Text:CardName v="METAGROSS" ])
 Summer Sale: Poké Gold (paid) ×15 Deal
 Summer Sale: Poké Gold (paid) ×200 Deal
 Poké gold (paid) ×115 + Accessories ([Text:CardName v="KAMITSURE" ])
+Poké Gold (paid) ×115 + Accessories ([Text:CardName v="THUNDER" ], [Text:CardName v="FREEZER" ], and [Text:CardName v="FIRE" ])
 Poké gold
 Tickets
 Special
@@ -10180,6 +10511,7 @@ ex Starter Decks
 Reissue Drop
 Reissue Wonder Pick
 Promo Cards
+Team Rocket
 1 [Mst:Rarity v="RARITY_MSID_RR" ] or higher card guaranteed
 [Mst:PackName v="PACK_NAME_PROMO_A_1"]
 [Mst:PackName v="PACK_NAME_PROMO_A_2"]
@@ -10204,6 +10536,7 @@ Promo Cards
 [Mst:PackName v="PACK_NAME_PROMO_B_9" ]
 [Mst:PackName v="PACK_NAME_PROMO_B_10" ]
 [Mst:PackName v="PACK_NAME_PROMO_B_11" ]
+[Mst:PackName v="PACK_NAME_PROMO_B_12"]
 A discontinued item.\nPlease exchange for other items at the Shop.
 Trade Token󱀀Trade Tokens
 Will trade for non-wishlisted cards
@@ -10352,6 +10685,12 @@ Switch your Active Stage 1 Pokémon with 1 of your Benched Pokémon.
 Take a [Img:Element id="0"] Energy from your Energy Zone and attach it to 1 of your Stage 2 Pokémon.
 At the end of each player’s turn, that player heals [Num:Int id="1" max_length="3"] damage from each of their Pokémon that has any [Img:Element id="0"] Energy attached.
 Once during each player’s turn, that player may discard the Energy that has been generated in their Energy Zone. If they do, the next Energy is produced.
+Put [Num:Int id= "1" plural_only=" " max_length="2" ][Gr:Count s="a " ref="1" ]random Item [Gr:Count s="card" p="cards" ref="1" ], except any [Text:CardName id="0"], from your opponent’s discard pile into your hand.
+Until the end of your opponent’s next turn, your opponent’s Active Pokémon’s Retreat Cost is [Num:Int id="0" max_length="2"] more.
+Look at your opponent’s hand and put any number of Basic Pokémon you find there onto your opponent’s Bench.
+Once during each player’s turn, that player may flip [Num:Int id="0" plural_only=" " max_length="2" ][Gr:Count s="a coin" p="coins" ref="0" ]. If[Gr:Count one="" two=" both of them are" p=" all of them are" ref="0" ] heads, that player draws cards until they have [Num:Int id="1" max_length="2" ] [Gr:Count s="card " p="cards " ref="1" ]in their hand.
+Flip a coin until you get tails. For each heads, put a random Pokémon that has “Team Rocket” in its name from your deck into your hand.
+Your opponent’s Active Pokémon is now [Text:SpecialCondition id="0"]. Flip a coin. If tails, your Active Pokémon is now also [Text:SpecialCondition id="0"].
 Pokémon Tool
 Item (Fossil)
 Item
@@ -10422,6 +10761,7 @@ Win this battle without your opponent getting any points
 [Mst:CollectionBoardHashTag]
 [Mst:CollectionFileHashTag]
 [Mst:CommonCharacterName]
+[Mst:CommonGroupName]
 [Mst:CountryName]
 [Mst:CurrencyDescription]
 [Mst:CurrencyName]
@@ -10435,6 +10775,8 @@ Win this battle without your opponent getting any points
 [Mst:ExpansionName]
 [Mst:ExpansionNameLong]
 [Mst:FixedNotice]
+[Mst:HiddenEventItemDescription]
+[Mst:HiddenEventItemName]
 [Mst:ItemExchangeSubCategory]
 [Mst:ItemShopCategoryName]
 [Mst:ItemShopProductName]
@@ -11146,6 +11488,8 @@ Please move [Gr:Count s="an " id="2" ][Num:Int id="0" visible="0" max_length="1"
 [Text:CardName id="1" ] can’t use\nattacks due to the effects of\n[Text:AbilityName id="0" ]
 Can’t play Pokémon from the hand to evolve\nPokémon
 Can have up to [Num:Int id="0" max_length="2" ] Pokémon Tool cards\nattached
+If any coins are flipped for an effect of the\nplayer’s Trainer card, they may begin flipping\nthose coins again
+Please choose any number of [Text:EvolutionPokemon id="0" style="plain" ]
 1 of the opponent’s Pokémon is chosen [Num:Int id="1" max_length="2" ]\nmore [Gr:Count s="time" p="times" id="2" ref="1" ] for the [Text:AttackName id="0" ]\nattack
 At the end of the opponent’s next turn,\nKnock Out the Pokémon in the chosen [Num:Int id="0" visible="0" max_length="1" ][Gr:Count s="spot" p="spots" id="1" ]
 There are no Pokémon that can have Energy\nmoved
@@ -11357,6 +11701,7 @@ Can’t play Stadium cards from hand
 If any coins are flipped for an attack of the player’s [Mst:EnergyTypeNamePokemon id="0" ], they may begin flipping those coins again
 Can’t play Pokémon from the hand to evolve Pokémon
 Can have up to [Num:Int id="0" max_length="2" ] Pokémon Tool cards attached
+If any coins are flipped for an effect of the player’s Trainer card, they may begin flipping those coins again
 1 of the opponent’s Pokémon is chosen [Num:Int id="1" max_length="2" ] more [Gr:Count s="time" p="times" id="2" ref="1" ] for the [Text:AttackName id="0" ] attack
 At the end of the opponent’s next turn, Knock Out the Pokémon in the chosen [Num:Int id="0" visible="0" max_length="1" ][Gr:Count s="spot" p="spots" id="1" ]
 Your opponent’s discard pile
@@ -12988,6 +13333,7 @@ Error
 Purchase Error
 To minors:\nWhen purchasing items, always get permission\nfrom your parent or guardian or make the \npurchase together.\n\nThere are other important notices in the\nTerms of Use. Please make sure to read them\ntogether with your parent or guardian before\nplaying the game.\n\nTo shoppers:\nIf your purchase of a product was not successful,\nplease try the button below.
 Notes
+Team Rocket’s\nSecret Shop
 Owned
 No items available.
 Main
@@ -13033,6 +13379,7 @@ Can exchange
 OK
 You cannot own any more of this
 You have reached the limit of what\nyou can exchange for at once
+A secret switch?!\nLet’s push it!
 Cancel
 Complete the following missions:
 To Missions
