@@ -4,6 +4,7 @@
   },
   "statusModal": {
     "boolean": {
+      "parentheses": "Your Boolean search query has missing or extra round brackets. If you meant to search for literal round bracket characters, please escape them with a backslash.",
       "where": "One of the languages specified in the WHERE clause was not recognised."
     }
   }

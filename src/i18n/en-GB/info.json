@@ -1,0 +1,58 @@
+{
+  "Digit": {
+    "*|Sep=46": "full stop"
+  },
+  "Grm": {
+    "ForceInitialCap": "Forces the next variable printed to have the first letter capitalised."
+  },
+  "EN": {
+    "DefArtCap": "Prints the appropriate English definite article, capitalised.",
+    "IndArtCap": "Prints the appropriate English indefinite article, capitalised."
+  },
+  "FR": {
+    "DefArtCap": "Prints the appropriate French definite article, capitalised.",
+    "IndArtCap": "Prints the appropriate French indefinite article, capitalised.",
+    "A_DefArtCap": "Prints the appropriate form of the French preposition \"à\" combined with the definite article, capitalised.",
+    "De_DefArtCap": "Prints the appropriate form of the French preposition \"de\" combined with the definite article, capitalised.",
+    "DeCap": "Prints the appropriate form of the French preposition \"de\", capitalised.",
+    "QueCap": "Prints the appropriate form of the French preposition \"que\", capitalised."
+  },
+  "IT": {
+    "DefArtCap": "Prints the appropriate Italian definite article, capitalised.",
+    "IndArtCap": "Prints the appropriate Italian indefinite article, capitalised.",
+    "Di_DefArtCap": "Prints the appropriate form of the Italian preposition \"di\" combined with the definite article, capitalised.",
+    "Su_DefArtCap": "Prints the appropriate form of the Italian preposition \"su\" combined with the definite article, capitalised.",
+    "A_DefArtCap": "Prints the appropriate form of the Italian preposition \"a\" combined with the definite article, capitalised.",
+    "In_DefArtCap": "Prints the appropriate form of the Italian preposition \"in\" combined with the definite article, capitalised.",
+    "EdCap": "Prints the appropriate form of the Italian conjunction \"e\", capitalised.",
+    "AdCap": "Prints the appropriate form of the Italian preposition \"a\", capitalised."
+  },
+  "DE": {
+    "DefArtNomCap": "Prints the appropriate German definite article in the nominative case, capitalised.",
+    "IndArtNomCap": "Prints the appropriate German indefinite article in the nominative case, capitalised.",
+    "DefArtAccCap": "Prints the appropriate German definite article in the accusative case, capitalised.",
+    "IndArtAccCap": "Prints the appropriate German indefinite article in the accusative case, capitalised."
+  },
+  "ES": {
+    "DefArtCap": "Prints the appropriate Spanish definite article, capitalised.",
+    "IndArtCap": "Prints the appropriate Spanish indefinite article, capitalised.",
+    "De_DefArtCap": "Prints the appropriate form of the Spanish preposition \"de\" combined with the definite article, capitalised.",
+    "A_DefArtCap": "Prints the appropriate form of the Spanish preposition \"a\" combined with the definite article, capitalised.",
+    "DefArtCap_TrTypeAndName": "Prints the appropriate Spanish definite article for a Trainer type and name, capitalised.",
+    "Y/E": "Prints the appropriate form of the Spanish conjunction \"y\", capitalised.",
+    "O/U": "Prints the appropriate form of the Spanish conjunction \"o\", capitalised."
+  },
+  "Ctrl1": {
+    "Color": "Sets the colour of the text to the specified colour.",
+    "Color|Letter": "text colour index",
+    "Color|Shadow": "shadow colour index",
+    "Color|Back": "highlight colour index",
+    "ColorReset": "Resets the colour of the text.",
+    "xcenter": "Centres the following line of text."
+  },
+  "System": {
+    "Color":"Sets the colour of the text to the specified colour.",
+    "Color|Idx": "colour index",
+    "Ruby":"Sets the colour of the text to the specified colour."
+  }
+}
