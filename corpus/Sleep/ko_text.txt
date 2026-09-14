@@ -488,6 +488,7 @@ Text File : Common_GROUP
 수령한 보상
 대상 포켓몬
 대상 포켓몬 일람
+상세
 이 아이템은 최대 [Digit:Digit1 ]개까지 소지할 수 있습니다\n소지 상한을 넘으므로 교환할 수 없습니다\n아이템을 소비한 뒤에 다시 교환해 주십시오
 이 아이템은 최대 [Digit:Digit1 ]개까지 소지할 수 있습니다\n소지 상한을 넘으므로 받을 수 없습니다\n아이템을 소비한 뒤에 다시 받아 주십시오
 지난 플레이 이후로 단말기의 시간 설정이\n변경된 것을 감지했습니다\n단말기의 시간 설정이 빈번하게 변경되면\n플레이에 지장을 줄 수 있으므로\n주의해 주십시오
@@ -689,6 +690,7 @@ Text File : EventBonusList
 도우미 포켓몬의 레벨을 올릴 때 [System:Color r="255" g="107" b="55" a="255" ]미니 사탕 부스트 기능[System:Color a="255" ] 사용 가능
 [System:Color r="255" g="107" b="55" a="255" ]사탕 윽우지로봇 [System:Color a="255" ]사용 가능
 축하 플라워를 키울 수 있다
+도우미 포켓몬이 일반적으로 도와주면서 가끔 「[System:Color r="255" g="107" b="55" a="255" ]엄청 큰 마고열매[System:Color a="255" ]」를 추가로 습득
 모든 도우미 포켓몬의 [System:Color r="255" g="107" b="55" a="255" ]메인 스킬 발동률 [Digit:Digit3 ]배[System:Color a="255" ]
 특기: 스킬인 도우미 포켓몬의 [System:Color r="255" g="107" b="55" a="255" ]메인 스킬 발동률 [Digit:Digit3 ]배[System:Color a="255" ]
 모든 도우미 포켓몬이 [System:Color r="255" g="107" b="55" a="255" ]메인 스킬 발동 시, 메인 스킬 레벨 +[Digit:Digit3 ][System:Color a="255" ]
@@ -713,6 +715,7 @@ Text File : EventBonusList
 특기: 스킬인 도우미 포켓몬의 [System:Color r="255" g="107" b="55" a="255" ]나무열매와 식재료의 최대 소지 수 +[Digit:Digit3 ]개[System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName ][System:Color a="255" ] 또는 [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName idx="1" ][System:Color a="255" ][Kor:Particle type="2" ] 팀에 편성하고 함께 잠을 자면 졸음 파워 [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 idx="2" ]배[System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName ][System:Color a="255" ][Kor:Particle type="4" ] [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName idx="1" ][System:Color a="255" ] 2마리를 팀에 편성하고 함께 잠을 자면 졸음 파워 [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 idx="2" ]배[System:Color a="255" ]
+도우미 포켓몬의 [System:Color r="255" g="107" b="55" a="255" ]최대 소지 수 +[Digit:Digit3 ]배[System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ][System:Color a="255" ]타입 도우미 포켓몬이 [System:Color r="255" g="107" b="55" a="255" ]메인 스킬 발동 시, 메인 스킬 레벨 +[Digit:Digit3 idx="1" ][System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ][System:Color a="255" ], [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType idx="1" ][System:Color a="255" ]타입 도우미 포켓몬이 [System:Color r="255" g="107" b="55" a="255" ]메인 스킬 발동 시, 메인 스킬 레벨 +[Digit:Digit3 idx="2" ][System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ][System:Color a="255" ], [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType idx="1" ][System:Color a="255" ], [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType idx="2" ][System:Color a="255" ]타입 도우미 포켓몬이 [System:Color r="255" g="107" b="55" a="255" ]메인 스킬 발동 시, 메인 스킬 레벨 +[Digit:Digit3 idx="3" ][System:Color a="255" ]
@@ -729,6 +732,8 @@ Text File : EventBonusList
 그날 리서처의 수면 타입에 상관없이 [System:Color r="255" g="107" b="55" a="255" ]다른 수면 타입의 포켓몬도 출현[System:Color a="255" ]
 간식 타임에서 [System:Color r="255" g="107" b="55" a="255" ]1마리 찬스 확정[System:Color a="255" ](1일 1회)
 하루의 첫 번째 간식 타임 중인 포켓몬이\n[System:Color r="255" g="107" b="55" a="255" ]쉽게 배불러하지 않게[System:Color a="255" ] 된다
+하루의 첫 번째 간식 타임 중에 특정 포켓몬이 [System:Color r="255" g="107" b="55" a="255" ]쉽게 배불러하지 않게[System:Color a="255" ] 된다
+【하루의 첫 번째 간식 타임에서 [System:Color r="255" g="107" b="55" a="255" ]쉽게 배불러하지 않게[System:Color a="255" ] 된다】
 이벤트 기간 중 요리는 [System:Color r="255" g="107" b="55" a="255" ][Name:CookingGenreName ][System:Color a="255" ][Kor:Particle type="3" ] 된다
 요리로 획득할 수 있는 [System:Color r="255" g="107" b="55" a="255" ]에너지가 [Digit:Digit4 separator="Default" ]배[System:Color a="255" ]가 된다
 요리로 회복하는 포켓몬의 기력이 [System:Color r="255" g="107" b="55" a="255" ]+[Digit:Digit3 ][System:Color a="255" ] 증가한다
@@ -783,6 +788,7 @@ EX 모드
 리서치 가능 필드
 EX 모드
 포켓몬의 잠자는 모습을 리서치하고\n잠자는 모습 도감 목표를 일정 목표까지 달성하면\n새로운 필드가 개방됩니다.
+필드마다 [System:Color r="255" g="107" b="55" a="255" ]잠만보가 좋아하는 나무열매[System:Color a="255" ]가 다릅니다.\n다양한 타입의 포켓몬을 육성하고\n잠자는 모습을 많이 리서치해 봅시다
 필드마다 [System:Color r="255" g="107" b="55" a="255" ]잠만보가 좋아하는 나무열매[System:Color a="255" ]가 다릅니다.\n다양한 타입의 포켓몬을 육성하고\n잠자는 모습을 많이 리서치해 봅시다
 필드에 대하여
 EX 모드는\n[Date:Date label="yyyyyMMMddd_hh:mm" ]에\n개방됩니다
@@ -1653,18 +1659,15 @@ Español
 알림
 어카운트 삭제
 [System:Color r="134" g="134" b="134" a="255" ]어카운트의 모든 데이터를 삭제합니다.\n이 조작은 되돌릴 수 없습니다.[System:Color a="255" ]
-수면 EXP 보너스 게이지
 EXP 보너스 게이지
 리서치 랭크 상한 보너스
 잠만보 평가 업
 EX 티켓 사용 확인
 팝업 표시
-레벨이 상한에 도달한 도우미 포켓몬이\n수면 EXP를 획득할 때 표시되는\n보너스 게이지의 팝업입니다
 레벨이 상한에 도달한 도우미 포켓몬이\nEXP를 획득할 때 표시되는\n보너스 게이지의 팝업입니다
 리서치 랭크가 상한에 도달한 경우에\n리서치 EXP가 자동으로\n꿈의조각으로 변환된다고 알리는 팝업입니다
 잠만보 평가가 올랐을 때 표시되는 팝업입니다.\nOFF로 설정하면 이미 달성한 평가에서는\n표시되지 않습니다.
 EX 티켓을 사용할 때 표시되는\n확인 팝업입니다
-수면 EXP 보너스 게이지
 EXP 보너스 게이지
 리서치 랭크 상한 보너스
 잠만보 평가 업
@@ -1936,7 +1939,6 @@ Text File : Home_SCENE
 보라 씨앗을 심겠습니까?
 하양 씨앗을 심겠습니까?
 꽃이 피면 아래 효과를 얻을 수 있습니다
-꽃이 피면\n[Name:Item idx="1" ][Kor:Particle type="2" ] 1개 획득할 수 있습니다
 꽃이 피면\n[System:Color r="255" g="107" b="55" a="255" ][Name:Item idx="1" ][System:Color a="255" ][Kor:Particle type="2" ] 1개 획득할 수 있습니다
 확인
 상세
@@ -1962,6 +1964,7 @@ Text File : Home_SCENE
 수면 리서치를 하고\n[Name:PokemonName ][Kor:Particle type="3" ] 찍힌 미라클 스냅을 모으자
 미션을 클리어했습니다!
 미라클 스냅 미션
+미라클 스냅 미션 미니
 씨앗을 심는다
 축하 플라워
 낮잠섬
@@ -1976,6 +1979,10 @@ Text File : Home_SCENE
 개방!
 필드 오른쪽 아래에 있는 간판에서\n이동할 수 있습니다
 개방
+필드에서 발생 중인 존 효과
+마고열매의 에너지양: [System:Color r="255" g="107" b="55" a="255" ]+[Digit:Digit4 separator="Default" ]%[System:Color a="255" ]
+※효과는 필드를 이동하면 리셋됩니다.
+존 효과
 리서처로 복귀하신 여러분께 [System:Color r="254" g="101" b="119" a="255" ]특별한 선물![System:Color a="255" ]\n또한 수면 리서치에서의 [System:Color r="254" g="101" b="119" a="255" ]특전도 받을 수 있습니다.[System:Color a="255" ]\n선물과 특전을 활용해서 계속 리서치를 진행해 봅시다!
 ●선물 내용
 ・[Name:Item idx="1" ] [System:Color r="254" g="101" b="119" a="255" ]x[Digit:Digit5 idx="2" separator="Default" ][System:Color a="255" ]
@@ -2013,6 +2020,7 @@ Text File : Home_SCENE
 다음 랭크까지\n앞으로
 보상 획득까지\n앞으로
 모두와 협력해서 졸음 파워를 모으고\n마음의물방울의 빛을 되찾자
+모두와 협력해서 졸음 파워를 모으고\n비경의 최심부로 향하자!
 이벤트 랭크 [Digit:Digit2 ] 이후는\n[Date:Date label="yyyyyMMMddd_aaa" idx="1" ] [Date:Date label="h:mm" idx="2" ]에\n개방됩니다
 잠김
 냄비
@@ -2243,11 +2251,9 @@ OPEN
 이벤트에 관한 더 자세한 내용은\n게임 내 [알림]을 확인해 주십시오.
 앤테이 리서치
 모든 도우미 포켓몬의\n[System:Color r="255" g="107" b="55" a="255" ]메인 스킬 발동률이 [Digit:Digit2 ]배 UP[System:Color a="255" ]
-모든 도우미 포켓몬의\n[System:Color r="255" g="107" b="55" a="255" ]메인 스킬 발동률이 [Digit:Digit3 ]배 UP[System:Color a="255" ]
 메인 스킬 [꿈의조각 획득]으로 획득하는\n[System:Color r="255" g="107" b="55" a="255" ]꿈의조각의 양이 [Digit:Digit2 ]배[System:Color a="255" ]가 된다
 메인 스킬 [꿈의조각 획득S]로 획득하는\n[System:Color r="255" g="107" b="55" a="255" ]꿈의조각의 양이 [Digit:Digit3 ]배[System:Color a="255" ]가 된다
 도우미 포켓몬의 레벨을 올릴 때\n[System:Color r="255" g="107" b="55" a="255" ]사탕 부스트 기능[System:Color a="255" ]을 사용할 수 있다
-도우미 포켓몬의 레벨을 올릴 때\n[System:Color r="255" g="107" b="55" a="255" ]미니 사탕 부스트 기능[System:Color a="255" ]을 사용할 수 있다
 잠만보 옆의 [System:Color r="255" g="107" b="55" a="255" ]드림 기프트[System:Color a="255" ]에서\n하루에 1번 아이템을 받을 수 있다
 [System:Color r="255" g="107" b="55" a="255" ]이벤트 교환소[System:Color a="255" ] 사용 가능
 [System:Color r="255" g="107" b="55" a="255" ]사탕 윽우지로봇[System:Color a="255" ] 사용 가능
@@ -2355,6 +2361,7 @@ OPEN
 식재료를 정리해 주십시오\n포켓몬이 스킬을 사용하여\n식재료를 획득할 수 없습니다
 식재료 가방을 정리해 주십시오\n포켓몬이 스킬을 발동할 수 없습니다
 식재료 가방이 가득 찼습니다
+%
 [Name:MainSkill ] Lv.[Digit:Digit3 idx="1" ]
 이동한다
 필드를 이동하기 전에\n아래 내용을 확인해 주십시오\n그래도 이동하겠습니까?
@@ -2455,21 +2462,14 @@ OPEN
 캠페인에 관한 더 자세한 내용은\n게임 내 [알림]을 확인해 주십시오.
 밸런타인
 일주일간 진행되는 이 캠페인은 개최 기간 동안 <strong>물타입 포켓몬</strong>이 픽업되는 특별한 캠페인입니다!\n\n「스이쿤 리서치」에 대비해서 많은 <b>물타입 포켓몬</b>과 동료가 되어 봅시다!\n\n기간 중에는 기간 한정 기능인 「<b>미니 사탕 부스트</b>」를 사용할 수 있습니다.\n물타입 포켓몬을 육성할 찬스입니다!\n\n그 밖에도 다양한 보너스가 적용됩니다.\n기대해 주세요!\n\n【개최 기간】\n・8/19(월) 4:00~8/26(월) 3:59\n\n【개최 필드】\n・모든 필드\n\n【미션 실시 기간】\n・8/19(월) 4:00~8/26(월) 3:59\n\n※기간 동안 개최 필드에서 아래의 효과가 발생합니다.\n\n【모든 일정(8/19~8/25)】\n・수면 리서치에서 <strong>1마리</strong> 「<strong>찬스</strong>」 <strong>확정</strong>\n・수면 리서치에서 그날 리서처의 수면 타입에 상관없이 <strong>다른 수면 타입의 포켓몬도 조금 출현</strong>\n・수면 리서치에서 <strong>특정 포켓몬의 출현 확률 UP</strong>\n・기간 한정 「<strong>미니 사탕 부스트</strong>」 사용 가능
-리서치에서 사탕 획득량이\n[Digit:Digit2 ]배(1일 1회 한정)
-리서처의 수면 타입에 상관없이\n다른 수면 타입의 포켓몬도 출현
 졸음 파워가 [Digit:Digit2 ]배
 졸음 파워가 [Digit:Digit3 ]배
 수면으로 얻는 EXP가 [Digit:Digit1 ]배
-수면으로 얻는 EXP가 [Digit:Digit3 ]배
 수면 계측을 하면 보너스 슬립 포인트\n[Digit:Digit4 separator="Default" ] 획득(1일 1회 한정)
 마스터 사블레를 수면 리서치에서\n사용해 보자
 [색이 다른 포켓몬과 만나기 쉬워진다]
-리서치에서 꿈의조각 획득량 [Digit:Digit2 ]배
-리서치에서 꿈의조각 획득량 [Digit:Digit3 ]배
 색이 다른 포켓몬과 만나기 쉬워진다
-간식 타임에서 1마리 찬스 확정\n(1일 1회 한정)
 수면 리서치에서 이벤트 아이템을\n획득할 수 있습니다(1일 1회 한정)
-수면 리서치에서 획득하는\n[System:Color r="255" g="107" b="55" a="255" ]리서치 EXP [Digit:Digit3 ]배[System:Color a="255" ]
 아직 발견한 적 없는\n[System:Color r="255" g="107" b="55" a="255" ]포켓몬의 잠자는 모습 발견 확률 UP[System:Color a="255" ]
 일주일간의 리서치를 마친 뒤에\n얻을 수 있는 필드 보너스가\n[Digit:Digit2 ]%가 된다
 수면 리서치에서\n[System:Color r="255" g="107" b="55" a="255" ][Name:Item idx="1" ][System:Color a="255" ][Kor:Particle type="2" ]\n획득할 수 있습니다(1일 1회 한정)
@@ -3897,6 +3897,28 @@ Text File : MD_BannerPopupText
 ・졸음 파워 <strong>[News:Num_Count ]배</strong>
 ・도우미 포켓몬의 수면 EXP <strong>[News:Num_Count ]배</strong>
 ・보너스 슬립 포인트 <strong>+[News:Num_Count ]pt</strong>
+아름다운 달밤에 운명적인 만남을!
+일 년에 한 번, 한가위가 가까워지면 보름달의 날과 그 전후, 총 3일간 「졸음 파워」가 커지고 색이 다른 <strong>[News:PokemonNamesList ]</strong>의 모습을 발견하기 쉬워진다고 합니다.
+운이 좋으면 리서처 여러분의 곁에 모습을 드러낼지도 모릅니다.
+또한 보너스 슬립 포인트와 포켓몬의 수면 EXP 상승 보너스도 적용됩니다.
+이벤트 기간 동안 많이 자고 포켓몬의 잠자는 모습을 잔뜩 리서치해 봅시다!
+【개최 기간】
+・[News:Date_mdahm ] ~ [News:Date_mdahm idx="1" ] 
+※보름달의 날: <strong>[News:Date_mda ]</strong>
+【개최 필드】
+・모든 필드
+기간 동안 개최 필드에서 아래의 효과가 발생합니다.
+【모든 일정】
+・수면 리서치에서 <strong>아직 발견되지 않은 포켓몬의 잠자는 모습 출현 확률 UP</strong>
+・운이 좋으면 색이 다른 특정 포켓몬과도 만날 수 있다
+【2일 차(보름달의 날)】
+・졸음 파워 <strong>[News:Num_Count ]배</strong>
+・도우미 포켓몬의 수면 EXP <strong>[News:Num_Count ]배</strong>
+・보너스 슬립 포인트 <strong>+[News:Num_Count ]pt</strong>
+【1일 차, 3일 차】
+・졸음 파워 <strong>[News:Num_Count ]배</strong>
+・도우미 포켓몬의 수면 EXP <strong>[News:Num_Count ]배</strong>
+・보너스 슬립 포인트 <strong>+[News:Num_Count ]pt</strong>
 트릭 오어 트릿!
 일주일간 진행되는 이 이벤트는 <strong>고스트타입 포켓몬</strong>이 픽업되는 핼러윈만의 특별한 이벤트입니다!
 기간 중에는 새로 등장하는 <strong>[News:PokemonName idx="1" ], [News:PokemonName idx="2" ], 핼러윈 모자를 쓴 「[News:PokemonName idx="3" ]」</strong>(와)과도 만날 수 있을지도 모릅니다.
@@ -4069,6 +4091,49 @@ Text File : MD_BannerPopupText
 【마지막 날([News:Date_md ])】
 ・졸음 파워 <strong>[News:Num_Count ]배</strong>
 ・졸음 파워에 적용되는 보너스가 중복되는 경우, 효과가 가장 높은 보너스만 적용됩니다.
+2주 동안 진행되는 이 특별한 이벤트에서는 <strong>연둣빛 본섬의 비경을 탐색하고 [News:PokemonName ]의 희귀한 잠자는 모습을 쫓을 수 있습니다!</strong>
+기간 중에는 「전 세계 리서처들의 졸음 파워의 평균」과 「자신의 졸음 파워」가 합산되어 「<strong>이벤트 졸음 파워</strong>」로 쌓입니다.
+이 「이벤트 졸음 파워」가 쌓이면 비경의 리서치가 진행되며, 비경 깊숙이 들어갈 수 있게 되는 것 같습니다.
+전 세계의 리서처들과 협력하여 조사를 진행해 봅시다!
+또한 기간 중에는 전설의 포켓몬 <strong>[News:PokemonName ]</strong>(이)가 픽업되며, [News:PokemonNamesList idx="1" ](와)과 함께 잠을 자면 <b>졸음 파워에 보너스</b>가 적용됩니다.\n
+그리고 기간 중에만 수면 리서치에서 「<strong>[News:PokemonName ]의 유전자</strong>」를 얻을 수 있습니다.\n
+모은 「[News:PokemonName ]의 유전자」를 이벤트 교환소에서 새로운 도구 「[News:PokemonName idx="1" ]의향로」나 「[News:PokemonName idx="2" ] 사블레」로 교환하고 [News:PokemonName idx="3" ]의 잠자는 모습을 리서치해 봅시다!
+추가로 이 비경에서 일반 마고열매보다 크기가 크고 에너지가 가득한 「<strong>엄청 큰 마고열매</strong> 」가 발견되었습니다. [News:PokemonName ](이)나 [News:PokemonName idx="1" ], 에스퍼타입 포켓몬은 더 많이 주워 주는 것 같습니다!
+기대해 주세요!
+【개최 기간】
+・1주 차: [News:Date_mdahm ]~[News:Date_mdahm idx="1" ]
+・2주 차: [News:Date_mdahm ]~[News:Date_mdahm idx="1" ]
+【개최 필드】
+[News:FieldNamesList ]
+<strong>※개최 기간에는 위 개최 필드 외에는 선택할 수 없습니다.</strong>
+※이벤트 기간 동안, EX 모드 필드도 일반 모드일 때의 필드와 동일한 이벤트 한정 모습이 적용됩니다.
+【미션 실시 기간】
+・1주 차: [News:Date_mdahm ]~[News:Date_mdahm idx="1" ]
+・2주 차: [News:Date_mdahm ]~[News:Date_mdahm idx="1" ]
+【이벤트 교환소】
+・교환 기간: [News:Date_mdahm ]~[News:Date_mdahm idx="1" ]
+※교환소는 모든 필드에서 이용할 수 있습니다.
+기간 동안 개최 필드에서 아래의 효과가 발생합니다.
+【모든 일정】
+・[News:PokemonName ] 또는 [News:PokemonName idx="1" ](을)를 팀에 편성하여 함께 잠을 자면, <strong>졸음 파워 [News:Num_Count idx="2" ]배</strong>
+・모든 도우미 포켓몬이 일반적으로 도와주면서 가끔 「<strong>엄청 큰 마고열매</strong>」를 추가로 습득
+・에스퍼타입 도우미 포켓몬이 <strong>일반적으로 도와주면서 식재료를 주워 올 때 식재료 +[News:Num_Count ]개</strong>
+・에스퍼타입 도우미 포켓몬의 <strong>메인 스킬 발동률 [News:Num_Count ]배</strong>
+・개최 필드의 「이번 주의 잠만보가 좋아하는 나무열매」 중 1종류가 <strong>마고열매</strong>(에스퍼타입)로 고정되며, 나머지 2종류는 랜덤
+・수면 리서치에서 <strong>특정 포켓몬의 출현 확률 UP</strong>
+・<strong>하루의 첫 번째</strong> 간식 타임에서 [News:PokemonName ](이)가 <strong>쉽게 배불러하지 않게</strong> 된다
+・기간 한정 「<strong>이벤트 교환소</strong>」 이용 가능
+・하루의 첫 번째 수면 리서치에서 이벤트 아이템 획득 가능
+・수면 리서치에서 그날 리서처의 수면 타입에 상관없이 <strong>다른 수면 타입의 포켓몬도 출현</strong>
+【1주 차([News:Date_md ]~[News:Date_md idx="1" ])】
+・모든 도우미 포켓몬의 <strong>최대 소지 수 +[News:Num_Count ]개</strong>
+・에스퍼타입 도우미 포켓몬이 메인 스킬 발동 시 <strong>메인 스킬 레벨 +[News:Num_Count ]</strong>
+【2주 차([News:Date_md ]~[News:Date_md idx="1" ])】
+・[News:PokemonName ](을)를 팀에 편성해서 함께 잠을 자면 <strong>졸음 파워 [News:Num_Count idx="1" ]배</strong>
+・모든 도우미 포켓몬의 <strong>최대 소지 수 +[News:Num_Count ]개</strong>
+・에스퍼타입 도우미 포켓몬이 메인 스킬 발동 시 <strong>메인 스킬 레벨 +[News:Num_Count ]</strong>
+・커다란 잠만보가 등장하여 <strong>일정 에너지부터 잠만보 육성 시작</strong>
+・졸음 파워에 적용되는 보너스가 중복되는 경우, 효과가 가장 높은 보너스만 적용됩니다.
 이번 한 달 동안, [News:PokemonName ]의 <b>미라클 스냅 미션</b>을 진행할 수 있습니다.
 기간 중에 포켓몬의 잠자는 모습을 리서치할 때, <strong>사진에 [News:PokemonName ]가 찍힙니다</strong>. [News:PokemonName ]가 찍힌 사진의 장수에 따라 미라클 스냅 미션이 진행됩니다.
 미라클 스냅이 발생하면 다양한 보너스가 적용됩니다.
@@ -4086,6 +4151,27 @@ Text File : MD_BannerPopupText
 ・미라클 스냅의 <strong>리서치 EXP가 평소의 [News:Num_Count ]배</strong>
 ・미라클 스냅의 <strong>꿈의조각 획득량이 평소보다 +[News:Num_Count ] 된다</strong>
 ※상기 모든 보너스 효과는 뮤가 찍히지 않은 잠자는 모습 사진에는 적용되지 않습니다.
+일주일간 진행되는 이 이벤트는 [News:PokemonName ]의 <b>미라클 스냅을 다시 모을 수 있는</b> 특별한 기간입니다.
+기간 중에 포켓몬의 잠자는 모습을 리서치할 때, <strong>사진에 [News:PokemonName ]가 찍힙니다</strong>. [News:PokemonName ]가 찍힌 사진의 장수에 따라 미라클 스냅 미션 미니가 진행됩니다.
+미라클 스냅이 발생하면 다양한 보너스가 적용됩니다.
+또한 「<strong>미라클 스냅 미션 미니</strong>」를 진행하면 보상을 받을 수 있습니다.
+아직 [News:PokemonName ]와 동료가 되지 않은 리서처는 [News:PokemonName idx="1" ]와 동료가 될 찬스입니다! 이미 [News:PokemonName idx="2" ]와 동료가 된 리서처는 「번뜩임 씨앗([News:PokemonName idx="3" ])」을 얻을 수 있습니다!
+【개최 기간】
+・[News:Date_mdahm ] ~ [News:Date_mdahm idx="1" ] 
+【개최 필드】
+・모든 필드
+【미션 실시 기간】
+・[News:Date_mdahm ] ~ [News:Date_mdahm idx="1" ] 
+기간 동안 개최 필드에서 아래의 효과가 발생합니다.
+【모든 일정】
+・하루의 첫 번째 수면 리서치에서 미라클 스냅 촬영 가능
+・미라클 스냅의 <strong>사탕 획득량이 평소의 [News:Num_Count ]배</strong>
+・미라클 스냅의 <strong>리서치 EXP가 평소의 [News:Num_Count ]배</strong>
+・미라클 스냅의 <strong>꿈의조각 획득량이 평소보다 +[News:Num_Count ] 된다</strong>
+・하루의 첫 번째 수면 리서치에서 <strong>1마리 찬스 확정</strong>
+・수면 리서치에서 <strong>특정 포켓몬의 출현 확률 UP</strong>
+・기간 한정 「<strong>미니 사탕 부스트</strong>」 사용 가능
+・수면 리서치에서 그날 리서처의 수면 타입에 상관없이 <strong>다른 수면 타입의 포켓몬도 출현</strong>
 일주일간 진행되는 이 캠페인은 개최 기간 동안 <strong>전기, 불꽃, 물타입 포켓몬</strong>이 픽업되는 특별한 캠페인입니다!
 추후 안내드릴 「[News:PokemonName idx="1" ], [News:PokemonName idx="2" ], [News:PokemonName idx="3" ] 리서치」 이벤트에 대비하여 많은 포켓몬과 동료가 되어 봅시다.
 기간 동안에는 하루의 첫 번째 간식 타임에서 <strong>포켓몬 1마리가 반드시 찬스 상태</strong>가 됩니다.
@@ -4220,6 +4306,36 @@ Text File : MD_BannerPopupText
 【개최 필드】
 ・[News:FieldNamesList ]
 <strong>※개최 기간에는 동시에 개최 중인 이벤트/캠페인의 영향으로, 위 개최 필드 외에는 선택할 수 없습니다.</strong>
+기간 동안 개최 필드에서 아래의 효과가 발생합니다.
+【모든 일정】
+・환상의 포켓몬의 <strong>특별 픽업</strong>
+・<strong>하루의 첫 번째</strong> 간식 타임에서 <strong>쉽게 배불러하지 않게</strong> 된다
+・운이 좋으면 색이 다른 포켓몬과도 만날 수 있다
+・특별 픽업 포켓몬과 수면 리서치에서 만날 때마다 프렌드 포인트 <strong>[News:Num_Count ]</strong> 상승
+신월이 뜨는 밤에 특별한 만남을!
+매월 개최되는 이 이벤트는 「신월의 날」과 그 전후, 총 3일간 특별 픽업이 진행되며, 기간 동안 포켓몬이 <strong>쉽게 배불러하지 않게</strong> 됩니다.
+게다가 운이 좋으면 <strong>색이 다른 포켓몬</strong>을 만날 수 있을지도 모릅니다.
+기대해 주세요!
+【개최 기간】
+・[News:Date_mdahm ] ~ [News:Date_mdahm idx="1" ] 
+※신월의 날: [News:Date_mda ]
+【개최 필드】
+・모든 필드
+기간 동안 개최 필드에서 아래의 효과가 발생합니다.
+【모든 일정】
+・환상의 포켓몬의 <strong>특별 픽업</strong>
+・<strong>하루의 첫 번째</strong> 간식 타임에서 <strong>쉽게 배불러하지 않게</strong> 된다
+・운이 좋으면 색이 다른 포켓몬과도 만날 수 있다
+・특별 픽업 포켓몬과 수면 리서치에서 만날 때마다 프렌드 포인트 <strong>[News:Num_Count ]</strong> 상승
+신월이 뜨는 밤에 특별한 만남을!
+매월 개최되는 이 이벤트는 「신월의 날」과 그 전후, 총 3일간 특별 픽업이 진행되며, 기간 동안 포켓몬이 <strong>쉽게 배불러하지 않게</strong> 됩니다.
+게다가 운이 좋으면 <strong>색이 다른 포켓몬</strong>을 만날 수 있을지도 모릅니다.
+기대해 주세요!
+【개최 기간】
+・[News:Date_mdahm ] ~ [News:Date_mdahm idx="1" ] 
+※신월의 날: [News:Date_mda ]
+【개최 필드】
+・모든 필드
 기간 동안 개최 필드에서 아래의 효과가 발생합니다.
 【모든 일정】
 ・환상의 포켓몬의 <strong>특별 픽업</strong>
@@ -4955,6 +5071,9 @@ Pokémon Day 기념 캠페인
 3주년 맞이 캠페인
 3주년 기념 페스티벌
 포켓몬 애니 콜라보 위크
+미라클 스냅 미션 미니
+비경 리서치! 뮤츠를 쫓아서
+뮤츠를 쫓아서
 이브이
 뉴 이어1
 뉴 이어2
@@ -5005,6 +5124,9 @@ Pokémon Day 기념
 3주년 기념1
 3주년 기념2
 콜라보 위크
+미라클 스냅 미니
+뮤츠1
+뮤츠2
 ~~~~~~~~~~~~~~~
 Text File : MD_event_item_packs
 ~~~~~~~~~~~~~~~
@@ -5206,7 +5328,19 @@ Pokémon Day 기념 캠페인 팩(호연&팔데아) vol.[Digit:Digit2 ]
 콜라보 기념 팩S
 콜라보 기념 팩M
 콜라보 기념 팩L
+미라클 스냅 미니 팩S
+미라클 스냅 미니 팩M
+미라클 스냅 미니 팩L
 포켓몬 육성 팩([Name:PokemonName ]) vol[Digit:Digit2 idx="1" ]
+뮤츠 리서치 팩S vol.[Digit:Digit2 ]
+뮤츠 리서치 팩M vol.[Digit:Digit2 ]
+뮤츠 리서치 팩L vol.[Digit:Digit2 ]
+뮤츠 스퍼트 팩S vol.[Digit:Digit2 ]
+뮤츠 스퍼트 팩M vol.[Digit:Digit2 ]
+뮤츠 스퍼트 팩L vol.[Digit:Digit2 ]
+포켓몬 30주년 기념 팩S
+포켓몬 30주년 기념 팩M
+포켓몬 30주년 기념 팩L
 ~~~~~~~~~~~~~~~
 Text File : MD_event_purchase_item_packs
 ~~~~~~~~~~~~~~~
@@ -5322,6 +5456,52 @@ Text File : MD_event_story
 [[System:Color r="255" g="107" b="55" a="255" ]마음의물방울[System:Color a="255" ]]의\n빛을 되찾으려는\n라티아스와 라티오스의 힘이
 잠만보에게도\n영향을 주고 있는 걸지도 모르겠구나
 이 잠만보라면 주초부터 효율적으로\n수면 리서치를 할 수 있을 것 같아\n잠만보, 잘 부탁해!
+리서치하느라 수고했어!\n오늘은 너에게\n특별한 리서치를 부탁하려고 한단다!
+드디어 전설의 포켓몬\n[System:Color r="255" g="107" b="55" a="255" ]뮤츠[System:Color a="255" ]가 향한 지역을\n알아냈단다!
+뮤츠는 연둣빛 본섬에서\n아직 조사가 진행되지 않은\n[System:Color r="255" g="107" b="55" a="255" ]비경[System:Color a="255" ] 지역에 있는 모양이야
+경계심이 강한 포켓몬이지만 비경에\n깊숙이 들어갈수록 희귀한 잠자는 모습을\n발견할 수 있을지도 모르겠구나
+모처럼이니 비경도 꼼꼼히 리서치하면서\n탐색해 보자!
+비경을 리서치하기 위해서는\n잠만보의 졸음을 유도하는 힘이\n많이 필요할 것 같아
+전 세계의 리서처들과 협력해서\n졸음 파워를 잔뜩 모아 주겠니?
+그리고 이 부근에는\n에너지가 듬뿍 담긴\n[System:Color r="255" g="107" b="55" a="255" ]엄청 큰 마고열매[System:Color a="255" ]가 있는 모양이야
+잠만보를 성장시키는 데\n도움이 될지도 모르겠구나
+그리고... 아무래도 호기심이 왕성한\n[System:Color r="255" g="107" b="55" a="255" ]뮤[System:Color a="255" ]도 뮤츠의 잠자는 모습에\n특별히 흥미를 느끼는 것 같구나
+뮤츠의 희귀한 잠자는 모습을\n조사하기 위해서\n힘을 빌려줄지도 모른단다!
+자, 그럼 비경을 탐색해 보자!
+리서치하느라 수고했어!\n네 덕분에 탐색이 진행돼서\n깊은 곳으로 이어지는 길을 발견했단다!
+이대로 계속 조사하다 보면\n[System:Color r="255" g="107" b="55" a="255" ]뮤츠의 희귀한 잠자는 모습[System:Color a="255" ]을\n리서치할 수 있을 것 같구나!
+이거 놀랍구나!
+잠자는 모습에 흥미가 가득한 뮤를\n성가신 듯이 쫓아내는\n뮤츠를 보게 되다니!
+뮤도 뮤츠의 잠자는 모습을 볼 수 있어서\n무척 기쁜 모양이야
+이대로 수면 리서치를 열심히 진행해 보자!
+이거 놀랍구나!\n이 잠만보는 평범한 잠만보보다\n[System:Color r="255" g="107" b="55" a="255" ]큰[System:Color a="255" ] 모양이야
+이 근처에서 발견되는\n엄청 큰 마고열매의 영향일까?
+이 잠만보라면 주초부터 효율적으로\n수면 리서치를 할 수 있을 것 같아\n잠만보, 잘 부탁해!
+리서치하느라 수고했어!\n오늘은 너에게\n특별한 부탁이 있단다!
+요 근래 [[System:Color r="255" g="107" b="55" a="255" ]뮤[System:Color a="255" ]]가\n잠들어 있는 포켓몬 주위를\n즐거운 듯이 날아다니고 있는 모양이야
+뮤에게 뭔가 신경 쓰이는 게\n있는 걸지도 모르겠구나
+지금 수면 리서치를 진행하면\n[System:Color r="255" g="107" b="55" a="255" ]날아다니는 뮤가\n사진에 찍힐 때가 있다[System:Color a="255" ]고 하니까
+뮤가 무엇을 신경 쓰고 있는지\n알아보기 위해서라도
+날아다니는 뮤의 모습을\n[System:Color r="255" g="107" b="55" a="255" ]사진에 담아[System:Color a="255" ] 주겠니?
+그럼 부탁할게!\n자, 힘내서 수면 리서치를 진행해 보자!
+뮤가 찍힌 사진을\n잔뜩 모아 줘서 고마워!
+희귀한 포켓몬의 잠자는 모습도\n리서치할 수 있는 네가 마음에 든 것 같아
+역시 뮤는\n잠들어 있는 포켓몬에게\n흥미를 느끼는 모양이야
+너를 더 신뢰하게 된 것인지\n[System:Color r="255" g="107" b="55" a="255" ]번뜩임 씨앗[System:Color a="255" ]을 받았단다
+희귀한 포켓몬의 잠자는 모습도\n리서치하는 네가 마음에 든 것 같아
+뮤와의 유대도 한층 깊어졌으니\n[System:Color r="255" g="107" b="55" a="255" ]다음 수면 리서치에도\n와 줄 거라고[System:Color a="255" ] 생각해
+지금이라면 뮤도 안심하고\n[System:Color r="255" g="107" b="55" a="255" ]잠을 자러 와 줄 것 같구나[System:Color a="255" ]
+그럼 계속해서\n수면 리서치를 열심히 해 주렴!
+내일 수면 리서치를\n잘 부탁해!
+리서치하느라 수고했어!
+네가 뮤를 조사하는 동안에\n[System:Color r="255" g="107" b="55" a="255" ]신비한 그림자[System:Color a="255" ]를 발견했단다
+서둘러 그림자를 촬영해서 \n사진을 확인했는데, 그 그림자의 정체는...
+아마도 전설의 포켓몬\n[[System:Color r="255" g="107" b="55" a="255" ]뮤츠[System:Color a="255" ]]인 것 같구나
+뮤는 뮤츠의 기척을 느끼고\n그 잠자는 모습에 흥미가 생겨서\n찾고 있었던 걸지도 모르겠네
+그리고 뮤츠는\n[System:Color r="255" g="107" b="55" a="255" ]연둣빛 본섬의 깊은 곳[System:Color a="255" ]으로\n향한 것 같아
+연둣빛 본섬에는\n아직 우리가 모르는 비경이\n있는 걸지도 모르겠구나
+내가 뮤츠가 향한 곳을 찾아내서\n조사할 준비를 해 둘 테니
+그때까지는 계속해서\n그날그날의 수면 리서치를 진행해 주겠니?\n잘 부탁해!
 리서치하느라 수고했어!\n오늘은 너에게\n특별한 부탁이 있단다!
 요 근래 연둣빛 본섬 주변에서\n환상의 포켓몬 [[System:Color r="255" g="107" b="55" a="255" ]뮤[System:Color a="255" ]]의 모습이\n목격되었다는 보고가 들어왔단다
 호기심이 많은 뮤는\n잠들어 있는 포켓몬들에게 흥미를 느끼고\n주위를 날아다니고 있는 모양이야
@@ -5472,7 +5652,6 @@ Text File : MD_health_data_sources
 (Fitbit、Google Pixel Watch 등)
 (Galaxy Watch 등)
 (Forerunner 265 등)
-Fitbit
 Google Health
 Samsung Health
 Apple Watch 표준 수면 계측
@@ -5484,13 +5663,13 @@ Text File : MD_health_faq
 Apple Watch에서 자동으로\n수면이 계측되고 있나요?
 Apple 건강에 수면 데이터가\n등록되어 있나요?
 수면 데이터를 Pokémon Sleep으로\n불러오기 위한 조건을 만족하고 있나요?
-Samsung Health나\nFitbit, Garmin Connect 등 앱에\n수면 데이터가 등록되어 있나요?
 Samsung Health나\nGoogle Health, Garmin Connect 등 앱에\n수면 데이터가 등록되어 있나요?
 헬스 커넥트에 수면 데이터가\n등록되어 있나요?
 수면 데이터를 Pokémon Sleep으로\n불러오기 위한 조건을 만족하고 있나요?
 Apple 건강의 읽기 권한을 ON으로 설정했나요?
 헬스 커넥트의 읽기 권한을 ON으로 설정했나요?
 Garmin Connect 앱에\n수면 데이터가 등록되어 있나요?
+Google Health나 Garmin Connect 등 앱에\n수면 데이터가 등록되어 있나요?
 ~~~~~~~~~~~~~~~
 Text File : MD_item_name_data
 ~~~~~~~~~~~~~~~
@@ -5506,6 +5685,7 @@ Text File : MD_item_name_data
 프리미어 사블레
 라티아스 사블레
 라티아스&라티오스 사블레
+뮤츠 사블레
 수면 리서치로 받을 수 있는\n리서치 EXP가 2배가 되는 향로.\n다음 수면 리서치에만 효과가 있다.
 수면 리서치로 받을 수 있는\n꿈의조각이 2배가 되는 향로.\n다음 수면 리서치에만 효과가 있다.
 수면 리서치로 도우미 포켓몬이\n받을 수 있는 EXP가 2배가 되는 향로.\n다음 수면 리서치에만 효과가 있다.
@@ -5567,6 +5747,7 @@ Text File : MD_item_name_data
 EX 모드 필드에 도전할 때\n필요한 티켓.
 특정 포켓몬과\n매우 친밀해질 수 있는 특별한 간식.\n프렌드 포인트가 6 오른다.
 이벤트 교환소의\n교환 기간이 종료되면 이 도구는\n자동으로 슈퍼 사블레로 바뀝니다.\n교환 기간은 이벤트 알림에서\n확인해 주십시오.
+이벤트 교환소의 교환 기간 종료 후,\n이 도구는 일정 기간이 지나면\n슈퍼 사블레로 자동으로 바뀝니다.\n교환 기간 및 사블레로 바뀌는 시점은\n이벤트 알림을 확인해 주십시오.
 이번 이벤트에서는 \n아래 포켓몬에게만 사용할 수 있습니다.
 도우미 포켓몬 1마리의 기력을\n20 회복하는 특제 주스.
 사용 시 기력을 100 이상으로\n회복할 수 있습니다.
@@ -5643,6 +5824,7 @@ EX 모드 필드에 도전할 때\n필요한 티켓.
 포켓몬의 유실물
 라티아스의 솜털
 라티오스의 솜털
+뮤츠의 유전자
 집중의향로
 행운의향로
 성장의향로
@@ -5941,6 +6123,7 @@ Text File : MD_pokedex_data
 드래곤포켓몬
 드래곤포켓몬
 드래곤포켓몬
+유전자포켓몬
 신종포켓몬
 잎사귀포켓몬
 잎사귀포켓몬
@@ -6175,6 +6358,7 @@ Text File : MD_pokedex_data
 오랫동안 환상이라고 여겨졌을 정도로 희귀한 포켓몬이다.\n어떤 식으로 자는지 수수께끼에 싸여 있었지만\n트레이너와 함께 지내는 미뇽이 많아지면서\n잠자는 모습을 다양하게 관찰할 수 있게 되었다.
 꼬리의 구슬에 힘을 모아 날씨를 조종한다고 전해진다.\n자는 동안에도 그 힘으로 날씨를 바꿔 버릴 때가 있다.\n언제 주위의 날씨가 바뀌어도 이상하지 않으므로 주의하자.
 바다의 화신이라고 불린다.\n넓은 바다를 날아다니다가 지쳤는지\n매우 드물게 배를 훤히 보이면서 숙면하는 모습이 발견된다.
+뮤의 유전자로부터 만들어졌다고 전해지는 포켓몬.\n가만히 서 있는 듯이 자고 있는 경우가 많은 것은\n싸움에서 힘을 최대한 발휘할 수 있도록 에너지를\n모으고 있기 때문이라고 여겨진다.
 모든 포켓몬의 유전자를 가진 뮤는\n무척 희귀하여 환상의 포켓몬이라 불린다.\n잠들었을 때도 자유자재로 모습을 감출 수 있어\n잠자는 모습을 본 연구자는 손에 꼽을 만큼 적다.
 머리의 잎사귀로 온도나 습도를 살피며\n가장 편안한 잠자리를 찾는다고 한다.\n좋은 장소를 찾았는지 평온하게 자고 있는 경우가 많다.
 베이리프의 목 주위에 있는 봉오리에서는\n사람을 힘이 나게 하는 효과가 있는 향긋한 향기가 풍긴다.\n어쩌면 주위에서 잠든 포켓몬도 힘이 날지도 모른다.
@@ -6412,6 +6596,7 @@ Text File : MD_pokemons
 미뇽
 신뇽
 망나뇽
+뮤츠
 뮤
 치코리타
 베이리프
@@ -6832,6 +7017,7 @@ Text File : MD_pokemon_main_skills
 랜덤으로 팀 포켓몬 2마리의 기력을 [Digit:Digit3 ] 회복하고\n즉시 [Digit:Digit2 idx="1" ]회만큼 도움받을 수 있다\n특정 조건을 만족하면 효과가 더욱 상승한다
 자신과 팀의 나무열매를 획득한다\n특정 조건을 만족하면 효과가 더욱 상승한다
 꿈의조각 x[Digit:Digit7 separator="Default" ]개를 획득한다\n그리고 잠만보의 에너지를 [Digit:Digit4 idx="1" separator="Default" ] 증가시킨다
+잠만보의 에너지를 [Digit:Digit7 separator="Default" ] 늘린다\n그리고 필드에 나무열매 존을 펼친다
 에너지 차지S
 에너지 차지M
 꿈의조각 획득S
@@ -6880,6 +7066,7 @@ Text File : MD_pokemon_main_skills
 치유파동(기력 응원S)
 용성군(나무열매 버스트)
 파동탄(꿈의조각 획득S)
+사이코브레이크(나무열매 존)
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_main_skills_ShortName
 ~~~~~~~~~~~~~~~
@@ -6905,6 +7092,7 @@ Text File : MD_pokemon_main_skill_filters
 플러스
 마이너스
 요리 어시스트S
+나무열매 존
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_nature
 ~~~~~~~~~~~~~~~
@@ -7156,7 +7344,7 @@ Text File : MD_sleeping_faces
 호쾌한잠
 떼굴떼굴잠
 묵직한잠
-우뚝선잠
+버티고선잠
 떼굴떼굴잠
 흐느적잠
 멍때리는잠
@@ -7241,6 +7429,11 @@ Text File : MD_sleeping_faces
 둥글둥글잠
 앉아잠
 배드러낸잠
+한쪽무릎세우고잠
+직립부유잠
+사이코브레이크잠
+성가신잠
+마음편안한잠
 둥실둥실잠
 자유자재잠
 거품침대잠
@@ -7365,7 +7558,7 @@ Text File : MD_sleeping_faces
 부들부들잠
 가스빼며잠
 배깔고잠
-우뚝선잠
+버티고선잠
 대자로잠
 앉아잠
 얼굴쓱쓱잠
@@ -7425,7 +7618,7 @@ Text File : MD_sleeping_faces
 자는거아냐잠
 철먹으며잠
 배문질잠
-우뚝선잠
+버티고선잠
 철먹으며잠
 온화한잠
 꾸벅잠
@@ -8221,7 +8414,6 @@ Pokémon Sleep 세계에 어서 오렴!\n내 이름은 [System:Color r="23" g="2
 우선은 네가 측정한\n오늘의 수면 데이터를\n확인하고 가자
 여기에서는 [System:Color r="255" g="107" b="55" a="255" ]수면 시간의 길이[System:Color a="255" ]를 나타내는\n[System:Color r="255" g="107" b="55" a="255" ]수면 스코어[System:Color a="255" ]를 표시하고 있어
 이것이 [System:Color r="255" g="107" b="55" a="255" ]수면 스코어[System:Color a="255" ]란다.\n얼마나 오래 잤는지\n[System:Color r="255" g="107" b="55" a="255" ]수면 시간의 길이[System:Color a="255" ]를 보여 주지
-이것이 [System:Color r="255" g="107" b="55" a="255" ]수면 스코어[System:Color a="255" ]란다.\n얼마나 오래 잤는지\n[System:Color r="255" g="107" b="55" a="255" ]수면 시간의 길이[System:Color a="255" ]를 보여 주지
 성인의 수면 스코어는\n[System:Color r="255" g="107" b="55" a="255" ]최대 8시간 30분[System:Color a="255" ]을\n100점으로 계산하고 있어
 어린이의 수면 스코어는\n[System:Color r="255" g="107" b="55" a="255" ]최대 11시간[System:Color a="255" ]을\n100점으로 계산하고 있어
 [System:Color r="255" g="107" b="55" a="255" ]8시간 30분[System:Color a="255" ] 잠을 자면\n100점을 받을 수 있단다.\n[System:Color r="255" g="107" b="55" a="255" ]가능한 한 오래 잠을 자고\n[System:Color a="255" ]100점을 노려보자!
@@ -8302,7 +8494,6 @@ Pokémon Sleep 세계에 어서 오렴!\n내 이름은 [System:Color r="23" g="2
 알려 준 것 말고도 할 수 있는 일이 많으니까\n다양한 기능을 시도해 보면 좋을 거야
 일주일이 지나면 잠만보와는 헤어지지만\n다음 필드에서 새로운 잠만보와\n리서치를 할 수 있게 된단다
 그럼 앞으로 힘내서\n수면 리서치를 해 보자!
-잠만보가 되도록 크게 성장하도록\n열심히 키워 보자!
 그리고 이 티켓을 사용하면\n[System:Color r="255" g="107" b="55" a="255" ]잠만보의 육성이나 리서치가\n더 순조로워질 테니[System:Color a="255" ] 한번 사용해 보렴
 잠만보가 성장하면\n[System:Color r="255" g="107" b="55" a="255" ]많은 포켓몬과 만나기 쉬워지니까[System:Color a="255" ]\n열심히 키워 보자!
 긴 설명 듣느라 고생 많았지?\n그럼 앞으로 힘내서\n수면 리서치를 해 보자!
@@ -8357,7 +8548,6 @@ Pokémon Sleep 세계에 어서 오렴!\n내 이름은 [System:Color r="23" g="2
 이 [System:Color r="255" g="107" b="55" a="255" ]번뜩임 씨앗[System:Color a="255" ]은 네게 돌려줄게\n나중에 [Name:PokemonName ]에게 사용해 보렴!
 동료가 되어 준 다크라이가\n신비한 아이템을 줬어
 동료가 되어 준 [Name:PokemonName ][Kor:Particle type="3" ]\n신비한 아이템을 줬어
-플랜터를 봤구나\n이번에는 네가\n특별한 꽃을 피워 줬으면 한단다
 플랜터를 봤구나\n이번에는 네가\n특별한 꽃을 피워 줬으면 한단다
 이 꽃에는 신비한 힘이 있어서\n[System:Color r="255" g="107" b="55" a="255" ]꽃이 피면 수면 리서치에서[System:Color a="255" ]\n좋은 일이 생기거든
 키우는 방법은 간단해!\n매일 플랜터에\n[System:Color r="255" g="107" b="55" a="255" ]원하는 씨앗을 심어서[System:Color a="255" ]
@@ -8846,7 +9036,6 @@ Lv.[Digit:Digit3 ]
 비축된 횟수에 따른\n잠만보의 에너지 증가량은 다음과 같습니다
 ※이 포켓몬을 팀 편성에서 해제하면\n　비축된 횟수는 리셋됩니다
 나무열매를 [Digit:Digit3 ]개 획득하고\n팀 내 포켓몬의 나무열매도\n[Digit:Digit3 idx="1" ]개씩 획득한다\n가끔 대성공하면 나무열매를\n대량으로 획득할 수 있다
-나무열매를 [Digit:Digit3 ]개 획득하고\n팀 내 포켓몬의 나무열매도\n[Digit:Digit3 idx="1" ]개씩 획득한다\n가끔 대성공하면 나무열매를\n대량으로 획득할 수 있다
 ※한 번 대성공하면, 수면 리서치나\n수면 데이터 매뉴얼 등록을 하기 전까지는\n대성공이 발생하지 않습니다
 랜덤으로 팀 포켓몬 1마리의\n메인 스킬을 복사해서 날린다
 ※스킬 복사 등 일부 메인 스킬은\n복사할 수 없으며\n그 대신 에너지를 조금 획득합니다
@@ -8884,6 +9073,11 @@ Lv.[Digit:Digit3 ]
 자신과 팀의 나무열매를 획득한다\n팀에 다른 종류의 [Name:PokemonType ]타입\n포켓몬이 많을수록 획득하는 나무열매의 수가 증가한다
 자신과 팀의 나무열매를 획득한다\n팀에 다른 종류의 [Name:PokemonType ]타입\n포켓몬이 많을수록 획득하는 나무열매의 수가 증가한다\n팀에 라티아스가 있을 경우\n자신이 획득하는 나무열매가 [Digit:Digit4 idx="1" separator="Default" ]개 증가한다
 팀에 라티아스가 있을 경우\n자신이 획득하는 나무열매가\n[Digit:Digit4 separator="Default" ]개 증가한다
+잠만보의 에너지를 [Digit:Digit7 separator="Default" ] 늘린다\n필드에 나무열매 존을 펼치고\n마고열매에서 획득하는 에너지를 [Digit:Digit3 idx="1" ]% 증가시킨다
+※한번 펼쳐진 나무열매 존은\n필드를 이동할 때까지 효과가 유지됩니다
+※[Name:PokemonName ][Kor:Particle type="2" ]\n도우미 팀에서 제외해도\n나무열매 존의 효과는 사라지지 않습니다
+※[나무열매 존] 효과의 상한은 [Digit:Digit4 separator="Default" ]%입니다\n메인 스킬이 발동할 때마다 [나무열매 존]의 효과는\n상한에 도달할 때까지 중첩됩니다
+※메인 스킬 발동 시\n나무열매 상자에 들어 있는 모든 나무열매가\n즉시 에너지로 바뀝니다
 올마이티에 대하여
 습득할 수 있는 메인 스킬 일람
 세팅할 수 있는 메인 스킬 일람
@@ -9144,6 +9338,7 @@ Text File : PokemonHeight
 1.8m
 4.0m
 2.2m
+2.0m
 0.4m
 0.9m
 1.2m
@@ -9425,12 +9620,9 @@ Text File : PokemonTop_SCENE
 팀 편성
 포켓몬 박스
 포켓몬
-남은 수면 EXP를 모으면\n아이템을 획득할 수 있습니다
 남은 EXP를 모으면\n아이템을 획득할 수 있습니다
-수면 EXP 보너스 게이지
 EXP 보너스 게이지
 설명
-팀의 도우미 포켓몬의 레벨이\n상한에 도달한 경우, 남은 수면 EXP는\n그 포켓몬에게 더해지는 대신\n보너스 게이지에 가산됩니다
 팀의 도우미 포켓몬의 레벨이\n상한에 도달한 경우, 남은 EXP는\n그 포켓몬에게 더해지는 대신\n보너스 게이지에 가산됩니다
 보너스 게이지가 MAX가 될 때마다\n[Name:Item idx="1" ] x[Digit:Digit2 idx="2" ][Kor:Particle type="2" ] 받을 수 있습니다
 포켓몬 레벨 상한 보너스
@@ -9510,6 +9702,7 @@ Text File : PokemonWeight
 3.3kg
 16.5kg
 210.0kg
+122.0kg
 4.0kg
 6.4kg
 15.8kg
@@ -9736,6 +9929,7 @@ Galaxy Watch\n수면 리서치 특전
 수령하지 않은 아이템
 Garmin\n수면 리서치 특전
 콜라보 기념 선물
+뮤 육성 선물\n[Digit:Digit2 ]일차
 ~~~~~~~~~~~~~~~
 Text File : PresentBox_SCENE
 ~~~~~~~~~~~~~~~
@@ -10685,14 +10879,9 @@ x[Digit:Digit3 ]
 선택한 포켓사블레
 [Digit:Digit3 ]/[Digit:Digit3 idx="1" ]
 [System:Color r="255" g="107" b="55" a="255" ]특정 포켓몬의 출현 확률 UP[System:Color a="255" ]
-그날 리서처의 수면 타입에 상관없이\n[System:Color r="255" g="107" b="55" a="255" ]다른 수면 타입의 포켓몬도 출현[System:Color a="255" ]
-첫 번째 수면 리서치에서 [System:Color r="255" g="107" b="55" a="255" ]사탕 획득량 UP[System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ]운이 좋으면 색이 다른 [Name:PokemonName ][Kor:Particle type="4" ] 만날 수 있다[System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ]운이 좋으면 색이 다른 포켓몬과 만날 수 있다[System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ]운이 좋으면 색이 다른 특정 포켓몬과도\n만날 수 있다[System:Color a="255" ]
-수면 리서치에서 [System:Color r="255" g="107" b="55" a="255" ]꿈의조각 획득량 UP[System:Color a="255" ]
-첫 번째 수면 리서치에서 1마리 찬스 확정
-수면 리서치에서 획득하는 [System:Color r="255" g="107" b="55" a="255" ]리서치 EXP [Digit:Digit3 ]배[System:Color a="255" ]
 아직 발견되지 않은 [System:Color r="255" g="107" b="55" a="255" ]포켓몬의 잠자는 모습 발견 확률 UP[System:Color a="255" ]
 이벤트 보너스
 January
@@ -10762,16 +10951,22 @@ x[Digit:Digit2 ]
 졸음 파워가 모여\n폭풍이 가라앉았다!
 모두의 졸음 파워가 모여\n마음의물방울이 빛을 되찾았다!
 졸음 파워가 모여\n마음의물방울이 빛을 되찾았다!
+모두의 졸음 파워가 모여\n비경의 조사가 진행되었다
+졸음 파워가 모여\n비경의 조사가 진행되었다
+모두의 졸음 파워로 조사가 진행되어\n비경의 안쪽으로 이어지는 길을 발견했다!
+졸음 파워로 조사가 진행되어\n비경의 안쪽으로 이어지는 길을 발견했다!
 모두의 졸음 파워도 모이기 시작했다!
 졸음 파워가 영향을 준다
 이벤트 졸음 파워
 [Name:PokemonName ][Kor:Particle type="4" ] [Name:PokemonName idx="1" ][Kor:Particle type="1" ]\n아직 기분 좋게 잠들어 있다
+[Name:PokemonName ][Kor:Particle type="1" ] 아직 잠들어 있다\n잠자는 모습을 본 [Name:PokemonName idx="1" ][Kor:Particle type="1" ]\n즐거워 보인다
 번뜩임 씨앗에 대하여
 동료가 될 수 있는 [Name:PokemonName ][Kor:Particle type="1" ] 1마리뿐입니다
 프렌드 포인트를 MAX로 만들면\n[System:Color r="255" g="107" b="55" a="255" ]번뜩임 씨앗[System:Color a="255" ]을 획득할 수 있습니다
 [Name:PokemonName ]의 프렌드 포인트에 대하여
 [Name:PokemonName ]에게서 신뢰가 느껴진다
 미라클 스냅 미션의 진척 상황에 따라\n[Name:PokemonName ]의\n프렌드 포인트가 올랐습니다
+미라클 스냅 미션 미니의\n진척 상황에 따라\n[Name:PokemonName ]의\n프렌드 포인트가 올랐습니다\n
 다음 뉴 문 데이를 기대해 주세요!
 깨우기
 아무래도 다크라이에게는 아직 풀리지 않은\n수수께끼가 남아 있는 모양입니다
@@ -10928,6 +11123,7 @@ No.
 향로 세팅
 세팅한 향로는 다음 새로운 수면 리서치에서\n효과를 발휘하고 사라집니다
 잠잘 때 사용할 향로를\n2개까지 세팅할 수 있습니다
+잠잘 때 사용할 향로를\n[Digit:Digit2 ]개까지 세팅할 수 있습니다
 이 아이템을 [Digit:Digit2 ]개 사용합니다\n계속하겠습니까?
 세팅한다
 [Digit:Digit2 ]
@@ -10984,7 +11180,6 @@ No.
 설명
 수면 데이터에 다음 내용이 보정되었습니다
 ・휴대 보정
-・길고 깊은 수면 보정
 딱딱한 바닥이나\n너무 부드러운 매트리스 위에서 계측하면\n정확하게 계측되지 않을 수 있습니다
 사이드 테이블 등,\n침대나 이불과 떨어진 위치에서 계측하면\n신체의 움직임이 정확하게 감지되지 않을 수 있습니다
 정확하게 수면이 계측되지 않을 경우\n몸과 더 가까운 위치에 단말기를 두면\n개선될 가능성이 있습니다
@@ -11435,6 +11630,8 @@ Text File : SupportPokemonSkill_GROUP
 [Name:PokemonNickname ]의 기력 [Digit:Digit3 idx="1" ] 회복! [Digit:Digit3 idx="2" ]회 도와주었다!\n[Name:PokemonNickname idx="3" ]의 기력 [Digit:Digit3 idx="4" ] 회복! [Digit:Digit3 idx="5" ]회 도와주었다!\n그리고 유대의 힘으로 [Name:PokemonNickname ][Kor:Particle type="4" ] [Name:PokemonNickname idx="3" ][Kor:Particle type="3" ] [Digit:Digit3 idx="6" ]회 도와주었다!
 나무열매 [Digit:Digit4 separator="Default" ]개 획득!\n그리고 유대의 힘으로 [Digit:Digit4 idx="1" separator="Default" ]개 추가로 획득!
 꿈의조각 x[Digit:Digit4 separator="Default" ] 획득!\n그리고 에너지 [Digit:Digit4 idx="1" separator="Default" ] 획득!
+에너지 [Digit:Digit5 separator="Default" ] 획득!\n그리고 나무열매 존 전개!\n마고열매의 에너지가 [Digit:Digit3 idx="1" ]％ 상승!
+에너지 [Digit:Digit5 separator="Default" ] 획득!\n나무열매 존의 효과가 상한에 도달하여\n나무열매 존은 펼쳐지지 않았다!
 ~~~~~~~~~~~~~~~
 Text File : TagSet
 ~~~~~~~~~~~~~~~
@@ -11720,8 +11917,10 @@ EX 모드
 미라클 스냅을 모으자
 하루의 첫 번째 수면 리서치에서\n포켓몬의 잠자는 모습에 [Name:PokemonName ][Kor:Particle type="3" ] 찍힌\n미라클 스냅을 촬영할 수 있습니다
 [Name:PokemonName ][Kor:Particle type="3" ] 찍힌 포켓몬의 잠자는 모습을 모아서\n[System:Color r="255" g="107" b="55" a="255" ]미라클 스냅 미션[System:Color a="255" ]을 클리어합시다
+[Name:PokemonName ][Kor:Particle type="3" ] 찍힌 포켓몬의 잠자는 모습을 모아서\n[System:Color r="255" g="107" b="55" a="255" ]미라클 스냅 미션 미니[System:Color a="255" ]를 클리어합시다
 [System:Color r="255" g="107" b="55" a="255" ]희귀한 잠자는 모습일수록[System:Color a="255" ]\n[Name:PokemonName ]가 찍힐 확률이 높습니다\n또한 미라클 스냅에서는\n포켓몬의 사탕 등, 보상을 조금 많이 받을 수 있습니다
 미라클 스냅 미션에 대하여
+미라클 스냅 미션 미니에 대하여
 라티아스와 라티오스를 팀에 편성하자
 라티아스와 라티오스는\n각각 1마리씩 같은 팀에 편성할 수 있습니다
 라티아스와 라티오스를 [System:Color r="255" g="107" b="55" a="255" ]함께 편성하면\n메인 스킬의 추가 효과가 발휘됩니다[System:Color a="255" ]
@@ -11742,6 +11941,11 @@ EX 모드
 이벤트 기간 동안\n[System:Color r="255" g="107" b="55" a="255" ]라티아스와 라티오스 2마리를\n팀에 편성한 상태[System:Color a="255" ]에서\n함께 잠들면 리서치 보너스로\n[System:Color r="255" g="107" b="55" a="255" ]졸음 파워가 1.3배[System:Color a="255" ]가 됩니다
 ※라티아스와 라티오스는\n같은 팀에 편성할 수 있습니다.
 라티아스, 라티오스와 함께\n졸음 파워를 모으고\n마음의물방울의 빛을 되찾자!
+뮤나 뮤츠를 팀에 편성하자
+이벤트 기간 동안\n[System:Color r="255" g="107" b="55" a="255" ]뮤 또는 뮤츠 중 1마리를\n팀에 편성한 상태[System:Color a="255" ]에서\n함께 잠들면 리서치 보너스로\n[System:Color r="255" g="107" b="55" a="255" ]졸음 파워가 1.1배[System:Color a="255" ]가 됩니다
+또한 이벤트 2주 차에는\n[System:Color r="255" g="107" b="55" a="255" ]뮤츠를 팀에 편성한 상태[System:Color a="255" ]에서\n함께 잠들면 리서치 보너스로\n[System:Color r="255" g="107" b="55" a="255" ]졸음 파워가 1.3배[System:Color a="255" ]가 됩니다
+졸음 파워에 적용되는 보너스가 중복되는 경우,\n효과가 가장 높은 보너스만 적용됩니다
+졸음 파워를 잔뜩 모으고\n비경을 탐색하자!
 프렌드 메달에 대하여
 프렌드 메달을 획득하자
 [System:Color r="255" g="107" b="55" a="255" ]프렌드 메달[System:Color a="255" ]은 포켓몬의 프렌드 레벨이\n특정 레벨에 도달하면 받을 수 있습니다
@@ -11836,4 +12040,4 @@ Text File : WeeklySummary_SCENE
 일주일 요약
 [Digit:Digit4 separator="Default" ]
 주차
-第
+

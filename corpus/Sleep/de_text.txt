@@ -488,6 +488,7 @@ Belohnungen
 Erhaltene Belohnungen
 Betroffene Pokémon
 Liste betroffener Pokémon
+Details
 Du kannst bis zu [Digit:Digit1 ] [DE:Qty S="Exemplar" P="Exemplare" ] dieses\nItems besitzen.\nDer Tausch kann nicht durchgeführt\nwerden, weil du dieses Limit sonst\nüberschreiten würdest.\n\nBitte versuche, den Tausch erneut\ndurchzuführen, nachdem du die Items,\ndie bereits in deinem Besitz sind,\neingesetzt hast.
 Du kannst maximal bis zu [Digit:Digit1 ] [DE:Qty S="Exemplar" P="Exemplare" ]\ndieses Items besitzen.\nDu kannst dieses Item nicht erhalten,\nweil du dieses Limit sonst\nüberschreiten würdest.\n\nBitte versuche, das Item erneut zu\nerhalten, nachdem du die Items,\ndie bereits in deinem Besitz sind,\neingesetzt hast.
 Es wurde eine Änderung der Zeit\ndeines Geräts festgestellt, seit du\ndas letzte Mal gespielt hast. Änderst\ndu diese zu häufig, kann dadurch dein\nSpielerlebnis negativ beeinflusst\nwerden, also sei bitte vorsichtig.
@@ -689,6 +690,7 @@ Text File : EventBonusList
 Du kannst die Funktion [System:Color r="255" g="107" b="55" a="255" ]„Mini-Bonbon-Boost“ [System:Color a="255" ]nutzen, um deine Helfer-Pokémon im Level aufsteigen zu lassen.
 Der [System:Color r="255" g="107" b="55" a="255" ]Bonbon-Urglmator [System:Color a="255" ]ist verfügbar.
 Du kannst Blumenpracht erblühen lassen.
+Zusätzlich zu ihrer üblichen Hilfe sammeln deine Helfer-Pokémon gelegentlich [System:Color r="255" g="107" b="55" a="255" ]Magobeeren XL[System:Color a="255" ] auf.
 Die Wahrscheinlichkeit, mit der das [System:Color r="255" g="107" b="55" a="255" ]Haupttalent[System:Color a="255" ] eines Helfer-Pokémon [System:Color r="255" g="107" b="55" a="255" ]ausgelöst[System:Color a="255" ] wird, wird [System:Color r="255" g="107" b="55" a="255" ]mit [Digit:Digit3 ] multipliziert[System:Color a="255" ].
 Die [System:Color r="255" g="107" b="55" a="255" ]Haupttalent-Chance[System:Color a="255" ] von Helfer-Pokémon mit der Spezialität „Talente“ wird [System:Color r="255" g="107" b="55" a="255" ]mit [Digit:Digit3 ] multipliziert[System:Color a="255" ].
 Das [System:Color r="255" g="107" b="55" a="255" ]Haupttalent-Level [System:Color a="255" ]jedes Helfer-Pokémon [System:Color r="255" g="107" b="55" a="255" ]wird um [Digit:Digit3 ] erhöht, wenn es ausgelöst wird[System:Color a="255" ].
@@ -713,6 +715,7 @@ Die [System:Color r="255" g="107" b="55" a="255" ]Anzahl der Beeren[System:Color
 [System:Color r="255" g="107" b="55" a="255" ]Die maximale Anzahl der Beeren und Zutaten[System:Color a="255" ], die ein Helfer-Pokémon mit der Spezialität „Talente“ tragen kann, wird [System:Color r="255" g="107" b="55" a="255" ]um [Digit:Digit3 ] erhöht[System:Color a="255" ].
 Deine Schlafkraft wird mit [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 idx="2" ] [System:Color a="255" ]multipliziert, wenn sich [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName ] [System:Color a="255" ]oder [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName idx="1" ][System:Color a="255" ] während deines Schlafs in deinem Team befindet.
 Deine Schlafkraft wird mit [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 idx="2" ] [System:Color a="255" ]multipliziert, wenn sich sowohl [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName ] [System:Color a="255" ]als auch [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName idx="1" ][System:Color a="255" ] während deines Schlafs in deinem Team befinden.
+Die [System:Color r="255" g="107" b="55" a="255" ]maximale Tragekapazität[System:Color a="255" ] von Helfer-Pokémon wird [System:Color r="255" g="107" b="55" a="255" ]um [Digit:Digit3 ] erhöht[System:Color a="255" ].
 Das [System:Color r="255" g="107" b="55" a="255" ]Haupttalent-Level[System:Color a="255" ] jedes Helfer-Pokémon vom Typ [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ][System:Color a="255" ] [System:Color r="255" g="107" b="55" a="255" ]wird um [Digit:Digit3 idx="1" ] erhöht, wenn es ausgelöst wird[System:Color a="255" ].
 Das [System:Color r="255" g="107" b="55" a="255" ]Haupttalent-Level[System:Color a="255" ] jedes Helfer-Pokémon vom Typ [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ][System:Color a="255" ] und [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType idx="1" ][System:Color a="255" ] [System:Color r="255" g="107" b="55" a="255" ]wird um [Digit:Digit3 idx="2" ] erhöht, wenn es ausgelöst wird[System:Color a="255" ].
 Das [System:Color r="255" g="107" b="55" a="255" ]Haupttalent-Level[System:Color a="255" ] jedes Helfer-Pokémon vom Typ [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ][System:Color a="255" ],[System:Color r="255" g="107" b="55" a="255" ] [Name:PokemonType idx="1" ][System:Color a="255" ] und [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType idx="2" ][System:Color a="255" ] [System:Color r="255" g="107" b="55" a="255" ]wird um [Digit:Digit3 idx="3" ] erhöht, wenn es ausgelöst wird[System:Color a="255" ].
@@ -729,6 +732,8 @@ Du wirst eine etwas größere Chance haben, [System:Color r="255" g="107" b="55"
 [System:Color r="255" g="107" b="55" a="255" ]Du kannst Pokémon verschiedener Schlaftypen entdecken[System:Color a="255" ], unabhängig von deinem eigenen Schlaftyp an diesem Tag.
 Ein Mal pro Tag wird ein Pokémon zur Snackzeit [System:Color r="255" g="107" b="55" a="255" ]garantiert hungrig sein[System:Color a="255" ].
 Es wird schwerer, Pokémon in der\nersten Snackzeit[System:Color r="255" g="107" b="55" a="255" ] ganz zu sättigen[System:Color a="255" ].
+Es wird schwerer, bestimmte Pokémon in der ersten Snackzeit[System:Color r="255" g="107" b="55" a="255" ] ganz zu sättigen[System:Color a="255" ].
+Pokémon, die in der ersten Snackzeit[System:Color r="255" g="107" b="55" a="255" ] schwerer ganz zu sättigen sind[System:Color a="255" ]:
 Während des Events sind Gerichte auf [System:Color r="255" g="107" b="55" a="255" ][Name:CookingGenreName ][System:Color a="255" ] eingestellt.
 Durch Gerichte erhaltene [System:Color r="255" g="107" b="55" a="255" ]Stärke [System:Color a="255" ]wird [System:Color r="255" g="107" b="55" a="255" ]mit [Digit:Digit4 separator="Default" ] multipliziert[System:Color a="255" ].
 Die Energie deiner Pokémon wird durch Gerichte um [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 ] zusätzliche[System:Color a="255" ] Einheiten aufgefüllt.
@@ -784,6 +789,7 @@ Gebiete, in denen du forschen kannst
 Expertenmodus
 [System:Color r="255" g="107" b="55" a="255" ]Neue Gebiete[System:Color a="255" ] werden freigeschaltet, wenn\ndu Pokémon-Schlafposen entdeckst und\nbestimmte Schlafdex-Ziele erreichst.
 In jedem Gebiet unterscheiden sich [System:Color r="255" g="107" b="55" a="255" ]Relaxos\nbevorzugte Beeren[System:Color a="255" ]. Versuche, Pokémon\nvieler verschiedener Typen zu stärken und\njede Menge Schlafposen zu endecken!
+In jedem Gebiet unterscheiden sich [System:Color r="255" g="107" b="55" a="255" ]Relaxos\nLieblingsbeeren[System:Color a="255" ]. Versuche, Pokémon vieler\nverschiedener Typen zu stärken und jede\nMenge Schlafposen zu entdecken!
 Über die Gebiete
 Der Expertenmodus wird am\n[Date:Date label="yyyyyMMMddd_hh:mm" ]\nfreigeschaltet.
 Gesperrt
@@ -1653,18 +1659,15 @@ Spracheinstellungen
 Neuigkeiten
 Mein Konto löschen
 [System:Color r="134" g="134" b="134" a="255" ]Diese Option löscht sämtliche mit diesem Konto\nverknüpften Daten. Das kann nicht rückgängig\ngemacht werden.[System:Color a="255" ]
-Schlaf-EP-Bonusleiste
 EP-Bonusleiste
 Bonus für max. Forschungsrang
 Relaxo-Rangaufstieg
 Experten-Ticket bestätigen
 Anzeige von Nachrichten
-Dies ist eine Nachricht zur\nBonusleiste, die angezeigt wird,\nwenn ein Helfer-Pokémon mit dem\nmaximalem Level Schlaf-EP erhält.
 Dies ist eine Nachricht zur\nBonusleiste, die angezeigt wird,\nwenn ein Helfer-Pokémon mit dem\nmaximalen Level EP erhält.
 Diese Nachricht wird angezeigt, wenn\nForschungspunkte automatisch in\nTraumsplitter umgewandelt werden,\nda der Forscher bereits den höchsten\nForschungsrang erreicht hat.
 Diese Nachricht erscheint, wenn\nRelaxos Rang steigt. Deaktivierst\ndu die Anzeige dieser Nachricht,\nwird sie nicht mehr erscheinen,\num Ränge anzuzeigen, die zuvor\nschon einmal erreicht wurden.
 Diese Nachricht wird angezeigt,\nbevor ein Experten-Ticket\neingesetzt wird.
-Schlaf-EP-Bonusleiste
 EP-Bonusleiste
 Bonus für max. Forschungsrang
 Relaxo-Rangaufstieg
@@ -1936,7 +1939,6 @@ Bist du sicher, dass du einen\nGelb-Samen säen möchtest?
 Bist du sicher, dass du einen\nLila-Samen säen möchtest?
 Bist du sicher, dass du einen\nWeiß-Samen säen möchtest?
 Wenn die Blumen erblühen, erhältst\ndu die folgenden Effekte:
-Wenn die Blumen erblühen, erhältst\ndu Folgendes: [Name:Item idx="1" ] ×1
 Wenn die Blumen erblühen, erhältst\ndu Folgendes: [System:Color r="255" g="107" b="55" a="255" ][Name:Item idx="1" ][System:Color a="255" ] ×1
 Bestätigung
 Details
@@ -1962,6 +1964,7 @@ Erhaltene Fotos:
 Betreibe Schlafforschung und sammle Fotos\nmit [Name:PokemonName ] bei der Foto-Überraschung.
 Missionen abgeschlossen!
 Foto-Überraschungs-Missionen
+Mini-Foto-Überraschungs-Missionen
 Samen säen
 Blumenpracht
 Nickerchen-Insel
@@ -1976,6 +1979,10 @@ Mampfaxos Nickerchen-Insel
 wurde freigeschaltet!
 Du gelangst über das Symbol in der unteren rechten\nEcke des Gebiets dorthin.
 Freigeschaltet
+Aktive Eifereffekte
+Magobeere: Stärke [System:Color r="255" g="107" b="55" a="255" ]+[Digit:Digit4 separator="Default" ] %[System:Color a="255" ]
+Hinweis: Die Effekte werden bei\nGebietswechsel zurückgesetzt.
+Eifereffekte
 Wiederkehrende Forscher erhalten von uns\n[System:Color r="255" g="107" b="55" a="255" ]besondere Geschenke[System:Color a="255" ] und auch [System:Color r="255" g="107" b="55" a="255" ]Vorteile [System:Color a="255" ]bei der\nSchlafforschung. Wir hoffen, dass ihr damit\nin eurer Forschung schnell Fortschritte macht!
 - Geschenkinhalte
 • [Name:Item idx="1" ] [System:Color r="254" g="101" b="119" a="255" ]×[Digit:Digit5 idx="2" separator="Default" ][System:Color a="255" ]
@@ -2013,6 +2020,7 @@ Der Eventzeitraum ist vorbei.
 Bis zum nächsten\nRang:
 Bis zur nächsten\nBelohnung:
 Arbeite weltweit mit anderen Forschern\nzusammen, um Schlafkraft zu sammeln und\nden Glanz des Seelentaus wiederherzustellen!
+Arbeite weltweit mit anderen Forschern\nzusammen, um Schlafkraft zu sammeln und\nweit in das unerforschte Gebiet vorzudringen!
 Eventrang [Digit:Digit2 ] sowie nachfolgende\nRänge werden am [Date:Date label="yyyyyMMMddd_aaa" idx="1" ]\num [Date:Date label="h:mm" idx="2" ] Uhr freigeschaltet.
 Gesperrt
 Topf
@@ -2243,11 +2251,9 @@ Erscheinen etwas häufiger:\nEntei, Glumanda, Glutexo, Glurak, Vulpix,\nVulnona,
 Mehr Infos zum Event findest du in den\nNeuigkeiten im Spiel.
 Entei-Forschung
 [System:Color r="255" g="107" b="55" a="255" ]Haupttalente[System:Color a="255" ] aller Pokémon werden mit\n[System:Color r="255" g="107" b="55" a="255" ][Digit:Digit2 ]-facher Wahrscheinlichkeit ausgelöst[System:Color a="255" ]!
-[System:Color r="255" g="107" b="55" a="255" ]Haupttalente[System:Color a="255" ] aller Helfer-Pokémon\nwerden mit [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 ]-facher\nWahrscheinlichkeit ausgelöst[System:Color a="255" ].
 Die [System:Color r="255" g="107" b="55" a="255" ]Anzahl[System:Color a="255" ] der durch das Haupttalent\n„Traumsplitter-Magnet“ [System:Color r="255" g="107" b="55" a="255" ]erhaltenen\nTraumsplitter [System:Color a="255" ]wird [System:Color r="255" g="107" b="55" a="255" ]mit [Digit:Digit2 ] multipliziert[System:Color a="255" ].
 Die [System:Color r="255" g="107" b="55" a="255" ]Anzahl[System:Color a="255" ] der durch das Haupttalent\n„Traumsplitter-Magnet S“ [System:Color r="255" g="107" b="55" a="255" ]erhaltenen\nTraumsplitter [System:Color a="255" ]wird [System:Color r="255" g="107" b="55" a="255" ]mit [Digit:Digit3 ] multipliziert[System:Color a="255" ].
 Du kannst die Funktion „[System:Color r="255" g="107" b="55" a="255" ]Bonbon-Boost[System:Color a="255" ]“\nnutzen, um deine Helfer-Pokémon im Level\naufsteigen zu lassen.
-Nutze die Funktion [System:Color r="255" g="107" b="55" a="255" ]„Mini-Bonbon-Boost“[System:Color a="255" ],\num deine Helfer-Pokémon im Level\naufsteigen zu lassen.
 Du kannst ein Mal täglich Items aus dem [System:Color r="255" g="107" b="55" a="255" ]Traumgeschenk[System:Color a="255" ] neben Relaxo erhalten.
 Der [System:Color r="255" g="107" b="55" a="255" ]Event-Tausch[System:Color a="255" ] ist verfügbar.
 Der [System:Color r="255" g="107" b="55" a="255" ]Bonbon-Urglmator [System:Color a="255" ]ist verfügbar.
@@ -2355,6 +2361,7 @@ Da deine erhöhte Rate für köstliche\nGerichte bereits das Maximum\nvon [Digit
 Bitte schaff Platz in deinem Beutel,\ndamit Pokémon weiter mit ihren\nTalenten Zutaten sammeln können.
 Bitte schaff Platz in deiner\nZutatentasche, damit Pokémon\nweiter mit ihren Talenten Zutaten\nsammeln können.
 Zutatentasche voll
+%
 [Name:MainSkill ] (Lv. [Digit:Digit3 idx="1" ])
 Gebiet verlassen
 Bevor du das Gebiet wechselst,\nbeachte bitte die folgenden Punkte.\nMöchtest du es dennoch wechseln?
@@ -2455,21 +2462,14 @@ Erscheinen häufiger:\nBisasam, Pummeluff, Flegmon, Pinsir,\nEndivie, Absol
 Mehr Infos zum Event findest du in den\nNeuigkeiten im Spiel.
 Valentinstag
 Dieses einwöchige Event bietet eine besondere Gelegenheit, mehr <strong>Pokémon vom Typ Wasser</strong> zu begegnen!\n\nWir empfehlen dir, dich mit vielen <b>Wasser-Pokémon</b> anzufreunden, um dich auf das Event „Suicune-Forschung“ vorzubereiten!\n\nWährend des Events „Typenwoche: Wasser“ kannst du die zeitlich begrenzte Funktion <b>Mini-Bonbon-Boost</b> nutzen. Das ist eine gute Gelegenheit, deine Wasser-Pokémon zu stärken!\n\nEs wird auch noch verschiedene weitere Boni geben.\nWir hoffen, dass du dich auf das Event freust!\n\nEventzeitraum:\n- 19. August (Mo.) um 04:00 Uhr bis 26. August (Mo.) um 03:59 Uhr\n\nEvent-Gebiete:\n- Alle Gebiete\n\nMissionszeitraum:\n- 19. August (Mo.) um 04:00 Uhr bis 26. August (Mo.) um 03:59 Uhr\n\nDie folgenden Effekte werden in den relevanten Gebieten während des Events aktiviert.\n\n- Alle Tage (19.08. bis 25.08.)\n• Während der Schlafforschung wird <strong>ein Pokémon garantiert hungrig sein</strong>.\n• Bei der Forschung werden <strong>einige Pokémon\nverschiedener Schlaftypen</strong> auftauchen, unabhängig vom Schlaftyp des Forschers an diesem Tag.\n• <strong>Bestimmte Pokémon werden</strong> bei der\nSchlafforschung <strong>häufiger erscheinen</strong>.\n• Die zeitlich begrenzte Funktion <strong>Mini-Bonbon-Boost</strong> wird verfügbar sein.
-Durch Forschung erhaltene\nBonbons ×[Digit:Digit2 ] (einmal täglich)
-Pokémon verschiedener\nSchlaftypen erscheinen unabhängig\nvom Schlaftyp des Forschers
 Schlafkraft ×[Digit:Digit2 ]
 Schlafkraft ×[Digit:Digit3 ]
 Durch Schlaf erhaltene EP ×[Digit:Digit1 ]
-Durch Schlaf erhaltene EP ×[Digit:Digit3 ]
 Erhalte für Schlafaufzeichnungen\nzusätzlich [Digit:Digit4 separator="Default" ] Schlafpunkte\n(nur ein Mal pro Tag)
 Versuche, einen Meisterkeks\nbei deiner Schlafforschung\nzu verwenden.
 Schillernde Pokémon, die häufiger\nerscheinen:
-Durch Forschung erhaltene\nTraumsplitter ×[Digit:Digit2 ]
-Durch Forschung erhaltene\nTraumsplitter ×[Digit:Digit3 ]
 Schillernde Pokémon erscheinen\nhäufiger
-Ein Mal pro Tag wird ein Pokémon\nzur Snackzeit garantiert hungrig\nsein.
 Ein Mal pro Tag kannst du\nbei der Schlafforschung\nEvent-Items erhalten.
-Durch Schlafforschung erhaltene\n[System:Color r="255" g="107" b="55" a="255" ]Forschungspunkte[System:Color a="255" ] werden mit\n[System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 ][System:Color a="255" ] multipliziert.
 [System:Color r="255" g="107" b="55" a="255" ]Pokémon in Schlafposen[System:Color a="255" ], die du\nbisher noch nicht entdeckt hast,\nsind[System:Color r="255" g="107" b="55" a="255" ] leichter anzutreffen[System:Color a="255" ].
 Nach einer Woche Schlafforschung\nerhöht sich dein Gebietsbonus\num [Digit:Digit2 ] %.
 Ein Mal pro Tag kannst du bei\nder Schlafforschung Folgendes\nerhalten:\n[System:Color r="255" g="107" b="55" a="255" ][Name:Item idx="1" ][System:Color a="255" ]
@@ -3897,6 +3897,28 @@ Die folgenden Effekte werden in den relevanten Gebieten während des Events akti
 • Schlafkraft <strong>×[News:Num_Count ]</strong>
 • Schlaf-EP für Helfer-Pokémon <strong>×[News:Num_Count ]</strong>
 • Bonus-Schlafpunkte <strong>+[News:Num_Count ]</strong>
+Eine schicksalhafte Begegnung im traumhaften Mondlicht...?
+Es wurde berichtet, dass ein Mal im Jahr, etwa zur Zeit des Herbstbeginns, in der Vollmondnacht sowie in den Nächten davor und danach nicht nur die Schlafkraft steigt, sondern darüber hinaus auch <strong>Schillernde [News:PokemonNamesList Type="And" ]</strong> häufiger erscheinen.
+Vielleicht schaffst du es im Rahmen deiner Forschung ja, sie zu erspähen!
+Im Rahmen des Events können zudem Bonus-Schlafpunkte und andere Boni für die Schlaf-EP deiner Pokémon erhalten werden.
+Versuche also, dich während des Events ausgiebig auszuruhen und viele Schlafposen zu entdecken!
+Eventzeitraum:
+- [News:Date_mdahm ] bis [News:Date_mdahm idx="1" ]
+Hinweis: Vollmondnacht ist am <strong>[News:Date_mda ]</strong>.
+Event-Gebiete:
+- Alle Gebiete
+Die folgenden Effekte werden in den relevanten Gebieten während des Events aktiviert.
+- Alle Tage
+• Bei der Schlafforschung <strong>sind Pokémon mit höherer Wahrscheinlichkeit in Schlafposen anzutreffen, die du bisher noch nicht entdeckt hast</strong>.
+• Vielleicht begegnest du bestimmten Schillernden Pokémon!
+- Tag 2 (Vollmondnacht)
+• Schlafkraft <strong>×[News:Num_Count ]</strong>
+• Schlaf-EP für Helfer-Pokémon <strong>×[News:Num_Count ]</strong>
+• Bonus-Schlafpunkte <strong>+[News:Num_Count ]</strong>
+- Tag 1 und Tag 3
+• Schlafkraft <strong>×[News:Num_Count ]</strong>
+• Schlaf-EP für Helfer-Pokémon <strong>×[News:Num_Count ]</strong>
+• Bonus-Schlafpunkte <strong>+[News:Num_Count ]</strong>
 Süßes oder Saures!
 Dieses einwöchige Event bietet eine besondere Gelegenheit, bei der <strong>Geister-Pokémon</strong> häufiger erscheinen.
 Vielleicht begegnest du während des Events sogar den neuen Pokémon <strong>[News:PokemonName idx="1" ], [News:PokemonName idx="2" ] und einem [News:PokemonName idx="3" ] mit Halloween-Hut.</strong>
@@ -4069,6 +4091,49 @@ Die folgenden Effekte werden in den relevanten Gebieten während des Events akti
 - Letzter Tag des Events ([News:Date_md ])
 • Schlafkraft <strong>×[News:Num_Count ]</strong>
 Hinweis: Sind mehrere Schlafkraft-Boni wirksam, wird der Bonus mit dem höheren Wert angewendet.
+Dieses zweiwöchige Event ist eine besondere Gelegenheit, um <strong>das unerforschte Gebiet innerhalb der Grasgrün-Insel und die seltenen Schlafposen von [News:PokemonName ] zu untersuchen</strong>!
+Während des Events wird die durchschnittliche Schlafkraft aller Forscher weltweit mit deiner eigenen Schlafkraft kombiniert und als <strong>Event-Schlafkraft</strong> angesammelt.
+Anscheinend wird Event-Schlafkraft angesammelt, indem du das unerforschte Gebiet untersuchst, was es dir gleichzeitig ermöglicht, tiefer in das Gebiet vorzudringen.
+Wir möchten dich dazu ermuntern, mit anderen Forschern weltweit zusammenzuarbeiten, um die Untersuchung voranzutreiben!
+Im Eventzeitraum erscheint das Legendäre Pokémon <strong>[News:PokemonName ]</strong> häufiger. Zudem wird die <b>Schlafkraft</b> durch einen Bonus verstärkt, wenn sich [News:PokemonNamesList idx="1" Type="Or" ] während deines Schlafs in deinem Team befindet.
+Nur während des Events kannst du außerdem bei der Schlafforschung <strong>[News:PokemonName ]-DNA</strong> erhalten.
+Du kannst Exemplare von [News:PokemonName ]-DNA dann beim Event-Tausch gegen die neuen Items „[News:PokemonName idx="1" ]-Rauch“ und „[News:PokemonName idx="2" ]-Kekse“ eintauschen, die dir dabei helfen, [News:PokemonName idx="3" ]s Schlafposen zu entdecken!
+Zusätzlich wurden <strong>Magobeeren XL</strong> im unerforschten Gebiet entdeckt, die größer als gewöhnliche sind und für einen beachtlichen Stärkezuwachs sorgen. Zudem können [News:PokemonName ], [News:PokemonName idx="1" ] und Pokémon vom Typ Psycho dir offenbar mehr Beeren bringen!
+Wir hoffen, dass du dich darauf freust!
+Eventzeitraum:
+- Woche 1: [News:Date_mdahm ] bis [News:Date_mdahm idx="1" ]
+- Woche 2: [News:Date_mdahm ] bis [News:Date_mdahm idx="1" ]
+Event-Gebiete:
+[News:FieldNamesList ]
+<strong>Hinweis: Während des Events können keine anderen außer den oben genannten relevanten Gebieten ausgewählt werden</strong>.
+Hinweis: Während des Events wird das Gebiet im Expertenmodus dasselbe eventexklusive Aussehen haben wie das im Normalmodus.
+Missionszeitraum:
+- Woche 1: [News:Date_mdahm ] bis [News:Date_mdahm idx="1" ]
+- Woche 2: [News:Date_mdahm ] bis [News:Date_mdahm idx="1" ]
+Event-Tausch:
+- Tauschzeitraum: [News:Date_mdahm ] bis [News:Date_mdahm idx="1" ]
+Hinweis: Der Event-Tausch kann in allen Gebieten genutzt werden.
+Die folgenden Effekte werden in den relevanten Gebieten während des Events aktiviert.
+- Alle Tage
+• Wenn sich [News:PokemonName ] oder [News:PokemonName idx="1" ] während deines Schlafs in deinem Team befindet, wird die Schlafkraft <strong>mit [News:Num_Count idx="2" ] multipliziert</strong>.
+• Jedes Mal, wenn dir ein Helfer-Pokémon wie gewohnt Beeren bringt, besteht die Möglichkeit, dass es dir <strong>Magobeeren XL</strong> mitbringt.
+• Jedes Mal, wenn dir ein Helfer-Pokémon vom Typ Psycho <strong>wie gewohnt Zutaten bringt, wird es [News:Num_Count ] zusätzliche</strong> tragen.
+• Die Wahrscheinlichkeit, mit der das <strong>Haupttalent</strong> eines Helfer-Pokémon vom Typ Psycho <strong>ausgelöst wird, wird mit [News:Num_Count ] multipliziert</strong>.
+• Das Relaxo in Event-Gebieten wird <strong>Magobeeren</strong> (Typ Psycho) zu seinen Lieblingsbeeren zählen. Die anderen beiden Beerenarten werden zufällig ausgewählt.
+• <strong>Bestimmte Pokémon werden</strong> bei der Schlafforschung <strong>häufiger erscheinen</strong>.
+• Es wird schwieriger sein, [News:PokemonName ] in der <strong>ersten Snackzeit des Tages vollständig zu sättigen</strong>.
+• Ein zeitlich begrenzter <strong>Event-Tausch</strong> wird verfügbar sein.
+• Während der ersten Schlafforschung des Tages kannst du Event-Items erhalten.
+• Bei der Schlafforschung werden <strong>einige Pokémon verschiedener Schlaftypen auftauchen</strong>, unabhängig vom Schlaftyp des Forschers an diesem Tag.
+- Woche 1 ([News:Date_md ] bis [News:Date_md idx="1" ])
+• <strong>Die maximale Tragekapazität</strong> von Helfer-Pokémon wird um <strong>[News:Num_Count ]</strong> erhöht.
+• Die <strong>Haupttalent-Level</strong> der Helfer-Pokémon vom Typ Psycho werden um <strong>[News:Num_Count ] erhöht</strong>, wenn sie ausgelöst werden.
+- Woche 2 ([News:Date_md ] bis [News:Date_md idx="1" ])
+• Wenn sich [News:PokemonName ] während deines Schlafs in deinem Team befindet, wird die Schlafkraft <strong>mit [News:Num_Count idx="1" ] multipliziert</strong>.
+• <strong>Die maximale Tragekapazität</strong> von Helfer-Pokémon wird um <strong>[News:Num_Count ]</strong> erhöht.
+• Die <strong>Haupttalent-Level</strong> der Helfer-Pokémon vom Typ Psycho werden um <strong>[News:Num_Count ] erhöht</strong>, wenn sie ausgelöst werden.
+• Ein großes Relaxo wird auftauchen und <strong>es kann mit einer gewissen Stärke beginnend gestärkt werden</strong>.
+Hinweis: Sind mehrere Schlafkraft-Boni wirksam, wird der Bonus mit dem höheren Wert angewendet.
 Dieses einmonatige Event bietet eine besondere Gelegenheit, [News:PokemonName ]s <strong>Foto-Überraschungs-Mission</strong> abzuschließen.
 Während des Events <strong>wird [News:PokemonName ] in Fotos auftauchen</strong>, wenn du Pokémon-Schlafposen erforschst. Dein Fortschritt bei den Foto-Überraschungs-Missionen hängt von der Anzahl an Bildern ab, in denen [News:PokemonName ] erscheint.
 Zudem gibt es verschiedene Boni, wenn du eine Foto-Überraschung machst.
@@ -4086,6 +4151,27 @@ Die folgenden Effekte werden in den relevanten Gebieten während des Events akti
 • Durch Foto-Überraschung <strong>erhaltene Forschungspunkte</strong> <strong>×[News:Num_Count ] der üblichen Anzahl</strong>
 • Durch Foto-Überraschung <strong>erhaltene Traumsplitter</strong> <strong>+[News:Num_Count ] der üblichen Anzahl</strong>
 Die oben aufgeführten Boni gelten nur für Schlafposen-Fotos, in denen Mew auftaucht.
+Dieses einwöchige Event ist eine besondere Gelegenheit, <b>erneut Foto-Überraschungs-Schnappschüsse</b> von [News:PokemonName ] zu sammeln!
+Während des Events <strong>wird [News:PokemonName ] in Fotos auftauchen</strong>, wenn du Pokémon-Schlafposen erforschst. Dein Fortschritt bei den Mini-Foto-Überraschungs-Missionen hängt von der Anzahl an Bildern ab, in denen [News:PokemonName ] erscheint.
+Zudem gibt es verschiedene Boni, wenn du eine Foto-Überraschung machst.
+Außerdem kannst du Belohnungen erhalten, wenn du <strong>Mini-Foto-Überraschungs-Missionen</strong> abschließt.
+Dieses Event bietet Forschern die Gelegenheit, sich mit [News:PokemonName idx="1" ] anzufreunden, falls sie sich zuvor noch nicht mit [News:PokemonName ] angefreundet haben. Forscher, die sich bereits mit [News:PokemonName idx="2" ] angefreundet haben, können einen Heurekasamen ([News:PokemonName idx="3" ]) erhalten!
+Eventzeitraum:
+- [News:Date_mdahm ] bis [News:Date_mdahm idx="1" ]
+Event-Gebiete:
+- Alle Gebiete
+Missionszeitraum:
+- [News:Date_mdahm ] bis [News:Date_mdahm idx="1" ]
+Die folgenden Effekte werden in den relevanten Gebieten während des Events aktiviert.
+- Alle Tage
+• Du kannst Foto-Überraschungs-Schnappschüsse nur während der ersten Schlafaufzeichnung des Tages sammeln.
+• Durch Foto-Überraschung <strong>erhaltene Bonbons</strong> <strong>×[News:Num_Count ] der üblichen Anzahl</strong>
+• Durch Foto-Überraschung <strong>erhaltene Forschungspunkte</strong> <strong>×[News:Num_Count ] der üblichen Anzahl</strong>
+• Durch Foto-Überraschung <strong>erhaltene Traumsplitter</strong> <strong>+[News:Num_Count ] der üblichen Anzahl</strong>
+• Während der ersten Schlafforschung des Tages wird <strong>ein Pokémon garantiert hungrig sein</strong>.
+• <strong>Bestimmte Pokémon werden</strong> bei der Schlafforschung <strong>häufiger erscheinen</strong>.
+• Die zeitlich begrenzte Funktion <strong>Mini-Bonbon-Boost</strong> wird verfügbar sein.
+• Bei der Schlafforschung werden <strong>einige Pokémon verschiedener Schlaftypen auftauchen</strong>, unabhängig vom Schlaftyp des Forschers an diesem Tag.
 Bei diesem einwöchigen Event erscheinen <strong>Pokémon vom Typ Elektro, Feuer und Wasser</strong> häufiger!
 Um dich gut auf das Event „[News:PokemonName idx="1" ]-, [News:PokemonName idx="2" ]- und [News:PokemonName idx="3" ]-Forschung“ vorzubereiten, über das wir in einem zukünftigen Update weitere Informationen preisgeben, empfehlen wir dir, dich mit vielen Pokémon anzufreunden!
 Während des Events <strong>wird ein Pokémon</strong> zur ersten Snackzeit des Tages <strong>garantiert hungrig sein</strong>.
@@ -4220,6 +4306,36 @@ Hinweis: Neumondtag ist am [News:Date_mda ].
 Event-Gebiete:
 - [News:FieldNamesList ]
 <strong>Hinweis: Während des Events kannst du aufgrund der Effekte eines anderen Events keine anderen als die oben genannten relevanten Gebiete auswählen.</strong>
+Die folgenden Effekte werden in den relevanten Gebieten während des Events aktiviert.
+- Alle Tage
+• <strong>Besondere Erscheinungsrate</strong> für Mysteriöse Pokémon.
+• Es wird schwieriger sein, Pokémon in der <strong>ersten Snackzeit des Tages vollständig zu sättigen</strong>.
+• Vielleicht begegnest du sogar Schillernden Pokémon!
+• Jedes Mal, wenn du bei der Schlafforschung während des Neumondtag-Events Pokémon mit besonderen Erscheinungsraten begegnest, werden deren Freundespunkte um <strong>[News:Num_Count ]</strong> erhöht.
+Glanzvolle Möglichkeiten in der Nacht des Neumondtags!
+Dieses Event findet ein Mal monatlich für insgesamt drei Tage statt: bei Neumond und an den jeweiligen Tagen davor und danach. Während dieses Zeitraums gelten besondere Erscheinungsraten für Pokémon und <strong>es wird schwieriger sein, sie vollständig zu sättigen</strong>.
+Vielleicht begegnest du sogar <strong>Schillernden Pokémon</strong>!
+Wir hoffen, dass du dich darauf freust!
+Eventzeitraum:
+- [News:Date_mdahm ] bis [News:Date_mdahm idx="1" ]
+Hinweis: Neumondtag ist am [News:Date_mda ].
+Event-Gebiete:
+- Alle Gebiete
+Die folgenden Effekte werden in den relevanten Gebieten während des Events aktiviert.
+- Alle Tage
+• <strong>Besondere Erscheinungsrate</strong> für Mysteriöse Pokémon.
+• Es wird schwieriger sein, Pokémon in der <strong>ersten Snackzeit des Tages vollständig zu sättigen</strong>.
+• Vielleicht begegnest du sogar Schillernden Pokémon!
+• Jedes Mal, wenn du bei der Schlafforschung während des Neumondtag-Events Pokémon mit besonderen Erscheinungsraten begegnest, werden deren Freundespunkte um <strong>[News:Num_Count ]</strong> erhöht.
+Glanzvolle Möglichkeiten in der Nacht des Neumondtags!
+Dieses Event findet ein Mal monatlich für insgesamt drei Tage statt: bei Neumond und an den jeweiligen Tagen davor und danach. Während dieses Zeitraums gelten besondere Erscheinungsraten für Pokémon und <strong>es wird schwieriger sein, sie vollständig zu sättigen</strong>.
+Vielleicht begegnest du sogar <strong>Schillernden Pokémon</strong>!
+Wir hoffen, dass du dich darauf freust!
+Eventzeitraum:
+- [News:Date_mdahm ] bis [News:Date_mdahm idx="1" ]
+Hinweis: Neumondtag ist am [News:Date_mda ].
+Event-Gebiete:
+- Alle Gebiete
 Die folgenden Effekte werden in den relevanten Gebieten während des Events aktiviert.
 - Alle Tage
 • <strong>Besondere Erscheinungsrate</strong> für Mysteriöse Pokémon.
@@ -4488,11 +4604,11 @@ Die folgenden Effekte werden in den relevanten Gebieten während des Events akti
 • <strong>Bestimmte Pokémon werden</strong> bei der Schlafforschung <strong>häufiger erscheinen</strong>.
 • Vielleicht begegnest du bestimmten Schillernden Pokémon!
 • Die zeitlich begrenzte Funktion <strong>Bonbon-Urglmator</strong> wird verfügbar sein.
-Am <b>[News:Date_mdahm ]</b> werden <strong>neue Rezepte hinzugefügt</strong>.
-Zutaten im neuen Currys/Eintöpfe-Gericht 1
-[News:ItemNamesList ]
-Zutaten im neuen Currys/Eintöpfe-Gericht 2
-[News:ItemNamesList ]
+
+
+
+
+
 Während der Schlafposen-Entdeckungswoche kannst du noch mehr Einträge für den Schlafdex sammeln!
 Dieses einwöchige Event ist eine gute Gelegenheit, <strong>Pokémon in Schlafposen zu entdecken, die du bisher noch nicht in deinem Schlafdex registriert hast, da diese leichter anzutreffen sein werden</strong>.
 Wir möchten dich dazu ermuntern, neue Gebiete zu erkunden und Schlafposen zu sammeln, die du noch nicht entdeckt hast!
@@ -4955,6 +5071,9 @@ Latios und der Seelentau
 Vorfeier zum 3. Jubiläum
 Fest zum 3. Jubiläum
 Kollaborationswoche
+Mini-Foto-Überraschungs-Missionen
+Unerforschtes Gebiet! Die Suche nach Mewtu
+Die Suche nach Mewtu
 Evoli
 Neujahr 1
 Neujahr 2
@@ -5005,6 +5124,9 @@ Latios 2
 3. Jubiläum 1
 3. Jubiläum 2
 Kollab.-Woche
+Mini-Foto
+Mewtu 1
+Mewtu 2
 ~~~~~~~~~~~~~~~
 Text File : MD_event_item_packs
 ~~~~~~~~~~~~~~~
@@ -5206,7 +5328,19 @@ Sommerfestival-Set L (2026)
 Kollaborations-Set S
 Kollaborations-Set M
 Kollaborations-Set L
+Mini-Foto-Überraschungs-Set S
+Mini-Foto-Überraschungs-Set M
+Mini-Foto-Überraschungs-Set L
 Pokémon-Stärkungs-Set ([Name:PokemonName ]) Nr. [Digit:Digit2 idx="1" ]
+Mewtu-Forschungs-Set Nr. [Digit:Digit2 ] S
+Mewtu-Forschungs-Set Nr. [Digit:Digit2 ] M
+Mewtu-Forschungs-Set Nr. [Digit:Digit2 ] L
+Mewtu-Endspurt-Set Nr. [Digit:Digit2 ] S
+Mewtu-Endspurt-Set Nr. [Digit:Digit2 ] M
+Mewtu-Endspurt-Set Nr. [Digit:Digit2 ] L
+Set zur Feier von 30 Jahren Pokémon S
+Set zur Feier von 30 Jahren Pokémon M
+Set zur Feier von 30 Jahren Pokémon L
 ~~~~~~~~~~~~~~~
 Text File : MD_event_purchase_item_packs
 ~~~~~~~~~~~~~~~
@@ -5322,6 +5456,52 @@ Oho, das ist ja erstaunlich!\nDieses Relaxo sieht... [System:Color r="255" g="10
 Latias und Latios versuchen,\nden Glanz des [System:Color r="255" g="107" b="55" a="255" ]Seelentaus[System:Color a="255" ]\nwiederherzustellen.
 Vielleicht hat ihre Kraft auch\nAuswirkungen auf Relaxo!
 Mit diesem Relaxo sollte deine\nSchlafforschung gleich von\nWochenbeginn an effektiver sein!
+Du hast tolle Arbeit geleistet!\nHeute habe ich einen besonderen\nForschungsauftrag für dich!
+Ich habe herausgefunden, wohin\ndas Legendäre Pokémon [System:Color r="255" g="107" b="55" a="255" ]Mewtu[System:Color a="255" ]\nverschwunden ist!
+Es befindet sich in einem noch\n[System:Color r="255" g="107" b="55" a="255" ]unerforschten Gebiet[System:Color a="255" ] der\nGrasgrün-Insel.
+Gelangen wir dorthin, könnten\nwir trotz Mewtus Vorsicht seine\nseltenen Schlafposen entdecken.
+Und wenn wir schon dabei sind,\nsollten wir die Gegend so gut\nwie möglich erkunden!
+Wir werden viel von Relaxos\nSchlafkraft benötigen, um die\nForschung voranzubringen.
+Könntest du bitte weltweit mit\nForschern zusammenarbeiten,\num Schlafkraft anzusammeln?
+Ach ja, und hier in der Gegend\ngibt es [System:Color r="255" g="107" b="55" a="255" ]Magobeeren XL[System:Color a="255" ], die vor\nStärke nur so strotzen.
+Sie könnten dir bei Relaxos\nStärkung von Nutzen sein.
+Übrigens zeigt [System:Color r="255" g="107" b="55" a="255" ]Mew[System:Color a="255" ] großes\nInteresse an Mewtus\nSchlafposen.
+Vielleicht hilft es dir ja dabei,\nMewtus seltene Schlafposen zu\nuntersuchen!
+Also schön, lass uns mit der\nErkundung des unerforschten\nGebiets beginnen!
+Dank all deiner Forschung haben\nwir einen Weg gefunden, der\ntiefer in das Gebiet hineinführt.
+Wenn wir so weitermachen,\nkönnen wir vielleicht [System:Color r="255" g="107" b="55" a="255" ]Mewtus[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]seltene Schlafposen[System:Color a="255" ] erforschen!
+Oho, das ist ja erstaunlich!
+Ich hätte nie gedacht, je zu\nsehen, wie Mewtu Mew, genervt\nvon seiner Neugier, verscheucht.
+Mew sah richtig glücklich aus,\nMewtus Schlafposen zu sehen,\nnicht wahr?
+Deine Schlafforschung\nentwickelt sich prächtig!\nWeiter so!
+Oho, das ist ja erstaunlich!\nDieses Relaxo sieht... [System:Color r="255" g="107" b="55" a="255" ]größer [System:Color a="255" ]aus\nals die anderen.
+Möglicherweise liegt das an dem\nEinfluss der Magobeeren XL!
+Mit diesem Relaxo sollte deine\nSchlafforschung gleich von\nWochenbeginn an effektiver sein!
+Du hast tolle Forschungsarbeit\ngeleistet! Ich möchte dich daher\ngerne um einen Gefallen bitten.
+Offenbar ist [System:Color r="255" g="107" b="55" a="255" ]Mew[System:Color a="255" ] in letzter Zeit\nfröhlich um die schlafenden\nPokémon herumgeflogen.
+Vielleicht hat etwas seine\nNeugier geweckt.
+Es könnte also vorkommen, dass\n[System:Color r="255" g="107" b="55" a="255" ]Mew bei deiner Schlafforschung\nauf deinen Fotos auftaucht[System:Color a="255" ].
+Möchtest du herausfinden, was\nMews Neugier geweckt hat?
+Mach einen [System:Color r="255" g="107" b="55" a="255" ]Schnappschuss[System:Color a="255" ] von\nihm, während es herumfliegt!
+Also dann, ich verlass mich auf\ndich! Viel Glück bei deiner\nSchlafforschung!
+Danke, dass du so viele\nSchnappschüsse von Mew\ngesammelt hast!
+Bestimmt hast du mit deiner\nErforschung von Schlafposen\nauch seine Neugier geweckt.
+Es scheint sich wirklich sehr\nfür schlafende Pokémon zu\ninteressieren.
+Als Zeichen eurer wachsenden\nFreundschaft hat es dir einen\n[System:Color r="255" g="107" b="55" a="255" ]Heurekasamen[System:Color a="255" ] geschenkt.
+Bestimmt hast du mit deiner\nErforschung der Schlafposen\nauch seine Neugier geweckt.
+Deine Bindung mit Mew ist jetzt\ntiefer und gewiss [System:Color r="255" g="107" b="55" a="255" ]taucht es bei\ndeiner Schlafforschung auf[System:Color a="255" ]!
+Ich vermute, Mew fühlt sich nun\nsicher genug, um [System:Color r="255" g="107" b="55" a="255" ]sich hier\nschlafen zu legen[System:Color a="255" ].
+Deine Schlafforschung entwickelt\nsich prächtig. Weiter so!
+Ich freue mich auf deine\nmorgige Schlafforschung!
+Gute Arbeit!
+Während du Mew erforscht hast,\nhabe ich einen [System:Color r="255" g="107" b="55" a="255" ]geheimnisvollen\nSchatten [System:Color a="255" ]bemerkt.
+Ich habe ganz schnell ein Foto\nvon ihm gemacht und rate mal,\nwas darauf zu sehen ist!
+Es könnte sich um das Legendäre\nPokémon [System:Color r="255" g="107" b="55" a="255" ]Mewtu[System:Color a="255" ] handeln!
+Mew hat wohl dessen Gegenwart\ngespürt und war neugierig auf\nseine Schlafposen.
+Außerdem sieht es so aus, als\nhätte sich Mewtu in die [System:Color r="255" g="107" b="55" a="255" ]Tiefen\nder Grasgrün-Insel[System:Color a="255" ] begeben.
+Es könnte ein unerforschtes\nGebiet auf der Grasgrün-Insel\ngeben, das wir nicht kennen.
+Ich werde Mewtu auffinden und\nmit den Vorbereitungen für die\nUntersuchung beginnen.
+Dürfte ich dich bitten, bis dahin\ndie tägliche Schlafforschung\nweiterzuführen? Vielen Dank!
 Du hast tolle Forschungsarbeit\ngeleistet! Ich möchte dich daher\ngerne um einen Gefallen bitten.
 Berichten zufolge wurde das\nMysteriöse Pokémon [System:Color r="255" g="107" b="55" a="255" ]Mew [System:Color a="255" ]auf\nder Grasgrün-Insel gesichtet.
 Wie ich gehört habe, fliegt es\nneugierig umher und beobachtet\nschlafende Pokémon.
@@ -5472,7 +5652,6 @@ Text File : MD_health_data_sources
 (Fitbit, Google Pixel Watch usw.)
 (Galaxy Watch usw.)
 (Forerunner 265 usw.)
-Fitbit
 Google Health
 Samsung Health
 Standardmäßige Schlafaufzeichnung\nder Apple Watch
@@ -5484,13 +5663,13 @@ Text File : MD_health_faq
 Werden Schlafdaten automatisch mit\ndeiner Apple Watch aufgezeichnet?
 Werden deine Schlafdaten in\nApple Health registriert?
 Erfüllen deine Schlafdaten die\nBedingungen, um in Pokémon Sleep\ngenutzt werden zu können?
-Werden deine Schlafdaten in Samsung\nHealth, der Fitbit-App, Garmin Connect\noder einer anderen App registriert?
 Werden deine Schlafdaten in Samsung\nHealth, Google Health, Garmin Connect\noder einer anderen App registriert?
 Werden deine Schlafdaten in\nHealth Connect registriert?
 Erfüllen deine Schlafdaten die\nBedingungen, um in Pokémon Sleep\ngenutzt werden zu können?
 Wurde der Lesezugriff für Apple Health\nerteilt (Einstellung: An)?
 Wurde die Leseberechtigung für Health\nConnect erteilt (Einstellung: An)?
 Werden deine Schlafdaten in\nGarmin Connect registriert?
+Werden deine Schlafdaten in Google\nHealth, Garmin Connect oder einer\nanderen App registriert?
 ~~~~~~~~~~~~~~~
 Text File : MD_item_name_data
 ~~~~~~~~~~~~~~~
@@ -5506,6 +5685,7 @@ Cresselia-Keks
 Premierkeks
 Latias-Keks
 Latias-/Latios-Keks
+Mewtu-Keks
 Verdoppelt die bei Schlafforschung\nerhaltenen Forschungspunkte. Wird\nnach einer Anwendung aufgebraucht.
 Verdoppelt die bei Schlafforschung\nerhaltenen Traumsplitter. Wird nach\neiner Anwendung aufgebraucht.
 Verdoppelt die von Helfer-Pokémon\nbei Schlafforschung erhaltenen EP.\nWird nach einer Anwendung\naufgebraucht.
@@ -5567,6 +5747,7 @@ Eine vollkommen weiße Minze. Lässt\nman ein Pokémon daran schnuppern,\nwerden
 Ein Ticket, das du benötigst, um\nGebiete im Expertenmodus zu\nbesuchen.
 Ein spezieller Snack für bestimmte\nPokémon, der sie erheblich\nfreundlicher stimmt. Dieser Keks\nerhöht ihre Freundespunkte um 6.
 Wenn der Zeitraum für den\nEvent-Tausch abgelaufen ist, wird\ndieses Item automatisch in einen\nSuperkeks umgewandelt. Die genauen\nDaten für den Tauschzeitraum findest\ndu in den Event-Neuigkeiten.
+Wenn der Zeitraum für den\nEvent-Tausch abgelaufen ist, wird\ndieses Item nach einer gewissen Zeit\nautomatisch in einen Superkeks\numgewandelt. Die genauen Daten für\nden Tauschzeitraum sowie den\nUmwandlungszeitpunkt des Kekses\nfindest du in den Event-Neuigkeiten.
 Während dieses Events kann es nur\nbei den folgenden Pokémon eingesetzt\nwerden.
 Ein speziell angefertigter Saft, der\ndie Energie eines Helfer-Pokémon um\n20 Einheiten auffüllt.
 Die Energie eines Pokémon kann\nhierdurch 100 übersteigen.
@@ -5643,6 +5824,7 @@ Cresselia-Flaum
 Pokémon-Materialien
 Latias-Flaum
 Latios-Flaum
+Mewtu-DNA
 Fokusrauch
 Glücksrauch
 EP-Rauch
@@ -5941,6 +6123,7 @@ Feuer-Pokémon
 Drachen-Pokémon
 Drachen-Pokémon
 Drachen-Pokémon
+Genmutant-Pokémon
 Neue Art-Pokémon
 Laub-Pokémon
 Laub-Pokémon
@@ -6175,6 +6358,7 @@ Es schläft zufrieden in sein flauschiges Fell gehüllt,\nwelches Hitze in die L
 Dieses Pokémon ist so selten, dass es lange Zeit als\nLegende galt. Seine Schlafgewohnheiten waren einst\ngeheimnisumwittert, aber seit immer mehr Dratini\nbei Trainern leben, wurde dieses Pokémon in einer\nVielzahl von Schlafposen beobachtet.
 Es heißt, dass Dragonir in den Bällen an seinem\nSchweif Kraft sammelt und dadurch das Wetter\nbeeinflusst, manchmal sogar im Schlaf. Vorsicht:\nDas Wetter in der Umgebung dieses Pokémon kann\nsich schlagartig ändern.
 Dragoran ist als „Inkarnation des Meeres“ bekannt.\nIn sehr seltenen Fällen wurde beobachtet, wie es tief\nschlummert und dabei seinen Bauch zur Schau stellt.\nDies passiert möglicherweise, nachdem es sich beim\nFliegen über die weiten Meere erschöpft hat.
+Dieses Pokémon wurde angeblich aus den Genen\nvon Mew geschaffen. Es schläft für gewöhnlich\nregungslos im Stand. Man vermutet, dass es dies\ntut, um Energie zu sparen, damit es im Kampf\nseine volle Kraft entfalten kann.
 Mew soll die genetische Zusammensetzung aller\nPokémon besitzen und ist so extrem selten, dass\nviele seine Existenz bezweifeln. Selbst im Schlaf\nkann es sich unsichtbar machen. Deshalb ist es\nbisher nur wenigen Forschern gelungen, seine\nSchlafposen zu beobachten.
 Es heißt, dass Endivie das Blatt auf seinem Kopf\nnutzt, um die Temperatur und Luftfeuchtigkeit in\nder Umgebung zu messen und den gemütlichsten\nSchlafplatz zu finden. Im Schlaf wirkt es oft\nentspannt, als hätte es ein tolles Plätzchen für\nsich gefunden.
 Das würzige Aroma, das die Knospen an seinem Hals\nabsondern, bringt Menschen auf Trab. Vielleicht\nstärkt es auch die Pokémon, die in Lorblatts Nähe\nschlafen.
@@ -6412,6 +6596,7 @@ Flamara
 Dratini
 Dragonir
 Dragoran
+Mewtu
 Mew
 Endivie
 Lorblatt
@@ -6832,6 +7017,7 @@ Zusätzlich erhältst du Bonbons für ein\nPokémon in deinem Team.
 Füllt die Energie zweier zufälliger Pokémon\ndeines Teams um [Digit:Digit3 ] auf und deren Hilfe wird\nsofort [Digit:Digit2 idx="1" ] Mal durchgeführt. Bestimmte\nBedingungen verstärken den Effekt.
 Du erhältst Beeren, die Pokémon in deinem\nTeam (inkl. es selbst) sammeln. Bestimmte\nBedingungen verstärken den Effekt.
 Du erhältst [Digit:Digit7 separator="Default" ] Traumsplitter. Erhöht\nzudem Relaxos Stärke um [Digit:Digit4 idx="1" separator="Default" ].
+Erhöht Relaxos Stärke um [Digit:Digit7 separator="Default" ].\nLöst außerdem einen Beeren-Eifer im Gebiet\naus.
 Stärkezufuhr S
 Stärkezufuhr M
 Traumsplitter-Magnet S
@@ -6880,6 +7066,7 @@ Vielfalt (Beerenregen)
 Heilwoge (Energisches Anfeuern S)
 Draco Meteor (Beerenregen)
 Aurasphäre (Traumsplitter-Magnet S)
+Psychostoß (Beeren-Eifer)
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_main_skills_ShortName
 ~~~~~~~~~~~~~~~
@@ -6905,6 +7092,7 @@ Zutaten-Tombola S
 Plus
 Minus
 Kochhilfe S
+Beeren-Eifer
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_nature
 ~~~~~~~~~~~~~~~
@@ -7241,6 +7429,11 @@ Entrollpose
 Einkugelpose
 Päuschenpose
 Bäuchleinpose
+Kniehochpose
+Aufrechtschwebepose
+Psychostoßpose
+Unruhestifterpose
+Seelenruhigpose
 Schwebeflugpose
 Freiheitspose
 Bläschenbettpose
@@ -8220,7 +8413,6 @@ Pikachu und du solltet gemeinsam\nein Schläfchen einlegen. Das wird\nder Ausgan
 Jetzt geht’s ans Eingemachte!\nLass uns alles vorbereiten für\ndeine erste Forschungseinheit!
 Sehen wir uns die Schlafdaten\nan, die du gesammelt hast.
 Hier kannst du sehen, [System:Color r="255" g="107" b="55" a="255" ]wie lange\ndu geschlafen hast[System:Color a="255" ] und welches\n[System:Color r="255" g="107" b="55" a="255" ]Schlafresultat[System:Color a="255" ] du erreicht hast.
-Dies ist dein [System:Color r="255" g="107" b="55" a="255" ]Schlafresultat[System:Color a="255" ]. Es\nzeigt dir an, wie [System:Color r="255" g="107" b="55" a="255" ]lange du\ngeschlafen[System:Color a="255" ] hast.
 Dies ist dein [System:Color r="255" g="107" b="55" a="255" ]Schlafresultat[System:Color a="255" ]. Es\nzeigt dir an, wie [System:Color r="255" g="107" b="55" a="255" ]lange du\ngeschlafen hast[System:Color a="255" ].
 Erwachsene können ein Resultat\nvon 100 erreichen, wenn sie\n[System:Color r="255" g="107" b="55" a="255" ]mindestens 8,5 Stunden [System:Color a="255" ]pro\nNacht schlafen.
 Kinder können ein Schlafresultat\nvon 100 erreichen, wenn sie\n[System:Color r="255" g="107" b="55" a="255" ]mindestens 11 Stunden [System:Color a="255" ]pro Nacht\nschlafen.
@@ -8302,7 +8494,6 @@ Du kannst[System:Color r="255" g="107" b="55" a="255" ] jede Woche von\nMontag b
 Und das, obwohl wir eigentlich\nerst die Grundlagen besprochen\nhaben... Aber ich überlasse es dir,\nden Rest zu entdecken!
 Nach einer Woche verabschiedet\nsich Relaxo, aber im nächsten\nGebiet triffst du wieder eins!
 Ich wünsche dir viel Erfolg bei\ndeiner Schlafforschung!\nSchlaf gut!
-Versuch dein Bestes, um Relaxo\nzu stärken, damit es so groß wie\nmöglich wird!
 Versuche, das Ticket zu benutzen!\nEs wird[System:Color r="255" g="107" b="55" a="255" ] Relaxos Stärkung und\ndeine Forschung beschleunigen[System:Color a="255" ].
 Versuche dein Bestes, um Relaxo\nzu stärken. Je größer es wird,\n[System:Color r="255" g="107" b="55" a="255" ]desto einfacher wird es, vielen\nPokémon zu begegnen[System:Color a="255" ]!
 Das war sehr viel auf einmal,\naber wir sind fertig! Viel Glück\nbei deiner Schlafforschung!
@@ -8357,7 +8548,6 @@ Ich gebe dir den [System:Color r="255" g="107" b="55" a="255" ]Heurekasamen[Syst
 Ich gebe dir den [System:Color r="255" g="107" b="55" a="255" ]Heurekasamen[System:Color a="255" ]\nzurück, damit du ihn später bei\n[Name:PokemonName ] einsetzen kannst!
 Dein neuer Freund Darkrai hat\ndir ein mysteriöses Item\ngeschenkt.
 Dein neuer Freund [Name:PokemonName ]\nhat dir ein mysteriöses Item\ngeschenkt.
-Du hast sicher den Blumentopf\ngesehen? Ich wollte dich bitten,\nbesondere Blumen anzupflanzen.
 Du hast sicher den Blumentopf\ngesehen? Ich wollte dich bitten,\nbesondere Blumen anzupflanzen.
 Diese Blumen haben Kräfte und\n[System:Color r="255" g="107" b="55" a="255" ]wenn sie blühen, passieren tolle\nDinge in der Schlafforschung[System:Color a="255" ].
 Es ist einfach, sie anzubauen.\nSäe einfach jeden Tag [System:Color r="255" g="107" b="55" a="255" ]Samen\ndeiner Wahl[System:Color a="255" ] im Blumentopf aus.
@@ -8845,7 +9035,6 @@ Helfer-Boost ([Name:PokemonType ])
 Entweder Horter oder Entfessler wird\nausgewählt. Wenn Entfessler ausgelöst\nwird, steigt Relaxos Stärke basierend auf\nder Anzahl der Auslösungen von Horter.\nDiese Anzahl wird nach dem Auslösen von\nEntfessler zurückgesetzt.
 Basierend auf der Anzahl der Auslösungen von\nHorter, steigt Relaxos Stärke wie folgt:
 Hinweis: Wird dieses Pokémon aus dem Team\nentfernt, wird die Anzahl der Auslösungen von\nHorter zurückgesetzt.
-Du erhältst [Digit:Digit3 ] [DE:Qty S="Beere" P="Beeren" ] sowie jeweils\n[Digit:Digit3 idx="1" ] der Beeren, die andere Pokémon im\nTeam sammeln. In seltenen Fällen wird\nein „Großer Erfolg“ ausgelöst und du\nsammelst eine noch größere Anzahl\nBeeren.
 Du erhältst [Digit:Digit3 ] [DE:Qty S="Beere" P="Beeren" ] sowie jeweils\n[Digit:Digit3 idx="1" ] der Beeren, die andere Pokémon im\nTeam sammeln. Manchmal wird ein\n„Großer Erfolg“ ausgelöst und du\nsammelst eine noch größere Anzahl\nBeeren.
 Hinweis: Nach einem „Großen Erfolg“ wird\nbis zur nächsten Schlafforschung oder den\nnächsten manuell eingetragenen Schlafdaten\nkein „Großer Erfolg“ mehr ausgelöst.
 Kopiert das Haupttalent eines zufällig\nausgewählten Pokémon im Team und\nsetzt es ein.
@@ -8884,6 +9073,11 @@ Wenn Latios in deinem Team ist, wird\ndessen Hilfe auf der Stelle [Digit:Digit2 
 Du erhältst Beeren, die die Pokémon in\ndeinem Team (inkl. es selbst) sammeln. Je\nmehr Arten von Pokémon vom Typ [Name:PokemonType ]\nsich in deinem Team befinden, desto mehr\nwerden gesammelt.
 Du erhältst Beeren, die die Pokémon in\ndeinem Team (inkl. es selbst) sammeln. Je\nmehr Arten von Pokémon vom Typ [Name:PokemonType ]\nsich in deinem Team befinden, desto mehr\nwerden gesammelt. Außerdem wird die\nAnzahl an Beeren, die dieses Pokémon\nerhält, um [Digit:Digit4 idx="1" separator="Default" ] erhöht, wenn Latias in\ndeinem Team ist.
 Die Anzahl an Beeren, die dieses\nPokémon erhält, wird um [Digit:Digit4 separator="Default" ] erhöht,\nwenn Latias in deinem Team ist.
+Erhöht Relaxos Stärke um [Digit:Digit7 separator="Default" ]. Löst\naußerdem einen Beeren-Eifer im Gebiet\naus, wodurch die durch Magobeeren\nerhaltene Stärke um [Digit:Digit3 idx="1" ] % erhöht wird.
+Hinweis: Nach der Auslösung hält der\nBeeren-Eifer an, bis du das Gebiet wechselst.
+Hinweis: Die Effekte von „Beeren-Eifer“ bleiben\nauch dann bestehen, wenn du [Name:PokemonName ]\naus deinem Helferteam entfernst.
+Hinweis: Die Effekte von „Beeren-Eifer“\nerreichen bei [Digit:Digit4 separator="Default" ] % ihr Maximum. Jedes Mal,\nwenn dieses Haupttalent ausgelöst wird,\naddieren sich die Effekte von „Beeren-Eifer“,\nbis das Limit erreicht wird.
+Hinweis: Wenn dieses Haupttalent aktiviert ist,\nwerden sämtliche Beeren in der für Beeren\nvorgesehenen Box in Stärke umgewandelt.
 Über das Talent „Vielfalt“
 Verfügbare Haupttalente
 Verfügbare Haupttalente
@@ -9144,6 +9338,7 @@ Text File : PokemonHeight
 1,8 m
 4,0 m
 2,2 m
+2,0 m
 0,4 m
 0,9 m
 1,2 m
@@ -9425,12 +9620,9 @@ Wähle Pokémon für dein Helferteam aus\nund verwalte deine Pokémon-Box.
 Teams ändern
 Pokémon-Box
 Pokémon
-Durch überschüssige Schlaf-EP\nkannst du Items erhalten.
 Durch überschüssige EP\nkannst du Items erhalten.
-Schlaf-EP-Bonusleiste
 EP-Bonusleiste
 Details
-Wenn ein Helfer-Pokémon den maximalen\nLevel erreicht hat, werden überschüssige\nSchlaf-EP zur Bonusleiste hinzugefügt,\nstatt dem Pokémon selbst.
 Wenn ein Helfer-Pokémon den maximalen\nLevel erreicht hat, werden überschüssige\nEP zur Bonusleiste hinzugefügt, statt dem\nPokémon selbst.
 Immer, wenn die Leiste voll ist, erhältst du\n[Name:Item idx="1" ] ×[Digit:Digit2 idx="2" ].
 Bonus für max. Level eines Pokémon
@@ -9510,6 +9702,7 @@ Text File : PokemonWeight
 3,3 kg
 16,5 kg
 210,0 kg
+122,0 kg
 4,0 kg
 6,4 kg
 15,8 kg
@@ -9736,6 +9929,7 @@ Nicht erhaltene\nNeutral-Minze
 Nicht erhaltenes Item
 Schlafforschungsbonus\nGarmin
 Kollaborations-Geschenk
+Mew-Stärkungs-Geschenk:\nTag [Digit:Digit2 ]
 ~~~~~~~~~~~~~~~
 Text File : PresentBox_SCENE
 ~~~~~~~~~~~~~~~
@@ -10685,14 +10879,9 @@ Snackzeit
 Ausgewählt:
 [Digit:Digit3 ]/[Digit:Digit3 idx="1" ]
 [System:Color r="255" g="107" b="55" a="255" ]Bestimmte Pokémon erscheinen häufiger.[System:Color a="255" ]
-Pokémon verschiedener Schlaftypen werden\nauftauchen, unabhängig vom Schlaftyp\ndes Forschers an diesem Tag.
-Forscher erhalten [System:Color r="255" g="107" b="55" a="255" ]mehr Bonbons[System:Color a="255" ] für die\nerste Schlafforschung des Tages.
 [System:Color r="255" g="107" b="55" a="255" ]Vielleicht triffst du ja auf ein Schillerndes\n[Name:PokemonName ].[System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ]Vielleicht begegnest du ja einem[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]Schillernden Pokémon.[System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ]Vielleicht begegnest du ja bestimmten[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]Schillernden Pokémon.[System:Color a="255" ]
-Forscher [System:Color r="255" g="107" b="55" a="255" ]erhalten[System:Color a="255" ] [System:Color r="255" g="107" b="55" a="255" ]mehr Traumsplitter[System:Color a="255" ] bei\nder Schlafforschung.
-Bei deiner ersten Schlafforschung des\nTages wird garantiert ein hungriges\nPokémon erscheinen.
-Durch Schlafforschung erhaltene\n[System:Color r="255" g="107" b="55" a="255" ]Forschungspunkte[System:Color a="255" ] werden mit\n[System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 ][System:Color a="255" ] multipliziert.
 [System:Color r="255" g="107" b="55" a="255" ]Pokémon in Schlafposen[System:Color a="255" ], die du bisher\nnoch nicht entdeckt hast, sind[System:Color r="255" g="107" b="55" a="255" ] leichter[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]anzutreffen[System:Color a="255" ].
 Event-Boni
 Jan.
@@ -10762,16 +10951,22 @@ Die vereinte Schlafkraft von\nallen hat den Sturm besänftigt!
 Deine gesammelte Schlafkraft\nhat den Sturm besänftigt!
 Die vereinte Schlafkraft von\nallen hat den Glanz des\nSeelentaus wiederhergestellt!
 Deine gesammelte Schlafkraft\nhat den Glanz des Seelentaus\nwiederhergestellt!
+Die vereinte Schlafkraft von\nallen hat die Erforschung des\nGebiets vorangebracht.
+Deine gesammelte Schlafkraft\nhat die Erforschung des Gebiets\nvorangebracht.
+Durch die vereinte Schlafkraft\nvon allen hast du einen Pfad ins\nInnere des Gebiets entdeckt.
+Durch deine gesammelte\nSchlafkraft hast du einen Pfad\nins Innere des Gebiets entdeckt.
 Schlafkraft von allen gesammelt!
 Deine Schlafkraft wirkt.
 Event-Schlafkraft
 Anscheinend schlafen [Name:PokemonName ] und\n[Name:PokemonName idx="1" ] noch tief und fest.
+Anscheinend schläft [Name:PokemonName ]\nnoch. [Name:PokemonName idx="1" ] freut sich sehr,\ndiese Schlafpose zu sehen!
 Über Heurekasamen
 Du kannst dich nur mit einem [Name:PokemonName ] anfreunden.
 Du kannst einen [System:Color r="255" g="107" b="55" a="255" ]Heurekasamen[System:Color a="255" ] erhalten, wenn\ndie Freundespunkte den Maximalwert erreichen.
 Freundespunkte von [Name:PokemonName ]
 Du kannst fühlen, dass\n[Name:PokemonName ] dir vertraut.
 Durch deinen Fortschritt bei den\nFoto-Überraschungs-Missionen\nhaben sich [Name:PokemonName ]s Freundespunkte\nerhöht.
+Durch deinen Fortschritt bei den\nMini-Foto-Überraschungs-Missionen\nhaben sich [Name:PokemonName ]s Freundespunkte\nerhöht.
 Wir hoffen, dass du dich auf den\nnächsten Neumondtag freust!
 Wecken
 Anscheinend sind einige Rätsel um\nDarkrai noch ungelöst.
@@ -10928,6 +11123,7 @@ Pokémon-Rauch
 Rauch auswählen
 Die ausgewählten Rauch-Items wirken\nwährend deiner nächsten Schlafforschung\nund werden dann aufgebraucht.
 Du kannst bis zu zwei Rauch-Items\neinsetzen, während du schläfst.
+Du kannst bis zu [Digit:Digit2 ] [DE:Qty S="Rauch-Item" P="Rauch-Items" ]\neinsetzen, während du schläfst.
 Möchtest du wirklich [Digit:Digit2 ] [DE:Qty S="Exemplar" P="Exemplare" ] des\nausgewählten Rauchs einsetzen?
 Rauch einsetzen
 [Digit:Digit2 ]
@@ -10984,7 +11180,6 @@ Dein Schlaf war [Date:Date label="mmmm" ]\nlänger als letztes Mal.
 Details
 Deine Schlafdaten wurden aufgrund\nder folgenden Umstände angepasst:
 - Das Gerät wurde getragen oder\nbewegt.
-- Du hast ungewöhnlich lange oder\ntief geschlafen.
 Auf harten Böden oder übermäßig weichen\nMatratzen aufgezeichneter Schlaf wird\nmöglicherweise nicht korrekt erfasst.
 Bei Aufzeichnung auf einem Nachttisch\noder einem weit von deiner Matratze\nentfernten Ort werden Körperbewegungen\nmöglicherweise nicht korrekt erfasst.
 Falls dein Schlaf nicht korrekt aufgezeichnet\nwird, kann es hilfreich sein, das Gerät näher\nan deinem Körper zu platzieren.
@@ -11069,7 +11264,7 @@ Aufz. [Digit:Digit4 separator="Default" ]
 [Date:Date label="yyyyyMMMddd_aaa" ] |
 [Date:Dow ]
 [Digit:Digit2 ]
- 
+
 Wie hast du geschlafen?
 [Date:Date label="hh:mm" ]
 [Digit:Digit2 0fill="1" ]
@@ -11435,6 +11630,8 @@ Energie von [Name:PokemonNickname ] wurde um [Digit:Digit3 idx="1" ] aufgefüllt
 Energie von [Name:PokemonNickname ] wurde um [Digit:Digit3 idx="1" ] aufgefüllt! Außerdem wurde dessen übliche Hilfe [Digit:Digit3 idx="2" ] Mal durchgeführt! Energie von [Name:PokemonNickname idx="3" ] wurde um [Digit:Digit3 idx="4" ] aufgefüllt! Außerdem wurde dessen übliche Hilfe [Digit:Digit3 idx="5" ] Mal durchgeführt! Zusätzlich wurde die übliche Hilfe von [Name:PokemonNickname ] und [Name:PokemonNickname idx="3" ] durch die Kraft der Verbindung [Digit:Digit3 idx="6" ] Mal durchgeführt!
 [Digit:Digit4 separator="Default" ] [DE:Qty S="Beere" P="Beeren" ] erhalten! [Digit:Digit4 idx="1" separator="Default" ] zusätzliche [DE:Qty S="Beere" P="Beeren" idx="1" ] durch die Kraft der Verbindung erhalten!
 [Digit:Digit4 separator="Default" ] Traumsplitter erhalten!\nAußerdem wurde Relaxos Stärke um\n[Digit:Digit4 idx="1" separator="Default" ] erhöht!
+Relaxos Stärke wird um [Digit:Digit5 separator="Default" ]\nerhöht und ein Beeren-Eifer\nausgelöst! Durch Magobeeren\nerhaltene Stärke wird um [Digit:Digit3 idx="1" ] %\nerhöht!
+Relaxos Stärke wird um [Digit:Digit5 separator="Default" ]\nerhöht! Es wurde kein Beeren-Eifer\nausgelöst, da das Limit des\nBeeren-Eifereffekts erreicht wurde.
 ~~~~~~~~~~~~~~~
 Text File : TagSet
 ~~~~~~~~~~~~~~~
@@ -11720,8 +11917,10 @@ Expertenmodus
 Sammle Fotos bei der Foto-Überraschung
 Bei der ersten Schlafaufzeichnung des Tages\nkannst du im Rahmen der Foto-Überraschung\nSchnappschüsse machen. [Name:PokemonName ] wird\ndabei auf Fotos von Pokémon-Schlafposen\nauftauchen.
 Sammle Fotos von Pokémon-Schlafposen,\nauf denen auch [Name:PokemonName ] zu sehen ist,\num Foto-Überraschungs-Missionen\nabzuschließen.
+Sammle Fotos von Pokémon-Schlafposen, auf\ndenen auch [Name:PokemonName ] zu sehen\nist, um [System:Color r="255" g="107" b="55" a="255" ]Mini-Foto-Überraschungs-Missionen[System:Color a="255" ]\nabzuschließen.
 [System:Color r="255" g="107" b="55" a="255" ]Je seltener eine Pokémon-Schlafpose ist[System:Color a="255" ],\ndesto wahrscheinlicher ist es, dass\n[Name:PokemonName ] auf einem Foto davon auftaucht.\nÜbrigens kannst du für diese Fotos einige\nBelohnungen erhalten, wie zum Beispiel\nPokémon-Bonbons.
 Foto-Überraschungs-Missionen
+Mini-Foto-Überraschungs-Missionen
 Füge Latias und Latios zum Team hinzu.
 [System:Color r="255" g="107" b="55" a="255" ]Du kannst jeweils genau ein[System:Color a="255" ] Latias und ein\nLatios [System:Color r="255" g="107" b="55" a="255" ]in deinem Team haben[System:Color a="255" ].
 [System:Color r="255" g="107" b="55" a="255" ]Wenn du [System:Color a="255" ]Latias und Latios [System:Color r="255" g="107" b="55" a="255" ]im selben Team\nhast, werden die zusätzlichen Effekte ihrer\nHaupttalente aktiviert[System:Color a="255" ].
@@ -11742,6 +11941,11 @@ Während des Events wird deine [System:Color r="255" g="107" b="55" a="255" ]Sch
 Während des Events wird deine [System:Color r="255" g="107" b="55" a="255" ]Schlafkraft\nmit 1,3 multipliziert[System:Color a="255" ], wenn sich [System:Color r="255" g="107" b="55" a="255" ]sowohl[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]Latias als auch Latios in deinem Team\nbefinden[System:Color a="255" ], während du schläfst.
 Hinweis: Du kannst Latias und Latios im\nselben Team haben.
 Sammle gemeinsam mit Latias und Latios\nSchlafkraft an, um den Glanz des Seelentaus\nwiederherzustellen!
+Füge Mew oder Mewtu zum Team hinzu.
+Während des Events wird deine [System:Color r="255" g="107" b="55" a="255" ]Schlafkraft\nmit 1,1 multipliziert[System:Color a="255" ], wenn sich [System:Color r="255" g="107" b="55" a="255" ]entweder[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]Mew oder Mewtu in deinem Team befindet[System:Color a="255" ],\nwährend du schläfst.
+Zudem wird während der zweiten Woche des\nEvents deine [System:Color r="255" g="107" b="55" a="255" ]Schlafkraft mit 1,3[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]multipliziert[System:Color a="255" ], wenn sich [System:Color r="255" g="107" b="55" a="255" ]Mewtu in deinem[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]Team befindet[System:Color a="255" ], während du schläfst.
+Sind mehrere Schlafkraft-Boni zeitgleich\nwirksam, wird der Bonus mit dem höheren\nWert angewendet.
+Sammle Schlafkraft an, um die Erkundung\ndes unerforschten Gebiets voranzutreiben!
 Freundschaftsabzeichen
 Freundschaftsabzeichen erhalten
 Erreichst du mit einem Pokémon einen\nbestimmten Freundeslevel, erhältst du ein\n[System:Color r="255" g="107" b="55" a="255" ]Freundschaftsabzeichen[System:Color a="255" ].
@@ -11836,4 +12040,4 @@ Trainingsfortschritt
 Wochenbericht
 [Digit:Digit4 separator="Default" ]
 Woche
-第
+

@@ -488,6 +488,7 @@ Premios
 Premios recibidos
 Pokémon compatibles
 Lista de Pokémon compatibles
+Detalles
 El máximo de unidades permitidas para\neste objeto es de [Digit:Digit1 ].\nNo puedes realizar el intercambio\nporque superarías este límite.\n\nVuelve a intentarlo cuando hayas\nhecho hueco en tu inventario.
 El máximo de unidades permitidas para\neste objeto es de [Digit:Digit1 ].\nNo puedes recibir este objeto porque\nsuperarías este límite.\n\nVuelve a intentarlo cuando hayas\nhecho hueco en tu inventario.
 Se ha detectado un cambio en los\najustes de la hora de tu dispositivo\nmóvil desde la última vez que usaste\nla aplicación. Cambiar repetidamente\nestos ajustes podría perjudicar la\nexperiencia de juego.
@@ -689,6 +690,7 @@ Text File : EventBonusList
 Puedes usar [System:Color r="255" g="107" b="55" a="255" ]la función Miniendulzador[System:Color a="255" ] para subir el nivel de tus Pokémon ayudantes.
 Puedes usar el [System:Color r="255" g="107" b="55" a="255" ]Cramobot de Caramelos[System:Color a="255" ].
 Puedes cultivar flores en la cesta floral.
+Tus Pokémon ayudantes recolectarán [System:Color r="255" g="107" b="55" a="255" ]Bayas Ango Enormes[System:Color a="255" ] de vez en cuando, además de brindarte ayuda de manera normal.
 La [System:Color r="255" g="107" b="55" a="255" ]probabilidad de activación de la habilidad principal[System:Color a="255" ] de todos los Pokémon ayudantes [System:Color r="255" g="107" b="55" a="255" ]se multiplicará por [Digit:Digit3 ][System:Color a="255" ].
 La [System:Color r="255" g="107" b="55" a="255" ]probabilidad de activación[System:Color a="255" ] de la habilidad principal de los Pokémon ayudantes con la especialidad "Habilidades" [System:Color r="255" g="107" b="55" a="255" ]se multiplicará por [Digit:Digit3 ][System:Color a="255" ].
 La [System:Color r="255" g="107" b="55" a="255" ]habilidad principal [System:Color a="255" ]de todos los Pokémon ayudantes [System:Color r="255" g="107" b="55" a="255" ]subirá [Digit:Digit3 ] nivel[ES:Qty P="es" ] al activarse.[System:Color a="255" ]
@@ -713,6 +715,7 @@ El [System:Color r="255" g="107" b="55" a="255" ]número de bayas [System:Color 
 [System:Color r="255" g="107" b="55" a="255" ]El número máximo de bayas e ingredientes[System:Color a="255" ] que puede tener un Pokémon con la especialidad "Habilidades" [System:Color r="255" g="107" b="55" a="255" ]aumenta en [Digit:Digit3 ][System:Color a="255" ].
 El poder Zzz se multiplicará por [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 idx="2" ][System:Color a="255" ] si [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName ][System:Color a="255" ] o [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName idx="1" ][System:Color a="255" ] están en tu equipo mientras duermes.
 El poder Zzz se multiplicará por [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 idx="2" ][System:Color a="255" ] si [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName ][System:Color a="255" ] y [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName idx="1" ][System:Color a="255" ] están en tu equipo mientras duermes.
+El [System:Color r="255" g="107" b="55" a="255" ]límite de objetos[System:Color a="255" ] de los Pokémon ayudantes [System:Color r="255" g="107" b="55" a="255" ]aumentará en [Digit:Digit3 ][System:Color a="255" ].
 La [System:Color r="255" g="107" b="55" a="255" ]habilidad principal[System:Color a="255" ] de los Pokémon ayudantes de tipo [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ] subirá [Digit:Digit3 idx="1" ] nivel[ES:Qty P="es" idx="1" ] al activarse[System:Color a="255" ].
 La [System:Color r="255" g="107" b="55" a="255" ]habilidad principal[System:Color a="255" ] de los Pokémon ayudantes de tipo [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ][System:Color a="255" ] o tipo [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType idx="1" ][System:Color a="255" ] [System:Color r="255" g="107" b="55" a="255" ]subirá [Digit:Digit3 idx="2" ] nivel[ES:Qty P="es" idx="2" ] al activarse[System:Color a="255" ].
 La [System:Color r="255" g="107" b="55" a="255" ]habilidad principal[System:Color a="255" ] de los Pokémon ayudantes de tipo [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ][System:Color a="255" ], tipo[System:Color r="255" g="107" b="55" a="255" ] [Name:PokemonType idx="1" ][System:Color a="255" ] y tipo [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType idx="2" ][System:Color a="255" ] [System:Color r="255" g="107" b="55" a="255" ]subirá [Digit:Digit3 idx="3" ] nivel[ES:Qty P="es" idx="3" ] al activarse[System:Color a="255" ].
@@ -729,6 +732,8 @@ Tendrás una probabilidad ligeramente mayor de encontrarte con [System:Color r="
 [System:Color r="255" g="107" b="55" a="255" ]Podrás encontrarte con Pokémon con distintos tipos de sueño[System:Color a="255" ] sin importar el tuyo ese día.
 [System:Color r="255" g="107" b="55" a="255" ]Asegura la visita[System:Color a="255" ], una vez al día, de un Pokémon [System:Color r="255" g="107" b="55" a="255" ]hambriento [System:Color a="255" ]a la hora del picoteo.
 [System:Color r="255" g="107" b="55" a="255" ]Saciar[System:Color a="255" ] a tus Pokémon a la 1.ª hora\ndel picoteo del día [System:Color r="255" g="107" b="55" a="255" ]será más difícil[System:Color a="255" ].
+[System:Color r="255" g="107" b="55" a="255" ]Será más difícil saciar[System:Color a="255" ] a determinadas especies de Pokémon durante la primera hora del picoteo del día.
+Pokémon a los que [System:Color r="255" g="107" b="55" a="255" ]será más difícil saciar[System:Color a="255" ] durante la primera hora de picoteo del día:
 Durante el evento, todos los platos serán [System:Color r="255" g="107" b="55" a="255" ][Name:CookingGenreName toUpper="OFF" ][System:Color a="255" ].
 El [System:Color r="255" g="107" b="55" a="255" ]vigor[System:Color a="255" ] obtenido por los platos [System:Color r="255" g="107" b="55" a="255" ]se multiplicará por [Digit:Digit4 separator="Default" ][System:Color a="255" ].
 Al comer, tus Pokémon recuperarán [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 ][System:Color a="255" ] puntos de energía [System:Color r="255" g="107" b="55" a="255" ]adicionales[System:Color a="255" ].
@@ -784,6 +789,7 @@ Zonas de estudio disponibles
 Modo experto
 Se desbloquearán [System:Color r="255" g="107" b="55" a="255" ]nuevas zonas[System:Color a="255" ] al estudiar\nposturas de Pokémon y alcanzar ciertos\nobjetivos de la DormiDex.
 Las bayas preferidas de Snorlax cambiarán\nen cada zona, así que intenta cuidar de\nPokémon de varios tipos y estudiar muchas\nposturas.
+[System:Color r="255" g="107" b="55" a="255" ]Las bayas favoritas de Snorlax[System:Color a="255" ] cambiarán\nen cada zona, así que intenta cuidar de\nPokémon de varios tipos y estudiar muchas\nposturas.
 Zonas
 El modo experto se desbloqueará el\n[Date:Date label="yyyyyMMMddd_hh:mm" ]
 Sin desbloquear
@@ -1653,18 +1659,15 @@ Selección de idioma
 Noticias
 Eliminar mi cuenta
 [System:Color r="134" g="134" b="134" a="255" ]Esta opción eliminará todos los datos relativos a\nesta cuenta. Ten en cuenta que, una vez eliminados,\nlos datos no se pueden recuperar.[System:Color a="255" ]
-Barra bonus EXP al dormir
 Barra bonus EXP
 Bonus por rango máx. de estudio
 Aumento de valoración de Snorlax
 Confirmar uso de Cupón Experto
 Visualización de ventanas emergentes
-Explicación sobre la barra adicional\nque aparece cuando un Pokémon\nayudante de nivel máximo recibe\nEXP al dormir.
 Explicación sobre la barra adicional\nque aparece cuando un Pokémon\nayudante de nivel máximo recibe\nEXP.
 Esta ventana aparece al convertirse\nautomáticamente la EXP de estudio\nen fragmentos de sueños cuando se ha\nalcanzado el rango máximo de estudio.
 Esta ventana aparece cuando sube la\nvaloración de Snorlax. Si la\ndesactivas, no aparecerá para mostrar\nvaloraciones que ya hayas alcanzado\nanteriormente.
 Esta ventana aparece antes de usar\nun Cupón Experto.
-Barra bonus EXP al dormir
 Barra bonus EXP
 Bonus por rango máximo de estudio
 Aumento de valoración de Snorlax
@@ -1936,7 +1939,6 @@ Cesta floral
 ¿Seguro que quieres plantar una\nSemilla Morada?
 ¿Seguro que quieres plantar una\nSemilla Blanca?
 Cuando salgan flores, recibirás los\nsiguientes efectos:
-Cuando salgan flores, obtendrás una\n[Name:Item idx="1" ].
 Cuando salgan flores, obtendrás una\n[System:Color r="255" g="107" b="55" a="255" ][Name:Item idx="1" ][System:Color a="255" ].
 Confirmación
 Detalles
@@ -1962,6 +1964,7 @@ Fotosorpresas tomadas:
 Realiza estudios del sueño y colecciona\nFotosorpresas en las que salga [Name:PokemonName ].
 ¡Misiones completadas!
 Misiones Fotosorpresa
+Misiones Fotosorpresa mini
 Planta una\nsemilla
 Cesta floral
 Islote Siestote
@@ -1976,6 +1979,10 @@ No disponible
 desbloqueado!
 Para visitarlo, accede desde el cartel de la\nesquina inferior derecha de la zona de estudio.
 Desbloqueado
+Efectos de zona activos
+Vigor de las Bayas Ango: [System:Color r="255" g="107" b="55" a="255" ]+[Digit:Digit4 separator="Default" ] %[System:Color a="255" ]
+Ten en cuenta que cambiar de zona\nreiniciará estos efectos.
+Efectos de zona
 Estamos entregando [System:Color r="254" g="101" b="119" a="255" ]regalos especiales[System:Color a="255" ] a los\nusuarios que retomen Pokémon Sleep, así como\n[System:Color r="254" g="101" b="119" a="255" ]una serie de ventajas[System:Color a="255" ] durante el estudio del\nsueño. ¡Esperamos que te sean de utilidad!
 • Contenido del regalo
 - [Name:Item idx="1" ] [System:Color r="254" g="101" b="119" a="255" ] ×[Digit:Digit5 idx="2" separator="Default" ][System:Color a="255" ]
@@ -2013,6 +2020,7 @@ El período del evento ha terminado.
 Siguiente rango:
 Siguiente premio:
 ¡Colabora con usuarios de todo el mundo y\nacumula poder Zzz para devolverle el brillo al\nRocío Bondad!
+¡Colabora con usuarios de todo el mundo y\nacumula poder Zzz para hallar el rincón más\nremoto de la zona inexplorada!
 El rango [Digit:Digit2 ] del evento y los rangos\nsiguientes se desbloquearán el\n[Date:Date label="yyyyyMMMddd_aaa" idx="1" ] a las [Date:Date label="h:mm" idx="2" ].
 Sin desbloquear
 Puchero
@@ -2243,11 +2251,9 @@ Probabilidad de encuentro ligeramente mayor\nEntei, Charmander, Charmeleon, Char
 Consulta la sección Noticias para conocer más\ndetalles sobre el evento.
 Estudio sobre Entei
 ¡[System:Color r="255" g="107" b="55" a="255" ]Probabilidad de activación de habilidad\nprincipal[System:Color a="255" ] de los ayudantes [System:Color r="255" g="107" b="55" a="255" ]×[Digit:Digit2 ][System:Color a="255" ]!
-¡[System:Color r="255" g="107" b="55" a="255" ]Probabilidad de activación de habilidad\nprincipal[System:Color a="255" ] de los ayudantes [System:Color r="255" g="107" b="55" a="255" ]×[Digit:Digit3 ][System:Color a="255" ]!
 ¡Los [System:Color r="255" g="107" b="55" a="255" ]fragmentos de sueños obtenidos\n[System:Color a="255" ]gracias a la habilidad principal Imán\nfragmentos se multiplicarán por[System:Color r="255" g="107" b="55" a="255" ] [Digit:Digit2 ][System:Color a="255" ]!
 ¡Los [System:Color r="255" g="107" b="55" a="255" ]fragmentos de sueños obtenidos\n[System:Color a="255" ]gracias a la habilidad principal Imán\nfragmentos S se multiplicarán por[System:Color r="255" g="107" b="55" a="255" ] [Digit:Digit3 ][System:Color a="255" ]!
 Puedes usar la [System:Color r="255" g="107" b="55" a="255" ]función Endulzador[System:Color a="255" ] para\nsubir el nivel de tus Pokémon ayudantes.
-Puedes usar la [System:Color r="255" g="107" b="55" a="255" ]función Miniendulzador[System:Color a="255" ] para\nsubir el nivel de tus Pokémon ayudantes.
 Puedes obtener objetos una vez al día si abres el [System:Color r="255" g="107" b="55" a="255" ]regalo de ensueño[System:Color a="255" ] que hay junto a Snorlax.
 El [System:Color r="255" g="107" b="55" a="255" ]rincón de intercambio del evento\n[System:Color a="255" ]está disponible.
 Puedes usar el [System:Color r="255" g="107" b="55" a="255" ]Cramobot de Caramelos[System:Color a="255" ].
@@ -2355,6 +2361,7 @@ Tus probabilidades de cocinar un plato\nriquísimo han alcanzado el máximo del\
 Haz espacio para que los Pokémon\npuedan recoger ingredientes con\nsus habilidades.
 Haz espacio en el bolsillo de\ningredientes para que los Pokémon\npuedan usar sus habilidades.
 Bolsillo de ingredientes lleno
+ %
 [Name:MainSkill ] (Nv. [Digit:Digit3 idx="1" ])
 Cambiar de zona
 Ten en cuenta los siguientes puntos\nantes de cambiar de ubicación.\n¿Seguro que quieres continuar?
@@ -2366,8 +2373,8 @@ Hoy no has [System:Color r="255" g="107" b="55" a="255" ]sincronizado tus datos\
 Hoy no has [System:Color r="255" g="107" b="55" a="255" ]sincronizado tus datos\ncon Salud de Apple[System:Color a="255" ].
 Hoy no has [System:Color r="255" g="107" b="55" a="255" ]sincronizado tus datos\ncon tu dispositivo vinculado[System:Color a="255" ].
 Si cambias de zona, perderás el incienso\nseleccionado. Termina de sincronizar los datos\nantes de cambiar de zona.
-¡Noche de luna nueva con encuentros especiales!\nEste evento se celebra una vez al mes y dura tres días: el correspondiente a la noche de luna nueva y los días inmediatamente anterior y posterior. Durante el evento, habrá probabilidades de encuentro especiales y <strong>será más difícil saciar a tus Pokémon</strong>.\n¡Hasta podrías toparte con <strong>Pokémon variocolor</strong>!\n\n¡Esperamos veros a todos!\n\nPeríodo del evento:\n• Del <i data-time="1748232000" data-format="6" data-raw-date="1"></i> al <i data-time="1748491199" data-format="6" data-raw-date="1"></i>.\nLa noche de luna nueva será el <i data-time="1748318400" data-format="4" data-raw-date="1"></i>.\n\nZona:\n• Todas las zonas.\n\nLos siguientes efectos se aplicarán en la zona correspondiente durante el evento.\n\n- Todos los días:\n• <strong>Ciertos Pokémon tendrán más probabilidades de aparecer</strong> durante el estudio.\n• <strong>Será más difícil saciar</strong> a tus Pokémon a la primera hora del picoteo del día.\n• Podrías encontrarte con un Pokémon variocolor.\n• <strong>Algunos Pokémon con distintos tipos de sueño se dejarán ver</strong> durante el estudio, sin importar cuál sea el tuyo.
-¡Noche de luna nueva con encuentros especiales!\nEste evento se celebra una vez al mes y dura tres días: el correspondiente a la noche de luna nueva y los días inmediatamente anterior y posterior. Durante el evento, habrá probabilidades de encuentro especiales y <strong>será más difícil saciar a tus Pokémon</strong>.\n¡Hasta podrías toparte con <strong>Pokémon variocolor</strong>!\n\n¡Esperamos veros a todos!\n\nPeríodo del evento:\n• Del <i data-time="1750737600" data-format="6" data-raw-date="1"></i> al <i data-time="1750996799" data-format="6" data-raw-date="1"></i>.\nLa noche de luna nueva será el <i data-time="1750824000" data-format="4" data-raw-date="1"></i>.\n\nZona:\n• Todas las zonas.\n\nLos siguientes efectos se aplicarán en la zona correspondiente durante el evento.\n\n- Todos los días:\n• Darkrai tendrá <strong>probabilidades de encuentro especiales</strong> durante el estudio.\n• <strong>Será más difícil saciar</strong> a tus Pokémon a la <strong>primera hora del picoteo del día</strong>.\n• Podrías encontrarte con un Pokémon variocolor.\n
+¡Noche de luna nueva con encuentros especiales!\nEste evento se celebra una vez al mes y dura tres días: el correspondiente a la noche de luna nueva y los días inmediatamente anterior y posterior. Durante el evento, habrá probabilidades de encuentro especiales y <strong>será más difícil saciar a tus Pokémon</strong>.\n¡Hasta podrías toparte con <strong>Pokémon variocolor</strong>!\n\n¡Esperamos veros a todos!\n\nPeríodo del evento:\n• Del <i data-time="1748232000" data-format="6" data-raw-date="1"></i> al <i data-time="1748491199" data-format="6" data-raw-date="1"></i>.\nLa noche de luna nueva será el <i data-time="1748318400" data-format="4" data-raw-date="1"></i>.\n\nZona:\n• Todas las zonas.\n\nLos siguientes efectos se aplicarán en la zona correspondiente durante el evento.\n\n- Todos los días:\n• <strong>Ciertos Pokémon tendrán más probabilidades de aparecer</strong> durante el estudio.\n• <strong>Será más difícil saciar</strong> a tus Pokémon durante la primera hora del picoteo del día.\n• Podrías encontrarte con un Pokémon variocolor.\n• <strong>Algunos Pokémon con distintos tipos de sueño se dejarán ver</strong> durante el estudio, sin importar cuál sea el tuyo.
+¡Noche de luna nueva con encuentros especiales!\nEste evento se celebra una vez al mes y dura tres días: el correspondiente a la noche de luna nueva y los días inmediatamente anterior y posterior. Durante el evento, habrá probabilidades de encuentro especiales y <strong>será más difícil saciar a tus Pokémon</strong>.\n¡Hasta podrías toparte con <strong>Pokémon variocolor</strong>!\n\n¡Esperamos veros a todos!\n\nPeríodo del evento:\n• Del <i data-time="1750737600" data-format="6" data-raw-date="1"></i> al <i data-time="1750996799" data-format="6" data-raw-date="1"></i>.\nLa noche de luna nueva será el <i data-time="1750824000" data-format="4" data-raw-date="1"></i>.\n\nZona:\n• Todas las zonas.\n\nLos siguientes efectos se aplicarán en la zona correspondiente durante el evento.\n\n- Todos los días:\n• Darkrai tendrá <strong>probabilidades de encuentro especiales</strong> durante el estudio.\n• <strong>Será más difícil saciar</strong> a tus Pokémon durante la <strong>primera hora del picoteo del día</strong>.\n• Podrías encontrarte con un Pokémon variocolor.\n
 ¡El evento de [System:Color r="142" g="254" b="255" a="255" ]Año Nuevo 2024 [System:Color a="255" ]comienza el lunes,\n1 de enero, a las 04:00 en todas las zonas!
 El evento de Año Nuevo 2024 celebra durante\nuna semana la llegada del nuevo año.\nMientras dure el evento, la EXP al dormir que\nobtengas se multiplicará por [System:Color r="142" g="254" b="255" a="255" ]1,5[System:Color a="255" ]. Además, si\ncontinúas con tu estudio del sueño durante toda\nla semana, podrás obtener [System:Color r="142" g="254" b="255" a="255" ]hasta 2024 puntos\nde sueño adicionales[System:Color a="255" ].\n\nPodrás encontrarte [System:Color r="142" g="254" b="255" a="255" ]Pokémon con distintos tipos\nde sueño[System:Color a="255" ] sin importar cuál sea el tuyo y tendrás\n[System:Color r="142" g="254" b="255" a="255" ]más probabilidades de encontrarte [System:Color a="255" ]a Pokémon\ncomo Bulbasaur, Charmander o Squirtle.\n\nSabemos que cuesta mantener un ritmo de\nsueño constante durante estas fechas, pero\nesperamos que logres arrancar el año con buen\npie con la ayuda de tus Pokémon.\n¡Esperamos veros a todos!
 • Desarrollo del evento\n¡Participar en el evento es fácil!\nSolo tienes que tocar el botón Dormir cuando\nvayas a acostarte mientras se esté celebrando\nel evento para iniciar el registro.\nAsí se activarán los diversos efectos del evento\ndurante el estudio del sueño.\nLos efectos aplicables durante este evento, que\nse indican a continuación, podrán activarse en\ncualquier zona del mapa.
@@ -2455,21 +2462,14 @@ Probabilidad de encuentro alta\nBulbasaur, Jigglypuff, Slowpoke, Pinsir,\nChikor
 Consulta la sección Noticias para conocer más\ndetalles sobre el evento.
 Día de los Enamorados
 ¡Este evento dura una semana y es una ocasión especial de encontrarte con más <strong>Pokémon de tipo Agua</strong>!\n\nDe cara al evento Estudio sobre Suicune, te animamos a trabar amistad con muchos <b>Pokémon de tipo Agua</b>.\n\nDurante el evento, estará disponible la función por tiempo limitado <b>Miniendulzador</b>. ¡Aprovecha la oportunidad para cuidar bien de tus Pokémon de tipo Agua!\n\nY eso no es todo. ¡Aún habrá más bonus!\n¡Esperamos veros a todos!\n\nPeríodo del evento:\n• Del lunes, 19 de agosto, a las 04:00 al lunes, 26 de agosto, a las 03:59.\n\nZona:\n• Todas las zonas\n\nPeríodo de las misiones:\n• Del lunes, 19 de agosto, a las 04:00 al lunes, 26 de agosto, a las 03:59.\n\nLos siguientes efectos se activarán en la zona correspondiente durante el evento.\n\nTodos los días (del 19 al 25 de agosto)\n• Se sumará a tu estudio del sueño <strong>un Pokémon que estará hambriento</strong>.\n• <strong>Algunos Pokémon con distintos tipos de sueño se dejarán ver</strong> durante el estudio, sin importar cuál sea el tuyo.\n• <strong>Ciertos Pokémon tendrán más probabilidades de aparecer</strong> durante el estudio.\n• Estará disponible la función <strong>Miniendulzador</strong> por tiempo limitado.
-Caramelos obtenidos por el\nestudio ×[Digit:Digit2 ] (una vez al día).
-Aparecen Pokémon con distintos\ntipos de sueño sin importar cuál\nsea el tuyo.
 Poder Zzz ×[Digit:Digit2 ]
 Poder Zzz ×[Digit:Digit3 ]
 EXP obtenida al dormir ×[Digit:Digit1 ]
-EXP obtenida al dormir ×[Digit:Digit3 ]
 [Digit:Digit4 separator="Default" ] punto[ES:Qty P="s" ] de sueño adicional[ES:Qty P="es" ]\npor registro (una vez al día).
 Prueba a usar una Megagalleta durante el estudio del sueño.
 Mayor probabilidad de encontrarse\ncon Pokémon variocolor:
-Fragmentos de sueños obtenidos\ntras el estudio ×[Digit:Digit2 ].
-Fragmentos de sueños obtenidos\ntras el estudio ×[Digit:Digit3 ].
 Mayor probabilidad de encontrarse\ncon Pokémon variocolor.
-Asegura la visita, una vez al día,\nde un Pokémon hambriento a la\nhora del picoteo.
 Puedes obtener objetos de evento\ntras el estudio (una vez al día).
-La [System:Color r="255" g="107" b="55" a="255" ]EXP de estudio[System:Color a="255" ] obtenida tras el\nestudio del sueño se multiplicará\npor [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 ][System:Color a="255" ].
 Existe una [System:Color r="255" g="107" b="55" a="255" ]mayor probabilidad de\navistar posturas de sueño[System:Color a="255" ] que\naún no has descubierto.
 Tras completar una semana \nde estudio, tu bonus de zona\naumentará un [Digit:Digit2 ] %.
 Puedes obtener este objeto una vez\nal día tras el estudio del sueño:\n[System:Color r="255" g="107" b="55" a="255" ][Name:Item idx="1" ][System:Color a="255" ]
@@ -3897,6 +3897,28 @@ Los siguientes efectos se aplicarán en la zona correspondiente durante el event
 • Poder&nbsp;Zzz&nbsp;<strong>×[News:Num_Count ]</strong>.
 • EXP al dormir de los Pokémon ayudantes&nbsp;<strong>×[News:Num_Count ]</strong>.
 • Puntos de sueño adicionales&nbsp;<strong>+[News:Num_Count ]</strong>.
+¿Un encuentro por obra del destino a la luz de la luna?
+Hay quien afirma que, una vez al año, sobre la época de la luna de la cosecha (concretamente, esa noche de luna llena y las noches inmediatamente anterior y posterior), además de potenciarse el poder&nbsp;Zzz, existe una mayor probabilidad de que aparezcan <strong>[News:PokemonNamesList Type="And" ]</strong> variocolor.
+¡Incluso podrían aparecerse ante vosotros!
+Durante el evento también podrás conseguir puntos de sueño adicionales y multiplicar tu EXP al dormir.
+¡Todos a dormir a pierna suelta durante el evento y a estudiar muchas posturas de Pokémon!
+Período del evento:
+• Del [News:Date_mdahm ] al [News:Date_mdahm idx="1" ].
+La noche de luna nueva será el <strong>[News:Date_mda ]</strong>.
+Zona:
+• Todas las zonas.
+Los siguientes efectos se aplicarán en la zona correspondiente durante el evento.
+- Todos los días:
+• <strong>Mayor probabilidad de avistar posturas de sueño que aún no has descubierto</strong> durante el estudio.
+• Podrías encontrarte con determinados Pokémon variocolor.
+- Día 2 (noche de luna llena):
+• Poder&nbsp;Zzz&nbsp;<strong>×[News:Num_Count ]</strong>.
+• EXP al dormir de los Pokémon ayudantes&nbsp;<strong>×[News:Num_Count ]</strong>.
+• Puntos de sueño adicionales&nbsp;<strong>+[News:Num_Count ]</strong>.
+- Día 1 y día 3:
+• Poder&nbsp;Zzz&nbsp;<strong>×[News:Num_Count ]</strong>.
+• EXP al dormir de los Pokémon ayudantes&nbsp;<strong>×[News:Num_Count ]</strong>.
+• Puntos de sueño adicionales&nbsp;<strong>+[News:Num_Count ]</strong>.
 ¡Truco o trato!
 ¡Este evento dura una semana y es una ocasión especial de encontrarte con más <strong>Pokémon de tipo Fantasma</strong>!
 Durante el evento, podrías toparte con los recién llegados, <strong>[News:PokemonName idx="1" ] y [News:PokemonName idx="2" ], y con un [News:PokemonName idx="3" ] con sombrero de Halloween</strong>.
@@ -4069,6 +4091,49 @@ Semana 2 (del [News:Date_md ] al [News:Date_md idx="1" ])
 Último día del evento ([News:Date_md ]):
 • Poder&nbsp;Zzz&nbsp;<strong>×[News:Num_Count ]</strong>.
 Si hay varios bonus al poder&nbsp;Zzz activos a la vez, solo tendrá efecto el mayor de ellos.
+Este evento dura dos semanas y es la ocasión perfecta para <strong>llevar a cabo un estudio de las zonas inexploradas de Isla Verdegal y rastrear las posturas de sueño inusuales de [News:PokemonName ]</strong>.
+Mientras dure el evento, tu poder&nbsp;Zzz se sumará a la media de poder&nbsp;Zzz de los usuarios de todo el mundo para conformar <strong>poder&nbsp;Zzz de evento</strong>.
+Parece que el poder&nbsp;Zzz de evento se acumulará durante el estudio de la zona inexplorada, lo que te permitirá seguir adentrándote en ella.
+¡Te animamos a colaborar con el resto de usuarios para avanzar en la investigación!
+Además, durante el evento, el Pokémon legendario <strong>[News:PokemonName ]</strong> tendrá más probabilidades de aparecer durante el estudio y se aplicará un <b>bonus al poder&nbsp;Zzz</b> si [News:PokemonNamesList idx="1" Type="Or" ] están en tu equipo mientras duermes.
+Además, y solo mientras dure el evento, podrás conseguir <strong>ADN de [News:PokemonName ]</strong> en los estudios del sueño.
+Podrás intercambiar muestras de ADN de [News:PokemonName ] en el rincón de intercambio del evento por objetos inéditos como Inciensos [News:PokemonName idx="1" ] y Galletas [News:PokemonName idx="2" ], útiles para avistar las distintas posturas de sueño de  [News:PokemonName idx="3" ].
+Además, en la tierra ignota se han hallado <strong>Bayas Ango Enormes</strong>, que proporcionan un vigor considerable por su tamaño mayor al habitual. ¡Y parece que [News:PokemonName ], [News:PokemonName idx="1" ] y los Pokémon de tipo Psíquico pueden traer más bayas!
+¡Esperamos veros a todos!
+Período del evento:
+• Semana 1: Del [News:Date_mdahm ] al [News:Date_mdahm idx="1" ].
+• Semana 2: Del [News:Date_mdahm ] al [News:Date_mdahm idx="1" ].
+Zona:
+[News:FieldNamesList Type="And" ]
+<strong>Mientras dure el evento, solo podrás seleccionar las zonas indicadas arriba</strong>.
+Durante el evento, la zona del modo experto tendrá el mismo aspecto exclusivo del evento que la zona del modo normal.
+Período de las misiones:
+• Semana 1: Del [News:Date_mdahm ] al [News:Date_mdahm idx="1" ].
+• Semana 2: Del [News:Date_mdahm ] al [News:Date_mdahm idx="1" ].
+Período de intercambio:
+• Del [News:Date_mdahm ] al [News:Date_mdahm idx="1" ].
+Podrás usar los intercambios en cualquier zona.
+Los siguientes efectos se aplicarán en la zona correspondiente durante el evento.
+- Todos los días:
+• Si [News:PokemonName ] o [News:PokemonName idx="1" ] están en tu equipo mientras duermes, el poder&nbsp;Zzz <strong>se multiplicará por [News:Num_Count idx="2" ]</strong>.
+• Cada vez que un Pokémon ayudante te traiga bayas al ayudarte de manera normal, también podrá traer <strong>Bayas Ango Enormes</strong>.
+• Cada vez que un Pokémon ayudante de tipo Psíquico <strong>te traiga ingredientes al ayudarte de manera normal, tendrá [News:Num_Count ] más</strong>.
+• La probabilidad de <strong>activación de la habilidad principal de los Pokémon ayudantes de tipo Psíquico se multiplicará por&nbsp;[News:Num_Count ]</strong>.
+• Los Snorlax de las zonas del evento tendrán la <strong>Baya Ango</strong> (tipo Psíquico) como una de sus favoritas. Las dos bayas restantes se elegirán de forma aleatoria.
+• <strong>Ciertos Pokémon tendrán más probabilidades de aparecer</strong> durante el estudio.
+• <strong>Será más difícil saciar</strong> a [News:PokemonName ] durante la <strong>primera hora del picoteo del día</strong>.
+• El <strong>rincón de intercambio del evento</strong> estará disponible por tiempo limitado.
+• Durante el primer estudio del sueño del día, podrás obtener objetos del evento.
+• <strong>Algunos Pokémon con distintos tipos de sueño se dejarán ver</strong> durante el estudio, sin importar cuál sea el tuyo.
+Semana 1 (del [News:Date_md ] al [News:Date_md idx="1" ])
+• <strong>El límite de objetos</strong> de los Pokémon ayudantes aumentará en <strong>[News:Num_Count ]</strong>.
+• <strong>La habilidad principal</strong> de los Pokémon ayudantes de tipo Psíquico <strong>aumentará&nbsp;[News:Num_Count ] niveles</strong> al activarse.
+Semana 2 (del [News:Date_md ] al [News:Date_md idx="1" ])
+• Si [News:PokemonName ] está en tu equipo mientras duermes, el poder&nbsp;Zzz <strong>se multiplicará por&nbsp;[News:Num_Count idx="1" ]</strong>.
+• <strong>El límite de objetos</strong> de los Pokémon ayudantes aumentará en <strong>[News:Num_Count ]</strong>.
+• <strong>La habilidad principal</strong> de los Pokémon ayudantes de tipo Psíquico <strong>aumentará&nbsp;[News:Num_Count ] niveles</strong> al activarse.
+• Aparecerá un Snorlax grande, que comenzará a mejorar a partir de <strong>un Vigor determinado</strong>.
+Si hay varios bonus al poder&nbsp;Zzz activos a la vez, solo tendrá efecto el mayor de ellos.
 Este evento dura un mes y es una ocasión especial para completar las <strong>misiones Fotosorpresa</strong> de [News:PokemonName ].
 Durante el evento, <strong>[News:PokemonName ] aparecerá en fotos</strong> al estudiar posturas de sueño. Podrás progresar en las misiones Fotosorpresa en función del número de fotos en las que salga [News:PokemonName ].
 Y eso no es todo. ¡Aún habrá más bonus cada vez que consigas una Fotosorpresa!
@@ -4086,6 +4151,27 @@ Los siguientes efectos se aplicarán en la zona correspondiente durante el event
 • La <strong>EXP de estudio recibida</strong> tras cada Fotosorpresa <strong>se multiplicará por&nbsp;[News:Num_Count ]</strong>.
 • Los <strong>fragmentos de sueño obtenidos</strong> tras cada Fotosorpresa <strong>aumentarán en&nbsp;[News:Num_Count ]</strong>.
 Estos bonus solo se aplicarán a las fotos de posturas de sueño en las que también salga Mew.
+Este evento dura una semana y es una ocasión especial para <b>reunir más Fotosorpresas</b> de [News:PokemonName ].
+Durante el evento, <strong>[News:PokemonName ] aparecerá en fotos</strong> cuando estudies posturas de sueño. Podrás progresar en las misiones Fotosorpresa mini según el número de fotos en las que salga [News:PokemonName ].
+Y eso no es todo. ¡Aún habrá más bonus cada vez que consigas una Fotosorpresa!
+Además, podrás obtener premios al completar <strong>misiones Fotosorpresa mini</strong>.
+Es una oportunidad para que los usuarios que aún no lo hubieran conseguido puedan trabar amistad con [News:PokemonName ]. Los que sí lo hayan hecho recibirán una Semilla Eureka ([News:PokemonName idx="3" ]).
+Período del evento:
+• Del [News:Date_mdahm ] al [News:Date_mdahm idx="1" ].
+Zona:
+• Todas las zonas.
+Período de las misiones:
+• Del [News:Date_mdahm ] al [News:Date_mdahm idx="1" ].
+Los siguientes efectos se aplicarán en la zona correspondiente durante el evento.
+- Todos los días:
+• Podrás tomar Fotosorpresas solo durante la primera sesión de estudio del día.
+• El <strong>número de caramelos obtenidos</strong> tras cada Fotosorpresa <strong>se multiplicará por&nbsp;[News:Num_Count ]</strong>.
+• La <strong>EXP de estudio recibida</strong> tras cada Fotosorpresa <strong>se multiplicará por&nbsp;[News:Num_Count ]</strong>.
+• Los <strong>fragmentos de sueño obtenidos</strong> tras cada Fotosorpresa <strong>aumentarán en&nbsp;[News:Num_Count ]</strong>.
+• Se sumará a tu primer estudio del sueño del día <strong>un Pokémon que estará hambriento</strong>.
+• <strong>Ciertos Pokémon tendrán más probabilidades de aparecer</strong> durante el estudio.
+• Estará disponible la función <strong>Miniendulzador</strong> por tiempo limitado.
+• <strong>Algunos Pokémon con distintos tipos de sueño se dejarán ver</strong> durante el estudio, sin importar cuál sea el tuyo.
 Este evento dura una semana, durante la cual tendrás más probabilidades de encontrarte con <strong>Pokémon de tipo Eléctrico, de tipo Fuego y de tipo Agua</strong>.
 De cara al evento Estudio sobre [Name:PokemonName idx="1" ], [Name:PokemonName idx="2" ] y [News:PokemonName idx="3" ], del que ofreceremos más información en una futura actualización, te animamos a trabar amistad con muchos Pokémon.
 Durante el evento, <strong>un Pokémon estará especialmente hambriento</strong> durante la primera hora del picoteo del día.
@@ -4115,7 +4201,7 @@ Zona:
 Los siguientes efectos se aplicarán en la zona correspondiente durante el evento.
 - Todos los días:
 • [News:PokemonName ] tendrá <strong>probabilidades de encuentro especiales</strong> durante el estudio.
-• <strong>Será más difícil saciar</strong> a tus Pokémon a la <strong>primera hora del picoteo del día</strong>.
+• <strong>Será más difícil saciar</strong> a tus Pokémon durante la <strong>primera hora del picoteo del día</strong>.
 • Podrías encontrarte con Pokémon variocolor.
 • Los Pokémon con probabilidades de encuentro especiales que aparezcan durante el estudio del sueño del Día de luna nueva recibirán <strong>[News:Num_Count ]</strong> puntos de amistad. 
 ¡Noche de luna nueva con encuentros especiales!
@@ -4131,7 +4217,7 @@ Zona:
 Los siguientes efectos se aplicarán en la zona correspondiente durante el evento.
 Todos los días:
 • [News:PokemonName ] tendrá <strong>probabilidades de encuentro especiales</strong> durante el estudio.
-• <strong>Será más difícil saciar</strong> a tus Pokémon a la primera hora del picoteo del día.
+• <strong>Será más difícil saciar</strong> a tus Pokémon durante la primera hora del picoteo del día.
 • Podrías encontrarte con un Pokémon variocolor.
 • Los Pokémon con probabilidades de encuentro especiales que aparezcan durante el estudio del sueño recibirán <strong>3</strong> puntos de amistad. 
 ¡Noche de luna nueva con encuentros especiales!
@@ -4146,7 +4232,7 @@ Zonas:
 Los siguientes efectos se aplicarán en la zona correspondiente durante el evento.
 - Todos los días:
 • [News:PokemonName ] tendrá <strong>probabilidades de encuentro especiales</strong> durante el estudio.
-• <strong>Será más difícil saciar</strong> a tus Pokémon a la primera hora del picoteo del día.
+• <strong>Será más difícil saciar</strong> a tus Pokémon durante la primera hora del picoteo del día.
 • Podrías encontrarte con Pokémon variocolor.
 • Los Pokémon con probabilidades de encuentro especiales que aparezcan durante el estudio del sueño del Día de luna nueva recibirán <strong>[News:Num_Count ]</strong> puntos de amistad.
 ¡Noche de luna nueva con encuentros especiales!
@@ -4161,7 +4247,7 @@ Zona:
 Los siguientes efectos se aplicarán en la zona correspondiente durante el evento.
 - Todos los días:
 • [News:PokemonName ] tendrá <strong>probabilidades de encuentro especiales</strong> durante el estudio.
-• <strong>Será más difícil saciar</strong> a tus Pokémon a la primera hora del picoteo del día.
+• <strong>Será más difícil saciar</strong> a tus Pokémon durante la primera hora del picoteo del día.
 • Podrías encontrarte con un Pokémon variocolor.
 • Los Pokémon con probabilidades de encuentro especiales que aparezcan durante el estudio del sueño del Día de luna nueva recibirán <strong>[News:Num_Count ]</strong> puntos de amistad.
 ¡Noche de luna nueva con encuentros especiales!
@@ -4176,7 +4262,7 @@ Zona:
 Los siguientes efectos se aplicarán en la zona correspondiente durante el evento.
 - Todos los días:
 • [News:PokemonName ] tendrá <strong>probabilidades de encuentro especiales</strong> durante el estudio.
-• <strong>Será más difícil saciar</strong> a tus Pokémon a la <strong>primera hora del picoteo del día</strong>.
+• <strong>Será más difícil saciar</strong> a tus Pokémon durante la <strong>primera hora del picoteo del día</strong>.
 • Podrías encontrarte con un Pokémon variocolor.
 • Los Pokémon con probabilidades de encuentro especiales que aparezcan durante el estudio del sueño del Día de luna nueva recibirán <strong>[News:Num_Count ]</strong> puntos de amistad.
 ¡Noche de luna nueva con encuentros especiales!
@@ -4192,7 +4278,7 @@ Zona:
 Los siguientes efectos se aplicarán en la zona correspondiente durante el evento.
 - Todos los días:
 • Los Pokémon singulares tendrán <strong>probabilidades de encuentro especiales</strong> durante el estudio.
-• <strong>Será más difícil saciar</strong> a tus Pokémon a la primera hora del picoteo del día.
+• <strong>Será más difícil saciar</strong> a tus Pokémon durante la primera hora del picoteo del día.
 • Podrías encontrarte con un Pokémon variocolor.
 • Los Pokémon con probabilidades de encuentro especiales que aparezcan durante el estudio del sueño del Día de luna nueva recibirán <strong>[News:Num_Count ]</strong> puntos de amistad.
 ¡Noche de luna nueva con encuentros especiales!
@@ -4207,7 +4293,7 @@ Zona:
 Los siguientes efectos se aplicarán en la zona correspondiente durante el evento.
 - Todos los días:
 • Los Pokémon singulares tendrán <strong>probabilidades de encuentro especiales</strong> durante el estudio.
-• <strong>Será más difícil saciar</strong> a tus Pokémon a la primera hora del picoteo del día.
+• <strong>Será más difícil saciar</strong> a tus Pokémon durante la primera hora del picoteo del día.
 • Podrías encontrarte con un Pokémon variocolor.
 • Los Pokémon con probabilidades de encuentro especiales que aparezcan durante el estudio del sueño del Día de luna nueva recibirán <strong>[News:Num_Count ]</strong> puntos de amistad.
 ¡Noche de luna nueva con encuentros especiales!
@@ -4223,7 +4309,7 @@ Zona:
 Los siguientes efectos se aplicarán en la zona correspondiente durante el evento.
 - Todos los días:
 • Los Pokémon singulares tendrán <strong>probabilidades de encuentro especiales</strong> durante el estudio.
-• <strong>Será más difícil saciar</strong> a tus Pokémon a la primera hora del picoteo del día.
+• <strong>Será más difícil saciar</strong> a tus Pokémon durante la primera hora del picoteo del día.
 • Podrías encontrarte con un Pokémon variocolor.
 • Los Pokémon con probabilidades de encuentro especiales que aparezcan durante el estudio del sueño del Día de luna nueva recibirán <strong>[News:Num_Count ]</strong> puntos de amistad.
 ¡Noche de luna nueva con encuentros especiales!
@@ -4238,7 +4324,7 @@ Zona:
 Los siguientes efectos se aplicarán en la zona correspondiente durante el evento.
 - Todos los días:
 • Los Pokémon singulares tendrán <strong>probabilidades de encuentro especiales</strong> durante el estudio.
-• <strong>Será más difícil saciar</strong> a tus Pokémon a la primera hora del picoteo del día.
+• <strong>Será más difícil saciar</strong> a tus Pokémon durante la primera hora del picoteo del día.
 • Podrías encontrarte con un Pokémon variocolor.
 • Los Pokémon con probabilidades de encuentro especiales que aparezcan durante el estudio del sueño del Día de luna nueva recibirán <strong>[News:Num_Count ]</strong> puntos de amistad.
 ¡Noche de luna nueva con encuentros especiales!
@@ -4253,7 +4339,37 @@ Zona:
 Los siguientes efectos se aplicarán en la zona correspondiente durante el evento.
 - Todos los días:
 • Los Pokémon singulares tendrán <strong>probabilidades de encuentro especiales</strong> durante el estudio.
-• <strong>Será más difícil saciar</strong> a tus Pokémon a la primera hora del picoteo del día.
+• <strong>Será más difícil saciar</strong> a tus Pokémon durante la primera hora del picoteo del día.
+• Podrías encontrarte con un Pokémon variocolor.
+• Los Pokémon con probabilidades de encuentro especiales que aparezcan durante el estudio del sueño del Día de luna nueva recibirán <strong>[News:Num_Count ]</strong> puntos de amistad.
+¡Noche de luna nueva con encuentros especiales!
+Este evento se celebra una vez al mes y dura tres días: el correspondiente a la noche de luna nueva y los días inmediatamente anterior y posterior. Durante el evento, habrá probabilidades de encuentro especiales y <strong>será más difícil saciar a tus Pokémon</strong>.
+¡Hasta podrías toparte con <strong>Pokémon variocolor</strong>!
+¡Esperamos veros a todos!
+Período del evento:
+• Del [News:Date_mdahm ] al [News:Date_mdahm idx="1" ].
+La noche de luna nueva será el [News:Date_mda ].
+Zona:
+• Todas las zonas.
+Los siguientes efectos se aplicarán en la zona correspondiente durante el evento.
+- Todos los días:
+• Los Pokémon singulares tendrán <strong>probabilidades de encuentro especiales</strong> durante el estudio.
+• <strong>Será más difícil saciar</strong> a tus Pokémon durante la primera hora del picoteo del día.
+• Podrías encontrarte con un Pokémon variocolor.
+• Los Pokémon con probabilidades de encuentro especiales que aparezcan durante el estudio del sueño del Día de luna nueva recibirán <strong>[News:Num_Count ]</strong> puntos de amistad.
+¡Noche de luna nueva con encuentros especiales!
+Este evento se celebra una vez al mes y dura tres días: el correspondiente a la noche de luna nueva y los días inmediatamente anterior y posterior. Durante el evento, habrá probabilidades de encuentro especiales y <strong>será más difícil saciar a tus Pokémon</strong>.
+¡Hasta podrías toparte con <strong>Pokémon variocolor</strong>!
+¡Esperamos veros a todos!
+Período del evento:
+• Del [News:Date_mdahm ] al [News:Date_mdahm idx="1" ].
+La noche de luna nueva será el [News:Date_mda ].
+Zona:
+• Todas las zonas.
+Los siguientes efectos se aplicarán en la zona correspondiente durante el evento.
+- Todos los días:
+• Los Pokémon singulares tendrán <strong>probabilidades de encuentro especiales</strong> durante el estudio.
+• <strong>Será más difícil saciar</strong> a tus Pokémon durante la primera hora del picoteo del día.
 • Podrías encontrarte con un Pokémon variocolor.
 • Los Pokémon con probabilidades de encuentro especiales que aparezcan durante el estudio del sueño del Día de luna nueva recibirán <strong>[News:Num_Count ]</strong> puntos de amistad.
 ¡Noche de luna nueva con encuentros especiales!
@@ -4268,7 +4384,7 @@ Zona:
 Los siguientes efectos se aplicarán en la zona correspondiente durante el evento.
 - Todos los días:
 • [News:PokemonName ] tendrá <strong>probabilidades de encuentro especiales</strong> durante el estudio.
-• <strong>Será más difícil saciar</strong> a tus Pokémon a la primera hora del picoteo del día.
+• <strong>Será más difícil saciar</strong> a tus Pokémon durante la primera hora del picoteo del día.
 • Podrías encontrarte con un Pokémon variocolor.
 ¡Noche de luna nueva con encuentros especiales!
 Este evento se celebra una vez al mes y dura tres días: el correspondiente a la noche de luna nueva y los días inmediatamente anterior y posterior. Durante el evento, habrá probabilidades de encuentro especiales y <strong>será más difícil saciar a tus Pokémon</strong>.
@@ -4282,7 +4398,7 @@ Zona:
 Los siguientes efectos se aplicarán en la zona correspondiente durante el evento.
 - Todos los días:
 • [News:PokemonName ] tendrá <strong>probabilidades de encuentro especiales</strong>.
-• <strong>Será más difícil saciar</strong> a tus Pokémon a la primera hora del picoteo del día.
+• <strong>Será más difícil saciar</strong> a tus Pokémon durante la primera hora del picoteo del día.
 • Podrías encontrarte con un Pokémon variocolor.
 ¡Noche de luna nueva con encuentros especiales!
 Este evento se celebra una vez al mes y dura tres días: el correspondiente a la noche de luna nueva y los días inmediatamente anterior y posterior. Durante el evento, habrá probabilidades de encuentro especiales y <strong>será más difícil saciar a tus Pokémon</strong>.
@@ -4296,7 +4412,7 @@ Zonas:
 Los siguientes efectos se aplicarán en la zona correspondiente durante el evento.
 - Todos los días:
 • [News:PokemonName ] tendrá <strong>probabilidades de encuentro especiales</strong>.
-• <strong>Será más difícil saciar</strong> a tus Pokémon a la primera hora del picoteo del día.
+• <strong>Será más difícil saciar</strong> a tus Pokémon durante la primera hora del picoteo del día.
 • Podrías encontrarte con un Pokémon variocolor.
 ¡Noche de luna nueva con encuentros especiales!
 Este evento se celebra una vez al mes y dura tres días: el correspondiente a la noche de luna nueva y los días inmediatamente anterior y posterior. Durante el evento, habrá probabilidades de encuentro especiales y <strong>será más difícil saciar a tus Pokémon</strong>.
@@ -4311,7 +4427,7 @@ Zona:
 Los siguientes efectos se aplicarán en la zona correspondiente durante el evento.
 - Todos los días:
 • [News:PokemonName ] tendrá <strong>probabilidades de encuentro especiales</strong> durante el estudio.
-• <strong>Será más difícil saciar</strong> a tus Pokémon a la primera hora del picoteo del día.
+• <strong>Será más difícil saciar</strong> a tus Pokémon durante la primera hora del picoteo del día.
 • Podrías encontrarte con un Pokémon variocolor.
 ¡Este evento dura dos semanas y es una ocasión especial de encontrarte con <strong>Pokémon que llegaron a Pokémon Sleep en 2025</strong>!
 ¡Durante este período, algunos Pokémon tales como <strong>[News:PokemonName idx="1" ]</strong>, <strong>[News:PokemonName idx="2" ]</strong> y <strong>[News:PokemonName idx="3" ]</strong> aparecerán en <strong>Isla Verdegal</strong>!
@@ -4488,11 +4604,11 @@ Los siguientes efectos se aplicarán en la zona correspondiente durante el event
 • <strong>Ciertos Pokémon tendrán más probabilidades de aparecer</strong> durante el estudio.
 • Podrías encontrarte con determinados Pokémon variocolor.
 • Estará disponible la función <strong>Cramobot de Caramelos</strong> por tiempo limitado.
-<strong>Se añadirán nuevas recetas</strong> el <b>[News:Date_mdahm ]</b>.
-Ingredientes necesarios para el nuevo plato de guisos y curris n.º&nbsp;1
-[News:ItemNamesList Type="And" ]
-Ingredientes necesarios para el nuevo plato de guisos y curris n.º&nbsp;2
-[News:ItemNamesList Type="And" ]
+
+
+
+
+
 ¡Puedes rellenar más entradas en tu DormiDex durante la Semana del descubrimiento!
 Este evento dura una semana y es una ocasión especial en la que <strong>será más fácil encontrar posturas de Pokémon que aún no tengas registradas en tu DormiDex</strong>.
 ¡Te animamos a conseguir las posturas de Pokémon que aún no hayas descubierto y a echar un vistazo a nuevas zonas!
@@ -4955,6 +5071,9 @@ Latios y el Rocío Bondad
 Evento preludio al tercer aniversario
 Fiesta tercer aniversario
 Semana de colaboración
+Misiones Fotosorpresa mini
+Estudio en tierra ignota: Vestigios de Mewtwo
+Vestigios de Mewtwo
 Eevee
 Año Nuevo 1
 Año Nuevo 2
@@ -5005,6 +5124,9 @@ Latios 2
 Tercer\naniversario 1
 Tercer\naniversario 2
 Semana de\ncolaboración
+Fotosorpresa\nmini
+Mewtwo 1
+Mewtwo 2
 ~~~~~~~~~~~~~~~
 Text File : MD_event_item_packs
 ~~~~~~~~~~~~~~~
@@ -5206,7 +5328,19 @@ Lote Fiesta estival 2026 L
 Lote de la colaboración S
 Lote de la colaboración M
 Lote de la colaboración L
+Lote Fotosorpresa mini S
+Lote Fotosorpresa mini M
+Lote Fotosorpresa mini L
 Lote cuidados Pokémon ([Name:PokemonName ]) vol. [Digit:Digit2 idx="1" ]
+Lote Estudio sobre Mewtwo vol. [Digit:Digit2 ] S
+Lote Estudio sobre Mewtwo vol. [Digit:Digit2 ] M
+Lote Estudio sobre Mewtwo vol. [Digit:Digit2 ] L
+Lote Recta final de Mewtwo vol. [Digit:Digit2 ] S
+Lote Recta final de Mewtwo vol. [Digit:Digit2 ] M
+Lote Recta final de Mewtwo vol. [Digit:Digit2 ] L
+Lote 30 años de Pokémon S
+Lote 30 años de Pokémon M
+Lote 30 años de Pokémon L
 ~~~~~~~~~~~~~~~
 Text File : MD_event_purchase_item_packs
 ~~~~~~~~~~~~~~~
@@ -5322,6 +5456,52 @@ Veo que Latias y Latios se han\nmarchado.
 Latias y Latios lo están dando\ntodo para devolver el brillo al\n[System:Color r="255" g="107" b="55" a="255" ]Rocío Bondad[System:Color a="255" ].
 Tal vez el influjo del poder que\nestán liberando haya afectado a\nSnorlax.
 Este Snorlax debería de optimizar\ntu estudio del sueño desde el\nprincipio de la semana.
+¡Otro estudio bien hecho!\n¡Hoy tengo preparada una tarea\nespecial para ti!
+¡Por fin he logrado averiguar\ndónde se ha metido el Pokémon\nlegendario [System:Color r="255" g="107" b="55" a="255" ]Mewtwo[System:Color a="255" ]!
+Se encuentra en Isla Verdegal,\nen una [System:Color r="255" g="107" b="55" a="255" ]zona ignota [System:Color a="255" ]que aún\nno hemos investigado.
+Aunque Mewtwo es cauteloso, si\naccedemos allí, podremos\ndescubrir sus posturas de sueño.
+¡Y, ya que estamos, no pasemos\nla oportunidad de explorar todo\nlo que podamos!
+Nos hará falta mucho poder Zzz\nde Snorlax para avanzar en la\ninvestigación.
+¿Podrías unir fuerzas con\nusuarios de todo el mundo\npara acumular poder Zzz?
+Ah, y por aquí hay [System:Color r="255" g="107" b="55" a="255" ]Bayas Ango\nEnormes[System:Color a="255" ] a rebosar de vigor.
+Es posible que nos sean de\nutilidad para cuidar de Snorlax.
+Por cierto, parece que [System:Color r="255" g="107" b="55" a="255" ]Mew\n[System:Color a="255" ]tiene especial interés por las\nposturas de sueño de Mewtwo.
+¡Puede que te eche una mano\nal investigar las posturas de\nsueño inusuales de Mewtwo!
+¡Bueno, no se hable más!\n¡Que dé comienzo el estudio\nde la zona inexplorada!
+Como le has puesto empeño,\nhemos logrado hallar un camino\nque lleva a las profundidades.
+Si seguimos investigando, quizá\npodamos estudiar las [System:Color r="255" g="107" b="55" a="255" ]posturas[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]de sueño inusuales de Mewtwo[System:Color a="255" ].
+¡Menudo sorpresón!
+¡Quién me iba a decir que vería a\nMewtwo intentando espantar a\nun curioso Mew!
+¿No te ha parecido que Mew\nestaba contentísimo de ver la\npostura de sueño de Mewtwo?
+¡Sigue así con tu estudio del\nsueño! ¡Vas por buen camino!
+¡Menudo sorpresón! Este Snorlax\nes claramente [System:Color r="255" g="107" b="55" a="255" ]más corpulento[System:Color a="255" ] de\nlo normal.
+¡Seguro que se debe a las Bayas\nAngo Enormes!
+Este Snorlax debería de optimizar\ntu estudio del sueño desde el\nprincipio de la semana.
+¡Otro estudio bien hecho!\nHoy tengo un favorcín que\npedirte.
+Al parecer, hace días que [System:Color r="255" g="107" b="55" a="255" ]Mew[System:Color a="255" ]\nha estado sobrevolando a\nPokémon dormidos.
+Parece ser que algo ha\ndespertado su curiosidad.
+Si realizas un estudio del sueño\nahora mismo, [System:Color r="255" g="107" b="55" a="255" ]quizás salga\nflotando en tus fotografías[System:Color a="255" ].
+Para averiguar qué es lo que le\ngenera tanta curiosidad...
+¿Podrías sacar [System:Color r="255" g="107" b="55" a="255" ]algunas fotos[System:Color a="255" ] de\nMew mientras vuela?
+¡Cuento contigo! ¡Buena suerte\ncon tu estudio del sueño!
+¡Gracias por conseguir tantas\nfotos de Mew!
+Apuesto a que ahora le interesas\nmás, ya que siempre andas\nanalizando posturas de sueño.
+Se ve que los Pokémon dormidos\nle llaman mucho la atención.
+Te ha dado una [System:Color r="255" g="107" b="55" a="255" ]Semilla Eureka[System:Color a="255" ].\nQuizá sea prueba de que vuestra\namistad se ha fortalecido.
+Y apuesto a que tú también le\ninteresas, ya que siempre andas\nanalizando posturas de sueño.
+Como tu vínculo con Mew se ha\nestrechado, ¡puede que[System:Color r="255" g="107" b="55" a="255" ] aparezca\nen tu próxima sesión de estudio[System:Color a="255" ]!
+Creo que Mew ya se debe sentir\nlo suficientemente cómodo como\npara [System:Color r="255" g="107" b="55" a="255" ]venir a dormir[System:Color a="255" ].
+¡Sigue así con tu estudio del\nsueño! ¡Vas por buen camino!
+¡Qué ganas de que me cuentes\nmañana cómo ha ido tu estudio\ndel sueño!
+¡Otro estudio bien hecho!
+Mientras llevabas a cabo tu\ninvestigación sobre Mew, he\nvisto una [System:Color r="255" g="107" b="55" a="255" ]sombra misteriosa[System:Color a="255" ].
+Me apresuré a sacarle una foto\ny, nada más verla, me di\ncuenta de que...
+Puede que fuese la sombra del\nPokémon legendario [System:Color r="255" g="107" b="55" a="255" ]Mewtwo[System:Color a="255" ].
+Es posible que Mew percibiese a\nMewtwo y sintiese curiosidad\npor sus posturas de sueño.
+Además, creo que Mewtwo se ha\nadentrado en las [System:Color r="255" g="107" b="55" a="255" ]profundidades\nde Isla Verdegal[System:Color a="255" ].
+Cabe la posibilidad de que exista\nuna zona inexplorada que no\nconozcamos en Isla Verdegal.
+Yo me ocupo de averiguar el\nparadero de Mewtwo y de\npreparar la investigación.
+Mientras tanto, ¿podrías llevar\nal día el estudio del sueño?\n¡Cuento contigo!
 ¡Otro estudio bien hecho!\n¡Hoy tengo un favorcín que\npedirte!
 Me han llegado informes de\navistamiento del Pokémon\nsingular [System:Color r="255" g="107" b="55" a="255" ]Mew[System:Color a="255" ] en Isla Verdegal.
 Por lo que he oído, el muy\ncurioso vuela por la zona y\nobserva a los Pokémon dormir.
@@ -5472,7 +5652,6 @@ Text File : MD_health_data_sources
 (Fitbit, Google Pixel Watch, etc.)
 (Galaxy Watch, etc.)
 (Forerunner 265, etc.)
-Fitbit
 Google Health
 Samsung Health
 Registro del sueño por defecto del\nApple Watch
@@ -5484,13 +5663,13 @@ Text File : MD_health_faq
 ¿Se están registrando datos de sueño\nde forma automática con tu\nApple Watch?
 ¿Están registrados tus datos de sueño\nen la aplicación Salud de Apple?
 ¿Tus datos de sueño cumplen los\nrequisitos necesarios para poder usarse\nen Pokémon Sleep?
-¿Están registrados tus datos de sueño\nen las aplicaciones Samsung Health,\nFitbit, Garmin Connect o similares?
 ¿Están registrados tus datos de sueño\nen las aplicaciones Samsung Health,\nGoogle Health, Garmin Connect o\nsimilares?
 ¿Están registrados tus datos de sueño\nen Health Connect?
 ¿Tus datos de sueño cumplen los\nrequisitos necesarios para poder usarse\nen Pokémon Sleep?
 ¿Están activados los permisos de\nlectura en la aplicación Salud de Apple?
 ¿Están activados los permisos de\nlectura en la aplicación Health Connect?
 ¿Están registrados tus datos de sueño\nen Garmin Connect?
+¿Están registrados tus datos de sueño\nen las aplicaciones Google Health,\nGarmin Connect o similares?
 ~~~~~~~~~~~~~~~
 Text File : MD_item_name_data
 ~~~~~~~~~~~~~~~
@@ -5506,6 +5685,7 @@ Galleta Cresselia
 Honorgalleta
 Galleta Latias
 Galleta Latias/Latios
+Galleta Mewtwo
 Duplica la EXP de estudio obtenida\ntras una sesión de estudio del sueño.\nSe consume al usarlo.
 Duplica la cantidad de fragmentos de\nsueños obtenidos tras una sesión de\nestudio. Se consume al usarlo.
 Duplica la EXP de los Pokémon\nayudantes tras una sesión de estudio.\nSe consume al usarlo.
@@ -5567,6 +5747,7 @@ Una menta de un blanco níveo. Cuando\nun Pokémon percibe su aroma, se\nelimina
 Cupón necesario para visitar las zonas\ndel modo experto.
 Dulce especial que aumenta mucho el\nnivel de amistad de ciertos Pokémon.\nProporciona seis puntos de amistad.
 Una vez finalizado el período de\nintercambio en el rincón de\nintercambio del evento, se convertirá\nautomáticamente en una Supergalleta.\nConsulta la sección Noticias para\nconocer más detalles.
+Una vez finalizado el período de\nintercambio en el rincón de\nintercambio del evento y transcurrido\ncierto tiempo, se convertirá\nautomáticamente en una Supergalleta.\nConsulta la sección Noticias para\nconocer más detalles.
 Durante el evento, solo se podrá usar\ncon los siguientes Pokémon:
 Zumo especial que restablece\n20 puntos de energía a un Pokémon\nayudante.
 Este objeto permite alcanzar valores\nsuperiores a 100 puntos de energía.
@@ -5643,6 +5824,7 @@ Pluma de Cresselia
 Materiales
 Pluma de Latias
 Pluma de Latios
+ADN de Mewtwo
 Incienso Concentración
 Incienso Duplo
 Incienso Desarrollo
@@ -5941,6 +6123,7 @@ Pokémon Llama
 Pokémon Dragón
 Pokémon Dragón
 Pokémon Dragón
+Pokémon Genético
 Pokémon Nueva Especie
 Pokémon Hoja
 Pokémon Hoja
@@ -6175,6 +6358,7 @@ Duerme tranquilamente acurrucado en su sedoso\npelaje, que libera calor para enf
 Un Pokémon tan inusual que durante mucho tiempo se\ndudó de su existencia. Sus hábitos de sueño eran un\nmisterio, pero al convivir con sus Entrenadores, se\nlos ha observado durmiendo en posturas variadas.
 Se dice que acumula energía en las esferas de su cola\npara controlar el clima, a veces incluso mientras\nduerme. Conviene tener cuidado, ya que el tiempo\npuede cambiar al instante cuando anda cerca.
 Se lo conoce como el Avatar de la Mar. En muy raras\nocasiones, quizás cuando se halla exhausto tras\nhaber sobrevolado el vasto océano, se lo ha visto\ndormir como un tronco con el vientre expuesto.
+Se dice que fue creado por recombinación genética\nde Mew. A veces, duerme tranquilamente de pie\npara conservar energía y poder liberarla luego en\ncombate.
 Dicen que Mew posee el mapa genético de todos\nlos Pokémon, y es tan inusual que muchos\nexpertos opinan que es solo una ilusión. Puede\nhacerse invisible cuando quiere, incluso mientras\nduerme, así que son muy pocos los investigadores\nque han logrado observar sus posturas de sueño.
 Se cree que con la hoja de la cabeza mide la humedad\ny la temperatura para buscar el lugar idóneo donde\necharse. A menudo duerme plácidamente, con aspecto\nde haber hallado el sitio perfecto.
 Los capullos que tiene en el cuello desprenden un\naroma a especias que anima a quien lo huela. A lo\nmejor los Pokémon que duermen a su lado también\nse sienten revitalizados.
@@ -6412,6 +6596,7 @@ Flareon
 Dratini
 Dragonair
 Dragonite
+Mewtwo
 Mew
 Chikorita
 Bayleef
@@ -6832,6 +7017,7 @@ También otorga caramelos adicionales a un\nPokémon de tu equipo.
 Restaura [Digit:Digit3 ] punto[ES:Qty P="s" ] de energía a dos Pokémon\nde tu equipo al azar y otorga al instante [Digit:Digit2 idx="1" ]\nve[ES:Qty S="z" P="ces" idx="1" ] la ayuda que brindan normalmente esos\nPokémon. Ciertas condiciones potencian el efecto.
 Otorga bayas que recolecten los Pokémon del\nequipo. Ciertas condiciones potencian el\nefecto.
 Otorga [Digit:Digit7 separator="Default" ] fragmentos de sueños\ny aumenta el vigor de Snorlax en [Digit:Digit4 idx="1" separator="Default" ].
+Aumenta [Digit:Digit7 separator="Default" ] [ES:Qty S="punto" P="puntos" ] el vigor de Snorlax.\nTambién activa Furor bayas en la zona de\nestudio.
 Carga vigor S
 Carga vigor M
 Imán fragmentos S
@@ -6880,6 +7066,7 @@ Versátil (Bayamanía)
 Pulso Cura (Ánimo enérgico S)
 Cometa Draco (Bayamanía)
 Esfera Aural (Imán fragmentos S)
+Onda Mental (Furor bayas)
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_main_skills_ShortName
 ~~~~~~~~~~~~~~~
@@ -6905,6 +7092,7 @@ Ingrediente aleatorio S
 Más
 Menos
 Imán Cocinitas S
+Furor bayas
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_nature
 ~~~~~~~~~~~~~~~
@@ -7241,6 +7429,11 @@ Desenroscada
 Ovillo
 Sentadita
 Bocarriba
+Rodilla alzada
+Flotante de pie
+Onda mental
+Incordio
+Mente en calma
 Levitación
 Libre
 Cama-burbuja
@@ -8221,7 +8414,6 @@ Para comenzar tu estudio con\nbuen pie, nada mejor que un\nsueño reparador en c
 Empecemos verificando los datos\nde sueño recabados...
 Aquí puedes comprobar [System:Color r="255" g="107" b="55" a="255" ]cuánto\nhas dormido [System:Color a="255" ]y la [System:Color r="255" g="107" b="55" a="255" ]puntuación [System:Color a="255" ]que\nhas obtenido en esta sesión.
 Esta es tu [System:Color r="255" g="107" b="55" a="255" ]puntuación de sueño[System:Color a="255" ].\nEstá basada en [System:Color r="255" g="107" b="55" a="255" ]cuánto duermes[System:Color a="255" ].
-Esta es tu [System:Color r="255" g="107" b="55" a="255" ]puntuación de sueño[System:Color a="255" ].\nEstá basada en [System:Color r="255" g="107" b="55" a="255" ]cuánto duermes[System:Color a="255" ].
 Para alcanzar una puntuación\nde 100, un adulto debe dormir\n[System:Color r="255" g="107" b="55" a="255" ]al menos ocho horas y media[System:Color a="255" ].
 Los niños deben dormir [System:Color r="255" g="107" b="55" a="255" ]por lo\nmenos once horas[System:Color a="255" ] si desean\nalcanzar esos 100 puntos.
 ¡[System:Color r="255" g="107" b="55" a="255" ]Duerme todo lo que puedas\n[System:Color a="255" ](al menos [System:Color r="255" g="107" b="55" a="255" ]8,5 horas[System:Color a="255" ]) para recibir\n100 puntos!
@@ -8302,7 +8494,6 @@ Puedes completar tu Dormidex\nal realizar estudios [System:Color r="255" g="107"
 Ahora bien, solo hemos visto por\nencima una muestra de todas las\ncosas que puedes hacer aquí, ¡así\nque no dudes en seguir probando!
 Snorlax se irá al final de cada\nsemana, pero en la siguiente\nzona te acompañará uno nuevo.
 ¡Te deseo la mejor de las suertes\ncon tu estudio del sueño!\n¡Que duermas bien!
-¡Cuida de Snorlax para que se\nponga lo más vigoroso posible!
 Para [System:Color r="255" g="107" b="55" a="255" ]acelerar el desarrollo de\nSnorlax y de tu estudio[System:Color a="255" ], ¡no te\nolvides de usar este cupón!
 Cuida de Snorlax, porque cuanto\nmás vigoroso se ponga, ¡[System:Color r="255" g="107" b="55" a="255" ]más[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]Pokémon podrás conocer[System:Color a="255" ]!
 Anda que no ha dado de sí la\nexplicación, ¡pero eso es todo!\n¡Buena suerte con tus estudios!
@@ -8357,7 +8548,6 @@ Te devuelvo tu [System:Color r="255" g="107" b="55" a="255" ]Semilla Eureka[Syst
 Te devuelvo tu [System:Color r="255" g="107" b="55" a="255" ]Semilla Eureka[System:Color a="255" ].\n¡Intenta darle uso con\n[Name:PokemonName ] más tarde!
 Tu nuevo amigo Darkrai te ha\ndado un objeto misterioso.
 Tu nuevo amigo [Name:PokemonName ]\nte ha dado un objeto misterioso.
-¿Has visto qué cesta tan mona?\nPues quiero que cultives en ella\nunas flores muy especiales.
 ¿Has visto qué cesta tan mona?\nPues quiero que cultives en ella\nunas flores muy especiales.
 [System:Color r="255" g="107" b="55" a="255" ]Cuando brotan, [System:Color a="255" ]su misterioso\npoder [System:Color r="255" g="107" b="55" a="255" ]atrae la buena suerte\ndurante el estudio del sueño[System:Color a="255" ].
 Son muy fáciles de cultivar. Solo\ntienes que [System:Color r="255" g="107" b="55" a="255" ]plantar una semilla\n[System:Color a="255" ]en la cesta todos los días.
@@ -8845,7 +9035,6 @@ Mejora de ayuda ([Name:PokemonType ])
 Se activa Reserva o Escupir. Cuando se\nactiva Escupir, el vigor de Snorlax aumenta\nsegún el número de veces que se haya\nactivado Reserva. El contador se reinicia\ntras activarse Escupir.
 Según el número de veces que se haya\nactivado Reserva, el vigor de Snorlax\naumentará en la siguiente cantidad:
 Si quitas a este Pokémon del equipo,\nel contador de Reserva se reiniciará.
-Otorga [Digit:Digit3 ] [ES:Qty S="baya" P="bayas" ] además de [Digit:Digit3 idx="1" ] de cada\nbaya que recolecte el resto de Pokémon\ndel equipo. En raras ocasiones, tendrá\nmucho éxito y recolectará un mayor\nnúmero de bayas.
 Otorga [Digit:Digit3 ] [ES:Qty S="baya" P="bayas" ] además de [Digit:Digit3 idx="1" ] de cada\nbaya que recolecte el resto de Pokémon\ndel equipo. En algunas ocasiones, tendrá\nmucho éxito y recolectará un mayor\nnúmero de bayas.
 Después de tener mucho éxito, no podrá\nvolver a tenerlo hasta la siguiente sesión de\nestudio del sueño o hasta que se introduzcan\ndatos de sueño manualmente.
 Copia y utiliza la habilidad principal\nde un Pokémon de tu equipo al azar.
@@ -8884,6 +9073,11 @@ Si Latios está en tu equipo, otorga al\ninstante [Digit:Digit2 ] ve[ES:Qty S="z
 Otorga bayas que recolecten los Pokémon\ndel equipo. Cuantas más especies de\nPokémon de tipo [Name:PokemonType ] distintas\ntengas en el equipo, mayor será el número\nde bayas que otorga.
 Otorga bayas que recolecten los Pokémon\ndel equipo. Cuantas más especies de\nPokémon de tipo [Name:PokemonType ] distintas\ntengas en el equipo, mayor será el número\nde bayas que otorga. Además, si Latias\nestá en tu equipo, aumenta en [Digit:Digit4 idx="1" separator="Default" ] \nel número de bayas que encuentra.
 Si Latias está en tu equipo, aumenta\nen [Digit:Digit4 separator="Default" ] el número de bayas que\nencuentra este Pokémon.
+Aumenta [Digit:Digit7 separator="Default" ] [ES:Qty S="punto" P="puntos" ] el vigor de\nSnorlax. Además, activa el efecto Furor\nbayas en la zona de estudio, lo que\naumenta el vigor obtenido de las Bayas\nAngo en un [Digit:Digit3 idx="1" ] %.
+Una vez que Furor bayas se haya activado, sus\nefectos durarán hasta que cambies de zona.
+Los efectos de Furor bayas durarán aunque\nquites a [Name:PokemonName ] de tu equipo de ayudantes.
+Furor bayas alcanza el máximo al [Digit:Digit4 separator="Default" ] %.\nCada vez que se active esta habilidad principal,\nel efecto de Furor bayas se acumulará hasta\nllegar al límite.
+Cuando se active esta habilidad principal,\nlas bayas que queden en la caja de bayas\nse convertirán inmediatamente en vigor.
 Versátil
 Habilidades principales disponibles
 Habilidades principales disponibles
@@ -9144,6 +9338,7 @@ Text File : PokemonHeight
 1,8 m
 4,0 m
 2,2 m
+2,0 m
 0,4 m
 0,9 m
 1,2 m
@@ -9425,12 +9620,9 @@ Elige Pokémon para tus equipos de ayudantes y organiza tu Caja de Pokémon.
 Organizar equipos
 Caja de Pokémon
 Pokémon
-Podrás obtener objetos si sigues acumulando\nEXP al dormir.
 Podrás obtener objetos si sigues acumulando\nEXP.
-Barra bonus EXP al dormir
 Barra bonus EXP
 Detalles
-Cuando un Pokémon ayudante alcance su\nnivel máximo, los puntos de EXP al dormir\nque gane se añadirán a la barra de bonus\nen lugar de a la suya.
 Cuando un Pokémon ayudante alcance su\nnivel máximo, los puntos de EXP que gane\nse añadirán a la barra bonus en lugar de a\nla suya.
 Una vez llena la barra bonus, recibirás\n[Name:Item idx="1" ] ×[Digit:Digit2 idx="2" ].
 Bonus por Pokémon al nivel máximo
@@ -9510,6 +9702,7 @@ Text File : PokemonWeight
 3,3 kg
 16,5 kg
 210,0 kg
+122,0 kg
 4,0 kg
 6,4 kg
 15,8 kg
@@ -9736,6 +9929,7 @@ Menta Neutra no recibida
 Objeto no recibido
 Bonus de estudio del sueño\nGarmin
 Regalo de la colaboración
+Regalo por los cuidados de\nMew: día [Digit:Digit2 ]
 ~~~~~~~~~~~~~~~
 Text File : PresentBox_SCENE
 ~~~~~~~~~~~~~~~
@@ -10685,14 +10879,9 @@ Hora del picoteo
 Seleccionada:
 [Digit:Digit3 ]/[Digit:Digit3 idx="1" ]
 [System:Color r="255" g="107" b="55" a="255" ]Mayor probabilidad de aparición de algunos Pokémon.[System:Color a="255" ]
-[System:Color r="255" g="107" b="55" a="255" ]Aparecerán Pokémon con distintos tipos\nde sueño[System:Color a="255" ] sin importar el tuyo ese día.
-[System:Color r="255" g="107" b="55" a="255" ]Obtendrás más caramelos[System:Color a="255" ] tras el primer\nestudio del sueño del día.
 [System:Color r="255" g="107" b="55" a="255" ]Podrías toparte con un\n[Name:PokemonName ] variocolor.[System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ]Podrías toparte con un Pokémon variocolor.[System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ]Podrías toparte con determinados Pokémon\nvariocolor.[System:Color a="255" ]
-[System:Color r="255" g="107" b="55" a="255" ]Obtendrás más fragmentos de sueños[System:Color a="255" ]\ntras el estudio del sueño.
-Aparecerá al menos un Pokémon\nhambriento en el primer estudio\ndel sueño del día.
-[System:Color r="255" g="107" b="55" a="255" ]EXP de estudio[System:Color a="255" ] obtenida tras el estudio del\nsueño multiplicada por [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 ][System:Color a="255" ].
 Existe una [System:Color r="255" g="107" b="55" a="255" ]mayor probabilidad de\navistar posturas de sueño[System:Color a="255" ] que\naún no has descubierto.
 Bonus del evento
 Enero
@@ -10762,16 +10951,22 @@ El poder Zzz que has acumulado\nha disipado un poco la tormenta.
 ¡El poder Zzz que has acumulado\nha despejado la tormenta!
 ¡El poder Zzz acumulado por\ntodo el mundo ha devuelto al\nRocío Bondad su brillo!
 ¡El poder Zzz que has acumulado\nha devuelto al Rocío Bondad su\nbrillo!
+El poder Zzz acumulado por todo\nel mundo ha avanzado el estudio\nde la zona inexplorada.
+El poder Zzz que has acumulado\nha avanzado el estudio de la\nzona inexplorada.
+El poder Zzz acumulado por todo\nel mundo ha ayudado a hallar un\ncamino hacia su interior.
+El poder Zzz que has acumulado\nha ayudado a hallar un camino\nhacia su interior.
 ¡Se ha acumulado poder Zzz global!
 Tu poder Zzz ha surtido efecto.
 Poder Zzz de evento
 [Name:PokemonName ] y [Name:PokemonName ] parecen seguir\ndurmiendo placidamente.
+Parece que [Name:PokemonName ] aún duerme\ny que [Name:PokemonName idx="1" ] está más que feliz de\npoder ver su postura de sueño.
 Semillas Eureka
 Solo puedes trabar amistad con un [Name:PokemonName ].
 Cuando sus puntos de amistad lleguen al\nmáximo, obtendrás una [System:Color r="255" g="107" b="55" a="255" ]Semilla Eureka[System:Color a="255" ].
 Puntos de amistad de [Name:PokemonName ]
 Sientes que [Name:PokemonName ]\nempieza a confiar en ti.
 Los puntos de amistad de [Name:PokemonName ]\nhan aumentado por tu progreso en\nlas misiones Fotosorpresa.
+Los puntos de amistad de [Name:PokemonName ]\nhan aumentado por tu progreso en\nlas misiones Fotosorpresa mini.
 ¡Esperamos veros a todos en el\npróximo Día de luna nueva!
 Despertar
 Parece que aún hay misterios por\nresolver sobre Darkrai.
@@ -10928,6 +11123,7 @@ Inciensos de Pokémon
 Selección de incienso
 Los inciensos que selecciones se usarán\ndurante la siguiente sesión de estudio.
 Puedes usar un máximo de dos\ninciensos mientras duermes.
+Puedes usar un máximo de\n[Digit:Digit2 ] [ES:Qty S="incienso" P="inciensos" ] mientras duermes.
 ¿Seguro que quieres usar [Digit:Digit2 ] incienso[ES:Qty P="s" ]?
 Usar incienso
 [Digit:Digit2 ]
@@ -10984,7 +11180,6 @@ Has dormido [Date:Date label="mmmm" ] más\nque en tu última sesión.
 Detalles
 Se han ajustado tus datos de sueño\npara reflejar estos factores:
 ・Dispositivo desplazado
-・Sueño inusualmente largo y profundo
 Es posible que no se detecte correctamente\nel sueño registrado al dormir sobre suelos\nmuy duros o colchones demasiado blandos.
 Asimismo, puede que los movimientos\ntampoco se detecten con precisión si\nel dispositivo se coloca en la mesita de\nnoche o alejado del colchón.
 Si tus sesiones de sueño no se registran \ncorrectamente, intenta dejar el dispositivo\nmás cerca de tu cuerpo.
@@ -11122,7 +11317,7 @@ Coloca tu dispositivo sobre el colchón.
 No apagues la pantalla ni suspendas\nla aplicación. La pantalla se oscurecerá\nautomáticamente para ahorrar energía.
 No apagues la pantalla. Coloca boca abajo\ntu dispositivo. [Style:FontSize ]Si minimizas la aplicación y\nlo dejas boca arriba, el registro continuará\nen segundo plano, pero podría detenerse.[/Style:FontSize ]
 [System:Color r="255" g="107" b="55" a="255" ]No cubras nunca tu dispositivo.\nAsí evitarás que se sobrecaliente.[System:Color a="255" ]
-[System:Color r="255" g="255" b="255" ].[System:Color a="255" ]
+
 Si tu dispositivo móvil tiene poca batería,\ncárgalo previamente.
 Resumen del registro
 Registro del sueño
@@ -11435,6 +11630,8 @@ No tienes espacio suficiente, así que\nno has podido obtener Caramelos\n[Name:P
 ¡[Name:PokemonNickname ] ha recuperado [Digit:Digit3 idx="1" ] punto[ES:Qty P="s" idx="1" ] de energía! ¡También recibes [Digit:Digit2 idx="2" ] ve[ES:Qty S="z" P="ces" idx="2" ] más su ayuda!\n¡[Name:PokemonNickname idx="3" ] ha recuperado [Digit:Digit3 idx="4" ] punto[ES:Qty P="s" idx="4" ] de energía! ¡También recibes [Digit:Digit2 idx="5" ] ve[ES:Qty S="z" P="ces" idx="5" ] más su ayuda!\nAdemás, recibes [Digit:Digit3 idx="6" ] [ES:Qty S="vez" P="veces" idx="6" ] más ayuda de [Name:PokemonNickname ] y [Name:PokemonNickname idx="3" ] gracias al poder de su vínculo.
 ¡Has obtenido [Digit:Digit4 separator="Default" ] [ES:Qty S="baya" P="bayas" ]! ¡Además obtienes [Digit:Digit4 idx="1" separator="Default" ] [ES:Qty S="baya" P="bayas" idx="1" ] adicionales gracias al poder de su vínculo!
 ¡Has obtenido [Digit:Digit4 separator="Default" ] fragmento[ES:Qty P="s" ] de\nsueños! ¡Además, el vigor de Snorlax\nha aumentado [Digit:Digit4 idx="1" separator="Default" ] punto[ES:Qty P="s" idx="1" ]!
+¡El vigor de Snorlax ha aumentado\n[Digit:Digit5 separator="Default" ] [ES:Qty S="punto" P="puntos" ] y se ha activado Furor\nbayas! ¡El vigor obtenido de las\nBayas Ango ha aumentado un [Digit:Digit3 idx="1" ] %!
+¡El vigor de Snorlax ha aumentado\n[Digit:Digit5 separator="Default" ] [ES:Qty S="punto" P="puntos" ]! No se ha activado\nFuror bayas porque su efecto ha\nalcanzado el límite.
 ~~~~~~~~~~~~~~~
 Text File : TagSet
 ~~~~~~~~~~~~~~~
@@ -11720,8 +11917,10 @@ Modo experto
 Colecciona Fotosorpresas
 Durante el primer estudio del sueño del día,\npodrás tomar Fotosorpresas: fotos de\nposturas de sueño de Pokémon en las que\nsaldrá también [Name:PokemonName ].
 Colecciona fotos de posturas de sueño de\notros Pokémon en las que también salga\n[Name:PokemonName ] para completar [System:Color r="255" g="107" b="55" a="255" ]misiones Fotosorpresa[System:Color a="255" ].
+Colecciona fotos de posturas de sueño\nde otros Pokémon en las que también\nsalga [Name:PokemonName ] para completar\n[System:Color r="255" g="107" b="55" a="255" ]misiones Fotosorpresa mini[System:Color a="255" ].
 [System:Color r="255" g="107" b="55" a="255" ]Cuanto más rara sea la postura de sueño del\nPokémon[System:Color a="255" ], mayor será la probabilidad de que\n[Name:PokemonName ] salga en la foto.\nAdemás, podrás recibir premios como\nCaramelos Pokémon por estas fotos.
 Misiones Fotosorpresa
+Misiones Fotosorpresa mini
 Añade a Latias y Latios a tu equipo.
 Puedes tener [System:Color r="255" g="107" b="55" a="255" ]hasta un Latias y un Latios en\nel equipo[System:Color a="255" ] al mismo tiempo.
 [System:Color r="255" g="107" b="55" a="255" ]Si tienes[System:Color a="255" ] un Latias y un Latios [System:Color r="255" g="107" b="55" a="255" ]en el equipo\nal mismo tiempo, se activará el efecto\nadicional de su habilidad principal[System:Color a="255" ].
@@ -11742,6 +11941,11 @@ Añade a Latias y Latios a tu equipo.
 [System:Color r="255" g="107" b="55" a="255" ]Si Latias y Latios están en tu equipo[System:Color a="255" ]\nmientras duermes durante el evento, [System:Color r="255" g="107" b="55" a="255" ]el\npoder Zzz se multiplicará por 1,3[System:Color a="255" ].
 Se puede tener a Latias y a Latios en el\nmismo equipo a la vez.
 ¡Acumula poder Zzz junto a Latias y Latios\npara devolver el brillo al Rocío Bondad!
+Añade a Mew o Mewtwo a tu equipo.
+Si [System:Color r="255" g="107" b="55" a="255" ]Mew o Mewtwo están en tu equipo[System:Color a="255" ]\nmientras duermes durante el evento,\nel [System:Color r="255" g="107" b="55" a="255" ]poder Zzz[System:Color a="255" ] [System:Color r="255" g="107" b="55" a="255" ]se multiplicará por 1,1[System:Color a="255" ].
+Además, si [System:Color r="255" g="107" b="55" a="255" ]Mewtwo está en tu equipo[System:Color a="255" ]\nmientras duermes en la segunda semana del\nevento, el [System:Color r="255" g="107" b="55" a="255" ]poder Zzz se multiplicará por 1,3[System:Color a="255" ].
+Si hay varios bonus al poder Zzz activos a la\nvez, solo tendrá efecto el mayor de ellos.
+¡Acumula poder Zzz y progresa en el estudio\nde la zona inexplorada!
 Medallas de la amistad
 Consigue medallas de la amistad.
 Si alcanzas cierto nivel de amistad con un\nPokémon, obtendrás una [System:Color r="255" g="107" b="55" a="255" ]medalla de la amistad[System:Color a="255" ].
@@ -11836,4 +12040,4 @@ Progreso de Snorlax
 Resumen semanal
 [Digit:Digit4 separator="Default" ]
 Semana
-第
+

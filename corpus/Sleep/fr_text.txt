@@ -58,7 +58,7 @@ Ajoutés :
 [Digit:Digit2 ]/[Digit:Digit2 idx="1" ]
 Cuisiner
 [Digit:Digit2 ]/[Digit:Digit2 idx="1" ]
-Ticket de Camping : [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 ] (+ [Digit:Digit3 idx="1" ])[System:Color a="255" ]
+Ticket de Camping : [System:Color r="255" g="107" b="55" a="255" ]× [Digit:Digit3 ] (+ [Digit:Digit3 idx="1" ])[System:Color a="255" ]
 Bonus de fin de semaine : [System:Color r="255" g="107" b="55" a="255" ]+ [Digit:Digit3 ][System:Color a="255" ]
 Compétence principale : [System:Color r="255" g="107" b="55" a="255" ]+ [Digit:Digit2 ][System:Color a="255" ]
 Bonus d'évènement : [System:Color r="255" g="107" b="55" a="255" ]+ [Digit:Digit2 ][System:Color a="255" ]
@@ -488,6 +488,7 @@ Récompense
 Récompenses reçues
 Pokémon concernés
 Liste des Pokémon concernés
+Détails
 Vous ne pouvez pas posséder plus de\n[Digit:Digit1 ] exemplaire[FR:Qty P="s" ] de cet objet.\nL'échange est impossible, car il vous\nferait dépasser cette limite.\n\nVeuillez essayer à nouveau lorsque\nvous aurez utilisé les exemplaires\nen votre possession.
 Vous ne pouvez pas posséder plus de\n[Digit:Digit1 ] exemplaire[FR:Qty P="s" ] de cet objet.\nLa réception est impossible, car elle\nvous ferait dépasser cette limite.\n\nVeuillez essayer à nouveau lorsque\nvous aurez utilisé les exemplaires\nen votre possession.
 Un changement de l'heure de votre\nappareil a été détecté depuis votre\ndernière session de jeu. Attention,\nveuillez noter que changer l'heure de\nvotre appareil trop fréquemment peut\naffecter votre expérience de jeu.
@@ -689,6 +690,7 @@ Text File : EventBonusList
 Vous pouvez utiliser la [System:Color r="255" g="107" b="55" a="255" ]fonctionnalité Mini Boost Bonbon[System:Color a="255" ] pour augmenter le niveau de vos Pokémon de soutien.
 Le [System:Color r="255" g="107" b="55" a="255" ]NigoMix 3000 à Bonbons[System:Color a="255" ] est disponible.
 Vous pouvez cultiver le contenu du Panier Floral.
+Vos Pokémon de soutien récolteront parfois d'[System:Color r="255" g="107" b="55" a="255" ]Énormes Baies Mago[System:Color a="255" ] en plus de vous apporter leur soutien.
 [System:Color r="255" g="107" b="55" a="255" ]Probabilité de déclenchement[System:Color a="255" ] de la compétence principale [System:Color r="255" g="107" b="55" a="255" ]× [Digit:Digit3 ][System:Color a="255" ]
 La [System:Color r="255" g="107" b="55" a="255" ]compétence principale [System:Color a="255" ]des Pokémon de soutien dotés de la spécialité « Compétences » [System:Color r="255" g="107" b="55" a="255" ]aura [Digit:Digit3 ] fois plus de chances de s'activer[System:Color a="255" ].
 [System:Color r="255" g="107" b="55" a="255" ]Gain de niveau des compétences principales[System:Color a="255" ] de tous les Pokémon de soutien [System:Color r="255" g="107" b="55" a="255" ]lorsqu'elles se déclenchent + [Digit:Digit3 ][System:Color a="255" ]
@@ -713,6 +715,7 @@ Le [System:Color r="255" g="107" b="55" a="255" ]nombre d'ingrédients[System:Co
 [System:Color r="255" g="107" b="55" a="255" ]Nombre maximal de Baies et ingrédients[System:Color a="255" ] portés par un Pokémon de soutien doté de la spécialité « Compétences »[System:Color r="255" g="107" b="55" a="255" ] + [Digit:Digit3 ][System:Color a="255" ]
 Votre dodoforce sera multipliée par [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 idx="2" ][System:Color a="255" ] si [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName ] [System:Color a="255" ]ou [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName idx="1" ] [System:Color a="255" ]font partie de votre équipe quand vous dormez.
 Votre dodoforce sera multipliée par [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 idx="2" ][System:Color a="255" ] si [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName ][System:Color a="255" ] et [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName idx="1" ][System:Color a="255" ] font partie de votre équipe quand vous dormez.
+[System:Color r="255" g="107" b="55" a="255" ]Capacité maximale[System:Color a="255" ] des Pokémon de soutien [System:Color r="255" g="107" b="55" a="255" ]+ [Digit:Digit3 ][System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ]La compétence principale[System:Color a="255" ] des Pokémon de soutien de type [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ] gagnera [Digit:Digit3 idx="1" ] niveau[FR:Qty P="x" ] quand elle se déclenchera[System:Color a="255" ].
 [System:Color r="255" g="107" b="55" a="255" ]La compétence principale[System:Color a="255" ] des Pokémon de soutien de type [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ] [System:Color a="255" ]et [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType idx="1" ][System:Color a="255" ] [System:Color r="255" g="107" b="55" a="255" ]gagne [Digit:Digit3 idx="2" ] niveau[FR:Qty P="x" idx="2" ] lorsqu'elle se déclenche[System:Color a="255" ].
 [System:Color r="255" g="107" b="55" a="255" ]La compétence principale[System:Color a="255" ] des Pokémon de soutien de type [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ][System:Color a="255" ], [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType idx="1" ][System:Color a="255" ] et [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType idx="2" ][System:Color a="255" ] [System:Color r="255" g="107" b="55" a="255" ]gagne [Digit:Digit3 idx="3" ] niveau[FR:Qty P="x" idx="3" ] quand elle se déclenche[System:Color a="255" ].
@@ -729,6 +732,8 @@ Rencontres avec [System:Color r="255" g="107" b="55" a="255" ]certains Pokémon 
 [System:Color r="255" g="107" b="55" a="255" ]Vous pourrez rencontrer des Pokémon avec divers types de dodo[System:Color a="255" ] pendant vos recherches, et ce, quel que soit votre type de dodo ce jour-là.
 L'un des Pokémon apparaissant à l'heure du goûter [System:Color r="255" g="107" b="55" a="255" ]va être affamé à coup sûr[System:Color a="255" ] (une fois par jour).
 Les Pokémon [System:Color r="255" g="107" b="55" a="255" ]seront plus difficiles\nà rassasier[System:Color a="255" ] lors du premier goûter.
+Certaines espèces de Pokémon [System:Color r="255" g="107" b="55" a="255" ]seront plus difficiles à rassasier[System:Color a="255" ] lors du premier goûter.
+Les Pokémon suivants [System:Color r="255" g="107" b="55" a="255" ]seront plus difficiles à rassasier[System:Color a="255" ] lors du premier goûter :
 Les [System:Color r="255" g="107" b="55" a="255" ][Name:CookingGenreName ][System:Color a="255" ] sont à l'honneur au cours de cet évènement.
 La [System:Color r="255" g="107" b="55" a="255" ]puissance[System:Color a="255" ] obtenue en cuisinant sera [System:Color r="255" g="107" b="55" a="255" ]multipliée par[System:Color a="255" ] [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit4 separator="Default" ][System:Color a="255" ].
 Les Pokémon récupéreront [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 ][System:Color a="255" ] [System:Color r="255" g="107" b="55" a="255" ]points d'énergie supplémentaires[System:Color a="255" ] grâce aux plats.
@@ -783,6 +788,7 @@ Liste des zones
 Zones disponibles pour vos recherches
 Mode expert
 Vous débloquerez de [System:Color r="255" g="107" b="55" a="255" ]nouvelles zones[System:Color a="255" ] en\nrecherchant des styles de dodo et en\natteignant certains objectifs du Dododex.
+[System:Color r="255" g="107" b="55" a="255" ]Les Baies préférées de Ronflex[System:Color a="255" ] seront\ndifférentes dans chaque zone. Tentez de\nrenforcer des Pokémon de types différents\net d'étudier plein de styles de dodo !
 [System:Color r="255" g="107" b="55" a="255" ]Les Baies préférées de Ronflex[System:Color a="255" ] seront\ndifférentes dans chaque zone. Tentez de\nrenforcer des Pokémon de types différents\net d'étudier plein de styles de dodo !
 À propos des zones
 Le mode expert sera débloqué\nle [Date:Date label="yyyyyMMMddd_hh:mm" ]
@@ -1653,18 +1659,15 @@ Langue
 Annonces
 Supprimer mon compte
 [System:Color r="134" g="134" b="134" a="255" ]Cette option effacera définitivement\ntoutes les données associées à ce compte.\nIl sera impossible de revenir en arrière ![System:Color a="255" ]
-Jauge de Bonus Dodo
 Jauge bonus d'EXP
 Bonus de rang de recherche max.
 Montée en rang de Ronflex
 Confirmer l'usage du Ticket Expert
 Affichage des notifications
-Notification concernant la jauge qui\napparaît quand un Pokémon de soutien\nau niveau max. reçoit un Bonus Dodo.
 Notification concernant la jauge\nqui apparaît quand un Pokémon\nde soutien au niveau max. reçoit\ndes Points d'Expérience.
 Notification apparaissant quand les\npoints de recherche sont convertis en\nFragments de Rêve après avoir atteint\nle rang de recherche maximal.
 Cette notification s'affiche quand\nRonflex monte en rang. Si vous la\ndésactivez, elle n'apparaîtra pas\npour montrer les rangs que vous\navez atteints précédemment.
 Une notification sera affichée avant\nl'utilisation d'un Ticket Expert.
-Jauge de Bonus Dodo
 Jauge bonus d'EXP
 Bonus de rang de recherche max.
 Montée en rang de Ronflex
@@ -1936,7 +1939,6 @@ Souhaitez-vous bien planter\nune Graine Jaune ?
 Souhaitez-vous bien planter\nune Graine Violette ?
 Souhaitez-vous bien planter\nune Graine Blanche ?
 Voici ce dont vous bénéficierez\nau moment de l'éclosion :
-Voici ce que vous recevrez\nau moment de l'éclosion :\n[Name:Item idx="1" ]
 Voici ce que vous recevrez\nau moment de l'éclosion :\n[System:Color r="255" g="107" b="55" a="255" ][Name:Item idx="1" ][System:Color a="255" ]
 Confirmation
 Détails
@@ -1962,6 +1964,7 @@ Cliché(s) miraculeux :
 Menez des recherches et prenez des clichés\nmiraculeux de [Name:PokemonName ].
 Missions accomplies !
 Missions des clichés miraculeux
+Missions des mini clichés miraculeux
 Planter\nune graine
 Panier Floral
 Île Roupillon
@@ -1976,6 +1979,10 @@ L'Île Roupillon de Goinfrex
 est disponible !
 Vous pouvez y accéder à partir du panneau en bas\nà droite de la zone.
 Disponible
+Effets de zone actifs
+Puissance des Baies Mago : [System:Color r="255" g="107" b="55" a="255" ]+ [Digit:Digit4 separator="Default" ] %[System:Color a="255" ]
+Remarque : changer de zone réinitialise\nles effets.
+Effets de zone
 Un [System:Color r="254" g="101" b="119" a="255" ]cadeau spécial [System:Color a="255" ]vous attend si vous reprenez\nles recherches sur le sommeil ! Recherches au\ncours desquelles vous bénéficierez de certains\n[System:Color r="254" g="101" b="119" a="255" ]avantages[System:Color a="255" ] afin de progresser rapidement !
 ● Contenu du cadeau
 • [Name:Item idx="1" ]\n[System:Color r="254" g="101" b="119" a="255" ]× [Digit:Digit5 idx="2" separator="Default" ][System:Color a="255" ]
@@ -2013,6 +2020,7 @@ La période de l'évènement est terminée.
 Prochain rang :
 Prochaine récompense :
 Collaborez avec des chercheurs et chercheuses\ndu monde entier pour restaurer l'éclat de la\nRosée Âme en accumulant de la dodoforce !
+Collaborez avec des chercheurs et chercheuses\ndu monde entier pour vous aventurer en terres\ninconnues en accumulant de la dodoforce !
 Les rangs d'évènement [Digit:Digit2 ]\net supérieurs seront débloqués\nle [Date:Date label="yyyyyMMMddd_aaa" idx="1" ] à [Date:Date label="hh:mm" idx="2" ].
 Indisponible
 Marmite
@@ -2243,11 +2251,9 @@ Un peu plus fréquents :\nSalamèche, Reptincel, Dracaufeu\nGoupix, Feunard, Ca
 Pour plus d'informations sur l'évènement,\nveuillez consulter les annonces en jeu.
 Recherche sur Entei
 Probabilité d'activation des [System:Color r="255" g="107" b="55" a="255" ]Compétences\nPrincipales[System:Color a="255" ] des Pokémon de soutien [System:Color r="255" g="107" b="55" a="255" ]× [Digit:Digit2 ] [System:Color a="255" ]!
-Probabilité d'activation des [System:Color r="255" g="107" b="55" a="255" ]Compétences\nprincipales [System:Color a="255" ]des Pokémon de soutien [System:Color r="255" g="107" b="55" a="255" ]× [Digit:Digit3 ] [System:Color a="255" ]!
 Le [System:Color r="255" g="107" b="55" a="255" ]nombre de Fragments de Rêve[System:Color a="255" ] obtenus\nvia la compétence principale Aimant à\nFragment de Rêve sera [System:Color r="255" g="107" b="55" a="255" ]multiplié par [Digit:Digit2 ][System:Color a="255" ].
 Le [System:Color r="255" g="107" b="55" a="255" ]nombre de Fragments de Rêve obtenus[System:Color a="255" ] via\nla compétence principale Aimant à Fragment\nde Rêve S sera [System:Color r="255" g="107" b="55" a="255" ]multiplié par [Digit:Digit3 ][System:Color a="255" ].
 Vous pouvez utiliser la [System:Color r="255" g="107" b="55" a="255" ]fonctionnalité\nBoost Bonbon[System:Color a="255" ] pour augmenter le niveau\nde vos Pokémon de soutien.
-Vous pouvez utiliser la [System:Color r="255" g="107" b="55" a="255" ]fonctionnalité\nMini Boost Bonbon[System:Color a="255" ] pour augmenter\nle niveau de vos Pokémon de soutien.
 Vous pouvez obtenir des objets une fois par jour en ouvrant le [System:Color r="255" g="107" b="55" a="255" ]Cadeau de Rêve [System:Color a="255" ]qui se trouve à côté de Ronflex.
 L'[System:Color r="255" g="107" b="55" a="255" ]échange de l'évènement[System:Color a="255" ] est disponible.
 Le [System:Color r="255" g="107" b="55" a="255" ]NigoMix 3000 à Bonbons\n[System:Color a="255" ]est disponible.
@@ -2355,6 +2361,7 @@ Il est impossible d'utiliser\nla compétence principale\n[Name:MainSkillExtensio
 Faites de la place dans votre Sac\npour que vos Pokémon trouvent\ndes ingrédients en utilisant\nleurs Compétences.
 Faites de la place dans votre poche\nà ingrédients pour que vos Pokémon\ntrouvent des ingrédients en utilisant\nleurs Compétences.
 La poche à ingrédients est pleine.
+ %
 [Name:MainSkill ] (N. [Digit:Digit3 idx="1" ])
 Changer de zone
 Avant de vous diriger vers un autre site,\nveuillez prendre note des informations\nsuivantes.\nSouhaitez-vous continuer ?
@@ -2455,21 +2462,14 @@ Plus fréquents :\nBulbizarre, Rondoudou, Ramoloss, Scarabrute,\nGermignon, Abso
 Pour plus d'informations sur l'évènement,\nveuillez consulter les annonces en jeu.
 Fête de l'amour
 Lors de cet évènement d'une semaine, vous pouvez rencontrer davantage de <strong>Pokémon de type Eau</strong> !\n\nNous vous encourageons à vous lier d'amitié avec plein de <b>Pokémon de type Eau</b> pour vous préparer à l'évènement Recherche sur Suicune, car ils vous seront particulièrement utiles !\n\nPendant la Semaine type Eau, vous pourrez utiliser la fonctionnalité à durée limitée <b>Mini Boost Bonbon</b>.\nC'est idéal pour renforcer vos Pokémon de type Eau !\n\nD'autres bonus seront également disponibles.\nNous espérons que cet évènement vous plaira !\n\nPériode de l'évènement :\n• Du lundi 19 août à 04:00 au lundi 26 août à 03:59.\n\nZones de l'évènement :\n• Toutes\n\nPériode des missions :\n• Du lundi 19 août à 04:00 au lundi 26 août à 03:59.\n\nLes effets ci-dessous s'appliqueront dans les zones de recherche concernées pendant l'évènement.\n\n— Tous les jours (du 19/08 au 25/08) —\n• Pendant vos recherches sur le sommeil, <strong>un des Pokémon qui vous rendra visite sera affamé à coup sûr</strong>.\n• <strong>Quelques Pokémon avec divers types de dodo apparaîtront</strong> pendant vos recherches, et ce, quel que soit votre type de dodo ce jour-là.\n• <strong>Certains Pokémon seront plus susceptibles d'apparaître</strong> pendant vos recherches.\n• La fonctionnalité à durée limitée <strong>Mini Boost Bonbon</strong> sera disponible.
-Bonbons gagnés grâce\naux recherches × [Digit:Digit2 ]\n(seulement une fois par jour)
-Des Pokémon adoptant un type\nde dodo différent du vôtre sont\nsusceptibles d'apparaître.
 Dodoforce × [Digit:Digit2 ]
 Dodoforce × [Digit:Digit3 ]
 Points d'Expérience gagnés\nen dormant × [Digit:Digit1 ]
-Points d'Expérience gagnés\nen dormant × [Digit:Digit3 ]
 Gagnez [Digit:Digit4 separator="Default" ] dodopoints bonus\nen mesurant votre sommeil\n(seulement une fois par jour)
 Essayez d'utiliser un Master\nBiscuit pour vos recherches\nsur le sommeil.
 Taux de Pokémon chromatique ↑
-Fragments de Rêve gagnés\nen dormant × [Digit:Digit2 ]
-Fragments de Rêve gagnés\nen dormant × [Digit:Digit3 ]
 Taux de Pokémon chromatique\naccru.
-Une fois par jour, un Pokémon\naffamé apparaîtra à coup sûr\nà l'heure du goûter.
 Vous pouvez obtenir des objets de\nl'évènement durant vos recherches\nsur le sommeil (une fois par jour).
-Les [System:Color r="255" g="107" b="55" a="255" ]points de recherche[System:Color a="255" ] obtenus\nà partir des recherches sur le\nsommeil seront multipliés par [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 ][System:Color a="255" ].
 [System:Color r="255" g="107" b="55" a="255" ]Des styles de dodo[System:Color a="255" ] que vous n'avez\npas encore découverts sont [System:Color r="255" g="107" b="55" a="255" ]plus\nsusceptibles d'apparaître.[System:Color a="255" ]
 Après une semaine de\nrecherches, votre bonus de\nzone augmentera de [Digit:Digit2 ] %.
 Vous pouvez obtenir ceci une fois\npar jour grâce à vos recherches\nsur le sommeil :\n[System:Color r="255" g="107" b="55" a="255" ][Name:Item idx="1" ][System:Color a="255" ]
@@ -3897,6 +3897,28 @@ Vous trouverez ci-dessous la liste des effets s'appliquant aux zones de recherch
 • Dodoforce <strong>×&nbsp;[News:Num_Count ]</strong>
 • Bonus Dodo pour les Pokémon de soutien <strong>×&nbsp;[News:Num_Count ]</strong>
 • Dodopoints bonus <strong>+&nbsp;[News:Num_Count ]</strong>
+De fatidiques rencontres vous attendent au clair de lune&nbsp;!
+On dit qu'une fois par an, durant la période de la lune des moissons (correspondant à la nuit de la pleine lune, à la nuit qui la précède et à celle qui la suit), la dodoforce est non seulement renforcée, mais des <strong>[News:PokemonNamesList Type="And" ] chromatiques</strong> sont aussi plus susceptibles d'apparaître.
+Il est donc possible qu'ils se montrent lors de vos recherches&nbsp;!
+Cet évènement est également l'occasion d'obtenir des dodopoints bonus et de bénéficier du Bonus Dodo&nbsp;!
+Profitez donc de cet évènement pour trouver votre meilleur sommeil et découvrir de nombreux styles de dodo&nbsp;!
+Période de l'évènement&nbsp;:
+• Du&nbsp;[News:Date_mdahm ] au&nbsp;[News:Date_mdahm idx="1" ]
+Remarque&nbsp;: la nuit de la pleine lune aura lieu le <strong>[News:Date_mda ]</strong>.
+Zones de l'évènement&nbsp;:
+• Toutes
+Vous trouverez ci-dessous la liste des effets s'appliquant aux zones de recherche concernées par l'évènement.
+—&nbsp;Tous les jours&nbsp;—
+• <strong>Apparition plus probable des Pokémon aux styles de dodo n'ayant pas encore été découverts</strong> pendant vos recherches sur le sommeil
+• Possibilité de croiser certains Pokémon chromatiques
+—&nbsp;Jour&nbsp;2 (la nuit de la pleine lune)&nbsp;—
+• Dodoforce <strong>×&nbsp;[News:Num_Count ]</strong>
+• Bonus Dodo pour les Pokémon de soutien <strong>×&nbsp;[News:Num_Count ]</strong>
+• Dodopoints bonus <strong>+&nbsp;[News:Num_Count ]</strong>
+—&nbsp;Jours&nbsp;1 et&nbsp;3&nbsp;—
+• Dodoforce <strong>×&nbsp;[News:Num_Count ]</strong>
+• Bonus Dodo pour les Pokémon de soutien <strong>×&nbsp;[News:Num_Count ]</strong>
+• Dodopoints bonus <strong>+&nbsp;[News:Num_Count ]</strong>
 Des bonbons ou un sort !
 Lors de cet évènement spécial d'une semaine, vous pouvez rencontrer plus de <strong>Pokémon de type Spectre</strong> que d'habitude !
 Au cours de l'évènement, vous pourriez même croiser des <strong>[News:PokemonName idx="1" ], [News:PokemonName idx="2" ], et [News:PokemonName idx="3" ] portant un chapeau d'Halloween</strong>.
@@ -4069,6 +4091,49 @@ Vous trouverez ci-dessous la liste des effets s'appliquant aux zones de recherch
 —&nbsp;Dernier jour de l'évènement ([News:Date_md ])&nbsp;—
 • Dodoforce <strong>×&nbsp;[News:Num_Count ]</strong>
 Remarque&nbsp;: s'il y a plus d'un bonus de dodoforce disponible, seul le bonus le plus élevé sera appliqué.
+Pendant la période spéciale durant laquelle cet évènement de deux semaines se tiendra, vous aurez l'occasion de <strong>mener votre enquête dans les terres inconnues de l'Île Vertepousse et de suivre les styles de dodo rares de [News:PokemonName ]</strong>&nbsp;!
+Pendant l'évènement, la dodoforce moyenne des chercheurs et chercheuses du monde entier ainsi que votre propre dodoforce seront combinées pour accumuler de la <strong>dodoforce d'évènement</strong>.
+De la dodoforce d'évènement devrait s'accumuler pendant vos recherches en terres inconnues, ce qui vous permettra d'explorer ces terres en profondeur.
+Nous vous encourageons à collaborer avec les chercheurs et chercheuses du monde entier pour progresser dans votre enquête&nbsp;!
+De plus, pendant cet évènement, le Pokémon légendaire <strong>[News:PokemonName ]</strong> sera plus susceptible d'apparaître, et un <b>bonus</b> sera appliqué à la <b>dodoforce</b> si [News:PokemonNamesList idx="1" Type="Or" ] font partie de votre équipe quand vous dormez. 
+Vous pourrez obtenir l'<strong>ADN de [News:PokemonName ]</strong> grâce aux recherches sur le sommeil, et ce, uniquement pendant que l'évènement est en cours.
+Échangez ces échantillons d'ADN de [News:PokemonName ] via le menu d'échange de l'évènement contre des Encens [News:PokemonName idx="1" ] et des Biscuits [News:PokemonName idx="2" ], pour obtenir de nouveaux objets qui vous aideront à découvrir les styles de dodo de [News:PokemonName idx="3" ]&nbsp;!
+De plus, d'<strong>Énormes Baies Mago</strong> encore plus grosses que d'habitude et qui fournissent une puissance considérable ont été aperçues dans les terres inconnues. [News:PokemonName ], [News:PokemonName idx="1" ] et des Pokémon de type Psy devraient pouvoir vous apporter plus de Baies&nbsp;!
+Nous espérons que ce contenu vous plaira&nbsp;!
+Période de l'évènement&nbsp;:
+• Semaine&nbsp;1&nbsp;: du&nbsp;[News:Date_mdahm ] au&nbsp;[News:Date_mdahm idx="1" ]
+• Semaine&nbsp;2&nbsp;: du&nbsp;[News:Date_mdahm ] au&nbsp;[News:Date_mdahm idx="1" ]
+Zones de l'évènement&nbsp;:
+[News:FieldNamesList ]
+<strong>Remarque&nbsp;: pendant cet évènement, vous pouvez sélectionner uniquement les zones de recherche concernées indiquées ci-dessus.</strong>
+Remarque&nbsp;: ces zones bénéficient de la même apparence exclusive à l'évènement en mode normal comme en mode expert.
+Période des missions&nbsp;:
+• Semaine&nbsp;1&nbsp;: du&nbsp;[News:Date_mdahm ] au&nbsp;[News:Date_mdahm idx="1" ]
+• Semaine&nbsp;2&nbsp;: du&nbsp;[News:Date_mdahm ] au&nbsp;[News:Date_mdahm idx="1" ]
+Période d'échange de l'évènement&nbsp;:
+• Du&nbsp;[News:Date_mdahm ] au&nbsp;[News:Date_mdahm idx="1" ]
+Remarque&nbsp;: l'échange peut être utilisé dans toutes les zones.
+Vous trouverez ci-dessous la liste des effets s'appliquant aux zones de recherche concernées par l'évènement.
+—&nbsp;Tous les jours&nbsp;—
+• Si [News:PokemonName ] ou [News:PokemonName idx="1" ] font partie de votre équipe pendant que vous dormez, la dodoforce sera <strong>multipliée par [News:Num_Count idx="2" ]</strong>.
+• Chaque fois qu'un Pokémon de soutien vous apportera des Baies, il se pourrait qu'il vous apporte également d'<strong>Énormes Baies Mago</strong>.
+• Chaque fois qu'un Pokémon de soutien de type Psy <strong>vous apportera des ingrédients, vous en obtiendrez [News:Num_Count ] en plus</strong>.
+• La probabilité qu'un Pokémon de soutien de type Psy <strong>active sa compétence principale sera multipliée par [News:Num_Count ]</strong>.
+• Les <strong>Baies Mago</strong> (type Psy) feront partie des Baies favorites du Ronflex dans les zones de l'évènement. Les autres sortes de Baies seront choisies aléatoirement.
+• <strong>Apparition plus probable de certains Pokémon</strong> pendant vos recherches sur le sommeil
+• [News:PokemonName ] <strong>sera plus difficilement rassasié</strong> lors de la <strong>première heure du goûter de la journée</strong>.
+• <strong>Échange de l'évènement</strong> disponible pendant une durée limitée
+• Vous pourrez obtenir des objets liés à l'évènement lors de la première session de recherches sur le sommeil du jour.
+• <strong>Apparition de quelques Pokémon aux types de dodo variés</strong> pendant vos recherches sur le sommeil (quel que soit le vôtre ce jour-là)
+—&nbsp;Semaine&nbsp;1 (du&nbsp;[News:Date_md ] au&nbsp;[News:Date_md idx="1" ])&nbsp;—
+• La <strong>capacité maximale</strong> de tous les Pokémon de soutien sera <strong>augmenté de&nbsp;[News:Num_Count ]</strong>.
+• <strong>Le niveau de la compétence principale</strong> des Pokémon de soutien de type Psy sera <strong>augmenté de [News:Num_Count ]</strong> lorsque celle-ci se déclenche.
+—&nbsp;Semaine&nbsp;2 (du&nbsp;[News:Date_md ] au&nbsp;[News:Date_md idx="1" ])&nbsp;—
+• Votre dodoforce sera <strong>multipliée par&nbsp;[News:Num_Count idx="1" ]</strong> si [News:PokemonName ] fait partie de votre équipe quand vous dormez.
+• La <strong>capacité maximale</strong> de tous les Pokémon de soutien sera <strong>augmenté de&nbsp;[News:Num_Count ]</strong>.
+• <strong>Le niveau de la compétence principale</strong> des Pokémon de soutien de type Psy sera <strong>augmenté de [News:Num_Count ]</strong> lorsque celle-ci se déclenche.
+• Apparition d'un énorme Ronflex possédant déjà une certaine puissance et pouvant être renforcé à partir de là
+Remarque&nbsp;: s'il y a plus d'un bonus de dodoforce disponible, seul le bonus le plus élevé sera appliqué.
 Lors de cet évènement spécial d'une durée d'un mois, vous pouvez terminer les <strong>missions des clichés miraculeux de [News:PokemonName ]</strong>.
 Pendant cet évènement, <strong>[News:PokemonName ] apparaîtra sur des photos</strong> lorsque vous recherchez les styles de dodo des Pokémon. Vous pouvez progresser dans les missions des clichés miraculeux en fonction du nombre de photos prises dans lesquelles [News:PokemonName ] apparaît.
 De plus, d'autres bonus seront disponibles lorsque vous obtenez un cliché miraculeux.
@@ -4086,6 +4151,27 @@ Vous trouverez ci-dessous la liste des effets s'appliquant aux zones de recherch
 • <strong>Points de recherche gagnés grâce aux clichés miraculeux ×&nbsp;[News:Num_Count ]</strong>
 • <strong>Fragments de Rêve gagnés grâce aux clichés miraculeux +&nbsp;[News:Num_Count ]</strong>
 Les bonus ci-dessus ne s'appliqueront qu'aux photos de styles de dodo dans lesquelles Mew apparaît.
+Lors de cet évènement spécial, vous aurez l'occasion de <strong>collecter une fois de plus des clichés miraculeux</strong> de [News:PokemonName ]&nbsp;!
+Pendant cet évènement, <strong>[News:PokemonName ] apparaîtra sur des photos</strong> lorsque vous rechercherez les styles de dodo des Pokémon. Vous pouvez progresser dans les missions des clichés miraculeux en fonction du nombre de photos prises dans lesquelles [News:PokemonName ] apparaît.
+De plus, d'autres bonus seront disponibles lorsque vous obtenez un cliché miraculeux.
+En outre, vous pouvez obtenir des récompenses en terminant les <strong>missions des clichés miraculeux</strong>.
+C'est une opportunité pour les chercheurs et chercheuses qui ne se sont pas encore liés d'amitié avec [News:PokemonName ] de pouvoir se lier d'amitié avec [News:PokemonName idx="1" ]. Les chercheurs et chercheuses qui se sont déjà liés d'amitié avec [News:PokemonName idx="2" ] peuvent obtenir une Graine Eurêka ([News:PokemonName idx="3" ])&nbsp;!
+Période de l'évènement&nbsp;:
+• Du&nbsp;[News:Date_mdahm ] au&nbsp;[News:Date_mdahm idx="1" ]
+Zones de l'évènement&nbsp;:
+• Toutes
+Période des missions&nbsp;:
+• Du&nbsp;[News:Date_mdahm ] au&nbsp;[News:Date_mdahm idx="1" ]
+Vous trouverez ci-dessous la liste des effets s'appliquant aux zones de recherche concernées par l'évènement.
+—&nbsp;Tous les jours&nbsp;—
+• Possibilité de collecter des clichés miraculeux au cours de la première session de recherches du jour uniquement
+• <strong>Bonbons gagnés grâce aux clichés miraculeux ×&nbsp;[News:Num_Count ]</strong>
+• <strong>Points de recherche gagnés grâce aux clichés miraculeux ×&nbsp;[News:Num_Count ]</strong>
+• <strong>Fragments de Rêve gagnés grâce aux clichés miraculeux +&nbsp;[News:Num_Count ]</strong>
+• <strong>Apparition à coup sûr d'un Pokémon affamé</strong> pendant la première session de recherches sur le sommeil du jour
+• <strong>Apparition plus probable de certains Pokémon</strong> pendant vos recherches sur le sommeil
+• Fonctionnalité à durée limitée <strong>Mini Boost Bonbon</strong> disponible
+• <strong>Apparition de quelques Pokémon aux types de dodo variés</strong> pendant vos recherches sur le sommeil (quel que soit le vôtre ce jour-là)
 Lors de cet évènement estival d'une durée d'une semaine, vous aurez plus de chances de rencontrer des <strong>Pokémon de type Électrik, Feu ou Eau</strong> !
 Pour vous préparer à l'évènement « Recherche sur [News:PokemonName idx="1" ], [News:PokemonName idx="2" ], et [News:PokemonName idx="3" ] », nous vous encourageons à vous lier d'amitié avec plein de Pokémon ! Plus d'informations à propos de cet évènement seront révélées dans une prochaine mise à jour.
 Au cours de l'évènement, <strong>un Pokémon affamé apparaîtra à coup sûr</strong> lors de la première heure du goûter du jour.
@@ -4220,6 +4306,36 @@ Remarque&nbsp;: la nuit de la nouvelle lune a lieu le&nbsp;[News:Date_mda ].
 Zones de l'évènement&nbsp;:
 • [News:FieldNamesList Type="And" ]
 <strong>Remarque&nbsp;: en raison d'un autre évènement en cours, vous ne pouvez sélectionner que les zones valables ci-dessus pendant l'évènement.</strong>
+Vous trouverez ci-dessous la liste des effets s'appliquant aux zones de recherche concernées par l'évènement.
+—&nbsp;Tous les jours&nbsp;—
+• <strong>Apparition spéciale</strong> des Pokémon fabuleux
+• Pokémon <strong>plus difficilement rassasiés</strong> lors de la <strong>première heure du goûter de la journée</strong>
+• Possibilité de rencontrer des Pokémon chromatiques
+• Chaque rencontre avec un Pokémon bénéficiant du taux d'apparition spécial lors de vos recherches sur le sommeil renforce les liens avec ce Pokémon de <strong>[News:Num_Count ]</strong>&nbsp;points d'amitié
+Rencontres spéciales la nuit de la nouvelle lune&nbsp;!
+Cet évènement a lieu une fois par mois pendant trois jours&nbsp;: le jour de la nouvelle lune, la veille, ainsi que le lendemain. Au cours de celui-ci, vous pouvez profiter de taux d'apparition spéciaux et <strong>les Pokémon sont plus difficilement rassasiés</strong>.
+Il est même possible que vous croisiez des <strong>Pokémon chromatiques</strong>&nbsp;!
+Nous espérons que ce contenu vous plaira&nbsp;!
+Période de l'évènement&nbsp;:
+• Du&nbsp;[News:Date_mdahm ] au&nbsp;[News:Date_mdahm idx="1" ]
+Remarque&nbsp;: la nuit de la nouvelle lune a lieu le&nbsp;[News:Date_mda ].
+Zones de l'évènement&nbsp;:
+• Toutes
+Vous trouverez ci-dessous la liste des effets s'appliquant aux zones de recherche concernées par l'évènement.
+—&nbsp;Tous les jours&nbsp;—
+• <strong>Apparition spéciale</strong> des Pokémon fabuleux
+• Pokémon <strong>plus difficilement rassasiés</strong> lors de la <strong>première heure du goûter de la journée</strong>
+• Possibilité de rencontrer des Pokémon chromatiques
+• Chaque rencontre avec un Pokémon bénéficiant du taux d'apparition spécial lors de vos recherches sur le sommeil renforce les liens avec ce Pokémon de <strong>[News:Num_Count ]</strong>&nbsp;points d'amitié
+Rencontres spéciales la nuit de la nouvelle lune&nbsp;!
+Cet évènement a lieu une fois par mois pendant trois jours&nbsp;: le jour de la nouvelle lune, la veille, ainsi que le lendemain. Au cours de celui-ci, vous pouvez profiter de taux d'apparition spéciaux et <strong>les Pokémon sont plus difficilement rassasiés</strong>.
+Il est même possible que vous croisiez des <strong>Pokémon chromatiques</strong>&nbsp;!
+Nous espérons que ce contenu vous plaira&nbsp;!
+Période de l'évènement&nbsp;:
+• Du&nbsp;[News:Date_mdahm ] au&nbsp;[News:Date_mdahm idx="1" ]
+Remarque&nbsp;: la nuit de la nouvelle lune a lieu le&nbsp;[News:Date_mda ].
+Zones de l'évènement&nbsp;:
+• Toutes
 Vous trouverez ci-dessous la liste des effets s'appliquant aux zones de recherche concernées par l'évènement.
 —&nbsp;Tous les jours&nbsp;—
 • <strong>Apparition spéciale</strong> des Pokémon fabuleux
@@ -4488,11 +4604,11 @@ Vous trouverez ci-dessous la liste des effets s'appliquant aux zones de recherch
 • <strong>Apparition plus probable de certains Pokémon</strong> pendant vos recherches sur le sommeil
 • Possibilité de croiser certains Pokémon chromatiques
 • Fonctionnalité à durée limitée <strong>NigoMix&nbsp;3000 à Bonbons</strong> disponible
-De <strong>nouvelles recettes vont être ajoutées</strong> le&nbsp;<b>[News:Date_mdahm ]</b>.
-Ingrédients à utiliser pour le premier nouveau plat de la catégorie «&nbsp;Currys et ragoûts&nbsp;»
-[News:ItemNamesList ]
-Ingrédients à utiliser pour le second nouveau plat de la catégorie «&nbsp;Currys et ragoûts&nbsp;»
-[News:ItemNamesList ]
+
+
+
+
+
 Vous pouvez remplir davantage de pages de votre Dododex pendant la Semaine des styles de dodo !
 Lors de cet évènement spécial d'une semaine, vous pouvez <strong>rencontrer plus facilement des Pokémon dont les styles de dodo ne sont pas encore enregistrés dans votre Dododex</strong>.
 Mettez le cap sur de nouvelles zones pour pouvoir remplir davantage de pages de votre Dododex pendant la Semaine des styles de dodo !
@@ -4955,6 +5071,9 @@ Latios et la Rosée Âme
 Évènement à l'approche du 3e anniversaire
 Fête 3e anniversaire
 Semaine de collaboration
+Missions des mini clichés miraculeux
+Recherches en terres inconnues ! Où est Mewtwo ?
+Où est Mewtwo ?
 Évoli
 Nouvel An 1
 Nouvel An 2
@@ -5005,6 +5124,9 @@ Latios 2
 3e anniversaire 1
 3e anniversaire 2
 Semaine\nde collab
+Mini clichés
+Mewtwo 1
+Mewtwo 2
 ~~~~~~~~~~~~~~~
 Text File : MD_event_item_packs
 ~~~~~~~~~~~~~~~
@@ -5206,7 +5328,19 @@ Lot fête de l'été 2026 L
 Lot collaboration S
 Lot collaboration M
 Lot collaboration L
+Lot mini clichés miraculeux S
+Lot mini clichés miraculeux M
+Lot mini clichés miraculeux L
 Lot renforcement Pokémon ([Name:PokemonName ]) [Digit:Digit2 idx="1" ]
+Lot recherche sur Mewtwo [Digit:Digit2 ] S
+Lot recherche sur Mewtwo [Digit:Digit2 ] M
+Lot recherche sur Mewtwo [Digit:Digit2 ] L
+Lot dernière chance de Mewtwo [Digit:Digit2 ] S
+Lot dernière chance de Mewtwo [Digit:Digit2 ] M
+Lot dernière chance de Mewtwo [Digit:Digit2 ] L
+Lot 30 ans de Pokémon S
+Lot 30 ans de Pokémon M
+Lot 30 ans de Pokémon L
 ~~~~~~~~~~~~~~~
 Text File : MD_event_purchase_item_packs
 ~~~~~~~~~~~~~~~
@@ -5322,6 +5456,52 @@ Ouah, ça pour une surprise !\nCe Ronflex a l'air bien [System:Color r="255" g="
 Alors que Latias et Latios\ntentent de restaurer l'éclat\nde la [System:Color r="255" g="107" b="55" a="255" ]Rosée Âme[System:Color a="255" ]...
 Leur pouvoir a peut-être\neu un effet sur Ronflex.
 Avec ce Ronflex, tes recherches\ndevraient démarrer sur les\nchapeaux de roues cette semaine !
+Tes recherches avancent bien,\ndis-moi ! Je t'ai préparé une\nrequête spéciale aujourd'hui !
+Je sais enfin où s'est rendu\nle Pokémon légendaire [System:Color r="255" g="107" b="55" a="255" ]Mewtwo [System:Color a="255" ]!
+Mewtwo se trouve dans une\n[System:Color r="255" g="107" b="55" a="255" ]partie encore[System:Color a="255" ] [System:Color r="255" g="107" b="55" a="255" ]inexplorée\n[System:Color a="255" ]de l'Île Vertepousse.
+Mewtwo est prudent, mais en\ns'aventurant là-bas, on pourrait\nvoir ses styles de dodo rares.
+Et on pourrait même en profiter\npour explorer en profondeur\nces terres inconnues !
+Nous aurons besoin de beaucoup\nde dodoforce de Ronflex pour\nfaire progresser nos recherches.
+Pourrais-tu travailler avec des\nchercheurs du monde entier pour\naccumuler de la dodoforce ?
+Ah, et ici il y a d'[System:Color r="255" g="107" b="55" a="255" ]Énormes Baies\nMago[System:Color a="255" ] gorgées de puissance.
+Elles pourraient s'avérer utiles\npour renforcer Ronflex.
+Et d'ailleurs, [System:Color r="255" g="107" b="55" a="255" ]Mew [System:Color a="255" ]a l'air de\ns'intéresser particulièrement\naux styles de dodo de Mewtwo.
+Il pourrait t'aider à étudier\nles styles de dodo rares\nde Mewtwo !
+Allez ! Commençons cette\nenquête en terres inconnues !
+Grâce à tes recherches, on a pu\ns'aventurer encore plus loin\net trouver un chemin reculé !
+On pourrait réussir à étudier les\n[System:Color r="255" g="107" b="55" a="255" ]styles de dodo rares de Mewtwo[System:Color a="255" ]\nen progressant dans l'enquête !
+Ouah ! Quelle surprise !
+Je n'aurais jamais pensé voir un\nMew curieux se faire repousser\npar un Mewtwo exaspéré !
+Mew avait l'air très content de\npouvoir voir le style de dodo de\nMewtwo, n'est-ce pas ?
+Poursuivons nos recherches\nsur le sommeil avec entrain !
+Ouah, ça pour une surprise !\nCe Ronflex a l'air bien [System:Color r="255" g="107" b="55" a="255" ]plus gros[System:Color a="255" ]\nque ses congénères habituels !
+C'est peut-être grâce aux\neffets des Énormes Baies Mago !
+Avec ce Ronflex, tes recherches\ndevraient démarrer sur les\nchapeaux de roues cette semaine !
+Tes recherches avancent bien,\ndis-moi ! Aujourd'hui, j'ai une\nrequête toute spéciale pour toi !
+Apparemment, [System:Color r="255" g="107" b="55" a="255" ]Mew[System:Color a="255" ] a été\naperçu en train de survoler\ndes Pokémon endormis.
+Quelque chose a peut-être\npiqué la curiosité de Mew.
+Alors si tu fais des recherches\nmaintenant, [System:Color r="255" g="107" b="55" a="255" ]Mew pourrait bien\napparaître en vol en photo [System:Color a="255" ]!
+Afin de découvrir ce qui a piqué\nla curiosité de Mew...
+Ce serait pas mal si tu pouvais\n[System:Color r="255" g="107" b="55" a="255" ]prendre des clichés de Mew[System:Color a="255" ]\npendant qu'il vole !
+Allez, je compte sur toi ! Bonne\nchance pour tes recherches\nsur le sommeil !
+Merci pour toutes ces photos\nde Mew !
+Tu dois l'intriguer encore plus\navec tes recherches sur\nles styles de dodo rares.
+Il semble décidément très\ncurieux au sujet des Pokémon\nendormis.
+En gage de votre amitié encore\nplus forte, il t'a même offert\nune [System:Color r="255" g="107" b="55" a="255" ]Graine Eurêka[System:Color a="255" ].
+Tu dois aussi l'intriguer avec\ntes recherches sur les styles\nde dodo rares.
+Ton lien avec Mew s'intensifie,\nje pense [System:Color r="255" g="107" b="55" a="255" ]qu'il se montrera lors\nde ta prochaine recherche [System:Color a="255" ]!
+Et il a même l'air de se sentir\nassez en sécurité pour [System:Color r="255" g="107" b="55" a="255" ]venir\ndormir ici[System:Color a="255" ], maintenant.
+Poursuivons nos recherches\nsur le sommeil avec entrain !
+J'ai hâte de voir ce que tes\nrecherches sur le sommeil\ndonneront, demain !
+Bravo pour tes recherches !
+Pendant que tu effectuais tes\nrecherches sur Mew, j'ai aperçu\nune [System:Color r="255" g="107" b="55" a="255" ]ombre mystérieuse[System:Color a="255" ].
+Je me suis empressé de prendre\nune photo de cette ombre, et\nquand je l'ai regardée...
+... je me suis rendu compte qu'il\ns'agissait peut-être du Pokémon\nlégendaire [System:Color r="255" g="107" b="55" a="255" ]Mewtwo[System:Color a="255" ].
+Mew a dû sentir la présence de\nMewtwo et ses styles de dodo\nont dû l'intriguer.
+On dirait aussi que Mewtwo\nse dirigeait vers les [System:Color r="255" g="107" b="55" a="255" ]profondeurs\nde l'Île Vertepousse[System:Color a="255" ].
+Il existe peut-être des parties\nde l'Île Vertepousse que nous\nn'avons pas encore découvertes.
+Je m'occuperai de découvrir où\nest Mewtwo et de commencer\nà préparer l'enquête.
+D'ici là, je compte sur toi pour\ncontinuer à effectuer tes\nrecherches au quotidien !
 Tes recherches avancent bien,\ndis-moi ! Aujourd'hui, j'ai une\nrequête toute spéciale pour toi !
 On m'a rapporté que le Pokémon\nfabuleux [System:Color r="255" g="107" b="55" a="255" ]Mew [System:Color a="255" ]a été aperçu près\nde l'Île Vertepousse.
 C'est un grand curieux, alors il\na décidé de survoler la zone pour\nobserver les Pokémon endormis.
@@ -5472,7 +5652,6 @@ Text File : MD_health_data_sources
 (Fitbit, Google Pixel Watch, etc.)
 (Galaxy Watch, etc.)
 (Forerunner 265, etc.)
-Fitbit
 Google Health
 Samsung Health
 Mesure de sommeil par défaut\nsur Apple Watch
@@ -5484,13 +5663,13 @@ Text File : MD_health_faq
 Vos données de sommeil sont-elles\nmesurées automatiquement par votre\nApple Watch ?
 Vos données de sommeil sont-elles\nenregistrées dans Santé d'Apple ?
 Vos données de sommeil remplissent-\nelles les conditions pour être utilisées\ndans Pokémon Sleep ?
-Vos données de sommeil sont-elles\nenregistrées dans l'application Samsung\nHealth, Garmin Connect, ou autre ?
 Vos données de sommeil sont-elles\nenregistrées dans l'application Samsung\nHealth, Google Health, Garmin Connect,\nou autre ?
 Vos données de sommeil sont-elles\nenregistrées dans Santé Connect ?
 Vos données de sommeil remplissent-\nelles les conditions pour être utilisées\ndans Pokémon Sleep ?
 Avez-vous autorisé la lecture\nde données dans Santé d'Apple ?
 Avez-vous autorisé la lecture de\ndonnées dans Santé Connect ?
 Vos données de sommeil sont-elles\nenregistrées dans l'application\nGarmin Connect ?
+Vos données de sommeil sont-elles\nenregistrées dans l'application\nGoogle Health, Garmin Connect,\nou autre ?
 ~~~~~~~~~~~~~~~
 Text File : MD_item_name_data
 ~~~~~~~~~~~~~~~
@@ -5506,6 +5685,7 @@ Biscuit Cresselia
 Honor Biscuit
 Biscuit Latias
 Biscuit Latias/Latios
+Biscuit Mewtwo
 Un encens qui double les points\nde recherche obtenus pendant une\nsession de recherche sur le sommeil.\nValable pour une seule session\naprès utilisation.
 Un encens qui double les Fragments\nde Rêve obtenus pendant une session\nde recherche sur le sommeil.\nValable pour une seule session\naprès utilisation.
 Un encens qui double les points\nd'expérience obtenus par les Pokémon\nde soutien pendant une session\nde recherche sur le sommeil.\nValable pour une seule session\naprès utilisation.
@@ -5567,6 +5747,7 @@ Un aromate d'un blanc immaculé.\nSi un Pokémon hume cet aromate,\ntous les eff
 Un ticket nécessaire pour visiter\nles zones du mode expert.
 Une friandise spéciale réservée\nà certains Pokémon qui renforcera\nénormément vos liens avec eux en\naugmentant de 6 leurs points d'amitié.
 À la fin de la période d'échange\nde l'évènement, cet objet sera\nautomatiquement converti en\nSuper Biscuit. Veuillez consulter\nles dates de la période d'échange\ndans les annonces liées à l'évènement.
+Après la fin de la période d'échange\nde l'évènement, cet objet sera\nautomatiquement converti en\nSuper Biscuit après un certain temps.\nVeuillez consulter les dates de la\npériode d'échange et les horaires\nde conversion de biscuit dans les\nannonces liées à l'évènement.
 Pendant cet évènement, vous pouvez\nuniquement le donner aux Pokémon\nindiqués ci-dessous.
 Un jus spécialement préparé afin de\nrestaurer 20 points d'énergie\nà un Pokémon de soutien.
 Il est possible que les points d'énergie\nd'un Pokémon excèdent la limite\nde 100 points après l'utilisation\nde cet objet.
@@ -5643,6 +5824,7 @@ Duvet de Cresselia
 Échantillons de Pokémon
 Duvet de Latias
 Duvet de Latios
+ADN de Mewtwo
 Encens Concentration
 Encens Veine
 Encens Croissance
@@ -5941,6 +6123,7 @@ Pokémon Flamme
 Pokémon Dragon
 Pokémon Dragon
 Pokémon Dragon
+Pokémon Génétique
 Pokémon Nouveau
 Pokémon Feuille
 Pokémon Feuille
@@ -6175,6 +6358,7 @@ Il s'emmitoufle dans son abondant pelage pour\ndormir. Ce dernier semble permett
 Un Pokémon si rare qu'il a longtemps été considéré\ncomme un mythe. Sa façon de dormir était alors\nun mystère, mais sa popularité croissante auprès\ndes Dresseurs et Dresseuses permet aujourd'hui\nde l'observer dormant dans des positions variées.
 On dit qu'il peut contrôler la météo grâce au pouvoir\nqu'il concentre dans les orbes au bout de sa queue,\nmême endormi. Attention, car il peut entraîner à\ntout moment de brusques changements climatiques.
 Surnommé « l'avatar de la mer », il peut parfois être\naperçu dormant le ventre en l'air, sûrement épuisé\naprès avoir parcouru l'immensité de l'océan.
+Ce Pokémon aurait été conçu à partir des gènes\nde Mew. On pense qu'il a l'habitude de dormir\ncalmement debout pour économiser son énergie\nqu'il préfère consacrer au combat.
 On dit que Mew possède le code génétique de tous\nles autres Pokémon. Unique et rare, son existence\nest remise en cause par les experts. Même dans\nson sommeil, il peut se rendre invisible à sa guise,\nc'est pourquoi peu de chercheurs et chercheuses\nont pu observer ses styles de dodo.
 On dit qu'il utilise la feuille sur sa tête pour jauger\nla température et l'humidité afin de pouvoir trouver\nle meilleur endroit pour dormir. On lui trouve\nsouvent un air satisfait quand il dort, sans doute\nravi d'avoir trouvé l'emplacement idéal.
 Le collier de bourgeons à son cou répand un arôme\népicé qui donne du tonus aux humains. Celui-ci agit-il\naussi sur les Pokémon dormant autour de lui ?
@@ -6412,6 +6596,7 @@ Pyroli
 Minidraco
 Draco
 Dracolosse
+Mewtwo
 Mew
 Germignon
 Macronium
@@ -6832,6 +7017,7 @@ Permet également d'obtenir des bonbons\npour un Pokémon de votre équipe.
 Restaure l'énergie de deux Pokémon au hasard\ndans l'équipe de [Digit:Digit3 ] point[FR:Qty P="s" ] et octroie environ\n[Digit:Digit2 idx="1" ] utilisation[FR:Qty P="s" idx="1" ] de ces Pokémon de soutien.\nEffet renforcé sous certaines conditions.
 Octroie les Baies collectées par toute l'équipe.\nEffet renforcé sous certaines conditions.
 Permet d'obtenir [Digit:Digit7 separator="Default" ] Fragment[FR:Qty P="s" ] de Rêve.\nAugmente la puissance de Ronflex de [Digit:Digit4 idx="1" separator="Default" ].
+Augmente la puissance de Ronflex de [Digit:Digit7 separator="Default" ].\nActive également Baies en folie dans la zone\nde recherche.
 Charge de Puissance S
 Charge de Puissance M
 Aimant à Fragment de Rêve S
@@ -6880,6 +7066,7 @@ Polyvalent (Baies à Gogo)
 Vibra Soin (Encouragement Énergique S)
 Draco-Météore (Baies à gogo)
 Aurasphère (Aimant à Fragment de Rêve S)
+Frappe Psy (Baies en folie)
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_main_skills_ShortName
 ~~~~~~~~~~~~~~~
@@ -6905,6 +7092,7 @@ Pioche à Ingrédient S
 Plus
 Moins
 Aide de Cuisine S
+Baies en folie
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_nature
 ~~~~~~~~~~~~~~~
@@ -7241,6 +7429,11 @@ Dodo Déroulé
 Dodo en Boule
 Dodo sur Séant
 Dodo Ventre en l'Air
+Dodo\nGenou Levé
+Dodo\nFlottant Debout
+Dodo Frappe Psy
+Dodo Exaspéré
+Dodo Serein
 Dodo Lévitation
 Dodo Libéré
 Dodo Lit Bulle
@@ -8221,7 +8414,6 @@ Allez, c'est parti ! Il est temps\nde nous préparer pour notre\npremière sessi
 Commençons par analyser\nles données obtenues\npendant ton sommeil...
 Ici, tu peux consulter ton [System:Color r="255" g="107" b="55" a="255" ]temps\nde sommeil[System:Color a="255" ] du jour et le [System:Color r="255" g="107" b="55" a="255" ]score\n[System:Color a="255" ]obtenu grâce à ce temps.
 Voici ton [System:Color r="255" g="107" b="55" a="255" ]score de sommeil[System:Color a="255" ].\nIl indique [System:Color r="255" g="107" b="55" a="255" ]combien de temps\ntu as dormi[System:Color a="255" ].
-Voici ton [System:Color r="255" g="107" b="55" a="255" ]score de sommeil[System:Color a="255" ].\nIl indique [System:Color r="255" g="107" b="55" a="255" ]combien de temps\ntu as dormi[System:Color a="255" ].
 Une personne adulte peut obtenir\n100 points [System:Color r="255" g="107" b="55" a="255" ]maximum[System:Color a="255" ] si elle dort\n[System:Color r="255" g="107" b="55" a="255" ]8 heures et demie[System:Color a="255" ] en une nuit.
 Pour les enfants, le [System:Color r="255" g="107" b="55" a="255" ]maximum\n[System:Color a="255" ]de 100 points peut être obtenu\nen dormant [System:Color r="255" g="107" b="55" a="255" ]11 heures[System:Color a="255" ] en une nuit.
 [System:Color r="255" g="107" b="55" a="255" ]Dors autant que possible[System:Color a="255" ] ! \nEn dormant [System:Color r="255" g="107" b="55" a="255" ]8 heures et demie[System:Color a="255" ],\ntu obtiendras un score de 100 !
@@ -8302,7 +8494,6 @@ Tu peux remplir ton Dododex en\neffectuant ces recherches [System:Color r="255" 
 Sache cependant que nous n'avons\npassé en revue que les bases.\nPense à toucher ton écran ça et là\npour en apprendre davantage !
 Ronflex te dira au revoir au bout\nd'une semaine, mais un autre\nt'attendra dans la zone suivante.
 Bonne chance pour tes recherches\net... fais de beaux rêves !
-Fais de ton mieux pour renforcer\nRonflex et qu'il devienne\naussi grand que possible !
 Et pour [System:Color r="255" g="107" b="55" a="255" ]augmenter la vitesse de\nrenforcement de Ronflex et de\ntes recherches[System:Color a="255" ], utilise ce ticket.
 Fais de ton mieux pour renforcer\nRonflex. Plus il grandira, [System:Color r="255" g="107" b="55" a="255" ]plus tu\npourras rencontrer de Pokémon [System:Color a="255" ]!
 Eh bien, on a enfin fait le tour !\nBonne chance pour tes futures\nrecherches sur le sommeil !
@@ -8357,7 +8548,6 @@ Je te rends cette [System:Color r="255" g="107" b="55" a="255" ]Graine Eurêka[S
 Je te rends cette [System:Color r="255" g="107" b="55" a="255" ]Graine Eurêka[System:Color a="255" ].\nTu devrais l'utiliser plus tard\nsur [Name:PokemonName ] !
 Votre nouvel ami Darkrai vous\na donné un mystérieux objet.
 Un mystérieux objet vous a été\noffert par votre nouvel ami\n[Name:PokemonName ].
-Tu as remarqué ce panier, là ?\nJ'aimerais bien que tu y fasses\npousser des fleurs spéciales !
 Tu as remarqué ce panier, là ?\nJ'aimerais bien que tu y fasses\npousser des fleurs spéciales !
 [System:Color r="255" g="107" b="55" a="255" ]Lorsqu'elles éclosent[System:Color a="255" ], elles ont\n[System:Color r="255" g="107" b="55" a="255" ]des pouvoirs bénéfiques sur\nles recherches sur le sommeil[System:Color a="255" ].
 Pour les faire pousser, plante\njuste la [System:Color r="255" g="107" b="55" a="255" ]graine de ton choix\n[System:Color a="255" ]dans ce panier tous les jours.
@@ -8845,7 +9035,6 @@ Super Soutien ([Name:PokemonType ])
 Active soit Stockage soit Relâche.\nQuand Relâche est activé, Ronflex\nobtient de la puissance en fonction\ndu nombre de fois où Stockage a été\nactivé. Après l'activation de Relâche,\nle compteur de Stockage est réinitialisé.
 En fonction du nombre de fois où Stockage\na été activé, Ronflex obtiendra la quantité\nde puissance suivante.
 Remarque : si ce Pokémon est retiré\nde l'équipe, son compteur de Stockage\nsera réinitialisé.
-Octroie [Digit:Digit3 ] [FR:Qty S="Baie" P="Baies" ], ainsi que\n[Digit:Digit3 idx="1" ] de chaque Baie collectée par\nles autres Pokémon de l'équipe.\nEn de rares occasions, vous obtiendrez\nun « Grand succès ! » et vous recevrez\ndavantage de Baies.
 Octroie [Digit:Digit3 ] [FR:Qty S="Baie" P="Baies" ], ainsi que\n[Digit:Digit3 idx="1" ] de chaque Baie collectée par\nles autres Pokémon de l'équipe.\nVous obtiendrez parfois\nun « Grand succès ! » et vous recevrez\ndavantage de Baies.
 Remarque : après un « Grand succès ! »,\nvous ne pouvez plus en obtenir jusqu'à la\nprochaine session de recherche ou prochaine\nsaisie manuelle des données de sommeil.
 Copie et utilise la compétence principale\nd'un Pokémon aléatoire de l'équipe.
@@ -8884,6 +9073,11 @@ Si Latios est dans votre équipe,\noctroie l'équivalent de [Digit:Digit2 ] uti
 Octroie les Baies collectées par toute\nl'équipe. Plus il y a de Pokémon de type \n[Name:PokemonType ] différents dans l'équipe, plus\nle nombre de Baies octroyées est élevé.
 Octroie les Baies collectées par toute\nl'équipe. Plus il y a de Pokémon de type\n[Name:PokemonType ] différents dans votre équipe,\nplus le nombre de Baies octroyées est\nélevé. Si Latias fait partie de votre équipe,\nle nombre de Baies que reçoit ce Pokémon\nest augmenté de [Digit:Digit4 idx="1" separator="Default" ].
 Si Latias est dans votre équipe,\nle nombre de Baies que reçoit\nce Pokémon augmente de [Digit:Digit4 separator="Default" ].
+Augmente la puissance de Ronflex\nde [Digit:Digit7 separator="Default" ].\nActive également Baies en folie dans\nla zone de recherche, ce qui augmente\nla puissance obtenue par les Baies Mago\nde [Digit:Digit3 idx="1" ] %.
+Remarque : lorsque Baies en folie s'active,\nses effets dureront jusqu'à ce que vous\nvous déplaciez dans une autre zone.
+Remarque : même si vous retirez [Name:PokemonName ]\nde votre équipe de soutien, les effets de\nBaies en folie persisteront.
+Remarque : l'effet de Baies en folie atteint\nson maximum à [Digit:Digit4 separator="Default" ] %.\nChaque fois que cette compétence principale\nest activée, l'effet de Baies en folie continue\nà s'accumuler jusqu'à atteindre son maximum.
+Remarque : lorsque cette compétence principale\ns'active, toutes les Baies de la boîte à Baies\nseront immédiatement converties en puissance.
 À propos de la compétence Polyvalent
 Compétences principales disponibles
 Compétences principales disponibles
@@ -9144,6 +9338,7 @@ Text File : PokemonHeight
 1,8 m
 4,0 m
 2,2 m
+2,0 m
 0,4 m
 0,9 m
 1,2 m
@@ -9425,12 +9620,9 @@ Choisissez les Pokémon de soutien pour vos équipes et organisez vos Boîtes Po
 Équipes
 Boîte Pokémon
 Pokémon
-Vous pouvez obtenir des objets en accumulant\ndu Bonus Dodo excédentaire.
 Vous pouvez obtenir des objets en\naccumulant des Points d'Expérience\nexcédentaires.
-Jauge de Bonus Dodo
 Jauge bonus d'EXP
 Détails
-Si un Pokémon de soutien a déjà atteint le\nniveau maximal, tout Bonus Dodo\nexcédentaire sera ajouté à la jauge\nplutôt qu'au Pokémon.
 Si un Pokémon de soutien a déjà atteint\nle niveau maximal, les Points d'Expérience\nexcédentaires seront ajoutés à la jauge\nbonus plutôt qu'au Pokémon.
 À chaque fois que la jauge est remplie, vous\nobtenez [Name:Item idx="1" ] × [Digit:Digit2 idx="2" ].
 Bonus de niveau max.
@@ -9510,6 +9702,7 @@ Text File : PokemonWeight
 3,3 kg
 16,5 kg
 210,0 kg
+122,0 kg
 4,0 kg
 6,4 kg
 15,8 kg
@@ -9736,6 +9929,7 @@ Aromate Neutre non reçu
 Objet non reçu
 Bonus de recherche\nGarmin
 Cadeau de collaboration
+Cadeau de renforcement\nde Mew : jour [Digit:Digit2 ]
 ~~~~~~~~~~~~~~~
 Text File : PresentBox_SCENE
 ~~~~~~~~~~~~~~~
@@ -10685,14 +10879,9 @@ Heure du goûter
 Biscuit choisi :
 [Digit:Digit3 ]/[Digit:Digit3 idx="1" ]
 [System:Color r="255" g="107" b="55" a="255" ]Certains Pokémon ont plus de chances\nd'apparaître.[System:Color a="255" ]
-[System:Color r="255" g="107" b="55" a="255" ]Des Pokémon avec divers types de dodo\napparaîtront[System:Color a="255" ] pendant vos recherches, et ce,\nquel que soit votre type de dodo ce jour-là.
-Vous [System:Color r="255" g="107" b="55" a="255" ]gagnerez plus de bonbons[System:Color a="255" ] après votre\npremière recherche du jour.
 [System:Color r="255" g="107" b="55" a="255" ]Vous pourrez peut-être rencontrer\nun [Name:PokemonName ] chromatique ![System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ]Vous pourrez peut-être rencontrer\nun Pokémon chromatique.[System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ]Vous pourrez peut-être rencontrer\ncertains Pokémon chromatiques.[System:Color a="255" ]
-Vous [System:Color r="255" g="107" b="55" a="255" ]gagnerez plus de Fragments de Rêve[System:Color a="255" ]\nlors de vos recherches sur le sommeil.
-Au moins un Pokémon sera affamé lors\nde la première session de sommeil\ndu jour.
-Les [System:Color r="255" g="107" b="55" a="255" ]points de recherche[System:Color a="255" ] obtenus à partir\ndes recherches sur le sommeil seront\nmultipliés par [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 ][System:Color a="255" ].
 Les [System:Color r="255" g="107" b="55" a="255" ]styles de dodo[System:Color a="255" ] que vous n'avez pas\nencore découverts sont [System:Color r="255" g="107" b="55" a="255" ]plus\nsusceptibles d'apparaître[System:Color a="255" ].
 Bonus d'évènement
 Jan.
@@ -10762,16 +10951,22 @@ La dodoforce combinée de tout\nle monde a apaisé la tempête.
 Votre propre dodoforce\naccumulée a apaisé la tempête.
 La dodoforce combinée de tout\nle monde a restauré l'éclat\nde la Rosée Âme.
 Votre propre dodoforce\naccumulée a restauré l'éclat\nde la Rosée Âme.
+La dodoforce de tout le monde\ns'est combinée et l'enquête en\nterres inconnues a progressé.
+Vous avez accumulé de la\ndodoforce et l'enquête en\nterres inconnues a progressé.
+La dodoforce de tout le monde\ns'est combinée et vous avez\ntrouvé un chemin reculé.
+Vous avez accumulé de la\ndodoforce et vous avez\ntrouvé un chemin reculé.
 Toute la dodoforce est accumulée !
 Votre dodoforce fait effet.
 Dodoforce d'évènement
 [Name:PokemonName ] et [Name:PokemonName idx="1" ]\ndorment encore profondément.
+[Name:PokemonName ] dort encore. [Name:PokemonName idx="1" ]\na l'air content d'avoir pu\nvoir ce style de dodo !
 À propos des Graines Eurêka
 Vous ne pouvez vous lier d'amitié qu'avec un [Name:PokemonName ].
 Vous pouvez obtenir une [System:Color r="255" g="107" b="55" a="255" ]Graine Eurêka[System:Color a="255" ] en\nfaisant monter ses points d'amitié au maximum.
 À propos des points d'amitié ([Name:PokemonName ])
 [Name:PokemonName ]\nsemble vous faire confiance.
 [Name:PokemonName ] voit ses points d'amitié\naugmenter en fonction de votre\nprogression dans les missions\ndes clichés miraculeux.
+[Name:PokemonName ] voit ses points d'amitié\naugmenter en fonction de votre\nprogression dans les missions\ndes mini clichés miraculeux.
 Nous espérons que\nle prochain évènement\n« Journée de la nouvelle lune »\nvous plaira !
 Réveiller
 Tous les mystères autour de Darkrai\nn'ont pas été révélés...
@@ -10928,6 +11123,7 @@ Encens Pokémon
 Choix d'encens
 Les encens sélectionnés seront utilisés\nlors de votre prochaine session de sommeil,\npuis disparaîtront.
 Vous pouvez utiliser jusqu'à deux\nencens pendant votre sommeil.
+Vous pouvez utiliser jusqu'à [Digit:Digit2 ]\nencens pendant votre sommeil.
 Vous allez utiliser [Digit:Digit2 ] encens.\nContinuer ?
 Utiliser un encens
 [Digit:Digit2 ]
@@ -10984,7 +11180,6 @@ Vous avez dormi [Date:Date label="mmmm" ] de plus\nque la dernière fois !
 Détails
 Vos données de sommeil ont été\najustées selon les facteurs suivants :
 - Appareil déplacé
-- Sommeil trop long ou trop profond
 Le sommeil mesuré sur un sol dur ou sur\nun matelas trop mou peut ne pas être\ndétecté correctement.
 Les mouvements corporels peuvent ne pas\nêtre détectés correctement si le sommeil\nest mesuré sur une table de nuit ou autre\nendroit loin de votre matelas.
 Si votre sommeil n'est pas mesuré\ncorrectement, vous pouvez essayer\nde placer l'appareil plus près\nde votre corps.
@@ -11069,7 +11264,7 @@ Session [Digit:Digit4 separator="Default" ]
 [Date:Date label="yyyyyMMMddd_aaa" ] |
 [Date:Dow ]
 [Digit:Digit2 ]
- 
+
 Comment avez-vous dormi ?
 [Date:Date label="hh:mm" ]
 [Digit:Digit2 0fill="1" ]
@@ -11426,7 +11621,7 @@ Vous avez obtenu [Digit:Digit3 ] ingrédient[FR:Qty P="s" ] !\nLes Bonbons [Nam
 Vous avez obtenu [Digit:Digit3 ] ingrédient[FR:Qty P="s" ] ! Les Bonbons [Name:PokemonName idx="1" ] excédant la limite maximale n'ont pas été conservés.
 [Name:PokemonNickname ] a récupéré\n[Digit:Digit3 idx="1" ] point[FR:Qty P="s" idx="1" ] d'énergie !\nDe plus, [Name:PokemonNickname idx="2" ] peut\ndésormais utiliser\nsa compétence principale !
 [Name:PokemonNickname ] a récupéré [Digit:Digit3 idx="1" ] point[FR:Qty P="s" idx="1" ] d'énergie et [Name:PokemonNickname idx="2" ] peut désormais utiliser sa compétence principale !
-Vous avez obtenu [Digit:Digit3 ] ingrédient[FR:Qty P="s" ] et les chances que vos préparations culinaires obtiennent la mention « Super bon ! » ont augmenté de [Digit:Digit3 ] % !
+Vous avez obtenu [Digit:Digit3 ] ingrédient[FR:Qty P="s" ] et les chances que vos préparations culinaires obtiennent la mention « Super bon ! » ont augmenté de [Digit:Digit3 idx="1" ] % !
 L'équipe a récupéré [Digit:Digit3 ] point[FR:Qty P="s" ]\nd'énergie !\nVous avez également obtenu ceci :\n[Name:Item type="Coin" idx="2" ] × [Digit:Digit3 idx="3" ]
 L'équipe a récupéré [Digit:Digit3 ] point[FR:Qty P="s" ] d'énergie et vous avez également obtenu ceci : [Name:Item type="Coin" idx="2" ] × [Digit:Digit3 idx="3" ]
 Vous avez également obtenu [Digit:Digit3 idx="1" ] Bonbon[FR:Qty P="s" idx="1" ] [Name:PokemonName ] !
@@ -11435,6 +11630,8 @@ Les Bonbons [Name:PokemonName ] excédant la limite maximale n'ont pas été con
 [Name:PokemonNickname ] a récupéré [Digit:Digit3 idx="1" ] point[FR:Qty P="s" idx="1" ] d'énergie ! Vous avez également obtenu [Digit:Digit3 idx="2" ] fois son soutien ! [Name:PokemonNickname idx="3" ] a récupéré [Digit:Digit3 idx="4" ] point[FR:Qty P="s" idx="4" ] d'énergie ! Vous avez également obtenu [Digit:Digit3 idx="5" ] fois son soutien ! De plus, vous avez obtenu [Digit:Digit3 idx="6" ] fois le soutien de [Name:PokemonNickname ] et de [Name:PokemonNickname idx="3" ] grâce à vos liens profonds.
 [Digit:Digit4 separator="Default" ] Baie[FR:Qty P="s" ] obtenue[FR:Qty P="s" ] ! [Digit:Digit4 idx="1" separator="Default" ] Baie[FR:Qty P="s" idx="1" ] supplémentaire[FR:Qty P="s" idx="1" ] obtenue[FR:Qty P="s" idx="1" ] grâce à vos liens profonds !
 [Digit:Digit5 separator="Default" ] Fragment[FR:Qty P="s" ] de Rêve obtenu[FR:Qty P="s" ] !\nRonflex gagne une puissance\nde [Digit:Digit4 idx="1" separator="Default" ]  !
+Ronflex gagne une puissance de [Digit:Digit5 separator="Default" ] ! De plus, Baies en folie est activé ! La puissance obtenue avec des Baies Mago augmente de [Digit:Digit3 idx="1" ] % !
+Ronflex gagne une puissance de [Digit:Digit5 separator="Default" ] ! Comme les effets de Baies en folie ont atteint leur maximum, Baies en folie ne peut pas être activé.
 ~~~~~~~~~~~~~~~
 Text File : TagSet
 ~~~~~~~~~~~~~~~
@@ -11720,8 +11917,10 @@ Mode expert
 Prenez des clichés miraculeux
 Lors de la première session de recherches\nsur le sommeil de la journée, vous aurez\nl'occasion de prendre des clichés miraculeux :\ndes photos de styles de dodo d'autres\nPokémon sur lesquelles [Name:PokemonName ]\napparaît également.
 Prenez des photos de styles de dodo\noù [Name:PokemonName ] est visible pour\nremplir [System:Color r="255" g="107" b="55" a="255" ]les missions des clichés miraculeux[System:Color a="255" ].
+Prenez des photos de styles de dodo où\n[Name:PokemonName ] est visible pour remplir\n[System:Color r="255" g="107" b="55" a="255" ]les missions des mini clichés miraculeux[System:Color a="255" ].
 [System:Color r="255" g="107" b="55" a="255" ]Plus le style de dodo est rare[System:Color a="255" ],\nplus [Name:PokemonName ] a de chances\nd'être présent sur la photo.\nCes clichés vous permettent d'obtenir\nquelques récompenses telles que\ndes Bonbons Pokémon.
 Missions des clichés miraculeux
+Missions des mini clichés miraculeux
 Ajouter Latias et Latios à votre équipe
 [System:Color r="255" g="107" b="55" a="255" ]Vous ne pouvez avoir qu'un seul [System:Color a="255" ]Latias et\n[System:Color r="255" g="107" b="55" a="255" ]qu'un seul[System:Color a="255" ] Latios [System:Color r="255" g="107" b="55" a="255" ]dans votre équipe[System:Color a="255" ].
 [System:Color r="255" g="107" b="55" a="255" ]En ayant[System:Color a="255" ] Latias et Latios [System:Color r="255" g="107" b="55" a="255" ]dans la même\néquipe, l'effet additionnel de leurs\ncompétences principales sera activé[System:Color a="255" ].
@@ -11742,6 +11941,11 @@ Au cours de l'évènement, votre [System:Color r="255" g="107" b="55" a="255" ]d
 Au cours de l'évènement, votre [System:Color r="255" g="107" b="55" a="255" ]dodoforce[System:Color a="255" ]\nsera [System:Color r="255" g="107" b="55" a="255" ]multipliée par 1,3[System:Color a="255" ] si [System:Color r="255" g="107" b="55" a="255" ]Latias et Latios\nfont tous les deux partie de votre équipe[System:Color a="255" ].
 Remarque : vous pouvez avoir Latias\net Latios dans la même équipe.
 Accumulez de la dodoforce avec Latias et\nLatios pour restaurer l'éclat de la Rosée Âme.
+Ajouter Mew ou Mewtwo à votre équipe
+Au cours de l'évènement, votre [System:Color r="255" g="107" b="55" a="255" ]dodoforce[System:Color a="255" ]\nsera [System:Color r="255" g="107" b="55" a="255" ]multipliée par 1,1[System:Color a="255" ] si [System:Color r="255" g="107" b="55" a="255" ]Mew ou Mewtwo\nfont partie de votre équipe[System:Color a="255" ].
+Pendant la deuxième semaine de l'évènement,\nvotre [System:Color r="255" g="107" b="55" a="255" ]dodoforce [System:Color a="255" ]sera [System:Color r="255" g="107" b="55" a="255" ]multipliée par 1,3[System:Color a="255" ] si\n[System:Color r="255" g="107" b="55" a="255" ]Mewtwo fait partie de votre équipe[System:Color a="255" ].
+S'il y a plus d'un bonus de dodoforce\ndisponible en même temps, seul le bonus\nle plus élevé sera appliqué.
+Accumulez de la dodoforce et faites\nprogresser l'enquête en terres inconnues !
 Médailles Amitié
 Obtenir des Médailles Amitié
 Si vous atteignez un certain niveau d'amitié\navec un Pokémon, vous obtiendrez\nune [System:Color r="255" g="107" b="55" a="255" ]Médaille Amitié[System:Color a="255" ].
@@ -11836,4 +12040,4 @@ Résultats du renforcement de Ronflex
 Résumé hebdo.
 [Digit:Digit4 separator="Default" ]
 Semaine
-第
+

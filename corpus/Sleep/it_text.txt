@@ -488,6 +488,7 @@ Ricompense
 Ricompense ricevute
 Pokémon interessati
 Lista di Pokémon interessati
+Informazioni
 La quantità massima che puoi\navere per questo strumento è [Digit:Digit1 ].\nNon puoi eseguire lo scambio\nperché supereresti questo limite.\n\nRiprova a eseguire lo scambio dopo\naver usato gli strumenti che hai già.
 La quantità massima che puoi\navere per questo strumento è [Digit:Digit1 ].\nNon puoi ottenerlo perché\nsupereresti questo limite.\n\nRiprova dopo aver usato\ngli strumenti che hai già.
 Dall'ultima volta che hai giocato\nè stata rilevata una modifica\ndell'ora del tuo dispositivo.\nFai attenzione, perché se le\nimpostazioni dell'ora vengono\ncambiate troppo spesso l'esperienza\ndi gioco potrebbe peggiorare.
@@ -689,6 +690,7 @@ Text File : EventBonusList
 Puoi usare la funzione [System:Color r="255" g="107" b="55" a="255" ]Caramelle ↑ mini[System:Color a="255" ] per far salire di livello i Pokémon aiutanti.
 È possibile usare la funzione [System:Color r="255" g="107" b="55" a="255" ]CramoBot caramelle[System:Color a="255" ].
 Puoi coltivare Fiori celebrativi.
+In aggiunta alle solite attività, di tanto in tanto i tuoi Pokémon aiutanti potrebbero raccogliere delle [System:Color r="255" g="107" b="55" a="255" ]Baccamango XL[System:Color a="255" ].
 La [System:Color r="255" g="107" b="55" a="255" ]probabilità di attivazione dell'abilità principale[System:Color a="255" ] dei Pokémon aiutanti [System:Color r="255" g="107" b="55" a="255" ]sarà moltiplicata per [Digit:Digit3 ][System:Color a="255" ].
 La [System:Color r="255" g="107" b="55" a="255" ]probabilità di attivazione dell'abilità principale[System:Color a="255" ] dei Pokémon aiutanti con la specialità "Abilità" [System:Color r="255" g="107" b="55" a="255" ]è moltiplicata per [Digit:Digit3 ][System:Color a="255" ].
 [System:Color r="255" g="107" b="55" a="255" ]Quando l'abilità principale[System:Color a="255" ] dei Pokémon aiutanti [System:Color r="255" g="107" b="55" a="255" ]si attiva[System:Color a="255" ], [System:Color r="255" g="107" b="55" a="255" ]il suo livello viene aumentato di [Digit:Digit3 ][System:Color a="255" ].
@@ -713,6 +715,7 @@ Il [System:Color r="255" g="107" b="55" a="255" ]numero massimo di bacche e ingr
 Il [System:Color r="255" g="107" b="55" a="255" ]numero massimo di bacche e ingredienti[System:Color a="255" ] che i Pokémon aiutanti con la specialità "Abilità" possono avere sarà [System:Color r="255" g="107" b="55" a="255" ]aumentato di [Digit:Digit3 ][System:Color a="255" ].
 Se quando vai a dormire hai un [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName ][System:Color a="255" ] o un [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName idx="1" ][System:Color a="255" ] in squadra, il potere sonno sarà moltiplicato per [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 idx="2" ][System:Color a="255" ].
 Se quando vai a dormire hai un [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName ][System:Color a="255" ] e un [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName idx="1" ][System:Color a="255" ] in squadra, il potere sonno sarà moltiplicato per [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 idx="2" ][System:Color a="255" ].
+Il [System:Color r="255" g="107" b="55" a="255" ]massimo trasportabile[System:Color a="255" ] dei Pokémon aiutanti sarà [System:Color r="255" g="107" b="55" a="255" ]aumentato di[System:Color a="255" ] [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 ][System:Color a="255" ].
 [System:Color r="255" g="107" b="55" a="255" ]Quando l'abilità principale[System:Color a="255" ] dei Pokémon aiutanti di tipo [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ] si attiva[System:Color a="255" ], [System:Color r="255" g="107" b="55" a="255" ]il suo livello viene aumentato di [Digit:Digit3 idx="1" ][System:Color a="255" ].
 [System:Color r="255" g="107" b="55" a="255" ]Quando l'abilità principale[System:Color a="255" ] dei Pokémon aiutanti di tipo [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ][System:Color a="255" ] e [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType idx="1" ] si attiva[System:Color a="255" ], [System:Color r="255" g="107" b="55" a="255" ]il suo livello viene aumentato di [Digit:Digit3 idx="2" ][System:Color a="255" ].
 [System:Color r="255" g="107" b="55" a="255" ]Quando l'abilità principale[System:Color a="255" ] dei Pokémon aiutanti di tipo [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ][System:Color a="255" ], [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType idx="1" ][System:Color a="255" ] e [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType idx="2" ] si attiva[System:Color a="255" ], [System:Color r="255" g="107" b="55" a="255" ]il suo livello viene aumentato di [Digit:Digit3 idx="3" ][System:Color a="255" ].
@@ -729,6 +732,8 @@ Avrai una probabilità un po' più alta di incontrare [System:Color r="255" g="1
 [System:Color r="255" g="107" b="55" a="255" ]Appariranno dei Pokémon con vari tipi di sonno[System:Color a="255" ] indipendentemente dal proprio tipo di sonno.
 Durante lo spuntino, un Pokémon [System:Color r="255" g="107" b="55" a="255" ]avrà sicuramente fame[System:Color a="255" ] (una volta al giorno).
 I Pokémon [System:Color r="255" g="107" b="55" a="255" ]non si sazieranno facilmente[System:Color a="255" ]\ndurante il primo spuntino della giornata.
+Determinate specie di Pokémon [System:Color r="255" g="107" b="55" a="255" ]non si sazieranno facilmente [System:Color a="255" ]durante il primo spuntino della giornata.
+Pokémon che [System:Color r="255" g="107" b="55" a="255" ]non si sazieranno facilmente [System:Color a="255" ]durante il primo spuntino della giornata:
 Piatti richiesti durante l'evento: [System:Color r="255" g="107" b="55" a="255" ][Name:CookingGenreName ][System:Color a="255" ].
 La [System:Color r="255" g="107" b="55" a="255" ]potenza[System:Color a="255" ] ottenuta dai piatti sarà [System:Color r="255" g="107" b="55" a="255" ]moltiplicata per [Digit:Digit4 separator="Default" ][System:Color a="255" ].
 I Pokémon recuperano [System:Color r="255" g="107" b="55" a="255" ]energia aggiuntiva[System:Color a="255" ] mangiando ([System:Color r="255" g="107" b="55" a="255" ]+[Digit:Digit3 ][System:Color a="255" ]).
@@ -783,6 +788,7 @@ Lista aree
 Aree in cui si può effettuare la ricerca
 Modalità pro
 Man mano che studierai gli stili di sonno\ne che raggiungerai determinati obiettivi\ndel Sonnodex, si sbloccheranno [System:Color r="255" g="107" b="55" a="255" ]nuove aree[System:Color a="255" ].
+In ciascun punto, le [System:Color r="255" g="107" b="55" a="255" ]Bacche preferite[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]di Snorlax[System:Color a="255" ] saranno diverse. Prova a far\ncrescere Pokémon di tanti tipi diversi\ne a scoprire tantissimi stili di sonno!
 In ciascun punto, le [System:Color r="255" g="107" b="55" a="255" ]Bacche preferite[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]di Snorlax[System:Color a="255" ] saranno diverse. Prova a far\ncrescere Pokémon di tanti tipi diversi\ne a scoprire tantissimi stili di sonno!
 Informazioni sulle aree
 La modalità pro si sbloccherà\nalla seguente data/ora:\n[Date:Date label="yyyyyMMMddd_hh:mm" ]
@@ -1653,18 +1659,15 @@ Impostazioni lingua
 Novità
 Elimina il mio account
 [System:Color r="134" g="134" b="134" a="255" ]Questa opzione eliminerà tutti i dati associati[System:Color a="255" ]\n[System:Color r="134" g="134" b="134" a="255" ]a questo account. Non può essere annullata![System:Color a="255" ]
-Barra bonus PE sonno
 Barra bonus PE
 Bonus grado ricerca massimo
 Aumento rango di Snorlax
 Conferma uso Biglietto pro
 Visualizzazione messaggi pop-up
-Messaggio relativo alla barra bonus\nche appare quando un Pokémon\naiutante che ha raggiunto il livello\nmassimo ottiene dei PE sonno.
 Messaggio relativo alla barra bonus\nche appare quando un Pokémon\naiutante che ha raggiunto il livello\nmassimo ottiene dei PE.
 Messaggio visualizzato quando\ni PE ricerca vengono convertiti\nautomaticamente in frammenti\ndi sogno perché è stato raggiunto\nil grado ricerca massimo.
 Questa è la finestra che appare\nquando Snorlax sale di rango.\nSe disabilitata, non apparirà per\ni ranghi raggiunti in precedenza.
 Questa finestra appare prima\ndi usare un Biglietto pro.
-Barra bonus PE sonno
 Barra bonus PE
 Bonus grado ricerca massimo
 Aumento rango di Snorlax
@@ -1936,7 +1939,6 @@ Vuoi davvero piantare\nun Seme giallo?
 Vuoi davvero piantare\nun Seme viola?
 Vuoi davvero piantare\nun Seme bianco?
 Quando sbocciano i fiori, otterrai\ngli effetti indicati:
-Quando sbocciano i fiori, otterrai una [Name:Item idx="1" ].
 Quando sbocciano i Fiori celebrativi, otterrai una [System:Color r="255" g="107" b="55" a="255" ][Name:Item idx="1" ][System:Color a="255" ].
 Conferma
 Informazioni
@@ -1962,6 +1964,7 @@ Scatti ottenuti:
 Fai la ricerca sul sonno e colleziona Scatti\nfortunati che includono [Name:PokemonName ].
 Missioni completate!
 Missioni Scatto fortunato
+Missioni Scatto fortunato mini
 Pianta un seme
 Fiori celebrativi
 Isola Pisola
@@ -1976,6 +1979,10 @@ L'Isola Pisola di Munchlax
 è stata sbloccata!
 Puoi andarci utilizzando il cartello nell'angolo\nin basso a destra del punto di ricerca.
 Sbloccata
+Effetti zona attivi
+Potenza Baccamango: [System:Color r="255" g="107" b="55" a="255" ]+[Digit:Digit4 separator="Default" ]%[System:Color a="255" ]
+Nota: cambiare punto azzera\ngli effetti.
+Effetti zona
 Abbiamo dei [System:Color r="254" g="101" b="119" a="255" ]regali speciali[System:Color a="255" ] per i ricercatori\nche ritornano sul gioco, con la possibilità\ndi [System:Color r="254" g="101" b="119" a="255" ]avere degli extra[System:Color a="255" ] durante la ricerca sul sonno.\nSperiamo che ti aiutino a fare progressi rapidi!
 ● Contenuto del regalo
 • [Name:Item idx="1" ] [System:Color r="254" g="101" b="119" a="255" ]×[Digit:Digit5 idx="2" separator="Default" ][System:Color a="255" ]
@@ -2013,6 +2020,7 @@ Il periodo dell'evento è terminato.
 Al prossimo grado:
 Alla prossima ricompensa:
 Collabora con ricercatori di tutto il mondo\ne accumula potere sonno per ripristinare\nil luccichio della Cuorugiada!
+Collabora con ricercatori di tutto il mondo\ne accumula potere sonno per trovare\nla parte più remota delle terre inesplorate!
 Il grado evento [Digit:Digit2 ] e quelli successivi\nsi sbloccheranno a partire dal giorno\n[Date:Date label="yyyyyMMMddd_aaa" idx="1" ] alle ore\n[Date:Date label="h:mm" idx="2" ].
 Bloccato
 Pentola
@@ -2243,11 +2251,9 @@ Probabilità di incontro un po' più alta:\nEntei, Charmander, Charmeleon, Chari
 Per altre informazioni sull'evento, controlla\nla sezione "Novità" del gioco.
 Ricerca su Entei
 [System:Color r="255" g="107" b="55" a="255" ]Probabilità di attivazione delle abilità[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]principali[System:Color a="255" ] di tutti i Pokémon aiutanti [System:Color r="255" g="107" b="55" a="255" ]×[Digit:Digit2 ]![System:Color a="255" ]
-[System:Color r="255" g="107" b="55" a="255" ]Probabilità di attivazione delle abilità[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]principali[System:Color a="255" ] di tutti i Pokémon aiutanti [System:Color r="255" g="107" b="55" a="255" ]×[Digit:Digit3 ]![System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ]Frammenti di sogno[System:Color a="255" ] ottenuti con l'abilità\nprincipale Calamita per sogni [System:Color r="255" g="107" b="55" a="255" ]x[Digit:Digit2 ][System:Color a="255" ]!
 [System:Color r="255" g="107" b="55" a="255" ]Frammenti di sogno[System:Color a="255" ] ottenuti con l'abilità\nprincipale Calamita per sogni S [System:Color r="255" g="107" b="55" a="255" ]x[Digit:Digit3 ][System:Color a="255" ]!
 Puoi usare la funzione [System:Color r="255" g="107" b="55" a="255" ]Caramelle ↑[System:Color a="255" ] per far \nsalire di livello i Pokémon aiutanti.
-Puoi usare la funzione [System:Color r="255" g="107" b="55" a="255" ]Caramelle ↑ mini[System:Color a="255" ]\nper far salire di livello i Pokémon aiutanti.
 Una volta al giorno, puoi ottenere\ndegli strumenti con il [System:Color r="255" g="107" b="55" a="255" ]Regalo onirico[System:Color a="255" ]\nche si trova accanto a Snorlax.
 È possibile usare lo [System:Color r="255" g="107" b="55" a="255" ]scambio evento[System:Color a="255" ].
 È possibile usare la funzione\n[System:Color r="255" g="107" b="55" a="255" ]CramoBot caramelle[System:Color a="255" ].
@@ -2355,6 +2361,7 @@ Non è possibile attivare l'abilità\nprincipale [Name:MainSkillExtension main="
 Fai spazio nella Borsa per permettere\nal Pokémon di raccogliere\ningredienti con la sua abilità.
 Fai spazio nella Borsa per permettere\nal Pokémon di usare la sua abilità.
 Tasca ingredienti piena
+%
 [Name:MainSkill ] (L. [Digit:Digit3 idx="1" ])
 Spostati
 Tieni presente quanto segue\nprima di cambiare punto.\nVuoi spostarti comunque?
@@ -2455,21 +2462,14 @@ Probabilità di incontro più alta:\nBulbasaur, Jigglypuff, Slowpoke, Pinsir,\nC
 Per altre informazioni sull'evento, controlla\nla sezione "Novità" del gioco.
 Festa degli innamorati
 Durante la settimana di questo evento avrai la speciale possibilità di incontrare più <strong>Pokémon di tipo Acqua</strong>!\n\nIn previsione dell'evento "Ricerca su Suicune", consigliamo di fare amicizia con tanti <b>Pokémon di tipo Acqua</b>!\n\nInoltre, durante la settimana Acqua potrai usare la funzione a tempo limitato <b>Caramelle ↑ mini</b>. Un'ottima occasione per far crescere i tuoi Pokémon di tipo Acqua!\n\nE ci saranno vari altri bonus!\nBuon divertimento!\n\nPeriodo dell'evento:\n• 19/08 (lun.) ore 04:00 - 26/08 (lun.) ore 03:59\n\nAree dell'evento:\n• Tutte le aree\n\nPeriodo delle missioni:\n• 19/08 (lun.) ore 04:00 - 26/08 (lun.) ore 03:59\n\nNelle aree in cui si svolge l'evento si attiveranno gli effetti indicati di seguito.\n\n— Tutti i giorni (19/08 - 25/08) —\n• Durante la ricerca sul sonno, <strong>un Pokémon avrà sicuramente fame</strong>.\n• Durante la ricerca sul sonno <strong>appariranno alcuni Pokémon con vari tipi di sonno</strong> indipendentemente dal proprio tipo di sonno di quel giorno.\n• <strong>Alcuni Pokémon avranno più probabilità di apparire</strong> durante la ricerca sul sonno.\n• Sarà disponibile la funzione a tempo limitato <strong>Caramelle ↑ mini</strong>.
-Caramelle ottenute con la\nricerca ×[Digit:Digit2 ] (una volta al giorno)
-Comparsa di Pokémon con vari tipi\ndi sonno, indipendentemente dal\ntuo tipo di sonno
 Potere sonno ×[Digit:Digit2 ]
 Potere sonno ×[Digit:Digit3 ]
 PE ottenuti dormendo ×[Digit:Digit1 ]
-PE ottenuti dormendo ×[Digit:Digit3 ]
 Ottieni [Digit:Digit4 separator="Default" ] punt[IT:Qty S="o" P="i" ] sonno bonus\nper aver misurato il sonno\n(una volta al giorno).
 Prova a usare un\nMasterbiscotto durante\nla ricerca sul sonno.
 Probabilità più alta di incontrare\nPokémon cromatici:
-Frammenti di sogno ottenuti con\nla ricerca sul sonno ×[Digit:Digit2 ]
-Frammenti di sogno ottenuti con\nla ricerca sul sonno ×[Digit:Digit3 ]
 Probabilità più alta di incontrare\nPokémon cromatici
-Durante lo spuntino, un Pokémon\navrà sicuramente fame (una volta\nal giorno).
 Puoi ottenere degli strumenti\nper l'evento con la ricerca\nsul sonno (una volta al giorno).
-I [System:Color r="255" g="107" b="55" a="255" ]PE ricerca[System:Color a="255" ] ottenuti con la ricerca\nsul sonno saranno moltiplicati\nper [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 ][System:Color a="255" ].
 Gli [System:Color r="255" g="107" b="55" a="255" ]stili di sonno dei Pokémon[System:Color a="255" ]\nnon ancora scoperti hanno\n[System:Color r="255" g="107" b="55" a="255" ]più probabilità di apparire[System:Color a="255" ].
 Dopo una settimana di ricerca,\nil bonus area aumenterà ([Digit:Digit2 ]%).
 Una volta al giorno, con la ricerca\nsul sonno puoi ottenere:\n[System:Color r="255" g="107" b="55" a="255" ][Name:Item idx="1" ][System:Color a="255" ]
@@ -3897,6 +3897,28 @@ Nell'area in cui si svolge l'evento si attiveranno gli effetti indicati di segui
 • Potere sonno <strong>×[News:Num_Count ]</strong>
 • PE sonno Pokémon aiutanti <strong>×[News:Num_Count ]</strong>
 • Punti sonno bonus <strong>+[News:Num_Count ]</strong>
+Un incontro fatidico in una splendida notte di luna piena...?
+È giunta notizia che una volta all'anno, all'arrivo dell'autunno (la notte di luna piena, il giorno precedente e quello successivo), non solo il potere sonno si intensifica, ma è anche più probabile trovare <strong>[News:PokemonNamesList Type="And" ]</strong> cromatici.
+Chissà se riuscirete a incontrarli anche voi!
+L'evento prevede anche punti sonno bonus e PE sonno extra per i Pokémon.
+Approfittatene per dormire molto e scoprire tanti stili di sonno dei Pokémon!
+Periodo dell'evento:
+• [News:Date_mdahm ] - [News:Date_mdahm idx="1" ]
+Notte di luna piena: <strong>[News:Date_mda ]</strong>.
+Aree dell'evento:
+• Tutte le aree
+Nell'area in cui si svolge l'evento si attiveranno gli effetti indicati di seguito.
+— Tutti i giorni —
+• <strong>Gli stili di sonno dei Pokémon non ancora scoperti hanno più probabilità di apparire</strong> durante la ricerca sul sonno.
+• Potresti incontrare alcuni Pokémon cromatici!
+— Secondo giorno (luna piena) —
+• Potere sonno <strong>×[News:Num_Count ]</strong>
+• PE sonno Pokémon aiutanti <strong>×[News:Num_Count ]</strong>
+• Punti sonno bonus <strong>+[News:Num_Count ]</strong>
+— Primo e terzo giorno —
+• Potere sonno <strong>×[News:Num_Count ]</strong>
+• PE sonno Pokémon aiutanti <strong>×[News:Num_Count ]</strong>
+• Punti sonno bonus <strong>+[News:Num_Count ]</strong>
 Dolcetto o scherzetto?
 Durante la settimana di questo evento ci saranno più probabilità che appaiano <strong>Pokémon di tipo Spettro</strong>!
 Durante l'evento potresti perfino incontrare i nuovi arrivati, <strong>[News:PokemonName idx="1" ] e [News:PokemonName idx="2" ], e un [News:PokemonName idx="3" ] con un cappello di Halloween</strong>.
@@ -4069,6 +4091,49 @@ Nell'area in cui si svolge l'evento si attiveranno gli effetti indicati di segui
 — Ultimo giorno dell'evento ([News:Date_md ]) —
 • Potere sonno <strong>×[News:Num_Count ]</strong>
 Nota: se sono disponibili più bonus sul potere sonno, si attiverà solo il maggiore.
+Le due settimane di questo evento sono un'occasione speciale per <strong>condurre una spedizione nelle terre inesplorate dell'Isola Erbaverde e studiare i rari stili di sonno di [News:PokemonName ]</strong>!
+Durante l'evento, il potere sonno medio dei ricercatori di tutto il mondo sarà combinato col tuo per accumulare <strong>potere sonno evento</strong>.
+Sembra che il potere sonno evento si accumulerà man mano che farai ricerche nelle terre inesplorate, permettendoti di addentrartici.
+Ti invitiamo a collaborare con i ricercatori di tutto il mondo per portare avanti le indagini!
+Inoltre, durante l'evento, il Pokémon leggendario <strong>[News:PokemonName ]</strong> avrà più probabilità di apparire, e sarà applicato un <b>bonus</b> al <b>potere sonno</b> se avrai [News:PokemonNamesList idx="1" Type="Or" ] in squadra mentre dormi.
+In più, potrai ottenere <strong>DNA di [News:PokemonName ]</strong> facendo la ricerca sul sonno solo mentre l'evento è in corso.
+Potrai scambiare questi campioni di DNA di [News:PokemonName ] allo scambio evento e ottenere nuovi strumenti come l'Aroma [News:PokemonName idx="1" ] e i Biscotti [News:PokemonName idx="2" ] per poter vedere più facilmente gli stili di sonno di [News:PokemonName idx="3" ]!
+In aggiunta, le <strong>Baccamango XL</strong>, che sono più grandi delle solite Baccamango e forniscono molta potenza, sono state scoperte nelle terre inesplorate. Sembra anche che [News:PokemonName ], [News:PokemonName idx="1" ] e i Pokémon di tipo Psico possano raccogliere più bacche!
+Buon divertimento!
+Periodo dell'evento:
+• Prima settimana: [News:Date_mdahm ] - [News:Date_mdahm idx="1" ]
+• Seconda settimana: [News:Date_mdahm ] - [News:Date_mdahm idx="1" ]
+Aree dell'evento:
+[News:FieldNamesList ]
+<strong>Nota: durante l'evento, potrai selezionare solo una tra le aree indicate sopra</strong>.
+Nota: durante l'evento, il punto di ricerca della modalità pro avrà lo stesso aspetto, esclusivo per l'evento, della modalità normale.
+Periodo delle missioni:
+• Prima settimana: [News:Date_mdahm ] - [News:Date_mdahm idx="1" ]
+• Seconda settimana: [News:Date_mdahm ] - [News:Date_mdahm idx="1" ]
+Periodo dello scambio evento:
+• [News:Date_mdahm ] - [News:Date_mdahm idx="1" ]
+Nota: lo scambio può essere utilizzato in tutte le aree.
+Nell'area in cui si svolge l'evento si attiveranno gli effetti indicati di seguito.
+— Tutti i giorni —
+• Se hai un [News:PokemonName ] o un [News:PokemonName idx="1" ] in squadra quando vai a dormire, il potere sonno sarà <strong>moltiplicato per [News:Num_Count idx="2" ]</strong>.
+• Ogni volta che un Pokémon aiutante raccoglie delle bacche, potrebbe raccogliere anche delle <strong>Baccamango XL</strong>.
+• Ogni volta che un Pokémon aiutante di tipo Psico raccoglie degli ingredienti, ne avrà <strong>[News:Num_Count ] in più</strong>.
+• La <strong>probabilità di attivazione dell'abilità principale</strong> dei Pokémon aiutanti di tipo Psico sarà <strong>moltiplicata per [News:Num_Count ]</strong>.
+• Lo Snorlax nelle aree dell'evento avrà le <strong>Baccamango</strong> (tipo Psico) tra le bacche preferite. Le altre due bacche saranno selezionate a caso.
+• <strong>Alcuni Pokémon avranno più probabilità di apparire</strong> durante la ricerca sul sonno.
+• Sarà <strong>più difficile che [News:PokemonName ] si senta sazio</strong> durante il <strong>primo spuntino del giorno</strong>.
+• Sarà disponibile uno <strong>scambio evento</strong> a tempo limitato.
+• Durante la prima ricerca sul sonno del giorno, potrai ottenere strumenti per l'evento.
+• Durante la ricerca sul sonno <strong>appariranno alcuni Pokémon con vari tipi di sonno</strong> indipendentemente dal proprio tipo di sonno di quel giorno.
+— Prima settimana ([News:Date_md ] - [News:Date_md idx="1" ]) —
+• <strong>Il massimo trasportabile</strong> di tutti i Pokémon aiutanti aumenterà di <strong>[News:Num_Count ]</strong>.
+• Il <strong>livello dell'abilità principale</strong> dei Pokémon aiutanti di tipo Psico <strong>aumenterà temporaneamente di [News:Num_Count ]</strong> quando si attiva.
+— Seconda settimana ([News:Date_md ] - [News:Date_md idx="1" ]) —
+• Se hai un [News:PokemonName ] in squadra quando vai a dormire, il potere sonno sarà <strong>moltiplicato per [News:Num_Count idx="1" ]</strong>.
+• <strong>Il massimo trasportabile</strong> di tutti i Pokémon aiutanti aumenterà di <strong>[News:Num_Count ]</strong>.
+• Il <strong>livello dell'abilità principale</strong> dei Pokémon aiutanti di tipo Psico <strong>aumenterà temporaneamente di [News:Num_Count ]</strong> quando si attiva.
+• Apparirà uno Snorlax grande che <strong>si potrà far crescere a partire da una certa potenza</strong>.
+Nota: se sono disponibili più bonus sul potere sonno, si attiverà solo il maggiore.
 Durante il mese di questo evento avrai la speciale possibilità di completare le <strong>missioni Scatto fortunato</strong> di [News:PokemonName ].
 Durante l'evento, <strong>[News:PokemonName ] spunterà fuori nelle foto</strong> scattate durante la ricerca sugli stili di sonno dei Pokémon. Puoi avanzare nelle missioni Scatto fortunato a seconda del numero di foto scattate in cui appare anche [News:PokemonName ].
 Inoltre, ci saranno vari altri bonus quando riuscirai a ottenere uno Scatto fortunato.
@@ -4086,6 +4151,27 @@ Nelle aree in cui si svolge l'evento si attiveranno gli effetti indicati di segu
 • <strong>I PE ricerca ottenuti</strong> con uno Scatto fortunato saranno <strong>[News:Num_Count ] volte la quantità normale</strong>.
 • <strong>I frammenti di sogno ottenuti</strong> con uno Scatto fortunato saranno <strong>[News:Num_Count ] in più della quantità normale.</strong>
 Nota: i bonus indicati sopra si applicheranno solo alle foto degli stili di sonno in cui appare Mew.
+Durante la settimana di questo evento avrai la speciale opportunità di <b>collezionare di nuovo Scatti fortunati</b> di [News:PokemonName ]!
+Durante l'evento, <strong>[News:PokemonName ] spunterà fuori nelle foto</strong> scattate durante la ricerca sugli stili di sonno dei Pokémon. Puoi avanzare nelle missioni Scatto fortunato mini a seconda del numero di foto scattate in cui appare anche [News:PokemonName ].
+Inoltre, ci saranno vari altri bonus quando riuscirai a ottenere uno Scatto fortunato.
+In più, completando le <strong>missioni Scatto fortunato mini</strong> puoi ottenere delle ricompense.
+Questa è un'opportunità, per i ricercatori che non sono ancora riusciti, di fare amicizia con [News:PokemonName ]. I ricercatori che hanno già fatto amicizia con [News:PokemonName idx="2" ] possono ottenere un Seme eureka ([News:PokemonName idx="3" ])!
+Periodo dell'evento:
+• [News:Date_mdahm ] - [News:Date_mdahm idx="1" ]
+Aree dell'evento:
+• Tutte le aree
+Periodo delle missioni:
+• [News:Date_mdahm ] - [News:Date_mdahm idx="1" ]
+Nell'area in cui si svolge l'evento si attiveranno gli effetti indicati di seguito.
+— Tutti i giorni —
+• Potrai fare Scatti fortunati solo durante la prima ricerca sul sonno del giorno.
+• Il <strong>numero di caramelle ottenute</strong> con uno Scatto fortunato sarà <strong>[News:Num_Count ] volte la quantità normale</strong>.
+• <strong>I PE ricerca ottenuti</strong> con uno Scatto fortunato saranno <strong>[News:Num_Count ] volte la quantità normale</strong>.
+• <strong>I frammenti di sogno ottenuti</strong> con uno Scatto fortunato saranno <strong>[News:Num_Count ] in più della quantità normale.</strong>
+• Durante la prima ricerca sul sonno del giorno, <strong>un Pokémon avrà sicuramente fame</strong>.
+• <strong>Alcuni Pokémon avranno più probabilità di apparire</strong> durante la ricerca sul sonno.
+• Sarà disponibile la funzione a tempo limitato <strong>Caramelle&nbsp;↑&nbsp;mini</strong>.
+• Durante la ricerca sul sonno <strong>appariranno alcuni Pokémon con vari tipi di sonno</strong> indipendentemente dal proprio tipo di sonno di quel giorno.
 Durante la settimana di questo evento avrai più probabilità di incontrare <strong>Pokémon di tipo Elettro, Fuoco e Acqua</strong>!
 In previsione dell'evento "Ricerca su [News:PokemonName idx="1" ], [News:PokemonName idx="2" ] e [News:PokemonName idx="3" ]", sul quale saranno comunicate più informazioni in seguito, consigliamo di fare amicizia con tanti Pokémon!
 Durante l'evento, al primo spuntino del giorno, <strong>un Pokémon avrà sicuramente fame</strong>.
@@ -4220,6 +4306,36 @@ Notte di luna nuova: [News:Date_mda ]
 Aree dell'evento:
 • [News:FieldNamesList Type="And" ]
 <strong>Nota: per via di un evento concomitante, durante l'evento potrai selezionare solo un'area tra quelle indicate sopra.</strong>
+Nell'area in cui si svolge l'evento si attiveranno gli effetti indicati di seguito.
+— Tutti i giorni —
+• <strong>Probabilità di incontro speciale</strong> per i Pokémon misteriosi.
+• Sarà <strong>più difficile che i Pokémon si sentano sazi</strong> durante il <strong>primo spuntino del giorno</strong>.
+• Potresti incontrare alcuni Pokémon cromatici.
+• Ogni volta che incontri un Pokémon con una probabilità di incontro speciale durante la ricerca sul sonno nel giorno del novilunio, i suoi punti amicizia aumenteranno di <strong>[News:Num_Count ]</strong>.
+Incontri speciali nella notte di luna nuova!
+Durante questo evento, che si tiene una volta al mese per tre giorni (la notte di luna nuova, il giorno precedente e quello successivo), ci saranno probabilità di incontro speciali e <strong>sarà più difficile che i Pokémon si sentano sazi</strong>.
+Potresti persino incontrare <strong>Pokémon cromatici</strong>!
+Buon divertimento!
+Periodo dell'evento:
+• [News:Date_mdahm ] - [News:Date_mdahm idx="1" ]
+Notte di luna nuova: [News:Date_mda ]
+Aree dell'evento:
+• Tutte le aree
+Nell'area in cui si svolge l'evento si attiveranno gli effetti indicati di seguito.
+— Tutti i giorni —
+• <strong>Probabilità di incontro speciale</strong> per i Pokémon misteriosi.
+• Sarà <strong>più difficile che i Pokémon si sentano sazi</strong> durante il <strong>primo spuntino del giorno</strong>.
+• Potresti incontrare alcuni Pokémon cromatici.
+• Ogni volta che incontri un Pokémon con una probabilità di incontro speciale durante la ricerca sul sonno nel giorno del novilunio, i suoi punti amicizia aumenteranno di <strong>[News:Num_Count ]</strong>.
+Incontri speciali nella notte di luna nuova!
+Durante questo evento, che si tiene una volta al mese per tre giorni (la notte di luna nuova, il giorno precedente e quello successivo), ci saranno probabilità di incontro speciali e <strong>sarà più difficile che i Pokémon si sentano sazi</strong>.
+Potresti persino incontrare <strong>Pokémon cromatici</strong>!
+Buon divertimento!
+Periodo dell'evento:
+• [News:Date_mdahm ] - [News:Date_mdahm idx="1" ]
+Notte di luna nuova: [News:Date_mda ]
+Aree dell'evento:
+• Tutte le aree
 Nell'area in cui si svolge l'evento si attiveranno gli effetti indicati di seguito.
 — Tutti i giorni —
 • <strong>Probabilità di incontro speciale</strong> per i Pokémon misteriosi.
@@ -4488,11 +4604,11 @@ Nell'area in cui si svolge l'evento si attiveranno gli effetti indicati di segui
 • <strong>Alcuni Pokémon avranno più probabilità di apparire</strong> durante la ricerca sul sonno.
 • Potresti incontrare alcuni Pokémon cromatici!
 • Sarà disponibile la funzione a tempo limitato <strong>CramoBot caramelle</strong>.
-<strong>Saranno aggiunte nuove ricette</strong> alla seguente data/ora: <b>[News:Date_mdahm ]</b>.
-Ingredienti da usare per il primo nuovo piatto di curry/zuppe
-[News:ItemNamesList Type="And" ]
-Ingredienti da usare per il secondo nuovo piatto di curry/zuppe
-[News:ItemNamesList Type="And" ]
+
+
+
+
+
 Con la settimana della scoperta degli stili di sonno puoi registrare più voci nel Sonnodex!
 Durante la settimana di questo evento avrai la speciale possibilità di <strong>vedere più facilmente gli stili di sonno dei Pokémon che non hai ancora registrato nel Sonnodex</strong>.
 Ti invitiamo a fare incetta di stili di sonno non ancora scoperti, rivolgendo lo sguardo verso nuove aree!
@@ -4955,6 +5071,9 @@ Latios e la Cuorugiada
 Evento in vista del 3° anniversario
 Festa 3° anniversario
 Settimana della collaborazione
+Missioni Scatto fortunato mini
+Ricerche in terre inesplorate! Insegui Mewtwo
+Insegui Mewtwo
 Eevee
 Capodanno 1
 Capodanno 2
@@ -5005,6 +5124,9 @@ Latios 2
 Terzo\nanniversario 1
 Terzo\nanniversario 2
 Collaborazione
+Scatto \nfortunato mini
+Mewtwo 1
+Mewtwo 2
 ~~~~~~~~~~~~~~~
 Text File : MD_event_item_packs
 ~~~~~~~~~~~~~~~
@@ -5206,7 +5328,19 @@ Pacchetto festa d'estate 2026 L
 Pacchetto per la collaborazione S
 Pacchetto per la collaborazione M
 Pacchetto per la collaborazione L
+Pacchetto Scatto fortunato mini S
+Pacchetto Scatto fortunato mini M
+Pacchetto Scatto fortunato mini L
 Pacchetto Pokémon ([Name:PokemonName ]) n° [Digit:Digit2 idx="1" ]
+Pacchetto ricerca su Mewtwo n° [Digit:Digit2 ] S
+Pacchetto ricerca su Mewtwo n° [Digit:Digit2 ] M
+Pacchetto ricerca su Mewtwo n° [Digit:Digit2 ] L
+Pacchetto rush finale Mewtwo n° [Digit:Digit2 ] S
+Pacchetto rush finale Mewtwo n° [Digit:Digit2 ] M
+Pacchetto rush finale Mewtwo n° [Digit:Digit2 ] L
+Pacchetto per i 30 anni di Pokémon S
+Pacchetto per i 30 anni di Pokémon M
+Pacchetto per i 30 anni di Pokémon L
 ~~~~~~~~~~~~~~~
 Text File : MD_event_purchase_item_packs
 ~~~~~~~~~~~~~~~
@@ -5322,6 +5456,52 @@ Oh, interessante! Questo Snorlax\nsembra [System:Color r="255" g="107" b="55" a=
 Potrebbe essere che il tentativo\ndi Latias e Latios di ripristinare\nil luccichio della [System:Color r="255" g="107" b="55" a="255" ]Cuorugiada[System:Color a="255" ]...
 ... abbia avuto effetto anche\nsu di lui.
 Con questo Snorlax la tua ricerca\nsul sonno dovrebbe essere più\nefficace fin da subito!
+Ottimo lavoro con la ricerca!\nOggi vorrei chiederti di\ncondurne una un po' speciale!
+Alla fine, ho scoperto dove si è\ndiretto il Pokémon leggendario\n[System:Color r="255" g="107" b="55" a="255" ]Mewtwo[System:Color a="255" ]!
+È nelle [System:Color r="255" g="107" b="55" a="255" ]terre inesplorate[System:Color a="255" ] dell'Isola\nErbaverde, dove non abbiamo\nancora condotto la spedizione.
+Mewtwo è all'erta, ma potremmo\nscoprire i suoi rari stili di sonno\nse lo raggiungessimo.
+E, già che ci siamo, potremmo\nanche esplorare l'area quanto\npiù possibile!
+Ci servirà molto potere sonno\ndi Snorlax per fare progressi\nnella nostra ricerca.
+Non è che potresti collaborare\ncon ricercatori di tutto il mondo\nper accumulare potere sonno?
+Ah, giusto! Pare che da queste\nparti ci siano delle [System:Color r="255" g="107" b="55" a="255" ]Baccamango\nXL[System:Color a="255" ] ricche di potenza.
+Potrebbero rivelarsi utili\nper far crescere Snorlax.
+Comunque, quel curiosone di [System:Color r="255" g="107" b="55" a="255" ]Mew[System:Color a="255" ]\nsembra proprio interessato agli\ngli stili di sonno di Mewtwo, eh?
+Magari potrebbe darti una mano\nnella ricerca sugli stili di sonno\nrari di Mewtwo!
+Bene, diamo il via alla spedizione\nnelle terre inesplorate!
+Grazie alle tue ricerche abbiamo\ntrovato un sentiero che conduce\nalla parte più interna dell'isola!
+Forse riusciremo a fare ricerche\nsui [System:Color r="255" g="107" b="55" a="255" ]rari stili di sonno di Mewtwo\n[System:Color a="255" ]proseguendo con la spedizione!
+Oh, interessante!
+Non avrei mai pensato che\nla curiosità di Mew potesse\nimportunare Mewtwo a tal modo!
+Sbaglio, o Mew sembrava\nmolto contento di vedere\nlo stile di sonno di Mewtwo?
+Buona fortuna con la ricerca\nsul sonno!
+Oh, interessante! Questo Snorlax\nsembra [System:Color r="255" g="107" b="55" a="255" ]più grande[System:Color a="255" ] degli altri.
+Forse è dovuto all'influenza\ndelle Baccamango XL!
+Con questo Snorlax la tua ricerca\nsul sonno dovrebbe essere più\nefficace fin da subito!
+Ottimo lavoro con la ricerca!\nOggi vorrei chiederti di farmi\nun favore speciale.
+A quanto pare, di recente [System:Color r="255" g="107" b="55" a="255" ]Mew[System:Color a="255" ]\nsi diverte a svolazzare attorno\nai Pokémon mentre dormono.
+È possibile che sia incuriosito\nda qualcosa.
+Quindi se fai la ricerca sul sonno\nadesso, [System:Color r="255" g="107" b="55" a="255" ]Mew potrebbe apparire[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]nelle tue foto mentre svolazza[System:Color a="255" ].
+Per scoprire cos'è che\nlo incuriosisce...
+... potresti provare a\n[System:Color r="255" g="107" b="55" a="255" ]fotografarlo [System:Color a="255" ]mentre vola\nin giro?
+Conto su di te! Bene, buona\nfortuna con la ricerca sul sonno!
+Grazie per aver scattato tante\nfoto in cui appare Mew!
+Sarà ancora più interessato\na te, date le tue ricerche sugli\nstili di sonno dei Pokémon rari.
+Sembra che sia davvero molto\nincuriosito dai Pokémon che\ndormono.
+Ti ha regalato un [System:Color r="255" g="107" b="55" a="255" ]Seme eureka[System:Color a="255" ].\nForse per mostrare che la vostra\namicizia è ancora più profonda!
+Sarà interessato anche a te,\ndate le tue ricerche sugli stili\ndi sonno dei Pokémon rari.
+Visto che il vostro legame è\nmigliorato, [System:Color r="255" g="107" b="55" a="255" ]ti farà visita nella\ntua prossima ricerca sul sonno[System:Color a="255" ]!
+Mi sembra che Mew ora si senta\nabbastanza a suo agio da [System:Color r="255" g="107" b="55" a="255" ]venire[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]a farsi un sonnellino[System:Color a="255" ].
+Continua così con la ricerca\nsul sonno.
+Aspetto con trepidazione la tua\nricerca sul sonno di domani!
+Ottimo lavoro con la ricerca!
+Mentre svolgevi le tue ricerche\nsu Mew, ho avvistato\nun'[System:Color r="255" g="107" b="55" a="255" ]ombra misteriosa[System:Color a="255" ].
+Ho subito scattato una foto,\ned esaminando l'ombra mi\nsono reso conto che...
+... potrebbe trattarsi del\nPokémon leggendario [System:Color r="255" g="107" b="55" a="255" ]Mewtwo[System:Color a="255" ].
+Forse Mew ha percepito la sua\npresenza e si è incuriosito sui\nsuoi stili di sonno.
+Tra l'altro, sembra che Mewtwo\nsi sia diretto nel [System:Color r="255" g="107" b="55" a="255" ]fitto dell'Isola\nErbaverde[System:Color a="255" ].
+Potrebbe esserci un'area\ninesplorata dell'Isola Erbaverde\nche ancora non conosciamo.
+Scoprirò dove si è diretto\nMewtwo e inizierò i preparativi\nper dare il via alle indagini.
+Nel frattempo, continueresti\ncon le tue ricerche sul sonno\nquotidiane? Conto su di te!
 Ottimo lavoro con la ricerca!\nOggi vorrei chiederti di farmi\nun favore speciale.
 Mi è giunta voce che il Pokémon\nmisterioso [System:Color r="255" g="107" b="55" a="255" ]Mew[System:Color a="255" ] sia stato\navvistato sull'Isola Erbaverde.
 Spinto dalla curiosità, sembra\nche vaghi qua e là per osservare\ni Pokémon addormentati.
@@ -5472,7 +5652,6 @@ Text File : MD_health_data_sources
 (Fitbit, Google Pixel Watch e altri)
 (Galaxy Watch e altri)
 (Forerunner 265 e altri)
-Fitbit
 Google Health
 Samsung Health
 Misurazione del sonno\npredefinita di Apple Watch
@@ -5484,13 +5663,13 @@ Text File : MD_health_faq
 Apple Watch misura i dati del sonno\nin modo automatico?
 I tuoi dati del sonno sono registrati\nin Apple Salute?
 I tuoi dati del sonno hanno i requisiti\nper essere usati in Pokémon Sleep?
-I tuoi dati del sonno sono registrati\nin Samsung Health, nell'app di Fitbit,\nin Garmin Connect o in altre app?
 I tuoi dati del sonno sono registrati\nin Samsung Health, in Google Health,\nin Garmin Connect o in altre app?
 I tuoi dati del sonno sono registrati\nin Connessione Salute?
 I tuoi dati del sonno hanno i requisiti\nper essere usati in Pokémon Sleep?
 Hai concesso l'accesso per la lettura\ndei dati presenti in Apple Salute?
 Hai concesso l'accesso in lettura\nai dati presenti in Connessione Salute?
 I tuoi dati del sonno sono registrati\nin Garmin Connect?
+I tuoi dati del sonno sono registrati\nin Google Health, in Garmin Connect\no in altre app?
 ~~~~~~~~~~~~~~~
 Text File : MD_item_name_data
 ~~~~~~~~~~~~~~~
@@ -5506,6 +5685,7 @@ Biscotto Cresselia
 Premierbiscotto
 Biscotto Latias
 Biscotto Latias/Latios
+Biscotto Mewtwo
 Raddoppia i PE ricerca ottenuti\ndopo la ricerca sul sonno.\nDura una sola sessione di sonno\ne poi sparisce.
 Raddoppia i frammenti di sogno\nricevuti dopo la ricerca sul sonno.\nDura una sola sessione di sonno\ne poi sparisce.
 Raddoppia i PE ottenuti dagli aiutanti\ndopo la ricerca sul sonno.\nDura una sola sessione di sonno\ne poi sparisce.
@@ -5567,6 +5747,7 @@ Una menta completamente bianca.\nQuando un Pokémon l'annusa,\nrimuove tutti gli
 Biglietto necessario per visitare\nle aree in modalità pro.
 Dolcetto speciale che rende molto\npiù amici alcuni Pokémon.\nAumenta i punti amicizia di 6.
 Al termine del periodo dello\nscambio evento, questo strumento\ndiventerà un Megabiscotto.\nPuoi controllare quando è possibile\nfare lo scambio nelle comunicazioni\nsull'evento.
+Al termine del periodo dello \nscambio evento, questo strumento\ndiventerà un Megabiscotto.\nPuoi controllare quando è possibile\nfare lo scambio e quando avverrà\nla conversione del biscotto nelle\ncomunicazioni sull'evento.
 In questo evento, si può usare solo\nsui Pokémon indicati di seguito.
 Succo ad hoc che fa recuperare\nenergie a un solo Pokémon\naiutante (+20).
 Note: con questo strumento l'energia\ndel Pokémon potrebbe superare 100.
@@ -5643,6 +5824,7 @@ Piume di Cresselia
 Materiale Pokémon
 Piume di Latias
 Piume di Latios
+DNA di Mewtwo
 Concentraroma
 Fortunaroma
 Cresciaroma
@@ -5941,6 +6123,7 @@ Pokémon Fiamma
 Pokémon Drago
 Pokémon Drago
 Pokémon Drago
+Pokémon Genetico
 Pokémon Novaspecie
 Pokémon Foglia
 Pokémon Foglia
@@ -6175,6 +6358,7 @@ Dorme avvolto comodamente nella sua\nmorbida pelliccia, che libera calore nell'a
 È così sfuggente che un tempo era considerato\nuna creatura leggendaria e le sue abitudini\nnotturne erano avvolte nel mistero. Oggi\nmolti esemplari vivono con i loro Allenatori\ne lo si può vedere adottare vari stili di sonno.
 Si dice che Dragonair accumuli energia nelle\nsfere che ha sulla coda e che controlli le\ncondizioni atmosferiche, a volte anche mentre\ndorme. Meglio fare attenzione: vicino a questo\nPokémon il meteo può cambiare all'istante.
 Noto come "Incarnazione del mare", di rado lo\nsi può vedere dormire profondamente con la\npancia in bella mostra, forse quando è stanco\ndopo aver sorvolando le distese marine.
+Un Pokémon che si dice sia stato creato dal DNA\ndi Mew. Si pensa che spesso dorma immobile\nper conservare l'energia che scatena\ndurante la lotta.
 Si dice che Mew possegga il patrimonio genetico di\ntutti i Pokémon, ed è così raro che molti esperti\nsostengono sia un'illusione. È in grado di rendersi\ninvisibile quando vuole, persino mentre dorme,\nquindi pochissimi ricercatori hanno potuto\nosservare i suoi stili di sonno.
 Si dice che usi la foglia che ha sulla testa\nper sondare la temperatura e l'umidità\ncircostanti e cercare il giaciglio più comodo.\nSpesso sembra dormire rilassato, come se\navesse trovato il miglior posto possibile.
 Le foglie intorno al suo collo emanano un\naroma speziato dall'effetto energizzante\nper le persone. Forse stimola anche\ni Pokémon che dormono vicino a lui.
@@ -6412,6 +6596,7 @@ Flareon
 Dratini
 Dragonair
 Dragonite
+Mewtwo
 Mew
 Chikorita
 Bayleef
@@ -6832,6 +7017,7 @@ Inoltre, fa ottenere delle caramelle\ndi un Pokémon della squadra.
 Fa recuperare energie a due Pokémon a\ncaso della squadra (+[Digit:Digit3 ]) e fa completare\nsubito [Digit:Digit2 idx="1" ] intervent[IT:Qty S="o" P="i" idx="1" ] a quei Pokémon.\nL'effetto aumenta a certe condizioni.
 Fa raccogliere le bacche ottenibili dai\nPokémon della squadra (se stesso compreso).\nL'effetto aumenta a certe condizioni.
 Permette di ottenere [Digit:Digit7 separator="Default" ] framment[IT:Qty S="o" P="i" ]\ndi sogno. Inoltre, fa aumentare la potenza\ndi Snorlax di [Digit:Digit4 idx="1" separator="Default" ].
+Fa aumentare la potenza di Snorlax\ndi [Digit:Digit7 separator="Default" ]. Inoltre, crea una Zona bacche\nnel punto di ricerca.
 Carica potenza S
 Carica potenza M
 Calamita per sogni S
@@ -6880,6 +7066,7 @@ Versatile (Bacche a iosa)
 Curapulsar (Tifo energizzante S)
 Dragobolide (Bacche a iosa)
 Sferapulsar (Calamita per sogni S)
+Psicobotta (Zona bacche)
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_main_skills_ShortName
 ~~~~~~~~~~~~~~~
@@ -6905,6 +7092,7 @@ Calamita per ingredienti scelti S
 Più
 Meno
 Aiuto in cucina S
+Zona bacche
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_nature
 ~~~~~~~~~~~~~~~
@@ -7241,6 +7429,11 @@ Stile srotolato
 Stile rannicchiato
 Stile seduto
 Stile pancia in su
+Stile ginocchio alzato
+Stile fluttuante in piedi
+Stile psicobotta
+Stile sonni importunati
+Stile sonni tranquilli
 Stile sospeso
 Stile in libertà
 Stile letto bolla
@@ -8221,7 +8414,6 @@ E ora prepariamo subito tutto\nl'occorrente per il tuo primo\ngiorno di ricerche
 Iniziamo con i dati del sonno\nche hai rilevato.
 Qui puoi vedere [System:Color r="255" g="107" b="55" a="255" ]quanto hai[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]dormito[System:Color a="255" ] e il [System:Color r="255" g="107" b="55" a="255" ]punteggio sonno[System:Color a="255" ]\nche hai ottenuto.
 Questo è il tuo [System:Color r="255" g="107" b="55" a="255" ]punteggio sonno[System:Color a="255" ].\nIndica [System:Color r="255" g="107" b="55" a="255" ]quanto hai dormito[System:Color a="255" ].
-Questo è il tuo [System:Color r="255" g="107" b="55" a="255" ]punteggio sonno[System:Color a="255" ].\nIndica [System:Color r="255" g="107" b="55" a="255" ]quanto hai dormito[System:Color a="255" ].
 Per ottenere un punteggio sonno\ndi 100, un adulto deve dormire\n[System:Color r="255" g="107" b="55" a="255" ]almeno 8 ore e mezza[System:Color a="255" ].
 Un bambino può ottenere\nun punteggio sonno di 100\ndormendo [System:Color r="255" g="107" b="55" a="255" ]almeno 11 ore[System:Color a="255" ].
 [System:Color r="255" g="107" b="55" a="255" ]Riposa il più a lungo possibile[System:Color a="255" ]!\nOtterrai un punteggio di 100\ndormendo almeno [System:Color r="255" g="107" b="55" a="255" ]8 ore e mezza![System:Color a="255" ]
@@ -8302,7 +8494,6 @@ Potrai riempire il tuo Sonnodex\nsvolgendo queste ricerche [System:Color r="255"
 Certo, ci sono anche altre cose\nche puoi fare qui, ma lascio a te\nil piacere di scoprirle!
 A fine settimana, Snorlax se ne\nandrà, ma ne troverai un altro\nad aspettarti nella prossima area.
 Buona fortuna con la ricerca\nsul sonno! E... sogni d'oro!
-Impegnati al massimo per far\ncrescere Snorlax il più possibile!
 Prova a usare questo biglietto!\n[System:Color r="255" g="107" b="55" a="255" ]Velocizzerà sia la crescita di\nSnorlax, che le tue ricerche[System:Color a="255" ].
 Impegnati al massimo per far\ncrescere Snorlax.[System:Color r="255" g="107" b="55" a="255" ] Più crescerà,\npiù tipi di Pokémon incontrerai[System:Color a="255" ]!
 Mi sono dilungato parecchio, ma\nti ho detto tutto! Buona fortuna\ncon la ricerca sul sonno!
@@ -8357,7 +8548,6 @@ Puoi riprenderti questo[System:Color r="255" g="107" b="55" a="255" ] Seme[Syste
 Puoi riprenderti questo [System:Color r="255" g="107" b="55" a="255" ]Seme[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]eureka[System:Color a="255" ]. Più tardi, prova a usarlo\nsu [Name:PokemonName ]!
 Il tuo nuovo amico Darkrai\nti ha fatto un dono misterioso.
 Il tuo nuovo amico [Name:PokemonName ]\nti ha fatto un dono misterioso.
-Hai notato quel vaso, eh?\nVorrei che facessi sbocciare\ndei fiori molto speciali.
 Hai notato quel vaso, eh?\nVorrei che facessi sbocciare\ndei fiori molto speciali.
 I fiori hanno poteri misteriosi...\n[System:Color r="255" g="107" b="55" a="255" ]Se li fai sbocciare, fanno sì che[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]la ricerca sul sonno vada meglio[System:Color a="255" ]!
 Coltivarli è semplice. [System:Color r="255" g="107" b="55" a="255" ]Pianta[System:Color a="255" ]\nogni giorno i [System:Color r="255" g="107" b="55" a="255" ]semi che preferisci[System:Color a="255" ]\nnel vaso.
@@ -8845,7 +9035,6 @@ Potenzia aiutanti ([Name:PokemonType ])
 Si attiva Accumulo o Sfoghenergia.\nQuando si attiva Sfoghenergia, fa\naumentare la potenza di Snorlax in base\nal numero di volte che si è attivato\nAccumulo. Questo numero si azzera\nad ogni attivazione di Sfoghenergia.
 Fa aumentare nel seguente modo la potenza\ndi Snorlax in base al numero di volte che\nsi è attivato Accumulo.
 Nota: il numero di volte che si è attivato\nAccumulo verrà azzerato se si rimuove\nil Pokémon dalla squadra.
-Fa raccogliere [Digit:Digit3 ] bacc[IT:Qty S="a" P="he" ], nonché [Digit:Digit3 idx="1" ]\nciascuna delle bacche ottenibili\ndagli altri Pokémon della squadra.\nRaramente, potrebbe far ottenere\nun ottimo risultato e far raccogliere\nun numero maggiore di bacche.
 Fa raccogliere [Digit:Digit3 ] bacc[IT:Qty S="a" P="he" ], nonché [Digit:Digit3 idx="1" ]\nciascuna delle bacche ottenibili\ndagli altri Pokémon della squadra.\nA volte, potrebbe far ottenere\nun ottimo risultato e far raccogliere\nun numero maggiore di bacche.
 Nota: dopo un ottimo risultato, non ne\notterrai altri fino alla successiva ricerca\nsul sonno o al successivo inserimento\nmanuale di dati del sonno.
 Fa copiare e utilizzare l'abilità principale\ndi un Pokémon a caso tra quelli\ndella squadra.
@@ -8884,6 +9073,11 @@ Se c'è Latios in squadra, fa completare\nsubito [Digit:Digit2 ] intervent[IT:Qt
 Fa raccogliere le bacche ottenibili dai\nPokémon della squadra (se stesso\ncompreso). Più Pokémon di tipo [Name:PokemonType ]\ndi specie diverse ci sono in squadra,\npiù bacche saranno raccolte.
 Fa raccogliere le bacche ottenibili dai\nPokémon della squadra (se stesso\ncompreso). Più Pokémon di tipo [Name:PokemonType ]\ndi specie diverse ci sono in squadra,\npiù bacche saranno raccolte.\nInoltre, se c'è Latias in squadra, fa\nraccogliere al Pokémon [Digit:Digit4 idx="1" separator="Default" ] bacc[IT:Qty S="a" P="he" idx="1" ] in più.
 Se c'è Latias in squadra, fa raccogliere\nal Pokémon [Digit:Digit4 separator="Default" ] bacc[IT:Qty S="a" P="he" ] in più.
+Fa aumentare la potenza di Snorlax di\n[Digit:Digit7 separator="Default" ]. Inoltre, crea una Zona bacche\nnel punto di ricerca che fa aumentare\nla potenza ottenuta dalle Baccamango\n(+[Digit:Digit3 idx="1" ]%).
+Note: una volta creata, la Zona bacche avrà\neffetto finché non si cambia punto.
+Gli effetti della Zona bacche rimarranno attivi\nanche se rimuovi dalla squadra aiutanti\n[Name:PokemonName ].
+L'effetto massimo raggiungibile dalla Zona\nbacche è [Digit:Digit4 separator="Default" ]%. Ogni volta che questa abilità\nprincipale viene attivata, l'effetto della\nZona bacche continua ad accumularsi\nfino a raggiungere il limite.
+Nota: quando questa abilità principale si attiva,\ntutte le bacche raccolte saranno convertite\nin potenza.
 Versatile
 Abilità principali disponibili
 Abilità principali disponibili
@@ -9144,6 +9338,7 @@ Text File : PokemonHeight
 1,8 m
 4,0 m
 2,2 m
+2,0 m
 0,4 m
 0,9 m
 1,2 m
@@ -9425,12 +9620,9 @@ Scegli i Pokémon per le tue squadre di aiutanti e organizza il box.
 Cambia squadra
 Box Pokémon
 Pokémon
-Puoi ottenere degli strumenti\naccumulando i PE sonno in eccesso.
 Puoi ottenere degli strumenti\naccumulando i PE in eccesso.
-Barra bonus PE sonno
 Barra bonus PE
 Info
-Quando un Pokémon aiutante raggiunge\nil livello massimo, i PE sonno extra non\nvanno al Pokémon, ma vengono aggiunti\nalla barra bonus.
 Quando un Pokémon aiutante raggiunge\nil livello massimo, i PE extra non vanno\nal Pokémon, ma vengono aggiunti\nalla barra bonus.
 Ricompensa ogni volta che riempi la barra:\n[Name:Item idx="1" ] ×[Digit:Digit2 idx="2" ]
 Bonus livello massimo Pokémon
@@ -9510,6 +9702,7 @@ Text File : PokemonWeight
 3,3 kg
 16,5 kg
 210,0 kg
+122,0 kg
 4,0 kg
 6,4 kg
 15,8 kg
@@ -9736,6 +9929,7 @@ Menta bularasa\nnon ricevuta
 Strumento non ricevuto
 Bonus ricerca sul sonno\nGarmin
 Regalo per la\ncollaborazione
+Regalo per la crescita\ndi Mew: [Digit:Digit2 ]° giorno
 ~~~~~~~~~~~~~~~
 Text File : PresentBox_SCENE
 ~~~~~~~~~~~~~~~
@@ -10685,14 +10879,9 @@ Spuntino
 Selezionato:
 [Digit:Digit3 ]/[Digit:Digit3 idx="1" ]
 [System:Color r="255" g="107" b="55" a="255" ]Alcuni Pokémon hanno più probabilità[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]di apparire.[System:Color a="255" ]
-[System:Color r="255" g="107" b="55" a="255" ]Appariranno dei Pokémon con vari tipi[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]di sonno[System:Color a="255" ] indipendentemente dal proprio\ntipo di sonno.
-I ricercatori [System:Color r="255" g="107" b="55" a="255" ]otterranno più caramelle[System:Color a="255" ]\nper la prima ricerca sul sonno del giorno.
 [System:Color r="255" g="107" b="55" a="255" ]Potresti incontrare un[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName ] cromatico.[System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ]Potresti incontrare un Pokémon cromatico.[System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ]Potresti incontrare alcuni Pokémon[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]cromatici.[System:Color a="255" ]
-I ricercatori [System:Color r="255" g="107" b="55" a="255" ]otterranno più frammenti[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]di sogno[System:Color a="255" ] con la ricerca sul sonno.
-Durante la prima ricerca sul sonno del\ngiorno, un Pokémon avrà sicuramente fame.
-I [System:Color r="255" g="107" b="55" a="255" ]PE ricerca[System:Color a="255" ] ottenuti con la ricerca\nsul sonno saranno moltiplicati per [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 ][System:Color a="255" ].
 Gli [System:Color r="255" g="107" b="55" a="255" ]stili di sonno dei Pokémon[System:Color a="255" ]\nnon ancora scoperti hanno\n[System:Color r="255" g="107" b="55" a="255" ]più probabilità di apparire[System:Color a="255" ].
 Bonus evento
 Gen.
@@ -10762,16 +10951,22 @@ Si è accumulato potere sonno\nglobale e la tempesta è passata!
 Il potere sonno personale che\nhai accumulato ha fatto passare\nla tempesta!
 Si è accumulato potere sonno\nglobale e il luccichio della\nCuorugiada è stato ripristinato!
 Il potere sonno personale che\nhai accumulato ha ripristinato\nil luccichio della Cuorugiada!
+Si è accumulato potere sonno\nglobale. Hai fatto progressi\ncon la spedizione.
+Hai accumulato potere sonno.\nHai fatto progressi\ncon la spedizione.
+Si è accumulato potere sonno\nglobale. Hai trovato un sentiero\nche porta nel profondo dell'isola.
+Hai accumulato potere sonno.\nHai trovato un sentiero che\nporta nel profondo dell'isola.
 Potere sonno globale accumulato!
 Il tuo potere sonno ha avuto effetto!
 Potere sonno evento
 Sembra che [Name:PokemonName ] e [Name:PokemonName idx="1" ]\nstiano ancora dormendo.
+Sembra che [Name:PokemonName ] stia ancora\ndormendo. [Name:PokemonName idx="1" ] pare felice di\naver visto questo stile di sonno!
 Semi eureka
 Puoi fare amicizia con un solo [Name:PokemonName ].
 Se porti al massimo i suoi punti amicizia,\npuoi ottenere un [System:Color r="255" g="107" b="55" a="255" ]Seme eureka[System:Color a="255" ].
 Punti amicizia di [Name:PokemonName ]
 Senti che [Name:PokemonName ]\nsi fida di te.
 I punti amicizia di [Name:PokemonName ] sono\naumentati in base ai progressi\ndelle missioni Scatto fortunato.
+I punti amicizia di [Name:PokemonName ] sono\naumentati in base ai progressi\ndelle missioni Scatto fortunato mini.
 Speriamo che ti divertirai con\nil prossimo giorno del novilunio!
 Sveglia
 Non tutti i misteri su Darkrai\nsono stati svelati.
@@ -10928,6 +11123,7 @@ Aromi Pokémon
 Seleziona aromi
 L'effetto degli aromi scelti sarà attivo per\ntutta la prossima ricerca e poi svanirà.
 Puoi scegliere fino a due aromi\nda usare mentre dormi.
+Puoi scegliere fino a [Digit:Digit2 ] arom[IT:Qty S="a" P="i" ]\nda usare mentre dormi.
 Vuoi davvero usarne [Digit:Digit2 ]?
 Usa aroma
 [Digit:Digit2 ]
@@ -10984,7 +11180,6 @@ Hai dormito [Date:Date label="mmmm" ]\nin più della volta scorsa.
 Informazioni
 I dati del sonno sono stati corretti\nper rispecchiare i seguenti fattori:
 ・Dispositivo trasportato o mosso
-・Sonno eccezionalmente\nlungo e pesante
 Il sonno misurato su superfici troppo dure\no su materassi troppo morbidi potrebbe\nnon essere rilevato correttamente.
 I movimenti del corpo potrebbero non\nessere rilevati correttamente quando\nla misurazione avviene da un comodino\no un altro posto lontano dal materasso.
 Se il sonno non viene rilevato in modo\ncorretto, posizionare il dispositivo più\nvicino al corpo potrebbe essere d'aiuto.
@@ -11426,7 +11621,7 @@ Ottenut[IT:Qty S="o" P="i" ] [Digit:Digit3 ] ingredient[IT:Qty S="e" P="i" ]!\nN
 Ottenut[IT:Qty S="o" P="i" ] [Digit:Digit3 ] ingredient[IT:Qty S="e" P="i" ]! Non hai ottenuto le Caramelle [Name:PokemonName idx="1" ] che superavano il limite.
 [Name:PokemonNickname ] recupera\nenergie (+[Digit:Digit3 idx="1" ])! In più,\n[Name:PokemonNickname idx="2" ] è pronto a\nutilizzare la sua abilità principale!
 [Name:PokemonNickname ] recupera energie (+[Digit:Digit3 idx="1" ])! In più, [Name:PokemonNickname idx="2" ] è pronto a utilizzare la sua abilità principale!
-Ottenut[IT:Qty S="o" P="i" ] [Digit:Digit3 ] ingredient[IT:Qty S="e" P="i" ]! Vera bontà più probabile! ([Digit:Digit3 ]%)
+Ottenut[IT:Qty S="o" P="i" ] [Digit:Digit3 ] ingredient[IT:Qty S="e" P="i" ]! Vera bontà più probabile! ([Digit:Digit3 idx="1" ]%)
 La squadra recupera energie (+[Digit:Digit3 ])!\nHai ottenuto:\n[Name:Item type="Coin" idx="2" ] ×[Digit:Digit3 idx="3" ]!
 La squadra recupera energie (+[Digit:Digit3 ])! Hai ottenuto: [Name:Item type="Coin" idx="2" ] ×[Digit:Digit3 idx="3" ]!
 Ottenut[IT:Qty S="a" P="e" idx="1" ] [Digit:Digit3 idx="1" ] Caramell[IT:Qty S="a" P="e" idx="1" ] [Name:PokemonName ]!
@@ -11435,6 +11630,8 @@ Non hai ottenuto le Caramelle [Name:PokemonName ] che superavano il limite.
 [Name:PokemonNickname ] recupera energie (+[Digit:Digit3 idx="1" ])! Inoltre, ha completato [Digit:Digit3 idx="2" ] intervent[IT:Qty S="o" P="i" idx="2" ]!\n[Name:PokemonNickname idx="3" ] recupera energie (+[Digit:Digit3 idx="4" ])! Inoltre, ha completato [Digit:Digit3 idx="5" ] intervent[IT:Qty S="o" P="i" idx="5" ]!\nIn più, [Name:PokemonNickname ] e [Name:PokemonNickname idx="3" ] hanno completato [Digit:Digit3 idx="6" ] intervent[IT:Qty S="o" P="i" idx="6" ] grazie al potere dei legami!
 Ottenut[IT:Qty S="a" P="e" ] [Digit:Digit4 separator="Default" ] bacc[IT:Qty S="a" P="he" ]! Inoltre,\nottenut[IT:Qty S="a" P="e" idx="1" ] [Digit:Digit4 idx="1" separator="Default" ] bacc[IT:Qty S="a" P="he" idx="1" ] in più\ngrazie al potere dei legami!
 Ottenut[IT:Qty S="o" P="i" ] [Digit:Digit4 separator="Default" ] framment[IT:Qty S="o" P="i" ] di sogno!\nInoltre, la potenza di Snorlax\naumenta di [Digit:Digit4 idx="1" separator="Default" ]!
+Snorlax ottiene una potenza di\n[Digit:Digit5 separator="Default" ]! Inoltre, è stata creata\nuna Zona bacche! La potenza\nottenuta dalle Baccamango\nè aumentata! ([Digit:Digit3 idx="1" ]%)
+Snorlax ottiene una potenza di\n[Digit:Digit5 separator="Default" ]! Non è stata creata una\nZona bacche, perché gli effetti\ndella Zona bacche avevano\nraggiunto il limite!
 ~~~~~~~~~~~~~~~
 Text File : TagSet
 ~~~~~~~~~~~~~~~
@@ -11720,8 +11917,10 @@ La modalità pro
 Collezionare Scatti fortunati
 Durante la prima ricerca sul sonno del giorno\npotrai fare Scatti fortunati in cui appare\n[Name:PokemonName ] nelle foto degli stili di sonno\ndei Pokémon.
 Colleziona foto di stili di sonno dei Pokémon\ncon [Name:PokemonName ] per completare [System:Color r="255" g="107" b="55" a="255" ]le missioni[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]Scatto fortunato[System:Color a="255" ].
+Colleziona foto di stili di sonno dei Pokémon\ncon [Name:PokemonName ] per completare\n[System:Color r="255" g="107" b="55" a="255" ]le missioni Scatto fortunato mini[System:Color a="255" ].
 [System:Color r="255" g="107" b="55" a="255" ]Più raro è uno stile di sonno[System:Color a="255" ], più è probabile\nche [Name:PokemonName ] appaia nella foto.\nInoltre, puoi ottenere delle ricompense per\nqueste foto, come ad esempio delle caramelle\nPokémon.
 Le missioni Scatto fortunato
+Missioni Scatto fortunato mini
 Aggiungi Latias e Latios alla squadra
 [System:Color r="255" g="107" b="55" a="255" ]Puoi avere solamente un[System:Color a="255" ] Latias e [System:Color r="255" g="107" b="55" a="255" ]un[System:Color a="255" ] Latios\n[System:Color r="255" g="107" b="55" a="255" ]in squadra[System:Color a="255" ].
 [System:Color r="255" g="107" b="55" a="255" ]Se[System:Color a="255" ] Latias e Latios [System:Color r="255" g="107" b="55" a="255" ]sono nella stessa squadra,\nsi attiverà un effetto aggiuntivo\ndella loro abilità principale[System:Color a="255" ].
@@ -11742,6 +11941,11 @@ Durante l'evento, se [System:Color r="255" g="107" b="55" a="255" ]hai un Latias
 Durante l'evento, se [System:Color r="255" g="107" b="55" a="255" ]hai sia Latias che Latios\nin squadra[System:Color a="255" ] quando vai a dormire,\nil [System:Color r="255" g="107" b="55" a="255" ]potere sonno[System:Color a="255" ] sarà [System:Color r="255" g="107" b="55" a="255" ]moltiplicato per 1,3[System:Color a="255" ].
 Nota: Latias e Latios possono fare parte\ndella stessa squadra.
 Accumula potere sonno assieme a Latias e\nLatios per ripristinare il luccichio\ndella Cuorugiada!
+Aggiungi Mew o Mewtwo alla squadra
+Durante l'evento, se [System:Color r="255" g="107" b="55" a="255" ]hai un Mew o\nun Mewtwo in squadra[System:Color a="255" ] quando vai a dormire,\nil [System:Color r="255" g="107" b="55" a="255" ]potere sonno[System:Color a="255" ] sarà [System:Color r="255" g="107" b="55" a="255" ]moltiplicato per 1,1[System:Color a="255" ].
+Inoltre, durante la seconda settimana\ndell'evento, se [System:Color r="255" g="107" b="55" a="255" ]hai un Mewtwo in squadra[System:Color a="255" ]\nquando vai a dormire, il [System:Color r="255" g="107" b="55" a="255" ]potere sonno[System:Color a="255" ]\nsarà [System:Color r="255" g="107" b="55" a="255" ]moltiplicato per 1,3[System:Color a="255" ].
+Se sono disponibili più bonus sul potere\nsonno allo stesso tempo, si attiverà solo\nil maggiore.
+Accumula potere sonno e fai progressi\nnella spedizione delle terre inesplorate!
 Medaglie amicizia
 Ottieni Medaglie amicizia
 Se raggiungi un determinato livello amicizia\ncon un Pokémon, puoi ottenere una [System:Color r="255" g="107" b="55" a="255" ]Medaglia[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]amicizia[System:Color a="255" ].
@@ -11836,4 +12040,4 @@ Risultati crescita di Snorlax
 Riepilogo 7 giorni
 [Digit:Digit4 separator="Default" ]
 Settimana
-第
+

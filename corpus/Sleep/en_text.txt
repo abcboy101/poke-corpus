@@ -488,6 +488,7 @@ Rewards
 Rewards Received
 Applicable Pokémon
 List of Applicable Pokémon
+Details
 The maximum number of this item\nthat you can hold is [Digit:Digit1 ].\nYou can’t make this exchange because\nit would bring you over this limit.\n\nPlease try exchanging again after you\nhave used what you already have.
 The maximum number of this item\nthat you can hold is [Digit:Digit1 ].\nYou can’t receive this because doing\nso would bring you over this limit.\n\nPlease try receiving again after you\nhave used what you already have.
 A time change has been detected in\nyour device since the last time you\nplayed. If the time settings on your\ndevice are changed too often, it can\nhinder your gameplay experience, so\nplease be careful.
@@ -689,6 +690,7 @@ Text File : EventBonusList
 You can use the [System:Color r="255" g="107" b="55" a="255" ]Mini Candy Boost function [System:Color a="255" ]to level up your helper Pokémon.
 The [System:Color r="255" g="107" b="55" a="255" ]Candy Cram-o-matic[System:Color a="255" ] is available.
 You can grow Festive Flowers.
+Your helper Pokémon may occasionally gather [System:Color r="255" g="107" b="55" a="255" ]Very Big Mago Berries[System:Color a="255" ] in addition to their usual help.
 The chance of each helper Pokémon’s[System:Color r="255" g="107" b="55" a="255" ] main skill triggering will be multiplied by [Digit:Digit3 ][System:Color a="255" ].
 The [System:Color r="255" g="107" b="55" a="255" ]chance of triggering[System:Color a="255" ] the main skill of helper Pokémon with the Skills specialty will be [System:Color r="255" g="107" b="55" a="255" ]multiplied by [Digit:Digit3 ][System:Color a="255" ].
 Every helper Pokémon’s [System:Color r="255" g="107" b="55" a="255" ]main skill level will be boosted by [Digit:Digit3 ] when it triggers[System:Color a="255" ].
@@ -713,6 +715,7 @@ The [System:Color r="255" g="107" b="55" a="255" ]number of Dream Shards obtaine
 [System:Color r="255" g="107" b="55" a="255" ]The max number of Berries and ingredients[System:Color a="255" ] that helper Pokémon with the Skills specialty can have will be [System:Color r="255" g="107" b="55" a="255" ]increased by [Digit:Digit3 ][System:Color a="255" ].
 Your Drowsy Power will be multiplied by [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 idx="2" ][System:Color a="255" ] if you have [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName ][System:Color a="255" ] or [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName idx="1" ][System:Color a="255" ] on your team when you sleep.
 Your Drowsy Power will be multiplied by [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 idx="2" ][System:Color a="255" ] if you have both [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName ][System:Color a="255" ] and [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName idx="1" ][System:Color a="255" ] on your team when you sleep.
+The [System:Color r="255" g="107" b="55" a="255" ]carry limit[System:Color a="255" ] of helper Pokémon is [System:Color r="255" g="107" b="55" a="255" ]increased by [Digit:Digit3 ][System:Color a="255" ].
 Every [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ][System:Color a="255" ]-type helper Pokémon’s [System:Color r="255" g="107" b="55" a="255" ]main skill level will be boosted by [Digit:Digit3 idx="1" ] when it triggers[System:Color a="255" ].
 Every [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ][System:Color a="255" ]- and [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType idx="1" ][System:Color a="255" ]-type helper Pokémon’s [System:Color r="255" g="107" b="55" a="255" ]main skill level will be boosted by [Digit:Digit3 idx="2" ] when it triggers[System:Color a="255" ].
 Every [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ][System:Color a="255" ]-,[System:Color r="255" g="107" b="55" a="255" ] [Name:PokemonType idx="1" ][System:Color a="255" ]-, and [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType idx="2" ][System:Color a="255" ]-type helper Pokémon’s [System:Color r="255" g="107" b="55" a="255" ]main skill level will be boosted by [Digit:Digit3 idx="3" ] when it triggers[System:Color a="255" ].
@@ -729,6 +732,8 @@ You’ll have a slightly increased chance to encounter [System:Color r="255" g="
 [System:Color r="255" g="107" b="55" a="255" ]You can encounter Pokémon of different sleep types[System:Color a="255" ] regardless of their sleep type for the day.
 Once per day, one Pokémon will [System:Color r="255" g="107" b="55" a="255" ]for sure be hungry[System:Color a="255" ] during snack time.
 Pokémon [System:Color r="255" g="107" b="55" a="255" ]won’t get full easily[System:Color a="255" ] during\nthe first snack time of the day.
+Certain species of Pokémon [System:Color r="255" g="107" b="55" a="255" ]won’t get full easily[System:Color a="255" ] during the first snack time of the day.
+[System:Color r="255" g="107" b="55" a="255" ]Won’t get full easily[System:Color a="255" ] during the first snack time of the day:
 Dishes during the event are set to the [System:Color r="255" g="107" b="55" a="255" ][Name:CookingGenreName ][System:Color a="255" ] category.
 [System:Color r="255" g="107" b="55" a="255" ]Strength[System:Color a="255" ] gains from dishes will be [System:Color r="255" g="107" b="55" a="255" ]multiplied by [Digit:Digit4 separator="Default" ][System:Color a="255" ].
 Pokémon will recover [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 ] additional[System:Color a="255" ] Energy from dishes.
@@ -784,6 +789,7 @@ Areas Where You Can Research
 Expert Mode
 [System:Color r="255" g="107" b="55" a="255" ]New areas[System:Color a="255" ] will unlock as you research\nPokémon sleep styles and reach certain\nSleep Style Dex goals.
 [System:Color r="255" g="107" b="55" a="255" ]The Berries Snorlax prefers[System:Color a="255" ] are\ndifferent in each area. Try to raise\nmany different types of Pokémon\nand research lots of sleep styles!
+[System:Color r="255" g="107" b="55" a="255" ]Snorlax’s favorite Berries[System:Color a="255" ] are\ndifferent in each area. Try to raise\nmany different types of Pokémon\nand research lots of sleep styles!
 About the Areas
 Expert mode will unlock on\n[Date:Date label="yyyyyMMMddd_hh:mm" ]
 Locked
@@ -1653,18 +1659,15 @@ Language Settings
 News
 Delete My Account
 [System:Color r="134" g="134" b="134" a="255" ]This option will delete all data associated with\nthis account. It cannot be undone![System:Color a="255" ]
-Sleep EXP Bonus Gauge
 EXP Bonus Gauge
 Max Research Rank Bonus
 Snorlax Rating Up
 Expert Ticket Use Confirmation
 Pop-up Display
-This is a pop-up about the bonus gauge\nthat appears when a helper Pokémon\nat max level receives Sleep EXP.
 This is a pop-up about the bonus\ngauge that appears when a helper\nPokémon at max level receives EXP.
 This pop-up will appear when research\nEXP is automatically converted into\nDream Shards because the researcher\nis already at the max research rank.
 This is for the pop-up that appears\nwhen Snorlax’s rating goes up. If you\nturn it off, it won’t pop up to show\nratings that you have already reached.
 This pop-up will display before\nan Expert Ticket is used.
-Sleep EXP Bonus Gauge
 EXP Bonus Gauge
 Max Research Rank Bonus
 Snorlax Rating Up
@@ -1936,7 +1939,6 @@ Are you sure you want to plant a\nyellow seed?
 Are you sure you want to plant a\npurple seed?
 Are you sure you want to plant a\nwhite seed?
 When your Festive Flowers bloom,\nyou will get the following effects:
-When your Festive Flowers bloom,\nyou will get one [Name:Item idx="1" ].
 When your Festive Flowers bloom,\nyou will get one [System:Color r="255" g="107" b="55" a="255" ][Name:Item idx="1" ][System:Color a="255" ].
 Confirmation
 Details
@@ -1962,6 +1964,7 @@ Photos obtained:
 Conduct sleep research and collect Snapshot\nSurprise photos with [Name:PokemonName ] in the frame.
 Missions cleared!
 Snapshot Surprise Missions
+Mini Snapshot Surprise Missions
 Plant a seed!
 Festive Flowers
 Nap Island
@@ -1976,6 +1979,10 @@ Munchlax’s Nap Island
 has been unlocked!
 You can go there from the sign in the lower-right\ncorner of the research site.
 Unlocked
+Active Zone Effects
+Mago Berry Strength: [System:Color r="255" g="107" b="55" a="255" ]+[Digit:Digit4 separator="Default" ]%[System:Color a="255" ]
+Note: Changing sites will reset\nthese effects.
+Zone Effects
 We’re giving out [System:Color r="254" g="101" b="119" a="255" ]special gifts[System:Color a="255" ] to returning\nresearchers—and they’ll also [System:Color r="254" g="101" b="119" a="255" ]get perks[System:Color a="255" ] during\nsleep research. We hope these gifts and perks\nhelp you progress quickly in your research!
 ● Gift Contents
 • [Name:Item idx="1" ] [System:Color r="254" g="101" b="119" a="255" ]×[Digit:Digit5 idx="2" separator="Default" ][System:Color a="255" ]
@@ -2013,6 +2020,7 @@ The event has ended.
 Until next rank:
 Until next reward:
 Work together with researchers everywhere\nto accumulate Drowsy Power and restore the\nSoul Dew’s brilliance!
+Work together with researchers everywhere\nto accumulate Drowsy Power and find the most\nremote part of the unexplored territory!
 Event Rank [Digit:Digit2 ] and subsequent ranks\nwill be unlocked on\n[Date:Date label="yyyyyMMMddd_aaa" idx="1" ] at [Date:Date label="h:mm" idx="2" ].
 Locked
 Pot
@@ -2243,11 +2251,9 @@ Slightly Greater Appearance Rate\nCharmander, Charmeleon, Charizard,\nVulpix, Ni
 For more details about the event, please see the\nin-game News.
 Entei Research
 [System:Color r="255" g="107" b="55" a="255" ]Main skills[System:Color a="255" ] for all helper Pokémon are\n[System:Color r="255" g="107" b="55" a="255" ][Digit:Digit2 ] times more likely to be triggered[System:Color a="255" ]!
-[System:Color r="255" g="107" b="55" a="255" ]Main skills[System:Color a="255" ] for all helper Pokémon are\n[System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 ] times more likely to trigger![System:Color a="255" ]
 The [System:Color r="255" g="107" b="55" a="255" ]number of Dream Shards obtained[System:Color a="255" ] \nthrough Main Skill Dream Shard Magnet will\nbe [System:Color r="255" g="107" b="55" a="255" ]multiplied by [Digit:Digit2 ][System:Color a="255" ].
 The [System:Color r="255" g="107" b="55" a="255" ]number of Dream Shards obtained[System:Color a="255" ]\nthrough the main skill Dream Shard\nMagnet S will be [System:Color r="255" g="107" b="55" a="255" ]multiplied by [Digit:Digit3 ][System:Color a="255" ].
 You can use the [System:Color r="255" g="107" b="55" a="255" ]Candy Boost function[System:Color a="255" ] to\nlevel up your helper Pokémon.
-You can use the [System:Color r="255" g="107" b="55" a="255" ]Mini Candy Boost function[System:Color a="255" ]\nto level up your helper Pokémon.
 You can get items once per day from the [System:Color r="255" g="107" b="55" a="255" ]Dream Gift[System:Color a="255" ] next to Snorlax.
 The [System:Color r="255" g="107" b="55" a="255" ]Event Exchange[System:Color a="255" ] is available.
 The [System:Color r="255" g="107" b="55" a="255" ]Candy Cram-o-matic[System:Color a="255" ] is available.
@@ -2355,6 +2361,7 @@ Because your higher Extra Tasty rate has already reached its max of [Digit:Digit
 Please make some space in your bag\nso Pokémon can gather ingredients\nusing their skills.
 Please make some space in your\ningredients pocket so Pokémon can\nuse their skills.
 Ingredients Pocket Is Full
+%
 [Name:MainSkill ] (Lv. [Digit:Digit3 idx="1" ])
 Move
 Please note the following\nbefore moving to another site.\nDo you still want to move?
@@ -2455,21 +2462,14 @@ Greater Appearance Rate\nBulbasaur, Jigglypuff, Slowpoke, Pinsir, \nChikorita, A
 For more details about the event, please see\nthe in-game News.
 Valentine’s Day
 This week-long event is a special opportunity to encounter more <strong>Water-type Pokémon</strong>!\n\nWe encourage you to befriend lots of <b>Water-type Pokémon</b> to prepare for the Suicune Research event!\n\nDuring Water Type Week, you’ll be able to use the limited-time <b>Mini Candy Boost</b> function.\nThis is a great time to raise your Water-type Pokémon!\n\nThere will be various other bonuses as well.\nWe hope you’re looking forward to the event!\n\nEvent Period:\n• Monday, August 19, at 4:00 a.m. to Monday, August 26, at 3:59 a.m.\n\nEvent Areas:\n• All areas\n\nMission Period:\n• Monday, August 19, at 4:00 a.m. to Monday, August 26, at 3:59 a.m.\n\nThe following effects will trigger in the applicable areas during the event.\n\n— All Days (8/19 to 8/25) —\n• During sleep research, <strong>one Pokémon will for sure arrive hungry</strong>.\n• <strong>A few Pokémon of different sleep types will appear</strong> during sleep research regardless of your sleep type for that day.\n• <strong>Certain Pokémon will be more likely to appear</strong> during sleep research.\n• The limited-time <strong>Mini Candy Boost</strong> function will be available.
-Candies gained through\nresearch ×[Digit:Digit2 ] (once per day)
-Pokémon with different sleep types appear regardless of researcher’s sleep type
 Drowsy Power ×[Digit:Digit2 ]
 Drowsy Power ×[Digit:Digit3 ]
 EXP gained through sleeping ×[Digit:Digit1 ]
-EXP gained through sleeping ×[Digit:Digit3 ]
 Gain [Digit:Digit4 separator="Default" ] bonus sleep points for tracking sleep (only once per day)
 Try using a Master Biscuit with your sleep research.
 Greater Shiny Appearance Rate:
-Dream Shards gained through\nresearch ×[Digit:Digit2 ]
-Dream Shards gained through\nresearch ×[Digit:Digit3 ]
 Greater Shiny appearance rate.
-Once per day, one Pokémon will for\nsure be hungry during snack time.
 Once per day, you can get event\nitems from sleep research.
-[System:Color r="255" g="107" b="55" a="255" ]Research EXP[System:Color a="255" ] from sleep research\nwill be multiplied by [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 ][System:Color a="255" ].
 [System:Color r="255" g="107" b="55" a="255" ]Pokémon sleep styles[System:Color a="255" ] you\nhaven’t discovered yet are[System:Color r="255" g="107" b="55" a="255" ]\nmore likely to appear[System:Color a="255" ].
 After you finish a week of\nresearch, your area bonus will\nincrease by [Digit:Digit2 ]%.
 Once per day, you can get the\nfollowing from sleep research:\n[System:Color r="255" g="107" b="55" a="255" ][Name:Item idx="1" ][System:Color a="255" ]
@@ -3750,27 +3750,27 @@ The following effects will trigger in the applicable areas during this event.
 • Drowsy Power <strong>×[News:Num_Count ]</strong>
 • Helper Pokémon Sleep EXP <strong>×[News:Num_Count ]</strong>
 • Bonus sleep points <strong>+[News:Num_Count ]</strong>
-Rest your very best on the night of the full moon!
-This event is held once a month for a total of three days—on the day of the full moon and the days before and after it—and provides a boost to Drowsy Power!
-Let’s try to get lots of good sleep during this time and research loads of Pokémon sleep styles!
-The event also includes bonus sleep points and bonuses to Pokémon’s Sleep EXP gains.
-We hope you’re looking forward to this!
-Event Period:
-• [News:Date_mdahm idx="1" ] to [News:Date_mdahm idx="2" ]
-Note: The day of the full moon is <strong>[News:Date_mda ]</strong>.
-Event Areas:
-• All areas
-The following effects will trigger in the applicable areas during this event.
-— All Days —
-• <strong>Pokémon sleep styles you haven’t discovered yet are more likely to appear</strong> during sleep research.
-— Day 2 (Night of the Full Moon) —
-• Drowsy Power <strong>×[News:Num_Count ]</strong>
-• Helper Pokémon Sleep EXP <strong>×[News:Num_Count ]</strong>
-• Bonus sleep points <strong>+[News:Num_Count ]</strong>
-— Day 1 and Day 3 —
-• Drowsy Power <strong>×[News:Num_Count ]</strong>
-• Helper Pokémon Sleep EXP <strong>×[News:Num_Count ]</strong>
-• Bonus sleep points <strong>+[News:Num_Count ]</strong>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Rest your very best on the night of the full moon!
 This event is held once a month for a total of three days—on the day of the full moon and the days before and after it—and provides a boost to Drowsy Power!
 Let’s try to get lots of good sleep during this time and research loads of Pokémon sleep styles!
@@ -3889,6 +3889,28 @@ Event Areas:
 The following effects will trigger in the applicable areas during this event.
 — All Days —
 • <strong>Pokémon sleep styles you haven’t discovered yet are more likely to appear</strong> during sleep research.
+— Day 2 (Night of the Full Moon) —
+• Drowsy Power <strong>×[News:Num_Count ]</strong>
+• Helper Pokémon Sleep EXP <strong>×[News:Num_Count ]</strong>
+• Bonus sleep points <strong>+[News:Num_Count ]</strong>
+— Day 1 and Day 3 —
+• Drowsy Power <strong>×[News:Num_Count ]</strong>
+• Helper Pokémon Sleep EXP <strong>×[News:Num_Count ]</strong>
+• Bonus sleep points <strong>+[News:Num_Count ]</strong>
+A fateful encounter on a gorgeous moonlit night...
+It’s been reported that once a year around the time of the harvest moon—on the night of the full moon and the nights before and after it—in addition to Drowsy Power becoming stronger, Shiny <strong>[News:PokemonNamesList Type="And" ]</strong> are more likely to appear.
+They may even show themselves to you researchers!
+The event also includes bonus sleep points and bonuses to Pokémon’s Sleep EXP gains.
+Let’s try to get lots of good sleep during this time and research loads of Pokémon sleep styles!
+Event Period:
+• [News:Date_mdahm ] to [News:Date_mdahm idx="1" ]
+Note: The day of the full moon is <strong>[News:Date_mda ]</strong>.
+Event Areas:
+• All areas
+The following effects will trigger in the applicable areas during this event.
+— All Days —
+• <strong>Pokémon sleep styles you haven’t discovered yet are more likely to appear</strong> during sleep research.
+• You may meet certain Shiny Pokémon!
 — Day 2 (Night of the Full Moon) —
 • Drowsy Power <strong>×[News:Num_Count ]</strong>
 • Helper Pokémon Sleep EXP <strong>×[News:Num_Count ]</strong>
@@ -4069,6 +4091,49 @@ The following effects will trigger in the applicable areas during this event.
 — Last Day of the Event ([News:Date_md ]) —
 • Drowsy Power <strong>×[News:Num_Count ]</strong>
 Note: If more than one bonus on Drowsy Power is triggered, the larger bonus will be applied.
+This two-week event is a special opportunity to <strong>conduct a survey of the unexplored realm within Greengrass Isle and trace the rare sleep styles of [News:PokemonName ]</strong>!
+During the event, the average Drowsy Power of researchers worldwide will be combined with your own Drowsy Power to accumulate <strong>Event Drowsy Power</strong>.
+It seems that Event Drowsy Power will accumulate as you research the unexplored realm, allowing you to advance deep into the heart of the unexplored realm.
+We encourage you to collaborate with researchers worldwide to progress the investigation!
+Also during the event, Legendary Pokémon <strong>[News:PokemonName ]</strong> will be more likely to appear, and a <b>bonus</b> will be applied to <b>Drowsy Power</b> if you have [News:PokemonNamesList idx="1" Type="Or" ] on your team while you sleep.
+You’ll also only be able to get <strong>[News:PokemonName ] DNA</strong> from sleep research while the event is in progress.
+You can trade [News:PokemonName ] DNA samples via the Event Exchange for new items [News:PokemonName idx="1" ] Incense and  [News:PokemonName idx="2" ]  Biscuits in order to help you see  [News:PokemonName idx="3" ]’s sleep styles!
+In addition, <strong>Very Big Mago Berries</strong> that are larger than usual and provide considerable Strength have been discovered in the unexplored realm. It also seems that [News:PokemonName ], [News:PokemonName idx="1" ], and Psychic-type Pokémon can bring you more Berries!
+We hope you’re looking forward to this!
+Event Period:
+• Week 1: [News:Date_mdahm ] to [News:Date_mdahm idx="1" ]
+• Week 2: [News:Date_mdahm ] to [News:Date_mdahm idx="1" ]
+Event Areas:
+[News:FieldNamesList ]
+<strong>Note: During the event, you cannot select areas other than the applicable areas above</strong>.
+Note: During this event, the expert mode site will have the same event-exclusive appearance as the normal mode site.
+Mission Period:
+• Week 1: [News:Date_mdahm ] to [News:Date_mdahm idx="1" ]
+• Week 2: [News:Date_mdahm ] to [News:Date_mdahm idx="1" ]
+Event Exchange Period:
+• [News:Date_mdahm ] to [News:Date_mdahm idx="1" ]
+Note: The Event Exchange can be used in all areas.
+The following effects will trigger in the applicable areas during this event.
+— All Days —
+• If you have [News:PokemonName ] or [News:PokemonName idx="1" ] on your team when you sleep, Drowsy Power will be <strong>multiplied by [News:Num_Count idx="2" ]</strong>.
+• Each time a helper Pokémon brings you Berries as it usually would, it may also bring you <strong>Very Big Mago Berries</strong>.
+• Each time a Psychic-type helper Pokémon <strong>brings you ingredients as it usually would, it will have [News:Num_Count ] extra</strong>.
+• The chance of any Psychic-type helper Pokémon’s <strong>main skill being triggered will be multiplied by [News:Num_Count ]</strong>.
+• The Snorlax in the event areas will have <strong>Mago Berries</strong> (Psychic type) set as one of its favorite Berries. The other two kinds of Berries will be chosen at random.
+• <strong>Certain Pokémon will be more likely to appear</strong> during sleep research.
+• [News:PokemonName ] <strong>won’t get full easily</strong> during the <strong>first snack time of the day</strong>.
+• A limited-time <strong>Event Exchange</strong> will be available.
+• During the first sleep research of the day, you will be able to obtain event items.
+• <strong>A few Pokémon of different sleep types will appear</strong> during sleep research regardless of your sleep type for that day.
+— Week 1 ([News:Date_md ] to [News:Date_md idx="1" ]) —
+• <strong>The carry limit</strong> of all helper Pokémon will increase by <strong>[News:Num_Count ]</strong>.
+• <strong>Main skill levels</strong> of Psychic-type helper Pokémon will be <strong>boosted by [News:Num_Count ]</strong> when they trigger.
+— Week 2 ([News:Date_md ] to [News:Date_md idx="1" ]) —
+• If you have [News:PokemonName ] on your team while you sleep, Drowsy Power will be <strong>multiplied by [News:Num_Count idx="1" ]</strong>.
+• <strong>The carry limit</strong> of all helper Pokémon will increase by <strong>[News:Num_Count ]</strong>.
+• <strong>Main skill levels</strong> of Psychic-type helper Pokémon will be <strong>boosted by [News:Num_Count ]</strong> when they trigger.
+• A big Snorlax will appear, and <strong>it will be possible to raise it starting at a certain Strength</strong>.
+Note: If more than one bonus on Drowsy Power is triggered, the larger bonus will be applied.
 This month-long event is a special opportunity to complete [News:PokemonName ]’s <strong>Snapshot Surprise missions</strong>.
 During this event, <strong>[News:PokemonName ] will show up in photos</strong> when researching Pokémon sleep styles. You can progress through Snapshot Surprise missions depending on the number of photos taken with [News:PokemonName ] in them.
 Also, there will be various other bonuses when a Snapshot Surprise happens.
@@ -4086,6 +4151,27 @@ The following effects will trigger in the applicable areas during this event.
 • <strong>Research EXP gained through</strong> Snapshot Surprise <strong>×[News:Num_Count ] times the usual amount.</strong>
 • <strong>Dream Shards gained through</strong> Snapshot Surprise <strong>+[News:Num_Count ] to the usual amount.</strong>
 The above bonuses will only apply to sleep style photos with Mew in them.
+This week-long event is a special opportunity to <b>once again collect Snapshot Surprise photos</b> of [News:PokemonName ]!
+During this event, <strong>[News:PokemonName ] will show up in photos</strong> as you research Pokémon sleep styles. You can progress through Mini Snapshot Surprise missions according to the number of photos taken with [News:PokemonName ] in them.
+Also, there will be various other bonuses when a Snapshot Surprise happens.
+Additionally, you can obtain rewards by completing <strong>Mini Snapshot Surprise missions</strong>.
+This is an opportunity for researchers who have not yet befriended [News:PokemonName ] to befriend [News:PokemonName idx="1" ]. Researchers who have already befriended [News:PokemonName idx="2" ] can obtain a Eureka Seed ([News:PokemonName idx="3" ])!
+Event Period:
+• [News:Date_mdahm ] to [News:Date_mdahm idx="1" ]
+Event Areas:
+• All areas
+Mission Period:
+• [News:Date_mdahm ] to [News:Date_mdahm idx="1" ]
+The following effects will trigger in the applicable areas during this event.
+— All Days —
+• You will be able to take Snapshot Surprise photos only during the first sleep research of the day.
+• <strong>Candies gained through</strong> Snapshot Surprise <strong>×[News:Num_Count ] the usual amount.</strong>
+• <strong>Research EXP gained through</strong> Snapshot Surprise <strong>×[News:Num_Count ] times the usual amount.</strong>
+• <strong>Dream Shards gained through</strong> Snapshot Surprise <strong>+[News:Num_Count ] to the usual amount.</strong>
+• During the first sleep research of the day, <strong>one Pokémon will for sure arrive hungry</strong>
+• <strong>Certain Pokémon will be more likely to appear</strong> during sleep research.
+• The limited-time <strong>Mini Candy Boost</strong> feature will be available.
+• <strong>A few Pokémon of different sleep types will appear</strong> during sleep research regardless of your sleep type for that day.
 This week-long event will feature greater appearance rates for <strong>Electric-, Fire-, and Water-type Pokémon</strong>!
 We encourage you to befriend lots of Pokémon to prepare for the [News:PokemonName idx="1" ], [News:PokemonName idx="2" ], and [News:PokemonName idx="3" ] Research event—more about this event is coming in a later update!
 During this event, <strong>one Pokémon will for sure be hungry</strong> during the first snack time of the day.
@@ -4220,6 +4306,36 @@ Note: The day of the new moon is [News:Date_mda ].
 Event Areas:
 • [News:FieldNamesList Type="And" ]
 <strong>Note: During the event, due to the effects of a concurrent event, you cannot select areas other than the applicable areas above.</strong>
+The following effects will trigger in the applicable areas during this event.
+— All Days —
+• Mythical Pokémon will have a <strong>special appearance rate</strong>.
+• Pokémon <strong>won’t get full easily</strong> during the <strong>first snack time of the day</strong>.
+• You may even meet Shiny Pokémon!
+• Every time you encounter a Pokémon with a special appearance rate during your New Moon Day sleep research, its friendship points will increase by <strong>[News:Num_Count ]</strong>.
+Possibilities shine on the night of the new moon!
+This event is held once a month for a total of three days—on the day of the new moon and the days before and after it. This event will have special appearance rates and it will <strong>be harder for Pokémon to become full</strong>.
+You may even meet <strong>Shiny Pokémon</strong>!
+We hope you’re looking forward to this!
+Event Period:
+• [News:Date_mdahm ] to [News:Date_mdahm idx="1" ]
+Note: The day of the new moon is [News:Date_mda ].
+Event Areas:
+• All areas
+The following effects will trigger in the applicable areas during this event.
+— All Days —
+• Mythical Pokémon will have a <strong>special appearance rate</strong>.
+• Pokémon <strong>won’t get full easily</strong> during the <strong>first snack time of the day</strong>.
+• You may even meet Shiny Pokémon!
+• Every time you encounter a Pokémon with a special appearance rate during your New Moon Day sleep research, its friendship points will increase by <strong>[News:Num_Count ]</strong>.
+Possibilities shine on the night of the new moon!
+This event is held once a month for a total of three days—on the day of the new moon and the days before and after it. This event will have special appearance rates and it will <strong>be harder for Pokémon to become full</strong>.
+You may even meet <strong>Shiny Pokémon</strong>!
+We hope you’re looking forward to this!
+Event Period:
+• [News:Date_mdahm ] to [News:Date_mdahm idx="1" ]
+Note: The day of the new moon is [News:Date_mda ].
+Event Areas:
+• All areas
 The following effects will trigger in the applicable areas during this event.
 — All Days —
 • Mythical Pokémon will have a <strong>special appearance rate</strong>.
@@ -4488,11 +4604,11 @@ The following effects will trigger in the applicable areas during this event.
 • <strong>Certain Pokémon will be more likely to appear</strong> during sleep research.
 • You may meet certain Shiny Pokémon!
 • The limited-time <strong>Candy Cram-o-matic</strong> feature will be available.
-<strong>New recipes will be added</strong> on <b>[News:Date_mdahm ]</b>.
-Ingredients to be Used in New Curries/Stews Dish 1
-[News:ItemNamesList ]
-Ingredients to be Used in New Curries/Stews Dish 2
-[News:ItemNamesList ]
+
+
+
+
+
 You can fill in more entries in your Sleep Style Dex during the Sleep Style Discovery Week!
 This week-long event is a special opportunity that will make it <strong>easier to encounter Pokémon sleep styles you haven’t registered in your Sleep Style Dex yet</strong>.
 With an eye toward new areas, we encourage you to discover Pokémon sleep styles you haven’t discovered yet!
@@ -4955,6 +5071,9 @@ Latios and the Soul Dew
 Third Anniversary Prelude Event
 Third Anniversary Fest
 Collaboration Week
+Mini Snapshot Surprise Missions
+Unexplored Realm Research! Pursue Mewtwo
+Pursue Mewtwo
 Eevee
 New Year 1
 New Year 2
@@ -5005,6 +5124,9 @@ Latios 2
 Third\nAnniversary 1
 Third\nAnniversary 2
 Collab Week
+Mini Snapshot
+Mewtwo 1
+Mewtwo 2
 ~~~~~~~~~~~~~~~
 Text File : MD_event_item_packs
 ~~~~~~~~~~~~~~~
@@ -5206,7 +5328,19 @@ Summer Festival 2026 Bundle L
 Collab Bundle S
 Collab Bundle M
 Collab Bundle L
+Mini Snapshot Surprise Bundle S
+Mini Snapshot Surprise Bundle M
+Mini Snapshot Surprise Bundle L
 Pokémon Raising Bundle ([Name:PokemonName ]) Vol. [Digit:Digit2 idx="1" ]
+Mewtwo Research Bundle Vol. [Digit:Digit2 ] S
+Mewtwo Research Bundle Vol. [Digit:Digit2 ] M
+Mewtwo Research Bundle Vol. [Digit:Digit2 ] L
+Mewtwo Last Chance Bundle Vol. [Digit:Digit2 ] S
+Mewtwo Last Chance Bundle Vol. [Digit:Digit2 ] M
+Mewtwo Last Chance Bundle Vol. [Digit:Digit2 ] L
+Pokémon 30-Year Celebration Bundle S
+Pokémon 30-Year Celebration Bundle M
+Pokémon 30-Year Celebration Bundle L
 ~~~~~~~~~~~~~~~
 Text File : MD_event_purchase_item_packs
 ~~~~~~~~~~~~~~~
@@ -5322,6 +5456,52 @@ Wow, this is certainly surprising!\nThis Snorlax looks [System:Color r="255" g="
 As Latias and Latios try to\nrestore the [System:Color r="255" g="107" b="55" a="255" ]Soul Dew[System:Color a="255" ]’s\nbrilliance,
 maybe their power has\ninfluenced Snorlax too.
 This Snorlax ought to make your\nsleep research more effective\nright from the start of the week!
+Good job with your research!\nI’ve got a special research\nrequest for you today!
+At last, I’ve figured out where\nthe Legendary Pokémon [System:Color r="255" g="107" b="55" a="255" ]Mewtwo[System:Color a="255" ]\nheaded off to!
+Mewtwo is in [System:Color r="255" g="107" b="55" a="255" ]unexplored\nterritory[System:Color a="255" ] on Greengrass Isle\nthat we haven’t surveyed yet.
+Mewtwo is cautious, but we may\ndiscover its rare sleep styles if\nwe can reach this remote place.
+And we might as well do as much\nexploring as we can while\nresearching this place!
+We’ll need a lot of Snorlax’s\nDrowsy Power to make progress\nin our research here.
+Could you please work with\nresearchers around the world to\naccumulate Drowsy Power?
+Oh, and around here there are\n[System:Color r="255" g="107" b="55" a="255" ]Very Big Mago Berries[System:Color a="255" ] that are\njam-packed with Strength.
+Those might prove useful for\nraising Snorlax.
+And by the way, [System:Color r="255" g="107" b="55" a="255" ]Mew [System:Color a="255" ]seems to\nhave taken a special interest in\nMewtwo’s sleep styles.
+It might just lend you a hand in\ninvestigating Mewtwo’s rare\nsleep styles!
+All right, let’s start our survey\nof the unexplored territory!
+Thanks to all your research, we\ndid more exploring and found a\npath that leads farther back!
+We might be able to research\n[System:Color r="255" g="107" b="55" a="255" ]Mewtwo’s rare sleep styles[System:Color a="255" ] if\nwe keep up our survey work!
+Wow, this is certainly\nsurprising!
+Never thought I’d see a curious\nMew being swatted away by\nan annoyed Mewtwo!
+Mew also looked really happy to\nbe able to see Mewtwo’s sleep\nstyle, didn’t it?
+Keep up the good work on that\nsleep research!
+Wow, this is certainly surprising!\nThis Snorlax looks [System:Color r="255" g="107" b="55" a="255" ]bigger [System:Color a="255" ]than the\nusual ones.
+Maybe it’s due to the influence\nof the Very Big Mago Berries!
+This Snorlax ought to make your\nsleep research more effective\nright from the start of the week!
+Good job with your research!\nI’ve got a special favor to ask\nof you today!
+Apparently, [System:Color r="255" g="107" b="55" a="255" ]Mew[System:Color a="255" ] has been\nhappily flying around sleeping\nPokémon recently.
+Maybe Mew is curious about\nsomething.
+If you do sleep research now,\n[System:Color r="255" g="107" b="55" a="255" ]Mew might show up in your\nphotos as it flies around[System:Color a="255" ].
+In order to find out what Mew is\ncurious about...
+could you capture the sight of\nMew flying around [System:Color r="255" g="107" b="55" a="255" ]in photos[System:Color a="255" ]?
+I’m counting on you! All right,\ngood luck with your sleep\nresearch!
+Thanks for getting lots of\npictures with Mew in them!
+I bet it’s interested in you even\nmore, since you’re researching\nrare Pokémon sleep styles.
+Looks like Mew really is curious\nabout sleeping Pokémon.
+Also, it’s given you a [System:Color r="255" g="107" b="55" a="255" ]Eureka\nSeed[System:Color a="255" ]. Maybe it’s showing that\nyour friendship is stronger.
+I bet it’s also interested in you,\nsince you’re researching these\nrare Pokémon sleep styles.
+Since your bond with Mew has\ndeepened, I think [System:Color r="255" g="107" b="55" a="255" ]it’ll show up\nduring your next sleep research[System:Color a="255" ]!
+I feel like Mew’s feeling safe\nenough now to [System:Color r="255" g="107" b="55" a="255" ]come and sleep[System:Color a="255" ].
+Keep up the good work on that\nsleep research.
+I’m looking forward to your\nsleep research tomorrow!
+Great job with your research!
+While you were conducting your\nresearch about Mew, I saw a\n[System:Color r="255" g="107" b="55" a="255" ]mysterious shadow[System:Color a="255" ].
+I hurriedly took a picture of the\nshadow, and when I saw the\nphoto I realized...
+it might be the Legendary\nPokémon [System:Color r="255" g="107" b="55" a="255" ]Mewtwo[System:Color a="255" ].
+Maybe Mew sensed the presence\nof Mewtwo, and was curious\nabout its sleep styles.
+Also, it seems like Mewtwo\nheaded into the [System:Color r="255" g="107" b="55" a="255" ]depths of\nGreengrass Isle[System:Color a="255" ].
+There may be an unexplored\narea on Greengrass Isle that\nwe don’t know about.
+I’ll find out where Mewtwo went\nand start preparing\nthe investigation.
+Until then, could I ask you to\nkeep up the day-to-day sleep\nresearch? I’m counting on you!
 Good job with your research!\nI’ve got a special favor to ask\nof you today!
 I’ve gotten reports that the\nMythical Pokémon [System:Color r="255" g="107" b="55" a="255" ]Mew[System:Color a="255" ] has been\nspotted around Greengrass Isle.
 I heard that the ever-curious\nMew has been flying around,\nchecking out sleeping Pokémon.
@@ -5472,7 +5652,6 @@ Text File : MD_health_data_sources
 (Fitbit, Google Pixel Watch, etc.)
 (Galaxy Watch, etc.)
 (Forerunner 265, etc.)
-Fitbit
 Google Health
 Samsung Health
 Apple Watch default sleep tracking
@@ -5484,13 +5663,13 @@ Text File : MD_health_faq
 Is sleep data being tracked\nautomatically through your\nApple Watch?
 Is your sleep data registered in Apple\nHealth?
 Does your sleep data meet the\nrequirements to be used in Pokémon\nSleep?
-Is your sleep data registered in Samsung\nHealth, the Fitbit app, Garmin Connect, \nor another app?
 Is your sleep data registered in Samsung\nHealth, Google Health, Garmin Connect, \nor another app?
 Is your sleep data registered in Health\nConnect?
 Does your sleep data meet the\nrequirements to be used in Pokémon\nSleep?
 Are reading permissions turned ON for\nApple Health?
 Are reading permissions turned ON for\nHealth Connect?
 Is your sleep data registered in Garmin\nConnect?
+Is your sleep data registered in\nGoogle Health, Garmin Connect,\nor another app?
 ~~~~~~~~~~~~~~~
 Text File : MD_item_name_data
 ~~~~~~~~~~~~~~~
@@ -5506,6 +5685,7 @@ Cresselia Biscuit
 Premier Biscuit
 Latias Biscuit
 Latias and Latios Biscuit
+Mewtwo Biscuit
 Doubles the research EXP gained\nafter sleep research. Good for one\nsleep session, then consumed.
 Doubles the Dream Shards received\nafter sleep research. Good for one\nsleep session, then consumed.
 Doubles the EXP that helpers gain\nafter sleep research. Good for one\nsleep session, then consumed.
@@ -5567,6 +5747,7 @@ A perfectly white mint. Having a\nPokémon smell it will remove all\neffects a P
 A ticket needed to visit\nexpert mode areas.
 A special treat for certain Pokémon\nthat will make them a lot more\nfriendly toward you. This biscuit\nincreases their friendship points by 6.
 When the Event Exchange’s exchange\nperiod ends, this item will be\nautomatically converted into a\nGreat Biscuit. Please check the dates\nof the exchange period in the event\nnews.
+After the Event Exchange’s exchange\nperiod ends, this item will be\nautomatically converted into a\nGreat Biscuit after a certain amount\nof time. Please check the dates of the\nexchange period and the timing of the\nbiscuit’s conversion in the event\nnews.
 This can only be used with the\nfollowing Pokémon during this event.
 A specially made juice that restores\n20 Energy to a single helper Pokémon.
 It is possible for this to raise\na Pokémon’s Energy to over 100.
@@ -5643,6 +5824,7 @@ Cresselia Down
 Pokémon material
 Latias Down
 Latios Down
+Mewtwo DNA
 Focus Incense
 Luck Incense
 Growth Incense
@@ -5941,6 +6123,7 @@ Flame Pokémon
 Dragon Pokémon
 Dragon Pokémon
 Dragon Pokémon
+Genetic Pokémon
 New Species Pokémon
 Leaf Pokémon
 Leaf Pokémon
@@ -6175,6 +6358,7 @@ It sleeps contentedly wrapped in its fluffy fur,\nwhich releases heat into the a
 A Pokémon so rare it was long thought to be a myth.\nIts sleeping habits used to be shrouded in mystery,\nbut since more and more Dratini have come to live\nwith Trainers, people have now observed this\nPokémon in a variety of sleep styles.
 Dragonair is said to gather power in the orbs on its\ntail and control the weather, sometimes even in its\nsleep. Be careful—the weather around this Pokémon\ncan change instantly.
 Dragonite is known as the Sea Incarnate. On very\nrare occasions, perhaps after it exhausts itself\nflying over the vast seas, it has been seen sleeping\nsoundly with its belly on full display.
+A Pokémon said to have been created from\nMew’s DNA. It is thought to often sleep quietly\nwhile standing up to conserve energy so it can\nunleash its full power in battle.
 Mew is said to possess the genetic composition of\nall Pokémon, and is so rare that it’s said to be a\nmyth. Even in its sleep, it is capable of making\nitself invisible at will, so very few researchers\nhave seen its sleep styles.
 It’s said that Chikorita uses the leaf on its head to\ndetermine the air’s temperature and humidity and\nsearch for the coziest place to bed down. It often\nseems relaxed in sleep, as if it has found itself\na great spot.
 The buds that ring Bayleef’s neck give off a spicy\naroma that perks people up. Maybe the Pokémon\nsleeping around Bayleef feel invigorated, too.
@@ -6412,6 +6596,7 @@ Flareon
 Dratini
 Dragonair
 Dragonite
+Mewtwo
 Mew
 Chikorita
 Bayleef
@@ -6832,6 +7017,7 @@ In addition, gets candy for one Pokémon on\nyour team.
 Restores [Digit:Digit3 ] Energy to two random Pokémon\non your team and instantly gets you ×[Digit:Digit2 idx="1" ] the\nusual help from those Pokémon. Meet certain\nconditions to boost effect.
 Gets the Berries the Pokémon on your team\n(including itself) collect. Meet certain\nconditions to boost effect.
 Obtain [Digit:Digit7 separator="Default" ] Dream [EN:Qty S="Shard" P="Shards" ]. Also increases\nSnorlax’s Strength by [Digit:Digit4 idx="1" separator="Default" ].
+Increases Snorlax’s Strength by [Digit:Digit7 separator="Default" ].\nAlso creates a Berry Zone in the research site.
 Charge Strength S
 Charge Strength M
 Dream Shard Magnet S
@@ -6880,6 +7066,7 @@ Versatile (Berry Burst)
 Heal Pulse (Energizing Cheer S)
 Draco Meteor (Berry Burst)
 Aura Sphere (Dream Shard Magnet S)
+Psystrike (Berry Zone)
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_main_skills_ShortName
 ~~~~~~~~~~~~~~~
@@ -6905,6 +7092,7 @@ Ingredient Draw S
 Plus
 Minus
 Cooking Assist S
+Berry Zone
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_nature
 ~~~~~~~~~~~~~~~
@@ -7241,6 +7429,11 @@ Uncoiled Sleep
 Curled-Up Sleep
 Seated Sleep
 Tummy-Up Sleep
+Knee-Up Sleep
+Upright Floating Sleep
+Psystrike Sleep
+Bothersome Sleep
+Mind-at-Ease Sleep
 Floaty Sleep
 Invisible-at-Will Sleep
 Bubble-Bed Sleep
@@ -8221,7 +8414,6 @@ Let’s get straight to readying\neverything we need for your\nfirst day!
 Let’s get started by checking the\nsleep data you collected.
 Here you can see both how [System:Color r="255" g="107" b="55" a="255" ]long[System:Color a="255" ]\n[System:Color r="255" g="107" b="55" a="255" ]you slept[System:Color a="255" ] and your [System:Color r="255" g="107" b="55" a="255" ]sleep score[System:Color a="255" ]\nfor this session.
 This is your [System:Color r="255" g="107" b="55" a="255" ]sleep score[System:Color a="255" ]. It\nindicates how [System:Color r="255" g="107" b="55" a="255" ]long you slept[System:Color a="255" ].
-This is your [System:Color r="255" g="107" b="55" a="255" ]sleep score[System:Color a="255" ]. It\nindicates how [System:Color r="255" g="107" b="55" a="255" ]long you slept[System:Color a="255" ].
 An adult can reach a sleep score\nof 100 by making sure they get\n[System:Color r="255" g="107" b="55" a="255" ]at least 8.5 hours[System:Color a="255" ] of sleep.
 A child can reach a sleep score\nof 100 by making sure they get\n[System:Color r="255" g="107" b="55" a="255" ]at least 11 hours[System:Color a="255" ] of sleep.
 [System:Color r="255" g="107" b="55" a="255" ]Sleep as much as you can[System:Color a="255" ], aiming\nfor [System:Color r="255" g="107" b="55" a="255" ]8.5 hours[System:Color a="255" ] of sleep, which is\nworth a score of 100!
@@ -8302,7 +8494,6 @@ You fill in your Sleep Style Dex\nby researching like this [System:Color r="255"
 I still only scratched the surface\nof all the things you can do here,\nso try poking around to discover\nwhat else you can learn.
 After a week, you’ll part ways\nwith Snorlax, but in your next\narea you’ll work with a new one.
 And good luck with that sleep\nresearch! Sleep tight!
-Try your best to raise Snorlax\nso it will get as big as possible!
 Also, try using this ticket! It’ll\n[System:Color r="255" g="107" b="55" a="255" ]speed up both Snorlax’s growth\nand your research a lot[System:Color a="255" ].
 Try your best to raise Snorlax.\nThe bigger it gets, [System:Color r="255" g="107" b="55" a="255" ]the easier\nit’ll be to meet lots of Pokémon[System:Color a="255" ]!
 Gosh, that was a lot to cover,\nbut lecture time is over! Good\nluck with your sleep research!
@@ -8357,7 +8548,6 @@ I’ll give you back this\n[System:Color r="255" g="107" b="55" a="255" ]Eureka 
 I’ll give you back this\n[System:Color r="255" g="107" b="55" a="255" ]Eureka Seed[System:Color a="255" ]. Try using it on\n[Name:PokemonName ] later!
 Your new friend Darkrai gave\nyou a mysterious item.
 Your new friend [Name:PokemonName ] gave\nyou a mysterious item.
-You noticed the planter, eh? I’d\nlike to ask you to grow some\nvery special flowers.
 You noticed the planter, eh? I’d\nlike to ask you to grow some\nvery special flowers.
 These flowers have powers, and\n[System:Color r="255" g="107" b="55" a="255" ]when they bloom, good things\nhappen during sleep research[System:Color a="255" ].
 They’re easy to grow—just\n[System:Color r="255" g="107" b="55" a="255" ]plant seeds you like[System:Color a="255" ] in the\nplanter every day.
@@ -8845,7 +9035,6 @@ Helper Boost ([Name:PokemonType ])
 Either Stockpile or Spit Up is selected.\nWhen Spit Up triggers, Snorlax gains\nStrength according to the number of times\nStockpile was triggered. After Spit Up\ntriggers, Stockpile’s number resets.
 Depending on the number of times Stockpile\nhas triggered, Snorlax will gain the following\namount of Strength.
 Note: If this Pokémon is removed from your\nteam, its Stockpile number will reset.
-Gets [Digit:Digit3 ] [EN:Qty S="Berry" P="Berries" ] plus [Digit:Digit3 idx="1" ] of each of\nthe Berries other Pokémon on your\nteam collect. On rare occasions, you’ll\nget a Great Success and receive a\ngreater number of Berries.
 Gets [Digit:Digit3 ] [EN:Qty S="Berry" P="Berries" ] plus [Digit:Digit3 idx="1" ] of each of\nthe Berries other Pokémon on your\nteam collect. Sometimes, you’ll\nget a Great Success and receive a\ngreater number of Berries.
 Note: After a Great Success, no more\nGreat Successes will occur until the next\nsleep research or manual sleep data entry.
 Copies and performs the main skill of one\nrandomly selected Pokémon on the team.
@@ -8884,6 +9073,11 @@ If Latios is on your team, instantly\ngets you an additional ×[Digit:Digit2 ] t
 Gets Berries the Pokémon on your team\n(including itself) collect. The more\ndifferent species of [Name:PokemonType ]-type\nPokémon on your team, the more Berries it\ngets.
 Gets Berries the Pokémon on your team\n(including itself) collect. The more\ndifferent species of [Name:PokemonType ]-type\nPokémon on your team, the more Berries it\ngets. Also, if Latias is on your team,\nincreases the number of Berries this\nPokémon gets by [Digit:Digit4 idx="1" separator="Default" ].
 If Latias is on your team, increases\nthe number of Berries this Pokémon\ngets by [Digit:Digit4 separator="Default" ].
+Increases Snorlax’s Strength by\n[Digit:Digit7 separator="Default" ]. Also, creates a Berry Zone in\nthe research site that raises the\nStrength gains from Mago Berries\nby [Digit:Digit3 idx="1" ]%.
+Note: Once created, Berry Zones last until you\nchange sites.
+Note: Berry Zone effects will remain even if\nyou remove [Name:PokemonName ] from your helper team.
+Note: The Berry Zone effect maxes out at\n[Digit:Digit4 separator="Default" ]%. Each time this main skill triggers, the\nBerry Zone effect continues to stack until the\nlimit is reached.
+Note: When this main skill activates, any\nBerries inside the box for Berries will be\nconverted into Strength immediately.
 About Versatile
 Available Main Skills
 Available Main Skills
@@ -9144,6 +9338,7 @@ Text File : PokemonHeight
 5'11"
 13'1"
 7'3"
+6'7"
 1'4"
 2'11"
 3'11"
@@ -9425,12 +9620,9 @@ Choose Pokémon for your helper teams\nand organize your Pokémon Box.
 Edit Teams
 Pokémon Box
 Pokémon
-You can get items by saving up extra Sleep EXP.
 You can get items by saving up extra EXP.
-Sleep EXP Bonus Gauge
 EXP Bonus Gauge
 Details
-If a helper Pokémon has reached its max\nlevel, any extra Sleep EXP will be added to\nthe Bonus Gauge instead of to\nthe Pokémon.
 If a helper Pokémon has reached its max\nlevel, any extra EXP will be added to the\nBonus Gauge instead of to the Pokémon.
 Each time the gauge fills up, you will get\n[Name:Item idx="1" ] ×[Digit:Digit2 idx="2" ].
 Pokémon Max Level Bonus
@@ -9510,6 +9702,7 @@ Text File : PokemonWeight
 7.3 lbs.
 36.4 lbs.
 463 lbs.
+269 lbs.
 8.8 lbs.
 14.1 lbs.
 34.8 lbs.
@@ -9736,6 +9929,7 @@ Unreceived\nNeutralizing Mint
 Unreceived item
 Garmin\nSleep Research Bonus
 Collab Gift
+Mew Raising Gift – Day [Digit:Digit2 ]
 ~~~~~~~~~~~~~~~
 Text File : PresentBox_SCENE
 ~~~~~~~~~~~~~~~
@@ -10685,14 +10879,9 @@ Snack Time
 Selected:
 [Digit:Digit3 ]/[Digit:Digit3 idx="1" ]
 [System:Color r="255" g="107" b="55" a="255" ]Certain Pokémon have a greater chance of appearing.[System:Color a="255" ]
-[System:Color r="255" g="107" b="55" a="255" ]Pokémon of different sleep types will\nappear[System:Color a="255" ] regardless of the researcher’s sleep\ntype for the day.
-Researchers will [System:Color r="255" g="107" b="55" a="255" ]gain more candies[System:Color a="255" ] for the\nfirst sleep research of the day
 [System:Color r="255" g="107" b="55" a="255" ]You may encounter a Shiny\n[Name:PokemonName ].[System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ]You may encounter a Shiny Pokémon.[System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ]You may meet certain Shiny Pokémon.[System:Color a="255" ]
-Researchers will [System:Color r="255" g="107" b="55" a="255" ]gain more Dream Shards\n[System:Color a="255" ]from sleep research.
-During your first sleep research of the day, one Pokémon will for sure be hungry.
-[System:Color r="255" g="107" b="55" a="255" ]Research EXP[System:Color a="255" ] from sleep research will be\nmultiplied by [System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 ][System:Color a="255" ].
 [System:Color r="255" g="107" b="55" a="255" ]Pokémon sleep styles[System:Color a="255" ] you\nhaven’t discovered yet are\n[System:Color r="255" g="107" b="55" a="255" ]more likely to appear[System:Color a="255" ].
 Event Bonuses
 Jan
@@ -10762,16 +10951,22 @@ Everyone’s Drowsy Power has\ncombined and settled the storm!
 Your own accumulated Drowsy\nPower has settled the storm!
 Everyone’s Drowsy Power has\ncombined and restored the\nSoul Dew’s brilliance!
 Your own accumulated Drowsy\nPower restored the\nSoul Dew’s brilliance!
+Everyone’s Drowsy Power has\ncombined. The unexplored\nterritory survey progressed.
+You accumulated Drowsy Power.\nThe unexplored territory survey\nprogressed.
+Everyone’s Drowsy Power has\ncombined. You found a path to\ndeeper within the territory.
+You accumulated Drowsy Power.\nYou found a path to deeper\nwithin the territory.
 Everyone’s Drowsy Power accumulated!
 Your Drowsy Power has an impact.
 Event Drowsy Power
 It seems [Name:PokemonName ] and [Name:PokemonName idx="1" ] are\nstill comfortably asleep.
+It seems [Name:PokemonName ] is still asleep.\n[Name:PokemonName idx="1" ] looks like it’s happy it got\nto see this sleep style!
 About Eureka Seeds
 You can only befriend one [Name:PokemonName ].
 You can get a [System:Color r="255" g="107" b="55" a="255" ]Eureka Seed[System:Color a="255" ] if you max out its\nfriendship points.
 [Name:PokemonName ]’s Friendship Points
 You feel a sense of trust\nfrom [Name:PokemonName ].
 [Name:PokemonName ]’s friendship points increased\nbased on your progress in\nSnapshot Surprise missions.
+[Name:PokemonName ]’s friendship points increased\nbased on your progress in\nMini Snapshot Surprise missions.
 We hope you’re looking forward to\nthe next New Moon Day!
 Wake Up
 Mysteries still remain about Darkrai.
@@ -10928,6 +11123,7 @@ Pokémon Incenses
 Select Incense
 Your chosen incenses take effect during\nthe next research session and are used up.
 You can choose up to two incenses\nto use while sleeping.
+You can choose up to [Digit:Digit2 ] [EN:Qty S="incense" P="incenses" ]\nto use while sleeping.
 Are you sure you’d like to\nuse [Digit:Digit2 ] of the above incenses?
 Use Incense
 [Digit:Digit2 ]
@@ -10984,7 +11180,6 @@ Compared to last session,\nyou slept [Date:Date label="mmmm" ] more!
 Details
 Your sleep data has been adjusted\nto reflect the following factors:
 ・Device carried or moved
-・Unusually long, heavy sleep
 Sleep tracked on hard floors or overly soft\nmattresses may not be detected correctly.
 Body movements may not be detected\ncorrectly when tracking on a nightstand\nor another place far from your mattress.
 If your sleep isn’t being tracked correctly,\nit may help to place the device closer to\nyour body.
@@ -11435,6 +11630,8 @@ You didn’t obtain the [Name:PokemonName ] Candies that exceeded your carry lim
 [Name:PokemonNickname ] recovered [Digit:Digit3 idx="1" ] Energy! Also, got ×[Digit:Digit3 idx="2" ] the usual help from them! [Name:PokemonNickname idx="3" ] recovered [Digit:Digit3 idx="4" ] Energy! Also, got ×[Digit:Digit3 idx="5" ] the usual help from them! Additionally, got ×[Digit:Digit3 idx="6" ] the usual help from [Name:PokemonNickname ] and [Name:PokemonNickname idx="3" ] through the power of bonds.
 [Digit:Digit4 separator="Default" ] [EN:Qty S="Berry" P="Berries" ] obtained! [Digit:Digit4 idx="1" separator="Default" ] additional [EN:Qty S="Berry" P="Berries" ] obtained through the power of bonds!
 Obtained [Digit:Digit4 separator="Default" ] Dream [EN:Qty S="Shard" P="Shards" ]! Also, Snorlax got [Digit:Digit4 idx="1" separator="Default" ] Strength!
+Snorlax got [Digit:Digit5 separator="Default" ] Strength! Also, a Berry Zone was created! Strength gained from Mago Berries raised by [Digit:Digit3 idx="1" ]%!
+Snorlax got [Digit:Digit5 separator="Default" ] Strength! A Berry Zone was not created, because the Berry Zone effect was at its limit.
 ~~~~~~~~~~~~~~~
 Text File : TagSet
 ~~~~~~~~~~~~~~~
@@ -11720,8 +11917,10 @@ Expert Mode
 Collect Snapshot Surprise Photos
 During the first sleep research of the day,\nyou can take Snapshot Surprise photos\nwhere [Name:PokemonName ] shows up in photos\nof Pokémon sleep styles.
 Collect Pokémon sleep style photos with\n[Name:PokemonName ] in them to complete\n[System:Color r="255" g="107" b="55" a="255" ]Snapshot Surprise missions[System:Color a="255" ].
+Collect Pokémon sleep style photos with\n[Name:PokemonName ] in them to complete\n[System:Color r="255" g="107" b="55" a="255" ]Mini Snapshot Surprise missions[System:Color a="255" ].
 [System:Color r="255" g="107" b="55" a="255" ]The more rare the Pokémon sleep style[System:Color a="255" ],\nthe more likely [Name:PokemonName ] is to appear\nin the photo.\nAnd by the way, you can get a few rewards\nfor these photos, such as Pokémon Candies.
 Snapshot Surprise Missions
+Mini Snapshot Surprise Missions
 Add Latias and Latios to your team
 [System:Color r="255" g="107" b="55" a="255" ]You can have exactly one each of[System:Color a="255" ] Latias and\nLatios [System:Color r="255" g="107" b="55" a="255" ]on your team[System:Color a="255" ].
 [System:Color r="255" g="107" b="55" a="255" ]By having [System:Color a="255" ]Latias and Latios [System:Color r="255" g="107" b="55" a="255" ]on the same\nteam, the additional effect of their main\nskills will activate[System:Color a="255" ].
@@ -11742,6 +11941,11 @@ During the event, if you [System:Color r="255" g="107" b="55" a="255" ]have one 
 During the event, if you [System:Color r="255" g="107" b="55" a="255" ]have both Latias\nand Latios on your team[System:Color a="255" ] when you sleep,\n[System:Color r="255" g="107" b="55" a="255" ]Drowsy Power[System:Color a="255" ] will be [System:Color r="255" g="107" b="55" a="255" ]multiplied by 1.3[System:Color a="255" ].
 Note: You can have both Latias and Latios on\nthe same team.
 Build Drowsy Power with Latias and Latios\nto restore the Soul Dew’s brilliance!
+Add Mew or Mewtwo to your team
+During the event, if you [System:Color r="255" g="107" b="55" a="255" ]have one of either\nMew or Mewtwo on your team[System:Color a="255" ] when you\nsleep, [System:Color r="255" g="107" b="55" a="255" ]Drowsy Power[System:Color a="255" ] will be [System:Color r="255" g="107" b="55" a="255" ]multiplied\nby 1.1[System:Color a="255" ].
+In addition, during the second week of the\nevent, if you [System:Color r="255" g="107" b="55" a="255" ]have Mewtwo on your team\n[System:Color a="255" ]when you sleep, [System:Color r="255" g="107" b="55" a="255" ]Drowsy Power [System:Color a="255" ]will be\n[System:Color r="255" g="107" b="55" a="255" ]multiplied by 1.3[System:Color a="255" ].
+If more than one bonus to Drowsy Power is\ntriggered at the same time, the larger bonus\nwill be applied.
+Build Drowsy Power and make progress on\nthe survey of the unexplored territory!
 Befriending Badges
 Get Befriending Badges
 If your friendship level with a Pokémon reaches\na certain level, you’ll get a [System:Color r="255" g="107" b="55" a="255" ]Befriending Badge[System:Color a="255" ].
@@ -11836,4 +12040,4 @@ Snorlax Raising Results
 Weekly Summary
 [Digit:Digit4 separator="Default" ]
 Week
-第
+

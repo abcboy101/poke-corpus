@@ -488,6 +488,7 @@ Text File : Common_GROUP
 領取的報酬
 對象寶可夢
 對象寶可夢一覽
+詳情
 此道具的持有上限為[Digit:Digit1 ]個。\n會超過持有上限，所以無法兌換。\n請在使用已有的道具後，再次嘗試兌換。
 此道具的持有上限為[Digit:Digit1 ]個。\n會超過持有上限，所以無法領取。\n請在使用已有的道具後，再次嘗試領取。
 偵測到自上次遊玩後\n裝置的時間設定有所變更。\n若裝置的時間設定頻繁變更，\n有可能會導致在遊玩時發生問題，\n敬請注意。
@@ -689,6 +690,7 @@ Text File : EventBonusList
 可在提升幫手寶可夢的等級時使用[System:Color r="255" g="107" b="55" a="255" ]迷你糖果增強功能[System:Color a="255" ]。
 可以使用[System:Color r="255" g="107" b="55" a="255" ]古月鳥扭糖機[System:Color a="255" ]。
 可以栽培彩慶花。
+幫手寶可夢在幫忙時，有時會額外撿來「[System:Color r="255" g="107" b="55" a="255" ]超大芒芒果[System:Color a="255" ]」。
 所有幫手寶可夢的[System:Color r="255" g="107" b="55" a="255" ]主技能發動機率變成[Digit:Digit3 ]倍[System:Color a="255" ]。
 專長為技能的幫手寶可夢[System:Color r="255" g="107" b="55" a="255" ]主技能發動機率會是[Digit:Digit3 ]倍[System:Color a="255" ]。
 所有幫手寶可夢的[System:Color r="255" g="107" b="55" a="255" ]發動的主技能等級提升[Digit:Digit3 ][System:Color a="255" ]。
@@ -713,6 +715,7 @@ Text File : EventBonusList
 專長為技能的幫手寶可夢，其[System:Color r="255" g="107" b="55" a="255" ]樹果、食材的持有上限會增加[Digit:Digit3 ]個[System:Color a="255" ]。
 若將[System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName ][System:Color a="255" ]或[System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName idx="1" ][System:Color a="255" ]編組在隊伍中一起睡覺，睡意之力就會變成[System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 idx="2" ]倍[System:Color a="255" ]。
 若將[System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName ][System:Color a="255" ]和[System:Color r="255" g="107" b="55" a="255" ][Name:PokemonName idx="1" ][System:Color a="255" ]這2隻寶可夢編組在隊伍中一起睡覺，睡意之力就會變成[System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 idx="2" ]倍[System:Color a="255" ]。
+幫手寶可夢的[System:Color r="255" g="107" b="55" a="255" ]持有上限+[Digit:Digit3 ]個[System:Color a="255" ]。
 [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ][System:Color a="255" ]屬性幫手寶可夢[System:Color r="255" g="107" b="55" a="255" ]發動的主技能等級提升[Digit:Digit3 idx="1" ][System:Color a="255" ]。
 [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ][System:Color a="255" ]、[System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType idx="1" ][System:Color a="255" ]屬性幫手寶可夢[System:Color r="255" g="107" b="55" a="255" ]發動的主技能等級提升[Digit:Digit3 idx="2" ][System:Color a="255" ]。
 [System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType ][System:Color a="255" ]、[System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType idx="1" ][System:Color a="255" ]、[System:Color r="255" g="107" b="55" a="255" ][Name:PokemonType idx="2" ][System:Color a="255" ]屬性幫手寶可夢[System:Color r="255" g="107" b="55" a="255" ]發動的主技能等級提升[Digit:Digit3 idx="3" ][System:Color a="255" ]。
@@ -729,6 +732,8 @@ Text File : EventBonusList
 不論研究者當天的睡眠類型為何，[System:Color r="255" g="107" b="55" a="255" ]都也能遇見其他睡眠類型的寶可夢[System:Color a="255" ]。
 在點心時間時，必定會有1隻寶可夢[System:Color r="255" g="107" b="55" a="255" ]處於貪吃狀態[System:Color a="255" ]。（1天僅限1次）
 在當天第1次的點心時間時，\n寶可夢會變得[System:Color r="255" g="107" b="55" a="255" ]不容易吃飽[System:Color a="255" ]。
+在當天第1次的點心時間時，特定的寶可夢會變得[System:Color r="255" g="107" b="55" a="255" ]不容易吃飽[System:Color a="255" ]。
+【在當天第1次的點心時間時會變得[System:Color r="255" g="107" b="55" a="255" ]不容易吃飽[System:Color a="255" ]】
 活動期間的料理為[System:Color r="255" g="107" b="55" a="255" ][Name:CookingGenreName ][System:Color a="255" ]。
 透過料理可獲得的[System:Color r="255" g="107" b="55" a="255" ]能量會變成[Digit:Digit4 separator="Default" ]倍[System:Color a="255" ]。
 寶可夢透過料理回復的活力[System:Color r="255" g="107" b="55" a="255" ]+[Digit:Digit3 ][System:Color a="255" ]。
@@ -783,6 +788,7 @@ EX模式
 能夠研究的營地
 EX模式
 研究寶可夢們的睡姿，\n達到一定程度的睡姿圖鑑目標，\n就能前往[System:Color r="255" g="107" b="55" a="255" ]新的營地[System:Color a="255" ]。
+[System:Color r="255" g="107" b="55" a="255" ]卡比獸喜歡的樹果[System:Color a="255" ]會隨營地而不同。\n多多培育各種屬性的寶可夢，\n研究許許多多的睡姿吧。
 [System:Color r="255" g="107" b="55" a="255" ]卡比獸喜歡的樹果[System:Color a="255" ]會隨營地而不同。\n多多培育各種屬性的寶可夢，\n研究許許多多的睡姿吧。
 關於營地
 EX模式會在\n[Date:Date label="yyyyyMMMddd_hh:mm" ]開放。
@@ -1653,18 +1659,15 @@ Español
 通知
 刪除帳號
 [System:Color r="134" g="134" b="134" a="255" ]將會刪除帳號的所有資料。\n這個操作無法復原。[System:Color a="255" ]
-睡眠EXP獎勵計量槽
 EXP獎勵計量槽
 研究階級MAX獎勵
 卡比獸級別提升
 EX券使用確認
 顯示彈出視窗
-當等級已達上限的幫手寶可夢\n獲得睡眠EXP時，\n會彈出獎勵計量槽的視窗。
 當等級已達上限的幫手寶可夢\n獲得EXP時，\n會彈出獎勵計量槽的視窗。
 當研究階級達到上限導致\n研究EXP自動轉換成夢之碎片時，\n會彈出視窗。
 在卡比獸級別提升時會彈出視窗。\n若將此項目設定為OFF，\n在達到已經達成過的級別時，\n將不再彈出視窗。
 使用EX券時，\n會彈出視窗以供確認。
-睡眠EXP獎勵計量槽
 EXP獎勵計量槽
 研究階級MAX獎勵
 卡比獸級別提升
@@ -1936,7 +1939,6 @@ Text File : Home_SCENE
 確定要種下紫花種子嗎？
 確定要種下白花種子嗎？
 花開後，可以獲得以下的效果。
-花開後可以獲得1個[Name:Item idx="1" ]。
 花開後可獲得1個\n[System:Color r="255" g="107" b="55" a="255" ][Name:Item idx="1" ][System:Color a="255" ]。
 確認
 詳情
@@ -1962,6 +1964,7 @@ Text File : Home_SCENE
 進行睡眠研究，\n收集有[Name:PokemonName ]入鏡的奇跡快照吧！
 任務已完成！
 奇跡快照任務
+奇跡快照任務（迷你）
 種下種子
 彩慶花
 午睡島
@@ -1976,6 +1979,10 @@ Text File : Home_SCENE
 開放了！
 可以從營地右下角的指示牌\n移動前往。
 開放
+正在營地展開的領域效果
+芒芒果的能量：[System:Color r="255" g="107" b="55" a="255" ]+[Digit:Digit4 separator="Default" ]%[System:Color a="255" ]
+※效果在移動營地後就會重置。
+領域效果
 我們將贈送[System:Color r="254" g="101" b="119" a="255" ]特別的禮物[System:Color a="255" ]給回歸的研究者們！\n此外，[System:Color r="254" g="101" b="119" a="255" ]還可以獲得[System:Color a="255" ]睡眠研究時的[System:Color r="254" g="101" b="119" a="255" ]特典[System:Color a="255" ]。\n活用禮物和特典，讓研究突飛猛進吧！
 ●禮物內容
 ・[Name:Item idx="1" ][System:Color r="254" g="101" b="119" a="255" ]×[Digit:Digit5 idx="2" separator="Default" ][System:Color a="255" ]
@@ -2013,6 +2020,7 @@ Text File : Home_SCENE
 距離下一級別\n還需
 距離獲得報酬\n還需
 和大家同心協力累積睡意之力，\n讓心之水滴恢復光輝吧！
+和大家同心協力累積睡意之力，\n往秘境的最深處前進吧！
 活動級別[Digit:Digit2 ]之後的級別\n會在[Date:Date label="yyyyyMMMddd_aaa" idx="1" ][Date:Date label="h:mm" idx="2" ]開放。
 尚未開放
 鍋子
@@ -2243,11 +2251,9 @@ OPEN
 更詳細的活動內容請查看遊戲內的「通知」。
 炎帝研究
 所有幫手寶可夢的\n[System:Color r="255" g="107" b="55" a="255" ]主技能發動機率提升[Digit:Digit2 ]倍[System:Color a="255" ]。
-所有幫手寶可夢的\n[System:Color r="255" g="107" b="55" a="255" ]主技能發動機率提升[Digit:Digit3 ]倍[System:Color a="255" ]。
 透過主技能「夢之碎片獲取」獲得的\n[System:Color r="255" g="107" b="55" a="255" ]夢之碎片數量[System:Color a="255" ]變成[System:Color r="255" g="107" b="55" a="255" ][Digit:Digit2 ]倍[System:Color a="255" ]。
 透過主技能「夢之碎片獲取S」獲得的\n[System:Color r="255" g="107" b="55" a="255" ]夢之碎片數量[System:Color a="255" ]變成[System:Color r="255" g="107" b="55" a="255" ][Digit:Digit3 ]倍[System:Color a="255" ]。
 可在提升幫手寶可夢的等級時\n使用[System:Color r="255" g="107" b="55" a="255" ]糖果增強功能[System:Color a="255" ]。
-可在提升幫手寶可夢的等級時\n使用[System:Color r="255" g="107" b="55" a="255" ]迷你糖果增強功能[System:Color a="255" ]。
 1天1次，可以從卡比獸身旁的\n[System:Color r="255" g="107" b="55" a="255" ]美夢好禮[System:Color a="255" ]獲得道具。
 可以使用[System:Color r="255" g="107" b="55" a="255" ]活動兌換處[System:Color a="255" ]。
 可以使用[System:Color r="255" g="107" b="55" a="255" ]古月鳥扭糖機[System:Color a="255" ]。
@@ -2355,6 +2361,7 @@ OPEN
 請整理食材，\n讓寶可夢可以用技能獲得食材。
 請整理食材包包，\n讓寶可夢可以發動技能。
 食材包包已滿
+%
 [Name:MainSkill ] Lv.[Digit:Digit3 idx="1" ]
 移動
 移動營地前，\n請確認以下事項。\n確定要移動營地嗎？
@@ -2455,21 +2462,14 @@ OPEN
 更詳細的企畫內容請查看遊戲內的「通知」。
 情人節
 本企畫為期一週，是能比平時更常遇見<strong>水屬性寶可夢</strong>的特別期間！\n\n趁機讓許多<b>水屬性寶可夢</b>成為夥伴，預備迎接「水君研究」吧！\n\n企畫期間，可使用期間限定功能「<b>迷你糖果增強</b>」。\n是培育水屬性寶可夢的好機會！\n\n除此之外，還會有各種獎勵生效。\n敬請期待！\n\n【企畫期間】\n・8/19（週一）4:00～8/26（週一）3:59\n\n【活動營地】\n・所有營地\n\n【任務期間】\n・8/19（週一）4:00～8/26（週一）3:59\n\n※企畫期間，在活動營地會發生下列效果。\n\n【所有日子（8/19～8/25）】\n・睡眠研究時，<strong>必定有1隻寶可夢</strong>會處於「<strong>貪吃</strong>」狀態。\n・睡眠研究時，不論研究者當天的睡眠類型為何，<strong>都也能遇見一些其他睡眠類型的寶可夢</strong>。\n・睡眠研究時，<strong>特定寶可夢的出現機率提升</strong>。\n・可以使用期間限定的「<strong>迷你糖果增強</strong>」。
-研究後的糖果獲得量變成[Digit:Digit2 ]倍。\n（1天僅限1次）
-不論研究者當天的睡眠類型為何，\n所有睡眠類型的寶可夢皆會出現。
 睡意之力變成[Digit:Digit2 ]倍。
 睡意之力變成[Digit:Digit3 ]倍。
 透過睡眠獲得的EXP變成[Digit:Digit1 ]倍。
-透過睡眠獲得的EXP變成[Digit:Digit3 ]倍。
 測量睡眠即可獲得[Digit:Digit4 separator="Default" ]點紅利睡眠點數。\n（1天僅限1次）
 試著在睡眠研究時\n使用大師沙布蕾吧。
 【容易遇見的異色寶可夢】
-研究後的夢之碎片獲得量變成[Digit:Digit2 ]倍。
-研究後的夢之碎片獲得量變成[Digit:Digit3 ]倍。
 容易遇見的異色寶可夢
-在點心時間時，\n必定會有1隻寶可夢處於貪吃狀態。\n（1天僅限1次）
 可透過睡眠研究獲得活動道具。\n（1天僅限1次）
-透過睡眠研究獲得的\n[System:Color r="255" g="107" b="55" a="255" ]研究EXP變成[Digit:Digit3 ]倍[System:Color a="255" ]。
 尚未發現的[System:Color r="255" g="107" b="55" a="255" ]寶可夢睡姿的發現機率提升[System:Color a="255" ]。
 結束一週的研究後，\n可獲得的營地獎勵會是[Digit:Digit2 ]%。
 可透過睡眠研究獲得\n[System:Color r="255" g="107" b="55" a="255" ][Name:Item idx="1" ][System:Color a="255" ]。\n（1天僅限1次）
@@ -3897,6 +3897,28 @@ Text File : MD_BannerPopupText
 ・睡意之力：<strong>[News:Num_Count ]倍</strong>
 ・幫手寶可夢的睡眠EXP：<strong>[News:Num_Count ]倍</strong>
 ・紅利睡眠點數：<strong>+[News:Num_Count ]pt</strong>
+在美麗的月夜，來場命運的邂逅吧！
+有報告指出當一年一度的中秋明月升起，不僅是滿月之日以及其前後各1天的「睡意之力」會增強，還會比平時更容易遇見異色的<strong>[News:PokemonNamesList ]</strong>。
+幸運的話，也許牠們會出現在各位研究者的身邊呢。
+此外，本活動還會有紅利睡眠點數及寶可夢的睡眠EXP上升的獎勵。
+歡迎把握活動期間睡飽睡足，多多研究寶可夢的睡姿！
+【舉辦期間】
+・[News:Date_mdahm ]～[News:Date_mdahm idx="1" ]
+※滿月之日：<strong>[News:Date_mda ]</strong>
+【活動營地】
+・所有營地
+期間內在活動營地會發生下列效果。
+【所有日子】
+・睡眠研究時，<strong>尚未發現的寶可夢睡姿出現機率提升</strong>。
+・幸運的話，還能遇見特定的異色寶可夢。
+【第2天（滿月之日）】
+・睡意之力：<strong>[News:Num_Count ]倍</strong>
+・幫手寶可夢的睡眠EXP：<strong>[News:Num_Count ]倍</strong>
+・紅利睡眠點數：<strong>+[News:Num_Count ]pt</strong>
+【第1天、第3天】
+・睡意之力：<strong>[News:Num_Count ]倍</strong>
+・幫手寶可夢的睡眠EXP：<strong>[News:Num_Count ]倍</strong>
+・紅利睡眠點數：<strong>+[News:Num_Count ]pt</strong>
 不給糖就搗蛋！
 在為期1週的活動中，能比平時更常遇見<strong>幽靈屬性的寶可夢</strong>，是配合萬聖節推出的特別期間！
 活動期間，也許還能遇見新登場的<strong>[News:PokemonName idx="1" ]、[News:PokemonName idx="2" ]，或戴著萬聖節帽子的「[News:PokemonName idx="3" ]」</strong>。
@@ -4069,6 +4091,49 @@ Text File : MD_BannerPopupText
 【最後一天([News:Date_md ])】
 ・睡意之力：<strong>[News:Num_Count ]倍</strong>
 ※睡意之力的獎勵同時登場時，僅適用倍率最大的獎勵。
+本活動為期2週，是<strong>探索萌綠之島的秘境、追尋[News:PokemonName ]稀有睡姿</strong>的特別期間！
+活動期間「全世界研究者睡意之力的平均值」和「自己的睡意之力」會總和成「<strong>活動睡意之力</strong>」並且逐漸累積。
+透過累積這個「活動睡意之力」，似乎能讓秘境研究有所進展，並能向秘境的更深處前進。
+和全世界的研究者同心協力，展開調查吧！
+此外，在活動期間，不僅會更容易遇見傳說的寶可夢<strong>[News:PokemonName ]</strong>，和[News:PokemonNamesList idx="1" ]一起睡覺還會有<b>睡意之力</b>提升的<b>獎勵</b>。
+不僅如此，僅在活動期間可透過睡眠研究獲得「<strong>[News:PokemonName ]的基因</strong>」。
+在活動兌換處將收集到的「[News:PokemonName ]的基因」兌換成新道具「[News:PokemonName idx="1" ]的薰香」和「[News:PokemonName idx="2" ]沙布蕾」，研究[News:PokemonName idx="3" ]的睡姿吧！
+另外，在這個秘境發現了尺寸比平常更大且能量滿滿的「<strong>超大芒芒果</strong>」，而[News:PokemonName ]、[News:PokemonName idx="1" ]和超能力屬性的寶可夢似乎會撿來更多的超大芒芒果！
+敬請期待！
+【舉辦期間】
+・第1週：[News:Date_mdahm ]～[News:Date_mdahm idx="1" ]
+・第2週：[News:Date_mdahm ]～[News:Date_mdahm idx="1" ]
+【活動營地】
+[News:FieldNamesList ]
+<strong>※在活動期間，無法選擇上述活動營地以外的營地。</strong>
+※活動期間，EX模式的營地外觀會與活動限定的一般模式營地外觀相同。
+【任務期間】
+・第1週：[News:Date_mdahm ]～[News:Date_mdahm idx="1" ]
+・第2週：[News:Date_mdahm ]～[News:Date_mdahm idx="1" ]
+【活動兌換處】
+・兌換期間：[News:Date_mdahm ]～[News:Date_mdahm idx="1" ]
+※在所有營地皆可使用兌換處。
+期間內在活動營地會發生下列效果。
+【所有日子】
+・若將[News:PokemonName ]或[News:PokemonName idx="1" ]編組在隊伍中一起睡覺，<strong>睡意之力會變成[News:Num_Count idx="2" ]倍</strong>。
+・所有幫手寶可夢在幫忙時，有時會額外撿來「<strong>超大芒芒果</strong>」。
+・超能力屬性幫手寶可夢在幫忙時撿來的<strong>食材數量會增加[News:Num_Count ]個</strong>。
+・超能力屬性幫手寶可夢的<strong>主技能發動機率會是[News:Num_Count ]倍</strong>。
+・活動營地的「這週的卡比獸喜歡的樹果」中，必定會有1種樹果是<strong>芒芒果</strong>（超能力屬性），另外的2種樹果會隨機決定。\n
+・睡眠研究時，<strong>特定寶可夢的出現機率提升</strong>。
+・在<strong>當天第1次</strong>的點心時間，[News:PokemonName ]會變得<strong>不容易吃飽</strong>。
+・可以使用期間限定的「<strong>活動兌換處</strong>」。
+・可透過當天第1次的睡眠研究獲得活動道具。
+・不論研究者當天的睡眠類型為何，<strong>都也能遇見其他睡眠類型的寶可夢</strong>。
+【第1週（[News:Date_md ]～[News:Date_md idx="1" ]）】
+・所有幫手寶可夢的<strong>持有上限會增加[News:Num_Count ]個</strong>。
+・超能力屬性幫手寶可夢發動主技能時，<strong>主技能等級+[News:Num_Count ]</strong>。
+【第2週（[News:Date_md ]～[News:Date_md idx="1" ]）】
+・若將[News:PokemonName ]編組在隊伍中一起睡覺，<strong>睡意之力就會變成[News:Num_Count idx="1" ]倍</strong>。
+・所有幫手寶可夢的<strong>持有上限會增加[News:Num_Count ]個</strong>。
+・超能力屬性幫手寶可夢發動主技能時，<strong>主技能等級+[News:Num_Count ]</strong>。
+・會出現大隻的卡比獸，<strong>可以從已累積一定能量的狀況開始培育卡比獸</strong>。
+※睡意之力的獎勵同時登場時，僅適用倍率最大的獎勵。
 這1個月是可以進行[News:PokemonName ]的<b>奇跡快照任務</b>的特別期間。
 舉辦期間，在研究寶可夢的睡姿時，有可能<strong>意外拍攝到[News:PokemonName ]的身影</strong>，而奇跡快照任務會隨著有[News:PokemonName ]入鏡的照片數量而有所進展。
 不僅如此，出現奇跡快照時，還會有各種獎勵生效。
@@ -4086,6 +4151,27 @@ Text File : MD_BannerPopupText
 ・奇跡快照的<strong>研究EXP變成平常的[News:Num_Count ]倍</strong>。
 ・奇跡快照的<strong>夢之碎片獲得量會比平常多[News:Num_Count ]個</strong>。
 ※以上所有獎勵效果皆不適用於沒有夢幻入鏡的睡姿照片。
+本活動為期1週，是<b>可以再次收集</b>[News:PokemonName ]的<b>奇跡快照</b>的特別期間。
+舉辦期間，在研究寶可夢的睡姿時，有可能<strong>意外拍攝到[News:PokemonName ]的身影</strong>，而奇跡快照任務（迷你）會隨著有[News:PokemonName ]入鏡的照片數量而有所進展。
+不僅如此，出現奇跡快照時，還會有各種獎勵生效。
+此外，進行「<strong>奇跡快照任務（迷你）</strong>」還可獲得報酬。
+對於尚未讓[News:PokemonName ]成為夥伴的研究者來說，這將會是讓[News:PokemonName idx="1" ]成為夥伴的好機會；而對於已讓[News:PokemonName idx="2" ]成為夥伴的研究者來說，則是獲得「靈感種子（[News:PokemonName idx="3" ]）」的絕佳機會！
+【舉辦期間】
+・[News:Date_mdahm ]～[News:Date_mdahm idx="1" ]
+【活動營地】
+・所有營地
+【任務期間】
+・[News:Date_mdahm ]～[News:Date_mdahm idx="1" ]
+期間內在活動營地會發生下列效果。
+【所有日子】
+・在當天第1次的睡眠研究可以拍攝奇跡快照。
+・奇跡快照的<strong>糖果獲得量變成平常的[News:Num_Count ]倍</strong>。
+・奇跡快照的<strong>研究EXP變成平常的[News:Num_Count ]倍</strong>。
+・奇跡快照的<strong>夢之碎片獲得量會比平常多[News:Num_Count ]個</strong>。
+・在當天第1次的睡眠研究，<strong>必定有1隻寶可夢會處於貪吃狀態</strong>。
+・睡眠研究時，<strong>特定寶可夢的出現機率提升</strong>。
+・可以使用期間限定的「<strong>迷你糖果增強</strong>」。
+・不論研究者當天的睡眠類型為何，<strong>都也能遇見其他睡眠類型的寶可夢</strong>。
 本企畫為期一週，是能比平時更常遇見<strong>電、火、水屬性寶可夢</strong>的特別期間！
 趁機讓許多寶可夢成為夥伴，預備迎接將在日後通知詳情的「[News:PokemonName idx="1" ]＆[News:PokemonName idx="2" ]＆[News:PokemonName idx="3" ]研究」吧！
 期間中，在當天第1次的點心時間，<strong>必定有1隻寶可夢會處於貪吃狀態</strong>。
@@ -4220,6 +4306,36 @@ Text File : MD_BannerPopupText
 【活動營地】
 ・[News:FieldNamesList ]
 <strong>※在活動期間，因受到同時舉辦的其他活動、企畫影響，無法選擇上述活動營地以外的營地。</strong>
+期間內在活動營地會發生下列效果。
+【所有日子】
+・幻之寶可夢的<strong>特別機率提升</strong>。
+・在<strong>當天第1次</strong>的點心時間，寶可夢會變得<strong>不容易吃飽</strong>。
+・幸運的話，也許還能遇見異色的寶可夢。
+・每次在睡眠研究遇見特別機率提升的寶可夢時，該寶可夢的友情點數皆會提升<strong>[News:Num_Count ]</strong>。
+在新月的夜晚，來場特別的邂逅吧！
+本活動會在每個月的「新月之日」以及其前後各1天舉辦，在這為期3天的期間會有特別機率提升，且寶可夢會變得<strong>不容易吃飽</strong>。
+不僅如此，幸運的話，也許還能遇見<strong>異色的寶可夢</strong>。
+敬請期待！
+【舉辦期間】
+・[News:Date_mdahm ]～[News:Date_mdahm idx="1" ]
+※新月之日：[News:Date_mda ]
+【活動營地】
+・所有營地
+期間內在活動營地會發生下列效果。
+【所有日子】
+・幻之寶可夢的<strong>特別機率提升</strong>。
+・在<strong>當天第1次</strong>的點心時間，寶可夢會變得<strong>不容易吃飽</strong>。
+・幸運的話，也許還能遇見異色的寶可夢。
+・每次在睡眠研究遇見特別機率提升的寶可夢時，該寶可夢的友情點數皆會提升<strong>[News:Num_Count ]</strong>。
+在新月的夜晚，來場特別的邂逅吧！
+本活動會在每個月的「新月之日」以及其前後各1天舉辦，在這為期3天的期間會有特別機率提升，且寶可夢會變得<strong>不容易吃飽</strong>。
+不僅如此，幸運的話，也許還能遇見<strong>異色的寶可夢</strong>。
+敬請期待！
+【舉辦期間】
+・[News:Date_mdahm ]～[News:Date_mdahm idx="1" ]
+※新月之日：[News:Date_mda ]
+【活動營地】
+・所有營地
 期間內在活動營地會發生下列效果。
 【所有日子】
 ・幻之寶可夢的<strong>特別機率提升</strong>。
@@ -4955,6 +5071,9 @@ Pokémon Day紀念企畫
 3週年搶先慶企畫
 3週年紀念嘉年華
 寶可夢動畫合作週
+奇跡快照任務（迷你）
+秘境研究！追尋超夢吧
+追尋超夢吧
 伊布
 新年1
 新年2
@@ -5005,6 +5124,9 @@ Pokémon Day紀念
 3週年紀念1
 3週年紀念2
 合作週
+奇跡快照（迷你）
+超夢1
+超夢2
 ~~~~~~~~~~~~~~~
 Text File : MD_event_item_packs
 ~~~~~~~~~~~~~~~
@@ -5206,7 +5328,19 @@ Pokémon Day紀念企畫歡慶包（豐緣＆帕底亞）vol.[Digit:Digit2 ]
 合作紀念包S
 合作紀念包M
 合作紀念包L
+奇跡快照（迷你）同樂包S
+奇跡快照（迷你）同樂包M
+奇跡快照（迷你）同樂包L
 寶可夢培育包（[Name:PokemonName ]）vol.[Digit:Digit2 idx="1" ]
+超夢研究包S vol.[Digit:Digit2 ]
+超夢研究包M vol.[Digit:Digit2 ]
+超夢研究包L vol.[Digit:Digit2 ]
+超夢衝刺包S vol.[Digit:Digit2 ]
+超夢衝刺包M vol.[Digit:Digit2 ]
+超夢衝刺包L vol.[Digit:Digit2 ]
+寶可夢30週年紀念包S
+寶可夢30週年紀念包M
+寶可夢30週年紀念包L
 ~~~~~~~~~~~~~~~
 Text File : MD_event_purchase_item_packs
 ~~~~~~~~~~~~~~~
@@ -5322,6 +5456,52 @@ Text File : MD_event_story
 試著讓「[System:Color r="255" g="107" b="55" a="255" ]心之水滴[System:Color a="255" ]」恢復光輝的\n拉帝亞斯和拉帝歐斯的力量，
 說不定對卡比獸也造成了影響呢。
 和這隻卡比獸的話，從一週的開始\n似乎就能有效率地進行睡眠研究呢。\n請多指教囉，卡比獸！
+謝謝你的研究！\n今天我有個特別的研究\n想拜託你！
+我終於弄清楚\n傳說的寶可夢[System:Color r="255" g="107" b="55" a="255" ]超夢[System:Color a="255" ]\n前往的區域了！
+超夢似乎就在萌綠之島\n尚未展開調查的[System:Color r="255" g="107" b="55" a="255" ]秘境[System:Color a="255" ]區域。
+雖然牠是戒備心很強的寶可夢，\n但只要越往秘境深處前進，\n或許就越有機會看見牠稀有的睡姿呢。
+機會難得，\n就讓我們一邊好好研究秘境\n一邊探索吧！
+如果要讓秘境研究有所進展，\n似乎會需要大量\n卡比獸那能引發睡意的力量。
+所以能拜託你\n與全世界的研究者同心協力，\n收集睡意之力嗎？
+另外，在那一帶似乎有著\n能量非常豐沛的[System:Color r="255" g="107" b="55" a="255" ]超大芒芒果[System:Color a="255" ]。
+在培育卡比獸時，\n說不定能派上用場呢。
+除此之外，充滿好奇心的[System:Color r="255" g="107" b="55" a="255" ]夢幻\n[System:Color a="255" ]好像也對超夢的睡姿特別感興趣。
+為了調查超夢的稀有睡姿，\n牠說不定會協助你喔！
+那麼，讓我們努力\n探索秘境吧！
+謝謝你的研究！\n託你的福，探索有了進展，\n找到了能前往深處的路！
+如果就這樣持續調查下去，\n或許就能研究到\n[System:Color r="255" g="107" b="55" a="255" ]超夢的稀有睡姿[System:Color a="255" ]了呢！
+真讓人吃驚！
+沒想到居然能看見超夢不耐煩地趕開\n對自己的睡姿深感興趣的夢幻！
+成功看到了超夢睡姿的夢幻\n好像也很高興呢。
+就讓我們照著這個步調，\n繼續努力進行睡眠研究吧！
+真讓人吃驚！\n這隻卡比獸似乎\n比一般的卡比獸還要[System:Color r="255" g="107" b="55" a="255" ]大隻[System:Color a="255" ]！
+會不會是能在這附近發現的\n超大芒芒果所帶來的影響呢？
+和這隻卡比獸的話，從一週的開始\n似乎就能有效率地進行睡眠研究呢。\n請多指教囉，卡比獸！
+謝謝你的研究！\n今天我有一件特別的事\n要拜託你！
+最近「[System:Color r="255" g="107" b="55" a="255" ]夢幻[System:Color a="255" ]」似乎在\n正在睡覺的寶可夢附近\n看似很高興地飛來飛去。
+說不定是有什麼\n讓夢幻覺得好奇的事呢。
+這陣子如果進行睡眠研究，\n似乎就能拍到[System:Color r="255" g="107" b="55" a="255" ]飛來飛去的夢幻\n不小心入鏡的照片[System:Color a="255" ]，所以……
+為了調查夢幻在好奇什麼事，
+能拜託你[System:Color r="255" g="107" b="55" a="255" ]拍下牠的身影[System:Color a="255" ]，\n將夢幻飛來飛去的樣子記錄下來嗎？
+那麼就拜託你了！\n讓我們努力進行睡眠研究吧。
+謝謝你收集了\n許多有夢幻入鏡的照片！
+牠大概更喜歡會幫忙研究\n稀有的寶可夢睡姿的你了。
+看來夢幻果然\n對在睡覺的寶可夢\n很感興趣呢。
+或許是變得更加信賴你了，\n牠給了你[System:Color r="255" g="107" b="55" a="255" ]靈感種子[System:Color a="255" ]。
+牠大概也很喜歡會幫忙研究\n稀有的寶可夢睡姿的你吧。
+你與夢幻的牽絆也變得更加深厚了，\n我想牠應該會\n[System:Color r="255" g="107" b="55" a="255" ]在下次睡眠研究時現身[System:Color a="255" ]喔。
+現在的話，感覺夢幻也會\n安心地[System:Color r="255" g="107" b="55" a="255" ]前來睡覺[System:Color a="255" ]了。
+那麼，讓我們繼續\n努力進行睡眠研究吧！
+明天的睡眠研究\n就拜託你了！
+謝謝你的研究！
+在你對夢幻展開調查的時候，\n我看見了[System:Color r="255" g="107" b="55" a="255" ]神秘的身影[System:Color a="255" ]。
+我急急忙忙地拍下了那個身影，\n沒想到看了照片後發現……
+那說不定是\n傳說的寶可夢「[System:Color r="255" g="107" b="55" a="255" ]超夢[System:Color a="255" ]」。
+夢幻或許是感受到了超夢的氣息，\n對牠的睡姿感到好奇而在尋找牠呢。
+還有，超夢好像前往\n[System:Color r="255" g="107" b="55" a="255" ]萌綠之島的深處[System:Color a="255" ]了。
+說不定在萌綠之島上，\n存在著我們還不知道的秘境。
+我會查清楚超夢去了哪裡，\n並且做好展開調查的準備的。
+在那之前能請你繼續\n完成每天的睡眠研究嗎？\n拜託你了！
 謝謝你的研究！\n今天我有一件特別的事\n要拜託你！
 最近有目擊報告指出\n在萌綠之島的附近發現了\n幻之寶可夢「[System:Color r="255" g="107" b="55" a="255" ]夢幻[System:Color a="255" ]」的身影。
 據說好奇心旺盛的夢幻似乎對\n正在睡覺的寶可夢們相當感興趣，\n在牠們的附近飛來飛去。
@@ -5472,7 +5652,6 @@ Text File : MD_health_data_sources
 （Fitbit、Google Pixel Watch等）
 （Galaxy Watch等）
 （Forerunner265等）
-Fitbit
 Google Health
 Samsung Health
 Apple Watch內建的睡眠測量
@@ -5484,13 +5663,13 @@ Text File : MD_health_faq
 Apple Watch是否有自動進行睡眠測量？
 睡眠資料是否被登錄在健康裡了？
 睡眠資料是否滿足\n可載入《Pokémon Sleep》的資料條件？
-睡眠資料是否已登錄在\nSamsung Health、Fitbit或\nGarmin Connect等應用程式裡了？
 睡眠資料是否已登錄在\nSamsung Health、Google Health或\nGarmin Connect等應用程式裡了？
 睡眠資料是否已登錄在Health Connect裡了？
 睡眠資料是否滿足\n可載入《Pokémon Sleep》的資料條件？
 是否已開啟健康的讀取權限？
 是否已開啟Health Connect的讀取權限？
 睡眠資料是否已登錄在\nGarmin Connect的應用程式裡了？
+睡眠資料是否已登錄在Google Health或\nGarmin Connect等應用程式裡了？
 ~~~~~~~~~~~~~~~
 Text File : MD_item_name_data
 ~~~~~~~~~~~~~~~
@@ -5506,6 +5685,7 @@ Text File : MD_item_name_data
 紀念沙布蕾
 拉帝亞斯沙布蕾
 拉帝亞斯／拉帝歐斯沙布蕾
+超夢沙布蕾
 能讓睡眠研究之後得到的\n研究EXP變成2倍。\n只在下一次的睡眠研究有效。
 能讓睡眠研究之後得到的\n夢之碎片變成2倍。\n只在下一次的睡眠研究有效。
 能讓幫手寶可夢在睡眠研究後\n得到的經驗值變成2倍。\n只在下一次的睡眠研究有效。
@@ -5567,6 +5747,7 @@ Text File : MD_item_name_data
 挑戰EX模式的營地時所需的票券。
 能和特定的寶可夢\n變得非常友好的特別點心。\n友情點數會提升6。
 活動兌換處的兌換期間結束後，\n此道具會自動被轉換成超級沙布蕾。\n兌換期間請查看活動的通知。
+活動兌換處的兌換期間結束後，\n此道具會在經過一段時間後\n自動被轉換成超級沙布蕾。\n兌換期間和沙布蕾轉換的時間點\n請查看活動的通知。
 在本次活動中，只能給以下的寶可夢吃。
 能讓1隻幫手寶可夢的活力\n回復20的特製果汁。
 使用後可能讓活力回復到100以上。
@@ -5643,6 +5824,7 @@ Text File : MD_item_name_data
 寶可夢的掉落物
 拉帝亞斯的羽絨
 拉帝歐斯的羽絨
+超夢的基因
 專注薰香
 幸運薰香
 成長薰香
@@ -5941,6 +6123,7 @@ Text File : MD_pokedex_data
 龍寶可夢
 龍寶可夢
 龍寶可夢
+基因寶可夢
 新種寶可夢
 葉子寶可夢
 葉子寶可夢
@@ -6175,6 +6358,7 @@ Text File : MD_pokedex_data
 長久以來被認為只存在於幻想之中，\n是罕見的寶可夢。牠睡覺的模樣一直是個謎，\n但是隨著有越來越多的迷你龍與訓練家生活，\n現在可以觀察到牠的各種睡姿了。
 哈克龍據說能將力量集中在尾巴的珠子，\n藉此操縱天氣。有時牠在睡夢之間也會\n不經意地用這個力量改變天氣。要小心，\n周圍的天氣隨時都有可能發生劇烈變化喔。
 快龍被稱為大海的化身。\n也許是因為在廣闊大海四處飛行\n筋疲力盡了，有人發現過牠露出了\n整個肚子在熟睡。是非常罕見的睡姿。
+據說是透過夢幻的基因製造出來的寶可夢。\n睡覺時大多是靜靜地站著睡，\n一般認為這是牠在儲存能量，\n以便在戰鬥時將力量發揮到極限。
 夢幻擁有所有寶可夢的基因，\n非常罕見，被稱為幻之寶可夢。\n牠甚至連睡覺時都能自由自在地消除蹤影，\n因此看過牠的睡姿的研究者寥寥無幾。
 據說牠會用頭上的葉子來探測\n溫度和濕度，尋找最舒服的睡覺處。\n也許是能夠找到好地方，\n很多時候牠都是放鬆地在睡覺喔。
 月桂葉會從脖子周圍的花苞中散發出\n香辛料般的香味。這種香味具有可以\n讓人湧出活力的效果，說不定也能讓\n睡在牠周圍的寶可夢恢復活力呢。
@@ -6412,6 +6596,7 @@ Text File : MD_pokemons
 迷你龍
 哈克龍
 快龍
+超夢
 夢幻
 菊草葉
 月桂葉
@@ -6832,6 +7017,7 @@ Text File : MD_pokemon_main_skills
 隨機讓隊伍的2隻寶可夢回復活力[Digit:Digit3 ]，\n並讓牠們立刻完成[Digit:Digit2 idx="1" ]次幫忙。\n滿足特定條件時，效果會進一步提升。
 獲得自己以及隊伍中的寶可夢會撿來的樹果。\n滿足特定條件時，效果會進一步提升。
 獲得[Digit:Digit7 separator="Default" ]個夢之碎片。\n不僅如此，卡比獸的能量還會增加[Digit:Digit4 idx="1" separator="Default" ]。
+卡比獸的能量增加[Digit:Digit7 separator="Default" ]。\n不僅如此，還會在營地展開樹果領域。
 能量填充S
 能量填充M
 夢之碎片獲取S
@@ -6880,6 +7066,7 @@ Text File : MD_pokemon_main_skills
 治癒波動（活力療癒S）
 流星群（樹果遽增）
 波導彈（夢之碎片獲取S）
+精神擊破（樹果領域）
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_main_skills_ShortName
 ~~~~~~~~~~~~~~~
@@ -6905,6 +7092,7 @@ Text File : MD_pokemon_main_skill_filters
 正電
 負電
 料理輔助S
+樹果領域
 ~~~~~~~~~~~~~~~
 Text File : MD_pokemon_nature
 ~~~~~~~~~~~~~~~
@@ -7241,6 +7429,11 @@ Text File : MD_sleeping_faces
 窩起來睡
 坐著睡
 露肚子睡
+立單膝睡
+站立飄浮睡
+精神擊破睡
+不耐煩睡
+心靈平靜睡
 輕飄飄睡
 隨心所欲睡
 泡泡床睡
@@ -8221,7 +8414,6 @@ Text File : MD_tutorial_stories
 首先，我們來確認你今天\n測量到的睡眠資料吧。
 這裡顯示的是代表\n[System:Color r="255" g="107" b="55" a="255" ]睡眠時間長度[System:Color a="255" ]的[System:Color r="255" g="107" b="55" a="255" ]睡眠分數[System:Color a="255" ]。
 這個叫做[System:Color r="255" g="107" b="55" a="255" ]睡眠分數[System:Color a="255" ]，\n代表你的[System:Color r="255" g="107" b="55" a="255" ]睡眠時間長度[System:Color a="255" ]。
-這個叫做[System:Color r="255" g="107" b="55" a="255" ]睡眠分數[System:Color a="255" ]，\n代表你的[System:Color r="255" g="107" b="55" a="255" ]睡眠時間長度[System:Color a="255" ]。
 以成人來說，\n[System:Color r="255" g="107" b="55" a="255" ]睡滿8個半小時[System:Color a="255" ]的睡眠，\n就能拿到滿分100分的睡眠分數。
 以成人來說，\n[System:Color r="255" g="107" b="55" a="255" ]睡滿11個小時[System:Color a="255" ]的睡眠，\n就能拿到滿分100分的睡眠分數。
 朝著100分，也就是睡滿\n[System:Color r="255" g="107" b="55" a="255" ]8個半小時[System:Color a="255" ]這個目標努力，\n[System:Color r="255" g="107" b="55" a="255" ]盡量確保長時間的睡眠吧！[System:Color a="255" ]
@@ -8302,7 +8494,6 @@ Text File : MD_tutorial_stories
 其他還有很多能做的事情。\n你可以試試各種不同的功能。
 雖然經過一週就會和卡比獸道別，\n但在下一個營地，\n你會和新的卡比獸一起進行研究。
 那麼，讓我們今後好好努力\n進行睡眠研究吧！
-努力培育卡比獸，\n盡量讓牠長得又大又壯吧！
 而且，只要使用這個票券，\n[System:Color r="255" g="107" b="55" a="255" ]就能在培育卡比獸和研究時更有進展[System:Color a="255" ]，\n你就試著使用看看吧。
 如果卡比獸長大，\n[System:Color r="255" g="107" b="55" a="255" ]就會更容易遇見許多寶可夢[System:Color a="255" ]，\n所以請努力培育卡比獸吧！
 哇，我講解了好久！辛苦你了！\n那麼，讓我們今後好好努力\n進行睡眠研究吧！
@@ -8357,7 +8548,6 @@ Text File : MD_tutorial_stories
 這個[System:Color r="255" g="107" b="55" a="255" ]靈感種子[System:Color a="255" ]還給你。\n等一下就對[Name:PokemonName ]使用看看吧！
 成為夥伴的達克萊伊\n送了你一個不可思議的道具呢。
 成為夥伴的[Name:PokemonName ]\n送了你一個不可思議的道具呢。
-看來你注意到花盆了呢。\n這次我想請你幫忙讓特別的花開花。
 看來你注意到花盆了呢。\n這次我想請你幫忙讓特別的花開花。
 這種花有不可思議的力量。\n[System:Color r="255" g="107" b="55" a="255" ]只要花開了，睡眠研究的時候[System:Color a="255" ]\n就會有好事發生呢。
 培育的方法很簡單。\n每天在花盆裡\n[System:Color r="255" g="107" b="55" a="255" ]種下你喜歡的種子[System:Color a="255" ]……
@@ -8845,7 +9035,6 @@ Lv. [Digit:Digit3 ]
 發動時會蓄積或噴放能量。\n在噴放能量時，會根據蓄積的次數\n增加卡比獸的能量。\n噴放能量後，蓄積的次數就會重置。
 蓄積後可增加的\n卡比獸能量分別如下。
 ※若將這隻寶可夢從隊伍移除，\n　蓄積的次數就會重置。
-獲得[Digit:Digit3 ]個樹果，另外還會獲得各[Digit:Digit3 idx="1" ]個\n隊伍中的寶可夢會撿來的樹果。\n少數情況下會發生「漂亮成功」，\n獲得大量樹果。
 獲得[Digit:Digit3 ]個樹果，另外還會獲得各[Digit:Digit3 idx="1" ]個\n隊伍中的寶可夢會撿來的樹果。\n有時候會發生「漂亮成功」，\n獲得大量樹果。
 ※一旦發生漂亮成功後，直到下次進行睡眠研究或\n手動登錄睡眠資料為止，都不會再發生漂亮成功。
 會隨機複製隊伍中1隻寶可夢的\n主技能來發動。
@@ -8884,6 +9073,11 @@ Lv. [Digit:Digit3 ]
 獲得自己以及隊伍中的寶可夢會撿來的樹果。\n隊伍中有越多不同種類的[Name:PokemonType ]屬性幫手寶可夢，\n樹果數量就會增加得越多。
 獲得自己以及隊伍中的寶可夢會撿來的樹果。\n隊伍中有越多不同種類的[Name:PokemonType ]屬性幫手寶可夢，\n樹果數量就會增加得越多。\n不僅如此，隊伍中有拉帝亞斯時，\n自己獲得的樹果還會增加[Digit:Digit4 idx="1" separator="Default" ]個。
 隊伍中有拉帝亞斯時，\n自己獲得的樹果還會增加[Digit:Digit4 separator="Default" ]個。
+卡比獸的能量增加[Digit:Digit7 separator="Default" ]。\n不僅如此，還會在營地展開樹果領域，\n透過芒芒果獲得的能量會提升[Digit:Digit3 idx="1" ]%。
+※「樹果領域」一旦展開，\n就會在移動營地前持續發揮效果。
+※即使將[Name:PokemonName ]從幫手隊伍移除，\n「樹果領域」的效果也不會消失。
+※「樹果領域」的效果上限為[Digit:Digit4 separator="Default" ]%。\n每次主技能發動時，「樹果領域」的效果都會疊加，\n直到達到上限為止。
+※發動主技能時，\n放在樹果箱子裡的所有樹果\n會立刻作為能量消耗使用。
 關於十項全能
 可學會的主技能一覽
 可設置的主技能一覽
@@ -9144,6 +9338,7 @@ Text File : PokemonHeight
 1.8m
 4.0m
 2.2m
+2.0m
 0.4m
 0.9m
 1.2m
@@ -9425,12 +9620,9 @@ Text File : PokemonTop_SCENE
 編組隊伍
 寶可夢盒
 寶可夢
-累積溢出的睡眠EXP\n即可獲得道具！
 累積溢出的EXP\n即可獲得道具！
-睡眠EXP獎勵計量槽
 EXP獎勵計量槽
 說明
-當隊伍裡的幫手寶可夢等級已達到上限時，\n寶可夢不會獲得溢出的睡眠EXP。\n溢出的睡眠EXP會被計入獎勵計量槽。
 當隊伍裡的幫手寶可夢等級已達到上限時，\n寶可夢不會獲得溢出的EXP。\n溢出的EXP會被計入獎勵計量槽。
 每次獎勵計量槽達到MAX時，\n皆可獲得[Digit:Digit2 idx="2" ]個[Name:Item idx="1" ]。
 寶可夢等級MAX獎勵
@@ -9510,6 +9702,7 @@ Text File : PokemonWeight
 3.3kg
 16.5kg
 210.0kg
+122.0kg
 4.0kg
 6.4kg
 15.8kg
@@ -9736,6 +9929,7 @@ Galaxy Watch\n睡眠研究特典
 尚未領取的道具
 Garmin\n睡眠研究特典
 合作紀念禮物
+夢幻培育禮物\n第[Digit:Digit2 ]天
 ~~~~~~~~~~~~~~~
 Text File : PresentBox_SCENE
 ~~~~~~~~~~~~~~~
@@ -9921,7 +10115,7 @@ Text File : Shop_SCENE
 鑽石（付費）×[Digit:Digit4 separator="Default" ]
 鑽石（獎勵）×[Digit:Digit4 separator="Default" ]
 [Digit:Digit2 ]折
-OFF
+
 商店
 睡眠點數兌換處
 商店
@@ -10685,14 +10879,9 @@ Loading...
 選擇中的寶可沙布蕾
 [Digit:Digit3 ]/[Digit:Digit3 idx="1" ]
 [System:Color r="255" g="107" b="55" a="255" ]特定寶可夢的出現機率提升[System:Color a="255" ]。
-不論研究者當天的睡眠類型為何，\n[System:Color r="255" g="107" b="55" a="255" ]所有睡眠類型的寶可夢皆會出現[System:Color a="255" ]。
-第1次睡眠研究後的[System:Color r="255" g="107" b="55" a="255" ]糖果獲得量提升[System:Color a="255" ]。
 [System:Color r="255" g="107" b="55" a="255" ]幸運的話，將能遇見\n異色的「[Name:PokemonName ]」。[System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ]幸運的話，將能遇見異色的寶可夢。[System:Color a="255" ]
 [System:Color r="255" g="107" b="55" a="255" ]幸運的話，\n也許還能遇見特定的異色寶可夢。[System:Color a="255" ]
-睡眠研究後的[System:Color r="255" g="107" b="55" a="255" ]夢之碎片獲得量提升[System:Color a="255" ]。
-在第1次睡眠研究時，\n必定會有1隻寶可夢處於貪吃狀態。
-透過睡眠研究獲得的[System:Color r="255" g="107" b="55" a="255" ]研究EXP變成[Digit:Digit3 ]倍[System:Color a="255" ]。
 尚未發現的[System:Color r="255" g="107" b="55" a="255" ]寶可夢睡姿的發現機率提升[System:Color a="255" ]。
 活動獎勵
 January
@@ -10762,16 +10951,22 @@ December
 睡意之力匯聚後，\n暴風雨平靜下來了！
 大家的睡意之力匯聚後，\n心之水滴恢復了光輝！
 睡意之力匯聚後，\n心之水滴恢復了光輝！
+大家的睡意之力匯聚後，\n秘境調查有了進展。
+睡意之力匯聚後，\n秘境調查有了進展。
+大家的睡意之力讓調查有所進展，\n找到了通往秘境深處的路！
+睡意之力讓調查有所進展，\n找到了通往秘境深處的路！
 大家的睡意之力也匯聚過來了！
 睡意之力帶來了影響……
 活動睡意之力
 [Name:PokemonName ]和[Name:PokemonName idx="1" ]\n看起來睡得很安穩。
+[Name:PokemonName ]還在睡覺。\n成功看到了睡姿的[Name:PokemonName idx="1" ]\n看起來很高興。
 關於靈感種子
 只能讓1隻[Name:PokemonName ]成為夥伴。
 當友情點數達到MAX時，\n就能獲得[System:Color r="255" g="107" b="55" a="255" ]靈感種子[System:Color a="255" ]。
 關於[Name:PokemonName ]的友情點數
 能感受到[Name:PokemonName ]的信賴。
 隨著奇跡快照任務的進度，\n[Name:PokemonName ]的\n友情點數提升了。
+隨著奇跡快照任務（迷你）的進度，\n[Name:PokemonName ]的\n友情點數提升了。
 敬請期待下次的新月日！
 喚醒牠
 看來達克萊伊\n似乎還有著未解之謎。
@@ -10928,6 +11123,7 @@ No.
 設置薰香
 設置好的薰香會在下一次的\n睡眠研究中發揮效果，並被消耗。
 最多可以設置2個\n睡眠時使用的薰香。
+最多可以設置[Digit:Digit2 ]個\n睡眠時使用的薰香。
 確定要使用[Digit:Digit2 ]個嗎？
 設置
 [Digit:Digit2 ]
@@ -10984,7 +11180,6 @@ No.
 說明
 已針對下列現象調整睡眠資料。
 ・裝置被攜帶或移動
-・深深入眠的狀態過長
 若是在堅硬的平面或是\n過於柔軟的床墊上測量睡眠，\n將可能無法正確偵測。
 若是在床邊桌等\n遠離床鋪的地方測量睡眠，\n將可能無法正確偵測身體動作。
 若無法正確測量睡眠，\n將裝置放置在更靠近身體的位置\n可能可以改善狀況。
@@ -11435,6 +11630,8 @@ Text File : SupportPokemonSkill_GROUP
 [Name:PokemonNickname ]的活力回復[Digit:Digit3 idx="1" ]，並完成了[Digit:Digit3 idx="2" ]次幫忙！\n[Name:PokemonNickname idx="3" ]的活力回復[Digit:Digit3 idx="4" ]，並完成了[Digit:Digit3 idx="5" ]次幫忙！\n不僅如此，[Name:PokemonNickname ]牠們還因為牽絆之力，完成了[Digit:Digit3 idx="6" ]次幫忙！
 獲得[Digit:Digit4 separator="Default" ]個樹果！\n不僅如此，還因為牽絆之力額外獲得了[Digit:Digit4 idx="1" separator="Default" ]個樹果！
 獲得夢之碎片×[Digit:Digit4 separator="Default" ]！\n不僅如此，還獲得了能量[Digit:Digit4 idx="1" separator="Default" ]！
+獲得能量[Digit:Digit5 separator="Default" ]！\n不僅如此，還展開了樹果領域！\n芒芒果的能量提升[Digit:Digit3 idx="1" ]％！
+獲得能量[Digit:Digit5 separator="Default" ]！\n由於樹果領域的效果已達上限，\n樹果領域並未展開！
 ~~~~~~~~~~~~~~~
 Text File : TagSet
 ~~~~~~~~~~~~~~~
@@ -11720,8 +11917,10 @@ EX模式
 收集奇跡快照吧
 在當天的第1次睡眠研究\n拍攝寶可夢的睡姿照片時，\n可以拍攝到有[Name:PokemonName ]入鏡的奇跡快照。
 收集有[Name:PokemonName ]入鏡的寶可夢的睡姿照片，\n完成[System:Color r="255" g="107" b="55" a="255" ]奇跡快照任務[System:Color a="255" ]吧。
+收集有[Name:PokemonName ]入鏡的寶可夢睡姿照片，\n完成[System:Color r="255" g="107" b="55" a="255" ]奇跡快照任務（迷你）[System:Color a="255" ]吧。
 [System:Color r="255" g="107" b="55" a="255" ]寶可夢的睡姿越稀有[System:Color a="255" ]，\n[Name:PokemonName ]就越容易入鏡。\n此外，透過奇跡快照獲得的\n寶可夢的糖果等報酬也會稍多一點。
 關於奇跡快照任務
+關於奇跡快照任務（迷你）
 將拉帝亞斯和拉帝歐斯編入隊伍吧
 拉帝亞斯和拉帝歐斯\n[System:Color r="255" g="107" b="55" a="255" ]在同一隊伍中可各編組1隻[System:Color a="255" ]。
 將拉帝亞斯和拉帝歐斯[System:Color r="255" g="107" b="55" a="255" ]編組在同一隊伍時[System:Color a="255" ]，\n[System:Color r="255" g="107" b="55" a="255" ]主技能的追加效果就會生效[System:Color a="255" ]。
@@ -11742,6 +11941,11 @@ EX模式
 在活動期間，\n若將[System:Color r="255" g="107" b="55" a="255" ]拉帝亞斯和拉帝歐斯2隻都\n編組在隊伍中[System:Color a="255" ]一起睡覺，\n作為研究獎勵的[System:Color r="255" g="107" b="55" a="255" ]睡意之力會變成1.3倍[System:Color a="255" ]。
 ※拉帝亞斯和拉帝歐斯\n可以2隻一起編組在同一隊伍。
 和拉帝亞斯與拉帝歐斯\n一起累積睡意之力，\n讓心之水滴恢復光輝吧！
+將夢幻或超夢編入隊伍吧
+在活動期間，\n若將[System:Color r="255" g="107" b="55" a="255" ]夢幻或超夢任1隻\n編組在隊伍中[System:Color a="255" ]一起睡覺，\n作為研究獎勵的[System:Color r="255" g="107" b="55" a="255" ]睡意之力會變成1.1倍[System:Color a="255" ]。
+不僅如此，在活動第2週，\n若將[System:Color r="255" g="107" b="55" a="255" ]超夢編組在隊伍中[System:Color a="255" ]一起睡覺，\n作為研究獎勵的[System:Color r="255" g="107" b="55" a="255" ]睡意之力會變成1.3倍[System:Color a="255" ]。
+睡意之力的獎勵同時登場時，\n僅適用倍率最大的獎勵。
+多多累積睡意之力，\n讓秘境探索有所進展吧！
 關於友情徽章
 獲得友情徽章吧！
 當寶可夢達到特定的友情等級時，\n就會獲得[System:Color r="255" g="107" b="55" a="255" ]友情徽章[System:Color a="255" ]。
