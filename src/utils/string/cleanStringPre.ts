@@ -45,7 +45,33 @@ export function remapKoreanBraille(s: string) {
 }
 
 // GB special characters
-function remapGBSpecialCharacters(s: string) {
+function remapGBSpecialCharacters(s: string, language: LanguageKey) {
+  s = language === 'ko' ? (s
+    // Single-byte (Japanese/English)
+    .replaceAll('<『>', '『')
+    .replaceAll('<』>', '』')
+    .replaceAll('<…>', '…')
+    .replaceAll('<(>', '(')
+    .replaceAll('<)>', ')')
+    .replaceAll('<->', '-')
+    .replaceAll('<?>', '?')
+    .replaceAll('<!>', '!')
+    .replaceAll('<,>', ',')
+
+    // Double-byte (Korean)
+    .replaceAll('<.>', '.')
+    .replaceAll('<0>', '0')
+    .replaceAll('<1>', '1')
+    .replaceAll('<2>', '2')
+    .replaceAll('<3>', '3')
+    .replaceAll('<4>', '4')
+    .replaceAll('<5>', '5')
+    .replaceAll('<6>', '6')
+    .replaceAll('<7>', '7')
+    .replaceAll('<8>', '8')
+    .replaceAll('<9>', '9')
+    .replaceAll('<SP>', '\u3000')
+  ) : s;
   return (s
     .replaceAll('¥', '$') // Pokémon Dollar
     .replaceAll('<PK>', '⒆') // Gen 1/2 PK
@@ -425,7 +451,7 @@ export function preprocessString(s: string, collectionKey: CollectionKey, langua
   const { isGB, isGen3, isNDS, is3DS, isSwitch, isN64, isGCN, isPBR, isRanch, isDreamRadar, isGO, isMasters, isSleep, isTCGPocket } = getCorpusGroups(collectionKey);
 
   if (isGB) {
-    s = remapGBSpecialCharacters(s);
+    s = remapGBSpecialCharacters(s, language);
   }
   else if (isGen3) {
     s = remapGBASpecialCharacters(s, language);
