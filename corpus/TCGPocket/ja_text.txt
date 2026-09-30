@@ -1743,6 +1743,7 @@ Vフレイム
 ヘルハウンドフレア
 ロケットフィーバー
 こらしめる
+フォーリングエッジ
 ほたるのいかり
 はっぱブーメラン
 なぶりやき
@@ -1902,6 +1903,7 @@ Vフレイム
 進撃パラドックス エンブレムイベント
 天空の支配者 エンブレムイベント
 ミラクルデイズ エンブレムイベント
+ハイクラスパック MEGAエンブレムイベント
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望 エンブレムイベント
 カメールデッキ(最強の遺伝子)
 フシギソウデッキ(最強の遺伝子)
@@ -2379,9 +2381,40 @@ Vフレイム
 [Text:CardName v="ROCKETDANNOYADOKING_EX"]デッキ(ロケット団の野望)
 [Text:CardName v="ROCKETDANNOMATADOGAS_EX"]デッキ(ロケット団の野望)
 [Text:CardName v="ROCKETDANNORATTA_EX"]デッキ(ロケット団の野望)
+[Text:CardName v="NYAROTE"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="WAKASYAMO"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="KAMEIL"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="BUTTERFREE"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="LAUDBON"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="INTEREON"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="RAICHU"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="NYMPHIA"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="ALOLABETBETON"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="GILLGARD"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="RATTA"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAJUKAIN_EX"]＆[Text:CardName v="MASQUERNYA_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGABURSYAMO_EX"]＆[Text:CardName v="BAKPHOON_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAKAMEX_EX"]＆[Text:CardName v="WHALOH_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALIVOLT_EX"]＆[Text:CardName v="HARABARIE_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGASIRNIGHT_EX"]＆[Text:CardName v="MIMIKKYU_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALUCARIO_EX"]＆[Text:CardName v="IWAPALACE_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAGANGAR_EX"]＆[Text:CardName v="DRAMIDORO_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAHASSAM_EX"]＆[Text:CardName v="SURFUGO_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="ELFUUN_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALIZARDONX_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="GEKKOUGA_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MIRAIDON_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGASIRNIGHT_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALUCARIO_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="ZOROARK_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MELMETAL_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGARAYQUAZA_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
 [Text:CardName v="HELLGAR"]デッキ(天空の支配者)
 [Text:CardName v="MEGAHELLGAR_EX"]デッキ(天空の支配者)
 [Text:CardName v="ROCKETDANNOLAPLACE"]デッキ(ロケット団の野望)
+[Text:CardName v="GABITE"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="GABURIAS"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAGABURIAS_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
 [Text:CardName v="SHIRONA"]デッキ(夢幻パレード)
 [Text:CardName v="KAIRYU"]デッキ(夢幻パレード)
 [Text:CardName v="SILVADY"]デッキ(夢幻パレード)
@@ -2408,6 +2441,15 @@ Vフレイム
 [Text:CardName v="MUMARGI"]デッキ(夢幻パレード)
 [Text:CardName v="ELEZARD"]デッキ(夢幻パレード)
 [Text:CardName v="ASHIRENE_EX"]デッキ(夢幻パレード)
+[Text:CardName v="MEGAFUSHIGIBANA_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAJUKAIN_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALIZARDONY_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGABURSYAMO_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAKAMEX_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAGYARADOS_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGATYLTALIS_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAGANGAR_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="KORAIDON_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
 フシギバナexデッキ(最強の遺伝子)
 リザードンexデッキ(最強の遺伝子)
 カメックスexデッキ(最強の遺伝子)
@@ -2590,6 +2632,14 @@ Vフレイム
 [Text:CardName v="ROCKETDANNOYADOKING_EX"]デッキ(ロケット団の野望)
 [Text:CardName v="ROCKETDANNOMATADOGAS_EX"]デッキ(ロケット団の野望)
 [Text:CardName v="ROCKETDANNORATTA_EX"]デッキ(ロケット団の野望)
+[Text:CardName v="MEGAJUKAIN_EX"]＆[Text:CardName v="MASQUERNYA_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGABURSYAMO_EX"]＆[Text:CardName v="BAKPHOON_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAKAMEX_EX"]＆[Text:CardName v="WHALOH_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALIVOLT_EX"]＆[Text:CardName v="HARABARIE_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGASIRNIGHT_EX"]＆[Text:CardName v="MIMIKKYU_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALUCARIO_EX"]＆[Text:CardName v="IWAPALACE_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAGANGAR_EX"]＆[Text:CardName v="DRAMIDORO_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAHASSAM_EX"]＆[Text:CardName v="SURFUGO_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
 エリートデッキ([Text:CardName v="MEGALIZARDONY_EX"])
 エリートデッキ([Text:CardName v="MEGALUCARIO_EX"])
 バトルで使えるレンタルデッキです\nデッキに含まれるカードを所持していなくても\nバトルで使用できます
@@ -2784,6 +2834,14 @@ Vフレイム
 [Text:CardName v="ROCKETDANNOYADOKING_EX"]デッキ(ロケット団の野望)
 [Text:CardName v="ROCKETDANNOMATADOGAS_EX"]デッキ(ロケット団の野望)
 [Text:CardName v="ROCKETDANNORATTA_EX"]デッキ(ロケット団の野望)
+[Text:CardName v="MEGAJUKAIN_EX"]＆[Text:CardName v="MASQUERNYA_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGABURSYAMO_EX"]＆[Text:CardName v="BAKPHOON_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAKAMEX_EX"]＆[Text:CardName v="WHALOH_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALIVOLT_EX"]＆[Text:CardName v="HARABARIE_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGASIRNIGHT_EX"]＆[Text:CardName v="MIMIKKYU_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALUCARIO_EX"]＆[Text:CardName v="IWAPALACE_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAGANGAR_EX"]＆[Text:CardName v="DRAMIDORO_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAHASSAM_EX"]＆[Text:CardName v="SURFUGO_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
 エリートデッキ([Text:CardName v="MEGALIZARDONY_EX"])
 エリートデッキ([Text:CardName v="MEGALUCARIO_EX"])
 デッキ機能で使えるテーマデッキレシピです\nレシピに書かれたカードを集めることで\nデッキを作成して遊ぶことができます
@@ -2850,6 +2908,7 @@ Vickie
 [Text:CardName v="HISUIZORUA"]ドロップイベント
 [Text:CardName v="MEGAHELLGAR_EX"]ドロップイベント
 [Text:CardName v="ROCKETDANNOLAPLACE"]ドロップイベント
+[Text:CardName v="MEGAGABURIAS_EX"]ドロップイベント
 ランダムバトル(B2)
 ランダムバトル(B2a)
 ランダムバトル(B2b)
@@ -2858,6 +2917,7 @@ Vickie
 ランダムバトル(B3b)
 ランダムバトル(B4)
 ランダムバトル(B4a)
+ランダムバトル(B4b)
 [Ctrl:Bold]やけど[/Ctrl:Bold]
 金フレーム
 コレクションファイル・コレクションボード・\nバトルで表示できる金フレームです
@@ -4198,6 +4258,7 @@ Vickie
 [Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ラプラス
 キャモメ
 [Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ソーナンス
+メガガブリアスex
 フォッコ
 [Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ブーバー
 [Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post"]ファイヤーex
@@ -4265,7 +4326,48 @@ Vickie
 メガエルレイド
 テラパゴス
 メガディアンシー
+メガミュウツーX
+メガリザードン
+ビギナーランク1
+ビギナーランク2
+ビギナーランク3
+ビギナーランク4
+ハイパーボールランク1
+ハイパーボールランク2
+ハイパーボールランク3
+ハイパーボールランク4
+モンスターボールランク1
+モンスターボールランク2
+モンスターボールランク3
+モンスターボールランク4
+スーパーボールランク1
+スーパーボールランク2
+スーパーボールランク3
+スーパーボールランク4
 ロケット団
+TOP1000
+TOP5000
+TOP10000
+第1弾
+第2弾
+第3弾
+第4弾
+第5弾
+第6弾
+第7弾
+第8弾
+第9弾
+第10弾
+第11弾
+第12弾
+第13弾
+第14弾
+第15弾
+第16弾
+第17弾
+第18弾
+第19弾
+第20弾
 アラブ首長国連邦
 アンティグア・バーブーダ
 アンギラ
@@ -4670,8 +4772,10 @@ Vickie
 [Text:CardName v="ROCKETDANNOBOSS"](エンブレム)
 ランクマッチ シーズンA3aで獲得できる\nハイパーボールランク3のエンブレムです
 シーズンA3a ハイパーボールランク3
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](エンブレム)
 ランクマッチ シーズンA3aで獲得できる\nハイパーボールランク4のエンブレムです
 シーズンA3a ハイパーボールランク4
+メガシンカex(エンブレム)
 ランクマッチ シーズンA3aで獲得できる\nスーパーボールランク1のエンブレムです
 シーズンA3a スーパーボールランク1
 ランクマッチ シーズンA3aで獲得できる\nスーパーボールランク2のエンブレムです
@@ -4906,12 +5010,20 @@ Vickie
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望 エンブレムイベント 金賞
 ランクマッチ シーズンA4bで獲得できる\nスーパーボールランク1のエンブレムです
 シーズンA4b スーパーボールランク1
+[Mst:PackName v="PACK_NAME_B4b_1"] エンブレムイベントで獲得できる\n参加賞のエンブレムです
+[Mst:PackName v="PACK_NAME_B4b_1"] エンブレムイベント 参加賞
 ランクマッチ シーズンA4bで獲得できる\nスーパーボールランク2のエンブレムです
 シーズンA4b スーパーボールランク2
+[Mst:PackName v="PACK_NAME_B4b_1"] エンブレムイベントで獲得できる\n銅賞のエンブレムです
+[Mst:PackName v="PACK_NAME_B4b_1"] エンブレムイベント 銅賞
 ランクマッチ シーズンA4bで獲得できる\nスーパーボールランク3のエンブレムです
 シーズンA4b スーパーボールランク3
+[Mst:PackName v="PACK_NAME_B4b_1"] エンブレムイベントで獲得できる\n銀賞のエンブレムです
+[Mst:PackName v="PACK_NAME_B4b_1"] エンブレムイベント 銀賞
 ランクマッチ シーズンA4bで獲得できる\nスーパーボールランク4のエンブレムです
 シーズンA4b スーパーボールランク4
+[Mst:PackName v="PACK_NAME_B4b_1"] エンブレムイベントで獲得できる\n金賞のエンブレムです
+[Mst:PackName v="PACK_NAME_B4b_1"] エンブレムイベント 金賞
 ランクマッチ シーズンA4bで獲得できる\nモンスターボールランク1のエンブレムです
 シーズンA4b モンスターボールランク1
 ランクマッチ シーズンA4bで獲得できる\nモンスターボールランク2のエンブレムです
@@ -5148,6 +5260,26 @@ Vickie
 シーズンB4a ビギナーランク2
 シーズンB4a ビギナーランク3
 シーズンB4a ビギナーランク4
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:MainRankName v="MAIN_RANK_NAME_MASTERBALL"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] マスターボールランク([Mst:CommonEventLabel v="COMMON_Master_TOP10000"])
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] マスターボールランク([Mst:CommonEventLabel v="COMMON_Master_TOP5000"])
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] マスターボールランク([Mst:CommonEventLabel v="COMMON_Master_TOP1000"])
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_01"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_02"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_03"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_04"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_01"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_02"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_03"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_04"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_01"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_02"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_03"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_04"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_01"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_02"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_03"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_04"]
 1周年
 スペシャルイベント2025の記念エンブレムです
 スペシャルイベント2025(エンブレム)
@@ -5212,6 +5344,7 @@ B3a
 B3b
 B4
 B4a
+B4b
 最強の遺伝子
 幻のいる島
 時空の激闘
@@ -5233,6 +5366,7 @@ B4a
 ミラクルデイズ
 天空の支配者
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望
+ハイクラスパック MEGA
 #マイコレクション
 #好きなポケモン
 #お気に入りのイラスト
@@ -6744,6 +6878,7 @@ B4a
 トレーナーとの　絆は　力｡\n敵を　切り裂く　プレートと　身を\n守る　マントに　姿を　変える｡
 １匹の　メタグロスと　１匹の\nメタングと　２匹の　ダンバルが\n連結している　姿　なのだ｡
 メガシンカで　全身が　発熱｡\n激しい　炎の　息吹を\n噴き出し　相手を　炭に　変える｡
+メガシンカ前より　凶暴な\n性質｡　両腕の　カマで\n敵を　ズタズタに　切り刻む｡
 大気中の　チリが　エサ｡\nチリに　含まれる　成分によって\nコアの　色が　決まるという｡
 夜空に　光る　流れ星は\n隕石を　追う　メガレックウザが\n舞い飛ぶ　姿かも　知れないのだ｡
 Narumi Sato
@@ -6983,6 +7118,7 @@ Yoshimoto Yoshimon
 Akino Fukuji
 Iwamoto05
 Kazuki Minami
+YOSHIROTTEN
 Coming Soon
 チャレンジパワーを待ち時間短縮するアイテムです\n使用するとゲットチャレンジまでの時間が1時間\n短縮します　ミッション報酬などで入手できます
 一部の「ひとりで」のバトルやイベントに\n挑戦するためのアイテムです\n使用すると挑戦までの時間を短縮します
@@ -7082,6 +7218,7 @@ EXP
 プロモカード交換チケット([Text:CardName v="HISUIZORUA"]ドロップイベント)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]のあやしいチケット
 プロモカード交換チケット([Text:CardName v="ROCKETDANNOLAPLACE"]ドロップイベント)
+プロモカード交換チケット([Text:CardName v="MEGAGABURIAS_EX"]ドロップイベント)
 いつかのチケット
 シャボン玉 水色 エフェクト(キラ)
 シャボン玉 ピンク エフェクト(キラ)
@@ -7172,6 +7309,40 @@ EXP
 コレクションファイルは\nプレイヤーレベルが6になると\nオープンします\n\nプレイヤーレベルはパック開封などで\nプレイヤー経験値を得ることで上がります
 プレミアムミッションは\nプレミアムパスに加入すると\nオープンします\n\nプレミアムパスはプレミアムミッションや\nショップにあるボタンから加入できます
 トレードは\nプレイヤーレベルが3になると\nオープンします\n\nプレイヤーレベルはパック開封などで\nプレイヤー経験値を得ることで上がります
+{0}デッキ({1})
+{0}(エンブレム)
+{0} エンブレムイベント 銅賞
+{0} エンブレムイベントで獲得できる\n銅賞のエンブレムです
+{0} エンブレムイベント 金賞
+{0} エンブレムイベントで獲得できる\n金賞のエンブレムです
+{0} エンブレムイベント 参加賞
+{0} エンブレムイベントで獲得できる\n参加賞のエンブレムです
+{0} エンブレムイベント 銀賞
+{0} エンブレムイベントで獲得できる\n銀賞のエンブレムです
+シーズン{0} {1}
+シーズン{0} マスターボールランク({1})
+イベントショップチケット({0})
+エンブレムチケット({0})
+プロモカードパック {0}シリーズ {1}
+{0}(アイコン)
+色ちがいの{0}(アイコン)
+{0} {1}(アイコン)
+{0}(ボード)
+{0} Ver.2(ボード)
+{0}(ポケモンコイン)
+色ちがいの{0}(ポケモンコイン)
+{0} アナザー(ポケモンコイン)
+{0} レインボー(ポケモンコイン)
+{0} Ver.2(ポケモンコイン)
+{0}(デッキシールド)
+{0} Ver.2(デッキシールド)
+{0}(ファイル)
+{0} {1}(ファイル)
+{0} Ver.2(ファイル)
+{0}(プレイマット)
+{0} {1}(プレイマット)
+{0} Ver.2(プレイマット)
+周辺グッズ「{0}」つきポケゴールド(有償)×115
 ビギナーランク
 ハイパーボールランク
 マスターボールランク
@@ -7207,6 +7378,7 @@ EXP
 レンタルデッキ「[Mst:RentalDeckName id="0"]」で「ひとりで」のバトルを[Num:Int id="1" max_length="3"]回しよう
 おすそわけを[Num:Int id="0" max_length="3"]回しよう
 「ひとりで」のバトルで[Num:Int id="0" max_length="3"]ポイント獲得しよう
+「だれかと」のバトルで[Mst:EnergyTypeNameLong id="0"]のカードを8枚以上デッキに入れて[Num:Int id="1" max_length="3"]回勝利しよう
 ログインせよ！([Num:Int id="0" max_length="3"]日目)
 バトルを[Num:Int id="0" max_length="3"]回せよ！
 ゲットチャレンジを[Num:Int id="0" max_length="3"]回プレイせよ！
@@ -7634,6 +7806,18 @@ exコンプリート！
 [Text:CardName v="ROCKETDANNOSHITAPPA"]大集合
 あやしい発明品コレクター
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]のカードコンプリート
+メガシンカexコレクション
+特性を持つポケモンex
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_24"]の2つの姿
+環境で姿がちがう[Text:CardName v="ZOROARK"]
+こいぬポケモンの日常
+硬い殻に守られたポケモン
+ひとつ目のポケモン
+音でたたかうポケモン
+スタジアムコンプリート！
+ハイクラスパック MEGAミュージアム
+特別な[Mst:Rarity v="RARITY_MSID_SSASR"]カードを1枚集めよう
+メガシンカex大集合！
 [Text:CardNameWithSubName id="0"]のカードを[Num:Int id="1" max_length="3"]枚入手せよ！
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望の[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]のカードを[Num:Int id="1" max_length="3"]枚入手せよ！
 [Text:CardName v="TRIMMIEN"]のファッションショー
@@ -7690,9 +7874,11 @@ exスタートデッキミッション
 1周年記念スペシャルミッション 後半
 ミラー仕様のカード大量発生イベント
 ミラー仕様のカード大量発生イベント
+ミラー仕様のカード大量発生イベント
 1周年カウントダウンミッション
 アカウント連携ミッション
 アカウント連携ミッション
+ボーナスウィークミッション
 ボーナスウィークミッション
 復刻PROMOドロップイベント2025\nミッション
 復刻PROMOゲットチャレンジイベント\n2025ミッション
@@ -7729,12 +7915,18 @@ exスタートデッキミッション
 [Text:CardName v="HISUIZORUA"]ドロップイベント
 ミラクルデイズ エンブレムイベント
 複数シリーズ①
+[Text:CardName v="MEGAGABURIAS_EX"]ドロップイベント
+[Text:CardName v="MEGAGABURIAS_EX"]ドロップイベント
+ハイクラスパック MEGA エンブレムイベント
+ハイクラスパック MEGA エンブレムイベント
 [Text:CardName v="ROCKETDANNOLAPLACE"]ドロップイベント
 [Text:CardName v="ROCKETDANNOLAPLACE"]ドロップイベント
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望 エンブレムイベント
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望 エンブレムイベント
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の特別任務
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の特別任務
+ピカピカ！ピカチュウミッション
+ピカピカ！ピカチュウミッション
 初級
 上級
 デイリー
@@ -7767,6 +7959,7 @@ exスタートデッキ
 一覧
 おかえり
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]
+ピカピカ！
 ランダムバトル(上級)
 ランダムバトル(初級)
 ランダムバトル(エキスパート)
@@ -7808,6 +8001,9 @@ TOP10000
 ミラクルデイズの拡張パック
 天空の支配者の拡張パック
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望の拡張パック
+ハイクラスパック MEGAの拡張パック
+ピカピカ！ピカチュウミッションで手に入る\n特別なパック
+ピカピカ！ピカチュウミッションで手に入る\nとても特別なパック
 Aシリーズ 第1弾のプロモカードパック 
 Aシリーズ 第2弾のプロモカードパック 
 Aシリーズ 第3弾のプロモカードパック 
@@ -7833,7 +8029,9 @@ Bシリーズ 第9弾のプロモカードパック
 Bシリーズ 第10弾のプロモカードパック 
 Bシリーズ 第11弾のプロモカードパック 
 Bシリーズ 第12弾のプロモカードパック 
+Bシリーズ 第13弾のプロモカードパック 
 [Mst:Rarity v="RARITY_MSID_RR"]以上1枚確定
+ポケモンex1枚確定
 最強の遺伝子 ミュウツー
 最強の遺伝子 ミュウツー([Mst:Rarity v="RARITY_MSID_RR"]以上1枚確定)
 最強の遺伝子 リザードン
@@ -7865,6 +8063,9 @@ Bシリーズ 第12弾のプロモカードパック
 ミラクルデイズ
 天空の支配者
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望
+ハイクラスパック MEGA
+ピカピカ！ピカチュウパック
+ピカピカ！ピカチュウパックex
 プロモカードパック Aシリーズ 第1弾
 プロモカードパック Aシリーズ 第2弾
 プロモカードパック Aシリーズ 第3弾
@@ -7890,6 +8091,7 @@ Bシリーズ 第12弾のプロモカードパック
 プロモカードパック Bシリーズ 第10弾
 プロモカードパック Bシリーズ 第11弾
 プロモカードパック Bシリーズ 第12弾
+プロモカードパック [Mst:SeriesName v="SERIES_NAME_2"]シリーズ [Mst:CommonPackLabel v="COMMON_PACK_LABEL_013"]
 [Mst:Rarity v="RARITY_MSID_RR"]以上確定
 通常封入
 通常封入+1枚
@@ -8397,6 +8599,7 @@ Bシリーズ 第12弾のプロモカードパック
 全国図鑑NO.0442　ふういんポケモン　高さ：1.0m　重さ：108.0kg
 全国図鑑NO.0443　りくザメポケモン　高さ：0.7m　重さ：20.5kg
 全国図鑑NO.0444　ほらあなポケモン　高さ：1.4m　重さ：56.0kg
+全国図鑑NO.0445　マッハポケモン　高さ：1.9m　重さ：95.0kg
 全国図鑑NO.0445　マッハポケモン　高さ：1.9m　重さ：95.0kg
 全国図鑑NO.0446　おおぐいポケモン　高さ：0.6m　重さ：105.0kg
 全国図鑑NO.0447　はもんポケモン　高さ：0.7m　重さ：20.2kg
@@ -9104,6 +9307,11 @@ Bシリーズ 第12弾のプロモカードパック
 [Text:CardName v="ROCKETDANNOSHITAPPA"] Ver.3(アイコン)
 [Text:CardName v="ROCKETDANNOKENKYUUIN"](アイコン)
 [Text:CardName v="ROCKETDANNOBOSS"](アイコン)
+[Text:CardName v="HUURO"](アイコン)
+[Mst:PackName v="PACK_NAME_B4b_1"] [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](アイコン)
+[Text:CardName v="PIKACHU"] Ver.12(アイコン)
+[Text:CardName v="PIKACHU"] Ver.13(アイコン)
+[Text:CardName v="PIKACHU"] Ver.14(アイコン)
 [Text:CardName v="PIKACHU"] Ver.2(アイコン)
 [Text:CardName v="PIKACHU"] Ver.3(アイコン)
 [Text:CardName v="PIKACHU"] Ver.4(アイコン)
@@ -9423,6 +9631,16 @@ PROMO-B
 重さくらべ
 レトロサマー(ボード)
 レトロサマー
+[Text:CardName v="HOOPA"](ボード)
+[Text:CardName v="HOOPA"]
+[Text:CardName v="HUURO"](ボード)
+[Text:CardName v="HUURO"]
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](ボード)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
+キラキラ海岸(ボード)
+キラキラ海岸
+喜びの街並み
+喜びの街並み(ボード)
 コレクションボード機能で使う\nカードを飾るための台紙です
 イーブイ(ポケモンコイン)
 イーブイ
@@ -9517,6 +9735,7 @@ PROMO-B
 [Text:CardName v="YAMIRAMI"](ポケモンコイン)
 [Text:CardName v="MIRAIDON"](ポケモンコイン)
 ポケモン30周年デザイン(ポケモンコイン)
+[Text:CardName v="PIKACHU"] Ver.3(ポケモンコイン)
 [Text:CardName v="METAGROSS"](ポケモンコイン)
 [Text:CardName v="MIJUMARU"](ポケモンコイン)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14"](ポケモンコイン)
@@ -9524,6 +9743,9 @@ PROMO-B
 [Text:CardName v="FOKKO"](ポケモンコイン)
 [Text:CardName v="ROCKETDANNOBOSS"](ポケモンコイン)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"](ポケモンコイン)
+[Text:CardName v="HOOPA"](ポケモンコイン)
+[Text:CardName v="HUURO"](ポケモンコイン)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](ポケモンコイン)
 バトル時に使用できるコインです\nデッキ機能で設定できます
 イーブイ(デッキシールド)
 イーブイ
@@ -9611,6 +9833,7 @@ PROMO-B
 [Text:CardName v="YAMIRAMI"](デッキシールド)
 [Text:CardName v="MIRAIDON"](デッキシールド)
 ポケモン30周年デザイン(デッキシールド)
+[Text:CardName v="PIKACHU"]＆[Text:CardName v="PICHU"](デッキシールド)
 [Text:CardName v="METAGROSS"](デッキシールド)
 [Text:CardName v="MIJUMARU"](デッキシールド)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14"](デッキシールド)
@@ -9618,6 +9841,9 @@ PROMO-B
 [Text:CardName v="FOKKO"](デッキシールド)
 [Text:CardName v="ROCKETDANNOBOSS"](デッキシールド)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"](デッキシールド)
+[Text:CardName v="HOOPA"](デッキシールド)
+[Text:CardName v="HUURO"](デッキシールド)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](デッキシールド)
 カードに装着する周辺グッズです\nデッキ機能で設定できます
 コレクションファイル機能で使う\nファイルの表紙です
 イーブイ(ファイル)
@@ -9764,6 +9990,10 @@ PROMO-B
 [Text:CardName v="ROCKETDANNOBOSS"]＆[Text:CardName v="PERSIAN"](ファイル)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"](ファイル)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"](ファイル)
+[Text:CardName v="HOOPA"](ファイル)
+[Text:CardName v="HUURO"]＆[Text:CardName v="SWANNA"](ファイル)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](ファイル)
+ハイクラスパック MEGA(ファイル)
 イーブイ(プレイマット)
 イーブイ
 ニャース(プレイマット)
@@ -9851,6 +10081,7 @@ PROMO-B
 [Text:CardName v="YAMIRAMI"](プレイマット)
 [Text:CardName v="MIRAIDON"](プレイマット)
 ポケモン30周年デザイン(プレイマット)
+[Text:CardName v="PIKACHU"]＆[Text:CardName v="KODUCK"]＆[Text:CardName v="PICHU"](プレイマット)
 [Text:CardName v="METAGROSS"](プレイマット)
 [Text:CardName v="MIJUMARU"](プレイマット)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14"](プレイマット)
@@ -9858,6 +10089,9 @@ PROMO-B
 [Text:CardName v="FOKKO"](プレイマット)
 [Text:CardName v="ROCKETDANNOBOSS"]＆[Text:CardName v="PERSIAN"](プレイマット)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"](プレイマット)
+[Text:CardName v="HOOPA"](プレイマット)
+[Text:CardName v="HUURO"]＆[Text:CardName v="SWANNA"](プレイマット)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](プレイマット)
 バトル時に場に広げる周辺グッズです\nデッキ機能で設定できます
 自分の場にたねポケモンを[Num:Int id="0" max_length="2"]匹出す
 自分の場にポケモンexを[Num:Int id="0" max_length="2"]匹出す
@@ -9896,6 +10130,7 @@ B3a
 B3b
 B4
 B4a
+B4b SP
 獲得したポイント数が[Num:Int id="0" max_length="3"]ポイント以上になる
 与えたダメージが[Num:Int id="0" max_length="5"]ダメージ以上になる
 獲得した勝利数が[Num:Int id="0" max_length="3"]回以上になる
@@ -10430,6 +10665,16 @@ exスタートデッキ
 [Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100850_SAKAKI"]
 [Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101040_SAKAKI"]
 [Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100850_SAKAKI_PERSIAN"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101340_MEGALIZARDONX"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101560_MEGALIZARDONX"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100890_MEGALIZARDONX"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101080_MEGALIZARDONX"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100890_MEGALIZARDONX"]
+[Mst:CardCharacterName v="CARD_NAME_1022"](096/P-B)
+[Mst:CardCharacterName v="CARD_NAME_380"](097/P-B)
+[Mst:CardCharacterName v="CARD_NAME_381"](098/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1344"](099/P-B)
+[Mst:CardCharacterName v="CARD_NAME_588"](100/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1340"](088/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1341"](089/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1342"](090/P-B)
@@ -10499,6 +10744,7 @@ exスタートデッキ
 サマーセール　お得なポケゴールド(有償)×15
 サマーセール　お得なポケゴールド(有償)×200
 周辺グッズ「[Text:CardName v="KAMITSURE"]」つきポケゴールド(有償)×115
+周辺グッズ「[Text:CardName v="HOOPA"]」つきポケゴールド(有償)×115
 周辺グッズ「[Text:CardName v="THUNDER"]＆[Text:CardName v="FREEZER"]＆[Text:CardName v="FIRE"]」つきポケゴールド(有償)×115
 ポケゴールド
 チケット
@@ -10537,6 +10783,7 @@ exスタートデッキ
 [Mst:PackName v="PACK_NAME_PROMO_B_10"]
 [Mst:PackName v="PACK_NAME_PROMO_B_11"]
 [Mst:PackName v="PACK_NAME_PROMO_B_12"]
+[Mst:PackName v="PACK_NAME_PROMO_B_13"]
 廃止されたアイテムです\nショップで他のアイテムと交換してください
 トレードメダル
 ほしいカード以外でもトレード希望
@@ -10761,7 +11008,9 @@ exスタートデッキ
 [Mst:CollectionBoardHashTag]
 [Mst:CollectionFileHashTag]
 [Mst:CommonCharacterName]
+[Mst:CommonEventLabel]
 [Mst:CommonGroupName]
+[Mst:CommonPackLabel]
 [Mst:CountryName]
 [Mst:CurrencyDescription]
 [Mst:CurrencyName]

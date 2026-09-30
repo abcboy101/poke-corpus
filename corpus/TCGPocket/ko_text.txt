@@ -1743,6 +1743,7 @@ V플레임
 헬하운드 플레어
 로켓피버
 혼내주기
+폴링에지
 반딧불의분노
 잎날부메랑
 조롱태우기
@@ -1902,6 +1903,7 @@ V플레임
 진격 패러독스 엠블럼 이벤트
 천공의 지배자 엠블럼 이벤트
 미라클 데이즈 엠블럼 이벤트
+하이클래스팩 MEGA 엠블럼 이벤트
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 엠블럼 이벤트
 어니부기 덱(최강의 유전자)
 이상해풀 덱(최강의 유전자)
@@ -2379,9 +2381,40 @@ V플레임
 [Text:CardName v="ROCKETDANNOYADOKING_EX" ] 덱(로켓단의 야망)
 [Text:CardName v="ROCKETDANNOMATADOGAS_EX" ] 덱(로켓단의 야망)
 [Text:CardName v="ROCKETDANNORATTA_EX" ] 덱(로켓단의 야망)
+[Text:CardName v="NYAROTE" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="WAKASYAMO" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="KAMEIL" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="BUTTERFREE" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="LAUDBON" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="INTEREON" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="RAICHU" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="NYMPHIA" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="ALOLABETBETON" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="GILLGARD" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="RATTA" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAJUKAIN_EX" ]&[Text:CardName v="MASQUERNYA_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGABURSYAMO_EX" ]&[Text:CardName v="BAKPHOON_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAKAMEX_EX" ]&[Text:CardName v="WHALOH_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALIVOLT_EX" ]&[Text:CardName v="HARABARIE_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGASIRNIGHT_EX" ]&[Text:CardName v="MIMIKKYU_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALUCARIO_EX" ]&[Text:CardName v="IWAPALACE_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAGANGAR_EX" ]&[Text:CardName v="DRAMIDORO_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAHASSAM_EX" ]&[Text:CardName v="SURFUGO_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="ELFUUN_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALIZARDONX_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="GEKKOUGA_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MIRAIDON_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGASIRNIGHT_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALUCARIO_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="ZOROARK_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MELMETAL_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGARAYQUAZA_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
 [Text:CardName v="HELLGAR" ] 덱(천공의 지배자)
 [Text:CardName v="MEGAHELLGAR_EX" ] 덱(천공의 지배자)
 [Text:CardName v="ROCKETDANNOLAPLACE" ] 덱(로켓단의 야망)
+[Text:CardName v="GABITE" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="GABURIAS" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAGABURIAS_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
 [Text:CardName v="SHIRONA" ] 덱(몽환 퍼레이드)
 [Text:CardName v="KAIRYU" ] 덱(몽환 퍼레이드)
 [Text:CardName v="SILVADY" ] 덱(몽환 퍼레이드)
@@ -2408,6 +2441,15 @@ V플레임
 [Text:CardName v="MUMARGI" ] 덱(몽환 퍼레이드)
 [Text:CardName v="ELEZARD" ] 덱(몽환 퍼레이드)
 [Text:CardName v="ASHIRENE_EX" ] 덱(몽환 퍼레이드)
+[Text:CardName v="MEGAFUSHIGIBANA_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAJUKAIN_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALIZARDONY_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGABURSYAMO_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAKAMEX_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAGYARADOS_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGATYLTALIS_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAGANGAR_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="KORAIDON_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
 이상해꽃 ex 덱(최강의 유전자)
 리자몽 ex 덱(최강의 유전자)
 거북왕 ex 덱(최강의 유전자)
@@ -2590,6 +2632,14 @@ V플레임
 [Text:CardName v="ROCKETDANNOYADOKING_EX" ] 덱(로켓단의 야망)
 [Text:CardName v="ROCKETDANNOMATADOGAS_EX" ] 덱(로켓단의 야망)
 [Text:CardName v="ROCKETDANNORATTA_EX" ] 덱(로켓단의 야망)
+[Text:CardName v="MEGAJUKAIN_EX" ]&[Text:CardName v="MASQUERNYA_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGABURSYAMO_EX" ]&[Text:CardName v="BAKPHOON_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAKAMEX_EX" ]&[Text:CardName v="WHALOH_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALIVOLT_EX" ]&[Text:CardName v="HARABARIE_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGASIRNIGHT_EX" ]&[Text:CardName v="MIMIKKYU_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALUCARIO_EX" ]&[Text:CardName v="IWAPALACE_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAGANGAR_EX" ]&[Text:CardName v="DRAMIDORO_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAHASSAM_EX" ]&[Text:CardName v="SURFUGO_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
 엘리트 덱([Text:CardName v="MEGALIZARDONY_EX" ])
 엘리트 덱([Text:CardName v="MEGALUCARIO_EX" ])
 배틀에 사용할 수 있는 렌탈 덱입니다\n덱에 포함된 카드를 가지고 있지 않아도\n배틀에서 사용할 수 있습니다
@@ -2784,6 +2834,14 @@ V플레임
 [Text:CardName v="ROCKETDANNOYADOKING_EX" ] 덱(로켓단의 야망)
 [Text:CardName v="ROCKETDANNOMATADOGAS_EX" ] 덱(로켓단의 야망)
 [Text:CardName v="ROCKETDANNORATTA_EX" ] 덱(로켓단의 야망)
+[Text:CardName v="MEGAJUKAIN_EX" ]&[Text:CardName v="MASQUERNYA_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGABURSYAMO_EX" ]&[Text:CardName v="BAKPHOON_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAKAMEX_EX" ]&[Text:CardName v="WHALOH_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALIVOLT_EX" ]&[Text:CardName v="HARABARIE_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGASIRNIGHT_EX" ]&[Text:CardName v="MIMIKKYU_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALUCARIO_EX" ]&[Text:CardName v="IWAPALACE_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAGANGAR_EX" ]&[Text:CardName v="DRAMIDORO_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAHASSAM_EX" ]&[Text:CardName v="SURFUGO_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
 엘리트 덱([Text:CardName v="MEGALIZARDONY_EX" ])
 엘리트 덱([Text:CardName v="MEGALUCARIO_EX" ])
 덱 기능에서 사용할 수 있는 테마 덱 레시피입니다\n레시피에 적힌 카드를 모으면\n덱을 생성하여 플레이할 수 있습니다
@@ -2850,6 +2908,7 @@ Vickie
 [Text:CardName v="HISUIZORUA" ] 드롭 이벤트
 [Text:CardName v="MEGAHELLGAR_EX" ] 드롭 이벤트
 [Text:CardName v="ROCKETDANNOLAPLACE" ] 드롭 이벤트
+[Text:CardName v="MEGAGABURIAS_EX" ] 드롭 이벤트
 랜덤 배틀(B2)
 랜덤 배틀(B2a)
 랜덤 배틀(B2b)
@@ -2858,6 +2917,7 @@ Vickie
 랜덤 배틀(B3b)
 랜덤 배틀(B4)
 랜덤 배틀(B4a)
+랜덤 배틀(B4b)
 [Ctrl:Bold]화상[/Ctrl:Bold]
 금색 프레임
 컬렉션 파일, 컬렉션 보드,\n배틀에서 표시할 수 있는 금색 프레임입니다
@@ -4198,6 +4258,7 @@ Vickie
 [Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]라프라스
 갈모매
 [Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]마자용
+메가한카리아스 ex
 푸호꼬
 [Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]마그마
 [Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]파이어 ex
@@ -4265,7 +4326,48 @@ Vickie
 메가엘레이드
 테라파고스
 메가디안시
+메가뮤츠X
+메가리자몽
+비기너 랭크1
+비기너 랭크2
+비기너 랭크3
+비기너 랭크4
+하이퍼볼 랭크1
+하이퍼볼 랭크2
+하이퍼볼 랭크3
+하이퍼볼 랭크4
+몬스터볼 랭크1
+몬스터볼 랭크2
+몬스터볼 랭크3
+몬스터볼 랭크4
+슈퍼볼 랭크1
+슈퍼볼 랭크2
+슈퍼볼 랭크3
+슈퍼볼 랭크4
 로켓단
+TOP 1000
+TOP 5000
+TOP 10000
+제1탄
+제2탄
+제3탄
+제4탄
+제5탄
+제6탄
+제7탄
+제8탄
+제9탄
+제10탄
+제11탄
+제12탄
+제13탄
+제14탄
+제15탄
+제16탄
+제17탄
+제18탄
+제19탄
+제20탄
 아랍에미리트
 앤티가 바부다
 앵귈라
@@ -4670,8 +4772,10 @@ Vickie
 [Text:CardName v="ROCKETDANNOBOSS" ](엠블럼)
 랭크 매치 시즌 A3a에서 획득할 수 있는\n하이퍼볼 랭크3의 엠블럼입니다
 시즌 A3a 하이퍼볼 랭크3
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](엠블럼)
 랭크 매치 시즌 A3a에서 획득할 수 있는\n하이퍼볼 랭크4의 엠블럼입니다
 시즌 A3a 하이퍼볼 랭크4
+메가진화 ex(엠블럼)
 랭크 매치 시즌 A3a에서 획득할 수 있는\n슈퍼볼 랭크1의 엠블럼입니다
 시즌 A3a 슈퍼볼 랭크1
 랭크 매치 시즌 A3a에서 획득할 수 있는\n슈퍼볼 랭크2의 엠블럼입니다
@@ -4906,12 +5010,20 @@ Vickie
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 엠블럼 이벤트 금상
 랭크 매치 시즌 A4b에서 획득할 수 있는\n슈퍼볼 랭크1의 엠블럼입니다
 시즌 A4b 슈퍼볼 랭크1
+[Mst:PackName v="PACK_NAME_B4b_1"] 엠블럼 이벤트에서 획득할 수 있는\n참가상 엠블럼입니다
+[Mst:PackName v="PACK_NAME_B4b_1"] 엠블럼 이벤트 참가상
 랭크 매치 시즌 A4b에서 획득할 수 있는\n슈퍼볼 랭크2의 엠블럼입니다
 시즌 A4b 슈퍼볼 랭크2
+[Mst:PackName v="PACK_NAME_B4b_1"] 엠블럼 이벤트에서 획득할 수 있는\n동상 엠블럼입니다
+[Mst:PackName v="PACK_NAME_B4b_1"] 엠블럼 이벤트 동상
 랭크 매치 시즌 A4b에서 획득할 수 있는\n슈퍼볼 랭크3의 엠블럼입니다
 시즌 A4b 슈퍼볼 랭크3
+[Mst:PackName v="PACK_NAME_B4b_1"] 엠블럼 이벤트에서 획득할 수 있는\n은상 엠블럼입니다
+[Mst:PackName v="PACK_NAME_B4b_1"] 엠블럼 이벤트 은상
 랭크 매치 시즌 A4b에서 획득할 수 있는\n슈퍼볼 랭크4의 엠블럼입니다
 시즌 A4b 슈퍼볼 랭크4
+[Mst:PackName v="PACK_NAME_B4b_1"] 엠블럼 이벤트에서 획득할 수 있는\n금상 엠블럼입니다
+[Mst:PackName v="PACK_NAME_B4b_1"] 엠블럼 이벤트 금상
 랭크 매치 시즌 A4b에서 획득할 수 있는\n몬스터볼 랭크1의 엠블럼입니다
 시즌 A4b 몬스터볼 랭크1
 랭크 매치 시즌 A4b에서 획득할 수 있는\n몬스터볼 랭크2의 엠블럼입니다
@@ -5148,6 +5260,26 @@ Vickie
 시즌 B4a 비기너 랭크2
 시즌 B4a 비기너 랭크3
 시즌 B4a 비기너 랭크4
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:MainRankName v="MAIN_RANK_NAME_MASTERBALL"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] 마스터볼 랭크([Mst:CommonEventLabel v="COMMON_Master_TOP10000"])
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] 마스터볼 랭크([Mst:CommonEventLabel v="COMMON_Master_TOP5000"])
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] 마스터볼 랭크([Mst:CommonEventLabel v="COMMON_Master_TOP1000"])
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_01"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_02"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_03"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_04"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_01"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_02"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_03"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_04"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_01"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_02"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_03"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_04"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_01"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_02"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_03"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_04"]
 1주년
 스페셜 이벤트 2025 기념 엠블럼입니다
 스페셜 이벤트 2025(엠블럼)
@@ -5212,6 +5344,7 @@ B3a
 B3b
 B4
 B4a
+B4b
 최강의 유전자
 환상이 있는 섬
 시공의 격투
@@ -5233,6 +5366,7 @@ B4a
 미라클 데이즈
 천공의 지배자
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망
+하이클래스팩 MEGA
 #마이컬렉션
 #좋아하는포켓몬
 #마음에드는일러스트
@@ -6744,6 +6878,7 @@ UB의 일종. 이 세계의\n물건에 불결함을 느끼는 것인지\n전혀 
 트레이너와의 유대가 곧 힘이다.\n적을 베어 버리는 플레이트와\n몸을 보호하는 망토를 갖춘 모습이 되었다.
 1마리의 메타그로스와\n1마리의 메탕구와 2마리의 메탕이\n연결된 모습이다.
 메가진화로 인해 전신이 발열한다.\n격렬한 불꽃의 숨결을 뿜어내서\n상대를 재로 만들어 버린다.
+메가진화 전보다 성질이 난폭하게 변했다.\n양팔의 낫으로 적을 갈기갈기 조각낸다.
 대기 중의 먼지가 먹이다.\n먼지에 포함된 성분에 따라\n코어의 색이 결정된다고 한다.
 밤하늘에 빛나는 유성은 사실\n운석을 뒤쫓는 메가레쿠쟈가\n날아가는 모습일지도 모른다.
 Narumi Sato
@@ -6983,6 +7118,7 @@ Yoshimoto Yoshimon
 Akino Fukuji
 Iwamoto05
 Kazuki Minami
+YOSHIROTTEN
 Coming Soon
 챌린지 파워 대기 시간을 단축하는 플레이\n아이템입니다. 사용하면 겟 챌린지까지 필요한 시간이\n1시간 단축됩니다. 미션 정보 등에서 획득 가능합니다.
 일부 「혼자서」 배틀이나 이벤트에\n도전할 때 필요한 플레이 아이템입니다\n사용하면 도전하기까지 시간을 단축할 수 있습니다
@@ -7082,6 +7218,7 @@ EXP
 프로모 카드 교환 티켓([Text:CardName v="HISUIZORUA" ] 드롭 이벤트)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 괴상한 티켓
 프로모 카드 교환 티켓([Text:CardName v="ROCKETDANNOLAPLACE" ] 드롭 이벤트)
+프로모 카드 교환 티켓([Text:CardName v="MEGAGABURIAS_EX" ] 드롭 이벤트)
 언젠가 쓰일 티켓
 비눗방울 물색 이펙트(반짝이)
 비눗방울 핑크 이펙트(반짝이)
@@ -7172,6 +7309,40 @@ EXP
 컬렉션 파일은\n플레이어 레벨이 6이 되면\n오픈됩니다\n\n플레이어 레벨은 팩 개봉 등에서\n플레이어 경험치를 얻으면 오릅니다
 프리미엄 미션은\n프리미엄 패스로 가입하면\n오픈됩니다\n\n프리미엄 패스는 프리미엄 미션 혹은\n숍에 있는 버튼을 통해 가입할 수 있습니다
 트레이드는\n플레이어 레벨이 3이 되면\n오픈됩니다\n\n플레이어 레벨은 팩 개봉 등에서\n플레이어 경험치를 얻으면 오릅니다
+{0} 덱({1})
+{0}(엠블럼)
+{0} 엠블럼 이벤트 동상
+{0} 엠블럼 이벤트에서 획득할 수 있는\n동상 엠블럼입니다
+{0} 엠블럼 이벤트 금상
+{0} 엠블럼 이벤트에서 획득할 수 있는\n금상 엠블럼입니다
+{0} 엠블럼 이벤트 참가상
+{0} 엠블럼 이벤트에서 획득할 수 있는\n참가상 엠블럼입니다
+{0} 엠블럼 이벤트 은상
+{0} 엠블럼 이벤트에서 획득할 수 있는\n은상 엠블럼입니다
+시즌 {0} {1}
+시즌 {0} 마스터볼 랭크({1})
+이벤트 숍 티켓({0})
+엠블럼 티켓({0})
+프로모 카드 팩 {0}시리즈 {1}
+{0}(아이콘)
+색이 다른 {0}(아이콘)
+{0} {1}(아이콘)
+{0}(보드)
+{0} Ver.2(보드)
+{0}(포켓몬 동전)
+색이 다른 {0}(포켓몬 동전)
+{0} 어나더(포켓몬 동전)
+{0} 레인보우(포켓몬 동전)
+{0} Ver.2(포켓몬 동전)
+{0}(카드 실드)
+{0} Ver.2(카드 실드)
+{0}(파일)
+{0} {1}(파일)
+{0} Ver.2(파일)
+{0}(플레이매트)
+{0} {1}(플레이매트)
+{0} Ver.2(플레이매트)
+포켓골드(유료)×115 + 주변 상품 「{0}」
 비기너 랭크
 하이퍼볼 랭크
 마스터볼 랭크
@@ -7207,6 +7378,7 @@ EXP
 렌탈 덱 「[Mst:RentalDeckName id="0" ]」[Gr:Patchim v="eu_" ]로 「혼자서」 배틀을 [Num:Int id="1" max_length="3" ]번 하자
 나눠주기를 [Num:Int id="0" max_length="3" ]번 하자
 「혼자서」 배틀에서 [Num:Int id="0" max_length="3" ]포인트 획득하자
+「누군가와」 배틀에서 [Mst:EnergyTypeNameLong id="0" ] 카드를 8장 이상 덱에 넣어 [Num:Int id="1" max_length="3" ]번 승리하자
 로그인 하라!([Num:Int id="0" max_length="3" ]일차)
 배틀을 [Num:Int id="0" max_length="3" ]번 하라!
 겟 챌린지를 [Num:Int id="0" max_length="3" ]번 플레이하라!
@@ -7634,6 +7806,18 @@ ex 컴플리트!
 [Text:CardName v="ROCKETDANNOSHITAPPA" ] 총집합
 괴상한 발명품 컬렉터
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] 카드 컴플리트
+메가진화 ex 컬렉션
+특성을 가진 포켓몬 ex
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_24" ]의 2가지 모습
+환경에 따라 모습이 다른 [Text:CardName v="ZOROARK" ]
+강아지포켓몬의 일상
+단단한 껍질로 보호받는 포켓몬
+외눈 포켓몬
+소리로 싸우는 포켓몬
+스타디움 컴플리트!
+하이클래스팩 MEGA 뮤지엄
+특별한 [Mst:Rarity v="RARITY_MSID_SSASR" ] 카드를 1장 모으자
+메가진화 ex 총집합!
 [Text:CardNameWithSubName id="0" ] 카드를 [Num:Int id="1" max_length="3" ]장 입수하라!
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] 카드를 [Num:Int id="1" max_length="3" ]장 입수하라!
 [Text:CardName v="TRIMMIEN" ]의 패션 쇼
@@ -7690,9 +7874,11 @@ ex 스타트 덱 미션
 1주년 기념 스페셜 미션 후반
 미러 사양의 카드 대량발생 이벤트
 미러 사양의 카드 대량발생 이벤트
+미러 사양의 카드 대량발생 이벤트
 1주년 카운트다운 미션
 어카운트 연동 미션
 어카운트 연동 미션
+보너스 위크 미션
 보너스 위크 미션
 복각 PROMO 드롭 이벤트 2025\n미션
 복각 PROMO 겟 챌린지 이벤트\n2025 미션
@@ -7729,12 +7915,18 @@ ex 스타트 덱 미션
 [Text:CardName v="HISUIZORUA" ] 드롭 이벤트
 미라클 데이즈 엠블럼 이벤트
 복수 시리즈①
+[Text:CardName v="MEGAGABURIAS_EX" ] 드롭 이벤트
+[Text:CardName v="MEGAGABURIAS_EX" ] 드롭 이벤트
+하이클래스팩 MEGA 엠블럼 이벤트
+하이클래스팩 MEGA 엠블럼 이벤트
 [Text:CardName v="ROCKETDANNOLAPLACE" ] 드롭 이벤트
 [Text:CardName v="ROCKETDANNOLAPLACE" ] 드롭 이벤트
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 엠블럼 이벤트
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 엠블럼 이벤트
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 특별 임무
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 특별 임무
+피카피카! 피카츄 미션
+피카피카! 피카츄 미션
 초급
 고급
 일일
@@ -7767,6 +7959,7 @@ ex 스타트 덱
 일람
 복귀
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]
+피카피카!
 랜덤 배틀(고급)
 랜덤 배틀(초급)
 랜덤 배틀(엑스퍼트)
@@ -7808,6 +8001,9 @@ TOP 10000
 미라클 데이즈 확장팩
 천공의 지배자 확장팩
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 확장팩
+하이클래스팩 MEGA 확장팩
+피카피카! 피카츄 미션에서 획득할 수 있는\n특별한 팩
+피카피카! 피카츄 미션에서 획득할 수 있는\n매우 특별한 팩
 A시리즈의 제1탄 프로모 카드 팩
 A시리즈의 제2탄 프로모 카드 팩
 A시리즈 제3탄 프로모 카드 팩
@@ -7833,7 +8029,9 @@ B시리즈 제9탄 프로모 카드 팩
 B시리즈 제10탄 프로모 카드 팩
 B시리즈 제11탄 프로모 카드 팩
 B시리즈 제12탄 프로모 카드 팩
+B시리즈 제13탄 프로모 카드 팩
 [Mst:Rarity v="RARITY_MSID_RR" ] 이상 1장 확정
+포켓몬 ex 1장 확정
 최강의 유전자 뮤츠
 최강의 유전자 뮤츠([Mst:Rarity v="RARITY_MSID_RR" ] 이상 1장 확정)
 최강의 유전자 리자몽
@@ -7865,6 +8063,9 @@ B시리즈 제12탄 프로모 카드 팩
 미라클 데이즈
 천공의 지배자
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망
+하이클래스팩 MEGA
+피카피카! 피카츄 팩
+피카피카! 피카츄 팩 ex
 프로모 카드 팩 A시리즈 제1탄
 프로모 카드 팩 A시리즈 제2탄
 프로모 카드 팩 A시리즈 제3탄
@@ -7890,6 +8091,7 @@ B시리즈 제12탄 프로모 카드 팩
 프로모 카드 팩 B시리즈 제10탄
 프로모 카드 팩 B시리즈 제11탄
 프로모 카드 팩 B시리즈 제12탄
+프로모 카드 팩 [Mst:SeriesName v="SERIES_NAME_2"]시리즈 [Mst:CommonPackLabel v="COMMON_PACK_LABEL_013"]
 [Mst:Rarity v="RARITY_MSID_RR" ] 이상 확정
 기본 확률
 기본 확률 +1장
@@ -8397,6 +8599,7 @@ B시리즈 제12탄 프로모 카드 팩
 전국도감No. 0442 봉인포켓몬 키：1.0m 몸무게：108.0kg
 전국도감No. 0443 육지상어포켓몬 키：0.7m 몸무게：20.5kg
 전국도감No. 0444 동굴포켓몬 키：1.4m 몸무게：56.0kg
+전국도감No. 0445 마하포켓몬 키：1.9m 몸무게：95.0kg
 전국도감No. 0445 마하포켓몬 키：1.9m 몸무게：95.0kg
 전국도감No. 0446 대식가포켓몬 키：0.6m 몸무게：105.0kg
 전국도감No. 0447 파문포켓몬 키：0.7m 몸무게：20.2kg
@@ -9104,6 +9307,11 @@ B시리즈 제12탄 프로모 카드 팩
 [Text:CardName v="ROCKETDANNOSHITAPPA" ] Ver.3(아이콘)
 [Text:CardName v="ROCKETDANNOKENKYUUIN" ](아이콘)
 [Text:CardName v="ROCKETDANNOBOSS" ](아이콘)
+[Text:CardName v="HUURO" ](아이콘)
+[Mst:PackName v="PACK_NAME_B4b_1"] [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](아이콘)
+[Text:CardName v="PIKACHU" ] Ver.12(아이콘)
+[Text:CardName v="PIKACHU" ] Ver.13(아이콘)
+[Text:CardName v="PIKACHU" ] Ver.14(아이콘)
 [Text:CardName v="PIKACHU" ] Ver.2(아이콘)
 [Text:CardName v="PIKACHU" ] Ver.3(아이콘)
 [Text:CardName v="PIKACHU" ] Ver.4(아이콘)
@@ -9423,6 +9631,16 @@ PROMO-B
 무게 비교
 레트로 서머(보드)
 레트로 서머
+[Text:CardName v="HOOPA" ](보드)
+[Text:CardName v="HOOPA" ]
+[Text:CardName v="HUURO" ](보드)
+[Text:CardName v="HUURO" ]
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](보드)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
+반짝반짝 해안(보드)
+반짝반짝 해안
+기쁨의 거리 풍경
+기쁨의 거리 풍경(보드)
 컬렉션 보드 기능에서 사용할\n카드를 꾸미는 배경지입니다.
 이브이(포켓몬 동전)
 이브이
@@ -9517,6 +9735,7 @@ PROMO-B
 [Text:CardName v="YAMIRAMI" ](포켓몬 동전)
 [Text:CardName v="MIRAIDON" ](포켓몬 동전)
 포켓몬 30주년 디자인(포켓몬 동전)
+[Text:CardName v="PIKACHU" ] Ver.3(포켓몬 동전)
 [Text:CardName v="METAGROSS" ](포켓몬 동전)
 [Text:CardName v="MIJUMARU" ](포켓몬 동전)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ](포켓몬 동전)
@@ -9524,6 +9743,9 @@ PROMO-B
 [Text:CardName v="FOKKO" ](포켓몬 동전)
 [Text:CardName v="ROCKETDANNOBOSS" ](포켓몬 동전)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ](포켓몬 동전)
+[Text:CardName v="HOOPA" ](포켓몬 동전)
+[Text:CardName v="HUURO" ](포켓몬 동전)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](포켓몬 동전)
 배틀 시에 사용할 수 있는 동전입니다.\n덱 기능에서 설정할 수 있습니다.
 이브이(카드 실드)
 이브이
@@ -9611,6 +9833,7 @@ PROMO-B
 [Text:CardName v="YAMIRAMI" ](카드 실드)
 [Text:CardName v="MIRAIDON" ](카드 실드)
 포켓몬 30주년 디자인(카드 실드)
+[Text:CardName v="PIKACHU" ]&[Text:CardName v="PICHU" ](카드 실드)
 [Text:CardName v="METAGROSS" ](카드 실드)
 [Text:CardName v="MIJUMARU" ](카드 실드)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ](카드 실드)
@@ -9618,6 +9841,9 @@ PROMO-B
 [Text:CardName v="FOKKO" ](카드 실드)
 [Text:CardName v="ROCKETDANNOBOSS" ](카드 실드)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ](카드 실드)
+[Text:CardName v="HOOPA" ](카드 실드)
+[Text:CardName v="HUURO" ](카드 실드)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](카드 실드)
 카드에 붙일 수 있는 주변 상품입니다\n덱 기능에서 설정할 수 있습니다
 컬렉션 파일 기능에서 사용하는\n파일의 표지입니다
 이브이(파일)
@@ -9764,6 +9990,10 @@ PROMO-B
 [Text:CardName v="ROCKETDANNOBOSS" ]&[Text:CardName v="PERSIAN" ](파일)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ](파일)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ](파일)
+[Text:CardName v="HOOPA" ](파일)
+[Text:CardName v="HUURO" ]&[Text:CardName v="SWANNA" ](파일)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](파일)
+하이클래스팩 MEGA(파일)
 이브이(플레이매트)
 이브이
 나옹(플레이매트)
@@ -9851,6 +10081,7 @@ PROMO-B
 [Text:CardName v="YAMIRAMI" ](플레이매트)
 [Text:CardName v="MIRAIDON" ](플레이매트)
 포켓몬 30주년 디자인(플레이매트)
+[Text:CardName v="PIKACHU" ]&[Text:CardName v="KODUCK" ]&[Text:CardName v="PICHU" ](플레이매트)
 [Text:CardName v="METAGROSS" ](플레이매트)
 [Text:CardName v="MIJUMARU" ](플레이매트)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ](플레이매트)
@@ -9858,6 +10089,9 @@ PROMO-B
 [Text:CardName v="FOKKO" ](플레이매트)
 [Text:CardName v="ROCKETDANNOBOSS" ]&[Text:CardName v="PERSIAN" ](플레이매트)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ](플레이매트)
+[Text:CardName v="HOOPA" ](플레이매트)
+[Text:CardName v="HUURO" ]&[Text:CardName v="SWANNA" ](플레이매트)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](플레이매트)
 배틀 시에 필드에 펼치는 주변 상품입니다\n덱 기능에서 설정할 수 있습니다
 자신의 필드에 기본 포켓몬을 [Num:Int id="0" max_length="2" ]마리 낸다
 자신의 필드에 포켓몬 ex를 [Num:Int id="0" max_length="2" ]마리 낸다
@@ -9896,6 +10130,7 @@ B3a
 B3b
 B4
 B4a
+B4b SP
 [Num:Int id="0" max_length="3" ]포인트 이상을 획득한다
 [Num:Int id="0" max_length="5" ]데미지 이상을 준다
 [Num:Int id="0" max_length="3" ]번 이상 승리한다
@@ -10430,6 +10665,16 @@ ex 스타트 덱
 [Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100850_SAKAKI"]
 [Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101040_SAKAKI"]
 [Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100850_SAKAKI_PERSIAN"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101340_MEGALIZARDONX"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101560_MEGALIZARDONX"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100890_MEGALIZARDONX"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101080_MEGALIZARDONX"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100890_MEGALIZARDONX"]
+[Mst:CardCharacterName v="CARD_NAME_1022"](096/P-B)
+[Mst:CardCharacterName v="CARD_NAME_380"](097/P-B)
+[Mst:CardCharacterName v="CARD_NAME_381"](098/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1344"](099/P-B)
+[Mst:CardCharacterName v="CARD_NAME_588"](100/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1340"](088/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1341"](089/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1342"](090/P-B)
@@ -10499,6 +10744,7 @@ ex 스타트 덱
 서머 세일 특별 포켓골드(유료)×15
 서머 세일 특별 포켓골드(유료)×200
 포켓골드(유료)×115 + 주변 상품 「[Text:CardName v="KAMITSURE" ]」
+포켓골드(유료)×115 + 주변 상품 「[Text:CardName v="HOOPA" ]」
 포켓골드(유료)×115 + 주변 상품 「[Text:CardName v="THUNDER" ]&[Text:CardName v="FREEZER" ]&[Text:CardName v="FIRE" ]」
 포켓골드
 티켓
@@ -10537,6 +10783,7 @@ ex 스타트 덱
 [Mst:PackName v="PACK_NAME_PROMO_B_10" ]
 [Mst:PackName v="PACK_NAME_PROMO_B_11" ]
 [Mst:PackName v="PACK_NAME_PROMO_B_12" ]
+[Mst:PackName v="PACK_NAME_PROMO_B_13" ]
 폐지된 플레이 아이템입니다\n숍에서 다른 플레이 아이템과 교환해 주십시오
 트레이드 메달
 갖고 싶은 카드 외에도 트레이드 희망
@@ -10761,7 +11008,9 @@ ex 스타트 덱
 [Mst:CollectionBoardHashTag]
 [Mst:CollectionFileHashTag]
 [Mst:CommonCharacterName]
+[Mst:CommonEventLabel]
 [Mst:CommonGroupName]
+[Mst:CommonPackLabel]
 [Mst:CountryName]
 [Mst:CurrencyDescription]
 [Mst:CurrencyName]

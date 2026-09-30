@@ -1743,6 +1743,7 @@ V型火焰
 地獄犬閃焰
 火箭狂熱
 懲治
+劈斬刀鋒
 螢之怒
 飛葉回力鏢
 燒壞
@@ -1902,6 +1903,7 @@ V型火焰
 進擊悖謬 勳章活動
 天空主宰 勳章活動
 奇跡日常 勳章活動
+高級擴充包MEGA 勳章活動
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]的野心 勳章活動
 卡咪龜牌組（最強的基因）
 妙蛙草牌組（最強的基因）
@@ -2379,9 +2381,40 @@ V型火焰
 [Text:CardName v="ROCKETDANNOYADOKING_EX" ]牌組（火箭隊的野心）
 [Text:CardName v="ROCKETDANNOMATADOGAS_EX" ]牌組（火箭隊的野心）
 [Text:CardName v="ROCKETDANNORATTA_EX" ]牌組（火箭隊的野心）
+[Text:CardName v="NYAROTE" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="WAKASYAMO" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="KAMEIL" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="BUTTERFREE" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="LAUDBON" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="INTEREON" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="RAICHU" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="NYMPHIA" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="ALOLABETBETON" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="GILLGARD" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="RATTA" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGAJUKAIN_EX" ]＆[Text:CardName v="MASQUERNYA_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGABURSYAMO_EX" ]＆[Text:CardName v="BAKPHOON_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGAKAMEX_EX" ]＆[Text:CardName v="WHALOH_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGALIVOLT_EX" ]＆[Text:CardName v="HARABARIE_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGASIRNIGHT_EX" ]＆[Text:CardName v="MIMIKKYU_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGALUCARIO_EX" ]＆[Text:CardName v="IWAPALACE_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGAGANGAR_EX" ]＆[Text:CardName v="DRAMIDORO_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGAHASSAM_EX" ]＆[Text:CardName v="SURFUGO_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="ELFUUN_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGALIZARDONX_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="GEKKOUGA_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MIRAIDON_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGASIRNIGHT_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGALUCARIO_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="ZOROARK_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MELMETAL_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGARAYQUAZA_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
 [Text:CardName v="HELLGAR" ]牌組（天空主宰）
 [Text:CardName v="MEGAHELLGAR_EX" ]牌組（天空主宰）
 [Text:CardName v="ROCKETDANNOLAPLACE" ]牌組（火箭隊的野心）
+[Text:CardName v="GABITE" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="GABURIAS" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGAGABURIAS_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
 [Text:CardName v="SHIRONA"]牌組（幻夢遊行）
 [Text:CardName v="KAIRYU"]牌組（幻夢遊行）
 [Text:CardName v="SILVADY"]牌組（幻夢遊行）
@@ -2408,6 +2441,15 @@ V型火焰
 [Text:CardName v="MUMARGI" ]牌組（幻夢遊行）
 [Text:CardName v="ELEZARD" ]牌組（幻夢遊行）
 [Text:CardName v="ASHIRENE_EX" ]牌組（幻夢遊行）
+[Text:CardName v="MEGAFUSHIGIBANA_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGAJUKAIN_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGALIZARDONY_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGABURSYAMO_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGAKAMEX_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGAGYARADOS_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGATYLTALIS_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGAGANGAR_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="KORAIDON_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
 妙蛙花ex牌組（最強的基因）
 噴火龍ex牌組（最強的基因）
 水箭龜ex牌組（最強的基因）
@@ -2590,6 +2632,14 @@ V型火焰
 [Text:CardName v="ROCKETDANNOYADOKING_EX" ]牌組（火箭隊的野心）
 [Text:CardName v="ROCKETDANNOMATADOGAS_EX" ]牌組（火箭隊的野心）
 [Text:CardName v="ROCKETDANNORATTA_EX" ]牌組（火箭隊的野心）
+[Text:CardName v="MEGAJUKAIN_EX" ]＆[Text:CardName v="MASQUERNYA_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGABURSYAMO_EX" ]＆[Text:CardName v="BAKPHOON_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGAKAMEX_EX" ]＆[Text:CardName v="WHALOH_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGALIVOLT_EX" ]＆[Text:CardName v="HARABARIE_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGASIRNIGHT_EX" ]＆[Text:CardName v="MIMIKKYU_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGALUCARIO_EX" ]＆[Text:CardName v="IWAPALACE_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGAGANGAR_EX" ]＆[Text:CardName v="DRAMIDORO_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGAHASSAM_EX" ]＆[Text:CardName v="SURFUGO_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
 精英牌組（[Text:CardName v="MEGALIZARDONY_EX" ]）
 精英牌組（[Text:CardName v="MEGALUCARIO_EX" ]）
 可用來對戰的租用牌組。\n即使未持有包含在牌組中的卡牌，\n也可在對戰使用。
@@ -2784,6 +2834,14 @@ V型火焰
 [Text:CardName v="ROCKETDANNOYADOKING_EX" ]牌組（火箭隊的野心）
 [Text:CardName v="ROCKETDANNOMATADOGAS_EX" ]牌組（火箭隊的野心）
 [Text:CardName v="ROCKETDANNORATTA_EX" ]牌組（火箭隊的野心）
+[Text:CardName v="MEGAJUKAIN_EX" ]＆[Text:CardName v="MASQUERNYA_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGABURSYAMO_EX" ]＆[Text:CardName v="BAKPHOON_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGAKAMEX_EX" ]＆[Text:CardName v="WHALOH_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGALIVOLT_EX" ]＆[Text:CardName v="HARABARIE_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGASIRNIGHT_EX" ]＆[Text:CardName v="MIMIKKYU_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGALUCARIO_EX" ]＆[Text:CardName v="IWAPALACE_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGAGANGAR_EX" ]＆[Text:CardName v="DRAMIDORO_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
+[Text:CardName v="MEGAHASSAM_EX" ]＆[Text:CardName v="SURFUGO_EX" ]牌組（[Mst:PackName v="PACK_NAME_B4b_1"]）
 精英牌組（[Text:CardName v="MEGALIZARDONY_EX" ]）
 精英牌組（[Text:CardName v="MEGALUCARIO_EX" ]）
 此為可在牌組功能使用的主題牌組構築方案。\n只要收集構築方案中記載的卡牌，\n即可建立牌組來遊玩。
@@ -2850,6 +2908,7 @@ Vickie
 [Text:CardName v="HISUIZORUA" ]掉落活動
 [Text:CardName v="MEGAHELLGAR_EX" ]掉落活動
 [Text:CardName v="ROCKETDANNOLAPLACE" ]掉落活動
+[Text:CardName v="MEGAGABURIAS_EX" ]掉落活動
 隨機對戰（B2）
 隨機對戰（B2a）
 隨機對戰（B2b）
@@ -2858,6 +2917,7 @@ Vickie
 隨機對戰（B3b）
 隨機對戰（B4）
 隨機對戰（B4a）
+隨機對戰（B4b）
 [Ctrl:Bold]灼傷[/Ctrl:Bold]
 金邊
 可在收藏冊／收藏板／\n對戰中顯示的金邊。
@@ -4198,6 +4258,7 @@ Vickie
 [Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]拉普拉斯
 長翅鷗
 [Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]果然翁
+超級烈咬陸鯊ex
 火狐狸
 [Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]鴨嘴火獸
 [Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]火焰鳥ex
@@ -4265,7 +4326,48 @@ Vickie
 超級艾路雷朵
 太樂巴戈斯
 超級蒂安希
+超級超夢X
+超級噴火龍
+新手級1
+新手級2
+新手級3
+新手級4
+高級球級1
+高級球級2
+高級球級3
+高級球級4
+精靈球級1
+精靈球級2
+精靈球級3
+精靈球級4
+超級球級1
+超級球級2
+超級球級3
+超級球級4
 火箭隊
+TOP1000
+TOP5000
+TOP10000
+第1波
+第2波
+第3波
+第4波
+第5波
+第6波
+第7波
+第8波
+第9波
+第10波
+第11波
+第12波
+第13波
+第14波
+第15波
+第16波
+第17波
+第18波
+第19波
+第20波
 阿拉伯聯合大公國
 安地卡及巴布達
 安圭拉
@@ -4670,8 +4772,10 @@ Vickie
 [Text:CardName v="ROCKETDANNOBOSS" ]（勳章）
 可在「級別對戰賽 賽季A3a」獲得的\n高級球級3勳章。
 賽季A3a 高級球級3
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]（勳章）
 可在「級別對戰賽 賽季A3a」獲得的\n高級球級4勳章。
 賽季A3a 高級球級4
+超級進化寶可夢ex（勳章）
 可在「級別對戰賽 賽季A3a」獲得的\n超級球級1勳章。
 賽季A3a 超級球級1
 可在「級別對戰賽 賽季A3a」獲得的\n超級球級2勳章。
@@ -4906,12 +5010,20 @@ Vickie
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]的野心 勳章活動 金獎
 可在「級別對戰賽 賽季A4b」獲得的\n超級球級1勳章。
 賽季A4b 超級球級1
+可在「[Mst:PackName v="PACK_NAME_B4b_1" ] 勳章活動」獲得的\n參加獎勳章。
+[Mst:PackName v="PACK_NAME_B4b_1"] 勳章活動 參加獎
 可在「級別對戰賽 賽季A4b」獲得的\n超級球級2勳章。
 賽季A4b 超級球級2
+可在「[Mst:PackName v="PACK_NAME_B4b_1" ] 勳章活動」獲得的\n銅獎勳章。
+[Mst:PackName v="PACK_NAME_B4b_1"] 勳章活動 銅獎
 可在「級別對戰賽 賽季A4b」獲得的\n超級球級3勳章。
 賽季A4b 超級球級3
+可在「[Mst:PackName v="PACK_NAME_B4b_1" ] 勳章活動」獲得的\n銀獎勳章。
+[Mst:PackName v="PACK_NAME_B4b_1"] 勳章活動 銀獎
 可在「級別對戰賽 賽季A4b」獲得的\n超級球級4勳章。
 賽季A4b 超級球級4
+可在「[Mst:PackName v="PACK_NAME_B4b_1" ] 勳章活動」獲得的\n金獎勳章。
+[Mst:PackName v="PACK_NAME_B4b_1"] 勳章活動 金獎
 可在「級別對戰賽 賽季A4b」獲得的\n精靈球級1勳章。
 賽季A4b 精靈球級1
 可在「級別對戰賽 賽季A4b」獲得的\n精靈球級2勳章。
@@ -5148,6 +5260,26 @@ Vickie
 賽季B4a 新手級2
 賽季B4a 新手級3
 賽季B4a 新手級4
+賽季[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:MainRankName v="MAIN_RANK_NAME_MASTERBALL"]
+賽季[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] 大師球級（[Mst:CommonEventLabel v="COMMON_Master_TOP10000"]）
+賽季[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] 大師球級（[Mst:CommonEventLabel v="COMMON_Master_TOP5000"]）
+賽季[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] 大師球級（[Mst:CommonEventLabel v="COMMON_Master_TOP1000"]）
+賽季[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_01"]
+賽季[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_02"]
+賽季[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_03"]
+賽季[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_04"]
+賽季[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_01"]
+賽季[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_02"]
+賽季[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_03"]
+賽季[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_04"]
+賽季[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_01"]
+賽季[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_02"]
+賽季[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_03"]
+賽季[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_04"]
+賽季[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_01"]
+賽季[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_02"]
+賽季[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_03"]
+賽季[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_04"]
 1週年
 特別活動2025的紀念勳章。
 特別活動2025（勳章）
@@ -5212,6 +5344,7 @@ B3a
 B3b
 B4
 B4a
+B4b
 最強的基因
 幻遊島
 時空激鬥
@@ -5233,6 +5366,7 @@ B4a
 奇跡日常
 天空主宰
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]的野心
+高級擴充包MEGA
 #我的收藏
 #喜歡的寶可夢
 #我的最愛的插畫
@@ -6744,6 +6878,7 @@ B4a
 力量來自和訓練家之間的牽絆。\n樣子改變後，會擁有能劈斬\n敵人的刀板及保護身體的斗篷。
 是１隻巨金怪、１隻金屬怪\n和２隻鐵啞鈴結合在一起的樣子。
 全身因超級進化而發熱。\n能吐出猛烈的火焰，\n把對手燒成焦炭。
+性情比超級進化之前\n更加兇暴。會用雙臂的\n鐮刀把敵人切成碎片。
 以大氣中的塵埃為食物。\n據說核心的顏色會根據\n塵埃所含的成分而定。
 夜空中閃爍的流星，\n或許是超級烈空坐\n追著隕石飛舞的身影。
 Narumi Sato
@@ -6983,6 +7118,7 @@ Yoshimoto Yoshimon
 Akino Fukuji
 Iwamoto05
 Kazuki Minami
+YOSHIROTTEN
 Coming Soon
 可用來縮短挑戰力等待時間的道具。\n使用後，可再度遊玩得卡挑戰的時間會縮短1小時。\n此道具可透過任務報酬等方式來獲得。
 可用來挑戰部分「單人對戰」的對戰\n或活動的道具。\n使用後，可再度挑戰的時間會縮短。
@@ -7082,6 +7218,7 @@ EXP
 特典卡兌換券（[Text:CardName v="HISUIZORUA" ]掉落活動）
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]的可疑票券
 特典卡兌換券（[Text:CardName v="ROCKETDANNOLAPLACE" ]掉落活動）
+特典卡兌換券（[Text:CardName v="MEGAGABURIAS_EX" ]掉落活動）
 有朝一日券
 炫閃特效：泡泡（藍）
 炫閃特效：泡泡（粉紅）
@@ -7172,6 +7309,40 @@ EXP
 收藏冊會在玩家等級達到6時開放。\n\n玩家等級可透過開封卡牌包等\n可獲得玩家經驗值的方式來提升。
 特級任務會在購買特級護照後開放。\n\n特級護照可經由\n特級任務或商店的按鈕購買。
 交換會在玩家等級達到3時開放。\n\n玩家等級可透過開封卡牌包等\n會獲得玩家經驗值的方式來提升。
+{0}牌組（{1}）
+{0}（勳章）
+{0} 勳章活動 銅獎
+可在「{0} 勳章活動」獲得的銅獎勳章。
+{0} 勳章活動 金獎
+可在「{0} 勳章活動」獲得的金獎勳章。
+{0} 勳章活動 參加獎
+可在「{0} 勳章活動」獲得的參加獎勳章。
+{0} 勳章活動 銀獎
+可在「{0} 勳章活動」獲得的銀獎勳章。
+賽季{0} {1}
+賽季{0} 大師球級（{1}）
+活動商店券（{0}）
+勳章券（{0}）
+特典卡牌包 {0}系列{1}
+{0}（頭像）
+異色的{0}（頭像）
+{0} {1}（頭像）
+{0}（收藏板）
+{0}Ver.2（收藏板）
+{0}（寶可夢幣）
+異色的{0}（寶可夢幣）
+{0}：異款（寶可夢幣）
+{0}：彩虹（寶可夢幣）
+{0}Ver.2（寶可夢幣）
+{0}（牌組護套）
+{0}Ver.2（牌組護套）
+{0}（收藏冊）
+{0} {1}（收藏冊）
+{0}Ver.2（收藏冊）
+{0}（對戰桌墊）
+{0} {1}（對戰桌墊）
+{0}Ver.2（對戰桌墊）
+寶可金塊（付費）（附贈周邊物品「{0}」）×115
 新手級
 高級球級
 大師球級
@@ -7207,6 +7378,7 @@ EXP
 以租用牌組「[Mst:RentalDeckName id="0" ]」在「單人對戰」中對戰[Num:Int id="1" max_length="3" ]次
 分送[Num:Int id="0" max_length="3" ]次卡牌
 在「單人對戰」中獲得[Num:Int id="0" max_length="3" ]分
+在牌組中放進8張以上[Mst:EnergyTypeNameLong id="0" ]的卡牌並在「與他人對戰」獲勝[Num:Int id="1" max_length="3" ]次
 登入遊戲！（第[Num:Int id="0" max_length="3" ]天）
 對戰[Num:Int id="0" max_length="3" ]次！
 遊玩[Num:Int id="0" max_length="3" ]次得卡挑戰！
@@ -7634,6 +7806,18 @@ ex收藏／無
 [Text:CardName v="ROCKETDANNOSHITAPPA" ]大集合
 可疑發明收藏家
 完整收藏[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]的卡牌
+超級進化寶可夢ex收藏
+擁有特性的寶可夢ex
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_24" ]的2種樣子
+依環境而有不同樣子的[Text:CardName v="ZOROARK" ]
+小狗寶可夢的日常生活
+受到堅硬外殼保護的寶可夢
+獨眼的寶可夢
+用聲音戰鬥的寶可夢
+完整收藏競技場！
+「高級擴充包MEGA」美術館
+收藏1張特別的[Mst:Rarity v="RARITY_MSID_SSASR" ]卡牌
+超級進化寶可夢ex大集合！
 獲得[Num:Int id="1" max_length="3" ]張[Text:CardNameWithSubName id="0" ]的卡牌！
 獲得[Num:Int id="1" max_length="3" ]張[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]的野心的[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]卡牌！
 [Text:CardName v="TRIMMIEN" ]的時尚秀
@@ -7690,9 +7874,11 @@ ex初階牌組任務
 1週年紀念特別任務 後半
 鏡面式樣卡牌大量出現活動
 鏡面式樣卡牌大量出現活動
+鏡面式樣卡牌大量出現活動
 1週年倒數任務
 帳號連結任務
 帳號連結任務
+獎勵週任務
 獎勵週任務
 復刻PROMO掉落活動2025\n任務
 復刻PROMO得卡挑戰活動\n2025任務
@@ -7729,12 +7915,18 @@ ex初階牌組任務
 [Text:CardName v="HISUIZORUA" ]掉落活動
 奇跡日常 勳章活動
 多個系列①
+[Text:CardName v="MEGAGABURIAS_EX" ]掉落活動
+[Text:CardName v="MEGAGABURIAS_EX" ]掉落活動
+高級擴充包MEGA 勳章活動
+高級擴充包MEGA 勳章活動
 [Text:CardName v="ROCKETDANNOLAPLACE" ]掉落活動
 [Text:CardName v="ROCKETDANNOLAPLACE" ]掉落活動
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]的野心 勳章活動
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]的野心 勳章活動
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]的特別任務
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]的特別任務
+皮卡皮卡！皮卡丘任務
+皮卡皮卡！皮卡丘任務
 初級
 高級
 每日
@@ -7767,6 +7959,7 @@ ex初階牌組
 一覽
 回巢
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]
+皮卡皮卡！
 隨機對戰（高級）
 隨機對戰（初級）
 隨機對戰（精英）
@@ -7808,6 +8001,9 @@ TOP10000
 「奇跡日常」的擴充包。
 「天空主宰」的擴充包。
 「[Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]的野心」的擴充包。
+「高級擴充包MEGA」的擴充包。
+能透過「皮卡皮卡！皮卡丘任務」獲得的\n特別卡牌包。
+能透過「皮卡皮卡！皮卡丘任務」獲得的\n超特別卡牌包。
 A系列 第1波的特典卡牌包。
 A系列 第2波的特典卡牌包。
 A系列 第3波的特典卡牌包。
@@ -7833,7 +8029,9 @@ B系列 第9波的特典卡牌包。
 B系列 第10波的特典卡牌包。
 B系列 第11波的特典卡牌包。
 B系列 第12波的特典卡牌包。
+B系列 第13波的特典卡牌包。
 必得1張[Mst:Rarity v="RARITY_MSID_RR"]以上卡牌
+必得1張寶可夢ex
 最強的基因 超夢
 最強的基因 超夢（必得1張[Mst:Rarity v="RARITY_MSID_RR" ]以上卡牌）
 最強的基因 噴火龍
@@ -7865,6 +8063,9 @@ B系列 第12波的特典卡牌包。
 奇跡日常
 天空主宰
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]的野心
+高級擴充包MEGA
+皮卡皮卡！皮卡丘卡牌包
+皮卡皮卡！皮卡丘卡牌包ex
 特典卡牌包 A系列第1波
 特典卡牌包 A系列第2波
 特典卡牌包 A系列第3波
@@ -7890,6 +8091,7 @@ B系列 第12波的特典卡牌包。
 特典卡牌包 B系列第10波
 特典卡牌包 B系列第11波
 特典卡牌包 B系列第12波
+特典卡牌包 [Mst:SeriesName v="SERIES_NAME_2"]系列[Mst:CommonPackLabel v="COMMON_PACK_LABEL_013"]
 必得[Mst:Rarity v="RARITY_MSID_RR" ]以上卡牌
 一般封入
 一般封入+1張
@@ -8397,6 +8599,7 @@ B系列 第12波的特典卡牌包。
 全國圖鑑NO.0442　封印寶可夢　身高：1.0m　體重：108.0kg
 全國圖鑑NO.0443　陸鯊寶可夢　身高：0.7m　體重：20.5kg
 全國圖鑑NO.0444　洞穴寶可夢　身高：1.4m　體重：56.0kg
+全國圖鑑NO.0445　音速寶可夢　身高：1.9m　體重：95.0kg
 全國圖鑑NO.0445　音速寶可夢　身高：1.9m　體重：95.0kg
 全國圖鑑NO.0446　大胃王寶可夢　身高：0.6m　體重：105.0kg
 全國圖鑑NO.0447　波紋寶可夢　身高：0.7m　體重：20.2kg
@@ -9104,6 +9307,11 @@ B系列 第12波的特典卡牌包。
 [Text:CardName v="ROCKETDANNOSHITAPPA" ]Ver.3（頭像）
 [Text:CardName v="ROCKETDANNOKENKYUUIN" ]（頭像）
 [Text:CardName v="ROCKETDANNOBOSS" ]（頭像）
+[Text:CardName v="HUURO" ]（頭像）
+[Mst:PackName v="PACK_NAME_B4b_1"] [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]（頭像）
+[Text:CardName v="PIKACHU" ]Ver.12（頭像）
+[Text:CardName v="PIKACHU" ]Ver.13（頭像）
+[Text:CardName v="PIKACHU" ]Ver.14（頭像）
 [Text:CardName v="PIKACHU" ]Ver.2（頭像）
 [Text:CardName v="PIKACHU" ]Ver.3（頭像）
 [Text:CardName v="PIKACHU" ]Ver.4（頭像）
@@ -9423,6 +9631,16 @@ PROMO-B
 重量比一比
 懷舊夏日（收藏板）
 懷舊夏日
+[Text:CardName v="HOOPA" ]（收藏板）
+[Text:CardName v="HOOPA" ]
+[Text:CardName v="HUURO" ]（收藏板）
+[Text:CardName v="HUURO" ]
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]（收藏板）
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
+閃亮海岸（收藏板）
+閃亮海岸
+歡樂街景
+歡樂街景（收藏板）
 可在收藏板功能中用來展示卡牌的背板。
 伊布（寶可夢幣）
 伊布
@@ -9517,6 +9735,7 @@ PROMO-B
 [Text:CardName v="YAMIRAMI" ]（寶可夢幣）
 [Text:CardName v="MIRAIDON" ]（寶可夢幣）
 寶可夢30週年紀念款（寶可夢幣）
+[Text:CardName v="PIKACHU" ]Ver.3（寶可夢幣）
 [Text:CardName v="METAGROSS" ]（寶可夢幣）
 [Text:CardName v="MIJUMARU" ]（寶可夢幣）
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14"]（寶可夢幣）
@@ -9524,6 +9743,9 @@ PROMO-B
 [Text:CardName v="FOKKO" ]（寶可夢幣）
 [Text:CardName v="ROCKETDANNOBOSS" ]（寶可夢幣）
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]（寶可夢幣）
+[Text:CardName v="HOOPA" ]（寶可夢幣）
+[Text:CardName v="HUURO" ]（寶可夢幣）
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]（寶可夢幣）
 對戰時使用的硬幣。\n可在牌組功能中進行設定。
 伊布（牌組護套）
 伊布
@@ -9611,6 +9833,7 @@ PROMO-B
 [Text:CardName v="YAMIRAMI" ]（牌組護套）
 [Text:CardName v="MIRAIDON" ]（牌組護套）
 寶可夢30週年紀念款（牌組護套）
+[Text:CardName v="PIKACHU" ]＆[Text:CardName v="PICHU" ]（牌組護套）
 [Text:CardName v="METAGROSS" ]（牌組護套）
 [Text:CardName v="MIJUMARU" ]（牌組護套）
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14"]（牌組護套）
@@ -9618,6 +9841,9 @@ PROMO-B
 [Text:CardName v="FOKKO" ]（牌組護套）
 [Text:CardName v="ROCKETDANNOBOSS" ]（牌組護套）
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]（牌組護套）
+[Text:CardName v="HOOPA" ]（牌組護套）
+[Text:CardName v="HUURO" ]（牌組護套）
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]（牌組護套）
 裝備在卡牌上的周邊物品。\n可在牌組功能中進行設定。
 可在收藏冊功能中使用的收藏冊封面。
 伊布（收藏冊）
@@ -9764,6 +9990,10 @@ PROMO-B
 [Text:CardName v="ROCKETDANNOBOSS" ]＆[Text:CardName v="PERSIAN" ]（收藏冊）
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]的野心 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]（收藏冊）
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]（收藏冊）
+[Text:CardName v="HOOPA" ]（收藏冊）
+[Text:CardName v="HUURO" ]＆[Text:CardName v="SWANNA" ]（收藏冊）
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]（收藏冊）
+高級擴充包MEGA（收藏冊）
 伊布（對戰桌墊）
 伊布
 喵喵（對戰桌墊）
@@ -9851,6 +10081,7 @@ PROMO-B
 [Text:CardName v="YAMIRAMI" ]（對戰桌墊）
 [Text:CardName v="MIRAIDON" ]（對戰桌墊）
 寶可夢30週年紀念款（對戰桌墊）
+[Text:CardName v="PIKACHU" ]＆[Text:CardName v="KODUCK" ]＆[Text:CardName v="PICHU" ]（對戰桌墊）
 [Text:CardName v="METAGROSS" ]（對戰桌墊）
 [Text:CardName v="MIJUMARU" ]（對戰桌墊）
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14"]（對戰桌墊）
@@ -9858,6 +10089,9 @@ PROMO-B
 [Text:CardName v="FOKKO" ]（對戰桌墊）
 [Text:CardName v="ROCKETDANNOBOSS" ]＆[Text:CardName v="PERSIAN" ]（對戰桌墊）
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]（對戰桌墊）
+[Text:CardName v="HOOPA" ]（對戰桌墊）
+[Text:CardName v="HUURO" ]＆[Text:CardName v="SWANNA" ]（對戰桌墊）
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]（對戰桌墊）
 對戰時可放置在場上的周邊物品。\n可在牌組功能中進行設定。
 在自己的場上放置[Num:Int id="0" max_length="2" ]隻基礎寶可夢。
 在自己的場上放置[Num:Int id="0" max_length="2" ]隻寶可夢ex。
@@ -9896,6 +10130,7 @@ B3a
 B3b
 B4
 B4a
+B4b SP
 獲得分數達到[Num:Int id="0" max_length="3" ]分以上。
 造成的傷害達到[Num:Int id="0" max_length="5" ]點以上。
 獲得勝利數達到[Num:Int id="0" max_length="3" ]次以上。
@@ -10430,6 +10665,16 @@ ex初階牌組
 [Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100850_SAKAKI"]
 [Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101040_SAKAKI"]
 [Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100850_SAKAKI_PERSIAN"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101340_MEGALIZARDONX"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101560_MEGALIZARDONX"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100890_MEGALIZARDONX"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101080_MEGALIZARDONX"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100890_MEGALIZARDONX"]
+[Mst:CardCharacterName v="CARD_NAME_1022"]（096/P-B）
+[Mst:CardCharacterName v="CARD_NAME_380"]（097/P-B）
+[Mst:CardCharacterName v="CARD_NAME_381"]（098/P-B）
+[Mst:CardCharacterName v="CARD_NAME_1344"]（099/P-B）
+[Mst:CardCharacterName v="CARD_NAME_588"]（100/P-B）
 [Mst:CardCharacterName v="CARD_NAME_1340"]（088/P-B）
 [Mst:CardCharacterName v="CARD_NAME_1341"]（089/P-B）
 [Mst:CardCharacterName v="CARD_NAME_1342"]（090/P-B）
@@ -10499,6 +10744,7 @@ ex初階牌組
 夏季優惠 超值寶可金塊（付費）×15
 夏季優惠 超值寶可金塊（付費）×200
 寶可金塊（付費）（附贈周邊物品「[Text:CardName v="KAMITSURE" ]」）×115
+寶可金塊（付費）（附贈周邊物品「[Text:CardName v="HOOPA" ]」）×115
 寶可金塊（付費）（附贈周邊物品「[Text:CardName v="THUNDER" ]＆[Text:CardName v="FREEZER" ]＆[Text:CardName v="FIRE" ]」）×115
 寶可金塊
 票券
@@ -10537,6 +10783,7 @@ ex初階牌組
 [Mst:PackName v="PACK_NAME_PROMO_B_10"]
 [Mst:PackName v="PACK_NAME_PROMO_B_11"]
 [Mst:PackName v="PACK_NAME_PROMO_B_12"]
+[Mst:PackName v="PACK_NAME_PROMO_B_13"]
 此為已被廢除的道具。\n請在商店兌換成其他道具。
 交換代幣
 非想要的卡牌也想交換
@@ -10761,7 +11008,9 @@ ex初階牌組
 [Mst:CollectionBoardHashTag]
 [Mst:CollectionFileHashTag]
 [Mst:CommonCharacterName]
+[Mst:CommonEventLabel]
 [Mst:CommonGroupName]
+[Mst:CommonPackLabel]
 [Mst:CountryName]
 [Mst:CurrencyDescription]
 [Mst:CurrencyName]

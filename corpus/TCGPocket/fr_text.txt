@@ -1743,6 +1743,7 @@ Goliastruction
 Feu du Molosse Infernal
 Frénésie Rocket
 Punir
+Lame Tombante
 Colère de Luciole
 Feuille-Boomerang
 Raillerie Roussie
@@ -1902,6 +1903,7 @@ Effet déco affiché en combat.
 Évènement insigne Propulsion Paradoxe
 Évènement insigne Domination Céleste
 Évènement insigne Jours Heureux
+Évènement insigne Booster de Luxe Méga
 Évènement insigne L'Ambition de la [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
 Deck Carabaffe (Puissance[C:Nbsp ]Génétique)
 Deck Herbizarre (Puissance[C:Nbsp ]Génétique)
@@ -2379,9 +2381,40 @@ Deck [Text:CardName v="ROCKETDANNOTHUNDER_EX" ] (L'Ambition de la Team Rocket)
 Deck [Text:CardName v="ROCKETDANNOYADOKING_EX" ] (L'Ambition de la Team Rocket)
 Deck [Text:CardName v="ROCKETDANNOMATADOGAS_EX" ] (L'Ambition de la Team Rocket)
 Deck [Text:CardName v="ROCKETDANNORATTA_EX" ] (L'Ambition de la Team Rocket)
+Deck [Text:CardName v="NYAROTE" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="WAKASYAMO" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="KAMEIL" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="BUTTERFREE" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="LAUDBON" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="INTEREON" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="RAICHU" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="NYMPHIA" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="ALOLABETBETON" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="GILLGARD" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="RATTA" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGAJUKAIN_EX" ] &[C:Nbsp ][Text:CardName v="MASQUERNYA_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGABURSYAMO_EX" ] &[C:Nbsp ][Text:CardName v="BAKPHOON_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGAKAMEX_EX" ] &[C:Nbsp ][Text:CardName v="WHALOH_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGALIVOLT_EX" ] &[C:Nbsp ][Text:CardName v="HARABARIE_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGASIRNIGHT_EX" ] &[C:Nbsp ][Text:CardName v="MIMIKKYU_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGALUCARIO_EX" ] &[C:Nbsp ][Text:CardName v="IWAPALACE_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGAGANGAR_EX" ] &[C:Nbsp ][Text:CardName v="DRAMIDORO_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGAHASSAM_EX" ] &[C:Nbsp ][Text:CardName v="SURFUGO_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="ELFUUN_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGALIZARDONX_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="GEKKOUGA_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MIRAIDON_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGASIRNIGHT_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGALUCARIO_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="ZOROARK_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MELMETAL_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGARAYQUAZA_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
 Deck [Text:CardName v="HELLGAR" ] (Domination Céleste)
 Deck [Text:CardName v="MEGAHELLGAR_EX" ] (Domination Céleste)
 Deck [Text:CardName v="ROCKETDANNOLAPLACE" ] (L'Ambition de la Team Rocket)
+Deck [Text:CardName v="GABITE" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="GABURIAS" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGAGABURIAS_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
 Deck [Text:CardName v="SHIRONA" ] (Parade Onirique)
 Deck [Text:CardName v="KAIRYU" ] (Parade Onirique)
 Deck [Text:CardName v="SILVADY" ] (Parade Onirique)
@@ -2408,6 +2441,15 @@ Deck [Text:CardName v="BURUNGEL" ] (Parade Onirique)
 Deck [Text:CardName v="MUMARGI" ] (Parade Onirique)
 Deck [Text:CardName v="ELEZARD" ] (Parade Onirique)
 Deck [Text:CardName v="ASHIRENE_EX" ] (Parade Onirique)
+Deck [Text:CardName v="MEGAFUSHIGIBANA_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGAJUKAIN_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGALIZARDONY_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGABURSYAMO_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGAKAMEX_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGAGYARADOS_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGATYLTALIS_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGAGANGAR_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="KORAIDON_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
 Deck Florizarre-ex (Puissance[C:Nbsp ]Génétique)
 Deck Dracaufeu-ex (Puissance[C:Nbsp ]Génétique)
 Deck Tortank-ex (Puissance[C:Nbsp ]Génétique)
@@ -2590,6 +2632,14 @@ Deck [Text:CardName v="ROCKETDANNOTHUNDER_EX" ] (L'Ambition de la Team Rocket)
 Deck [Text:CardName v="ROCKETDANNOYADOKING_EX" ] (L'Ambition de la Team Rocket)
 Deck [Text:CardName v="ROCKETDANNOMATADOGAS_EX" ] (L'Ambition de la Team Rocket)
 Deck [Text:CardName v="ROCKETDANNORATTA_EX" ] (L'Ambition de la Team Rocket)
+Deck [Text:CardName v="MEGAJUKAIN_EX" ] &[C:Nbsp ][Text:CardName v="MASQUERNYA_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGABURSYAMO_EX" ] &[C:Nbsp ][Text:CardName v="BAKPHOON_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGAKAMEX_EX" ] &[C:Nbsp ][Text:CardName v="WHALOH_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGALIVOLT_EX" ] &[C:Nbsp ][Text:CardName v="HARABARIE_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGASIRNIGHT_EX" ] &[C:Nbsp ][Text:CardName v="MIMIKKYU_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGALUCARIO_EX" ] &[C:Nbsp ][Text:CardName v="IWAPALACE_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGAGANGAR_EX" ] &[C:Nbsp ][Text:CardName v="DRAMIDORO_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGAHASSAM_EX" ] &[C:Nbsp ][Text:CardName v="SURFUGO_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
 Deck d'élite ([Text:CardName v="MEGALIZARDONY_EX" ])
 Deck d'élite [Text:CardName v="MEGALUCARIO_EX" ]
 Un deck d'emprunt que vous pouvez utiliser en\ncombat, même si vous ne possédez pas toutes\nles cartes qu'il contient.
@@ -2784,6 +2834,14 @@ Deck [Text:CardName v="ROCKETDANNOTHUNDER_EX" ] (L'Ambition de la Team Rocket)
 Deck [Text:CardName v="ROCKETDANNOYADOKING_EX" ] (L'Ambition de la Team Rocket)
 Deck [Text:CardName v="ROCKETDANNOMATADOGAS_EX" ] (L'Ambition de la Team Rocket)
 Deck [Text:CardName v="ROCKETDANNORATTA_EX" ] (L'Ambition de la Team Rocket)
+Deck [Text:CardName v="MEGAJUKAIN_EX" ] &[C:Nbsp ][Text:CardName v="MASQUERNYA_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGABURSYAMO_EX" ] &[C:Nbsp ][Text:CardName v="BAKPHOON_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGAKAMEX_EX" ] &[C:Nbsp ][Text:CardName v="WHALOH_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGALIVOLT_EX" ] &[C:Nbsp ][Text:CardName v="HARABARIE_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGASIRNIGHT_EX" ] &[C:Nbsp ][Text:CardName v="MIMIKKYU_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGALUCARIO_EX" ] &[C:Nbsp ][Text:CardName v="IWAPALACE_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGAGANGAR_EX" ] &[C:Nbsp ][Text:CardName v="DRAMIDORO_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Deck [Text:CardName v="MEGAHASSAM_EX" ] &[C:Nbsp ][Text:CardName v="SURFUGO_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
 Deck d'élite ([Text:CardName v="MEGALIZARDONY_EX" ])
 Deck d'élite [Text:CardName v="MEGALUCARIO_EX" ]
 Un deck à thème pouvant être utilisé lorsque vous\nconsultez vos decks. Vous pouvez créer ce deck et\njouer avec en collectant les cartes qui y sont listées.
@@ -2850,6 +2908,7 @@ Retour d'évèn. butin PROMO 2025
 Évènement butin [Text:CardName v="HISUIZORUA" ]
 Évènement butin [Text:CardName v="MEGAHELLGAR_EX" ]
 Évènement butin [Text:CardName v="ROCKETDANNOLAPLACE" ]
+Évènement butin [Text:CardName v="MEGAGABURIAS_EX" ]
 Combat aléatoire (B2)
 Combat aléatoire (B2a)
 Combat aléatoire (B2b)
@@ -2858,6 +2917,7 @@ Combat aléatoire (B3a)
 Combats aléatoires (B3b)
 Combats aléatoires (B4)
 Combats aléatoires (B4a)
+Combats aléatoires (B4b)
 Brûlés󱀀Brûlé
 Cadre d'or
 Un cadre d'or qui s'affiche dans les portfolios,\ndans les cadres expo et en combat.
@@ -4198,6 +4258,7 @@ Insécateur[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="pre" 
 Lokhlass[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="pre" ]
 Goélise
 Qulbutoké[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="pre" ]
+Méga-Carchacrok-ex
 Feunnec
 Magmar[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="pre" ]
 Sulfura-ex[Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="pre" ]
@@ -4265,7 +4326,48 @@ Méga[C:Nbh ]Métalosse
 Méga[C:Nbh ]Gallame
 Terapagos
 Méga-Diancie
+Méga[C:Nbh ]Mewtwo[C:Nbsp ]X
+Méga-Dracaufeu
+Rang Débutant[C:Nbsp ]1
+Rang Débutant[C:Nbsp ]2
+Rang Débutant[C:Nbsp ]3
+Rang Débutant[C:Nbsp ]4
+Rang Hyper Ball[C:Nbsp ]1
+Rang Hyper Ball[C:Nbsp ]2
+Rang Hyper Ball[C:Nbsp ]3
+Rang Hyper Ball[C:Nbsp ]4
+Rang Poké Ball[C:Nbsp ]1
+Rang Poké Ball[C:Nbsp ]2
+Rang Poké Ball[C:Nbsp ]3
+Rang Poké Ball[C:Nbsp ]4
+Rang Super Ball[C:Nbsp ]1
+Rang Super Ball[C:Nbsp ]2
+Rang Super Ball[C:Nbsp ]3
+Rang Super Ball[C:Nbsp ]4
 Team Rocket
+Top 1[C:Nbsp ]000
+Top 5[C:Nbsp ]000
+Top 10[C:Nbsp ]000
+vol.[C:Nbsp ]1
+vol.[C:Nbsp ]2
+vol.[C:Nbsp ]3
+vol.[C:Nbsp ]4
+vol.[C:Nbsp ]5
+vol.[C:Nbsp ]6
+vol.[C:Nbsp ]7
+vol.[C:Nbsp ]8
+vol.[C:Nbsp ]9
+vol.[C:Nbsp ]10
+vol.[C:Nbsp ]11
+vol.[C:Nbsp ]12
+vol.[C:Nbsp ]13
+vol.[C:Nbsp ]14
+vol.[C:Nbsp ]15
+vol.[C:Nbsp ]16
+vol.[C:Nbsp ]17
+vol.[C:Nbsp ]18
+vol.[C:Nbsp ]19
+vol.[C:Nbsp ]20
 Émirats arabes unis
 Antigua-et-Barbuda
 Anguilla
@@ -4670,8 +4772,10 @@ Saison A3a - Rang Hyper Ball[C:Nbsp ]2
 Insigne - [Text:CardName v="ROCKETDANNOBOSS" ]
 Un insigne de rang Hyper Ball[C:Nbsp ]3\npouvant être obtenu au cours de\nla saison de matchs classés A3a.
 Saison A3a - Rang Hyper Ball[C:Nbsp ]3
+Insigne - [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
 Un insigne de rang Hyper Ball[C:Nbsp ]4\npouvant être obtenu au cours de\nla saison de matchs classés A3a.
 Saison A3a - Rang Hyper Ball[C:Nbsp ]4
+Insigne - Pokémon[C:Nbh ]ex Méga[C:Nbh ]Évolution
 Un insigne de rang Super Ball[C:Nbsp ]1\npouvant être obtenu au cours de\nla saison de matchs classés A3a.
 Saison A3a - Rang Super Ball[C:Nbsp ]1
 Un insigne de rang Super Ball[C:Nbsp ]2\npouvant être obtenu au cours de\nla saison de matchs classés A3a.
@@ -4906,12 +5010,20 @@ Un insigne d'or pouvant être\nobtenu au cours de l'évènement\ninsigne L'Ambit
 Insigne d'or - évènement insigne L'Ambition de la [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
 Un insigne de rang Super Ball[C:Nbsp ]1\npouvant être obtenu au cours de\nla saison de matchs classés A4b.
 Saison A4b - Rang Super Ball[C:Nbsp ]1
+Un insigne de participation pouvant\nêtre obtenu au cours de l'évènement\ninsigne [Mst:PackName v="PACK_NAME_B4b_1"].
+Insigne de participation - évènement insigne [Mst:PackName v="PACK_NAME_B4b_1"]
 Un insigne de rang Super Ball[C:Nbsp ]2\npouvant être obtenu au cours de\nla saison de matchs classés A4b.
 Saison A4b - Rang Super Ball[C:Nbsp ]2
+Un insigne de bronze pouvant être\nobtenu au cours de l'évènement\ninsigne [Mst:PackName v="PACK_NAME_B4b_1"].
+Insigne de bronze - évènement insigne [Mst:PackName v="PACK_NAME_B4b_1"]
 Un insigne de rang Super Ball[C:Nbsp ]3\npouvant être obtenu au cours de\nla saison de matchs classés A4b.
 Saison A4b - Rang Super Ball[C:Nbsp ]3
+Un insigne d'argent pouvant être\nobtenu au cours de l'évènement\ninsigne [Mst:PackName v="PACK_NAME_B4b_1"].
+Insigne d'argent - évènement insigne [Mst:PackName v="PACK_NAME_B4b_1"]
 Un insigne de rang Super Ball[C:Nbsp ]4\npouvant être obtenu au cours de\nla saison de matchs classés A4b.
 Saison A4b - Rang Super Ball[C:Nbsp ]4
+Un insigne d'or pouvant être\nobtenu au cours de l'évènement\ninsigne [Mst:PackName v="PACK_NAME_B4b_1"].
+Insigne d'or - évènement insigne [Mst:PackName v="PACK_NAME_B4b_1"]
 Un insigne de rang Poké Ball[C:Nbsp ]1\npouvant être obtenu au cours de\nla saison de matchs classés A4b.
 Saison A4b - Rang Poké Ball[C:Nbsp ]1
 Un insigne de rang Poké Ball[C:Nbsp ]2\npouvant être obtenu au cours de\nla saison de matchs classés A4b.
@@ -5148,6 +5260,26 @@ Saison[C:Nbsp ]B4a - Rang Débutant[C:Nbsp ]1
 Saison[C:Nbsp ]B4a - Rang Débutant[C:Nbsp ]2
 Saison[C:Nbsp ]B4a - Rang Débutant[C:Nbsp ]3
 Saison[C:Nbsp ]B4a - Rang Débutant[C:Nbsp ]4
+Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] - [Mst:MainRankName v="MAIN_RANK_NAME_MASTERBALL"]
+Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180" ] - Rang Master Ball ([Mst:CommonEventLabel case="lower" v="COMMON_Master_TOP10000" ])
+Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180" ] - Rang Master Ball ([Mst:CommonEventLabel case="lower" v="COMMON_Master_TOP5000" ])
+Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180" ] - Rang Master Ball ([Mst:CommonEventLabel case="lower" v="COMMON_Master_TOP1000" ])
+Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] - [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_01"]
+Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] - [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_02"]
+Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] - [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_03"]
+Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] - [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_04"]
+Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] - [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_01"]
+Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] - [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_02"]
+Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] - [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_03"]
+Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] - [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_04"]
+Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] - [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_01"]
+Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] - [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_02"]
+Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] - [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_03"]
+Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] - [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_04"]
+Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] - [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_01"]
+Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] - [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_02"]
+Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] - [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_03"]
+Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] - [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_04"]
 1\nan
 Un insigne pour célébrer l'évènement spécial[C:Nbsp ]2025.
 Insigne - évènement spécial 2025
@@ -5212,6 +5344,7 @@ B3a
 B3b
 B4
 B4a
+B4b
 Puissance Génétique
 L'Île Fabuleuse
 Choc Spatio-Temporel
@@ -5233,6 +5366,7 @@ Propulsion Paradoxe
 Jours Heureux
 Domination Céleste
 L'Ambition de la [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
+Booster de Luxe Méga
 #MaCollection
 #PokemonFavoris
 #IllustrationsFavorites
@@ -6744,6 +6878,7 @@ On l'appelle aussi « la princesse rose de l'élégance ».\nLe diamant resplend
 Il tire sa force du lien qui l'unit à son Dresseur\nou à sa Dresseuse. Son corps s'est doté de\nplaques tranchantes et d'une cape protectrice.
 Il s'agit de la fusion d'un Métalosse,\nd'un Métang et de deux Terhal.
 Quand ce Pokémon méga-évolue, son corps\ntout entier dégage de la chaleur. Son souffle\nenflammé réduit ses adversaires en cendres.
+La Méga-Évolution l'a rendu plus brutal.\nIl taille en pièces ses ennemis à l'aide\nde ses bras en forme de faux.
 Il se nourrit de particules en suspension dans\nl'atmosphère. La composition de ces dernières\ninfluerait sur la couleur de son noyau.
 Lorsqu'une étoile filante illumine le ciel\nnocturne, il se pourrait qu'il s'agisse en réalité\nde Méga-Rayquaza pourchassant une météorite.
 Narumi Sato
@@ -6983,6 +7118,7 @@ Yoshimoto Yoshimon
 Akino Fukuji
 Iwamoto05
 Kazuki Minami
+YOSHIROTTEN
 Coming Soon
 Objet qui recharge la vitalité miracle. Réduit d'une\nheure le temps d'attente d'une pioche miracle.\nPeut être obtenu en récompense de missions, etc.
 S'utilise pour participer à certains combats solo ou\névènements. Cet objet fait en sorte que ceux-ci\nsoient à nouveau disponibles plus rapidement.
@@ -7082,6 +7218,7 @@ Coupon carte promo (évènement butin [Text:CardName v="SOUBLADES_EX" ])
 Coupon carte promo (évènement butin [Text:CardName v="HISUIZORUA" ])
 Ticket louche de la [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
 Coupon carte promo (évènement butin [Text:CardName v="ROCKETDANNOLAPLACE" ])
+Coupon carte promo (évènement butin [Text:CardName v="MEGAGABURIAS_EX" ])
 Ticket avenir
 Effet déco (ornement) - Bulles bleu clair
 Effet déco (ornement) - Bulles roses
@@ -7172,6 +7309,40 @@ Les cadres expo se déverrouillent au niveau 4.\n\nVous pouvez monter de niveau 
 Les portfolios se déverrouillent au niveau 6.\n\nVous pouvez monter de niveau en accumulant\ndes points d'expérience, que vous pouvez obtenir\nen ouvrant des Boosters, entre autres.
 Les missions premium se déverrouillent lorsque\nvous vous abonnez au pass premium.\n\nVous pouvez vous abonner au pass premium\nvia le bouton dédié dans l'écran des missions\npremium ou via la boutique.
 Le menu « Échange » se déverrouille au niveau 3.\n\nVous pouvez monter de niveau en accumulant\ndes points d'expérience, que vous pouvez obtenir\nen ouvrant des Boosters, entre autres.
+Deck {0} ({1})
+Insigne - {0}
+Insigne de bronze - évènement insigne {0}
+Un insigne de bronze pouvant être\nobtenu au cours de l'évènement\ninsigne {0}.
+Insigne d'or - évènement insigne {0}
+Un insigne d'or pouvant être\nobtenu au cours de l'évènement\ninsigne {0}.
+Insigne de participation - évènement insigne {0}
+Un insigne de participation pouvant\nêtre obtenu au cours de l'évènement\ninsigne {0}.
+Insigne d'argent - évènement insigne {0}
+Un insigne d'argent pouvant être\nobtenu au cours de l'évènement\ninsigne {0}.
+Saison {0} - {1}
+Saison {0} - Rang Master Ball ({1})
+Ticket boutique évènement ({0})
+Ticket insigne ({0})
+Booster promo série {0}, {1}
+Icône - {0}
+Icône - {0} chromatique
+Icône - {0}[C:Nbsp ]: {1}
+Arrière-Plan - {0}
+Arrière-Plan - {0} version[C:Nbsp ]2
+Pièce Pokémon - {0}
+Pièce Pokémon - {0} chromatique
+Pièce Pokémon - {0} version alternative
+Pièce Pokémon - {0} version irisée
+Pièce Pokémon - {0} version[C:Nbsp ]2
+Protège-Carte - {0}
+Protège-Carte - {0} version[C:Nbsp ]2
+Couverture - {0}
+Couverture - {0}[C:Nbsp ]: {1}
+Couverture - {0} version[C:Nbsp ]2
+Tapis de Jeu - {0}
+Tapis de Jeu - {0}[C:Nbsp ]: {1}
+Tapis de Jeu - {0} version[C:Nbsp ]2
+Poké Lingots (payants) ×[C:Nbsp ]115 +[C:Nbsp ]Accessoires ({0})
 Rang Débutant
 Rang Hyper Ball
 Rang Master Ball
@@ -7207,6 +7378,7 @@ Ajouter des cartes recherchées à votre profil
 Participer à [Num:Int id="1" max_length="3" ] combat[Gr:Count p="s" ref="1" ] solo avec le deck d'emprunt «[C:Nbsp id="0" ref="0" ][Mst:RentalDeckName id="0" ][C:Nbsp id="0" ref="0" ]»
 Partager [Num:Int id="0" max_length="3" ] fois
 Obtenir [Num:Int id="0" max_length="3" ] point[Gr:Count p="s" ] en combat solo
+Gagner [Num:Int id="1" max_length="3" plural_only="" ][Gr:Count s="un" ref="1" ] combat[Gr:Count p="s" ref="1" ] versus avec un deck contenant 8[C:Nbsp ]cartes[C:Nbsp ][Mst:EnergyTypeNameLong id="0" ] ou plus
 Objectif[C:Nbsp ]: se connecter (jour[C:Nbsp ][Num:Int id="0" max_length="3" ])[C:Nbsp ]!
 Objectif[C:Nbsp ]: terminer [Num:Int max_length="3" plural_only="" ][Gr:Count s="un" id="1" ][C:Nbsp ]combat[Gr:Count p="s" id="1" ][C:Nbsp ]!
 Objectif[C:Nbsp ]: utiliser la pioche miracle [Num:Int max_length="3" plural_only="" ][Gr:Count s="une" ][C:Nbsp ]fois[C:Nbsp ]!
@@ -7634,6 +7806,18 @@ Musée de L'Ambition de la [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ][C:Nbsp
 Une armée de [Text:CardName v="ROCKETDANNOSHITAPPA" lang="fr_FR_Plural" plural="1" ]
 Collection d'inventions louches
 Les cartes de la [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] au grand complet[C:Nbsp ]!
+Collection Méga[C:Nbh ]Évolution[C:Nbh ]ex
+Des Pokémon-ex dotés de talents
+Les deux formes de [Mst:CommonCharacterName v="COMMON_CARD_NAME_24" ]
+Formes de [Text:CardName v="ZOROARK" ] façonnées par leur environnement
+Le quotidien des Pokémon Chiot
+Pokémon protégés par une carapace
+Pokémon n'ayant qu'un seul œil
+Pokémon utilisant le son pour combattre
+Collection de Stades complète !
+Musée du Booster de Luxe Méga
+Obtenir une carte spéciale de rareté[C:Nbsp ][Mst:Rarity v="RARITY_MSID_SSASR" ]
+Une multitude de Méga[C:Nbh ]Évolutions[C:Nbh ]ex[C:Nbsp ]!
 Rassemblez [Num:Int id="1" max_length="3" plural_only="" ][Gr:Count s="une" ref="1" ][C:Nbsp ]carte[Gr:Count p="s" ref="1" ] [Text:CardNameWithSubName id="0" ][C:Nbsp ]!
 Rassemblez [Num:Int id="1" max_length="3" plural_only="" ][Gr:Count s="une" ref="1" ][C:Nbsp ]carte[Gr:Count p="s" ref="1" ] [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] de L'Ambition de la [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ][C:Nbsp ]!
 Le défilé de mode de [Text:CardName v="TRIMMIEN" ]
@@ -7690,10 +7874,12 @@ Missions spéciales du\npremier anniversaire 1
 Missions spéciales du\npremier anniversaire 2
 Apparition massive de\ncartes brillantes parallèles
 Apparition massive de cartes brillantes parallèles
+Apparition massive de cartes brillantes parallèles
 Missions de compte à rebours\ndu premier anniversaire
 Missions de comptes associés
 Missions de comptes associés
-Missions de semaine bonus
+Missions de la semaine bonus
+Missions de la semaine bonus
 Missions de retour\nd'évènement butin\nPROMO 2025
 Missions de retour\nd'évènement pioche\nmiracle PROMO 2025
 Évènement insigne\nEmbrasement Écarlate
@@ -7712,8 +7898,8 @@ Missions spéciales[C:Nbsp id="0" ref="0" ]2026
 Évènement butin\n[Text:CardName v="MEGACHAREM_EX" ]
 Évènement butin [Text:CardName v="YADON" ]
 Évènement insigne\nMéga[C:Nbh ]Rayonnement
-Missions cadeau\ndeck d'élite
-Missions cadeau\ndeck d'élite
+Missions deck d'élite\nen cadeau
+Missions deck d'élite\nen cadeau
 30 jours de cadeaux
 Missions collection de\ncartes pratiques
 Missions collection\nde cartes pratiques
@@ -7729,12 +7915,18 @@ Liste des missions
 Évènement butin\n[Text:CardName v="HISUIZORUA" ]
 Évènement insigne\nJours Heureux
 Séries multiples 1
+Évènement butin\n[Text:CardName v="MEGAGABURIAS_EX" ]
+Évènement butin [Text:CardName v="MEGAGABURIAS_EX" ]
+Évènement insigne\nBooster de Luxe Méga
+Évènement insigne Booster de Luxe Méga
 Évènement butin\n[Text:CardName v="ROCKETDANNOLAPLACE" ]󱀀Évènements butin\n[Text:CardName v="ROCKETDANNOLAPLACE" ]
 Évènement butin [Text:CardName v="ROCKETDANNOLAPLACE" ]󱀀Évènements butin [Text:CardName v="ROCKETDANNOLAPLACE" ]
 Évènement insigne\nL'Ambition de la [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
 Évènement insigne L'Ambition de la [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
 Objectifs spéciaux\nde la [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
 Objectifs spéciaux de la [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
+Missions Pikachu[C:Nbsp ]:\nPika Pika !
+Missions Pikachu[C:Nbsp ]: Pika Pika !
 Faciles
 Difficiles
 Quotidiennes
@@ -7767,6 +7959,7 @@ Cartes pratiques
 Liste
 Bon retour
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
+Pika Pika[C:Nbsp ]!
 Combat aléatoire (difficile)
 Combat aléatoire (facile)
 Combat aléatoire (expert)
@@ -7808,6 +8001,9 @@ Booster Propulsion Paradoxe
 Booster Jours Heureux
 Booster Domination Céleste
 Booster L'Ambition de la [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
+Booster Booster de Luxe Méga
+Un Booster unique pouvant être obtenu\ngrâce aux missions Pikachu : Pika Pika !
+Un Booster vraiment unique pouvant être obtenu\ngrâce aux missions Pikachu : Pika Pika !
 Booster promo de la série A, vol. 1
 Booster promo de la série A, vol. 2
 Booster promo de la série A, vol. 3
@@ -7833,7 +8029,9 @@ Booster promo de la série B, vol. 9
 Booster promo de la série B, vol. 10
 Booster promo de la série B, vol. 11
 Booster promo de la série B, vol. 12
+Booster promo de la série[C:Nbsp ]B, vol.[C:Nbsp ]13
 1 carte de rareté[C:Nbsp ][Mst:Rarity v="RARITY_MSID_RR" ]\nou plus garantie
+1 carte Pokémon-ex\ngarantie
 Puissance Génétique : Mewtwo
 Booster Puissance[C:Nbsp ]Génétique[C:Nbsp ]: Mewtwo (1 carte de rareté [Mst:Rarity v="RARITY_MSID_RR" ] ou plus garantie)
 Puissance Génétique : Dracaufeu
@@ -7865,6 +8063,9 @@ Propulsion Paradoxe
 Jours Heureux
 Domination Céleste
 L'Ambition de la [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
+Booster de Luxe Méga󱀀Boosters de Luxe Méga
+Boosters Pikachu[C:Nbsp ]: Pika Pika[C:Nbsp ]!󱀀Booster Pikachu[C:Nbsp ]: Pika Pika[C:Nbsp ]!
+Booster Pikachu[C:Nbsp ]: Pika Pika[C:Nbsp ]! ex󱀀Boosters Pikachu[C:Nbsp ]: Pika Pika[C:Nbsp ]! ex
 Booster promo série A, vol. 1
 Booster promo série A, vol. 2
 Booster promo série A, vol. 3
@@ -7890,6 +8091,7 @@ Booster promo série B, vol. 9
 Booster promo série B, vol. 10
 Booster promo série B, vol. 11
 Booster promo série B, vol. 12
+Boosters promo série[C:Nbsp ][Mst:SeriesName v="SERIES_NAME_2" ], [Mst:CommonPackLabel v="COMMON_PACK_LABEL_013" ]󱀀Booster promo série[C:Nbsp ][Mst:SeriesName v="SERIES_NAME_2" ], [Mst:CommonPackLabel v="COMMON_PACK_LABEL_013" ]
 [Mst:Rarity v="RARITY_MSID_RR" ] ou plus garantie
 Booster commun
 Boost. commun + 1 carte
@@ -8397,6 +8599,7 @@ Nº 0441 Pokémon Note Musique Taille : 0,5 m Poids : 1,9 kg
 Nº 0442 Pokémon Interdit Taille : 1,0 m Poids : 108,0 kg
 Nº 0443 Pokémon Terrequin Taille : 0,7 m Poids : 20,5 kg
 Nº 0444 Pokémon Caverne Taille : 1,4 m Poids : 56,0 kg
+Nº 0445 Pokémon Supersonic Taille : 1,9 m Poids : 95,0 kg
 Nº 0445 Pokémon Supersonic Taille : 1,9 m Poids : 95,0 kg
 Nº 0446 Pokémon Goinfre Taille : 0,6 m Poids : 105,0 kg
 Nº 0447 Pokémon Émanation Taille : 0,7 m Poids : 20,2 kg
@@ -9104,6 +9307,11 @@ Icône - [Text:CardName v="ROCKETDANNOSHITAPPA" ] version[C:Nbsp ]2
 Icône - [Text:CardName v="ROCKETDANNOSHITAPPA" ] version[C:Nbsp ]3
 Icône - [Text:CardName v="ROCKETDANNOKENKYUUIN" ]
 Icône - [Text:CardName v="ROCKETDANNOBOSS" ]
+Icône - [Text:CardName v="HUURO" ]
+Icône - [Mst:PackName v="PACK_NAME_B4b_1" ][C:Nbsp ]: [Mst:CommonCharacterName v="COMMON_CARD_NAME_12" ]
+Icône - [Text:CardName v="PIKACHU" ] version[C:Nbsp ]12
+Icône - [Text:CardName v="PIKACHU" ] version[C:Nbsp ]13
+Icône - [Text:CardName v="PIKACHU" ] version[C:Nbsp ]14
 Icône - [Text:CardName v="PIKACHU" ] version[C:Nbsp ]2
 Icône - [Text:CardName v="PIKACHU" ] version[C:Nbsp ]3
 Icône - [Text:CardName v="PIKACHU" ] version[C:Nbsp ]4
@@ -9423,6 +9631,16 @@ Arrière-Plan - Pesée
 Pesée
 Arrière-Plan - Été rétro
 Été rétro
+Arrière-Plan - [Text:CardName v="HOOPA" ]
+[Text:CardName v="HOOPA" ]
+Arrière-Plan - [Text:CardName v="HUURO" ]
+[Text:CardName v="HUURO" ]
+Arrière-Plan - [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
+Arrière-Plan - Côte scintillante
+Côte scintillante
+Liesse urbaine
+Arrière-Plan - Liesse urbaine
 Un Arrière-Plan sur lequel placer vos cartes\nlorsque vous décorez vos cadres expo.
 Pièce Pokémon - Évoli
 Évoli
@@ -9517,6 +9735,7 @@ Pièce Pokémon - [Text:CardName v="KORAIDON" ]
 Pièce Pokémon - [Text:CardName v="YAMIRAMI" ]
 Pièce Pokémon - [Text:CardName v="MIRAIDON" ]
 Pièce Pokémon - 30 ans de Pokémon
+Pièce Pokémon - [Text:CardName v="PIKACHU" ] version[C:Nbsp ]3
 Pièce Pokémon - [Text:CardName v="METAGROSS" ]
 Pièce Pokémon - [Text:CardName v="MIJUMARU" ]
 Pièce Pokémon - [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ]
@@ -9524,6 +9743,9 @@ Pièce Pokémon - [Text:CardName v="THUNDER" ]
 Pièce Pokémon - [Text:CardName v="FOKKO" ]
 Pièce Pokémon - [Text:CardName v="ROCKETDANNOBOSS" ]
 Pièce Pokémon - [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
+Pièce Pokémon - [Text:CardName v="HOOPA" ]
+Pièce Pokémon - [Text:CardName v="HUURO" ]
+Pièce Pokémon - [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
 Une pièce pouvant être utilisée en combat.\nVous pouvez choisir laquelle utiliser lorsque\nvous consultez vos decks.
 Protège-Carte - Évoli
 Évoli
@@ -9611,6 +9833,7 @@ Protège-Carte - [Text:CardName v="KORAIDON" ]
 Protège-Carte - [Text:CardName v="YAMIRAMI" ]
 Protège-Carte - [Text:CardName v="MIRAIDON" ]
 Protège-Carte - 30 ans de Pokémon
+Protège-Carte - [Text:CardName v="PIKACHU" ] &[C:Nbsp ][Text:CardName v="PICHU" ]
 Protège-Carte - [Text:CardName v="METAGROSS" ]
 Protège-Carte - [Text:CardName v="MIJUMARU" ]
 Protège-Carte - [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ]
@@ -9618,6 +9841,9 @@ Protège-Carte - [Text:CardName v="THUNDER" ], [Text:CardName v="FREEZER" ] &[C:
 Protège-Carte - [Text:CardName v="FOKKO" ]
 Protège-Carte - [Text:CardName v="ROCKETDANNOBOSS" ]
 Protège-Carte - [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
+Protège-Carte - [Text:CardName v="HOOPA" ]
+Protège-Carte - [Text:CardName v="HUURO" ]
+Protège-Carte - [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
 Un Accessoire dans lequel les cartes sont rangées.\nVous pouvez choisir lequel utiliser lorsque vous\nconsultez vos decks.
 Une Couverture pouvant être utilisée\nafin de décorer vos portfolios.
 Couverture - Évoli
@@ -9764,6 +9990,10 @@ Couverture - [Text:CardName v="FOKKO" ]
 Couverture - [Text:CardName v="ROCKETDANNOBOSS" ] &[C:Nbsp ][Text:CardName v="PERSIAN" ]
 Couverture - L'Ambition de la [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ][C:Nbsp ]: [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
 Couverture - [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
+Couverture - [Text:CardName v="HOOPA" ]
+Couverture - [Text:CardName v="HUURO" ] &[C:Nbsp ][Text:CardName v="SWANNA" ]
+Couverture - [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
+Couverture - Booster de Luxe Méga
 Tapis de Jeu - Évoli
 Évoli
 Tapis de Jeu - Miaouss
@@ -9851,6 +10081,7 @@ Tapis de Jeu - [Text:CardName v="KORAIDON" ]
 Tapis de Jeu - [Text:CardName v="YAMIRAMI" ]
 Tapis de Jeu - [Text:CardName v="MIRAIDON" ]
 Tapis de Jeu - 30 ans de Pokémon
+Tapis de Jeu - [Text:CardName v="PIKACHU" ], [Text:CardName v="KODUCK" ] &[C:Nbsp ][Text:CardName v="PICHU" ]
 Tapis de Jeu - [Text:CardName v="METAGROSS" ]
 Tapis de Jeu - [Text:CardName v="MIJUMARU" ]
 Tapis de Jeu - [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ]
@@ -9858,6 +10089,9 @@ Tapis de Jeu - [Text:CardName v="THUNDER" ], [Text:CardName v="FREEZER" ] &[C:Nb
 Tapis de Jeu - [Text:CardName v="FOKKO" ]
 Tapis de Jeu - [Text:CardName v="ROCKETDANNOBOSS" ] &[C:Nbsp ][Text:CardName v="PERSIAN" ]
 Tapis de Jeu - [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
+Tapis de Jeu - [Text:CardName v="HOOPA" ]
+Tapis de Jeu - [Text:CardName v="HUURO" ] &[C:Nbsp ][Text:CardName v="SWANNA" ]
+Tapis de Jeu - [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
 Un Accessoire placé sur le terrain de jeu pendant\nle combat. Vous pouvez choisir lequel utiliser\nlorsque vous consultez vos decks.
 Placer [Num:Int max_length="2" plural_only="" ][Gr:Count s="un" ][C:Nbsp ]Pokémon de base sur le terrain
 Placer [Num:Int max_length="2" plural_only="" ][Gr:Count s="un" ] Pokémon-ex sur le terrain
@@ -9896,6 +10130,7 @@ B3a
 B3b
 B4
 B4a
+B4b SP
 Obtenir [Num:Int id="0" max_length="3" ] points ou plus
 Infliger [Num:Int id="0" max_length="5" ] dégâts ou plus
 Gagner [Num:Int id="0" max_length="3" ] combats ou plus
@@ -10430,6 +10665,16 @@ Chaussettes de Sbire de la Team Rocket
 [Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100850_SAKAKI" ]
 [Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101040_SAKAKI" ]
 [Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100850_SAKAKI_PERSIAN" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101340_MEGALIZARDONX"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101560_MEGALIZARDONX"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100890_MEGALIZARDONX"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101080_MEGALIZARDONX"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100890_MEGALIZARDONX"]
+[Mst:CardCharacterName v="CARD_NAME_1022" ] (096/P-B)
+[Mst:CardCharacterName v="CARD_NAME_380" ] (097/P-B)
+[Mst:CardCharacterName v="CARD_NAME_381" ] (098/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1344" ] (099/P-B)
+[Mst:CardCharacterName v="CARD_NAME_588" ] (100/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1340" ] (088/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1341" ] (089/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1342" ] (090/P-B)
@@ -10499,6 +10744,7 @@ Poké Lingots (payants) ×[C:Nbsp id="0" ref="0" ]115 +[C:Nbsp id="0" ref="0" ]A
 Soldes d'été[C:Nbsp id="0" ref="0" ]: offre Poké Lingots (payants) ×[C:Nbsp id="0" ref="0" ]15
 Soldes d'été[C:Nbsp id="0" ref="0" ]: offre Poké Lingots (payants) ×[C:Nbsp id="0" ref="0" ]200
 Poké Lingots (payants) ×[C:Nbsp id="0" ref="0" ]115 +[C:Nbsp id="0" ref="0" ]Accessoires ([Text:CardName v="KAMITSURE" ])
+Poké Lingots (payants) ×[C:Nbsp ]115 +[C:Nbsp ]Accessoires ([Text:CardName v="HOOPA" ])
 Poké Lingots (payants) ×[C:Nbsp ]115 +[C:Nbsp ]Accessoires ([Text:CardName v="THUNDER" ], [Text:CardName v="FREEZER" ] &[C:Nbsp ][Text:CardName v="FIRE" ])
 Poké Lingots
 Tickets
@@ -10537,6 +10783,7 @@ Team Rocket
 [Mst:PackName v="PACK_NAME_PROMO_B_10" ]
 [Mst:PackName v="PACK_NAME_PROMO_B_11" ]
 [Mst:PackName v="PACK_NAME_PROMO_B_12"]
+[Mst:PackName v="PACK_NAME_PROMO_B_13" ]
 Objet désormais aboli.\nVeuillez l'échanger contre d'autres objets\ndans la boutique.
 Jeton Échange󱀀Jetons Échange
 Cherche aussi cartes non recherchées
@@ -10761,7 +11008,9 @@ Gagner ce combat sans que votre adversaire ne gagne de point
 [Mst:CollectionBoardHashTag]
 [Mst:CollectionFileHashTag]
 [Mst:CommonCharacterName]
+[Mst:CommonEventLabel]
 [Mst:CommonGroupName]
+[Mst:CommonPackLabel]
 [Mst:CountryName]
 [Mst:CurrencyDescription]
 [Mst:CurrencyName]
@@ -12527,7 +12776,7 @@ Calcul des résultats...
 Commence bientôt
 Match privé
 Match aléatoire
-Match évènement
+Matchs évènement
 Versus
 Avec mot de passe
 Avec code-barres 2D

@@ -1743,6 +1743,7 @@ Goldbrecher
 Schattenhund-Fackel
 Rocket-Fieber
 Bestrafung
+Fallende Klinge
 Zorniger Leuchtkäfer
 Blätter-Bumerang
 Höhnisches Rösten
@@ -1902,6 +1903,7 @@ Emblem-Event (Mega-Schillern)
 Emblem-Event (Paradoxansturm)
 Emblem-Event (Herrscher der Lüfte)
 Emblem-Event (Wunder des Alltags)
+Emblem-Event (Deluxepack: Mega)
 Emblem-Event ([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne)
 Schillok-Deck (Unschlagbare Gene)
 Bisaknosp-Deck (Unschlagbare Gene)
@@ -2379,9 +2381,40 @@ Süße Staffel-Deck (Evoli-Hain)
 [Text:CardName v="ROCKETDANNOYADOKING_EX" ]-Deck (Team Rockets Pläne)
 [Text:CardName v="ROCKETDANNOMATADOGAS_EX" ]-Deck (Team Rockets Pläne)
 [Text:CardName v="ROCKETDANNORATTA_EX" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="NYAROTE" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="WAKASYAMO" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="KAMEIL" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="BUTTERFREE" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="LAUDBON" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="INTEREON" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="RAICHU" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="NYMPHIA" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="ALOLABETBETON" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="GILLGARD" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="RATTA" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAJUKAIN_EX" ] & [Text:CardName v="MASQUERNYA_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGABURSYAMO_EX" ] & [Text:CardName v="BAKPHOON_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAKAMEX_EX" ] & [Text:CardName v="WHALOH_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALIVOLT_EX" ] & [Text:CardName v="HARABARIE_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGASIRNIGHT_EX" ] & [Text:CardName v="MIMIKKYU_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALUCARIO_EX" ] & [Text:CardName v="IWAPALACE_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAGANGAR_EX" ] & [Text:CardName v="DRAMIDORO_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAHASSAM_EX" ] & [Text:CardName v="SURFUGO_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="ELFUUN_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALIZARDONX_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="GEKKOUGA_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MIRAIDON_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGASIRNIGHT_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALUCARIO_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="ZOROARK_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MELMETAL_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGARAYQUAZA_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
 [Text:CardName v="HELLGAR" lang="de_DE" ]-Deck (Herrscher der Lüfte)
 [Text:CardName v="MEGAHELLGAR_EX" lang="de_DE" ]-Deck (Herrscher der Lüfte)
 [Text:CardName v="ROCKETDANNOLAPLACE" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="GABITE" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="GABURIAS" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAGABURIAS_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
 [Text:CardName v="SHIRONA" ]-Deck (Traumhafte Parade)
 [Text:CardName v="KAIRYU" ]-Deck (Traumhafte Parade)
 [Text:CardName v="SILVADY" ]-Deck (Traumhafte Parade)
@@ -2408,6 +2441,15 @@ Letzte Ehre-Deck (Wundervolles Paldea)
 [Text:CardName v="MUMARGI" ]-Deck (Traumhafte Parade)
 [Text:CardName v="ELEZARD" ]-Deck (Traumhafte Parade)
 [Text:CardName v="ASHIRENE_EX" ]-Deck (Traumhafte Parade)
+[Text:CardName v="MEGAFUSHIGIBANA_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAJUKAIN_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALIZARDONY_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGABURSYAMO_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAKAMEX_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAGYARADOS_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGATYLTALIS_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAGANGAR_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="KORAIDON_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
 Bisaflor-ex-Deck (Unschlagbare Gene)
 Glurak-ex-Deck (Unschlagbare Gene)
 Turtok-ex-Deck (Unschlagbare Gene)
@@ -2590,6 +2632,14 @@ Elite-Deck ([Text:CardName v="MEGABURSYAMO_EX" ])
 [Text:CardName v="ROCKETDANNOYADOKING_EX" ]-Deck (Team Rockets Pläne)
 [Text:CardName v="ROCKETDANNOMATADOGAS_EX" ]-Deck (Team Rockets Pläne)
 [Text:CardName v="ROCKETDANNORATTA_EX" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="MEGAJUKAIN_EX" ] & [Text:CardName v="MASQUERNYA_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGABURSYAMO_EX" ] & [Text:CardName v="BAKPHOON_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAKAMEX_EX" ] & [Text:CardName v="WHALOH_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALIVOLT_EX" ] & [Text:CardName v="HARABARIE_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGASIRNIGHT_EX" ] & [Text:CardName v="MIMIKKYU_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALUCARIO_EX" ] & [Text:CardName v="IWAPALACE_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAGANGAR_EX" ] & [Text:CardName v="DRAMIDORO_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAHASSAM_EX" ] & [Text:CardName v="SURFUGO_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
 Elite-Deck ([Text:CardName v="MEGALIZARDONY_EX" lang="de_DE" ])
 Elite-Deck ([Text:CardName v="MEGALUCARIO_EX" lang="de_DE" ])
 Ein Leihdeck, das du in Kämpfen einsetzen kannst.\nDieses Deck kannst du verwenden, auch wenn du\nnicht alle Karten daraus besitzt.
@@ -2784,6 +2834,14 @@ Elite-Deck ([Text:CardName v="MEGABURSYAMO_EX" ])
 [Text:CardName v="ROCKETDANNOYADOKING_EX" ]-Deck (Team Rockets Pläne)
 [Text:CardName v="ROCKETDANNOMATADOGAS_EX" ]-Deck (Team Rockets Pläne)
 [Text:CardName v="ROCKETDANNORATTA_EX" ]-Deck (Team Rockets Pläne)
+[Text:CardName v="MEGAJUKAIN_EX" ] & [Text:CardName v="MASQUERNYA_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGABURSYAMO_EX" ] & [Text:CardName v="BAKPHOON_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAKAMEX_EX" ] & [Text:CardName v="WHALOH_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALIVOLT_EX" ] & [Text:CardName v="HARABARIE_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGASIRNIGHT_EX" ] & [Text:CardName v="MIMIKKYU_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGALUCARIO_EX" ] & [Text:CardName v="IWAPALACE_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAGANGAR_EX" ] & [Text:CardName v="DRAMIDORO_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="MEGAHASSAM_EX" ] & [Text:CardName v="SURFUGO_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
 Elite-Deck ([Text:CardName v="MEGALIZARDONY_EX" lang="de_DE" ])
 Elite-Deck ([Text:CardName v="MEGALUCARIO_EX" lang="de_DE" ])
 Themendeck-Vorlage, die unter „Decks“ zu finden\nist. Um dieses Deck erstellen und mit ihm spielen zu\nkönnen, musst du alle enthaltenen Karten sammeln.
@@ -2850,6 +2908,7 @@ Drop-Event ([Text:CardName v="SOUBLADES_EX" lang="de_DE" ])
 Drop-Event ([Text:CardName v="HISUIZORUA" lang="de_DE" ])
 Drop-Event ([Text:CardName v="MEGAHELLGAR_EX" lang="de_DE" ])
 Drop-Event ([Text:CardName v="ROCKETDANNOLAPLACE" ])
+Drop-Event ([Text:CardName v="MEGAGABURIAS_EX" ])
 Zufallskampf (B2)
 Zufallskampf (B2a)
 Zufallskampf (B2b)
@@ -2858,6 +2917,7 @@ Zufallskampf (B3a)
 Zufallskampf (B3b)
 Zufallskampf (B4)
 Zufallskampf (B4a)
+Zufallskampf (B4b)
 verbrannt
 Goldrahmen
 Ein Goldrahmen, der in deinen Alben, Galerien\nund im Kampf angezeigt wird.
@@ -4198,6 +4258,7 @@ Mega-Hundemon-ex
 [Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Lapras
 Wingull
 [Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Woingenau
+Mega-Knakrack-ex
 Fynx
 [Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Magmar
 [Text:AdditionalName v="ADDITIONAL_NAME_Rocket" type="C" space="post" ]Lavados-ex
@@ -4265,7 +4326,48 @@ Mega-Metagross
 Mega-Galagladi
 Terapagos
 Mega-Diancie
+Mega-Mewtu X
+Mega-Glurak
+Anfänger-Rang-1
+Anfänger-Rang-2
+Anfänger-Rang-3
+Anfänger-Rang-4
+Hyperball-Rang-1
+Hyperball-Rang-2
+Hyperball-Rang-3
+Hyperball-Rang-4
+Pokéball-Rang-1
+Pokéball-Rang-2
+Pokéball-Rang-3
+Pokéball-Rang-4
+Superball-Rang-1
+Superball-Rang-2
+Superball-Rang-3
+Superball-Rang-4
 Team Rocket
+Top[C:Nbsp ]1000
+Top[C:Nbsp ]5000
+Top[C:Nbsp ]10[C:Nnbsp ]000
+Vol. 1
+Vol. 2
+Vol. 3
+Vol. 4
+Vol. 5
+Vol. 6
+Vol. 7
+Vol. 8
+Vol. 9
+Vol. 10
+Vol. 11
+Vol. 12
+Vol. 13
+Vol. 14
+Vol. 15
+Vol. 16
+Vol. 17
+Vol. 18
+Vol. 19
+Vol. 20
 Vereinigte Arabische Emirate
 Antigua und Barbuda
 Anguilla
@@ -4670,8 +4772,10 @@ Hyperball-Rang-2 (Saison A3a)
 [Text:CardName v="ROCKETDANNOBOSS" ] (Emblem)
 Ein Hyperball-Rang-3-Emblem, das bei\nRangmatches der Saison A3a erhalten\nwerden kann.
 Hyperball-Rang-3 (Saison A3a)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"] (Emblem)
 Ein Hyperball-Rang-4-Emblem, das bei\nRangmatches der Saison A3a erhalten\nwerden kann.
 Hyperball-Rang-4 (Saison A3a)
+Mega-Entwicklungs-Pokémon-ex (Emblem)
 Ein Superball-Rang-1-Emblem, das bei\nRangmatches der Saison A3a erhalten\nwerden kann.
 Superball-Rang-1 (Saison A3a)
 Ein Superball-Rang-2-Emblem, das bei\nRangmatches der Saison A3a erhalten\nwerden kann.
@@ -4906,12 +5010,20 @@ Ein Gold-Emblem, das beim Emblem-Event\n([Mst:CommonGroupName v="COMMON_GROUP_NA
 Gold-Emblem für Emblem-Event ([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne)
 Ein Superball-Rang-1-Emblem, das bei\nRangmatches der Saison A4b erhalten\nwerden kann.
 Superball-Rang-1 (Saison A4b)
+Ein Teilnahme-Emblem, das beim Emblem-Event\n([Mst:PackName v="PACK_NAME_B4b_1"]) erhalten werden kann.
+Teilnahme-Emblem für Emblem-Event ([Mst:PackName v="PACK_NAME_B4b_1"])
 Ein Superball-Rang-2-Emblem, das bei\nRangmatches der Saison A4b erhalten\nwerden kann.
 Superball-Rang-2 (Saison A4b)
+Ein Bronze-Emblem, das beim Emblem-Event\n([Mst:PackName v="PACK_NAME_B4b_1"]) erhalten werden kann.
+Bronze-Emblem für Emblem-Event ([Mst:PackName v="PACK_NAME_B4b_1"])
 Ein Superball-Rang-3-Emblem, das bei\nRangmatches der Saison A4b erhalten\nwerden kann.
 Superball-Rang-3 (Saison A4b)
+Ein Silber-Emblem, das beim Emblem-Event\n([Mst:PackName v="PACK_NAME_B4b_1"]) erhalten werden kann.
+Silber-Emblem für Emblem-Event ([Mst:PackName v="PACK_NAME_B4b_1"])
 Ein Superball-Rang-4-Emblem, das bei\nRangmatches der Saison A4b erhalten\nwerden kann.
 Superball-Rang-4 (Saison A4b)
+Ein Gold-Emblem, das beim Emblem-Event\n([Mst:PackName v="PACK_NAME_B4b_1"]) erhalten werden kann.
+Gold-Emblem für Emblem-Event ([Mst:PackName v="PACK_NAME_B4b_1"])
 Ein Pokéball-Rang-1-Emblem, das bei\nRangmatches der Saison A4b erhalten\nwerden kann.
 Pokéball-Rang-1 (Saison A4b)
 Ein Pokéball-Rang-2-Emblem, das bei\nRangmatches der Saison A4b erhalten\nwerden kann.
@@ -5148,6 +5260,26 @@ Anfänger-Rang-1 (Saison B4a)
 Anfänger-Rang-2 (Saison B4a)
 Anfänger-Rang-3 (Saison B4a)
 Anfänger-Rang-4 (Saison B4a)
+[Mst:MainRankName v="MAIN_RANK_NAME_MASTERBALL"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
+Meisterball-Rang – [Mst:CommonEventLabel v="COMMON_Master_TOP10000"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
+Meisterball-Rang – [Mst:CommonEventLabel v="COMMON_Master_TOP5000"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
+Meisterball-Rang – [Mst:CommonEventLabel v="COMMON_Master_TOP1000"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_01"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_02"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_03"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_04"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Super_01"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Super_02"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Super_03"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Super_04"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_01"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_02"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_03"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_04"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_01"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_02"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_03"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_04"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
 1.\nJub.
 Ein Emblem zur Feier des Spezial-Events 2025.
 Spezial-Event 2025 (Emblem)
@@ -5212,6 +5344,7 @@ B3a
 B3b
 B4
 B4a
+B4b
 Unschlagbare Gene
 Mysteriöse Insel
 Kollision von Raum und Zeit
@@ -5233,6 +5366,7 @@ Paradoxansturm
 Wunder des Alltags
 Herrscher der Lüfte
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne
+Deluxepack: Mega
 #MeineSammlung
 #LieblingsPokémon
 #Lieblingsillustrationen
@@ -6744,6 +6878,7 @@ Es ist auch unter dem Namen Prinzessin Rosarot\nbekannt. Der hell leuchtende Dia
 Die Bindung zu seinem Trainer verleiht ihm Kraft.\nIn dieser Form besitzt es Klingen, um Gegner\naufzuschlitzen, und einen schützenden Mantel.
 Ein Metagross, ein Metang und zwei Tanhel\nhaben sich zu dieser Gestalt vereint.
 Die Mega-Entwicklung erhitzt seinen ganzen Körper.\nDer gewaltige feurige Atem, den es seinen Gegnern\nentgegenspeit, äschert diese ein.
+Es ist wütender und brutaler als vor der\nMega-Entwicklung. Mit seinen sichelartigen\nArmfortsätzen zerfetzt es seine Gegner.
 Partikel in der Atmosphäre sind seine Nahrung.\nMan sagt, die Farbe seines Kerns hänge von den\nInhaltsstoffen dieser Partikel ab.
 Eine leuchtende Sternschnuppe am Nachthimmel\nkönnte in Wirklichkeit Mega-Rayquaza sein,\ndas anmutig einem Meteor nachjagt.
 Narumi Sato
@@ -6983,6 +7118,7 @@ Yoshimoto Yoshimon
 Akino Fukuji
 Iwamoto05
 Kazuki Minami
+YOSHIROTTEN
 Coming Soon
 Verkürzt die Zeit bis zur nächsten Wunderwahl\num eine Stunde. Unter anderem erhältlich\nals Missionsbelohnung.
 Wird eingesetzt, um in bestimmten CPU-Kämpfen\noder Events anzutreten und kann die Zeit\nverkürzen, in der diese wieder verfügbar werden.
@@ -7082,6 +7218,7 @@ Promokarten-Tausch-Ticket (Drop-Event ([Text:CardName v="SOUBLADES_EX" lang="de_
 Promokarten-Tausch-Ticket (Drop-Event ([Text:CardName v="HISUIZORUA" lang="de_DE" ]))
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s dubioses Ticket
 Promokarten-Tausch-Ticket (Drop-Event ([Text:CardName v="ROCKETDANNOLAPLACE" ]))
+Promokarten-Tausch-Ticket (Drop-Event ([Text:CardName v="MEGAGABURIAS_EX" ]))
 Vorabticket
 Blubberblasen: Hellblau (Deko)
 Blubberblasen: Rosa (Deko)
@@ -7172,6 +7309,40 @@ Galerien werden auf Spielerlevel 4 freigeschaltet.\n\nDu kannst deinen Spielerle
 Alben werden auf Spielerlevel 6 freigeschaltet.\n\nDu kannst deinen Spielerlevel mit Spieler-EP\nerhöhen. Diese erhältst du zum Beispiel, indem du\nPacks öffnest.
 Premium-Missionen werden freigeschaltet,\nwenn du den Premiumpass abonnierst.\n\nDu kannst den Premiumpass abonnieren,\nindem du auf die zugehörige Schaltfläche in\nden Premium-Missionen oder im Shop tippst.
 Die Tauschfunktion wird auf Spielerlevel 3\nfreigeschaltet.\n\nDu kannst deinen Spielerlevel mit Spieler-EP\nerhöhen. Diese erhältst du zum Beispiel, indem du\nPacks öffnest.
+{0}-Deck ({1})
+{0} (Emblem)
+Bronze-Emblem für Emblem-Event ({0})
+Ein Bronze-Emblem, das beim Emblem-Event\n({0}) erhalten werden kann.
+Gold-Emblem für Emblem-Event ({0})
+Ein Gold-Emblem, das beim Emblem-Event\n({0}) erhalten werden kann.
+Teilnahme-Emblem für Emblem-Event ({0})
+Ein Teilnahme-Emblem, das beim Emblem-Event\n({0}) erhalten werden kann.
+Silber-Emblem für Emblem-Event ({0})
+Ein Silber-Emblem, das beim Emblem-Event\n({0}) erhalten werden kann.
+{1} (Saison {0})
+Meisterball-Rang – {1} (Saison {0})
+Event-Shop-Ticket ({0})
+Emblem-Ticket ({0})
+Promopack Serie {0}, {1}
+{0} (Icon)
+Schillerndes {0} (Icon)
+{0}: {1} (Icon)
+{0} (Hintergrund)
+{0} Ver.[C:Nbsp ]2 (Hintergrund)
+{0} (Münze)
+Schillerndes {0} (Münze)
+{0}, alternative Version (Münze)
+Regenbogen-{0} (Münze)
+{0} Ver.[C:Nbsp ]2 (Münze)
+{0} (Kartenhüllen)
+{0} Ver.[C:Nbsp ]2 (Kartenhüllen)
+{0} (Cover)
+{0}: {1} (Cover)
+{0} Ver.[C:Nbsp ]2 (Cover)
+{0} (Spielunterlage)
+{0}: {1} (Spielunterlage)
+{0} Ver.[C:Nbsp ]2 (Spielunterlage)
+PokéGold (gekauft) ×[C:Nbsp ]115 + Zubehör ({0})
 Anfänger-Rang
 Hyperball-Rang
 Meisterball-Rang
@@ -7207,6 +7378,7 @@ Stelle Karten von deiner Wunschliste auf deinem\nProfil aus
 Nimm an [Num:Int id="1" max_length="3" ] [Gr:Count s="CPU-Kampf" p="CPU-Kämpfen" ref="1" ] mit dem Leihdeck  „[Mst:RentalDeckName id="0" ]“ teil
 Nutze die Abgabe-Funktion [Num:Int id="0" max_length="3" ] Mal
 Erhalte [Num:Int id="0" max_length="3" ] [Gr:Count s="Punkt" p="Punkte" id="1" ] in CPU-Kämpfen
+Gewinne [Num:Int id="1" max_length="3" ] [Gr:Count s="Spielerkampf" p="Spielerkämpfe" ref="1" ] mit 8 oder mehr „[Mst:EnergyTypeNameLong id="0" ]“-Karten in deinem Deck.
 Auftrag: Melde dich an! (Tag [Num:Int id="0" max_length="3" ])
 Auftrag: Schließe [Num:Int id="0" max_length="3" ] [Gr:Count s="Kampf" p="Kämpfe" ] ab!
 Auftrag: Führe [Num:Int id="0" max_length="3" ] [Gr:Count s="Wunderwahl" p="Wunderwahlen" ] durch!
@@ -7634,6 +7806,18 @@ Museum 2 ([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne)
 Eine Horde [Text:CardName v="ROCKETDANNOSHITAPPA" ]!
 Sammler dubioser Erfindungen
 Alle Karten von [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] komplett!
+Mega-Entwicklungs-Pokémon-\nex-Sammlung
+Pokémon-ex mit Fähigkeiten
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_24" ]s zwei Formen
+Verschiedene Umgebungen, verschiedene [Text:CardName v="ZOROARK" ]
+Fröhlicher Alltag mit Welpen-Pokémon
+Pokémon mit schützenden Panzern
+Einäugige Pokémon
+Pokémon, die Klang im Kampf nutzen
+Stadionkarten komplett!
+Museum (Deluxepack: Mega)
+Sammle 1 besondere Karte der Seltenheit[C:Nbsp ][Mst:Rarity v="RARITY_MSID_SSASR" ]
+Eine Menge\nMega-Entwicklungs-\nPokémon-ex
 Erhalte [Num:Int id="1" max_length="3" ] [Gr:Count s="Exemplar" p="Exemplare" ref="1" ] der Karte [Text:CardNameWithSubName id="0" ]
 Erhalte [Num:Int id="1" max_length="3" ] [Gr:Count s="Exemplar" p="Exemplare" ref="1" ] von [Text:CardNameWithSubName id="0" ] aus [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne
 Ein modisches Rudel [Text:CardName v="TRIMMIEN" ]
@@ -7689,11 +7873,13 @@ Emblem-Event (Mega-Aufstieg)
 Spezial-Missionen zur\n1. Jubiläumsfeier Teil 1
 Spezial-Missionen zur\n1. Jubiläumsfeier Teil 2
 Massiver Auflauf von\nParallelfolienkarten
+Massiver Aufl. v.\nParallelfolienkart.
 Massiver Auflauf von Parallelfolienkarten
 Countdown-Missionen\nzum 1. Jubiläum
 Verknüpfungsmissionen
 Verknüpfungs-\nmissionen
 Bonuswochen-Missionen
+Bonuswochen-\nMissionen
 Missionen zum PROMO-\nNeuauflagen-Drop-\nEvent 2025
 Missionen zum PROMO-\nNeuauflagen-Wunderwahl-\nEvent 2025
 Emblem-Event\n(Feuerrote Flammen)
@@ -7729,12 +7915,18 @@ Emblem-Event\n(Herrscher der Lüfte)
 Drop-Event\n([Text:CardName v="HISUIZORUA" ])
 Emblem-Event\n(Wunder des Alltags)
 Verschiedene Serien 1
+Drop-Event\n([Text:CardName v="MEGAGABURIAS_EX" ])
+Drop-Event\n([Text:CardName v="MEGAGABURIAS_EX" ])
+Emblem-Event\n(Deluxepack: Mega)
+Emblem-Event (Deluxep.: Mega)
 Drop-Event\n([Text:CardName v="ROCKETDANNOLAPLACE" ])
 Drop-Event ([Text:CardName v="ROCKETDANNOLAPLACE" ])
 Emblem-Event\n([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne)
 Emblem-Event\n([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s\nSpezialaufträge
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s\nSpezialaufträge
+Pikachu-Missionen:\nPika Pika!
+Pikachu-Miss.:\nPika Pika!
 Anfänger
 Profi
 Täglich
@@ -7767,6 +7959,7 @@ Nützliche Karte
 Liste
 Willkommen zurück
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]
+Pika Pika!
 Zufallskampf (Profi)
 Zufallskampf (Anfänger)
 Zufallskampf (Meister)
@@ -7808,6 +8001,9 @@ Paradoxansturm-Boosterpack
 Wunder des Alltags-Boosterpack
 Herrscher der Lüfte-Boosterpack
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne-Boosterpack
+„Deluxepack: Mega“-Boosterpack
+Ein besonderes Boosterpack, das durch das\nAbschließen von „Pikachu-Missionen: Pika Pika!“\nerhalten werden kann.
+Ein ganz besonderes Boosterpack, das durch das\nAbschließen von „Pikachu-Missionen: Pika Pika!“\nerhalten werden kann.
 Ein Promopack aus Serie A, Vol. 1
 Ein Promopack aus Serie A, Vol. 2
 Ein Promopack aus Serie A, Vol. 3
@@ -7833,7 +8029,9 @@ Ein Promopack aus Serie B, Vol. 9
 Ein Promopack aus Serie B, Vol. 10
 Ein Promopack aus Serie B, Vol. 11
 Ein Promopack aus Serie B, Vol. 12
+Ein Promopack aus Serie B, Vol. 13
 1 Karte mit\nSeltenheit [Mst:Rarity v="RARITY_MSID_RR" ] oder\nseltener garantiert.
+1 Pokémon-ex-Karte\ngarantiert
 Unschlagbare Gene: Mewtu
 Unschlagbare Gene: Mewtu (1[C:Nbsp ]Karte mit Seltenheit [Mst:Rarity v="RARITY_MSID_RR" ] oder seltener garantiert)
 Unschlagbare Gene: Glurak
@@ -7865,6 +8063,9 @@ Paradoxansturm
 Wunder des Alltags
 Herrscher der Lüfte
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne
+Deluxepack: Mega
+Pikachu-Packs: Pika Pika!󱀀Pikachu-Pack: Pika Pika!
+Pikachu-Pack-ex: Pika Pika!󱀀Pikachu-Packs-ex: Pika Pika!
 Promopack Serie A, Vol. 1
 Promopack Serie A, Vol. 2
 Promopack Serie A, Vol. 3
@@ -7890,6 +8091,7 @@ Promopack aus Serie B, Vol. 9
 Promopack aus Serie B, Vol. 10
 Promopack aus Serie B, Vol. 11
 Promopack aus Serie B, Vol. 12
+Promopack Serie [Mst:SeriesName v="SERIES_NAME_2"], [Mst:CommonPackLabel v="COMMON_PACK_LABEL_013"]
 [Mst:Rarity v="RARITY_MSID_RR" ] o. seltener garant.
 Normales Pack
 Norm. Pack +[C:Nbsp ]1[C:Nbsp ]Karte
@@ -8397,6 +8599,7 @@ Nr. 0441 Musiknoten-Pokémon Größe: 0,5 m Gewicht: 1,9 kg
 Nr. 0442 Verboten-Pokémon Größe: 1,0 m Gewicht: 108,0 kg
 Nr. 0443 Landhai-Pokémon Größe: 0,7 m Gewicht: 20,5 kg
 Nr. 0444 Höhlen-Pokémon Größe: 1,4 m Gewicht: 56,0 kg
+Nr. 0445 Rasanz-Pokémon Größe: 1,9 m Gewicht: 95,0 kg
 Nr. 0445 Rasanz-Pokémon Größe: 1,9 m Gewicht: 95,0 kg
 Nr. 0446 Nimmersatt-Pokémon Größe: 0,6 m Gewicht: 105,0 kg
 Nr. 0447 Wellenspiel-Pokémon Größe: 0,7 m Gewicht: 20,2 kg
@@ -9104,6 +9307,11 @@ Herrscher der Lüfte: [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (Icon)
 [Text:CardName v="ROCKETDANNOSHITAPPA" ] Ver.[C:Nbsp ]3 (Icon)
 [Text:CardName v="ROCKETDANNOKENKYUUIN" ] (Icon)
 [Text:CardName v="ROCKETDANNOBOSS" ] (Icon)
+[Text:CardName v="HUURO" ] (Icon)
+[Mst:PackName v="PACK_NAME_B4b_1"]: [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"] (Icon)
+[Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]12 (Icon)
+[Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]13 (Icon)
+[Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]14 (Icon)
 [Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]2 (Icon)
 [Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]3 (Icon)
 [Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]4 (Icon)
@@ -9423,6 +9631,16 @@ Goldene Waage (Hintergrund)
 Goldene Waage
 Retro-Sommer (Hintergrund)
 Retro-Sommer
+[Text:CardName v="HOOPA" ] (Hintergrund)
+[Text:CardName v="HOOPA" ]
+[Text:CardName v="HUURO" ] (Hintergrund)
+[Text:CardName v="HUURO" ]
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"] (Hintergrund)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
+Funkelnde Küste (Hintergrund)
+Funkelnde Küste
+Leuchtende Stadtkulisse
+Leuchtende Stadtkulisse (Hintergrund)
 Ein Hintergrund für das Ausstellen von Karten in\ndeinen Galerien.
 Evoli (Münze)
 Evoli
@@ -9517,6 +9735,7 @@ Schillerndes [Mst:CommonCharacterName v="COMMON_CARD_NAME_5" ] (Münze)
 [Text:CardName v="YAMIRAMI" lang="de_DE" ] (Münze)
 [Text:CardName v="MIRAIDON" lang="de_DE" ] (Münze)
 30 Jahre Pokémon (Münze)
+[Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]3 (Münze)
 [Text:CardName v="METAGROSS" lang="de_DE" ] (Münze)
 [Text:CardName v="MIJUMARU" lang="de_DE" ] (Münze)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (Münze)
@@ -9524,6 +9743,9 @@ Schillerndes [Mst:CommonCharacterName v="COMMON_CARD_NAME_5" ] (Münze)
 [Text:CardName v="FOKKO" ] (Münze)
 [Text:CardName v="ROCKETDANNOBOSS" ] (Münze)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] (Münze)
+[Text:CardName v="HOOPA" ] (Münze)
+[Text:CardName v="HUURO" ] (Münze)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"] (Münze)
 Eine Münze, die im Kampf verwendet werden\nkann. Du kannst sie auswählen, wenn du auf deine\nDecks zugreifst.
 Evoli (Kartenhüllen)
 Evoli
@@ -9611,6 +9833,7 @@ Pokémon im Wald (Kartenhüllen)
 [Text:CardName v="YAMIRAMI" lang="de_DE" ] (Kartenhüllen)
 [Text:CardName v="MIRAIDON" lang="de_DE" ] (Kartenhüllen)
 30 Jahre Pokémon (Kartenhülle)
+[Text:CardName v="PIKACHU" ] & [Text:CardName v="PICHU" ] (Kartenhüllen)
 [Text:CardName v="METAGROSS" lang="de_DE" ] (Kartenhüllen)
 [Text:CardName v="MIJUMARU" lang="de_DE" ] (Kartenhüllen)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (Kartenhüllen)
@@ -9618,6 +9841,9 @@ Pokémon im Wald (Kartenhüllen)
 [Text:CardName v="FOKKO" ] (Kartenhüllen)
 [Text:CardName v="ROCKETDANNOBOSS" ] (Kartenhüllen)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] (Kartenhüllen)
+[Text:CardName v="HOOPA" ] (Kartenhüllen)
+[Text:CardName v="HUURO" ] (Kartenhüllen)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"] (Kartenhüllen)
 Dieses Zubehör kann an Karten angebracht\nwerden. Du kannst es auswählen, wenn du auf\ndeine Decks zugreifst.
 Dieses Cover für Alben kannst du nutzen,\nwenn du auf deine Alben zugreifst.
 Evoli (Cover)
@@ -9764,6 +9990,10 @@ Herrscher der Lüfte: [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (Cover)
 [Text:CardName v="ROCKETDANNOBOSS" ] & [Text:CardName v="PERSIAN" ] (Cover)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne: [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] (Cover)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] (Cover)
+[Text:CardName v="HOOPA" ] (Cover)
+[Text:CardName v="HUURO" ] & [Text:CardName v="SWANNA" ] (Cover)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"] (Cover)
+Deluxepack: Mega (Cover)
 Evoli (Spielunterlage)
 Evoli
 Mauzi (Spielunterlage)
@@ -9851,6 +10081,7 @@ Pokémon im Wald (Spielunterlage)
 [Text:CardName v="YAMIRAMI" lang="de_DE" ] (Spielunterlage)
 [Text:CardName v="MIRAIDON" lang="de_DE" ] (Spielunterlage)
 30 Jahre Pokémon (Spielunterlage)
+[Text:CardName v="PIKACHU" ] & [Text:CardName v="KODUCK" ] & [Text:CardName v="PICHU" ] (Spielunterlage)
 [Text:CardName v="METAGROSS" lang="de_DE" ] (Spielunterlage)
 [Text:CardName v="MIJUMARU" lang="de_DE" ] (Spielunterlage)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (Spielunterlage)
@@ -9858,6 +10089,9 @@ Pokémon im Wald (Spielunterlage)
 [Text:CardName v="FOKKO" ] (Spielunterlage)
 [Text:CardName v="ROCKETDANNOBOSS" ] & [Text:CardName v="PERSIAN" ] (Spielunterlage)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] (Spielunterlage)
+[Text:CardName v="HOOPA" ] (Spielunterlage)
+[Text:CardName v="HUURO" ] & [Text:CardName v="SWANNA" ] (Spielunterlage)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_12"] (Spielunterlage)
 Dieses Zubehör wird im Kampf auf das Spielfeld\ngelegt. Du kannst es auswählen, wenn du auf deine\nDecks zugreifst.
 Bringe [Num:Int max_length="2" plural_only=" " ][Gr:Count s="ein Basis-Pokémon" p="Basis-Pokémon" ] ins Spiel.
 Bringe [Num:Int max_length="2" plural_only=" " ][Gr:Count s="ein Pokémon-ex" p="Pokémon-ex" ] ins Spiel.
@@ -9896,6 +10130,7 @@ B3a
 B3b
 B4
 B4a
+B4b SP
 Erhalte [Num:Int id="0" max_length="3" ] oder mehr Punkte.
 Füge [Num:Int id="0" max_length="5" ] oder mehr Schadenspunkte zu.
 Gewinne [Num:Int id="0" max_length="3" ] oder mehr Kämpfe.
@@ -10430,6 +10665,16 @@ Socken eines Rüpels von Team Rocket
 [Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100850_SAKAKI" ]
 [Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101040_SAKAKI" ]
 [Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100850_SAKAKI_PERSIAN" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101340_MEGALIZARDONX"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101560_MEGALIZARDONX"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100890_MEGALIZARDONX"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101080_MEGALIZARDONX"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100890_MEGALIZARDONX"]
+[Mst:CardCharacterName v="CARD_NAME_1022" ] (096/P-B)
+[Mst:CardCharacterName v="CARD_NAME_380" ] (097/P-B)
+[Mst:CardCharacterName v="CARD_NAME_381" ] (098/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1344" ] (099/P-B)
+[Mst:CardCharacterName v="CARD_NAME_588" ] (100/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1340" ] (088/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1341" ] (089/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1342" ] (090/P-B)
@@ -10499,6 +10744,7 @@ PokéGold (gekauft) × 115 + Zubehör ([Text:CardName v="METAGROSS" lang="de_DE"
 Sommer-Aktion: Ang. für PokéGold (gekauft) × 15
 Sommer-Aktion: Ang. für PokéGold (gekauft) × 200
 PokéGold (gekauft) × 115 + Zubehör ([Text:CardName v="KAMITSURE" lang="de_DE" ])
+PokéGold (gekauft) ×[C:Nbsp]115 + Zubehör ([Text:CardName v="HOOPA" ])
 PokéGold (gekauft) ×[C:Nbsp ]115 + Zubehör ([Text:CardName v="THUNDER" ] & [Text:CardName v="FREEZER" ] & [Text:CardName v="FIRE" ])
 PokéGold
 Tickets
@@ -10537,6 +10783,7 @@ Team Rocket
 [Mst:PackName v="PACK_NAME_PROMO_B_10" ]
 [Mst:PackName v="PACK_NAME_PROMO_B_11" ]
 [Mst:PackName v="PACK_NAME_PROMO_B_12" ]
+[Mst:PackName v="PACK_NAME_PROMO_B_13" ]
 Dieses Item wird nicht mehr verwendet.\nBitte tausche es im Shop gegen andere Items ein.
 Tausch-Marke󱀀Tausch-Marken
 Suche alle Karten
@@ -10761,7 +11008,9 @@ Gewinne, ohne dass dein Gegner Punkte erhält.
 [Mst:CollectionBoardHashTag]
 [Mst:CollectionFileHashTag]
 [Mst:CommonCharacterName]
+[Mst:CommonEventLabel]
 [Mst:CommonGroupName]
+[Mst:CommonPackLabel]
 [Mst:CountryName]
 [Mst:CurrencyDescription]
 [Mst:CurrencyName]
@@ -12527,7 +12776,7 @@ Ergebnisauswertung...
 Beginnt bald
 Privatmatch
 Zufallsmatch
-Event-Match
+Event-Matches
 Spielerkampf
 Mit Passwort
 Mit 2D-Code
