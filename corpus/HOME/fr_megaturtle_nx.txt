@@ -716,8 +716,11 @@ Téraformation 0
 Emprise Toxique
 Transperceuse
 Peau Draconique
+Lévitaboost
 Méga-Soleil
+Crinière de Feu
 Habanéruption
+Aura Protectrice
 ~~~~~~~~~~~~~~~
 Text File : itemname
 ~~~~~~~~~~~~~~~
@@ -6955,6 +6958,10 @@ Méga-Nigirigon
 Méga-Nigirigon
 Méga-Floréclat
 [~ 1526]
+Couleur du Passé
+Forme Courbée
+Forme Affalée
+Forme Raide
 ~~~~~~~~~~~~~~~
 Text File : zkn_type
 ~~~~~~~~~~~~~~~
@@ -8661,7 +8668,7 @@ Pokémon
 Mode liste
 [~ 2]
 Pokémon triés par : [VAR 01DA(0000)] (aucun filtre)
-Pokémon triés par : [VAR 01DA(0000)] (actuellement affiché[VAR 1101(0001,0100)]s : [VAR 0203(0001,202F)]/[VAR 0203(0002,202F)])
+Pokémon triés par : [VAR 01DA(0000)] (actuellement affiché[VAR 1101(0001,0100)]s : [VAR 0204(0001,0000)]/[VAR 0204(0002,0000)])
 Pokémon triés par : [VAR 01DA(0000)] (filtrage en cours...)
 [~ 6]
 [VAR 0102(0000)] (N. [VAR 0202(0001)])
@@ -9077,6 +9084,43 @@ Souhaitez-vous obtenir des explications au sujet\nde la connexion avec Pokémon�
 Oui, qu’est-ce que c’est ?
 Oui, qu’est-ce que l’icône de transfert ?
 Non merci
+Retirer un Pokémon obtenu par synchronisation\navec un jeu Game Boy Advance (GBA) pour l’envoyer\ndans le jeu actuellement synchronisé entraînera\nune modification de son Nº ID.\n\nUne fois redéposé dans Pokémon HOME,\nil retrouvera son Nº ID d’origine.
+~~~~~~~~~~~~~~~
+Text File : gba_system
+~~~~~~~~~~~~~~~
+[~ 0]
+Synchronisation avec un jeu GBA
+Choix de Boîte
+Nb. de Pokémon pouvant être déposés :
+[VAR 0204(0000,202F)]
+Les Pokémon tenant un objet, connaissant une CS (capacité secrète) ainsi que les Œufs\nne peuvent pas être envoyés dans Pokémon HOME.
+Souhaitez-vous retourner au menu principal sans effectuer\nde synchronisation avec un jeu Game Boy Advance (GBA) ?
+Les Pokémon envoyés dans Pokémon HOME ne pourront\npas retourner dans leur jeu d’origine.\c\nLes capacités qu’ils connaîtront seront en outre différentes\nde celles qu’ils connaissent actuellement.\c\nSouhaitez-vous vraiment effectuer cet envoi ?
+Les Pokémon de la Boîte sélectionnée sont\nen cours d’envoi vers Pokémon HOME...
+Le ou les Pokémon ont été envoyés du jeu\nGame Boy Advance (GBA) vers Pokémon HOME !
+Oui
+Non
+Aide
+Quitter
+[~ 14]
+Ici, c’est l’écran de la synchronisation avec les jeux Game Boy Advance (GBA) !\nÇa permet d’envoyer les Pokémon attrapés dans ces jeux vers Pokémon HOME !
+Et les Pokémon s’envoient par Boîtes entières !\nVous choisissez une Boîte, et touuus les Pokémon\nqu’elle contient partiront direction Pokémon HOME !
+Ces Pokémon chercheront des emplacements vides\ndans les Boîtes de Pokémon HOME, et ils s’y installeront\nbien sagement dans l’ordre où ils ont été envoyés !
+Du coup, ouvrez bien l’œil, parce qu’ils atterriront\npeut-être dans plusieurs Boîtes différentes !
+[~ 19]
+Vous avez déjà envoyé un [VAR 0101(0000)]\ndepuis cette sauvegarde.\c\nIl n’est possible d’envoyer qu’un seul [VAR 0101(0000)]\npar sauvegarde.
+Vous avez déjà envoyé un [VAR 0101(0000)] chromatique\ndepuis cette sauvegarde.\c\nIl n’est possible d’envoyer qu’un seul [VAR 0101(0000)]\nchromatique par sauvegarde.
+Votre sélection contient au moins un [VAR 0101(0000)].\c\nUn [VAR 0101(0000)] a déjà été envoyé depuis cette\nsauvegarde, vous ne pouvez donc pas en envoyer davantage.
+Votre sélection contient au moins un [VAR 0101(0000)] chromatique.\c\nUn [VAR 0101(0000)] chromatique a déjà été envoyé depuis\ncette sauvegarde, vous ne pouvez donc pas en envoyer davantage.
+Vous ne pouvez envoyer qu’un seul [VAR 0101(0000)]\npar sauvegarde.\c\nIl y a plus d’un [VAR 0101(0000)] dans cette Boîte,\ncelle-ci ne peut donc pas être envoyée.
+Vous ne pouvez envoyer qu’un seul [VAR 0101(0000)]\nchromatique par sauvegarde.\c\nIl y a plus d’un [VAR 0101(0000)] chromatique dans cette Boîte,\ncelle-ci ne peut donc pas être envoyée.
+Vous ne pouvez envoyer qu’un seul [VAR 0101(0000)]\ndepuis cette sauvegarde.\c\nUn [VAR 0101(0000)] est compris dans votre sélection actuelle.\nSouhaitez-vous bien effectuer cet envoi ?
+Vous ne pouvez envoyer qu’un seul [VAR 0101(0000)]\nchromatique depuis cette sauvegarde.\c\nUn [VAR 0101(0000)] chromatique est compris\ndans votre sélection actuelle.\r\nSouhaitez-vous bien effectuer cet envoi ?
+Votre sélection actuelle comprend plus d’un Pokémon\nne pouvant être envoyé qu’une seule fois\r\ndepuis cette sauvegarde, dont un [VAR 0101(0000)].\c\nSouhaitez-vous bien effectuer l’envoi de cette Boîte\nvers Pokémon HOME ?
+Votre sélection actuelle comprend plus d’un Pokémon\nne pouvant être envoyé qu’une seule fois\r\ndepuis cette sauvegarde, dont un [VAR 0101(0000)] chromatique.\c\nSouhaitez-vous bien effectuer l’envoi de cette Boîte\nvers Pokémon HOME ?
+Cette Boîte contient un Pokémon ne pouvant pas\nêtre envoyé vers Pokémon HOME.
+Cette Boîte ne contient aucun Pokémon.
+Cette Boîte contient plus de Pokémon que vous ne pouvez\nen déposer dans Pokémon HOME.
 ~~~~~~~~~~~~~~~
 Text File : zkn_height
 ~~~~~~~~~~~~~~~
@@ -12258,6 +12302,17 @@ Vous ne pouvez pas encore synchroniser Pokémon HOME\navec la sauvegarde de ce 
 [~ 91]
 [~ 92]
 Vous ne pouvez pas synchroniser Pokémon HOME\navec la sauvegarde de ce jeu pour le moment.\c\nVeuillez revenir d’Extra Illumis dans Légendes Pokémon : Z-A,\npuis sauvegarder votre partie.
+[~ 94]
+Synchronisation avec un jeu GBA
+Les Pokémon envoyés dans Pokémon HOME ne pourront\npas retourner d’où ils viennent.\c\nSouhaitez-vous commencer la synchronisation ?
+Copie de la progression du Pokédex dans Pokémon HOME...
+Vous ne pouvez effectuer de synchronisation avec un jeu\nGame Boy Advance (GBA) qu’une fois par minute.\r\nVeuillez patienter un instant.
+Pokémon Version Rouge Feu
+Pokémon Version Vert Feuille
+[~ 101]
+Sur cet écran, vous pouvez choisir quelle sauvegarde de jeu\nGame Boy Advance (GBA) synchroniser avec Pokémon HOME !
+Si votre Nintendo Switch contient des sauvegardes de jeux qui peuvent\nêtre synchronisées avec Pokémon HOME, elles apparaîtront ici sous\nforme d’icônes !
+Sélectionnez une icône et votre progression dans le Pokédex du jeu\nen question sera reflétée dans celui de Pokémon HOME !\nC’est pas beau, ça ?
 ~~~~~~~~~~~~~~~
 Text File : main_system
 ~~~~~~~~~~~~~~~
@@ -12279,12 +12334,12 @@ Transfert
 Envoi de PCo
 Paramètres
 [~ 17]
-Voir vos Boîtes et y déposer vos Pokémon.
-Consulter toutes vos informations sur les Pokémon.
-Consulter l’historique des dépôts et retraits de Pokémon.
-Transférer vos Pokémon depuis une Nintendo 3DS ou autre.
-Utiliser vos Points Pokémon HOME.
-Modifier les paramètres de Pokémon HOME.
+Voir vos Boîtes et y déposer vos Pokémon
+Consulter toutes vos informations sur les Pokémon
+Consulter l’historique des dépôts et retraits de Pokémon
+Transférer vos Pokémon depuis une Nintendo 3DS
+Utiliser vos Points Pokémon HOME
+Modifier les paramètres de Pokémon HOME
 À propos de l’abonnement à un compte premium (payant)
 Vous pouvez en apprendre plus sur le compte\npremium sur le Nintendo eShop.\nSi vous êtes mineur, veuillez demander\nà un adulte de lire ces informations avec vous.
 [~ 26]
@@ -12311,6 +12366,9 @@ Récupérer des Pokémon de Pokémon GO
 [~ 47]
 Pokémon Champions
 Effectuer un transfert de Pokémon vers Pokémon Champions
+[~ 50]
+Jeu(x) GBA
+Amener des Pokémon depuis un jeu Game Boy Advance (GBA) sur Nintendo Switch
 ~~~~~~~~~~~~~~~
 Text File : ribbon_BDSP
 ~~~~~~~~~~~~~~~
@@ -23890,8 +23948,15 @@ APPUYEZ SUR LE BOUTON A
 Ver. [VAR 0200(0000)].[VAR 0200(0001)].[VAR 0200(0002)]
 [~ 2]
 [~ 3]
-ID Client
+ID de clientèle
 XXXX-XXXX-XXXX-XXXX
+[~ 6]
+Souhaitez-vous vider le cache ?
+Une fois le cache vidé, il est possible que se connecter\nrequière plus de temps.\c\nLes données de Pokémon HOME en cours d’utilisation\nne seront toutefois pas effacées.\c\nSouhaitez-vous vraiment vider le cache ?
+Oui
+Non
+Vidage du cache...\nMerci de patienter.
+Le cache a été vidé.
 ~~~~~~~~~~~~~~~
 Text File : wazainfo_all
 ~~~~~~~~~~~~~~~
@@ -24894,14 +24959,16 @@ Missions de Sinnoh
 Missions de Hisui
 Missions de Paldea
 Missions de Kalos
-[~ 74]
+Missions de Kanto (GBA)
+[~ 75]
 Mission de Kanto nº [VAR 0201(0000)]
 Mission de Galar nº [VAR 0201(0000)]
 Mission de Sinnoh nº [VAR 0201(0000)]
 Mission de Hisui nº [VAR 0201(0000)]
 Mission de Paldea nº [VAR 0201(0000)]
 Mission de Kalos nº [VAR 0201(0000)]
-[~ 81]
+Mission de Kanto (GBA) nº [VAR 0201(0000)]
+[~ 83]
 Nº [VAR 0203(0000,202F)]
 [VAR 0101(0000)]
 Taille
@@ -24912,37 +24979,39 @@ Poids
 
 Forme [VAR 0201(0000)]/[VAR 0201(0001)]
 
-[~ 92]
+[~ 94]
 Apparaît dans ([VAR 0200(0000)]/[VAR 0200(0001)])
 Apparaît dans
-Déposez un [VAR 0101(0000)] capturé dans un jeu en japonais\ndans Pokémon HOME pour lire sa description dans cette langue !
-Déposez un [VAR 0101(0000)] capturé dans un jeu en anglais\ndans Pokémon HOME pour lire sa description dans cette langue !
+Déposer un [VAR 0101(0000)] attrapé dans un jeu en japonais\ndans Pokémon HOME pour lire sa description dans cette langue
+Déposer un [VAR 0101(0000)] attrapé dans un jeu en anglais\ndans Pokémon HOME pour lire sa description dans cette langue
 Déposer un [VAR 0101(0000)] attrapé dans un jeu en espagnol\n(Espagne) dans Pokémon HOME pour lire sa description\ndans cette langue
-Déposez un [VAR 0101(0000)] capturé dans un jeu en français\ndans Pokémon HOME pour lire sa description dans cette langue !
+Déposer un [VAR 0101(0000)] attrapé dans un jeu en français\ndans Pokémon HOME pour lire sa description dans cette langue
 Déposer un [VAR 0101(0000)] attrapé dans un jeu en allemand\ndans Pokémon HOME pour lire sa description dans cette langue
-Déposez un [VAR 0101(0000)] capturé dans un jeu en italien\ndans Pokémon HOME pour lire sa description dans cette langue !\n
-Déposez un [VAR 0101(0000)] capturé dans un jeu en coréen\ndans Pokémon HOME pour lire sa description dans cette langue !
-Déposez un [VAR 0101(0000)] capturé dans un jeu\nen chinois simplifié dans Pokémon HOME\npour lire sa description dans cette langue !
-Déposez un [VAR 0101(0000)] capturé dans un jeu\nen chinois traditionnel dans Pokémon HOME\npour lire sa description dans cette langue !
+Déposer un [VAR 0101(0000)] attrapé dans un jeu en italien\ndans Pokémon HOME pour lire sa description dans cette langue
+Déposer un [VAR 0101(0000)] attrapé dans un jeu en coréen\ndans Pokémon HOME pour lire sa description dans cette langue
+Déposer un [VAR 0101(0000)] attrapé dans un jeu\nen chinois simplifié dans Pokémon HOME\npour lire sa description dans cette langue
+Déposer un [VAR 0101(0000)] attrapé dans un jeu\nen chinois traditionnel dans Pokémon HOME\npour lire sa description dans cette langue
 Déposer un [VAR 0101(0000)] attrapé dans un jeu en espagnol\n(Amérique latine) dans Pokémon HOME pour lire sa description\ndans cette langue
-Déposez un [VAR 0101(0000)] capturé dans un jeu en japonais\ndans Pokémon HOME pour lire sa description dans cette langue !
-Déposez un [VAR 0101(0000)] capturé dans un jeu en anglais\ndans Pokémon HOME pour lire sa description dans cette langue !
+Description absente du Pokédex.\nVeuillez la lire dans une autre langue\nou basculer vers celle d’un autre jeu.
+Déposer un [VAR 0101(0000)] attrapé dans un jeu en japonais\ndans Pokémon HOME pour lire sa description dans cette langue
+Déposer un [VAR 0101(0000)] attrapé dans un jeu en anglais\ndans Pokémon HOME pour lire sa description dans cette langue
 Déposer un [VAR 0101(0000)] attrapé dans un jeu en espagnol\n(Espagne) dans Pokémon HOME pour lire sa description\ndans cette langue
-Déposez un [VAR 0101(0000)] capturé dans un jeu en français\ndans Pokémon HOME pour lire sa description dans cette langue !
-Déposez un [VAR 0101(0000)] capturé dans un jeu en allemand\ndans Pokémon HOME pour lire sa description dans cette langue !
-Déposez un [VAR 0101(0000)] capturé dans un jeu en italien\ndans Pokémon HOME pour lire sa description dans cette langue !\n
-Déposez un [VAR 0101(0000)] capturé dans un jeu en coréen\ndans Pokémon HOME pour lire sa description dans cette langue !
-Déposez un [VAR 0101(0000)] capturé dans un jeu\nen chinois simplifié dans Pokémon HOME\npour lire sa description dans cette langue !
-Déposez un [VAR 0101(0000)] capturé dans un jeu\nen chinois traditionnel dans Pokémon HOME\npour lire sa description dans cette langue !
+Déposer un [VAR 0101(0000)] attrapé dans un jeu en français\ndans Pokémon HOME pour lire sa description dans cette langue
+Déposer un [VAR 0101(0000)] attrapé dans un jeu en allemand\ndans Pokémon HOME pour lire sa description dans cette langue
+Déposer un [VAR 0101(0000)] attrapé dans un jeu en italien\ndans Pokémon HOME pour lire sa description dans cette langue
+Déposer un [VAR 0101(0000)] attrapé dans un jeu en coréen\ndans Pokémon HOME pour lire sa description dans cette langue
+Déposer un [VAR 0101(0000)] attrapé dans un jeu\nen chinois simplifié dans Pokémon HOME\npour lire sa description dans cette langue
+Déposer un [VAR 0101(0000)] attrapé dans un jeu\nen chinois traditionnel dans Pokémon HOME\npour lire sa description dans cette langue
 Déposer un [VAR 0101(0000)] attrapé dans un jeu en espagnol\n(Amérique latine) dans Pokémon HOME pour lire sa description\ndans cette langue
-[~ 115]
+Description absente du Pokédex.\nVeuillez la lire dans une autre langue\nou basculer vers celle d’un autre jeu.
+[~ 119]
 
 Nº [VAR 0203(0000,202F)]
 
 
 [VAR 0101(0000)]
 ???
-[~ 122]
+[~ 126]
 Japonais (kana)
 Japonais (kanji)
 Anglais
@@ -24954,13 +25023,13 @@ Espagnol (Espagne)
 Chinois simplifié
 Chinois traditionnel
 Espagnol (Amérique latine)
-[~ 134]
+[~ 138]
 Nº [VAR 0203(0000,202F)]
 [VAR 0101(0000)]
 Pokémon triés par : [VAR 01DA(0000)] (aucun filtre)
 Pokémon triés par : [VAR 01DA(0000)] (actuellement affiché[VAR 1101(0001,0100)]s : [VAR 0203(0001,202F)]/[VAR 0203(0002,202F)])
 Pokémon triés par : [VAR 01DA(0000)] (actuellement affichée[VAR 1101(0001,0100)]s : [VAR 0203(0001,202F)] espèce[VAR 1101(0001,0100)]s)
-[~ 140]
+[~ 144]
 Filtrer par :
 Trier par :
 Nom
@@ -24971,7 +25040,7 @@ Apparence du corps
 Forme
 Jeu d’apparition
 Statut dans le Pokédex
-[~ 151]
+[~ 155]
 Filtrer par nom
 Filtrer par type
 Filtrer par couleur
@@ -24980,14 +25049,14 @@ Filtrer par forme
 Filtrer par jeu d’apparition
 Filtrer par statut dans le Pokédex
 Aucun résultat.
-[~ 160]
+[~ 164]
 Numéro de Pokédex
 Ordre alphabétique
 Poids décroissant
 Poids croissant
 Taille décroissante
 Taille croissante
-[~ 167]
+[~ 171]
 Rouge
 Bleu
 Vert
@@ -24998,7 +25067,7 @@ Brun
 Gris
 Blanc
 Noir
-[~ 178]
+[~ 182]
 Toutes les formes
 Chromatique
 Forme ♂
@@ -25011,14 +25080,14 @@ Forme d’Alola
 Forme de Galar
 Forme de Hisui
 Forme de Paldea
-[~ 191]
+[~ 195]
 Capturé
 Vu
-[~ 194]
+[~ 198]
 ———
 —————
 ————————
-[~ 198]
+[~ 202]
 [VAR 0101(0000)]
 ???
 
@@ -25027,24 +25096,24 @@ Accomplissez [VAR 0201(0000)] mission[VAR 1101(0000,0100)]s dans cette liste pou
 ???
 [VAR 0200(0000)]/[VAR 0200(0001)]
 [VAR 01DA(0000)] (accomplie[VAR 1101(0001,0100)]s : [VAR 0201(0001)])
-[~ 207]
+[~ 211]
 Alors, ça, c’est le « BIG » Pokédex que Big Chen a inventé.\nIl enregistre des informations sur les Pokémon déposés dans les Boîtes\nde Pokémon HOME, et il fait ça tout seul comme un grand !
 En plus d’afficher toutes les informations des Pokémon, il inclut aussi\nun filtre spécial qui sert à afficher juste les Pokémon ayant été découverts\ndans une région spécifique ! Pratique, non ?
 Et c’est pas fini ! En appuyant sur les boutons L et R, vous pouvez\nafficher les missions ! C’est pour aider Big Chen dans ses recherches\ntrès compliquées. Vous allez l’aider, hein ?
-[~ 211]
+[~ 215]
 Alors, ça, c’est l’écran où on voit toutes les informations d’un Pokémon !\nEt à droite, vous pouvez choisir le Pokémon dans la liste !
 Si vous voulez lire les différentes entrées Pokédex\ndu Pokémon, appuyez sur les boutons ZL ou ZR !\nC’est intéressant de voir les différentes descriptions de chaque jeu !
 Si vous avez enregistré un Pokémon avec plusieurs formes,\nvous pouvez les faire défiler avec les boutons L et R !
 Ah, et avec le bouton Y, vous pouvez voir dans quels jeux ce Pokémon\napparaît, et donc dans lesquels vous pouvez l’attraper !
-[~ 216]
+[~ 220]
 Avec ce mode liste, vous pouvez voir tous les Pokémon enregistrés dans\nle Pokédex, tous bien alignés ! Si vous en trouvez un qui a l’air intéressant,\nappuyez sur le bouton A pour en savoir plus à son sujet !
 Le bouton X ouvre la fenêtre avec les filtres. Par exemple, il y a le filtre\npour les types, le filtre pour la couleur, le filtre pour la forme du corps...\nC’est vraiment très pratique !
 Le bouton Y change l’ordre dans lequel les Pokémon sont rangés !\nOn a l’habitude de l’ordre du Pokédex, mais c’est aussi intéressant\nde les ranger par taille ou par poids !
-[~ 220]
+[~ 224]
 La liste des missions ? C’est vrai que ça a pas l’air facile, mais au moins,\nelles sont très gratifiantes ! Ce sont des missions envoyées par Big Chen\nlui-même, et il y a pas plus grand honneur que de l’aider !
 Si votre console Nintendo Switch a des données de sauvegarde d’une\nrégion que Big Chen veut que vous exploriez, vous verrez apparaître\nsur cet écran une liste de missions à accomplir dans chaque région !
 Mais attention ! Pour réussir une mission, il faut vous assurer de trouver\ntous les Pokémon que Big Chen a listé, et ce dans la région indiquée !\nEh oui, sinon, ça compte pas !
-[~ 224]
+[~ 228]
 À droite de cet écran, c’est la liste des missions.\nSi vous trouvez tous les Pokémon nécessaires pour en réussir une,\neh bien... vous l’aurez réussie ! Bravo !
 Mais faites attention : c’est pas que l’espèce qui est importante.\nIl faut vous assurer de la trouver dans le bon jeu, et que ce soit la bonne\nforme du Pokémon ! Sinon, ça compte pas non plus !\nDonc vérifiez bien où vous avez capturé vos Pokémon !
 Une fois que vous aurez capturé les Pokémon demandés (les bons, hein !),\nvous aurez juste à les déposer dans vos Boîtes de Pokémon HOME,\net la mission sera automatiquement marquée comme réussie.\nVous n’aurez rien d’autre à faire !
@@ -27822,7 +27891,7 @@ Aide
 Paramètres par défaut
 [~ 5]
 [VAR 01D9(0000)]
-ID Client
+ID de clientèle
 XXXX-XXXX-XXXX-XXXX
 Compte actuel
 [~ 10]
@@ -33564,7 +33633,7 @@ N. [VAR 0202(0000)]
 Nº [VAR 0203(0000,202F)]
 [VAR 0101(0000)]
 Aucun historique
-[~ 75]
+Réception de données...
 Déposés
 Retirés
 Relâchés
@@ -33594,6 +33663,12 @@ Transfert vers Pokémon Champions
 [VAR 0203(0000,202F)] Pokémon [VAR 1101(0000,0301)]aont été transféré[VAR 1101(0000,0100)]s.
 Retour de Pokémon Champions
 [VAR 0203(0000,202F)] Pokémon [VAR 1101(0000,0302)]essont de retour.
+[~ 105]
+Envoi depuis Pokémon Version Rouge Feu
+Envoi depuis Pokémon Version Vert Feuille
+Envoi depuis Pokémon Version Rouge Feu
+Envoi depuis Pokémon Version Vert Feuille
+Vous avez accueilli [VAR 0203(0000,202F)] Pokémon.
 ~~~~~~~~~~~~~~~
 Text File : B2W2_place_name
 ~~~~~~~~~~~~~~~
@@ -37276,6 +37351,9 @@ L’accès au compte premium que vous utilisiez\nsur votre appareil mobile est a
 Une erreur est survenue lors de la sauvegarde\navec le jeu synchronisé.\nSi vous avez uniquement effectué des modifications\ndans les Boîtes de Pokémon HOME, celles-ci ont été\nsauvegardées. Si vous avez effectué des modifications\ndans les Boîtes du jeu synchronisé, celles-ci n’ont\nété sauvegardées ni dans les Boîtes du jeu\nen question, ni dans celles de Pokémon HOME.\nRetour à l’écran titre.
 Les transferts provenant de cet identifiant\nNintendo Network ont été restreints.
 La maintenance est terminée. L’accès à\nPokémon HOME est actuellement limité afin\nde stabiliser la charge subie par les serveurs\net redeviendra possible progressivement.\nMerci de votre patience.
+[~ 17]
+Une erreur est survenue lors de la sauvegarde\navec le jeu synchronisé.\nAucun envoi de Pokémon entre ce jeu\net Pokémon HOME n’a donc été effectué.\n\nRetour à l’écran titre.
+Votre compte est actuellement soumis à des restrictions\nempêchant l’utilisation de cette fonctionnalité.\c\nLa synchronisation avec le jeu Game Boy Advance (GBA)\na donc été interrompue.
 ~~~~~~~~~~~~~~~
 Text File : SWSH_place_name
 ~~~~~~~~~~~~~~~
@@ -37572,6 +37650,27 @@ Nº 18\nCelui qui donne et celui qui prend
 Nº 19\nLe Pokémon qui protège Illumis
 Nº 20\nLa fleur Éternelle
 [~ 126]
+Nº 1\nLes premiers partenaires
+Nº 2\nLa Forêt de Jade
+Nº 3\nLe Mont Sélénite
+Nº 4\nLes Pokémon aquatiques
+Nº 5\nLa Cave Taupiqueur
+Nº 6\nLes Kinésistes
+Nº 7\nLa Grotte
+Nº 8\nLa Tour Pokémon
+Nº 9\nLe dojo
+Nº 10\nLa Centrale
+Nº 11\nLes Îles Écume
+Nº 12\nLe Manoir Pokémon
+Nº 13\nLe secret des fossiles
+Nº 14\nLa Route Victoire
+Nº 15\nLa Caverne Azurée
+Nº 16\nLes pierres d’évolution
+Nº 17\nLes évolutions par échange
+Nº 18\nLes Îles Sevii
+Nº 19\nLes Pokémon oiseaux légendaires
+Nº 20\nLe Pokémon Génétique
+[~ 147]
 Les Pokémon vivant sur la Route 1,\nqui relie Bourg Palette à Jadielle.
 Les Pokémon vivant dans la Forêt de Jade,\nun endroit réputé pour la capture d’insectes.
 Les Pokémon vivant à l’intérieur du Mont Sélénite,\nà l’est d’Argenta.
@@ -37592,7 +37691,7 @@ Les Pokémon ayant mystérieusement évolué\nlors d’un échange avec un autre
 Les Pokémon qui vous permettent de voler.
 Les Pokémon oiseaux légendaires ayant été aperçus\ndans la région de Kanto.
 Un Pokémon qui aurait été créé par un scientifique.
-[~ 147]
+[~ 168]
 Les Pokémon choisis comme premiers partenaires\npar les Dresseurs qui voyagent dans la région de Galar.
 Les Pokémon vivant sur la route de campagne\nreliant Paddoxton à Brasswick.
 Les Pokémon vivant dans la Forêt de Sleepwood,\ntoujours nimbée d’une brume épaisse.
@@ -37613,7 +37712,7 @@ Les Pokémon préférés du Challenger Travis.
 Les Pokémon préférés du Maître de Galar, Tarak.
 Les Pokémon jouant dans le groupe de musique qui s’est produit\nsur scène pour célébrer l’avènement du nouveau Maître.
 Les Pokémon de puissance colossale qui sont étroitement\nliés à l’histoire de la région de Galar.
-[~ 168]
+[~ 189]
 Les Pokémon choisis comme premiers\npartenaires par les Dresseurs de Sinnoh.
 Les Pokémon vivant sur la route vallonnée\nreliant Floraville à Vestigion.
 Les Pokémon vivant dans une forêt labyrinthique\ntraversée par un air qui donne froid dans le dos.
@@ -37634,7 +37733,7 @@ Les Pokémon que l’on peut apercevoir dans une zone\nqui ressemble à une vers
 Les Pokémon aux pouvoirs spéciaux pouvant être\naperçus dans les terres les plus reculées de Sinnoh.
 Les Pokémon aux pouvoirs mystérieux apparaissant\nparfois dans les lacs de Sinnoh.
 Les Pokémon dont l’existence est relatée par les mythes\nde la région de Sinnoh.
-[~ 189]
+[~ 210]
 Les Pokémon confiés par le Professeur pour vous permettre\nde rejoindre le Corps des Chercheurs.
 Les Pokémon que l’on vous a ordonné d’attraper lors de l’épreuve\npour rejoindre le Groupe Galaxie.
 Les Pokémon s’ébattant dans les étendues verdoyantes\ndes Plaines Obsidiennes.
@@ -37655,7 +37754,7 @@ Les Pokémon attendant dans les grottes sous les lacs,\npareils à des gardiens.
 Les Pokémon aux pouvoirs étranges pouvant être aperçus ici et là,\nà travers Hisui.
 Les Pokémon apparus au sommet du Mont Couronné, dont\nl’apparence a changé sous l’emprise d’un pouvoir mystérieux.
 Le Pokémon dont il est question dans les légendes\nqui se transmettent encore à Hisui.
-[~ 210]
+[~ 231]
 Les Pokémon confiés par le proviseur de l’académie\nau moment de votre inscription.
 Les Pokémon que vous pouvez croiser sur cette jolie petite route\nà l’air iodé.
 Les Pokémon qui vivent autour de la grande ville\noù se situe l’académie.
@@ -37676,7 +37775,7 @@ Les Pokémon entourés de mystères qui accompagnent\nla Professeure Olim.
 Les Pokémon entourés de mystères qui accompagnent\nle Professeur Turum.
 Les Pokémon scellés par des pieux sacrés et incarnant\nles trésors du fléau.
 Les Pokémon légendaires capables de parcourir librement\nla région de Paldea.
-[~ 231]
+[~ 252]
 Les braves Pokémon sur lesquels vous pouvez compter\npour vous aider à récupérer votre sac volé.
 Les Pokémon pouvant être attrapés dans\nla première zone sauvage que vous visitez.
 Les Pokémon que vous avez affrontés lors\ndes matches qualificatifs du Royale Z-A.
@@ -37697,6 +37796,27 @@ Les Pokémon surpuissants que vous avez affrontés\nen vous alliant avec des Dre
 Les Pokémon légendaires de la région de Kalos,\nmaîtres de la vie et de la destruction.
 Le Pokémon légendaire qui s’est battu à vos côtés\npour faire d’Illumis une ville meilleure.
 Le Pokémon que la personne à la tête de la Team MZ\nvous a confié pour veiller sur Illumis.
+[~ 273]
+Les Pokémon choisis comme premiers partenaires\npar les Dresseurs et Dresseuses de Kanto.
+Les Pokémon vivant dans la Forêt de Jade,\nun endroit réputé pour la capture d’insectes.
+Les Pokémon vivant à l’intérieur du Mont Sélénite,\nà l’est d’Argenta.
+Les Pokémon que l’on voit relativement souvent\nsur les rives de la région de Kanto.
+Les Pokémon ayant creusé le tunnel géant\nqui relie Carmin sur Mer à Argenta.
+Les Pokémon souvent choisis comme partenaires\npar les Kinésistes de la région de Kanto.
+Les Pokémon vivant dans l’obscurité absolue\nde la Grotte.
+Les Pokémon qui hantent la Tour Pokémon de Lavanville.
+Les Pokémon recommandés par le Grand Maître de Karaté\ndu dojo de Safrania.
+Les Pokémon vivant dans la centrale électrique désaffectée.
+Les Pokémon vivant sur les Îles Écume,\ndans la mer du sud de la région de Kanto.
+Les Pokémon vivant à l’intérieur de l’étrange manoir délabré\nde Cramois’Île.
+Les Pokémon antiques recréés à partir de fossiles\ntrouvés dans la région de Kanto.
+Les Pokémon puissants se mettant en travers de la route\ndes Dresseurs et Dresseuses qui veulent défier la Ligue Pokémon.
+Les Pokémon vivant dans la profonde caverne\nau nord-ouest d’Azuria.
+Les Pokémon ayant évolué grâce au mystérieux pouvoir\ndes pierres d’évolution.
+Les Pokémon ayant mystérieusement évolué lors d’un échange\navec un autre Dresseur ou une autre Dresseuse.
+Les Pokémon vivant dans les Îles Sevii,\naccessibles en prenant un ferry Flèche des Mers.
+Les Pokémon oiseaux légendaires ayant été aperçus\ndans la région de Kanto.
+Un Pokémon qui aurait été créé par un certain scientifique.
 ~~~~~~~~~~~~~~~
 Text File : USUM_place_name
 ~~~~~~~~~~~~~~~
@@ -40579,6 +40699,848 @@ Quand le Pokémon met un ennemi K.O., il émet\nun hennissement glaçant, ce qui
 Quand le Pokémon met un ennemi K.O., il émet\nun hennissement terrifiant qui augmente\nson Attaque Spéciale.
 Les talents Tension de Sylveroy et Blanche Ruade\nde Blizzeval sont cumulés.
 Les talents Tension de Sylveroy et Sombre Ruade\nde Spectreval sont cumulés.
+~~~~~~~~~~~~~~~
+Text File : zukan_comment_fr
+~~~~~~~~~~~~~~~
+
+Il y a une étrange graine sur son dos depuis le jour\nde sa naissance. Elle devient chaque jour un peu\nplus grosse.
+Il y a un bulbe sur son dos. On dit que s’il absorbe assez\nde nutriments, ce bulbe se transforme en une jolie fleur.
+Une douce senteur émane de sa plante. Cette fragrance\ncalme tous ceux qui sont engagés dans un combat.
+Depuis sa naissance, une petite flamme brûle au bout\nde sa queue. Si cette flamme s’éteint, la vie\nde ce POKéMON s’éteindra elle aussi.
+Il se sert de sa queue pour faire tomber ses adversaires.\nUne fois qu’ils sont au sol, il les lacère de ses griffes acérées.
+Ses ailes peuvent le faire voler à plus de 1 400 mètres d’altitude.\nCe POKéMON crache du feu à des températures très élevées.
+Quand il rentre son cou dans sa carapace, CARAPUCE\npeut projeter de l’eau à haute pression.
+Ce POKéMON est très apprécié comme animal de compagnie.\nLa fourrure sur sa queue est le symbole de sa longévité.
+Il écrase ses adversaires de tout son poids pour leur faire perdre\nconnaissance. Il rentre dans sa carapace s’il se sent en danger.
+Il est recouvert d’une peau toute verte. Quand il fait sa mue,\nil s’enroule dans un fil de soie pour s’enfermer dans un cocon.
+Bien qu’il soit entouré d’une carapace solide, le reste de son\ncorps est si mou qu’il ne résisterait pas à une attaque violente.
+Ses ailes sont recouvertes d’une poudre les protégeant\nde la pluie. Ce POKéMON peut donc voler pendant\nde grosses averses.
+On trouve souvent ce POKéMON dans les forêts et les hautes\nherbes. L’aiguillon de 5 cm sur sa tête contient un venin\ntrès toxique.
+Ce POKéMON a pris cette forme transitoire le temps\nde développer sa forme véritable. Il est quasiment\nincapable de se déplacer tout seul.
+On le voit souvent voler dans un essaim. Il vole très rapidement,\npiquant sans cesse ses adversaires de son dard toxique.
+Ce POKéMON n’aime pas se battre, il se cache dans les hautes\nherbes à la recherche de petits insectes pour se nourrir.
+Grâce à ses griffes très puissantes, il est capable de transporter\ndes NOEUNOEUF vers un nid éloigné de plus de 100 km.
+ROUCARNAGE déploie ses ailes majestueuses pour effrayer\nses ennemis. Il peut voler à Mach 2.
+Les dents de RATTATA sont longues et tranchantes.\nComme elles poussent sans arrêt, il doit ronger tout\nce qu’il trouve pour pouvoir les tailler.
+Ses pattes arrière ont trois doigts chacune. Elles sont palmées\npour lui permettre de se déplacer dans les rivières.
+Il vole activement çà et là. Même s’il semble frêle,\nsa MIMIQUE fait de lui un adversaire redoutable.
+Ses ailes gigantesques lui permettent de planer très haut\ndans le ciel. Il peut rester toute une journée en l’air\nsans avoir besoin de se poser.
+On le croise très souvent dans les hautes herbes.\nIl agite rapidement sa langue pour percevoir le danger.
+Les motifs sur son corps ressemblent à un visage menaçant.\nLes adversaires les plus craintifs fuient à la seule vue\nde ce POKéMON.
+PIKACHU a de petites poches pleines d’électricité sur ses joues.\nS’il se sent menacé, il laisse s’échapper des décharges électriques.
+Ce POKéMON peut accumuler jusqu’à 100 000 volts.\nIl peut ainsi assommer un éléphant juste en le touchant.
+Il s’enterre et vit dans les sous-sols. S’il se sent menacé,\nil se met en boule pour se protéger.
+Lorsqu’il fuit en tournoyant sur lui-même, il utilise les piques\nsur son dos ainsi que ses griffes acérées pour blesser\nses ennemis.
+Bien qu’il soit très petit, ce POKéMON doit être traité\navec prudence à cause de ses dards toxiques.\nLes femelles ont des cornes plus petites.
+La femelle a un tempérament doux. Elle émet des cris\nultrasoniques capables de déstabiliser ses ennemis.
+Son corps est recouvert d’écailles en forme de pointes.\nQuand ce POKéMON s’énerve, ses pointes se dressent\nde façon menaçante.
+Ce POKéMON agite ses oreilles comme pour entendre\ntout ce qui se passe au loin. Il déploie des aiguillons\ntoxiques quand il est en colère.
+Il se met très facilement en colère. S’il charge avec sa corne\nimposante, ce POKéMON peut même briser du diamant.
+On le reconnaît facilement grâce à sa peau dure comme\nde la pierre ainsi qu’à sa grosse corne pleine de poison.
+Son apparence adorable donne envie de le prendre\ndans ses bras. Il est rare et difficile à trouver.
+Ce POKéMON a l’ouïe très développée. Il peut facilement\nentendre une épingle tomber à 1 km de distance.
+Quand il est jeune, ce POKéMON a six queues magnifiques.\nDe nouvelles queues apparaissent tout au long de sa croissance.
+Il a neuf longues queues et une fourrure qui brille comme de l’or.\nOn dit qu’il peut vivre 1 000 ans.
+Il hypnotise ses ennemis grâce à ses grands yeux avant\nde les plonger dans un profond sommeil en chantant\nune douce mélopée.
+Sa fourrure est fine, dense et souple à la fois.\nTrès agréable au toucher, elle donne envie de le dorloter.
+Comme il ne possède pas d’yeux, il n’utilise que\nses ultrasons pour se déplacer dans les ténèbres.
+Une fois ses dents pointues plantées dans le corps de\nson adversaire, il est capable de lui retirer un quart\nde litre de sang en une seule gorgée.
+Son nom scientifique est « Oddium Wanderus ».\nLorsqu’il fait nuit, il se déplace à l’aide de ses racines\npour disséminer ses graines.
+Ses pistils sécrètent une odeur incroyablement fétide.\nCette senteur épouvantable peut faire perdre\nconnaissance à ses adversaires.
+Ses pétales sont les plus grands au monde. À cause du pollen\nqu’ils libèrent, ce POKéMON peut causer de terribles allergies.
+Sur le dos de ce POKéMON se trouvent des champignons\nappelés tochukaso. Ils se développent au même rythme\nque leur hôte.
+Il dégage des spores toxiques depuis son chapeau en forme\nde champignon. En Chine, ces spores sont utilisées\ncomme des herbes médicinales.
+Ses yeux fonctionnent comme des radars et lui permettent\nde voir dans l’obscurité. Ils peuvent également envoyer\ndes rayons très puissants.
+Ses ailes sont couvertes d’écailles poudreuses. À chaque battement\nd’ailes, il laisse tomber de la poudre hautement toxique.
+Ce POKéMON creuse sous terre à faible profondeur.\nLa terre qu’il laisse dans son sillage le rend facile à repérer.
+Au combat, il s’enfouit sous terre pour pouvoir frapper\nses adversaires depuis n’importe quelle direction.
+Il passe ses journées à dormir. La nuit venue, il patrouille\nsur son territoire en utilisant ses yeux brillants.
+Ce POKéMON a un comportement sournois. S’il lève\nla queue, cela signifie qu’il s’apprête à vous mordre.
+Ce POKéMON a tout le temps la migraine. Quand la douleur\ndevient insupportable, il se met à utiliser ses pouvoirs psy.
+Ses pattes arrière palmées font de ce POKéMON un excellent\nnageur. On peut souvent le voir nager élégamment dans les lacs.
+Ce POKéMON est léger, très agile sur ses pieds\nmais surtout doté d’un tempérament hargneux.\nQuand il s’énerve, plus rien ne peut le calmer.
+Ce POKéMON est constamment en rogne. S’il traque une proie,\nil la pourchassera peu importe jusqu’où elle pourra aller.
+Ce POKéMON est particulièrement affectueux et loyal.\nIl aboie et il mord pour se débarrasser de ses adversaires.
+On parle de ce POKéMON dans les légendes chinoises.\nIl paraît qu’il peut courir à des vitesses incroyables.
+Sa peau est humide, lisse et surtout très fine.\nLa forme en spirale sur son ventre est en fait une partie\nde ses organes internes que l’on peut apercevoir.
+Ses deux jambes sont très développées. Bien qu’il puisse\nse déplacer sur la terre ferme, ce POKéMON préfère\nvivre sous l’eau.
+Il passe tout son temps à nager. Il connaît le crawl, la nage\npapillon et bien d’autres nages. Il est plus rapide\nque les plus grands champions humains.
+Il dort 18 heures par jour. Il peut utiliser de nombreux\npouvoirs psy, même pendant son sommeil.
+Selon les rumeurs, KADABRA serait un petit garçon aux pouvoirs psy\nqui se serait réveillé un jour sous cette apparence.
+Ce POKéMON n’apprécie pas vraiment les attaques physiques.\nIl utilise ses pouvoirs extrasensoriels pour vaincre ses ennemis.
+Son corps est essentiellement composé de muscles.\nMême s’il a la taille d’un petit enfant, il peut soulever\n100 adultes avec ses bras.
+Son corps incroyable ne se fatigue jamais. Il n’hésite pas à aider\nles gens lorsqu’il s’agit de soulever des objets très lourds.
+Ses deux paires de bras permettent à MACKOGNEUR d’envoyer\nune série de 1 000 coups de poing en 2 secondes.
+Son bourgeon ressemble à un visage humain. Selon la légende,\nCHETIFLOR serait un type de mandragore légendaire.
+Ses membres en forme de feuilles permettent\nà BOUSTIFLOR de trancher ses adversaires.\nIl crache un fluide capable de tout dissoudre.
+L’odeur mielleuse qu’il propage lui permet d’attirer\nses proies jusqu’à sa bouche. La proie piégée\nest alors digérée grâce à un fluide très acide.
+Ses yeux sont aussi transparents que du cristal.\nGrâce à eux, il peut tirer de puissants rayons lumineux.
+Les 80 tentacules que TENTACRUEL laisse s’agiter\nlui permettent d’injecter du poison dans le corps\nde ses ennemis mais aussi de les trancher.
+Sa forme ronde le rend facile à ramasser.\nCertaines personnes les utilisent dans\nles combats de boules de neige.
+Faites attention pendant vos balades en montagne.\nDes GRAVALANCH peuvent dévaler des chemins\nsans même ralentir !
+GROLEM est entouré d’une carapace aussi rugueuse\nque la roche. Il s’en débarrasse une fois par an\npendant sa mue pour pouvoir grandir.
+PONYTA est très léger mais ses pattes sont incroyablement\npuissantes. Il peut franchir des montagnes d’un seul saut.
+Ce POKéMON peut galoper jusqu’à 240 km/h.\nSi vous pensez voir une boule de feu au loin,\nil s’agit peut-être d’un GALOPA en pleine course.
+RAMOLOSS semble toujours perdu dans ses pensées,\nmais personne ne sait vraiment à quoi il pense.\nIl adore pêcher en utilisant sa queue.
+Un KOKIYAS s’est un jour accroché à la queue d’un RAMOLOSS\nqui pêchait et l’a fait évoluer en FLAGADOSS.
+Il reste constamment en sustentation pour se déplacer.\nCe POKéMON peut envoyer de l’électricité\npar les aimants situés sur ses côtés.
+Ce POKéMON est composé de plusieurs MAGNETI.\nIl est capable de projeter de puissantes décharges\nmagnétiques à haute tension.
+Ce POKéMON se promène toujours en tenant un artichaut\ndans son bec. Il l’utilise pour faire son nid.
+Ce POKéMON à deux têtes a été découvert après\nune soudaine mutation. Il peut courir jusqu’à 100 km/h.
+Une espèce étrange que l’on trouve rarement.\nLes trois têtes représentent la joie, la tristesse et la colère.
+Sa peau épaisse et dure est recouverte d’une fourrure\nbleu clair. Elle permet à ce POKéMON de résister\naux températures les plus glaciales.
+Son corps est recouvert d’une fourrure d’un blanc pur.\nPlus il fait froid, et plus ce POKéMON est actif.
+TADMORV est né d’un tas de déchets exposé aux rayons X lunaires.\nCe POKéMON adore se nourrir de choses dégoûtantes.
+Ce POKéMON est très dur à repérer car il se liquéfie souvent sur\nle sol. Il suffit de le toucher pour être gravement empoisonné.
+Il est protégé par une coquille aussi dure que du diamant.\nIl est par contre extrêmement tendre à l’intérieur.
+Sa coquille est extrêmement résistante. Rien ne peut la détruire,\npas même une bombe. Il ne l’ouvre que lorsqu’il attaque.
+Ce POKéMON est constitué seulement de gaz.\nIl peut renverser un éléphant en deux secondes\njuste en l’enveloppant de son corps gazeux.
+Si vous avez l’impression d’être surveillé dans le noir,\nc’est sûrement qu’un SPECTRUM est dans le coin.
+On dit que les ECTOPLASMA surgissent des ténèbres\npour prendre la vie des personnes égarées en montagne.
+ONIX vit généralement sous terre. Il cherche de la nourriture\nen creusant à plus de 80 km/h.
+Ce POKéMON est le descendant d’un animal légendaire\nqui dévorerait les rêves de ses victimes. Il est capable\nd’hypnotiser ses ennemis.
+Il transporte toujours un petit pendule. On raconte qu’il aurait\nun jour enlevé un enfant après l’avoir hypnotisé.
+On trouve ce POKéMON près de la mer.\nSes grosses pinces peuvent repousser si elles se font arracher.
+Sa grosse pince développe une puissance de 10 000 CV.\nToutefois, sa taille imposante la rend difficile à utiliser.
+Cette forme de vie est d’origine inconnue. On sait que\nce POKéMON utilise GRINCEMENT ou DESTRUCTION.
+Il explose au moindre choc. Son seul surnom\nde « Bomb Ball » suffit à effrayer ses adversaires.
+Même s’il ressemble à des œufs, ce POKéMON\nappartient à la famille des végétaux.
+On le surnomme « la forêt tropicale ambulante ».\nChacune de ses noix possède un visage\net un tempérament qui lui sont propres.
+Ce POKéMON porte le crâne de sa défunte mère sur sa tête.\nOn raconte qu’il se met à pleurer dès qu’il se retrouve seul.
+Ce petit POKéMON était à l’origine très faible. Il est devenu\nredoutable le jour où il a appris à se servir de ses os.
+KICKLEE peut rétracter et allonger ses jambes\nà sa guise. La formidable allonge dont il dispose\nlui donne souvent l’avantage en plein combat.
+TYGNON possède l’esprit combatif des plus grands\nchampions de boxe. Ses coups de poing partent\nplus vite qu’un boulet de canon.
+Sa langue fait deux fois la taille de son corps. Il l’utilise comme\nun bras pour saisir de la nourriture mais aussi pour attaquer.
+Son corps très fin en forme de ballon est rempli\nd’un horrible gaz toxique. Essayez de respirer\npar la bouche si vous vous trouvez près de lui.
+Il peut arriver que deux SMOGO mutent et s’associent\npour former un SMOGOGO, mais c’est très rare.
+Costaud mais pas très intelligent, ce POKéMON est capable\nde détruire un immeuble entier en utilisant sa CHARGE.
+L’évolution a permis à ce POKéMON de marcher\nsur ses pattes arrière. Il peut facilement faire\ndes trous dans les rochers en utilisant sa corne.
+Il peut pondre plusieurs œufs par jour. Ses œufs sont\ntrès riches en nutriments et vraiment délicieux.
+Une grande masse de lianes bleues cache l’identité\nde ce POKéMON. Sans pitié, il attrape tout\nce qui passe à sa portée.
+La femelle élève sa progéniture dans une poche abdominale.\nCe POKéMON adore utiliser le POING COMETE.
+Ce POKéMON maintient son équilibre en balançant\nsa queue qui se termine en boucle. Il peut cracher\nde l’encre avec sa bouche.
+Son corps est recouvert de pointes tranchantes.\nIl faut la plus grande attention pour le saisir,\nsous peine de se faire piquer.
+Ses nageoires dorsales et pectorales sont très développées.\nGrâce à elles, POISSIRENE peut nager à 5 nœuds.
+La corne sur sa tête est plus dure que le foret d’une perceuse.\nAvec cette corne, il fait des trous dans les rochers\npour y faire son nid.
+On peut voir des STARI en grand nombre près des côtes.\nLa nuit, le centre de son corps clignote d’une lumière rouge.
+Le corps de ce POKéMON a une forme géométrique.\nÀ cause de cette particularité, les pêcheurs racontent\nque ce POKéMON vient d’une autre planète.
+Il adore imiter les gens. On le dit capable de créer\nde véritables murs juste en les mimant.
+Il déchiquette ses proies à l’aide de ses bras tranchants comme\ndes faux. Il n’utilise ses ailes pour voler que très rarement.
+Il communique en utilisant un langage qui semble être humain.\nDes recherches sont en cours pour déterminer ce qu’il dit.
+Il adore se nourrir d’électricité. Il apparaît occasionnellement\nprès des grandes centrales électriques.
+On trouve ce POKéMON près des bouches de volcans.\nSon corps incandescent atteint 1 200 degrés.
+Ses deux grandes cornes lui servent de pinces.\nUne fois qu’il tient une proie, il ne la lâche pas\navant de l’avoir déchiquetée.
+Juste avant d’utiliser CHARGE, ce POKéMON agite\nfrénétiquement ses trois grandes queues.
+MAGICARPE manque totalement de vitesse et de force.\nC’est le POKéMON le plus pathétique sur terre.
+Il est d’une nature très agressive. L’ULTRALASER qu’il tire\nde sa bouche est capable de désintégrer n’importe quelle cible.
+Son intelligence lui permet de comprendre le langage\ndes humains. Il adore promener les gens sur son dos.
+METAMORPH peut modifier sa structure cellulaire à sa guise\npour se transformer en n’importe quelle forme vivante.
+Un POKéMON extrêmement rare capable d’évoluer\nde différentes façons en fonction du stimulus.
+Sa structure cellulaire est similaire à la composition\nmoléculaire de l’eau. Une fois dans l’eau, il devient\nindétectable à l’œil nu.
+S’il est irrité ou attaqué, toute la fourrure de son corps\nse dresse comme des aiguilles pour percer ses ennemis.
+PYROLI a une poche de feu à l’intérieur de son corps.\nAprès une bonne inspiration, il est capable de recracher\ndes flammes à 1 700 degrés.
+En utilisant les dernières avancées technologiques,\ndes scientifiques ont réussi à créer PORYGON,\nle premier POKéMON artificiel.
+Un POKéMON préhistorique qui vivait dans les profondeurs\nmarines. Il se déplace en agitant ses 10 tentacules.
+Ses tentacules sont développés comme s’il s’agissait de bras\nou de jambes. Dès qu’il attrape une proie, il la mord.
+Ce POKéMON a été reconstitué à partir du fossile d’une\nancienne créature. Il se protège à l’aide de sa carapace.
+Il peut nager librement dans l’eau. Il lacère ses ennemis à l’aide\nde ses bras tranchants et absorbe ensuite leur énergie vitale.
+Ce POKéMON a été reconstitué à partir d’une cellule\nde dinosaure trouvée dans un morceau d’ambre.\nIl vole très haut en poussant des cris très aigus.
+RONFLEX n’est pas satisfait tant qu’il n’a pas avalé\nses 400 kilos de nourriture quotidienne. Dès qu’il a\nfini de manger, il commence une sieste pour digérer.
+Il est l’un des POKéMON oiseaux légendaires.\nSa longue queue flottant au vent laisse bouche bée\ntous ceux qui ont la chance de l’apercevoir.
+Un des POKéMON oiseaux légendaires.\nQuand il vole, il lance des cris électrisants.
+Il est l’un des POKéMON oiseaux légendaires.\nTous ceux qui l’aperçoivent sont subjugués par\nses ailes orange qui semblent être en feu.
+Même les plus jeunes peuvent dépasser 2 mètres de long.\nIl grandit au fur et à mesure de ses mues.
+On dit que ce POKéMON vit dans les mers et les lacs.\nMême s’il n’a pas d’ailes, certaines personnes disent\nl’avoir déjà vu voler.
+Malgré son poids et son physique imposant, DRACOLOSSE est\ncapable de voler. Il peut faire le tour du monde en 16 heures.
+Le caractère malfaisant de ce POKéMON est le résultat\nde nombreuses expériences qui visaient à modifier\nson code génétique.
+On pensait que ce POKéMON originaire d’Amérique du Sud\navait disparu. Il est très intelligent et peut apprendre\nn’importe quelle capacité.
+Sa feuille à l’arôme agréable a le pouvoir de déterminer\nla température et le niveau d’humidité.
+Un arôme épicé émane de son cou. Cet arôme agit\ncomme un stimulant pour lui faire récupérer son énergie.
+Le souffle de MEGANIUM a le pouvoir de redonner\nla santé aux plantes malades ou mortes.
+Il reste en général courbé. S’il est en colère\nou surpris, des flammes jaillissent de son dos.
+Ce POKéMON est couvert de fourrure ignifugée.\nIl résiste à toute attaque de type feu.
+Il a une technique secrète dévastatrice. En frottant\nsa fourrure ardente, il crée une forte explosion.
+Petit mais costaud, il n’hésite pas à mordre\ntout ce qui passe à portée de crocs.
+Il ouvre en grand ses mâchoires quand il attaque.\nSi ses crocs se cassent, ils repoussent très vite.
+Il a du mal à se mouvoir hors de l’eau, alors\nil marche à quatre pattes. Il reste très rapide.
+Il se tient dressé sur sa queue pour voir les ennemis arriver\nde loin. Au moindre danger, il crie pour avertir ses semblables.
+Il est impossible de déterminer où sa queue commence. Malgré\nses petites pattes, il est aussi bon chasseur qu’un RATTATA.
+Il a un sens du timing parfait.\nIl reste toujours en rythme en balançant sa tête.
+Quand il réfléchit, il tourne sa tête sur 180 degrés\npour optimiser son mode de pensée.
+Quand le temps se rafraîchit, de nombreux COXY\nse réunissent pour se tenir mutuellement chaud.
+Les étoiles sur son dos deviennent plus grandes\nou plus petites selon le nombre d’étoiles dans le ciel.
+Il tisse une toile en utilisant un fil fin mais solide,\npuis il attend tranquillement sa proie.
+Il crée en permanence un fil très solide qui relie\nson corps directement à son nid.
+Les ailes qui ont poussé sur ses pattes lui permettent\nde voler très vite.
+Au plus profond de l’océan, son seul moyen de communication\nest la lumière qu’il fait clignoter constamment.
+Il aveugle sa proie avec une lumière intense, puis\nl’avale d’un seul trait une fois celle-ci immobilisée.
+Malgré sa petite taille, il peut électrocuter des adultes.\nIl se surprend lui-même en le faisant.
+Quand de nombreux météores illuminent le ciel,\non arrive à voir plus de MELO que d’habitude.
+Son corps est très élastique, ce qui lui permet\nde rebondir tout le temps et là où il veut.
+Il y a un proverbe qui dit que le bonheur touchera celui\nqui peut faire tenir debout un TOGEPI endormi.
+Il se déprime vite s’il n’est pas entouré de gens sympathiques.\nIl peut léviter sans battre des ailes.
+Il cherche sa nourriture par terre, mais il grimpe\nquelquefois aux arbres pour manger.
+Il paraît que son œil gauche peut voir le passé\net que son œil droit est capable de voir l’avenir.
+Sa toison pousse constamment. En été, on le tond complètement,\nmais sa laine repousse en moins d’une semaine.
+Sa douce laine stocke facilement l’électricité.\nSa peau caoutchouteuse le protège de l’électrocution.
+La lumière vive sur sa queue peut être vue de loin.\nIl a longtemps été vénéré et utilisé comme un phare.
+Ils vivent en masse dans les tropiques. Quand ils dansent,\nleurs pétales se frottent en créant un son mélodieux.
+Le bout de sa queue lui sert de bouée, l’empêchant\nde se noyer même par fort courant.
+Quand il joue dans l’eau, il met ses oreilles\nen boule pour éviter de les mouiller.
+Il se déguise en arbre pour éviter les problèmes.\nIl déteste l’eau et se cache par temps de pluie.
+Quand trois TARPAUD ou plus se réunissent, ils chantent\nd’une voix ressemblant à un beuglement.
+Son corps est si léger qu’il doit s’agripper au sol\npour éviter de se faire emporter par le vent.
+Il étend ses pétales pour absorber la lumière du soleil.\nIl flotte pour se rapprocher du soleil.
+Il se laisse porter par le vent et répand ses spores\nduveteuses dans le monde pour se multiplier.
+Il vit sur les plus hautes cimes. Sautant de branche\nen branche, sa queue lui assure un bon équilibre.
+Il vit en buvant la rosée sur les feuilles.\nOn dit qu’il ne peut rien manger d’autre.
+La journée, il court dans tous les sens, mais à la tombée\nde la nuit, il s’arrête complètement.
+Ses yeux immenses peuvent voir à 360 degrés.\nIl regarde partout pour trouver des insectes à avaler.
+Quand il marche sur la terre ferme, il répand une fine\ncouche de poison tout le long de son corps.
+Il est si distrait que quand il nage, il se cogne souvent\nla tête sur les rochers ou les coques de bateau.
+En analysant les déplacements du vent, il peut prédire\nle climat ou même les mouvements de son adversaire.
+Quand la nuit tombe, les anneaux sur son corps\nse mettent à luire, terrorisant ceux qui sont proches.
+Il paraît que s’il est pourchassé, il attire son ennemi\ndans la montagne pour qu’il s’y perde.
+Une fois sa tête mordue, des toxines ont envahi RAMOLOSS\net lui ont conféré des pouvoirs immenses.
+Il adore mordre et tirer les cheveux des gens par surprise,\njuste pour voir leur réaction.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Pour cacher sa queue noire, il vit discrètement\ndans l’obscurité. Il n’attaque jamais le premier.
+Sa queue, qui contient également un petit cerveau,\npeut mordre d’elle-même.
+Il se suspend et attend qu’un insecte vole à proximité.\nIl ne bougera pas de lui-même.
+Il est totalement fixé à son arbre. Il lance des morceaux\nde sa carapace pour faire fuir son ennemi.
+S’il est repéré, il fuit en creusant avec sa queue.\nIl peut léviter avec ses ailes.
+Il s’accroche souvent aux falaises. Une fois sa proie\nrepérée, il plane vers elle pour l’attaquer.
+On raconte que si un ONIX vit plus de 100 ans, sa composition\nchange pour devenir similaire à celle du diamant.
+Il est d’une nature joviale. De nombreuses femmes\nl’apprécient pour sa gentillesse.
+Ses crocs sont trop lourds, ce qui lui fait pencher la tête.\nAttention à sa MORSURE.
+Son corps est recouvert de piques qui proviennent\nde ses écailles. Elles sécrètent un poison étourdissant.
+Ses ailes ne sont pas utilisées pour voler. Il bat des ailes\nà grande vitesse pour réguler sa température interne.
+Il garde des BAIES dans sa coquille.\nPour éviter les attaques, il s’immobilise sous les rochers.
+Le plus souvent docile, il chasse les intrus avec\nsa corne s’il est attaqué quand il mange du miel.
+De nature agressive, il chasse les ROUCOOL\nde leurs nids et dévore les œufs abandonnés.
+Il se fait des réserves de nourriture dans\ndes cachettes avant l’arrivée de l’hiver.
+Doté d’un odorat hypersensible, il trouve immanquablement\ntoute nourriture enfouie dans le sol.
+Il vit dans les régions volcaniques et se déplace\nsans cesse pour trouver des endroits chauds.
+Sa coquille, très fragile, projette régulièrement\ndes flammes qui circulent dans tout son corps.
+S’il sent une odeur attrayante, il fonce tête\nla première pour trouver d’où elle vient.
+S’il charge un ennemi, les poils de son dos se dressent.\nIl est très sensible au bruit.
+Dans les îles du Sud, les gens vivent dans des communautés\nqui sont formées sur des groupes de ces POKéMON.
+Se servant de sa nageoire dorsale, il s’accroche\nsous un DEMANTA pour récupérer ses restes.
+Il s’introduit furtivement dans les rochers. S’il est fatigué,\nil prend le nid d’un autre OCTILLERY.
+Il fait son nid au bord des falaises abruptes.\nIl passe sa journée à nourrir ses petits.
+Vivant en pleine mer, il peut jaillir hors de l’eau et planer\nau-dessus des vagues s’il a suffisamment de vitesse.
+Comme il fait son nid dans les ronces, ses petits\ns’endurcissent à force d’être sans cesse éraflés.
+Pour attraper leur proie, ils vérifient la position de chacun\npar des aboiements qu’eux seuls comprennent.
+En entendant ses hurlements sinistres, les autres\nPOKéMON prennent peur et fuient vers leur nid.
+Il dort au plus profond de l’océan pour accumuler\nde l’énergie. Son réveil cause des tornades.
+Il se cogne sur celui ou celle qu’il apprécie.\nMais il est si fort qu’il fait souvent mal à ceux qu’il aime.
+Plus grandes sont ses défenses, plus haut est son rang\ndans le troupeau. Ses défenses poussent lentement.
+Des recherches poussées ont amélioré ses capacités.\nIl a appris de nouveaux mouvements.
+Ceux qui observent ses bois perdront progressivement\nleurs sens et ne pourront plus se tenir debout.
+Arrivé à l’âge adulte, il laisse ses camarades\nposer leur empreinte de patte sur son dos.
+Même s’il est petit, il vaut mieux ne pas l’ignorer :\nil frappe fort et souvent sans prévenir.
+Il donne des coups de pied tout en tournant.\nIl tourne si vite qu’il peut ainsi creuser le sol.
+Il balance sa tête d’avant en arrière et donne\nl’impression d’essayer d’embrasser quelqu’un.
+Ce POKéMON joue toujours gaiement, même dans le plus\nviolent des orages, au milieu de terribles éclairs.
+On le trouve dans le cratère des volcans. Sa température\ndépasse les 600 degrés, alors faites attention !
+Si un ECREMEUH vient d’avoir un petit, son lait\nest beaucoup plus nutritif que d’ordinaire.
+Il est d’une nature protectrice. S’il voit un POKéMON\nmalade, il le soignera jusqu’à ce qu’il guérisse.
+Un POKéMON qui parcourt les plaines avec\nun aboiement proche d’un coup de tonnerre.
+Un POKéMON qui parcourt les plaines. À chaque fois\nqu’un volcan apparaît, un ENTEI vient au monde.
+Un POKéMON qui parcourt les plaines.\nLe vent du Nord souffle à chaque fois qu’il apparaît.
+Né sous terre, il ne peut atteindre la surface\nqu’après avoir mangé toute la terre qui l’entoure.
+Il peut se déplacer même s’il est coincé dans sa coquille.\nIl est doté d’un terrible pouvoir de destruction.
+Il est d’une nature impulsive. Avec sa force phénoménale,\nil est capable de changer la forme des paysages aux alentours.
+Il est supposé être le gardien des mers.\nOn raconte qu’il est apparu une nuit de forte tempête.
+Une légende raconte que son corps brille de sept couleurs.\nUn arc-en-ciel se forme derrière lui quand il vole.
+Quand CELEBI disparaît au fin fond de la forêt,\nil laisse derrière lui un œuf venant du futur.
+ARCKO est capable de grimper aux murs à l’aide de ses pattes.\nGrâce à sa queue, il peut mesurer l’humidité de l’air\net prédire le temps du jour suivant.
+Les muscles surdéveloppés de ses cuisses permettent\nà MASSKO de sauter incroyablement haut.
+Les feuilles sur ses pattes avant sont aussi tranchantes\nque des épées. Il surgit de derrière les arbres\npour attaquer sa cible.
+POUSSIFEU possède, dans son ventre, une poche de feu\nqui brûle sans arrêt. Il donne une impression de chaleur\nquand on lui fait des câlins.
+Il augmente sa concentration en émettant de petits cris secs.\nSes coups de pied ont une puissance destructrice phénoménale.
+Quand il est face à un ennemi, il laisse s’échapper\ndes gerbes de flammes par ses poignets.\nSes jambes lui permettent de sauter par-dessus les immeubles.
+Sa grande queue en forme de nageoire lui donne\nune puissance d’accélération incroyable.\nIl est très costaud malgré sa taille.
+FLOBIO se sent surtout à l’aise sur les sols boueux.\nIl prend rapidement l’avantage sur ses ennemis\ns’il se bat sur ce genre de terrain.
+Ses bras sont aussi durs que de la roche.\nD’un revers, il peut envoyer bouler ses adversaires.\nIl adore faire son nid sur les jolies plages des lagons.
+MEDHYENA est d’un tempérament tenace.\nSon odorat très développé lui permet de\nne jamais perdre la trace de sa proie.
+Il obéit toujours aux ordres de son maître si celui-ci est très doué.\nSon comportement vient de l’époque reculée où il vivait en meute.
+Un POKéMON d’une curiosité insatiable. Il montre de l’intérêt\npour tout ce qui l’entoure et passe d’un endroit à un autre\nen zigzaguant pour tout regarder.
+Quand il court en ligne droite, il peut atteindre 100 km/h.\nMais il a beaucoup de problèmes sur les chemins tortueux.
+Il vit dans les hautes herbes et les forêts.\nS’il est attaqué, il résiste en dirigeant\nses pointes vénéneuses vers son ennemi.
+Il économise son énergie en se déplaçant le moins possible.\nIl attend d’évoluer et se contente seulement d’un peu\nd’eau de pluie.
+Malgré son apparence, CHARMILLON est de nature plutôt agressive.\nIl attaque en donnant des coups avec sa langue fine et longue.
+Son corps, constitué de soie fine, durcit avec le temps.\nSi vous voyez apparaître des fissures, c’est qu’il va\ntrès bientôt évoluer.
+Il laisse s’échapper une horrible poudre toxique s’il se sent menacé.\nLa nuit venue, tous les PAPINOX se rassemblent\nprès des éclairages publics.
+NENUPIOT recherche toujours les coins où coule de l’eau pure.\nS’il reste longtemps sans boire, la feuille sur sa tête commence à faner.
+Il vit au bord de l’eau dans les endroits ensoleillés.\nLe jour, il s’endort sur un tas d’algues et ne se lève\nqu’à la nuit tombée.
+Les cellules de LUDICOLO s’activent s’il entend\nune musique entraînante, le rendant encore plus puissant.
+S’il reste immobile, il est impossible de le distinguer\nparmi de véritables noix. Il adore surprendre les ROUCOOL\nqui cherchent de la nourriture.
+Il vit dans les trous qui se trouvent dans les grands arbres.\nLe bruit du vent sur sa feuille suffit à remplir d’effroi\nses adversaires.
+Ce POKéMON est le gardien des forêts.\nIl peut lire les pensées de ses ennemis et agir en conséquence.
+NIRONDELLE ne supporte pas les saisons froides.\nIl vole vers d’autres terres à la recherche de chaleur\net peut ainsi parcourir 300 km par jour.
+Si les plumes de ses deux queues restent bien droites,\ncela signifie qu’HELEDELLE est en bonne santé.\nSon élégance est sans pareille.
+Il utilise les vents marins à la façon d’un planeur.\nEn hiver, il cache de la nourriture autour de son nid.
+BEKIPAN est capable de transporter plusieurs POKéMON\ndans son bec. Sur les longues distances, il se pose\nsur les vagues pour se reposer.
+Il est très sensible aux émotions des gens et des POKéMON.\nIl se cache au moindre signe d’hostilité.
+Ce POKéMON tire ses pouvoirs psy du soutien de son DRESSEUR.\nIl danse et tourne sur lui-même quand il est content.
+GARDEVOIR est capable de prédire l’avenir.\nSa puissance augmente quand il protège son DRESSEUR.
+Ils vivent généralement dans les étangs mais après\ndes averses passagères, on peut en trouver\ndans des flaques au milieu des villes.
+Ses antennes sont couvertes de motifs les faisant ressembler\nà de gros yeux. Quand il pleut, elles se chargent d’eau\net l’empêchent de voler.
+Il préfère les endroits humides. La journée, il reste à la lisière\nde la forêt. Il libère de la poudre toxique par sa tête.
+Les graines sur sa queue sont faites de spores toxiques.\nIl assomme ses ennemis avec des coups si rapides\nqu’ils sont presque invisibles.
+PARECOOL dort 20 heures par jour.\nIl suffit de lui jeter un regard pour avoir envie de bâiller.
+Il est toujours en colère et a toujours envie de tout détruire.\nIl ne se calme jamais, pas même quand il mange.
+C’est le POKéMON le plus paresseux du monde.\nIl est cependant capable de libérer une puissance\nphénoménale en une seule attaque.
+Comme il vit presque toujours sous terre, sa vue est\ntrès peu développée et il est presque aveugle.\nIl utilise ses antennes pour se repérer.
+Ce POKéMON est tellement rapide qu’on le dit\ncapable d’éviter toutes les attaques.\nIl adore se nourrir de la sève des arbres.
+Un POKéMON étrange que l’on trouve dans les POKé BALLS\naprès l’évolution d’un NINGALE.
+Il communique en murmurant, mais se met à hurler\ns’il sent le moindre danger. Il s’arrête quand\non lui bouche les oreilles.
+S’il hurle suffisamment fort, ce POKéMON est capable\nde générer des ultrasons qui peuvent détruire une maison.
+Il peut créer toute une gamme de sons par les trous\nqui recouvrent son corps. Ses cris sont perceptibles\nà plus de 10 km à la ronde.
+Il suit un entraînement drastique pour devenir encore plus fort.\nC’est un POKéMON plein de volonté, et capable\nde faire face à toutes les attaques.
+Il piétine le sol violemment pour concentrer son énergie.\nIl peut envoyer en l’air un camion de 10 tonnes\nd’un seul coup de poing.
+Il combat en faisant rebondir sa queue qui est plus grande\nque son corps. Elle lui sert aussi de bouée pour flotter sur l’eau.
+Son nez magnétique pointe constamment vers le nord.\nLes voyageurs l’observent pour connaître leur position.
+SKITTY n’est pas du genre à faire confiance.\nIl est pourtant très apprécié pour son comportement\net son apparence adorable.
+Le POKéMON favori des DRESSEURS féminins\nvictimes de la mode. On organise des défilés\npour déterminer quel DELCATTY a le plus de style.
+Ce POKéMON se nourrit de pierres précieuses.\nDans les ténèbres, ses yeux brillent du reflet des joyaux.
+Il utilise son visage charmeur pour tromper ses ennemis\navant de les mordre avec ses énormes mâchoires.
+GALEKID mange beaucoup de fer pour endurcir son corps d’acier.\nIl descend des montagnes pour manger les ponts\net les voies de chemin de fer.
+Pour montrer sa force à ses ennemis, GALEGON frotte\nson corps d’acier contre les rochers pour produire\nde gigantesques étincelles.
+Le territoire de GALEKING est si grand qu’il peut couvrir\ntoute une montagne. Il attaque sans pitié quiconque ose\ns’aventurer sur ses terres.
+MEDITIKKA ne rate jamais une séance de yoga.\nIl augmente sa force intérieure par la méditation.
+CHARMINA évite les attaques en exécutant d’élégants\npas de danse avant de lancer une attaque dévastatrice\ndans son élan.
+DYNAVOLT stocke de l’électricité statique dans sa fourrure.\nIl produit des étincelles lorsque le temps devient orageux.
+Ce POKéMON évite le contact des humains.\nOn raconte qu’il fait sa nichée là où la foudre est déjà tombée.
+Il soutient ses amis en lançant de petites étincelles par ses joues.\nIl grimpe sur les poteaux téléphoniques pour absorber de l’électricité.
+Il déteste tellement l’eau qu’il se réfugie sous les porches\ndes maisons à la moindre averse.\nIl soutient ses amis en faisant des étincelles.
+Il vit aux abords des étangs.\nLa nuit, son corps émet de la lumière\npour communiquer avec d’autres MUCIOLE.
+La nuit, il dirige les MUCIOLE pour qu’ils dessinent\nde belles figures dans le ciel. Des scientifiques\nétudient les formes ainsi créées.
+Ses fleurs dégagent un parfum relaxant.\nPlus fort est cet arôme, et plus ROSELIA est en bonne santé.
+Il n’y a rien que son estomac ne puisse digérer.\nPendant sa digestion, il laisse s’échapper\ndes gaz très bruyants et nauséabonds.
+Il peut avaler un pneu entier d’une seule bouchée.\nIl sécrète un horrible fluide toxique par les pores de sa peau.
+Ce POKéMON vit dans les fleuves qui traversent les forêts tropicales.\nIl attaque en groupe ceux qui s’aventurent sur son territoire.
+Cette terreur des océans a des crocs capables de transpercer le fer.\nIl se déplace en propulsant l’eau par-derrière.
+Il ressemble à un énorme ballon quand il avale\nde très grosses quantités d’eau de mer.\nIl dévore une tonne de nourriture par jour.
+Il fait partie des plus grands POKéMON.\nIl rabat les poissons en groupe avant de les avaler d’une seule bouchée.
+Un magma à 1 200 degrés circule dans tout son corps.\nQuand il se refroidit, il se durcit et ralentit CHAMALLOT\ndans ses déplacements.
+S’il s’énerve, CAMERUPT fait jaillir de la lave en fusion\npar les bosses qui se trouvent sur son dos.\nIl vit dans les cratères des volcans.
+Du charbon brûle sans arrêt à l’intérieur de sa carapace.\nS’il est attaqué, il recrache de la fumée noire et épaisse\navant de prendre la fuite.
+Les gens pensent que s’il arrêtait de sauter partout,\nSPOINK mourrait presque sur le coup.\nIl porte la perle d’un COQUIPERL sur sa tête.
+Il hypnotise ses adversaires en exécutant des danses étranges.\nLes perles noires qu’il a sur le front sont de précieux joyaux.
+Il n’existe pas deux SPINDA avec des motifs identiques.\nIl arrive à troubler ses ennemis en se déplaçant bizarrement.
+Il vit dans les déserts arides. Pour attraper ses proies,\nil se place dans un trou et laisse sa gueule grande ouverte\nen attendant qu’elles tombent dedans.
+Il génère des ondes ultrasoniques en battant violemment des ailes.\nDès que sa proie est inconsciente, il l’arrose d’acide\npour pouvoir l’avaler.
+Il se cache du regard des autres en soulevant\nle sable du désert avec ses ailes.\nUne fine peau rouge protège ses yeux du sable.
+Il se sent plus à l’aise dans des endroits hostiles comme le désert.\nIl peut survivre 30 jours en utilisant seulement l’eau stockée\ndans son corps.
+On le trouve principalement dans les déserts.\nLa nuit, il se met à chasser les animaux épuisés\npar la chaleur du désert.
+Il toilette constamment ses ailes duveteuses.\nIl se dépêche de se laver à la moindre salissure\npour que ses ailes restent les plus blanches possibles.
+Si vous entendez une douce mélodie venir des montagnes,\nc’est sûrement un ALTARIA qui chantonne.
+S’il vient à croiser un SEVIPER, son poil se met à briller\net il prend sa position de combat. Ses griffes acérées\nsont sa meilleure arme.
+Il affûte sa queue tranchante comme une épée sur les rochers.\nIl se cache dans les hautes herbes pour attaquer sa proie\npar surprise.
+La vitalité de SELEROC dépend du cycle lunaire.\nIl est doté d’une force phénoménale les jours de pleine lune.
+SOLAROC absorbe l’énergie du soleil pendant la journée.\nToujours impassible, il parvient à lire les pensées\nde ses ennemis.
+Il sonde les bords boueux des rivières avec ses vibrisses.\nUn film fin et visqueux protège tout son corps.
+Il fait son nid au fond des marais. Il ne se pose pas de questions\net avale toutes les créatures qui passent près de lui.
+Il vient de par-delà les mers.\nC’est une créature très résistante qui prolifère\nrapidement, même dans les eaux polluées.
+Ce POKéMON très coriace agite tout le temps ses énormes pinces.\nIl faut beaucoup de patience pour le dresser.
+Il a été découvert dans des ruines anciennes.\nIl tourne sur lui-même pour se déplacer.\nIl reste en équilibre même quand il dort.
+KAORINE a été créé à partir de vieilles poupées d’argile\nconfectionnées par des civilisations anciennes.\nIl se déplace grâce à la lévitation.
+Tous les LILIA avaient disparu il y a 100 millions d’années.\nIls ont été recréés à partir d’un fossile, au moyen\nde techniques modernes.
+Lorsqu’il chasse, VACILYS utilise ses huit tentacules.\nIl dissout sa proie à l’aide d’un puissant acide\navant de l’avaler.
+C’est un POKéMON préhistorique.\nCaché derrière les rochers, il utilise ses pinces\nextensibles pour attraper ses proies.
+Rien ne peut transpercer la cuirasse d’ARMALDO.\nCe POKéMON embroche ses proies avec ses griffes\npour les avaler plus facilement.
+En raison de son apparence peu soignée, les chercheurs\nle négligent complètement. Il vit dans les étangs pollués.
+MILOBELLUS est d’une beauté à couper le souffle.\nCeux qui en voient un perdent aussitôt l’envie de se battre.
+MORPHEO a la capacité de changer son apparence en fonction\ndu temps. Il utilise la force de la nature pour combattre.
+Il change la couleur de son corps soit pour se fondre\ndans le décor soit pour exprimer ses états d’âme.
+La corne de POLICHOMBR arrive à capter les sentiments des gens.\nIl adore se nourrir de sentiments tels que la jalousie et la malice.
+Un très violent sentiment de haine a transformé\nune poupée de chiffon en BRANETTE.\nS’il ouvre la bouche, une énergie négative s’en échappe.
+SKELENOX devient invisible pour se faufiler plus facilement\nderrière ses proies. Il a le pouvoir de traverser les murs.
+Son corps est complètement creux. Quand il ouvre la bouche,\nil aspire tout ce qui passe près de lui, à la façon d’un trou noir.
+TROPIUS vit dans les jungles tropicales.\nLes fruits qui poussent sur son cou sont succulents\net poussent deux fois dans l’année.
+EOKO se déplace en utilisant les courants aériens.\nIl utilise intelligemment sa longue queue pour cueillir\nles BAIES et les noix dont il raffole.
+ABSOL apparaît dès qu’une catastrophe naturelle\nest sur le point de se produire. Pour cette raison,\nles gens ont longtemps pensé qu’il portait malheur.
+OKEOKE adore se déplacer en groupe.\nIls se réunissent souvent pour dormir la nuit dans les cavernes.
+On raconte que STALGAMIN porte chance aux maisons qu’il visite.\nIl peut supporter une température de moins 100 degrés.
+Son corps constitué de glace ne peut pas fondre, même s’il est\nexposé au feu. Il peut instantanément geler l’humidité contenue\ndans l’air.
+Son corps est couvert d’une douce fourrure. Elle le protège\ndu sentiment de froid quand il se déplace en roulant sur la glace.
+Il utilise le bout de son nez pour sentir et toucher tout\nce qu’il ne connaît pas. Il s’amuse souvent à jongler\navec des OBALIE.
+Il traverse les mers glacées en brisant les blocs de glace\navec ses défenses. Il est protégé du froid par une grosse\ncouche de graisse.
+Ce POKéMON ferme sa coquille pour se protéger du danger.\nIl ne crée qu’une seule perle de toute sa vie,\nmais celle-ci est magnifique.
+Il vit dans les abysses, là où la lumière ne va jamais.\nIl allume le bout de sa queue qui ressemble à un poisson\npour attirer ses proies.
+Sa façon de se déplacer sous l’eau est d’une élégance\nincomparable. Du bout de sa fine bouche, il se nourrit\ndes algues qui poussent entre les rochers.
+RELICANTH n’a connu aucune évolution depuis\n100 millions d’années. Il a été découvert pendant\nune exploration dans les profondeurs de la mer.
+Pendant la saison des amours, d’innombrables LOVDISC\nse réunissent près des barrières de corail et donnent\nl’impression que la mer est rose.
+Sa tête dure comme le métal peut éclater de gros rochers.\nIl attend impatiemment que ses ailes poussent pour enfin voler.
+Son corps renforcé repousse toutes les attaques.\nCependant, le poids important de cette armure\nempêche DRACKHAUS de se déplacer librement.
+Une fois enragé, plus rien ne peut arrêter DRATTAK.\nIl détruit tout ce qu’il voit en utilisant ses griffes\nou en crachant des flammes.
+Il utilise les ondes magnétiques pour communiquer\navec ses semblables.\nToutes les cellules de son corps sont aimantées.
+Il flotte dans les airs en utilisant l’énergie magnétique.\nSon corps est si résistant qu’il n’aurait pas une seule\négratignure en tombant de très haut.
+Il résulte de la fusion de deux METANG.\nOn raconte que ses quatre cerveaux sont plus performants\nqu’un superordinateur.
+Son corps est essentiellement composé de roches,\net on ne sait pas s’il possède un cerveau ou un cœur.\nIl reste un mystère pour les scientifiques.
+Des scientifiques ont découvert que le corps de ce POKéMON\nest constitué du même type de glace que celle\nqu’on trouve au pôle Sud.
+Il est plus résistant que n’importe quel type de métal.\nSon corps s’est endurci à cause des fortes pressions\nsouterraines qu’il subit depuis des milliers d’années.
+LATIAS peut communiquer avec les gens par télépathie.\nIl change son apparence en renvoyant la lumière.
+D’un tempérament docile, LATIOS n’aime pas vraiment se battre.\nEn rentrant ses pattes avant, il peut voler plus vite qu’un jet.
+Ce seraient les fortes pluies que peut invoquer ce POKéMON qui\nauraient rendu les océans si vastes. Il a le pouvoir de maîtriser l’eau.
+Ce POKéMON légendaire incarne la terre.\nIl plongea dans un profond sommeil après\nson combat avec KYOGRE.
+RAYQUAZA a vécu pendant des centaines de millions d’années\ndans la couche d’ozone de l’atmosphère.\nQuand il vole, on croirait voir un météore.
+JIRACHI est capable de réaliser tous les vœux.\nIl ne reste éveillé que 7 jours sur mille ans.
+
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+Son corps plat et fin est toujours collé aux murs.\nOn pense que sa forme a une signification.
+MORPHEO a la capacité de changer son apparence en fonction\ndu temps. Il utilise la force de la nature pour combattre.
+MORPHEO a la capacité de changer son apparence en fonction\ndu temps. Il utilise la force de la nature pour combattre.
+MORPHEO a la capacité de changer son apparence en fonction\ndu temps. Il utilise la force de la nature pour combattre.
+DEOXYS a choisi lui-même d’avoir cette apparence agressive.\nIl trompe ses ennemis en changeant de forme à volonté.
+~~~~~~~~~~~~~~~
+Text File : zukan_comment_lg
+~~~~~~~~~~~~~~~
+
+Il a une étrange graine plantée sur son dos.\nElle grandit avec lui depuis sa naissance.
+Son bulbe dorsal devient si gros qu’il ne peut plus\nse tenir sur ses pattes arrière.
+Sa plante donne des fleurs quand elle absorbe les rayons du soleil.\nIl migre souvent vers les endroits ensoleillés.
+Il préfère les endroits chauds.\nEn cas de pluie, de la vapeur se forme autour de sa queue.
+En agitant sa queue, il peut élever la température\nà un niveau incroyable.
+Il peut fondre la roche de son souffle brûlant.\nIl est souvent la cause de nombreux incendies de forêt.
+Son dos se gonfle et durcit avec l’âge pour former\nune carapace très résistante.\nIl peut cracher des jets d’écume.
+Il se cache au fond de l’eau pour guetter sa proie.\nSes oreilles sont des gouvernails.
+Ce POKéMON brutal est armé de canons hydrauliques.\nSes puissants jets d’eau sont dévastateurs.
+Ses petites pattes sont équipées de ventouses,\nlui permettant de grimper aux murs.
+Il est vulnérable aux attaques tant que sa carapace est molle,\ncar il expose son corps tendre et mou.
+En combat, il bat des ailes très rapidement pour projeter\ndes poudres toxiques sur ses ennemis.
+Il vit dans les forêts et se nourrit essentiellement de feuilles.\nL’aiguillon sur sa tête est empoisonné.
+Incapable de se déplacer de lui-même, il se défend\nen durcissant sa carapace.
+Il vole à très grande vitesse.\nIl se bat avec les dards empoisonnés de ses bras.
+On l’aperçoit souvent dans les forêts.\nIl brasse l’air de ses ailes près du sol pour projeter du sable.
+Il protège son territoire avec ardeur\net repousse à coups de bec tout intrus.
+Il survole la surface de l’eau pour repérer une proie\net plonge en piqué pour l’attraper.
+Sa morsure est très puissante.\nPetit et rapide, on en voit un peu partout.
+Si ses moustaches sont coupées, il perd le sens de l’équilibre\net devient moins rapide.
+Il chasse les insectes dans les hautes herbes.\nSes petites ailes lui permettent de voler très vite.
+Ses ailes géantes lui permettent de voler sur de longues distances\nsans qu’il ait besoin de se reposer.
+Il se déplace en silence pour dévorer des œufs\nde ROUCOOL ou de PIAFABEC.
+Les motifs féroces peints sur son corps varient\nselon la région où il se trouve.
+Quand plusieurs de ces POKéMON se réunissent,\nils provoquent de gigantesques orages.
+Il doit garder sa queue en contact avec le sol\npour éviter toute électrocution.
+Il s’enterre dans les régions arides et désertiques.\nIl émerge seulement pour chasser.
+Il se roule en boule hérissée de piques s’il est menacé.\nIl peut ainsi s’enfuir ou attaquer.
+Ce POKéMON est hérissé de dards empoisonnés.\nLes femelles ont des cornes plus petites.
+Les cornes de la femelle poussent lentement.\nElle préfère griffer ou mordre pour attaquer.
+Ses écailles très résistantes la protègent.\nSon corps massif lui permet d’exécuter des attaques dévastatrices.
+Son ouïe très fine l’avertit du danger.\nPlus ses cornes sont grandes, plus son poison est mortel.
+Très agressif, il est prompt à répondre à la violence.\nLa corne sur sa tête est venimeuse.
+Sa queue est une arme redoutable, il s’en sert\npour attraper sa proie et lui broyer les os.
+Très recherché pour son aura mystique, il est très rare\net ne vit que dans des endroits précis.
+Ce POKéMON est une sorte de petite fée très rare.\nIl court vite se cacher s’il aperçoit un être humain.
+Il n’a qu’une seule queue à la naissance.\nSa queue se divise à la pointe au fil des ans.
+Il est très intelligent et rancunier.\nAttrapez-lui une de ses queues et il vous maudira pour 1 000 ans.
+Quand ses yeux s’illuminent, il chante une mystérieuse berceuse\npour endormir ses ennemis.
+En cas de danger, il gonfle d’air son corps doux et potelé\ndans des proportions gigantesques.
+Il vit en colonie dans les régions peu éclairées.\nIl s’oriente grâce aux ultrasons.
+Il mord son adversaire et absorbe toute son énergie,\nmême s’il devient trop lourd pour voler.
+Pendant la journée il se cache sous terre.\nIl erre dehors toute la nuit pour planter ses graines.
+Ce n’est pas de la bave qui s’écoule de sa bouche,\nmais un nectar qu’il utilise pour appâter sa proie.
+Plus ses pétales sont grands, plus ils contiennent de pollen toxique.
+Les champignons sur son dos se nourrissent des nutriments\nde leur hôte insectoïde.
+Ce POKéMON résulte de la symbiose entre un parasite et un insecte.\nLe champignon a pris le contrôle de son hôte.
+Il vit à l’ombre des grands arbres où il se nourrit d’insectes.\nIl est attiré par la lumière.
+La couleur des écailles poudreuses qui recouvrent ses ailes\nchange en fonction de son type de poison.
+Il vit à un mètre sous la terre et se nourrit de racines.\nIl apparaît rarement à la surface.
+Un groupe de TAUPIQUEUR.\nIl crée des séismes en creusant à plus de 100 km de profondeur.
+Il adore les pièces de monnaie.\nIl hante les rues à la recherche de pièces oubliées par les passants.
+Très apprécié pour sa fourrure, il est difficile à apprivoiser\nen raison de son caractère rétif.
+Il distrait ses ennemis avec des grimaces débiles\net les attaque ensuite avec ses pouvoirs psy.
+Il nage avec élégance le long des côtes.\nOn le confond souvent avec Kappa, le monstre japonais.
+Il se met en colère très vite. Calme ou furieux,\nson humeur change d’une seconde à l’autre.
+Agressif et teigneux, il poursuit son gibier\njusqu’à épuisement complet.
+Pour protéger son territoire il aboie et mord\njusqu’à ce que les intrus s’enfuient.
+Un POKéMON très recherché pour sa grâce légendaire.\nIl court avec tellement d’agilité qu’on dirait qu’il vole.
+Il est tellement mal à l’aise sur ses nouvelles pattes\nqu’il préfère la nage à la marche.
+Ce POKéMON amphibie transpire continuellement\nquand il est hors de l’eau afin d’hydrater son corps.
+Excellent nageur, il pratique le crawl ou la nage papillon\nmieux qu’un champion olympique.
+Son don de télépathie lui permet de sentir le danger\net de se TELEPORTER en un lieu sûr.
+Son corps émet des ondes alpha qui donnent la migraine\nà ceux qui se trouvent à proximité.
+Son cerveau hors du commun peut effectuer des opérations\nà la vitesse d’un ordinateur. Il a un Q.I. de 5 000.
+Il adore la musculation. Il pratique les arts martiaux\npour devenir encore plus fort.
+Son corps est si puissant qu’il lui faut une ceinture de force\npour équilibrer ses mouvements.
+Ses coups de poing sont si puissants qu’ils font voler\nses adversaires jusqu’à l’horizon.
+Un POKéMON carnivore qui se nourrit de petits insectes.\nIl se désaltère en puisant de l’eau par les racines de ses pieds.
+Il crache de la POUDRE TOXIK pour immobiliser sa proie\net il l’achève avec de l’ACIDE.
+Il vit en colonie dans la jungle mais personne\nn’en est jamais revenu vivant.
+Il vit en bord de mer. Les pêcheurs se font souvent arroser\nd’acide quand ils en accrochent un.
+Ses tentacules sont rétractés au repos. En situation de chasse,\nils s’allongent pour prendre ses proies au piège.
+Il vit dans les plaines ou les montagnes.\nOn le confond souvent avec un petit caillou.
+Pour se déplacer, il dégringole le long des pentes.\nIl pulvérise tous les obstacles qui se trouvent\nsur son passage.
+Son corps de pierre est indestructible.\nIl peut supporter des explosions de dynamite.
+Ses sabots sont plus résistants que le diamant.\nIl peut aplatir n’importe quoi en le piétinant.
+Doté d’un esprit de compétition, il poursuit\ntoute créature rapide pour faire la course.
+Très lent et endormi, il lui faut 5 secondes\npour ressentir la douleur d’une attaque.
+Le KOKIYAS accroché à la queue du RAMOLOSS\nse nourrit des restes de son hôte.
+Il contrôle la gravité pour pouvoir voler.\nIl surgit de nulle part pour attaquer avec des CAGE-ECLAIR.
+Constitué de MAGNETI reliés les uns aux autres,\nil apparaît souvent quand le soleil brille.
+Il utilise l’artichaut qu’il a dans la bouche\ncomme s’il s’agissait d’une épée.
+Cet oiseau vole très mal mais court très vite.\nIl laisse de gigantesques empreintes de pas.
+Il élabore des plans complexes avec ses trois cerveaux.\nUne de ses têtes reste toujours éveillée.
+La corne sur son front est très résistante.\nElle lui sert à détruire les blocs de glace.
+Il emmagasine la chaleur dans son corps.\nIl peut nager dans l’eau glacée à plus de 8 nœuds.
+Vivant dans des tas d’ordures, il se nourrit\ndes déchets polluants rejetés par les usines.
+Il est recouvert d’une épaisse couche toute sale.\nIl est si toxique que même ses traces de pas sont empoisonnées.
+Protégé par une carapace très résistante, il est vulnérable\nquand celle-ci s’ouvre.
+Une fois menacé, il envoie de rapides volées de dards.\nOn ignore ce qui se trouve à l’intérieur de sa carapace.
+Ce POKéMON gazeux plonge ses victimes dans un profond sommeil\nsans qu’elles ne s’en aperçoivent.
+Parce qu’il peut traverser les murs, on raconte que\nce POKéMON vient d’une autre dimension.
+Les nuits de pleine lune, il imite l’ombre des passants\net se moque de leur effroi.
+Les parties en pierre de son corps durcissent\net prennent l’aspect d’une sorte de diamant noir.
+Il endort ses ennemis et dévore leurs songes.\nS’il mange trop de cauchemars, il fait une indigestion.
+Quand il regarde fixement son adversaire, c’est qu’il va l’attaquer\navec des attaques PSY comme HYPNOSE et CHOC MENTAL.
+Ses pinces sont des armes très puissantes.\nElles lui servent aussi à garder l’équilibre.
+Son énorme pince développe une puissance de 10 000 CV.\nMais elle est très encombrante.
+Vivant près des centrales électriques, ce POKéMON survolté\nest souvent confondu avec une POKé BALL.
+Il emmagasine des quantités énormes de courant électrique\nsous pression pouvant exploser.
+Souvent pris pour des œufs, ils ont tendance\nà se regrouper pour attaquer.
+On raconte que si une de ses têtes se détache,\nelle se transforme en un NOEUNOEUF.
+Il ne retire jamais son casque en os.\nPersonne n’a jamais vu le visage de ce POKéMON.
+L’os qu’il tient dans la main est son arme la plus efficace.\nIl s’en sert comme d’un boomerang pour assommer sa proie.
+S’il est pressé, ses jambes s’allongent progressivement.\nIl court alors très rapidement.
+Il distribue des séries de coups de poing rapides comme l’éclair\net invisibles à l’œil nu.
+Il peut projeter sa langue comme un caméléon.\nSi un ennemi reçoit un coup de langue,\nil aura une sensation de picotement.
+Son corps, constitué de divers gaz toxiques et instables,\npeut exploser à tout instant.
+Deux SMOGO peuvent se combiner en un SMOGOGO\nen mélangeant leurs gaz.
+Avec une ossature 1 000 fois plus résistante\nque celle de l’homme, ses charges sont dévastatrices.
+Son épiderme très épais lui permet de survivre\ndans un environnement où il fait plus de 2 000 degrés.
+Un POKéMON rare et difficile à capturer\nqui porte chance et bonheur à son possesseur.
+Son corps est recouvert de lianes similaires à des algues.\nElles bougent quand il marche.
+Son enfant ne quitte la poche ventrale protectrice\nqu’à l’âge de 3 ans.
+Il abat les insectes volants en leur tirant un jet d’encre\ndepuis la surface de l’eau. Ses tirs sont toujours précis.
+Il peut nager à l’envers en agitant ses petites nageoires pectorales.
+Sa queue ondule gracieusement telle une sirène qui se déhanche.\nC’est pourquoi on l’appelle « La Reine des Océans ».
+Pendant la saison des amours, on peut le voir nager\ndans les rivières et les lacs.
+Ce POKéMON mystérieux peut régénérer ses appendices\nsectionnés lors d’un combat.
+Son cœur brille des couleurs de l’arc-en-ciel.\nOn raconte que c’est une pierre précieuse.
+Dérangez-le pendant qu’il mime et il se battra\nen distribuant des volées de claques.
+Rapide et agile comme un ninja, il se déplace si vite\nqu’il crée l’illusion d’être en groupe.
+Il ondule ses hanches en marchant et entraîne les gens\ndans des danses frénétiques.
+Vivant près des centrales électriques, il provoque\ndes pannes de courant quand il se promène en ville.
+Son corps en fusion brûle d’une flamme orangée,\nle rendant invisible dans le feu.
+S’il n’arrive pas à écraser sa proie avec ses pinces,\nil la secoue et l’envoie dans les airs.
+Une fois sa cible en vue, il la charge furieusement\nen fouettant l’air de sa triple queue.
+La puissance de cette créature a beaucoup régressé au fil des siècles.
+Gigantesque et maléfique, il est capable de raser\nune ville entière dans un accès de rage.
+Ce POKéMON en voie d’extinction peut transporter\ndes passagers sur son dos par-delà les océans.
+Il est capable de copier le code génétique d’un ennemi\npour se transformer en son double.
+Ses gènes atypiques lui permettent d’évoluer\ns’il est exposé aux radiations d’une pierre.
+Il vit au bord de l’eau.\nSa queue lui donne l’apparence d’une sirène.
+Il se charge d’électricité statique pour envoyer\ndes décharges de 10 000 volts.
+Il peut accumuler suffisamment de chaleur pour atteindre\ndes températures supérieures à 900 degrés.
+Ce POKéMON est fait de programmes et d’algorithmes.\nIl peut survivre en milieu virtuel.
+Disparu depuis longtemps, il peut être réanimé génétiquement\nà partir d’anciens fossiles.
+Un POKéMON préhistorique qui disparut quand sa coquille\ndevint trop lourde à déplacer.
+Un POKéMON reconstitué à partir d’un fossile\ntrouvé dans un site préhistorique.
+Sa forme pure et lisse lui permet de nager rapidement.\nIl lacère sa proie avant d’en absorber la vie.
+Un POKéMON préhistorique qui attaque son ennemi\nà la gorge avec ses crocs acérés.
+Très paresseux, il ne fait que manger et dormir.\nPlus il grossit, plus il devient fainéant.
+Le légendaire oiseau des glaces.\nOn dit qu’il apparaît aux gens perdus dans les sommets.
+L’oiseau légendaire de la foudre.\nIl surgit hors des nuages en lançant d’énormes éclairs.
+Le légendaire oiseau du feu.\nUne pluie de flammes surgit à chaque battement de ses ailes.
+On l’a longtemps considéré comme une créature légendaire,\nmais une colonie a récemment été découverte dans les océans.
+Un POKéMON légendaire plein de charme.\nIl peut contrôler les variations climatiques.
+Un POKéMON marin extrêmement rare.\nOn dit qu’il est aussi intelligent que l’homme.
+Il est le fruit de nombreuses expériences génétiques\nhorribles et malsaines.
+Unique et rare, son existence est remise en cause par les experts.\nPeu nombreux sont ceux qui l’ont vu.
+Un doux parfum émane de la feuille placée sur sa tête.\nIl est très doux et il aime dormir au soleil.
+Une odeur épicée provient de son cou. Si on la respire,\ncette odeur donne envie de se battre.
+L’arôme qui émane de ses pétales contient une substance\nqui calme les pulsions agressives.
+Il est timide et se met en boule pour se protéger.\nS’il est attaqué, il enflamme son dos pour riposter.
+Attention ! Quand il tourne le dos dans un combat,\nc’est qu’il va attaquer avec ses flammes dorsales.
+Quand il est furieux, il devient si chaud que tout\nce qui le touche s’enflamme instantanément.
+Sa mâchoire surdéveloppée est capable de tout broyer.\nMême son DRESSEUR doit s’en méfier.
+Quand il perd un croc, un autre repousse aussitôt.\nSa bouche en comporte donc 48 en permanence.
+Quand il mord avec sa puissante mâchoire, il secoue sa tête\npour déchiqueter sa pauvre victime.
+C’est un POKéMON très prudent, il se dresse sur sa queue\npour mieux observer les environs.
+Il fait un nid qui convient à son corps très fin.\nIl est le seul à pouvoir y pénétrer.
+Il se tient toujours sur un pied. Il change de pied si vite\nqu’on peut à peine distinguer ce mouvement.
+Ses yeux ont la particularité de pouvoir filtrer la lumière faible,\nc’est pourquoi il voit parfaitement dans l’obscurité.
+De nature timide, il a peur de sortir seul.\nIl est beaucoup plus à l’aise quand il est en groupe.
+Quand les étoiles brillent dans le ciel, il volette partout\nen semant derrière lui une poudre brillante.
+Il reste immobile dans sa toile pendant des jours.\nIl attend que sa proie se rapproche pour la capturer.
+Il peut produire des fils de soie par la queue ou par la bouche.\nIl est difficile de différencier ces deux organes.
+Il vole en silence dans l’obscurité à l’aide de ses quatre ailes.\nMême très proche, on ne l’entend pas.
+Il émet avec ses antennes des impulsions positives et négatives\nqui peuvent électrocuter ses ennemis.
+Sa brillance est si forte qu’il peut illuminer les fonds marins\nà 5 000 mètres de profondeur.
+Il ne sait pas encore stocker l’électricité.\nIl envoie des décharges quand il veut jouer ou quand il a peur.
+Il ressemble un peu à une étoile.\nOn suppose qu’il est venu sur terre accroché à une météorite.
+Son corps est tout mou. Quand il commence à rebondir,\nil est impossible de l’arrêter.
+Sa coquille est remplie de joie.\nOn dit que s’il est bien traité, il est porteur de chance.
+On dit qu’il n’apparaît qu’aux cœurs purs.\nIl apporte la joie et le bonheur à son maître.
+Ses ailes ne sont pas encore assez développées.\nIl ne peut que planer péniblement. Il a toujours le regard fixe.
+On dit qu’il est calme et tranquille car il peut voir\nen permanence le passé et le futur.
+Son corps produit de l’électricité statique.\nQuand il est bien chargé, son poil double de volume.
+Il stocke tellement d’électricité que son poil ne peut plus\nrepousser à certains endroits de son corps.
+Le bout de sa queue brille si fort qu’il peut être vu de très loin.\nIl sert de balise aux personnes égarées.
+JOLIFLOR danse la majorité du temps.\nCertains pensent que c’est un rituel pour appeler le soleil.
+Le bout de sa queue est rempli d’une huile plus légère que l’eau,\nce qui lui permet de ne pas couler.
+En ne bougeant plus et en écoutant, il peut discerner\nce qui se passe au fond des fleuves.
+Il fait semblant d’être un arbre.\nSa composition est en fait plus proche de la pierre.
+Si PTITARD et TETARTE entendent son cri,\nils se rassemblent pour venir le rencontrer.
+Pour éviter d’être balayés par les vents, ils se rassemblent\nen petits groupes. Il n’empêche qu’ils aiment la brise légère.
+Le bourgeon sur sa tête s’ouvre et se ferme en fonction\ndes fluctuations de la température ambiante.
+Quand il est pris dans le vent, il utilise ses appendices de coton\npour voler autour du monde.
+Sa queue est si forte qu’il peut l’utiliser\npour se suspendre aux branches des arbres.
+Il peut tomber du ciel sans crier gare.\nS’il est attaqué par un PIAFABEC, il secoue violemment ses feuilles.
+Il convertit la lumière du soleil en énergie.\nQuand la nuit tombe, ses pétales se referment.
+En battant des ailes très vite, il peut générer\nune onde de choc très violente.
+Ce POKéMON vit en eau froide.\nIl sort de l’eau pour se nourrir quand il fait froid à l’extérieur.
+Ce POKéMON est très insouciant.\nQuand il nage, il fonce tête la première dans la coque des bateaux.
+Son fin pelage enregistre les courants d’air provoqués\npar les déplacements de ses ennemis.
+Pour se défendre ce POKéMON émet un gaz toxique\npar les pores de sa peau.
+Craint et peu aimé, il paraît qu’il porte malheur\nà ceux qui croisent son chemin la nuit.
+D’une grande intelligence, il sait rester calme\ndans les situations les plus stressantes.
+La nuit, il aime faire des farces pour effrayer les gens.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Il déteste la lumière.\nS’il est attaqué, il se gonfle pour riposter avec plus de violence.
+Sa queue possède un cerveau. Si vous vous en approchez,\nil vous sentira et vous mordra.
+Il renforce sa carapace en y ajoutant des écorces d’arbre.\nIl devient alors plus lourd.
+Son corps est protégé par une énorme carapace.\nCe qui se trouve sous cette armure est un mystère.
+Si un ennemi le repère, il creuse furieusement dans la terre\navec sa queue pour s’échapper.
+Il vole droit vers le visage de sa cible effrayée\net s’y accroche pour lui injecter son poison.
+Son corps a été comprimé par la pression du sol.\nIl est devenu plus résistant que le diamant.
+Bien qu’il ait l’air menaçant, il est gentil et très affectueux.\nIl est très populaire chez les femmes.
+Il est du genre timide et peureux. S’il est attaqué,\nil s’agite dans tous les sens pour repousser son agresseur.
+Pour tirer ses dards empoisonnés, il gonfle son corps\nen buvant 10 litres d’eau subitement.
+Il effraie l’ennemi en agitant ses pinces en forme d’œil\net donne ainsi l’impression d’avoir 3 têtes.
+Les BAIES qu’il stocke dans sa coquille se décomposent\net deviennent un liquide gluant.
+Ce POKéMON puissant enfonce sa corne sous le ventre\nde ses ennemis pour ensuite les soulever.
+Ses griffes sont cachées dans ses pattes.\nS’il est attaqué, il les sort pour frapper ses ennemis.
+Quand il trouve du miel, sa marque en forme de lune brille.\nIl passe son temps à lécher ses pattes couvertes de miel.
+Même s’il grimpe bien aux arbres, il préfère les secouer\navec ses pattes pour faire tomber des BAIES.
+Il ne dort jamais. Il doit toujours se déplacer,\ncar s’il reste immobile, son corps de lave\nse refroidit et durcit.
+La coquille sur son dos est une partie de sa peau\nqui s’est refroidie et solidifiée. Elle est très fragile.
+Il renifle le sol avec sa truffe pour y dénicher de la nourriture.\nIl trouve parfois des sources d’eau chaude.
+Ses yeux sont masqués par ses longs poils.\nIl ne voit rien et se déplace en chargeant.
+Il grandit en permanence. Le bout de sa tête est très recherché,\nen témoignage de sa beauté.
+Il est très précis quand il crache ses jets d’eau.\nIl peut toucher une cible mouvante à 100 mètres.
+Il capture ses ennemis avec ses tentacules et les écrase\nensuite avec sa tête dure comme la pierre.
+Il transporte de la nourriture toute la journée.\nSes stocks de vivres auraient sauvé de nombreuses personnes.
+Il nage avec majesté.\nSi un REMORAID est attaché à son corps, il s’en moque.
+Ses ailes sont en fait légères et creuses.\nIl vole facilement et peut atteindre de très hautes altitudes.
+Il émet toutes sortes de cris pour communiquer\navec ses semblables ou pour chasser une proie.
+Les blessures provoquées par son souffle de flammes\nsont permanentes et la douleur ne s’en va jamais.
+On dit qu’il se cache dans les grottes sous-marines.\nIl peut créer des tourbillons rien qu’en bâillant.
+Il balance sa trompe pour s’amuser, mais il est si fort\nque cela peut être dangereux.
+Il a des défenses aiguisées et une peau épaisse.\nSes CHARGES peuvent détruire une maison.
+Cette version améliorée de PORYGON a été créée\npour l’exploration de l’espace.
+Ses bois tordus changent le flot de l’air et créent\nune distorsion spatiale dans le monde réel.
+Un liquide coule du bout de sa queue.\nIl peint avec ce fluide pour marquer son territoire.
+Il déborde d’énergie. Il se bat tout le temps\npour être plus fort, quitte à perdre un combat.
+Si vous êtes fasciné par sa danse de coups de pied,\nvous risquez vite de le regretter en les prenant dans le nez.
+Ses lèvres sont la partie la plus sensible de son corps.\nIl les utilise pour examiner les objets.
+Il fait pivoter ses bras pour créer de l’énergie,\nmais il ne se charge qu’un peu car il se fatigue vite.
+À chaque fois qu’il respire, des braises brûlantes\nsortent de sa bouche et de ses narines.
+Son lait est plein d’énergie nutritive.\nC’est une boisson parfaite pour les gens malades ou fatigués.
+Celui qui mange un peu de l’œuf de LEUPHORIE\ndevient aimable et plaisant avec tout le monde.
+Le nuage de pluie qu’il porte lui permet d’invoquer la foudre.\nOn dit de lui qu’il est venu avec l’orage.
+Les volcans entrent en éruption quand il rugit.\nIl doit courir sans cesse pour contrôler sa puissance.
+Il serait la réincarnation du vent du Nord.\nIl peut purifier instantanément les eaux polluées.
+Il se nourrit du sol. Après avoir dévoré une montagne,\nil s’endort et commence à évoluer.
+Sa carapace est aussi dure que la pierre et il est très fort.\nSes coups peuvent raser une montagne.
+Son corps est invulnérable à toutes les attaques,\nc’est pourquoi il aime tant tester ses forces.
+Il paraît qu’il s’isole au fond des océans\ncar son pouvoir est beaucoup trop grand.
+Les légendes racontent qu’il survole le monde en permanence\ngrâce à ses ailes aux couleurs de l’arc-en-ciel.
+Ce POKéMON voyage dans le temps.\nLa végétation est luxuriante là où il s’installe.
+ARCKO est capable de grimper aux murs à l’aide de ses pattes.\nGrâce à sa queue, il peut mesurer l’humidité de l’air\net prédire le temps du jour suivant.
+Les muscles surdéveloppés de ses cuisses permettent\nà MASSKO de sauter incroyablement haut.
+Les feuilles sur ses pattes avant sont aussi tranchantes\nque des épées. Il surgit de derrière les arbres\npour attaquer sa cible.
+POUSSIFEU possède, dans son ventre, une poche de feu\nqui brûle sans arrêt. Il donne une impression de chaleur\nquand on lui fait des câlins.
+Il augmente sa concentration en émettant de petits cris secs.\nSes coups de pied ont une puissance destructrice phénoménale.
+Quand il est face à un ennemi, il laisse s’échapper\ndes gerbes de flammes par ses poignets.\nSes jambes lui permettent de sauter par-dessus les immeubles.
+Sa grande queue en forme de nageoire lui donne\nune puissance d’accélération incroyable.\nIl est très costaud malgré sa taille.
+FLOBIO se sent surtout à l’aise sur les sols boueux.\nIl prend rapidement l’avantage sur ses ennemis\ns’il se bat sur ce genre de terrain.
+Ses bras sont aussi durs que de la roche.\nD’un revers, il peut envoyer bouler ses adversaires.\nIl adore faire son nid sur les jolies plages des lagons.
+MEDHYENA est d’un tempérament tenace.\nSon odorat très développé lui permet de\nne jamais perdre la trace de sa proie.
+Il obéit toujours aux ordres de son maître si celui-ci est très doué.\nSon comportement vient de l’époque reculée où il vivait en meute.
+Un POKéMON d’une curiosité insatiable. Il montre de l’intérêt\npour tout ce qui l’entoure et passe d’un endroit à un autre\nen zigzaguant pour tout regarder.
+Quand il court en ligne droite, il peut atteindre 100 km/h.\nMais il a beaucoup de problèmes sur les chemins tortueux.
+Il vit dans les hautes herbes et les forêts.\nS’il est attaqué, il résiste en dirigeant\nses pointes vénéneuses vers son ennemi.
+Il économise son énergie en se déplaçant le moins possible.\nIl attend d’évoluer et se contente seulement d’un peu\nd’eau de pluie.
+Malgré son apparence, CHARMILLON est de nature plutôt agressive.\nIl attaque en donnant des coups avec sa langue fine et longue.
+Son corps, constitué de soie fine, durcit avec le temps.\nSi vous voyez apparaître des fissures, c’est qu’il va\ntrès bientôt évoluer.
+Il laisse s’échapper une horrible poudre toxique s’il se sent menacé.\nLa nuit venue, tous les PAPINOX se rassemblent\nprès des éclairages publics.
+NENUPIOT recherche toujours les coins où coule de l’eau pure.\nS’il reste longtemps sans boire, la feuille sur sa tête commence à faner.
+Il vit au bord de l’eau dans les endroits ensoleillés.\nLe jour, il s’endort sur un tas d’algues et ne se lève\nqu’à la nuit tombée.
+Les cellules de LUDICOLO s’activent s’il entend\nune musique entraînante, le rendant encore plus puissant.
+S’il reste immobile, il est impossible de le distinguer\nparmi de véritables noix. Il adore surprendre les ROUCOOL\nqui cherchent de la nourriture.
+Il vit dans les trous qui se trouvent dans les grands arbres.\nLe bruit du vent sur sa feuille suffit à remplir d’effroi\nses adversaires.
+Ce POKéMON est le gardien des forêts.\nIl peut lire les pensées de ses ennemis et agir en conséquence.
+NIRONDELLE ne supporte pas les saisons froides.\nIl vole vers d’autres terres à la recherche de chaleur\net peut ainsi parcourir 300 km par jour.
+Si les plumes de ses deux queues restent bien droites,\ncela signifie qu’HELEDELLE est en bonne santé.\nSon élégance est sans pareille.
+Il utilise les vents marins à la façon d’un planeur.\nEn hiver, il cache de la nourriture autour de son nid.
+BEKIPAN est capable de transporter plusieurs POKéMON\ndans son bec. Sur les longues distances, il se pose\nsur les vagues pour se reposer.
+Il est très sensible aux émotions des gens et des POKéMON.\nIl se cache au moindre signe d’hostilité.
+Ce POKéMON tire ses pouvoirs psy du soutien de son DRESSEUR.\nIl danse et tourne sur lui-même quand il est content.
+GARDEVOIR est capable de prédire l’avenir.\nSa puissance augmente quand il protège son DRESSEUR.
+Ils vivent généralement dans les étangs mais après\ndes averses passagères, on peut en trouver\ndans des flaques au milieu des villes.
+Ses antennes sont couvertes de motifs les faisant ressembler\nà de gros yeux. Quand il pleut, elles se chargent d’eau\net l’empêchent de voler.
+Il préfère les endroits humides. La journée, il reste à la lisière\nde la forêt. Il libère de la poudre toxique par sa tête.
+Les graines sur sa queue sont faites de spores toxiques.\nIl assomme ses ennemis avec des coups si rapides\nqu’ils sont presque invisibles.
+PARECOOL dort 20 heures par jour.\nIl suffit de lui jeter un regard pour avoir envie de bâiller.
+Il est toujours en colère et a toujours envie de tout détruire.\nIl ne se calme jamais, pas même quand il mange.
+C’est le POKéMON le plus paresseux du monde.\nIl est cependant capable de libérer une puissance\nphénoménale en une seule attaque.
+Comme il vit presque toujours sous terre, sa vue est\ntrès peu développée et il est presque aveugle.\nIl utilise ses antennes pour se repérer.
+Ce POKéMON est tellement rapide qu’on le dit\ncapable d’éviter toutes les attaques.\nIl adore se nourrir de la sève des arbres.
+Un POKéMON étrange que l’on trouve dans les POKé BALLS\naprès l’évolution d’un NINGALE.
+Il communique en murmurant, mais se met à hurler\ns’il sent le moindre danger. Il s’arrête quand\non lui bouche les oreilles.
+S’il hurle suffisamment fort, ce POKéMON est capable\nde générer des ultrasons qui peuvent détruire une maison.
+Il peut créer toute une gamme de sons par les trous\nqui recouvrent son corps. Ses cris sont perceptibles\nà plus de 10 km à la ronde.
+Il suit un entraînement drastique pour devenir encore plus fort.\nC’est un POKéMON plein de volonté, et capable\nde faire face à toutes les attaques.
+Il piétine le sol violemment pour concentrer son énergie.\nIl peut envoyer en l’air un camion de 10 tonnes\nd’un seul coup de poing.
+Il combat en faisant rebondir sa queue qui est plus grande\nque son corps. Elle lui sert aussi de bouée pour flotter sur l’eau.
+Son nez magnétique pointe constamment vers le nord.\nLes voyageurs l’observent pour connaître leur position.
+SKITTY n’est pas du genre à faire confiance.\nIl est pourtant très apprécié pour son comportement\net son apparence adorable.
+Le POKéMON favori des DRESSEURS féminins\nvictimes de la mode. On organise des défilés\npour déterminer quel DELCATTY a le plus de style.
+Ce POKéMON se nourrit de pierres précieuses.\nDans les ténèbres, ses yeux brillent du reflet des joyaux.
+Il utilise son visage charmeur pour tromper ses ennemis\navant de les mordre avec ses énormes mâchoires.
+GALEKID mange beaucoup de fer pour endurcir son corps d’acier.\nIl descend des montagnes pour manger les ponts\net les voies de chemin de fer.
+Pour montrer sa force à ses ennemis, GALEGON frotte\nson corps d’acier contre les rochers pour produire\nde gigantesques étincelles.
+Le territoire de GALEKING est si grand qu’il peut couvrir\ntoute une montagne. Il attaque sans pitié quiconque ose\ns’aventurer sur ses terres.
+MEDITIKKA ne rate jamais une séance de yoga.\nIl augmente sa force intérieure par la méditation.
+CHARMINA évite les attaques en exécutant d’élégants\npas de danse avant de lancer une attaque dévastatrice\ndans son élan.
+DYNAVOLT stocke de l’électricité statique dans sa fourrure.\nIl produit des étincelles lorsque le temps devient orageux.
+Ce POKéMON évite le contact des humains.\nOn raconte qu’il fait sa nichée là où la foudre est déjà tombée.
+Il soutient ses amis en lançant de petites étincelles par ses joues.\nIl grimpe sur les poteaux téléphoniques pour absorber de l’électricité.
+Il déteste tellement l’eau qu’il se réfugie sous les porches\ndes maisons à la moindre averse.\nIl soutient ses amis en faisant des étincelles.
+Il vit aux abords des étangs.\nLa nuit, son corps émet de la lumière\npour communiquer avec d’autres MUCIOLE.
+La nuit, il dirige les MUCIOLE pour qu’ils dessinent\nde belles figures dans le ciel. Des scientifiques\nétudient les formes ainsi créées.
+Ses fleurs dégagent un parfum relaxant.\nPlus fort est cet arôme, et plus ROSELIA est en bonne santé.
+Il n’y a rien que son estomac ne puisse digérer.\nPendant sa digestion, il laisse s’échapper\ndes gaz très bruyants et nauséabonds.
+Il peut avaler un pneu entier d’une seule bouchée.\nIl sécrète un horrible fluide toxique par les pores de sa peau.
+Ce POKéMON vit dans les fleuves qui traversent les forêts tropicales.\nIl attaque en groupe ceux qui s’aventurent sur son territoire.
+Cette terreur des océans a des crocs capables de transpercer le fer.\nIl se déplace en propulsant l’eau par-derrière.
+Il ressemble à un énorme ballon quand il avale\nde très grosses quantités d’eau de mer.\nIl dévore une tonne de nourriture par jour.
+Il fait partie des plus grands POKéMON.\nIl rabat les poissons en groupe avant de les avaler d’une seule bouchée.
+Un magma à 1 200 degrés circule dans tout son corps.\nQuand il se refroidit, il se durcit et ralentit CHAMALLOT\ndans ses déplacements.
+S’il s’énerve, CAMERUPT fait jaillir de la lave en fusion\npar les bosses qui se trouvent sur son dos.\nIl vit dans les cratères des volcans.
+Du charbon brûle sans arrêt à l’intérieur de sa carapace.\nS’il est attaqué, il recrache de la fumée noire et épaisse\navant de prendre la fuite.
+Les gens pensent que s’il arrêtait de sauter partout,\nSPOINK mourrait presque sur le coup.\nIl porte la perle d’un COQUIPERL sur sa tête.
+Il hypnotise ses adversaires en exécutant des danses étranges.\nLes perles noires qu’il a sur le front sont de précieux joyaux.
+Il n’existe pas deux SPINDA avec des motifs identiques.\nIl arrive à troubler ses ennemis en se déplaçant bizarrement.
+Il vit dans les déserts arides. Pour attraper ses proies,\nil se place dans un trou et laisse sa gueule grande ouverte\nen attendant qu’elles tombent dedans.
+Il génère des ondes ultrasoniques en battant violemment des ailes.\nDès que sa proie est inconsciente, il l’arrose d’acide\npour pouvoir l’avaler.
+Il se cache du regard des autres en soulevant\nle sable du désert avec ses ailes.\nUne fine peau rouge protège ses yeux du sable.
+Il se sent plus à l’aise dans des endroits hostiles comme le désert.\nIl peut survivre 30 jours en utilisant seulement l’eau stockée\ndans son corps.
+On le trouve principalement dans les déserts.\nLa nuit, il se met à chasser les animaux épuisés\npar la chaleur du désert.
+Il toilette constamment ses ailes duveteuses.\nIl se dépêche de se laver à la moindre salissure\npour que ses ailes restent les plus blanches possibles.
+Si vous entendez une douce mélodie venir des montagnes,\nc’est sûrement un ALTARIA qui chantonne.
+S’il vient à croiser un SEVIPER, son poil se met à briller\net il prend sa position de combat. Ses griffes acérées\nsont sa meilleure arme.
+Il affûte sa queue tranchante comme une épée sur les rochers.\nIl se cache dans les hautes herbes pour attaquer sa proie\npar surprise.
+La vitalité de SELEROC dépend du cycle lunaire.\nIl est doté d’une force phénoménale les jours de pleine lune.
+SOLAROC absorbe l’énergie du soleil pendant la journée.\nToujours impassible, il parvient à lire les pensées\nde ses ennemis.
+Il sonde les bords boueux des rivières avec ses vibrisses.\nUn film fin et visqueux protège tout son corps.
+Il fait son nid au fond des marais. Il ne se pose pas de questions\net avale toutes les créatures qui passent près de lui.
+Il vient de par-delà les mers.\nC’est une créature très résistante qui prolifère\nrapidement, même dans les eaux polluées.
+Ce POKéMON très coriace agite tout le temps ses énormes pinces.\nIl faut beaucoup de patience pour le dresser.
+Il a été découvert dans des ruines anciennes.\nIl tourne sur lui-même pour se déplacer.\nIl reste en équilibre même quand il dort.
+KAORINE a été créé à partir de vieilles poupées d’argile\nconfectionnées par des civilisations anciennes.\nIl se déplace grâce à la lévitation.
+Tous les LILIA avaient disparu il y a 100 millions d’années.\nIls ont été recréés à partir d’un fossile, au moyen\nde techniques modernes.
+Lorsqu’il chasse, VACILYS utilise ses huit tentacules.\nIl dissout sa proie à l’aide d’un puissant acide\navant de l’avaler.
+C’est un POKéMON préhistorique.\nCaché derrière les rochers, il utilise ses pinces\nextensibles pour attraper ses proies.
+Rien ne peut transpercer la cuirasse d’ARMALDO.\nCe POKéMON embroche ses proies avec ses griffes\npour les avaler plus facilement.
+En raison de son apparence peu soignée, les chercheurs\nle négligent complètement. Il vit dans les étangs pollués.
+MILOBELLUS est d’une beauté à couper le souffle.\nCeux qui en voient un perdent aussitôt l’envie de se battre.
+MORPHEO a la capacité de changer son apparence en fonction\ndu temps. Il utilise la force de la nature pour combattre.
+Il change la couleur de son corps non seulement\npour se fondre dans le décor mais aussi selon\nson humeur, qu’il soit triste ou heureux.
+La corne de POLICHOMBR arrive à capter les sentiments des gens.\nIl adore se nourrir de sentiments tels que la jalousie et la malice.
+Un très violent sentiment de haine a transformé\nune poupée de chiffon en BRANETTE.\nS’il ouvre la bouche, une énergie négative s’en échappe.
+SKELENOX devient invisible pour se faufiler plus facilement\nderrière ses proies. Il a le pouvoir de traverser les murs.
+Son corps est complètement creux. Quand il ouvre la bouche,\nil aspire tout ce qui passe près de lui, à la façon d’un trou noir.
+TROPIUS vit dans les jungles tropicales.\nLes fruits qui poussent sur son cou sont succulents\net poussent deux fois dans l’année.
+EOKO se déplace en utilisant les courants aériens.\nIl utilise intelligemment sa longue queue pour cueillir\nles BAIES et les noix dont il raffole.
+ABSOL apparaît dès qu’une catastrophe naturelle\nest sur le point de se produire. Pour cette raison,\nles gens ont longtemps pensé qu’il portait malheur.
+OKEOKE adore se déplacer en groupe.\nIls se réunissent souvent pour dormir la nuit dans les cavernes.
+On raconte que STALGAMIN porte chance aux maisons qu’il visite.\nIl peut supporter une température de moins 100 degrés.
+Son corps constitué de glace ne peut pas fondre, même s’il est\nexposé au feu. Il peut instantanément geler l’humidité contenue\ndans l’air.
+Son corps est couvert d’une douce fourrure. Elle le protège\ndu sentiment de froid quand il se déplace en roulant sur la glace.
+Il utilise le bout de son nez pour sentir et toucher tout\nce qu’il ne connaît pas. Il s’amuse souvent à jongler\navec des OBALIE.
+Il traverse les mers glacées en brisant les blocs de glace\navec ses défenses. Il est protégé du froid par une grosse\ncouche de graisse.
+Ce POKéMON ferme sa coquille pour se protéger du danger.\nIl ne crée qu’une seule perle de toute sa vie,\nmais celle-ci est magnifique.
+Il vit dans les abysses, là où la lumière ne va jamais.\nIl allume le bout de sa queue qui ressemble à un poisson\npour attirer ses proies.
+Sa façon de se déplacer sous l’eau est d’une élégance\nincomparable. Du bout de sa fine bouche, il se nourrit\ndes algues qui poussent entre les rochers.
+RELICANTH n’a connu aucune évolution depuis\n100 millions d’années. Il a été découvert pendant\nune exploration dans les profondeurs de la mer.
+Pendant la saison des amours, d’innombrables LOVDISC\nse réunissent près des barrières de corail et donnent\nl’impression que la mer est rose.
+Sa tête dure comme le métal peut éclater de gros rochers.\nIl attend impatiemment que ses ailes poussent pour enfin voler.
+Son corps renforcé repousse toutes les attaques.\nCependant, le poids important de cette armure\nempêche DRACKHAUS de se déplacer librement.
+Une fois enragé, plus rien ne peut arrêter DRATTAK.\nIl détruit tout ce qu’il voit en utilisant ses griffes\nou en crachant des flammes.
+Il utilise les ondes magnétiques pour communiquer\navec ses semblables.\nToutes les cellules de son corps sont aimantées.
+Il flotte dans les airs en utilisant l’énergie magnétique.\nSon corps est si résistant qu’il n’aurait pas une seule\négratignure en tombant de très haut.
+Il résulte de la fusion de deux METANG.\nOn raconte que ses quatre cerveaux sont plus performants\nqu’un superordinateur.
+Son corps est essentiellement composé de roches,\net on ne sait pas s’il possède un cerveau ou un cœur.\nIl reste un mystère pour les scientifiques.
+Des scientifiques ont découvert que le corps de ce POKéMON\nest constitué du même type de glace que celle\nqu’on trouve au pôle Sud.
+Il est plus résistant que n’importe quel type de métal.\nSon corps s’est endurci à cause des fortes pressions\nsouterraines qu’il subit depuis des milliers d’années.
+LATIAS peut communiquer avec les gens par télépathie.\nIl change son apparence en renvoyant la lumière.
+D’un tempérament docile, LATIOS n’aime pas vraiment se battre.\nEn rentrant ses pattes avant, il peut voler plus vite qu’un jet.
+Ce seraient les fortes pluies que peut invoquer ce POKéMON qui\nauraient rendu les océans si vastes. Il a le pouvoir de maîtriser l’eau.
+Ce POKéMON légendaire incarne la terre.\nIl plongea dans un profond sommeil après\nson combat avec KYOGRE.
+RAYQUAZA a vécu pendant des centaines de millions d’années\ndans la couche d’ozone de l’atmosphère.\nQuand il vole, on croirait voir un météore.
+JIRACHI est capable de réaliser tous les vœux.\nIl ne reste éveillé que 7 jours sur mille ans.
+
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+Ils ressemblent aux hiéroglyphes inscrits sur les tablettes anciennes.\nIl semble y avoir un lien.
+MORPHEO a la capacité de changer son apparence en fonction\ndu temps. Il utilise la force de la nature pour combattre.
+MORPHEO a la capacité de changer son apparence en fonction\ndu temps. Il utilise la force de la nature pour combattre.
+MORPHEO a la capacité de changer son apparence en fonction\ndu temps. Il utilise la force de la nature pour combattre.
+DEOXYS a choisi lui-même d’avoir cette apparence agressive.\nIl trompe ses ennemis en changeant de forme à volonté.
 ~~~~~~~~~~~~~~~
 Text File : zukan_comment_za
 ~~~~~~~~~~~~~~~
@@ -56940,8 +57902,11 @@ Text File : tokuseiinfo_Champions
 ~~~~~~~~~~~~~~~
 Quand le Pokémon utilise une capacité à contact, il ignore\nles effets de protection de l’adversaire et inflige 1/4\ndes dégâts que la capacité aurait normalement infligés.\nLes autres effets de l’adversaire se déclenchent toujours.
 Les capacités de type Normal prennent le type Dragon\net leur puissance est multipliée par 1,2.
+Le Pokémon flotte au-dessus du sol, ce qui l’immunise contre\nles capacités de type Sol, ainsi que les effets de Picots,\nPics Toxik et Toile Gluante.\nQuand il met un adversaire K.O. avec une attaque,\nsa stat la plus élevée augmente de 1 cran.
 Le Pokémon peut utiliser ses capacités comme si\nle soleil brillait, même si ce n’est pas le cas.
+La puissance des capacités de type Feu du Pokémon\nest multipliée par 1,5.
 Quand le Pokémon subit des dégâts d’une capacité,\nil brûle l’adversaire.
+Les dégâts des capacités à contact subis par le Pokémon\nsont réduits de moitié.
 ~~~~~~~~~~~~~~~
 Text File : zukan_comment_scarlet
 ~~~~~~~~~~~~~~~

@@ -716,8 +716,11 @@ Teraform Zero
 Poison Puppeteer
 Piercing Drill
 Dragonize
+Eelevate
 Mega Sol
+Fire Mane
 Spicy Spray
+Aura Guard
 ~~~~~~~~~~~~~~~
 Text File : itemname
 ~~~~~~~~~~~~~~~
@@ -6955,6 +6958,10 @@ Mega Tatsugiri
 Mega Tatsugiri
 Mega Glimmora
 [~ 1526]
+Original Color
+Curly Form
+Droopy Form
+Stretchy Form
 ~~~~~~~~~~~~~~~
 Text File : zkn_type
 ~~~~~~~~~~~~~~~
@@ -8032,7 +8039,7 @@ Receiving Pokémon...
 Pokémon received successfully.
 Receive
 Back
-Pokémon GO Link
+POKÉMON GO
 You have too many Pokémon in Pokémon HOME.\nPlease organize your Boxes to make space.
 ~~~~~~~~~~~~~~~
 Text File : ribbon_LA
@@ -8661,7 +8668,7 @@ POKÉMON
 POKÉMON LIST
 [~ 2]
 [VAR 01DA(0000)] (No Filters Applied)
-[VAR 01DA(0000)] (Filters Showing [VAR 0203(0001,002C)] out of [VAR 0203(0002,002C)])
+[VAR 01DA(0000)] (Filters Showing [VAR 0204(0001,002C)] out of [VAR 0204(0002,002C)])
 [VAR 01DA(0000)] (Filtering Results...)
 [~ 6]
 [VAR 0102(0000)] (Lv. [VAR 0202(0001)])
@@ -9077,6 +9084,43 @@ Want to hear more about linking with Pokémon Champions?
 Tell me about linking
 Tell me about the visit icon
 No thanks
+If you move a Pokémon from a Game Boy Advance (GBA)\ngame into the currently connected game, its ID No. will\nchange.\n\nIf you move the Pokémon back into Pokémon HOME, its\nID No. will return to what it originally was.
+~~~~~~~~~~~~~~~
+Text File : gba_system
+~~~~~~~~~~~~~~~
+[~ 0]
+Connect to GBA Games
+Select a Box
+Pokémon That Can Be Deposited
+[VAR 0204(0000,002C)]
+Eggs or Pokémon that are holding items or that know hidden moves can’t be transferred\nto Pokémon HOME.
+Do you want to return to the main menu without connecting\nto any GBA game?
+Pokémon sent to Pokémon HOME can’t be returned to their\noriginal game, and the moves they know will change.\c\nAre you sure you want to proceed?
+Pokémon are being transferred from the selected Box to\nPokémon HOME...
+Pokémon have been transferred from your GBA games to\nPokémon HOME!
+Yes
+No
+Help
+Quit
+[~ 14]
+This right here is the screen where you can connect to\nGame Boy Advance games! If you want to transfer Pokémon\nyou caught in Game Boy Advance games to Pokémon HOME,\nhere’s where to do it!
+You’ll need to pick which Box you want to transfer over. Then all\nthe Pokémon in that Box will be sent to Pokémon HOME! Isn’t\nthat something?
+The Pokémon sent over will be dropped into your Pokémon HOME\nBoxes in the order that they arrive wherever there’s space!
+Just watch out, because that means that sometimes they end up in\ndifferent Boxes from each other!
+[~ 19]
+You’ve already moved [VAR 1302(0000,0000)][VAR 0101(0000)] from this save file\ninto Pokémon HOME!\c\nYou can send only one [VAR 0101(0000)] per save file.
+You’ve already moved a Shiny [VAR 0101(0000)] from this\nsave file into Pokémon HOME!\c\nOnly one Shiny [VAR 0101(0000)] per save file can be moved\ninto Pokémon HOME.
+Your selection includes one or more Pokémon that you’ve\nalready moved into Pokémon HOME from this save file,\c\nsuch as [VAR 1302(0000,0000)][VAR 0101(0000)]!\c\nOnly one [VAR 0101(0000)] per save file can be moved into\nPokémon HOME.
+Your selection includes one or more Pokémon that you’ve\nalready moved into Pokémon HOME from this save file,\c\nsuch as a Shiny [VAR 0101(0000)]!\c\nOnly one Shiny [VAR 0101(0000)] per save file can be moved\ninto Pokémon HOME.
+You can send only one [VAR 0101(0000)] per save file.\c\nThe Pokémon in this Box can’t be sent, as the Box includes\ntwo or more [VAR 0101(0000)].
+You can send only one Shiny [VAR 0101(0000)] per save file.\c\nThe Pokémon in this Box can’t be sent, as the Box includes\ntwo or more Shiny [VAR 0101(0000)].
+You can send only one [VAR 0101(0000)] from this save file.\c\nAre you sure you want to send a Box containing\n[VAR 1302(0000,0000)][VAR 0101(0000)]?
+You can send only one Shiny [VAR 0101(0000)] from this\nsave file.\c\nAre you sure you want to send a Box containing\na Shiny [VAR 0101(0000)]?
+You’ve selected a Box that contains a Pokémon that can be\nsent only once per save file, such as [VAR 1302(0000,0000)][VAR 0101(0000)].\c\nAre you sure you want to send this Box to Pokémon HOME?
+You’ve selected a Box that contains a Pokémon that can be\nsent only once per save file, such as a Shiny [VAR 0101(0000)].\c\nAre you sure you want to send this Box to Pokémon HOME?
+This Box contains Pokémon that can’t be sent to\nPokémon HOME.
+There are no Pokémon in this Box.
+This Box contains more Pokémon than you can deposit\nin Pokémon HOME.
 ~~~~~~~~~~~~~~~
 Text File : zkn_height
 ~~~~~~~~~~~~~~~
@@ -12132,7 +12176,7 @@ Text File : zkn_weight
 ~~~~~~~~~~~~~~~
 Text File : link_system
 ~~~~~~~~~~~~~~~
-Link with Pokémon Champions
+POKÉMON CHAMPIONS
 Checking for Pokémon coming back from\nPokémon Champions...
 Yes
 No
@@ -12258,6 +12302,17 @@ You can’t connect this game’s save data to\nPokémon HOME yet.\c\nPlease sav
 [~ 91]
 [~ 92]
 You can’t connect this game’s save data to Pokémon HOME\nright now.\c\nPlease save your progress in your Pokémon Legends: Z-A\ngame after returning from Hyperspace Lumiose.
+[~ 94]
+Connect to GBA games
+Pokémon sent to Pokémon HOME can’t come back.\c\nAre you sure you want to proceed?
+Your Pokédex is being synchronized with Pokémon HOME...
+You can only connect to Game Boy Advance (GBA) games\nonce per minute. Please wait.
+Pokémon FireRed
+Pokémon LeafGreen
+[~ 101]
+Here’s where you choose the save file of the Game Boy Advance (GBA)\ngame you want to connect to Pokémon HOME!
+If there’s a save file you can connect to on your Nintendo Switch, that\ngame’s icon will show up here!
+Just select an icon, and your Pokédex here in Pokémon HOME will\nautomatically sync with the Pokédex in the chosen game!
 ~~~~~~~~~~~~~~~
 Text File : main_system
 ~~~~~~~~~~~~~~~
@@ -12311,6 +12366,9 @@ Receive Pokémon from Pokémon GO
 [~ 47]
 Pokémon Champions
 Send Pokémon to Pokémon Champions
+[~ 50]
+GBA games
+Move Pokémon from GBA games on the Nintendo Switch
 ~~~~~~~~~~~~~~~
 Text File : ribbon_BDSP
 ~~~~~~~~~~~~~~~
@@ -21155,7 +21213,7 @@ Are you using Pokémon HOME on your mobile device?
 [~ 15]
 By linking to a Nintendo Account, you’ll\nbe able to share your usage info\r\nbetween devices.\c\nHave you linked to a Nintendo Account on\nthe mobile device version?
 [~ 17]
-From now on, if you link a Nintendo Account when\nstarting up the mobile device version, you’ll be able\r\nto share your usage info with your other devices.
+If you do start using the mobile device version in the future,\nlinking your Nintendo Account will allow you to share your\r\nusage info across devices.
 You won’t be able to share your usage info with your\nother devices unless you’ve already linked a\r\nNintendo Account on the mobile device version!\c\nIt’s recommended that you link a Nintendo Account\non the mobile device version before proceeding.
 Now...let’s get Pokémon HOME started!
 [~ 21]
@@ -23892,6 +23950,13 @@ Ver.[VAR 0200(0000)].[VAR 0200(0001)].[VAR 0200(0002)]
 [~ 3]
 Support ID
 XXXX-XXXX-XXXX-XXXX
+[~ 6]
+Do you want to clear your cache?
+It might take longer to log in once you clear your cache.\c\nPokémon HOME data currently in use won’t be deleted.\nAre you sure you want to clear your cache?
+Yes
+No
+Now clearing the cache...
+Cache successfully cleared!
 ~~~~~~~~~~~~~~~
 Text File : wazainfo_all
 ~~~~~~~~~~~~~~~
@@ -24894,14 +24959,16 @@ Sinnoh Region Tasks
 Hisui Region Tasks
 Paldea Region Tasks
 Kalos Region Tasks
-[~ 74]
+Kanto Region Tasks (GBA)
+[~ 75]
 Kanto Task #[VAR 0201(0000)]
 Galar Task #[VAR 0201(0000)]
 Sinnoh Task #[VAR 0201(0000)]
 Hisui Task #[VAR 0201(0000)]
 Paldea Task #[VAR 0201(0000)]
 Kalos Task #[VAR 0201(0000)]
-[~ 81]
+Kanto Task (GBA) #[VAR 0201(0000)]
+[~ 83]
 No. [VAR 0203(0000,0000)]
 [VAR 0101(0000)]
 Height
@@ -24912,7 +24979,7 @@ Weight
 
 (Form [VAR 0201(0000)] of [VAR 0201(0001)])
 
-[~ 92]
+[~ 94]
 Games it appears in ([VAR 0200(0000)] of [VAR 0200(0001)])
 Games it appears in
 Bring a Japanese-language [VAR 0101(0000)] to\nPokémon HOME, and you’ll be able to view its\ndetails in Japanese, too!
@@ -24925,6 +24992,7 @@ Bring a Korean-language [VAR 0101(0000)] to\nPokémon HOME, and you’ll be able
 Bring a simplified-Chinese-language [VAR 0101(0000)]\nto Pokémon HOME, and you’ll be able to view its\ndetails in simplified Chinese, too!
 Bring a traditional-Chinese-language [VAR 0101(0000)]\nto Pokémon HOME, and you’ll be able to view its\ndetails in traditional Chinese, too!
 Bring a Latin American Spanish-language (ES-LA)\n[VAR 0101(0000)] to Pokémon HOME, and you’ll be able to\nview its details in Latin American Spanish, too!
+There is no Pokédex entry for this Pokémon. Please either\nchange the game or the language you’re using.
 Bring a Japanese-language [VAR 0101(0000)] to\nPokémon HOME, and you’ll be able to view its\ndetails in Japanese, too!
 Bring an English-language [VAR 0101(0000)] to\nPokémon HOME, and you’ll be able to view its\ndetails in English, too!
 Bring a Castilian Spanish-language (ES-ES) [VAR 0101(0000)]\nto Pokémon HOME, and you’ll be able to view its\ndetails in Castilian Spanish, too!
@@ -24935,14 +25003,15 @@ Bring a Korean-language [VAR 0101(0000)] to\nPokémon HOME, and you’ll be able
 Bring a simplified-Chinese-language [VAR 0101(0000)]\nto Pokémon HOME, and you’ll be able to view its\ndetails in simplified Chinese, too!
 Bring a traditional-Chinese-language [VAR 0101(0000)]\nto Pokémon HOME, and you’ll be able to view its\ndetails in traditional Chinese, too!
 Bring a Latin American Spanish-language (ES-LA)\n[VAR 0101(0000)] to Pokémon HOME, and you’ll be able to\nview its details in Latin American Spanish, too!
-[~ 115]
+There is no Pokédex entry for this Pokémon. Please either\nchange the game or the language you’re using.
+[~ 119]
 
 No. [VAR 0203(0000,0000)]
 
 
 [VAR 0101(0000)]
 ??????
-[~ 122]
+[~ 126]
 Japanese (Kana)
 Japanese (Kanji)
 English
@@ -24954,13 +25023,13 @@ Spanish (Spain)
 Chinese (Simplified)
 Chinese (Traditional)
 Spanish (Latin America)
-[~ 134]
+[~ 138]
 No. [VAR 0203(0000,0000)]
 [VAR 0101(0000)]
 Sorted By: [VAR 01DA(0000)] (No Filters Applied)
 Sorted By: [VAR 01DA(0000)] (Filters Showing [VAR 0203(0001,002C)] out of [VAR 0203(0002,002C)])
 Sorted By: [VAR 01DA(0000)] (Filters Showing [VAR 0203(0001,002C)] Forms)
-[~ 140]
+[~ 144]
 Filter Pokémon by...
 Sort Pokémon by...
 First Initial
@@ -24971,7 +25040,7 @@ Shape
 Form
 Featured Game
 Pokédex Status
-[~ 151]
+[~ 155]
 Filter by initial letter
 Filter by type
 Filter by main color
@@ -24980,14 +25049,14 @@ Filter by form
 Filter by the games it appears in
 Filter by Pokédex registration status
 No matches found!
-[~ 160]
+[~ 164]
 Pokédex Number
 Alphabetical Order
 Heaviest to Lightest
 Lightest to Heaviest
 Tallest to Shortest
 Shortest to Tallest
-[~ 167]
+[~ 171]
 Red
 Blue
 Green
@@ -24998,7 +25067,7 @@ Brown
 Gray
 White
 Black
-[~ 178]
+[~ 182]
 Show all forms
 Shiny form
 Male form
@@ -25011,14 +25080,14 @@ Alolan Form
 Galarian Form
 Hisuian Form
 Paldean Form
-[~ 191]
+[~ 195]
 Registered
 Not yet registered
-[~ 194]
+[~ 198]
 ———
 ——————
 —————————
-[~ 198]
+[~ 202]
 [VAR 0101(0000)]
 ??????
 
@@ -25027,24 +25096,24 @@ Complete [VAR 0201(0000)] task[VAR 1101(0000,0100)]s for this region\nto unlock 
 ?????????????????????
 [VAR 0200(0000)]/[VAR 0200(0001)]
 [VAR 01DA(0000)] (Completed Tasks: [VAR 0201(0001)])
-[~ 207]
+[~ 211]
 This is the grand Pokédex that Grand Oak whipped up.\nNeat-o, right? It’ll automatically register any Pokémon you bring\nalong to your cozy Boxes here in Pokémon HOME!
 Of course it’s a super goal to complete the WHOLE Pokédex with\nevery last Pokémon out there! But, boy, is that ever a lot of work!\nTry using Spotlight Mode to focus in on different regional Pokédexes,\nand keep chipping away at that goal—one region at a time!
 But that’s not all! Have you tried giving your L or R Buttons a squeeze?\nPress ’em and you’ll be switched right on over to your Research Tasks!\nGrand Oak himself wants YOUR help with his great research,\nso help an old man out, won’t you?
-[~ 211]
+[~ 215]
 This here is the details screen, where you’ll find all the spiffy key details\nabout your Pokémon crammed into one place!\nGet started off by choosing a Pokémon from the list on the right!
 If you want to learn even more about your Pokémon,\ngive your ZL or ZR Buttons a friendly tap, won’t you?\nYou’ll be able to see their Pokédex entries from different games\nyou’ve found ’em in. It’s super nifty!
 And if you’ve got Pokémon that you’ve registered in more than one form,\nyou can use those handy L and R Buttons to flip between their forms!\nDid you know that sometimes forms have different Pokédex entries, too?\nBe sure you give ’em all a good look!
 And you’ve got the Y Button there to help you check which games\nthat Pokémon appears in.\nThat means you might be able to get the Pokémon in those games!
-[~ 216]
+[~ 220]
 This list view lets you just go on and take a gander at all the Pokémon\nyou’ve registered in all their glory! It sure is a sight, isn’t it?\nWhenever you want to take a closer look at any one of your Pokémon\nas you scroll through, give that A Button a little press!
 The X Button opens up the filter window! Fwooosh! Just like that!\nYou can filter your list of Pokémon by all sorts of conditions, including\nthings like their types, their main color, or even shape!\nWant to know what my type is? Why, I’m the having-a-ball type!
 The Y Button lets you change up the order that your Pokémon are\nsorted in! Sure, you’ve got your familiar old Pokédex-number order...\nBut how about sorting by height or by weight? It’s good to turn things\non their head sometimes and look at ’em from a whole new angle!
-[~ 220]
+[~ 224]
 Research Tasks might seem a bit taxing, but they’re really rewarding!\nThey’re requests that come from Grand Oak, see, and what could\nbe better than helping out the grand old gent himself?
 If you’ve got save data on your Nintendo Switch from a region\nthat Grand Oak wants to research, then you’ll see task lists start\npopping up for each region on this screen!
 But consider this your warning, pal! To complete a task, you’ve got to get\nthe Pokémon Grand Oak is interested in seeing AND get it in that same\nregion as the task belongs to. He’s a bit of a stickler like that!
-[~ 224]
+[~ 228]
 On the right side of this screen, you’ve got your list of Research Tasks.\nAll you’ve got to do to complete a Research Task is get your hands on the\nnecessary Pokémon! I bet you’re a catching pro, aren’t you?
 But there are still a few little tricks to these tasks!\nEven if you get your hands on the right Pokémon species, it won’t\ncount if it’s from the wrong game or in the wrong form!\nBe sure you check carefully where your Pokémon were caught!
 But if you do manage to get the right Pokémon that meet every condition,\nthen all you have to do is bring ’em to your Pokémon HOME Boxes and\nyou’ll find your tasks automatically get marked off as complete!\nYou don’t even have to lift a finger!
@@ -33564,7 +33633,7 @@ Lv. [VAR 0202(0000)]
 No. [VAR 0203(0000,0000)]
 [VAR 0101(0000)]
 No history
-[~ 75]
+Receiving data...
 Deposited
 Withdrawn
 Released
@@ -33594,6 +33663,12 @@ Visited Pokémon Champions
 Sent [VAR 0203(0000,002C)] Pokémon to visit.
 Came back from Pokémon Champions
 Welcomed back [VAR 0203(0000,002C)] Pokémon.
+[~ 105]
+Sent from Pokémon FireRed
+Sent from Pokémon LeafGreen
+Sent from Pokémon FireRed
+Sent from Pokémon LeafGreen
+You received [VAR 0203(0000,002C)] Pokémon.
 ~~~~~~~~~~~~~~~
 Text File : B2W2_place_name
 ~~~~~~~~~~~~~~~
@@ -37276,6 +37351,9 @@ The Premium Plan you have been using on your\nmobile device is currently paused.
 There was an error saving your linked game data.\n\nIf you made changes only to your Pokémon\nHOME Boxes, those changes have been saved.\nIf you made changes to your Pokémon Boxes in\nthis linked game, no changes to those Boxes or\nto your Pokémon HOME Boxes were saved.\n\nNow returning to the title screen.
 This Nintendo Network ID has been restricted\nfrom moving Pokémon to Pokémon HOME.
 Maintenance has been completed. Log-ins are\ncurrently being limited to balance server load.\nUsers will gradually become able to log in.\nPlease wait a little while.
+[~ 17]
+There was an error saving your linked game data.\nNo Pokémon have been transferred from the\nlinked game to Pokémon HOME.\n\nNow returning to the title screen.
+Your account is currently restricted from using this feature.\c\nYour attempt to connect to Game Boy Advance (GBA) games\nhas been canceled.
 ~~~~~~~~~~~~~~~
 Text File : SWSH_place_name
 ~~~~~~~~~~~~~~~
@@ -37572,6 +37650,27 @@ Text File : topics_contents
 #19\nLumiose’s Guardian
 #20\nThe Eternal Flower
 [~ 126]
+#01\nFirst Partner Pokémon
+#02\nViridian Forest
+#03\nMt. Moon
+#04\nAquatic Pokémon
+#05\nDiglett’s Cave
+#06\nPsychic
+#07\nRock Tunnel
+#08\nPokémon Tower
+#09\nFighting Dojo
+#10\nPower Plant
+#11\nSeafoam Islands
+#12\nPokémon Mansion
+#13\nFossil Secrets
+#14\nVictory Road
+#15\nCerulean Cave
+#16\nEvolution Stones
+#17\nTrading Mysteries
+#18\nSevii Islands
+#19\nLegendary Bird Pokémon
+#20\nGenetic Pokémon
+[~ 147]
 Pokémon that appear on Route 1, which connects\nPallet Town and Viridian City.
 Pokémon that appear in Viridian Forest, which is known\nas a hot spot for catching Bug-type Pokémon.
 Pokémon that appear in Mt. Moon, which is located to\nthe east of Pewter City.
@@ -37592,7 +37691,7 @@ Pokémon that evolved through a mysterious power when\ntraded between Trainers.
 Pokémon that can fly you around when you\nare on their back.
 Legendary bird Pokémon that have been sighted in\nthe Kanto region.
 A Pokémon that is said to have been created by\na certain scientist.
-[~ 147]
+[~ 168]
 Pokémon that Trainers of the Galar region choose as\ntheir first partner before beginning their journey.
 Pokémon that appear on the little tranquil path\nbetween Postwick and Wedgehurst.
 Pokémon that appear in the mist-shrouded\nSlumbering Weald.
@@ -37613,7 +37712,7 @@ Pokémon that Gym Challenger Bede is particularly\nfond of!
 Pokémon that Galar Champion Leon himself\nhas on his team!
 Pokémon that are part of the Pokémon band that celebrated\nthe birth of a new Champion.
 Powerful Pokémon that have played a role in shaping\nthe history of the Galar region.
-[~ 168]
+[~ 189]
 Pokémon that Trainers of the Sinnoh region choose as their first\npartner before beginning their journey.
 Pokémon that appear on the hilly road that connects Floaroma\nTown and Eterna City.
 Pokémon that dwell in the mazelike forest enveloped in chilly air.
@@ -37634,7 +37733,7 @@ Pokémon that live amid scenery that resembles a miniature of the\nSinnoh region
 Pokémon that can be seen deep in the hinterlands of Sinnoh\nand wield a special power.
 Pokémon that appear at Sinnoh’s great lakes and wield a\nmysterious power.
 Pokémon whose names have been passed down in the mythology\nof the Sinnoh region.
-[~ 189]
+[~ 210]
 Pokémon you were given by the Professor for your work with the\nSurvey Corps.
 Pokémon you were ordered to catch as a trial to join the Galaxy\nExpedition Team.
 Pokémon that live in the rich, sprawling greenery of the\nObsidian Fieldlands.
@@ -37655,7 +37754,7 @@ Pokémon that stand in your way in caverns beneath lakes, serving\nas guards.
 Pokémon that wield strange powers and show themselves here\nand there in Hisui.
 Pokémon that appeared atop Mount Coronet and are said to have\ntransformed through a mysterious power.
 A Pokémon whose existence is spoken of in the mythology of the\nHisui region.
-[~ 210]
+[~ 231]
 Pokémon you could receive from the director when you first\nenrolled at the academy.
 Pokémon you can meet on this nice path where you can enjoy\nthe salty breeze from the sea.
 Pokémon seen around the great city that is also home to the\nacademy you attend.
@@ -37676,7 +37775,7 @@ Pokémon used by Professor Sada and steeped in many mysteries.
 Pokémon used by Professor Turo and steeped in many mysteries.
 Pokémon known as the treasures of ruin, sealed away with\nsacred stakes.
 Legendary Pokémon capable of traversing the Paldea region \nunimpeded.
-[~ 231]
+[~ 252]
 Trusty Pokémon you might be partnered with in order to get back\nyour stolen travel bag.
 Pokémon you could catch in the first Wild Zone you entered.
 Pokémon you faced in your promotion matches for the\nZ-A Royale.
@@ -37697,6 +37796,27 @@ Powerful Pokémon you calmed by battling together with other\ntop-ranked members
 The Legendary Pokémon of the Kalos region that rule over\nlife and destruction.
 The Legendary Pokémon you sought to catch in order to make\nLumiose a better city for all.
 The Pokémon you were entrusted with by the leader of Team MZ\nso you could continue to protect Lumiose.
+[~ 273]
+Pokémon that Trainers of the Kanto region choose as their first\npartner before beginning their journey.
+Pokémon that appear in Viridian Forest, which is known as a hot\nspot for catching Bug-type Pokémon.
+Pokémon that appear in Mt. Moon, which is located to the east of\nPewter City.
+Pokémon that can be found close to the waters of the Kanto\nregion.
+Pokémon that dug out the huge tunnel connecting Vermilion City\nand Pewter City.
+Pokémon that the psychics of Kanto often choose as their\npartners.
+Pokémon that dwell inside the Rock Tunnel, where light doesn’t\nreach.
+Pokémon that caused people to think that the Pokémon Tower in\nLavender Town was haunted.
+Pokémon that are highly recommended by the Karate Master of\nSaffron City’s Fighting Dojo.
+Pokémon that have made their home inside the abandoned\nPower Plant.
+Pokémon that appear in the Seafoam Islands, located in the\nsouthern sea of Kanto.
+Pokémon that have made their home inside the desolate\nPokémon Mansion on Cinnabar Island.
+Ancient Pokémon that have been revived from fossils found in the\nKanto region.
+Powerful Pokémon that those who challenge the Pokémon League\nmust face along their way.
+Pokémon that appear in the deep cave located to the northwest\nof Cerulean City.
+Pokémon that have evolved thanks to the mysterious power\nhidden within Evolution stones.
+Pokémon that evolved through a mysterious power when traded\nbetween Trainers.
+Pokémon that appear on the Sevii Islands, which can be explored\nby riding the Seagallop ferries.
+Legendary bird Pokémon that have been sighted in the Kanto\nregion.
+A Pokémon that is said to have been created by a certain\nscientist.
 ~~~~~~~~~~~~~~~
 Text File : USUM_place_name
 ~~~~~~~~~~~~~~~
@@ -40579,6 +40699,848 @@ When the Pokémon knocks out a target, it utters a\nchilling neigh, which boosts
 When the Pokémon knocks out a target, it utters a\nterrifying neigh, which boosts its Sp. Atk stat.
 This Ability combines the effects of both Calyrex’s\nUnnerve Ability and Glastrier’s Chilling Neigh Ability.
 This Ability combines the effects of both Calyrex’s\nUnnerve Ability and Spectrier’s Grim Neigh Ability.
+~~~~~~~~~~~~~~~
+Text File : zukan_comment_fr
+~~~~~~~~~~~~~~~
+
+There is a plant seed on its back right\nfrom the day this POKéMON is born.\nThe seed slowly grows larger.
+There is a plant bulb on its back.\nWhen it absorbs nutrients, the bulb is said\nto blossom into a large flower.
+A bewitching aroma wafts from its flower.\nThe fragrance becalms those engaged in\na battle.
+From the time it is born, a flame burns\nat the tip of its tail. Its life would end\nif the flame were to go out.
+It lashes about with its tail to knock\ndown its foe. It then tears up the fallen\nopponent with sharp claws.
+Its wings can carry this POKéMON close to\nan altitude of 4,600 feet. It blows out\nfire at very high temperatures.
+When it retracts its long neck into its\nshell, it squirts out water with vigorous\nforce.
+This POKéMON is very popular as a pet.\nIts fur-covered tail is a symbol of its\nlongevity.
+It crushes its foe under its heavy body\nto cause fainting. In a pinch, it will\nwithdraw inside its shell.
+It is covered with a green skin. When it\ngrows, it sheds the skin, covers itself\nwith silk, and becomes a cocoon.
+Even though it is encased in a sturdy\nshell, the body inside is tender.\nIt can’t withstand a harsh attack.
+The wings are protected by rain-repellent\ndust. As a result, this POKéMON can fly\nabout even in rain.
+Often found in forests and grasslands.\nIt has a sharp, toxic barb of around two\ninches on top of its head.
+This POKéMON is in a temporary stage\nwhile making its body. It is almost\ncompletely unable to move on its own.
+May appear in a swarm. Flies at violent\nspeeds, all the while stabbing with the\ntoxic stinger on its rear.
+Does not like to fight. It hides in\ntall grass and so on, foraging for food\nsuch as small bugs.
+The claws on its feet are well developed.\nIt can carry prey such as an EXEGGCUTE\nto its nest over 60 miles away.
+It spreads its gorgeous wings widely to\nintimidate enemies. It races through the\nskies at Mach-2 speed.
+Its fangs are long and very sharp.\nThey grow continuously, so it gnaws on\nhard things to whittle them down.
+Its rear feet have three toes each.\nThey are webbed, enabling it to swim\nacross rivers.
+It busily flits around here and there.\nEven if it is frail, it can be a tough\nfoe that uses MIRROR MOVE.
+Its huge and magnificent wings can keep it\naloft in the sky. It can remain flying a\nwhole day without landing.
+A very common sight in grassland, etc.\nIt flicks its tongue in and out to sense\ndanger in its surroundings.
+The pattern on its belly appears to be a\nfrightening face. Weak foes will flee just\nat the sight of the pattern.
+It has small electric sacs on both its\ncheeks. If threatened, it looses electric\ncharges from the sacs.
+Its electric charges can reach even\n100,000 volts. Careless contact can cause\neven an Indian elephant to faint.
+It burrows and lives underground.\nIf threatened, it curls itself up into a\nball for protection.
+It is adept at attacking with the spines\non its back and its sharp claws while\nquickly scurrying about.
+Though small, it must be treated with\ncaution because of its powerfully toxic\nbarbs. The female has smaller horns.
+The female has a gentle temperament.\nIt emits ultrasonic cries that have the\npower to befuddle foes.
+The body is covered by stiff, needle-\nlike scales. If it becomes excited,\nthe needles bristle outwards.
+Its large ears are flapped like wings\nwhen it is listening to distant sounds.\nIt extends toxic barbs when angered.
+It is easily angered. By swinging its well-\ndeveloped horn wildly, it can even punch\nthrough diamond.
+It is recognized by its rock-hard hide\nand its extended horn. Be careful with\nthe horn as it contains venom.
+Its adorable appearance makes it popular\nas a pet. However, it is rare and\ndifficult to find.
+It has an acute sense of hearing. It can\neasily hear a pin being dropped nearly\n1,100 yards away.
+While young, it has six gorgeous tails.\nWhen it grows, several new tails are\nsprouted.
+It has nine long tails and fur that\ngleams gold. It is said to live for\n1,000 years.
+It captivates foes with its huge, round\neyes, then lulls them to sleep by singing\na soothing melody.
+Its fur is extremely fine, dense, and\nsupple. The exquisitely pleasant fur\nconveys an image of luxury.
+It has no eyes. Instead, it relies on\nits ultrasonic cries for echo location to\nflit about in darkness.
+It clamps down on its prey with needle-\nsharp fangs and drains over 10 ounces of\nblood in one gulp.
+Its scientific name is “Oddium Wanderus.”\nAt night, it is said to walk nearly 1,000\nfeet on its two roots.
+Its pistils exude an incredibly foul odor.\nThe horrid stench can cause fainting at a\ndistance of 1.25 miles.
+Its petals are the largest in the world.\nIt fiendishly scatters allergy-causing\npollen from its petals.
+Growing out of the bug’s back are\nmushrooms called tochukaso. The mushrooms\ngrow with the bug host.
+It scatters toxic spores from the\nmushroom cap. In China, the spores are\nused as herbal medicine.
+Its eyes act as radar, enabling it to be\nactive in darkness. The eyes can also\nshoot powerful beams.
+The wings are covered with dustlike\nscales. Every time it flaps its wings, it\nlooses highly toxic dust.
+It burrows through the ground at a\nshallow depth. It leaves raised earth in\nits wake, making it easy to spot.
+In battle, it digs through the ground and\nstrikes the unsuspecting foe from an\nunexpected direction.
+All it does is sleep during the daytime.\nAt night, it patrols its territory with its\neyes aglow.
+Has a vicious temperament. Beware if it\nraises its tail straight up. It is a signal\nthat it is about to pounce and bite.
+It is constantly wracked by a headache.\nWhen the headache turns intense, it begins\nusing mysterious powers.
+The forelegs are webbed, helping to make\nit an adept swimmer. It can be seen\nswimming elegantly in lakes, etc.
+Light and agile on its feet, and ferocious\nin temperament. When angered, it flies into\nan uncontrollable frenzy.
+It is always outrageously furious. If it\ngives chase, it will tenaciously track the\ntarget no matter how far.
+Very friendly and faithful to people.\nIt will try to repel enemies by barking\nand biting.
+A POKéMON that is described in Chinese\nlegends. It is said to race at an\nunbelievable speed.
+Its slick black skin is thin and damp.\nA part of its internal organs can be seen\nthrough the skin as a spiral pattern.
+Its two legs are well developed.\nEven though it can live on the ground,\nit prefers living in water.
+An adept swimmer, it knows the front\ncrawl, butterfly, and more. It is faster\nthan the best human swimmers.
+It sleeps for 18 hours a day. It uses a\nvariety of extrasensory powers even\nwhile asleep.
+It happened one morning - a boy with\nextrasensory powers awoke in bed\ntransformed into KADABRA.
+It does not like physical attacks very\nmuch. Instead, it freely uses extra-\nsensory powers to defeat foes.
+Its whole body is composed of muscles.\nEven though it’s the size of a human\nchild, it can hurl 100 grown-ups.
+Its formidable body never gets tired.\nIt helps people by doing work such as\nthe moving of heavy goods.
+Its four ruggedly developed arms can\nlaunch a flurry of 1,000 punches in just\ntwo seconds.
+Its bud looks like a human face. Because\nof the bud, it is rumored to be a type of\nlegendary mandrake plant.
+The leafy parts act as cutters for\nslashing foes. It spits a fluid that\ndissolves everything.
+Lures prey into its mouth with a honeylike\naroma. The helpless prey is melted with\na dissolving fluid.
+Its eyes are as transparent as crystals.\nFrom them, it shoots mysterious\nbeams of light.
+It has 80 tentacles that move about\nfreely. They can sting, causing poisoning\nand sharp, stabbing pain.
+Its round form makes it easy to pick up.\nSome people have used them to hurl\nat each other in a snowball fight.
+Be careful while hiking on mountain trails.\nGRAVELER may come rolling down the path\nwithout slowing.
+It is enclosed in a hard shell that is as\nrugged as slabs of rock. It sheds skin\nonce a year to grow larger.
+Its body is light, and its legs are\nincredibly powerful. It can clear\nAyers Rock in one leap.
+It can gallop at a top speed of 150\nmiles per hour. It can race as fast as a\nbullet train while ablaze.
+It is always vacantly lost in thought, but\nno one knows what it is thinking about.\nIt is good at fishing with its tail.
+When a SLOWPOKE went hunting in the sea,\nits tail was bitten by a SHELLDER. That\nmade it evolve into SLOWBRO.
+It moves while constantly hovering.\nIt discharges THUNDER WAVE and so on\nfrom the units at its sides.
+A linked cluster formed of several\nMAGNEMITE. It discharges powerful\nmagnetic waves at high voltage.
+It always walks about with a plant stalk\nclamped in its beak. The stalk is used for\nbuilding its nest.
+A two-headed POKéMON that was discovered\nas a sudden mutation. It runs at a pace\nof over 60 miles per hour.
+An odd species that is rarely found.\nThe three heads respectively represent\njoy, sadness, and anger.
+Covered with light blue fur, its hide is\nthick and tough. It is active in bitter\ncold of minus 40 degrees Fahrenheit.
+Its body is covered with a pure white\nfur. The colder the weather, the more\nactive it becomes.
+Sludge exposed to X rays from the moon\ntransformed into GRIMER. It loves feeding\non filthy things.
+It is usually undetectable because it\nblends in with the ground. Touching it can\ncause terrible poisoning.
+It is encased in a shell that is harder\nthan diamond. Inside, however, it is\nsurprisingly tender.
+Its shell is extremely hard. It cannot be\nshattered, even with a bomb. The shell\nopens only when it is attacking.
+A being that exists as a thin gas. It can\ntopple an Indian elephant by enveloping\nthe prey in two seconds.
+If you get the feeling of being watched\nin darkness when nobody is around,\nHAUNTER is there.
+It is said to emerge from darkness to\nsteal the lives of those who become lost\nin mountains.
+It usually lives underground. It searches\nfor food while boring its way through the\nground at 50 miles per hour.
+A descendent of the legendary animal\nbaku, which is said to eat dreams. It is\nskilled at hypnotism.
+It carries a pendulum-like device. There\nonce was an incident in which it took\naway a child it hypnotized.
+It can be found near the sea. The large\npincers grow back if they are torn out of\ntheir sockets.
+Its large and hard pincer has 10,000-\nhorsepower strength. However, being so\nbig, it is unwieldy to move.
+A life-form whose identity is unknown.\nIt is said to SCREECH or suddenly\nSELFDESTRUCT.
+It explodes in response to even minor\nstimuli. It is feared, with the nickname\nof “The Bomb Ball.”
+Even though it appears to be eggs of\nsome sort, it was discovered to be a life-\nform more like plant seeds.
+It is called “The Walking Tropical\nRainforest.” Each of the nuts has\na face and a will of its own.
+It wears the skull of its dead mother on\nits head. When it becomes lonesome, it is\nsaid to cry loudly.
+It is small and was originally very weak.\nIts temperament turned ferocious when it\nbegan using bones.
+The legs freely contract and stretch.\nThe stretchy legs allow it to hit a\ndistant foe with a rising kick.
+The spirit of a pro boxer has infused this\nPOKéMON. It throws punches that are\nfaster than a bullet train.
+Its tongue is twice the length of its\nbody. It can be moved like an arm for\ngrabbing food and attacking.
+Its thin, balloon-like body is inflated by\nhorribly toxic gases. It reeks when it is\nnearby.
+Very rarely, a sudden mutation can result\nin two small KOFFING twins becoming\nconjoined as a WEEZING.
+Strong, but not too bright, this POKéMON\ncan shatter even a skyscraper with its\ncharging TACKLES.
+It begins walking on its hind legs after\nevolution. It can punch holes through\nboulders with its horn.
+It lays several eggs a day. The eggs are\napparently rich in nutrients and extremely\ndelicious.
+Blue plant vines cloak the POKéMON’s\nidentity in a tangled mass. It entangles\nanything that gets close.
+The female raises its offspring in a pouch\non its belly. It is skilled at attacking\nusing COMET PUNCH.
+It maintains balance using its tail, which\nis wound up like a coil. It may spray ink\nfrom its mouth.
+Its body bristles with sharp spikes.\nCarelessly trying to touch it could cause\nfainting from the spikes.
+Its dorsal and pectoral fins are strongly\ndeveloped like muscles. It can swim at a\nspeed of five knots.
+The horn on its head is sharp like a\ndrill. It bores a hole in a boulder to\nmake its nest.
+It appears in large numbers by seashores.\nAt night, its central core flashes with a\nred light.
+This POKéMON has a geometric body.\nBecause of its body, the locals suspect\nthat it is an alien creature.
+It is adept at conning people. It is said\nto be able to create walls out of thin\nair by miming.
+It tears and shreds prey with its wickedly\nsharp scythes. It very rarely spreads its\nwings to fly.
+It speaks using a language that sounds\nhuman. Research is under way to determine\nwhat is being said.
+It loves to feed on strong electricity.\nIt occasionally appears around large\npower plants and so on.
+Found near the mouth of a volcano.\nThis fire-breather’s body temperature is\nnearly 2,200 degrees Fahrenheit.
+Its two long pincer horns are powerful.\nOnce they grip an enemy, they won’t\nrelease until the foe is torn.
+When it is about to TACKLE, it whips\nits body repeatedly with its three\nlong tails.
+It is virtually worthless in terms of both\npower and speed. It is the most weak and\npathetic POKéMON in the world.
+It has an extremely aggressive nature.\nThe HYPER BEAM it shoots from its mouth\ntotally incinerates all targets.
+Its high intelligence enables it to\nunderstand human speech. It likes to ferry\npeople on its back.
+It can freely recombine its own cellular\nstructure to transform into other life-\nforms.
+An extremely rare POKéMON that may\nevolve in a number of different ways\ndepending on stimuli.
+Its body’s cellular structure is similar to\nthe molecular composition of water.\nIt can melt invisibly in water.
+If it is angered or startled, the fur all\nover its body bristles like sharp needles\nthat pierce foes.
+It has a flame bag inside its body. After\ninhaling deeply, it blows out flames of\nnearly 3,100 degrees Fahrenheit.
+Using the most advanced technologies,\nscientists finally succeeded in making the\nfirst artificial POKéMON.
+A prehistoric POKéMON that lived in the\nprimordial sea, it swims by twisting its\n10 tentacles about.
+Its tentacles are highly developed as if\nthey are hands and feet. As soon as it\nensnares prey, it bites.
+This POKéMON was regenerated from the\nfossil of an ancient creature. It protects\nitself with a hard shell.
+It swims freely through water. It catches\nprey with its scythe-like arms and drains\nthe victim’s fluids.
+It was regenerated from a dinosaur’s\ngenetic matter that was found in amber.\nIt flies with high-pitched cries.
+It is not satisfied unless it eats over 880\npounds of food every day. When it is done\neating, it goes promptly to sleep.
+One of the legendary bird POKéMON.\nWith its long tail trailing behind, its\nflying form is magnificent.
+One of the legendary bird POKéMON.\nWhile it is flying, it makes crackling and\nsnapping sounds.
+One of the legendary bird POKéMON.\nThose seeing it are overwhelmed by its\norange wings that seem to be on fire.
+Even the young can exceed 6.5 feet in\nlength. It grows larger by repeatedly\nshedding skin.
+It is said to live in seas and lakes.\nEven though it has no wings, it has been\nseen flying occasionally.
+It can fly in spite of its big and bulky\nphysique. It circles the globe in just\n16 hours.
+A POKéMON whose genetic code was\nrepeatedly recombined for research.\nIt turned vicious as a result.
+A POKéMON of South America that was\nthought to have been extinct. It is very\nintelligent and learns any move.
+Its pleasantly aromatic leaves have the\nability to check the humidity and\ntemperature.
+A spicy aroma emanates from around its\nneck. The aroma acts as a stimulant to\nrestore health.
+MEGANIUM’s breath has the power to revive\ndead grass and plants. It can make them\nhealthy again.
+It usually stays hunched over. If it is\nangry or surprised, it shoots flames out\nof its back.
+This POKéMON is fully covered by\nnonflammable fur. It can withstand any\nkind of fire attack.
+It has a secret, devastating move. It\nrubs its blazing fur together to cause\nhuge explosions.
+It is small but rough and tough. It won’t\nhesitate to take a bite out of anything\nthat moves.
+It opens its huge jaws wide when\nattacking. If it loses any fangs while\nbiting, they grow back in.
+It is hard for it to support its own\nweight out of water, so it gets down on\nall fours. But it moves fast.
+It stands on its tail so it can see a long\nway. If it spots an enemy, it cries loudly\nto warn its kind.
+There is no telling where its tail begins.\nDespite its short legs, it is quick at\nhunting RATTATA.
+It has a perfect sense of time. Whatever\nhappens, it keeps rhythm by precisely\ntilting its head in time.
+When it needs to think, it rotates its head\n180 degrees to sharpen its intellectual\npower.
+When the weather turns cold, numerous\nLEDYBA gather from everywhere to cluster\nand keep each other warm.
+The star patterns on its back grow larger\nor smaller depending on the number of\nstars in the night sky.
+It spins a web using fine--but durable--\nthread. It then waits patiently for prey\nto be trapped.
+A single strand of a special string is\nendlessly spun out of its rear. The string\nleads back to its nest.
+The development of wings on its legs\nenables it to fly fast but also makes it\ntough to stop and rest.
+On the dark ocean floor, its only means\nof communication is its constantly\nflashing lights.
+It blinds prey with an intense burst of\nlight, then swallows the immobilized prey\nin a single gulp.
+Despite its small size, it can zap even\nadult humans. However, if it does so, it\nalso surprises itself.
+When numerous meteors illuminate the\nnight sky, sightings of CLEFFA strangely\nincrease.
+Its extremely flexible and elastic body\nmakes it bounce continuously--anytime,\nanywhere.
+A proverb claims that happiness will come\nto anyone who can make a sleeping TOGEPI\nstand up.
+It grows dispirited if it is not with kind\npeople. It can float in midair without\nmoving its wings.
+It usually forages for food on the ground\nbut may, on rare occasions, hop onto\nbranches to peck at shoots.
+In South America, it is said that its right\neye sees the future and its left eye\nviews the past.
+Its fleece grows continually. In the\nsummer, the fleece is fully shed, but it\ngrows back in a week.
+Its fluffy fleece easily stores\nelectricity. Its rubbery hide keeps it\nfrom being electrocuted.
+The bright light on its tail can be seen\nfar away. It has been treasured since\nancient times as a beacon.
+Plentiful in the tropics. When it dances,\nits petals rub together and make a\npleasant ringing sound.
+The end of its tail serves as a buoy that\nkeeps it from drowning, even in a vicious\ncurrent.
+When it plays in water, it rolls up its\nelongated ears to prevent their insides\nfrom getting wet.
+It disguises itself as a tree to avoid\nattack. It hates water, so it will\ndisappear if it starts raining.
+Whenever three or more of these get\ntogether, they sing in a loud voice that\nsounds like bellowing.
+Its body is so light, it must grip the\nground firmly with its feet to keep from\nbeing blown away.
+It spreads its petals to absorb sunlight.\nIt also floats in the air to get closer to\nthe sun.
+It drifts on seasonal winds and spreads\nits cotton-like spores all over the world\nto make more offspring.
+It lives atop tall trees. When leaping\nfrom branch to branch, it deftly uses its\ntail for balance.
+It lives by drinking only dewdrops from\nunder the leaves of plants. It is said\nthat it eats nothing else.
+In the daytime, it rushes about in a\nhectic manner, but it comes to a complete\nstop when the sun sets.
+Its large eyes can scan 360 degrees.\nIt looks in all directions to seek out\ninsects as its prey.
+When it walks around on the ground,\nit coats its body with a slimy, poisonous\nfilm.
+Due to its relaxed and carefree attitude,\nit often bumps its head on boulders and\nboat hulls as it swims.
+By reading air currents, it can predict\nthings such as the weather or its foe’s\nnext move.
+When darkness falls, the rings on its body\nbegin to glow, striking fear in the hearts\nof anyone nearby.
+It is said that when chased, it lures its\nattacker onto dark mountain trails where\nthe foe will get lost.
+When its head was bitten, toxins entered\nSLOWPOKE’s head and unlocked an\nextraordinary power.
+It loves to bite and yank people’s hair\nfrom behind without warning, just to see\ntheir shocked reactions.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+To keep its pitch-black tail hidden, it\nlives quietly in the darkness. It is never\nfirst to attack.
+Its tail, which also contains a small\nbrain, may bite on its own if it notices an\nalluring smell.
+It hangs and waits for flying-insect prey\nto come near. It does not move about\nmuch on its own.
+It remains immovably rooted to its tree.\nIt scatters pieces of its hard shell to\ndrive its enemies away.
+If spotted, it escapes by burrowing with\nits tail. It can hover just slightly using\nits wings.
+It usually clings to cliffs. When it spots\nits prey, it spreads its wings and glides\ndown to attack.
+It is said that if an ONIX lives for over\n100 years, its composition changes to\nbecome diamond-like.
+It has an active, playful nature. Many\nwomen like to frolic with it because of\nits affectionate ways.
+Because its fangs are too heavy, it\nalways keeps its head tilted down.\nHowever, its BITE is powerful.
+The small spikes covering its body\ndeveloped from scales. They inject a\ntoxin that causes fainting.
+Its wings are not used for flying.\nThey are flapped at high speed to adjust\nits body temperature.
+It stores BERRIES inside its shell.\nTo avoid attacks, it hides beneath rocks\nand remains completely still.
+Usually docile, but if disturbed while\nsipping honey, it chases off the intruder\nwith its horn.
+Vicious in nature, it drives PIDGEY from\ntheir nests and feasts on the eggs that\nare left behind.
+Before food becomes scarce in wintertime,\nits habit is to hoard food in many hidden\nlocations.
+With its ability to distinguish any smell,\nit unfailingly finds all food buried deep\nunderground.
+A common sight in volcanic areas, it\nslowly slithers around in a constant\nsearch for warm places.
+Its brittle shell occasionally spouts\nintense flames that circulate throughout\nits body.
+If it smells something enticing, it dashes\noff headlong to find the source of the\naroma.
+If it charges at an enemy, the hairs on\nits back stand up straight. It is very\nsensitive to sound.
+In a south sea nation, the people live in\ncommunities that are built on groups of\nthese POKéMON.
+Using its dorsal fin as a suction pad, it\nclings to a MANTINE’s underside to\nscavenge for leftovers.
+It instinctively sneaks into rocky holes.\nIf it gets sleepy, it steals the nest of a\nfellow OCTILLERY.
+It nests at the edge of sharp cliffs.\nIt spends all day carrying food to its\nawaiting chicks.
+Swimming freely in open seas, it may fly\nout of the water and over the waves if it\nbuilds up enough speed.
+After nesting in bramble bushes, the wings\nof its chicks grow hard from scratches by\nthorns.
+To corner prey, they check each other’s\nlocation using barks that only they can\nunderstand.
+Upon hearing its eerie howls, other\nPOKéMON get the shivers and head straight\nback to their nests.
+It sleeps deep on the ocean floor to\nbuild its energy. It is said to cause\ntornadoes as it wakes.
+As a sign of affection, it bumps with its\nsnout. However, it is so strong, it may\nsend you flying.
+The longer and bigger its tusks, the\nhigher its rank in its herd. The tusks take\na long time to grow.
+Further research enhanced its abilities.\nSometimes, it may exhibit motions that\nwere not programmed.
+Those who stare at its antlers will\ngradually lose control of their senses\nand be unable to stand.
+Once it becomes an adult, it has a\ntendency to let its comrades plant\nfootprints on its back.
+Even though it is small, it can’t be\nignored because it will slug any handy\ntarget without warning.
+It launches kicks while spinning. If it\nspins at high speed, it may bore its way\ninto the ground.
+It always rocks its head slowly backwards\nand forwards as if it is trying to kiss\nsomeone.
+Even in the most vicious storm, this\nPOKéMON plays happily if thunder rumbles\nin the sky.
+It is found in volcanic craters. Its body\nheat exceeds 1,100 degrees Fahrenheit,\nso don’t underestimate it.
+If it has just had a baby, the milk it\nproduces contains much more nutrition than\nusual.
+It has a very compassionate nature. If it\nsees a sick POKéMON, it will nurse the\nsufferer back to health.
+This POKéMON races across the\nland while barking a cry that sounds\nlike crashing thunder.
+A POKéMON that races across the land.\nIt is said that one is born every time a\nnew volcano appears.
+This POKéMON races across the land.\nIt is said that north winds will somehow\nblow whenever it appears.
+It is born deep underground. It can’t\nemerge until it has entirely consumed the\nsoil around it.
+Even sealed in its shell, it can move\nfreely. Hard and fast, it has outstanding\ndestructive power.
+Its body can’t be harmed by any sort of\nattack, so it is very eager to make\nchallenges against enemies.
+It is said to be the guardian of the seas.\nIt is rumored to have been seen on the\nnight of a storm.
+A legend says that its body glows in\nseven colors. A rainbow is said to form\nbehind it when it flies.
+When CELEBI disappears deep in a forest,\nit is said to leave behind an egg it\nbrought from the future.
+It quickly scales even vertical walls.\nIt senses humidity with its tail to predict\nthe next day’s weather.
+Its strongly developed thigh muscles\ngive it astounding agility and jumping\nperformance.
+The leaves on its forelegs are as sharp\nas swords. It agilely leaps about the\nbranches of trees to strike.
+It has a flame sac inside its belly that\nperpetually burns. It feels warm if it is\nhugged.
+It boosts its concentration by emitting\nharsh cries. Its kicks have outstanding\ndestructive power.
+When facing a tough foe, it looses flames\nfrom its wrists. Its powerful legs let it\njump clear over buildings.
+Its large tail fin propels it through\nwater with powerful acceleration. It is\nstrong in spite of its size.
+It is at its best when on muddy ground\nwith poor footing. It quickly overwhelms\nfoes struggling in mud.
+Its arms are rock-hard. With one swing,\nthey can batter down its foe. It makes its\nnest on beautiful beaches.
+It has a very tenacious nature. Its acute\nsense of smell lets it chase a chosen\nprey without ever losing track.
+It will always obey the commands of a\nskilled TRAINER. Its behavior arises from\nits living in packs in ancient times.
+A POKéMON with abundant curiosity.\nIt shows an interest in everything, so it\nalways zigs and zags.
+When running in a straight line, it can top\n60 miles per hour. However, it has a\ntough time with curved roads.
+It lives amidst tall grass and in forests.\nWhen attacked, it resists by pointing its\nvenomous spikes at the foe.
+It conserves its energy by moving as\nlittle as possible. It awaits evolution\nwhile drinking only a little rainwater.
+Despite its appearance, it has an\naggressive nature. It attacks by jabbing\nwith its long, thin mouth.
+Its body, which is made of soft silk,\nhardens over time. When cracks appear,\nevolution is near.
+It scatters horribly toxic dust when it\nsenses danger. They tend to gather in the\nglow of streetlamps at night.
+It searches about for clean water. If it\ndoes not drink water for too long, the\nleaf on its head wilts.
+It lives at the water’s edge where it is\nsunny. It sleeps on a bed of water grass\nby day and becomes active at night.
+The rhythm of bright, festive music\nactivates LUDICOLO’s cells, making it more\npowerful.
+If it remains still, it becomes impossible\nto distinguish from real nuts. It delights\nin surprising foraging PIDGEY.
+They live in holes bored in large trees.\nThe sound of NUZLEAF’s grass flute fills\nlisteners with dread.
+A POKéMON that was feared as a forest\nguardian. It can read the foe’s mind and\ntake preemptive action.
+It dislikes cold seasons. They migrate to\nother lands in search of warmth, flying\nover 180 miles a day.
+If its two tail feathers are standing at\nattention, it is proof of good health.\nIt soars elegantly in the sky.
+It rides upon ocean winds as if it were\na glider. In the winter, it hides food\naround its nest.
+It is a flying transporter that carries\nsmall POKéMON in its beak. It bobs on the\nwaves to rest its wings.
+It is highly attuned to the emotions of\npeople and POKéMON. It hides if it senses\nhostility.
+The cheerful spirit of its TRAINER gives\nit energy for its psychokinetic power.\nIt spins and dances when happy.
+It has the power to predict the future.\nIts power peaks when it is protecting its\nTRAINER.
+They usually live on ponds, but after an\nevening shower, they may appear on\npuddles in towns.
+The antennae have distinctive patterns\nthat look like eyes. When it rains, they\ngrow heavy, making flight impossible.
+It prefers damp places. By day it remains\nstill in the forest shade. It releases\ntoxic powder from its head.
+The seeds on its tail are made of toxic\nspores. It knocks out foes with quick,\nvirtually invisible punches.
+It sleeps for 20 hours every day. Making\ndrowsy those that see it is one of\nits abilities.
+It is always hungry because it won’t stop\nrampaging. Even while it is eating, it\ncan’t keep still.
+It is the world’s most slothful POKéMON.\nHowever, it can exert horrifying power by\nreleasing pent-up energy all at once.
+Because it lived almost entirely\nunderground, it is nearly blind.\nIt uses its antennae instead.
+This POKéMON is so quick, it is said to\nbe able to avoid any attack. It loves to\nfeed on tree sap.
+A most peculiar POKéMON that somehow\nappears in a POKé BALL when a NINCADA\nevolves.
+It usually murmurs, but starts crying\nloudly if it senses danger. It stops when\nits ear covers are shut.
+When it stamps its feet and bellows, it\ngenerates ultrasonic waves that can blow\napart a house.
+It emits a variety of sounds from the\nholes all over its body. Its loud cries\ncan be heard from over six miles away.
+It grows stronger by enduring harsh\ntraining. It is a gutsy POKéMON that can\nwithstand any attack.
+It stomps on the ground to build power.\nIt can send a 10-ton truck flying with a\nstraight-arm punch.
+It battles by flinging around its tail,\nwhich is bigger than its body. The\ntail is a flotation device in water.
+Its magnetic nose consistently faces\nnorth. Travelers check NOSEPASS to get\ntheir bearings.
+It is said to be difficult to earn its\ntrust. However, it is extremely popular\nfor its cute looks and behavior.
+The favorite of trend-conscious\nfemale TRAINERS, they are used in\ncompetition for their style and fur.
+It feeds on gemstone crystals.\nIn darkness, its eyes sparkle with the\nglitter of jewels.
+It uses its docile-looking face to lull\nfoes into complacency, then bites with its\nhuge, relentless jaws.
+It eats iron to build its steel body.\nIt is a pest that descends from mountains\nto eat bridges and train tracks.
+It habitually shows off its strength with\nthe size of sparks it creates by ramming\nits steel body into boulders.
+It claims a large mountain as its sole\nterritory. It mercilessly thrashes those\nthat violate its space.
+It never skips its daily yoga training.\nIt heightens its inner strength through\nmeditation.
+It elegantly avoids attacks with dance-\nlike steps, then launches a devastating\nblow in the same motion.
+It stores static electricity in its fur\nfor discharging. It gives off sparks if a\nstorm approaches.
+It rarely appears before people.\nIt is said to nest where lightning has\nfallen.
+It cheers on partners while scattering\nsparks from its body. It climbs telephone\npoles to absorb electricity.
+Its dislike of water makes it take shelter\nunder the eaves of houses in rain. It uses\npom-poms made of sparks for cheering.
+It lives around clean ponds. At night,\nits rear lights up. It converses with\nothers by flashing its light.
+It guides VOLBEAT to draw signs in night\nskies. There are scientists that study the\npatterns it creates.
+Its flowers give off a relaxing fragrance.\nThe stronger its aroma, the healthier\nthe ROSELIA is.
+There is nothing its stomach can’t digest.\nWhile it is digesting, vile, overpowering\ngases are expelled.
+It can swallow a tire whole in one gulp.\nIt secretes a horribly toxic fluid from\nthe pores on its body.
+It lives in massive rivers that course\nthrough jungles. It swarms prey that\nenter its territory.
+The ruffian of the seas, it has fangs that\ncrunch through iron. It swims by jetting\nwater from its rear.
+When it sucks in a large volume of\nseawater, it becomes like a big, bouncy\nball. It eats a ton of food daily.
+It is among the largest of all POKéMON.\nIt herds prey in a pack then swallows the\nmassed prey in one gulp.
+Magma of almost 2,200 degrees Fahrenheit\ncourses through its body. When it grows\ncold, the magma hardens and slows it.
+If angered, the humps on its back erupt\nin a shower of molten lava. It lives in\nthe craters of volcanoes.
+It burns coal inside its shell. If it is\nattacked, it belches thick, black smoke\nand flees.
+It apparently dies if it stops bouncing\nabout. It carries a pearl from CLAMPERL\non its head.
+It can gain control over foes by doing\nodd dance steps. The black pearls on its\nforehead are precious gems.
+No two SPINDA are said to have identical\npatterns. It confuses foes with its\nstumbling motions.
+It lives in arid deserts. It makes a\nsloping pit trap in sand where it\npatiently awaits prey.
+It generates ultrasonic waves by violently\nflapping its wings. After making its prey\nfaint, it melts the prey with acid.
+It hides itself by kicking up desert sand\nwith its wings. Red covers shield its eyes\nfrom sand.
+It prefers harsh environments such as\ndeserts. It can survive for 30 days on\nwater stored in its body.
+It lives in deserts. It becomes active at\nnight when it hunts for prey exhausted\nfrom the desert’s heat.
+It constantly grooms its cotton-like\nwings. It takes a shower to clean\nitself if it becomes dirty.
+If you hear a beautiful melody trilling\ndeep among mountains far from people,\nit is ALTARIA’s humming.
+If it comes across a SEVIPER, its fur\nbristles and it assumes its battle pose.\nIts sharp claws are its best weapon.
+It sharpens its swordlike tail on hard\nrocks. It hides in tall grass and strikes\nunwary prey with venomous fangs.
+Its health ebbs and flows with the lunar\ncycle. It brims with power when exposed\nto the light of the full moon.
+It absorbs solar energy during the day.\nAlways expressionless, it can sense what\nits foe is thinking.
+It probes muddy riverbeds with its two\nlong whiskers. A slimy film protects its\nbody.
+It makes its nest at the bottom of\nswamps. It will eat anything - if it is\nalive, WHISCASH will eat it.
+It came from overseas. It is a very hardy\ncreature that will quickly proliferate,\neven in polluted streams.
+A rough customer that wildly flails its\ngiant claws. It is said to be extremely\nhard to raise.
+It was discovered in ancient ruins.\nWhile moving, it constantly spins. It\nstands on one foot even when asleep.
+It appears to have been born from clay\ndolls made by ancient people. It uses\ntelekinesis to float and move.
+It became extinct roughly 100 million\nyears ago. It was regenerated from a\nfossil using advanced techniques.
+It ensnares prey with its eight tentacles.\nIt then melts the prey with a strong acid\nbefore feeding.
+It is a kind of POKéMON progenitor.\nIt uses its extending claws to catch prey\nhiding among rocks on the seafloor.
+Protected by a hard shell, its body is\nvery sturdy. It skewers prey with its\nclaws to feed.
+Ridiculed for its shabby appearance,\nit is ignored by researchers. It lives in\nponds choked with weeds.
+MILOTIC is breathtakingly beautiful.\nThose that see it are said to forget their\ncombative spirits.
+It has the ability to change its form into\nthe sun, the rain, or a snow cloud,\ndepending on the weather.
+It changes body color to blend in with\nits surroundings. It also changes color if\nit is happy or sad.
+It loves to feed on feelings like envy and\nmalice. Its upright horn catches the\nemotions of people.
+Strong feelings of hatred turned a puppet\ninto a POKéMON. If it opens its mouth,\nits cursed energy escapes.
+Making itself invisible, it silently sneaks\nup to prey. It has the ability to slip\nthrough thick walls.
+Its body is entirely hollow. When it opens\nits mouth, it sucks everything in as if it\nwere a black hole.
+It lives in tropical jungles. The bunch of\nfruit around its neck is delicious.\nThe fruit grows twice a year.
+It travels by riding on winds. It cleverly\nuses its long tail to pluck nuts and\nberries, which it loves to eat.
+It appears when it senses an impending\nnatural disaster. As a result, it was\nmistaken as a doom-bringer.
+It tends to move in a pack with others.\nThey cluster in a tight group to sleep in\na cave.
+It is said that a home visited by a\nSNORUNT will prosper. It can withstand\ncold of minus 150 degrees Fahrenheit.
+It has a body of ice that won’t melt,\neven with fire. It can instantly freeze\nmoisture in the atmosphere.
+Its body is covered in fluffy fur. The\nfur keeps it from feeling cold while\nit is rolling on ice.
+It touches new things with its nose to\ntest for smell and feel. It plays by\nspinning SPHEAL on its nose.
+It swims through icy seas while shattering\nice floes with its large tusks. It is\nprotected by its thick blubber.
+It is protected by a sturdy shell.\nOnce in a lifetime, it makes a magnificent\npearl.
+It lives deep in the sea where no light\never filters down. It lights up its small\nfishlike tail to attract prey.
+Its swimming form is exquisitely elegant.\nWith its thin mouth, it feeds on seaweed\nthat grows between rocks.
+It has remained unchanged for 100\nmillion years. It was discovered\nduring a deep-sea exploration.
+During the spawning season, countless\nLUVDISC congregate at coral reefs,\nturning the waters pink.
+Its steel-hard head can shatter boulders.\nIt longingly hopes for wings to grow so it\ncan fly.
+Its armored body makes all attacks bounce\noff. The armor is too tough, however,\nmaking it heavy and somewhat sluggish.
+It becomes uncontrollable if it is\nenraged. It destroys everything with\nshredding claws and fire.
+It uses magnetic waves to converse with\nits kind. All the cells in its body are\nmagnetic.
+It floats midair using magnetism. Its body\nis so tough, even a crash with a jet\nplane won’t leave a scratch.
+It is formed by two METANG fusing.\nIts four brains are said to be superior\nto a supercomputer.
+It is entirely composed of rocks with no\nsign of a brain or heart. It is a mystery\neven to modern scientists.
+Research revealed that its body is made\nof the same kind of ice that is found at\nthe South Pole.
+It is sturdier than any kind of metal.\nIt hardened due to pressure underground\nover tens of thousands of years.
+It can telepathically communicate with\npeople. It changes its appearance using\nits down that refracts light.
+It has a docile temperament and dislikes\nfighting. Tucking in its forelegs, it can\nfly faster than a jet plane.
+This POKéMON is said to have\nexpanded the sea by bringing heavy rains.\nIt has the power to control water.
+This legendary POKéMON is said to\nrepresent the land. It went to sleep after\ndueling KYOGRE.
+It has lived for hundreds of millions of\nyears in the ozone layer. Its flying form\nlooks like a meteor.
+It is said to make any wish come true.\nIt is awake for only seven days out of\na thousand years.
+
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+Its flat, thin body is always stuck on\nwalls. Its shape appears to have some\nmeaning.
+It has the ability to change its form into\nthe sun, the rain, or a snow cloud,\ndepending on the weather.
+It has the ability to change its form into\nthe sun, the rain, or a snow cloud,\ndepending on the weather.
+It has the ability to change its form into\nthe sun, the rain, or a snow cloud,\ndepending on the weather.
+This DEOXYS has transformed into its\naggressive guise. It can fool enemies by\naltering its appearance.
+~~~~~~~~~~~~~~~
+Text File : zukan_comment_lg
+~~~~~~~~~~~~~~~
+
+A strange seed was planted on its back at\nbirth. The plant sprouts and grows with\nthis POKéMON.
+When the bulb on its back grows large, it\nappears to lose the ability to stand on\nits hind legs.
+Its plant blooms when it is absorbing\nsolar energy. It stays on the move to\nseek sunlight.
+It has a preference for hot things.\nWhen it rains, steam is said to spout from\nthe tip of its tail.
+When it swings its burning tail, it\nelevates the air temperature to\nunbearably high levels.
+It spits fire that is hot enough to melt\nboulders. It may cause forest fires by\nblowing flames.
+After birth, its back swells and hardens\ninto a shell. It powerfully sprays foam\nfrom its mouth.
+It often hides in water to stalk unwary\nprey. For fast swimming, it moves its\nears to maintain balance.
+The pressurized water jets on this brutal\nPOKéMON’s shell are used for high-\nspeed tackles.
+Its short feet are tipped with suction\npads that enable it to tirelessly climb\nslopes and walls.
+This POKéMON is vulnerable to attack\nwhile its shell is soft, exposing its weak\nand tender body.
+In battle, it flaps its wings at great\nspeed to release highly toxic dust into\nthe air.
+Often found in forests, eating leaves.\nIt has a sharp stinger on its head that\ninjects poison.
+Almost incapable of moving, this POKéMON\ncan only harden its shell to protect\nitself when it is in danger.
+It flies at high speed and attacks using\nthe large venomous stingers on its\nforelegs and tail.
+A common sight in forests and woods.\nIt flaps its wings at ground level to kick\nup blinding sand.
+Very protective of its sprawling\nterritorial area, this POKéMON will\nfiercely peck at any intruder.
+When hunting, it skims the surface of\nwater at high speed to pick off unwary\nprey such as MAGIKARP.
+Bites anything when it attacks. Small and\nvery quick, it is a common sight in many\nplaces.
+It uses its whiskers to maintain its\nbalance. It apparently slows down if\nthey are cut off.
+Eats bugs in grassy areas. It has to flap\nits short wings at high speed to stay\nairborne.
+With its huge and magnificent wings, it can\nkeep aloft without ever having to land\nfor rest.
+Moving silently and stealthily, it eats\nthe eggs of birds, such as PIDGEY\nand SPEAROW, whole.
+It is rumored that the ferocious warning\nmarkings on its belly differ from area to\narea.
+When several of these POKéMON gather,\ntheir electricity can build and cause\nlightning storms.
+Its long tail serves as a ground to\nprotect itself from its own high-voltage\npower.
+Burrows deep underground in arid locations\nfar from water. It only emerges to hunt\nfor prey.
+Curls up into a spiny ball when\nthreatened. It can roll while curled up\nto attack or escape.
+Although small, its venomous barbs render\nthis POKéMON dangerous. The female has\nsmaller horns.
+The female’s horns develop slowly.\nPrefers physical attacks such as clawing\nand biting.
+Its hard scales provide strong protection.\nIt uses its hefty bulk to execute\npowerful moves.
+It stiffens its ears to sense danger.\nThe larger its horns, the more\npowerful its secreted venom.
+An aggressive POKéMON that is quick to\nattack. The horn on its head secretes a\npowerful venom.
+It uses its powerful tail in battle to\nsmash, constrict, then break the prey’s\nbones.
+With its magical and cute appeal, it has\nmany admirers. It is rare and found only\nin certain areas.
+A timid fairy POKéMON that is rarely seen,\nit will run and hide the moment it senses\npeople.
+When it is born, it has just one snow-\nwhite tail. The tail splits from its tip as\nit grows older.
+Very smart and very vengeful. Grabbing\none of its many tails could result in a\n1,000-year curse.
+When its huge eyes waver, it sings a\nmysteriously soothing melody that lulls\nits enemies to sleep.
+The body is soft and rubbery. When\nangered, it will suck in air and inflate\nitself to an enormous size.
+It forms colonies in perpetually dark\nplaces and uses ultrasonic waves to\nidentify and approach targets.
+Once it bites, it will not stop draining\nenergy from the victim even if it gets too\nheavy to fly.
+During the day, it keeps its face buried\nin the ground. At night, it wanders around\nsowing its seeds.
+The fluid that oozes from its mouth isn’t\ndrool. It is a nectar that is used to\nattract prey.
+The larger its petals, the more toxic\npollen it contains. Its big head is heavy\nand hard to hold up.
+Burrows to suck tree roots. The mushrooms\non its back grow by drawing nutrients from\nthe bug host.
+A host-parasite pair in which the parasite\nmushroom has taken over the host bug.\nPrefers damp places.
+Lives in the shadows of tall trees where\nit eats bugs. It is attracted by light\nat night.
+The dustlike scales covering its wings\nare color-coded to indicate the kinds of\npoison it has.
+Lives about one yard underground where it\nfeeds on plant roots. It sometimes appears\naboveground.
+A team of DIGLETT triplets. It triggers\nhuge earthquakes by burrowing 60 miles\nunderground.
+Adores round objects. It wanders the\nstreets on a nightly basis to look for\ndropped loose change.
+Although its fur has many admirers, it is\ntough to raise as a pet because of its\nfickle meanness.
+While lulling its enemies with its vacant\nlook, this wily POKéMON will use\npsychokinetic powers.
+Often seen swimming elegantly by\nlakeshores. It is often mistaken for the\nJapanese monster Kappa.
+Extremely quick to anger. It could be\ndocile one moment, then thrashing away\nthe next instant.
+Always furious and tenacious to boot.\nIt will not abandon chasing its quarry\nuntil it catches up.
+It is very protective of its territory.\nIt will bark and bite to repel intruders\nfrom its space.
+A POKéMON that has long been admired\nfor its beauty. It runs agilely as if\non wings.
+Its newly grown legs prevent it from\nwalking well. It appears to prefer\nswimming over walking.
+It can live in or out of water. When out\nof water, it constantly sweats to keep its\nbody slimy.
+A swimmer adept at both the front crawl\nand breaststroke. Easily overtakes the\nbest human swimmers.
+Using its ability to read minds, it will\nsense impending danger and TELEPORT to\nsafety.
+It emits special alpha waves from its\nbody that induce headaches just by being\nclose.
+Its brain can outperform a supercomputer.\nIts IQ (intelligence quotient) is said to\nbe around 5,000.
+Loves to build its muscles. It trains in\nall styles of martial arts to become even\nstronger.
+Its muscular body is so powerful, it must\nwear a power-save belt to be able to\nregulate its motions.
+Its superpowerful punches are said to\nknock the victim flying clear over the\nhorizon.
+A carnivorous POKéMON that traps and eats\nbugs. It appears to use its root feet to\nreplenish moisture.
+It spits out POISONPOWDER to immobilize\nthe enemy and then finishes it with a\nspray of ACID.
+Said to live in huge colonies deep in\njungles, although no one has ever\nreturned from there.
+Drifts in shallow seas. Anglers who hook\nthem by accident are often punished by\ntheir stingers.
+The tentacles are normally kept short.\nOn hunts, they are extended to ensnare\nand immobilize prey.
+Found in fields and mountains. Mistaking\nthem for boulders, people often step or\ntrip on them.
+Rolls down slopes to move. It rolls over\nany obstacle without slowing or changing\nits direction.
+Its boulder-like body is extremely hard.\nIt can easily withstand dynamite blasts\nwithout taking damage.
+Its hooves are ten times harder than\ndiamond. It can trample anything\ncompletely flat in little time.
+Very competitive, this POKéMON will chase\nanything that moves fast in the hopes of\nracing it.
+Incredibly slow and dopey. It takes five\nseconds for it to feel pain when under\nattack.
+The SHELLDER that latches onto\nSLOWPOKE’s tail is said to feed on the\nhost’s leftover scraps.
+Uses antigravity to stay suspended.\nAppears without warning and uses THUNDER\nWAVE and similar moves.
+Formed by several MAGNEMITE linked\ntogether. They frequently appear when\nsunspots flare up.
+The plant stalk it holds is its weapon.\nThe stalk is used like a sword to cut all\nsorts of things.
+A bird that makes up for its poor flying\nwith its fast foot speed. Leaves giant\nfootprints.
+Uses its three brains to execute complex\nplans. While two heads sleep, one head is\nsaid to stay awake.
+The protruding horn on its head is very\nhard. It is used for bashing through thick\nicebergs.
+It stores thermal energy in the body.\nIt swims at a steady eight knots even in\nintensely cold waters.
+Appears in filthy areas. It thrives by\nsucking up polluted sludge that is pumped\nout of factories.
+Thickly covered with a filthy, vile\nsludge. It is so toxic, even its footprints\ncontain poison.
+Its hard shell repels any kind of attack.\nIt is vulnerable only when its shell is\nopen.
+When attacked, it launches its horns in\nquick volleys. Its innards have never been\nseen.
+Almost invisible, this gaseous POKéMON\ncloaks the target and puts it to sleep\nwithout notice.
+Because of its ability to slip through\nblock walls, it is said to be from another\ndimension.
+On the night of a full moon, if shadows\nmove on their own and laugh, it must be\nGENGAR’s doing.
+As it grows, the stone portions of its\nbody harden to become similar to\nblack-colored diamonds.
+Puts enemies to sleep, then eats their\ndreams. Occasionally gets sick from eating\nonly bad dreams.
+When it locks eyes with an enemy, it will\nuse a mix of PSI moves such as HYPNOSIS\nand CONFUSION.
+Its pincers are not only powerful weapons,\nthey are used for balance when walking\nsideways.
+The large pincer has 10,000-horsepower\ncrushing force. However, its huge size\nmakes it unwieldy to use.
+Usually found in power plants. Easily\nmistaken for a POKé BALL, it has\nzapped many people.
+It stores electric energy under very high\npressure. It often explodes with little or\nno provocation.
+It is often mistaken for eggs. When\ndisturbed, they quickly gather and attack\nin swarms.
+It is said that on rare occasions, one\nof its heads will drop off and continue on\nas an EXEGGCUTE.
+Because it never removes its skull helmet,\nno one has ever seen this POKéMON’s real\nface.
+The bone it holds is its key weapon.\nIt throws the bone skillfully like a\nboomerang to KO targets.
+When in a hurry, its legs lengthen\nprogressively. It runs smoothly with\nextra-long, loping strides.
+While apparently doing nothing, it fires\npunches in lightning-fast volleys that are\nimpossible to see.
+Its tongue can be extended like a\nchameleon’s. It leaves a tingling\nsensation when it licks enemies.
+Because it stores several kinds of toxic\ngases in its body, it is prone to\nexploding without warning.
+Where two kinds of poison gases meet, two\nKOFFING can fuse into a WEEZING over\nmany years.
+Its massive bones are 1,000 times harder\nthan human bones. Its TACKLE can knock a\nsemitrailer flying.
+Protected by an armor-like hide, it is\ncapable of living in molten lava of 3,600\ndegrees Fahrenheit.
+A rare and elusive POKéMON that is said\nto bring happiness to those who manage to\ncatch one.
+The whole body is swathed with wide vines\nthat are similar to seaweed. The vines\nsway as it walks.
+The infant rarely ventures out of its\nmother’s protective pouch until it is\nthree years old.
+Known to shoot down flying bugs with\nprecision blasts of ink from the surface\nof the water.
+It is capable of swimming backwards by\nrapidly flapping its winglike pectoral fins\nand stout tail.
+Its tail fin billows like an elegant\nballroom dress, giving it the nickname of\n“The Water Queen.”
+In the autumn spawning season, they can\nbe seen swimming powerfully up rivers and\ncreeks.
+An enigmatic POKéMON that can effortlessly\nregenerate any appendage it loses in\nbattle.
+Its central core glows with the seven\ncolors of the rainbow. Some people value\nthe core as a gem.
+If interrupted while it is miming, it will\nsuddenly DOUBLESLAP the offender with its\nbroad hands.
+With ninja-like agility and speed, it can\ncreate the illusion that there is more\nthan one of itself.
+It seductively wiggles its hips as it\nwalks. It can cause people to dance in\nunison with it.
+Normally found near power plants, they\ncan wander away and cause major\nblackouts in cities.
+Its body always burns with an orange glow\nthat enables it to hide perfectly amidst\nflames.
+If it fails to crush the foe in its\npincers, it will swing around and toss\nthe opponent.
+When it targets an enemy, it charges\nfuriously while whipping its body with its\nlong tails.
+In the distant past, it was somewhat\nstronger than the horribly weak\ndescendants that exist today.
+Rarely seen in the wild. Huge and vicious,\nit is capable of destroying entire cities\nin a rage.
+A POKéMON that has been overhunted\nalmost to extinction. It can ferry people\non its back.
+Capable of copying an opponent’s genetic\ncode to instantly transform itself into a\nduplicate of the enemy.
+Its genetic code is irregular. It may\nmutate if it is exposed to radiation from\nelement STONES.
+Lives close to water. Its long tail is\nridged with a fin which is often mistaken\nfor a mermaid’s.
+It accumulates negative ions in the\natmosphere to blast out 10,000-volt\nlightning bolts.
+When storing thermal energy in its body,\nits temperature can soar to over 1,600\ndegrees Fahrenheit.
+A POKéMON that consists entirely of\nprogramming code. It is capable of moving\nfreely in cyberspace.
+Although long extinct, in rare cases, it\ncan be genetically regenerated from\nfossils.
+Despite having strong fangs and tentacles,\nit went extinct when its heavy shell made\nit unable to catch prey.
+A POKéMON that was regenerated from a\nfossil found in what was once the ocean\nfloor long ago.
+Its sleek shape is perfect for swimming.\nIt slashes prey with its claws and drains\ntheir fluids.
+A ferocious, prehistoric POKéMON that\ngoes for the enemy’s throat with its\nserrated, sawlike fangs.
+Very lazy. Just eats and sleeps. As its\nrotund bulk builds, it becomes steadily\nmore slothful.
+A legendary bird POKéMON that is said to\nappear to doomed people who are lost in\nicy mountains.
+A legendary bird POKéMON that is said to\nappear from clouds while dropping\nenormous lightning bolts.
+It is said to be the legendary bird\nPOKéMON of fire. Every flap of its wings\ncreates a dazzling flare of flames.
+Long considered a mythical POKéMON until\nrecently, when a small colony was found\nliving underwater.
+A mystical POKéMON that exudes a gentle\naura. It is said to have the ability to\nchange the weather.
+Only a very few people ever see this\nPOKéMON. Its intelligence is said to\nmatch that of humans.
+It was created by a scientist after years\nof horrific gene-splicing and DNA-\nengineering experiments.
+So rare that it is still said to be a\nmirage by many experts. Only a few people\nhave seen it worldwide.
+A sweet aroma gently wafts from the leaf\non its head. It is docile and loves to\nsoak up the sun’s rays.
+The scent of spices comes from around\nits neck. Somehow, sniffing it makes you\nwant to fight.
+The aroma that rises from its petals\ncontains a substance that calms aggressive\nfeelings.
+It is timid and always curls itself up in\na ball. If attacked, it flares up its back\nfor protection.
+Be careful if it turns its back during\nbattle. It means that it will attack with\nthe fire on its back.
+If its rage peaks, it becomes so hot that\nanything that touches it will instantly go\nup in flames.
+Its well-developed jaws are powerful and\ncapable of crushing anything. Even its\nTRAINER must be careful.
+If it loses a fang, a new one grows back\nin its place. There are always 48 fangs\nlining its mouth.
+When it bites with its massive and\npowerful jaws, it shakes its head and\nsavagely tears up its victim.
+A very cautious POKéMON, it raises itself\nup using its tail to get a better view of\nits surroundings.
+It makes a nest to suit its long and skinny\nbody. The nest is impossible for other\nPOKéMON to enter.
+It always stands on one foot. It changes\nfeet so fast, the movement can rarely be\nseen.
+Its eyes are specially adapted. They\nconcentrate even faint light and enable it\nto see in the dark.
+It is very timid. It will be afraid to\nmove if it is alone. But it will be active\nif it is in a group.
+When the stars flicker in the night sky, it\nflutters about, scattering a glowing\npowder.
+It lies still in the same pose for days\nin its web, waiting for its unsuspecting\nprey to wander close.
+It spins string not only from its rear but\nalso from its mouth. It is hard to tell\nwhich end is which.
+It flies so silently through the dark on\nits four wings that it may not be noticed\neven when nearby.
+It shoots positive and negative\nelectricity between the tips of its two\nantennae and zaps its enemies.
+The light it emits is so bright that it can\nilluminate the sea’s surface from a depth\nof over three miles.
+It is not yet skilled at storing\nelectricity. It may send out a jolt if\namused or startled.
+Because of its unusual, starlike\nsilhouette, people believe that it came\nhere on a meteor.
+It has a very soft body. If it starts to\nroll, it will bounce all over and be\nimpossible to stop.
+The shell seems to be filled with joy.\nIt is said that it will share good luck\nwhen treated kindly.
+They say that it will appear before\nkindhearted, caring people and shower\nthem with happiness.
+Because its wings aren’t yet fully grown,\nit has to hop to get around. It is always\nstaring at something.
+They say that it stays still and quiet\nbecause it is seeing both the past and\nfuture at the same time.
+If static electricity builds in its body,\nits fleece doubles in volume. Touching\nit will shock you.
+As a result of storing too much\nelectricity, it developed patches where\neven downy wool won’t grow.
+The tail’s tip shines brightly and can be\nseen from far away. It acts as a beacon\nfor lost people.
+BELLOSSOM gather at times and appear to\ndance. They say that the dance is a\nritual to summon the sun.
+The tip of its tail, which contains oil\nthat is lighter than water, lets it swim\nwithout drowning.
+By keeping still and listening intently, it\ncan even tell what is in wild, fast-moving\nrivers.
+Although it always pretends to be a tree,\nits composition appears to be closer to a\nrock than a plant.
+If POLIWAG and POLIWHIRL hear its\nechoing cry, they respond by gathering\nfrom far and wide.
+To keep from being blown away by the\nwind, they gather in clusters. They do\nenjoy gentle breezes, though.
+The bloom on top of its head opens and\ncloses as the temperature fluctuates up\nand down.
+Once it catches the wind, it deftly\ncontrols its cotton-puff spores to float,\neven around the world.
+Its tail is so powerful that it can use it\nto grab a tree branch and hold itself up\nin the air.
+It may drop out of the sky suddenly.\nIf attacked by a SPEAROW, it will\nviolently shake its leaves.
+It converts sunlight into energy. In the\ndarkness after sunset, it closes its petals\nand becomes still.
+If it flaps its wings really fast, it can\ngenerate shock waves that will shatter\nwindows in the area.
+This POKéMON lives in cold water. It will\nleave the water to search for food when\nit gets cold outside.
+This carefree POKéMON has an easygoing\nnature. While swimming, it always bumps\ninto boat hulls.
+It uses the fine hair that covers its body\nto sense air currents and predict its\nenemy’s actions.
+When agitated, this POKéMON protects\nitself by spraying poisonous sweat from its\npores.
+Feared and loathed by many, it is\nbelieved to bring misfortune to all those\nwho see it at night.
+It has incredible intellect and intuition.\nWhatever the situation, it remains calm\nand collected.
+It likes playing mischievous tricks such as\nscreaming and wailing to startle people at\nnight.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+It hates light and shock. If attacked,\nit inflates its body to pump up its\ncounterstrike.
+Its tail has a small brain of its own.\nBeware! If you get close, it may react\nto your scent and bite.
+It likes to make its shell thicker by\nadding layers of tree bark. The extra\nweight doesn’t bother it.
+Its entire body is shielded by a steel-\nhard shell. What lurks inside the armor is\na total mystery.
+When spotted, this POKéMON escapes\nbackward by furiously boring into the\nground with its tail.
+It flies straight at its target’s face,\nthen clamps down on the startled\nvictim to inject poison.
+Its body has been compressed deep under\nthe ground. As a result, it is even harder\nthan diamond.
+Although it looks frightening, it is\nactually kind and affectionate. It is very\npopular among women.
+It is actually timid and easily spooked.\nIf attacked, it flails about to fend off\nits attacker.
+To fire its poison spikes, it must inflate\nits body by drinking over 2.6 gallons of\nwater all at once.
+It swings its eye-patterned pincers up to\nscare its foes. This makes it look like it\nhas three heads.
+The BERRIES it stores in its vaselike\nshell decompose and become a gooey\nliquid.
+This powerful POKéMON thrusts its prized\nhorn under its enemies’ bellies, then lifts\nand throws them.
+Its paws conceal sharp claws.\nIf attacked, it suddenly extends the\nclaws and startles its enemy.
+If it finds honey, its crescent mark glows.\nIt always licks its paws because they are\nsoaked with honey.
+Although it is a good climber, it prefers\nto snap stout trees with its forelegs and\neat fallen BERRIES.
+It never sleeps. It has to keep moving\nbecause if it stopped, its magma body\nwould cool and harden.
+The shell on its back is just skin that\nhas cooled and hardened. It breaks easily\nwith a slight touch.
+It rubs its snout on the ground to find\nand dig up food. It sometimes discovers\nhot springs.
+Because the long hair all over its body\nobscures its sight, it just keeps charging\nrepeatedly.
+It continuously sheds and grows. The tip\nof its head is prized as a treasure for\nits beauty.
+It has superb accuracy. The water it\nshoots out can strike even moving prey\nfrom more than 100 yards.
+It traps enemies with its suction-cupped\ntentacles, then smashes them with its\nrock-hard head.
+It carries food all day long. There are\ntales about lost people who were saved\nby the food it had.
+As it majestically swims, it doesn’t care\nif REMORAID attach to it to scavenge\nfor its leftovers.
+Its sturdy wings look heavy, but its bones\nare hollow and light, allowing it to fly\nfreely in the sky.
+It uses different kinds of cries for\ncommunicating with others of its kind and\nfor pursuing prey.
+If you are burned by the flames it shoots\nfrom its mouth, the pain will never go\naway.
+It is said that it usually hides in\nunderwater caves. It can create\nwhirlpools by yawning.
+It swings its long snout around playfully,\nbut because it is so strong, this can be\ndangerous.
+It has sharp, hard tusks and a rugged\nhide. Its TACKLE is strong enough to\nknock down a house.
+This upgraded version of PORYGON is\ndesigned for space exploration. However,\nit can’t even fly.
+Its curved antlers subtly change the flow\nof air to create a strange space where\nreality is distorted.
+A special fluid oozes from the tip of its\ntail. It paints the fluid everywhere to\nmark its territory.
+It is always bursting with energy. To make\nitself stronger, it keeps on fighting even\nif it loses.
+If you become enchanted by its smooth,\nelegant, dance-like kicks, you may get\ndrilled hard.
+Its lips are the most sensitive parts on\nits body. It always uses its lips first to\nexamine things.
+It rotates its arms to generate\nelectricity, but it tires easily, so it\ncharges up only a little bit.
+Each and every time it inhales and\nexhales, hot embers dribble out of its\nmouth and nostrils.
+Its milk is packed with nutrition, making\nit the ultimate beverage for the sick or\nweary.
+Anyone who takes even one bite of\nBLISSEY’s egg becomes unfailingly caring\nand pleasant to everyone.
+The rain clouds it carries let it fire\nthunderbolts at will. They say that it\ndescended with lightning.
+Volcanoes erupt when it barks. Unable to\nrestrain its extreme power, it races\nheadlong around the land.
+Said to be the reincarnation of north\nwinds, it can instantly purify filthy,\nmurky water.
+It feeds on soil. After it has eaten a\nlarge mountain, it will fall asleep so it\ncan grow.
+Its shell is as hard as sheet rock, and it\nis also very strong. Its THRASHING can\ntopple a mountain.
+Its body can’t be harmed by any sort of\nattack, so it is very eager to make\nchallenges against enemies.
+It is said that it quietly spends its time\ndeep at the bottom of the sea because\nits powers are too strong.
+Legends claim this POKéMON flies the\nworld’s skies continuously on its\nmagnificent seven-colored wings.
+This POKéMON wanders across time.\nGrass and trees flourish in the forests in\nwhich it has appeared.
+It quickly scales even vertical walls.\nIt senses humidity with its tail to predict\nthe next day’s weather.
+Its strongly developed thigh muscles\ngive it astounding agility and jumping\nperformance.
+The leaves on its forelegs are as sharp\nas swords. It agilely leaps about the\nbranches of trees to strike.
+It has a flame sac inside its belly that\nperpetually burns. It feels warm if it is\nhugged.
+It boosts its concentration by emitting\nharsh cries. Its kicks have outstanding\ndestructive power.
+When facing a tough foe, it looses flames\nfrom its wrists. Its powerful legs let it\njump clear over buildings.
+Its large tail fin propels it through\nwater with powerful acceleration. It is\nstrong in spite of its size.
+It is at its best when on muddy ground\nwith poor footing. It quickly overwhelms\nfoes struggling in mud.
+Its arms are rock-hard. With one swing,\nthey can batter down its foe. It makes its\nnest on beautiful beaches.
+It has a very tenacious nature. Its acute\nsense of smell lets it chase a chosen\nprey without ever losing track.
+It will always obey the commands of a\nskilled TRAINER. Its behavior arises from\nits living in packs in ancient times.
+A POKéMON with abundant curiosity.\nIt shows an interest in everything, so it\nalways zigs and zags.
+When running in a straight line, it can top\n60 miles per hour. However, it has a\ntough time with curved roads.
+It lives amidst tall grass and in forests.\nWhen attacked, it resists by pointing its\nvenomous spikes at the foe.
+It conserves its energy by moving as\nlittle as possible. It awaits evolution\nwhile drinking only a little rainwater.
+Despite its appearance, it has an\naggressive nature. It attacks by jabbing\nwith its long, thin mouth.
+Its body, which is made of soft silk,\nhardens over time. When cracks appear,\nevolution is near.
+It scatters horribly toxic dust when it\nsenses danger. They tend to gather in the\nglow of streetlamps at night.
+It searches about for clean water. If it\ndoes not drink water for too long, the\nleaf on its head wilts.
+It lives at the water’s edge where it is\nsunny. It sleeps on a bed of water grass\nby day and becomes active at night.
+The rhythm of bright, festive music\nactivates LUDICOLO’s cells, making it more\npowerful.
+If it remains still, it becomes impossible\nto distinguish from real nuts. It delights\nin surprising foraging PIDGEY.
+They live in holes bored in large trees.\nThe sound of NUZLEAF’s grass flute fills\nlisteners with dread.
+A POKéMON that was feared as a forest\nguardian. It can read the foe’s mind and\ntake preemptive action.
+It dislikes cold seasons. They migrate to\nother lands in search of warmth, flying\nover 180 miles a day.
+If its two tail feathers are standing at\nattention, it is proof of good health.\nIt soars elegantly in the sky.
+It rides upon ocean winds as if it were\na glider. In the winter, it hides food\naround its nest.
+It is a flying transporter that carries\nsmall POKéMON in its beak. It bobs on the\nwaves to rest its wings.
+It is highly attuned to the emotions of\npeople and POKéMON. It hides if it senses\nhostility.
+The cheerful spirit of its TRAINER gives\nit energy for its psychokinetic power.\nIt spins and dances when happy.
+It has the power to predict the future.\nIts power peaks when it is protecting its\nTRAINER.
+They usually live on ponds, but after an\nevening shower, they may appear on\npuddles in towns.
+The antennae have distinctive patterns\nthat look like eyes. When it rains, they\ngrow heavy, making flight impossible.
+It prefers damp places. By day it remains\nstill in the forest shade. It releases\ntoxic powder from its head.
+The seeds on its tail are made of toxic\nspores. It knocks out foes with quick,\nvirtually invisible punches.
+It sleeps for 20 hours every day. Making\ndrowsy those that see it is one of\nits abilities.
+It is always hungry because it won’t stop\nrampaging. Even while it is eating, it\ncan’t keep still.
+It is the world’s most slothful POKéMON.\nHowever, it can exert horrifying power by\nreleasing pent-up energy all at once.
+Because it lived almost entirely\nunderground, it is nearly blind.\nIt uses its antennae instead.
+This POKéMON is so quick, it is said to\nbe able to avoid any attack. It loves to\nfeed on tree sap.
+A most peculiar POKéMON that somehow\nappears in a POKé BALL when a NINCADA\nevolves.
+It usually murmurs, but starts crying\nloudly if it senses danger. It stops when\nits ear covers are shut.
+When it stamps its feet and bellows, it\ngenerates ultrasonic waves that can blow\napart a house.
+It emits a variety of sounds from the\nholes all over its body. Its loud cries\ncan be heard from over six miles away.
+It grows stronger by enduring harsh\ntraining. It is a gutsy POKéMON that can\nwithstand any attack.
+It stomps on the ground to build power.\nIt can send a 10-ton truck flying with a\nstraight-arm punch.
+It battles by flinging around its tail,\nwhich is bigger than its body. The\ntail is a flotation device in water.
+Its magnetic nose consistently faces\nnorth. Travelers check NOSEPASS to get\ntheir bearings.
+It is said to be difficult to earn its\ntrust. However, it is extremely popular\nfor its cute looks and behavior.
+The favorite of trend-conscious\nfemale TRAINERS, they are used in\ncompetition for their style and fur.
+It feeds on gemstone crystals.\nIn darkness, its eyes sparkle with the\nglitter of jewels.
+It uses its docile-looking face to lull\nfoes into complacency, then bites with its\nhuge, relentless jaws.
+It eats iron to build its steel body.\nIt is a pest that descends from mountains\nto eat bridges and train tracks.
+It habitually shows off its strength with\nthe size of sparks it creates by ramming\nits steel body into boulders.
+It claims a large mountain as its sole\nterritory. It mercilessly thrashes those\nthat violate its space.
+It never skips its daily yoga training.\nIt heightens its inner strength through\nmeditation.
+It elegantly avoids attacks with dance-\nlike steps, then launches a devastating\nblow in the same motion.
+It stores static electricity in its fur\nfor discharging. It gives off sparks if a\nstorm approaches.
+It rarely appears before people.\nIt is said to nest where lightning has\nfallen.
+It cheers on partners while scattering\nsparks from its body. It climbs telephone\npoles to absorb electricity.
+Its dislike of water makes it take shelter\nunder the eaves of houses in rain. It uses\npom-poms made of sparks for cheering.
+It lives around clean ponds. At night,\nits rear lights up. It converses with\nothers by flashing its light.
+It guides VOLBEAT to draw signs in night\nskies. There are scientists that study the\npatterns it creates.
+Its flowers give off a relaxing fragrance.\nThe stronger its aroma, the healthier\nthe ROSELIA is.
+There is nothing its stomach can’t digest.\nWhile it is digesting, vile, overpowering\ngases are expelled.
+It can swallow a tire whole in one gulp.\nIt secretes a horribly toxic fluid from\nthe pores on its body.
+It lives in massive rivers that course\nthrough jungles. It swarms prey that\nenter its territory.
+The ruffian of the seas, it has fangs that\ncrunch through iron. It swims by jetting\nwater from its rear.
+When it sucks in a large volume of\nseawater, it becomes like a big, bouncy\nball. It eats a ton of food daily.
+It is among the largest of all POKéMON.\nIt herds prey in a pack then swallows the\nmassed prey in one gulp.
+Magma of almost 2,200 degrees Fahrenheit\ncourses through its body. When it grows\ncold, the magma hardens and slows it.
+If angered, the humps on its back erupt\nin a shower of molten lava. It lives in\nthe craters of volcanoes.
+It burns coal inside its shell. If it is\nattacked, it belches thick, black smoke\nand flees.
+It apparently dies if it stops bouncing\nabout. It carries a pearl from CLAMPERL\non its head.
+It can gain control over foes by doing\nodd dance steps. The black pearls on its\nforehead are precious gems.
+No two SPINDA are said to have identical\npatterns. It confuses foes with its\nstumbling motions.
+It lives in arid deserts. It makes a\nsloping pit trap in sand where it\npatiently awaits prey.
+It generates ultrasonic waves by violently\nflapping its wings. After making its prey\nfaint, it melts the prey with acid.
+It hides itself by kicking up desert sand\nwith its wings. Red covers shield its eyes\nfrom sand.
+It prefers harsh environments such as\ndeserts. It can survive for 30 days on\nwater stored in its body.
+It lives in deserts. It becomes active at\nnight when it hunts for prey exhausted\nfrom the desert’s heat.
+It constantly grooms its cotton-like\nwings. It takes a shower to clean\nitself if it becomes dirty.
+If you hear a beautiful melody trilling\ndeep among mountains far from people,\nit is ALTARIA’s humming.
+If it comes across a SEVIPER, its fur\nbristles and it assumes its battle pose.\nIts sharp claws are its best weapon.
+It sharpens its swordlike tail on hard\nrocks. It hides in tall grass and strikes\nunwary prey with venomous fangs.
+Its health ebbs and flows with the lunar\ncycle. It brims with power when exposed\nto the light of the full moon.
+It absorbs solar energy during the day.\nAlways expressionless, it can sense what\nits foe is thinking.
+It probes muddy riverbeds with its two\nlong whiskers. A slimy film protects its\nbody.
+It makes its nest at the bottom of\nswamps. It will eat anything - if it is\nalive, WHISCASH will eat it.
+It came from overseas. It is a very hardy\ncreature that will quickly proliferate,\neven in polluted streams.
+A rough customer that wildly flails its\ngiant claws. It is said to be extremely\nhard to raise.
+It was discovered in ancient ruins.\nWhile moving, it constantly spins. It\nstands on one foot even when asleep.
+It appears to have been born from clay\ndolls made by ancient people. It uses\ntelekinesis to float and move.
+It became extinct roughly 100 million\nyears ago. It was regenerated from a\nfossil using advanced techniques.
+It ensnares prey with its eight tentacles.\nIt then melts the prey with a strong acid\nbefore feeding.
+It is a kind of POKéMON progenitor.\nIt uses its extending claws to catch prey\nhiding among rocks on the seafloor.
+Protected by a hard shell, its body is\nvery sturdy. It skewers prey with its\nclaws to feed.
+Ridiculed for its shabby appearance,\nit is ignored by researchers. It lives in\nponds choked with weeds.
+MILOTIC is breathtakingly beautiful.\nThose that see it are said to forget their\ncombative spirits.
+It has the ability to change its form into\nthe sun, the rain, or a snow cloud,\ndepending on the weather.
+It changes body color to blend in with\nits surroundings. It also changes color if\nit is happy or sad.
+It loves to feed on feelings like envy and\nmalice. Its upright horn catches the\nemotions of people.
+Strong feelings of hatred turned a puppet\ninto a POKéMON. If it opens its mouth,\nits cursed energy escapes.
+Making itself invisible, it silently sneaks\nup to prey. It has the ability to slip\nthrough thick walls.
+Its body is entirely hollow. When it opens\nits mouth, it sucks everything in as if it\nwere a black hole.
+It lives in tropical jungles. The bunch of\nfruit around its neck is delicious.\nThe fruit grows twice a year.
+It travels by riding on winds. It cleverly\nuses its long tail to pluck nuts and\nberries, which it loves to eat.
+It appears when it senses an impending\nnatural disaster. As a result, it was\nmistaken as a doom-bringer.
+It tends to move in a pack with others.\nThey cluster in a tight group to sleep in\na cave.
+It is said that a home visited by a\nSNORUNT will prosper. It can withstand\ncold of minus 150 degrees Fahrenheit.
+It has a body of ice that won’t melt,\neven with fire. It can instantly freeze\nmoisture in the atmosphere.
+Its body is covered in fluffy fur.\nThe fur keeps it from feeling cold while\nit is rolling on ice.
+It touches new things with its nose to\ntest for smell and feel. It plays by\nspinning SPHEAL on its nose.
+It swims through icy seas while shattering\nice floes with its large tusks. It is\nprotected by its thick blubber.
+It is protected by a sturdy shell.\nOnce in a lifetime, it makes a magnificent\npearl.
+It lives deep in the sea where no light\never filters down. It lights up its small\nfishlike tail to attract prey.
+Its swimming form is exquisitely elegant.\nWith its thin mouth, it feeds on seaweed\nthat grows between rocks.
+It has remained unchanged for 100\nmillion years. It was discovered\nduring a deep-sea exploration.
+During the spawning season, countless\nLUVDISC congregate at coral reefs,\nturning the waters pink.
+Its steel-hard head can shatter boulders.\nIt longingly hopes for wings to grow so it\ncan fly.
+Its armored body makes all attacks bounce\noff. The armor is too tough, however,\nmaking it heavy and somewhat sluggish.
+It becomes uncontrollable if it is\nenraged. It destroys everything with\nshredding claws and fire.
+It uses magnetic waves to converse with\nits kind. All the cells in its body are\nmagnetic.
+It floats midair using magnetism. Its body\nis so tough, even a crash with a jet\nplane won’t leave a scratch.
+It is formed by two METANG fusing.\nIts four brains are said to be superior\nto a supercomputer.
+It is entirely composed of rocks with no\nsign of a brain or heart. It is a mystery\neven to modern scientists.
+Research revealed that its body is made\nof the same kind of ice that is found at\nthe South Pole.
+It is sturdier than any kind of metal.\nIt hardened due to pressure underground\nover tens of thousands of years.
+It can telepathically communicate with\npeople. It changes its appearance using\nits down that refracts light.
+It has a docile temperament and dislikes\nfighting. Tucking in its forelegs, it can\nfly faster than a jet plane.
+This POKéMON is said to have expanded\nthe sea by bringing heavy rains.\nIt has the power to control water.
+This legendary POKéMON is said to\nrepresent the land. It went to sleep after\ndueling KYOGRE.
+It has lived for hundreds of millions of\nyears in the ozone layer. Its flying form\nlooks like a meteor.
+It is said to make any wish come true.\nIt is awake for only seven days out of\na thousand years.
+
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+Their shapes look like hieroglyphs on\nancient tablets. It is said that the two\nare somehow related.
+It has the ability to change its form into\nthe sun, the rain, or a snow cloud,\ndepending on the weather.
+It has the ability to change its form into\nthe sun, the rain, or a snow cloud,\ndepending on the weather.
+It has the ability to change its form into\nthe sun, the rain, or a snow cloud,\ndepending on the weather.
+When it changes form, an aurora appears.\nIt absorbs attacks by altering its\ncellular structure.
 ~~~~~~~~~~~~~~~
 Text File : zukan_comment_za
 ~~~~~~~~~~~~~~~
@@ -56940,8 +57902,11 @@ Text File : tokuseiinfo_Champions
 ~~~~~~~~~~~~~~~
 When the Pokémon uses contact moves, it can hit even targets\nthat are protecting themselves, dealing 1/4 of the damage that\nthe move would otherwise deal. Everything aside from the\ntarget’s protective effects is still triggered.
 The Pokémon’s Normal-type moves become Dragon-type moves\nand their power is boosted by 20%.
+The Pokémon floats off the ground, making it immune to\nGround-type moves, as well as the Spikes, Toxic Spikes,\nand Sticky Web statuses. When the Pokémon knocks out a\ntarget with an attack, its highest stat is boosted by 1 stage.
 Even when the sunlight has not turned harsh, the Pokémon can\nuse its moves as if the weather were harsh sunlight.
+Boosts the power of the Pokémon’s Fire-type moves by 50%.
 When the Pokémon takes damage from a move, it burns\nthe attacker.
+Halves the damage the Pokémon takes from contact moves.
 ~~~~~~~~~~~~~~~
 Text File : zukan_comment_scarlet
 ~~~~~~~~~~~~~~~

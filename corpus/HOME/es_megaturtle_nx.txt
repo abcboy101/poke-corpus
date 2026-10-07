@@ -716,8 +716,11 @@ Teraformación 0
 Títere Tóxico
 Turbotaladro
 Piel Dragontina
+Impulso Anguila
 Megasolar
+Crin de Fuego
 Salpicante
+Aura Protectora
 ~~~~~~~~~~~~~~~
 Text File : itemname
 ~~~~~~~~~~~~~~~
@@ -6955,6 +6958,10 @@ Mega-Tatsugiri
 Mega-Tatsugiri
 Mega-Glimmora
 [~ 1526]
+Color Vetusto
+Forma Curvada
+Forma Lánguida
+Forma Recta
 ~~~~~~~~~~~~~~~
 Text File : zkn_type
 ~~~~~~~~~~~~~~~
@@ -8658,10 +8665,10 @@ Cinta especial que llevan los Pokémon recibidos por\nparte de Entrenadores sele
 Text File : box_system
 ~~~~~~~~~~~~~~~
 Pokémon
-Vista global
+Lista de Pokémon
 [~ 2]
 [VAR 01DA(0000)] (sin filtros)
-[VAR 01DA(0000)] (filtrados: [VAR 0203(0001,0000)] de [VAR 0203(0002,0000)])
+[VAR 01DA(0000)] (filtrados: [VAR 0204(0001,202F)] de [VAR 0204(0002,202F)])
 [VAR 01DA(0000)] (filtrando...)
 [~ 6]
 [VAR 0102(0000)] Nv. [VAR 0202(0001)]
@@ -8674,7 +8681,7 @@ Huevo
 Atrás
 Ayuda
 Terminar
-Vista global
+Modo lista
 Mover
 Cambiar vista
 [~ 20]
@@ -9077,6 +9084,43 @@ Los Pokémon que estén actualmente de visita, además de mostrar el\nicono corr
 Acerca de la conexión
 Acerca del icono de visita
 Salir
+Si transfieres un Pokémon obtenido mediante la conexión\ncon juegos de Game Boy Advance (GBA) al juego conectado\nactualmente, su n.º ID cambiará.\n\nSi lo devuelves a Pokémon HOME, recuperará su n.º ID\noriginal.
+~~~~~~~~~~~~~~~
+Text File : gba_system
+~~~~~~~~~~~~~~~
+[~ 0]
+Conexión con juegos de GBA
+Selección de cajas
+Capacidad
+[VAR 0204(0000,202F)]
+No es posible enviar a Pokémon HOME ni Huevos ni Pokémon que lleven equipado algún objeto\no que conozcan movimientos ocultos.
+¿Quieres cancelar la conexión con juegos de GBA\ny regresar al menú principal?
+Una vez transferidos a Pokémon HOME, no podrás devolver\nlos Pokémon a su juego original y los movimientos que\r\nconocen cambiarán.\c\n¿Seguro que quieres continuar?
+Transfiriendo el contenido de la caja seleccionada\na Pokémon HOME...
+¡El contenido de la caja se ha transferido del juego de GBA a\nPokémon HOME!
+Sí
+No
+Ayuda
+Terminar
+[~ 14]
+Esta es la pantalla de conexión con juegos de Game Boy Advance (GBA).\nDesde aquí podrás transferir a Pokémon HOME los Pokémon que hubieras\ncapturado en tus juegos de Game Boy Advance (GBA).
+Lo único que tienes que saber es que, en este caso, la transferencia\nse hace por cajas. ¡Selecciona la que quieras y podrás transferir todos\nlos Pokémon que contiene del tirón!
+Los Pokémon que transfieras de esta forma ocuparán los espacios libres\nque tengas en tus cajas de Pokémon HOME tal como vayan llegando.
+Eso significa que es probable que acaben repartidos por distintas cajas.\nAsí que no te rayes si no los encuentras a la primera porque estar, están.
+[~ 19]
+Ya has transferido un [VAR 0101(0000)] procedente de estos\ndatos de guardado.\c\nNo puedes transferir más de un [VAR 0101(0000)]\nprocedente de la misma partida.
+Ya has transferido un [VAR 0101(0000)] variocolor\nprocedente de estos datos de guardado.\c\nNo puedes transferir más de un [VAR 0101(0000)] variocolor\nprocedente de la misma partida.
+Ya has transferido un [VAR 0101(0000)] procedente de estos\ndatos de guardado.\c\nTu selección incluye un [VAR 0101(0000)], pero no puedes\ntransferir más de uno procedente de la misma partida.
+Ya has transferido un [VAR 0101(0000)] variocolor\nprocedente de estos datos de guardado.\c\nTu selección incluye un [VAR 0101(0000)] variocolor, pero no\npuedes transferir más de uno procedente de la misma\r\npartida.
+Tu selección incluye dos o más [VAR 0101(0000)].\c\nNo puedes transferir más de un [VAR 0101(0000)]\nprocedente de la misma partida.
+Tu selección incluye dos o más [VAR 0101(0000)] variocolor.\c\nNo puedes transferir más de un [VAR 0101(0000)] variocolor\nprocedente de la misma partida.
+Solo puedes transferir un [VAR 0101(0000)] procedente de\nesta partida.\c\n¿Quieres transferir el contenido de la caja seleccionada?
+Solo puedes transferir un [VAR 0101(0000)] variocolor\nprocedente de esta partida.\c\n¿Quieres transferir el contenido de la caja seleccionada?
+Tu selección incluye Pokémon que solo se pueden transferir\nuna vez desde esta partida, como un [VAR 0101(0000)].\c\n¿Seguro que quieres transferir el contenido de esta caja a\nPokémon HOME?
+Tu selección incluye Pokémon que solo se pueden transferir\nuna vez desde esta partida, como un [VAR 0101(0000)]\r\nvariocolor.\c\n¿Seguro que quieres transferir el contenido de esta caja a\nPokémon HOME?
+Esta caja contiene Pokémon que no se pueden transferir\na Pokémon HOME.
+Esta caja está vacía.
+El contenido de esta caja supera el número de espacios\nlibres de tus cajas de Pokémon HOME.
 ~~~~~~~~~~~~~~~
 Text File : zkn_height
 ~~~~~~~~~~~~~~~
@@ -12258,6 +12302,17 @@ Todavía no es posible conectar los datos de guardado de\neste juego con Pokémo
 [~ 91]
 [~ 92]
 Ahora mismo no es posible conectar los datos de guardado\nde este juego con Pokémon HOME.\c\nGuarda la partida tras haber regresado de Luminalia\nDimensional en Leyendas Pokémon: Z-A.
+[~ 94]
+Conexión con juegos de GBA
+Los Pokémon que transfieras a Pokémon HOME no podrán\nser devueltos a su juego original.\c\n¿Quieres iniciar la conexión?
+Registrando los datos de tu Pokédex en Pokémon HOME...
+La conexión con juegos de Game Boy Advance (GBA) solo\npuede realizarse una vez por minuto. Espera un poco.
+Pokémon Rojo Fuego
+Pokémon Verde Hoja
+[~ 101]
+Aquí podrás seleccionar los datos de guardado del juego de\nGame Boy Advance (GBA) que quieras conectar con Pokémon HOME.
+Si tienes datos de guardado que se pueden conectar con tu\nNintendo Switch, se mostrará el icono del juego correspondiente.
+Selecciona un icono y Pokémon HOME se actualizará con los datos\nde la Pokédex del juego en cuestión.
 ~~~~~~~~~~~~~~~
 Text File : main_system
 ~~~~~~~~~~~~~~~
@@ -12311,6 +12366,9 @@ Recibe Pokémon de Pokémon GO.
 [~ 47]
 Pokémon Champions
 Envía Pokémon de visita a Pokémon Champions.
+[~ 50]
+Juegos de GBA
+Recibe Pokémon desde un juego de Game Boy Advance (GBA) para Nintendo Switch.
 ~~~~~~~~~~~~~~~
 Text File : ribbon_BDSP
 ~~~~~~~~~~~~~~~
@@ -23892,6 +23950,13 @@ Ver. [VAR 0200(0000)].[VAR 0200(0001)].[VAR 0200(0002)]
 [~ 3]
 ID de usuario
 XXXX-XXXX-XXXX-XXXX
+[~ 6]
+¿Quieres borrar la caché?
+Si borras la caché, puede que tardes más en iniciar sesión.\nNo se borrarán tus datos guardados de Pokémon HOME.\c\n¿Seguro que quieres borrar la caché?
+Sí
+No
+Borrando la caché...\nEspera un momento
+Se ha borrado la caché.
 ~~~~~~~~~~~~~~~
 Text File : wazainfo_all
 ~~~~~~~~~~~~~~~
@@ -24894,14 +24959,16 @@ Tareas de Sinnoh
 Tareas de Hisui
 Tareas de Paldea
 Tareas de Kalos
-[~ 74]
+Tareas de Kanto (GBA)
+[~ 75]
 Tarea de Kanto n.º [VAR 0201(0000)]
 Tarea de Galar n.º [VAR 0201(0000)]
 Tarea de Sinnoh n.º [VAR 0201(0000)]
 Tarea de Hisui n.º [VAR 0201(0000)]
 Tarea de Paldea n.º [VAR 0201(0000)]
 Tarea de Kalos n.º [VAR 0201(0000)]
-[~ 81]
+Tarea de Kanto (GBA) n.º [VAR 0201(0000)]
+[~ 83]
 N.º [VAR 0203(0000,0000)]
 [VAR 0101(0000)]
 Altura
@@ -24912,7 +24979,7 @@ Peso
 
 Forma [VAR 0201(0000)]/[VAR 0201(0001)]
 
-[~ 92]
+[~ 94]
 Juegos donde aparece ([VAR 0200(0000)]/[VAR 0200(0001)])
 Juegos donde aparece
 Deposita en Pokémon HOME un [VAR 0101(0000)] atrapado en\nuna partida en japonés y podrás leer sus entradas de la Pokédex\nen japonés.
@@ -24925,6 +24992,7 @@ Deposita en Pokémon HOME un [VAR 0101(0000)] atrapado en\nuna partida en corean
 Deposita en Pokémon HOME un [VAR 0101(0000)] atrapado en\nuna partida en chino simplificado y podrás leer sus entradas de\nla Pokédex en chino simplificado.
 Deposita en Pokémon HOME un [VAR 0101(0000)] atrapado en\nuna partida en chino tradicional y podrás leer sus entradas de\nla Pokédex en chino tradicional.
 Deposita en Pokémon HOME un [VAR 0101(0000)] atrapado en\nuna partida en español (Latinoamérica) y podrás leer sus entradas\nde la Pokédex en español de Latinoamérica.
+No se han encontrado entradas de la Pokédex.\nPrueba a cambiar el idioma o el juego conectado.
 Deposita en Pokémon HOME un [VAR 0101(0000)] atrapado en\nuna partida en japonés y podrás leer sus entradas de la Pokédex\nen japonés.
 Deposita en Pokémon HOME un [VAR 0101(0000)] atrapado en\nuna partida en inglés y podrás leer sus entradas de la Pokédex\nen inglés.
 Deposita en Pokémon HOME un [VAR 0101(0000)] atrapado en\nuna partida en español (España) y podrás leer sus entradas de la\nPokédex en español de España.
@@ -24935,14 +25003,15 @@ Deposita en Pokémon HOME un [VAR 0101(0000)] atrapado en\nuna partida en corean
 Deposita en Pokémon HOME un [VAR 0101(0000)] atrapado en\nuna partida en chino simplificado y podrás leer sus entradas de\nla Pokédex en chino simplificado.
 Deposita en Pokémon HOME un [VAR 0101(0000)] atrapado en\nuna partida en chino tradicional y podrás leer sus entradas de\nla Pokédex en chino tradicional.
 Deposita en Pokémon HOME un [VAR 0101(0000)] atrapado en\nuna partida en español (Latinoamérica) y podrás leer sus entradas\nde la Pokédex en español de Latinoamérica.
-[~ 115]
+No se han encontrado entradas de la Pokédex.\nPrueba a cambiar el idioma o el juego conectado.
+[~ 119]
 
 N.º [VAR 0203(0000,0000)]
 
 
 [VAR 0101(0000)]
 (?)
-[~ 122]
+[~ 126]
 Japonés (hiragana)
 Japonés (kanji)
 Inglés
@@ -24954,13 +25023,13 @@ Español (España)
 Chino simplificado
 Chino tradicional
 Español (Latinoamérica)
-[~ 134]
+[~ 138]
 N.º [VAR 0203(0000,0000)]
 [VAR 0101(0000)]
 [VAR 01DA(0000)] (sin filtros)
 [VAR 01DA(0000)] (filtrados: [VAR 0203(0001,0000)] de [VAR 0203(0002,0000)])
 [VAR 01DA(0000)] (filtrados: [VAR 0203(0001,0000)])
-[~ 140]
+[~ 144]
 Filtros de búsqueda
 Criterios de ordenación
 Nombre
@@ -24971,7 +25040,7 @@ Figura
 Forma
 Juego
 Registro en la Pokédex
-[~ 151]
+[~ 155]
 Buscar por nombre
 Buscar por tipo
 Buscar por color
@@ -24980,14 +25049,14 @@ Buscar por forma
 Buscar por juegos en los que aparece
 Buscar por registro en la Pokédex
 No se han encontrado resultados.
-[~ 160]
+[~ 164]
 Por número
 Alfabéticamente
 Pesado → Ligero
 Ligero → Pesado
 Alto → Bajo
 Bajo → Alto
-[~ 167]
+[~ 171]
 Rojo
 Azul
 Verde
@@ -24998,7 +25067,7 @@ Marrón
 Gris
 Blanco
 Negro
-[~ 178]
+[~ 182]
 Todas las formas
 Variocolor
 Macho
@@ -25011,14 +25080,14 @@ Forma de Alola
 Forma de Galar
 Forma de Hisui
 Forma de Paldea
-[~ 191]
+[~ 195]
 Registrado
 No registrado
-[~ 194]
-—
-—
-—
 [~ 198]
+—
+—
+—
+[~ 202]
 [VAR 0101(0000)]
 (?)
 
@@ -25027,24 +25096,24 @@ Esta tarea se desbloqueará cuando hayas completado [VAR 0201(0000)] más de\nes
 (?)
 [VAR 0200(0000)]/[VAR 0200(0001)]
 [VAR 01DA(0000)] (completadas: [VAR 0201(0001)])
-[~ 207]
+[~ 211]
 El Gran Oak ha creado esta Pokédex digna de su nombre. En ella se\nregistrarán automáticamente todos los Pokémon que deposites en tus\ncajas de Pokémon HOME.
 Por supuesto, el objetivo final es reunir los datos de todos los Pokémon\ndel mundo mundial, pero, para no agobiarte, puedes ir completándola\npoco a poco, por regiones, por ejemplo.
 ¡Y una cosita más! Al Gran Oak le gustaría que le echaras una mano en\nsus investigaciones. Si pulsas el botón L o R, podrás consultar las tareas\nque tiene reservadas para ti. ¡Es un gran honor!
-[~ 211]
+[~ 215]
 Aquí puedes consultar información detallada de todos y cada uno de tus\nPokémon. Elige el que quieras de la lista que aparece en la parte derecha\nde la pantalla y ¡voilà!
 Mira, ¿por qué no pruebas a pulsar el botón ZL o ZR para consultar las\nentradas de la Pokédex de los distintos juegos? Conozco a más de uno y\nmás de una que se pasan horas comparando entradas. ¡Yo mismo, vaya!
 Si tienes registrado un Pokémon que puede presentar varias formas, hasta\nes posible alternar entre ellas pulsando los botones L y R. ¿Te habías\nfijado en que la descripción cambia según la forma? Seguro que sí, pero\nyo te lo digo por si acaso.
 Uy, ¡que se me olvidaba! Si pulsas el botón Y, también podrás consultar\nen qué juego o juegos aparece. Eso significa que podrías hacerte con\nese Pokémon en dichos juegos. Mola, ¿eh?
-[~ 216]
+[~ 220]
 Aquí se muestran todos los Pokémon que tienes registrados en la\nPokédex, del primero al último. Para consultar los detalles de alguno,\nsolo tienes que pulsar el botón A.
 También es posible aplicar filtros de búsqueda en la Pokédex. Por si te\nda por buscar Pokémon de un mismo tipo, color o lo que sea, vaya. Solo\ntienes que pulsar el botón X y se abrirá una ventana con la lista de filtros\nque puedes usar para hacerte la vida más fácil.
 Pulsa el botón Y si quieres cambiar el orden en el que se muestran tus\nPokémon. Además del típico número de la Pokédex, que nunca pasa de\nmoda, tienes otras opciones como ordenarlos por peso, por altura, etc.\n¡Es curiosísimo!
-[~ 220]
+[~ 224]
 Si te preguntas qué es esto de las tareas, en realidad es muy sencillo. Son\nmisiones muy chachis que el Gran Oak ha reservado especialmente para\nti. Colabora en sus investigaciones capturando los Pokémon que te pida.
 Si tienes datos guardados en tu Nintendo Switch de una región que le\ngustaría examinar, verás como se te va llenando esta pantalla de tareas.
 Pero oye, ten presente que, para completar una tarea, solo cuenta\nsi reúnes los Pokémon que le interesan al Gran Oak y si los atrapas\nen la región indicada. ¡Que aquí no vale hacer trampas!
-[~ 224]
+[~ 228]
 A la derecha verás tu lista de tareas. Para completarlas, solo tienes que\nreunir los Pokémon que te encarguen. ¡Pan comido!
 ¡Pero cuidadín! Porque si atrapas el Pokémon que toca, pero no en el\njuego ni con la forma que se te pide, no valdrá para completar la tarea.\n¡Asegúrate siempre de mirar bien dónde atrapaste a tus Pokémon!
 Cuando por fin consigas todos los Pokémon que cumplan los requisitos,\nsolo tienes que depositarlos en tus cajas de Pokémon HOME y... ¡tachán!\nVerás que la tarea se marcará automáticamente como completada.
@@ -27872,7 +27941,7 @@ Este es el menú de opciones de Pokémon HOME. Aquí podrás ajustar\nel volumen
 Aunque, eso sí, lo que no podrás ver es cuánto dura tu plan prémium...\nPara saberlo, consulta en la tienda donde lo compraste, ¿vale?
 Y un consejo: ¡no pierdas de vista el ID de usuario que sale en esta\npantalla! Te hará falta si tienes algún problema con Pokémon HOME\ny necesitas ponerte en contacto con el servicio de atención al cliente.
 [~ 56]
-Ver las condiciones de uso y la política de privacidad
+Ver las condiciones de uso y la política de privacidad.
 Condiciones de uso y política de privacidad
 ¿Quieres ver las condiciones de uso y la política de\nprivacidad?
 Condiciones de uso
@@ -33551,7 +33620,7 @@ Regalo de bienvenida de Pokémon HOME
 Primer Pokémon recibido
 [~ 60]
 [~ 61]
-Cambiaste [VAR 0205(0000,202F)] puntos por [VAR 0205(0001,202F)] PB.
+Cambiaste [VAR 0205(0000,202F)] punto[VAR 1101(0000,0100)]s por [VAR 0205(0001,202F)] PB.
 Cambiaste [VAR 0205(0000,202F)] punto[VAR 1101(0000,0100)]s por [VAR 0206(0000,202F)] PG.
 Cambiaste [VAR 0205(0000,202F)] punto[VAR 1101(0000,0100)]s por [VAR 0206(0001,202F)] PL.
 Obtuviste [VAR 0203(0000,0000)] Pokémon.
@@ -33564,7 +33633,7 @@ Nv. [VAR 0202(0000)]
 N.º [VAR 0203(0000,0000)]
 [VAR 0101(0000)]
 El registro está vacío.
-[~ 75]
+Cargando datos...
 Depositados
 Retirados
 Liberados
@@ -33594,6 +33663,12 @@ Enviado a Pokémon Champions
 Enviaste de visita [VAR 0203(0000,0000)] Pokémon.
 Recibido desde Pokémon Champions
 Recibiste [VAR 0203(0000,0000)] Pokémon desde Pokémon Champions.
+[~ 105]
+Recibido desde Pokémon Rojo Fuego
+Recibido desde Pokémon Verde Hoja
+Recibido desde Pokémon Rojo Fuego
+Recibido desde Pokémon Verde Hoja
+Obtuviste [VAR 0203(0000,0000)] Pokémon.
 ~~~~~~~~~~~~~~~
 Text File : B2W2_place_name
 ~~~~~~~~~~~~~~~
@@ -37225,7 +37300,7 @@ Ayuda
 [~ 4]
 Puntos Pokémon HOME
 [VAR 0204(0000,202F)] punto[VAR 1101(0000,0100)]s
-1 PB = [VAR 0201(0000)] puntos
+1 PB = [VAR 0201(0000)] punto[VAR 1101(0000,0100)]s
 Puntos necesarios: [VAR 0204(0000,202F)]
 [VAR 0200(0000)]
 PB
@@ -37237,7 +37312,7 @@ PB
 Sí
 No
 La cantidad de puntos que querías enviar al juego superaba\nel límite, por lo que se ha ajustado al máximo posible.
-¿Quieres convertir [VAR 0204(0000,202F)] puntos a [VAR 0203(0001,0000)] PB y enviar dicha\nsuma a tu juego?
+¿Quieres convertir [VAR 0204(0000,202F)] punto[VAR 1101(0000,0100)]s a [VAR 0203(0001,0000)] PB y enviar dicha\nsuma a tu juego?
 Guardando...\nNo cierres Pokémon HOME.
 Se han guardado los datos.\c\nLa conversión de puntos se ha realizado con éxito.
 [~ 22]
@@ -37276,6 +37351,9 @@ Se ha pausado el plan prémium que estabas\nutilizando en tu dispositivo móvil.
 Se ha producido un error al guardar los datos del\njuego conectado.\n\nSi solo has realizado cambios en las cajas de\nPokémon HOME, estos se habrán guardado. \nSi has hecho cambios en las cajas del juego,\nno se habrán guardado los cambios en las cajas\nde dicho juego ni en las de Pokémon HOME.\n\nRegresarás a la pantalla del título.
 Las transferencias de Pokémon a Pokémon HOME\ndesde este Nintendo Network ID están\nrestringidas.
 Han concluido las labores de mantenimiento.\nPara equilibrar el tráfico en los servidores,\nestamos limitando temporalmente el número\nde usuarios que pueden iniciar sesión\nde forma simultánea. Dicha limitación se irá\nretirando gradualmente. Espera y disculpa\nlas molestias.
+[~ 17]
+Se ha producido un error al guardar los datos\ndel juego conectado, por lo que no ha podido\nrealizarse la transferencia.\n\nRegresarás a la pantalla del título.
+Actualmente, tu cuenta tiene restringido el uso de\nesta función.\c\nSe ha cancelado la conexión con juegos de\nGame Boy Advance (GBA).
 ~~~~~~~~~~~~~~~
 Text File : SWSH_place_name
 ~~~~~~~~~~~~~~~
@@ -37572,6 +37650,27 @@ N.º 18\nEl que da y el que quita
 N.º 19\nEl protector de Ciudad Luminalia
 N.º 20\nLa Flor Eterna
 [~ 126]
+N.º 1\nPrimeros compañeros
+N.º 2\nEl Bosque Verde
+N.º 3\nEl Monte Moon
+N.º 4\nHabitantes acuáticos
+N.º 5\nLa Cueva Diglett
+N.º 6\nMédiums
+N.º 7\nEl Túnel Roca
+N.º 8\nLa Torre Pokémon
+N.º 9\nEl Dojo Kárate
+N.º 10\nLa Central de Energía
+N.º 11\nLas Islas Espuma
+N.º 12\nLa Mansión Pokémon
+N.º 13\nEl secreto de los fósiles
+N.º 14\nLa Calle Victoria
+N.º 15\nLa Cueva Celeste
+N.º 16\nLas piedras evolutivas
+N.º 17\nEl misterio de los intercambios
+N.º 18\nArchi7
+N.º 19\nLas aves legendarias
+N.º 20\nEl Pokémon Genético
+[~ 147]
 Estos Pokémon viven en la Ruta 1, que conecta Pueblo Paleta\ncon Ciudad Verde.
 El hogar de estos Pokémon es el Bosque Verde, un lugar muy\npopular entre los aficionados a cazar bichos.
 Estos Pokémon habitan en el Monte Moon, situado al este de\nCiudad Plateada.
@@ -37592,7 +37691,7 @@ Estos Pokémon han evolucionado gracias a la extraña fuerza que\nse desata al i
 Los Entrenadores pueden surcar los cielos a lomos de estos\nPokémon.
 Unos Pokémon pájaro legendarios que, según cuentan, han sido\navistados en la región de Kanto.
 Se dice que este Pokémon fue creado de forma artificial por un\ncientífico.
-[~ 147]
+[~ 168]
 Los primeros compañeros Pokémon de los Entrenadores que\ninician su aventura en Galar.
 Estos Pokémon habitan en la Ruta 1, un tranquilo camino que une\nPueblo Yarda con Pueblo Par.
 El hogar de estos Pokémon es el Bosque Oniria, siempre envuelto\nen una densa niebla.
@@ -37613,7 +37712,7 @@ Una selección de los Pokémon favoritos del Aspirante Berto.
 Una selección de los Pokémon destacados de Lionel, el\nCampeón de Galar.
 Estos Pokémon forman el grupo musical que celebra el\nnacimiento de la nueva estrella de Galar.
 Unos Pokémon dotados de un gran poder, cuya existencia está\nligada a la historia de la región de Galar.
-[~ 168]
+[~ 189]
 Los primeros compañeros Pokémon de los Entrenadores que\ninician su aventura en Sinnoh.
 Estos Pokémon viven en una ruta llena de desniveles que conecta\nPueblo Aromaflor con Ciudad Vetusta.
 Estos Pokémon viven en un bosque laberíntico envuelto en una\nfresca brisa.
@@ -37634,7 +37733,7 @@ Estos Pokémon habitan en una zona que parece una versión en\nminiatura de la r
 Unos Pokémon que poseen un poder especial y que se\nencuentran en las áreas más interiores de Sinnoh.
 Unos Pokémon que poseen un poder misterioso y que aparecen\nen los lagos de Sinnoh.
 Desde tiempos inmemoriales, estos Pokémon forman parte de la\nmitología de Sinnoh.
-[~ 189]
+[~ 210]
 Pokémon que te entrega el Profesor para ayudarte a entrar en la\ndivisión de investigación.
 Pokémon que te pidieron capturar en la prueba de admisión al\nEquipo Galaxia.
 Estos Pokémon viven en la verde y exuberante Pradera Obsidiana.
@@ -37655,7 +37754,7 @@ Estos Pokémon protectores aguardan en las cuevas subterráneas\nsituadas bajo l
 Estos Pokémon poseedores de un extraño poder se aparecen en\ndistintos puntos de Hisui.
 Se dice que estos Pokémon que aparecieron en el Monte Corona\nse transformaron a causa de una fuerza misteriosa.
 Un Pokémon cuya existencia se menciona en las leyendas de\nHisui.
-[~ 210]
+[~ 231]
 Los Pokémon que te entrega el director al matricularte en la\nacademia.
 Pokémon que te puedes encontrar en este agradable sendero\ndonde sopla la brisa marina.
 Estos Pokémon aparecen en los alrededores de la gran ciudad\ndonde se encuentra la academia.
@@ -37676,7 +37775,7 @@ Los misteriosos Pokémon de la Profesora Albora.
 Los misteriosos Pokémon del Profesor Turo.
 Estos Pokémon, sellados bajo unas estacas sagradas, encarnan los\ntesoros funestos.
 Estos Pokémon legendarios recorren Paldea a su aire.
-[~ 231]
+[~ 252]
 Los leales Pokémon que te confiaron para ayudarte a recuperar\ntu bolsa robada.
 Los Pokémon que capturaste en la primera zona salvaje en la\nque te adentraste.
 Los Pokémon a los que te enfrentaste en tus combates\nde ascenso de los Juegos Z-A.
@@ -37697,6 +37796,27 @@ Poderosos Pokémon a los que te enfrentaste junto a los más\ndestacados partici
 Los Pokémon legendarios de Kalos, que reinan sobre la vida\ny la destrucción.
 Pokémon legendario que combatió a tu lado para hacer de\nCiudad Luminalia un lugar mejor.
 Pokémon que te confió quien lidera el Equipo MZ para que\nsiguieras protegiendo Ciudad Luminalia.
+[~ 273]
+Los primeros compañeros Pokémon de los Entrenadores que\ninician su aventura en Kanto.
+El hogar de estos Pokémon es el Bosque Verde, un lugar muy\npopular entre los aficionados a cazar bichos.
+Estos Pokémon habitan en el Monte Moon, situado al este de\nCiudad Plateada.
+Algunos Pokémon relativamente comunes que se pueden\nencontrar en zonas acuáticas de toda la región de Kanto.
+El gigantesco túnel que une Ciudad Carmín con Ciudad Plateada\nfue obra de estos Pokémon.
+Los Médiums de la región de Kanto suelen elegir a estos\nPokémon como compañeros.
+Estos Pokémon merodean por el oscuro Túnel Roca.
+Estos Pokémon protagonizan los extraños y fantasmagóricos\nsucesos de la Torre Pokémon de Pueblo Lavanda.
+Los Pokémon favoritos del Maestro Karateka del dojo de Ciudad\nAzafrán.
+Estos Pokémon han hecho de la Central de Energía abandonada\nsu hogar.
+Estos Pokémon suelen habitar en las Islas Espuma, en el mar del\nsur de Kanto.
+Estos Pokémon viven en una extraña mansión en ruinas situada en\nIsla Canela.
+Unos Pokémon ancestrales que han sido revividos a partir de\nfósiles encontrados en la región de Kanto.
+Unos fortísimos Pokémon que dificultan el camino a los\nEntrenadores que afrontan el reto de la Liga Pokémon.
+Estos Pokémon se esconden en una profunda cueva situada al\nnoroeste de Ciudad Celeste.
+El extraño poder que esconden las piedras evolutivas ha hecho\nevolucionar a estos Pokémon.
+Estos Pokémon han evolucionado gracias a la extraña fuerza que\nse desata al intercambiarlos con otro Entrenador.
+Estos Pokémon habitan en las islas que conforman el archipiélago\nArchi7, accesible a bordo de un Surcamar Veloce.
+Unos Pokémon pájaro legendarios que, según cuentan, han sido\navistados en la región de Kanto.
+Se dice que este Pokémon fue creado de forma artificial por un\ncientífico.
 ~~~~~~~~~~~~~~~
 Text File : USUM_place_name
 ~~~~~~~~~~~~~~~
@@ -40579,6 +40699,848 @@ Al derrotar a un objetivo, emite un relincho gélido y\naumenta su Ataque.
 Al derrotar a un objetivo, emite un relincho aterrador y\naumenta su Ataque Especial.
 El Pokémon tiene dos habilidades: Relincho Blanco de\nGlastrier y Nerviosismo de Calyrex.
 El Pokémon tiene dos habilidades: Relincho Negro de\nSpectrier y Nerviosismo de Calyrex.
+~~~~~~~~~~~~~~~
+Text File : zukan_comment_fr
+~~~~~~~~~~~~~~~
+
+Este POKéMON nace con una semilla en el lomo. Con el tiempo,\nla semilla brota.
+Este POKéMON tiene un bulbo en el lomo. Dicen que, al\nabsorber nutrientes, el bulbo se transforma en una flor grande.
+La flor que tiene en el lomo libera un delicado aroma. En\ncombate, este aroma tiene un efecto relajante.
+Este POKéMON nace con una llama en la punta de la cola. Si la\nllama se apagara, el POKéMON se debilitaría.
+Suele usar la cola para derribar a su rival. Cuando lo tira, se vale\nde sus afiladas garras para acabar con él.
+Con las alas que tiene puede alcanzar una altura de casi 1400 m.\nSuele escupir fuego por la boca.
+Cuando se esconde en el caparazón, dispara agua a una presión\nincreíble.
+Es el POKéMON que se suele tener como mascota. La cola tan\nlarga y peluda que posee simboliza lo longevo que es.
+Para acabar con su enemigo, lo aplasta con el peso de su cuerpo.\nEn momentos de apuro, se esconde en el caparazón.
+Tiene la piel de color verde. Cuando la muda, se recubre de seda\ny se convierte en capullo.
+Aunque tiene una coraza muy dura, el cuerpo del POKéMON es\nblando. Un ataque violento puede acabar con él.
+Tiene las alas protegidas con una capa impermeable, de ahí\nque pueda volar también cuando llueve.
+Suele habitar bosques y praderas. Tiene un afilado y venenoso\naguijón de unos 5 cm encima de la cabeza.
+Este POKéMON permanece inmóvil mientras desarrolla\ninternamente su organismo. Es prácticamente incapaz de moverse\nsolo.
+Puede aparecer en enjambres volando a gran velocidad.\nSuele usar el venenoso aguijón inferior para atacar.
+A este POKéMON no le gusta luchar. Suele permanecer\nescondido en zonas de hierba alta. Se alimenta de pequeños\ninsectos.
+Tiene unas garras desarrolladas. Puede atrapar un EXEGGCUTE y\ntransportarlo desde una distancia de casi 100 km.
+Para intimidar a su enemigo, extiende las increíbles alas que\ntiene. Este POKéMON vuela a una velocidad increíble.
+Tiene unos largos y afilados colmillos que no dejan de crecer.\nLe resultan muy útiles para destruir cosas.
+Cada pata trasera tiene tres dedos palmeados que le permiten\nnadar por los ríos.
+Va siempre revoloteando de aquí para allá. Aunque frágil, puede\nser un duro rival cuando usa MOVIMIENTO ESPEJO.
+Gracias a sus espléndidas alas puede alcanzar una gran altura y\nvolar durante un día entero sin tener que parar.
+Es fácil encontrarlo en praderas y zonas similares. A este\nPOKéMON le basta con sacar la lengua para detectar el peligro.
+El dibujo que tiene en la panza aterroriza. Los rivales más débiles\nsalen huyendo al verlo.
+Las bolsas de las mejillas están llenas de electricidad, que libera\ncuando se siente amenazado.
+Suelta descargas eléctricas de hasta 100 000 voltios, con lo que\nes capaz de derribar al mayor de los POKéMON.
+Este POKéMON permanece bajo tierra. Si se siente amenazado,\nse enrosca para defenderse.
+Suele hacerse una bola y rodar a toda velocidad al tiempo que va\nclavándole las púas y las garras al enemigo.
+No es grande, pero tampoco inofensivo. Las tóxicas púas que\ntiene son peligrosas. La hembra tiene cuernos pequeños.
+Las hembras tienen una agradable temperatura. Emiten ondas\nultrasónicas para confundir al enemigo.
+Tiene el cuerpo recubierto de duras y cortantes escamas. Cuando\nse pone nervioso, las usa para defenderse.
+Cambia la orientación de las grandes orejas que tiene para oír\nmejor. Si se enfada, sus venenosos cuernos crecen.
+Se enfada con facilidad y es capaz de romper un diamante con el\npotente cuerno que tiene.
+Es fácil reconocerlo por tener una dura piel y un gran cuerno\nlleno de peligrosísimo veneno.
+Es una de las mascotas preferidas de todo el mundo por el\naspecto tan dulce que tiene. Pero no es fácil dar con él.
+Tiene un agudísimo sentido del oído. Es capaz de oír la caída de\nun alfiler a 1 km de distancia.
+De pequeño, tiene seis colas increíbles. A medida que crece,\nle van saliendo más.
+Tiene nueve colas y un pelaje de color dorado. Dicen que este\nPOKéMON llega a vivir 1000 años.
+Cautiva con la mirada a su enemigo y hace que se quede\nprofundamente dormido mientras entona una dulce melodía.
+Tiene un pelaje excepcional, muy fino, pero tupido y suave.\nResulta único y llamativo.
+No tiene ojos. Se guía por las ondas ultrasónicas que emite.\nEl eco le indica por dónde tiene que ir en la oscuridad.
+Se lanza sobre su presa con los afilados colmillos que tiene y\npuede chuparle hasta 300 cc de sangre de una vez.
+Su nombre científico es “Oddium Wanderus”. Dicen que usa las\nraíces para desplazarse. Llega a hacerse 300 m.
+Libera un fétido olor por los pistilos. El fuerte hedor acaba con\ncualquier rival que se encuentre a 2 km de distancia.
+Tiene unos pétalos inmensos. Libera con la mejor sonrisa un\npolen que provoca agudos ataques de alergia.
+Lleva en el lomo dos setas parásitas llamadas tochukaso, que\ncrecen con él.
+Libera esporas tóxicas a través de la seta que lo cubre. En China,\nlas esporas se usan como remedios medicinales.
+Los ojos le funcionan como radar. Gracias a ellos puede moverse\nen la oscuridad y disparar potentes rayos.
+Tiene las alas cubiertas de un polvillo de escamas que esparce\ncada vez que las bate.
+Este POKéMON se entierra a gran profundidad, pero como\nlevanta tierra al cavar, es fácil localizarlo.
+En combate, cava la tierra, se esconde y sale de repente para\ngolpear a su rival. Nunca se sabe por dónde puede aparecer.
+Durante el día se dedica a dormir, y de noche vigila su territorio.\nTiene unos ojos muy sensibles a todo lo que brilla.
+Tiene un carácter muy fuerte. Cuando va a propinar un golpe y\nmorder al rival, suele estirar y levantar la cola.
+Padece continuamente dolores de cabeza. Cuando son muy\nfuertes, empieza a usar misteriosos poderes.
+Las patas traseras palmípedas le permiten nadar. Es común verlo\nchapotear con estilo en lagos y otras zonas acuáticas.
+Es muy ligero y ágil, y también violento. Cuando se enfada, no\nhay quien controle el estado de furia en el que entra.
+Siempre está tremendamente enfadado. Cuando se empeña en\nuna presa, no hay distancia para él.
+Es muy agradable y leal. Para ahuyentar al enemigo, se pone a\nladrar y a dar bocados.
+Las leyendas chinas hablan de este POKéMON. Se dice que es\ncapaz de correr a velocidades inimaginables.
+Tiene una piel extraordinaria, fina y húmeda, que deja entrever\nlas vísceras que tiene dispuestas en espiral.
+Tiene unas extremidades inferiores muy desarrolladas. Aunque\npuede vivir en tierra, prefiere el medio acuático.
+Es un nadador nato. Sabe nadar a crol y a mariposa entre otros\nestilos, y es más rápido que los nadadores profesionales.
+Duerme 18 horas al día y mientras lo hace es capaz de usar una\nserie de poderes extrasensoriales.
+Cuentan que una mañana, un niño que tenía poderes\nextrasensoriales, se despertó convertido en KADABRA.
+No le gustan los ataques físicos. Este POKéMON prefiere hacer\nuso de sus poderes extrasensoriales cuando lucha.
+Es una masa de músculos y, aunque es pequeño, tiene fuerza de\nsobra para tomar en brazos a 100 personas.
+Tiene una complexión tan fuerte que nunca se cansa. Suele\nayudar a la gente a cargar objetos pesados.
+Tiene cuatro brazos tan bien desarrollados que puede dar una\nserie de 1000 puñetazos en cuestión de dos segundos.
+Tiene cara de persona. Por el aspecto que tiene se ha comentado\nque podría ser algún tipo de mandrágora legendaria.
+Las hojas que tiene actúan como cuchillas en combate. Otra de\nsus armas es el corrosivo fluido que expulsa.
+Deja que su presa se le acerque a la boca, atraída por el aroma a\nmiel. Una vez dentro, la disuelve con un fluido.
+Tiene unos ojos transparentes como el cristal, que disparan\nmisteriosos rayos.
+Tiene 80 tentáculos que se mueven a su aire. Con ellos, pica,\nenvenena y causa un dolor agudo e intenso.
+Es fácil atraparlo por la forma redonda que tiene. Cuando hay\nbatallas de bolas de nieve, la gente lo usa para lanzarlo.
+Este POKéMON es un peligro. Suele bajar rodando las montañas\na toda velocidad por los caminos reservados para el senderismo.
+Está encerrado en un duro caparazón formado por escamas de\npiedra. Para fortalecerse, lo muda una vez al año.
+Tiene un cuerpo ligero, pero unas patas tremendamente fuertes.\nEs capaz de destrozar un peñón de una patada.
+Al galope puede alcanzar los 240 km por hora. Impresiona verlo\ncon sus llameantes melenas, a la velocidad del rayo.
+Está siempre en su mundo, pero nadie sabe en qué piensa. Suele\npescar con la cola.
+Según parece, cuando SLOWPOKE fue a pescar al río, le mordió\nun SHELLDER en la cola y así se convirtió en SLOWBRO.
+Está suspendido en el aire y no para de moverse. A través de las\nextremidades laterales dispara ONDA TRUENO.
+Lo constituye un grupo de MAGNEMITE. Descarga potentes\nondas magnéticas de alto voltaje.
+Siempre lleva una ramita en el pico, con la que construye su nido.
+Este POKéMON de dos cabezas es el resultado de una mutación.\nCuando corre, puede alcanzar casi 100 km por hora.
+Pertenece a una rara especie difícil de encontrar. Las tres cabezas\nsimbolizan la alegría, la tristeza y la ira.
+Está recubierto de un pelaje de color azul, y tiene una piel gruesa\ny tosca. Se mantiene activo a 40 grados bajo 0.
+Está recubierto de un luminoso pelaje blanco. Este POKéMON\naumenta su actividad cuando bajan las temperaturas.
+Nace de lodo alterado al filtrarse en el agua los rayos X\nreflejados por la Luna. Se alimenta de sustancias desagradables.
+Normalmente pasa desapercibido porque se mezcla con lo que\nhaya en el suelo. Al contacto resulta tóxico.
+Está metido en una concha sólida como el diamante, pero tiene\nun cuerpo muy blando.
+La concha que lo cubre es extremadamente dura. No es posible\ncausarle rasguños y solo se abre si lo atacan.
+Está compuesto prácticamente de un gas ligero con el que es\ncapaz de asfixiar al mayor de los POKéMON en dos segundos.
+Cuando tienes la sensación de que te están observando, seguro\nque es porque HAUNTER está cerca.
+Dicen que sale de la oscuridad para robarle el alma a los que se\npierden por las montañas.
+Suele vivir bajo tierra. Va buscando comida a medida que se va\nabriendo camino a 80 km por hora.
+Desciende del legendario animal baku, del que se dice que come\nsueños. Tiene grandes habilidades hipnóticas.
+Lleva un péndulo en la mano. Una vez, hizo desaparecer a un\nniño al que había hipnotizado.
+Es fácil encontrarlo cerca del mar. Las largas pinzas que tiene\nvuelven a crecer si se las quitan de su sitio.
+La pinza tan grande que tiene posee una fuerza de 10 000\ncaballos de potencia. Pero, por su gran tamaño, cuesta moverla.
+La procedencia de esta forma de vida no está muy clara. Dicen\nque usa CHIRRIDO o AUTODESTRUCCIÓN.
+Explotan a la mínima. Por eso se les tiene mucho miedo. Estos\nPOKéMON reciben el mote de “Bomba Ball”.
+Aunque los huevos que lo constituyen parecen de verdad, se ha\nvisto que son como semillas.
+Suelen referirse a él como la “vegetación del trópico con patas”.\nCada una de sus cabezas tiene autonomía.
+Lleva puesto el cráneo de su madre. Cuando se siente solo se\npone a gritar muy fuerte.
+Es pequeño y siempre ha sido muy débil. Cuando empezó a usar\nhuesos, se volvió más violento.
+Encoge y estira las patas a su antojo. Cuando las estira, es capaz\nde propinar una buena patada al enemigo.
+Dicen que tiene el alma de un boxeador profesional.\nDa puñetazos a la velocidad del rayo.
+La lengua es tan larga que duplica su altura. Es útil porque puede\nmoverla para agarrar comida y atacar.
+Tiene forma de globo y es muy ligero. Está compuesto por gases\ntóxicos, y apesta.
+En ocasiones, puede mutar y originar dos KOFFING pequeños\nidénticos que, al unirse, forman el WEEZING.
+Es muy fuerte, pero no especialmente listo. Es capaz de derribar\nrascacielos usando PLACAJE varias veces.
+Cuando evoluciona, comienza a andar con las patas traseras.\nEs capaz de horadar rocas con el cuerno que tiene.
+Pone varios huevos al día. Según parece son muy nutritivos y\nestán riquísimos.
+Las cintas de tipo alga que tiene a modo de tentáculos le dan su\nidentidad. Es una masa que todo lo enreda.
+La hembra cría a sus pequeños en la bolsa que tiene en la panza.\nEs muy buena usando PUÑO COMETA.
+Tiene enrollada la cola y la usa para mantener el equilibrio.\nEn ocasiones echa tinta por la boca.
+Las afiladas púas que le recubren el cuerpo se le erizan y pueden\ncausar el debilitamiento con solo tocarlo.
+Las aletas dorsales están tan desarrolladas que actúan como\nmúsculos. Puede nadar a casi 10 km por hora.
+El cuerno que tiene en la cabeza está tan afilado como un\ntaladro. Suele usarlo para horadar rocas y construir su nido.
+Suele aparecer en grupos en la orilla de la playa. Por la noche,\nel órgano central que tiene brilla con una luz roja.
+Este POKéMON tiene un cuerpo geométrico que le da un aspecto\nextraterrestre.
+Dicen que puede hacer un muro a partir del aire mediante la\npantomima. Es experto en crear ilusiones ópticas.
+Destroza a su presa con las guadañas que tiene. No es común\nque use las alas para volar.
+Habla emitiendo sonidos que parecen humanos. Se está\nintentando descifrar lo que dice cuando habla.
+Le encanta alimentarse de alta tensión. A veces, aparece cerca\nde centrales eléctricas y zonas similares.
+A este POKéMON se lo encontraron cerca de un volcán. Esta\ncriatura ígnea tiene una temperatura corporal de unos 1200 º.
+Los cuernos que tiene a modo de pinzas son infalibles. Cuando\natrapan al rival, no lo sueltan hasta que no acaban con él.
+Cuando va a usar PLACAJE se azota repetidas veces con las tres\ncolas que tiene.
+No es precisamente rápido ni fuerte. Es el POKéMON más\ndebilucho y simplón de todos los que hay.
+Es exageradamente agresivo. Lanza HIPERRAYO por la boca para\nachicharrar a su rival.
+Tiene un coeficiente intelectual tan alto que puede entender el\nlenguaje humano. Le encanta llevar a gente sobre el lomo.
+Tiene la capacidad de reorganizar su estructura celular para\nconvertirse en otras formas de vida.
+Es un POKéMON rarísimo que puede evolucionar de mil formas\ndistintas según las circunstancias.
+La composición celular de su cuerpo es tan similar a la estructura\nmolecular del agua que se confunde con ella.
+Si se le enfada o asusta, se le eriza el pelaje. Cada pelo se le\nconvierte en una afilada púa que hace trizas al rival.
+Almacena llamas en el interior de su cuerpo. Tras inhalar\nprofundamente, las lanza a una temperatura de 1700 º.
+Es obra de unos científicos que usaron la tecnología más punta\npara crearlo.
+POKéMON prehistórico que vivió en el océano primordial. Para\nnadar se valía de sus 10 tentáculos.
+Tiene los tentáculos tan desarrollados que le sirven de manos y\npies. Con ellos atrapa a su presa y le da un bocado.
+Es un POKéMON regenerado a partir de un fósil de una criatura\nancestral. Está protegido por un duro caparazón.
+Le gusta nadar a su aire. Cuando atrapa a su presa con las garras,\nle absorbe todos los fluidos.
+Se regeneró a partir de material genético de un dinosaurio,\nencontrado en ámbar. Cuando vuela emite escandalosos alaridos.
+No se encuentra satisfecho hasta que no se come 400 kg de\ncomida cada día. Cuando acaba de comer, se queda dormido.
+Es uno de los legendarios pájaros POKéMON. Vuela con la cola\nal viento haciendo gala de su magnificencia.
+Es uno de los legendarios pájaros POKéMON. Cuando vuela hace\nruidos; emite una especie de chasquido y chisporroteo.
+Es uno de los legendarios pájaros POKéMON. Quien lo ve se\nqueda embobado con las alas que tiene; parece que arden.
+Las crías pueden medir más de 2 m y crecen más mudando\nmuchas veces la piel.
+Dicen que habita ríos y mares. Aunque no tiene alas, a veces se\nle ha visto volar.
+A pesar del tamaño que tiene y de lo pesado que es, puede volar.\nEs capaz de dar la vuelta al mundo en solo 16 horas.
+Su código genético se recombinó repetidas veces por motivos\ncientíficos y el resultado fue este curioso POKéMON.
+Procede de Sudamérica y se pensaba que se había extinguido.\nEs muy inteligente y capaz de aprender cualquier movimiento.
+Sus hojas aromáticas son capaces de medir la humedad y la\ntemperatura.
+Emana por el cuello un intenso aroma, que actúa como\nestimulante para recuperar salud.
+El aliento de MEGANIUM tiene el poder de revivir los rastrojos,\nademás de regenerarlos.
+Suele estar acurrucado. Si se enfada o asusta, lanzará llamas por\nel lomo.
+El pelaje de este POKéMON es ignífugo. Puede soportar\ncualquier ataque de fuego.
+Tiene una habilidad secreta y devastadora. Causa explosiones al\nfrotar el pelaje.
+Es pequeño, pero violento. No dudará en morder cualquier cosa\nque se mueva cerca.
+Abre sus grandes fauces cuando le atacan. Si pierde algún\ncolmillo al morder, le vuelve a crecer.
+Le cuesta soportar su propio peso fuera del agua, así que va a\ncuatro patas. Aun así es rápido.
+Se apoya sobre la cola para ver a mucha distancia. Si divisa a un\nenemigo, dará la alarma a gritos.
+No se sabe dónde comienza su cola. A pesar de sus cortas patas,\nes rápido en cazar a RATTATA.
+Su percepción del tiempo es exacta. Ocurra lo que ocurra, lleva\nel ritmo moviendo la cabeza.
+Cuando necesita pensar, gira su cabeza 180 grados para agudizar\nsu capacidad intelectual.
+Cuando llega el frío, se reúnen muchos LEDYBA de todas partes\npara darse calor.
+Las estrellas que tiene en el lomo crecen y decrecen\ndependiendo de las estrellas del cielo nocturno.
+Teje su telaraña con hilo fino pero resistente. Espera\npacientemente a que caiga su presa.
+Una hebra de un hilo especial es tejida sin fin desde su parte\ntrasera. El hilo acaba en su nido.
+Las alas de las patas le permiten volar rápidamente, pero también\nle dificultan pararse y descansar.
+En el oscuro fondo del océano, su único modo de comunicarse es\nemitiendo luces parpadeantes.
+Ciega a su presa con una luz intensa, y luego se la traga de un\nsolo bocado.
+A pesar de su pequeño tamaño, ataca incluso a los humanos, algo\nque le sorprende hasta a él.
+Cuando varios meteoros iluminan el cielo nocturno, la vista de\nCLEFFA mejora de forma extraña.
+Su cuerpo realmente flexible y elástico le permite rebotar cuando\nsea y donde sea.
+Dice el proverbio que quien despierte a un TOGEPI de su sueño,\nalcanzará la felicidad.
+Si no está con gente amable, se entristece. Puede flotar en el aire\nsin mover las alas.
+Normalmente busca comida por el suelo. En raras ocasiones,\nsalta a las ramas para picotear brotes.
+Dicen en Sudamérica que con el ojo derecho ve el futuro; y con\nel izquierdo, el pasado.
+Su lana crece continuamente. En verano la pierde toda, pero le\nvuelve a salir en una semana.
+Su esponjosa lana almacena electricidad. Su piel gomosa evita\nque sea electrocutado.
+El brillo de la cola es visible desde lejos. En la antigüedad se\nusaba mucho como faro.
+Abundan en los trópicos. Cuando baila, sus pétalos se rozan\ncreando un agradable tintineo.
+Usa el extremo de su cola como boya, así no se ahoga aunque lo\narrastre una fuerte corriente.
+Cuando juega en el agua, enrolla las alargadas orejas que tiene,\npara evitar que le entre agua.
+Se disfraza de árbol para no ser atacado. Odia el agua, por lo que\ndesaparecerá si empieza a llover.
+Cuando tres o más de estos se juntan, emiten un sonido muy\nfuerte parecido a un bramido.
+Su cuerpo es tan ligero que debe agarrarse bien al suelo con las\npatas para no irse con el viento.
+Abre los pétalos para absorber la luz solar. También flota en el\naire para estar más cerca del Sol.
+Se desplaza con los vientos estacionales y suelta sus esporas por\ntodo el mundo para reproducirse.
+Vive en lo alto de los árboles. Cuando salta de rama en rama, usa\nla cola para equilibrarse.
+Se alimenta del rocío que hay sobre las hojas de las plantas.\nDicen que no come nada más.
+De día, corre de forma incontrolada de un lado a otro, pero\ncuando se pone el sol, se detiene por completo.
+Sus grandes ojos pueden girar 360 grados. Mira en todas\ndirecciones en busca de insectos como presa.
+Cuando camina por el suelo, se envuelve en una película suave y\nvenenosa.
+Debido a su despreocupada actitud, a menudo golpea su cabeza\ncontra rocas o barcos al nadar.
+Basándose en las corrientes de aire predice cosas como el clima o\nel próximo ataque del enemigo.
+Cuando oscurece, los anillos de su cuerpo comienzan a brillar,\nasustando a cualquiera que se acerque.
+Dicen que al ser perseguido, atrae al atacante hacia los caminos\nde la oscura montaña, donde se perderá.
+Al ser mordido en la cabeza, SLOWPOKE absorbió unas toxinas\nque liberaron su oculto poder.
+Le gusta morder y tirar del pelo a la gente desde atrás sin avisar,\nsolo para ver su reacción.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Para mantener oculta la negra cola que tiene, vive en silencio en\nla oscuridad. Nunca ataca primero.
+La cola, que también tiene un pequeño cerebro, muerde por su\ncuenta si nota un olor seductor.
+Se cuelga y espera a los insectos que pasan cerca. No suele\nmoverse mucho por su cuenta.
+Permanece inmóvil agarrado a su árbol. Dispara trozos de su dura\nconcha para alejar al enemigo.
+Si se siente amenazado, escapa cavando con la cola. Puede flotar\nligeramente usando las alas.
+A veces se sujeta a los precipicios. Cuando divisa una presa,\ndespliega las alas y planea para atacar.
+Dicen que si ONIX viviera más de 100 años, su composición sería\nla del diamante, como STEELIX.
+Muy travieso por naturaleza, a muchas mujeres les gusta jugar con\nél porque es muy cariñoso.
+Como le pesan mucho los colmillos, se le va la cabeza hacia\nadelante. Su MORDISCO es muy potente.
+Las pequeñas púas que cubren su cuerpo eran escamas. Inyectan\nuna toxina que debilita.
+No usa las alas para volar. Las agita a gran velocidad para regular\nsu temperatura.
+Almacena BAYAS dentro del caparazón. Para evitar ataques, se\nesconde inmóvil bajo las rocas.
+Suele ser dócil, pero si se le molesta mientras succiona miel,\nperseguirá con su cuerno al intruso.
+Es malvado por naturaleza. Saca a los PIDGEY de sus nidos para\ndevorar sus huevos.
+Antes de que la comida escasee en invierno, tiene por costumbre\nocultar comida en lugares secretos.
+Capaz de percibir cualquier tipo de aroma, encuentra sin\nproblemas todo alimento enterrado bajo tierra.
+Asiduo a las zonas volcánicas, se desliza lentamente en busca de\nlugares calientes.
+En ocasiones, lanza por la resbaladiza coraza que tiene intensas\nllamaradas que recorren todo su cuerpo.
+Si percibe un aroma tentador, se tira de cabeza para encontrar el\norigen de dicho olor.
+Si carga contra un enemigo, los pelos del lomo se le erizarán.\nEs muy sensible al ruido.
+En un país costero del sur, la gente vive en comunidades sobre\ngrupos de este POKéMON.
+Usando su aleta dorsal para succionar, se une a un MANTINE para\nbuscar restos de comida.
+Instintivamente se escabulle entre las rocas. Si le entra sueño,\nrobará la guarida de otro OCTILLERY.
+Anida en el borde de escarpados acantilados. Se pasa todo el día\nllevando comida a sus polluelos.
+Nada libremente en mar abierto. Si va lo bastante rápido, volará\nsobre las olas del mar.
+Después de anidar en zarzas, las alas de sus polluelos crecen\nfortalecidas por los rasguños.
+Para arrinconar a su presa, comprueban sus posiciones con\nladridos que solo ellos entienden.
+Al oír sus siniestros aullidos, los otros POKéMON se estremecen y\nse guarecen.
+Duerme en el fondo del océano para recargarse de energía.\nDicen que causa tornados cuando se levanta.
+Como muestra de afecto, da golpes con la trompa. Aunque es tan\nfuerte que te mandará lejos.
+Cuanto más grandes son los colmillos, mayor es su estatus en la\nmanada. Los colmillos tardan mucho en crecer.
+La investigación mejoró sus habilidades. A veces, puede actuar de\nforma no programada.
+Todo aquel que se quede mirando su cornamenta, perderá el\ncontrol y el equilibrio.
+Cuando llega a adulto, suele dejar que sus camaradas dejen sus\nhuellas sobre el lomo.
+Aunque es pequeño, es mejor no ignorarlo porque atacará\ncualquier objetivo sin previo aviso.
+Lanza patadas mientras gira. Si alcanza mucha velocidad, puede\ncavar un hoyo en la tierra.
+Siempre mueve la cabeza hacia delante y hacia atrás como si\nquisiera besar a alguien.
+Incluso en la peor de las tormentas, este POKéMON juega feliz si\nun trueno cruza el cielo.
+Aparece en los cráteres de los volcanes. Puede alcanzar los\n600 grados de temperatura, así que no lo subestimes.
+Si solo tiene una cría, la leche que produce contiene muchos más\nnutrientes de lo normal.
+Es de naturaleza compasiva. Si ve a un POKéMON enfermo, lo\ncuidará hasta que se recupere.
+Un POKéMON que corre por el campo mientras lanza un grito\nque recuerda al trueno.
+Un POKéMON que corre por la tierra. Dicen que siempre nace\nuno cuando aparece un nuevo volcán.
+Este POKéMON corre por la tierra. Dicen que siempre que\naparece, soplan vientos del norte.
+Nace muy profundo en el suelo, y no podrá salir hasta que se\nhaya comido la tierra que le rodea.
+Hasta encerrado en su coraza, se mueve libremente. Es duro y\nrápido, y su poder destructivo es enorme.
+Tiene tanta fuerza que puede cambiar el paisaje. Su naturaleza\ninsolente le hace ser muy egoísta.
+Dicen que es el guardián de los mares. Hay rumores de que fue\nvisto en una noche de tormenta.
+Cuenta la leyenda que brilla en siete colores. Dicen que deja un\narco iris tras de sí al volar.
+Dicen que cuando CELEBI se interna en un bosque, deja tras de sí\nun huevo traído del futuro.
+Escala superficies verticales muy rápido. Con la cola detecta la\nhumedad y prevé el tiempo que va a hacer.
+Los desarrollados músculos que tiene en las extremidades\ninferiores le hacen ser muy ágil y le permiten dar grandes saltos.
+Las hojas que le salen de las patas delanteras están afiladas como\ncuchillas. Salta de rama en rama para atacar.
+En su interior, guarda la llama que arde sin cesar. Si se le abraza,\nse nota que tiene una temperatura muy alta.
+Para entrar en un estado de alta concentración se pone a chillar.\nDa unas patadas demoledoras.
+Ante un rival difícil, expulsa llamas por las muñecas. Tiene mucha\nfuerza en las patas; hasta puede saltar edificios.
+Tiene una larga cola que le propulsa por el agua con mucha\npotencia. A pesar de ser pequeño, tiene mucha fuerza.
+Está en su salsa cuando se encuentra en zonas lodosas de suelo\nresbaladizo. Si lucha en este medio, es impresionante.
+Tiene unos brazos duros como el acero. De una batida, puede\ndejar molido al enemigo. Construye su nido en la playa.
+Es tenaz, por naturaleza. Tiene un sentido del olfato tan agudo\nque nunca se le escapa la presa que quiere.
+Siempre obedece a los buenos ENTRENADORES. Está\nacostumbrado a vivir en jaurías en estado salvaje.
+Es un POKéMON muy inquieto, se interesa por todo. Siempre\nestá de aquí para allá.
+En línea recta puede alcanzar los 100 km por hora, pero tiene\ndificultades para ir rápido cuando hay curvas.
+Vive en las zonas de maleza alta de los bosques. Cuando le\natacan, apunta a su rival con las venenosas púas que tiene.
+Ahorra energía moviéndose lo menos posible. Se dedica a beber\nel agua de la lluvia a la espera de su evolución.
+Aunque no lo parezca, es un POKéMON agresivo. Ataca clavando\nla boca que tiene en forma de espiral.
+Está formado por seda que se endurece poco a poco. Si se\nresquebraja el capullo, está a punto de evolucionar.
+Si siente que está en peligro, libera un polvillo venenoso. Se\nreúne con más de su especie cerca de las luces de la calle.
+Va buscando agua potable para beber. Si no la encuentra pasado\nun tiempo, se le marchita la hoja de la cabeza.
+Vive en el agua y, cuando hace sol, se queda en la orilla. De día\nduerme sobre las algas y de noche entra en acción.
+El ritmo de la música alegre y animada activa las células de\nLUDICOLO y estas le dan fuerza.
+Cuando se queda inmóvil, parece una bellota de verdad. Le\nencanta sorprender a los PIDGEY cuando van buscando grano.
+Vive en los agujeros de los troncos de los árboles. Cuando usa la\nhoja de la cabeza como flauta, asusta a la gente.
+Habita los bosques y se le tiene miedo. Es capaz de leer los\npensamientos del rival y actuar en consecuencia.
+No le gustan las bajas temperaturas. En las estaciones frías se\nrecorren casi 300 km al día en busca de zonas cálidas.
+Cuando se encuentra bien, pone firmes las plumas de la cola\ndoble que tiene. Remonta el vuelo de forma muy elegante.
+Vuela y planea siguiendo la brisa oceánica. En invierno esconde\ncomida cerca de su nido.
+Vuela transportando pequeños POKéMON en el pico. A veces,\nse queda flotando en el agua para descansar las alas.
+Capta muy bien lo que sienten las personas y los POKéMON.\nCuando nota cierta hostilidad, se esconde.
+Al percibir la alegría de su ENTRENADOR refuerza sus ataques\npsicoquinéticos. Cuando está contento, da vueltas y baila.
+Tiene la capacidad de predecir el futuro. Cuando protege a su\nENTRENADOR se vuelve más fuerte.
+Vive en estanques, pero cuando se desata una tormenta puede\naparecer en los charcos que se forman en las ciudades.
+En las antenas tiene un par de ojos dibujados. Cuando llueve, se\nle vuelven muy pesadas y le impiden luchar.
+Prefiere los sitios húmedos. De día está tranquilamente en el\nbosque, a la sombra. Expulsa polvo tóxico por la cabeza.
+Las semillas de la cola contienen esporas tóxicas. Vence al rival\ndándole puñetazos rápidos y casi invisibles.
+Se pasa 20 horas al día durmiendo. Una de sus habilidades es\nhacer que le entre sueño al que tiene al lado.
+Siempre tiene hambre porque no para. No puede estarse quieto\nni comiendo.
+Es el POKéMON más vago que hay. Con todo, puede liberar de\nuna vez una cantidad tremenda de energía acumulada.
+Como se ha pasado casi toda la vida viviendo bajo tierra, no ve\nbien. La antena que tiene le ayuda a orientarse.
+Este POKéMON es tan rápido que puede esquivar cualquier\nataque. Le encanta alimentarse de la savia de los árboles.
+Es un POKéMON muy peculiar; aparece de repente en una\nPOKé BALL cuando NINCADA evoluciona.
+Normalmente murmulla, pero cuando siente que hay peligro se\npone a chillar. Solo para cuando se le cierran las orejas.
+Cuando patalea y ruge, genera ondas ultrasónicas con las que\npuede destruir hasta una casa.
+Emite diversos sonidos a través de los tubos que tiene por el\ncuerpo. Cuando chilla, se le puede oír a 10 km.
+A base de duro entrenamiento se hace cada vez más fuerte. Es\ntan resistente que puede soportar cualquier ataque.
+Para aumentar su fuerza, da un pisotón en el suelo. Puede lanzar\nun camión de 10 toneladas por los aires de un puñetazo.
+En combate lanza la cola, que es mayor que él mismo, para\natacar. Cuando está en el agua le sirve de flotador.
+Siempre está con el pico magnético orientado hacia el norte.\nQuienes viajan toman a NOSEPASS como referencia.
+Dicen que cuesta ganarse su confianza, pero que es muy dulce y\nque se porta muy bien.
+Es el favorito de las ENTRENADORAS que están a la última. Lo\nlucen en combate por el pelaje y el estilo que tiene.
+Se alimenta de rocas y gemas. En la oscuridad, los ojos le brillan\ncon el destello de las piedras preciosas.
+Engaña con su aspecto dócil; hace que el rival se confíe y le da\nun mordisco con sus enormes e implacables mandíbulas.
+Se alimenta de hierro para fortalecer su cuerpo de acero. Es un\nproblema, pues devora puentes y vías de tren.
+Para alardear de su fuerza, hace saltar chispas frotando contra\ngrandes rocas el cuerpo de acero que tiene.
+Hace de toda una montaña su territorio y machaca a todo aquel\nque lo invada.
+A diario va a yoga, no se pierde ni una sesión. Mediante la\nmeditación, aumenta su fuerza interior.
+Evita los ataques moviéndose de forma elegante, como si bailara.\nAtaca dando un golpe devastador y moviéndose igual.
+Acumula electricidad estática en el pelaje para lanzar descargas.\nCuando va a haber tormenta, suelta chispas.
+No suele aparecer ante la gente. Dicen que suele colocar su nido\ndonde caen los rayos.
+Anima a sus compañeros con un alegre chisporroteo. Para\nabsorber electricidad, se sube a los postes de teléfono.
+Odia el agua. Si llueve, se protege bajo los aleros de las casas.\nCon las chispas que suelta, hace alegres pompones.
+Vive cerca de estanques de agua clara. De noche, enciende la luz\nde la cola para comunicarse con otros de su especie.
+De noche, guía a VOLBEAT para que dibuje formas en el cielo\ncon la luz que emite. Hay quienes estudian los dibujos.
+Las flores que tiene desprenden un aroma relajante. Cuanto más\nintenso, mejor es el estado de salud de ROSELIA.
+Es capaz de digerir cualquier cosa. Para hacer la digestión, se\nayuda de un fluido y un gas capaces de corroerlo todo.
+Es capaz de tragarse un neumático sin masticarlo. Segrega un\nhorrible fluido tóxico por los poros.
+Habita caudalosos ríos que atraviesan las junglas. Si alguien\ninvade su territorio, acude con más de su especie.
+Es el terror de los mares; traspasa el hierro con los colmillos.\nNada agitando la aleta trasera propulsándose por el agua.
+Cuando traga una gran cantidad de agua, se hincha y se convierte\nen una pelota. Necesita 1 tonelada de alimento al día.
+Es el mayor POKéMON que hay. Atrapa a un buen número de\npresas y se las traga de una vez.
+Magma de 1200 grados centígrados le recorre el cuerpo. Cuando\nse enfría, el magma se solidifica y se vuelve lento.
+Cuando se enfada, las jorobas del lomo entran en erupción y\nexpulsan lava. Habita los cráteres de los volcanes.
+Quema carbón en el interior de su caparazón. Si le atacan, echa\nun denso humo negro y huye.
+Si dejara de saltar se debilitaría. Lleva una perla de CLAMPERL\nen la cabeza.
+Realiza unos raros pasos de baile para captar la atención del rival.\nLas perlas negras que tiene son valiosísimas.
+Dicen que no hay dos SPINDA iguales. Realizan movimientos\nextraños para confundir al rival.
+Habita desiertos áridos. Cava fosas profundas, en las que espera\nque caiga su presa.
+Genera ondas ultrasónicas batiendo las alas violentamente.\nCuando debilita a su presa, la destruye con ácido.
+Su medio es el desierto. Para esconderse, levanta arena con las\npatas. Tiene los ojos protegidos con mallas rojas.
+Prefiere los medios hostiles como los desiertos. Puede sobrevivir\n30 días sin beber, gracias al agua que almacena.
+Su medio es el desierto. Por la noche, se vuelve activo y sale a\nbuscar a presas agotadas por el calor.
+Está continuamente acicalándose las alas de algodón que tiene.\nSi se ensucia, se da una ducha para limpiarse enseguida.
+ALTARIA trina entonando una bella melodía que llega desde lo\nmás profundo de las montañas.
+Cuando se encuentra con un rival, se le eriza el pelaje y se pone\nen guardia. Las zarpas que tiene son su mejor arma.
+Usa rocas para afilarse la cola en forma de espada que tiene. Sale\nde la hierba de repente y ataca con tóxicos colmillos.
+Su energía fluye y refluye según el ciclo de la Luna; cuando está\nexpuesto a ella, rebosa vitalidad.
+De día, absorbe energía solar. No es nada expresivo, pero capta\nperfectamente lo que piensa su rival.
+Examina los lechos lodosos de los ríos con los largos bigotes que\ntiene. Está protegido por una capa viscosa.
+Construye su nido en el fondo de los pantanos. Es capaz de\ncomerse cualquier cosa...
+Viene de muy lejos. Es una criatura resistente que se reproduce\ncon rapidez, incluso en aguas contaminadas.
+Esta violenta criatura agita de forma salvaje las gigantes pinzas\nque tiene. Dicen que es muy difícil criarlo.
+Fue descubierto en unas ruinas antiguas. Para moverse gira sin\nparar. Se mantiene sobre un pie hasta cuando duerme.
+Dicen que se creó de una muñeca de barro hecha por una antigua\ncivilización. Usa telequinesia para levitar y moverse.
+Se extinguió hace cien millones de años, y se regeneró a partir de\nun fósil gracias a los avances de la técnica.
+Atrapa a su presa con los ocho tentáculos que tiene, y antes de\ndevorarla la baña en ácido.
+Es una especie de POKéMON predecesor. Estira las pinzas para\ncazar a sus presas, que se esconden en las rocas del mar.
+Está protegido por una fuerte armadura y tiene un cuerpo\nrobusto. Engancha a sus presas con las pinzas y las devora.
+A los investigadores no les interesa mucho por el aspecto poco\nimponente que tiene. Habita estanques que tengan algas.
+MILOTIC es impresionantemente bello. Quienes lo ven, temen\nperder las ganas de luchar contra él.
+Tiene la habilidad de cambiar y adaptarse al tiempo. Según el\nclima, se transformará en sol, o en nubarrones de lluvia o nieve.
+Cambia el color de la piel para mezclarse con su entorno.\nTambién varía la coloración según su estado de ánimo.
+Se alimenta de sentimientos como la envidia y el rencor, que\ncapta a través del cuerno de la cabeza.
+Cuando abandonaron a este muñeco de felpa, se convirtió en\nPOKéMON. Libera una energía que hechiza al enemigo.
+Se vuelve invisible para acercarse sigilosamente al enemigo.\nTiene la habilidad de atravesar anchos muros.
+Está completamente hueco. Cuando abre la boca, es capaz de\nabsorber cualquier cosa, como si fuera un agujero negro.
+Habita las junglas tropicales. Los racimos de fruta que le rodean\nel cuello son deliciosos. Da fruto dos veces al año.
+Se desplaza aprovechando los vientos. Usa la larga cola que tiene\npara agarrar bayas y frutos secos, que le encantan.
+Aparece cuando prevé una catástrofe natural inminente, por eso\ndicen que trae mala suerte.
+Suelen ir en grupo y a la hora de dormir se resguardan en una\ncueva.
+Dicen que los hogares que reciben la visita de SNORUNT\nprosperan. Puede soportar temperaturas de 100 º bajo cero.
+Tiene un cuerpo de hielo imposible de derretir. Es capaz de\ncongelar en un instante la humedad del ambiente.
+Tiene un suave pelaje que lo protege del frío cuando se revuelca\npor el hielo.
+Para identificar cosas, se las coloca en el morro para olerlas y ver\nel tacto que tienen. A veces hace lo mismo con SPHEAL.
+Nada por mares glaciales destrozando bloques de hielo con sus\nenormes colmillos. Lo protege una capa de grasa.
+Está protegido por una sólida concha. Puede llegar a formar una\nperla extraordinaria.
+Vive en los abismos marinos, donde no se filtra la luz. Tiene una\ncola en forma de pez, que enciende para atraer a su presa.
+Tiene una forma de nadar de lo más elegante. Se alimenta de las\nalgas marinas que crecen entre las rocas.
+No ha sufrido ningún cambio desde hace 100 millones de años.\nFue descubierto durante una expedición marina.
+Durante el desove, multitud de LUVDISC se concentran en los\narrecifes de coral coloreando de rosa el agua.
+Tiene la cabeza dura como el acero y es capaz de destrozar rocas.\nSu sueño es que le crezcan alas para volar.
+La robusta capa que lo rodea repele los ataques. Aunque es una\nbuena protección, lo hace lento y pesado.
+Si se enfada, no hay forma de calmarlo; lo destruye todo\nlanzando arañazos y llamas.
+Usa ondas magnéticas para comunicarse con los de su misma\nespecie. Las células de su organismo están magnetizadas.
+Levita gracias al magnetismo que posee. Es tan robusto que ni el\nimpacto más fuerte conseguiría hacerle un rasguño.
+Está compuesto por dos METANG fusionados. Tiene cuatro\ncerebros que superan en capacidad al mejor de los ordenadores.
+Está formado enteramente por rocas. No parece que tenga sitio\npara corazón ni cerebro. Es un misterio de la ciencia.
+Estudios revelaron que el cuerpo de este POKéMON está\nformado por el mismo hielo que hay en el Polo Sur.
+Es más fuerte que el metal más duro. Durante más de diez mil\naños se fue endureciendo bajo la corteza terrestre.
+Se comunica por telepatía con la gente. Cambia de aspecto\nrefractando luz con el plumaje.
+Es muy dócil y no le gusta nada combatir. Para ganar velocidad\ncuando vuela, pliega las patas delanteras.
+Dicen que extendió la superficie de los mares haciendo que\ndiluviara. Tiene la capacidad de controlar las aguas.
+Dicen que este POKéMON legendario simboliza la tierra. Tras\nbatirse en duelo con KYOGRE se echó a dormir.
+Ha vivido durante cientos de millones de años en la capa de\nozono. Cuando vuela, parece un meteorito.
+Dicen que hace realidad cualquier sueño. Permanece despierto\nuna semana por cada mil años de sueño.
+
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Su cuerpo fino y plano aparece siempre en los muros. Su forma\nparece tener algún significado.
+Tiene la habilidad de cambiar y adaptarse al tiempo. Según el\nclima, se transformará en sol, o en nubarrones de lluvia o nieve.
+Tiene la habilidad de cambiar y adaptarse al tiempo. Según el\nclima, se transformará en sol, o en nubarrones de lluvia o nieve.
+Tiene la habilidad de cambiar y adaptarse al tiempo. Según el\nclima, se transformará en sol, o en nubarrones de lluvia o nieve.
+DEOXYS se ha convertido en un POKéMON agresivo. Engaña al\nenemigo cambiando de aspecto.
+~~~~~~~~~~~~~~~
+Text File : zukan_comment_lg
+~~~~~~~~~~~~~~~
+
+Una rara semilla le fue plantada en el lomo al nacer. La planta\nbrota y crece con este POKéMON.
+Cuando el bulbo del lomo crece, le cuesta un poco ponerse de\npie sobre las patas traseras.
+La planta florece cuando absorbe energía solar, por eso le obliga\na buscar luz del sol.
+Prefiere los sitios cálidos. Dicen que cuando llueve le sale vapor\nde la punta de la cola.
+Cuando balancea la ardiente cola, eleva la temperatura a niveles\nmuy altos.
+Escupe fuego tan caliente que funde las rocas. Causa incendios\nforestales sin querer.
+Tras nacer, se le hincha el lomo y se le forma un caparazón.\nEcha potente espuma por la boca.
+Se oculta en el agua para cazar a sus presas. Al nadar\nrápidamente mueve las orejas para nivelarse.
+Es un POKéMON violento. Tiene reactores de agua en el\ncaparazón, que le sirven para atacar con fuerza.
+Sus cortas patas están recubiertas de ventosas que le permiten\nsubir incansable por muros y cuestas.
+Este POKéMON es vulnerable al ataque cuando su coraza es\nblanda y no lo protege del todo.
+En combate, aletea a gran velocidad para lanzar al aire sus\ntóxicos polvillos.
+Fácil de ver por los bosques comiendo hojas. Tiene un aguijón\nvenenoso en la cabeza.
+Casi incapaz de moverse, este POKéMON solo puede endurecer\nsu caparazón para protegerse.
+Vuela muy deprisa y ataca con los venenosos y grandes aguijones\nde la cola y las patas delanteras.
+Muy común en bosques y selvas. Aletea al nivel del suelo para\nlevantar la gravilla.
+Muy protector de su amplio territorio, este POKéMON picoteará\nferozmente a los intrusos.
+Cuando caza, vuela muy deprisa a ras del agua, y sorprende a\ninocentes presas como MAGIKARP.
+Cuando ataca lo muerde todo. Pequeño y muy rápido, es muy\nfácil de ver en muchos sitios.
+Utiliza los bigotes para equilibrarse. Parece que si se los cortan\nva más despacio.
+Come bichos en zonas de hierba. Agita sus cortas alas muy rápido\npara mantenerse en el aire.
+Con sus enormes y magníficas alas, puede seguir volando sin\ntener que aterrizar para descansar.
+Es muy silencioso y cauteloso. Come huevos de pájaros como los\nde PIDGEY y SPEAROW.
+Se dice que las feroces señales de alerta de la panza difieren de\nun área a otra.
+Cuando varios de estos POKéMON se juntan, su energía puede\ncausar fuertes tormentas.
+La larga cola que tiene le sirve para protegerse a sí mismo de su\npotente y alto voltaje.
+Se oculta bajo tierra, en zonas áridas y alejadas del agua. Solo\nemerge para cazar su comida.
+Ante el peligro, se acurruca en un espinoso ovillo. De esta forma\npuede rodar para atacar o escapar.
+Aunque pequeñas, sus venenosas púas son muy peligrosas.\nLa hembra tiene pequeños cuernos.
+El cuerno de la hembra crece lentamente. Prefiere ataques físicos\ncomo arañar y morder.
+Está protegido por duras escamas. Usa su gran corpulencia para\nejecutar potentes movimientos.
+Estira las orejas para sentir el peligro. Cuanto mayores sean los\ncuernos, más fuerte será su veneno.
+Un POKéMON agresivo, siempre listo para atacar. El cuerno de la\ncabeza segrega un potente veneno.
+Usa la potente cola en combate para aplastar y oprimir a su\npresa. Después le rompe los huesos.
+Su mágico y adorable aspecto atrae a la gente. Es raro y solo\naparece en ciertas áreas.
+Un encantador y tímido POKéMON muy raro de ver. Corre y se\noculta en cuanto siente que viene gente.
+Cuando nace solo tiene una cola, pero a medida que crece, esta\nse va dividiendo desde la punta.
+Muy inteligente y vengativo. Agarrar una de sus colas podría traer\n1000 años de mala suerte.
+Cuando sus ojos se iluminan, canta una secreta melodía con la\nque duerme a sus enemigos.
+Su cuerpo es blando y gomoso. Cuando se enfada, traga aire y se\nhincha muchísimo.
+Forma colonias en lugares oscuros. Usa ultrasonido para\nidentificar y acercarse a los objetivos.
+Cuando ataque, seguirá chupando energía de su víctima, aunque\npese tanto que ya no pueda volar.
+Durante el día, entierra la cara en el suelo, y de noche, va\nplantando semillas por ahí.
+El fluido que le cae de la boca no es la saliva, sino un néctar que\nusa para atraer a su presa.
+Cuanto mayores son sus pétalos, más tóxico es su polen. Le pesa\nla cabeza y le cuesta mantenerla erguida.
+Cava para chupar las raíces de los árboles. Las setas del lomo\ncrecen con él.
+Una pareja de parásitos en la que la seta domina al bicho.\nPrefieren los sitios húmedos.
+Vive entre las sombras de árboles altos, donde come insectos.\nPor la noche, le atrae la luz.
+El polvillo que cubre sus alas es de distinto color según el tipo de\nveneno que lleve.
+Vive un metro por debajo del suelo, donde se alimenta de raíces.\nTambién aparece en la superficie.
+Un trío de DIGLETT. Causa enormes terremotos al cavar 100 km\npor debajo del suelo.
+Adora los objetos redondos. De noche, camina por las calles en\nbusca de monedas perdidas.
+Aunque es muy admirado por el pelo, es difícil de entrenar como\nmascota, porque es un poco travieso.
+Mientras calma al enemigo con su vacía mirada, este POKéMON\nusa poderes psicoquinéticos.
+Suele ser visto nadando de forma elegante por los lagos. Es\nconfundido con el monstruo japonés, Kappa.
+Se enfada muy fácilmente. Puede pasar de la tranquilidad a la ira\nen apenas un segundo.
+Siempre furioso y tenaz con sus patadas. Perseguirá a su presa\nhasta que la atrape.
+Gran defensor de su territorio. Ladrará y morderá para echar a los\nintrusos de su espacio.
+Un POKéMON muy admirado desde la antigüedad por su belleza.\nCorre ágilmente como si tuviera alas.
+Sus nuevas y pequeñas patas no le dejan correr. Parece que\nprefiere nadar a estar de pie.
+Capaz de vivir dentro o fuera del agua. Fuera del agua suda para\nmantener baboso su cuerpo.
+Experto nadador tanto a braza como a crol. Gana fácilmente a los\nnadadores profesionales.
+Con su capacidad de leer la mente, detecta cualquier peligro y se\nTELETRANSPORTA a un lugar seguro.
+Emite ondas alfa especiales que causan jaquecas a todo el que se\nle acerca.
+Su cerebro puede ganar al de un ordenador de alta gama. Tiene\nun coeficiente intelectual de 5000.
+Le encanta ser musculoso. Se entrena en todo tipo de arte marcial\npara ser aún más fuerte.
+Su musculoso cuerpo es tan fuerte que usa un cinto antifuerza\npara controlar sus movimientos.
+Usa los fuertes músculos que tiene para lanzar bestiales\npuñetazos y enviar muy lejos a su víctima.
+Un POKéMON carnívoro que caza insectos. Usa sus raíces para\nabsorber humedad.
+Escupe POLVO VENENO para envenenar al enemigo, y luego lo\nliquida con ÁCIDO.
+Dicen que vive en grandes colonias en el interior de las junglas,\naunque nadie ha podido verificarlo.
+Va a la deriva a poca profundidad. Si es pescado por accidente,\nel castigo será su punzante ácido.
+Cuando caza, extiende los cortos tentáculos que tiene para\natrapar e inmovilizar a su presa.
+Aparecen en llanos y montañas. Como parecen rocas, la gente se\ntropieza con ellos o los pisa.
+Se mueve rodando cuesta abajo y sobre cualquier obstáculo, sin\nfrenar ni cambiar de dirección.
+Su cuerpo rocoso es superduro. Soporta explosiones de dinamita\nsin sufrir daño.
+Sus cascos son 10 veces más duros que el diamante. Puede\npisotear cualquier cosa en poco tiempo.
+Muy competitivo, este POKéMON perseguirá a todo lo que se\nmueva rápido e intentará salir airoso.
+Increíblemente lento y torpe. Tarda 5 segundos en sentir dolor si\nlo atacan.
+Dicen que el SHELLDER pegado a la cola de SLOWPOKE se nutre\nde los residuos del anfitrión.
+Anula la gravedad para mantenerse en el aire. Sin previo aviso\nusa ONDA TRUENO y parecidos.
+Están formados por MAGNEMITE unidos. Suelen aparecer cuando\narden las manchas solares.
+La ramita que lleva es su mejor arma. Suele usarla como espada\npara cortar cosas.
+Un pájaro que compensa su pobre vuelo caminando muy\nrápidamente. Deja enormes huellas.
+Para tramar sus planes usa sus tres cerebros. Cuando dos cabezas\nduermen, la otra sigue despierta.
+El cuerno que sobresale de su cabeza es muy duro. Suele usarlo\npara romper el hielo.
+Guarda energía térmica en su cuerpo. Nada a 15 km por hora sin\nparar hasta en aguas muy frías.
+Aparece en zonas asquerosas. Crece absorbiendo los residuos\ntóxicos expulsados por las fábricas.
+Está cubierto por un repugnante lodo. Es tan tóxico que hasta sus\nhuellas son venenosas.
+La concha lo protege de cualquier tipo de ataque. Solo es\nvulnerable cuando se abre.
+Cuando es atacado, lanza sus cuernos con gran rapidez. Sus\nentrañas jamás han sido vistas.
+Casi invisible, este gaseoso POKéMON cubre al enemigo y lo\nadormece sin previo aviso.
+Por su habilidad para atravesar muros de piedra, se dice que\nviene de otra dimensión.
+En luna llena, a este POKéMON le gusta imitar las sombras de la\ngente y burlarse de sus miedos.
+Cuando crece, las partes rocosas de su cuerpo se endurecen.\nAcaba pareciéndose a un diamante negro.
+Adormece a sus enemigos y se come sus sueños. A veces se pone\nenfermo si come pesadillas.
+Cuando mira al enemigo, usa una mezcla de movimientos\nPSÍQUICOS como HIPNOSIS y CONFUSIÓN.
+Usa las pinzas como potentes armas y para equilibrarse cuando\ncamina de lado.
+La pinza más grande tiene una enorme potencia, pero su gran\ntamaño la hace poco manejable.
+Suele vivir en centrales de energía. Mucha gente acaba muy mal\nal confundirlo con una POKé BALL.
+Almacena energía eléctrica a gran presión. Suele explotar a la\nmínima provocación.
+Son muy parecidos a los huevos. Cuando se les molesta, se\nagrupan y atacan todos juntos.
+Dice la leyenda que en raras ocasiones una de sus cabezas cae\ny sobrevive como un EXEGGCUTE.
+Como no se quita nunca el cráneo que lleva puesto, nadie le ha\nvisto la cara a este POKéMON.
+El hueso que lleva es su gran arma. Lo lanza hábilmente como un\nbumerán y deja a todos fuera de combate.
+Cuando tiene prisa, extiende las patas. Corre suavemente dando\nenormes zancadas.
+Aunque parezca que no hace nada, sus rápidos puñetazos-voleas\nson imposibles de ver.
+Su lengua se extiende como la de un camaleón. Cuando lame a\nsus enemigos, se estremecen.
+Como encierra varios tipos de gases tóxicos en su cuerpo, suele\nexplosionar sin previo aviso.
+Donde se junten 2 tipos de gases venenosos, 2 KOFFING podrán\nfusionarse y convertirse en un WEEZING.
+Tiene unos huesos 1000 veces más macizos que los de las\npersonas. Es famoso por su gran fuerza.
+La piel le sirve de escudo protector. Puede vivir en lava líquida a\n2000 grados de temperatura.
+Un raro y evasivo POKéMON que, según dicen, lleva la felicidad\na quienes lo atrapan.
+Tiene el cuerpo cubierto con anchas cintas del tipo alga que se\nmueven cuando camina.
+El bebé no suele salir de la segura bolsa de su madre hasta que\ncumple los tres años.
+Es famoso por derribar a bichos voladores lanzando tinta desde\nla superficie del agua.
+Puede nadar hacia atrás moviendo rápidamente las aletas\npectorales y la robusta cola que tiene.
+La aleta de la cola se infla como un elegante traje de baile.\nLe llaman Reina del agua.
+En otoño, cuando se reproducen, se les puede ver nadando con\nenergía por ríos y arroyos.
+Un enigmático POKéMON que puede regenerar con facilidad\ntodo apéndice que pierda luchando.
+Su núcleo central brilla con los 7 colores del arco iris. Para\nalgunos tiene el valor de una gema.
+Si alguien lo interrumpe mientras excava, se pondrá a darle\nbofetadas con las enormes manos que tiene.
+Con una agilidad y velocidad de ninja, puede hacer creer que hay\nmás de uno.
+Camina moviendo las caderas de forma llamativa. Puede hacer\nque la gente baile con él a su ritmo.
+Suelen andar por las centrales eléctricas, pero también merodean\npor otras zonas y causan grandes apagones.
+Su cuerpo siempre arde con un brillo naranja, con el que se\noculta entre las llamas.
+Si no consigue triturar a su víctima con sus pinzas, le dará vueltas\ny la arrojará lejos.
+Cuando ve a un enemigo, carga ferozmente con todo el cuerpo,\nazotándose con las largas colas que tiene.
+En un pasado lejano, era más fuerte que sus horribles\ndescendientes de hoy en día.
+No es frecuente verlo en su medio. Es enorme y malvado, y capaz\nde destruir ciudades enteras de un ataque.
+Un POKéMON que ha sido cazado casi hasta la extinción. Puede\nllevar a la gente por el agua.
+Puede copiar el código genético de un enemigo y transformarse\nen una réplica del mismo.
+De irregular código genético, puede mutar si se le expone a la\nradiación de los elementos ROCA.
+Vive cerca del agua. La larga cola que tiene termina en una aleta\nmuy parecida a la de una sirena.
+Acumula iones negativos de la atmósfera para lanzar rayos de\n10 000 voltios de potencia.
+Cuando almacena energía térmica en su cuerpo, su temperatura\npuede subir a más de 900 grados.
+Un POKéMON formado por códigos de programación. Se mueve\nlibre por el ciberespacio.
+Aunque extinto, en algunas ocasiones puede ser recuperado\ngenéticamente a partir de los fósiles.
+Un prehistórico POKéMON que se extinguió porque su pesada\nconcha le impedía atrapar a sus presas.
+Un POKéMON recuperado a partir de un fósil encontrado en lo\nque hace años fue el fondo oceánico.
+Con su impecable forma es un gran nadador. Corta a su presa con\nlas garras y absorbe sus fluidos.
+Un prehistórico y feroz POKéMON que se lanza con los colmillos\na la garganta del enemigo.
+Es muy vago. Solo come y duerme. A medida que engorda se\nvuelve cada vez más perezoso.
+Es un legendario pájaro POKéMON. Se aparece a la gente que se\nha perdido en las heladas montañas.
+Es un legendario pájaro POKéMON. Dicen que aparece entre las\nnubes lanzando enormes rayos brillantes.
+Es más conocido como el legendario pájaro de fuego. Con cada\naleteo crea brillantes llamas.
+Durante años se dudó de su existencia, hasta que se encontró\nuna colonia submarina.
+Es un POKéMON misterioso. Está rodeado de una sutil aura y\ntiene la capacidad de cambiar el clima.
+Es un POKéMON marino muy raro de ver. Dicen que es tan\ninteligente como los humanos.
+Fue creado por un científico tras años de horribles experimentos\nde ingeniería genética.
+Es tan raro que muchos expertos opinan que es solo una ilusión.\nSolo unos pocos lo han visto.
+La hoja de la cabeza desprende un dulce aroma. Es dócil y le\nencanta absorber rayos de sol.
+Su cuello huele a especias. Dicen que, por alguna razón, su\nsimple olor incita a luchar.
+El olor que desprenden sus pétalos contiene una sustancia que\ncalma el instinto agresivo.
+Es tímido y siempre se enrosca como una pelota. Si es atacado,\nenciende el lomo para protegerse.
+Ten cuidado si te da la espalda en combate. Significa que te va a\natacar con el lomo en llamas.
+Si su furia crece, se calienta tanto que cualquier cosa que toque\narderá al instante.
+Sus desarrolladas y potentes mandíbulas pueden romper cualquier\ncosa. Su ENTRENADOR debe tener cuidado.
+Si pierde un colmillo, le crecerá otro en su lugar. Siempre tiene\n48 colmillos en la boca.
+Al morder con sus feroces fauces, mueve la cabeza para\ndespedazar salvajemente a su víctima.
+Es un POKéMON muy precavido. Se levanta apoyándose en la\ncola para tener una mejor vista de los alrededores.
+Construye un nido donde introducir el largo y delgado cuerpo\nque tiene, para protegerse de otros POKéMON.
+Se apoya en una sola pata y cuando hace el cambio, se mueve\ntan rápido que apenas se nota.
+Sus ojos se adaptan muy bien a la oscuridad; cuando hay poca\nluz, la condensan para poder ver.
+Es muy tímido. Tiene miedo de moverse cuando va solo. Pero si\nva en grupo, se vuelve muy activo.
+Cuando parpadean las estrellas en el cielo nocturno, se mece\ndesprendiendo un polvo brillante.
+Mantiene la misma postura en su telaraña durante días,\nesperando a que se acerque una presa inocente.
+Teje su telaraña desde su parte trasera y con la boca. Es muy\ndifícil localizar de dónde sale cada hebra.
+Es tan silencioso cuando vuela en la oscuridad con sus cuatro\nalas, que cuesta percibirlo cuando se acerca.
+Libera cargas positivas y negativas entre las puntas de las dos\nantenas que tiene, y electrocuta al enemigo.
+La luz que emite es tan brillante que puede iluminar la superficie\ndel mar desde unos 5 km de profundidad.
+Todavía no domina el almacenamiento de electricidad, y descarga\nrayos cuando se divierte o se asusta.
+Por su inusual forma estrellada, la gente cree que procede de un\nmeteorito que cayó a la tierra.
+Su cuerpo es muy blando. Cuando se pone a rodar, rebota contra\ntodo y es imposible de parar.
+El cascarón parece estar lleno de alegría. Dicen que trae buena\nsuerte si se le trata con cariño.
+Dicen que aparece entre gentes cuidadosas y de buen corazón, a\nquienes inunda de felicidad.
+Va dando saltitos porque sus alas no han crecido lo suficiente.\nSiempre está pendiente de algo.
+Dicen que se mantiene quieto y en silencio porque observa el\npasado y el futuro al mismo tiempo.
+Cuando almacena electricidad en su organismo, duplica su\nvolumen. Tócalo y recibirás una descarga.
+Como almacena tanta electricidad, ha desarrollado parches\ndonde no crece ni la lana.
+La punta de la cola brilla y se puede ver desde lejos. Suele usarse\ncomo faro.
+Los BELLOSSOM suelen reunirse para bailar. Dicen que sus\ndanzas son un ritual para invocar al Sol.
+La punta de la cola, que contiene aceite, le permite nadar sin\nmiedo a ahogarse.
+Guardando silencio y prestando mucha atención puede saber lo\nque hay en los rápidos y salvajes ríos.
+Aunque pretende ser un árbol, en su composición se parece más\na una roca que a una planta.
+Si POLIWAG y POLIWHIRL oyen su grito, responderán y se\nreunirán estén donde estén.
+Para evitar ser arrastrados por el viento, se reúnen en grupos,\naunque adoran las brisas suaves.
+La flor que tiene en la cabeza se abre y cierra según suba o baje\nla temperatura.
+Si es llevado por el viento, podría dar la vuelta al mundo\ncontrolando el vuelo con sus esporas.
+Tiene una cola tan potente que puede usarla para agarrarse a la\nrama de un árbol y no caerse.
+Puede caer del cielo de repente. Si le ataca un SPEAROW, moverá\nviolentamente las hojas.
+Convierte la luz solar en energía. En la oscuridad, tras el\natardecer, cierra los pétalos y se queda inmóvil.
+Si agita muy rápido las alas, genera ondas expansivas capaces de\nhacer añicos las ventanas que haya cerca.
+Este POKéMON vive en aguas frías. Y cuando refresca, sale del\nagua para buscar comida.
+Este despreocupado POKéMON es de naturaleza tranquila.\nSiempre que nada, se choca con los barcos.
+Está recubierto por un corto pelaje que le permite sentir el viento\ny predecir las acciones enemigas.
+Cuando se siente amenazado, este POKéMON se protege\nlanzando sudor venenoso por todos sus poros.
+Temido y odiado por muchos, dicen que trae la desgracia a todos\naquellos que lo ven por la noche.
+Su intelecto e intuición son increíbles. No pierde la compostura\nen ninguna situación.
+Le gusta hacer travesuras como gritar y aullar por la noche, para\nasustar a la gente.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Odia la luz y las sacudidas. Si le atacan, se infla para aumentar la\nfuerza del contraataque.
+Tiene un pequeño cerebro en la cola. ¡Cuidado! Si te acercas,\npuede olerte y morderte.
+Le gusta engrosar su coraza añadiendo cortezas de árbol. El\naumento de peso no le molesta.
+Todo su cuerpo está protegido por una concha de metal. Lo que\nesconde la concha es un misterio.
+Este POKéMON escapa perforando el suelo con la cola y\nenterrándose de espaldas, si es descubierto.
+Vuela directo a la cara de su aterrada víctima, y acaba con ella\ninyectándole veneno.
+Su cuerpo ha sido comprimido en el interior de la tierra, y por\neso es hasta más duro que el diamante.
+Aunque parezca aterrador, en realidad es amable y afectuoso. Es\nmuy popular entre las mujeres.
+Es muy tímido y asustadizo. Si se siente atacado, se moverá para\nevitar al enemigo.
+Para arrojar sus venenosas púas, se infla bebiendo hasta 10 litros\nde agua de una sola vez.
+Mueve sus pinzas para asustar al enemigo. Por los dibujos de su\ncuerpo parece tener 3 cabezas.
+Las BAYAS que almacena en el caparazón se descomponen en un\nlíquido pegajoso.
+Este fuerte POKéMON clava su preciado cuerno en la tripa del\nenemigo, lo eleva y luego lo arroja.
+Tiene ocultas unas garras muy afiladas. Si le atacan, las extiende\npara asustar al enemigo.
+Cuando encuentra miel, le brilla la marca que tiene en la frente.\nSi se llena las garras de miel, se las lame.
+Aunque trepa muy bien, prefiere agitar los árboles con sus patas\ny comer las BAYAS que caen.
+No duerme nunca. Tiene que seguir moviéndose porque si se\ndetiene, su cuerpo de lava podría enfriarse.
+La concha que tiene en el lomo son restos de piel enfriada y\nendurecida, que se rompe con solo tocarla.
+Frota el hocico contra el suelo para desenterrar comida. A veces,\ndescubre aguas termales.
+Como su largo vello corporal le impide ver con claridad, sigue\natacando repetidamente.
+Crece y muda continuamente. La parte superior de la cabeza es\nmuy apreciada por su belleza.
+Tiene muy buena puntería. Dispara agua a sus presas, hasta\ncuando se mueven, a más de 100 metros.
+Atrapa a los enemigos con los tentáculos, y después los golpea\ncon la dura cabeza.
+Siempre lleva comida. Dicen que hay muchos desaparecidos que\nsobrevivieron gracias a esta.
+Mientras nada majestuosamente, no le importa que REMORAID le\nsiga para comerse sus sobras.
+Sus fuertes alas parecen pesadas, aunque son huecas y ligeras, y\nle permiten volar libremente.
+Usa diferentes tipos de gritos para comunicarse con los de su\nespecie o para seguir a su presa.
+Si te quemas con las llamas que lanza por la boca, el dolor no\ndesaparecerá nunca.
+Dicen que suele esconderse en cuevas submarinas. Puede crear\ntorbellinos al bostezar.
+Mueve la larga trompa para jugar, pero como es tan fuerte, a\nveces puede resultar peligroso.
+Tiene afilados y duros colmillos, y una gruesa piel. Su PLACAJE es\ntan fuerte que puede derribar una casa.
+Esta versión mejorada de PORYGON fue creada para explorar el\nespacio, aunque no puede volar.
+Su cornamenta cambia el flujo del aire para crear un espacio de\nrealidad distorsionada.
+La punta de la cola rezuma un fluido especial. Lo pinta todo con\neste líquido para marcar su terreno.
+Ataca siempre con mucha energía. Para fortalecerse a sí mismo,\nsigue luchando aunque pierda.
+Si te quedas embobado con las suaves, elegantes y danzarinas\npatadas que da, puedes acabar lleno de magulladuras.
+La parte más sensible de su cuerpo son los labios. Siempre los usa\npara examinar las cosas.
+Gira los brazos para generar electricidad, pero se agota rápido,\nasí que solo se recarga un poco.
+Cada vez que inspira y expira, lanza ascuas por la boca y por las\nfosas nasales.
+Su leche, rica en nutrientes, es la mejor bebida contra el\ncansancio y las enfermedades.
+Cualquiera que pruebe un poco de huevo de BLISSEY, se volverá\nmás amable y agradable con todos.
+Las nubes de lluvia que lleva le permiten lanzar rayos a voluntad.\nDicen que apareció con un rayo.
+Cuando ladra, los volcanes entran en erupción. Como no puede\ncontrolar su poder, corre siempre en cabeza.
+Conocido como la reencarnación de los vientos del norte, puede\npurificar aguas turbias y sucias.
+Se alimenta de tierra. Después de comer una gran montaña, se\nduerme y empieza a crecer.
+Su caparazón es duro como una piedra, y muy resistente. Su\nGOLPE puede derribar montañas.
+Su cuerpo es casi inmune a los ataques. Por eso le encanta\ndesafiar a sus enemigos.
+Dicen que permanece en silencio en el fondo del mar debido a su\ninmenso poder.
+Cuenta la leyenda que este POKéMON vuela por el cielo con sus\nmagníficas alas de siete colores.
+Este POKéMON vaga por el tiempo. La hierba y los árboles\ncrecen por los campos por donde pasa.
+Escala superficies verticales muy rápido. Con la cola detecta la\nhumedad y prevé el tiempo que va a hacer.
+Los desarrollados músculos que tiene en las extremidades\ninferiores le hacen ser muy ágil y le permiten dar grandes saltos.
+Las hojas que le salen de las patas delanteras están afiladas como\ncuchillas. Salta de rama en rama para atacar.
+En su interior, guarda la llama que arde sin cesar. Si se le abraza,\nse nota que tiene una temperatura muy alta.
+Para entrar en un estado de alta concentración se pone a chillar.\nDa unas patadas demoledoras.
+Ante un rival difícil, expulsa llamas por las muñecas. Tiene mucha\nfuerza en las patas; hasta puede saltar edificios.
+Tiene una larga cola que le propulsa por el agua con mucha\npotencia. A pesar de ser pequeño, tiene mucha fuerza.
+Está en su salsa cuando se encuentra en zonas lodosas de suelo\nresbaladizo. Si lucha en este medio, es impresionante.
+Tiene unos brazos duros como el acero. De una batida, puede\ndejar molido al enemigo. Construye su nido en la playa.
+Es tenaz, por naturaleza. Tiene un sentido del olfato tan agudo\nque nunca se le escapa la presa que quiere.
+Siempre obedece a los buenos ENTRENADORES. Está\nacostumbrado a vivir en jaurías en estado salvaje.
+Es un POKéMON muy inquieto, se interesa por todo. Siempre\nestá de aquí para allá.
+En línea recta puede alcanzar los 100 km por hora, pero tiene\ndificultades para ir rápido cuando hay curvas.
+Vive en las zonas de maleza alta de los bosques. Cuando le\natacan, apunta a su rival con las venenosas púas que tiene.
+Ahorra energía moviéndose lo menos posible. Se dedica a beber\nel agua de la lluvia a la espera de su evolución.
+Aunque no lo parezca, es un POKéMON agresivo. Ataca clavando\nla boca que tiene en forma de espiral.
+Está formado por seda que se endurece poco a poco. Si se\nresquebraja el capullo, está a punto de evolucionar.
+Si siente que está en peligro, libera un polvillo venenoso. Se\nreúne con más de su especie cerca de las luces de la calle.
+Va buscando agua potable para beber. Si no la encuentra pasado\nun tiempo, se le marchita la hoja de la cabeza.
+Vive en el agua y, cuando hace sol, se queda en la orilla. De día\nduerme sobre las algas y de noche entra en acción.
+El ritmo de la música alegre y animada activa las células de\nLUDICOLO y estas le dan fuerza.
+Cuando se queda inmóvil, parece una bellota de verdad. Le\nencanta sorprender a los PIDGEY cuando van buscando grano.
+Vive en los agujeros de los troncos de los árboles. Cuando usa la\nhoja de la cabeza como flauta, asusta a la gente.
+Habita los bosques y se le tiene miedo. Es capaz de leer los\npensamientos del rival y actuar en consecuencia.
+No le gustan las bajas temperaturas. En las estaciones frías se\nrecorren casi 300 km al día en busca de zonas cálidas.
+Cuando se encuentra bien, pone firmes las plumas de la cola\ndoble que tiene. Remonta el vuelo de forma muy elegante.
+Vuela y planea siguiendo la brisa oceánica. En invierno esconde\ncomida cerca de su nido.
+Vuela transportando pequeños POKéMON en el pico. A veces,\nse queda flotando en el agua para descansar las alas.
+Capta muy bien lo que sienten las personas y los POKéMON.\nCuando nota cierta hostilidad, se esconde.
+Al percibir la alegría de su ENTRENADOR refuerza sus ataques\npsicoquinéticos. Cuando está contento, da vueltas y baila.
+Tiene la capacidad de predecir el futuro. Cuando protege a su\nENTRENADOR se vuelve más fuerte.
+Vive en estanques, pero cuando se desata una tormenta puede\naparecer en los charcos que se forman en las ciudades.
+En las antenas tiene un par de ojos dibujados. Cuando llueve, se\nle vuelven muy pesadas y le impiden luchar.
+Prefiere los sitios húmedos. De día está tranquilamente en el\nbosque, a la sombra. Expulsa polvo tóxico por la cabeza.
+Las semillas de la cola contienen esporas tóxicas. Vence al rival\ndándole puñetazos rápidos y casi invisibles.
+Se pasa 20 horas al día durmiendo. Una de sus habilidades es\nhacer que le entre sueño al que tiene al lado.
+Siempre tiene hambre porque no para. No puede estarse quieto\nni comiendo.
+Es el POKéMON más vago que hay. Con todo, puede liberar de\nuna vez una cantidad tremenda de energía acumulada.
+Como se ha pasado casi toda la vida viviendo bajo tierra, no ve\nbien. La antena que tiene le ayuda a orientarse.
+Este POKéMON es tan rápido que puede esquivar cualquier\nataque. Le encanta alimentarse de la savia de los árboles.
+Es un POKéMON muy peculiar; aparece de repente en una\nPOKé BALL cuando NINCADA evoluciona.
+Normalmente murmulla, pero cuando siente que hay peligro se\npone a chillar. Solo para cuando se le cierran las orejas.
+Cuando patalea y ruge, genera ondas ultrasónicas con las que\npuede destruir hasta una casa.
+Emite diversos sonidos a través de los tubos que tiene por el\ncuerpo. Cuando chilla, se le puede oír a 10 km.
+A base de duro entrenamiento se hace cada vez más fuerte. Es\ntan resistente que puede soportar cualquier ataque.
+Para aumentar su fuerza, da un pisotón en el suelo. Puede lanzar\nun camión de 10 toneladas por los aires de un puñetazo.
+En combate lanza la cola, que es mayor que él mismo, para\natacar. Cuando está en el agua le sirve de flotador.
+Siempre está con el pico magnético orientado hacia el norte.\nQuienes viajan toman a NOSEPASS como referencia.
+Dicen que cuesta ganarse su confianza, pero que es muy dulce y\nque se porta muy bien.
+Es el favorito de las ENTRENADORAS que están a la última. Lo\nlucen en combate por el pelaje y el estilo que tiene.
+Se alimenta de rocas y gemas. En la oscuridad, los ojos le brillan\ncon el destello de las piedras preciosas.
+Engaña con su aspecto dócil; hace que el rival se confíe y le da\nun mordisco con sus enormes e implacables mandíbulas.
+Se alimenta de hierro para fortalecer su cuerpo de acero. Es un\nproblema, pues devora puentes y vías de tren.
+Para alardear de su fuerza, hace saltar chispas frotando contra\ngrandes rocas el cuerpo de acero que tiene.
+Hace de toda una montaña su territorio y machaca a todo aquel\nque lo invada.
+A diario va a yoga, no se pierde ni una sesión. Mediante la\nmeditación, aumenta su fuerza interior.
+Evita los ataques moviéndose de forma elegante, como si bailara.\nAtaca dando un golpe devastador y moviéndose igual.
+Acumula electricidad estática en el pelaje para lanzar descargas.\nCuando va a haber tormenta, suelta chispas.
+No suele aparecer ante la gente. Dicen que suele colocar su nido\ndonde caen los rayos.
+Anima a sus compañeros con un alegre chisporroteo. Para\nabsorber electricidad, se sube a los postes de teléfono.
+Odia el agua. Si llueve, se protege bajo los aleros de las casas.\nCon las chispas que suelta, hace alegres pompones.
+Vive cerca de estanques de agua clara. De noche, enciende la luz\nde la cola para comunicarse con otros de su especie.
+De noche, guía a VOLBEAT para que dibuje formas en el cielo\ncon la luz que emite. Hay quienes estudian los dibujos.
+Las flores que tiene desprenden un aroma relajante. Cuanto más\nintenso, mejor es el estado de salud de ROSELIA.
+Es capaz de digerir cualquier cosa. Para hacer la digestión, se\nayuda de un fluido y un gas capaces de corroerlo todo.
+Es capaz de tragarse un neumático sin masticarlo. Segrega un\nhorrible fluido tóxico por los poros.
+Habita caudalosos ríos que atraviesan las junglas. Si alguien\ninvade su territorio, acude con más de su especie.
+Es el terror de los mares; traspasa el hierro con los colmillos.\nNada agitando la aleta trasera propulsándose por el agua.
+Cuando traga una gran cantidad de agua, se hincha y se convierte\nen una pelota. Necesita 1 tonelada de alimento al día.
+Es el mayor POKéMON que hay. Atrapa a un buen número de\npresas y se las traga de una vez.
+Magma de 1200 grados centígrados le recorre el cuerpo. Cuando\nse enfría, el magma se solidifica y se vuelve lento.
+Cuando se enfada, las jorobas del lomo entran en erupción y\nexpulsan lava. Habita los cráteres de los volcanes.
+Quema carbón en el interior de su caparazón. Si le atacan, echa\nun denso humo negro y huye.
+Si dejara de saltar se debilitaría. Lleva una perla de CLAMPERL\nen la cabeza.
+Realiza unos raros pasos de baile para captar la atención del rival.\nLas perlas negras que tiene son valiosísimas.
+Dicen que no hay dos SPINDA iguales. Realizan movimientos\nextraños para confundir al rival.
+Habita desiertos áridos. Cava fosas profundas, en las que espera\nque caiga su presa.
+Genera ondas ultrasónicas batiendo las alas violentamente.\nCuando debilita a su presa, la destruye con ácido.
+Su medio es el desierto. Para esconderse, levanta arena con las\npatas. Tiene los ojos protegidos con mallas rojas.
+Prefiere los medios hostiles como los desiertos. Puede sobrevivir\n30 días sin beber, gracias al agua que almacena.
+Su medio es el desierto. Por la noche, se vuelve activo y sale a\nbuscar a presas agotadas por el calor.
+Está continuamente acicalándose las alas de algodón que tiene.\nSi se ensucia, se da una ducha para limpiarse enseguida.
+ALTARIA trina entonando una bella melodía que llega desde lo\nmás profundo de las montañas.
+Cuando se encuentra con un rival, se le eriza el pelaje y se pone\nen guardia. Las zarpas que tiene son su mejor arma.
+Usa rocas para afilarse la cola en forma de espada que tiene. Sale\nde la hierba de repente y ataca con tóxicos colmillos.
+Su energía fluye y refluye según el ciclo de la Luna; cuando está\nexpuesto a ella, rebosa vitalidad.
+De día, absorbe energía solar. No es nada expresivo, pero capta\nperfectamente lo que piensa su rival.
+Examina los lechos lodosos de los ríos con los largos bigotes que\ntiene. Está protegido por una capa viscosa.
+Construye su nido en el fondo de los pantanos. Es capaz de\ncomerse cualquier cosa...
+Viene de muy lejos. Es una criatura resistente que se reproduce\ncon rapidez, incluso en aguas contaminadas.
+Esta violenta criatura agita de forma salvaje las gigantes pinzas\nque tiene. Dicen que es muy difícil criarlo.
+Fue descubierto en unas ruinas antiguas. Para moverse gira sin\nparar. Se mantiene sobre un pie hasta cuando duerme.
+Dicen que se creó de una muñeca de barro hecha por una antigua\ncivilización. Usa telequinesia para levitar y moverse.
+Se extinguió hace cien millones de años, y se regeneró a partir de\nun fósil gracias a los avances de la técnica.
+Atrapa a su presa con los ocho tentáculos que tiene, y antes de\ndevorarla la baña en ácido.
+Es una especie de POKéMON predecesor. Estira las pinzas para\ncazar a sus presas, que se esconden en las rocas del mar.
+Está protegido por una fuerte armadura y tiene un cuerpo\nrobusto. Engancha a sus presas con las pinzas y las devora.
+A los investigadores no les interesa mucho por el aspecto poco\nimponente que tiene. Habita estanques que tengan algas.
+MILOTIC es impresionantemente bello. Quienes lo ven, temen\nperder las ganas de luchar contra él.
+Tiene la habilidad de cambiar y adaptarse al tiempo. Según el\nclima, se transformará en sol, o en nubarrones de lluvia o nieve.
+Cambia el color de la piel para mezclarse con su entorno.\nTambién varía la coloración según su estado de ánimo.
+Se alimenta de sentimientos como la envidia y el rencor, que\ncapta a través del cuerno de la cabeza.
+Cuando abandonaron a este muñeco de felpa, se convirtió en\nPOKéMON. Libera una energía que hechiza al enemigo.
+Se vuelve invisible para acercarse sigilosamente al enemigo.\nTiene la habilidad de atravesar anchos muros.
+Está completamente hueco. Cuando abre la boca, es capaz de\nabsorber cualquier cosa, como si fuera un agujero negro.
+Habita las junglas tropicales. Los racimos de fruta que le rodean\nel cuello son deliciosos. Da fruto dos veces al año.
+Se desplaza aprovechando los vientos. Usa la larga cola que tiene\npara agarrar bayas y frutos secos, que le encantan.
+Aparece cuando prevé una catástrofe natural inminente, por eso\ndicen que trae mala suerte.
+Suelen ir en grupo y a la hora de dormir se resguardan en una\ncueva.
+Dicen que los hogares que reciben la visita de SNORUNT\nprosperan. Puede soportar temperaturas de 100 º bajo cero.
+Tiene un cuerpo de hielo imposible de derretir. Es capaz de\ncongelar en un instante la humedad del ambiente.
+Tiene un suave pelaje que lo protege del frío cuando se revuelca\npor el hielo.
+Para identificar cosas, se las coloca en el morro para olerlas y ver\nel tacto que tienen. A veces hace lo mismo con SPHEAL.
+Nada por mares glaciales destrozando bloques de hielo con sus\nenormes colmillos. Lo protege una capa de grasa.
+Está protegido por una sólida concha. Puede llegar a formar una\nperla extraordinaria.
+Vive en los abismos marinos, donde no se filtra la luz. Tiene una\ncola en forma de pez, que enciende para atraer a su presa.
+Tiene una forma de nadar de lo más elegante. Se alimenta de las\nalgas marinas que crecen entre las rocas.
+No ha sufrido ningún cambio desde hace 100 millones de años.\nFue descubierto durante una expedición marina.
+Durante el desove, multitud de LUVDISC se concentran en los\narrecifes de coral coloreando de rosa el agua.
+Tiene la cabeza dura como el acero y es capaz de destrozar rocas.\nSu sueño es que le crezcan alas para volar.
+La robusta capa que lo rodea repele los ataques. Aunque es una\nbuena protección, lo hace lento y pesado.
+Si se enfada, no hay forma de calmarlo; lo destruye todo\nlanzando arañazos y llamas.
+Usa ondas magnéticas para comunicarse con los de su misma\nespecie. Las células de su organismo están magnetizadas.
+Levita gracias al magnetismo que posee. Es tan robusto que ni el\nimpacto más fuerte conseguiría hacerle un rasguño.
+Está compuesto por dos METANG fusionados. Tiene cuatro\ncerebros que superan en capacidad al mejor de los ordenadores.
+Está formado enteramente por rocas. No parece que tenga sitio\npara corazón ni cerebro. Es un misterio de la ciencia.
+Estudios revelaron que el cuerpo de este POKéMON está\nformado por el mismo hielo que hay en el Polo Sur.
+Es más fuerte que el metal más duro. Durante más de diez mil\naños se fue endureciendo bajo la corteza terrestre.
+Se comunica por telepatía con la gente. Cambia de aspecto\nrefractando luz con el plumaje.
+Es muy dócil y no le gusta nada combatir. Para ganar velocidad\ncuando vuela, pliega las patas delanteras.
+Dicen que extendió la superficie de los mares haciendo que\ndiluviara. Tiene la capacidad de controlar las aguas.
+Dicen que este POKéMON legendario simboliza la tierra. Tras\nbatirse en duelo con KYOGRE se echó a dormir.
+Ha vivido durante cientos de millones de años en la capa de\nozono. Cuando vuela, parece un meteorito.
+Dicen que hace realidad cualquier sueño. Permanece despierto\nuna semana por cada mil años de sueño.
+
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tienen forma de jeroglíficos sobre lápidas antiguas. Dicen que\nambos están relacionados.
+Tiene la habilidad de cambiar y adaptarse al tiempo. Según el\nclima, se transformará en sol, o en nubarrones de lluvia o nieve.
+Tiene la habilidad de cambiar y adaptarse al tiempo. Según el\nclima, se transformará en sol, o en nubarrones de lluvia o nieve.
+Tiene la habilidad de cambiar y adaptarse al tiempo. Según el\nclima, se transformará en sol, o en nubarrones de lluvia o nieve.
+Cuando cambia de aspecto, emite una intensa luz. Absorbe los\nefectos de los ataques alterando su esctructura celular.
 ~~~~~~~~~~~~~~~
 Text File : zukan_comment_za
 ~~~~~~~~~~~~~~~
@@ -48731,7 +49693,7 @@ Sneasel trepa por los árboles agarrándose a la corteza con las\ngarras curvas 
 A Teddiursa le encanta chuparse las palmas impregnadas de dulce\nmiel. Este Pokémon fabrica su propia miel mezclando frutos y el\npolen que recoge Beedrill.
 En los bosques habitados por Ursaring, dicen que abundan los\narroyos y árboles gigantes en los que guardan su alimento. Este\nPokémon se dedica todos los días a pasear por el bosque para\nbuscar comida y guardarla.
 Slugma no tiene sangre en su organismo, sino ardiente magma\nque hace circular por todo el cuerpo los nutrientes y el oxígeno\nque necesitan sus órganos.
-Magcargo tiene una temperatura corporal de 1000 ºC\naproximadamente. El agua se evapora al contacto con él.\nSi llueve, las gotas que le rozan se transforman en vapor al\ninstante y crean una densa niebla.
+Magcargo tiene una temperatura corporal de 10 000 ºC\naproximadamente. El agua se evapora al contacto con él.\nSi llueve, las gotas que le rozan se transforman en vapor al\ninstante y crean una densa niebla.
 Swinub busca el alimento frotando el hocico contra el suelo. Su\ncomida preferida es una seta que crece bajo la hierba marchita.\nA veces, al frotar, descubre fuentes termales.
 Piloswine está cubierto por un pelaje tupido y de largas cerdas\nque le permite soportar el frío polar. Este Pokémon usa los\ncolmillos para desenterrar los alimentos que hayan podido quedar\nbajo el hielo.
 Las aguas templadas son el hábitat de Corsola. Allí se agrupan\ngrandes bancos de estos Pokémon que sirven de escondite a\nPokémon más pequeños. Cuando la temperatura del agua baja,\nsuelen migrar a los mares del sur.
@@ -56940,8 +57902,11 @@ Text File : tokuseiinfo_Champions
 ~~~~~~~~~~~~~~~
 Cuando el Pokémon ataca con un movimiento de contacto,\nes capaz de alcanzar incluso a objetivos que se encuentran\nprotegidos por algún efecto y les inflige 1/4 del daño original.\nEl resto de efectos no se ven afectados por esta habilidad y se\nactivarán de forma habitual.
 Convierte los movimientos de tipo Normal del Pokémon en\nmovimientos de tipo Dragón y aumenta un 20 % su potencia.
+Hace que el Pokémon flote y deje de estar en contacto con\nel suelo, lo que impide que le afecten los movimientos de tipo\nTierra y los estados Púas, Púas Tóxicas y Red Viscosa.\nAumenta un nivel la característica más alta del Pokémon\ncuando debilita a un objetivo con un ataque.
 El Pokémon puede usar movimientos con los mismos resultados\nque si hiciese sol, aunque realmente ese no sea el tiempo\natmosférico actual.
+Aumenta un 50 % la potencia de los movimientos de tipo Fuego\ndel Pokémon.
 Quema al atacante si recibe daño de un movimiento.
+Reduce a la mitad el daño que el Pokémon recibe de\nmovimientos de contacto.
 ~~~~~~~~~~~~~~~
 Text File : zukan_comment_scarlet
 ~~~~~~~~~~~~~~~
