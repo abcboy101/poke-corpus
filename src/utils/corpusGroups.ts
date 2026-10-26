@@ -11,12 +11,13 @@ export function getCorpusGroups(collectionKey: string) {
   const isPBR = collectionKey === "BattleRevolution";
   const isRanch = collectionKey === "Ranch";
   const isDreamRadar = collectionKey === "DreamRadar";
+  const isHOME = collectionKey === "HOME";
+  const isChampions = collectionKey === "Champions";
   const isGO = collectionKey === "GO";
   const isMasters = collectionKey === "Masters";
   const isSleep = collectionKey === "Sleep";
   const isTCGPocket = collectionKey === "TCGPocket";
-  const isHOME = collectionKey === "HOME";
-  const isChampions = collectionKey === "Champions";
+  const isPokopia = collectionKey === "Pokopia";
 
   const isGB = isGen1 || isGen2;
   const isNDS = isGen4 || isGen5;
@@ -28,7 +29,8 @@ export function getCorpusGroups(collectionKey: string) {
 
   return {
     isGen1, isGen2, isGen3, isGen4, isGen5, isBDSP,
-    isPBR, isRanch, isDreamRadar, isGO, isMasters, isSleep, isTCGPocket, isHOME, isChampions,
+    isPBR, isRanch, isDreamRadar, isHOME, isChampions,
+    isGO, isMasters, isSleep, isTCGPocket, isPokopia,
     isGB, isNDS, is3DS, isSwitch, isN64, isGCN, isModern,
   };
 }

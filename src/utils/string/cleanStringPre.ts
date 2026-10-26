@@ -7,6 +7,7 @@ import { getCorpusGroups } from "../corpusGroups";
 import chineseChars from './chineseChars';
 import { preprocessStringGO } from './cleanStringGO';
 import { preprocessStringMasters } from './cleanStringMasters';
+import { preprocessStringPokopia } from './cleanStringPokopia';
 import { preprocessStringSleep } from './cleanStringSleep';
 import { preprocessStringTCGPocket } from './cleanStringTCGPocket';
 import { variables3DS } from './variableNames';
@@ -448,7 +449,12 @@ function remapChampionsSpecialCharacters(s: string) {
  * Returns the resulting string.
  */
 export function preprocessString(s: string, collectionKey: CollectionKey, language: LanguageKey) {
-  const { isGB, isGen3, isNDS, is3DS, isSwitch, isN64, isGCN, isPBR, isRanch, isDreamRadar, isGO, isMasters, isSleep, isTCGPocket } = getCorpusGroups(collectionKey);
+  const {
+    isGen3,
+    isPBR, isRanch, isDreamRadar,
+    isGO, isMasters, isSleep, isTCGPocket, isPokopia,
+    isGB, isNDS, is3DS, isSwitch, isN64, isGCN,
+  } = getCorpusGroups(collectionKey);
 
   if (isGB) {
     s = remapGBSpecialCharacters(s, language);
@@ -498,6 +504,9 @@ export function preprocessString(s: string, collectionKey: CollectionKey, langua
   }
   else if (isTCGPocket) {
     s = preprocessStringTCGPocket(s);
+  }
+  else if (isPokopia) {
+    s = preprocessStringPokopia(s);
   }
 
   return s;

@@ -7,6 +7,7 @@ import { postprocessSpeaker } from '../speaker';
 import { grammarBranch, versionBranch, genderBranch, numberBranch, genderNumberBranch, genderNumberDEBranch } from './branches';
 import { postprocessStringGO } from './cleanStringGO';
 import { postprocessStringMasters } from './cleanStringMasters';
+import { postprocessStringPokopia } from './cleanStringPokopia';
 import { postprocessStringSleep } from './cleanStringSleep';
 import { postprocessStringTCGPocket } from './cleanStringTCGPocket';
 import * as g1 from './expandVariablesG1';
@@ -101,7 +102,12 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
   if (!richText)
     return escapeHTML(s);
 
-  const { isGen1, isGen2, isGen3, isGen4, isGen5, isBDSP, isPBR, isRanch, isDreamRadar, isGO, isMasters, isSleep, isTCGPocket, isHOME, isChampions, isGB, isNDS, is3DS, isN64, isGCN, isModern } = getCorpusGroups(collectionKey);
+  const {
+    isGen1, isGen2, isGen3, isGen4, isGen5, isBDSP,
+    isPBR, isRanch, isDreamRadar, isHOME, isChampions,
+    isGO, isMasters, isSleep, isTCGPocket, isPokopia,
+    isGB, isNDS, is3DS, isN64, isGCN, isModern,
+  } = getCorpusGroups(collectionKey);
   const ti = new TextInfo();
 
   // Replace literal special characters with a placeholder so they don't match other rules
@@ -273,9 +279,10 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
       s = s.replaceAll(/(\[VAR BD06\([0-9A-F]{4}\)\])([^\x80\x81\x82]*)\x82/g, (_, code: string, line: string) => `${code}${line}\x82\x84`);
       break;
     case "Champions":
+    case "Pokopia":
     default:
       // Starting in LA, it affects all subsequent \n and \r\n (but not \c\n).
-      s = s.replaceAll(/(\[VAR BD06\([0-9A-F]{4}\)\]|\[Ctrl1:battle_oneline \])(.*)$/g, (_, code: string, children: string) => `${code}${children.replaceAll(/(?<!\x81)\x82/g, '\x82\x84')}`);
+      s = s.replaceAll(/(\[VAR BD06\([0-9A-F]{4}\)\]|\[Ctrl1:battle_oneline \]|<oneline>)(.*)$/g, (_, code: string, children: string) => `${code}${children.replaceAll(/(?<!\x81)\x82/g, '\x82\x84')}`);
   }
 
   s = isGen4 ? (s
@@ -418,6 +425,7 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
   s = isMasters ? postprocessStringMasters(s, ti) : s;
   s = isSleep ? postprocessStringSleep(s, language, ti) : s;
   s = isTCGPocket ? postprocessStringTCGPocket(s, ti) : s;
+  s = isPokopia ? postprocessStringPokopia(s, language, ti) : s;
   //#endregion
 
   //#region Grammar

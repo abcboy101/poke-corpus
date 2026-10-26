@@ -171,11 +171,11 @@ export class TextInfo {
   }
 
   public var(short?: string) {
-    return (start: string) => this.as({ start, kind: 'var', className: 'var', content: escape(start), short });
+    return (start: string) => this.as({ start, kind: 'var', className: 'var', content: escape(start), short: short ? escape(short) : undefined });
   };
 
   public func(short?: string) {
-    return (start: string) => this.as({ start, kind: 'var', className: 'func', content: escape(start), short });
+    return (start: string) => this.as({ start, kind: 'var', className: 'func', content: escape(start), short: short ? escape(short) : undefined });
   };
 
   public control() {

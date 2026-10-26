@@ -310,3 +310,12 @@ td[lang="zxx"] wbr {
 .results-table li {
   list-style-type: circled-decimal;
 }
+
+/* Pokopia */
+.text-size-0 {
+  font-size: 75%;
+}
+
+.text-size-2 {
+  font-size: 150%;
+}
