@@ -1,5 +1,7 @@
 {
   "title": "Poké Corpus",
+  "version": "β",
+  "titleVersion": "{{title}} {{version}}",
   "error": {
     "title": "Une erreur s'est produite",
     "message": "Consultez la console de developpement de votre navigateur pour toute information complémentaire, ainsi que de nous faire remonter l'erreur sur GitHub."
@@ -89,18 +91,23 @@
     }
   },
   "progressBar": {
-    "title": "Avancement"
+    "title": "Avancement",
+    "value": "{{amount, number}}"
   },
   "jumpTo": "Aller à...",
   "copy": "Copier",
   "share": "Partager",
   "viewNearby": "Voir le texte à proximité",
-  "viewSpeaker": "Voir le dialogue du personnage",
-  "tablePartial_zero": "{{count, number}} résultat masqué",
+  "infoModal": {
+    "viewLines": "Voir toutes les lignes",
+    "close": "Fermer",
+    "codeHeader": "Code\u00A0:",
+    "groupHeader": "Groupe\u00A0:"
+  },
+  "tableHeader": "{{collection}} {{file}}",
   "tablePartial_one": "{{count, number}} résultat masqué",
   "tablePartial_other": "{{count, number}} résultats masqués",
   "displayedRange": {
-    "long_zero": "{{start, number}} à {{end, number}} résultat affiché sur {{count, number}}",
     "long_one": "{{start, number}} à {{end, number}} résultat affiché sur {{count, number}}",
     "long_other": "{{start, number}} à {{end, number}} résultats affichés sur {{count, number}}",
     "short": "{{start, number}}-{{end, number}} sur {{count, number}}"
@@ -121,7 +128,9 @@
     "files_one": "{{count}} fichier",
     "files_other": "{{count}} fichiers",
     "storageUsed": "Poids total utilisé\u00A0: {{amount, number}}",
+    "loading": "{{message}} ({{loaded}}/{{total}})",
     "inProgress": "Mise en cache en cours...",
+    "size": "{{amount, number}}",
     "cacheAllModal": {
       "message": "Êtes-vous sûr·e de mettre tous les fichiers en cache\u00A0? (Taille du téléchargement\u00A0: approximativement {{amount, number}})",
       "buttons": {
