@@ -90,7 +90,8 @@
     }
   },
   "progressBar": {
-    "title": "进度"
+    "title": "进度",
+    "value": "{{amount, number}}"
   },
   "jumpTo": "跳转至…",
   "copy": "复制",
@@ -98,9 +99,16 @@
   "viewNearby": "查看附近行",
   "viewSpeaker": "查看说话角色的行",
   "tablePartial": "{{count, number}} 条结果未显示",
+  "infoModal": {
+    "viewLines": "搜索此变量",
+    "close": "关闭",
+    "codeHeader": "变量代码：",
+    "groupHeader": "分组：" 
+  },
+  "tableHeader": "{{collection}} {{file}}",
   "displayedRange": {
     "long": "显示第 {{start, number}}～{{end, number}} 条结果，共 {{count, number}} 条",
-    "short": "{{start, number}}～{{end, number}} (共 {{count, number}} 条)"
+    "short": "{{start, number}}～{{end, number}} （共 {{count, number}} 条）"
   },
   "loadPrev": "上一页",
   "loadNext": "下一页",
@@ -117,7 +125,9 @@
     "filesStored": "缓存文件数：$t(cache.files, {\"count\": {{count}} })",
     "files": "{{count}} 个",
     "storageUsed": "缓存已使用：{{amount, number}}",
+    "loading": "{{message}} ({{loaded}}/{{total}})",
     "inProgress": "正在缓存...",
+    "size": "{{amount, number}}",
     "cacheAllModal": {
       "message": "您确定要缓存所有文件吗？ （待下载大小: 大约 {{amount, number}}）",
       "buttons": {
