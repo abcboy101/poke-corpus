@@ -199,13 +199,13 @@
     "CtrlSpeed|mode": "index"
   },
   "System": {
-    "Color":"Sets the color of the text to the specified color.",
+    "Color": "Sets the color of the text to the specified color.",
     "Color|Idx": "color index",
     "Color|r": "red",
     "Color|g": "green",
     "Color|b": "blue",
     "Color|a": "alpha",
-    "Ruby":"Sets the ruby text.",
+    "Ruby": "Displays ruby text above the base text. Used for Japanese furigana.",
     "Ruby|rt": "ruby text"
   },
   "Other": {
