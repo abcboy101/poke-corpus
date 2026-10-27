@@ -8,12 +8,29 @@ export function preprocessStringPokopia(s: string) {
     .replaceAll('<slide>', '\\r')
     .replaceAll('<clear>', '\\c')
     .replaceAll('<br>', '\\n')
-    // .replaceAll('<nbs>', '')  // TODO: determine best representation
-    // .replaceAll('<nbs2>', '')
-    // .replaceAll('<nbs4>', '')
+    .replaceAll('<nbs>', '\u00A0') // half space (via U+E025)
+    .replaceAll('<nbs2>', '\u2006') // six-per-em space (French/Spanish)
+    .replaceAll('<nbs4>', '\u202F') // quarter space (German/Spanish)
 
     // Furigana
     .replaceAll(/<([^:>]+):([^:>]+)>/g, '{$1|$2}')
+
+    // Special characters
+    .replaceAll('\uE01A', '^')
+    .replaceAll('\uE01B', '~')
+    .replaceAll('\uE01C', 'あ゙')
+    .replaceAll('\uE01D', 'ま゙')
+    .replaceAll('\uE01E', 'ん゙')
+    .replaceAll('\uE01F', 'ア゙')
+    .replaceAll('\uE020', 'マ゙')
+    .replaceAll('\uE021', 'ン゙')
+    .replaceAll('\uE022', '☒')
+    .replaceAll('\uE023', '綉') // CHT xiù (used in Valerie's name)
+    .replaceAll('\uE024', '坂') // CHT bǎn (used in Giovanni's name)
+    .replaceAll('\uE025', '\u00A0')
+    .replaceAll('\uE026', '<')
+    .replaceAll('\uE027', '>')
+    .replaceAll('\uE028', ',')
   );
 }
 
