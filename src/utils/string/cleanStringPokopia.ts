@@ -19,6 +19,54 @@ export function preprocessStringPokopia(s: string) {
 
 export function postprocessStringPokopia(s: string, language: LanguageKey, ti: TextInfo) {
   const makeRuby = (base: string, ruby: string) => `<ruby>${base}<rp>(</rp><rt>${ruby}</rt><rp>)</rp></ruby>`;
+  const grammar: Record<string, Record<string, string[] | undefined> | string[] | undefined> = {
+    // Definite/indefinite articles
+    dart: {
+      en: ["", "the"],
+      fr: ["", "le", "l'", "la", "les"],
+      it: ["", "il", "l'", "lo", "la", "i", "gli", "le"],
+      de: ["", "der", "die", "das"],
+      es: ["", "el", "la", "los", "las"],
+    },
+    iart: {
+      en: ["", "a", "an"],
+      fr: ["", "un", "une", "des"],
+      it: ["", "un", "uno", "una", "un'", "dei", "degli", "delle", "del", "dell'", "dello", "della"],
+      de: ["", "ein", "eine"],
+      es: ["", "un", "una", "unos", "unas"],
+    },
+
+    // Korean
+    ko:       ["", "는", "은", "를", "을", "가", "이", "와", "과", "으", "야", "아"], // handled in cleanStringPost
+
+    // French
+    fra:      ["à", "au", "à l'", "à la", "aux"],
+    frde:     ["", "de", "d'"],
+    frdedef:  ["de", "d'", "du", "de l'", "de la", "des"],
+    frdemdet: ["", "ce", "cet", "cette", "ces"],
+    frque:    ["", "que", "qu'"],
+    frstgind: ["à ", "sur l'"],
+
+    // German
+    accdart:  ["", "den", "die", "das"],
+    acciart:  ["", "einen", "eine", "ein"],
+
+    // Italian
+    ita:      ["a", "al", "all'", "allo", "alla", "ai", "agli", "alle"],
+    itad:     ["", "a", "ad"],
+    itdemdet: ["", "quel", "quell'", "quello", "quella", "quei", "quegli", "quelle"],
+    itdi:     ["di", "del", "dell'", "dello", "della", "dei", "degli", "delle"],
+    ited:     ["", "e", "ed"],
+    itin:     ["in", "nel", "nell'", "nello", "nella", "nei", "negli", "nelle"],
+    itsu:     ["su", "sul", "sull'", "sullo", "sulla", "sui", "sugli", "sulle"],
+
+    // Spanish
+    esa:      ["a", "al", "a la", "a los", "a las"],
+    esde:     ["de", "del", "de la", "de los", "de las"],
+    esou:     ["", "o", "u"],
+    esye:     ["", "y", "e"],
+  } as const;
+
   s = (s
     // Formatting
     .replaceAll(/(<\$cdef\((\d+)\)>)(.*?)(<\/color>)/g, (_, start: string, value: string, children: string, end: string) => ti.as({ kind: 'var', start, className: 'color', style: `color: var(--color-${value})`, children, end })) // font color
@@ -34,28 +82,20 @@ export function postprocessStringPokopia(s: string, language: LanguageKey, ti: T
     .replaceAll(/<elis;-?\d+\(([^,>]*),([^,>]*)\)>/g, (code, no: string, yes: string) => ti.asBranch(code, grammarBranch(no, yes)))
 
     // Grammar
-    // TODO: check values in Pokopia
-    .replaceAll(/<(dart)\b[^>]*>/g, ti.var('<dart>'))
-    .replaceAll(/<(iart)\b[^>]*>/g, ti.var('<iart>'))
-    .replaceAll(/<(fra)\b[^>]*>/g, ti.var('<fra>'))
-    .replaceAll(/<(frdedef)\b[^>]*>/g, ti.var('<frdedef>'))
-    .replaceAll(/<(frde)\b[^>]*>/g, ti.var('<frde>'))
-    .replaceAll(/<(frque)\b[^>]*>/g, ti.var('<frque>'))
-    .replaceAll(/<(frdemdet)\b[^>]*>/g, ti.var('<frdemdet>')) // "ce", "cet", "cette", "ces"
-    .replaceAll(/<(itdi)\b[^>]*>/g, ti.var('<itdi>'))
-    .replaceAll(/<(itsu)\b[^>]*>/g, ti.var('<itsu>'))
-    .replaceAll(/<(ita)\b[^>]*>/g, ti.var('<ita>'))
-    .replaceAll(/<(itin)\b[^>]*>/g, ti.var('<itin>'))
-    .replaceAll(/<(ited)\b[^>]*>/g, ti.var('<ited>'))
-    .replaceAll(/<(itad)\b[^>]*>/g, ti.var('<itad>'))
-    .replaceAll(/<(itdemdet)\b[^>]*>/g, ti.var('<itdemdet>'))
-    .replaceAll(/<(accdart)\b[^>]*>/g, ti.var('<accdart>'))
-    .replaceAll(/<(acciart)\b[^>]*>/g, ti.var('<acciart>'))
-    .replaceAll(/<(esde)\b[^>]*>/g, ti.var('<esde>'))
-    .replaceAll(/<(esa)\b[^>]*>/g, ti.var('<esa>'))
-    .replaceAll(/<(esye)\b[^>]*>/g, ti.var('<esye>'))
-    .replaceAll(/<(esou)\b[^>]*>/g, ti.var('<esou>'))
-    .replaceAll(/<(ko)\b[^>]*>/g, ti.var('<ko>'))
+    .replaceAll(/(<fcap>)?<(dart|iart|fra|frdedef|frde|frque|frdemdet|itdi|itsu|ita|itin|ited|itad|itdemdet|accdart|acciart|esde|esa|esye|esou|frstgind)\b[^>]*>/g, (code, fcap: string | undefined, tag: string) => {
+      const entry = grammar[tag] ?? [];
+      const forms = Array.isArray(entry) ? entry : (entry[language] ?? []);
+      const space = tag !== 'frstgind'; // only French stage indirect includes a space already
+      for (let i = 0; i < forms.length; i++) {
+        if (forms[i].length === 0)
+          continue;
+        if (fcap) // capitalize first letter
+          forms[i] = forms[i][0].toUpperCase() + forms[i].substring(1);
+        if (space && forms[i].at(-1) !== "'") // following space
+          forms[i] += ' ';
+      }
+      return ti.asBranch(code, grammarBranch(...forms));
+    })
 
     // Force
     .replaceAll(/<(fgen)\b[^>]*>/g, ti.func('<fgen>'))
@@ -90,7 +130,7 @@ export function postprocessStringPokopia(s: string, language: LanguageKey, ti: T
     .replaceAll(/<(\$voicetonevar)\b[^>]*>/g, ti.func('<$voicetonevar>'))
 
     // Variables
-    .replaceAll(/<([^>]+)>/g, (start: string, tag: string) => ti.var(`<${(/^[^;()>]+/.exec(tag) ?? '')[0]}>`)(start))
+    .replaceAll(/<(?!ko\b)([^>]+)>/g, (start: string, tag: string) => ti.var(`<${(/^[^;()>]+/.exec(tag) ?? '')[0]}>`)(start)) // pass <ko> through
   );
   return s;
 }

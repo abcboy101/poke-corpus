@@ -461,6 +461,8 @@ export function postprocessString(s: string, collectionKey: CollectionKey, langu
     s = s.replaceAll(/\[VAR 1900\(([0-9A-F]{4})\)\]/g, (code, index: string) => ti.asBranch(code, particleBranchFromIndex(parseInt(index, 16))));
   else if (isDreamRadar)
     s = s.replaceAll(/\[VAR 0600\((0[0-9A-F])[0-9A-F]{2}\)\]/g, (code, index: string) => ti.asBranch(code, particleBranchFromIndex(parseInt(index, 16))));
+  else if (isPokopia)
+    s = s.replaceAll(/<ko\((\d+)\)>/g, (code, index: string) => ti.asBranch(code, particleBranchFromIndex(+index)));
   //#endregion
 
   //#region Branches
