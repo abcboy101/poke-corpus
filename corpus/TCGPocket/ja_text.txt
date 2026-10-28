@@ -140,6 +140,10 @@
 自分の番に、自分のトレーナーズの効果でコインを投げたとき、1回使える。そのコインの結果をすべてなくし、はじめからコインを投げなおす。この特性は別の「[Text:AbilityName id="0" suffix="Short"]」を使った番は使えない。
 自分の番に、このカードを手札から出して進化させたとき、[Ctrl:NoBreak]1回[/Ctrl:NoBreak]使える。相手のバトルポケモンからエネルギーをランダムに[Ctrl:NoBreak][Num:Int id="0" max_length="1"]個[/Ctrl:NoBreak]、このポケモンにつけ替える。
 自分の番に1回使える。相手の手札からランダムに[Num:Int id="0" max_length="1"]枚、オモテを見る。
+自分の番に[Ctrl:NoBreak]1回[/Ctrl:NoBreak]使える。レンタルカードの「[Text:CardNameByCardID id="0"]」を[Ctrl:NoBreak][Num:Int id="1" max_length="1"]枚[/Ctrl:NoBreak]、手札に加える。
+このポケモンがいるかぎり、自分のポケモンが使うワザ「[Text:AttackName id="0"]」で投げるコインの数を、[Num:Int id="1" max_length="2"]回多くする。
+自分の番に、このカードを手札から出して進化させたとき、[Ctrl:NoBreak]1回[/Ctrl:NoBreak]使える。自分の山札から「[Text:CardName id="0"]」をランダムに[Ctrl:NoBreak][Num:Int id="1" max_length="1"]枚[/Ctrl:NoBreak]、ベンチに出す。
+このポケモンがいるかぎり、自分の[Img:Element id="0"]ポケモン全員が、相手のポケモンから受けるワザのダメージを-[Num:Int id="1" max_length="3"]する。この特性は重ならない。
 パウダーヒール
 かおりのわな
 はんげき
@@ -307,6 +311,15 @@ POWER
 マッハステルス
 どろぼうまえば
 スパイかつどう
+サニーヒール
+みつあつめ
+フレイムオーラ
+ジャンピングコーチ
+でたとこぶんしん
+でんきづくり
+ストライクバック
+メタルスクラム
+めんえき
 あかつきのつばさ
 アローラ
 あまみずのすがた
@@ -661,6 +674,14 @@ POWER
 相手のバトルポケモンが[Ctrl:Bold][Text:SpecialCondition id="0"][/Ctrl:Bold]なら、このポケモンのHPを[Num:Int id="1" max_length="3"]回復。
 このポケモンがダメージを受けているなら、このワザのダメージを-[Num:Int id="0" max_length="3"]する。
 前の相手の番、相手がとったポイントの数×[Num:Int id="0" max_length="3"]ダメージ追加。
+自分の手札にある「[Text:CardName id="0"]」をすべて相手に見せ、見せた枚数×[Num:Int id="1" max_length="3"]ダメージ。
+相手の手札からランダムに[Num:Int id="0" max_length="1"]枚、オモテを見て、山札にもどす。
+このポケモンから[Img:Element id="0"]エネルギーを[Num:Int id="1" max_length="2"]個トラッシュし、相手のポケモン[Num:Int id="2" max_length="1"]匹に[Num:Int id="3" max_length="3"]ダメージ。
+場に出ている相手のスタジアムをトラッシュ。
+相手のバトルポケモンを[Ctrl:Bold][Text:SpecialCondition id="0"][/Ctrl:Bold]にする。この[Ctrl:Bold][Text:SpecialCondition id="0"][/Ctrl:Bold]で投げるコインは[Num:Int id="1" max_length="2"]回になり、すべてオモテが出ないと回復しない。
+次の自分の番、このポケモンの「[Text:AttackName id="0"]」のダメージを-[Num:Int id="1" max_length="3"]する。
+このポケモンからエネルギーをすべて、ベンチポケモンに好きなようにつけ替える。
+自分がすでにとったポイントの数×[Num:Int id="0" max_length="3"]ダメージ追加。
 つるのムチ
 はっぱカッター
 メガドレイン
@@ -1772,6 +1793,46 @@ Vフレイム
 ぷくぷくエール
 ヒップドロップ
 れいこくなうず
+くびながハンマー
+ハニーラッシュ
+らくようタックル
+シグナルビーム
+ダイナマイトスチーム
+ラビットジャンプ
+スピニングキック
+げきおこファイヤー
+デュアルブリザード
+あくうせつだん
+いしあたま
+スプラッシュダーク
+ピカパンチ
+いなずまテール
+じばく
+じゅくすいソング
+デュアルインパクト
+ひみつのみちびき
+サイコバーン
+ブレインウェーブ
+サイコブースト
+ちりあつめ
+がちりんのつばさ
+メガホーン
+ひじうち
+おてパンチ
+ひどいガス
+ゆうやみどく
+ムーンレイド
+ランページクラッシュ
+イカサマ
+シュレッダークロー
+ときのほうこう
+にちりんのツメ
+ドラゴニックメテオ
+クリーンヒット
+パワーボール
+ひっさつラリアット
+サイキックブラスター
+まどわす
 [Ctrl:Bold]ねむり[/Ctrl:Bold]
 自分のポケモンにエネルギーを[Num:Int id="0" max_length="2"]個つける
 ピカチュウのシルエット エフェクト(バトル)
@@ -1905,6 +1966,8 @@ Vフレイム
 ミラクルデイズ エンブレムイベント
 ハイクラスパック MEGAエンブレムイベント
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望 エンブレムイベント
+デュアルフュージョン エンブレムイベント
+デュアルフュージョン(C1)限定バトル
 カメールデッキ(最強の遺伝子)
 フシギソウデッキ(最強の遺伝子)
 リザードデッキ(最強の遺伝子)
@@ -2450,6 +2513,16 @@ Vフレイム
 [Text:CardName v="MEGATYLTALIS_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
 [Text:CardName v="MEGAGANGAR_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
 [Text:CardName v="KORAIDON_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="KAMEIL"]デッキ
+[Text:CardName v="KAMEX"]デッキ
+[Text:CardName v="PARMOT"]デッキ
+[Text:CardName v="HOGATOR_EX"]デッキ
+[Text:CardName v="PIKACHU_EX"]デッキ
+[Text:CardName v="MEGAMEWTWOX_EX"]デッキ
+[Text:CardName v="ALOLANASSY_EX"]デッキ
+[Text:CardName v="MEGAGEKKOUGA_EX"]デッキ
+[Text:CardName v="MEGABANGIRAS_EX"]デッキ
+[Text:CardName v="GIRATINA_EX"]デッキ
 フシギバナexデッキ(最強の遺伝子)
 リザードンexデッキ(最強の遺伝子)
 カメックスexデッキ(最強の遺伝子)
@@ -2642,6 +2715,12 @@ Vフレイム
 [Text:CardName v="MEGAHASSAM_EX"]＆[Text:CardName v="SURFUGO_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
 エリートデッキ([Text:CardName v="MEGALIZARDONY_EX"])
 エリートデッキ([Text:CardName v="MEGALUCARIO_EX"])
+[Text:CardName v="PIKACHU_EX"]デッキ
+[Text:CardName v="MEGAMEWTWOX_EX"]デッキ
+[Text:CardName v="MEGAGEKKOUGA_EX"]デッキ
+[Text:CardName v="MEGABANGIRAS_EX"]デッキ
+みつあつめデッキ
+ラビットジャンプデッキ
 バトルで使えるレンタルデッキです\nデッキに含まれるカードを所持していなくても\nバトルで使用できます
 フシギバナexデッキ(最強の遺伝子)
 リザードンexデッキ(最強の遺伝子)
@@ -2844,6 +2923,7 @@ Vフレイム
 [Text:CardName v="MEGAHASSAM_EX"]＆[Text:CardName v="SURFUGO_EX"]デッキ([Mst:PackName v="PACK_NAME_B4b_1"])
 エリートデッキ([Text:CardName v="MEGALIZARDONY_EX"])
 エリートデッキ([Text:CardName v="MEGALUCARIO_EX"])
+エリートデッキ([Text:CardName v="MEGARAYQUAZA_EX"])
 デッキ機能で使えるテーマデッキレシピです\nレシピに書かれたカードを集めることで\nデッキを作成して遊ぶことができます
 デッキ(20枚のカード)をもらえます\nデッキ機能で使えるテーマデッキレシピももらえます\nexスタートデッキは9種類の中から1つしか交換できません
 ギャロップデッキ
@@ -2909,6 +2989,7 @@ Vickie
 [Text:CardName v="MEGAHELLGAR_EX"]ドロップイベント
 [Text:CardName v="ROCKETDANNOLAPLACE"]ドロップイベント
 [Text:CardName v="MEGAGABURIAS_EX"]ドロップイベント
+復刻PROMOドロップイベント2026
 ランダムバトル(B2)
 ランダムバトル(B2a)
 ランダムバトル(B2b)
@@ -2918,6 +2999,7 @@ Vickie
 ランダムバトル(B4)
 ランダムバトル(B4a)
 ランダムバトル(B4b)
+ランダムバトル(C1)
 [Ctrl:Bold]やけど[/Ctrl:Bold]
 金フレーム
 コレクションファイル・コレクションボード・\nバトルで表示できる金フレームです
@@ -4304,6 +4386,40 @@ Vickie
 ロケット団の大作戦
 ロケット団のボス
 ゲームセンター
+[Text:AdditionalName v="ADDITIONAL_NAME_Alora" type="region" space="post"]ナッシーex
+シキジカ
+メブキジカ
+ボルケニオン
+ホゲータex
+グレンアルマ
+パルキア
+メガゲッコウガex
+メガミュウツーXex
+デオキシス
+ルナアーラ
+メガバンギラスex
+クスネ
+フォクスライ
+メガエアームドex
+ディアルガ
+ソルガレオ
+メガカイリューex
+キテルグマex
+あまいミツ
+いいきずぐすり
+ゴールドスプレー
+なんでもなおし
+しんかのきせき
+でんきだま
+カンナ
+グリーンの挑発
+セレナの選択
+チリ
+フレンドリィショップのお兄さん
+ホープトレーナー
+さびれたスタンド
+メガミュウツーYex
+ゲノムコンバーターY
 キャンペーンで入手
 ゲットチャレンジで入手
 ミッションで入手
@@ -4327,6 +4443,10 @@ Vickie
 テラパゴス
 メガディアンシー
 メガミュウツーX
+メガゲッコウガ
+メガカイリュー
+ドオー
+メガバンギラス
 メガリザードン
 ビギナーランク1
 ビギナーランク2
@@ -4778,20 +4898,25 @@ TOP10000
 メガシンカex(エンブレム)
 ランクマッチ シーズンA3aで獲得できる\nスーパーボールランク1のエンブレムです
 シーズンA3a スーパーボールランク1
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_19"](エンブレム)
 ランクマッチ シーズンA3aで獲得できる\nスーパーボールランク2のエンブレムです
 シーズンA3a スーパーボールランク2
+[Text:CardName v="PIKACHU"] Ver.6(エンブレム)
 ランクマッチ シーズンA3aで獲得できる\nスーパーボールランク3のエンブレムです
 シーズンA3a スーパーボールランク3
 紅蓮ブレイズ エンブレムイベントで獲得できる\n参加賞のエンブレムです
 紅蓮ブレイズ エンブレムイベント 参加賞
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"](エンブレム)
 ランクマッチ シーズンA3aで獲得できる\nスーパーボールランク4のエンブレムです
 シーズンA3a スーパーボールランク4
+[Text:CardName v="ABURIBBON"](エンブレム)
 紅蓮ブレイズ エンブレムイベントで獲得できる\n銅賞のエンブレムです
 紅蓮ブレイズ エンブレムイベント 銅賞
 ランクマッチ シーズンA3aで獲得できる\nモンスターボールランク1のエンブレムです
 シーズンA3a モンスターボールランク1
 紅蓮ブレイズ エンブレムイベントで獲得できる\n銀賞のエンブレムです
 紅蓮ブレイズ エンブレムイベント 銀賞
+[Text:CardName v="HIBANNY"](エンブレム)
 ランクマッチ シーズンA3aで獲得できる\nモンスターボールランク2のエンブレムです
 シーズンA3a モンスターボールランク2
 紅蓮ブレイズ エンブレムイベントで獲得できる\n金賞のエンブレムです
@@ -5026,12 +5151,20 @@ TOP10000
 [Mst:PackName v="PACK_NAME_B4b_1"] エンブレムイベント 金賞
 ランクマッチ シーズンA4bで獲得できる\nモンスターボールランク1のエンブレムです
 シーズンA4b モンスターボールランク1
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] エンブレムイベントで獲得できる\n参加賞のエンブレムです
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] エンブレムイベント 参加賞
 ランクマッチ シーズンA4bで獲得できる\nモンスターボールランク2のエンブレムです
 シーズンA4b モンスターボールランク2
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] エンブレムイベントで獲得できる\n銅賞のエンブレムです
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] エンブレムイベント 銅賞
 ランクマッチ シーズンA4bで獲得できる\nモンスターボールランク3のエンブレムです
 シーズンA4b モンスターボールランク3
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] エンブレムイベントで獲得できる\n銀賞のエンブレムです
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] エンブレムイベント 銀賞
 ランクマッチ シーズンA4bで獲得できる\nモンスターボールランク4のエンブレムです
 シーズンA4b モンスターボールランク4
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] エンブレムイベントで獲得できる\n金賞のエンブレムです
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] エンブレムイベント 金賞
 ランクマッチ シーズンA4bで獲得できる\nビギナーランク1のエンブレムです
 シーズンA4b ビギナーランク1
 ランクマッチ シーズンA4bで獲得できる\nビギナーランク2のエンブレムです
@@ -5280,6 +5413,26 @@ TOP10000
 シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_02"]
 シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_03"]
 シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_04"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:MainRankName v="MAIN_RANK_NAME_MASTERBALL"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] マスターボールランク([Mst:CommonEventLabel v="COMMON_Master_TOP10000"])
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] マスターボールランク([Mst:CommonEventLabel v="COMMON_Master_TOP5000"])
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] マスターボールランク([Mst:CommonEventLabel v="COMMON_Master_TOP1000"])
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_01"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_02"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_03"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_04"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_01"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_02"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_03"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_04"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_01"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_02"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_03"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_04"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_01"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_02"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_03"]
+シーズン[Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_04"]
 1周年
 スペシャルイベント2025の記念エンブレムです
 スペシャルイベント2025(エンブレム)
@@ -5287,6 +5440,8 @@ TOP10000
 1周年記念(エンブレム)
 スペシャルイベント2026の記念エンブレムです
 スペシャルイベント2026(エンブレム)
+おすそわけでたくさんカードを送ると獲得できる\n特別なエンブレムです
+おすそわけマスター(エンブレム)
 無色タイプ
 悪タイプ
 ドラゴンタイプ
@@ -5345,6 +5500,8 @@ B3b
 B4
 B4a
 B4b
+C1
+SP1
 最強の遺伝子
 幻のいる島
 時空の激闘
@@ -5367,6 +5524,8 @@ B4b
 天空の支配者
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望
 ハイクラスパック MEGA
+デュアルフュージョン
+スペシャルパック はじまりのパートナー
 #マイコレクション
 #好きなポケモン
 #お気に入りのイラスト
@@ -6858,6 +7017,53 @@ B4b
 膨大な　エネルギーが　細胞を\n激しく　刺激｡　眠っていた\nドラゴンの　血が　目覚めたらしい｡
 筋力が　大幅に　アップ｡\n２週間の　あいだ　休まず\n飛び続けることが　できるのだ｡
 とろけるような　肌ざわりの\n羽毛は　数本で　ダンプカーを\n吊り上げられるほど　強靭｡
+生まれて　しばらくの　あいだ\n背中の　タネに　詰まった\n栄養を　取って　育つ｡
+太陽の　光を　浴びるほど\n体に　力が　わいて　背中の\nつぼみが　育っていく｡
+浴びた　太陽の　光を\nエネルギーに　変換できるので\n夏の　ほうが　強くなる｡
+タマゴだと　思って　触ると\n仲間が　どんどん　集まってきて\n集団攻撃に　あう｡
+モンスターボールの　開発者は\nタマゲタケが　好きだったという\n説が　あるが　真偽は　不明｡
+吹き出す　毒の胞子に　注意｡\n浴びた　部分から　モロバレルの\nカサに　似た　キノコが　生えてくる｡
+人や　ポケモンの　楽しそうな\nオーラを　感じ取り　寄ってきては\n長い　口で　突くので　痛い｡
+落ちこんでいる　人や　ポケモンの\n気持ちを　感じ取っては　手作りの\n花粉団子で　元気づけたりする｡
+尻尾で　燃える　炎は\n生命力の　表れ｡\n元気がないと　炎は　弱まる｡
+燃える　尻尾を　振りまわすと\nまわりの　温度が　どんどん　上がって\n相手を　苦しめる｡
+本気で　怒った　リザードンの\n尻尾の　先の　炎は\n青白く　燃え上がる｡
+水蒸気を　噴き出して　自分の　姿を\n濃霧で　隠す｡　人の　立ち入らない\n山に　住むという｡
+全身が　温まることで\n本来の　パワーを　発揮できる｡\nそのため　準備運動を　する｡
+ふかふかの　体毛の　おかげで\n炎エネルギーを　温めやすく\nさらに　強い　炎を　出せる｡
+熱くなりやすい　性格だが\n信頼する　トレーナーが　いると\n隙のない　戦い方を　みせる｡
+焼けた　木炭に　命が　宿り\nポケモンになった｡　燃える　闘志で\n強敵にも　戦いを　挑む｡
+多くの　武勲を　立てた　戦士の\n鎧によって　進化した　姿｡\n忠誠心の　厚い　ポケモン｡
+両腕の　炎の剣は\n志半ばで　力つきた\n剣士の　怨念で　燃え上がる｡
+生まれたあと　背中が　ふくらんで\n硬い　甲羅が　できる｡　口から\n強力な　泡を　出す｡
+長くて　ふさふさの　尻尾は\n長生きの　シンボル｡\nとくに　お年寄りに　人気がある｡
+噴射した　水の　勢いに\n負けないように　わざと　体重を\n重くしているのだ｡
+頭に　でっぱりが　あって\n非常に　硬い｡　頭突きで\n氷山を　割って　進む｡
+水の　温度が　下がる　夜\n食べものを　求め　泳ぎまわる｡\n昼間は　浅い　海底で　寝る｡
+ガラルの　とある　地域では\n氷の　女王と　呼んで\nルージュラを　恐れ崇めていた｡
+人を　背中に乗せて　海を行く｡\n機嫌がいいと　きれいな　鳴き声で\n歌うことも　あるらしい｡
+並行して　並ぶ　空間の　狭間に\n住むと　言われている｡\n神話に　登場する　ポケモン｡
+同じ色で　集まり　群れる｡\nいちばんの　敵は　赤い色の\nバスラオの　群れなのだ｡
+呑気に　見えるが　敵を　欺く\n演技｡　一転　目にも留まらない\nスピードで　敵を　圧倒する｡
+地形を　活かした　戦法が\n得意｡　小石を　泡で　包んだ\nつぶては　百発百中だ｡
+隕石に　付着していた\n宇宙ウイルスの　ＤＮＡが\n変異して　生まれた　ポケモン｡
+半径１０キロメートルの　範囲を\n縄張りにしているが　走っていると\n縄張りを　忘れてしまうらしい｡
+ダイヤモンドの　原石を　砕く\n威力の　ツノを　仲間同士で\nぶつけあって　磨きあげている｡
+丈夫な　プロテクターが　火山の\n噴火から　身を　守る｡　丸い\n岩を　手の　穴から　撃ち出す｡
+敵に　襲われると　太い　棘を\n胴体から　突き出して　反撃｡\n身を切る　覚悟の　危険な　技｡
+硬い　岩で　刀の　尻尾を　研ぐ｡\nしげみに　隠れて　獲物に　近寄り\n毒の　キバで　襲う｡
+ほかの　ポケモンが　みつけた　餌を\n掠めて　暮らしている｡　ふかふかの\n肉球は　足音を　たてない｡
+狙った　獲物は　こっそり\nマーキング｡　においを　辿って\n油断　したころ　盗みに　来るぞ｡
+ディアルガが　生まれたことで\n時間が　動き出したという\n伝説を　持つ　ポケモン｡
+棘を　飛ばして　身を　守る｡\n狙った　方向に　飛ばすには\nたくさんの　訓練が　必要｡
+トゲで　岩盤に　キズを　つけると\n触手の　先端を　あてて\n栄養を　吸収する｡
+呼吸を　していないので\nどんなところでも　活躍できると\n期待される　人工の　ポケモン｡
+最新科学で　進化した\n人工の　ポケモン｡　ときどき\nプログラムにない　反応をみせる｡
+さらに　優れた　ポケモンを　目指し\n追加した　プログラムに　不具合が\nあったらしく　動きが　おかしい｡
+眠っているとき以外は　つねに\nエサを　食べている　大食らい｡\n１日に　４００キロも　たいらげる｡
+人知を　超えた　硬さの　殻に\n包まれている｡　星の　光を\n浴びて　成長する｡
+月を　誘いし　獣　という\n名前を　もつ｡　あらゆる　光を\nエネルギーに　変えて　生きている｡
+全身から　光を　発して\nまるで　太陽の　姿になると\n闇を　消して　世界を　照らす｡
 メガシンカして　さらに　大きく\n成長した　花を　支えるため\n足腰も　たくましく　なったのだ｡
 トレーナーとの　絆が　パワーの　源｡\nジェット機を　しのぐ\n飛行能力を　誇る｡
 甲羅の　大砲は　戦車並みの　威力｡\n発射の　衝撃を\n強靭な　足腰で　踏ん張る｡
@@ -6879,8 +7085,39 @@ B4b
 １匹の　メタグロスと　１匹の\nメタングと　２匹の　ダンバルが\n連結している　姿　なのだ｡
 メガシンカで　全身が　発熱｡\n激しい　炎の　息吹を\n噴き出し　相手を　炭に　変える｡
 メガシンカ前より　凶暴な\n性質｡　両腕の　カマで\n敵を　ズタズタに　切り刻む｡
+発光体を　点滅させて\n相手の　やる気を　なくさせることで\n強敵から　身を　守っている｡
+強力すぎる　さいみんじゅつ｡\n操られていた　相手は\n前後の　記憶を　失っている｡
+高速回転　させて　浮かぶ\n巨大手裏剣に　逆さまに\n貼りつき　相手の　虚を　突く｡
+サイコパワーが　体の　筋肉を\n増強｡　握力は　１トン｡\n１００ｍを　２秒で　走れるぞ｡
+メガシンカの　影響で　さらに\n凶暴に　なった｡　トレーナーの\n命令も　聞こえているか　不明｡
+飛行速度は　音速を　超える｡\n衝撃波を　巻き起こして　敵を\n吹き飛ばし　ツメで　とどめを　刺す｡
+メガシンカのエネルギーが　優しい\n気持ちを　過剰に　パワーアップ｡\n慈悲の　心で　敵を　葬る｡
+体は　小さくなったが　パワーは\nケタはずれ｡　軽く　念じるだけで\n高層ビルも　木っ端微塵　だ｡
 大気中の　チリが　エサ｡\nチリに　含まれる　成分によって\nコアの　色が　決まるという｡
+発達した　あごは　パワフルで\nなんでも　噛み砕いて　しまうので\n親のトレーナーでも　要注意｡
+足の　裏の　小さな　トゲを　引っ掛けて\n垂直の　カベを　登ることが　できる｡\n太い　尻尾を　たたきつけて　攻撃する｡
+トレーナーに　くっついて　ちょこちょこ　歩く｡\n口から　飛ばす　炎は　摂氏　１０００度｡\n相手を　黒コゲにする　灼熱の　玉だ｡
+頭の　ひれは　とても　敏感な　レーダー｡\n水や　空気の　動きから　目を　使わずに\n周りの　様子を　キャッチすることが　できる｡
+土で　できた　背中の　甲羅は\n水を　飲むと　さらに　硬くなる｡\n湖の　ほとりで　暮らしている｡
+断崖絶壁を　身軽に　登り\n岩山の　上で　生活する｡\n炎を　消して　眠る｡
+プライドが　高く　人から\n食べ物を　もらう　ことを　嫌う｡\n長い　産毛が　寒さを　防ぐ｡
+知能が　高く　とても　冷静｡\n太陽の　光を　たっぷり\n浴びると　動きが　鋭くなる｡
+鼻の　穴から　炎を　吹く｡\nカゼを　ひくと　炎ではなく　\n真っ黒な　煙に　なってしまう｡
+お腹の　ホタチで　戦う｡\n攻撃を　受け止めてから　すかさず\n切りつけて　反撃するのだ｡
+普段　やわらかい　頭の　トゲは\n力を　こめると　鋭く　とがり\n岩をも　つらぬくほど　硬くなる｡
+小枝を　食べると　元気になって\n摂氏２００度を　超える　熱気を\n大きな　耳から　噴き出す｡
+警戒心が　強い｡　昼は\n光合成で　力を　溜めて\n夜になったら　活動開始｡
+毛づくろいで　お腹に　溜まった\n抜け毛を　燃やして　火を　吹く｡\n毛の　吐きかたで　炎も　変化｡
+頑張り屋な　性質で　有名｡\n体液を　鼻で　膨らませた\nバルーンを　敵に　ぶつける｡
+特別な　スティックで　リズムを\n刻むと　草花を　元気にする\nパワーが　音波になって　広がる｡
+走りまわって　体温を　上げると\n炎エネルギーが　体を　巡り\n本来の　力を　発揮できる｡
+怯えると　玉ねぎ１００個分の\n催涙成分を　もつ　涙を\n流して　もらい泣き　させる｡
+昔　遠い　土地から　やって来て\n棲みついた｡　羽から　分泌する\nジェルは　水と　汚れを　弾く｡
+いまでも　まぼろしの　ポケモンと\nいわれる｡　そのすがたを　みたものは\nぜんこくでも　ほとんど　いない｡
 夜空に　光る　流れ星は\n隕石を　追う　メガレックウザが\n舞い飛ぶ　姿かも　知れないのだ｡
+別の　宇宙から　やって来た｡\nガスの　体は　とても　軽く\nそよ風にも　流れてしまうほどだ｡
+人見知りしない　性格なので\n人間の　前でも　マイペース｡\nエサを　あげると　すぐ　懐くよ｡
+愛好家の　多い　ポケモン｡\nツノから　垂れる　枝葉の　赤が\n濃いものほど　乙と　されている｡
 Narumi Sato
 Kurata So
 Ryota Murayama
@@ -7119,6 +7356,14 @@ Akino Fukuji
 Iwamoto05
 Kazuki Minami
 YOSHIROTTEN
+telu
+Atsuya Uki
+Keisuke Azuma
+CHORISO
+Bun Toujo
+TOMATO MARKET
+ORBITALLINK Inc.
+Yoshiyuki Sadamoto
 Coming Soon
 チャレンジパワーを待ち時間短縮するアイテムです\n使用するとゲットチャレンジまでの時間が1時間\n短縮します　ミッション報酬などで入手できます
 一部の「ひとりで」のバトルやイベントに\n挑戦するためのアイテムです\n使用すると挑戦までの時間を短縮します
@@ -7132,6 +7377,7 @@ Coming Soon
 集めることでプレイヤーレベルをアップさせる\nことができるアイテムです
 長い間　使い込まれた\nロケット団のしたっぱのくつ下\nちょっと臭う…
 期限切れのゲットチャレンジを復活するための\nアイテムです　1回につき1個　チャレンジパワーと\n一緒に消費する必要があります
+ショップで特別な拡張パックと交換できます\n2周年記念キャンペーンのイベントミッションや\nプレゼントで入手できます\n交換期間を過ぎると削除されます
 ショップでデッキ(20枚のカード)と交換できます\nexスタートデッキミッションで入手できます\n交換期間を過ぎると削除されます
 テーマコレクションや図鑑ミッションを達成すると\n入手できます\nショップで特定のエンブレムと交換できます
 ショップで周辺グッズやアイテムと交換できます\nイベントミッションを達成すると入手できます\n交換期間を過ぎると削除されます
@@ -7219,6 +7465,10 @@ EXP
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]のあやしいチケット
 プロモカード交換チケット([Text:CardName v="ROCKETDANNOLAPLACE"]ドロップイベント)
 プロモカード交換チケット([Text:CardName v="MEGAGABURIAS_EX"]ドロップイベント)
+プロモカード交換チケット(プロモカードパック Cシリーズ 第1弾)
+プロモカード交換チケット(復刻PROMOドロップイベント2026)
+プロモカード交換チケット(復刻PROMOゲットチャレンジイベント2026)
+[Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定拡張パック交換チケット
 いつかのチケット
 シャボン玉 水色 エフェクト(キラ)
 シャボン玉 ピンク エフェクト(キラ)
@@ -7303,12 +7553,13 @@ EXP
 ゲットチャレンジは\nプレイヤーレベルが2になると\nオープンします
 バトルメニューは\nプレイヤーレベルが3になると\nオープンします\n\nプレイヤーレベルはパック開封などで\nプレイヤー経験値を得ることで上がります
 デッキミッションは\nプレイヤーレベルが3になると\nオープンします\n\nプレイヤーレベルはパック開封などで\nプレイヤー経験値を得ることで上がります
-デッキは\nバトルの遊びかたの06を\nクリアするとオープンします\n\nバトルの遊びかたはバトルメニューの\n左下のボタンから確認できます
-バトルは\nバトルの遊びかたの06を\nクリアするとオープンします\n\nバトルの遊びかたはバトルメニューの\n左下のボタンから確認できます
+デッキは\nバトルの遊びかたの06を\nクリアするとオープンします\n\nバトルの遊びかたはバトルメニューの\n「遊びかた」から確認できます
+バトルは\nバトルの遊びかたの06を\nクリアするとオープンします\n\nバトルの遊びかたはバトルメニューの\n「遊びかた」から確認できます
 コレクションボードは\nプレイヤーレベルが4になると\nオープンします\n\nプレイヤーレベルはパック開封などで\nプレイヤー経験値を得ることで上がります
 コレクションファイルは\nプレイヤーレベルが6になると\nオープンします\n\nプレイヤーレベルはパック開封などで\nプレイヤー経験値を得ることで上がります
 プレミアムミッションは\nプレミアムパスに加入すると\nオープンします\n\nプレミアムパスはプレミアムミッションや\nショップにあるボタンから加入できます
 トレードは\nプレイヤーレベルが3になると\nオープンします\n\nプレイヤーレベルはパック開封などで\nプレイヤー経験値を得ることで上がります
+だれかのデッキは\nバトルの遊びかたの06を\nクリアするとオープンします\n\nバトルの遊びかたはバトルメニューの\n「遊びかた」から確認できます
 {0}デッキ({1})
 {0}(エンブレム)
 {0} エンブレムイベント 銅賞
@@ -7382,6 +7633,8 @@ EXP
 ログインせよ！([Num:Int id="0" max_length="3"]日目)
 バトルを[Num:Int id="0" max_length="3"]回せよ！
 ゲットチャレンジを[Num:Int id="0" max_length="3"]回プレイせよ！
+相手の図鑑未登録カードかほしいカードを[Num:Int id="0" max_length="3"]回おすそわけしよう
+【2週目】ログインをしよう([Num:Int id="0" max_length="3"]日目)
 はじめての選択
 エレブーとブーバー
 トキワの森
@@ -7625,7 +7878,7 @@ HP60のポケモン
 むしポケモン大集合！
 メガシンカexのカードを1枚集めよう
 メガシンカexのカードを3枚集めよう
-プロモカードの[Text:CardNameWithSubName id="0"]を[Num:Int id="1" max_length="3"]枚集めよう
+このイベントのプロモカード3種類を集めよう
 笑顔の花が咲いた園②
 exコレクション
 ミラー仕様のカードのポケモンを集めよう
@@ -7806,6 +8059,7 @@ exコンプリート！
 [Text:CardName v="ROCKETDANNOSHITAPPA"]大集合
 あやしい発明品コレクター
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]のカードコンプリート
+カントー地方のパートナーたち
 メガシンカexコレクション
 特性を持つポケモンex
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_24"]の2つの姿
@@ -7824,6 +8078,45 @@ exコンプリート！
 [Text:CardName v="PIKACHU"]の冒険
 オスとメスの[Text:CardName v="NYAONIX"]
 4匹の「けしん」たち
+電気パワーがあふれる[Text:CardName v="PIKACHU"]
+花畑でミツ集め①
+花畑でミツ集め②
+跳んで跳ねて ラビットジャンプ
+モンスターボールに似た姿
+昼と夜の進化
+太陽と月の進化
+ヨロイをまとった炎の戦士
+フレンドリィショップでお買い物
+すやすやゆっくりひとやすみ
+ともに歩んだパートナー
+シンオウ地方の伝説
+大地を揺るがす[Mst:CommonCharacterName v="COMMON_CARD_NAME_23"]
+デュアルフュージョンミュージアム①
+デュアルフュージョンミュージアム②
+デュアルフュージョンミュージアム③
+デュアルフュージョンミュージアム④
+忍ばずの逆さ忍者(水/悪)
+あふれんばかりのミツ集め
+もっと跳ねて ラビットジャンプ
+ジョウト地方のパートナーたち
+ホウエン地方のパートナーたち
+シンオウ地方のパートナーたち
+イッシュ地方のパートナーたち
+カロス地方のパートナーたち
+アローラ地方のパートナーたち
+ガラル地方のパートナーたち
+パルデア地方のパートナーたち
+[Text:CardName v="MEGAMEWTWOX_EX"]([Mst:Rarity v="RARITY_MSID_IM"]) への道 STEP5/5
+[Text:CardName v="PIKACHU_EX"]([Mst:Rarity v="RARITY_MSID_IM"])  への道 STEP5/5
+[Text:CardName v="MEGAMEWTWOX_EX"]([Mst:Rarity v="RARITY_MSID_IM"])  への道 STEP1/5
+[Text:CardName v="MEGAMEWTWOX_EX"]([Mst:Rarity v="RARITY_MSID_IM"])  への道 STEP2/5
+[Text:CardName v="MEGAMEWTWOX_EX"]([Mst:Rarity v="RARITY_MSID_IM"])  への道 STEP3/5
+[Text:CardName v="MEGAMEWTWOX_EX"]([Mst:Rarity v="RARITY_MSID_IM"])  への道 STEP4/5
+[Text:CardName v="PIKACHU_EX"]([Mst:Rarity v="RARITY_MSID_IM"])  への道 STEP1/5
+[Text:CardName v="PIKACHU_EX"]([Mst:Rarity v="RARITY_MSID_IM"])  への道 STEP2/5
+[Text:CardName v="PIKACHU_EX"]([Mst:Rarity v="RARITY_MSID_IM"])  への道 STEP3/5
+[Text:CardName v="PIKACHU_EX"]([Mst:Rarity v="RARITY_MSID_IM"])  への道 STEP4/5
+最強のデュアルタイプ(超/闘)
 デッキミッション
 デッキミッション
 最強の遺伝子 エンブレムイベント1
@@ -7925,8 +8218,20 @@ exスタートデッキミッション
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望 エンブレムイベント
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の特別任務
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の特別任務
+デュアルフュージョン バトル応援ミッション
+デュアルフュージョン バトル応援ミッション
 ピカピカ！ピカチュウミッション
 ピカピカ！ピカチュウミッション
+ウィンターホリデー\nテーマプロモカードイベント
+ウィンターホリデー\nテーマプロモカードイベント
+復刻PROMOドロップイベント2026\nミッション
+復刻PROMOドロップイベント2026\nミッション
+復刻PROMOゲットチャレンジイベント\n2026ミッション
+復刻PROMOゲットチャレンジイベント\n2026ミッション
+[Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定拡張パックミッション
+[Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定拡張パックミッション
+ブイブイ！イーブイミッション
+ブイブイ！イーブイミッション
 初級
 上級
 デイリー
@@ -7960,6 +8265,10 @@ exスタートデッキ
 おかえり
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]
 ピカピカ！
+[Mst:Rarity v="RARITY_MSID_SSASR"]確定拡張パック
+バトル応援
+テーマプロモカード
+ブイブイ！
 ランダムバトル(上級)
 ランダムバトル(初級)
 ランダムバトル(エキスパート)
@@ -7972,38 +8281,68 @@ TOP10000
 緊急のお知らせのため、英語でお知らせを掲載しています。準備が整い次第、●●語のお知らせを掲載いたします
 最強の遺伝子 ミュウツーのパック
 最強の遺伝子 ミュウツー([Mst:Rarity v="RARITY_MSID_RR"]以上1枚確定)のパック
+[Mst:PackName v="PACK_NAME_A1_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 最強の遺伝子 リザードンのパック
 最強の遺伝子 リザードン([Mst:Rarity v="RARITY_MSID_RR"]以上1枚確定)のパック
+[Mst:PackName v="PACK_NAME_A1_2"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 最強の遺伝子 ピカチュウのパック
 最強の遺伝子 ピカチュウ([Mst:Rarity v="RARITY_MSID_RR"]以上1枚確定)のパック
+[Mst:PackName v="PACK_NAME_A1_3"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 幻のいる島のパック
+[Mst:PackName v="PACK_NAME_A1a_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 時空の激闘 ディアルガのパック
+[Mst:PackName v="PACK_NAME_A2_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 時空の激闘 パルキアのパック
+[Mst:PackName v="PACK_NAME_A2_2"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 超克の光のパック
+[Mst:PackName v="PACK_NAME_A2a_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 シャイニングハイのパック
+[Mst:PackName v="PACK_NAME_A2b_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 双天の守護者 ソルガレオのパック
+[Mst:PackName v="PACK_NAME_A3_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 双天の守護者 ルナアーラのパック
+[Mst:PackName v="PACK_NAME_A3_2"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 異次元クライシスの拡張パック
+[Mst:PackName v="PACK_NAME_A3a_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 イーブイガーデンの拡張パック
+[Mst:PackName v="PACK_NAME_A3b_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 空と海の導き ホウオウの拡張パック
+[Mst:PackName v="PACK_NAME_A4_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 空と海の導き ルギアの拡張パック
+[Mst:PackName v="PACK_NAME_A4_2"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 未知なる水域の拡張パック
+[Mst:PackName v="PACK_NAME_A4a_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 ハイクラスパック exの拡張パック
 メガライジング メガバシャーモの拡張パック
+[Mst:PackName v="PACK_NAME_B1_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 メガライジング メガギャラドスの拡張パック
+[Mst:PackName v="PACK_NAME_B1_2"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 メガライジング メガチルタリスの拡張パック
+[Mst:PackName v="PACK_NAME_B1_3"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 紅蓮ブレイズの拡張パック
+[Mst:PackName v="PACK_NAME_B1a_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 夢幻パレードの拡張パック
+[Mst:PackName v="PACK_NAME_B2_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 パルデアワンダーの拡張パック
+[Mst:PackName v="PACK_NAME_B2a_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 シャイニングメガの拡張パック
+[Mst:PackName v="PACK_NAME_B2b_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 波動ビートの拡張パック
+[Mst:PackName v="PACK_NAME_B3_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 進撃パラドックスの拡張パック
+[Mst:PackName v="PACK_NAME_B3a_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 ミラクルデイズの拡張パック
+[Mst:PackName v="PACK_NAME_B3b_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 天空の支配者の拡張パック
+[Mst:PackName v="PACK_NAME_B4_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望の拡張パック
+[Mst:PackName v="PACK_NAME_B4a_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)の特別な拡張パック
 ハイクラスパック MEGAの拡張パック
+デュアルフュージョン [Mst:CommonCharacterName v="COMMON_CARD_NAME_19"]の拡張パック
+デュアルフュージョン [Text:CardName v="PIKACHU"]の拡張パック
 ピカピカ！ピカチュウミッションで手に入る\n特別なパック
 ピカピカ！ピカチュウミッションで手に入る\nとても特別なパック
+ブイブイ！イーブイミッションで手に入る\n特別なパック
 Aシリーズ 第1弾のプロモカードパック 
 Aシリーズ 第2弾のプロモカードパック 
 Aシリーズ 第3弾のプロモカードパック 
@@ -8030,42 +8369,74 @@ Bシリーズ 第10弾のプロモカードパック
 Bシリーズ 第11弾のプロモカードパック 
 Bシリーズ 第12弾のプロモカードパック 
 Bシリーズ 第13弾のプロモカードパック 
+Cシリーズ 第1弾のプロモカードパック 
+スペシャルパック はじまりのパートナーの\n特別な拡張パック
 [Mst:Rarity v="RARITY_MSID_RR"]以上1枚確定
 ポケモンex1枚確定
 最強の遺伝子 ミュウツー
 最強の遺伝子 ミュウツー([Mst:Rarity v="RARITY_MSID_RR"]以上1枚確定)
+[Mst:PackName v="PACK_NAME_A1_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 最強の遺伝子 リザードン
 最強の遺伝子 リザードン([Mst:Rarity v="RARITY_MSID_RR"]以上1枚確定)
+[Mst:PackName v="PACK_NAME_A1_2"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 最強の遺伝子 ピカチュウ
 最強の遺伝子 ピカチュウ([Mst:Rarity v="RARITY_MSID_RR"]以上1枚確定)
+[Mst:PackName v="PACK_NAME_A1_3"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 幻のいる島
+[Mst:PackName v="PACK_NAME_A1a_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 時空の激闘 ディアルガ
+[Mst:PackName v="PACK_NAME_A2_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 時空の激闘 パルキア
+[Mst:PackName v="PACK_NAME_A2_2"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 超克の光
+[Mst:PackName v="PACK_NAME_A2a_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 シャイニングハイ
+[Mst:PackName v="PACK_NAME_A2b_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 双天の守護者 ソルガレオ
+[Mst:PackName v="PACK_NAME_A3_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 双天の守護者 ルナアーラ
+[Mst:PackName v="PACK_NAME_A3_2"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 異次元クライシス
+[Mst:PackName v="PACK_NAME_A3a_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 イーブイガーデン
+[Mst:PackName v="PACK_NAME_A3b_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 空と海の導き ホウオウ
+[Mst:PackName v="PACK_NAME_A4_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 空と海の導き ルギア
+[Mst:PackName v="PACK_NAME_A4_2"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 未知なる水域
+[Mst:PackName v="PACK_NAME_A4a_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 ハイクラスパック ex
 メガライジング メガバシャーモ
+[Mst:PackName v="PACK_NAME_B1_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 メガライジング メガギャラドス
+[Mst:PackName v="PACK_NAME_B1_2"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 メガライジング メガチルタリス
+[Mst:PackName v="PACK_NAME_B1_3"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 紅蓮ブレイズ
+[Mst:PackName v="PACK_NAME_B1a_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 夢幻パレード
+[Mst:PackName v="PACK_NAME_B2_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 パルデアワンダー
+[Mst:PackName v="PACK_NAME_B2a_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 シャイニングメガ
+[Mst:PackName v="PACK_NAME_B2b_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 波動ビート
+[Mst:PackName v="PACK_NAME_B3_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 進撃パラドックス
+[Mst:PackName v="PACK_NAME_B3a_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 ミラクルデイズ
+[Mst:PackName v="PACK_NAME_B3b_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 天空の支配者
+[Mst:PackName v="PACK_NAME_B4_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]の野望
+[Mst:PackName v="PACK_NAME_B4a_1"]([Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定)
 ハイクラスパック MEGA
+デュアルフュージョン [Mst:CommonCharacterName v="COMMON_CARD_NAME_19"]
+デュアルフュージョン [Text:CardName v="PIKACHU"]
 ピカピカ！ピカチュウパック
 ピカピカ！ピカチュウパックex
+ブイブイ！イーブイパック
 プロモカードパック Aシリーズ 第1弾
 プロモカードパック Aシリーズ 第2弾
 プロモカードパック Aシリーズ 第3弾
@@ -8092,6 +8463,8 @@ Bシリーズ 第13弾のプロモカードパック
 プロモカードパック Bシリーズ 第11弾
 プロモカードパック Bシリーズ 第12弾
 プロモカードパック [Mst:SeriesName v="SERIES_NAME_2"]シリーズ [Mst:CommonPackLabel v="COMMON_PACK_LABEL_013"]
+プロモカードパック [Mst:SeriesName v="SERIES_NAME_3"]シリーズ [Mst:CommonPackLabel v="COMMON_PACK_LABEL_001"]
+スペシャルパック はじまりのパートナー
 [Mst:Rarity v="RARITY_MSID_RR"]以上確定
 通常封入
 通常封入+1枚
@@ -8281,7 +8654,10 @@ Bシリーズ 第13弾のプロモカードパック
 全国図鑑NO.0147　ドラゴンポケモン　高さ：1.8m　重さ：3.3kg
 全国図鑑NO.0148　ドラゴンポケモン　高さ：4.0m　重さ：16.5kg
 全国図鑑NO.0149　ドラゴンポケモン　高さ：2.2m　重さ：210.0kg
+全国図鑑NO.0149　ドラゴンポケモン　高さ：2.2m　重さ：290.0kg
 全国図鑑NO.0150　いでんしポケモン　高さ：2.0m　重さ：122.0kg
+全国図鑑NO.0150　いでんしポケモン　高さ：2.3m　重さ：127.0kg
+全国図鑑NO.0150　いでんしポケモン　高さ：1.5m　重さ：33.0kg
 全国図鑑NO.0151　しんしゅポケモン　高さ：0.4m　重さ：4.0kg
 全国図鑑NO.0152　はっぱポケモン　高さ：0.9m　重さ：6.4kg
 全国図鑑NO.0153　はっぱポケモン　高さ：1.2m　重さ：15.8kg
@@ -8365,6 +8741,7 @@ Bシリーズ 第13弾のプロモカードパック
 全国図鑑NO.0225　はこびやポケモン　高さ：0.9m　重さ：16.0kg
 全国図鑑NO.0226　カイトポケモン　高さ：2.1m　重さ：220.0kg
 全国図鑑NO.0227　よろいどりポケモン　高さ：1.7m　重さ：50.5kg
+全国図鑑NO.0227　よろいどりポケモン　高さ：1.7m　重さ：40.4kg
 全国図鑑NO.0228　ダークポケモン　高さ：0.6m　重さ：10.8kg
 全国図鑑NO.0229　ダークポケモン　高さ：1.4m　重さ：35.0kg
 全国図鑑NO.0229　ダークポケモン　高さ：1.9m　重さ：49.5kg
@@ -8386,6 +8763,7 @@ Bシリーズ 第13弾のプロモカードパック
 全国図鑑NO.0246　いわはだポケモン　高さ：0.6m　重さ：72.0kg
 全国図鑑NO.0247　だんがんポケモン　高さ：1.2m　重さ：152.0kg
 全国図鑑NO.0248　よろいポケモン　高さ：2.0m　重さ：202.0kg
+全国図鑑NO.0248　よろいポケモン　高さ：2.5m　重さ：255.0kg
 全国図鑑NO.0249　せんすいポケモン　高さ：5.2m　重さ：216.0kg
 全国図鑑NO.0250　にじいろポケモン　高さ：3.8m　重さ：199.0kg
 全国図鑑NO.0251　ときわたりポケモン　高さ：0.6m　重さ：5.0kg
@@ -8538,6 +8916,7 @@ Bシリーズ 第13弾のプロモカードパック
 全国図鑑NO.0384　てんくうポケモン　高さ：7.0m　重さ：206.5kg
 全国図鑑NO.0384　てんくうポケモン　高さ：10.8m　重さ：392.0kg
 全国図鑑NO.0385　ねがいごとポケモン　高さ：0.3m　重さ：1.1kg
+全国図鑑NO.0386　ＤＮＡポケモン　高さ：1.7m　重さ：60.8kg
 全国図鑑NO.0387　わかばポケモン　高さ：0.4m　重さ：10.2kg
 全国図鑑NO.0388　こだちポケモン　高さ：1.1m　重さ：97.0kg
 全国図鑑NO.0389　たいりくポケモン　高さ：2.2m　重さ：310.0kg
@@ -8645,7 +9024,9 @@ Bシリーズ 第13弾のプロモカードパック
 全国図鑑NO.0480　ちしきポケモン　高さ：0.3m　重さ：0.3kg
 全国図鑑NO.0481　かんじょうポケモン　高さ：0.3m　重さ：0.3kg
 全国図鑑NO.0482　いしポケモン　高さ：0.3m　重さ：0.3kg
+全国図鑑NO.0483　じかんポケモン　高さ：5.4m　重さ：683.0kg
 全国図鑑NO.0483　じかんポケモン　高さ：7.0m　重さ：850.0kg
+全国図鑑NO.0484　くうかんポケモン　高さ：4.2m　重さ：336.0kg
 全国図鑑NO.0484　くうかんポケモン　高さ：6.3m　重さ：660.0kg
 全国図鑑NO.0485　かこうポケモン　高さ：1.7m　重さ：430.0kg
 全国図鑑NO.0486　きょだいポケモン　高さ：3.7m　重さ：420.0kg
@@ -8716,6 +9097,7 @@ Bシリーズ 第13弾のプロモカードパック
 全国図鑑NO.0549　はなかざりポケモン　高さ：1.1m　重さ：16.3kg
 全国図鑑NO.0549　スピンポケモン　高さ：1.2m　重さ：19.2kg
 全国図鑑NO.0550　らんぼうポケモン　高さ：1.0m　重さ：18.0kg
+全国図鑑NO.0550　らんぼうポケモン　高さ：1.0m　重さ：18.0kg
 全国図鑑NO.0550　おんこうポケモン　高さ：1.0m　重さ：18.0kg
 全国図鑑NO.0551　さばくワニポケモン　高さ：0.7m　重さ：15.2kg
 全国図鑑NO.0552　さばくワニポケモン　高さ：1.0m　重さ：33.4kg
@@ -8752,6 +9134,8 @@ Bシリーズ 第13弾のプロモカードパック
 全国図鑑NO.0582　しんせつポケモン　高さ：0.4m　重さ：5.7kg
 全国図鑑NO.0583　ひょうせつポケモン　高さ：1.1m　重さ：41.0kg
 全国図鑑NO.0584　ブリザードポケモン　高さ：1.3m　重さ：57.5kg
+全国図鑑NO.0585　きせつポケモン　高さ：0.6m　重さ：19.5kg
+全国図鑑NO.0586　きせつポケモン　高さ：1.9m　重さ：92.5kg
 全国図鑑NO.0587　モモンガポケモン　高さ：0.4m　重さ：5.0kg
 全国図鑑NO.0588　かぶりつきポケモン　高さ：0.5m　重さ：5.9kg
 全国図鑑NO.0589　きへいポケモン　高さ：1.0m　重さ：33.0kg
@@ -8824,6 +9208,7 @@ Bシリーズ 第13弾のプロモカードパック
 全国図鑑NO.0655　キツネポケモン　高さ：1.5m　重さ：39.0kg
 全国図鑑NO.0656　あわがえるポケモン　高さ：0.3m　重さ：7.0kg
 全国図鑑NO.0657　あわがえるポケモン　高さ：0.6m　重さ：10.9kg
+全国図鑑NO.0658　しのびポケモン　高さ：1.5m　重さ：40.0kg
 全国図鑑NO.0658　しのびポケモン　高さ：1.5m　重さ：40.0kg
 全国図鑑NO.0659　あなほりポケモン　高さ：0.4m　重さ：5.0kg
 全国図鑑NO.0660　あなほりポケモン　高さ：1.0m　重さ：42.4kg
@@ -8902,6 +9287,7 @@ Bシリーズ 第13弾のプロモカードパック
 全国図鑑NO.0719　ほうせきポケモン　高さ：0.7m　重さ：8.8kg
 全国図鑑NO.0719　ほうせきポケモン　高さ：1.1m　重さ：27.8kg
 全国図鑑NO.0720　いたずらポケモン　高さ：0.5m　重さ：9.0kg
+全国図鑑NO.0721　スチームポケモン　高さ：1.7m　重さ：195.0kg
 全国図鑑NO.0722　くさばねポケモン　高さ：0.3m　重さ：1.5kg
 全国図鑑NO.0723　はばねポケモン　高さ：0.7m　重さ：16.0kg
 全国図鑑NO.0724　やばねポケモン　高さ：1.6m　重さ：36.6kg
@@ -8975,6 +9361,8 @@ Bシリーズ 第13弾のプロモカードパック
 全国図鑑NO.0788　とちがみポケモン　高さ：1.3m　重さ：21.2kg
 全国図鑑NO.0789　せいうんポケモン　高さ：0.2m　重さ：0.1kg
 全国図鑑NO.0790　げんしせいポケモン　高さ：0.1m　重さ：999.9kg
+全国図鑑NO.0791　にちりんポケモン　高さ：3.4m　重さ：230.0kg
+全国図鑑NO.0792　がちりんポケモン　高さ：4.0m　重さ：120.0kg
 全国図鑑NO.0793　きせいポケモン　高さ：1.2m　重さ：55.5kg
 全国図鑑NO.0794　ぼうちょうポケモン　高さ：2.4m　重さ：333.6kg
 全国図鑑NO.0795　えんびポケモン　高さ：1.8m　重さ：25.0kg
@@ -9008,6 +9396,8 @@ Bシリーズ 第13弾のプロモカードパック
 全国図鑑NO.0821　ことりポケモン　高さ：0.2m　重さ：1.8kg
 全国図鑑NO.0822　カラスポケモン　高さ：0.8m　重さ：16.0kg
 全国図鑑NO.0823　カラスポケモン　高さ：2.2m　重さ：75.0kg
+全国図鑑NO.0827　きつねポケモン　高さ：0.6m　重さ：8.9kg
+全国図鑑NO.0828　きつねポケモン　高さ：1.2m　重さ：19.9kg
 全国図鑑NO.0829　はなかざりポケモン　高さ：0.4m　重さ：2.2kg
 全国図鑑NO.0830　わたかざりポケモン　高さ：0.5m　重さ：2.5kg
 全国図鑑NO.0831　ひつじポケモン　高さ：0.6m　重さ：6.0kg
@@ -9100,6 +9490,7 @@ Bシリーズ 第13弾のプロモカードパック
 全国図鑑NO.0933　がんえんポケモン　高さ：0.6m　重さ：105.0kg
 全国図鑑NO.0934　がんえんポケモン　高さ：2.3m　重さ：240.0kg
 全国図鑑NO.0935　ひのこポケモン　高さ：0.6m　重さ：10.5kg
+全国図鑑NO.0936　ひのせんしポケモン　高さ：1.5m　重さ：85.0kg
 全国図鑑NO.0937　ひのけんしポケモン　高さ：1.6m　重さ：62.0kg
 全国図鑑NO.0938　でんきおたまポケモン　高さ：0.3m　重さ：0.4kg
 全国図鑑NO.0939　でんきがえるポケモン　高さ：1.2m　重さ：113.0kg
@@ -9207,6 +9598,9 @@ Bシリーズ 第13弾のプロモカードパック
 いつかのチケットの当選報酬：3等
 おすそわけが届きました
 おすそわけで「ありがとう！」をもらったよ
+[Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定拡張パックの交換チケットです
+最新エキスパンションのエリートデッキです
+すべての[Text:CardName v="EIEVUI"]とその進化系が封入された特別なパックです
 プロフィール画面で設定できるアイコンです
 サーナイト(アイコン)
 イーブイ(アイコン)
@@ -9309,6 +9703,16 @@ Bシリーズ 第13弾のプロモカードパック
 [Text:CardName v="ROCKETDANNOBOSS"](アイコン)
 [Text:CardName v="HUURO"](アイコン)
 [Mst:PackName v="PACK_NAME_B4b_1"] [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](アイコン)
+[Text:CardName v="SOUBLADES"](アイコン)
+[Text:CardName v="ABURIBBON"](アイコン)
+[Text:CardName v="PARMOT"](アイコン)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_21"](アイコン)
+[Text:CardName v="CHILI"](アイコン)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"](アイコン)
+[Text:CardName v="YATOUMORI"](アイコン)
+[Text:CardName v="DUGTRIO"](アイコン)
+[Text:CardName v="MIMIROL"](アイコン)
+[Text:CardName v="FOODIN"](アイコン)
 [Text:CardName v="PIKACHU"] Ver.12(アイコン)
 [Text:CardName v="PIKACHU"] Ver.13(アイコン)
 [Text:CardName v="PIKACHU"] Ver.14(アイコン)
@@ -9378,6 +9782,7 @@ Bシリーズ 第13弾のプロモカードパック
 メガシンカex集めてます！
 PROMO-A
 PROMO-B
+PROMO-C
 [Ctrl:Bold]マヒ[/Ctrl:Bold]
 イーブイ(ボード)
 イーブイ
@@ -9639,8 +10044,24 @@ PROMO-B
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
 キラキラ海岸(ボード)
 キラキラ海岸
+[Text:CardName v="PIKACHU"]と仲間たち(ボード)
+[Text:CardName v="PIKACHU"]と仲間たち
+旅の記憶(ボード)
+旅の記憶
+カントリーな小道(ボード)
+カントリーな小道
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"](ボード)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"]
+[Text:CardName v="CHILI"](ボード)
+[Text:CardName v="CHILI"]
+スペシャルセット03(ボード)
+スペシャルセット03
 喜びの街並み
 喜びの街並み(ボード)
+3枚セットボード C1 ウィンターホリデー(縦ボード)
+3枚セットボード C1 ウィンターホリデー(縦)
+3枚セットボード C1 ウィンターホリデー(横ボード)
+3枚セットボード C1 ウィンターホリデー(横)
 コレクションボード機能で使う\nカードを飾るための台紙です
 イーブイ(ポケモンコイン)
 イーブイ
@@ -9746,6 +10167,12 @@ PROMO-B
 [Text:CardName v="HOOPA"](ポケモンコイン)
 [Text:CardName v="HUURO"](ポケモンコイン)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](ポケモンコイン)
+[Text:CardName v="PIKACHU"] Ver.4(ポケモンコイン)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_19"](ポケモンコイン)
+スペシャルセット03(ポケモンコイン)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"](ポケモンコイン)
+[Text:CardName v="CHILI"](ポケモンコイン)
+[Text:CardName v="GANGAR"](ポケモンコイン)
 バトル時に使用できるコインです\nデッキ機能で設定できます
 イーブイ(デッキシールド)
 イーブイ
@@ -9844,6 +10271,16 @@ PROMO-B
 [Text:CardName v="HOOPA"](デッキシールド)
 [Text:CardName v="HUURO"](デッキシールド)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](デッキシールド)
+[Text:CardName v="PIKACHU"]と仲間たち(デッキシールド)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_19"](デッキシールド)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"](デッキシールド)
+[Text:CardName v="CHILI"](デッキシールド)
+スペシャルセット03(デッキシールド)
+[Text:CardName v="GANGAR"](デッキシールド)
+シーズンC1 マスターボールランク(デッキシールド)
+シーズンC1 マスターボールランク(TOP10000)(デッキシールド)
+シーズンC1 マスターボールランク(TOP5000)(デッキシールド)
+シーズンC1 マスターボールランク(TOP1000)(デッキシールド)
 カードに装着する周辺グッズです\nデッキ機能で設定できます
 コレクションファイル機能で使う\nファイルの表紙です
 イーブイ(ファイル)
@@ -9994,6 +10431,12 @@ PROMO-B
 [Text:CardName v="HUURO"]＆[Text:CardName v="SWANNA"](ファイル)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](ファイル)
 ハイクラスパック MEGA(ファイル)
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] [Mst:CommonCharacterName v="COMMON_CARD_NAME_19"](ファイル)
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] [Text:CardName v="PIKACHU"](ファイル)
+[Text:CardName v="PIKACHU"]と仲間たち(ファイル)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"](ファイル)
+[Text:CardName v="CHILI"]＆[Mst:CommonCharacterName v="COMMON_CARD_NAME_22"](ファイル)
+スペシャルセット03(ファイル)
 イーブイ(プレイマット)
 イーブイ
 ニャース(プレイマット)
@@ -10092,6 +10535,12 @@ PROMO-B
 [Text:CardName v="HOOPA"](プレイマット)
 [Text:CardName v="HUURO"]＆[Text:CardName v="SWANNA"](プレイマット)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](プレイマット)
+[Text:CardName v="PIKACHU"]と仲間たち(プレイマット)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_19"](プレイマット)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"](プレイマット)
+[Text:CardName v="CHILI"]＆[Mst:CommonCharacterName v="COMMON_CARD_NAME_22"](プレイマット)
+スペシャルセット03(プレイマット)
+[Text:CardName v="GANGAR"](プレイマット)
 バトル時に場に広げる周辺グッズです\nデッキ機能で設定できます
 自分の場にたねポケモンを[Num:Int id="0" max_length="2"]匹出す
 自分の場にポケモンexを[Num:Int id="0" max_length="2"]匹出す
@@ -10131,6 +10580,7 @@ B3b
 B4
 B4a
 B4b SP
+C1
 獲得したポイント数が[Num:Int id="0" max_length="3"]ポイント以上になる
 与えたダメージが[Num:Int id="0" max_length="5"]ダメージ以上になる
 獲得した勝利数が[Num:Int id="0" max_length="3"]回以上になる
@@ -10138,6 +10588,9 @@ A
 Aシリーズ
 B
 Bシリーズ
+C
+Cシリーズ
+スペシャル
 ゲットチャレンジイベント
 アイテム
 周辺グッズ
@@ -10171,6 +10624,7 @@ exスタートデッキ
 波動ビート
 シャイニングメガ
 レアなアイテム
+2周年記念 [Mst:Rarity v="RARITY_MSID_SSASR"]1枚確定拡張パック
 ニャース(ポケモンコイン)
 ニャース(デッキシールド)
 ニャース(プレイマット)
@@ -10601,6 +11055,8 @@ exスタートデッキ
 [Mst:CardCharacterName v="CARD_NAME_1163"](058/P-B)
 [Mst:CardCharacterName v="CARD_NAME_811"](059/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1204"](060/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1149"](061/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1191"](062/P-B)
 [Mst:CardCharacterName v="CARD_NAME_993"](026/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1001"](027/P-B)
 [Mst:CardCharacterName v="CARD_NAME_130"](028/P-B)
@@ -10680,11 +11136,77 @@ exスタートデッキ
 [Mst:CardCharacterName v="CARD_NAME_1342"](090/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1343"](091/P-B)
 [Mst:CardCharacterName v="CARD_NAME_152"](092/P-B)
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101390_MEGAGEKKOUGA"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101400_CHILI_DOOH"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101410_PremiumSet03"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101620_MEGAGEKKOUGA"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101630_CHILI_DOOH"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101640_PremiumSet03"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100920_MEGAGEKKOUGA"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100930_CHILI_DOOH"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100940_PremiumSet03"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100950_MEGAGEKKOUGA"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100960_CHILI_DOOH"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100970_PremiumSet03"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101120_PremiumSet03"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101130_MEGAGEKKOUGA"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101140_CHILI_DOOH"]
+[Mst:CardCharacterName v="CARD_NAME_94"](001/P-C)
+[Mst:CardCharacterName v="CARD_NAME_1422"](002/P-C)
+[Mst:CardCharacterName v="CARD_NAME_1399"](003/P-C)
+[Mst:CardCharacterName v="CARD_NAME_814"](004/P-C)
+[Mst:CardCharacterName v="CARD_NAME_815"](005/P-C)
+[Mst:CardCharacterName v="CARD_NAME_547"](006/P-C)
+[Mst:CardCharacterName v="CARD_NAME_548"](007/P-C)
+[Mst:CardCharacterName v="CARD_NAME_1400"](008/P-C)
+[Mst:CardCharacterName v="CARD_NAME_1423"](009/P-C)
 [Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101050_TEAM_ROCKET"]
 [Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100860_TEAM_ROCKET"]
 [Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100860_TEAM_ROCKET"]
 [Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101510_TEAM_ROCKET"]
 [Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101310_TEAM_ROCKET"]
+[Mst:PackName v="PACK_NAME_A1_1_02"]
+[Mst:PackName v="PACK_NAME_A1_2_02"]
+[Mst:PackName v="PACK_NAME_A1_3_02"]
+[Mst:PackName v="PACK_NAME_A1a_1_01"]
+[Mst:PackName v="PACK_NAME_A2_1_01"]
+[Mst:PackName v="PACK_NAME_A2_2_01"]
+[Mst:PackName v="PACK_NAME_A2a_1_01"]
+[Mst:PackName v="PACK_NAME_A2b_1_01"]
+[Mst:PackName v="PACK_NAME_A3_1_01"]
+[Mst:PackName v="PACK_NAME_A3_2_01"]
+[Mst:PackName v="PACK_NAME_A3a_1_01"]
+[Mst:PackName v="PACK_NAME_A3b_1_01"]
+[Mst:PackName v="PACK_NAME_A4_1_01"]
+[Mst:PackName v="PACK_NAME_A4_2_01"]
+[Mst:PackName v="PACK_NAME_A4a_1_01"]
+[Mst:PackName v="PACK_NAME_B1_1_01"]
+[Mst:PackName v="PACK_NAME_B1_2_01"]
+[Mst:PackName v="PACK_NAME_B1_3_01"]
+[Mst:PackName v="PACK_NAME_B1a_1_01"]
+[Mst:PackName v="PACK_NAME_B2_1_01"]
+[Mst:PackName v="PACK_NAME_B2a_1_01"]
+[Mst:PackName v="PACK_NAME_B2b_1_01"]
+[Mst:PackName v="PACK_NAME_B3_1_01"]
+[Mst:PackName v="PACK_NAME_B3a_1_01"]
+[Mst:PackName v="PACK_NAME_B4_1_01"]
+[Mst:PackName v="PACK_NAME_B3b_1_01"]
+[Mst:PackName v="PACK_NAME_B4a_1_01"]
+[Mst:CardCharacterName v="CARD_NAME_456"](069/P-B)
+[Mst:CardCharacterName v="CARD_NAME_534"](070/P-B)
+[Mst:CardCharacterName v="CARD_NAME_39"](077/P-B)
+[Mst:CardCharacterName v="CARD_NAME_639"](078/P-B)
+[Mst:CardCharacterName v="CARD_NAME_452"](085/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1312"](086/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1345"](093/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1183"](094/P-B)
+[Mst:CardCharacterName v="CARD_NAME_33"](101/P-B)
+[Mst:CardCharacterName v="CARD_NAME_583"](102/P-B)
+[Mst:CardCharacterName v="CARD_NAME_21"](060/P-A)
+[Mst:CardCharacterName v="CARD_NAME_87"](061/P-A)
+[Mst:CardCharacterName v="CARD_NAME_198"](062/P-A)
+[Mst:CardCharacterName v="CARD_NAME_830"](063/P-A)
+[Mst:CardCharacterName v="CARD_NAME_831"](064/P-A)
 ポケゴールド
 周辺グッズつきポケゴールド
 おまけつきポケゴールド
@@ -10746,6 +11268,12 @@ exスタートデッキ
 周辺グッズ「[Text:CardName v="KAMITSURE"]」つきポケゴールド(有償)×115
 周辺グッズ「[Text:CardName v="HOOPA"]」つきポケゴールド(有償)×115
 周辺グッズ「[Text:CardName v="THUNDER"]＆[Text:CardName v="FREEZER"]＆[Text:CardName v="FIRE"]」つきポケゴールド(有償)×115
+2周年記念　お得なポケゴールド(有償)×100
+2周年記念　お得なポケゴールド(有償)×200
+周辺グッズ「[Text:CardName v="PIKACHU"]と仲間たち」つきポケゴールド(有償)×115
+おまけポケゴールド(無償)55個つき！超お得なポケゴールド(有償)×5
+新拡張パックスタートダッシュ！お得なポケゴールド(有償)×35
+ポケゴールド(有償)×35
 ポケゴールド
 チケット
 スペシャル
@@ -10758,6 +11286,9 @@ exスタートデッキ
 復刻ゲットチャレンジ
 プロモカード
 ロケット団
+[Mst:Rarity v="RARITY_MSID_SSASR"]確定拡張パック
+スペシャルパックを開封するアイテムです
+スペシャルパック砂時計
 [Mst:Rarity v="RARITY_MSID_RR"]以上1枚確定
 [Mst:PackName v="PACK_NAME_PROMO_A_1"]
 [Mst:PackName v="PACK_NAME_PROMO_A_2"]
@@ -10765,6 +11296,7 @@ exスタートデッキ
 [Mst:PackName v="PACK_NAME_PROMO_A_4"]
 [Mst:PackName v="PACK_NAME_PROMO_A_5"]
 [Mst:PackName v="PACK_NAME_PROMO_A_6"]
+[Mst:PackName v="PACK_NAME_PROMO_A_7"]
 [Mst:PackName v="PACK_NAME_PROMO_A_8"]
 [Mst:PackName v="PACK_NAME_PROMO_A_9"]
 [Mst:PackName v="PACK_NAME_PROMO_A_10"]
@@ -10938,6 +11470,18 @@ exスタートデッキ
 おたがいのプレイヤーは、自分の番に1回使える。コインを[Num:Int id="0" max_length="2"]回投げ、すべてオモテなら、自分の手札が[Num:Int id="1" max_length="2"]枚になるように、山札を引く。
 ウラが出るまでコインを投げ、オモテの数ぶん、自分の山札から名前に「ロケット団」とつくポケモンをランダムに手札に加える。
 相手のバトルポケモンを[Ctrl:Bold][Text:SpecialCondition id="0"][/Ctrl:Bold]にする。コインを1回投げウラなら、自分のバトルポケモンも[Ctrl:Bold][Text:SpecialCondition id="0"][/Ctrl:Bold]にする。
+自分のポケモンを1匹選ぶ。ウラが出るまでコインを投げ、オモテの数×[Num:Int id="0" max_length="3"]ダメージぶん、そのポケモンのHPを回復。
+エネルギーがついている自分のポケモン[Ctrl:NoBreak]1匹[/Ctrl:NoBreak]のHPを[Num:Int id="0" max_length="3"]回復。その後、そのポケモンからエネルギーをランダムに[Ctrl:NoBreak][Num:Int id="1" max_length="2"]個[/Ctrl:NoBreak]トラッシュ。
+自分のバトルポケモンの特殊状態を、すべて回復。
+このカードをつけている[Ctrl:Bold]たね[/Ctrl:Bold]ポケモンが、相手のポケモンから受けるワザのダメージを-[Num:Int id="0" max_length="3"]する。
+このカードをつけている「[Text:CardName id="0"]」が使うワザの、相手のバトルポケモンへのダメージを+[Num:Int id="1" max_length="3"]する。
+この番、自分の「[Text:CardName id="0"]」「[Text:CardName id="1"]」「[Text:CardName id="2"]」が使うワザの、相手のポケモン全員へのダメージを[Ctrl:NoBreak]+[Num:Int id="3" max_length="3"][/Ctrl:NoBreak]する。
+このカードは、自分の場に「[Text:CardName id="0"]」または「[Text:CardName id="1"]」または「[Text:CardName id="2"]」または「[Text:CardName id="3"]」がいるときにしか使えない。\n\n相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。
+自分の山札を上から[Ctrl:NoBreak][Num:Int id="0" max_length="2"]枚[/Ctrl:NoBreak]見て、その中からカードを[Ctrl:NoBreak][Num:Int id="1" max_length="2"]枚[/Ctrl:NoBreak]選び、手札に加える。残りのカードは山札にもどす。
+自分のエネルギーゾーンから[Img:Element id="0"]エネルギーを[Num:Int id="1" max_length="2"]個出し、「[Text:CardName id="2"]」または「[Text:CardName id="3"]」1匹につける。
+このカードは、自分の場のポケモンのタイプが[Num:Int id="0" max_length="1"]種類以上のときにしか使えない。\n\n自分のバトルポケモンを、ベンチポケモンと入れ替える。
+おたがいのプレイヤーは、自分の番に1回使える。コインを1回投げオモテなら、自分の山札を[Num:Int id="0" max_length="2"]枚引く。
+自分のベンチの[Img:Element id="0"]ポケモン1匹から[Img:Element id="1"]エネルギーをすべて、バトル場の「[Text:CardName id="2"]」につけ替える。
 ポケモンのどうぐ
 グッズ(化石)
 グッズ
@@ -11077,6 +11621,8 @@ exスタートデッキ
 [Mst:SoloRandomBattleGroupName]
 [Mst:SoloRandomBattleName]
 [Mst:SpecialConditionType]
+[Mst:SpecialPackTicketDescription]
+[Mst:SpecialPackTicketName]
 [Mst:StageType]
 [Mst:StageTypePokemon]
 [Mst:SubPackName]
@@ -11098,6 +11644,10 @@ exスタートデッキ
 チャレンジパワーが全回復したときに通知します
 チャレンジパワー全回復
 チャレンジパワーが全回復しました！
+週に一度の特別なパック開封ができます
+スペシャルパックパワーが回復したときに通知します
+スペシャルパックパワー回復
+スペシャルパックパワーが回復しました
 1枚目のカード封入確率
 1〜3枚目のカード封入確率
 1〜4枚目のカード封入確率
@@ -11107,6 +11657,7 @@ exスタートデッキ
 4枚目のカード封入確率
 5枚目のカード封入確率
 6枚目のカード封入確率
+1枚目の封入カード
 このアプリについて
 新規作成
 ファイル作成上限
@@ -11254,6 +11805,7 @@ OK
 後攻
 活躍した\nカード
 なし
+デッキを見る
 活躍した\nカード
 タップですすむ
 対戦相手のカード
@@ -11275,7 +11827,8 @@ pt変動はありません
 初回報酬
 確率報酬
 プレイヤー経験値
-プロモカードパック[Num:Int id="0" max_length="0" visible="0"]は\nプレゼントボックスに送られました
+勝利数報酬
+獲得したパック[Num:Int id="0" max_length="0" visible="0"]は\nプレゼントボックスに送られました
 バトルログ
 VS [Str:PlayerName id="0"]
 引き分け
@@ -11489,6 +12042,7 @@ OK
 ポケモンチェック やけど
 コイントス こんらん
 最初の1回だけ必ずオモテ
+[Num:Int id="0" max_length="2"]回多く投げる
 相手がプレイ中
 オモテ！
 ウラ！
@@ -11745,6 +12299,12 @@ HPが回復しない
 つけ替えたいエネルギーがついている\nポケモンを選んでください
 エネルギーのつけ替えをすべて確定させますか？
 相手のポケモンが使う\nワザのダメージと効果を受けない
+「[Text:CardName id="0"]」「[Text:CardName id="1"]」\n「[Text:CardName id="2"]」の相手のポケモン全員へ\nワザで与えるダメージを+[Num:Int id="3" max_length="3"]
+「[Text:AttackName id="0"]」で\n与えるダメージを-[Num:Int id="1" max_length="3"]
+「[Text:AttackName id="0"]」で\n投げるコインの数を[Num:Int id="1" max_length="2"]回多くする
+[Num:Int id="0" visible="0" max_length="1"]エネルギーをつける[Num:Int id="1" visible="0" max_length="1"]ポケモンを選んでください
+きぜつするときコインを1回投げ\nオモテなら相手はポイントをとれない
+「[Text:CardName id="0"]」が使うワザの\n相手のバトルポケモンへのダメージを+[Num:Int id="1" max_length="3"]
 たねポケモンをバトル場に出してください
 たねポケモン以外は選べません
 ポケモンを場に出してください
@@ -11953,6 +12513,11 @@ HPが回復しない
 自分のトレーナーズでコインを投げたときはじめからコインを投げなおすことができる
 「[Text:AttackName id="0"]」で相手のポケモンが選ばれる回数を+[Num:Int id="1" max_length="2"]
 次の相手の番の終わりに選んだ[Num:Int id="0" visible="0" max_length="1"]場所にいるポケモンをきぜつさせる
+「[Text:CardName id="0"]」「[Text:CardName id="1"]」「[Text:CardName id="2"]」の相手のポケモン全員へワザで与えるダメージを+[Num:Int id="3" max_length="3"]
+「[Text:AttackName id="0"]」で与えるダメージを-[Num:Int id="1" max_length="3"]
+「[Text:AttackName id="0"]」で投げるコインの数を[Num:Int id="1" max_length="2"]回多くする
+きぜつするときコインを1回投げオモテなら相手はポイントをとれない
+「[Text:CardName id="0"]」が使うワザの相手のバトルポケモンへのダメージを+[Num:Int id="1" max_length="3"]
 相手のトラッシュ
 自分のトラッシュ
 カードはありません
@@ -11991,6 +12556,7 @@ TIPS
 [Str:NickName]
 [Str:PlayerCode]
 [Str:PlayerName]
+-/[Num:Int id="0" max_length="3" zero_padding="3"]
 [Num:Int id="0" max_length="3"]<size=24><space=0.15em><voffset=3.3><scale=1.8>-</scale></size></voffset>
 [Num:Int id="0" max_length="3"]<size=24><space=0.08em><voffset=5>+</size></voffset>
 [Num:Int id="0" max_length="4"]+
@@ -12055,6 +12621,7 @@ HP
 シリーズ
 トレーナーズ
 エフェクト入手
+？？？
 JPN
 SPA
 ENG
@@ -12078,6 +12645,7 @@ ITA
 エフェクトを所持していません
 現在このカードを持っていないため\nプレビューできません
 ほしいカードに登録できるのは[Num:Int id="0" max_length="3"]枚までです
+このカードは「ほしい！」登録できません
 カードを長押ししてみましょう！
 ほしい！
 アプリを終了します\nよろしいですか？
@@ -12258,7 +12826,7 @@ OK
 キャンセル
 OK
 デッキ削除
-お気に入りに登録しているデッキです\nデッキを削除しますか？\nデッキを削除してもカードはなくなりません
+以下の設定があるデッキです\n削除してもよろしいですか？\nデッキを削除してもカードはなくなりません\n\n・お気に入りに設定されているデッキです\n削除するとお気に入りの設定も解除されます
 キャンセル
 OK
 デッキ削除
@@ -12287,6 +12855,21 @@ OK
 OK
 以下の条件を満たしていないため\n2次元コードでの共有はできません\n・デッキ枚数を20枚ちょうどにする\n・たねポケモンを1枚以上入れる\n・持っているカードのみで編成する\n・エネルギーを設定している
 OK
+プロフィールのマイデッキに設定されているデッキです\n公開設定を変更するとマイデッキの設定も\n解除されますがよろしいですか？
+キャンセル
+OK
+公開設定の変更
+マイデッキに設定されているデッキです\nデッキが使用できない状態で保存すると\nマイデッキから解除されます
+キャンセル
+OK
+以下の設定があるデッキです\n削除してもよろしいですか？\nデッキを削除してもカードはなくなりません\n\n・プロフィールのマイデッキに設定されているデッキです\n削除するとマイデッキの設定も解除されます
+キャンセル
+OK
+デッキ削除
+以下の設定があるデッキです\n削除してもよろしいですか？\nデッキを削除してもカードはなくなりません\n\n・プロフィールのマイデッキに設定されているデッキです\n削除するとマイデッキの設定も解除されます\n\n・お気に入りに設定されているデッキです\n削除するとお気に入りの設定も解除されます\n
+キャンセル
+OK
+デッキ削除
 デッキを削除する
 一覧で表示する
 デッキをコピーする
@@ -12305,6 +12888,9 @@ OK
 コピーする
 キャンセル
 編成する
+非公開
+公開
+フレンドのみ
 保存する
 変更
 デッキ内のワザを発動させる\n必要エネルギーが設定されていません
@@ -12320,11 +12906,17 @@ OK
 テーマデッキレシピから作る
 デッキをコピーして作る
 コードを読み取る
+だれかのデッキに移動する
 コピーするデッキを選択
 編集
 編集中
 保存する
 マイデッキ
+非公開
+公開
+フレンドのみに公開
+デッキを公開すると他のプレイヤーが\nあなたのデッキを見られるようになります
+公開設定
 タイプを選んでください\n2タイプまで選択できます
 キャンセル
 おまかせ編成
@@ -12399,6 +12991,7 @@ OK
 デッキをコピーして作成しました
 デッキを削除しました
 対象のデッキがありません
+使用できないカードです
 2次元コード
 キャンセル
 コピーする
@@ -12407,6 +13000,7 @@ About cancellation
 OK
 遊びかた
 プロモカードパック
+イベントの詳細
 ミッション
 交換所
 イベントについて
@@ -12420,6 +13014,9 @@ PROMO
 エンブレムイベントには決められた勝利数を\n目指したり　連勝数を目指すなど\n様々な種類があります\n開催されているイベントの種類は\n各イベントのおしらせをご覧ください\n
 ドロップイベントでは様々なデッキとバトルし\n勝利すると　プロモカードパックが\n手に入ることがあります\nプロモカードパックからは特別なカードを\n入手できます\n※画像のプロモカードパック・カードは一例です
 イベントバトルで遊ぶには\n「イベントパワー」が必要です\nイベントパワーは時間がたつと回復する他\n「イベント砂時計」というアイテムで\n回復できます
+限定バトルは決められた特殊ルールに合った\nデッキで他のプレイヤーとバトルし\n勝利を重ねて様々な報酬の獲得を\n目指すイベントです
+特殊ルールはイベントによって異なります\nデッキを編成する前に\nイベント画面やデッキ編成画面から\n特殊ルールを確認してみましょう
+限定バトルには決められた勝利数を\n目指したり　連勝数を目指すなど\n様々な種類があります\n開催されているイベントの種類は\n各イベントのおしらせをご覧ください
 [Mst:CardCharacterName]から進化
 ポケモン[Img:ex]が[Ctrl:Bold]きぜつ[/Ctrl:Bold]したとき、相手は[Ctrl:Bold]2[/Ctrl:Bold]ポイントとる。
 exルール
@@ -12551,7 +13148,7 @@ OK
 プレイマットやデッキシールド　ポケモンコインを\n変更することもできます\n\nこれらは　ショップやミッションなどで\n入手できます
 もう一度説明を見たいときは\nこのマークをタップしてください\n\nその他のわからないことは\nゲームのヒントを確認してみましょう
 レンタルデッキは　20枚のカードを借りて\nバトルで使用できるデッキです
-レンタルデッキは　おもにデッキミッションを\n達成することで入手できます\n\n手に入れたレンタルデッキは　デッキメニューから\n確認できます
+レンタルデッキは自動で付与され\n使用できるレンタルデッキは\n定期的に更新されます　
 レンタルデッキは使用できる回数が決まっています
 「テーマデッキレシピ」を使うと\n簡単にデッキを作ることができます
 デッキを作るときに　テーマデッキレシピを選ぶと\n持っているカードでデッキを作成してくれます\n\nテーマデッキを完成させるには\nそのレシピと同じカードが必要です
@@ -12594,6 +13191,14 @@ OK
 フレンドにお気に入り機能が追加されました\nお気に入り登録したフレンドは\nフレンドリストの上部に表示され\nトレードするときなどに見つけやすくなります
 お気に入りフレンドを登録するには\n右上のお気に入りボタンをタップしましょう
 お気に入り登録したい\nフレンドを選択すれば完了です\n※登録したことは相手にはわかりません
+スペシャルパックは「スペシャルパックパワー」\nを使って週に1度だけ開封できます
+スペシャルパックパワーがたまって\nスペシャルパックが開封できるときには\nおしらせします\n\n週に1度のパック開封を忘れずにしましょう
+「スペシャルパック砂時計」を使うと\nスペシャルパックパワーがなくても\nスペシャルパックを開封できます
+「だれかのデッキ」とは\n世界中のプレイヤーが作っているデッキや\nフレンドのデッキを\n見ることができる機能です
+「最近の人気」は\n世界中のプレイヤーがよく作っているデッキを\n表示しています
+「フレンド」は\nあなたのフレンドが公開しているマイデッキを\n表示しています
+気になったデッキをタップすると\nデッキの内容が一覧で表示されます
+あなたの持っているカードでデッキを編成できます\n「このデッキを編成する」をタップして\n編成画面から保存してください
 ここに並んでいるのは\nあなたが持っているカードです
 「コレクションファイル」が\nオープンしました
 好きなファイルを選んで\n自分のカードを並べることができます
@@ -12639,7 +13244,7 @@ OK
 さっそく「ひとりで」でバトルを\n遊んでみましょう
 ステップアップバトルには難易度があります\nはじめは初級から遊びましょう
 バトルをクリアすると　プレイヤー経験値や\nアイテムなどの報酬をゲットできます
-はじめは「フシギソウデッキ」と\nバトルしましょう
+はじめはこちらの\nバトルをしましょう
 バトルをオートでプレイしてくれる\n機能もあります
 こちらのボタンから切り替えられるので\n手軽に遊びたいときに使ってみましょう
 オートはバトル中でも\n切り替えができます
@@ -12657,6 +13262,7 @@ OK
 ここでは交換できるエフェクトやアイテムが\nすべて表示されています
 フレンドにカードを\n送ることができます
 これでおすそわけの説明は終わりです\nさっそくカードを送ってみましょう
+ここでは世界中のプレイヤーやフレンドの\nデッキを見ることができます
 カードにつけたエフェクトは\n「自分のカード」で見ることができます\nバトルでも派手に演出されます
 任意でエフェクトを入手できます\n入手条件はカードごとに異なります
 エフェクトは同じカードを一定枚数集めることで\n自動的に入手できます\n※一部対象外のカードもあります
@@ -12747,8 +13353,10 @@ CHT
 他の拡張パックを見る
 相手の図鑑未登録カード
 おすそわけできるカード一覧
+相手のほしいカード
 図鑑未登録カードはありません(コンプリート済み)
 相手の図鑑未登録カードを所持していません
+対象のカードがありません
 特定のレアリティのカードをおすそわけできます
 おすそわけするカードを選んでください
 フレンドにカードをおすそわけしました
@@ -12760,9 +13368,29 @@ CHT
 グッズは、自分の番に何枚でも使える。
 バトル
 ソーシャル
+デッキ制限
+※一部のカードは制限に関わらず使用できます
+エキスパンションを選択できます
+エキスパンション制限
+※制限されるのはポケモンのカードのみです\n※一部のカードは制限に関わらず使用できます
+レアリティを選択できます
+レアリティ制限
+すべてのデッキ
+クリア
+エキスパンション制限あり
+レアリティ制限あり
+バトルルール設定
+カード制限
+デッキ制限
+マイデッキのみ
+エキスパンション制限なし
+レアリティ制限なし
+OK
+PROMO
+レンタルデッキのみ
 デッキ
 マイデッキ
-テーマデッキレシピ
+デッキレシピ
 レンタルデッキ
 デッキメニュー
 遊びかた
@@ -12778,6 +13406,21 @@ CHT
 ランダムマッチ
 イベントマッチ
 だれかと
+「あいことば」や「2次元コード」を共有して\n身近な人や友達とカードバトルを楽しめます
+プライベートマッチ
+設定中
+誘う
+自動で発行されます
+あいことば
+※バトルルールを設定する場合は自動で発行されます\n※2次元コードは「はじめる」を押した後に発行されます
+プライベートマッチ設定
+あいことばを設定する
+バトルルール設定
+はじめる
+参加する
+参加する
+あいことば
+2次元コード
 あいことばで
 2次元コードで
 プライベートマッチメニュー
@@ -12787,12 +13430,14 @@ CHT
 COMING SOON
 新登場
 ひとりで
+だれかのデッキ
 イベント[Num:Int id="0" max_length="0" visible="0"]開催中
 まもなく終了！
 イベント[Num:Int id="0" max_length="0" visible="0"]開催中
 まもなく終了！
 イベント開催中
 まもなく終了！
+プロモカードパック報酬追加中
 ひとりで
 だれかと
 日付が変わりました\nタイトル画面にもどります
@@ -12803,6 +13448,10 @@ OK
 OK
 近日公開予定です
 OK
+レンタルデッキのみを設定すると\nカード制限の設定は一度リセットされます
+キャンセル
+OK
+デッキ制限確認
 お気に入り登録したコレクションボードを\nいつでもホームから見ることができます\n\n設定はコレクションボードで行えます
 お気に入り登録したコレクションファイルを\nいつでもホームから見ることができます\n\n設定はコレクションファイルで行えます
 コレクションボードへ
@@ -12827,6 +13476,7 @@ OK
 オープンするまであと
 オープン条件
 ソーシャルへ
+バトルルールを設定しているため\nあいことばは自動で発行されます
 ゲットチャレンジ
 レアチャレンジ\n出現中
 ラッキーチャレンジ\n出現中
@@ -12852,6 +13502,14 @@ GET!
 エンブレム
 タップですすむ
 GET!
+獲得したテーマデッキレシピで\nいますぐデッキ登録しますか？\n\n※マイデッキの新規作成より\nテーマデッキレシピから\nデッキを登録できます
+キャンセル
+登録する
+デッキ登録
+デッキ枠に空きがなかったため\nデッキ登録を行いませんでした\n\nマイデッキの新規作成より\nテーマデッキレシピから\nデッキを登録できます
+OK
+テーマデッキの登録中にゲームが終了しました\n\nマイデッキの新規作成より\nテーマデッキレシピから\nデッキを登録できます
+OK
 トレーナーズ完成！
 レアリティ完成！
 図鑑登録！\n[Num:Int id="0" max_length="3"]枚
@@ -12922,11 +13580,13 @@ OK
 次へ
 おめでとうございます\nこのエキスパンションの\n[Text:Char v="DIAMOND"]のカードをすべて集めました
 おめでとうございます\nこのエキスパンションの\nカードをすべて集めました
+おめでとうございます\nこのエキスパンションの\n[Mst:Rarity v="RARITY_MSID_SA"]のカードをすべて集めました
 OK
 [Num:Int id="0" max_length="4"]種類達成！
 Complete!
 図鑑登録数
 達成！
+あと[Num:Int id="0" max_length="3"]枚！
 追加する
 コレクションファイルに追加
 コレクションボードに追加
@@ -12934,6 +13594,7 @@ Complete!
 選択中
 ポケモンex
 メガシンカex
+デュアルタイプ
 特性あり
 特性なし
 すべて
@@ -13103,6 +13764,7 @@ CLEAR!
 期間あり
 本日のデイリーミッションを達成しました
 すべてのミッションを達成しました
+今週のイベントミッションを\n達成しました！\n次のミッションのオープンをお待ちください
 受け取る
 達成する
 受け取り済
@@ -13110,6 +13772,7 @@ CLEAR!
 すべての報酬を獲得しました
 まとめて受け取る
 テーマ\nコレクション
+オープンまで：
 OK
 おめでとうございます！ミッションを1つ達成しました\n引きつづき他のミッションにも挑戦してみましょう
 以下のいずれかを満たすカードを集めてください
@@ -13127,6 +13790,8 @@ OK
 ポイントがMAXです
 パック開封ポイント交換
 交換可能
+金曜日
+土曜日
 パック開封ポイントが足りません
 交換する
 所持
@@ -13139,8 +13804,10 @@ OK
 ・当該パックの出現条件を満たした場合「通常封入」は抽選されません\n・代わりに、当該拡張パックが抽選されます\n・抽選確率は「通常封入」の提供割合と同じです\n・出現条件については注意事項をご確認ください
 ・当該パックの出現条件を満たした場合「通常封入」および「通常封入+1枚」は抽選されません\n・代わりに、当該拡張パックが抽選されます\n・抽選確率は「通常封入」と「通常封入+1枚」の合計となります\n・出現条件については注意事項をご確認ください
 提供割合
+スペシャルパックラインナップ
 提供割合
 注意事項
+？？？
 [Mst:PackTableName id="0"]
 長押し
 パック開封ポイントが上限に達しているため\nパック開封ポイント交換で\nカードを交換してください
@@ -13151,6 +13818,8 @@ NEW
 [Num:Int id="0" max_length="2"]パック目
 開封したい拡張パックをタップ！
 この拡張パックは期間が終了したので\n入手できません
+このスペシャルパックは期間が終了したので\n入手できません
+OK
 OK
 ポケゴールド(無償)から優先して消費されます
 アイテムを使用して\nパック開封の待ち時間を短縮しますか？
@@ -13158,6 +13827,7 @@ OK
 拡張パックが開封できるまで
 10パック開封に必要な時間
 拡張パックを開封できます
+スペシャルパックを開封できます
 拡張パックが開封できるまで
 10パック開封に必要な時間
 1ポケゴールドでパック開封までの\n待ち時間を2時間ぶん短縮できます
@@ -13168,6 +13838,17 @@ OK
 [Num:Int id="0" max_length="2"]パック目
 開封結果
 エキスパンション選択
+スペシャルパックパワーがあるため\n週に1度のスペシャルパックが開封できます\n開封しますか？
+キャンセル
+OK
+スペシャルパック砂時計が足りません\nスペシャルパック砂時計は\nミッション報酬などで入手できます
+必要スペシャルパック砂時計
+OK
+アイテム不足
+開封できます
+次の開封
+スペシャルパック砂時計を[Num:Int id="0" max_length="3"]個消費して\n[Num:Int id="1" max_length="2"]パック開封しますか？
+提供内容
 拡張パックを開封できます
 期間外のため入手できません
 アイテムを使用して今すぐパック開封をします
@@ -13205,6 +13886,8 @@ OK
 ポケモンのどうぐは、自分のポケモンにつけて使う。\nポケモン１匹につき１枚だけつけられ、つけたままに\nする。
 所持上限に達しているため\n受け取れませんでした
 受け取り期間を過ぎているため\n受け取れませんでした
+デッキ機能がオープンされていないため\n受け取れませんでした\n\nデッキ機能は\nバトルの遊びかた06をクリアすると\nオープンできます
+OK
 OK
 OK
 受け取り
@@ -13242,6 +13925,9 @@ OK
 エンブレム入手順
 ソート
 エンブレム
+そのニックネームは使用できません
+OK
+エラー
 そのプレイヤー名は使用できません
 OK
 エラー
@@ -13256,6 +13942,10 @@ OK
 すべてのほしいカードを解除
 すでに変更しているため\n30日間変更ができません\n(変更日 [Date:DateTime format="d" id="0" max_length="10"])
 OK
+OK
+キャンセル
+8文字まで入力できます
+ニックネーム設定
 キャンセル
 キャンセル
 8文字まで入力できます
@@ -13281,8 +13971,15 @@ OK
 タグ設定なし
 マイベスト設定
 マイベスト設定
+OK
+設定できません
+フレンドのみに公開
+非公開
+マイデッキ設定
+デッキ
 相手にこのコードを読み取ってもらいましょう\nソーシャル>フレンドから読み取り用のカメラを起動できます
 マイベスト
+マイデッキ
 フレンドID
 非公開\n
 非公開
@@ -13303,8 +14000,11 @@ OK
 フレンド申請をおことわりしました
 設定できるエンブレムは3つまでです
 設定できるカードは3枚までです
+非公開のデッキは\n設定できません
+条件を満たしていないため\n設定できません
 現在使用されていないアカウントです
 設定されていません
+ニックネームを設定する
 タグ設定なし
 ほしいカード一覧へ
 設定されていません
@@ -13337,6 +14037,7 @@ OFF
 ON
 バトル！
 バトル！
+プロモカードパック報酬追加中
 使用できません
 おすすめ
 回復する
@@ -13353,6 +14054,14 @@ ON
 [Num:Int id="0" max_length="1"]ポイント獲得で勝利
 手番中の制限時間[Num:Int id="0" max_length="2"]秒
 手番中の制限時間なし
+マイデッキのみ
+レンタルデッキのみ
+使用可能なエキスパンション
+使用可能なレアリティ
+以下のカードはデッキ以外の制限に関わらず使用可能
+バトルルール
+ルール[Num:Int id="0" max_length="3"]
+特殊ルール[Num:Int id="0" max_length="3"]
 ルール1
 ルール2
 ルール3
@@ -13387,6 +14096,7 @@ Next
 マイデッキへ
 おすすめ
 レンタルデッキへ
+プロモカードパック報酬追加中
 上級・エキスパートについては\n初回クリアするまで\n対戦相手のデッキ詳細を確認できません
 新たなバトルがオープンしました\nプレイしてみましょう！
 OK
@@ -13394,6 +14104,7 @@ OK
 オープン条件
 新たなバトルがオープン！
 おすすめのレンタルデッキが選ばれました
+新しいバトルがオープンしました
 まもなく終了！
 初級
 中級
@@ -13413,6 +14124,9 @@ Complete
 真剣勝負
 カジュアル
 そのあいことばは使用できません
+OK
+エラー
+参加できませんでした
 OK
 エラー
 バトル！
@@ -13436,6 +14150,10 @@ OK
 Lv.[Num:Int id="0" max_length="3"]
 初心者
 カードプレイヤー
+バトルを終了します\nよろしいですか？
+キャンセル
+バトルをやめる
+OK
 「だれかと」は他のプレイヤーとの\n対戦になります\nまずは「ひとりで」のバトルを遊んでから\nチャレンジすることをおすすめします
 対戦相手が見つかりませんでした\n\nアプリが最新バージョンになっているか\nご確認ください
 正常に終了していないバトルを終了させます\nこのバトルは負けになります
@@ -13445,8 +14163,13 @@ OK
 あいことば設定
 あいことばを入れる
 自動で作る
+バトル履歴はありません
+バトル履歴
 あいことばが発行されました
 あいことばをコピーしました
+詳細
+バトルルール
+制限あり
 初心者
 真剣勝負
 カジュアル
@@ -13460,7 +14183,9 @@ OK
 ここでは「バトルスタンス」を設定して\n世界中のプレイヤーとバトルを楽しめます
 ランダムマッチ
 コードを読み取る
+バトル履歴
 コードを表示
+2次元コードを表示
 参加したことのあるプレイヤーは\n前回参加したシーズンのptに応じて\nシーズン開始時のptが決定されます
 OK
 シーズン開始
@@ -13508,6 +14233,7 @@ pt変動なし
 ランクダウン
 ランクアップ
 連勝pt
+VS
 勝利
 バトル履歴
 タップですすむ
@@ -13721,6 +14447,18 @@ OK
 フレンド申請上限です
 相手のフレンド承認待ちがいっぱいです
 すでにフレンドになっています
+デッキをコピー
+このデッキを\n編成する
+表示されているデッキを\nマイデッキに保存しました
+マイデッキがいっぱいのため\nコピーできませんでした
+表示できるデッキがありません\n時間を空けてお試しください
+マイデッキを設定しているフレンドがいません
+あと[Num:Int id="0" max_length="2"]枚
+作成可能
+最近の人気デッキランキング
+最近の人気
+フレンド
+だれかのデッキ
 特定商取引法に基づく表記
 スタジアムは､自分の番に１枚､バトル場の横に出せる｡\n別のスタジアムが場に出たなら､このカードをトラッシュ\nする｡同じ名前のスタジアムは場に出せない｡
 アプリを再起動してタイトルにもどります
@@ -13775,6 +14513,7 @@ Español
 パックパワー回復
 チャレンジパワー回復
 大事なおしらせ
+スペシャルパックパワー回復
 初期設定にもどす
 30fps
 60fps
@@ -13794,7 +14533,10 @@ SE
 サウンド
 システム
 トレード
+ほしいカード
 触覚のための振動
+ほしいカード自動解除
+ほしいカードを入手した場合\nそのカードのほしいカード登録を自動で解除します
 サポートIDをコピーしました
 もちもの
 ショップ
@@ -14105,6 +14847,7 @@ Apple Accountと連携が完了しました\n\nアプリを消してしまって
 プライバシーポリシーが更新されました\n\n内容を確認して　もう一度同意してください
 パック開封中にゲームが終了しましたが\nカードは正常に入手しました\n\n入手したカードは「自分のカード」画面で\n「入手順」に並び替えをすることで確認できます
 ゲームが終了しましたが\nアイテムは正常に入手しました\n\n入手したアイテムはメニュー>もちもので\n確認できます
+ゲームを遊びながらデータをダウンロードしますか？\n\nWi-Fi環境でのダウンロードをおすすめします\n(あとからでもダウンロードできます)\n\nダウンロードサイズ\n[Num:Int id="0" max_length="5"]MB
 キャンセル
 OK
 OK
@@ -14135,6 +14878,8 @@ OK
 OK
 OK
 OK
+OK
+あとで
 OK
 購入処理の完了
 購入処理の完了
@@ -14230,12 +14975,17 @@ Ver.[Str:Free id="0"]
 エキスパンション
 金フレーム
 トレード情報
+図鑑未登録カードはありません\n(コンプリート済み)
+相手の図鑑未登録カードを\n所持していません
 対象のカードがありません
+他の拡張パックを見る
 相手から同じレアリティのカードを受け取れます
 受け取るカードと同じレアリティのカードを送れます
 OK
 相手に送るカードを選んでください
 相手からのメッセージ
+トレードできるカード一覧
+相手の図鑑未登録カード
 相手のほしいカード
 PROMO
 トレード不可
@@ -14375,6 +15125,7 @@ CHT(繁體中文)のカードを希望
 トレードするには金フレームが必要です
 金フレームを外してください
 エフェクトを外してください
+ひかりのすなが足りません
 OK
 ※トレードが成立しなかった場合は\n消費したぶんのトレードパワーは回復し\nカードやアイテムがもどってきます
 カードを相手に提案しました\n提案中は自分のカードには表示されなくなり\n使用もできません

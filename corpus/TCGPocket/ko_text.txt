@@ -100,7 +100,7 @@
 자신의 차례 처음에 이 포켓몬이 배틀필드에 있다면 자신의 덱에서 [Img:Element id="0" ]포켓몬을 랜덤으로 [Num:Int id="1" max_length="1" ]장 패로 가져온다.
 이 포켓몬이 필드에 나와서 처음으로 기술의 데미지를 받을 때 그 데미지를 받지 않는다.
 자신의 차례에 이 카드를 패에서 꺼내서 진화시켰을 때 [Ctrl:NoBreak ]1번[/Ctrl:NoBreak] 사용할 수 있다. 상대의 패를 모두 덱으로 되돌린다. 상대는 상대 자신이 이기기 위해 필요한 남은 포인트의 수만큼 덱을 뽑는다.
-자신의 필드에 다른 「[Text:CardName id="0" ]」[Gr:Patchim v="i_ga" ] 있다면 이 포켓몬이 상대의 배틀 포켓몬에게 주는 데미지를 +[Num:Int id="1" max_length="3" ]하고 상대의 포켓몬으로부터 받는 기술의 데미지를 -[Num:Int id="2" max_length="3" ]한다.
+자신의 필드에 다른 「[Text:CardName id="0" ]」[Gr:Patchim v="i_ga" ] 있다면 이 포켓몬이 상대의 배틀 포켓몬에게 주는 기술의 데미지를 +[Num:Int id="1" max_length="3" ]하고 상대의 포켓몬으로부터 받는 기술의 데미지를 -[Num:Int id="2" max_length="3" ]한다.
 이 포켓몬이 있는 한, 서로의 필드의 [Ctrl:Bold]기본[/Ctrl:Bold] 포켓몬의 특성을 모두 없앤다.
 이 포켓몬이 배틀필드에서 상대의 포켓몬으로부터 기술의 데미지를 받아 [Ctrl:Bold]기절[/Ctrl:Bold]했을 때 상대의 포켓몬 전원에게 [Num:Int id="0" max_length="3" ]데미지를 준다.
 자신의 차례에 이 카드를 패에서 꺼내서 진화시켰을 때 [Ctrl:NoBreak ]1번[/Ctrl:NoBreak] 사용할 수 있다. 자신의 트래쉬에서 「포켓몬의 도구」를 랜덤으로 [Ctrl:NoBreak ][Num:Int id="0" max_length="1" ]장[/Ctrl:NoBreak] 패로 가져온다.
@@ -140,6 +140,10 @@
 자신의 차례에 자신의 트레이너스의 효과로 동전을 던졌을 때 1번 사용할 수 있다. 그 동전의 결과를 모두 없애고 처음부터 동전을 다시 던진다. 이 특성은 다른 「[Text:AbilityName id="0" suffix="Short" ]」[Gr:Patchim v="eul_reul" ] 사용한 차례는 사용할 수 없다.
 자신의 차례에 이 카드를 패에서 꺼내서 진화시켰을 때 [Ctrl:NoBreak ]1번[/Ctrl:NoBreak] 사용할 수 있다. 상대의 배틀 포켓몬에서 에너지를 랜덤으로 [Ctrl:NoBreak ][Num:Int id="0" max_length="1" ]개[/Ctrl:NoBreak] 이 포켓몬에게 바꿔 붙인다.
 자신의 차례에 1번 사용할 수 있다. 상대의 패에서 랜덤으로 [Num:Int id="0" max_length="1" ]장 앞면을 본다.
+자신의 차례에 [Ctrl:NoBreak]1번[/Ctrl:NoBreak] 사용할 수 있다. 렌탈 카드 「[Text:CardNameByCardID id="0" ]」[Gr:Patchim v="eul_reul" ] [Ctrl:NoBreak][Num:Int id="1" max_length="1" ]장[/Ctrl:NoBreak] 패로 가져온다.
+이 포켓몬이 있는 한, 자신의 포켓몬이 사용하는 기술 「[Text:AttackName id="0" ]」[Gr:Patchim v="eu_" ]로 던지는 동전의 수를 [Num:Int id="1" max_length="2" ]번 많게 한다.
+자신의 차례에 이 카드를 패에서 꺼내서 진화시켰을 때 [Ctrl:NoBreak]1번[/Ctrl:NoBreak] 사용할 수 있다. 자신의 덱에서 「[Text:CardName id="0" ]」[Gr:Patchim v="eul_reul" ] 랜덤으로 [Ctrl:NoBreak][Num:Int id="1" max_length="1" ]장[/Ctrl:NoBreak] 벤치로 내보낸다.
+이 포켓몬이 있는 한, 자신의 [Img:Element id="0" ]포켓몬 전원이 상대의 포켓몬으로부터 받는 기술의 데미지를 -[Num:Int id="1" max_length="3" ]한다. 이 특성은 중복되지 않는다.
 파우더 힐
 향기의 덫
 반격
@@ -307,6 +311,15 @@ POWER
 마하 스텔스
 도둑질 앞니
 스파이 활동
+서니 힐
+꿀모으기
+플레임 오라
+점핑 코치
+서든 분신
+전기 생산
+스트라이크 백
+메탈 스크럼
+면역
 새벽의 날개
 알로라
 빗방울의 모습
@@ -661,6 +674,14 @@ POWER
 상대의 배틀 포켓몬이 [Ctrl:Bold][Text:SpecialCondition id="0" ][/Ctrl:Bold][Gr:Patchim v="i_" ]라면 이 포켓몬의 HP를 [Num:Int id="1" max_length="3" ]회복.
 이 포켓몬이 데미지를 받고 있다면 이 기술의 데미지를 -[Num:Int id="0" max_length="3" ]한다.
 상대의 이전 차례에 상대가 가져간 포인트의 수 × [Num:Int id="0" max_length="3" ]데미지를 추가한다.
+자신의 패에 있는 「[Text:CardName id="0" ]」[Gr:Patchim v="eul_reul" ] 모두 상대에게 보여주고 보여준 장수 × [Num:Int id="1" max_length="3" ]데미지를 준다.
+상대의 패에서 랜덤으로 [Num:Int id="0" max_length="1" ]장 앞면을 보고 덱으로 되돌린다.
+이 포켓몬에서 [Img:Element id="0" ]에너지를 [Num:Int id="1" max_length="2" ]개 트래쉬하고 상대의 포켓몬 [Num:Int id="2" max_length="1" ]마리에게 [Num:Int id="3" max_length="3" ]데미지를 준다.
+필드에 나와 있는 상대의 스타디움을 트래쉬한다.
+상대의 배틀 포켓몬을 [Ctrl:Bold][Text:SpecialCondition id="0" ][/Ctrl:Bold][Gr:Patchim v="eu_" ]로 만든다. 이 [Ctrl:Bold][Text:SpecialCondition id="0" ][/Ctrl:Bold][Gr:Patchim v="eu_" ]로 던지는 동전은 [Num:Int id="1" max_length="2" ]번이 되며, 모두 앞면이 나오지 않으면 회복되지 않는다.
+자신의 다음 차례에 이 포켓몬의 「[Text:AttackName id="0" ]」의 데미지를 -[Num:Int id="1" max_length="3" ]한다.
+이 포켓몬에서 에너지를 모두 벤치 포켓몬에게 원하는 대로 바꿔 붙인다.
+자신이 이미 가져온 포인트의 수 × [Num:Int id="0" max_length="3" ]데미지를 추가한다.
 덩굴채찍
 잎날가르기
 메가드레인
@@ -1772,6 +1793,46 @@ V플레임
 탱탱옐
 히프드롭
 냉혹한회오리
+긴목해머
+허니러시
+낙엽태클
+시그널빔
+다이너마이트 스팀
+래빗점프
+스피닝킥
+분통파이어
+듀얼블리자드
+공간절단
+돌머리
+스플래시다크
+피카펀치
+천둥번개테일
+자폭
+단잠송
+듀얼임팩트
+비밀의인도
+사이코번
+브레인웨이브
+사이코부스트
+먼지모으기
+월륜의날개
+메가혼
+팔꿈치치기
+손펀치
+독한가스
+땅거미독
+문레이드
+램페이지 크래시
+속임수
+슈레더클로
+시간의포효
+일륜의발톱
+드래고닉 메테오
+클린히트
+파워볼
+필살래리엇
+사이킥 블래스터
+혼란시키기
 [Ctrl:Bold]잠듦[/Ctrl:Bold]
 자신의 포켓몬에게 에너지를 [Num:Int id="0" max_length="2" ]개 붙인다
 피카츄 실루엣 이펙트(배틀)
@@ -1905,6 +1966,8 @@ V플레임
 미라클 데이즈 엠블럼 이벤트
 하이클래스팩 MEGA 엠블럼 이벤트
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 엠블럼 이벤트
+듀얼 퓨전 엠블럼 이벤트
+듀얼 퓨전(C1) 한정 배틀
 어니부기 덱(최강의 유전자)
 이상해풀 덱(최강의 유전자)
 리자드 덱(최강의 유전자)
@@ -2450,6 +2513,16 @@ V플레임
 [Text:CardName v="MEGATYLTALIS_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
 [Text:CardName v="MEGAGANGAR_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
 [Text:CardName v="KORAIDON_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="KAMEIL" ] 덱
+[Text:CardName v="KAMEX" ] 덱
+[Text:CardName v="PARMOT" ] 덱
+[Text:CardName v="HOGATOR_EX" ] 덱
+[Text:CardName v="PIKACHU_EX" ] 덱
+[Text:CardName v="MEGAMEWTWOX_EX" ] 덱
+[Text:CardName v="ALOLANASSY_EX" ] 덱
+[Text:CardName v="MEGAGEKKOUGA_EX" ] 덱
+[Text:CardName v="MEGABANGIRAS_EX" ] 덱
+[Text:CardName v="GIRATINA_EX" ] 덱
 이상해꽃 ex 덱(최강의 유전자)
 리자몽 ex 덱(최강의 유전자)
 거북왕 ex 덱(최강의 유전자)
@@ -2642,6 +2715,12 @@ V플레임
 [Text:CardName v="MEGAHASSAM_EX" ]&[Text:CardName v="SURFUGO_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
 엘리트 덱([Text:CardName v="MEGALIZARDONY_EX" ])
 엘리트 덱([Text:CardName v="MEGALUCARIO_EX" ])
+[Text:CardName v="PIKACHU_EX" ] 덱
+[Text:CardName v="MEGAMEWTWOX_EX" ] 덱
+[Text:CardName v="MEGAGEKKOUGA_EX" ] 덱
+[Text:CardName v="MEGABANGIRAS_EX" ] 덱
+꿀모으기 덱
+래빗점프 덱
 배틀에 사용할 수 있는 렌탈 덱입니다\n덱에 포함된 카드를 가지고 있지 않아도\n배틀에서 사용할 수 있습니다
 이상해꽃 ex 덱(최강의 유전자)
 리자몽 ex 덱(최강의 유전자)
@@ -2844,6 +2923,7 @@ V플레임
 [Text:CardName v="MEGAHASSAM_EX" ]&[Text:CardName v="SURFUGO_EX" ] 덱([Mst:PackName v="PACK_NAME_B4b_1"])
 엘리트 덱([Text:CardName v="MEGALIZARDONY_EX" ])
 엘리트 덱([Text:CardName v="MEGALUCARIO_EX" ])
+엘리트 덱([Text:CardName v="MEGARAYQUAZA_EX" ])
 덱 기능에서 사용할 수 있는 테마 덱 레시피입니다\n레시피에 적힌 카드를 모으면\n덱을 생성하여 플레이할 수 있습니다
 덱(20장 카드)을 받을 수 있습니다. 덱 기능에서 \n사용할 수 있는 테마 덱 레시피도 받을 수 있습니다\nex 스타트 덱은 9종류 중 1가지만 교환할 수 있습니다
 날쌩마 덱
@@ -2909,6 +2989,7 @@ Vickie
 [Text:CardName v="MEGAHELLGAR_EX" ] 드롭 이벤트
 [Text:CardName v="ROCKETDANNOLAPLACE" ] 드롭 이벤트
 [Text:CardName v="MEGAGABURIAS_EX" ] 드롭 이벤트
+복각 PROMO 드롭 이벤트 2026
 랜덤 배틀(B2)
 랜덤 배틀(B2a)
 랜덤 배틀(B2b)
@@ -2918,6 +2999,7 @@ Vickie
 랜덤 배틀(B4)
 랜덤 배틀(B4a)
 랜덤 배틀(B4b)
+랜덤 배틀(C1)
 [Ctrl:Bold]화상[/Ctrl:Bold]
 금색 프레임
 컬렉션 파일, 컬렉션 보드,\n배틀에서 표시할 수 있는 금색 프레임입니다
@@ -4304,6 +4386,40 @@ Vickie
 로켓단의 대작전
 로켓단의 보스
 게임센터
+[Text:AdditionalName v="ADDITIONAL_NAME_Alora" type="region" space="post" ]나시 ex
+사철록
+바라철록
+볼케니온
+뜨아거 ex
+카디나르마
+펄기아
+메가개굴닌자 ex
+메가뮤츠X ex
+테오키스
+루나아라
+메가마기라스 ex
+훔처우
+폭슬라이
+메가무장조 ex
+디아루가
+솔가레오
+메가망나뇽 ex
+이븐곰 ex
+달콤한꿀
+좋은상처약
+골드스프레이
+만병통치제
+진화의휘석
+전기구슬
+칸나
+그린의 도발
+세레나의 선택
+칠리
+프렌들리숍 직원
+호프 트레이너
+허름한 스탠드
+메가뮤츠Y ex
+게놈 컨버터Y
 캠페인에서 입수
 겟 챌린지에서 입수
 미션에서 입수
@@ -4327,6 +4443,10 @@ Vickie
 테라파고스
 메가디안시
 메가뮤츠X
+메가개굴닌자
+메가망나뇽
+토오
+메가마기라스
 메가리자몽
 비기너 랭크1
 비기너 랭크2
@@ -4778,20 +4898,25 @@ TOP 10000
 메가진화 ex(엠블럼)
 랭크 매치 시즌 A3a에서 획득할 수 있는\n슈퍼볼 랭크1의 엠블럼입니다
 시즌 A3a 슈퍼볼 랭크1
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_19"](엠블럼)
 랭크 매치 시즌 A3a에서 획득할 수 있는\n슈퍼볼 랭크2의 엠블럼입니다
 시즌 A3a 슈퍼볼 랭크2
+[Text:CardName v="PIKACHU" ] Ver.6(엠블럼)
 랭크 매치 시즌 A3a에서 획득할 수 있는\n슈퍼볼 랭크3의 엠블럼입니다
 시즌 A3a 슈퍼볼 랭크3
 홍련 블레이즈 엠블럼 이벤트에서 획득할 수 있는\n참가상 엠블럼입니다
 홍련 블레이즈 엠블럼 이벤트 참가상
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"](엠블럼)
 랭크 매치 시즌 A3a에서 획득할 수 있는\n슈퍼볼 랭크4의 엠블럼입니다
 시즌 A3a 슈퍼볼 랭크4
+[Text:CardName v="ABURIBBON" ](엠블럼)
 홍련 블레이즈 엠블럼 이벤트에서 획득할 수 있는\n동상 엠블럼입니다
 홍련 블레이즈 엠블럼 이벤트 동상
 랭크 매치 시즌 A3a에서 획득할 수 있는\n몬스터볼 랭크1의 엠블럼입니다
 시즌 A3a 몬스터볼 랭크1
 홍련 블레이즈 엠블럼 이벤트에서 획득할 수 있는\n은상 엠블럼입니다
 홍련 블레이즈 엠블럼 이벤트 은상
+[Text:CardName v="HIBANNY" ](엠블럼)
 랭크 매치 시즌 A3a에서 획득할 수 있는\n몬스터볼 랭크2의 엠블럼입니다
 시즌 A3a 몬스터볼 랭크2
 홍련 블레이즈 엠블럼 이벤트에서 획득할 수 있는\n금상 엠블럼입니다
@@ -5026,12 +5151,20 @@ TOP 10000
 [Mst:PackName v="PACK_NAME_B4b_1"] 엠블럼 이벤트 금상
 랭크 매치 시즌 A4b에서 획득할 수 있는\n몬스터볼 랭크1의 엠블럼입니다
 시즌 A4b 몬스터볼 랭크1
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] 엠블럼 이벤트에서 획득할 수 있는\n참가상 엠블럼입니다
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] 엠블럼 이벤트 참가상
 랭크 매치 시즌 A4b에서 획득할 수 있는\n몬스터볼 랭크2의 엠블럼입니다
 시즌 A4b 몬스터볼 랭크2
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] 엠블럼 이벤트에서 획득할 수 있는\n동상 엠블럼입니다
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] 엠블럼 이벤트 동상
 랭크 매치 시즌 A4b에서 획득할 수 있는\n몬스터볼 랭크3의 엠블럼입니다
 시즌 A4b 몬스터볼 랭크3
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] 엠블럼 이벤트에서 획득할 수 있는\n은상 엠블럼입니다
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] 엠블럼 이벤트 은상
 랭크 매치 시즌 A4b에서 획득할 수 있는\n몬스터볼 랭크4의 엠블럼입니다
 시즌 A4b 몬스터볼 랭크4
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] 엠블럼 이벤트에서 획득할 수 있는\n금상 엠블럼입니다
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] 엠블럼 이벤트 금상
 랭크 매치 시즌 A4b에서 획득할 수 있는\n비기너 랭크1의 엠블럼입니다
 시즌 A4b 비기너 랭크1
 랭크 매치 시즌 A4b에서 획득할 수 있는\n비기너 랭크2의 엠블럼입니다
@@ -5280,6 +5413,26 @@ TOP 10000
 시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_02"]
 시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_03"]
 시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_04"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:MainRankName v="MAIN_RANK_NAME_MASTERBALL"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] 마스터볼 랭크([Mst:CommonEventLabel v="COMMON_Master_TOP10000"])
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] 마스터볼 랭크([Mst:CommonEventLabel v="COMMON_Master_TOP5000"])
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] 마스터볼 랭크([Mst:CommonEventLabel v="COMMON_Master_TOP1000"])
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_01"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_02"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_03"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_04"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_01"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_02"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_03"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_04"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_01"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_02"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_03"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_04"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_01"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_02"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_03"]
+시즌 [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_04"]
 1주년
 스페셜 이벤트 2025 기념 엠블럼입니다
 스페셜 이벤트 2025(엠블럼)
@@ -5287,6 +5440,8 @@ TOP 10000
 1주년 기념(엠블럼)
 스페셜 이벤트 2026 기념 엠블럼입니다
 스페셜 이벤트 2026(엠블럼)
+나눠주기로 많은 카드를 보내면 획득할 수 있는\n특별한 엠블럼입니다
+나눠주기 마스터(엠블럼)
 무색타입
 악타입
 드래곤타입
@@ -5345,6 +5500,8 @@ B3b
 B4
 B4a
 B4b
+C1
+SP1
 최강의 유전자
 환상이 있는 섬
 시공의 격투
@@ -5367,6 +5524,8 @@ B4b
 천공의 지배자
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망
 하이클래스팩 MEGA
+듀얼 퓨전
+스페셜 팩 첫 파트너
 #마이컬렉션
 #좋아하는포켓몬
 #마음에드는일러스트
@@ -6858,6 +7017,53 @@ UB의 일종. 이 세계의\n물건에 불결함을 느끼는 것인지\n전혀 
 방대한 에너지가 세포를\n격렬하게 자극한다. 잠들었던\n드래곤의 피가 깨어났다고 한다.
 근력이 대폭 상승했다.\n2주 동안 쉬지 않고\n계속 날 수 있다.
 녹아내릴 것만 같은 촉감의 털은\n단 몇 가닥으로 덤프트럭을\n매달아 올릴 수 있을 정도로 튼튼하다.
+태어나서 얼마 동안\n등의 씨앗에 담긴\n영양을 섭취하며 자란다.
+햇빛을 받을수록\n몸에 힘이 솟아나\n등의 꽃봉오리가 자라난다.
+내리쪼이는 태양 빛을\n에너지로 변환할 수 있기 때문에\n여름에 더욱 강해진다.
+알로 착각하여 건드리면\n동료들이 모여들어서\n집단으로 공격한다.
+몬스터볼의 개발자가\n깜놀버슬을 좋아했다는\n설이 있지만, 진위는 불명하다.
+내뿜는 독 포자를 조심해야 한다.\n포자에 닿은 부분에서\n뽀록나의 갓을 닮은 버섯이 자라기 때문이다.
+사람이나 포켓몬의\n즐거워 보이는 오라를 감지하면\n접근해서 긴 주둥이로 아프게 찔러 댄다.
+기운이 없는 사람이나 포켓몬의\n감정을 감지하면 직접 만든\n꽃가루경단으로 기운을 북돋워 준다.
+꼬리에서 타오르는 불꽃은\n생명력의 상징.\n기운이 없으면 불꽃이 약해진다.
+불타는 꼬리를 휘두르면\n주위의 온도가 점점 올라가\n상대를 괴롭게 한다.
+정말 화가 난 리자몽의\n꼬리 끝 불꽃은\n푸르스름하게 불타오른다.
+수증기를 뿜어내어 자신의\n모습을 짙은 안개 속에 숨긴다. 사람이\n오지 않는 산에 산다고 한다.
+전신이 따뜻해지면\n본래의 힘을 발휘할 수 있다.\n그러기 위해 준비 운동을 한다.
+푹신푹신한 털 덕분에\n불꽃 에너지의 온도를 올리기 쉬워져서\n더욱 강한 불꽃을 내보낼 수 있다.
+쉽게 흥분하는 성격이지만\n신뢰하는 트레이너가 있으면\n빈틈없는 전법을 구사한다.
+불탄 숯에 영혼이 깃들어서\n포켓몬이 되었다. 타오르는 투지로\n강한 상대에게도 싸움을 건다.
+많은 무공을 세운 전사의\n갑옷에 의해 진화한 모습.\n충성심이 강한 포켓몬이다.
+양팔의 불꽃 검은\n뜻을 다 이루지 못한 채 스러진\n검사의 원념에 의해 타오르고 있다.
+태어난 뒤 등이 부풀면서\n단단한 등껍질이 생긴다.\n입에서 강력한 거품을 발사한다.
+길고 탐스러운 꼬리는\n장수의 상징이다.\n노인층에게 특히 인기가 많다.
+분사한 물의 기세에\n밀리지 않도록 일부러\n체중을 무겁게 불리고 있다.
+머리에 있는 뿔은 매우 단단하다.\n박치기로 빙산을 부수며 나아간다.
+물의 온도가 내려가는 밤에\n먹이를 찾아 헤엄친다.\n낮에는 얕은 해저에서 잔다.
+가라르의 어느 지역에서는\n얼음의 여왕이라고 부르며\n루주라를 두려워하며 받들었다.
+사람을 등에 태우고 바다를 건넌다.\n기분이 좋으면 아름다운 목소리로\n노래를 하기도 하는 듯하다.
+평행으로 늘어선 공간의\n틈새에 산다고 전해진다.\n신화에 등장하는 포켓몬이다.
+같은 색끼리 모여서 무리를 이룬다.\n최대의 적은 빨간색 배쓰나이 무리다.
+태평해 보이는 것은\n적을 속이기 위한 연기다.\n눈에 보이지 않는 스피드로 적을 압도한다.
+지형을 활용한 전법이 특기다.\n조약돌을 거품으로 감싸서\n날리는 기술은 백발백중이다.
+운석에 붙어 있던\n우주 바이러스의 DNA가\n변이하여 생겨난 포켓몬이다.
+반경 10km의 범위를\n영역으로 삼고 있으나,\n달리다 보면 영역을 잊어버린다고 한다.
+다이아몬드 원석도 부숴 버리는\n위력을 자랑하는 뿔을\n동료들과 부딪치며 단련한다.
+튼튼한 프로텍터가\n화산의 분화로부터 보호해 준다.\n둥근 바위를 손의 구멍에서 발사한다.
+적에게 공격을 받으면 몸에서\n굵은 가시를 내지르며 반격한다.\n몸이 끊어질 각오가 필요한 위험한 기술이다.
+단단한 바위로 칼날 같은 꼬리를 간다.\n수풀에 숨어서 먹이에 접근한 다음\n독 이빨로 공격한다.
+다른 포켓몬이 발견한 먹이를\n훔치며 산다. 푹신푹신한\n볼록살 덕분에 발소리가 나지 않는다.
+목표로 한 먹잇감에 슬쩍 마킹을\n해둔다. 냄새를 따라가다 먹이의\n주인이 방심하고 있을 때 훔치려 든다.
+디아루가가 태어남으로써\n시간이 움직이기 시작했다는\n전설을 가진 포켓몬이다.
+가시를 날려서 몸을 지킨다.\n원하는 방향으로 날리기 위해서는\n많은 훈련이 필요하다.
+가시로 암반에 상처를 낸 다음\n촉수 끝을 이용해서\n영양분을 흡수한다.
+호흡을 하지 않기 때문에\n어디서나 활약할 수 있을 것으로\n기대되는 인공의 포켓몬이다.
+최신 과학에 의해 진화한 인공 포켓몬.\n가끔씩 프로그래밍되어 있지 않은\n반응을 보인다.
+더 우월한 포켓몬을 목표로\n추가한 프로그램에 문제가 있었는지\n움직임이 이상하다.
+자고 있을 때를 제외하고는\n항상 먹이를 먹고 있는 대식가.\n하루에 400kg은 먹어 치운다.
+인간의 지식을 뛰어넘는 강도를 가진\n껍질에 둘러싸여 있다.\n별의 빛을 받아서 성장한다.
+달을 현혹하는 짐승이라는\n이름을 가졌다. 모든 빛을\n에너지로 변환해서 살고 있다.
+전신에서 빛을 발산해서\n마치 태양 같은 모습이 되면\n어둠을 물리치고 세상을 비춘다.
 메가진화하여 더욱 크게\n성장한 꽃을 지탱하기 위해\n등과 다리가 전보다 튼튼해졌다.
 트레이너와의 유대가 힘의 원천이다.\n제트기를 능가하는\n비행 능력을 자랑한다.
 등껍질의 대포는 전차 수준의\n위력을 가졌다. 발사의 충격을\n강인한 하체로 견뎌 낸다.
@@ -6879,8 +7085,39 @@ UB의 일종. 이 세계의\n물건에 불결함을 느끼는 것인지\n전혀 
 1마리의 메타그로스와\n1마리의 메탕구와 2마리의 메탕이\n연결된 모습이다.
 메가진화로 인해 전신이 발열한다.\n격렬한 불꽃의 숨결을 뿜어내서\n상대를 재로 만들어 버린다.
 메가진화 전보다 성질이 난폭하게 변했다.\n양팔의 낫으로 적을 갈기갈기 조각낸다.
+발광체를 깜빡여서\n상대의 의욕을 상실시키는 방식으로\n강적으로부터 몸을 지킨다.
+어마어마하게 강한 최면술을 쓴다.\n조종당한 상대는\n전후의 기억을 잃어버린다.
+고속 회전에 의해 떠 있는\n거대 수리검에 거꾸로 달라붙어서\n상대의 허를 찌른다.
+사이코 파워로 몸의 근육이 증가했다.\n악력은 1톤에 달하며\n100m를 2초에 달릴 수 있다.
+메가진화의 영향으로 더욱 난폭해졌다.\n트레이너의 명령이 제대로\n들리고 있는지도 불명확하다.
+비행 속도는 음속을 초월한다.\n충격파를 일으켜서 적을 날려 버린 뒤\n발톱으로 마무리를 짓는다.
+메가진화의 에너지 때문에\n상냥한 마음이 지나칠 정도로 파워업했다.\n자비로운 마음으로 적을 끝내 버린다.
+몸집은 작아졌지만 파워는\n상상을 초월한다. 가벼운 염력만으로\n고층 빌딩도 산산이 조각난다.
 대기 중의 먼지가 먹이다.\n먼지에 포함된 성분에 따라\n코어의 색이 결정된다고 한다.
+발달한 턱은 파워풀해서\n뭐든지 깨물어 부수기 때문에\n어버이 트레이너라도 주의해야 한다.
+다리 뒤의 작은 가시를 박아\n수직인 벽을 올라갈 수 있다.\n굵은 꼬리로 힘껏 쳐서 공격한다.
+트레이너에게 바짝 붙어 아장아장 걷는다.\n입에서 날리는 불꽃은 섭씨 1000도다.\n상대를 새까맣게 태우는 작열하는 불덩이다.
+머리의 지느러미는 매우 민감한 레이더다.\n물이나 공기의 움직임을 통해 눈을 쓰지 않고\n주변의 상황을 알아낼 수 있다.
+흙으로 만들어진 등껍질은\n물을 마시면 한층 단단해진다.\n호수 근처에서 살고 있다.
+낭떠러지 절벽을 민첩하게 올라\n바위산의 위에서 생활한다.\n불꽃을 끄고 잠든다.
+자존심이 강해서 사람에게\n먹이를 얻는 것을 싫어한다.\n긴 솜털이 추위를 막는다.
+지능이 높고 매우 냉정하다.\n태양의 빛을 듬뿍 받으면\n움직임이 민첩해진다.
+콧구멍에서 불꽃을 뿜어낸다.\n감기에 걸리면 불꽃 대신\n새까만 연기를 뿜어낸다.
+배에 있는 가리비칼로 싸운다.\n공격을 막고 그 즉시\n베어 반격한다.
+머리의 가시는 평소에는 부드럽지만\n힘을 주면 뾰족하고 날카로워지며\n바위를 뚫어 버릴 정도로 단단해진다.
+잔가지를 먹으면 힘이 나서\n섭씨 200도가 넘는 열기를\n커다란 귀에서 내뿜는다.
+경계심이 강하다. 낮에는\n광합성으로 힘을 비축하고\n밤이 되면 활동을 개시한다.
+혀로 털을 정리할 때 배 속에 쌓이는\n빠진 털을 태워서 불을 뿜는다.\n털을 뱉어 내는 방법에 따라 불꽃도 변한다.
+노력하는 성질로 유명하다.\n체액을 코로 부풀린\n풍선을 적에게 부딪힌다.
+특별한 스틱으로 리듬을 타면\n화초를 생생하게 만드는 힘이\n음파가 되어 퍼진다.
+뛰어다니며 체온을 높이면\n불꽃 에너지가 몸 안에 맴돌아\n본래의 힘을 발휘할 수 있다.
+겁을 먹으면 양파 100개와 맞먹는\n최루 성분의 눈물을 흘려서\n상대도 덩달아 울게 만든다.
+옛날에 머나먼 땅에서 찾아와 정착했다.\n날개에서 분비되는 젤은\n물과 먼지를 튕겨 낸다.
+지금도 환상의 포켓몬이라고 전해진다.\n그 모습을 본 자는 전국에서도 거의 없다.
 밤하늘에 빛나는 유성은 사실\n운석을 뒤쫓는 메가레쿠쟈가\n날아가는 모습일지도 모른다.
+다른 우주에서 찾아왔다.\n가스로 된 몸은 매우 가벼워서\n산들바람에도 날아가 버릴 정도다.
+낯을 가리지 않는 성격이라\n인간이 앞에 있어도 눈치 보지 않는다.\n먹이를 주면 금방 친해질 수 있다.
+애호가가 많은 포켓몬.\n뿔에서 늘어진 가지와 잎의 빨간색이\n짙을수록 멋진 것으로 여겨진다.
 Narumi Sato
 Kurata So
 Ryota Murayama
@@ -7119,6 +7356,14 @@ Akino Fukuji
 Iwamoto05
 Kazuki Minami
 YOSHIROTTEN
+telu
+Atsuya Uki
+Keisuke Azuma
+CHORISO
+Bun Toujo
+TOMATO MARKET
+ORBITALLINK Inc.
+Yoshiyuki Sadamoto
 Coming Soon
 챌린지 파워 대기 시간을 단축하는 플레이\n아이템입니다. 사용하면 겟 챌린지까지 필요한 시간이\n1시간 단축됩니다. 미션 정보 등에서 획득 가능합니다.
 일부 「혼자서」 배틀이나 이벤트에\n도전할 때 필요한 플레이 아이템입니다\n사용하면 도전하기까지 시간을 단축할 수 있습니다
@@ -7132,6 +7377,7 @@ Coming Soon
 모으면 플레이어 레벨을 올릴 수 있는\n플레이 아이템입니다
 오랫동안 사용했던\n로켓단의 조무래기의 양말\n냄새가 조금 난다
 기한이 지난 겟 챌린지를 부활시키기 위한\n플레이 아이템입니다. 1번에 1개, 챌린지 파워와 함께\n소비해야 합니다
+숍에서 특별한 확장팩과 교환할 수 있습니다\n2주년 기념 캠페인의 이벤트 미션이나\n선물로 획득할 수 있습니다\n교환 기간이 지나면 삭제됩니다
 숍에서 덱(20장 카드)과 교환할 수 있습니다\nex 스타트 덱 미션에서 획득할 수 있습니다\n교환 기간이 지나면 삭제됩니다
 테마 컬렉션 혹은 도감 미션을 달성하면\n획득할 수 있습니다\n숍에서 특정 엠블럼과 교환할 수 있습니다
 숍에서 주변 상품이나 플레이 아이템과\n교환할 수 있습니다\n이벤트 미션을 달성하면 획득할 수 있습니다\n교환 기간이 지나면 삭제됩니다
@@ -7219,6 +7465,10 @@ EXP
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 괴상한 티켓
 프로모 카드 교환 티켓([Text:CardName v="ROCKETDANNOLAPLACE" ] 드롭 이벤트)
 프로모 카드 교환 티켓([Text:CardName v="MEGAGABURIAS_EX" ] 드롭 이벤트)
+프로모 카드 교환 티켓(프로모 카드 팩 C시리즈 제1탄）
+프로모 카드 교환 티켓(복각 PROMO 드롭 이벤트 2026)
+프로모 카드 교환 티켓(복각 PROMO 겟 챌린지 이벤트 2026）
+[Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정 확장팩 교환 티켓
 언젠가 쓰일 티켓
 비눗방울 물색 이펙트(반짝이)
 비눗방울 핑크 이펙트(반짝이)
@@ -7303,12 +7553,13 @@ EXP
 겟 챌린지는\n플레이어 레벨이 2가 되면\n오픈됩니다
 배틀 메뉴는\n플레이어 레벨이 3이 되면\n오픈됩니다\n\n플레이어 레벨은 팩 개봉 등에서\n플레이어 경험치를 얻으면 오릅니다
 덱 미션은\n플레이어 레벨이 3이 되면\n오픈됩니다\n\n플레이어 레벨은 팩 개봉 등에서\n플레이어 경험치를 얻으면 오릅니다
-덱은\n배틀 놀이 방법 06을\n클리어하면 오픈됩니다\n\n배틀 놀이 방법은 배틀 메뉴의\n좌측 하단 버튼에서 확인할 수 있습니다
-배틀은\n배틀 놀이 방법 06을\n클리어하면 오픈됩니다\n\n배틀 놀이 방법은 배틀 메뉴의\n좌측 하단 버튼에서 확인할 수 있습니다
+덱은\n배틀 놀이 방법 06을\n클리어하면 오픈됩니다\n\n배틀 놀이 방법은 배틀 메뉴의\n「놀이 방법」에서 확인할 수 있습니다
+배틀은\n배틀 놀이 방법 06을\n클리어하면 오픈됩니다\n\n배틀 놀이 방법은 배틀 메뉴의\n「놀이 방법」에서 확인할 수 있습니다
 컬렉션 보드는\n플레이어 레벨이 4가 되면\n오픈됩니다\n\n플레이어 레벨은 팩 개봉 등에서\n플레이어 경험치를 얻으면 오릅니다
 컬렉션 파일은\n플레이어 레벨이 6이 되면\n오픈됩니다\n\n플레이어 레벨은 팩 개봉 등에서\n플레이어 경험치를 얻으면 오릅니다
 프리미엄 미션은\n프리미엄 패스로 가입하면\n오픈됩니다\n\n프리미엄 패스는 프리미엄 미션 혹은\n숍에 있는 버튼을 통해 가입할 수 있습니다
 트레이드는\n플레이어 레벨이 3이 되면\n오픈됩니다\n\n플레이어 레벨은 팩 개봉 등에서\n플레이어 경험치를 얻으면 오릅니다
+누군가의 덱은\n배틀 놀이 방법 06을\n클리어하면 오픈됩니다\n\n배틀 놀이 방법은 배틀 메뉴의\n「놀이 방법」에서 확인할 수 있습니다
 {0} 덱({1})
 {0}(엠블럼)
 {0} 엠블럼 이벤트 동상
@@ -7382,6 +7633,8 @@ EXP
 로그인 하라!([Num:Int id="0" max_length="3" ]일차)
 배틀을 [Num:Int id="0" max_length="3" ]번 하라!
 겟 챌린지를 [Num:Int id="0" max_length="3" ]번 플레이하라!
+상대의 도감 미등록 카드나 갖고 싶은 카드를 [Num:Int id="0" max_length="3" ]번 나눠주기 하자
+【2주차】 로그인을 하자([Num:Int id="0" max_length="3" ]일차)
 첫 선택
 에레브와 마그마
 상록숲
@@ -7625,7 +7878,7 @@ HP60의 포켓몬
 벌레 포켓몬 총집합!
 메가진화 ex 카드를 1장 모으자
 메가진화 ex 카드를 3장 모으자
-프로모 카드 [Text:CardNameWithSubName id="0" ][Gr:Patchim v="eul_reul" ] [Num:Int id="1" max_length="3" ]장 모으자
+이 이벤트의 프로모 카드 3종류를 모으자
 웃음꽃이 피는 화원②
 ex 컬렉션\n
 미러 사양의 카드의 포켓몬을 모으자
@@ -7806,6 +8059,7 @@ ex 컴플리트!
 [Text:CardName v="ROCKETDANNOSHITAPPA" ] 총집합
 괴상한 발명품 컬렉터
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] 카드 컴플리트
+관동지방 파트너들
 메가진화 ex 컬렉션
 특성을 가진 포켓몬 ex
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_24" ]의 2가지 모습
@@ -7824,6 +8078,45 @@ ex 컴플리트!
 [Text:CardName v="PIKACHU" ]의 모험
 수컷과 암컷의 [Text:CardName v="NYAONIX" ]
 4마리의 「화신」들
+전기 파워가 흘러넘치는 [Text:CardName v="PIKACHU" ]
+꽃밭에서 꿀 모으기①
+꽃밭에서 꿀 모으기②
+뛰어 올라 래빗점프
+몬스터볼을 닮은 모습
+낮과 밤의 진화
+태양과 달의 진화
+갑옷을 두른 불꽃의 전사
+프렌들리숍에서 장보기
+새근새근 느긋하게 잠시 쉬기
+함께 지내온 파트너
+신오지방의 전설
+대지를 흔드는 [Mst:CommonCharacterName v="COMMON_CARD_NAME_23" ]
+듀얼 퓨전 뮤지엄①
+듀얼 퓨전 뮤지엄②
+듀얼 퓨전 뮤지엄③
+듀얼 퓨전 뮤지엄④
+숨지 않는 거꾸로 매달린 닌자(물/악)
+흘러넘칠 것 같은 꿀 모으기
+더 뛰어올라 래빗점프
+성도지방 파트너들
+호연지방 파트너들
+신오지방 파트너들
+하나지방 파트너들
+칼로스지방 파트너들
+알로라지방 파트너들
+가라르지방 파트너들
+팔데아지방 파트너들
+[Text:CardName v="MEGAMEWTWOX_EX" ]([Mst:Rarity v="RARITY_MSID_IM" ])로의 길 STEP5/5
+[Text:CardName v="PIKACHU_EX" ]([Mst:Rarity v="RARITY_MSID_IM" ])로의 길 STEP5/5
+[Text:CardName v="MEGAMEWTWOX_EX" ]([Mst:Rarity v="RARITY_MSID_IM" ])로의 길 STEP1/5
+[Text:CardName v="MEGAMEWTWOX_EX" ]([Mst:Rarity v="RARITY_MSID_IM" ])로의 길 STEP2/5
+[Text:CardName v="MEGAMEWTWOX_EX" ]([Mst:Rarity v="RARITY_MSID_IM" ])로의 길 STEP3/5
+[Text:CardName v="MEGAMEWTWOX_EX" ]([Mst:Rarity v="RARITY_MSID_IM" ])로의 길 STEP4/5
+[Text:CardName v="PIKACHU_EX" ]([Mst:Rarity v="RARITY_MSID_IM" ])로의 길 STEP1/5
+[Text:CardName v="PIKACHU_EX" ]([Mst:Rarity v="RARITY_MSID_IM" ])로의 길 STEP2/5
+[Text:CardName v="PIKACHU_EX" ]([Mst:Rarity v="RARITY_MSID_IM" ])로의 길 STEP3/5
+[Text:CardName v="PIKACHU_EX" ]([Mst:Rarity v="RARITY_MSID_IM" ])로의 길 STEP4/5
+최강의 듀얼타입(초/격투)
 덱 미션
 덱 미션
 최강의 유전자 엠블럼 이벤트1
@@ -7925,8 +8218,20 @@ ex 스타트 덱 미션
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 엠블럼 이벤트
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 특별 임무
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 특별 임무
+듀얼 퓨전 배틀 응원 미션
+듀얼 퓨전 배틀 응원 미션
 피카피카! 피카츄 미션
 피카피카! 피카츄 미션
+윈터 홀리데이\n테마 프로모 카드 이벤트
+윈터 홀리데이\n테마 프로모 카드 이벤트
+복각 PROMO 드롭 이벤트\n2026 미션
+복각 PROMO 드롭 이벤트\n2026 미션
+복각 PROMO 겟 챌린지 이벤트\n2026 미션
+복각 PROMO 겟 챌린지 이벤트\n2026 미션
+[Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정 확장팩 미션
+[Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정 확장팩 미션
+브이브이! 이브이 미션
+브이브이! 이브이 미션
 초급
 고급
 일일
@@ -7960,6 +8265,10 @@ ex 스타트 덱
 복귀
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]
 피카피카!
+[Mst:Rarity v="RARITY_MSID_SSASR" ] 확정 확장팩
+배틀 응원
+테마 프로모 카드
+브이브이!
 랜덤 배틀(고급)
 랜덤 배틀(초급)
 랜덤 배틀(엑스퍼트)
@@ -7972,38 +8281,68 @@ TOP 10000
 긴급 알림으로 영어로 먼저 안내해 드립니다. 준비가 되는 대로 한국어로 안내하겠습니다.
 최강의 유전자 뮤츠 팩
 최강의 유전자 뮤츠([Mst:Rarity v="RARITY_MSID_RR" ] 이상 1장 확정) 팩
+[Mst:PackName v="PACK_NAME_A1_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 최강의 유전자 리자몽 팩
 최강의 유전자 리자몽([Mst:Rarity v="RARITY_MSID_RR" ] 이상 1장 확정) 팩
+[Mst:PackName v="PACK_NAME_A1_2" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 최강의 유전자 피카츄 팩
 최강의 유전자 피카츄([Mst:Rarity v="RARITY_MSID_RR" ] 이상 1장 확정) 팩
+[Mst:PackName v="PACK_NAME_A1_3" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 환상이 있는 섬 팩
+[Mst:PackName v="PACK_NAME_A1a_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 시공의 격투 디아루가 팩
+[Mst:PackName v="PACK_NAME_A2_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 시공의 격투 펄기아 팩
+[Mst:PackName v="PACK_NAME_A2_2" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 초극의 빛 팩
+[Mst:PackName v="PACK_NAME_A2a_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 샤이닝 하이 팩
+[Mst:PackName v="PACK_NAME_A2b_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 쌍천의 수호자 솔가레오 팩
+[Mst:PackName v="PACK_NAME_A3_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 쌍천의 수호자 루나아라 팩
+[Mst:PackName v="PACK_NAME_A3_2" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 이차원 크라이시스 확장팩
+[Mst:PackName v="PACK_NAME_A3a_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 이브이 가든 확장팩
+[Mst:PackName v="PACK_NAME_A3b_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 하늘과 바다의 인도 칠색조 확장팩
+[Mst:PackName v="PACK_NAME_A4_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 하늘과 바다의 인도 루기아 확장팩
+[Mst:PackName v="PACK_NAME_A4_2" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 미지의 수역 확장팩
+[Mst:PackName v="PACK_NAME_A4a_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 하이클래스팩 ex 확장팩
 메가라이징 메가번치코 확장팩
+[Mst:PackName v="PACK_NAME_B1_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 메가라이징 메가갸라도스 확장팩
+[Mst:PackName v="PACK_NAME_B1_2" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 메가라이징 메가파비코리 확장팩
+[Mst:PackName v="PACK_NAME_B1_3" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 홍련 블레이즈 확장팩
+[Mst:PackName v="PACK_NAME_B1a_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 몽환 퍼레이드 확장팩
+[Mst:PackName v="PACK_NAME_B2_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 팔데아 원더 확장팩
+[Mst:PackName v="PACK_NAME_B2a_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 샤이닝 메가 확장팩
+[Mst:PackName v="PACK_NAME_B2b_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 파동 비트 확장팩
+[Mst:PackName v="PACK_NAME_B3_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 진격 패러독스 확장팩
+[Mst:PackName v="PACK_NAME_B3a_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 미라클 데이즈 확장팩
+[Mst:PackName v="PACK_NAME_B3b_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 천공의 지배자 확장팩
+[Mst:PackName v="PACK_NAME_B4_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망 확장팩
+[Mst:PackName v="PACK_NAME_B4a_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정) 특별한 확장팩
 하이클래스팩 MEGA 확장팩
+듀얼 퓨전 [Mst:CommonCharacterName v="COMMON_CARD_NAME_19" ] 확장팩
+듀얼 퓨전 [Text:CardName v="PIKACHU" ] 확장팩
 피카피카! 피카츄 미션에서 획득할 수 있는\n특별한 팩
 피카피카! 피카츄 미션에서 획득할 수 있는\n매우 특별한 팩
+브이브이! 이브이 미션에서 획득할 수 있는\n특별한 팩
 A시리즈의 제1탄 프로모 카드 팩
 A시리즈의 제2탄 프로모 카드 팩
 A시리즈 제3탄 프로모 카드 팩
@@ -8030,42 +8369,74 @@ B시리즈 제10탄 프로모 카드 팩
 B시리즈 제11탄 프로모 카드 팩
 B시리즈 제12탄 프로모 카드 팩
 B시리즈 제13탄 프로모 카드 팩
+C시리즈 제1탄 프로모 카드 팩
+스페셜 팩 첫 파트너의\n특별한 확장팩
 [Mst:Rarity v="RARITY_MSID_RR" ] 이상 1장 확정
 포켓몬 ex 1장 확정
 최강의 유전자 뮤츠
 최강의 유전자 뮤츠([Mst:Rarity v="RARITY_MSID_RR" ] 이상 1장 확정)
+[Mst:PackName v="PACK_NAME_A1_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 최강의 유전자 리자몽
 최강의 유전자 리자몽([Mst:Rarity v="RARITY_MSID_RR" ] 이상 1장 확정)
+[Mst:PackName v="PACK_NAME_A1_2" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 최강의 유전자 피카츄
 최강의 유전자 피카츄([Mst:Rarity v="RARITY_MSID_RR" ] 이상 1장 확정)
+[Mst:PackName v="PACK_NAME_A1_3" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 환상이 있는 섬
+[Mst:PackName v="PACK_NAME_A1a_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 시공의 격투 디아루가
+[Mst:PackName v="PACK_NAME_A2_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 시공의 격투 펄기아
+[Mst:PackName v="PACK_NAME_A2_2" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 초극의 빛
+[Mst:PackName v="PACK_NAME_A2a_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 샤이닝 하이
+[Mst:PackName v="PACK_NAME_A2b_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 쌍천의 수호자 솔가레오
+[Mst:PackName v="PACK_NAME_A3_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 쌍천의 수호자 루나아라
+[Mst:PackName v="PACK_NAME_A3_2" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 이차원 크라이시스
+[Mst:PackName v="PACK_NAME_A3a_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 이브이 가든
+[Mst:PackName v="PACK_NAME_A3b_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 하늘과 바다의 인도 칠색조
+[Mst:PackName v="PACK_NAME_A4_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 하늘과 바다의 인도 루기아
+[Mst:PackName v="PACK_NAME_A4_2" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 미지의 수역
+[Mst:PackName v="PACK_NAME_A4a_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 하이클래스팩 ex
 메가라이징 메가번치코
+[Mst:PackName v="PACK_NAME_B1_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 메가라이징 메가갸라도스
+[Mst:PackName v="PACK_NAME_B1_2" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 메가라이징 메가파비코리
+[Mst:PackName v="PACK_NAME_B1_3" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 홍련 블레이즈
+[Mst:PackName v="PACK_NAME_B1a_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 몽환 퍼레이드
+[Mst:PackName v="PACK_NAME_B2_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 팔데아 원더
+[Mst:PackName v="PACK_NAME_B2a_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 샤이닝 메가
+[Mst:PackName v="PACK_NAME_B2b_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 파동 비트
+[Mst:PackName v="PACK_NAME_B3_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 진격 패러독스
+[Mst:PackName v="PACK_NAME_B3a_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 미라클 데이즈
+[Mst:PackName v="PACK_NAME_B3b_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 천공의 지배자
+[Mst:PackName v="PACK_NAME_B4_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]의 야망
+[Mst:PackName v="PACK_NAME_B4a_1" ]([Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정)
 하이클래스팩 MEGA
+듀얼 퓨전 [Mst:CommonCharacterName v="COMMON_CARD_NAME_19" ]
+듀얼 퓨전 [Text:CardName v="PIKACHU" ]
 피카피카! 피카츄 팩
 피카피카! 피카츄 팩 ex
+브이브이! 이브이 팩
 프로모 카드 팩 A시리즈 제1탄
 프로모 카드 팩 A시리즈 제2탄
 프로모 카드 팩 A시리즈 제3탄
@@ -8092,6 +8463,8 @@ B시리즈 제13탄 프로모 카드 팩
 프로모 카드 팩 B시리즈 제11탄
 프로모 카드 팩 B시리즈 제12탄
 프로모 카드 팩 [Mst:SeriesName v="SERIES_NAME_2"]시리즈 [Mst:CommonPackLabel v="COMMON_PACK_LABEL_013"]
+프로모 카드 팩 [Mst:SeriesName v="SERIES_NAME_3"]시리즈 [Mst:CommonPackLabel v="COMMON_PACK_LABEL_001"]
+스페셜 팩 첫 파트너
 [Mst:Rarity v="RARITY_MSID_RR" ] 이상 확정
 기본 확률
 기본 확률 +1장
@@ -8281,7 +8654,10 @@ B시리즈 제13탄 프로모 카드 팩
 전국도감No. 0147 드래곤포켓몬 키：1.8m 몸무게：3.3kg
 전국도감No. 0148 드래곤포켓몬 키：4.0m 몸무게：16.5kg
 전국도감No. 0149 드래곤포켓몬 키：2.2m 몸무게：210.0kg
+전국도감No. 0149 드래곤포켓몬 키：2.2m 몸무게：290.0kg
 전국도감No. 0150 유전자포켓몬 키：2.0m 몸무게：122.0kg
+전국도감No. 0150 유전자포켓몬 키：2.3m 몸무게：127.0kg
+전국도감No. 0150 유전자포켓몬 키：1.5m 몸무게：33.0kg
 전국도감No. 0151 신종포켓몬 키：0.4m 몸무게：4.0kg
 전국도감No. 0152 잎사귀포켓몬 키：0.9m 몸무게：6.4kg
 전국도감No. 0153 잎사귀포켓몬 키：1.2m 몸무게：15.8kg
@@ -8365,6 +8741,7 @@ B시리즈 제13탄 프로모 카드 팩
 전국도감No. 0225 배달포켓몬 키：0.9m 몸무게：16.0kg
 전국도감No. 0226 연포켓몬 키：2.1m 몸무게：220.0kg
 전국도감No. 0227 갑옷새포켓몬 키：1.7m 몸무게：50.5kg
+전국도감No. 0227 갑옷새포켓몬 키：1.7m 몸무게：40.4kg
 전국도감No. 0228 다크포켓몬 키：0.6m 몸무게：10.8kg
 전국도감No. 0229 다크포켓몬 키：1.4m 몸무게：35.0kg
 전국도감No. 0229 다크포켓몬 키：1.9m 몸무게：49.5kg
@@ -8386,6 +8763,7 @@ B시리즈 제13탄 프로모 카드 팩
 전국도감No. 0246 바위표면포켓몬 키：0.6m 몸무게：72.0kg
 전국도감No. 0247 탄환포켓몬 키：1.2m 몸무게：152.0kg
 전국도감No. 0248 갑옷포켓몬 키：2.0m 몸무게：202.0kg
+전국도감No. 0248 갑옷포켓몬 키：2.5m 몸무게：255.0kg
 전국도감No. 0249 잠수포켓몬 키：5.2m 몸무게：216.0kg
 전국도감No. 0250 무지개색포켓몬 키：3.8m 몸무게：199.0kg
 전국도감No. 0251 시간이동포켓몬 키：0.6m 몸무게：5.0kg
@@ -8538,6 +8916,7 @@ B시리즈 제13탄 프로모 카드 팩
 전국도감No. 0384 천공포켓몬 키：7.0m 몸무게：206.5kg
 전국도감No. 0384 천공포켓몬 키：10.8m 몸무게：392.0kg
 전국도감No. 0385 희망사항포켓몬 키：0.3m 몸무게：1.1kg
+전국도감No. 0386 DNA포켓몬 키：1.7m 몸무게：60.8kg
 전국도감No. 0387 어린잎포켓몬 키：0.4m 몸무게：10.2kg
 전국도감No. 0388 나무숲포켓몬 키：1.1m 몸무게：97.0kg
 전국도감No. 0389 대륙포켓몬 키：2.2m 몸무게：310.0kg
@@ -8645,7 +9024,9 @@ B시리즈 제13탄 프로모 카드 팩
 전국도감No. 0480 지식포켓몬 키：0.3m 몸무게：0.3kg
 전국도감No. 0481 감정포켓몬 키：0.3m 몸무게：0.3kg
 전국도감No. 0482 의지포켓몬 키：0.3m 몸무게：0.3kg
+전국도감No. 0483 시간포켓몬 키：5.4m 몸무게：683.0kg
 전국도감No. 0483 시간포켓몬 키：7.0m 몸무게：850.0kg
+전국도감No. 0484 공간포켓몬 키：4.2m 몸무게：336.0kg
 전국도감No. 0484 공간포켓몬 키：6.3m 몸무게：660.0kg
 전국도감No. 0485 화구포켓몬 키：1.7m 몸무게：430.0kg
 전국도감No. 0486 거대포켓몬 키：3.7m 몸무게：420.0kg
@@ -8716,6 +9097,7 @@ B시리즈 제13탄 프로모 카드 팩
 전국도감No. 0549 꽃장식포켓몬 키：1.1m 몸무게：16.3kg
 전국도감No. 0549 스핀포켓몬 키：1.2m 몸무게：19.2kg
 전국도감No. 0550 흉포포켓몬 키：1.0m 몸무게：18.0kg
+전국도감No. 0550 흉포포켓몬 키：1.0m 몸무게：18.0kg
 전국도감No. 0550 온후포켓몬 키：1.0m 몸무게：18.0kg
 전국도감No. 0551 사막악어포켓몬 키：0.7m 몸무게：15.2kg
 전국도감No. 0552 사막악어포켓몬 키：1.0m 몸무게：33.4kg
@@ -8752,6 +9134,8 @@ B시리즈 제13탄 프로모 카드 팩
 전국도감No. 0582 신설포켓몬 키：0.4m 몸무게：5.7kg
 전국도감No. 0583 빙설포켓몬 키：1.1m 몸무게：41.0kg
 전국도감No. 0584 블리자드포켓몬 키：1.3m 몸무게：57.5kg
+전국도감No. 0585 계절포켓몬 키：0.6m 몸무게：19.5kg
+전국도감No. 0586 계절포켓몬 키：1.9m 몸무게：92.5kg
 전국도감No. 0587 하늘다람쥐포켓몬 키：0.4m 몸무게：5.0kg
 전국도감No. 0588 덥석물기포켓몬 키：0.5m 몸무게：5.9kg
 전국도감No. 0589 기병포켓몬 키：1.0m 몸무게：33.0kg
@@ -8824,6 +9208,7 @@ B시리즈 제13탄 프로모 카드 팩
 전국도감No. 0655 여우포켓몬 키：1.5m 몸무게：39.0kg
 전국도감No. 0656 거품개구리포켓몬 키：0.3m 몸무게：7.0kg
 전국도감No. 0657 거품개구리포켓몬 키：0.6m 몸무게：10.9kg
+전국도감No. 0658 시노비포켓몬 키：1.5m 몸무게：40.0kg
 전국도감No. 0658 시노비포켓몬 키：1.5m 몸무게：40.0kg
 전국도감No. 0659 땅구멍파기포켓몬 키：0.4m 몸무게：5.0kg
 전국도감No. 0660 땅구멍파기포켓몬 키：1.0m 몸무게：42.4kg
@@ -8902,6 +9287,7 @@ B시리즈 제13탄 프로모 카드 팩
 전국도감No. 0719 보석포켓몬 키：0.7m 몸무게：8.8kg
 전국도감No. 0719 보석포켓몬 키：1.1m 몸무게：27.8kg
 전국도감No. 0720 장난포켓몬 키：0.5m 몸무게：9.0kg
+전국도감No. 0721 스팀포켓몬 키：1.7m 몸무게：195.0kg
 전국도감No. 0722 풀깃포켓몬 키：0.3m 몸무게：1.5kg
 전국도감No. 0723 칼날깃포켓몬 키：0.7m 몸무게：16.0kg
 전국도감No. 0724 화살깃포켓몬 키：1.6m 몸무게：36.6kg
@@ -8975,6 +9361,8 @@ B시리즈 제13탄 프로모 카드 팩
 전국도감No. 0788 토속신포켓몬 키：1.3m 몸무게：21.2kg
 전국도감No. 0789 성운포켓몬 키：0.2m 몸무게：0.1kg
 전국도감No. 0790 원시성포켓몬 키：0.1m 몸무게：999.9kg
+전국도감No. 0791 일륜포켓몬 키：3.4m 몸무게：230.0kg
+전국도감No. 0792 월륜포켓몬 키：4.0m 몸무게：120.0kg
 전국도감No. 0793 기생포켓몬 키：1.2m 몸무게：55.5kg
 전국도감No. 0794 팽창포켓몬 키：2.4m 몸무게：333.6kg
 전국도감No. 0795 염미포켓몬 키：1.8m 몸무게：25.0kg
@@ -9008,6 +9396,8 @@ B시리즈 제13탄 프로모 카드 팩
 전국도감No. 0821 아기새포켓몬 키：0.2m 몸무게：1.8kg
 전국도감No. 0822 까마귀포켓몬 키：0.8m 몸무게：16.0kg
 전국도감No. 0823 까마귀포켓몬 키：2.2m 몸무게：75.0kg
+전국도감No. 0827 여우포켓몬 키：0.6m 몸무게：8.9kg
+전국도감No. 0828 여우포켓몬 키：1.2m 몸무게：19.9kg
 전국도감No. 0829 꽃장식포켓몬 키：0.4m 몸무게：2.2kg
 전국도감No. 0830 솜장식포켓몬 키：0.5m 몸무게：2.5kg
 전국도감No. 0831 양포켓몬 키：0.6m 몸무게：6.0kg
@@ -9100,6 +9490,7 @@ B시리즈 제13탄 프로모 카드 팩
 전국도감No. 0933 암염포켓몬 키：0.6m 몸무게：105.0kg
 전국도감No. 0934 암염포켓몬 키：2.3m 몸무게：240.0kg
 전국도감No. 0935 불의아이포켓몬 키：0.6m 몸무게：10.5kg
+전국도감No. 0936 불의전사포켓몬 키：1.5m 몸무게：85.0kg
 전국도감No. 0937 불의검사포켓몬 키：1.6m 몸무게：62.0kg
 전국도감No. 0938 전기올챙이포켓몬 키：0.3m 몸무게：0.4kg
 전국도감No. 0939 전기개구리포켓몬 키：1.2m 몸무게：113.0kg
@@ -9207,6 +9598,9 @@ B시리즈 제13탄 프로모 카드 팩
 언젠가 쓰일 티켓 당첨 보상 : 3등
 나눠주기로 받은 카드가 도착했습니다
 나눠주기에서 「고마워!」를 받았습니다
+[Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정 확장팩 교환 티켓입니다
+최신 익스팬션의 엘리트 덱입니다
+모든 [Text:CardName v="EIEVUI" ]와 그 진화형이 들어있는 특별한 팩입니다
 프로필 화면에서 설정할 수 있는 아이콘입니다
 가디안(아이콘)
 이브이(아이콘)
@@ -9309,6 +9703,16 @@ B시리즈 제13탄 프로모 카드 팩
 [Text:CardName v="ROCKETDANNOBOSS" ](아이콘)
 [Text:CardName v="HUURO" ](아이콘)
 [Mst:PackName v="PACK_NAME_B4b_1"] [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](아이콘)
+[Text:CardName v="SOUBLADES" ](아이콘)
+[Text:CardName v="ABURIBBON" ](아이콘)
+[Text:CardName v="PARMOT" ](아이콘)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_21"](아이콘)
+[Text:CardName v="CHILI" ](아이콘)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"](아이콘)
+[Text:CardName v="YATOUMORI" ](아이콘)
+[Text:CardName v="DUGTRIO" ](아이콘)
+[Text:CardName v="MIMIROL" ](아이콘)
+[Text:CardName v="FOODIN" ](아이콘)
 [Text:CardName v="PIKACHU" ] Ver.12(아이콘)
 [Text:CardName v="PIKACHU" ] Ver.13(아이콘)
 [Text:CardName v="PIKACHU" ] Ver.14(아이콘)
@@ -9378,6 +9782,7 @@ B시리즈 제13탄 프로모 카드 팩
 메가진화 ex를 모으고 있습니다!
 PROMO-A
 PROMO-B
+PROMO-C
 [Ctrl:Bold]마비[/Ctrl:Bold]
 이브이(보드)
 이브이
@@ -9639,8 +10044,24 @@ PROMO-B
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
 반짝반짝 해안(보드)
 반짝반짝 해안
+[Text:CardName v="PIKACHU" ]와 동료들(보드)
+[Text:CardName v="PIKACHU" ]와 동료들
+여행의 기억(보드)
+여행의 기억
+컨트리 골목길(보드)
+컨트리 골목길
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"](보드)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20" ]
+[Text:CardName v="CHILI" ](보드)
+[Text:CardName v="CHILI" ]
+스페셜 세트03(보드)
+스페셜 세트03
 기쁨의 거리 풍경
 기쁨의 거리 풍경(보드)
+3장 세트 보드 C1 윈터 홀리데이(세로 보드)
+3장 세트 보드 C1 윈터 홀리데이(세로)
+3장 세트 보드 C1 윈터 홀리데이(가로 보드)
+3장 세트 보드 C1 윈터 홀리데이(가로)
 컬렉션 보드 기능에서 사용할\n카드를 꾸미는 배경지입니다.
 이브이(포켓몬 동전)
 이브이
@@ -9746,6 +10167,12 @@ PROMO-B
 [Text:CardName v="HOOPA" ](포켓몬 동전)
 [Text:CardName v="HUURO" ](포켓몬 동전)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](포켓몬 동전)
+[Text:CardName v="PIKACHU" ] Ver.4(포켓몬 동전)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_19"](포켓몬 동전)
+스페셜 세트03(포켓몬 동전)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"](포켓몬 동전)
+[Text:CardName v="CHILI" ](포켓몬 동전)
+[Text:CardName v="GANGAR" ](포켓몬 동전)
 배틀 시에 사용할 수 있는 동전입니다.\n덱 기능에서 설정할 수 있습니다.
 이브이(카드 실드)
 이브이
@@ -9844,6 +10271,16 @@ PROMO-B
 [Text:CardName v="HOOPA" ](카드 실드)
 [Text:CardName v="HUURO" ](카드 실드)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](카드 실드)
+[Text:CardName v="PIKACHU" ]와 동료들(카드 실드)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_19"](카드 실드)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"](카드 실드)
+[Text:CardName v="CHILI" ](카드 실드)
+스페셜 세트03(카드 실드)
+[Text:CardName v="GANGAR" ](카드 실드)
+시즌 C1 마스터볼 랭크(카드 실드)
+시즌 C1 마스터볼 랭크(TOP 10000)(카드 실드)
+시즌 C1 마스터볼 랭크(TOP 5000)(카드 실드)
+시즌 C1 마스터볼 랭크(TOP 1000)(카드 실드)
 카드에 붙일 수 있는 주변 상품입니다\n덱 기능에서 설정할 수 있습니다
 컬렉션 파일 기능에서 사용하는\n파일의 표지입니다
 이브이(파일)
@@ -9994,6 +10431,12 @@ PROMO-B
 [Text:CardName v="HUURO" ]&[Text:CardName v="SWANNA" ](파일)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](파일)
 하이클래스팩 MEGA(파일)
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] [Mst:CommonCharacterName v="COMMON_CARD_NAME_19"](파일)
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] [Text:CardName v="PIKACHU" ](파일)
+[Text:CardName v="PIKACHU" ]와 동료들(파일)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"](파일)
+[Text:CardName v="CHILI" ]&[Mst:CommonCharacterName v="COMMON_CARD_NAME_22"](파일)
+스페셜 세트03(파일)
 이브이(플레이매트)
 이브이
 나옹(플레이매트)
@@ -10092,6 +10535,12 @@ PROMO-B
 [Text:CardName v="HOOPA" ](플레이매트)
 [Text:CardName v="HUURO" ]&[Text:CardName v="SWANNA" ](플레이매트)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"](플레이매트)
+[Text:CardName v="PIKACHU" ]와 동료들(플레이매트)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_19"](플레이매트)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"](플레이매트)
+[Text:CardName v="CHILI" ]&[Mst:CommonCharacterName v="COMMON_CARD_NAME_22"](플레이매트)
+스페셜 세트03(플레이매트)
+[Text:CardName v="GANGAR" ](플레이매트)
 배틀 시에 필드에 펼치는 주변 상품입니다\n덱 기능에서 설정할 수 있습니다
 자신의 필드에 기본 포켓몬을 [Num:Int id="0" max_length="2" ]마리 낸다
 자신의 필드에 포켓몬 ex를 [Num:Int id="0" max_length="2" ]마리 낸다
@@ -10131,6 +10580,7 @@ B3b
 B4
 B4a
 B4b SP
+C1
 [Num:Int id="0" max_length="3" ]포인트 이상을 획득한다
 [Num:Int id="0" max_length="5" ]데미지 이상을 준다
 [Num:Int id="0" max_length="3" ]번 이상 승리한다
@@ -10138,6 +10588,9 @@ A
 A시리즈
 B
 B시리즈
+C
+C시리즈
+스페셜
 겟 챌린지 이벤트
 플레이 아이템
 주변 상품
@@ -10171,6 +10624,7 @@ ex 스타트 덱
 파동 비트
 샤이닝 메가
 레어한 플레이 아이템
+2주년 기념 [Mst:Rarity v="RARITY_MSID_SSASR" ] 1장 확정 확장팩
 나옹(포켓몬 동전)
 나옹(카드 실드)
 나옹(플레이매트)
@@ -10601,6 +11055,8 @@ ex 스타트 덱
 [Mst:CardCharacterName v="CARD_NAME_1163"](058/P-B)
 [Mst:CardCharacterName v="CARD_NAME_811"](059/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1204"](060/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1149"](061/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1191"](062/P-B)
 [Mst:CardCharacterName v="CARD_NAME_993"](026/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1001"](027/P-B)
 [Mst:CardCharacterName v="CARD_NAME_130"](028/P-B)
@@ -10680,11 +11136,77 @@ ex 스타트 덱
 [Mst:CardCharacterName v="CARD_NAME_1342"](090/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1343"](091/P-B)
 [Mst:CardCharacterName v="CARD_NAME_152"](092/P-B)
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101390_MEGAGEKKOUGA"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101400_CHILI_DOOH"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101410_PremiumSet03"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101620_MEGAGEKKOUGA"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101630_CHILI_DOOH"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101640_PremiumSet03"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100920_MEGAGEKKOUGA"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100930_CHILI_DOOH"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100940_PremiumSet03"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100950_MEGAGEKKOUGA"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100960_CHILI_DOOH"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100970_PremiumSet03"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101120_PremiumSet03"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101130_MEGAGEKKOUGA"]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101140_CHILI_DOOH"]
+[Mst:CardCharacterName v="CARD_NAME_94"](001/P-C)
+[Mst:CardCharacterName v="CARD_NAME_1422"](002/P-C)
+[Mst:CardCharacterName v="CARD_NAME_1399"](003/P-C)
+[Mst:CardCharacterName v="CARD_NAME_814"](004/P-C)
+[Mst:CardCharacterName v="CARD_NAME_815"](005/P-C)
+[Mst:CardCharacterName v="CARD_NAME_547"](006/P-C)
+[Mst:CardCharacterName v="CARD_NAME_548"](007/P-C)
+[Mst:CardCharacterName v="CARD_NAME_1400"](008/P-C)
+[Mst:CardCharacterName v="CARD_NAME_1423"](009/P-C)
 [Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101050_TEAM_ROCKET" ]
 [Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100860_TEAM_ROCKET"]
 [Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100860_TEAM_ROCKET"]
 [Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101510_TEAM_ROCKET"]
 [Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101310_TEAM_ROCKET"]
+[Mst:PackName v="PACK_NAME_A1_1_02"]
+[Mst:PackName v="PACK_NAME_A1_2_02"]
+[Mst:PackName v="PACK_NAME_A1_3_02"]
+[Mst:PackName v="PACK_NAME_A1a_1_01"]
+[Mst:PackName v="PACK_NAME_A2_1_01"]
+[Mst:PackName v="PACK_NAME_A2_2_01"]
+[Mst:PackName v="PACK_NAME_A2a_1_01"]
+[Mst:PackName v="PACK_NAME_A2b_1_01"]
+[Mst:PackName v="PACK_NAME_A3_1_01"]
+[Mst:PackName v="PACK_NAME_A3_2_01"]
+[Mst:PackName v="PACK_NAME_A3a_1_01"]
+[Mst:PackName v="PACK_NAME_A3b_1_01"]
+[Mst:PackName v="PACK_NAME_A4_1_01"]
+[Mst:PackName v="PACK_NAME_A4_2_01"]
+[Mst:PackName v="PACK_NAME_A4a_1_01"]
+[Mst:PackName v="PACK_NAME_B1_1_01"]
+[Mst:PackName v="PACK_NAME_B1_2_01"]
+[Mst:PackName v="PACK_NAME_B1_3_01"]
+[Mst:PackName v="PACK_NAME_B1a_1_01"]
+[Mst:PackName v="PACK_NAME_B2_1_01"]
+[Mst:PackName v="PACK_NAME_B2a_1_01"]
+[Mst:PackName v="PACK_NAME_B2b_1_01"]
+[Mst:PackName v="PACK_NAME_B3_1_01"]
+[Mst:PackName v="PACK_NAME_B3a_1_01"]
+[Mst:PackName v="PACK_NAME_B4_1_01"]
+[Mst:PackName v="PACK_NAME_B3b_1_01"]
+[Mst:PackName v="PACK_NAME_B4a_1_01"]
+[Mst:CardCharacterName v="CARD_NAME_456"](069/P-B)
+[Mst:CardCharacterName v="CARD_NAME_534"](070/P-B)
+[Mst:CardCharacterName v="CARD_NAME_39"](077/P-B)
+[Mst:CardCharacterName v="CARD_NAME_639"](078/P-B)
+[Mst:CardCharacterName v="CARD_NAME_452"](085/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1312"](086/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1345"](093/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1183"](094/P-B)
+[Mst:CardCharacterName v="CARD_NAME_33"](101/P-B)
+[Mst:CardCharacterName v="CARD_NAME_583"](102/P-B)
+[Mst:CardCharacterName v="CARD_NAME_21" ](060/P-A)
+[Mst:CardCharacterName v="CARD_NAME_87" ](061/P-A)
+[Mst:CardCharacterName v="CARD_NAME_198" ](062/P-A)
+[Mst:CardCharacterName v="CARD_NAME_830" ](063/P-A)
+[Mst:CardCharacterName v="CARD_NAME_831" ](064/P-A)
 포켓골드
 포켓골드 + 주변 상품
 포켓골드 + 증정분
@@ -10746,6 +11268,12 @@ ex 스타트 덱
 포켓골드(유료)×115 + 주변 상품 「[Text:CardName v="KAMITSURE" ]」
 포켓골드(유료)×115 + 주변 상품 「[Text:CardName v="HOOPA" ]」
 포켓골드(유료)×115 + 주변 상품 「[Text:CardName v="THUNDER" ]&[Text:CardName v="FREEZER" ]&[Text:CardName v="FIRE" ]」
+2주년 기념 특별 포켓골드(유료)×100
+2주년 기념 특별 포켓골드(유료)×200
+포켓골드(유료)×115 + 주변 상품 「[Text:CardName v="PIKACHU" ]와 동료들」
+초특별 포켓골드(유료)×5 + 증정분 포켓골드(무료) 55개!
+신규 확장팩 스타트 대시! 특별 포켓골드(유료)×35
+포켓골드(유료)×35
 포켓골드
 티켓
 스페셜
@@ -10758,6 +11286,9 @@ ex 스타트 덱
 복각 겟 챌린지
 프로모 카드
 로켓단
+[Mst:Rarity v="RARITY_MSID_SSASR" ] 확정 확장팩
+스페셜 팩을 개봉하는 플레이 아이템입니다
+스페셜 팩 모래시계
 [Mst:Rarity v="RARITY_MSID_RR" ] 이상 1장 확정
 [Mst:PackName v="PACK_NAME_PROMO_A_1"]
 [Mst:PackName v="PACK_NAME_PROMO_A_2"]
@@ -10765,6 +11296,7 @@ ex 스타트 덱
 [Mst:PackName v="PACK_NAME_PROMO_A_4"]
 [Mst:PackName v="PACK_NAME_PROMO_A_5"]
 [Mst:PackName v="PACK_NAME_PROMO_A_6"]
+[Mst:PackName v="PACK_NAME_PROMO_A_7" ]
 [Mst:PackName v="PACK_NAME_PROMO_A_8"]
 [Mst:PackName v="PACK_NAME_PROMO_A_9"]
 [Mst:PackName v="PACK_NAME_PROMO_A_10"]
@@ -10938,6 +11470,18 @@ ex 스타트 덱
 서로의 플레이어는 자신의 차례에 1번 사용할 수 있다. 동전을 [Num:Int id="0" max_length="2" ]번 던져서 모두 앞면이 나오면 자신의 패가 [Num:Int id="1" max_length="2" ]장이 되도록 덱을 뽑는다.
 뒷면이 나올 때까지 동전을 던져서 앞면이 나온 수만큼 자신의 덱에서 이름에 「로켓단」이 적힌 포켓몬을 랜덤으로 패로 가져온다.
 상대의 배틀 포켓몬을 [Ctrl:Bold][Text:SpecialCondition id="0" ][/Ctrl:Bold][Gr:Patchim v="eu_" ]로 만든다. 동전을 1번 던져서 뒷면이 나오면 자신의 배틀 포켓몬도 [Ctrl:Bold][Text:SpecialCondition id="0" ][/Ctrl:Bold][Gr:Patchim v="eu_" ]로 만든다.
+자신의 포켓몬을 1마리 선택한다. 뒷면이 나올 때까지 동전을 던져서 앞면이 나온 수 × [Num:Int id="0" max_length="3" ]데미지만큼 그 포켓몬의 HP를 회복.
+에너지가 붙어 있는 자신의 포켓몬 [Ctrl:NoBreak]1마리[/Ctrl:NoBreak]의 HP를 [Num:Int id="0" max_length="3" ]회복. 그 뒤, 그 포켓몬에서 에너지를 랜덤으로 [Ctrl:NoBreak][Num:Int id="1" max_length="2" ]개[/Ctrl:NoBreak] 트래쉬한다.
+자신의 배틀 포켓몬의 특수 상태를 모두 회복.
+이 카드를 붙이고 있는 [Ctrl:Bold]기본[/Ctrl:Bold] 포켓몬이 상대의 포켓몬으로부터 받는 기술의 데미지를 -[Num:Int id="0" max_length="3" ]한다.
+이 카드를 붙이고 있는 「[Text:CardName id="0" ]」[Gr:Patchim v="i_ga" ] 사용하는 기술이 상대의 배틀 포켓몬에게 주는 데미지를 +[Num:Int id="1" max_length="3" ]한다.
+이 차례에 자신의 「[Text:CardName id="0" ]」「[Text:CardName id="1" ]」「[Text:CardName id="2" ]」[Gr:Patchim v="i_ga" ] 사용하는 기술이 상대의 포켓몬 전원에게 주는 데미지를 [Ctrl:NoBreak]+[Num:Int id="3" max_length="3" ][/Ctrl:NoBreak]한다.
+이 카드는 자신의 필드에 「[Text:CardName id="0" ]」 또는 「[Text:CardName id="1" ]」 또는 「[Text:CardName id="2" ]」 또는 「[Text:CardName id="3" ]」[Gr:Patchim v="i_ga" ] 있을 때만 사용할 수 있다.\n\n상대의 벤치 포켓몬을 1마리 선택해서 배틀 포켓몬과 교체한다.
+자신의 덱을 위에서부터 [Ctrl:NoBreak][Num:Int id="0" max_length="2" ]장[/Ctrl:NoBreak] 보고 그 중에서 카드를 [Ctrl:NoBreak][Num:Int id="1" max_length="2" ]장[/Ctrl:NoBreak] 선택해서 패로 가져온다. 남은 카드는 덱으로 되돌린다.
+자신의 에너지존에서 [Img:Element id="0" ]에너지를 [Num:Int id="1" max_length="2" ]개 내보내 「[Text:CardName id="2" ]」 또는 「[Text:CardName id="3" ]」 1마리에게 붙인다.
+이 카드는 자신의 필드의 포켓몬의 타입이 [Num:Int id="0" max_length="1" ]종류 이상일 때만 사용할 수 있다.\n\n자신의 배틀 포켓몬을 벤치 포켓몬과 교체한다.
+서로의 플레이어는 자신의 차례에 1번 사용할 수 있다. 동전을 1번 던져서 앞면이 나오면 자신의 덱을 [Num:Int id="0" max_length="2" ]장 뽑는다.
+자신의 벤치의 [Img:Element id="0" ]포켓몬 1마리로부터 [Img:Element id="1" ]에너지를 모두 배틀필드의 「[Text:CardName id="2" ]」에게 바꿔 붙인다.
 포켓몬의 도구
 아이템(화석)
 아이템
@@ -11077,6 +11621,8 @@ ex 스타트 덱
 [Mst:SoloRandomBattleGroupName]
 [Mst:SoloRandomBattleName]
 [Mst:SpecialConditionType]
+[Mst:SpecialPackTicketDescription]
+[Mst:SpecialPackTicketName]
 [Mst:StageType]
 [Mst:StageTypePokemon]
 [Mst:SubPackName]
@@ -11098,6 +11644,10 @@ ex 스타트 덱
 챌린지 파워를 모두 회복했을 때 알립니다
 챌린지 파워 모두 회복
 챌린지 파워를 모두 회복했습니다
+매주 1번 특별한 팩을 개봉할 수 있습니다
+스페셜 팩 파워를 회복했을 때 알립니다
+스페셜 팩 파워 회복
+스페셜 팩 파워가 회복되었습니다
 1장째 카드 확률
 1~3장째 카드 확률
 1~4장째 카드 확률
@@ -11107,6 +11657,7 @@ ex 스타트 덱
 4장째 카드 확률
 5장째 카드 확률
 6장째 카드 확률
+1장째 들어가 있는 카드
 이 앱에 대하여
 신규 생성
 파일 생성 상한
@@ -11254,6 +11805,7 @@ OK
 후공
 활약한\n카드
 없음
+덱 보기
 활약한\n카드
 터치해서 진행
 대전 상대의 카드
@@ -11275,7 +11827,8 @@ pt는 변동하지 않았습니다
 첫 클리어 보상
 확률 보상
 플레이어 경험치
-프로모 카드 팩[Num:Int id="0" max_length="0" visible="0" ]은\n선물함으로 보내졌습니다
+승리 횟수 보상
+획득한 팩[Num:Int id="0" max_length="0" visible="0" ]은\n선물함으로 보내졌습니다
 배틀 로그
 VS [Str:PlayerName id="0" ]
 무승부
@@ -11489,6 +12042,7 @@ OK
 포켓몬 체크 화상
 동전 던지기 혼란
 처음 1번만 반드시 앞면
+[Num:Int id="0" max_length="2" ]번 많이 던진다
 상대가 플레이 중
 앞면!
 뒷면!
@@ -11745,6 +12299,12 @@ HP가 회복되지 않는다
 바꿔 붙이고 싶은 에너지가 붙어 있는\n포켓몬을 선택해 주십시오
 바꿔 붙인 에너지를 모두 확정하겠습니까?
 상대의 포켓몬이 사용하는\n기술의 데미지와 효과를 받지 않는다
+「[Text:CardName id="0" ]」「[Text:CardName id="1" ]」\n「[Text:CardName id="2" ]」의 상대의 포켓몬 전원에게\n기술로 주는 데미지를 +[Num:Int id="3" max_length="3" ]
+「[Text:AttackName id="0" ]」[Gr:Patchim v="eu_" ]로\n주는 데미지를 -[Num:Int id="1" max_length="3" ]
+「[Text:AttackName id="0" ]」[Gr:Patchim v="eu_" ]로\n던지는 동전의 수를 [Num:Int id="1" max_length="2" ]번 많게 한다
+[Num:Int id="0" visible="0" max_length="1" ]에너지를 붙일 [Num:Int id="1" visible="0" max_length="1" ]포켓몬을 선택해 주십시오
+기절할 때 동전을 1번 던져서\n앞면이 나오면 상대는 포인트를 가져갈 수 없다
+「[Text:CardName id="0" ]」[Gr:Patchim v="i_ga" ]\n사용하는 기술이 상대의 배틀 포켓몬에게\n주는 데미지를 +[Num:Int id="1" max_length="3" ]
 기본 포켓몬을 배틀필드로 내보내 주십시오
 기본 포켓몬 이외에는 선택할 수 없습니다
 포켓몬을 필드로 내보내 주십시오
@@ -11953,6 +12513,11 @@ HP가 회복되지 않는다
 자신의 트레이너스로 동전을 던졌을 때 처음부터 동전을 다시 던질 수 있다
 「[Text:AttackName id="0" ]」[Gr:Patchim v="eu_" ]로 상대의 포켓몬이 선택되는 횟수를 +[Num:Int id="1" max_length="2" ]
 상대의 다음 차례 마지막에 선택한 [Num:Int id="0" visible="0" max_length="1" ]장소에 있는 포켓몬을 기절시킨다
+「[Text:CardName id="0" ]」「[Text:CardName id="1" ]」「[Text:CardName id="2" ]」의 상대의 포켓몬 전원에게 기술로 주는 데미지를 +[Num:Int id="3" max_length="3" ]
+「[Text:AttackName id="0" ]」[Gr:Patchim v="eu_" ]로 주는 데미지를 -[Num:Int id="1" max_length="3" ]
+「[Text:AttackName id="0" ]」[Gr:Patchim v="eu_" ]로 던지는 동전의 수를 [Num:Int id="1" max_length="2" ]번 많게 한다
+기절할 때 동전을 1번 던져서 앞면이 나오면 상대는 포인트를 가져갈 수 없다
+「[Text:CardName id="0" ]」[Gr:Patchim v="i_ga" ] 사용하는 기술이 상대의 배틀 포켓몬에게 주는 데미지를 +[Num:Int id="1" max_length="3" ]
 상대의 트래쉬
 자신의 트래쉬
 카드는 없습니다
@@ -11991,6 +12556,7 @@ TIPS
 [Str:NickName]
 [Str:PlayerCode]
 [Str:PlayerName]
+-/[Num:Int id="0" max_length="3" zero_padding="3"]
 [Num:Int id="0" max_length="3"]<size=24><space=0.15em><voffset=3.3><scale=1.8>-</scale></size></voffset>
 [Num:Int id="0" max_length="3"]<size=24><space=0.08em><voffset=5>+</size></voffset>
 [Num:Int id="0" max_length="4"]+
@@ -12055,6 +12621,7 @@ HP
 시리즈
 트레이너스
 이펙트 획득
+???
 JPN
 SPA
 ENG
@@ -12078,6 +12645,7 @@ ITA
 이펙트를 보유하고 있지 않습니다
 현재 이 카드를 가지고 있지 않아\n프리뷰할 수 없습니다
 갖고 싶은 카드로 등록할 수 있는 건 [Num:Int id="0" max_length="3" ]장까지입니다
+이 카드는 「갖고 싶다!」로 등록할 수 없습니다
 카드를 길게 눌러보자!
 갖고 싶다!
 앱을 종료합니다\n괜찮겠습니까?
@@ -12258,7 +12826,7 @@ OK
 취소
 OK
 덱 삭제
-즐겨찾기로 등록한 덱입니다\n덱을 삭제하겠습니까?\n덱을 삭제해도 카드는 없어지지 않습니다
+아래와 같이 설정된 덱입니다\n삭제해도 괜찮겠습니까?\n덱을 삭제해도 카드는 없어지지 않습니다\n\n・즐겨찾기로 설정된 덱입니다\n삭제하면 즐겨찾기 설정도 해제됩니다
 취소
 OK
 덱 삭제
@@ -12287,6 +12855,21 @@ OK
 OK
 아래 조건을 만족하지 않아\n2차원 코드로 공유할 수 없습니다\n・덱 장수가 정확히 20장이다\n・기본 포켓몬을 1장 이상 넣는다\n・가지고 있는 카드만으로 편성한다\n・에너지를 설정했다
 OK
+프로필의 마이 덱에 설정된 덱입니다\n공개 설정을 변경하면 마이 덱 설정도\n해제됩니다만 괜찮겠습니까?
+취소
+OK
+공개 설정 변경
+마이 덱으로 설정되어 있는 덱입니다\n덱을 사용할 수 없는 상태에서 저장하면\n마이 덱에서 해제됩니다
+취소
+OK
+아래와 같이 설정된 덱입니다\n삭제해도 괜찮겠습니까?\n덱을 삭제해도 카드는 없어지지 않습니다\n\n・프로필의 마이 덱으로 설정된 덱입니다\n삭제하면 마이 덱 설정도 해제됩니다
+취소
+OK
+덱 삭제
+아래와 같이 설정된 덱입니다\n삭제해도 괜찮겠습니까?\n덱을 삭제해도 카드는 없어지지 않습니다\n\n・프로필의 마이 덱으로 설정된 덱입니다\n삭제하면 마이 덱 설정도 해제됩니다\n\n・즐겨찾기로 설정된 덱입니다\n삭제하면 즐겨찾기 설정도 해제됩니다\n
+취소
+OK
+덱 삭제
 덱을 삭제하기
 일람으로 표시하기
 덱을 복사하기
@@ -12305,6 +12888,9 @@ OK
 복사하기
 취소
 편성하기
+비공개
+공개
+친구만
 저장하기
 변경
 덱 내의 기술을 발동하기 위한\n필요 에너지가 설정되어 있지 않습니다
@@ -12320,11 +12906,17 @@ OK
 테마 덱 레시피에서 만들기
 덱을 복사해서 만들기
 코드 읽기
+누군가의 덱으로 이동하기
 복사할 덱을 선택
 편집
 편집 중
 저장하기
 마이 덱
+비공개
+공개
+친구에게만 공개
+덱을 공개하면 다른 플레이어가\n당신의 덱을 볼 수 있게 됩니다
+공개 설정
 타입을 선택해 주십시오\n2가지 타입까지 선택할 수 있습니다
 취소
 자동 편성
@@ -12399,6 +12991,7 @@ OK
 덱을 복사해서 생성했습니다
 덱을 삭제했습니다
 대상 덱이 없습니다
+사용할 수 없는 카드입니다
 2차원 코드
 취소
 복사하기
@@ -12407,6 +13000,7 @@ OK
 OK
 놀이 방법
 프로모 카드 팩
+이벤트 상세
 미션
 교환소
 이벤트에 대해서
@@ -12420,6 +13014,9 @@ PROMO
 엠블럼 이벤트에는 정해진 횟수만큼 승리하거나\n연승을 노리는 등\n다양한 종류가 있습니다\n개최 중인 이벤트의 종류에 대해서는\n각 이벤트의 알림을 확인해 주십시오\n
 드롭 이벤트에서는 다양한 덱과 배틀하여\n승리하면 프로모 카드 팩을\n획득할 수 있습니다\n프로모 카드 팩에서는 특별한 카드를\n입수할 수 있습니다\n※이미지의 프로모 카드 팩, 카드는 예시입니다
 이벤트 배틀을 플레이하기 위해서는\n「이벤트 파워」가 필요합니다\n이벤트 파워는 시간 경과로 회복하거나\n「이벤트 모래시계」라는 플레이 아이템으로\n회복할 수 있습니다
+한정 배틀은 정해진 특수 룰에 적합한\n덱으로 다른 플레이어와 배틀하고\n승리를 거듭하여 다양한 보상 획득을\n노리는 이벤트입니다
+특수 룰은 이벤트에 따라 다릅니다\n덱을 편성하기 전에\n이벤트 화면이나 덱 편성 화면에서\n특수 룰을 확인합시다
+한정 배틀에는 정해진 횟수만큼 승리하거나\n연승을 노리는 등 다양한 종류가 있습니다\n개최 중인 이벤트 종류에 대해서는\n각 이벤트의 알림을 확인해 주십시오
 [Mst:CardCharacterName ]에서 진화
 포켓몬 [Img:ex ]가 [Ctrl:Bold]기절[/Ctrl:Bold]한 경우 상대는 [Ctrl:Bold]2[/Ctrl:Bold]포인트 가져간다.
 ex 룰
@@ -12551,7 +13148,7 @@ OK
 플레이매트나 카드 실드, 포켓몬 동전을\n변경할 수도 있습니다\n\n이러한 것들은 숍이나 미션 등을 통해\n획득할 수 있습니다
 다시 한번 설명을 보고 싶은 경우\n이 마크를 터치해 주십시오\n\n기타 궁금한 내용은\n게임 힌트를 확인해 봅시다
 렌탈 덱은 20장의 카드를 빌려\n배틀에서 사용할 수 있는 덱입니다
-렌탈 덱은 주로 덱 미션을\n달성하면 획득할 수 있습니다.\n\n획득한 렌탈 덱은 덱 메뉴에서\n확인할 수 있습니다
+렌탈 덱은 자동으로 부여되며\n사용할 수 있는 렌탈 덱은\n정기적으로 갱신됩니다
 렌탈 덱은 사용할 수 있는 횟수가 정해져 있습니다
 「테마 덱 레시피」를 사용하면\n간편하게 덱을 만들 수 있습니다
 덱을 만들 때 테마 덱 레시피를 선택하면\n가지고 있는 카드로 덱을 생성합니다\n\n테마 덱을 완성하기 위해서는\n해당 레시피와 같은 카드가 필요합니다
@@ -12594,6 +13191,14 @@ OK
 친구에 즐겨찾기 기능이 추가되었습니다\n즐겨찾기로 등록된 친구는\n친구 리스트 상단에 표시되며\n트레이드할 때 찾기 쉬워집니다
 즐겨 찾는 친구로 등록하기 위해서는\n우측 상단의 즐겨찾기 버튼을 터치합시다
 즐겨찾기로 등록하고 싶은\n친구를 선택하면 완료됩니다\n※등록한 사실을 상대는 알 수 없습니다
+스페셜 팩은 「스페셜 팩 파워」를\n사용하여 매주 1번 개봉할 수 있습니다
+스페셜 팩 파워가 모여\n스페셜 팩을 개봉할 수 있을 때\n알림을 보냅니다\n\n매주 1번 팩 개봉을 잊지 맙시다
+「스페셜 팩 모래시계」를 사용하면\n스페셜 팩 파워가 없어도\n스페셜 팩을 개봉할 수 있습니다
+「누군가의 덱」이란\n전 세계의 플레이어가 만들고 있는 덱이나\n친구의 덱을 볼 수 있는 기능입니다
+「최근 인기」에서는\n전 세계 플레이어가 자주 만드는 덱이\n표시됩니다
+「친구」에서는\n당신의 친구가 공개하고 있는 마이 덱이\n표시됩니다
+관심 있는 덱을 터치하면\n덱 내용이 일람으로 표시됩니다
+당신이 가지고 있는 카드로 덱을 편성할 수 있습니다\n「이 덱을 편성하기」를 터치하여\n편성 화면에서 저장해 주십시오
 이곳에는 당신이 보유한 카드가\n표시됩니다
 「컬렉션 파일」이\n오픈되었습니다
 좋아하는 파일을 선택해서\n자신의 카드를 늘여놓을 수 있습니다
@@ -12639,7 +13244,7 @@ OK
 그럼 바로 「혼자서」로 배틀을\n플레이해 봅시다
 스텝 업 배틀은 난이도가 있습니다\n우선은 초급부터 플레이합시다
 배틀을 클리어하면 플레이어 경험치나\n플레이 아이템 등 보상을 획득할 수 있습니다
-우선은 「이상해풀 덱」과\n배틀해 봅시다
+우선은 이 배틀을\n해 봅시다
 배틀을 자동으로 플레이해 주는\n기능도 있습니다
 이쪽 버튼에서 전환할 수 있으니\n가볍게 플레이하고 싶을 때 사용해 봅시다
 Auto는 배틀 중에도\n전환할 수 있습니다
@@ -12657,6 +13262,7 @@ Auto는 배틀 중에도\n전환할 수 있습니다
 여기서는 교환할 수 있는 이펙트나 플레이 아이템이\n모두 표시되어 있습니다
 친구에게 카드를\n보낼 수 있습니다
 이걸로 나눠주기 설명은 끝입니다\n바로 카드를 보내봅시다
+여기서는 전 세계 플레이어와 친구의\n덱을 볼 수 있습니다
 카드에 붙인 이펙트는\n「자신의 카드」에서 볼 수도 있습니다\n배틀에서도 화려하게 연출됩니다
 임의로 이펙트를 획득할 수 있습니다\n획득 조건은 카드에 따라 다릅니다
 이펙트는 같은 카드를 일정 장수 모으면\n자동으로 획득할 수 있습니다\n※일부 대상이 아닌 카드도 있습니다
@@ -12747,8 +13353,10 @@ CHT
 다른 확장팩 보기
 상대의 도감 미등록 카드
 나눠주기 가능한 카드 일람
+상대의 갖고 싶은 카드
 도감 미등록 카드가 없습니다(컴플리트 상태)
 상대의 도감 미등록 카드를 보유하고 있지 않습니다
+대상 카드가 없습니다
 특정 레어도의 카드를 나눠주기 할 수 있습니다
 나눠주기 할 카드를 선택해 주십시오
 친구에게 카드를 나눠주었습니다
@@ -12760,9 +13368,29 @@ CHT
 아이템은 자신의 차례에 몇 장이라도 사용할 수 있다.
 배틀
 소셜
+덱 제한
+※일부 카드는 제한에 상관없이 사용할 수 있습니다
+익스팬션을 선택할 수 있습니다
+익스팬션 제한
+※제한되는 건 포켓몬 카드뿐입니다\n※일부 카드는 제한에 상관없이 사용할 수 있습니다
+레어도를 선택할 수 있습니다
+레어도 제한
+모든 덱
+클리어
+익스팬션 제한 있음
+레어도 제한 있음
+배틀 룰 설정
+카드 제한
+덱 제한
+마이 덱만
+익스팬션 제한 없음
+레어도 제한 없음
+OK
+PROMO
+렌탈 덱만
 덱
 마이 덱
-테마 덱 레시피
+덱 레시피
 렌탈 덱
 덱 메뉴
 놀이 방법
@@ -12778,6 +13406,21 @@ CHT
 랜덤 매치
 이벤트 매치
 누군가와
+「암호」나 「2차원 코드」를 공유하여\n가까운 사람 또는 친구와 카드 배틀을 즐길 수 있습니다
+프라이빗 매치
+설정 중
+초대하기
+자동으로 발행됩니다
+암호
+※배틀 룰을 설정하는 경우 자동으로 발행됩니다\n※2차원 코드는 「시작하기」를 누른 다음에 발행됩니다
+프라이빗 매치 설정
+암호 설정하기
+배틀 룰 설정
+시작하기
+참가하기
+참가하기
+암호
+2차원 코드
 암호로
 2차원 코드로
 프라이빗 매치 메뉴
@@ -12787,12 +13430,14 @@ CHT
 COMING SOON
 새로 등장
 혼자서
+누군가의 덱
 이벤트 [Num:Int id="0" max_length="0" visible="0" ]개최 중
 종료 임박!
 이벤트 [Num:Int id="0" max_length="0" visible="0" ]개최 중
 종료 임박!
 이벤트 개최 중
 종료 임박!
+프로모 카드 팩 보상 추가 중
 혼자서
 누군가와
 날짜가 변경되었습니다\n타이틀로 돌아갑니다
@@ -12803,6 +13448,10 @@ OK
 OK
 추후 공개 예정입니다
 OK
+렌탈 덱만 설정하면\n카드 제한 설정은 한번 초기화됩니다.
+취소
+OK
+덱 제한 확인
 즐겨찾기로 등록한 컬렉션 보드를\n언제나 홈에서 볼 수 있습니다\n\n설정은 컬렉션 보드에서 진행할 수 있습니다
 즐겨찾기로 등록한 컬렉션 파일을\n언제나 홈에서 볼 수 있습니다\n\n설정은 컬렉션 파일에서 진행할 수 있습니다
 컬렉션 보드로
@@ -12827,6 +13476,7 @@ OK
 오픈까지 앞으로
 오픈 조건
 소셜로
+배틀 룰을 설정하고 있어\n암호는 자동으로 발행됩니다
 겟 챌린지
 레어 챌린지\n출현 중
 럭키 챌린지\n출현 중
@@ -12852,6 +13502,14 @@ GET!
 엠블럼
 터치해서 진행
 GET!
+획득한 테마 덱 레시피를 사용해\n지금 바로 덱을 등록하겠습니까?\n\n※마이 덱의 신규 생성을 통해\n테마 덱 레시피에서\n덱을 등록할 수 있습니다
+취소
+등록하기
+덱 등록
+등록한 덱 수가 상한에 도달하여\n덱을 등록할 수 없었습니다\n\n마이 덱의 신규 생성을 통해\n테마 덱 레시피에서\n덱을 등록할 수 있습니다
+OK
+테마 덱 등록 중 게임이 종료되었습니다\n\n마이 덱의 신규 생성을 통해\n테마 덱 레시피에서\n덱을 등록할 수 있습니다
+OK
 트레이너스 완성!
 레어도 완성!
 도감 등록!\n[Num:Int id="0" max_length="3" ]장
@@ -12922,11 +13580,13 @@ OK
 다음으로
 축하합니다\n이 익스팬션의\n[Text:Char v="DIAMOND" ]카드를 모두 모았습니다
 축하합니다\n이 익스팬션의\n카드를 모두 모았습니다
+축하합니다\n이 익스팬션의\n[Mst:Rarity v="RARITY_MSID_SA" ] 카드를 모두 모았습니다
 OK
 [Num:Int id="0" max_length="4" ]종류 달성!
 Complete!
 도감 등록 수
 달성!
+앞으로 [Num:Int id="0" max_length="3" ]장!
 추가하기
 컬렉션 파일에 추가
 컬렉션 보드에 추가
@@ -12934,6 +13594,7 @@ Complete!
 선택 중
 포켓몬 ex
 메가진화 ex
+듀얼타입
 특성 있음
 특성 없음
 모두
@@ -13103,6 +13764,7 @@ CLEAR!
 기간 한정
 오늘의 일일 미션을 달성했습니다
 모든 미션을 달성했습니다
+이번 주 이벤트 미션을\n달성했습니다!\n다음 미션 오픈을 기다려 주십시오
 받기
 달성하기
 수령 완료
@@ -13110,6 +13772,7 @@ CLEAR!
 모든 보상을 획득했습니다
 일괄 수령
 테마\n컬렉션
+오픈까지 : 
 OK
 축하합니다! 미션 1개를 달성했습니다\n계속해서 다른 미션에도 도전해 봅시다
 아래 중 하나를 만족하는 카드를 모아주십시오
@@ -13127,6 +13790,8 @@ OK
 포인트가 MAX입니다
 팩 개봉 포인트 교환
 교환 가능
+금요일
+토요일
 팩 개봉 포인트가 부족합니다
 교환하기
 보유
@@ -13139,8 +13804,10 @@ OK
 ・해당 팩의 출현 조건을 만족한 경우 「기본 확률」은 추첨되지 않습니다\n・대신 해당 확장팩이 추첨됩니다\n・추첨 확률은 「기본 확률」의 제공 확률과 동일합니다\n・출현 조건에 대해서는 주의 사항을 확인해 주십시오
 ・해당 팩의 출현 조건을 만족한 경우 「기본 확률」 및 「기본 확률 +1장」은 추첨되지 않습니다\n・대신 해당 확장팩이 추첨됩니다\n・추첨 확률은 「기본 확률」과 「기본 확률 +1장」의 합계입니다\n・출현 조건에 대해서는 주의 사항을 확인해 주십시오
 제공 확률
+스페셜 팩 라인업
 제공 확률
 주의 사항
+???
 [Mst:PackTableName id="0" ]
 길게 누르기
 팩 개봉 포인트가 상한에 도달했으므로\n팩 개봉 포인트 교환에서\n카드를 교환해 주십시오
@@ -13151,6 +13818,8 @@ NEW
 [Num:Int id="0" max_length="2" ]팩째
 개봉하고 싶은 확장팩을 터치!
 이 팩은 기간이 종료되어\n획득할 수 없습니다
+이 스페셜 팩은 기간이 종료되어\n획득할 수 없습니다
+OK
 OK
 무료 포켓골드부터 우선적으로 소비합니다
 플레이 아이템을 사용하여\n팩 개봉 대기 시간을 단축하겠습니까?
@@ -13158,6 +13827,7 @@ OK
 확장팩 개봉 가능하기까지
 10팩 개봉에 필요한 시간
 확장팩을 개봉할 수 있습니다
+스페셜 팩을 개봉할 수 있습니다
 확장팩을 개봉할 수 있을 때까지
 10팩 개봉에 필요한 시간
 포켓골드 1개로 팩 개봉까지 남은 대기 시간을\n2시간 단축할 수 있습니다
@@ -13168,6 +13838,17 @@ OK
 [Num:Int id="0" max_length="2" ]팩째
 개봉 결과
 익스팬션 선택
+스페셜 팩 파워가 있어\n매주 1번 스페셜 팩을 개봉할 수 있습니다\n개봉하겠습니까?
+취소
+OK
+스페셜 팩 모래시계가 부족합니다\n스페셜 팩 모래시계는\n미션 보상 등으로 획득할 수 있습니다
+필요한 스페셜 팩 모래시계
+OK
+플레이 아이템 부족
+개봉 가능
+다음 개봉
+스페셜 팩 모래시계를 [Num:Int id="0" max_length="3" ]개 소비하여\n[Num:Int id="1" max_length="2" ]팩을 개봉하겠습니까?
+제공 내용
 확장팩을 개봉할 수 있습니다
 획득할 수 있는 기간이 아닙니다
 플레이 아이템을 사용해서 바로 팩을 개봉합니다
@@ -13205,6 +13886,8 @@ OK
 포켓몬의 도구는 자신의 포켓몬에게 붙여서 사용한다.\n포켓몬 1마리에게 1장만 붙일 수 있고 붙인 채로 둔다.
 보유 상한에 도달하여\n받을 수 없었습니다
 수령 기한이 지나\n받을 수 없었습니다
+덱 기능이 오픈되지 않아\n받을 수 없었습니다\n\n덱 기능은\n배틀 놀이 방법 06을 클리어하면\n오픈됩니다
+OK
 OK
 OK
 수령
@@ -13242,6 +13925,9 @@ OK
 엠블럼 획득 순
 정렬
 엠블럼
+그 닉네임은 사용할 수 없습니다
+OK
+에러
 이 플레이어 이름은 사용할 수 없습니다
 OK
 에러
@@ -13256,6 +13942,10 @@ OK
 모든 갖고 싶은 카드를 해제
 이미 변경하여\n30일간 변경할 수 없습니다\n(변경일 [Date:DateTime format="d" id="0" max_length="10" ])
 OK
+OK
+취소
+8글자까지 입력할 수 있습니다
+닉네임 설정
 취소
 취소
 8글자까지 입력할 수 있습니다
@@ -13281,8 +13971,15 @@ OK
 태그 설정 없음
 마이 베스트 설정
 마이 베스트 설정
+OK
+설정할 수 없습니다
+친구에게만 공개
+비공개
+마이 덱 설정
+덱
 상대에게 이 코드를 읽게 합시다\n소셜 > 친구에서 읽기용 카메라를 기동할 수 있습니다
 마이 베스트
+마이 덱
 친구 ID
 비공개
 비공개
@@ -13303,8 +14000,11 @@ OK
 친구 신청을 거절했습니다
 설정할 수 있는 엠블럼은 3개까지입니다
 설정할 수 있는 카드는 3장까지입니다
+비공개 덱은\n설정할 수 없습니다
+조건을 만족하지 않아\n설정할 수 없습니다
 현재 사용하지 않는 어카운트입니다
 설정되지 않았습니다
+닉네임 설정하기
 태그 설정 없음
 갖고 싶은 카드 일람으로
 설정되지 않았습니다
@@ -13337,6 +14037,7 @@ OFF
 ON
 배틀!
 배틀!
+프로모 카드 팩 보상 추가 중
 사용할 수 없습니다
 추천
 회복하기
@@ -13353,6 +14054,14 @@ ON
 [Num:Int id="0" max_length="1" ]포인트 획득하면 승리
 자신의 차례 제한 시간 [Num:Int id="0" max_length="2" ]초
 자신의 차례 제한 시간 없음
+마이 덱만
+렌탈 덱만
+사용 가능한 익스팬션
+사용 가능한 레어도
+아래 카드는 덱 이외의 제한에 상관없이 사용 가능
+배틀 룰
+룰[Num:Int id="0" max_length="3" ]
+특수 룰[Num:Int id="0" max_length="3" ]
 룰1
 룰2
 룰3
@@ -13387,6 +14096,7 @@ Next
 마이 덱으로
 추천
 렌탈 덱으로
+프로모 카드 팩 보상 추가 중
 고급, 엑스퍼트에서는\n처음 클리어할 때까지\n대전 상대의 덱 상세를 확인할 수 없습니다
 새로운 배틀이 오픈되었습니다!\n플레이해 봅시다!
 OK
@@ -13394,6 +14104,7 @@ OK
 오픈 조건
 새로운 배틀이 오픈!
 추천 렌탈 덱이 선택되었습니다
+새로운 배틀이 오픈되었습니다
 종료 임박!
 초급
 중급
@@ -13413,6 +14124,9 @@ Complete
 진검승부
 캐주얼
 그 암호는 사용할 수 없습니다
+OK
+에러
+참가할 수 없었습니다
 OK
 에러
 배틀!
@@ -13436,6 +14150,10 @@ OK
 Lv.[Num:Int id="0" max_length="3" ]
 초보자
 카드 플레이어
+배틀을 종료합니다\n괜찮겠습니까?
+취소
+배틀을 그만두기
+OK
 「누군가와」에서는 다른 플레이어와\n대전합니다\n우선 「혼자서」에서 배틀을 플레이하고\n도전하는 것을 추천합니다
 대전 상대를 찾지 못했습니다\n\n앱이 최신 버전인지\n확인하여 주십시오
 정상적으로 종료하지 않은 배틀을 종료합니다\n이 배틀은 패배가 됩니다
@@ -13445,8 +14163,13 @@ OK
 암호 설정
 암호를 입력하기
 자동으로 만들기
+배틀 이력이 없습니다
+배틀 이력
 암호를 발행했습니다
 암호를 복사했습니다
+상세
+배틀 룰
+제한 있음
 초보자
 진검승부
 캐주얼
@@ -13460,7 +14183,9 @@ OK
 여기에서는 「배틀 스탠스」를 설정하고\n전 세계 플레이어와 배틀을 즐길 수 있습니다
 랜덤 매치
 코드 읽기
+배틀 이력
 코드 표시
+2차원 코드를 표시
 참가한 적이 있는 플레이어는\n지난번 참가한 시즌의 pt에 따라\n시즌 시작 시의 pt가 결정됩니다
 OK
 시즌 시작
@@ -13508,6 +14233,7 @@ pt 변동 없음
 강등
 승급
 연승 pt
+VS
 승리
 배틀 이력
 터치해서 진행
@@ -13721,6 +14447,18 @@ OK
 친구 신청 상한입니다
 상대의 친구 승인 대기가 가득 찼습니다
 이미 친구입니다
+덱 복사
+이 덱을\n편성하기
+표시된 덱을\n마이 덱으로 저장했습니다
+마이 덱이 가득 차 있어\n복사할 수 없었습니다
+표시할 수 있는 덱이 없습니다\n시간을 두고 다시 시도해 주십시오
+마이 덱을 설정한 친구가 없습니다
+앞으로 [Num:Int id="0" max_length="2" ]장
+작성 가능
+최근 인기 덱 랭킹
+최근 인기
+친구
+누군가의 덱
 Notation under the Act on Specified Commercial Transactions
 스타디움은 자신의 차례에 1장 배틀필드 옆에 내놓을 수\n있다. 다른 스타디움이 필드에 나오면 이 카드를 트래쉬한다.\n같은 이름의 스타디움은 필드에 내보낼 수 없다.
 앱을 재기동하고 타이틀로 돌아갑니다
@@ -13775,6 +14513,7 @@ Español
 팩 파워 회복
 챌린지 파워 회복
 중요한 알림
+스페셜 팩 파워 회복
 초기 설정으로 되돌린다
 30fps
 60fps
@@ -13794,7 +14533,10 @@ SE
 사운드
 시스템
 트레이드
+갖고 싶은 카드
 촉각을 위한 진동
+갖고 싶은 카드 자동 해제
+갖고 싶은 카드를 획득한 경우\n해당 카드를 등록된 갖고 싶은 카드에서 자동으로 해제합니다
 서포트 ID를 복사했습니다
 지닌물건
 숍
@@ -14105,6 +14847,7 @@ Apple 계정과 연동을 완료했습니다\n\n앱을 삭제해도\n이 어카�
 개인정보 처리방침이 갱신되었습니다\n\n내용을 확인하고 다시 한번 동의해 주시기 바랍니다
 팩 개봉 중 게임이 종료되었으나\n카드는 정상적으로 획득했습니다\n\n획득한 카드는 「자신의 카드」 화면에서\n「획득 순」으로 정렬하면 확인할 수 있습니다
 게임이 종료되었으나\n플레이 아이템은 정상적으로 획득했습니다\n\n획득한 플레이 아이템은 메뉴 > 지닌물건에서\n확인할 수 있습니다
+게임을 플레이하면서 데이터를 다운로드하겠습니까?\n\nWi-Fi 환경에서의 다운로드를 권장합니다\n(나중에도 다운로드할 수 있습니다)\n\n다운로드 사이즈\n[Num:Int id="0" max_length="5" ]MB
 취소
 OK
 OK
@@ -14135,6 +14878,8 @@ OK
 OK
 OK
 OK
+OK
+나중에
 OK
 구입 처리 완료
 구입 처리 완료
@@ -14230,12 +14975,17 @@ Ver.[Str:Free id="0" ]
 익스팬션
 금색 프레임
 트레이드 정보
+도감 미등록 카드가 없습니다\n(컴플리트 상태)
+상대의 도감 미등록 카드를\n보유하고 있지 않습니다
 대상 카드가 없습니다
+다른 확장팩 보기
 상대로부터 같은 레어도의 카드를 받을 수 있습니다
 받는 카드와 같은 레어도의 카드를 보낼 수 있습니다
 OK
 상대에게 보낼 카드를 선택해 주십시오
 상대로부터 온 메시지
+트레이드할 수 있는 카드 일람
+상대의 도감 미등록 카드
 상대의 갖고 싶은 카드
 PROMO
 트레이드 불가
@@ -14375,6 +15125,7 @@ CHT(繁體中文) 카드 희망
 트레이드하기 위해서는 금색 프레임이 필요합니다
 금색 프레임을 해제해 주십시오
 이펙트를 해제해 주십시오
+빛의 모래가 부족합니다
 OK
 ※트레이드가 성립하지 않은 경우\n소비한 만큼의 트레이드 파워는 회복하며\n카드와 플레이 아이템이 돌아옵니다
 카드를 상대에게 제안했습니다\n제안 중에는 자신의 카드에 표시되지 않으며\n사용할 수도 없습니다

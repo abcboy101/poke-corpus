@@ -140,6 +140,10 @@ Einmal während deines Zuges, wenn du dieses Pokémon von deiner Hand spielst, u
 Einmal während deines Zuges, nachdem du Münzen für einen Effekt von 1 deiner Trainerkarten geworfen hast, kannst du alle daraus resultierenden Effekte ignorieren und die Münzen erneut werfen. Du kannst die Fähigkeit [Text:AbilityName id="0" suffix="Short" ] nur einmal pro Zug einsetzen.
 Einmal während deines Zuges, wenn du dieses Pokémon von deiner Hand spielst, um 1 deiner Pokémon zu entwickeln, kannst du [Num:Int id="0" max_length="1" ][C:Nbsp ]zufällige [Gr:Count s="Energie" p="Energien" ] vom Aktiven Pokémon deines Gegners auf dieses Pokémon verschieben.
 Einmal während deines Zuges kannst du dir [Num:Int id="0" max_length="1" ][C:Nbsp ]zufällige [Gr:Count s="Karte" p="Karten" ] aus der Hand deines Gegners anschauen.
+Einmal während deines Zuges kannst du diese Fähigkeit einsetzen. Nimm [Num:Int id="1" max_length="1" ][C:Nbsp ][Text:CardNameByCardID id="0" ][C:Nbh ][Gr:Count s="Leihkarte" p="Leihkarten" ref="1" ] auf deine Hand.
+Solange dieses Pokémon im Spiel ist, wirf [Num:Int id="1" max_length="2" ][C:Nbsp ][Gr:Count s="Münze" p="Münzen" ref="1" ] mehr, wenn deine Pokémon die Attacke [Text:AttackName id="0" ] einsetzen.
+Einmal während deines Zuges, wenn du diese Karte von deiner Hand spielst, um 1 deiner Pokémon zu entwickeln, kannst du diese Fähigkeit einsetzen. Lege [Num:Int id="1" max_length="1" ][C:Nbsp ][Gr:Count s="zufälliges" p="zufällige" ref="1" ] [Text:CardName id="0" ] aus deinem Deck auf deine Bank.
+Solange dieses Pokémon im Spiel ist, werden allen deinen [Img:Element id="0" ][C:Nbh ]Pokémon −[C:Nbsp ][Num:Int id="1" max_length="3" ][C:Nbsp ]Schadenspunkte durch Attacken von Pokémon deines Gegners zugefügt. Der Effekt stapelt sich nicht.
 Puderheilung
 Aromafalle
 Gegenangriff
@@ -307,6 +311,15 @@ Luxusmünze
 Rasantes Tarnen
 Diebesnager
 Spionage
+Sonnenheilung
+Honigmaul
+Flammende Aura
+Sprungtrainer
+Spontane Verdopplung
+Stromerzeugung
+Reflex-Vergeltung
+Metallgedränge
+Immunität
 Morgenschwingen-
 Alola-
 Regenform
@@ -661,6 +674,14 @@ Diese Attacke fügt für jede Karte auf deiner Hand [Num:Int id="0" max_length="
 Wenn das Aktive Pokémon deines Gegners [Text:SpecialCondition v0="{} ist" v1="{}" ], heile [Num:Int id="1" max_length="3" ][C:Nbsp ]Schadenspunkte bei diesem Pokémon.
 Wenn diesem Pokémon bereits Schaden zugefügt wurde, fügt diese Attacke −[C:Nbsp ][Num:Int id="0" max_length="3" ][C:Nbsp ]Schadenspunkte zu.
 Diese Attacke fügt für jeden Punkt, den dein Gegner während seines letzten Zugs erhalten hat, [Num:Int id="0" max_length="3" ][C:Nbsp ]Schadenspunkte mehr zu.
+Zeige deinem Gegner alle [Text:CardName id="0" ]-Karten auf deiner Hand und diese Attacke fügt für jede auf diese Weise gezeigte Karte [Num:Int id="1" max_length="3" ][C:Nbsp ]Schadenspunkte zu.
+Schau dir [Num:Int id="0" max_length="1" ][C:Nbsp ]zufällige [Gr:Count s="Karte" p="Karten" ] aus der Hand deines Gegners an und mische sie in sein Deck.
+Lege [Num:Int id="1" max_length="2" ][C:Nbsp ][Img:Element id="0" ][C:Nbh ][Gr:Count s="Energie" p="Energien" ref="1" ] von diesem Pokémon ab und diese Attacke fügt [Num:Int id="2" max_length="1" ][C:Nbsp ]Pokémon deines Gegners [Num:Int id="3" max_length="3" ][C:Nbsp ]Schadenspunkte zu.
+Wenn dein Gegner eine Stadionkarte im Spiel hat, lege sie auf seinen Ablagestapel.
+Das Aktive Pokémon deines Gegners [Text:SpecialCondition v0="ist jetzt {}" v1="{} jetzt" ]. Dein Gegner wirft [Num:Int id="1" max_length="2" ][C:Nbsp ]Münzen für diesen Speziellen Zustand. Zeigt mindestens 1[C:Nbsp ]Zahl, [Text:SpecialCondition v0="ist jenes Pokémon immer noch {}" v1="{} jenes Pokémon weiter" ].
+Während deines nächsten Zuges fügt die Attacke [Text:AttackName id="0" ] von diesem Pokémon −[C:Nbsp ][Num:Int id="1" max_length="3" ][C:Nbsp ]Schadenspunkte zu.
+Verschiebe alle Energien von diesem Pokémon beliebig auf die Pokémon auf deiner Bank.
+Diese Attacke fügt für jeden von dir erhaltenen Punkt [Num:Int id="0" max_length="3" ][C:Nbsp ]Schadenspunkte mehr zu.
 Rankenhieb
 Rasierblatt
 Megasauger
@@ -1772,6 +1793,46 @@ Versteckschlag
 Kugeljubel
 Platzierter Platscher
 Grausamer Strudel
+Langhalshammer
+Honigrausch
+Laubstreu-Tackle
+Ampelleuchte
+Dynamitdampf
+Hasensprung
+Wirbelkick
+Freche Flammen
+Doppelsturm
+Raumschlag
+Steinhaupt
+Spritzer der Finsternis
+Pikahieb
+Donnerschweif
+Finale
+Beruhigendes Wiegenlied
+Doppelter Stoß
+Geheimes Geleit
+Psychoverbrennung
+Gehirnwelle
+Psyschub
+Staubfänger
+Mondscheiben-Flügel
+Vielender
+Ellbogenstoß
+Pfötchenhieb
+Übler Gestank
+Dämmergift
+Überfall im Mondschein
+Schmetternde Randale
+Schmarotzer
+Schredderkrallen
+Zeitenlärm
+Sonnenkreis-Klauen
+Drachenmeteor
+Sauberer Treffer
+Angetriebener Ball
+Hyperlasso
+Psycho-Blaster
+Perplex
 schläft
 Lege [Num:Int id="0" max_length="2" ][C:Nbsp ][Gr:Count s="Energie" p="Energien" ] an deine Pokémon an.
 Pikachu-Silhouetten (Kampf)
@@ -1905,6 +1966,8 @@ Emblem-Event (Herrscher der Lüfte)
 Emblem-Event (Wunder des Alltags)
 Emblem-Event (Deluxepack: Mega)
 Emblem-Event ([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne)
+Emblem-Event (Duale Fusion)
+Limitierte Kämpfe: Duale Fusion (C1)
 Schillok-Deck (Unschlagbare Gene)
 Bisaknosp-Deck (Unschlagbare Gene)
 Glutexo-Deck (Unschlagbare Gene)
@@ -2450,6 +2513,16 @@ Letzte Ehre-Deck (Wundervolles Paldea)
 [Text:CardName v="MEGATYLTALIS_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
 [Text:CardName v="MEGAGANGAR_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
 [Text:CardName v="KORAIDON_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="KAMEIL" ]-Deck
+[Text:CardName v="KAMEX" ]-Deck
+[Text:CardName v="PARMOT" ]-Deck
+[Text:CardName v="HOGATOR_EX" ]-Deck
+[Text:CardName v="PIKACHU_EX" ]-Deck
+[Text:CardName v="MEGAMEWTWOX_EX" ]-Deck
+[Text:CardName v="ALOLANASSY_EX" ]-Deck
+[Text:CardName v="MEGAGEKKOUGA_EX" ]-Deck
+[Text:CardName v="MEGABANGIRAS_EX" ]-Deck
+[Text:CardName v="GIRATINA_EX" ]-Deck
 Bisaflor-ex-Deck (Unschlagbare Gene)
 Glurak-ex-Deck (Unschlagbare Gene)
 Turtok-ex-Deck (Unschlagbare Gene)
@@ -2642,6 +2715,12 @@ Elite-Deck ([Text:CardName v="MEGABURSYAMO_EX" ])
 [Text:CardName v="MEGAHASSAM_EX" ] & [Text:CardName v="SURFUGO_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
 Elite-Deck ([Text:CardName v="MEGALIZARDONY_EX" lang="de_DE" ])
 Elite-Deck ([Text:CardName v="MEGALUCARIO_EX" lang="de_DE" ])
+[Text:CardName v="PIKACHU_EX" ]-Deck
+[Text:CardName v="MEGAMEWTWOX_EX" ]-Deck
+[Text:CardName v="MEGAGEKKOUGA_EX" ]-Deck
+[Text:CardName v="MEGABANGIRAS_EX" ]-Deck
+Honigmaul-Deck
+Hasensprung-Deck
 Ein Leihdeck, das du in Kämpfen einsetzen kannst.\nDieses Deck kannst du verwenden, auch wenn du\nnicht alle Karten daraus besitzt.
 Bisaflor-ex-Deck (Unschlagbare[C:Nbsp ]Gene)
 Glurak-ex-Deck (Unschlagbare[C:Nbsp ]Gene)
@@ -2844,6 +2923,7 @@ Elite-Deck ([Text:CardName v="MEGABURSYAMO_EX" ])
 [Text:CardName v="MEGAHASSAM_EX" ] & [Text:CardName v="SURFUGO_EX" ]-Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
 Elite-Deck ([Text:CardName v="MEGALIZARDONY_EX" lang="de_DE" ])
 Elite-Deck ([Text:CardName v="MEGALUCARIO_EX" lang="de_DE" ])
+Elite-Deck ([Text:CardName v="MEGARAYQUAZA_EX" ])
 Themendeck-Vorlage, die unter „Decks“ zu finden\nist. Um dieses Deck erstellen und mit ihm spielen zu\nkönnen, musst du alle enthaltenen Karten sammeln.
 Du erhältst eine Themendeck-Vorlage (einsehbar\nunter „Decks“) samt der 20 zugehörigen Karten.\nDu kannst nur eins der neun ex-Startdecks erhalten.
 Gallopa-Deck
@@ -2909,6 +2989,7 @@ Drop-Event ([Text:CardName v="HISUIZORUA" lang="de_DE" ])
 Drop-Event ([Text:CardName v="MEGAHELLGAR_EX" lang="de_DE" ])
 Drop-Event ([Text:CardName v="ROCKETDANNOLAPLACE" ])
 Drop-Event ([Text:CardName v="MEGAGABURIAS_EX" ])
+PROMO-Neuauflagen-Drop-Event 2026
 Zufallskampf (B2)
 Zufallskampf (B2a)
 Zufallskampf (B2b)
@@ -2918,6 +2999,7 @@ Zufallskampf (B3b)
 Zufallskampf (B4)
 Zufallskampf (B4a)
 Zufallskampf (B4b)
+Zufallskampf (C1)
 verbrannt
 Goldrahmen
 Ein Goldrahmen, der in deinen Alben, Galerien\nund im Kampf angezeigt wird.
@@ -4304,6 +4386,40 @@ Forscherin von Team Rocket
 Team Rockets Großer Plan
 Boss von Team Rocket
 Gamer-Paradies
+[Text:AdditionalName v="ADDITIONAL_NAME_Alora" type="region" ]Kokowei-ex
+Sesokitz
+Kronjuwild
+Volcanion
+Krokel-ex
+Crimanzo
+Palkia
+Mega-Quajutsu-ex
+Mega-Mewtu X-ex
+Deoxys
+Lunala
+Mega-Despotar-ex
+Kleptifux
+Gaunux
+Mega-Panzaeron-ex
+Dialga
+Solgaleo
+Mega-Dragoran-ex
+Kosturso-ex
+Honig
+Supertrank
+Top-Schutz
+Hyperheiler
+Evolith
+Kugelblitz
+Lorelei
+Blaus Provokation
+Serenas Wahl
+Cay
+Pokémon-Supermarkt-Händler
+Trainerhoffnung
+Verlassene Raststätte
+Mega-Mewtu Y-ex
+Genom-Konverter Y
 Bei einer Aktion
 Bei der Wunderwahl
 Bei Missionen
@@ -4327,6 +4443,10 @@ Mega-Galagladi
 Terapagos
 Mega-Diancie
 Mega-Mewtu X
+Mega-Quajutsu
+Mega-Dragoran
+Suelord
+Mega-Despotar
 Mega-Glurak
 Anfänger-Rang-1
 Anfänger-Rang-2
@@ -4778,20 +4898,25 @@ Hyperball-Rang-4 (Saison A3a)
 Mega-Entwicklungs-Pokémon-ex (Emblem)
 Ein Superball-Rang-1-Emblem, das bei\nRangmatches der Saison A3a erhalten\nwerden kann.
 Superball-Rang-1 (Saison A3a)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_19"] (Emblem)
 Ein Superball-Rang-2-Emblem, das bei\nRangmatches der Saison A3a erhalten\nwerden kann.
 Superball-Rang-2 (Saison A3a)
+[Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]6 (Emblem)
 Ein Superball-Rang-3-Emblem, das bei\nRangmatches der Saison A3a erhalten\nwerden kann.
 Superball-Rang-3 (Saison A3a)
 Ein Teilnahme-Emblem, das beim Emblem-Event\n(Feuerrote Flammen) erhalten werden kann.
 Teilnahme-Emblem für Emblem-Event (Feuerrote Flammen)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"] (Emblem)
 Ein Superball-Rang-4-Emblem, das bei\nRangmatches der Saison A3a erhalten\nwerden kann.
 Superball-Rang-4 (Saison A3a)
+[Text:CardName v="ABURIBBON" ] (Emblem)
 Ein Bronze-Emblem, das beim Emblem-Event\n(Feuerrote Flammen) erhalten werden kann.
 Bronze-Emblem für Emblem-Event (Feuerrote Flammen)
 Ein Pokéball-Rang-1-Emblem, das bei\nRangmatches der Saison A3a erhalten\nwerden kann.
 Pokéball-Rang-1 (Saison A3a)
 Ein Silber-Emblem, das beim Emblem-Event\n(Feuerrote Flammen) erhalten werden kann.
 Silber-Emblem für Emblem-Event (Feuerrote Flammen)
+[Text:CardName v="HIBANNY" ] (Emblem)
 Ein Pokéball-Rang-2-Emblem, das bei\nRangmatches der Saison A3a erhalten\nwerden kann.
 Pokéball-Rang-2 (Saison A3a)
 Ein Gold-Emblem, das beim Emblem-Event\n(Feuerrote Flammen) erhalten werden kann.
@@ -5026,12 +5151,20 @@ Ein Gold-Emblem, das beim Emblem-Event\n([Mst:PackName v="PACK_NAME_B4b_1"]) erh
 Gold-Emblem für Emblem-Event ([Mst:PackName v="PACK_NAME_B4b_1"])
 Ein Pokéball-Rang-1-Emblem, das bei\nRangmatches der Saison A4b erhalten\nwerden kann.
 Pokéball-Rang-1 (Saison A4b)
+Ein Teilnahme-Emblem, das beim Emblem-Event\n([Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"]) erhalten werden kann.
+Teilnahme-Emblem für Emblem-Event ([Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"])
 Ein Pokéball-Rang-2-Emblem, das bei\nRangmatches der Saison A4b erhalten\nwerden kann.
 Pokéball-Rang-2 (Saison A4b)
+Ein Bronze-Emblem, das beim Emblem-Event\n([Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"]) erhalten werden kann.
+Bronze-Emblem für Emblem-Event ([Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"])
 Ein Pokéball-Rang-3-Emblem, das bei\nRangmatches der Saison A4b erhalten\nwerden kann.
 Pokéball-Rang-3 (Saison A4b)
+Ein Silber-Emblem, das beim Emblem-Event\n([Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"]) erhalten werden kann.
+Silber-Emblem für Emblem-Event ([Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"])
 Ein Pokéball-Rang-4-Emblem, das bei\nRangmatches der Saison A4b erhalten\nwerden kann.
 Pokéball-Rang-4 (Saison A4b)
+Ein Gold-Emblem, das beim Emblem-Event\n([Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"]) erhalten werden kann.
+Gold-Emblem für Emblem-Event ([Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"])
 Ein Anfänger-Rang-1-Emblem, das bei\nRangmatches der Saison A4b erhalten\nwerden kann.
 Anfänger-Rang-1 (Saison A4b)
 Ein Anfänger-Rang-2-Emblem, das bei\nRangmatches der Saison A4b erhalten\nwerden kann.
@@ -5280,6 +5413,26 @@ Meisterball-Rang – [Mst:CommonEventLabel v="COMMON_Master_TOP1000"] (Saison [M
 [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_02"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
 [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_03"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
 [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_04"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"])
+[Mst:MainRankName v="MAIN_RANK_NAME_MASTERBALL"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"])
+Meisterball-Rang – [Mst:CommonEventLabel v="COMMON_Master_TOP10000"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"])
+Meisterball-Rang – [Mst:CommonEventLabel v="COMMON_Master_TOP5000"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"])
+Meisterball-Rang – [Mst:CommonEventLabel v="COMMON_Master_TOP1000"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_01"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_02"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_03"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_04"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Super_01"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Super_02"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Super_03"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Super_04"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_01"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_02"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_03"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_04"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_01"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_02"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_03"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"])
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_04"] (Saison [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"])
 1.\nJub.
 Ein Emblem zur Feier des Spezial-Events 2025.
 Spezial-Event 2025 (Emblem)
@@ -5287,6 +5440,8 @@ Ein Emblem zur Feier des\n1. Jubiläums seit Veröffentlichung
 1. Jubiläumsfeier (Emblem)
 Ein Emblem zur Feier des Spezial-Events 2026.
 Spezial-Event 2026 (Emblem)
+Ein besonderes Emblem, das durch das Abgeben\nvieler Karten erhalten werden kann.
+Abgabemeister (Emblem)
 Typ Farblos
 Typ Finsternis
 Typ Drache
@@ -5345,6 +5500,8 @@ B3b
 B4
 B4a
 B4b
+C1
+SP1
 Unschlagbare Gene
 Mysteriöse Insel
 Kollision von Raum und Zeit
@@ -5367,6 +5524,8 @@ Wunder des Alltags
 Herrscher der Lüfte
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne
 Deluxepack: Mega
+Duale Fusion
+Spezialpack: Erste Partner
 #MeineSammlung
 #LieblingsPokémon
 #Lieblingsillustrationen
@@ -6858,6 +7017,53 @@ Mithilfe seiner mysteriösen Kräfte kontrollierte es\nMenschen und Pokémon und
 Riesige Energiemengen haben seine Zellen stark\nstimuliert. Es scheint, als sei das Drachenblut\nerwacht, das so lange in ihm schlummerte.
 Durch seine gesteigerte Körperkraft ist es in der\nLage, zwei Wochen ohne Pause durchzufliegen.
 Seine Daunen, die sich unfassbar weich anfühlen,\nsind so robust, dass ein paar davon reichen,\num einen Kipplaster in der Luft zu halten.
+Nach der Geburt nutzt es für eine\nWeile die Nährstoffe im Samen auf\nseinem Rücken, um zu wachsen.
+Die Sonne macht es stärker. Die Knospe auf seinem\nRücken wächst unter dem Einfluss von Sonnenlicht.
+Da es Sonnenlicht in Energie umwandelt,\nist es im Sommer stärker.
+Berührt man einen seiner Köpfe, weil man\nihn für ein Ei hält, tun die übrigen sich rasch\nzusammen und gehen zum Angriff über.
+Einer Theorie zufolge fand der Entwickler des\nPokéballs Gefallen an Tarnpignon. Jedoch konnte\ndies bisher nicht bestätigt werden.
+Vorsicht vor den Giftsporen, die Hutsassa\nversprüht! Wo auch immer diese landen,\nwachsen Pilze, die seinen Hüten ähneln.
+Nimmt es die fröhliche Aura von Menschen oder\nPokémon wahr, nähert es sich ihnen und teilt mit\nseinem langen Rüssel schmerzhafte Stiche aus.
+Wenn es die Gefühle niedergeschlagener\nMenschen oder Pokémon wahrnimmt, heitert\nes sie mit selbstgemachten Pollenknödeln auf.
+Die Flamme an seiner Schwanzspitze zeigt\nseine Lebensenergie an. Geht es ihm\nnicht gut, wird die Flamme schwächer.
+Wenn Glutexo seinen brennenden Schwanz\nschwingt, steigt die Temperatur um es herum\nimmer weiter an und setzt seinen Gegnern zu.
+Wenn Glurak richtig wütend wird, flackert\ndie Flamme an seiner Schwanzspitze in\neinem bläulichen Ton.
+Es stößt Wasserdampf aus und versteckt sich\nim dadurch entstehenden dichten Nebel. Es lebt\nin Bergen, die von Menschen gemieden werden.
+Erst wenn sein Körper ausreichend warm\nist, kann es seine wahre Kraft entfesseln.\nDeshalb macht es Aufwärmübungen.
+Dank seines flauschigen Fells kann es leichter\nFeuer-Energie aufbauen und dadurch noch\nheißere Flammen ausstoßen.
+Es hat ein hitziges Gemüt. Bringt es einem Trainer\naber genügend Vertrauen entgegen, legt es eine\nfehlerfreie Kampfweise an den Tag.
+Ein verbranntes Stück Holzkohle ist als Pokémon\nzum Leben erwacht. Es fordert selbst starke\nGegner heraus und hat einen feurigen Kampfgeist.
+Es entwickelte sich durch die Rüstung eines\nheldenhaften Kriegers zu dieser Form. Crimanzo\nbesitzt einen ausgeprägten Sinn für Loyalität.
+Die Flammenschwerter an beiden Armen lodern\nmit dem Groll eines Schwertkämpfers, der fiel,\nehe er sein Ziel erreichen konnte.
+Nach der Geburt schwillt sein Rücken an und\nverhärtet sich zu einem Panzer. Es versprüht\nstarken Schaum aus seinem Maul.
+Sein langer und buschiger Schweif zeugt von Langlebigkeit.\nEs ist besonders bei älteren Menschen beliebt.
+Es macht sich absichtlich schwer, um den\nRückstoß seiner Wasserstrahlen abzufangen.
+Dieses Pokémon verfügt über ein sehr\nhartes Horn. Mit Kopfstößen durchbricht\nes Eismassen in seinem Weg.
+Des Nachts, wenn die Wassertemperatur fällt,\nschwimmt es auf der Suche nach Nahrung umher.\nTagsüber schläft es im seichten Meereswasser.
+In einer bestimmten Gegend von Galar\nwurde Rossana einst als „Königin des Eises“\ngleichermaßen gefürchtet wie verehrt.
+Es trägt Menschen auf seinem Rücken übers Meer.\nWenn es gut gelaunt ist, stimmt es anscheinend\nmanchmal ein entzückendes Lied an.
+Man sagt, es lebe in einem Spalt in\neiner Paralleldimension. Es wird in\nder Mythologie erwähnt.
+Sie schließen sich mit gleichfarbigen Artgenossen\nzu Schwärmen zusammen. Ihre Erzfeinde sind\nSchwärme von rotlinigen Barschuft.
+Es wirkt unbekümmert, doch damit täuscht es nur\nGegner, um sie dann plötzlich mit unbegreiflicher\nGeschwindigkeit zu überwältigen.
+Seine Stärke sind Kampfstrategien, bei denen es\ndie Umgebung nutzt. Es wirft kleine, in Blasen\ngehüllte Steine und trifft so garantiert sein Ziel.
+Ein außerirdischer Virus kam mit einem Meteor auf\ndie Erde. Seine DNA mutierte. So entstand Deoxys.
+Das Revier dieses Pokémon hat einen Radius\nvon 10 km. Sobald es jedoch losrennt, scheint\nes zu vergessen, wo dieses anfängt und aufhört.
+Mit seinem Horn kann es selbst Rohdiamanten\nzertrümmern. Artgenossen stoßen ihre Hörner\naneinander, um sie zu schärfen.
+Durch seine robuste Panzerung hält sein Körper\nauch Vulkanausbrüchen stand. Aus den Löchern in\nden Handflächen feuert es runde Felsbrocken ab.
+Wird Suelord angegriffen, wehrt es sich, indem es\ndicke Stacheln ausfährt. Setzt es diese riskante\nAttacke ein, ist es bereit, aufs Ganze zu gehen.
+Es schärft den klingenartigen Schwanz an Steinen.\nIm Dickicht versteckt nähert es sich ahnungsloser\nBeute und greift diese mit seinen Giftzähnen an.
+Es stibitzt Futter, das andere Pokémon gefunden\nhaben. Dank der samtweichen Ballen an seinen\nPfoten ist sein Gang lautlos.
+Es markiert heimlich die Beute, auf die es ein\nAuge geworfen hat. Dann folgt es dem Geruch\nund stiehlt sie, wenn sich die Gelegenheit bietet.
+Ein Pokémon, das in Legenden zu finden ist. Man sagt,\nals Dialga geboren wurde, begann der Lauf der Zeit.
+Es schützt sich, indem es Dornen verschießt.\nEin Kastadur muss jahrelang trainieren, um\npräzise zielen zu können.
+Es kratzt mit seinen Dornen Kerben in Felswände\nund extrahiert dann mit den Dornenspitzen an\nseinen Schlingen Nährstoffe aus dem Gestein.
+Dieses künstliche Pokémon atmet nicht.\nDaher zählt man darauf, dass es in jeder\nUmgebung eingesetzt werden kann.
+Dieses künstliche Pokémon entwickelte sich\nmithilfe neuester Technologie. Manchmal zeigt\nes Reaktionen, die nicht einprogrammiert sind.
+Um das Pokémon zu verbessern, wurde eine\nzusätzliche Software installiert, die aber offenbar\nfehlerhaft war. Seitdem bewegt es sich seltsam.
+Dieser Nimmersatt isst unentwegt, wenn er\nnicht gerade schläft. Relaxo verschlingt mehr\nals 400 kg Nahrung am Tag.
+Es wird von einer Schale umhüllt, deren\nHärte Menschen vor ein Rätsel stellt.\nEs wächst, indem es in Sternenlicht badet.
+Ihm wurde der Name „Mondbringer“ verliehen.\nSolange es lebt, wandelt es jedes Licht in Energie um.
+Wenn sein ganzer Körper Licht ausstrahlt, nimmt\nes eine sonnenähnliche Gestalt an, und kann so\ndas Dunkel vertreiben und die Welt erhellen.
 Die Mega-Entwicklung macht die Blume\nauf seinem Rücken noch größer. Um sie zu\ntragen, werden Beine und Rumpf robuster.
 Aus der Bindung zu seinem Trainer schöpft es\nseine Kraft. Seine Fluggeschwindigkeit übertrifft\nsogar die eines Düsenjets.
 Die Kanone auf seinem Rücken ist so stark wie\ndie eines Panzers. Mit seinen kräftigen Beinen\nhält es dem Rückstoß der Schüsse stand.
@@ -6879,8 +7085,39 @@ Die Bindung zu seinem Trainer verleiht ihm Kraft.\nIn dieser Form besitzt es Kli
 Ein Metagross, ein Metang und zwei Tanhel\nhaben sich zu dieser Gestalt vereint.
 Die Mega-Entwicklung erhitzt seinen ganzen Körper.\nDer gewaltige feurige Atem, den es seinen Gegnern\nentgegenspeit, äschert diese ein.
 Es ist wütender und brutaler als vor der\nMega-Entwicklung. Mit seinen sichelartigen\nArmfortsätzen zerfetzt es seine Gegner.
+Es schützt sich vor starken Feinden, indem es\ndie Punkte auf seinem Körper blinken lässt\nund Gegnern so den Kampfeswillen raubt.
+Seine hypnotischen Kräfte sind unfassbar stark.\nHat es sich ein Opfer gefügig gemacht, verliert\ndieses jegliche Erinnerung an den Vorfall.
+Es heftet sich kopfüber an einen riesigen Wurfstern,\nden es so schnell dreht, dass er in der Luft schwebt,\nund überrumpelt so seine Gegner.
+Seine Psycho-Kräfte haben seine Muskeln stärker\nwerden lassen. Es hat eine Greifkraft von einer\nTonne und legt in zwei Sekunden 100 m zurück.
+Die Mega-Entwicklung macht es noch rasender,\nals es ohnehin schon ist. Es ist ungewiss, ob es\ndie Befehle seines Trainers hören kann.
+Es fliegt schneller als der Schall. Feinde bläst es\nmit einer Druckwelle davon und bringt sie dann\nmit seinen Krallen zur Strecke.
+Die Mega-Entwicklung ließ seine Gutmütigkeit\nüber alle Maßen wachsen. Mit Mitleid im Herzen\nversetzt es seinen Gegnern den Gnadenstoß.
+Obwohl sein Körper geschrumpft ist, verfügt es\nüber gewaltige Stärke. Mit bloßer Willenskraft\nkann es ein ganzes Hochhaus zertrümmern.
 Partikel in der Atmosphäre sind seine Nahrung.\nMan sagt, die Farbe seines Kerns hänge von den\nInhaltsstoffen dieser Partikel ab.
+Seine kräftigen, stark entwickelten Kiefer können\nalles zermalmen. Selbst sein Trainer muss sich vor\nihm in Acht nehmen.
+Mit den kleinen Haken unter seinen Füßen kann Geckarbor\nan Wänden hochklettern. Dieses Pokémon greift Feinde an,\nindem es mit seinem mächtigen Schweif zuschlägt.
+Flemmli hängt an seinem Trainer wie eine Klette. Es schlurft\nimmer hinter ihm her. Dieses Pokémon spuckt 1000 °C\nheißes Feuer, das seinen Feinden ordentlich einheizt.
+Die Flosse an Hydropis Kopf dient als hochempfindliches Radar. Damit kann\nes Bewegungen im Wasser und in der Luft wahrnehmen. So weiß es jederzeit,\nwas in seiner Umgebung passiert, ohne dabei seine Augen zu benutzen.
+Der Panzer auf seinem Rücken besteht aus Lehm\nund wird härter, wenn das Pokémon Wasser trinkt.\nEs lebt am Ufer von Seen.
+Es lebt auf zerklüfteten Bergen und klettert mit\nLeichtigkeit steile Felswände hinauf. Bevor es\nschlafen geht, löscht es seine Flamme.
+Sein stark ausgeprägter Stolz hält es davon ab,\nvon Menschen Futter anzunehmen. Die dicke\nDaunenschicht schützt es vor Kälte.
+Eine kühle Denkernatur. Bekommt es genügend\nSonnenlicht ab, erhöht sich die Geschwindigkeit\nseiner Bewegungen.
+Es schießt Flammen aus seinem Rüssel.\nIst es erkältet, kommt statt Feuer aber\nnur pechschwarzer Rauch zum Vorschein.
+Kämpft mit der Muschel auf seinem Bauch.\nPariert es einen Angriff, schlägt es sofort\nmit einer Schnitt-Attacke zurück.
+Wenn es seine Kraft auf die sonst eher weichen Stacheln\nauf seinem Kopf konzentriert, werden diese robust genug,\num damit Steine zu zertrümmern.
+Wenn es Zweige frisst, fasst es neue Kraft und stößt\nüber seine Ohren über 200 °C heiße Luft aus.
+Ein wachsames und nachtaktives Pokémon.\nTagsüber sammelt es per Photosynthese\nKräfte, um fit für die Nacht zu sein.
+Es verbrennt Haare, die es bei der Körperpflege\nverschluckt hat, indem es Feuer speit.\nDie Flammen variieren je nach Art des Speiens.
+Dieses Pokémon ist für seine Willensstärke\nbekannt. Bläst es Körperflüssigkeit durch die\nNase, entsteht eine Blase, die als Waffe fungiert.
+Der Rhythmus, den es mit seinem besonderen\nSchlägel erzeugt, verbreitet Schallwellen, die\nPflanzen neue Vitalität verleihen können.
+Erhöht es durch Rennen seine Körpertemperatur,\nströmt Feuer-Energie durch seinen Körper.\nDann kann es seine wahre Kraft entfesseln.
+Hat es Angst, vergießt es Tränen, die Reizstoffe\nenthalten, welche andere ebenfalls zum Weinen\nbringen. Sie sind so stark wie 100 Zwiebeln.
+Vor langer Zeit kam es von weit her und ließ sich\nin Paldea nieder. Über sein Gefieder sondert es\nein Gel ab, das Wasser und Schmutz abweist.
+Viele Experten bezweifeln die Existenz\ndieses Pokémon. Nur wenige Personen\nhaben es gesehen.
 Eine leuchtende Sternschnuppe am Nachthimmel\nkönnte in Wirklichkeit Mega-Rayquaza sein,\ndas anmutig einem Meteor nachjagt.
+Es stammt aus einem anderen Universum.\nSein Körper aus Gas ist so leicht, dass es\nsogar von einer sanften Brise weggeweht wird.
+Da es nicht schüchtern ist, fühlt es sich auch in\nGegenwart von Menschen wohl. Wenn man es\nfüttert, freundet es sich sofort mit einem an.
+Dieses Pokémon hat viele Bewunderer. Es wird als\numso schicker empfunden, je tiefer das Rot der\nBlätter ist, die von seinem Geweih herabhängen.
 Narumi Sato
 Kurata So
 Ryota Murayama
@@ -7119,6 +7356,14 @@ Akino Fukuji
 Iwamoto05
 Kazuki Minami
 YOSHIROTTEN
+telu
+Atsuya Uki
+Keisuke Azuma
+CHORISO
+Bun Toujo
+TOMATO MARKET
+ORBITALLINK Inc.
+Yoshiyuki Sadamoto
 Coming Soon
 Verkürzt die Zeit bis zur nächsten Wunderwahl\num eine Stunde. Unter anderem erhältlich\nals Missionsbelohnung.
 Wird eingesetzt, um in bestimmten CPU-Kämpfen\noder Events anzutreten und kann die Zeit\nverkürzen, in der diese wieder verfügbar werden.
@@ -7132,6 +7377,7 @@ Erhältlich durch das Abschließen von Premium-\nMissionen. Eintauschbar gegen Z
 Ein Item, das gesammelt werden kann, um den\nSpielerlevel zu erhöhen.
 Socken eines Rüpels von Team Rocket,\ndie ziemlich lange getragen wurden.\nSie müffeln ein bisschen...
 Reaktiviert eine abgelaufene Wunderwahl.\nDabei muss neben Wunder-Ausdauer jeweils ein\nExemplar verbraucht werden.
+Eintauschbar gegen besondere Boosterpacks im Shop.\nErhältlich als Geschenk und durch Abschluss von\nEvent-Missionen der Aktion zur 2. Jubiläumsfeier.\nWird nach Ende des Tauschzeitraums gelöscht.
 Erhältlich durch das Abschließen von\nex-Startdeck-Missionen.\nEintauschbar gegen Decks (20 Karten) im Shop.\nWird nach Ende des Tauschzeitraums gelöscht.
 Erhältlich durch das Vervollständigen von\nFokus-Sammlungen oder das Abschließen von\nDex-Missionen. Eintauschbar gegen bestimmte\nEmbleme im Shop.
 Erhältlich durch das Abschließen von Event-\nMissionen. Eintauschbar gegen Zubehör und Items\nim Shop. Wird nach Ende des Tauschzeitraums\ngelöscht.
@@ -7219,6 +7465,10 @@ Promokarten-Tausch-Ticket (Drop-Event ([Text:CardName v="HISUIZORUA" lang="de_DE
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s dubioses Ticket
 Promokarten-Tausch-Ticket (Drop-Event ([Text:CardName v="ROCKETDANNOLAPLACE" ]))
 Promokarten-Tausch-Ticket (Drop-Event ([Text:CardName v="MEGAGABURIAS_EX" ]))
+Promokarten-Tausch-Tickets (Promopack aus Serie C, Vol. 1)󱀀Promokarten-Tausch-Ticket (Promopack aus Serie C, Vol. 1)
+Promokarten-Tausch-Ticket (PROMO-Neuauflagen-Drop-Event 2026)󱀀Promokarten-Tausch-Tickets (PROMO-Neuauflagen-Drop-Event 2026)
+Promokarten-Tausch-Tickets (PROMO-Neuauflagen-Wunderwahl-Event 2026)󱀀Promokarten-Tausch-Ticket (PROMO-Neuauflagen-Wunderwahl-Event 2026)
+Boosterpack-Tausch-Ticket mit 1 garantierten Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ]󱀀Boosterpack-Tausch-Tickets mit 1 garantierten Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ]
 Vorabticket
 Blubberblasen: Hellblau (Deko)
 Blubberblasen: Rosa (Deko)
@@ -7303,12 +7553,13 @@ Besiege [Num:Int id="0" max_length="2" ] Mal das gegn. Aktive Pokémon mit einer
 Die Wunderwahl wird auf Spielerlevel 2\nfreigeschaltet.
 Das Kampfmenü wird auf Spielerlevel 3\nfreigeschaltet.\n\nDu kannst deinen Spielerlevel mit Spieler-EP\nerhöhen. Diese erhältst du zum Beispiel, indem du\nPacks öffnest.
 Deck-Missionen werden auf Spielerlevel 3\nfreigeschaltet.\n\nDu kannst deinen Spielerlevel mit Spieler-EP\nerhöhen. Diese erhältst du zum Beispiel, indem du\nPacks öffnest.
-Decks werden freigeschaltet, nachdem du Teil 06\ndes Kampf-Tutorials abgeschlossen hast.\n\nDu kannst das Kampf-Tutorial aufrufen, indem du\nauf die Schaltfläche unten links im Kampfmenü\ntippst.
-Kämpfe werden freigeschaltet, nachdem du Teil 06\ndes Kampf-Tutorials abgeschlossen hast.\n\nDu kannst das Kampf-Tutorial aufrufen, indem du\nauf die Schaltfläche unten links im Kampfmenü\ntippst.
+Decks werden freigeschaltet, nachdem du Teil 06\ndes Kampf-Tutorials abgeschlossen hast.\n\nDu kannst das Kampf-Tutorial aufrufen, indem du\nim Kampfmenü auf „Tutorial“ tippst.
+Kämpfe werden freigeschaltet, nachdem du Teil 06\ndes Kampf-Tutorials abgeschlossen hast.\n\nDu kannst das Kampf-Tutorial aufrufen, indem du\nim Kampfmenü auf „Tutorial“ tippst.
 Galerien werden auf Spielerlevel 4 freigeschaltet.\n\nDu kannst deinen Spielerlevel mit Spieler-EP\nerhöhen. Diese erhältst du zum Beispiel, indem du\nPacks öffnest.
 Alben werden auf Spielerlevel 6 freigeschaltet.\n\nDu kannst deinen Spielerlevel mit Spieler-EP\nerhöhen. Diese erhältst du zum Beispiel, indem du\nPacks öffnest.
 Premium-Missionen werden freigeschaltet,\nwenn du den Premiumpass abonnierst.\n\nDu kannst den Premiumpass abonnieren,\nindem du auf die zugehörige Schaltfläche in\nden Premium-Missionen oder im Shop tippst.
 Die Tauschfunktion wird auf Spielerlevel 3\nfreigeschaltet.\n\nDu kannst deinen Spielerlevel mit Spieler-EP\nerhöhen. Diese erhältst du zum Beispiel, indem du\nPacks öffnest.
+Öffentliche Decks werden freigeschaltet, nachdem\ndu Teil 06 des Kampf-Tutorials abgeschlossen hast.\n\nDu kannst das Kampf-Tutorial aufrufen, indem du\nim Kampfmenü auf „Tutorial“ tippst.
 {0}-Deck ({1})
 {0} (Emblem)
 Bronze-Emblem für Emblem-Event ({0})
@@ -7382,6 +7633,8 @@ Gewinne [Num:Int id="1" max_length="3" ] [Gr:Count s="Spielerkampf" p="Spielerk�
 Auftrag: Melde dich an! (Tag [Num:Int id="0" max_length="3" ])
 Auftrag: Schließe [Num:Int id="0" max_length="3" ] [Gr:Count s="Kampf" p="Kämpfe" ] ab!
 Auftrag: Führe [Num:Int id="0" max_length="3" ] [Gr:Count s="Wunderwahl" p="Wunderwahlen" ] durch!
+Gib [Num:Int id="0" max_length="3" ] Mal eine Karte ab, die dein Abgabepartner haben will oder noch nicht registriert hat
+Woche 2: Melde dich an\n(Tag [Num:Int id="0" max_length="3" ])
 Erste Wahl
 Elektek und Magmar
 Vertania-Wald
@@ -7625,7 +7878,7 @@ Museum 6 (Mega-Aufstieg)
 Ein Schwarm von Käfer-Pokémon
 Sammle 1 Mega-Entwicklungs-Pokémon-\nex-Karte
 Sammle 3 Mega-Entwicklungs-Pokémon-\nex-Karten
-Sammle [Num:Int id="1" max_length="3" ][C:Nbsp ][Text:CardNameWithSubName id="0" ][C:Nbh ][Gr:Count s="Promokarte" p="Promokarten" ref="1" ]
+Sammle 3 verschiedene Promokarten aus diesem Event
 Garten der lächelnden Blumen 2
 ex-Sammlung
 Sammle Parallelfolienkarten von Pokémon
@@ -7806,6 +8059,7 @@ Museum 2 ([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne)
 Eine Horde [Text:CardName v="ROCKETDANNOSHITAPPA" ]!
 Sammler dubioser Erfindungen
 Alle Karten von [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] komplett!
+Partner aus Kanto
 Mega-Entwicklungs-Pokémon-\nex-Sammlung
 Pokémon-ex mit Fähigkeiten
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_24" ]s zwei Formen
@@ -7824,6 +8078,45 @@ Ein modisches Rudel [Text:CardName v="TRIMMIEN" ]
 [Text:CardName v="PIKACHU" ]s Abenteuer
 Männliches und weibliches [Text:CardName v="NYAONIX" ]
 Die vier Inkarnationsformen
+[Text:CardName v="PIKACHU" ] sprüht vor Elektro-Energie
+Honigsammeln im Blumengarten 1
+Honigsammeln im Blumengarten 2
+Hoppeln, Hüpfen, Hasensprung
+Pokéball-Doppelgänger
+Entwicklungen des Tages und der Nacht
+Entwicklungen der Sonne und des Mondes
+Feuerkrieger in Rüstung
+Einkauf im Pokémon-Supermarkt
+Friedliche Nickerchen
+Treue Partner an deiner Seite
+Legenden der Sinnoh-Region
+Erderschütterndes [Mst:CommonCharacterName v="COMMON_CARD_NAME_23" ]
+Museum 1 (Duale Fusion)
+Museum 2 (Duale Fusion)
+Museum 3 (Duale Fusion)
+Museum 4 (Duale Fusion)
+Der kühne Kopfüber-Ninja (Wasser/Finsternis)
+Ertragreiches Honigsammeln
+Noch höhere Hasensprünge!
+Partner aus Johto
+Partner aus Hoenn
+Partner aus Sinnoh
+Partner aus Einall
+Partner aus Kalos
+Partner aus Alola
+Partner aus Galar
+Partner aus Paldea
+Der Pfad zu\n[Text:CardName v="MEGAMEWTWOX_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ]) 5/5
+Der Pfad zu [Text:CardName v="PIKACHU_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ]) 5/5
+Der Pfad zu\n[Text:CardName v="MEGAMEWTWOX_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ]) 1/5
+Der Pfad zu\n[Text:CardName v="MEGAMEWTWOX_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ]) 2/5
+Der Pfad zu\n[Text:CardName v="MEGAMEWTWOX_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ]) 3/5
+Der Pfad zu\n[Text:CardName v="MEGAMEWTWOX_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ]) 4/5
+Der Pfad zu [Text:CardName v="PIKACHU_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ]) 1/5
+Der Pfad zu [Text:CardName v="PIKACHU_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ]) 2/5
+Der Pfad zu [Text:CardName v="PIKACHU_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ]) 3/5
+Der Pfad zu [Text:CardName v="PIKACHU_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ]) 4/5
+Der stärkste Dualtyp (Psycho/Kampf)
 Deck-Missionen
 Deck-Missionen
 Emblem-Event 1\n(Unschlagbare Gene)
@@ -7925,8 +8218,20 @@ Emblem-Event\n([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne)
 Emblem-Event\n([Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s\nSpezialaufträge
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s\nSpezialaufträge
+Kampfansporn-Missionen:\nDuale Fusion
+Kampfansporn-\nMissionen: Duale Fusion
 Pikachu-Missionen:\nPika Pika!
 Pikachu-Miss.:\nPika Pika!
+Fokus-Promokarten-\nEvent (Festtage)
+Fokus-Promok.-\nEvent (Festtage)
+Missionen zum PROMO-\nNeuauflagen-Drop-\nEvent 2026
+PROMO-Neuauf.-\nDrop-Event 2026
+Missionen zum PROMO-\nNeuauflagen-Wunderwahl-\nEvent 2026
+PROMO-Neuauf.-\nWunderw.-Event 2026
+Boosterpack-Missionen:\n1 [Mst:Rarity v="RARITY_MSID_SSASR" ]-Karte garantiert
+Boosterp.-Miss.:\n1 [Mst:Rarity v="RARITY_MSID_SSASR" ]-Karte gar.
+Evoli-Missionen: Voli Voli!
+Evoli-Missionen:\nVoli Voli!
 Anfänger
 Profi
 Täglich
@@ -7960,6 +8265,10 @@ Liste
 Willkommen zurück
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1"]
 Pika Pika!
+[Mst:Rarity v="RARITY_MSID_SSASR" ]-Garantie-Pack
+Kampfansporn
+Fokus-Promokarte
+Voli Voli!
 Zufallskampf (Profi)
 Zufallskampf (Anfänger)
 Zufallskampf (Meister)
@@ -7972,38 +8281,68 @@ Weitere Informationen werden wir zu einem späteren Zeitpunkt bekannt geben.
 Da es sich hierbei um eine Eilmeldung handelt, ist diese Nachricht auf Englisch. Wir werden dieselbe Benachrichtigung auf Deutsch veröffentlichen, sobald sie verfügbar ist.
 Unschlagbare Gene: Mewtu-Pack
 Unschlagbare Gene: Mewtu-Pack\n(1 Karte mit Seltenheit [Mst:Rarity v="RARITY_MSID_RR" ] oder seltener garantiert)
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_A1_1" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Unschlagbare Gene: Glurak-Pack
 Unschlagbare Gene: Glurak-Pack\n(1 Karte mit Seltenheit [Mst:Rarity v="RARITY_MSID_RR" ] oder seltener garantiert)
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_A1_2" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Unschlagbare Gene: Pikachu-Pack
 Unschlagbare Gene: Pikachu-Pack\n(1 Karte mit Seltenheit [Mst:Rarity v="RARITY_MSID_RR" ] oder seltener garantiert)
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_A1_3" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Mysteriöse Insel-Pack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_A1a_1" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Kollision von Raum und Zeit: Dialga-Pack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_A2_1" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Kollision von Raum und Zeit: Palkia-Pack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_A2_2" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Licht des Triumphs-Pack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_A2a_1" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Glänzendes Festival-Pack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_A2b_1" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Hüter des Firmaments: Solgaleo-Pack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_A3_1" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Hüter des Firmaments: Lunala-Pack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_A3_2" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Dimensionale Krise-Boosterpack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_A3a_1" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Evoli-Hain-Boosterpack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_A3b_1" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Weisheit von Meer und Himmel: Ho-Oh-Boosterpack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_A4_1" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Weisheit von Meer und Himmel: Lugia-Boosterpack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_A4_2" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Verborgene Quelle-Boosterpack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_A4a_1" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Deluxepack-ex-Boosterpack
 Mega-Aufstieg: Mega-Lohgock-Boosterpack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_B1_1" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Mega-Aufstieg: Mega-Garados-Boosterpack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_B1_2" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Mega-Aufstieg: Mega-Altaria-Boosterpack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_B1_3" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Feuerrote Flammen-Boosterpack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_B1a_1" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Traumhafte Parade-Boosterpack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_B2_1" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Wundervolles Paldea-Boosterpack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_B2a_1" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Mega-Schillern-Boosterpack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_B2b_1" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Pulsierende Aura-Boosterpack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_B3_1" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Paradoxansturm-Boosterpack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_B3a_1" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Wunder des Alltags-Boosterpack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_B3b_1" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Herrscher der Lüfte-Boosterpack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_B4_1" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne-Boosterpack
+Besonderes Boosterpack:\n[Mst:PackName v="PACK_NAME_B4a_1" ]\n(1 Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 „Deluxepack: Mega“-Boosterpack
+Duale Fusion: [Mst:CommonCharacterName v="COMMON_CARD_NAME_19" ]-Boosterpack
+Duale Fusion: [Text:CardName v="PIKACHU" ]-Boosterpack
 Ein besonderes Boosterpack, das durch das\nAbschließen von „Pikachu-Missionen: Pika Pika!“\nerhalten werden kann.
 Ein ganz besonderes Boosterpack, das durch das\nAbschließen von „Pikachu-Missionen: Pika Pika!“\nerhalten werden kann.
+Ein besonderes Boosterpack, das durch das\nAbschließen von „Evoli-Missionen: Voli Voli!“\nerhalten werden kann.
 Ein Promopack aus Serie A, Vol. 1
 Ein Promopack aus Serie A, Vol. 2
 Ein Promopack aus Serie A, Vol. 3
@@ -8030,42 +8369,74 @@ Ein Promopack aus Serie B, Vol. 10
 Ein Promopack aus Serie B, Vol. 11
 Ein Promopack aus Serie B, Vol. 12
 Ein Promopack aus Serie B, Vol. 13
+Ein Promopack aus Serie C, Vol. 1
+Besonderes Boosterpack:\n„Spezialpack: Erste Partner“
 1 Karte mit\nSeltenheit [Mst:Rarity v="RARITY_MSID_RR" ] oder\nseltener garantiert.
 1 Pokémon-ex-Karte\ngarantiert
 Unschlagbare Gene: Mewtu
 Unschlagbare Gene: Mewtu (1[C:Nbsp ]Karte mit Seltenheit [Mst:Rarity v="RARITY_MSID_RR" ] oder seltener garantiert)
+[Mst:PackName v="PACK_NAME_A1_1" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Unschlagbare Gene: Glurak
 Unschlagbare Gene: Glurak (1[C:Nbsp ]Karte mit Seltenheit [Mst:Rarity v="RARITY_MSID_RR" ] oder seltener garantiert)
+[Mst:PackName v="PACK_NAME_A1_2" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Unschlagbare Gene: Pikachu
 Unschlagbare Gene: Pikachu (1[C:Nbsp ]Karte mit Seltenheit [Mst:Rarity v="RARITY_MSID_RR" ] oder seltener garantiert)
+[Mst:PackName v="PACK_NAME_A1_3" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Mysteriöse Insel
+[Mst:PackName v="PACK_NAME_A1a_1" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Kollision von Raum und Zeit: Dialga
+[Mst:PackName v="PACK_NAME_A2_1" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Kollision von Raum und Zeit: Palkia
+[Mst:PackName v="PACK_NAME_A2_2" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Licht des Triumphs
+[Mst:PackName v="PACK_NAME_A2a_1" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Glänzendes Festival
+[Mst:PackName v="PACK_NAME_A2b_1" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Hüter des Firmaments: Solgaleo
+[Mst:PackName v="PACK_NAME_A3_1" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Hüter des Firmaments: Lunala
+[Mst:PackName v="PACK_NAME_A3_2" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Dimensionale Krise
+[Mst:PackName v="PACK_NAME_A3a_1" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Evoli-Hain
+[Mst:PackName v="PACK_NAME_A3b_1" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Weisheit von Meer und Himmel: Ho-Oh
+[Mst:PackName v="PACK_NAME_A4_1" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Weisheit von Meer und Himmel: Lugia
+[Mst:PackName v="PACK_NAME_A4_2" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Verborgene Quelle
+[Mst:PackName v="PACK_NAME_A4a_1" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Deluxepack-ex-Boosterpack
 Mega-Aufstieg: Mega-Lohgock
+[Mst:PackName v="PACK_NAME_B1_1" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Mega-Aufstieg: Mega-Garados
+[Mst:PackName v="PACK_NAME_B1_2" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Mega-Aufstieg: Mega-Altaria
+[Mst:PackName v="PACK_NAME_B1_3" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Feuerrote Flammen
+[Mst:PackName v="PACK_NAME_B1a_1" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Traumhafte Parade
+[Mst:PackName v="PACK_NAME_B2_1" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Wundervolles Paldea
+[Mst:PackName v="PACK_NAME_B2a_1" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Mega-Schillern
+[Mst:PackName v="PACK_NAME_B2b_1" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Pulsierende Aura
+[Mst:PackName v="PACK_NAME_B3_1" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Paradoxansturm
+[Mst:PackName v="PACK_NAME_B3a_1" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Wunder des Alltags
+[Mst:PackName v="PACK_NAME_B3b_1" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Herrscher der Lüfte
+[Mst:PackName v="PACK_NAME_B4_1" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]s Pläne
+[Mst:PackName v="PACK_NAME_B4a_1" ] (1[C:Nbsp ]Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ] garantiert)
 Deluxepack: Mega
+Duale Fusion: [Mst:CommonCharacterName v="COMMON_CARD_NAME_19" ]
+Duale Fusion: [Text:CardName v="PIKACHU" ]
 Pikachu-Packs: Pika Pika!󱀀Pikachu-Pack: Pika Pika!
 Pikachu-Pack-ex: Pika Pika!󱀀Pikachu-Packs-ex: Pika Pika!
+Evoli-Packs: Voli Voli!󱀀Evoli-Pack: Voli Voli!
 Promopack Serie A, Vol. 1
 Promopack Serie A, Vol. 2
 Promopack Serie A, Vol. 3
@@ -8092,6 +8463,8 @@ Promopack aus Serie B, Vol. 10
 Promopack aus Serie B, Vol. 11
 Promopack aus Serie B, Vol. 12
 Promopack Serie [Mst:SeriesName v="SERIES_NAME_2"], [Mst:CommonPackLabel v="COMMON_PACK_LABEL_013"]
+Promopack Serie [Mst:SeriesName v="SERIES_NAME_3"], [Mst:CommonPackLabel v="COMMON_PACK_LABEL_001"]
+Spezialpack: Erste Partner󱀀Spezialpacks: Erste Partner
 [Mst:Rarity v="RARITY_MSID_RR" ] o. seltener garant.
 Normales Pack
 Norm. Pack +[C:Nbsp ]1[C:Nbsp ]Karte
@@ -8281,7 +8654,10 @@ Nr. 0146 Flammen-Pokémon Größe: 2,0 m Gewicht: 60,0 kg
 Nr. 0147 Drachen-Pokémon Größe: 1,8 m Gewicht: 3,3 kg
 Nr. 0148 Drachen-Pokémon Größe: 4,0 m Gewicht: 16,5 kg
 Nr. 0149 Drachen-Pokémon Größe: 2,2 m Gewicht: 210,0 kg
+Nr. 0149 Drachen-Pokémon Größe: 2,2 m Gewicht: 290,0 kg
 Nr. 0150 Genmutanten-Pokémon Größe: 2,0 m Gewicht: 122,0 kg
+Nr. 0150 Genmutanten-Pokémon Größe: 2,3 m Gewicht: 127,0 kg
+Nr. 0150 Genmutanten-Pokémon Größe: 1,5 m Gewicht: 33,0 kg
 Nr. 0151 Neue Art-Pokémon Größe: 0,4 m Gewicht: 4,0 kg
 Nr. 0152 Laub-Pokémon Größe: 0,9 m Gewicht: 6,4 kg
 Nr. 0153 Laub-Pokémon Größe: 1,2 m Gewicht: 15,8 kg
@@ -8365,6 +8741,7 @@ Nr. 0224 Hochdruck-Pokémon Größe: 0,9 m Gewicht: 28,5 kg
 Nr. 0225 Lieferanten-Pokémon Größe: 0,9 m Gewicht: 16,0 kg
 Nr. 0226 Flugrochen-Pokémon Größe: 2,1 m Gewicht: 220,0 kg
 Nr. 0227 Flugstahl-Pokémon Größe: 1,7 m Gewicht: 50,5 kg
+Nr. 0227 Flugstahl-Pokémon Größe: 1,7 m Gewicht: 40,4 kg
 Nr. 0228 Hades-Pokémon Größe: 0,6 m Gewicht: 10,8 kg
 Nr. 0229 Hades-Pokémon Größe: 1,4 m Gewicht: 35,0 kg
 Nr. 0229 Hades-Pokémon Größe: 1,9 m Gewicht: 49,5 kg
@@ -8386,6 +8763,7 @@ Nr. 0245 Polarlicht-Pokémon Größe: 2,0 m Gewicht: 187,0 kg
 Nr. 0246 Felshaut-Pokémon Größe: 0,6 m Gewicht: 72,0 kg
 Nr. 0247 Hartschalen-Pokémon Größe: 1,2 m Gewicht: 152,0 kg
 Nr. 0248 Panzer-Pokémon Größe: 2,0 m Gewicht: 202,0 kg
+Nr. 0248 Panzer-Pokémon Größe: 2,5 m Gewicht: 255,0 kg
 Nr. 0249 Taucher-Pokémon Größe: 5,2 m Gewicht: 216,0 kg
 Nr. 0250 Regenbogen-Pokémon Größe: 3,8 m Gewicht: 199,0 kg
 Nr. 0251 Zeitreise-Pokémon Größe: 0,6 m Gewicht: 5,0 kg
@@ -8538,6 +8916,7 @@ Nr. 0383 Kontinent-Pokémon Größe: 3,5 m Gewicht: 950,0 kg
 Nr. 0384 Himmelhoch-Pokémon Größe: 7,0 m Gewicht: 206,5 kg
 Nr. 0384 Himmelhoch-Pokémon Größe: 10,8 m Gewicht: 392,0 kg
 Nr. 0385 Wünscher-Pokémon Größe: 0,3 m Gewicht: 1,1 kg
+Nr. 0386 DNS-Pokémon Größe: 1,7 m Gewicht: 60,8 kg
 Nr. 0387 Winziglaub-Pokémon Größe: 0,4 m Gewicht: 10,2 kg
 Nr. 0388 Hain-Pokémon Größe: 1,1 m Gewicht: 97,0 kg
 Nr. 0389 Kontinent-Pokémon Größe: 2,2 m Gewicht: 310,0 kg
@@ -8645,7 +9024,9 @@ Nr. 0479 Plasma-Pokémon Größe: 0,3 m Gewicht: 0,3 kg
 Nr. 0480 Wissens-Pokémon Größe: 0,3 m Gewicht: 0,3 kg
 Nr. 0481 Emotions-Pokémon Größe: 0,3 m Gewicht: 0,3 kg
 Nr. 0482 Willenskraft-Pokémon Größe: 0,3 m Gewicht: 0,3 kg
+Nr. 0483 Zeitweilig-Pokémon Größe: 5,4 m Gewicht: 683,0 kg
 Nr. 0483 Zeitweilig-Pokémon Größe: 7,0m Gewicht: 850,0kg
+Nr. 0484 Räumlich-Pokémon Größe: 4,2 m Gewicht: 336,0 kg
 Nr. 0484 Räumlich-Pokémon Größe: 6,3m Gewicht: 660,0kg
 Nr. 0485 Lavadom-Pokémon Größe: 1,7 m Gewicht: 430,0 kg
 Nr. 0486 Kolossal-Pokémon Größe: 3,7 m Gewicht: 420,0 kg
@@ -8716,6 +9097,7 @@ Nr. 0548 Wurzel-Pokémon Größe: 0,5 m Gewicht: 6,6 kg
 Nr. 0549 Blumenzier-Pokémon Größe: 1,1 m Gewicht: 16,3 kg
 Nr. 0549 Pirouetten-Pokémon Größe: 1,2 m Gewicht: 19,2 kg
 Nr. 0550 Grobheits-Pokémon Größe: 1,0 m Gewicht: 18,0 kg
+Nr. 0550 Grobheits-Pokémon Größe: 1,0 m Gewicht: 18,0 kg
 Nr. 0550 Sanftheits-Pokémon Größe: 1,0 m Gewicht: 18,0 kg
 Nr. 0551 Wüstenkroko-Pokémon Größe: 0,7 m Gewicht: 15,2 kg
 Nr. 0552 Wüstenkroko-Pokémon Größe: 1,0 m Gewicht: 33,4 kg
@@ -8752,6 +9134,8 @@ Nr. 0581 Schwan-Pokémon Größe: 1,3 m Gewicht: 24,2 kg
 Nr. 0582 Neuschnee-Pokémon Größe: 0,4 m Gewicht: 5,7 kg
 Nr. 0583 Firn-Pokémon Größe: 1,1 m Gewicht: 41,0 kg
 Nr. 0584 Schneesturm-Pokémon Größe: 1,3 m Gewicht: 57,5 kg
+Nr. 0585 Jahreszeiten-Pokémon Größe: 0,6 m Gewicht: 19,5 kg
+Nr. 0586 Jahreszeiten-Pokémon Größe: 1,9 m Gewicht: 92,5 kg
 Nr. 0587 Flughörnchen-Pokémon Größe: 0,4 m Gewicht: 5,0 kg
 Nr. 0588 Schnappbiss-Pokémon Größe: 0,5 m Gewicht: 5,9 kg
 Nr. 0589 Kavallerie-Pokémon Größe: 1,0 m Gewicht: 33,0 kg
@@ -8824,6 +9208,7 @@ Nr. 0654 Fuchs-Pokémon Größe: 1,0 m Gewicht: 14,5 kg
 Nr. 0655 Fuchs-Pokémon Größe: 1,5 m Gewicht: 39,0 kg
 Nr. 0656 Blubbfrosch-Pokémon Größe: 0,3 m Gewicht: 7,0 kg
 Nr. 0657 Blubbfrosch-Pokémon Größe: 0,6 m Gewicht: 10,9 kg
+Nr. 0658 Ninja-Pokémon Größe: 1,5 m Gewicht: 40,0 kg
 Nr. 0658 Ninja-Pokémon Größe: 1,5 m Gewicht: 40,0 kg
 Nr. 0659 Baugräber-Pokémon Größe: 0,4 m Gewicht: 5,0 kg
 Nr. 0660 Baugräber-Pokémon Größe: 1,0 m Gewicht: 42,4 kg
@@ -8902,6 +9287,7 @@ Nr. 0718 Ordnungs-Pokémon Größe: 1,2 m Gewicht: 33,5 kg
 Nr. 0719 Edelstein-Pokémon Größe: 0,7 m Gewicht: 8,8 kg
 Nr. 0719 Edelstein-Pokémon Größe: 1,1 m Gewicht: 27,8 kg
 Nr. 0720 Schabernack-Pokémon Größe: 0,5 m Gewicht: 9,0 kg
+Nr. 0721 Dampf-Pokémon Größe: 1,7 m Gewicht: 195,0 kg
 Nr. 0722 Laubflügel-Pokémon Größe: 0,3 m Gewicht: 1,5 kg
 Nr. 0723 Flügelklingen-Pokémon Größe: 0,7 m Gewicht: 16,0 kg
 Nr. 0724 Pfeilflügel-Pokémon Größe: 1,6 m Gewicht: 36,6 kg
@@ -8975,6 +9361,8 @@ Nr. 0787 Schutzpatron-Pokémon Größe: 1,9 m Gewicht: 45,5 kg
 Nr. 0788 Schutzpatron-Pokémon Größe: 1,3 m Gewicht: 21,2 kg
 Nr. 0789 Nebula-Pokémon Größe: 0,2 m Gewicht: 0,1 kg
 Nr. 0790 Urgestirns-Pokémon Größe: 0,1 m Gewicht: 999,9 kg
+Nr. 0791 Sonnenkreis-Pokémon Größe: 3,4 m Gewicht: 230,0 kg
+Nr. 0792 Mondscheiben-Pokémon Größe: 4,0 m Gewicht: 120,0 kg
 Nr. 0793 Parasiten-Pokémon Größe: 1,2 m Gewicht: 55,5 kg
 Nr. 0794 Ausdehnungs-Pokémon Größe: 2,4 m Gewicht: 333,6 kg
 Nr. 0795 Eleganz-Pokémon Größe: 1,8 m Gewicht: 25,0 kg
@@ -9008,6 +9396,8 @@ Nr. 0820 Gierschlund-Pokémon Größe: 0,6 m Gewicht: 6,0 kg
 Nr. 0821 Kleinvogel-Pokémon Größe: 0,2 m Gewicht: 1,8 kg
 Nr. 0822 Krähen-Pokémon Größe: 0,8 m Gewicht: 16,0 kg
 Nr. 0823 Krähen-Pokémon Größe: 2,2 m Gewicht: 75,0 kg
+Nr. 0827 Fuchs-Pokémon Größe: 0,6 m Gewicht: 8,9 kg
+Nr. 0828 Fuchs-Pokémon Größe: 1,2 m Gewicht: 19,9 kg
 Nr. 0829 Blumenzier-Pokémon Größe: 0,4 m Gewicht: 2,2 kg
 Nr. 0830 Baumwollzier-Pokémon Größe: 0,5 m Gewicht: 2,5 kg
 Nr. 0831 Schaf-Pokémon Größe: 0,6 m Gewicht: 6,0 kg
@@ -9100,6 +9490,7 @@ Nr. 0932 Steinsalz-Pokémon Größe: 0,4 m Gewicht: 16,0 kg
 Nr. 0933 Steinsalz-Pokémon Größe: 0,6 m Gewicht: 105,0 kg
 Nr. 0934 Steinsalz-Pokémon Größe: 2,3 m Gewicht: 240,0 kg
 Nr. 0935 Feuerkind-Pokémon Größe: 0,6 m Gewicht: 10,5 kg
+Nr. 0936 Feuerrüstungs-Pokémon Größe: 1,5 m Gewicht: 85,0 kg
 Nr. 0937 Feuerklingen-Pokémon Größe: 1,6 m Gewicht: 62,0 kg
 Nr. 0938 Stromquappen-Pokémon Größe: 0,3 m Gewicht: 0,4 kg
 Nr. 0939 Stromfrosch-Pokémon Größe: 1,2 m Gewicht: 113,0 kg
@@ -9207,6 +9598,9 @@ Vorabticket-Belohnung: 2. Preis
 Vorabticket-Belohnung: 3. Preis
 Durch Abgabe erhaltene Karte
 „Danke“ für eine Abgabe erhalten
+Tausch-Ticket für ein Boosterpack mit\n1 garantierten Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ]
+Elite-Deck aus der neuesten Erweiterung
+Ein besonderes Pack, das alle [Text:CardName v="EIEVUI" ]-Karten\nsamt Entwicklungen enthalten kann
 Icon, das auf dem Profil-Bildschirm ausgewählt\nwerden kann.
 Guardevoir (Icon)
 Evoli (Icon)
@@ -9309,6 +9703,16 @@ Herrscher der Lüfte: [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (Icon)
 [Text:CardName v="ROCKETDANNOBOSS" ] (Icon)
 [Text:CardName v="HUURO" ] (Icon)
 [Mst:PackName v="PACK_NAME_B4b_1"]: [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"] (Icon)
+[Text:CardName v="SOUBLADES" ] (Icon)
+[Text:CardName v="ABURIBBON" ] (Icon)
+[Text:CardName v="PARMOT" ] (Icon)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_21"] (Icon)
+[Text:CardName v="CHILI" ] (Icon)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"] (Icon)
+[Text:CardName v="YATOUMORI" ] (Icon)
+[Text:CardName v="DUGTRIO" ] (Icon)
+[Text:CardName v="MIMIROL" ] (Icon)
+[Text:CardName v="FOODIN" ] (Icon)
 [Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]12 (Icon)
 [Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]13 (Icon)
 [Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]14 (Icon)
@@ -9378,6 +9782,7 @@ Ich mag Pokémon aus der Paldea-Region!
 Ich sammle Mega-Entwicklungs-Pokémon-ex!
 PROMO-A
 PROMO-B
+PROMO-C
 paralysiert
 Evoli (Hintergrund)
 Evoli
@@ -9639,8 +10044,24 @@ Retro-Sommer
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
 Funkelnde Küste (Hintergrund)
 Funkelnde Küste
+[Text:CardName v="PIKACHU" ] & Freunde (Hintergrund)
+[Text:CardName v="PIKACHU" ] & Freunde
+Reiseerinnerungen (Hintergrund)
+Reise-\nerinnerungen
+Dorfstraße (Hintergrund)
+Dorfstraße
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"] (Hintergrund)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"]
+[Text:CardName v="CHILI" ] (Hintergrund)
+[Text:CardName v="CHILI" ]
+Spezial-Set 3 (Hintergrund)
+Spezial-Set 3
 Leuchtende Stadtkulisse
 Leuchtende Stadtkulisse (Hintergrund)
+3-Karten-Set-Hintergrund (C1): Festtage (Vertikaler Hintergrund)
+3-Karten-Set-Hintergrund (C1): Festtage (vertikal)
+3-Karten-Set-Hintergrund (C1): Festtage (Horizontaler Hintergrund)
+3-Karten-Set-Hintergrund (C1): Festtage (horizontal)
 Ein Hintergrund für das Ausstellen von Karten in\ndeinen Galerien.
 Evoli (Münze)
 Evoli
@@ -9746,6 +10167,12 @@ Schillerndes [Mst:CommonCharacterName v="COMMON_CARD_NAME_5" ] (Münze)
 [Text:CardName v="HOOPA" ] (Münze)
 [Text:CardName v="HUURO" ] (Münze)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"] (Münze)
+[Text:CardName v="PIKACHU" ] Ver.[C:Nbsp ]4 (Münze)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_19"] (Münze)
+Spezial-Set 3 (Münze)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"] (Münze)
+[Text:CardName v="CHILI" ] (Münze)
+[Text:CardName v="GANGAR" ] (Münze)
 Eine Münze, die im Kampf verwendet werden\nkann. Du kannst sie auswählen, wenn du auf deine\nDecks zugreifst.
 Evoli (Kartenhüllen)
 Evoli
@@ -9844,6 +10271,16 @@ Pokémon im Wald (Kartenhüllen)
 [Text:CardName v="HOOPA" ] (Kartenhüllen)
 [Text:CardName v="HUURO" ] (Kartenhüllen)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"] (Kartenhüllen)
+[Text:CardName v="PIKACHU" ] & Freunde (Kartenhüllen)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_19"] (Kartenhüllen)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"] (Kartenhüllen)
+[Text:CardName v="CHILI" ] (Kartenhüllen)
+Spezial-Set 3 (Kartenhüllen)
+[Text:CardName v="GANGAR" ] (Kartenhüllen)
+Meisterball-Rang (Saison[C:Nbsp ]C1) (Kartenhüllen)
+Meisterball-Rang – Top[C:Nbsp ]10[C:Nbsp ]000 (Saison[C:Nbsp ]C1) (Kartenhüllen)
+Meisterball-Rang – Top[C:Nbsp ]5000 (Saison[C:Nbsp ]C1) (Kartenhüllen)
+Meisterball-Rang – Top[C:Nbsp ]1000 (Saison[C:Nbsp ]C1) (Kartenhüllen)
 Dieses Zubehör kann an Karten angebracht\nwerden. Du kannst es auswählen, wenn du auf\ndeine Decks zugreifst.
 Dieses Cover für Alben kannst du nutzen,\nwenn du auf deine Alben zugreifst.
 Evoli (Cover)
@@ -9994,6 +10431,12 @@ Herrscher der Lüfte: [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (Cover)
 [Text:CardName v="HUURO" ] & [Text:CardName v="SWANNA" ] (Cover)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"] (Cover)
 Deluxepack: Mega (Cover)
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"]: [Mst:CommonCharacterName v="COMMON_CARD_NAME_19"] (Cover)
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"]: [Text:CardName v="PIKACHU" ] (Cover)
+[Text:CardName v="PIKACHU" ] & Freunde (Cover)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"] (Cover)
+[Text:CardName v="CHILI" ] & [Mst:CommonCharacterName v="COMMON_CARD_NAME_22"] (Cover)
+Spezial-Set 3 (Cover)
 Evoli (Spielunterlage)
 Evoli
 Mauzi (Spielunterlage)
@@ -10092,6 +10535,12 @@ Pokémon im Wald (Spielunterlage)
 [Text:CardName v="HOOPA" ] (Spielunterlage)
 [Text:CardName v="HUURO" ] & [Text:CardName v="SWANNA" ] (Spielunterlage)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"] (Spielunterlage)
+[Text:CardName v="PIKACHU" ] & Freunde (Spielunterlage)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_19"] (Spielunterlage)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"] (Spielunterlage)
+[Text:CardName v="CHILI" ] & [Mst:CommonCharacterName v="COMMON_CARD_NAME_22"] (Spielunterlage)
+Spezial-Set 3 (Spielunterlage)
+[Text:CardName v="GANGAR" ] (Spielunterlage)
 Dieses Zubehör wird im Kampf auf das Spielfeld\ngelegt. Du kannst es auswählen, wenn du auf deine\nDecks zugreifst.
 Bringe [Num:Int max_length="2" plural_only=" " ][Gr:Count s="ein Basis-Pokémon" p="Basis-Pokémon" ] ins Spiel.
 Bringe [Num:Int max_length="2" plural_only=" " ][Gr:Count s="ein Pokémon-ex" p="Pokémon-ex" ] ins Spiel.
@@ -10131,6 +10580,7 @@ B3b
 B4
 B4a
 B4b SP
+C1
 Erhalte [Num:Int id="0" max_length="3" ] oder mehr Punkte.
 Füge [Num:Int id="0" max_length="5" ] oder mehr Schadenspunkte zu.
 Gewinne [Num:Int id="0" max_length="3" ] oder mehr Kämpfe.
@@ -10138,6 +10588,9 @@ A
 Serie A
 B
 Serie B
+C
+Serie C
+Spezial
 Wunderwahl-Event
 Items
 Zubehör
@@ -10171,6 +10624,7 @@ Wundervolles Paldea
 Pulsierende Aura
 Mega-Schillern
 Seltene Items
+2. Jubiläumsfeier: Boosterpacks mit 1\ngarantierten Karte der Seltenheit [Mst:Rarity v="RARITY_MSID_SSASR" ]
 Mauzi (Münze)
 Mauzi (Kartenhüllen)
 Mauzi (Spielunterlage)
@@ -10601,6 +11055,8 @@ Funkelstaub ×[C:Nbsp ]1000
 [Mst:CardCharacterName v="CARD_NAME_1163" ] (058/P-B)
 [Mst:CardCharacterName v="CARD_NAME_811" ] (059/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1204" ] (060/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1149" ] (061/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1191" ] (062/P-B)
 [Mst:CardCharacterName v="CARD_NAME_993" ] (026/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1001" ] (027/P-B)
 [Mst:CardCharacterName v="CARD_NAME_130" ] (028/P-B)
@@ -10680,11 +11136,77 @@ Socken eines Rüpels von Team Rocket
 [Mst:CardCharacterName v="CARD_NAME_1342" ] (090/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1343" ] (091/P-B)
 [Mst:CardCharacterName v="CARD_NAME_152" ] (092/P-B)
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101390_MEGAGEKKOUGA" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101400_CHILI_DOOH" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101410_PremiumSet03" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101620_MEGAGEKKOUGA" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101630_CHILI_DOOH" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101640_PremiumSet03" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100920_MEGAGEKKOUGA" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100930_CHILI_DOOH" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100940_PremiumSet03" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100950_MEGAGEKKOUGA" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100960_CHILI_DOOH" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100970_PremiumSet03" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101120_PremiumSet03" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101130_MEGAGEKKOUGA" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101140_CHILI_DOOH" ]
+[Mst:CardCharacterName v="CARD_NAME_94" ] (001/P-C)
+[Mst:CardCharacterName v="CARD_NAME_1422" ] (002/P-C)
+[Mst:CardCharacterName v="CARD_NAME_1399" ] (003/P-C)
+[Mst:CardCharacterName v="CARD_NAME_814" ] (004/P-C)
+[Mst:CardCharacterName v="CARD_NAME_815" ] (005/P-C)
+[Mst:CardCharacterName v="CARD_NAME_547" ] (006/P-C)
+[Mst:CardCharacterName v="CARD_NAME_548" ] (007/P-C)
+[Mst:CardCharacterName v="CARD_NAME_1400" ] (008/P-C)
+[Mst:CardCharacterName v="CARD_NAME_1423" ] (009/P-C)
 [Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101050_TEAM_ROCKET" ]
 [Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100860_TEAM_ROCKET" ]
 [Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100860_TEAM_ROCKET" ]
 [Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101510_TEAM_ROCKET" ]
 [Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101310_TEAM_ROCKET" ]
+[Mst:PackName v="PACK_NAME_A1_1_02" ]
+[Mst:PackName v="PACK_NAME_A1_2_02" ]
+[Mst:PackName v="PACK_NAME_A1_3_02" ]
+[Mst:PackName v="PACK_NAME_A1a_1_01" ]
+[Mst:PackName v="PACK_NAME_A2_1_01" ]
+[Mst:PackName v="PACK_NAME_A2_2_01" ]
+[Mst:PackName v="PACK_NAME_A2a_1_01" ]
+[Mst:PackName v="PACK_NAME_A2b_1_01" ]
+[Mst:PackName v="PACK_NAME_A3_1_01" ]
+[Mst:PackName v="PACK_NAME_A3_2_01" ]
+[Mst:PackName v="PACK_NAME_A3a_1_01" ]
+[Mst:PackName v="PACK_NAME_A3b_1_01" ]
+[Mst:PackName v="PACK_NAME_A4_1_01" ]
+[Mst:PackName v="PACK_NAME_A4_2_01" ]
+[Mst:PackName v="PACK_NAME_A4a_1_01" ]
+[Mst:PackName v="PACK_NAME_B1_1_01" ]
+[Mst:PackName v="PACK_NAME_B1_2_01" ]
+[Mst:PackName v="PACK_NAME_B1_3_01" ]
+[Mst:PackName v="PACK_NAME_B1a_1_01" ]
+[Mst:PackName v="PACK_NAME_B2_1_01" ]
+[Mst:PackName v="PACK_NAME_B2a_1_01" ]
+[Mst:PackName v="PACK_NAME_B2b_1_01" ]
+[Mst:PackName v="PACK_NAME_B3_1_01" ]
+[Mst:PackName v="PACK_NAME_B3a_1_01" ]
+[Mst:PackName v="PACK_NAME_B4_1_01" ]
+[Mst:PackName v="PACK_NAME_B3b_1_01" ]
+[Mst:PackName v="PACK_NAME_B4a_1_01" ]
+[Mst:CardCharacterName v="CARD_NAME_456" ] (069/P-B)
+[Mst:CardCharacterName v="CARD_NAME_534" ] (070/P-B)
+[Mst:CardCharacterName v="CARD_NAME_39" ] (077/P-B)
+[Mst:CardCharacterName v="CARD_NAME_639" ] (078/P-B)
+[Mst:CardCharacterName v="CARD_NAME_452" ] (085/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1312" ] (086/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1345" ] (093/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1183" ] (094/P-B)
+[Mst:CardCharacterName v="CARD_NAME_33" ] (101/P-B)
+[Mst:CardCharacterName v="CARD_NAME_583" ] (102/P-B)
+[Mst:CardCharacterName v="CARD_NAME_21" ] (060/P-A)
+[Mst:CardCharacterName v="CARD_NAME_87" ] (061/P-A)
+[Mst:CardCharacterName v="CARD_NAME_198" ] (062/P-A)
+[Mst:CardCharacterName v="CARD_NAME_830" ] (063/P-A)
+[Mst:CardCharacterName v="CARD_NAME_831" ] (064/P-A)
 PokéGold
 PokéGold + Zubehör
 PokéGold + Boni
@@ -10746,6 +11268,12 @@ Sommer-Aktion: Ang. für PokéGold (gekauft) × 200
 PokéGold (gekauft) × 115 + Zubehör ([Text:CardName v="KAMITSURE" lang="de_DE" ])
 PokéGold (gekauft) ×[C:Nbsp]115 + Zubehör ([Text:CardName v="HOOPA" ])
 PokéGold (gekauft) ×[C:Nbsp ]115 + Zubehör ([Text:CardName v="THUNDER" ] & [Text:CardName v="FREEZER" ] & [Text:CardName v="FIRE" ])
+2. Jubiläumsfeier: Ang. für PokéGold (gekauft) × 100
+2. Jubiläumsfeier: Ang. für PokéGold (gekauft) × 200
+PokéGold (gekauft) × 115 + Zubehör ([Text:CardName v="PIKACHU" ] & Freunde)
+Super-Angebot für PokéGold (gekauft) ×[C:Nbsp ]5 + Bonus-PokéGold (kostenlos) ×[C:Nbsp ]55!
+Starthilfe für das neue Boosterpack: Ang. für PokéGold (gekauft) ×[C:Nbsp ]35
+PokéGold (gekauft) ×[C:Nbsp ]35
 PokéGold
 Tickets
 Spezial
@@ -10758,6 +11286,9 @@ Neuauflagen-Drop
 Neuauflagen-Wunderwahl
 Promokarten
 Team Rocket
+[Mst:Rarity v="RARITY_MSID_SSASR" ]-Garantie-Pack
+Verwendbar zum Öffnen von Spezialpacks.
+Spezialpack-Sanduhr
 1 Karte mit Seltenheit [Mst:Rarity v="RARITY_MSID_RR" ] oder seltener garantiert
 [Mst:PackName v="PACK_NAME_PROMO_A_1"]
 [Mst:PackName v="PACK_NAME_PROMO_A_2"]
@@ -10765,6 +11296,7 @@ Team Rocket
 [Mst:PackName v="PACK_NAME_PROMO_A_4"]
 [Mst:PackName v="PACK_NAME_PROMO_A_5"]
 [Mst:PackName v="PACK_NAME_PROMO_A_6"]
+[Mst:PackName v="PACK_NAME_PROMO_A_7"]
 [Mst:PackName v="PACK_NAME_PROMO_A_8"]
 [Mst:PackName v="PACK_NAME_PROMO_A_9"]
 [Mst:PackName v="PACK_NAME_PROMO_A_10"]
@@ -10938,6 +11470,18 @@ Schau dir die Hand deines Gegners an und lege beliebig viele Basis-Pokémon, die
 Einmal während des Zuges jedes Spielers kann jener Spieler [Num:Int id="0" max_length="2" ][C:Nbsp ][Gr:Count s="Münze" p="Münzen" ref="0" ] werfen. [Gr:Count p="Zeigen alle Münzen Kopf," one="Bei Kopf" two="Zeigen beide Münzen Kopf," ref="0" ] zieht jener Spieler so lange Karten, bis er [Num:Int id="1" max_length="2" ][C:Nbsp ][Gr:Count s="Karte" p="Karten" ref="1" ] auf der Hand hat.
 Wirf so lange 1 Münze, bis sie Zahl zeigt. Nimm pro Kopf 1 zufälliges Pokémon, bei dem „Team[C:Nbsp ]Rocket“ zum Namen gehört, aus deinem Deck auf deine Hand.
 Das Aktive Pokémon deines Gegners [Text:SpecialCondition v0="ist jetzt {}" v1="{} jetzt" ]. Wirf 1 Münze. Bei Zahl [Text:SpecialCondition v0="ist dein Aktives Pokémon jetzt auch {}" v1="{} dein Aktives Pokémon jetzt auch" ].
+Wähle 1 deiner Pokémon und wirf anschließend so lange 1 Münze, bis sie Zahl zeigt. Heile pro Kopf [Num:Int id="0" max_length="3" ][C:Nbsp ]Schadenspunkte bei jenem Pokémon.
+Heile [Num:Int id="0" max_length="3" ][C:Nbsp ]Schadenspunkte bei 1 deiner Pokémon, an das mindestens 1 Energie angelegt ist. Wenn du auf diese Weise Schaden geheilt hast, lege [Num:Int id="1" max_length="2" ][C:Nbsp ]zufällige [Gr:Count s="Energie" p="Energien" ref="1" ] von jenem Pokémon ab.
+Dein Aktives Pokémon erholt sich von allen Speziellen Zuständen.
+Dem Basis-Pokémon, an das diese Karte angelegt ist, werden −[C:Nbsp ][Num:Int id="0" max_length="3" ][C:Nbsp ]Schadenspunkte durch Attacken von Pokémon deines Gegners zugefügt.
+Die eingesetzten Attacken von dem [Text:CardName id="0" ], an das diese Karte angelegt ist, fügen dem Aktiven Pokémon deines Gegners +[C:Nbsp ][Num:Int id="1" max_length="3" ][C:Nbsp ]Schadenspunkte zu.
+Während dieses Zuges fügen die Attacken deines [Text:CardName id="0" ], [Text:CardName id="1" ] oder [Text:CardName id="2" ] den Pokémon deines Gegners +[C:Nbsp ][Num:Int id="3" max_length="3" ][C:Nbsp ]Schadenspunkte zu.
+Du kannst diese Karte nur einsetzen, wenn du [Text:CardName id="0" ], [Text:CardName id="1" ], [Text:CardName id="2" ] oder [Text:CardName id="3" ] im Spiel hast.\n\nWechsle 1 Pokémon von der Bank deines Gegners in die Aktive Position ein.
+Schau dir die obersten [Num:Int id="0" max_length="2" ][C:Nbsp ]Karten deines Decks an und nimm [Num:Int id="1" max_length="2" ] von ihnen auf deine Hand. Mische den Rest zurück in dein Deck.
+Generiere [Num:Int id="1" max_length="2" ][C:Nbsp ][Img:Element id="0" ][C:Nbh ][Gr:Count s="Energie" p="Energien" ref="1" ] in deinem Energiebereich und lege sie an 1 deiner [Text:CardName id="2" ] oder [Text:CardName id="3" ] an.
+Du kannst diese Karte nur einsetzen, wenn du [Num:Int id="0" max_length="1" ] oder mehr Pokémon verschiedenen Typs im Spiel hast.\n\nTausche dein Aktives Pokémon gegen 1[C:Nbsp ]Pokémon auf deiner Bank aus.
+Einmal während des Zuges jedes Spielers kann jener Spieler diesen Effekt nutzen. Wirf 1[C:Nbsp ]Münze. Ziehe bei Kopf [Num:Int id="0" max_length="2" ][C:Nbsp ][Gr:Count s="Karte" p="Karten" ].
+Verschiebe alle [Img:Element id="1" ][C:Nbh ]Energien von 1[C:Nbsp ][Img:Element id="0" ][C:Nbh ]Pokémon auf deiner Bank auf dein [Text:CardName id="2" ] in der Aktiven Position.
 Pokémon-Ausrüstung
 Item (Fossil)
 Item
@@ -11077,6 +11621,8 @@ Gewinne, ohne dass dein Gegner Punkte erhält.
 [Mst:SoloRandomBattleGroupName]
 [Mst:SoloRandomBattleName]
 [Mst:SpecialConditionType]
+[Mst:SpecialPackTicketDescription]
+[Mst:SpecialPackTicketName]
 [Mst:StageType]
 [Mst:StageTypePokemon]
 [Mst:SubPackName]
@@ -11098,6 +11644,10 @@ Möchtest du einen Blick auf die Wunderwahl werfen?
 Wir benachrichtigen dich, wenn deine Wunder-Ausdauer vollständig regeneriert wurde.
 Wunder-Ausdauer vollständig regeneriert
 Deine Wunder-Ausdauer wurde vollständig regeneriert!
+Du kannst dein wöchentliches Spezialpack öffnen!
+Du erfährst, wenn du wieder Spezialpack-Ausdauer hast.
+Spezialpack-Ausdauer regeneriert
+Deine Spezialpack-Ausdauer wurde regeneriert!
 Erscheinungswahrscheinlichkeit der 1. Karte
 Erscheinungswahrscheinlichkeit der 1. bis 3. Karte
 Erscheinungswahrscheinlichkeit der 1. bis 4. Karte
@@ -11107,6 +11657,7 @@ Erscheinungswahrscheinlichkeit der 3. Karte
 Erscheinungswahrscheinlichkeit der 4. Karte
 Erscheinungswahrscheinlichkeit der 5. Karte
 Erscheinungswahrscheinlichkeit der 6. Karte
+Mögliche erste Karten
 Über diese App
 Neues Album erstellen
 Albenlimit erreicht
@@ -11254,6 +11805,7 @@ Du warst zuerst dran.
 Der Gegner war zuerst dran.
 Top-Karte
 Keine
+Deck ansehen
 Top-Karte
 Zum Fortfahren tippen
 Karte deines Gegners
@@ -11275,7 +11827,8 @@ Du hast keine Belohnungen erhalten.
 Erstmalige Belohnungen
 Zufallsbelohnungen
 Spieler-EP
-Du hast [Num:Int id="0" max_length="0" visible="0" ][Gr:Count s="ein Promopack erhalten, das" p="Promopacks erhalten, die" ] unter\n„Geschenke“ gefunden werden [Gr:Count s="kann" p="können" ].
+Gewinne Belohnungen
+Du hast [Num:Int id="0" max_length="0" visible="0" ][Gr:Count s="ein Pack erhalten, das" p="Packs erhalten, die" ] unter\n„Geschenke“ gefunden werden [Gr:Count s="kann" p="können" ].
 Kampfverlauf
 VS. [Str:PlayerName id="0" ]
 Unentschieden
@@ -11489,6 +12042,7 @@ Pokémon-Check: Schlaf
 Pokémon-Check: Verbrennung
 Münzwurf: Verwirrung
 Der erste Münzwurf ist garantiert Kopf.
+Wirf [Num:Int id="0" max_length="2" ][C:Nbsp ][Gr:Count s="Münze" p="Münzen" ] mehr.
 Es wird auf den Gegner gewartet...
 Kopf
 Zahl
@@ -11745,6 +12299,12 @@ Es gibt keine Pokémon, die für das\nVerschieben von Energie in Frage kommen.
 Bitte wähle das Pokémon, an das Energie\nangelegt ist, die du verschieben möchtest.
 Bist du fertig damit, Energie zu verschieben?
 Verhindert allen Schaden und alle Effekte der\nvon Pokémon des Gegners eingesetzten\nAttacken.
+Attacken von [Text:CardName id="0" ], [Text:CardName id="1" ]\nund [Text:CardName id="2" ] fügen den Pokémon\ndes Gegners +[C:Nbsp ][Num:Int id="3" max_length="3" ][C:Nbsp ]Schadenspunkte zu.
+[Text:AttackName id="0" ] fügt\n−[C:Nbsp ][Num:Int id="1" max_length="3" ][C:Nbsp ]Schadenspunkte zu.
+Wirf beim Einsatz von [Text:AttackName id="0" ]\n[Num:Int id="1" max_length="2" ][C:Nbsp ][Gr:Count s="Münze" p="Münzen" ref="1" ] mehr.
+Bitte wähle [Gr:Count s="das Pokémon" p="die Pokémon" ref="1" ][Num:Int id="1" visible="0" max_length="1" ] aus, an [Gr:Count s="das" p="die" ref="1" ] du\n[Gr:Count s="Energie" p="Energien" ref="0" ][Num:Int id="0" visible="0" max_length="1" ] anlegen möchtest.
+Wirf eine Münze, wenn dein Pokémon\nkampfunfähig wird. Bei Kopf erhält dein\nGegner dafür keine Punkte.
+Attacken von [Text:CardName id="0" ] fügen dem\nAktiven Pokémon des Gegners\n+[C:Nbsp ][Num:Int id="1" max_length="3" ][C:Nbsp ]Schadenspunkte zu.
 Lege ein Basis-Pokémon in die Aktive\nPosition.
 Es können nur Basis-Pokémon ausgewählt\nwerden.
 Bringe ein Pokémon ins Spiel.
@@ -11953,6 +12513,11 @@ Bis zu [Num:Int id="0" max_length="2" ] [Gr:Count s="Pokémon-Ausrüstung" p="Po
 Wenn für einen Effekt der Trainerkarte des Spielers Münzen geworfen werden, kann der Spieler diese Münzen erneut werfen.
 Bei der Attacke [Text:AttackName id="0" ] wird 1 Pokémon des Gegners [Num:Int id="1" max_length="2" ] Mal mehr ausgewählt.
 [Gr:Count s="Das" p="Die" ] Pokémon auf [Num:Int id="0" visible="0" max_length="1" ][Gr:Count s="der ausgewählten Position" p="den ausgewählten Positionen" ] [Gr:Count s="wird" p="werden" ] am Ende des nächsten Zuges des Gegners kampfunfähig gemacht.
+Attacken von [Text:CardName id="0" ], [Text:CardName id="1" ] und [Text:CardName id="2" ] fügen den Pokémon des Gegners +[C:Nbsp ][Num:Int id="3" max_length="3" ][C:Nbsp ]Schadenspunkte zu.
+[Text:AttackName id="0" ] fügt −[C:Nbsp ][Num:Int id="1" max_length="3" ][C:Nbsp ]Schadenspunkte zu.
+Wirf beim Einsatz von [Text:AttackName id="0" ] [Num:Int id="1" max_length="2" ][C:Nbsp ][Gr:Count s="Münze" p="Münzen" ref="1" ] mehr.
+Wirf eine Münze, wenn dein Pokémon kampfunfähig wird. Bei Kopf erhält dein Gegner dafür keine Punkte.
+Attacken von [Text:CardName id="0" ] fügen dem Aktiven Pokémon des Gegners +[C:Nbsp ][Num:Int id="1" max_length="3" ][C:Nbsp ]Schadenspunkte zu.
 Ablagestapel des Gegners
 Dein Ablagestapel
 Keine abgelegten Karten
@@ -11991,6 +12556,7 @@ Wische nach oben, um die Karte deinem\nTauschpartner zu schicken.
 [Str:NickName]
 [Str:PlayerCode]
 [Str:PlayerName]
+-/[Num:Int id="0" max_length="3" zero_padding="3"]
 [Num:Int id="0" max_length="3" ]<size=24><space=0.15em><voffset=3.3><scale=1.8>-</scale></size></voffset>
 [Num:Int id="0" max_length="3" ] <size=24><space=0.08em><voffset=5>+</size></voffset>
 [Num:Int id="0" max_length="4" ] +
@@ -12055,13 +12621,14 @@ Rückzug
 Regelzeichen
 Trainer
 Flair erhalten
+???
 JPN
 SPA
 ENG
-PT-BR
+POR
 FRA
 KOR
-DEU
+GER
 CHT
 ITA
 Vorschau
@@ -12078,6 +12645,7 @@ Diese Karte ist nicht in Boosterpacks erhältlich.
 Du besitzt keine Flairs.
 Vorschau nicht möglich. Derzeit besitzt du diese\nKarte nicht.
 Du kannst nicht mehr als [Num:Int id="0" max_length="3" ] Karten\nzu deiner Wunschliste hinzufügen.
+Diese Karte kann nicht zur Wunschliste\nhinzugefügt werden.
 Halte die Karte gedrückt
 Will ich!
 Die App wird geschlossen.\nBist du damit einverstanden?
@@ -12258,7 +12826,7 @@ Möchtest du dieses Deck löschen?\nDeine Karten werden dadurch nicht gelöscht.
 Abbrechen
 OK
 Deck löschen
-Dieses Deck wurde als Favorit markiert.\nMöchtest du es trotzdem löschen?\nDeine Karten werden dadurch nicht gelöscht.
+Dieses Deck wurde wie folgt eingestellt.\nMöchtest du es wirklich löschen?\nDeine Karten werden dadurch nicht gelöscht.\n\n• Dieses Deck wurde als Favorit markiert.\nWenn du es löschst, wird es auch aus deinen\nFavoriten entfernt.
 Abbrechen
 OK
 Deck löschen
@@ -12287,6 +12855,21 @@ Karten konnten nicht zur Wunschliste hinzugefügt\nwerden, da diese voll ist.\n\
 OK
 Das Deck kann nicht mittels eines 2D-Codes\ngeteilt werden, weil es mindestens eine dieser\nBedingungen nicht erfüllt:\n\n• Besteht aus genau 20 Karten\n• Enthält mindestens ein Basis-Pokémon\n• Wurde ausschließlich mit eigenen Karten erstellt\n• Es wurde Energie ausgewählt
 OK
+Dieses Deck ist momentan als Spotlight-Deck\nauf deinem Profil eingestellt. Wenn du die\nFreigabe-Einstellungen änderst, wird es auch von\ndeinem Profil entfernt.\nBist du damit einverstanden?
+Abbrechen
+OK
+Freigabe-Einstellungen ändern
+Dieses Deck ist momentan als dein Spotlight-Deck\nfestgelegt. Wenn es in einem nicht nutzbaren\nZustand gespeichert wird, wird es von deinem\nProfil entfernt.
+Abbrechen
+OK
+Dieses Deck wurde wie folgt eingestellt.\nMöchtest du es wirklich löschen?\nDeine Karten werden dadurch nicht gelöscht.\n\n• Dieses Deck ist momentan als Spotlight-Deck\nauf deinem Profil eingestellt.\nWenn du es löschst, wird es auch von deinem\nProfil entfernt.
+Abbrechen
+OK
+Deck löschen
+Dieses Deck wurde wie folgt eingestellt.\nMöchtest du es wirklich löschen?\nDeine Karten werden dadurch nicht gelöscht.\n\n• Dieses Deck ist momentan als Spotlight-Deck\nauf deinem Profil eingestellt.\nWenn du es löschst, wird es auch von deinem\nProfil entfernt.\n\n• Dieses Deck wurde als Favorit markiert.\nWenn du es löschst, wird es auch aus deinen\nFavoriten entfernt.
+Abbrechen
+OK
+Deck löschen
 Dieses Deck löschen
 Alle Karten im Deck ansehen
 Dieses Deck kopieren
@@ -12305,6 +12888,9 @@ Zubehör
 Kopieren
 Abbrechen
 Bearbeiten
+Privat
+Öffentlich
+Nur Freunde
 Speichern
 Ändern
 Mindestens ein Energietyp, der benötigt wird,\num die Attacken in diesem Deck einzusetzen,\nwurde nicht ausgewählt.
@@ -12320,11 +12906,17 @@ Neues Deck erstellen
 Themendeck-Vorlage nutzen
 Kopie eines Decks erstellen
 Code scannen
+Zu „Öffentliche Decks“
 Welches Deck kopieren?
 Bearbeiten
 In Bearbeitung
 Speichern
 Meine Decks
+Privat
+Öffentlich
+Nur für Freunde einsehbar
+Wenn du „Öffentlich“ auswählst, können sich\nandere Spieler die von dir erstellten Decks\nansehen.
+Freigabe-Einstellungen
 Bitte wähle bis zu zwei Typen aus.
 Abbrechen
 Automatisch erstellen
@@ -12399,6 +12991,7 @@ Dieses Deck wurde erfolgreich erstellt.
 Dieses Deck wurde erfolgreich kopiert.
 Dieses Deck wurde erfolgreich gelöscht.
 Keine Decks gefunden
+Karte kann nicht eingesetzt werden
 2D-Code
 Abbrechen
 Kopieren
@@ -12407,6 +13000,7 @@ Der Event-Zeitraum ist abgelaufen.\nDu kehrst zum Kampfbildschirm zurück.
 OK
 Tutorial
 Promopacks
+Eventdetails
 Missionen
 Shop
 Über das Event
@@ -12420,6 +13014,9 @@ Bei Emblem-Events kannst du gegen andere Spieler\nantreten und versuchen, durch 
 Es gibt verschiedene Arten von Emblem-Events,\nzum Beispiel solche, bei denen Spieler eine\nbestimmte Anzahl von Siegen anstreben oder\naufeinanderfolgende Siege erreichen wollen. \nWelche Art von Event gerade im Gange ist,\nkannst du unter „Neuigkeiten“ einsehen.
 Bei Drop-Events kannst du gegen allerlei Decks\nantreten und durch Siege Promopacks erhalten.\nAus diesen Promopacks kannst du besondere\nKarten erhalten.\nHinweis: Die Promopacks und Karten auf dem\nBild sind nur Beispiele.
 Du benötigst Event-Ausdauer, um an Event-Kämpfen\nteilnehmen zu können.\nEvent-Ausdauer regeneriert sich im Laufe der Zeit\noder durch die Nutzung von Event-Sanduhren.
+Limitierte Kämpfe sind Events, bei denen du mit\nDecks, die speziellen Regeln entsprechen,\ngegen andere Spieler antreten und versuchen\nkannst, dir durch möglichst viele Siege\nverschiedene Belohnungen zu erkämpfen.
+Die speziellen Regeln variieren je nach Event.\nMache dich auf dem Event-Bildschirm und dem\nDeck-Auswahlbildschirm mit den aktuellen\nRegeln vertraut, bevor du ein Deck erstellst.
+Es gibt verschiedene Arten von limitierten\nKämpfen, zum Beispiel solche, bei denen du eine\nbestimmte Anzahl von Siegen oder eine Reihe\naufeinanderfolgende Siege anstrebst.\nWelche Art von Event gerade im Gange ist, kannst\ndu in den Neuigkeiten zum Event einsehen.
 Entwickelt sich aus [Mst:CardCharacterName ]
 <line-indent=140>Wenn dein Pokémon-[Img:ex ] [Ctrl:Bold ]kampfunfähig[/Ctrl:Bold] ist, erhält dein Gegner [Ctrl:Bold ]2[/Ctrl:Bold][C:Nbsp ]Punkte.
 ex-Regel
@@ -12465,10 +13062,10 @@ Kostenlos
 JPN
 SPA
 ENG
-PT-BR
+POR
 FRA
 KOR
-DEU
+GER
 CHT
 ITA
 Du besitzt nicht genug Items oder PokéGold, um\ndiese Wunderwahl zu reaktivieren.
@@ -12551,7 +13148,7 @@ Du kannst Decks auch automatisch erstellen\nlassen.\nDafür wählst du einfach �
 Außerdem kannst du das Aussehen deiner\nSpielunterlage, Kartenhüllen und Münze ändern.\n\nNeue Designs können unter anderem im Shop\noder durch das Abschließen von Missionen\nerhalten werden.
 Wenn du diese Erklärung erneut lesen möchtest,\ntippe auf dieses Symbol.\n\nWenn du dir bei etwas anderem unsicher bist,\nschau in den Tipps nach.
 Leihdecks bestehen aus 20 Karten, die du\nausleihen kannst, um sie in Kämpfen einzusetzen.
-Leihdecks erhältst du hauptsächlich durch das\nAbschließen von Deck-Missionen.\n\nDeine erhaltenen Leihdecks kannst du über das\nDeck-Menü einsehen.
+Leihdecks werden automatisch bereitgestellt.\nVerfügbare Leihdecks werden regelmäßig\naktualisiert.
 Ein Leihdeck kann nur begrenzt oft verwendet\nwerden.
 Mithilfe von Themendeck-Vorlagen lassen sich\nganz einfach Decks erstellen.
 Wenn du beim Erstellen eines Decks eine\nThemendeck-Vorlage auswählst, wird aus den\nKarten, die du besitzt, ein Deck zusammengestellt.\n\nUm ein Themendeck zu vervollständigen, benötigst\ndu alle Karten, die in diesem enthalten sind.
@@ -12594,6 +13191,14 @@ Dein Freund wird die Karte dann unter\n„Geschenke“ finden können
 Der Freundesliste wurde eine Funktion\nhinzugefügt, mit der du Freunde als Favoriten\nmarkieren kannst. So markierte Freunde werden\ndann oben in der Freundesliste angezeigt, sodass\nsie einfach zu finden sind, z. B. wenn du tauschen\nmöchtest.
 Um einen Freund als Favorit zu markieren, tippe\nauf „Favorit“ oben rechts auf der Freundesliste.
 Du musst nur noch die Freunde auswählen, die du\nals Favorit markieren möchtest.\nHinweis: Deine Freunde werden nicht sehen, dass\ndu sie als Favorit markiert hast.
+Du kannst Spezialpack-Ausdauer nur einmal pro\nWoche einsetzen, um ein Spezialpack zu öffnen.
+Du wirst benachrichtigt, wenn sich deine\nSpezialpack-Ausdauer regeneriert hat und du\nein Spezialpack öffnen kannst.\n\nVergiss nicht, dein wöchentliches Pack zu öffnen!
+Wenn du Spezialpack-Sanduhren einsetzt, kannst\ndu ein Spezialpack öffnen, auch wenn du keine\nSpezialpack-Ausdauer hast.
+Unter „Öffentliche Decks“ kannst du dir Decks\nvon Freunden und Spielern aus aller Welt ansehen.
+Unter „Derzeit beliebt“ werden Decks angezeigt,\ndie von Spielern weltweit häufig erstellt werden.
+Unter „Freunde“ kannst du Spotlight-Decks sehen,\ndie deine Freunde öffentlich gemacht haben.
+Tippe auf ein Deck, das dich interessiert, um alle\nenthaltenen Karten anzusehen.
+Du kannst mit den Karten, die du besitzt,\nein Deck erstellen. Dieses kannst du auf dem\nDeck-Bearbeitungsbildschirm speichern, zu dem\ndu durch das Tippen auf „Dieses Deck bearbeiten“\ngelangst.
 Hier werden alle Karten angezeigt,\ndie du besitzt.
 Alben wurden freigeschaltet.
 Wähle ein Cover, das dir gefällt, und stelle\ndeine Karten im Album zur Schau.
@@ -12639,7 +13244,7 @@ In CPU-Kämpfen trittst du gegen KI-Gegner\nan, die unterschiedliche Decks nutze
 Versuche dich doch einmal an einem\nCPU-Kampf.
 Stufenkämpfe gibt es in unterschiedlichen\nSchwierigkeitsstufen. Starte mit „Anfänger“.
 Wenn du gewinnst, kannst du Belohnungen\nwie Spieler-EP und Items erhalten.
-Kämpfe als Erstes gegen dieses\nBisaknosp-Deck.
+Fangen wir mit diesem Kampf an.
 Es gibt auch eine Funktion, die automatisch\ndas Kämpfen für dich übernimmt.
 Hier kannst du sie ein- und ausschalten.\nSie ist ideal für entspannte Kämpfe.
 Das automatische Kämpfen kannst du auch\nwährend eines Kampfes ein- und ausschalten.
@@ -12657,6 +13262,7 @@ In Rangmatches kannst du dein\nKampfgeschick gegen Spieler aus\naller Welt auf d
 Alle Flairs und Items, die du beim Tausch\nerhalten kannst, werden hier angezeigt.
 Du kannst Karten an Freunde schicken.
 Damit hast du das Abgabe-Tutorial\nabgeschlossen. Jetzt kannst du\nFreunden Karten schicken!
+Hier kannst du dir Decks von Freunden und\nSpielern aus aller Welt ansehen.
 Unter „Meine Karten“ kannst du dir ansehen, wie\nFlairs auf Karten aussehen. In Kämpfen kannst du\nsie dann auch in Bewegung erleben.
 Du kannst Flairs deiner Wahl erhalten.\nDie Bedingungen dafür hängen von der jeweiligen\nKarte ab.
 Wenn du eine bestimmte Anzahl derselben Karte\nerhältst, kannst du automatisch Flairs für diese\nKarte erhalten. Hinweis: Du kannst nicht für alle\nKarten auf diese Weise Flairs erhalten.
@@ -12747,8 +13353,10 @@ Abgabe-Info
 Andere Boosterpacks ansehen
 Karten, die deinem Abgabepartner fehlen
 Karten, die du abgeben kannst
+Wunschliste deines Abgabepartners
 Keine fehlenden Karten im Kartendex (komplett).
 Du besitzt keine der Karten, die deinem Freund fehlen.
+Keine Karten gefunden
 Du kannst nur Karten mit bestimmter Seltenheit abgeben.
 Wähle eine Karte zum Abgeben
 Du hast die Karte an deinen Freund abgegeben.
@@ -12760,9 +13368,29 @@ Du kannst jedem Freund nur ein Mal\npro Tag eine Karte abgeben.
 Du kannst während deines Zuges beliebig viele Itemkarten spielen.
 Kampf
 Community
+Deck-Einschränkungen
+Hinweis: Manche Karten können unabhängig von den\nfestgelegten Einschränkungen eingesetzt werden.
+Du kannst die erlaubten Erweiterungen auswählen.
+Erweiterungs-Einschränkungen
+Hinweise: Einschränkungen gelten nur für Pokémon.\nManche Karten können unabhängig von den\nfestgelegten Einschränkungen eingesetzt werden.
+Du kannst die erlaubten Seltenheiten auswählen.
+Seltenheits-Einschränkungen
+Alle Decks
+Zurücksetzen
+Mit Erweiterungs-Einschränkungen
+Mit Seltenheits-Einschränkungen
+Kampfregel-Einstellungen
+Karten-Einschränkungen
+Deck-Einschränkungen
+Nur „Meine Decks“
+Keine Erweiterungs-Einschränkungen
+Keine Seltenheits-Einschränkungen
+OK
+PROMO
+Nur Leihdecks
 Decks
 Meine Decks
-Themendeck-Vorlagen
+Deckvorlagen
 Leihdecks
 Deck-Menü
 Tutorial
@@ -12778,6 +13406,21 @@ Privatmatch
 Zufallsmatch
 Event-Matches
 Spielerkampf
+Du kannst mit deinen Freunden kämpfen, indem ihr\nein Passwort oder einen 2D-Code miteinander teilt.
+Privatmatch
+In Vorbereitung...
+Einladen
+Wird automatisch erstellt
+Passwort
+Hinweise:\n- Wenn du Kampfregeln festlegst, wird automatisch ein\nPasswort erstellt.\n- Sobald du auf „Starten“ tippst, wird ein 2D-Code generiert.
+Privatmatch-Einstellungen
+Passwort eingeben
+Kampfregel-Einstellungen
+Starten
+Beitreten
+Beitreten
+Passwort
+2D-Code
 Mit Passwort
 Mit 2D-Code
 Privatmatch-Menü
@@ -12787,12 +13430,14 @@ Event
 Bald verfügbar
 Neu verfügbar
 CPU
+Öffentliche Decks
 [Num:Int id="0" max_length="0" visible="0" ][Gr:Count s="Event" p="Events" ] im Gange!
 Endet bald!
 [Num:Int id="0" max_length="0" visible="0" ][Gr:Count s="Event" p="Events" ] im Gange!
 Endet bald!
 Event im Gange!
 Endet bald!
+Promopack-Belohnungen hinzugefügt
 CPU-Kampf
 Spielerkampf
 Das Datum hat sich geändert.\nDu kehrst zum Titelbildschirm zurück.
@@ -12803,6 +13448,10 @@ Der Status hat sich geändert.\nDu kehrst zum Titelbildschirm zurück.
 OK
 Bald verfügbar
 OK
+Wenn du die Regel „Nur Leihdecks“ aktivierst,\nwerden die festgelegten Karten-Einschränkungen\nzurückgesetzt.
+Abbrechen
+OK
+Deck-Einschränkungen bestätigen
 Galerien, die du als Favorit markierst, sind jederzeit vom Hauptbildschirm aus einsehbar. Unter „Galerien“ kannst du dies ändern.
 Alben, die du als Favorit markierst, sind jederzeit vom Hauptbildschirm aus einsehbar. Unter „Alben“ kannst du dies ändern.
 Galerie
@@ -12827,6 +13476,7 @@ OK
 Freischaltung in:
 Freischaltbedingungen
 Community
+Die Kampfregeln wurden festgelegt.\nEin Passwort wird automatisch erstellt.
 Wunderwahl
 Wunderwahl+\nverfügbar
 Chaneira-Wahl\nverfügbar
@@ -12852,6 +13502,14 @@ Neu!
 Emblem
 Zum Fortfahren tippen
 Super!
+Möchtest du mithilfe der erhaltenen Themendeck-\nVorlage jetzt das Deck registrieren?\n\nHinweis: Du kannst Decks aus Themendeck-\nVorlagen registrieren, indem du unter\n„Meine Decks“ auf „Neu erstellen“ tippst.
+Abbrechen
+Registrieren
+Deck registrieren
+Das Deck konnte nicht registriert werden, da du\nkeinen Platz für weitere Decks hast.\n\nDu kannst Decks aus Themendeck-Vorlagen\nregistrieren, indem du unter „Meine Decks“ auf\n„Neu erstellen“ tippst.
+OK
+Das Spiel wurde beim Registrieren des\nThemendecks geschlossen.\n\nDu kannst Decks aus Themendeck-Vorlagen\nregistrieren, indem du unter „Meine Decks“ auf\n„Neu erstellen“ tippst.
+OK
 Trainerkarten komplett!
 Seltenheit komplett!
 [Num:Int id="0" max_length="3" ] [Gr:Count s="Karte" p="Karten" ] im\nKartendex registriert!
@@ -12922,11 +13580,13 @@ Typ Wasser komplett!
 Weiter
 Glückwunsch!\nDu hast alle [Text:Char v="DIAMOND" ]-Karten dieser Erweiterung\nerhalten!
 Glückwunsch!\nDu hast alle Karten dieser Erweiterung erhalten!
+Glückwunsch!\nDu hast alle Karten der Seltenheit [Mst:Rarity v="RARITY_MSID_SA" ] aus\ndieser Erweiterung gesammelt!
 OK
 [Num:Int id="0" max_length="4" ] verschiedene [Gr:Count s="Karte" p="Karten" ]!
 Komplett!
 Registrierte Karten:
 Komplett!
+Fehlende Karten: [Num:Int id="0" max_length="3"]
 Hinzufügen
 Zu einem Album hinzufügen
 Zu einer Galerie hinzufügen
@@ -12934,6 +13594,7 @@ Zu einer Galerie hinzufügen
 Ausgewählt
 Pokémon-ex
 Mega-Entwicklungs-Pokémon-ex
+Dualtyp
 Mit Fähigkeit
 Ohne Fähigkeit
 Alle
@@ -13103,6 +13764,7 @@ Empfohlene Missionen
 Zeitlich begrenzt
 Du hast die heutigen Tages-Missionen abgeschlossen.
 Du hast hier alle Missionen abgeschlossen.
+Du hast die Event-Missionen dieser Woche abgeschlossen! Bitte warte, bis die nächsten Missionen freigeschaltet werden.
 Abschließen
 Abschließen
 Abgeschlossen
@@ -13110,6 +13772,7 @@ Abgeschlossen
 Du hast alle Belohnungen angenommen.
 Alle abschließen
 Fokus-Sammlungen
+Bis zur Freischaltung:
 OK
 Glückwunsch! Du hast eine Mission\nabgeschlossen. Du kannst versuchen,\nauch andere Missionen abzuschließen.
 Erfülle eine der folgenden Vorgaben:
@@ -13127,6 +13790,8 @@ Pack-Punkte können als Bonus erhalten werden,\nwenn du Boosterpacks mithilfe vo
 Du hast das Pack-Punktelimit erreicht.
 Pack-Punktetausch
 Eintauschbar
+Freitag
+Samstag
 Nicht genug Pack-Punkte
 Eintauschen
 Im Besitz
@@ -13139,8 +13804,10 @@ Beim Öffnen eines Packs werden die unten aufgeführten Schritte nacheinander au
 • Wenn die Bedingungen für die Generierung des Boosterpacks aus dieser Kategorie erfüllt wurden, wird kein „Normales Pack“ ausgewählt.\n• Stattdessen wird das Boosterpack aus dieser Kategorie ausgewählt.\n• Die Auswahl-Wahrscheinlichkeit entspricht dabei den Erscheinungsraten eines „Normalen Packs“.\n• Bitte lies dir die Sektion „Achtung!“ durch, um Informationen zu den Bedingungen zu erhalten, die die Generierung von Packs bestimmen.
 • Wenn die Bedingungen für die Generierung des Boosterpacks aus dieser Kategorie erfüllt wurden, wird kein „Normales Pack“ oder „Normales Pack +[C:Nbsp ]1[C:Nbsp ]Karte“ ausgewählt.\n• Stattdessen wird das Boosterpack aus dieser Kategorie ausgewählt.\n• Die Auswahl-Wahrscheinlichkeit entspricht dabei den kombinierten Wahrscheinlichkeiten eines „Normalen Packs“ und eines „Normalen Packs +[C:Nbsp ]1[C:Nbsp ]Karte“.\n• Bitte lies dir die Sektion „Achtung!“ durch, um Informationen zu den Bedingungen zu erhalten, die die Generierung von Packs bestimmen.
 Erscheinungsraten
+Spezialpack-Angebot
 Erscheinungsraten
 Achtung!
+???
 [Mst:PackTableName id="0" ]
 Gedrückt halten
 Du hast das Pack-Punktelimit erreicht.\nBitte tausche deine Pack-Punkte im\nPack-Punktetausch gegen Karten ein.
@@ -13151,6 +13818,8 @@ Zum Öffnen die Linie nachfahren
 [Num:Int id="0" max_length="2" ]. Pack
 Wähle das Pack, das du öffnen willst!
 Dieses Boosterpack ist nicht mehr erhältlich,\nda der Verfügbarkeitszeitraum abgelaufen ist.
+Dieses Spezialpack ist nicht mehr erhältlich,\nda der Verfügbarkeitszeitraum abgelaufen ist.
+OK
 OK
 Kostenloses PokéGold wird zuerst verwendet.
 Möchtest du Items einsetzen, um die Zeit zu\nverkürzen, bis weitere Packs geöffnet werden\nkönnen?
@@ -13158,6 +13827,7 @@ Möchtest du Items einsetzen, um genug\nPack-Ausdauer für das Öffnen von 10 Pa
 Zeit, bis du ein Boosterpack öffnen kannst:
 Zeit, bis du 10 Boosterpacks öffnen kannst:
 Es ist Zeit, ein Boosterpack zu öffnen!
+Du kannst ein Spezialpack öffnen.
 Zeit, bis du ein Boosterpack öffnen kannst:
 Zeit, bis du 10 Boosterpacks öffnen kannst:
 Durch Ausgeben von 1 PokéGold wird die Zeit,\nbis du ein Pack öffnen kannst, um 2 Stunden\nverkürzt.
@@ -13168,6 +13838,17 @@ Weiter
 [Num:Int id="0" max_length="2" ]. Pack
 Ergebnis
 Erweiterung auswählen
+Du hast genug Spezialpack-Ausdauer, um dein\nwöchentliches Spezialpack zu öffnen.\nMöchtest du es jetzt öffnen?
+Abbrechen
+OK
+Du besitzt nicht genug Spezialpack-Sanduhren.\nSpezialpack-Sanduhren sind unter anderem\nerhältlich als Missionsbelohnungen.
+Benötigte Spezialpack-Sanduhren:
+OK
+Nicht genug Items
+Jetzt erhältlich
+Nächste Öffnung:
+Möchtest du [Num:Int id="0" max_length="3" ] [Gr:Count s="Spezialpack-Sanduhr" p="Spezialpack-Sanduhren" id="2" ref="0" ]\nverbrauchen, um [Num:Int id="1" max_length="2" ] [Gr:Count s="Pack" p="Packs" ref="1" ] zu öffnen?
+Mögliche Inhalte
 Du kannst ein Boosterpack öffnen.
 Der Zeitraum für den Erhalt dieses Boosterpacks\nist abgelaufen.
 Items einsetzen, um ein Pack sofort zu öffnen
@@ -13205,6 +13886,8 @@ OK
 Pokémon-Ausrüstung kannst du an deine Pokémon anlegen. Pro Pokémon ist 1 Pokémon-Ausrüstung anlegbar, und sie bleibt an dieses Pokémon angelegt.
 Kann nicht angenommen werden, da du das Limit\nfür dieses Item erreicht hast.
 Kann nicht angenommen werden, da der Verfügbarkeitszeitraum abgelaufen ist.
+Kann nicht angenommen werden, da die\nDeck-Funktion noch nicht freigeschaltet wurde.\n\nDie Freischaltung erfolgt, nachdem du Teil 06\ndes Kampf-Tutorials abgeschlossen hast.
+OK
 OK
 OK
 Annehmen
@@ -13242,6 +13925,9 @@ Sonstige
 Nach neuesten Emblemen
 Sortieren
 Embleme
+Dieser Spitzname kann nicht verwendet werden.
+OK
+Fehler
 Dieser Spielername kann nicht verwendet werden.
 OK
 Fehler
@@ -13256,6 +13942,10 @@ Entfernen
 Alle Karten von der Wunschliste entfernen
 Dein Spielername kann 30 Tage lang nicht\ngeändert werden.\n(Geändert am [Date:DateTime format="d" id="0" max_length="10" ])
 OK
+OK
+Abbrechen
+Maximal 14 Zeichen
+Spitznamen festlegen
 Abbrechen
 Abbrechen
 Maximal 14 Zeichen
@@ -13281,8 +13971,15 @@ OK
 Keine Tags zugewiesen
 Spotlight festlegen
 Spotlight festlegen
+OK
+Nicht festlegbar
+Nur für Freunde einsehbar
+Privat
+Spotlight-Deck festlegen
+Decks
 Bitte deinen Freund, diesen Code zu scannen. Er kann mit der\nKamera im Community-Menü unter „Freunde“ gescannt werden.
 Spotlight
+Spotlight-Deck
 Freundes-ID
 Privat
 Privat
@@ -13303,8 +14000,11 @@ Freundesanfrage zurückgezogen
 Freundesanfrage abgelehnt
 Du kannst bis zu drei Embleme auswählen.
 Du kannst bis zu drei Karten auswählen.
+Private Decks können nicht ausgewählt werden.
+Das Deck kann nicht festgelegt werden.\nDie Bedingungen wurden nicht erfüllt.
 Dieses Konto ist momentan nicht aktiv.
 Nicht ausgewählt
+Gib einen Spitznamen ein
 Keine Tags zugewiesen
 Wunschliste ansehen
 Nicht ausgewählt
@@ -13337,6 +14037,7 @@ Aus
 An
 Los geht’s!
 Los geht’s!
+Promopack-Belohnungen hinzugefügt
 Nicht nutzbar
 Empfohlen
 Regenerieren
@@ -13353,6 +14054,14 @@ Maximal [Num:Int id="0" max_length="2" ] Züge
 [Num:Int id="0" max_length="1" ] [Gr:Count s="Punkt" p="Punkte" ] für den Sieg
 Zeitlimit von [Num:Int id="0" max_length="2" ] [Gr:Count s="Sekunde" p="Sekunden" ] pro Zug
 Kein Zeitlimit pro Zug
+Nur „Meine Decks“
+Nur Leihdecks
+Einsetzbare Erweiterungen
+Einsetzbare Seltenheiten
+Die folgenden Karten sind unbeeinträchtigt einsetzbar, außer bei Deck-Einschränkungen.
+Kampfregeln
+Regel [Num:Int id="0" max_length="3" ]
+Spezialregel [Num:Int id="0" max_length="3" ]
 Regel 1
 Regel 2
 Regel 3
@@ -13387,6 +14096,7 @@ Für diesen Kampf wird ein Deck vom\n[Mst:EnergyTypeNameLong id="0" ] empfohlen!
 Meine Decks
 Empfohlen
 Leihdecks
+Promopack-Belohnungen hinzugefügt
 Du kannst dir das Deck deiner Gegner auf den\nStufen „Profi“ und „Meister“ erst ansehen, wenn\ndu einen Kampf gegen sie gewonnen hast.
 Ein neuer Kampf wurde freigeschaltet.\nVersuch dich doch mal daran!
 OK
@@ -13394,6 +14104,7 @@ OK
 Freischaltbedingungen
 Neuer Kampf freigeschaltet!
 Ein empfohlenes Leihdeck wurde ausgewählt.
+Ein neuer Kampf wurde freigeschaltet.
 Endet bald!
 Anfänger
 Fortgeschritten
@@ -13413,6 +14124,9 @@ Neuer Spieler
 Kompetitive Kämpfe
 Zwanglose Kämpfe
 Dieses Passwort kann nicht verwendet werden.
+OK
+Fehler
+Beitreten nicht möglich.
 OK
 Fehler
 Los geht’s!
@@ -13436,6 +14150,10 @@ Ein Gegner wurde gefunden!
 Lv. [Num:Int id="0" max_length="3" ]
 Neuer Spieler
 Erfahrener Spieler
+Du verlässt den Kampf.\nBist du damit einverstanden?
+Abbrechen
+Kampf verlassen
+OK
 In Spielerkämpfen trittst du gegen andere Spieler\nan. Bevor du dich daran versuchst, empfehlen wir,\nzuerst in CPU-Kämpfen zu üben.
 Es konnte kein Gegner gefunden werden.\n\nBitte überprüfe, ob du die neueste Version\nder App verwendest.
 Ein Kampf, der nicht korrekt beendet wurde,\nwird nun beendet.\nDieser Kampf wird als Niederlage gewertet.
@@ -13445,8 +14163,13 @@ Fehler bei der Gegnersuche
 Passwort-Einstellungen
 Passwort eingeben
 Automatisch generieren
+Die Kampfchronik ist leer.
+Kampfchronik
 Ein Passwort wurde erstellt.
 Passwort kopiert
+Details
+Kampfregeln
+Mit Einschränkungen
 Neuer Spieler
 Kompetitive Kämpfe
 Zwanglose Kämpfe
@@ -13460,7 +14183,9 @@ Privatmatch
 Wähle hier deine Kampferfahrung aus und\nkämpfe gegen Spieler aus aller Welt!
 Zufallsmatch
 Code scannen
+Kampfchronik
 Code anzeigen
+2D-Code anzeigen
 Spieler, die an vorherigen Rangmatch-Saisons\nteilgenommen haben, erhalten Punkte, deren\nMenge auf ihrer Punktzahl aus der zuletzt\ngespielten Saison basieren.
 OK
 Eine neue Saison beginnt
@@ -13508,6 +14233,7 @@ Punkte verloren
 Rangabstieg
 Rangaufstieg
 Punkte für Siege in Folge
+VS.
 Sieg
 Kampfchronik
 Zum Fortfahren tippen
@@ -13721,6 +14447,18 @@ Freundesanfrage abgelehnt
 Du hast das Limit an Freundesanfragen erreicht.
 Dieser Spieler kann keine weiteren\nFreundesanfragen empfangen.
 Du bist bereits mit diesem Spieler befreundet.
+Deck kopieren
+Dieses Deck\nbearbeiten
+Das angezeigte Deck wurde unter\n„Meine Decks“ gespeichert.
+Kopieren nicht möglich.\nNicht genug Platz in „Meine Decks“.
+Es können keine Decks angezeigt werden.\nBitte versuche es später erneut.
+Du bist mit niemandem befreundet, der ein Spotlight-Deck festgelegt hat.
+Fehlende Karten: [Num:Int id="0" max_length="2" ]
+Erstellbar
+Rangliste derzeit beliebter Decks
+Derzeit beliebt
+Freunde
+Öffentliche Decks
 Notation under the Act on Specified\nCommercial Transactions
 Du kannst während deines Zuges nur 1 Stadionkarte spielen. Lege\nsie neben die Aktive Position, und lege sie auf den Ablagestapel,\nwenn eine andere Stadionkarte ins Spiel gebracht wird. Eine\nStadionkarte mit demselben Namen kann nicht gespielt werden.
 Die App wird neu gestartet und du kehrst zum\nTitelbildschirm zurück.
@@ -13775,6 +14513,7 @@ Alle aktivieren/deaktivieren
 Regeneration von Pack-Ausdauer
 Regeneration von Wunder-Ausdauer
 Wichtige Neuigkeiten
+Regeneration von Spezialpack-Ausdauer
 Alles zurücksetzen
 30 FPS
 60 FPS
@@ -13794,7 +14533,10 @@ Mitteilungen
 Töne
 System
 Tausch
+Wunschliste
 Haptisches Feedback
+Karten automatisch entfernen
+Wenn du eine Karte erhältst, die auf deiner Wunschliste\nsteht, wird diese automatisch von der Liste entfernt.
 Die Spieler-ID wurde kopiert.
 Items
 Shop
@@ -14105,6 +14847,7 @@ Die Nutzungsbedingungen wurden aktualisiert.\n\nBitte lies dir die aktualisierte
 Die Datenschutzerklärung wurde aktualisiert.\n\nBitte lies dir die aktualisierte Erklärung durch\nund stimme ihr erneut zu.
 Das Spiel wurde beim Öffnen eines Packs\ngeschlossen, aber du hast die Karten erfolgreich\nerhalten.\n\nDu kannst die erhaltenen Karten unter\n„Meine Karten“ ansehen, indem du „Nach\nneuesten Karten“ sortierst.
 Das Spiel wurde geschlossen, aber du hast die\nItems erfolgreich erhalten.\n\nDu kannst die erhaltenen Items im Menü unter\n„Items“ ansehen.
+Möchtest du Spieldaten herunterladen, während\ndu spielst?\n\nWir empfehlen, eine WLAN-Verbindung für\nden Download zu nutzen.\n(Du kannst ihn auch später durchführen.)\n\nDownload-Größe: [Num:Int id="0" max_length="5" ] MB
 Abbrechen
 OK
 OK
@@ -14135,6 +14878,8 @@ OK
 OK
 OK
 OK
+OK
+Später
 OK
 Kauf abschließen
 Kauf abschließen
@@ -14230,12 +14975,17 @@ Flair
 Erweiterung
 Goldrahmen
 Tauschinfo
+Keine fehlenden Karten im Kartendex (komplett).
+Du besitzt keine der Karten, die deinem Freund fehlen.
 Keine Karten gefunden
+Andere Boosterpacks ansehen
 Du kannst eine Karte mit gleichwertiger Seltenheit\nvon deinem Tauschpartner erhalten.
 Du kannst eine Karte eintauschen, deren Seltenheit\nder der angebotenen Karte entspricht.
 OK
 Wähle eine Karte für den Tausch
 Nachricht des Tauschpartners
+Karten, die du tauschen kannst
+Karten, die deinem Tauschpartner fehlen
 Wunschliste deines Tauschpartners
 PROMO
 Nicht tauschbar
@@ -14375,6 +15125,7 @@ Um tauschen zu können, wird ein Flair benötigt.
 Du brauchst einen Goldrahmen zum Tauschen.
 Bitte entferne den Goldrahmen.
 Bitte entferne das Flair.
+Du hast nicht genug Funkelstaub.
 OK
 Hinweis: Kommt der Tausch nicht zustande, regeneriert sich die verbrauchte Tausch-Ausdauer und du bekommst die Karte samt Items zurück.
 Du hast die Karte dem Tauschpartner angeboten.\nWährend das Angebot läuft, erscheint die Karte nicht unter „Meine Karten“ und ist nicht nutzbar.

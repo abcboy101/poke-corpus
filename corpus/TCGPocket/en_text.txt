@@ -140,6 +140,10 @@ Once during your turn, when you play this Pokémon from your hand to evolve 1 of
 Once during your turn, when you flip any coins for an effect of your Trainer cards, you may ignore all results of those coin flips and begin flipping those coins again. You can’t use more than 1 [Text:AbilityName id="0" suffix="Short"] Ability each turn.
 Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may move [Num:Int id="0" plural_only=" " ][Gr:Count s="a " ref="0" ]random Energy from your opponent’s Active Pokémon to this Pokémon.
 Once during your turn, you may look at [Num:Int id="0" plural_only=" " ][Gr:Count s="a random card" p="random cards" id="0" ref="0" ] from your opponent’s hand.
+Once during your turn, you may use this Ability. Put [Num:Int id="1" plural_only=" " ][Gr:Count s="a " id="2" ref="1"][Text:CardNameByCardID id="0"] rental [Gr:Count s="card" p="cards" id="3" ref="1"] into your hand.
+As long as this Pokémon is in play, flip [Num:Int id="1" max_length="2"] more [Gr:Count s="coin" p="coins" id="2" ref="1"] for the [Text:AttackName id="0"] attack used by your Pokémon.
+Once during your turn, when you play this card from your hand to evolve 1 of your Pokémon, you may use this Ability. Put [Num:Int id="1" plural_only=" " ][Gr:Count s="a " id="2" ref="1"]random [Text:CardName id="0"] from your deck onto your Bench.
+As long as this Pokémon is in play, all of your [Img:Element id="0"] Pokémon take −[Num:Int id="1" max_length="3"] damage from attacks from your opponent’s Pokémon. This effect doesn’t stack.
 Powder Heal
 Fragrance Trap
 Counterattack
@@ -307,6 +311,15 @@ Luxury Coin
 Mach Stealth
 Thieving Incisors
 Spy Ops
+Sunny Heal
+Honey Gather
+Flame Aura
+Jumping Coach
+Sudden Duplication
+Electrocreation
+Reflexive Retaliation
+Metal Scrum
+Immunity
 Dawn Wings
 Alolan
 Rainy Form
@@ -661,6 +674,14 @@ This attack does [Num:Int id="0" max_length="3"] damage for each card in your ha
 If your opponent’s Active Pokémon is [Text:SpecialCondition id="0"], heal [Num:Int id="1" max_length="3"] damage from this Pokémon.
 If this Pokémon has damage on it, this attack does −[Num:Int id="0" max_length="3"] damage.
 This attack does [Num:Int id="0" max_length="3"] more damage for each point your opponent got during their last turn.
+Reveal all of the [Text:CardName id="0"] in your hand, and this attack does [Num:Int id="1" max_length="3"] damage for each card you revealed in this way.
+Look at [Gr:Count s="a " id="1" ref="0" ][Num:Int id="0" plural_only=" " ]random [Gr:Count s="card" p="cards" id="2" ref="0" ] from your opponent’s hand and shuffle [Gr:Count s="it" p="them" id="2" ref="0" ] into their deck.
+Discard [Gr:Count s="a " id="4" ref="1" ][Num:Int id="1" plural_only=" " max_length="2" ][Img:Element id="0" ] Energy from this Pokémon, and this attack does [Num:Int id="3" max_length="3" ] damage to [Num:Int id="2" max_length="1" ] of your opponent’s Pokémon.
+If your opponent has a Stadium in play, discard it.
+Your opponent’s Active Pokémon is now [Text:SpecialCondition id="0" ]. Your opponent flips [Num:Int id="1" max_length="2" ] coins for this Special Condition, and if [Gr:Count two="either of them is" p="any of them are" id="2" ref="1" ] tails, that Pokémon is still [Text:SpecialCondition id="0" ].
+During your next turn, this Pokémon’s [Text:AttackName id="0" ] does −[Num:Int id="1" max_length="3" ] damage.
+Move all Energy from this Pokémon to your Benched Pokémon in any way you like.
+This attack does [Num:Int id="0" max_length="3"] more damage for each point you have gotten.
 Vine Whip
 Razor Leaf
 Mega Drain
@@ -1772,6 +1793,46 @@ Hit and Hide
 Chubby Cheer
 Sitdown Splash
 Ruthless Whirlpool
+Long-Neck Hammering
+Honey Rush
+Leaf Litter Tackle
+Signal Beam
+Dynamite Steam
+Rabbit Jumping
+Spinning Kick
+Feisty Flames
+Dual Blizzard
+Spacial Rend
+Rock Head
+Splash of Darkness
+Pika Punch
+Thundertail
+Self-Destruct
+Soothing Lullaby
+Dual Impact
+Secret Guidance
+Psyburn
+Brainwave
+Psycho Boost
+Dust Gathering
+Wings of the Moone
+Megahorn
+Elbow Strike
+Paw Shake Punch
+Severe Gas
+Twilight Poison
+Moonlit Raid
+Crushing Rampage
+Foul Play
+Shredding Claw
+Roar of Time
+Claws of the Sunne
+Draconic Meteor
+Clean Hit
+Powered Ball
+Hyper Lariat
+Psychic Blaster
+Perplex
 Asleep
 Attach [Num:Int id="0" max_length="2" ] Energy to your Pokémon
 Pikachu Silhouettes Flair (Battle)
@@ -1905,6 +1966,8 @@ Ruler of the Skies Emblem Event
 Everyday Wonders Emblem Event
 Deluxe Pack: Mega Emblem Event
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition Emblem Event
+Dual Fusion Emblem Event
+Dual Fusion (C1) Limited Battles
 Wartortle Deck (Genetic Apex)
 Ivysaur Deck (Genetic Apex)
 Charmeleon Deck (Genetic Apex)
@@ -2450,6 +2513,16 @@ Last Respects Deck (Paldean Wonders)
 [Text:CardName v="MEGATYLTALIS_EX" ] Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
 [Text:CardName v="MEGAGANGAR_EX" ] Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
 [Text:CardName v="KORAIDON_EX" ] Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
+[Text:CardName v="KAMEIL" ] Deck
+[Text:CardName v="KAMEX" ] Deck
+[Text:CardName v="PARMOT" ] Deck
+[Text:CardName v="HOGATOR_EX" ] Deck
+[Text:CardName v="PIKACHU_EX" ] Deck
+[Text:CardName v="MEGAMEWTWOX_EX" ] Deck
+[Text:CardName v="ALOLANASSY_EX" ] Deck
+[Text:CardName v="MEGAGEKKOUGA_EX" ] Deck
+[Text:CardName v="MEGABANGIRAS_EX" ] Deck
+[Text:CardName v="GIRATINA_EX" ] Deck
 Venusaur ex Deck (Genetic Apex)
 Charizard ex Deck (Genetic Apex)
 Blastoise ex Deck (Genetic Apex)
@@ -2642,6 +2715,12 @@ Elite Deck ([Text:CardName v="MEGABURSYAMO_EX" ])
 [Text:CardName v="MEGAHASSAM_EX" ] & [Text:CardName v="SURFUGO_EX" ] Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
 Elite Deck ([Text:CardName v="MEGALIZARDONY_EX" ])
 Elite Deck ([Text:CardName v="MEGALUCARIO_EX" ])
+[Text:CardName v="PIKACHU_EX" ] Deck
+[Text:CardName v="MEGAMEWTWOX_EX" ] Deck
+[Text:CardName v="MEGAGEKKOUGA_EX" ] Deck
+[Text:CardName v="MEGABANGIRAS_EX" ] Deck
+Honey Gather Deck
+Rabbit Jumping Deck
 A rental deck that you can use in battles.\nThis deck can be used in battle even if you do not\nown all of the cards included in it.
 Venusaur ex Deck (Genetic Apex)
 Charizard ex Deck (Genetic Apex)
@@ -2844,6 +2923,7 @@ Elite Deck ([Text:CardName v="MEGABURSYAMO_EX" ])
 [Text:CardName v="MEGAHASSAM_EX" ] & [Text:CardName v="SURFUGO_EX" ] Deck ([Mst:PackName v="PACK_NAME_B4b_1"])
 Elite Deck ([Text:CardName v="MEGALIZARDONY_EX" ])
 Elite Deck ([Text:CardName v="MEGALUCARIO_EX" ])
+Elite Deck ([Text:CardName v="MEGARAYQUAZA_EX" ])
 A theme deck list that can be used when accessing\nyour decks. You will be able to build and play with\nthis deck by collecting the cards in this list.
 You’ll get a theme deck list to use when accessing\nyour decks, and the 20 cards included in it. You\ncan obtain only one of the nine ex Starter Decks.
 Rapidash Deck
@@ -2909,6 +2989,7 @@ Special Drop Event 2026
 [Text:CardName v="MEGAHELLGAR_EX" ] Drop Event
 [Text:CardName v="ROCKETDANNOLAPLACE" ] Drop Event
 [Text:CardName v="MEGAGABURIAS_EX" ] Drop Event
+PROMO Reissue Drop Event 2026
 Random Battles (B2)
 Random Battles (B2a)
 Random Battles (B2b)
@@ -2918,6 +2999,7 @@ Random Battles (B3b)
 Random Battles (B4)
 Random Battles (B4a)
 Random Battles (B4b)
+Random Battles (C1)
 Burned
 Gold Frame
 A gold frame that is displayed in your binders,\ndisplay boards, and battles.
@@ -4304,6 +4386,40 @@ Team Rocket’s Researcher
 Team Rocket’s Master Plan
 Team Rocket’s Boss
 Arcade
+[Text:AdditionalName v="ADDITIONAL_NAME_Alora" type="region" space="post" ]Exeggutor ex
+Deerling
+Sawsbuck
+Volcanion
+Fuecoco ex
+Armarouge
+Palkia
+Mega Greninja ex
+Mega Mewtwo X ex
+Deoxys
+Lunala
+Mega Tyranitar ex
+Nickit
+Thievul
+Mega Skarmory ex
+Dialga
+Solgaleo
+Mega Dragonite ex
+Bewear ex
+Sweet Honey
+Super Potion
+Max Repel
+Full Heal
+Eviolite
+Light Ball
+Lorelei
+Blue’s Provocation
+Serena’s Choice
+Rika
+Poké Mart Guy
+Rising Star
+Abandoned Station
+Mega Mewtwo Y ex
+Genome Converter Y
 Obtained from a campaign
 Obtained from a wonder pick
 Obtained from a mission
@@ -4327,6 +4443,10 @@ Mega Gallade
 Terapagos
 Mega Diancie
 Mega Mewtwo X
+Mega Greninja
+Mega Dragonite
+Clodsire
+Mega Tyranitar
 Mega Charizard
 Beginner Rank 1
 Beginner Rank 2
@@ -4778,20 +4898,25 @@ Season A3a Ultra Ball Rank 4
 Mega Evolution Pokémon ex (emblem)
 A Great Ball Rank 1 emblem that can be obtained\nin Ranked Match Season A3a.
 Season A3a Great Ball Rank 1
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_19"] (emblem)
 A Great Ball Rank 2 emblem that can be obtained\nin Ranked Match Season A3a.
 Season A3a Great Ball Rank 2
+[Text:CardName v="PIKACHU" ] ver.[C:Nbsp ]6 (emblem)
 A Great Ball Rank 3 emblem that can be obtained\nin Ranked Match Season A3a.
 Season A3a Great Ball Rank 3
 A participation emblem that can be obtained from\nthe Crimson Blaze Emblem Event.
 Crimson Blaze Emblem Event Participation Emblem
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"] (emblem)
 A Great Ball Rank 4 emblem that can be obtained\nin Ranked Match Season A3a.
 Season A3a Great Ball Rank 4
+[Text:CardName v="ABURIBBON" ] (emblem)
 A bronze emblem that can be obtained from\nthe Crimson Blaze Emblem Event.
 Crimson Blaze Emblem Event Bronze Emblem
 A Poké Ball Rank 1 emblem that can be obtained\nin Ranked Match Season A3a.
 Season A3a Poké Ball Rank 1
 A silver emblem that can be obtained from\nthe Crimson Blaze Emblem Event.
 Crimson Blaze Emblem Event Silver Emblem
+[Text:CardName v="HIBANNY" ] (emblem)
 A Poké Ball Rank 2 emblem that can be obtained\nin Ranked Match Season A3a.
 Season A3a Poké Ball Rank 2
 A gold emblem that can be obtained from\nthe Crimson Blaze Emblem Event.
@@ -5026,12 +5151,20 @@ A gold emblem that can be obtained from the\n[Mst:PackName v="PACK_NAME_B4b_1"] 
 [Mst:PackName v="PACK_NAME_B4b_1" ] Emblem Event Gold Emblem
 A Poké Ball Rank 1 emblem that can be obtained\nin Ranked Match Season A4b.
 Season A4b Poké Ball Rank 1
+A participation emblem that can be obtained from\nthe [Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25" ] Emblem Event.
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] Emblem Event Participation Emblem
 A Poké Ball Rank 2 emblem that can be obtained\nin Ranked Match Season A4b.
 Season A4b Poké Ball Rank 2
+A bronze emblem that can be obtained from\nthe [Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25" ] Emblem Event.
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] Emblem Event Bronze Emblem
 A Poké Ball Rank 3 emblem that can be obtained\nin Ranked Match Season A4b.
 Season A4b Poké Ball Rank 3
+A silver emblem that can be obtained from\nthe [Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25" ] Emblem Event.
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] Emblem Event Silver Emblem
 A Poké Ball Rank 4 emblem that can be obtained\nin Ranked Match Season A4b.
 Season A4b Poké Ball Rank 4
+A gold emblem that can be obtained from\nthe [Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25" ] Emblem Event.
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"] Emblem Event Gold Emblem
 A Beginner Rank 1 emblem that can be obtained in\nRanked Match Season A4b.
 Season A4b Beginner Rank 1
 A Beginner Rank 2 emblem that can be obtained in\nRanked Match Season A4b.
@@ -5280,6 +5413,26 @@ Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:
 Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_02"]
 Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_03"]
 Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_04"]
+Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:MainRankName v="MAIN_RANK_NAME_MASTERBALL"]
+Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190" ] Master Ball Rank ([Mst:CommonEventLabel v="COMMON_Master_TOP10000" ])
+Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] Master Ball Rank ([Mst:CommonEventLabel v="COMMON_Master_TOP5000"])
+Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] Master Ball Rank ([Mst:CommonEventLabel v="COMMON_Master_TOP1000"])
+Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_01"]
+Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_02"]
+Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_03"]
+Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_04"]
+Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_01"]
+Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_02"]
+Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_03"]
+Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Super_04"]
+Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_01"]
+Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_02"]
+Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_03"]
+Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_04"]
+Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_01"]
+Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_02"]
+Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_03"]
+Season [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"] [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_04"]
 1st\nAnniv.
 A commemorative emblem from\nSpecial Event 2025.
 Special Event 2025 (emblem)
@@ -5287,6 +5440,8 @@ A commemorative emblem for the\nfirst anniversary of release.
 First Anniversary Celebration (emblem)
 A commemorative emblem from\nSpecial Event 2026.
 Special Event 2026 (emblem)
+A special emblem that can be obtained by sharing\na lot of cards.
+Share Master (emblem)
 Colorless type
 Darkness type
 Dragon type
@@ -5345,6 +5500,8 @@ B3b
 B4
 B4a
 B4b
+C1
+SP1
 Genetic Apex
 Mythical Island
 Space-Time Smackdown
@@ -5367,6 +5524,8 @@ Everyday Wonders
 Ruler of the Skies
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition
 Deluxe Pack: Mega
+Dual Fusion
+Special Pack: First Partners
 #MyCollection
 #FavoritePokemon
 #FavoriteIllustrations
@@ -6858,6 +7017,53 @@ Its potent spectral powers allow it to manipulate\nothers. It once used its powe
 Massive amounts of energy intensely stimulated\nAmpharos’s cells, apparently awakening its\nlong-sleeping dragon’s blood.
 With its muscular strength now greatly\nincreased, it can fly continuously for two weeks\nwithout resting.
 Its down is so soft, it seems as if a touch could\nmelt it. But it’s strong enough that just a few\nstrands could be used to hoist a dump truck.
+For some time after its birth, it uses the nutrients\nthat are packed into the seed on its back in order\nto grow.
+The more sunlight Ivysaur bathes in, the more\nstrength wells up within it, allowing the bud\non its back to grow larger.
+While it basks in the sun, it can convert the\nlight into energy. As a result, it is more\npowerful in the summertime.
+If you touch one of Exeggcute’s heads,\nmistaking it for an egg, the other heads will\nquickly gather and attack you in a swarm.
+There is a theory that the developer of the\nmodern-day Poké Ball really liked Foongus,\nbut this has not been confirmed.
+Be wary of the poisonous spores it releases.\nMushrooms resembling Amoonguss’s caps will\ngrow out of anywhere the spores touch.
+When it senses the auras of people or Pokémon\nwho are having fun, it will draw close and give\nthem a painful poke with its long proboscis.
+Ribombee can sense when people or Pokémon\nare feeling down, and it will cheer them up with\nhandmade pollen puffs.
+The flame on its tail shows the strength of its\nlife-force. If Charmander is weak, the flame\nalso burns weakly.
+When it swings its burning tail, the temperature\naround it rises higher and higher, tormenting its\nopponents.
+If Charizard becomes truly angered, the flame\nat the tip of its tail burns in a light blue shade.
+It lets out billows of steam and disappears into\nthe dense fog. It’s said to live in mountains\nwhere humans do not tread.
+Once its body has heated up, Scorbunny can use\nthe full extent of its power. That’s why it does\nwarm-up exercises.
+Thanks to its soft and fluffy fur, Raboot can easily\nheat up its fire energy and produce flames with\nmore power.
+Although Cinderace loses its cool easily, it will\nbattle flawlessly for a Trainer it trusts.
+Burnt charcoal came to life and became a\nPokémon. Possessing a fiery fighting spirit,\nCharcadet will battle even tough opponents.
+Armarouge evolved through the use of a set of\narmor that belonged to a distinguished warrior.\nThis Pokémon is incredibly loyal.
+The fiery blades on its arms burn fiercely with the\nlingering resentment of a sword wielder who fell\nbefore accomplishing their goal.
+After birth, its back swells and hardens into a\nshell. It sprays a potent foam from its mouth.
+Wartortle’s long, furry tail is a symbol of\nlongevity, so this Pokémon is quite popular\namong older people.
+It deliberately increases its body weight so\nit can withstand the recoil of the water jets\nit fires.
+The protrusion on its head is very hard. It is\nused for bashing through thick ice.
+It sleeps under shallow ocean waters during\nthe day, then looks for food at night when\nit’s colder.
+In certain parts of Galar, Jynx was once feared\nand worshiped as the Queen of Ice.
+It ferries people across the sea on its back. It may\nsing an enchanting cry if it is in a good mood.
+It is said to live in a gap in the spatial dimension\nparallel to ours. It appears in mythology.
+These Pokémon form schools with others of the\nsame color. The greatest foe of a school of blue\nBasculin is a school of red Basculin.
+Its happy-go-lucky look is an act intended to fool\nits enemies. It will suddenly drop the facade and\noverwhelm its foes with its blinding speed.
+It excels at devising battle strategies that make\nuse of the terrain, and it never misses its mark\nwhen throwing bubble-covered pebbles.
+An alien virus that fell to earth on a meteor\nunderwent a DNA mutation to become\nthis Pokémon.
+Rhyhorn claims an area with over a six mile radius\nas its territory. It apparently forgets where this\nterritory is when running, however.
+The horn of a Rhydon is powerful enough\nto crush raw diamonds. These Pokémon polish\ntheir horns by bashing them together.
+This Pokémon’s sturdy carapace protects\nit from volcanic eruptions. It shoots round\nrocks from the holes in its hands.
+When attacked, this Pokémon will retaliate by\nsticking thick spines out from its body. It’s a risky\nmove that puts everything on the line.
+It sharpens its swordlike tail on hard rocks.\nIt hides in tall grass and strikes unwary prey\nwith venomous fangs.
+Aided by the soft pads on its feet, it silently raids\nthe food stores of other Pokémon. It survives off\nits ill-gotten gains.
+It secretly marks potential targets with a scent.\nBy following the scent, it stalks its targets\nand steals from them when they least expect it.
+A Pokémon spoken of in legend. It is said that time\nbegan moving when Dialga was born.
+It defends itself by launching spikes, but its\naim isn’t very good at first. Only after a lot of\npractice will it improve.
+This Pokémon scrapes its spikes across rocks,\nand then uses the tips of its feelers to absorb\nthe nutrients it finds within the stone.
+It is an artificial Pokémon. Since it doesn’t\nbreathe, people are excited by its potential\nto be useful in any environment.
+This artificial Pokémon evolved thanks to cutting-\nedge science. It sometimes displays behavior that\nis not in its programming.
+An additional program was installed to create a\nmore advanced Pokémon, but it was apparently\nflawed. Porygon-Z moves oddly as a result.
+This gluttonous Pokémon eats constantly, apart\nfrom when it’s asleep. It devours nearly 900\npounds of food per day.
+The absorption of starlight fuels this Pokémon’s\ngrowth. The shell that encases it is harder than\nany known material.
+Known as the Beast That Calls the Moon, this\nPokémon lives by taking in any and all light and\nconverting it into its own energy.
+When light radiates from its body, this Pokémon\ncould almost appear to be the sun. It will dispel\nany darkness and light up the world.
 In order to support its flower, which has grown\nlarger due to Mega Evolution, its back and legs\nhave become stronger.
 Its bond with its Trainer is the source of\nits power. It boasts speed and maneuverability\ngreater than that of a jet.
 The cannon on its back is as powerful as a\ntank gun. Its tough legs and back enable it to\nwithstand the recoil from firing the cannon.
@@ -6879,8 +7085,39 @@ It gets power from the bond it has with its Trainer.\nMega Evolution has given i
 This form results from\none Metagross, one Metang,\nand two Beldum linking up.
 Houndoom’s entire body generates heat when it\nMega Evolves. Its intense, fiery breath turns its\nopponents to charcoal.
 Its disposition is more vicious than before its\nMega Evolution. Garchomp carves its opponents\nup with the scythes on both arms.
+It protects itself from tough foes by flashing its\nluminescent spots to discourage them.
+Its hypnotic powers are dangerously strong.\nAnyone who falls under Malamar’s control\nloses their memories surrounding the event.
+This Pokémon spins a giant shuriken at high\nspeed to make it float, then clings to it upside\ndown to catch opponents unawares.
+Psychic power has augmented its muscles. It has\na grip strength of one ton and can sprint 100\nmeters in two seconds flat!
+The effects of Mega Evolution make it more\nferocious than ever. It’s unclear whether it can\neven hear its Trainer’s orders.
+It flies faster than the speed of sound. After\nwhipping up shock waves to send enemies flying,\nit finishes them off with its talons.
+Mega Evolution has excessively powered up this\nPokémon’s feelings of kindness. It finishes off its\nopponents with mercy in its heart.
+Despite its diminished size, its mental power has\ngrown phenomenally. With a mere thought, it can\nsmash a skyscraper to smithereens.
 It feeds on dust in the atmosphere. The color\nof its core is said to be determined by the\ncomposition of the dust it eats.
+Its powerful, well-developed jaws are capable\nof crushing anything. Even its Trainer must be\ncareful.
+Treecko has small hooks on the bottom of its feet that enable\nit to scale vertical walls. This Pokémon attacks by slamming\nfoes with its thick tail.
+Torchic sticks with its Trainer, following behind with unsteady\nsteps. This Pokémon breathes fire of over 1,800 degrees \nFahrenheit, including fireballs that leave the foe scorched black.
+The fin on Mudkip’s head acts as highly sensitive radar. Using this fin\nto sense movements of water and air, this Pokémon can\ndetermine what is taking place around it without using its eyes.
+Made from soil, the shell on its back hardens\nwhen it drinks water. It lives along lakes.
+It agilely scales sheer cliffs to live atop craggy\nmountains. Its fire is put out when it sleeps.
+Because it is very proud, it hates accepting food\nfrom people. Its thick down guards it from cold.
+It is very intelligent and calm.\nBeing exposed to lots of sunlight makes\nits movements swifter.
+It blows fire through its nose.\nWhen it catches a cold, the fire\nbecomes pitch-black smoke instead.
+It fights using the scalchop on its stomach.\nIn response to an attack, it retaliates immediately\nby slashing.
+The quills on its head are usually soft.\nWhen it flexes them, the points become\nso hard and sharp that they can pierce rock.
+Eating a twig fills it with energy,\nand its roomy ears give vent to air\nhotter than 390 degrees Fahrenheit.
+This wary Pokémon uses photosynthesis to\nstore up energy during the day, while becoming\nactive at night.
+While grooming itself, it builds up fur inside its\nstomach. It sets the fur alight and spews fiery\nattacks, which change based on how it coughs.
+This Pokémon snorts body fluids from its nose,\nblowing balloons to smash into its foes.\nIt’s famous for being a hard worker.
+When it uses its special stick to strike up a beat,\nthe sound waves produced carry revitalizing\nenergy to the plants and flowers in the area.
+A warm-up of running around gets fire energy\ncoursing through this Pokémon’s body. Once that\nhappens, it’s ready to fight at full power.
+When scared, this Pokémon cries. Its tears pack\nthe chemical punch of 100 onions, and attackers\nwon’t be able to resist weeping.
+This Pokémon migrated to Paldea from distant\nlands long ago. The gel secreted by its feathers\nrepels water and grime.
+So rare that it is still said to be a\nmirage by many experts. Only a few\npeople have seen it worldwide.
 A shooting star streaking across the night sky\nmay, in fact, be Mega Rayquaza flying gracefully\nafter a meteoroid.
+This Pokémon came from another universe.\nIts gaseous body is so light that even a gentle\nbreeze can blow it away.
+These Pokémon are not shy—they will behave as\nthey please, even in front of people. If you feed\none of them, it will quickly take a liking to you.
+There are many Sawsbuck enthusiasts. The darker\nthe red of the foliage that hangs from its antlers,\nthe more stylish the Sawsbuck is thought to be.
 Narumi Sato
 Kurata So
 Ryota Murayama
@@ -7119,6 +7356,14 @@ Akino Fukuji
 Iwamoto05
 Kazuki Minami
 YOSHIROTTEN
+telu
+Atsuya Uki
+Keisuke Azuma
+CHORISO
+Bun Toujo
+TOMATO MARKET
+ORBITALLINK Inc.
+Yoshiyuki Sadamoto
 Coming Soon
 Used to reduce the time to get wonder stamina.\nReduces the time to wonder pick by one hour.\nObtainable as mission rewards and so forth.
 Used to attempt select solo battles or events.\nThis item can reduce the time it takes for these\nbattles to become available again.
@@ -7132,6 +7377,7 @@ Obtainable by doing premium missions.\nUsed to exchange for accessories or promo
 An item that can be gathered to increase\nplayer level.
 Team Rocket Grunt’s socks\nthat were worn for a long time.\nThey’re a little smelly...
 Used to restore an expired wonder pick. One\nmust be consumed each time, along with wonder\nstamina.
+Exchangeable for special booster packs at the Shop.\nObtainable as a gift and by completing Second\nAnniversary Celebration campaign event missions.\nIt will be deleted after the exchange period ends.
 Exchangeable for 20-card decks at the shop.\nObtainable by doing ex Starter Deck missions.\nIt will be deleted after the exchange period ends.
 Obtainable by completing themed collections or\ndex missions.\nExchangeable for specific emblems at the Shop.
 Exchangeable for accessories and items at\nthe Shop.\nObtainable by completing event missions.\nIt will be deleted after the exchange period ends.
@@ -7219,6 +7465,10 @@ Promo Card Exchange Ticket ([Text:CardName v="HISUIZORUA" ] Drop Event)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Shady Ticket
 Promo Card Exchange Ticket ([Text:CardName v="ROCKETDANNOLAPLACE" ] Drop Event)
 Promo Card Exchange Ticket ([Text:CardName v="MEGAGABURIAS_EX" ] Drop Event)
+Promo Card Exchange Tickets (Promo Pack C Series Vol. 1)󱀀Promo Card Exchange Ticket (Promo Pack C Series Vol. 1)
+Promo Card Exchange Ticket (PROMO Reissue Drop Event 2026)󱀀Promo Card Exchange Tickets (PROMO Reissue Drop Event 2026)
+Promo Card Exchange Tickets (PROMO Reissue Wonder Pick Event 2026)󱀀Promo Card Exchange Ticket (PROMO Reissue Wonder Pick Event 2026)
+1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed Booster Pack Exchange Ticket󱀀1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed Booster Pack Exchange Tickets
 Advance Ticket
 Bubbles Flair: Light blue (Cosmetic)
 Bubbles Flair: Pink (Cosmetic)
@@ -7303,12 +7553,13 @@ Knock Out your opponent’s Active Pokémon [Num:Int id="0" max_length="2" ] [Gr
 Wonder picks are unlocked at player level 2.
 The Battle menu is unlocked at player level 3.\n\nYou can increase your player level by earning\nplayer EXP. You can do this by opening packs and\nso forth.
 Deck missions are unlocked at player level 3.\n\nYou can increase your player level by earning\nplayer EXP. You can do this by opening packs and\nso forth.
-Decks are unlocked after completing part 06 of\nthe battle guide.\n\nYou can see the battle guide by tapping on the\nbutton in the bottom-left of the Battle menu.
-Battles are unlocked after completing part 06 of\nthe battle guide.\n\nYou can see the battle guide by tapping on the\nbutton in the bottom-left of the Battle menu.
+Decks are unlocked after completing part 06 of\nthe battle guide.\n\nYou can see the battle guide by tapping Guide in\nthe Battle menu.
+Battles are unlocked after completing part 06 of\nthe battle guide.\n\nYou can see the battle guide by tapping Guide in\nthe Battle menu.
 Display boards are unlocked at player level 4.\n\nYou can increase your player level by earning\nplayer EXP. You can do this by opening packs and\nso forth.
 Binders are unlocked at player level 6.\n\nYou can increase your player level by earning\nplayer EXP. You can do this by opening packs and\nso forth.
 Premium missions are unlocked if you subscribe\nto the premium pass.\n\nYou can subscribe to the premium pass using the\nbutton on Premium Missions or in the Shop.
 Trading is unlocked at player level 3.\n\nYou can increase your player level by earning\nplayer EXP. You can do this by opening packs and\nso forth.
+Community decks are unlocked after completing\npart 06 of the battle guide.\n\nYou can see the battle guide by tapping Guide in\nthe Battle menu.
 {0} Deck ({1})
 {0} (emblem)
 {0} Emblem Event Bronze Emblem
@@ -7382,6 +7633,8 @@ Win [Num:Int id="1" max_length="3" ] versus [Gr:Count s="battle" p="battles" id=
 Assignment: Log in! (Day [Num:Int id="0" max_length="3" ])
 Assignment: Participate in [Num:Int id="0" max_length="3" ] [Gr:Count s="battle" p="battles" id="1" ]!
 Assignment: Wonder pick [Num:Int id="0" max_length="3" ] [Gr:Count s="time" p="times" id="1" ]!
+Share a card that’s on your share partner’s wishlist or not in their card dex [Num:Int id="0" max_length="3" ] [Gr:Count s="time" p="times" id="1" ]
+Week 2 log in (Day [Num:Int id="0" max_length="3" ])
 First Choice
 Electabuzz and Magmar
 Viridian Forest
@@ -7625,7 +7878,7 @@ Mega Rising Museum 6
 A Swarm of Bug Pokémon!
 Collect 1 Mega Evolution Pokémon ex card
 Collect 3 Mega Evolution Pokémon ex cards
-Collect [Num:Int id="1" max_length="3" ] [Text:CardNameWithSubName id="0" ] Promo [Gr:Count s="card" p="cards" ref="1" ]
+Collect 3 different promo cards from this event
 Garden of Smiling Flowers 2
 ex Collection
 Collect Parallel Foil Card Pokémon
@@ -7806,6 +8059,7 @@ Pokémon Holding Things in Their Hands
 [Text:CardName v="ROCKETDANNOSHITAPPA" ] Army!
 Shady Invention Collector
 All [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] Cards Complete!
+Kanto Region Partners
 Mega Evolution Pokémon ex Collection
 Pokémon ex with Abilities
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_24" ]’s Two Forms
@@ -7824,6 +8078,45 @@ Obtain [Num:Int id="1" max_length="3" ] [Mst:CommonGroupName v="COMMON_GROUP_NAM
 [Text:CardName v="PIKACHU" ]’s Adventures
 Male and Female [Text:CardName v="NYAONIX" ]
 The Four Incarnate Formes
+[Text:CardName v="PIKACHU" ], Overflowing with Electric Power
+Flower Garden Honey Gathering 1
+Flower Garden Honey Gathering 2
+Hopping, Leaping, Rabbit Jumping
+Poké Ball Look-Alikes
+Evolutions of Day and Night
+Evolutions of the Sun and the Moon
+Armor-clad Warriors of Fire
+Shopping at the Poké Mart
+Peaceful Naps
+Partners Always by Your Side
+Legends of the Sinnoh Region
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_23" ], Shaking the Earth
+Dual Fusion Museum 1
+Dual Fusion Museum 2
+Dual Fusion Museum 3
+Dual Fusion Museum 4
+The Bold, Upside-Down Ninja (Water/Darkness)
+Bountiful Honey Gathering
+Keep Up That Rabbit Jumping!
+Johto Region Partners
+Hoenn Region Partners
+Sinnoh Region Partners
+Unova Region Partners
+Kalos Region Partners
+Alola Region Partners
+Galar Region Partners
+Paldea Region Partners
+The Path to [Text:CardName v="MEGAMEWTWOX_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ]) Step 5/5
+The Path to [Text:CardName v="PIKACHU_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ]) Step 5/5
+The Path to [Text:CardName v="MEGAMEWTWOX_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ]) Step 1/5
+The Path to [Text:CardName v="MEGAMEWTWOX_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ]) Step 2/5
+The Path to [Text:CardName v="MEGAMEWTWOX_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ]) Step 3/5
+The Path to [Text:CardName v="MEGAMEWTWOX_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ]) Step 4/5
+The Path to [Text:CardName v="PIKACHU_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ]) Step 1/5
+The Path to [Text:CardName v="PIKACHU_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ]) Step 2/5
+The Path to [Text:CardName v="PIKACHU_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ]) Step 3/5
+The Path to [Text:CardName v="PIKACHU_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ]) Step 4/5
+The Strongest Dual Type (Fighting/Psychic)
 Deck Missions
 Deck Missions
 Genetic Apex\nEmblem Event 1
@@ -7925,8 +8218,20 @@ Deluxe Pack: Mega Emblem Event
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition Emblem Event
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s\nSpecial Assignments
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Special Assignments
+Dual Fusion\nBattle Rally Missions
+Dual Fusion Battle Rally Missions
 Pika Pika! Pikachu\nMissions
 Pika Pika! Pikachu Missions
+Winter Holidays\nThemed Promo Card Event
+Winter Holidays Themed Promo Card Event
+PROMO Reissue\nDrop Event\n2026 Missions
+PROMO Reissue Drop Event 2026 Missions
+PROMO Reissue\nWonder Pick Event\n2026 Missions
+PROMO Reissue Wonder Pick Event 2026 Missions
+1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed\nBooster Pack Missions
+1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed Booster Pack Missions
+Vee Vee! Eevee Missions
+Vee Vee! Eevee Missions
 Beginner
 Advanced
 Daily
@@ -7960,6 +8265,10 @@ List
 Welcome Back
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
 Pika Pika!
+[Mst:Rarity v="RARITY_MSID_SSASR" ] Guaranteed Booster Pack
+Battle Rally
+Themed Promo Card
+Vee Vee!
 Random Battle (Advanced)
 Random Battle (Beginner)
 Random Battle (Expert)
@@ -7972,38 +8281,68 @@ We will provide details at a later date.
 Since this is an emergency notice, we are notifying you in English. We will make the same notice in [[language]] as soon as it becomes available.
 Genetic Apex: Mewtwo pack
 Genetic Apex: Mewtwo pack (1 [Mst:Rarity v="RARITY_MSID_RR" ] or higher card guaranteed)
+[Mst:PackName v="PACK_NAME_A1_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed)\nspecial booster pack
 Genetic Apex: Charizard pack
 Genetic Apex: Charizard pack (1 [Mst:Rarity v="RARITY_MSID_RR" ] or higher card guaranteed)
+[Mst:PackName v="PACK_NAME_A1_2" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed)\nspecial booster pack
 Genetic Apex: Pikachu pack
 Genetic Apex: Pikachu pack (1 [Mst:Rarity v="RARITY_MSID_RR" ] or higher card guaranteed)
+[Mst:PackName v="PACK_NAME_A1_3" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed)\nspecial booster pack
 Mythical Island pack
+[Mst:PackName v="PACK_NAME_A1a_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed) special booster pack
 Space-Time Smackdown: Dialga pack
+[Mst:PackName v="PACK_NAME_A2_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed)\nspecial booster pack
 Space-Time Smackdown: Palkia pack
+[Mst:PackName v="PACK_NAME_A2_2" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed)\nspecial booster pack
 Triumphant Light pack
+[Mst:PackName v="PACK_NAME_A2a_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed) special booster pack
 Shining Revelry pack
+[Mst:PackName v="PACK_NAME_A2b_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed) special booster pack
 Celestial Guardians: Solgaleo pack
+[Mst:PackName v="PACK_NAME_A3_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed)\nspecial booster pack
 Celestial Guardians: Lunala pack
+[Mst:PackName v="PACK_NAME_A3_2" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed)\nspecial booster pack
 Extradimensional Crisis booster pack
+[Mst:PackName v="PACK_NAME_A3a_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed)\nspecial booster pack
 Eevee Grove booster pack
+[Mst:PackName v="PACK_NAME_A3b_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed) special booster pack
 Wisdom of Sea and Sky: Ho-Oh booster pack
+[Mst:PackName v="PACK_NAME_A4_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed)\nspecial booster pack
 Wisdom of Sea and Sky: Lugia booster pack
+[Mst:PackName v="PACK_NAME_A4_2" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed)\nspecial booster pack
 Secluded Springs booster pack
+[Mst:PackName v="PACK_NAME_A4a_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed) special booster pack
 Deluxe Pack: ex booster pack
 Mega Rising: Mega Blaziken booster pack
+[Mst:PackName v="PACK_NAME_B1_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed)\nspecial booster pack
 Mega Rising: Mega Gyarados booster pack
+[Mst:PackName v="PACK_NAME_B1_2" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed)\nspecial booster pack
 Mega Rising: Mega Altaria booster pack
+[Mst:PackName v="PACK_NAME_B1_3" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed)\nspecial booster pack
 Crimson Blaze booster pack
+[Mst:PackName v="PACK_NAME_B1a_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed) special booster pack
 Fantastical Parade booster pack
+[Mst:PackName v="PACK_NAME_B2_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed) special booster pack
 Paldean Wonders booster pack
+[Mst:PackName v="PACK_NAME_B2a_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed) special booster pack
 Mega Shine booster pack
+[Mst:PackName v="PACK_NAME_B2b_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed) special booster pack
 Pulsing Aura booster pack
+[Mst:PackName v="PACK_NAME_B3_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed) special booster pack
 Paradox Drive booster pack
+[Mst:PackName v="PACK_NAME_B3a_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed) special booster pack
 Everyday Wonders booster pack
+[Mst:PackName v="PACK_NAME_B3b_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed) special booster pack
 Ruler of the Skies booster pack
+[Mst:PackName v="PACK_NAME_B4_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed) special booster pack
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition booster pack
+[Mst:PackName v="PACK_NAME_B4a_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed)\nspecial booster pack
 Deluxe Pack: Mega booster pack
+Dual Fusion: [Mst:CommonCharacterName v="COMMON_CARD_NAME_19" ] booster pack
+Dual Fusion: [Text:CardName v="PIKACHU" ] booster pack
 A special pack that can be obtained from\nPika Pika! Pikachu missions
 A very special pack that can be obtained from\nPika Pika! Pikachu missions
+A special pack that can be obtained from\nVee Vee! Eevee missions
 An A series vol. 1 promo pack
 An A series vol. 2 promo pack
 An A series vol. 3 promo pack
@@ -8030,42 +8369,74 @@ A B series vol. 10 promo pack
 A B series vol. 11 promo pack
 A B series vol. 12 promo pack
 A B series vol. 13 promo pack
+A C series vol. 1 promo pack
+Special Pack: First Partners\nspecial booster pack
 1 [Mst:Rarity v="RARITY_MSID_RR" ] or higher\ncard guaranteed
 1 Pokémon ex\ncard guaranteed
 Genetic Apex: Mewtwo
 Genetic Apex: Mewtwo (1 [Mst:Rarity v="RARITY_MSID_RR" ] or higher card guaranteed)
+[Mst:PackName v="PACK_NAME_A1_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Genetic Apex: Charizard
 Genetic Apex: Charizard (1 [Mst:Rarity v="RARITY_MSID_RR" ] or higher card guaranteed)
+[Mst:PackName v="PACK_NAME_A1_2" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Genetic Apex: Pikachu
 Genetic Apex: Pikachu (1 [Mst:Rarity v="RARITY_MSID_RR" ] or higher card guaranteed)
+[Mst:PackName v="PACK_NAME_A1_3" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Mythical Island
+[Mst:PackName v="PACK_NAME_A1a_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Space-Time Smackdown: Dialga
+[Mst:PackName v="PACK_NAME_A2_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Space-Time Smackdown: Palkia
+[Mst:PackName v="PACK_NAME_A2_2" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Triumphant Light
+[Mst:PackName v="PACK_NAME_A2a_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Shining Revelry
+[Mst:PackName v="PACK_NAME_A2b_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Celestial Guardians: Solgaleo
+[Mst:PackName v="PACK_NAME_A3_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Celestial Guardians: Lunala
+[Mst:PackName v="PACK_NAME_A3_2" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Extradimensional Crisis
+[Mst:PackName v="PACK_NAME_A3a_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Eevee Grove
+[Mst:PackName v="PACK_NAME_A3b_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Wisdom of Sea and Sky: Ho-Oh
+[Mst:PackName v="PACK_NAME_A4_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Wisdom of Sea and Sky: Lugia
+[Mst:PackName v="PACK_NAME_A4_2" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Secluded Springs
+[Mst:PackName v="PACK_NAME_A4a_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Deluxe Pack: ex
 Mega Rising: Mega Blaziken
+[Mst:PackName v="PACK_NAME_B1_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Mega Rising: Mega Gyarados
+[Mst:PackName v="PACK_NAME_B1_2" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Mega Rising: Mega Altaria
+[Mst:PackName v="PACK_NAME_B1_3" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Crimson Blaze
+[Mst:PackName v="PACK_NAME_B1a_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Fantastical Parade
+[Mst:PackName v="PACK_NAME_B2_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Paldean Wonders
+[Mst:PackName v="PACK_NAME_B2a_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Mega Shine
+[Mst:PackName v="PACK_NAME_B2b_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Pulsing Aura
+[Mst:PackName v="PACK_NAME_B3_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Paradox Drive
+[Mst:PackName v="PACK_NAME_B3a_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Everyday Wonders
+[Mst:PackName v="PACK_NAME_B3b_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Ruler of the Skies
+[Mst:PackName v="PACK_NAME_B4_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]’s Ambition
+[Mst:PackName v="PACK_NAME_B4a_1" ] (1 [Mst:Rarity v="RARITY_MSID_SSASR" ] Card Guaranteed)
 Deluxe Pack: Mega
+Dual Fusion: [Mst:CommonCharacterName v="COMMON_CARD_NAME_19" ]
+Dual Fusion: [Text:CardName v="PIKACHU" ]
 Pika Pika! Pikachu Packs󱀀Pika Pika! Pikachu Pack
 Pika Pika! Pikachu Pack ex󱀀Pika Pika! Pikachu Packs ex
+Vee Vee! Eevee Packs󱀀Vee Vee! Eevee Pack
 Promo Pack A Series Vol. 1
 Promo Pack A Series Vol. 2
 Promo Pack A Series Vol. 3
@@ -8092,6 +8463,8 @@ Promo Pack B Series Vol. 10
 Promo Pack B Series Vol. 11
 Promo Pack B Series Vol. 12
 Promo Pack [Mst:SeriesName v="SERIES_NAME_2" ] Series [Mst:CommonPackLabel v="COMMON_PACK_LABEL_013" ]
+Promo Pack [Mst:SeriesName v="SERIES_NAME_3" ] Series [Mst:CommonPackLabel v="COMMON_PACK_LABEL_001" ]
+Special Pack: First Partners
 [Mst:Rarity v="RARITY_MSID_RR" ] or higher guaranteed
 Regular pack
 Regular pack + 1 card
@@ -8281,7 +8654,10 @@ NO. 0146 Flame Pokémon HT: 6'7" WT: 132.3 lbs.
 NO. 0147 Dragon Pokémon HT: 5'11" WT: 7.3 lbs.
 NO. 0148 Dragon Pokémon HT: 13'1" WT: 36.4 lbs.
 NO. 0149 Dragon Pokémon HT: 7'3" WT: 463 lbs.
+NO. 0149 Dragon Pokémon HT: 7'3" WT: 639.3 lbs.
 NO. 0150 Genetic Pokémon HT: 6'7" WT: 269 lbs.
+NO. 0150 Genetic Pokémon HT: 7'7" WT: 280 lbs.
+NO. 0150 Genetic Pokémon HT: 4'11" WT: 72.8 lbs.
 NO. 0151 New Species Pokémon HT: 1'4" WT: 8.8 lbs.
 NO. 0152 Leaf Pokémon HT: 2'11" WT: 14.1 lbs.
 NO. 0153 Leaf Pokémon HT: 3'11" WT: 34.8 lbs.
@@ -8365,6 +8741,7 @@ NO. 0224 Jet Pokémon HT: 2'11" WT: 62.8 lbs.
 NO. 0225 Delivery Pokémon HT: 2'11" WT: 35.3 lbs.
 NO. 0226 Kite Pokémon HT: 6'11" WT: 485 lbs.
 NO. 0227 Armor Bird Pokémon HT: 5'7" WT: 111.3 lbs.
+NO. 0227 Armor Bird Pokémon HT: 5'7" WT: 89.1 lbs.
 NO. 0228 Dark Pokémon HT: 2' WT: 23.8 lbs.
 NO. 0229 Dark Pokémon HT: 4'7" WT: 77.2 lbs.
 NO. 0229 Dark Pokémon HT: 6'3" WT: 109.1 lbs.
@@ -8386,6 +8763,7 @@ NO. 0245 Aurora Pokémon HT: 6'7" WT: 412.3 lbs.
 NO. 0246 Rock Skin Pokémon HT: 2' WT: 158.7 lbs.
 NO. 0247 Hard Shell Pokémon HT: 3'11" WT: 335.1 lbs.
 NO. 0248 Armor Pokémon HT: 6'7" WT: 445.3 lbs.
+NO. 0248 Armor Pokémon HT: 8'2" WT: 562.2 lbs.
 NO. 0249 Diving Pokémon HT: 17'1" WT: 476.2 lbs.
 NO. 0250 Rainbow Pokémon HT: 12'6" WT: 438.7 lbs.
 NO. 0251 Time Travel Pokémon HT: 2' WT: 11 lbs.
@@ -8538,6 +8916,7 @@ NO. 0383 Continent Pokémon HT: 11'6" WT: 2094.4 lbs.
 NO. 0384 Sky High Pokémon HT: 23' WT: 455.3 lbs.
 NO. 0384 Sky High Pokémon HT: 35'5" WT: 864.2 lbs.
 NO. 0385 Wish Pokémon HT: 1' WT: 2.4 lbs.
+NO. 0386 DNA Pokémon HT: 5'7" WT: 134 lbs.
 NO. 0387 Tiny Leaf Pokémon HT: 1'4" WT: 22.5 lbs.
 NO. 0388 Grove Pokémon HT: 3'7" WT: 213.8 lbs.
 NO. 0389 Continent Pokémon HT: 7'3" WT: 683.4 lbs.
@@ -8645,7 +9024,9 @@ NO. 0479 Plasma Pokémon HT: 1' WT: 0.7 lbs.
 NO. 0480 Knowledge Pokémon HT: 1' WT: 0.7 lbs.
 NO. 0481 Emotion Pokémon HT: 1' WT: 0.7 lbs.
 NO. 0482 Willpower Pokémon HT: 1' WT: 0.7 lbs.
+NO. 0483 Temporal Pokémon HT: 17'9" WT: 1505.8 lbs.
 NO. 0483 Temporal Pokémon HT: 23' WT: 1873.9 lbs.
+NO. 0484 Spatial Pokémon HT: 13'9" WT: 740.8 lbs.
 NO. 0484 Spatial Pokémon HT: 20'8" WT: 1455.1 lbs.
 NO. 0485 Lava Dome Pokémon HT: 5'7" WT: 948 lbs.
 NO. 0486 Colossal Pokémon HT: 12'2" WT: 925.9 lbs.
@@ -8716,6 +9097,7 @@ NO. 0548 Bulb Pokémon HT: 1'8" WT: 14.6 lbs.
 NO. 0549 Flowering Pokémon HT: 3'7" WT: 35.9 lbs.
 NO. 0549 Spinning Pokémon HT: 3'11" WT: 42.3 lbs.
 NO. 0550 Hostile Pokémon HT: 3'3" WT: 39.7 lbs.
+NO. 0550 Hostile Pokémon HT: 3'3" WT: 39.7 lbs.
 NO. 0550 Mellow Pokémon HT: 3'3" WT: 39.7 lbs.
 NO. 0551 Desert Croc Pokémon HT: 2'4" WT: 33.5 lbs.
 NO. 0552 Desert Croc Pokémon HT: 3'3" WT: 73.6 lbs.
@@ -8752,6 +9134,8 @@ NO. 0581 White Bird Pokémon HT: 4'3" WT: 53.4 lbs.
 NO. 0582 Fresh Snow Pokémon HT: 1'4" WT: 12.6 lbs.
 NO. 0583 Icy Snow Pokémon HT: 3'7" WT: 90.4 lbs.
 NO. 0584 Snowstorm Pokémon HT: 4'3" WT: 126.8 lbs.
+NO. 0585 Season Pokémon HT: 2' WT: 43 lbs.
+NO. 0586 Season Pokémon HT: 6'3" WT: 203.9 lbs.
 NO. 0587 Sky Squirrel Pokémon HT: 1'4" WT: 11 lbs.
 NO. 0588 Clamping Pokémon HT: 1'8" WT: 13 lbs.
 NO. 0589 Cavalry Pokémon HT: 3'3" WT: 72.8 lbs.
@@ -8824,6 +9208,7 @@ NO. 0654 Fox Pokémon HT: 3'3" WT: 32 lbs.
 NO. 0655 Fox Pokémon HT: 4'11" WT: 86 lbs.
 NO. 0656 Bubble Frog Pokémon HT: 1' WT: 15.4 lbs.
 NO. 0657 Bubble Frog Pokémon HT: 2' WT: 24 lbs.
+NO. 0658 Ninja Pokémon HT: 4'11" WT: 88.2 lbs.
 NO. 0658 Ninja Pokémon HT: 4'11" WT: 88.2 lbs.
 NO. 0659 Digging Pokémon HT: 1'4" WT: 11 lbs.
 NO. 0660 Digging Pokémon HT: 3'3" WT: 93.5 lbs.
@@ -8902,6 +9287,7 @@ NO. 0718 Order Pokémon HT: 3'11" WT: 73.9 lbs.
 NO. 0719 Jewel Pokémon HT: 2'4" WT: 19.4 lbs.
 NO. 0719 Jewel Pokémon HT: 3'7" WT: 61.3 lbs.
 NO. 0720 Mischief Pokémon HT: 1'8" WT: 19.8 lbs.
+NO. 0721 Steam Pokémon HT: 5'7" WT: 429.9 lbs.
 NO. 0722 Grass Quill Pokémon HT: 1' WT: 3.3 lbs.
 NO. 0723 Blade Quill Pokémon HT: 2'4" WT: 35.3 lbs.
 NO. 0724 Arrow Quill Pokémon HT: 5'3" WT: 80.7 lbs.
@@ -8975,6 +9361,8 @@ NO. 0787 Land Spirit Pokémon HT: 6'3" WT: 100.3 lbs.
 NO. 0788 Land Spirit Pokémon HT: 4'3" WT: 46.7 lbs.
 NO. 0789 Nebula Pokémon HT: 8" WT: 0.2 lbs.
 NO. 0790 Protostar Pokémon HT: 4" WT: 2204.4 lbs.
+NO. 0791 Sunne Pokémon HT: 11'2" WT: 507.1 lbs.
+NO. 0792 Moone Pokémon HT: 13'1" WT: 264.6 lbs.
 NO. 0793 Parasite Pokémon HT: 3'11" WT: 122.4 lbs.
 NO. 0794 Swollen Pokémon HT: 7'10" WT: 735.5 lbs.
 NO. 0795 Lissome Pokémon HT: 5'11" WT: 55.1 lbs.
@@ -9008,6 +9396,8 @@ NO. 0820 Greedy Pokémon HT: 2' WT: 13.2 lbs.
 NO. 0821 Tiny Bird Pokémon HT: 8" WT: 4 lbs.
 NO. 0822 Raven Pokémon HT: 2'7" WT: 35.3 lbs.
 NO. 0823 Raven Pokémon HT: 7'3" WT: 165.3 lbs.
+NO. 0827 Fox Pokémon HT: 2' WT: 19.6 lbs.
+NO. 0828 Fox Pokémon HT: 3'11" WT: 43.9 lbs.
 NO. 0829 Flowering Pokémon HT: 1'4" WT: 4.9 lbs.
 NO. 0830 Cotton Bloom Pokémon HT: 1'8" WT: 5.5 lbs.
 NO. 0831 Sheep Pokémon HT: 2' WT: 13.2 lbs.
@@ -9100,6 +9490,7 @@ NO. 0932 Rock Salt Pokémon HT: 1'4" WT: 35.3 lbs.
 NO. 0933 Rock Salt Pokémon HT: 2' WT: 231.5 lbs.
 NO. 0934 Rock Salt Pokémon HT: 7'7" WT: 529.1 lbs.
 NO. 0935 Fire Child Pokémon HT: 2' WT: 23.1 lbs.
+NO. 0936 Fire Warrior Pokémon HT: 4'11" WT: 187.4 lbs.
 NO. 0937 Fire Blades Pokémon HT: 5'3" WT: 136.7 lbs.
 NO. 0938 EleTadpole Pokémon HT: 1' WT: 0.9 lbs.
 NO. 0939 EleFrog Pokémon HT: 3'11" WT: 249.1 lbs.
@@ -9207,6 +9598,9 @@ Advance ticket reward: 2nd prize
 Advance ticket reward: 3rd prize
 Share received
 You got a thanks from a share
+Exchange ticket for a 1 [Mst:Rarity v="RARITY_MSID_SSASR" ] card guaranteed\nbooster pack
+Elite deck from the most recent expansion
+Special pack that includes all [Text:CardName v="EIEVUI" ] and\nits Evolutions
 An icon that can be selected on the profile screen.
 Gardevoir (icon)
 Eevee (icon)
@@ -9309,6 +9703,16 @@ Ruler of the Skies: [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (icon)
 [Text:CardName v="ROCKETDANNOBOSS" ] (icon)
 [Text:CardName v="HUURO" ] (icon)
 [Mst:PackName v="PACK_NAME_B4b_1" ]: [Mst:CommonCharacterName v="COMMON_CARD_NAME_12" ] (icon)
+[Text:CardName v="SOUBLADES" ] (icon)
+[Text:CardName v="ABURIBBON" ] (icon)
+[Text:CardName v="PARMOT" ] (icon)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_21"] (icon)
+[Text:CardName v="CHILI" ] (icon)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"] (icon)
+[Text:CardName v="YATOUMORI" ] (icon)
+[Text:CardName v="DUGTRIO" ] (icon)
+[Text:CardName v="MIMIROL" ] (icon)
+[Text:CardName v="FOODIN" ] (icon)
 [Text:CardName v="PIKACHU" ] ver.[C:Nbsp ]12 (icon)
 [Text:CardName v="PIKACHU" ] ver.[C:Nbsp ]13 (icon)
 [Text:CardName v="PIKACHU" ] ver.[C:Nbsp ]14 (icon)
@@ -9378,6 +9782,7 @@ I like Pokémon from the Paldea region
 I’m collecting Mega Evolution Pokémon ex!
 PROMO-A
 PROMO-B
+PROMO-C
 Paralyzed
 Eevee (backdrop)
 Eevee
@@ -9639,8 +10044,24 @@ Retro Summer
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
 Sparkling Coast (backdrop)
 Sparkling Coast
+[Text:CardName v="PIKACHU" ] & Friends (backdrop)
+[Text:CardName v="PIKACHU" ] & Friends
+Memories of a Journey (backdrop)
+Memories of a Journey
+Village Street (backdrop)
+Village Street
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20" ] (backdrop)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20" ]
+[Text:CardName v="CHILI" ] (backdrop)
+[Text:CardName v="CHILI" ]
+Special Set 03 (backdrop)
+Special Set 03
 Joyous Cityscape
 Joyous Cityscape (backdrop)
+Three-Card-Set Backdrop (C1) − Winter Holidays (portrait backdrop)
+Three-Card-Set Backdrop (C1) − Winter Holidays (portrait)
+Three-Card-Set Backdrop (C1) − Winter Holidays (landscape backdrop)
+Three-Card-Set Backdrop (C1) − Winter Holidays (landscape)
 A backdrop used to place cards on when using the\nDisplay Boards feature.
 Eevee (Pokémon coin)
 Eevee
@@ -9746,6 +10167,12 @@ Pokémon 30th Celebration Design (Pokémon coin)
 [Text:CardName v="HOOPA" ] (Pokémon coin)
 [Text:CardName v="HUURO" ] (Pokémon coin)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"] (Pokémon coin)
+[Text:CardName v="PIKACHU" ] ver.[C:Nbsp ]4 (Pokémon coin)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_19" ] (Pokémon coin)
+Special Set 03 (Pokémon coin)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20" ] (Pokémon coin)
+[Text:CardName v="CHILI" ] (Pokémon coin)
+[Text:CardName v="GANGAR" ] (Pokémon coin)
 A coin that can be used during battle.\nYou can select it when using the Decks feature.
 Eevee (card sleeve)
 Eevee
@@ -9844,6 +10271,16 @@ Pokémon 30th Celebration Design (card sleeve)
 [Text:CardName v="HOOPA" ] (card sleeve)
 [Text:CardName v="HUURO" ] (card sleeve)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"] (card sleeve)
+[Text:CardName v="PIKACHU" ] & Friends (card sleeve)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_19" ] (card sleeve)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20" ] (card sleeve)
+[Text:CardName v="CHILI" ] (card sleeve)
+Special Set 03 (card sleeve)
+[Text:CardName v="GANGAR" ] (card sleeve)
+Season C1 Master Ball Rank (card sleeve)
+Season C1 Master Ball Rank (TOP[C:Nbsp ]10,000) (card sleeve)
+Season C1 Master Ball Rank (TOP[C:Nbsp ]5,000) (card sleeve)
+Season C1 Master Ball Rank (TOP[C:Nbsp ]1,000) (card sleeve)
 An accessory that is attached to cards.\nYou can select it when using the Decks feature.
 A cover for binders that can be used when\nusing the Binders feature.
 Eevee (cover)
@@ -9994,6 +10431,12 @@ Ruler of the Skies: [Mst:CommonCharacterName v="COMMON_CARD_NAME_14" ] (cover)
 [Text:CardName v="HUURO" ] & [Text:CardName v="SWANNA" ] (cover)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"] (cover)
 Deluxe Pack: Mega (cover)
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25" ]: [Mst:CommonCharacterName v="COMMON_CARD_NAME_19" ] (cover)
+[Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25" ]: [Text:CardName v="PIKACHU" ] (cover)
+[Text:CardName v="PIKACHU" ] & Friends (cover)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20" ] (cover)
+[Text:CardName v="CHILI" ] & [Mst:CommonCharacterName v="COMMON_CARD_NAME_22" ] (cover)
+Special Set 03 (cover)
 Eevee (playmat)
 Eevee
 Meowth (playmat)
@@ -10092,6 +10535,12 @@ Pokémon 30th Celebration Design (playmat)
 [Text:CardName v="HOOPA" ] (playmat)
 [Text:CardName v="HUURO" ] & [Text:CardName v="SWANNA" ] (playmat)
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"] (playmat)
+[Text:CardName v="PIKACHU" ] & Friends (playmat)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_19" ] (playmat)
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20" ] (playmat)
+[Text:CardName v="CHILI" ] & [Mst:CommonCharacterName v="COMMON_CARD_NAME_22" ] (playmat)
+Special Set 03 (playmat)
+[Text:CardName v="GANGAR" ] (playmat)
 An accessory that is laid out on the in-play zone\nduring battle.\nYou can select it when using the Decks feature.
 Put [Num:Int max_length="2" plural_only=" " ][Gr:Count s="a Basic Pokémon" p="Basic Pokémon" ] into play
 Put [Num:Int max_length="2" plural_only=" " ][Gr:Count s="a Pokémon ex" p="Pokémon ex" ] into play
@@ -10131,6 +10580,7 @@ B3b
 B4
 B4a
 B4b SP
+C1
 Get [Num:Int id="0" max_length="3" ] or more points
 Deal [Num:Int id="0" max_length="5" ] or more damage
 Win [Num:Int id="0" max_length="3" ] or more battles
@@ -10138,6 +10588,9 @@ A
 A Series
 B
 B Series
+C
+C Series
+Special
 Wonder Pick Event
 Items
 Accessories
@@ -10171,6 +10624,7 @@ Paldean Wonders
 Pulsing Aura
 Mega Shine
 Rare Items
+Second Anniversary Celebration: 1 [Mst:Rarity v="RARITY_MSID_SSASR" ]\nCard Guaranteed Booster Packs
 Meowth (Pokémon coin)
 Meowth (card sleeve)
 Meowth (playmat)
@@ -10601,6 +11055,8 @@ Shinedust ×1,000
 [Mst:CardCharacterName v="CARD_NAME_1163" ] (058/P-B)
 [Mst:CardCharacterName v="CARD_NAME_811" ] (059/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1204" ] (060/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1149" ] (061/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1191" ] (062/P-B)
 [Mst:CardCharacterName v="CARD_NAME_993" ] (026/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1001" ] (027/P-B)
 [Mst:CardCharacterName v="CARD_NAME_130" ] (028/P-B)
@@ -10680,11 +11136,77 @@ Team Rocket Grunt’s Socks
 [Mst:CardCharacterName v="CARD_NAME_1342" ] (090/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1343" ] (091/P-B)
 [Mst:CardCharacterName v="CARD_NAME_152" ] (092/P-B)
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101390_MEGAGEKKOUGA" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101400_CHILI_DOOH" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101410_PremiumSet03" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101620_MEGAGEKKOUGA" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101630_CHILI_DOOH" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101640_PremiumSet03" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100920_MEGAGEKKOUGA" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100930_CHILI_DOOH" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100940_PremiumSet03" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100950_MEGAGEKKOUGA" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100960_CHILI_DOOH" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100970_PremiumSet03" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101120_PremiumSet03" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101130_MEGAGEKKOUGA" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101140_CHILI_DOOH" ]
+[Mst:CardCharacterName v="CARD_NAME_94" ] (001/P-C)
+[Mst:CardCharacterName v="CARD_NAME_1422" ] (002/P-C)
+[Mst:CardCharacterName v="CARD_NAME_1399" ] (003/P-C)
+[Mst:CardCharacterName v="CARD_NAME_814" ] (004/P-C)
+[Mst:CardCharacterName v="CARD_NAME_815" ] (005/P-C)
+[Mst:CardCharacterName v="CARD_NAME_547" ] (006/P-C)
+[Mst:CardCharacterName v="CARD_NAME_548" ] (007/P-C)
+[Mst:CardCharacterName v="CARD_NAME_1400" ] (008/P-C)
+[Mst:CardCharacterName v="CARD_NAME_1423" ] (009/P-C)
 [Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101050_TEAM_ROCKET" ]
 [Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100860_TEAM_ROCKET" ]
 [Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100860_TEAM_ROCKET" ]
 [Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101510_TEAM_ROCKET" ]
 [Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101310_TEAM_ROCKET" ]
+[Mst:PackName v="PACK_NAME_A1_1_02" ]
+[Mst:PackName v="PACK_NAME_A1_2_02" ]
+[Mst:PackName v="PACK_NAME_A1_3_02" ]
+[Mst:PackName v="PACK_NAME_A1a_1_01" ]
+[Mst:PackName v="PACK_NAME_A2_1_01" ]
+[Mst:PackName v="PACK_NAME_A2_2_01" ]
+[Mst:PackName v="PACK_NAME_A2a_1_01" ]
+[Mst:PackName v="PACK_NAME_A2b_1_01" ]
+[Mst:PackName v="PACK_NAME_A3_1_01" ]
+[Mst:PackName v="PACK_NAME_A3_2_01" ]
+[Mst:PackName v="PACK_NAME_A3a_1_01" ]
+[Mst:PackName v="PACK_NAME_A3b_1_01" ]
+[Mst:PackName v="PACK_NAME_A4_1_01" ]
+[Mst:PackName v="PACK_NAME_A4_2_01" ]
+[Mst:PackName v="PACK_NAME_A4a_1_01" ]
+[Mst:PackName v="PACK_NAME_B1_1_01" ]
+[Mst:PackName v="PACK_NAME_B1_2_01" ]
+[Mst:PackName v="PACK_NAME_B1_3_01" ]
+[Mst:PackName v="PACK_NAME_B1a_1_01" ]
+[Mst:PackName v="PACK_NAME_B2_1_01" ]
+[Mst:PackName v="PACK_NAME_B2a_1_01" ]
+[Mst:PackName v="PACK_NAME_B2b_1_01" ]
+[Mst:PackName v="PACK_NAME_B3_1_01" ]
+[Mst:PackName v="PACK_NAME_B3a_1_01" ]
+[Mst:PackName v="PACK_NAME_B4_1_01" ]
+[Mst:PackName v="PACK_NAME_B3b_1_01" ]
+[Mst:PackName v="PACK_NAME_B4a_1_01" ]
+[Mst:CardCharacterName v="CARD_NAME_456" ] (069/P-B)
+[Mst:CardCharacterName v="CARD_NAME_534" ] (070/P-B)
+[Mst:CardCharacterName v="CARD_NAME_39" ] (077/P-B)
+[Mst:CardCharacterName v="CARD_NAME_639" ] (078/P-B)
+[Mst:CardCharacterName v="CARD_NAME_452" ] (085/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1312" ] (086/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1345" ] (093/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1183" ] (094/P-B)
+[Mst:CardCharacterName v="CARD_NAME_33" ] (101/P-B)
+[Mst:CardCharacterName v="CARD_NAME_583" ] (102/P-B)
+[Mst:CardCharacterName v="CARD_NAME_21" ] (060/P-A)
+[Mst:CardCharacterName v="CARD_NAME_87" ] (061/P-A)
+[Mst:CardCharacterName v="CARD_NAME_198" ] (062/P-A)
+[Mst:CardCharacterName v="CARD_NAME_830" ] (063/P-A)
+[Mst:CardCharacterName v="CARD_NAME_831" ] (064/P-A)
 Poké Gold
 Poké Gold + Accessories
 Poké Gold + Bonuses
@@ -10746,6 +11268,12 @@ Summer Sale: Poké Gold (paid) ×200 Deal
 Poké gold (paid) ×115 + Accessories ([Text:CardName v="KAMITSURE" ])
 Poké Gold (paid) ×115 + Accessories ([Text:CardName v="HOOPA" ])
 Poké Gold (paid) ×115 + Accessories ([Text:CardName v="THUNDER" ], [Text:CardName v="FREEZER" ], and [Text:CardName v="FIRE" ])
+2nd Anniv.: Poké Gold (paid) ×100 Deal
+2nd Anniv.: Poké Gold (paid) ×200 Deal
+Poké Gold (paid) ×115 + Accessories ([Text:CardName v="PIKACHU" ] & Friends)
+Poké Gold (paid) ×5 Super Deal + 55 Bonus Poké Gold (non-paid)!
+New Booster Pack Jump Start! Poké Gold (paid) ×35 Deal
+Poké Gold (paid) ×35
 Poké gold
 Tickets
 Special
@@ -10758,6 +11286,9 @@ Reissue Drop
 Reissue Wonder Pick
 Promo Cards
 Team Rocket
+[Mst:Rarity v="RARITY_MSID_SSASR" ] Guaranteed Booster Pack
+Used to open special packs.
+Special Pack Hourglass
 1 [Mst:Rarity v="RARITY_MSID_RR" ] or higher card guaranteed
 [Mst:PackName v="PACK_NAME_PROMO_A_1"]
 [Mst:PackName v="PACK_NAME_PROMO_A_2"]
@@ -10765,6 +11296,7 @@ Team Rocket
 [Mst:PackName v="PACK_NAME_PROMO_A_4"]
 [Mst:PackName v="PACK_NAME_PROMO_A_5"]
 [Mst:PackName v="PACK_NAME_PROMO_A_6"]
+[Mst:PackName v="PACK_NAME_PROMO_A_7"]
 [Mst:PackName v="PACK_NAME_PROMO_A_8"]
 [Mst:PackName v="PACK_NAME_PROMO_A_9"]
 [Mst:PackName v="PACK_NAME_PROMO_A_10"]
@@ -10938,6 +11470,18 @@ Look at your opponent’s hand and put any number of Basic Pokémon you find the
 Once during each player’s turn, that player may flip [Num:Int id="0" plural_only=" " max_length="2" ][Gr:Count s="a coin" p="coins" ref="0" ]. If[Gr:Count one="" two=" both of them are" p=" all of them are" ref="0" ] heads, that player draws cards until they have [Num:Int id="1" max_length="2" ] [Gr:Count s="card " p="cards " ref="1" ]in their hand.
 Flip a coin until you get tails. For each heads, put a random Pokémon that has “Team Rocket” in its name from your deck into your hand.
 Your opponent’s Active Pokémon is now [Text:SpecialCondition id="0"]. Flip a coin. If tails, your Active Pokémon is now also [Text:SpecialCondition id="0"].
+Choose 1 of your Pokémon, and then flip a coin until you get tails. For each heads, heal [Num:Int id="0" max_length="3"] damage from that Pokémon.
+Heal [Num:Int id="0" max_length="3"] damage from 1 of your Pokémon that has any Energy attached. If you healed any damage in this way, discard [Gr:Count s="a " id="2" ref="1" ][Num:Int id="1" plural_only=" " max_length="2" ]random Energy from that Pokémon.
+Your Active Pokémon recovers from all Special Conditions.
+The Basic Pokémon this card is attached to takes −[Num:Int id="0" max_length="3"] damage from attacks from your opponent’s Pokémon.
+Attacks used by the [Text:CardName id="0"] this card is attached to do +[Num:Int id="1" max_length="3"] damage to your opponent’s Active Pokémon.
+During this turn, attacks used by your [Text:CardName id="0"], [Text:CardName id="1"], or [Text:CardName id="2"] do +[Num:Int id="3" max_length="3"] damage to your opponent’s Pokémon.
+You can use this card only if you have [Text:CardName id="0"], [Text:CardName id="1"], [Text:CardName id="2"], or [Text:CardName id="3"] in play.\n\nSwitch in 1 of your opponent’s Benched Pokémon to the Active Spot.
+Look at the top [Num:Int id="0" max_length="2" ] cards of your deck and put [Num:Int id="1" max_length="2" ] of them into your hand. Shuffle [Gr:Count p="any other cards" id="2" two="the other card" ] back into your deck.
+Produce [Gr:Count s="a " id="4" ref="1" ][Num:Int id="1" plural_only=" " max_length="2" ][Img:Element id="0"] Energy from your Energy Zone, and attach it to 1 of your [Text:CardName id="2"] or [Text:CardName id="3"].
+You can use this card only if you have [Num:Int id="0" max_length="1"] or more different Pokémon types in play.\n\nSwitch your Active Pokémon with 1 of your Benched Pokémon.
+Once during each player’s turn, that player may use this effect. Flip a coin. If heads, draw [Gr:Count s="a " id="1" ref="0" ][Num:Int id="0" plural_only=" " max_length="2" ][Gr:Count s="card" p="cards" id="2" ref="0" ].
+Move all [Img:Element id="1"] Energy from 1 of your Benched [Img:Element id="0"] Pokémon to your [Text:CardName id="2"] in the Active Spot.
 Pokémon Tool
 Item (Fossil)
 Item
@@ -11077,6 +11621,8 @@ Win this battle without your opponent getting any points
 [Mst:SoloRandomBattleGroupName]
 [Mst:SoloRandomBattleName]
 [Mst:SpecialConditionType]
+[Mst:SpecialPackTicketDescription]
+[Mst:SpecialPackTicketName]
 [Mst:StageType]
 [Mst:StageTypePokemon]
 [Mst:SubPackName]
@@ -11098,6 +11644,10 @@ Would you like to look at wonder picks?
 We’ll notify you when your wonder stamina has fully recovered.
 Wonder stamina fully recovered.
 Your wonder stamina has fully recovered!
+You can open your weekly special pack!
+We’ll notify you when your special pack stamina has recovered.
+Special pack stamina recovered.
+Your special pack stamina has recovered!
 Card inclusion probability rate for the 1st card
 Card inclusion probability rate for the 1st to 3rd cards
 Card inclusion probability rate for the 1st to 4th cards
@@ -11107,6 +11657,7 @@ Card inclusion probability rate for the 3rd card
 Card inclusion probability rate for the 4th card
 Card inclusion probability rate for the 5th card
 Card inclusion probability rate for the 6th card
+Cards included first
 About This App
 Create New
 Binder limit reached
@@ -11254,6 +11805,7 @@ Went first
 Went second
 Card of the\nGame
 None
+View Deck
 Card of the Game
 Tap to Proceed
 Your opponent’s cards
@@ -11275,7 +11827,8 @@ You did not acquire any rewards.
 First-Time Rewards
 Chance Rewards
 Player EXP
-[Num:Int id="0" max_length="0" visible="0" ][Gr:Count s="A promo pack has" p="Promo packs have" id="1" ] been sent to Gifts
+Win Rewards
+[Num:Int id="0" max_length="0" visible="0" ][Gr:Count s="A pack you obtained has" p="packs you obtained have" id="1" ] been sent to Gifts
 Battle Log
 vs. [Str:PlayerName id="0" ]
 Tie
@@ -11489,6 +12042,7 @@ Pokémon Checkup — Asleep
 Pokémon Checkup — Burned
 Coin flip — Confused
 First coin flip will definitely be heads
+Flip [Num:Int id="0" max_length="2" ] more [Gr:Count s="time" p="times" id="1" ]
 Waiting for opponent...
 Heads!
 Tails!
@@ -11745,6 +12299,12 @@ There are no Pokémon that can have Energy\nmoved
 Please choose a Pokémon that has Energy you\nwould like to move attached to it
 Confirm movement of all Energy?
 Prevent all damage from—and effects\nof—attacks used by the opponent’s Pokémon
+Attacks by [Text:CardName id="0" ], [Text:CardName id="1" ],\nand [Text:CardName id="2" ] do +[Num:Int id="3" max_length="3" ] damage\nto the opponent’s Pokémon
+[Text:AttackName id="0" ] does −[Num:Int id="1" max_length="3" ] damage
+Flip [Num:Int id="1" max_length="2" ] more [Gr:Count s="coin" p="coins" id="2" ref="1" ] for\n[Text:AttackName id="0" ]
+Please choose [Gr:Count s="a " id="2" ref="1" ][Num:Int id="1" visible="0" max_length="1" ]Pokémon to attach [Gr:Count s="an " id="3" ][Num:Int id="0" visible="0" max_length="1" ]Energy to
+Flip a coin when Knocked Out. If heads, the\nopponent can’t get any points for it
+Attacks used by [Text:CardName id="0" ]\ndo +[Num:Int id="1" max_length="3" ] damage to the opponent’s\nActive Pokémon
 Please put a Basic Pokémon in the\nActive Spot.
 Only Basic Pokémon can be chosen.
 Please put a Pokémon in play.
@@ -11953,6 +12513,11 @@ Can have up to [Num:Int id="0" max_length="2" ] Pokémon Tool cards attached
 If any coins are flipped for an effect of the player’s Trainer card, they may begin flipping those coins again
 1 of the opponent’s Pokémon is chosen [Num:Int id="1" max_length="2" ] more [Gr:Count s="time" p="times" id="2" ref="1" ] for the [Text:AttackName id="0" ] attack
 At the end of the opponent’s next turn, Knock Out the Pokémon in the chosen [Num:Int id="0" visible="0" max_length="1" ][Gr:Count s="spot" p="spots" id="1" ]
+Attacks by [Text:CardName id="0" ], [Text:CardName id="1" ], and [Text:CardName id="2" ] do +[Num:Int id="3" max_length="3" ] damage to the opponent’s Pokémon
+[Text:AttackName id="0" ] does −[Num:Int id="1" max_length="3" ] damage
+Flip [Num:Int id="1" max_length="2" ] more [Gr:Count s="coin" p="coins" id="2" ref="1" ] for [Text:AttackName id="0" ]
+Flip a coin when Knocked Out. If heads, the opponent can’t get any points for it
+Attacks used by [Text:CardName id="0" ] do +[Num:Int id="1" max_length="3" ] damage to the opponent’s Active Pokémon
 Your opponent’s discard pile
 Your discard pile
 No discarded cards
@@ -11991,6 +12556,7 @@ Swipe the card to send it to your\ntrade partner
 [Str:NickName]
 [Str:PlayerCode]
 [Str:PlayerName]
+-/[Num:Int id="0" max_length="3" zero_padding="3"]
 [Num:Int id="0" max_length="3"]<size=24><space=0.15em><voffset=3.3><scale=1.8>-</scale></size></voffset>
 [Num:Int id="0" max_length="3" ]<size=24><space=0.08em><voffset=5>+</size></voffset>
 [Num:Int id="0" max_length="4" ]+
@@ -12055,6 +12621,7 @@ Retreat
 Series
 Trainer
 Obtain Flair
+???
 JPN
 SPA
 ENG
@@ -12078,6 +12645,7 @@ This card can’t be obtained from booster packs
 You do not own any flair
 Unable to preview. You do not currently own\nthis card
 You cannot have more than [Num:Int id="0" max_length="3" ] cards on your wishlist
+This card cannot be wishlisted
 Try tapping and holding on the card!
 Wishlist
 Quitting the app. Is this OK?
@@ -12258,7 +12826,7 @@ Delete this deck?\nDeleting this deck will not delete your cards.
 Cancel
 OK
 Delete Deck
-This deck is favorited.\nDelete this deck?\nDeleting this deck will not delete your cards.
+This deck has been set as follows.\nAre you sure you want to delete it?\nDeleting this deck will not delete your cards.\n\n• This deck is currently favorited.\nDeleting it will also remove it as a favorite.
 Cancel
 OK
 Delete Deck
@@ -12287,6 +12855,21 @@ Unable to wishlist cards. Wishlist limit reached.\n\nPlease wishlist cards indiv
 OK
 This deck cannot be shared with a 2D pattern code\nbecause it does not meet one or more of the\nfollowing conditions:\n\n• Consists of exactly 20 cards\n• Includes one or more Basic Pokémon\n• Built using owned cards only\n• Has Energy selected
 OK
+This deck is currently set as a featured deck on\nyour profile. Changing its sharing settings will also\nremove it from your profile.\nIs this OK?
+Cancel
+OK
+Change Sharing Settings
+This deck is currently set as your featured deck.\nSaving it in an unusable state will remove it from\nyour profile.
+Cancel
+OK
+This deck has been set as follows.\nAre you sure you want to delete it?\nDeleting this deck will not delete your cards.\n\n• This deck is currently set as your featured deck\non your profile.\nDeleting it will also remove it from your profile.
+Cancel
+OK
+Delete Deck
+This deck has been set as follows.\nAre you sure you want to delete it?\nDeleting this deck will not delete your cards.\n\n• This deck is currently set as your featured deck\non your profile.\nDeleting it will also remove it from your profile.\n\n• This deck is currently favorited.\nDeleting it will also remove it as a favorite.
+Cancel
+OK
+Delete Deck
 Delete this Deck
 View All Cards in Deck
 Copy this Deck
@@ -12305,6 +12888,9 @@ Highlight [Gr:Count s="card" p="cards" ][Num:Int id="0" max_length="0" visible="
 Copy
 Cancel
 Edit
+Private
+Public
+Friends Only
 Save
 Change
 One or more Energy types needed to use the\nattacks in this deck have not been selected.
@@ -12320,11 +12906,17 @@ Build New Deck
 Build from Theme Deck List
 Build a Copy of a Deck
 Scan Code
+Go to Community Decks
 Choose a Deck to Copy
 Edit
 Editing
 Save
 My Decks
+Private
+Public
+Visible Only to Friends
+If you make your decks public, other players will\nbe able to see them.
+Sharing Settings
 Please select up to two types.
 Cancel
 Auto-build
@@ -12399,6 +12991,7 @@ You successfully built this deck
 You successfully built a copy of the deck
 You successfully deleted the deck
 No decks found
+Card cannot be used
 2D Pattern Code
 Cancel
 Copy
@@ -12407,6 +13000,7 @@ The event period has ended. Now returning to the Battle screen.
 OK
 Guide
 Promo Packs
+Event Details
 Missions
 Shop
 About the Event
@@ -12420,6 +13014,9 @@ Emblem events are events where you can battle\nagainst other players and strive 
 There are several kinds of emblem events, such as\nthose where you aim to get a certain number of\nvictories, aim for consecutive victories, and more.\nYou can check what kind of event is underway by\nchecking the announcements for the event.
 In drop events, you can battle all sorts of decks,\nand you might obtain promo packs if you win.\nYou can obtain special cards from these promo\npacks.\nNote: The promo packs and cards in the image\nare an example.
 You will need event stamina in order to\nparticipate in event battles.\nEvent stamina can be recovered over time and by\nusing items called event hourglasses.
+Limited battles are events where you can battle\nagainst other players with decks that align with\nspecial rules and strive for various rewards by\nwinning as many battles as you can.
+The special rules vary by event.\nBefore building a deck, be sure to check the\nspecial rules on the event’s screen and the\ndeck-selection screens.
+There are several kinds of limited battles, such\nas those where you aim for a certain number of\nvictories, consecutive victories, and more.\nYou can see what kind of event is underway by\nchecking the news for the event.
 Evolves from [Mst:CardCharacterName ]
 <line-indent=140>When your Pokémon [Img:ex ] is [Ctrl:Bold ]Knocked Out[/Ctrl:Bold], your opponent gets [Ctrl:Bold ]2[/Ctrl:Bold] points.
 ex rule
@@ -12551,7 +13148,7 @@ You can also build a deck using Auto-build.\n\nAll you have to do is select Auto
 You can also change your playmat, card sleeves,\nand Pokémon coin.\n\nThese can be obtained in a number of ways, like\nfrom the Shop or by completing missions.
 You can tap this icon if you want to see this\nexplanation again.\n\nIf you’re unsure of anything else, you can try\nchecking Tips.
 Rental decks are a kind of deck that let you\nborrow a set of 20 cards to use in battle.
-Rental decks are obtained mainly by completing\ndeck missions.\n\nYou can see the rental decks you have obtained\nfrom the Deck Menu.
+Rental decks are granted automatically.\nThe rental decks you can use are updated\nregularly.
 A rental deck has a limited number of uses.
 You can use theme deck lists to easily build decks.
 If you select a theme deck list when building a\ndeck, a deck will be built using cards you own.\n\nTo build a theme deck, you must own all the cards\nrequired by the theme deck list.
@@ -12594,6 +13191,14 @@ The card will be sent to your friend’s Gifts.
 A favoriting feature has been added to the friends\nlist. Favorited friends are shown at the top of the\nfriends list, so they will be easier to find when\ntrading, for example.
 To favorite a friend, tap Favorites at the top-right\nof the friends list.
 All you need to do is choose the friends you want\nto favorite.\nNote: Your friends will not know that you have\nfavorited them.
+You can only use special pack stamina to open a\nspecial pack once a week.
+You will be notified when your special pack stamina\nhas recovered and you can open a special pack.\n\nTry to make sure you open your pack once a week!
+If you use special pack hourglasses, you can open\na special pack even if you don’t have any special\npack stamina.
+The Community Decks feature lets you view decks\nfrom friends and players from around the world.
+Currently Popular shows what decks players\naround the world are frequently building.
+In Friends, you can see featured decks that your\nfriends have made public.
+You can tap a deck you’re interested in to view all\nof the cards in it.
+You can build a deck with cards you own.\nSave the deck on the deck-editing screen by tapping\nEdit This Deck.
 All the cards you own are shown here.
 Binders have been unlocked.
 Choose your favorite cover and display\nyour cards inside the binder.
@@ -12639,7 +13244,7 @@ You can try battling AI opponents that use\na variety of deck types in solo.
 Let’s try your hand at a solo battle.
 Step-up battles have different levels of\ndifficulty. Let’s start out with beginner.
 Winning battles will give you rewards like\nplayer EXP and items.
-Let’s start off battling against this\nIvysaur deck.
+Let’s start with this battle.
 There is also a feature that does the\nbattling for you automatically.
 It can be toggled with this button. You can\ntry it out when you want to play casually.
 The Auto feature can also be toggled\nduring battle.
@@ -12657,6 +13262,7 @@ In Ranked Matches, you can test your skills\nin battle against players from arou
 Flair and items you can exchange for are\ndisplayed here.
 You can send cards\nto friends.
 We’ve reached the end of the Share tutorial.\nYou can now start sending cards to friends!
+Here, you can view decks from friends and\nplayers from all over the world.
 You can preview what flair looks like when applied\nto a card in My Cards. You can also see their\ndramatic effects in motion during battles.
 You can obtain flair of your choice. The conditions\nfor obtaining flair differ by card.
 If you collect a set number of duplicates of a card,\nyou can automatically obtain flair for that card.\nNote: You cannot obtain flair this way for all cards.
@@ -12747,8 +13353,10 @@ Share Info
 View Other Booster Packs
 Cards Not Registered in Share Partner’s Card Dex
 Cards You Can Share
+Share Partner’s Wishlist
 Card Dex has no unregistered cards (completed).
 You do not own any of their unregistered cards.
+No cards found.
 You can only share cards of certain rarities.
 Choose a Card to Share
 The card was shared with your friend
@@ -12760,9 +13368,29 @@ You can share with the same friend\nonce per day.
 You may play any number of Item cards during your turn.
 Battle
 Social Hub
+Deck Restrictions
+Note: Some cards can be used regardless of restrictions.
+You can select expansions.
+Expansion Restrictions
+Notes:\n• Restrictions apply only to Pokémon.\n• Some cards can be used regardless of restrictions.
+You can select rarities.
+Rarity Restrictions
+All Decks
+Clear
+With Expansion Restrictions
+With Rarity Restrictions
+Battle Rules Settings
+Card Restrictions
+Deck Restrictions
+My Decks Only
+No Expansion Restrictions
+No Rarity Restrictions
+OK
+PROMO
+Rental Decks Only
 Decks
 My Decks
-Theme Deck Lists
+Deck Lists
 Rental Decks
 Deck Menu
 Guide
@@ -12778,6 +13406,21 @@ Private Match
 Random Match
 Event Matches
 Versus
+You can use a shared password or 2D pattern code to\nenjoy battling with people you know.
+Private Match
+Setting up match
+Invite
+Will be issued automatically
+Password
+Notes:\n• If you set battle rules, a password will be automatically issued.\n• A 2D pattern code will be issued after you tap Start.
+Private Match Settings
+Enter a password
+Battle Rules Settings
+Start
+Join
+Join
+Password
+2D Pattern Code
 With Password
 With 2D Pattern Code
 Private Match Menu
@@ -12787,12 +13430,14 @@ Event
 Coming soon
 Newly available
 Solo
+Community Decks
 [Num:Int id="0" max_length="0" visible="0" ][Gr:Count s="Event" p="Events" id="1" ] underway!
 Ending soon!
 [Num:Int id="0" max_length="0" visible="0" ][Gr:Count s="Event" p="Events" id="1" ] underway!
 Ending soon!
 Event underway!
 Ending soon!
+Promo pack rewards added
 Solo
 Versus
 The date has changed.\nReturning to the title screen.
@@ -12803,6 +13448,10 @@ The status has been updated.\nReturning to the title screen.
 OK
 Coming soon.
 OK
+If the rule is set to rental decks only,\nthe card restriction settings will be reset.
+Cancel
+OK
+Confirm Deck Restrictions
 The display board you favorite can be viewed anytime from the Home screen. You can change the settings in Display Boards.
 The binder you favorite can be viewed anytime from the Home screen. You can change the settings in Binders.
 To Display Boards
@@ -12827,6 +13476,7 @@ OK
 Will unlock in:
 How to Unlock
 To Social Hub
+Battle rules have been set.\nA password will automatically be issued
 Wonder Pick
 Rare pick available
 Chansey pick\navailable
@@ -12852,6 +13502,14 @@ Got it!
 Emblem
 Tap to Proceed
 Got it!
+Register deck now with the theme deck list you\nacquired?\n\nNote: You can register decks from theme deck lists\nby tapping Build New in My Decks.
+Cancel
+Register
+Register Deck
+The deck was not registered because you do not\nhave space for any more decks.\n\nYou can register decks from theme deck lists\nby tapping Build New in My Decks.
+OK
+The game closed while registering the theme deck.\n\nYou can register decks from theme deck lists\nby tapping Build New in My Decks.
+OK
 Trainers complete!
 Rarity complete!
 [Num:Int id="0" max_length="3" ] [Gr:Count s="card" p="cards" ] registered\nin card dex!
@@ -12922,11 +13580,13 @@ Water type complete!
 Next
 Congratulations!\nYou’ve collected every [Text:Char v="DIAMOND" ] card in this expansion!
 Congratulations!\nYou’ve collected every card in this expansion!
+Congratulations!\nYou’ve collected every [Mst:Rarity v="RARITY_MSID_SA" ] card in this expansion!
 OK
 Got [Num:Int id="0" max_length="4" ] different [Gr:Count s="card" p="cards" ]!
 Complete!
 Cards registered:
 Collected!
+Cards to go: [Num:Int id="0" max_length="3" ]!
 Add
 Add to binder
 Add to display board
@@ -12934,6 +13594,7 @@ Not specified
 Selected
 Pokémon ex
 Mega Evolution Pokémon ex
+Dual Type
 With Ability
 Without Ability
 All
@@ -13103,6 +13764,7 @@ Recommended Missions
 Limited Time
 You completed today’s daily missions.
 You completed all of the missions here.
+You completed this week’s event missions!\nPlease wait until the next missions are unlocked.
 Complete
 Complete
 Completed
@@ -13110,6 +13772,7 @@ Completed
 You have claimed all rewards
 Complete All
 Themed\nCollections
+Unlocks in:
 OK
 Congratulations! You’ve completed a mission.\nYou can try completing other missions, too.
 Please collect cards to fulfill any of the below.
@@ -13127,6 +13790,8 @@ About Pack Points
 Your pack points are maxed out
 Pack Point Exchange
 Can exchange
+Friday
+Saturday
 Not enough pack points
 Exchange
 Owned
@@ -13139,8 +13804,10 @@ When a pack is opened, the steps listed below will be carried out in sequence. (
 • A “regular” pack will not be selected if the conditions for the booster pack in this category to be generated have been fulfilled.\n• In place of it, the booster pack in this category will be selected.\n• The selection probability will be the same as the offering rates of a “regular” pack.\n• Please check the Attention section for information on pack generation conditions.
 • A “regular” or “regular + 1 card” pack will not be selected if the conditions for the booster pack in this category to be generated have been fulfilled.\n• In place of it, the booster pack in this category will be selected.\n• The selection probability will be that of a “regular” and a “regular + 1 card” pack combined.\n• Please check the Attention section for information on pack generation conditions.
 Offering Rates
+Special Pack Lineup
 Offering Rates
 Attention
+???
 [Mst:PackTableName id="0"]
 Tap and hold
 Pack point limit reached. Please exchange your\npack points for cards in Pack Point Exchange.
@@ -13151,6 +13818,8 @@ Trace line to open
 Pack no. [Num:Int id="0" max_length="2" ]
 Tap a booster pack you want to open!
 The availability period for this booster pack\nhas ended. Unable to obtain.
+The availability period for this special pack\nhas ended. Unable to obtain.
+OK
 OK
 Non-paid Poké gold will be used first.
 Use items to reduce the time to open packs?
@@ -13158,6 +13827,7 @@ Use items to recover enough pack stamina to\nopen 10 packs?
 Time until you can open a booster pack:
 Time until you can open 10 packs:
 It’s booster pack opening time!
+You can open a special pack
 Time until you can open a booster pack:
 Time until you can open 10 packs:
 It takes 1 Poké gold to reduce the time until you\ncan open a pack by 2 hours.
@@ -13168,6 +13838,17 @@ Next
 Pack no. [Num:Int id="0" max_length="2" ]
 Opening Results
 Select Expansion
+You have enough special pack stamina to\nopen your once-a-week special pack.\nDo you want to open it now?
+Cancel
+OK
+You do not have enough special pack hourglasses.\nSpecial pack hourglasses can be obtained as\nmission rewards and so forth.
+Special pack hourglasses required:
+OK
+Not Enough Items
+Can be opened
+Next opening:
+Do you want to consume [Num:Int id="0" max_length="3" ] special pack\nhourglass[Gr:Count p="es" id="2" ] to open [Num:Int id="1" max_length="2" ] pack[Gr:Count p="s" id="3" ref="1" ]?
+Offering Contents
 You can open a booster pack
 The period for obtaining this pack has ended
 You can use items to open a pack now
@@ -13205,6 +13886,8 @@ OK
 You use Pokémon Tools by attaching them to your Pokémon. You may attach only 1 Pokémon Tool to each Pokémon, and it stays attached.
 Unable to claim. Item limit reached.
 Unable to claim. Claim period has ended.
+Unable to claim.\nThe Decks feature has not been unlocked.\n\nThe Decks feature can be unlocked after\ncompleting part 06 of the battle guide.
+OK
 OK
 OK
 Claim
@@ -13242,6 +13925,9 @@ Other
 Recent emblems
 Sort
 Emblems
+That nickname cannot be used.
+OK
+Error
 That player name cannot be used
 OK
 Error
@@ -13256,6 +13942,10 @@ Remove
 Remove all Wishlisted Cards
 Your player name cannot be changed for 30 days.\n(Changed on [Date:DateTime format="d" id="0" max_length="10" ])
 OK
+OK
+Cancel
+Max 14 characters
+Set Nickname
 Cancel
 Cancel
 Max 14 characters
@@ -13281,8 +13971,15 @@ OK
 No tags set
 Set Player’s Featured
 Set Player’s Featured
+OK
+Cannot be set
+Visible only to friends
+Private
+Set a Featured Deck
+Decks
 Ask your friend to scan this code. It can be scanned with the\ncamera in Social Hub > Friends.
 Player’s Featured
+Featured Deck
 Friend ID
 Private
 Private
@@ -13303,8 +14000,11 @@ Friend request withdrawn
 Friend request denied
 Up to three emblems can be selected
 You can set up to three cards
+You cannot select decks that are private
+Unable to set deck.\nConditions have not been met
 That account is not currently in use.
 Not selected
+Set a nickname
 No tags set
 View Wishlist
 Not selected
@@ -13337,6 +14037,7 @@ Off
 On
 Battle!
 Battle!
+Promo pack rewards added
 Unavailable for use
 Recommended
 Recover
@@ -13353,6 +14054,14 @@ Maximum of [Num:Int id="0" max_length="2" ] turns
 [Num:Int id="0" max_length="1" ] [Gr:Count s="point" p="points" ] to win
 Time limit of [Num:Int id="0" max_length="2" ] seconds per turn
 No time limit per turn
+My decks only
+Rental decks only
+Usable expansions
+Usable rarities
+Use of the following cards is only limited by deck restrictions
+Battle Rules
+Rule [Num:Int id="0" max_length="3" ]
+Special Rule [Num:Int id="0" max_length="3" ]
 Rule 1
 Rule 2
 Rule 3
@@ -13387,6 +14096,7 @@ A [Mst:EnergyTypeNameLong id="0" space="hyphen" ] deck is recommended for this b
 To My Decks
 Recommended
 To Rental Decks
+Promo pack rewards added
 For advanced and expert, you must clear the\nbattle once to view the details of the\nopponent’s deck.
 A new battle has unlocked. Give it a try!
 OK
@@ -13394,6 +14104,7 @@ OK
 How to Unlock
 New Battle Unlocked!
 A recommended rental deck was selected
+A new battle has been unlocked
 Ending soon!
 Beginner
 Intermediate
@@ -13413,6 +14124,9 @@ Beginner
 Competitive
 Casual
 That password cannot be used.
+OK
+Error
+Unable to join.
 OK
 Error
 Battle!
@@ -13436,6 +14150,10 @@ Opponent found!
 Lv. [Num:Int id="0" max_length="3" ]
 Beginner
 TCG Player
+Quitting the battle.\nIs this OK?
+Cancel
+Quit Battle
+OK
 In Versus, you’ll battle other players.\nWe recommend playing solo before you try a\nversus battle.
 Unable to find opponents.\n\nPlease check whether you are using the latest\nversion of the app.
 A battle that was not correctly ended will now be\nterminated.\nThis battle will be counted as a loss.
@@ -13445,8 +14163,13 @@ Matchmaking error
 Password Settings
 Enter a Password
 Generate Automatically
+No battle history
+Battle History
 A password has been issued
 Password copied
+Details
+Battle Rules
+With Restrictions
 Beginner
 Competitive
 Casual
@@ -13460,7 +14183,9 @@ Private Match
 Here, you can choose your battle stance and\nenjoy battles with players all over the world.
 Random Match
 Scan Code
+Battle History
 Display Code
+Display 2D Pattern Code
 Players who have participated in previous ranked\nmatch seasons will be assigned a number of points\nbased on the points they had in their most\nrecently played season.
 OK
 A New Season Begins
@@ -13508,6 +14233,7 @@ pts lost
 Ranked down
 Ranked up
 Win streak pts
+vs.
 Victory
 Battle History
 Tap to Proceed
@@ -13721,6 +14447,18 @@ Friend request denied
 You have reached your friend request limit
 The other player cannot receive any more\nfriend requests
 You are already friends with this player
+Copy Deck
+Edit This Deck
+The deck displayed was saved in My Decks
+Unable to copy.\nNo space in My Decks
+Unable to display any decks.\nPlease try again later.
+You do not have friends who have set a featured deck.
+Cards to go: [Num:Int id="0" max_length="3" ]
+Buildable
+Currently Popular Deck Rankings
+Currently Popular
+Friends
+Community Decks
 Notation Under the Act on Specified\nCommercial Transactions
 You may play only 1 Stadium card during your turn. Put it next to\nthe Active Spot, and discard it if another Stadium comes into play.\nA Stadium with the same name can’t be played.
 Restarting the app to return to the title screen.
@@ -13775,6 +14513,7 @@ Turn all ON/OFF
 Pack stamina recovery
 Wonder stamina recovery
 Important news
+Special pack stamina recovery
 Reset to Default Settings
 30 fps
 60 fps
@@ -13794,7 +14533,10 @@ Notifications
 Sound
 System
 Trade
+Wishlist
 Haptic feedback
+Remove wishlisted cards automatically
+If you obtain one of your wishlisted cards, that card will\nautomatically be removed from your wishlist.
 Support ID has been copied
 Items
 Shop
@@ -14105,6 +14847,7 @@ The Terms of Use have been updated. Please read\nthe updated terms and agree to 
 The Privacy Notice has been updated. Please read\nthe updated notice and agree to it again.
 The game closed during a pack opening, but you\nsuccessfully obtained the cards. You can view the\ncards you obtained in My Cards by sorting by\nrecent cards.
 The game closed, but you successfully\nobtained the items.\n\nYou can view the items you obtained in\nMenu > Items.
+Do you want to download game data while\nyou play?\n\nWe recommend connecting to Wi-Fi to download.\n(You can also download it later.)\n\nDownload size: [Num:Int id="0" max_length="5" ] MB
 Cancel
 OK
 OK
@@ -14135,6 +14878,8 @@ OK
 OK
 OK
 OK
+OK
+Later
 OK
 Complete Purchase
 Complete Purchase
@@ -14230,12 +14975,17 @@ Flair
 Expansion
 Gold frames
 Trade Info
+Card Dex has no unregistered cards (completed).
+You do not own any of their unregistered cards.
 No cards found.
+View Other Booster Packs
 You can receive a card of the same rarity from your\ntrade partner.
 You can trade a card of the same rarity as the one\nyou’d receive.
 OK
 Choose a Card to Trade
 Message from Trade Partner
+Cards You Can Trade
+Cards Not Registered in Trade Partner’s Card Dex
 Trade Partner’s Wishlist
 PROMO
 Cannot be traded
@@ -14375,6 +15125,7 @@ Flair is required to trade
 A gold frame is required to trade
 Please remove gold frame
 Please remove flair
+You do not have enough shinedust
 OK
 Note: If a trade agreement is not reached, you will recover the trade stamina you consumed, and the card and items will be returned.
 You have offered the card to your trade partner.\nWhile it is being offered, it will not be displayed in My Cards, and you will not be able to use it.

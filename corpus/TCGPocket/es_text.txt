@@ -140,6 +140,10 @@ Una vez durante tu turno, cuando juegas este Pokémon de tu mano para hacer evol
 Una vez durante tu turno, al lanzar las monedas para un efecto de tus cartas de Entrenador, puedes ignorar todos los resultados de esos lanzamientos de monedas y lanzar esas monedas de nuevo. No puedes usar más de 1 habilidad [Text:AbilityName id="0" suffix="Short" ] en cada turno.
 Una vez durante tu turno, cuando juegas este Pokémon de tu mano para hacer evolucionar a uno de tus Pokémon, puedes mover [Num:Int id="0" max_length="1" ] Energía[Gr:Count p="s" ref="0" ] aleatoria[Gr:Count p="s" ref="0" ] del Pokémon Activo de tu rival a este Pokémon.
 Una vez durante tu turno, puedes mirar [Num:Int id="0" max_length="1" ] carta[Gr:Count p="s" ref="0" ] aleatoria[Gr:Count p="s" ref="0" ] de la mano de tu rival.
+Una vez durante tu turno, puedes usar esta habilidad. Pon [Num:Int id="1" max_length="1" ] carta[Gr:Count p="s" ref="1" ] de préstamo [Text:CardNameByCardID id="0" ] en tu mano.
+Mientras este Pokémon esté en juego, lanza [Num:Int id="1" max_length="2" ][C:Nbsp ]moneda[Gr:Count p="s" ref="1" ] más para el ataque [Text:AttackName id="0" ] de tus Pokémon.
+Una vez durante tu turno, cuando juegas esta carta de tu mano para hacer evolucionar a uno de tus Pokémon, puedes usar esta habilidad. Pon [Num:Int id="1" max_length="1" ] [Text:CardName id="0" ] aleatorio[Gr:Count p="s" ref="1" ] de tu baraja en tu Banca.
+Mientras este Pokémon esté en juego, los ataques de los Pokémon de tu rival hacen [C:Nbh ][Num:Int id="1" max_length="3" ][C:Nbsp ]puntos de daño a todos tus Pokémon[C:Nbsp ][Img:Element id="0" ]. Este efecto no se acumula.
 Polvo Sanador
 Trampa Fragancia
 Contragolpe
@@ -307,6 +311,15 @@ Moneda Resplandeciente
 Sigilo Mach
 Incisivos Despojadores
 Espía
+Cura Soleada
+Recogemiel
+Aura Llameante
+Entrenador de Salto
+Duplicación Súbita
+Electrocreación
+Venganza Meditada
+Melé Metálica
+Inmunidad
 Alas del Alba
 de Alola
 Forma Lluvia
@@ -661,6 +674,14 @@ Este ataque hace [Num:Int id="0" max_length="3" ][C:Nbsp ]puntos de daño por ca
 Si el Pokémon Activo de tu rival está [Text:SpecialCondition id="0" ], cura [Num:Int id="1" max_length="3" ][C:Nbsp ]puntos de daño a este Pokémon.
 Si este Pokémon ya tiene daño, este ataque hace [C:Nbh ][Num:Int id="0" max_length="3" ][C:Nbsp ]puntos de daño.
 Este ataque hace [Num:Int id="0" max_length="3" ][C:Nbsp ]puntos de daño más por cada punto que haya conseguido tu rival durante su último turno.
+Enseña todas las cartas de [Text:CardName id="0" ] de tu mano. Este ataque hace [Num:Int id="1" max_length="3" ][C:Nbsp ]puntos de daño por cada carta que hayas enseñado de esta manera.
+Mira [Num:Int id="0" max_length="1" ] carta[Gr:Count p="s" ] aleatoria[Gr:Count p="s" ] de la mano de tu rival, ponla[Gr:Count p="s" ] de nuevo en su baraja y baraja todas las cartas.
+Descarta [Num:Int id="1" max_length="2" ] Energía[Gr:Count p="s" ref="1" ][C:Nbsp ][Img:Element id="0" ] de este Pokémon. Este ataque hace [Num:Int id="3" max_length="3" ][C:Nbsp ]puntos de daño a [Num:Int id="2" max_length="1" ] de los Pokémon de tu rival.
+Si tu rival tiene un Estadio en juego, descártalo.
+El Pokémon Activo de tu rival pasa a estar [Text:SpecialCondition id="0" ]. Tu rival lanza [Num:Int id="1" max_length="2" ][C:Nbsp ]monedas por esta Condición Especial y, si sale cruz en alguna de ellas, ese Pokémon sigue [Text:SpecialCondition id="0" ].
+Durante tu próximo turno, el ataque [Text:AttackName id="0" ] de este Pokémon hace [C:Nbh ][Num:Int id="1" max_length="3" ][C:Nbsp ]puntos de daño.
+Mueve todas las Energías de este Pokémon a tus Pokémon en Banca de la manera que desees.
+Este ataque hace [Num:Int id="0" max_length="3" ][C:Nbsp ]puntos de daño más por cada punto que hayas conseguido.
 Látigo Cepa
 Hoja Afilada
 Megaagotar
@@ -1772,6 +1793,46 @@ Golpear y Esconder
 Ovación Ovalada
 Chapoteo Sentado
 Torbellino Implacable
+Martilleo Cuellilargo
+Fiebre de Miel
+Placaje Hojarasca
+Rayo Señal
+Vapor Dinamita
+Brinconejo
+Patada Giratoria
+Llamas Iracundas
+Ventisca Doble
+Corte Vacío
+Cabeza Roca
+Salpicadura Siniestra
+Pika Puño
+Cola Relámpago
+Autodestrucción
+Nana Sedante
+Impacto Dual
+Guía Secreta
+Psicoquemadura
+Onda Cerebral
+Psicoataque
+Concentración de Polvo
+Alas de la Luna
+Megacuerno
+Codazo
+Sacudir y Dar la Patita
+Gas Grave
+Veneno Ocaso
+Incursión de Luz Lunar
+Furia Demoledora
+Juego Sucio
+Garra Trituradora
+Distorsión
+Garras del Sol
+Meteoro Dracónico
+Impacto Limpio
+Bola Cargada
+Hiperlazo
+Psicoestruendo
+Desconcierto
 Dormido󱀀Dormidos
 Une [Num:Int id="0" max_length="2" ] Energía[Gr:Count p="s" ] a tus Pokémon.
 Efecto en partida siluetas de Pikachu
@@ -1905,6 +1966,8 @@ Evento emblema Dominador de los Cielos
 Evento emblema Maravillas Cotidianas
 Evento emblema Sobre Deluxe Mega
 Evento emblema La Ambición del [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
+Evento emblema Fusión Dual
+Partidas limitadas Fusión Dual (C1)
 Baraja Wartortle (Genes Formidables)
 Baraja Ivysaur (Genes Formidables)
 Baraja Charmeleon (Genes Formidables)
@@ -2450,6 +2513,16 @@ Baraja [Text:CardName v="MEGAGYARADOS_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
 Baraja [Text:CardName v="MEGATYLTALIS_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
 Baraja [Text:CardName v="MEGAGANGAR_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
 Baraja [Text:CardName v="KORAIDON_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
+Baraja [Text:CardName v="KAMEIL" ]
+Baraja [Text:CardName v="KAMEX" ]
+Baraja [Text:CardName v="PARMOT" ]
+Baraja [Text:CardName v="HOGATOR_EX" ]
+Baraja [Text:CardName v="PIKACHU_EX" ]
+Baraja [Text:CardName v="MEGAMEWTWOX_EX" ]
+Baraja [Text:CardName v="ALOLANASSY_EX" ]
+Baraja [Text:CardName v="MEGAGEKKOUGA_EX" ]
+Baraja [Text:CardName v="MEGABANGIRAS_EX" ]
+Baraja [Text:CardName v="GIRATINA_EX" ]
 Baraja Venusaur ex (Genes Formidables)
 Baraja Charizard ex (Genes Formidables)
 Baraja Blastoise ex (Genes Formidables)
@@ -2642,6 +2715,12 @@ Baraja [Text:CardName v="MEGAGANGAR_EX" ] y [Text:CardName v="DRAMIDORO_EX" ] ([
 Baraja [Text:CardName v="MEGAHASSAM_EX" ] y [Text:CardName v="SURFUGO_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
 Baraja de élite ([Text:CardName v="MEGALIZARDONY_EX" ])
 Baraja de élite ([Text:CardName v="MEGALUCARIO_EX" ])
+Baraja [Text:CardName v="PIKACHU_EX" ]
+Baraja [Text:CardName v="MEGAMEWTWOX_EX" ]
+Baraja [Text:CardName v="MEGAGEKKOUGA_EX" ]
+Baraja [Text:CardName v="MEGABANGIRAS_EX" ]
+Baraja Recogemiel
+Baraja Brinconejo
 Baraja de préstamo que puede usarse en partidas,\nincluso si no tienes todas las cartas incluidas en la\nbaraja.
 Baraja Venusaur ex (Genes Formidables)
 Baraja Charizard ex (Genes Formidables)
@@ -2844,6 +2923,7 @@ Baraja [Text:CardName v="MEGAGANGAR_EX" ] y [Text:CardName v="DRAMIDORO_EX" ] ([
 Baraja [Text:CardName v="MEGAHASSAM_EX" ] y [Text:CardName v="SURFUGO_EX" ] ([Mst:PackName v="PACK_NAME_B4b_1"])
 Baraja de élite ([Text:CardName v="MEGALIZARDONY_EX" ])
 Baraja de élite ([Text:CardName v="MEGALUCARIO_EX" ])
+Baraja de élite ([Text:CardName v="MEGARAYQUAZA_EX" ])
 Baraja temática que puede usarse al acceder a tus\nbarajas. Consigue las cartas incluidas en la lista\npara crear esta baraja y jugar con ella.
 Recibirás 1 baraja temática que podrás usar para\ncrear barajas y las 20 cartas que incluye. Solo\npuedes obtener 1 de las 9 barajas Iniciación ex.
 Baraja Rapidash
@@ -2909,6 +2989,7 @@ Evento botín [Text:CardName v="HISUIZORUA" ]
 Evento botín [Text:CardName v="MEGAHELLGAR_EX" ]
 Evento botín [Text:CardName v="ROCKETDANNOLAPLACE" ]
 Evento botín [Text:CardName v="MEGAGABURIAS_EX" ]
+Evento botín bis PROMO 2026
 Partidas aleatorias (B2)
 Partidas aleatorias (B2a)
 Partidas aleatorias (B2b)
@@ -2918,6 +2999,7 @@ Partidas aleatorias (B3b)
 Partidas aleatorias (B4)
 Partidas aleatorias (B4a)
 Partidas aleatorias (B4b)
+Partidas aleatorias (C1)
 Quemados󱀀Quemado
 Marco dorado
 Marco dorado que se aplica en álbumes, vitrinas\ny durante las partidas.
@@ -4304,6 +4386,40 @@ Investigación del Team Rocket
 Plan Maestro del Team Rocket
 Jefe del Team Rocket
 Salón Recreativo
+Exeggutor[Text:AdditionalName v="ADDITIONAL_NAME_Alora" type="region" space="pre" ] ex
+Deerling
+Sawsbuck
+Volcanion
+Fuecoco ex
+Armarouge
+Palkia
+Mega-Greninja ex
+Mega-Mewtwo X ex
+Deoxys
+Lunala
+Mega-Tyranitar ex
+Nickit
+Thievul
+Mega-Skarmory ex
+Dialga
+Solgaleo
+Mega-Dragonite ex
+Bewear ex
+Miel
+Superpoción
+Repelente Máximo
+Cura Total
+Mineral Evolutivo
+Bola Luminosa
+Lorelei
+Provocación de Azul
+Elección de Serena
+Cayena
+Chico de la Tienda Pokémon
+Entrenadores Promesa
+Estación Abandonada
+Mega-Mewtwo Y ex
+Conversor Genoma Y
 En promociones
 En elecciones mágicas
 En misiones
@@ -4327,6 +4443,10 @@ Mega-Gallade
 Terapagos
 Mega-Diancie
 Mega-Mewtwo X
+Mega-Greninja
+Mega-Dragonite
+Clodsire
+Mega-Tyranitar
 Mega-Charizard
 Rango Principiante 1
 Rango Principiante 2
@@ -4778,20 +4898,25 @@ Rango Ultra Ball 4 temporada A3a
 Emblema Pokémon ex Megaevolución
 Emblema del rango Super Ball 1 que se consigue\nen la temporada A3a de encuentros clasificatorios.
 Rango Super Ball 1 temporada A3a
+Emblema [Mst:CommonCharacterName v="COMMON_CARD_NAME_19"]
 Emblema del rango Super Ball 2 que se consigue\nen la temporada A3a de encuentros clasificatorios.
 Rango Super Ball 2 temporada A3a
+Emblema [Text:CardName v="PIKACHU" ] v.[C:Nbsp ]6
 Emblema del rango Super Ball 3 que se consigue\nen la temporada A3a de encuentros clasificatorios.
 Rango Super Ball 3 temporada A3a
 Emblema de participación que se puede conseguir\nen el evento emblema Fuego Carmesí.
 Emblema de participación Fuego Carmesí
+Emblema [Mst:CommonCharacterName v="COMMON_CARD_NAME_20"]
 Emblema del rango Super Ball 4 que se consigue\nen la temporada A3a de encuentros clasificatorios.
 Rango Super Ball 4 temporada A3a
+Emblema [Text:CardName v="ABURIBBON" ]
 Emblema de bronce que se puede conseguir en el\nevento emblema Fuego Carmesí.
 Emblema de bronce Fuego Carmesí
 Emblema del rango Poké Ball 1 que se consigue\nen la temporada A3a de encuentros clasificatorios.
 Rango Poké Ball 1 temporada A3a
 Emblema de plata que se puede conseguir en el\nevento emblema Fuego Carmesí.
 Emblema de plata Fuego Carmesí
+Emblema [Text:CardName v="HIBANNY" ]
 Emblema del rango Poké Ball 2 que se consigue\nen la temporada A3a de encuentros clasificatorios.
 Rango Poké Ball 2 temporada A3a
 Emblema de oro que se puede conseguir en el\nevento emblema Fuego Carmesí.
@@ -5026,12 +5151,20 @@ Emblema de oro que se puede conseguir en el\nevento emblema [Mst:PackName v="PAC
 Emblema de oro [Mst:PackName v="PACK_NAME_B4b_1"]
 Emblema del rango Poké Ball 1 que se consigue\nen la temporada A4b de encuentros clasificatorios.
 Rango Poké Ball 1 temporada A4b
+Emblema de participación que se puede conseguir\nen el evento emblema [Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"].
+Emblema de participación [Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"]
 Emblema del rango Poké Ball 2 que se consigue\nen la temporada A4b de encuentros clasificatorios.
 Rango Poké Ball 2 temporada A4b
+Emblema de bronce que se puede conseguir en el\nevento emblema [Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"].
+Emblema de bronce [Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"]
 Emblema del rango Poké Ball 3 que se consigue\nen la temporada A4b de encuentros clasificatorios.
 Rango Poké Ball 3 temporada A4b
+Emblema de plata que se puede conseguir en el\nevento emblema [Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"].
+Emblema de plata [Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"]
 Emblema del rango Poké Ball 4 que se consigue\nen la temporada A4b de encuentros clasificatorios.
 Rango Poké Ball 4 temporada A4b
+Emblema de oro que se puede conseguir en el\nevento emblema [Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"].
+Emblema de oro [Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"]
 Emblema del rango Principiante 1 que se consigue\nen la temporada A4b de encuentros clasificatorios.
 Rango Principiante 1 temporada A4b
 Emblema del rango Principiante 2 que se consigue\nen la temporada A4b de encuentros clasificatorios.
@@ -5280,6 +5413,26 @@ Rango Master Ball [Mst:CommonEventLabel v="COMMON_Master_TOP1000"] temporada [Ms
 [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_02"] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"]
 [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_03"] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"]
 [Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_04"] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00180"]
+[Mst:MainRankName v="MAIN_RANK_NAME_MASTERBALL"] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"]
+Rango Master Ball [Mst:CommonEventLabel v="COMMON_Master_TOP10000" ] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190" ]
+Rango Master Ball [Mst:CommonEventLabel v="COMMON_Master_TOP5000" ] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190" ]
+Rango Master Ball [Mst:CommonEventLabel v="COMMON_Master_TOP1000" ] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190" ]
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_01"] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"]
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_02"] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"]
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_03"] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"]
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Hyper_04"] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"]
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Super_01"] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"]
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Super_02"] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"]
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Super_03"] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"]
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Super_04"] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"]
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_01"] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"]
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_02"] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"]
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_03"] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"]
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Monster_04"] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"]
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_01"] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"]
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_02"] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"]
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_03"] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"]
+[Mst:CommonEventLabel v="COMMON_EMBLEM_Beginner_04"] temporada [Mst:RankMatchSeasonNameNoTranslation v="RATING_SEASON_NAME_00190"]
 1 año
 Emblema conmemorativo del evento especial\n2025.
 Emblema evento especial 2025
@@ -5287,6 +5440,8 @@ Emblema conmemorativo del primer aniversario\ndesde la salida del juego.
 Emblema de celebración del primer aniversario
 Emblema conmemorativo del evento especial\n2026.
 Emblema evento especial 2026
+Un emblema especial que se puede conseguir\ncompartiendo muchas cartas.
+Emblema as del compartir
 Tipo Incoloro
 Tipo Oscuro
 Tipo Dragón
@@ -5345,6 +5500,8 @@ B3b
 B4
 B4a
 B4b
+C1
+SP1
 Genes Formidables
 La Isla Singular
 Pugna Espaciotemporal
@@ -5367,6 +5524,8 @@ Maravillas Cotidianas
 Dominador de los Cielos
 La Ambición del [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
 Sobre Deluxe Mega
+Fusión Dual
+Sobre extraordinario Primeros Compañeros
 #MiColeccion
 #PokemonFavoritos
 #IlustracionesFavoritas
@@ -6858,6 +7017,53 @@ Mediante el control ejercido con su inmenso\npoder espectral, logró que humanos
 La descomunal energía de la megaevolución\nle afecta a nivel celular, haciendo resurgir la\nsangre de dragón latente en su interior.
 Su potencia muscular ha aumentado tanto que es capaz\nde mantener el vuelo sin descanso durante dos semanas.
 Sus plumas, increíblemente suaves al tacto,\nson tan resistentes que solo unas pocas\nbastarían para sostener un camión en el aire.
+Tras nacer, crece alimentándose durante un tiempo\nde los nutrientes que contiene el bulbo de su lomo.
+Cuanta más luz solar recibe, más aumenta su fuerza\ny más se desarrolla el capullo que tiene en el lomo.
+Puede convertir la luz del sol en energía.\nPor esa razón, es más poderoso en verano.
+Si alguien confunde a una de sus cabezas\ncon un huevo y la toca, se reagrupa con\nlas otras para atacar todas juntas.
+Ciertas teorías, cuya veracidad no ha podido\nconstatarse, afirman que quien desarrolló las\nPoké Balls admiraba con fervor a este Pokémon.
+Las esporas tóxicas que libera son peligrosas,\nya que allí donde caen acaban creciendo unas\nsetas parecidas a los sombreros de los Amoonguss.
+Si percibe el aura de un ser humano o Pokémon\nque transmite alegría, se le acerca y, con su larga\nprobóscide, le asesta un pinchazo doloroso.
+Si percibe un ser humano o Pokémon\ninvadido por la desazón, le insufla ánimos\ncon las bolas de polen que produce.
+La llama de su cola indica su fuerza vital.\nSi está débil, la llama arderá más tenue.
+Al agitar su ardiente cola, eleva\npoco a poco la temperatura a su\nalrededor para sofocar a sus rivales.
+Cuando se enfurece de verdad, la llama de la\npunta de su cola se vuelve de color azul claro.
+Expulsa vapor y desaparece entre la densa niebla.\nDicen que habita en montañas solitarias.
+Desata su verdadera fuerza cuando su cuerpo entra\nen calor. Por eso hace ejercicios de calentamiento.
+Su suave pelaje le permite calentar\nenergía ígnea con mayor facilidad y así\nexpulsar llamas todavía más potentes.
+Es de temperamento irascible, pero da\nlo mejor de sí mismo en combate cuando\ncuenta con un Entrenador en el que confía.
+Nació de unos restos de carbón consumidos\npor las llamas. Reta a rivales poderosos para\nsaciar su ardiente espíritu combativo.
+Evolucionó al portar la armadura\nde un guerrero de renombre. Este\nPokémon destaca por su gran lealtad.
+Las afiladas llamas que cubren sus brazos\nestán avivadas por la frustración de un espadachín\nque cayó antes de poder cumplir su cometido.
+Tras nacer, se le hincha el lomo y se le forma un\ncaparazón. Escupe poderosa espuma por la boca.
+Tiene una cola larga y peluda que simboliza la\nlongevidad y lo hace popular entre los mayores.
+Aumenta de peso deliberadamente\npara contrarrestar la fuerza de los\nchorros de agua que dispara.
+La protuberancia que tiene en la cabeza\nes tan dura que la usa para abrirse paso\na cabezazos por el hielo de los icebergs.
+Duerme en aguas poco profundas durante el día\ny, por la noche, cuando baja la temperatura del\nagua, nada en busca de comida.
+En cierta parte de Galar se conocía a Jynx como la\nReina del Hielo y se reverenciaba con cierto temor.
+Surca los mares transportando gente sobre\nel lomo. Al parecer, a veces entona un\nmelodioso canto si está de buen humor.
+Se dice que vive en una dimensión espacial\nparalela. Aparece en la mitología.
+Forman bancos de ejemplares del mismo color. Sus\nenemigos acérrimos son los Basculin de raya roja.
+Su aire despreocupado no es más que una\nfachada con la que engaña a sus enemigos para\ndespués arrollarlos a una velocidad abrumadora.
+Es muy hábil ideando tácticas que usan el terreno\na su favor. Dispara piedras envueltas en burbujas\ncon tal puntería que no falla nunca.
+Surgió a raíz de la mutación de ADN de un virus\nalienígena que cayó a la tierra en un meteorito.
+Puede controlar un territorio de hasta 10 km\nde radio, pero, cuando se pone a correr, parece\nolvidársele dónde empieza y dónde acaba.
+Hace chocar el cuerno con el de sus\ncongéneres para afilarlo. Es capaz de\nhoradar diamantes en bruto con él.
+Repele erupciones volcánicas con sus robustos\nprotectores. Dispara con fuerza rocas redondas\na través de las cavidades de las manos.
+Cuando se siente amenazado, repele al enemigo\ncon sus gruesas púas retráctiles. Esta técnica\ntan peligrosa es un arma de doble filo.
+Usa rocas para afilarse la cola en forma\nde espada. Sale de la hierba de repente\ny ataca con sus colmillos tóxicos.
+Se sustenta con el alimento que roba a otros\nPokémon. Las almohadillas de sus patas son tan\nblandas que no hace ningún ruido al caminar.
+Marca a su presa sin ser advertido.\nSigue el olor y, cuando el otro Pokémon\nbaja la guardia, aprovecha para robarle.
+Un Pokémon de leyenda. Se dice que el tiempo\ncomenzó a avanzar cuando Dialga nació.
+Se defiende lanzando púas, pero para\npoder apuntar con precisión a su objetivo\nnecesita ingentes sesiones de práctica.
+Raya el lecho rocoso con las púas\npara luego absorber nutrientes\ncon el extremo de los tentáculos.
+Un Pokémon artificial que no respira, por lo\nque se le supone la capacidad de desenvolverse\nsin problemas en cualquier entorno.
+Pokémon artificial evolucionado con tecnología\nde vanguardia. En ocasiones muestra reacciones\nque no forman parte de su código.
+Se le instaló un software para convertirlo en un\nPokémon más avanzado. Sin embargo, algo salió\nmal y por eso se mueve de manera extraña.
+Este Pokémon es un glotón que lo único que\nhace aparte de comer es dormir. Puede ingerir\nhasta 400 kg de comida en un solo día.
+Está recubierto de un caparazón de una dureza\nque escapa al entendimiento humano. Crece\nal exponerse a la luz de las estrellas.
+Lo llaman la Criatura que Invoca a la\nLuna. Convierte cualquier forma de\nluz en energía para sustentarse.
+Es capaz de eliminar toda oscuridad e iluminar\nel mundo entero irradiando luz por todo el\ncuerpo como si de un sol se tratara.
 Sus patas y lomo se han fortalecido para\nsoportar el peso de la flor, que ha crecido\nconsiderablemente tras la megaevolución.
 El vínculo que lo une a su Entrenador\nes la fuente de su poder. Su capacidad\nde vuelo supera la de un avión a reacción.
 Sus fornidas patas y lomo le permiten aguantar\nel retroceso del cañón de su caparazón, cuya\npotencia de disparo es pareja a la de un tanque.
@@ -6879,8 +7085,39 @@ Obtiene su fuerza del vínculo con su Entrenador.\nAhora posee dos hojas con las
 Este Pokémon es el resultado de la combinación\nentre un Metagross, un Metang y dos Beldum.
 La energía de la megaevolución hace que su\ncuerpo desprenda un calor ardiente. Reduce\na cenizas al oponente con su aliento de fuego.
 La megaevolución exacerba su agresividad.\nHace jirones al enemigo con sus\nextremidades en forma de guadañas.
+Los destellos de luz intermitente que emiten\nsus órganos luminosos aplacan el ánimo del rival,\nlo que le permite protegerse de enemigos fuertes.
+Sus potentes poderes hipnóticos no tienen\nrival. Aquellos a los que controla no recuerdan\nen absoluto haber estado sometidos a su voluntad.
+Hace girar un enorme shuriken a tal velocidad\nque queda suspendido en el aire, y se adhiere a él\nboca abajo para atacar por sorpresa al enemigo.
+Su poder psíquico ha incrementado su masa\nmuscular. Posee una fuerza de agarre de una\ntonelada y puede correr 100 m en dos segundos.
+La megaevolución lo vuelve aún más\nviolento que de costumbre. Es difícil\nsaber si oye las órdenes de su Entrenador.
+Vuela a velocidad supersónica. Las ondas\nde choque que provoca alzan en volandas\nal rival, al que remata con las garras.
+La energía de la megaevolución eleva su piedad\nhasta cotas inusitadas. Hace gala de una gran\ncompasión al dar el golpe de gracia a sus rivales.
+Aunque su cuerpo se ha encogido, el poder\ntan extraordinario que atesora le permite reducir\na escombros un rascacielos con solo pensarlo.
 Su alimentación se basa en partículas que\nflotan en la atmósfera. Dicen que el color de\nsu núcleo depende de la composición de estas.
+Sus desarrolladas y potentes mandíbulas\npueden triturar cualquier cosa, por lo que hasta\nsu propio Entrenador debe andarse con cuidado.
+Treecko tiene unos ganchos pequeños en las plantas de\nlos pies con los que puede escalar superficies verticales.\nEste Pokémon ataca dando un golpetazo con la cola.
+Torchic no se separa de su Entrenador. Siempre va tras él con\nsus pasitos inseguros. Este Pokémon escupe bolas de fuego\nque pueden alcanzar los 1000 ºC y carbonizar al enemigo.
+La aleta que tiene Mudkip en la cabeza actúa de radar y es muy sensible.\nPuede captar movimientos que se produzcan en el agua y en el aire,\ny todo lo que ocurra a su alrededor, sin necesidad de abrir los ojos.
+La concha de su espalda es de tierra y se endurece\ncuando bebe agua. Vive cerca de los lagos.
+Escala acantilados escarpados con agilidad\ny vive en las cimas de montañas rocosas.\nSu fuego se apaga cuando duerme.
+Es muy orgulloso, por lo que odia aceptar comida\nde la gente. Su grueso plumón lo protege del frío.
+De gran inteligencia y sangre fría.\nSe mueve ágilmente si recibe rayos\nde sol de forma continuada.
+Lanza llamas por su hocico.\nCuando está resfriado, expulsa humo\nazabache en lugar de fuego.
+Ataca con la vieira de su ombligo.\nEn cuanto para un ataque, pasa\nal contraataque sin dilación.
+Cuando acumula energía, las suaves púas\nde su cabeza se vuelven tan duras y afiladas\nque hasta pueden atravesar rocas.
+Tras masticar e ingerir pequeñas ramas se siente\npletórico y expulsa aire caliente por sus grandes\norejas a temperaturas superiores a los 200 ºC.
+Es cauteloso, desconfiado y de naturaleza nocturna.\nDurante el día acumula energía mediante la fotosíntesis.
+Prende las bolas de pelo que se le forman en el\nestómago tras acicalarse. Las llamas resultantes\ncambian según la forma en la que escupe el pelo.
+Se le conoce por su diligencia y predisposición.\nSegrega agua por la nariz para hinchar globos\ncon los que golpea a sus rivales.
+Al marcar el ritmo con su baqueta especial,\nproduce unas ondas sonoras capaces de\ndevolver la vitalidad a la flora.
+Se pone a correr para elevar su temperatura\ncorporal y propagar la energía ígnea por todo\nel cuerpo. Desata así su verdadera fuerza.
+Cuando se espanta, libera unas lágrimas\ncon un factor lacrimógeno equivalente a 100\ncebollas para hacer llorar también al rival.
+Un Pokémon llegado hace tiempo desde tierras\nlejanas y ya establecido en la región. El gel que\nsecreta por las plumas repele el agua y la mugre.
+Es tan raro que muchos expertos\nopinan que es solo una ilusión.\nSolo unos pocos lo han visto.
 En ocasiones, lo que parece una estrella\nfugaz por la noche podría tratarse de\nMega-Rayquaza volando tras un meteorito.
+Proviene de otro mundo. Su cuerpo\ngaseoso es tan liviano que hasta la brisa\nmás suave es capaz de arrastrarlo.
+No es nada tímido y hace lo que quiere\nincluso delante de la gente. Se encariña\nenseguida con quien le da de comer.
+Mucha gente admira a este Pokémon. Cuanto\nmás intenso es el rojo del follaje que cuelga de\nsu cornamenta, más elegante se lo considera.
 Narumi Sato
 Kurata So
 Ryota Murayama
@@ -7119,6 +7356,14 @@ Akino Fukuji
 Iwamoto05
 Kazuki Minami
 YOSHIROTTEN
+telu
+Atsuya Uki
+Keisuke Azuma
+CHORISO
+Bun Toujo
+TOMATO MARKET
+ORBITALLINK Inc.
+Yoshiyuki Sadamoto
 Coming Soon
 Reduce en una hora el tiempo de recuperación de\nenergía mágica para realizar elecciones mágicas.\nSe consigue, por ejemplo, al completar misiones.
 Se puede usar para participar en algunas partidas\nindividuales o eventos. Este objeto hace que esas\npartidas vuelvan a estar disponibles más pronto.
@@ -7132,6 +7377,7 @@ Se consigue al completar misiones prémium.\nSe puede canjear por accesorios o c
 Este objeto puede acumularse para subir de nivel.
 Estos calcetines de Recluta del Team Rocket se\nhan usado hasta la saciedad (¿o suciedad?).\nDesprenden un cierto tufillo...
 Se puede usar para restaurar una elección mágica\nexpirada. Al hacerlo, se consume uno cada vez\njunto con energía mágica.
+Canjeable por sobres de mejora especiales en la\ntienda. Se obtiene al completar misiones de evento\nde la campaña del 2.º aniversario o como regalo.\nSe eliminará al finalizar el período de canje.
 Canjeable por barajas de 20 cartas en la tienda.\nSe consigue al hacer misiones de baraja Iniciación\nex. Se eliminará al finalizar el período de canje.
 Se consigue al completar colecciones temáticas o\nmisiones de índice de cartas. Se puede canjear por\nemblemas específicos en la tienda.
 Canjeable por accesorios y artículos en la tienda.\nSe consigue al completar misiones de evento.\nSe eliminará al finalizar el período de canje.
@@ -7219,6 +7465,10 @@ Cupón de carta de promoción (evento botín [Text:CardName v="HISUIZORUA" ])
 Cupón dudoso del [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
 Cupón de carta de promoción (evento botín [Text:CardName v="ROCKETDANNOLAPLACE" ])
 Cupón de carta de promoción (evento botín [Text:CardName v="MEGAGABURIAS_EX" ])
+Cupón de carta de promoción (sobre de promoción serie C vol. 1)
+Cupón de carta de promoción (evento botín bis PROMO 2026)
+Cupón de carta de promoción (evento elección mágica bis PROMO 2026)
+Cupón de sobre de mejora con 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada󱀀Cupones de sobre de mejora con 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada
 Cupón futuro
 Efecto cosmético burbujas azul claro
 Efecto cosmético burbujas rosas
@@ -7303,12 +7553,13 @@ Noquea al Pokémon Activo del rival [Num:Int id="0" max_length="2" ] [Gr:Count s
 Las elecciones mágicas se desbloquean\nen el nivel 2.
 El menú "Partidas" se desbloquea en el nivel 3.\n\nTu nivel subirá a medida que recibas puntos de\nexperiencia. Hay varias formas de conseguirlos,\ncomo por ejemplo abriendo sobres.
 Las misiones de baraja se desbloquean en el nivel\n3.\n\nTu nivel subirá a medida que recibas puntos de\nexperiencia. Hay varias formas de conseguirlos,\ncomo por ejemplo abriendo sobres.
-Las barajas se desbloquean tras completar el\napartado 06 de la guía sobre partidas.\n\nPuedes abrir la guía tocando el botón de la\nesquina inferior izquierda en el menú "Partidas".
-Las partidas se desbloquean tras completar el\napartado 06 de la guía sobre partidas.\n\nPuedes abrir la guía tocando el botón de la\nesquina inferior izquierda en el menú "Partidas".
+Las barajas se desbloquean tras completar el\napartado 06 de la guía sobre partidas, que puedes\nconsultar tocando el botón "Guía" en el menú\n"Partidas".
+Las partidas se desbloquean tras completar el\napartado 06 de la guía sobre partidas, que puedes\nconsultar tocando el botón "Guía" en el menú\n"Partidas".
 Las vitrinas se desbloquean en el nivel 4.\n\nTu nivel subirá a medida que recibas puntos de\nexperiencia. Hay varias formas de conseguirlos,\ncomo por ejemplo abriendo sobres.
 Los álbumes se desbloquean en el nivel 6.\n\nTu nivel subirá a medida que recibas puntos de\nexperiencia. Hay varias formas de conseguirlos,\ncomo por ejemplo abriendo sobres.
 Las misiones prémium se desbloquean al\nsuscribirse al pase prémium.\n\nPuedes suscribirte al pase prémium tocando\nel botón correspondiente en "Misiones prémium"\no en la tienda.
 La función de intercambio se desbloquea en el\nnivel 3.\n\nTu nivel subirá a medida que recibas puntos de\nexperiencia. Hay varias formas de conseguirlos,\ncomo por ejemplo abriendo sobres.
+Las barajas de la comunidad se desbloquean tras\ncompletar el apartado 06 de la guía sobre partidas.\n\nPuedes abrir la guía tocando el botón\ncorrespondiente en el menú "Partidas".
 Baraja {0} ({1})
 Emblema {0}
 Emblema de bronce {0}
@@ -7382,6 +7633,8 @@ Gana [Num:Int id="1" max_length="3" ] partida[Gr:Count p="s" ref="1" ] versus co
 Encargo: ¡Inicia sesión! (día [Num:Int id="0" max_length="3" ])
 Encargo: ¡Juega [Num:Int id="0" max_length="3" ] partida[Gr:Count p="s" ref="0" ]!
 Encargo: ¡Usa la elección mágica [Num:Int id="0" max_length="3" ] [Gr:Count s="vez" p="veces" ]!
+Comparte [Num:Int id="0" max_length="3" ] ve[Gr:Count s="z" p="ces" ] una carta deseada por la otra parte, o no presente en su índice de cartas
+[[2.ª semana]] Inicia sesión (día [Num:Int id="0" max_length="3" ])
 Primera elección
 Electabuzz y Magmar
 Bosque Verde
@@ -7625,7 +7878,7 @@ Museo Megaascenso 6
 Un enjambre de Pokémon insecto
 Consigue 1 carta de Pokémon ex Megaevolución
 Consigue 3 cartas de Pokémon ex Megaevolución
-Consigue [Num:Int id="1" max_length="3" ] carta[Gr:Count p="s" ref="1" ] de promoción [Text:CardNameWithSubName id="0" ]
+Consigue 3 cartas de promoción diferentes de este evento
 El jardín de las flores risueñas 2
 Colección ex
 Consigue cartas holográficas paralelas de Pokémon
@@ -7806,6 +8059,7 @@ Museo La Ambición del [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ][C:Nbsp ]2
 ¡Ejército de [Text:CardName v="ROCKETDANNOSHITAPPA" plural="1" ]!
 Coleccionista de invenciones sospechosas
 ¡Las cartas del [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ] al completo!
+Compañeros de Kanto
 Colección de Pokémon ex Megaevolución
 Pokémon ex con habilidades
 Las dos formas de [Mst:CommonCharacterName v="COMMON_CARD_NAME_24" ]
@@ -7824,6 +8078,45 @@ El desfile de moda de [Text:CardName v="TRIMMIEN" ]
 Las aventuras de [Text:CardName v="PIKACHU" ]
 [Text:CardName v="NYAONIX" ] macho y hembra
 Las cuatro Formas Avatar
+Un [Text:CardName v="PIKACHU" ] desbordante de energía eléctrica
+Recogida de miel en el jardín de flores 1
+Recogida de miel en el jardín de flores 2
+Saltos y brincos conejiles
+Parecidos razonables a Poké Ball
+Evoluciones diurnas y nocturnas
+Evoluciones del sol y la luna
+Guerreros de fuego con armadura
+De compras en la Tienda Pokémon
+Siestas plácidas
+Compañeros inseparables
+Leyendas de Sinnoh
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_23" ] hace temblar la tierra
+Museo Fusión Dual 1
+Museo Fusión Dual 2
+Museo Fusión Dual 3
+Museo Fusión Dual 4
+El audaz ninja de las poses imprevisibles (Agua/Oscuro)
+Recogida de miel abundante
+¡Que se cuenten por miles esos saltos conejiles!
+Compañeros de Johto
+Compañeros de Hoenn
+Compañeros de Sinnoh
+Compañeros de Teselia
+Compañeros de Kalos
+Compañeros de Alola
+Compañeros de Galar
+Compañeros de Paldea
+Paso 5/5: El camino que lleva a [Text:CardName v="MEGAMEWTWOX_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ])
+Paso 5/5: El camino que lleva a [Text:CardName v="PIKACHU_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ])
+Paso 1/5: El camino que lleva a [Text:CardName v="MEGAMEWTWOX_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ])
+Paso 2/5: El camino que lleva a [Text:CardName v="MEGAMEWTWOX_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ])
+Paso 3/5: El camino que lleva a [Text:CardName v="MEGAMEWTWOX_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ])
+Paso 4/5: El camino que lleva a [Text:CardName v="MEGAMEWTWOX_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ])
+Paso 1/5: El camino que lleva a [Text:CardName v="PIKACHU_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ])
+Paso 2/5: El camino que lleva a [Text:CardName v="PIKACHU_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ])
+Paso 3/5: El camino que lleva a [Text:CardName v="PIKACHU_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ])
+Paso 4/5: El camino que lleva a [Text:CardName v="PIKACHU_EX" ] ([Mst:Rarity v="RARITY_MSID_IM" ])
+El Pokémon de dos tipos más fuerte (Psíquico/Lucha)
 Misiones de baraja
 Misiones de baraja
 Evento emblema\nGenes Formidables 1
@@ -7925,8 +8218,20 @@ Evento emblema\nLa Ambición del [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
 Evento emblema La Ambición del [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
 Encargos especiales del\n[Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
 Encargos especiales del [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
+Misiones incentivadoras\nde partidas: Fusión Dual
+Misiones incentivadoras de partidas: Fusión Dual
 Misiones Pikachu pika pika
 Misiones Pikachu pika pika
+Evento cartas de promoción\ntemáticas: festividad invernal
+Evento cartas de promoción temáticas: festividad invernal
+Misiones de evento botín\nbis PROMO 2026
+Misiones de evento botín bis PROMO 2026
+Misiones de evento elección\nmágica bis PROMO 2026
+Misiones de evento elección mágica bis PROMO 2026
+Misiones de sobre de mejora:\n1 carta garantizada de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ]
+Misiones de sobre de mejora: 1 carta garantizada de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ]
+Misiones Eevee vii vii
+Misiones Eevee vii vii
 Principiante
 Avanzadas
 Diarias
@@ -7960,6 +8265,10 @@ Lista
 Regreso
 [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
 ¡Pika, pika!
+[Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada
+Incentivadoras
+Promoción temática
+¡Vii, vii!
 Partida aleatoria (difícil)
 Partida aleatoria (fácil)
 Partida aleatoria (avanzada)
@@ -7972,38 +8281,68 @@ Proporcionaremos más detalles más adelante.
 Este es un mensaje de emergencia y, por lo tanto, está en inglés. Haremos un comunicado con el mismo mensaje en español en cuanto esté disponible.
 Un sobre de mejora de Mewtwo de la expansión\nGenes Formidables.
 Un sobre de mejora de Mewtwo de la expansión\nGenes Formidables con 1 carta garantizada de\nrareza [Mst:Rarity case="lower" v="RARITY_MSID_RR" ] o superior.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_A1_1" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de Charizard de la expansión\nGenes Formidables.
 Un sobre de mejora de Charizard de la expansión\nGenes Formidables con 1 carta garantizada de\nrareza [Mst:Rarity case="lower" v="RARITY_MSID_RR" ] o superior.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_A1_2" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de Pikachu de la expansión\nGenes Formidables.
 Un sobre de mejora de Pikachu de la expansión\nGenes Formidables con 1 carta garantizada de\nrareza [Mst:Rarity case="lower" v="RARITY_MSID_RR" ] o superior.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_A1_3" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de la expansión La Isla\nSingular.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_A1a_1" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de Dialga de la expansión\nPugna Espaciotemporal.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_A2_1" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de Palkia de la expansión\nPugna Espaciotemporal.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_A2_2" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de la expansión Luz Triunfal.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_A2a_1" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de la expansión Festival\nBrillante.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_A2b_1" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de Solgaleo de la expansión\nGuardianes Celestiales.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_A3_1" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de Lunala de la expansión\nGuardianes Celestiales.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_A3_2" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de la expansión Crisis\nDimensional.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_A3a_1" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de la expansión Arboleda de\nEevee.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_A3b_1" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de Ho-Oh de la expansión\nSaber Marino y Celeste.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_A4_1" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de Lugia de la expansión\nSaber Marino y Celeste.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_A4_2" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de la expansión Manantial\nOculto.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_A4a_1" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de la expansión Sobre Deluxe\nex.
 Un sobre de mejora de Mega-Blaziken de la\nexpansión Megaascenso.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_B1_1" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de Mega-Gyarados de la\nexpansión Megaascenso.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_B1_2" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de Mega-Altaria de la\nexpansión Megaascenso.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_B1_3" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de la expansión Fuego\nCarmesí.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_B1a_1" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de la expansión Desfile de\nEnsueño.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_B2_1" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de la expansión Encantos de\nPaldea.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_B2a_1" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de la expansión\nMegavariocolor.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_B2b_1" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de la expansión Aura\nPulsante.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_B3_1" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de la expansión Impulso\nParadójico.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_B3a_1" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de la expansión Maravillas\nCotidianas.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_B3b_1" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de la expansión Dominador\nde los Cielos.
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_B4_1" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de la expansión La Ambición\ndel [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ].
+Un sobre de mejora especial de la expansión\n[Mst:PackName v="PACK_NAME_B4a_1" ].\nContiene 1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada.
 Un sobre de mejora de la expansión Sobre Deluxe\nMega.
+Un sobre de mejora de [Mst:CommonCharacterName v="COMMON_CARD_NAME_19" ] de la\nexpansión Fusión Dual.
+Un sobre de mejora de [Text:CardName v="PIKACHU" ] de la expansión\nFusión Dual.
 Un sobre particular que se puede conseguir\nen las misiones Pikachu pika pika.
 Un sobre muy particular que se puede conseguir\nen las misiones Pikachu pika pika.
+Un sobre particular que se puede conseguir\nen las misiones Eevee vii vii.
 Un sobre de promoción del volumen 1 de la\nserie A.
 Un sobre de promoción del volumen 2 de la\nserie A.
 Un sobre de promoción del volumen 3 de la\nserie A.
@@ -8030,42 +8369,74 @@ Un sobre de promoción del volumen 10 de la\nserie B.
 Un sobre de promoción del volumen 11 de la\nserie B.
 Un sobre de promoción del volumen 12 de la\nserie B.
 Un sobre de promoción del volumen 13 de la\nserie B.
+Un sobre de promoción del volumen 1 de la\nserie C.
+Un sobre extraordinario de la expansión Primeros\nCompañeros.
 1 carta garantizada\nde rareza [Mst:Rarity v="RARITY_MSID_RR" ]\no superior
 1 Pokémon ex\ngarantizado
 Genes Formidables: Mewtwo
 Genes Formidables: Mewtwo (1[C:Nbsp ]carta garantizada de rareza [Mst:Rarity case="lower" v="RARITY_MSID_RR" ] o superior)
+[Mst:PackName v="PACK_NAME_A1_1" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Genes Formidables: Charizard
 Genes Formidables: Charizard (1[C:Nbsp ]carta garantizada de rareza [Mst:Rarity case="lower" v="RARITY_MSID_RR" ] o superior)
+[Mst:PackName v="PACK_NAME_A1_2" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Genes Formidables: Pikachu
 Genes Formidables: Pikachu (1[C:Nbsp ]carta garantizada de rareza [Mst:Rarity case="lower" v="RARITY_MSID_RR" ] o superior)
+[Mst:PackName v="PACK_NAME_A1_3" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 La Isla Singular
+[Mst:PackName v="PACK_NAME_A1a_1" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Pugna Espaciotemporal: Dialga
+[Mst:PackName v="PACK_NAME_A2_1" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Pugna Espaciotemporal: Palkia
+[Mst:PackName v="PACK_NAME_A2_2" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Luz Triunfal
+[Mst:PackName v="PACK_NAME_A2a_1" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Festival Brillante
+[Mst:PackName v="PACK_NAME_A2b_1" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Guardianes Celestiales: Solgaleo
+[Mst:PackName v="PACK_NAME_A3_1" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Guardianes Celestiales: Lunala
+[Mst:PackName v="PACK_NAME_A3_2" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Crisis Dimensional
+[Mst:PackName v="PACK_NAME_A3a_1" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Arboleda de Eevee
+[Mst:PackName v="PACK_NAME_A3b_1" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Saber Marino y Celeste: Ho-Oh
+[Mst:PackName v="PACK_NAME_A4_1" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Saber Marino y Celeste: Lugia
+[Mst:PackName v="PACK_NAME_A4_2" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Manantial Oculto
+[Mst:PackName v="PACK_NAME_A4a_1" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Sobre Deluxe ex
 Megaascenso: Mega-Blaziken
+[Mst:PackName v="PACK_NAME_B1_1" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Megaascenso: Mega-Gyarados
+[Mst:PackName v="PACK_NAME_B1_2" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Megaascenso: Mega-Altaria
+[Mst:PackName v="PACK_NAME_B1_3" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Fuego Carmesí
+[Mst:PackName v="PACK_NAME_B1a_1" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Desfile de Ensueño
+[Mst:PackName v="PACK_NAME_B2_1" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Encantos de Paldea
+[Mst:PackName v="PACK_NAME_B2a_1" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Megavariocolor
+[Mst:PackName v="PACK_NAME_B2b_1" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Aura Pulsante
+[Mst:PackName v="PACK_NAME_B3_1" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Impulso Paradójico
+[Mst:PackName v="PACK_NAME_B3a_1" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Maravillas Cotidianas
+[Mst:PackName v="PACK_NAME_B3b_1" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Dominador de los Cielos
+[Mst:PackName v="PACK_NAME_B4_1" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 La Ambición del [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
+[Mst:PackName v="PACK_NAME_B4a_1" ] (1 carta de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada)
 Sobre Deluxe Mega
+Fusión Dual: [Mst:CommonCharacterName v="COMMON_CARD_NAME_19" ]
+Fusión Dual: [Text:CardName v="PIKACHU" ]
 Sobres Pikachu pika pika󱀀Sobre Pikachu pika pika
 Sobre Pikachu pika pika ex󱀀Sobres Pikachu pika pika ex
+Sobres Eevee vii vii󱀀Sobre Eevee vii vii
 Sobre de promoción serie A vol. 1
 Sobre de promoción serie A vol. 2
 Sobre de promoción serie A vol. 3
@@ -8092,6 +8463,8 @@ Sobre de promoción serie B vol. 10
 Sobre de promoción serie B vol. 11
 Sobre de promoción serie B vol. 12
 Sobre de promoción serie [Mst:SeriesName v="SERIES_NAME_2"] [Mst:CommonPackLabel v="COMMON_PACK_LABEL_013"]
+Sobre de promoción serie [Mst:SeriesName v="SERIES_NAME_3"] [Mst:CommonPackLabel v="COMMON_PACK_LABEL_001"]󱀀Sobres de promoción serie [Mst:SeriesName v="SERIES_NAME_3" ] [Mst:CommonPackLabel v="COMMON_PACK_LABEL_001" ]
+Sobre extraordinario Primeros Compañeros
 [Mst:Rarity v="RARITY_MSID_RR" ] o mayor garantizada
 Sobre normal
 Sobre normal + 1 carta
@@ -8281,7 +8654,10 @@ N.º 0146 Pokémon Llama Altura: 2,0 m Peso: 60,0 kg
 N.º 0147 Pokémon Dragón Altura: 1,8 m Peso: 3,3 kg
 N.º 0148 Pokémon Dragón Altura: 4,0 m Peso: 16,5 kg
 N.º 0149 Pokémon Dragón Altura: 2,2 m Peso: 210,0 kg
+N.º 0149 Pokémon Dragón Altura: 2,2 m Peso: 290,0 kg
 N.º 0150 Pokémon Genético Altura: 2,0 m Peso: 122,0 kg
+N.º 0150 Pokémon Genético Altura: 2,3 m Peso: 127,0 kg
+N.º 0150 Pokémon Genético Altura: 1,5 m Peso: 33,0 kg
 N.º 0151 Pokémon Nueva Especie Altura: 0,4 m Peso: 4,0 kg
 N.º 0152 Pokémon Hoja Altura: 0,9 m Peso: 6,4 kg
 N.º 0153 Pokémon Hoja Altura: 1,2 m Peso: 15,8 kg
@@ -8365,6 +8741,7 @@ N.º 0224 Pokémon Reactor Altura: 0,9 m Peso: 28,5 kg
 N.º 0225 Pokémon Reparto Altura: 0,9 m Peso: 16,0 kg
 N.º 0226 Pokémon Milano Altura: 2,1 m Peso: 220,0 kg
 N.º 0227 Pokémon Coraza Ave Altura: 1,7 m Peso: 50,5 kg
+N.º 0227 Pokémon Coraza Ave Altura: 1,7 m Peso: 40,4 kg
 N.º 0228 Pokémon Siniestro Altura: 0,6 m Peso: 10,8 kg
 N.º 0229 Pokémon Siniestro Altura: 1,4 m Peso: 35,0 kg
 N.º 0229 Pokémon Siniestro Altura: 1,9 m Peso: 49,5 kg
@@ -8386,6 +8763,7 @@ N.º 0245 Pokémon Aurora Altura: 2,0 m Peso: 187,0 kg
 N.º 0246 Pokémon Piel Roca Altura: 0,6 m Peso: 72,0 kg
 N.º 0247 Pokémon Caparazón Altura: 1,2 m Peso: 152,0 kg
 N.º 0248 Pokémon Coraza Altura: 2,0 m Peso: 202,0 kg
+N.º 0248 Pokémon Coraza Altura: 2,5 m Peso: 255,0 kg
 N.º 0249 Pokémon Buceo Altura: 5,2 m Peso: 216,0 kg
 N.º 0250 Pokémon Arcoíris Altura: 3,8 m Peso: 199,0 kg
 N.º 0251 Pokémon Viajetiempo Altura: 0,6 m Peso: 5,0 kg
@@ -8538,6 +8916,7 @@ N.º 0383 Pokémon Continente Altura: 3,5 m Peso: 950,0 kg
 N.º 0384 Pokémon Cielo Altura: 7,0 m Peso: 206,5 kg
 N.º 0384 Pokémon Cielo Altura: 10,8 m Peso: 392,0 kg
 N.º 0385 Pokémon Deseo Altura: 0,3 m Peso: 1,1 kg
+N.º 0386 Pokémon ADN Altura: 1,7 m Peso: 60,8 kg
 N.º 0387 Pokémon Hojita Altura: 0,4 m Peso: 10,2 kg
 N.º 0388 Pokémon Arboleda Altura: 1,1 m Peso: 97,0 kg
 N.º 0389 Pokémon Continente Altura: 2,2 m Peso: 310,0 kg
@@ -8645,7 +9024,9 @@ N.º 0479 Pokémon Plasma Altura: 0,3 m Peso: 0,3 kg
 N.º 0480 Pokémon Sabiduría Altura: 0,3 m Peso: 0,3 kg
 N.º 0481 Pokémon Sensorio Altura: 0,3 m Peso: 0,3 kg
 N.º 0482 Pokémon Voluntad Altura: 0,3 m Peso: 0,3 kg
+N.º 0483 Pokémon Temporal Altura: 5,4 m Peso: 683,0 kg
 N.º 0483 Pokémon Temporal Altura: 7,0 m Peso: 850,0 kg
+N.º 0484 Pokémon Espacial Altura: 4,2 m Peso: 336,0 kg
 N.º 0484 Pokémon Espacial Altura: 6,3 m Peso: 660,0 kg
 N.º 0485 Pokémon Domo Lava Altura: 1,7 m Peso: 430,0 kg
 N.º 0486 Pokémon Colosal Altura: 3,7 m Peso: 420,0 kg
@@ -8716,6 +9097,7 @@ N.º 0548 Pokémon Bulbo Altura: 0,5 m Peso: 6,6 kg
 N.º 0549 Pokémon Adornofloral Altura: 1,1 m Peso: 16,3 kg
 N.º 0549 Pokémon Pirueta Altura: 1,2 m Peso: 19,2 kg
 N.º 0550 Pokémon Violento Altura: 1,0 m Peso: 18,0 kg
+N.º 0550 Pokémon Violento Altura: 1,0 m Peso: 18,0 kg
 N.º 0550 Pokémon Manso Altura: 1,0 m Peso: 18,0 kg
 N.º 0551 Pokémon Desierdrilo Altura: 0,7 m Peso: 15,2 kg
 N.º 0552 Pokémon Desierdrilo Altura: 1,0 m Peso: 33,4 kg
@@ -8752,6 +9134,8 @@ N.º 0581 Pokémon Cisne Altura: 1,3 m Peso: 24,2 kg
 N.º 0582 Pokémon Nieve Fresca Altura: 0,4 m Peso: 5,7 kg
 N.º 0583 Pokémon Nieve Helada Altura: 1,1 m Peso: 41,0 kg
 N.º 0584 Pokémon Nieve Gélida Altura: 1,3 m Peso: 57,5 kg
+N.º 0585 Pokémon Estacional Altura: 0,6 m Peso: 19,5 kg
+N.º 0586 Pokémon Estacional Altura: 1,9 m Peso: 92,5 kg
 N.º 0587 Pokémon Vuelardilla Altura: 0,4 m Peso: 5,0 kg
 N.º 0588 Pokémon Bocado Altura: 0,5 m Peso: 5,9 kg
 N.º 0589 Pokémon Soldado Altura: 1,0 m Peso: 33,0 kg
@@ -8824,6 +9208,7 @@ N.º 0654 Pokémon Zorro Altura: 1,0 m Peso: 14,5 kg
 N.º 0655 Pokémon Zorro Altura: 1,5 m Peso: 39,0 kg
 N.º 0656 Pokémon Burburrana Altura: 0,3 m Peso: 7,0 kg
 N.º 0657 Pokémon Burburrana Altura: 0,6 m Peso: 10,9 kg
+N.º 0658 Pokémon Ninja Altura: 1,5 m Peso: 40,0 kg
 N.º 0658 Pokémon Ninja Altura: 1,5 m Peso: 40,0 kg
 N.º 0659 Pokémon Excavador Altura: 0,4 m Peso: 5,0 kg
 N.º 0660 Pokémon Excavador Altura: 1,0 m Peso: 42,4 kg
@@ -8902,6 +9287,7 @@ N.º 0718 Pokémon Equilibrio Altura: 1,2 m Peso: 33,5 kg
 N.º 0719 Pokémon Joya Altura: 0,7 m Peso: 8,8 kg
 N.º 0719 Pokémon Joya Altura: 1,1 m Peso: 27,8 kg
 N.º 0720 Pokémon Travesura Altura: 0,5 m Peso: 9,0 kg
+N.º 0721 Pokémon Vapor Altura: 1,7 m Peso: 195,0 kg
 N.º 0722 Pokémon Pluma Hoja Altura: 0,3 m Peso: 1,5 kg
 N.º 0723 Pokémon Pluma Filo Altura: 0,7 m Peso: 16,0 kg
 N.º 0724 Pokémon Pluma Flecha Altura: 1,6 m Peso: 36,6 kg
@@ -8975,6 +9361,8 @@ N.º 0787 Pokémon Dios Nativo Altura: 1,9 m Peso: 45,5 kg
 N.º 0788 Pokémon Dios Nativo Altura: 1,3 m Peso: 21,2 kg
 N.º 0789 Pokémon Nebulosa Altura: 0,2 m Peso: 0,1 kg
 N.º 0790 Pokémon Protostrella Altura: 0,1 m Peso: 999,9 kg
+N.º 0791 Pokémon Corona Solar Altura: 3,4 m Peso: 230,0 kg
+N.º 0792 Pokémon Corona Lunar Altura: 4,0 m Peso: 120,0 kg
 N.º 0793 Pokémon Parásito Altura: 1,2 m Peso: 55,5 kg
 N.º 0794 Pokémon Hinchado Altura: 2,4 m Peso: 333,6 kg
 N.º 0795 Pokémon Elegancia Altura: 1,8 m Peso: 25,0 kg
@@ -9008,6 +9396,8 @@ N.º 0820 Pokémon Avaricia Altura: 0,6 m Peso: 6,0 kg
 N.º 0821 Pokémon Pajarito Altura: 0,2 m Peso: 1,8 kg
 N.º 0822 Pokémon Cuervo Altura: 0,8 m Peso: 16,0 kg
 N.º 0823 Pokémon Cuervo Altura: 2,2 m Peso: 75,0 kg
+N.º 0827 Pokémon Zorro Altura: 0,6 m Peso: 8,9 kg
+N.º 0828 Pokémon Zorro Altura: 1,2 m Peso: 19,9 kg
 N.º 0829 Pokémon Adornofloral Altura: 0,4 m Peso: 2,2 kg
 N.º 0830 Pokémon Adornalgodón Altura: 0,5 m Peso: 2,5 kg
 N.º 0831 Pokémon Oveja Altura: 0,6 m Peso: 6,0 kg
@@ -9100,6 +9490,7 @@ N.º 0932 Pokémon Halita Altura: 0,4 m Peso: 16,0 kg
 N.º 0933 Pokémon Halita Altura: 0,6 m Peso: 105,0 kg
 N.º 0934 Pokémon Halita Altura: 2,3 m Peso: 240,0 kg
 N.º 0935 Pokémon Piroescudero Altura: 0,6 m Peso: 10,5 kg
+N.º 0936 Pokémon Piroguerrero Altura: 1,5 m Peso: 85,0 kg
 N.º 0937 Pokémon Piroespada Altura: 1,6 m Peso: 62,0 kg
 N.º 0938 Pokémon Electrocuajo Altura: 0,3 m Peso: 0,4 kg
 N.º 0939 Pokémon Electrorrana Altura: 1,2 m Peso: 113,0 kg
@@ -9207,6 +9598,9 @@ Recompensa de cupón futuro: segundo\npremio.
 Recompensa de cupón futuro: tercer\npremio.
 Carta recibida.
 Agradecimiento por compartir.
+Cupón de sobre de mejora con 1 carta\ngarantizada de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ].
+Baraja de élite de la expansión más\nreciente.
+Sobre particular que incluye a [Text:CardName v="EIEVUI" ] y\ntodas sus evoluciones.
 Icono que se puede seleccionar desde la pantalla\ndel perfil.
 Icono Gardevoir
 Icono Eevee
@@ -9309,6 +9703,16 @@ Icono [Text:CardName v="ROCKETDANNOKENKYUUIN" ]
 Icono [Text:CardName v="ROCKETDANNOBOSS" ]
 Icono [Text:CardName v="HUURO" ]
 Icono [Mst:PackName v="PACK_NAME_B4b_1"]: [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
+Icono [Text:CardName v="SOUBLADES" ]
+Icono [Text:CardName v="ABURIBBON" ]
+Icono [Text:CardName v="PARMOT" ]
+Icono [Mst:CommonCharacterName v="COMMON_CARD_NAME_21"]
+Icono [Text:CardName v="CHILI" ]
+Icono [Mst:CommonCharacterName v="COMMON_CARD_NAME_20"]
+Icono [Text:CardName v="YATOUMORI" ]
+Icono [Text:CardName v="DUGTRIO" ]
+Icono [Text:CardName v="MIMIROL" ]
+Icono [Text:CardName v="FOODIN" ]
 Icono [Text:CardName v="PIKACHU" ] v.[C:Nbsp ]12
 Icono [Text:CardName v="PIKACHU" ] v.[C:Nbsp ]13
 Icono [Text:CardName v="PIKACHU" ] v.[C:Nbsp ]14
@@ -9378,6 +9782,7 @@ Me gustan los Pokémon de Paldea
 Colecciono Pokémon ex Megaevolución
 PROMO-A
 PROMO-B
+PROMO-C
 Paralizados󱀀Paralizado
 Fondo Eevee
 Eevee
@@ -9639,8 +10044,24 @@ Fondo [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
 [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
 Fondo litoral centelleante
 Litoral centelleante
+Fondo [Text:CardName v="PIKACHU" ] y amigos
+[Text:CardName v="PIKACHU" ] y amigos
+Fondo recuerdos de viaje
+Recuerdos de viaje
+Fondo callejuela rural
+Callejuela rural
+Fondo [Mst:CommonCharacterName v="COMMON_CARD_NAME_20"]
+[Mst:CommonCharacterName v="COMMON_CARD_NAME_20"]
+Fondo [Text:CardName v="CHILI" ]
+[Text:CardName v="CHILI" ]
+Fondo set especial 03
+Set especial 03
 Ciudad radiante
 Fondo ciudad radiante
+Fondo set tres cartas (C1): festividad invernal (vertical)
+Fondo set tres cartas (C1): festividad invernal (vertical)
+Fondo set tres cartas (C1): festividad invernal (horizontal)
+Fondo set tres cartas (C1): festividad invernal (horizontal)
 Fondo sobre el que colocar las cartas en las\nvitrinas.
 Moneda Eevee
 Eevee
@@ -9746,6 +10167,12 @@ Moneda [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
 Moneda [Text:CardName v="HOOPA" ]
 Moneda [Text:CardName v="HUURO" ]
 Moneda [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
+Moneda [Text:CardName v="PIKACHU" ] v.[C:Nbsp ]4
+Moneda [Mst:CommonCharacterName v="COMMON_CARD_NAME_19"]
+Moneda set especial 03
+Moneda [Mst:CommonCharacterName v="COMMON_CARD_NAME_20"]
+Moneda [Text:CardName v="CHILI" ]
+Moneda [Text:CardName v="GANGAR" ]
 Moneda que se puede usar durante las partidas.\nPuedes seleccionarla desde tu baraja.
 Fundas Eevee
 Eevee
@@ -9844,6 +10271,16 @@ Fundas [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
 Fundas [Text:CardName v="HOOPA" ]
 Fundas [Text:CardName v="HUURO" ]
 Fundas [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
+Fundas [Text:CardName v="PIKACHU" ] y amigos
+Fundas [Mst:CommonCharacterName v="COMMON_CARD_NAME_19"]
+Fundas [Mst:CommonCharacterName v="COMMON_CARD_NAME_20"]
+Fundas [Text:CardName v="CHILI" ]
+Fundas set especial 03
+Fundas [Text:CardName v="GANGAR" ]
+Fundas rango Master Ball temporada C1
+Fundas rango Master Ball TOP 10[C:Nnbsp ]000 temporada C1
+Fundas rango Master Ball TOP 5000 temporada C1
+Fundas rango Master Ball TOP 1000 temporada C1
 Accesorio en el que se meten las cartas.\nPuedes seleccionarlo desde tu baraja.
 Portada que se puede usar en los álbumes.
 Portada Eevee
@@ -9994,6 +10431,12 @@ Portada [Text:CardName v="HOOPA" ]
 Portada [Text:CardName v="HUURO" ] y [Text:CardName v="SWANNA" ]
 Portada [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
 Portada Sobre Deluxe Mega
+Portada [Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"]: [Mst:CommonCharacterName v="COMMON_CARD_NAME_19"]
+Portada [Mst:ExpansionNameLong v="EXPANSION_NAME_LONG_25"]: [Text:CardName v="PIKACHU" ]
+Portada [Text:CardName v="PIKACHU" ] y amigos
+Portada [Mst:CommonCharacterName v="COMMON_CARD_NAME_20"]
+Portada [Text:CardName v="CHILI" ] y [Mst:CommonCharacterName v="COMMON_CARD_NAME_22"]
+Portada set especial 03
 Tapete Eevee
 Eevee
 Tapete Meowth
@@ -10092,6 +10535,12 @@ Tapete [Mst:CommonGroupName v="COMMON_GROUP_NAME_1" ]
 Tapete [Text:CardName v="HOOPA" ]
 Tapete [Text:CardName v="HUURO" ] y [Text:CardName v="SWANNA" ]
 Tapete [Mst:CommonCharacterName v="COMMON_CARD_NAME_12"]
+Tapete [Text:CardName v="PIKACHU" ] y amigos
+Tapete [Mst:CommonCharacterName v="COMMON_CARD_NAME_19"]
+Tapete [Mst:CommonCharacterName v="COMMON_CARD_NAME_20"]
+Tapete [Text:CardName v="CHILI" ] y [Mst:CommonCharacterName v="COMMON_CARD_NAME_22"]
+Tapete set especial 03
+Tapete [Text:CardName v="GANGAR" ]
 Accesorio que se coloca en la zona de juego\ndurante las partidas. Puedes seleccionarlo desde\ntu baraja.
 Pon [Num:Int max_length="2" ] Pokémon Básico[Gr:Count p="s" ] en juego.
 Pon [Num:Int max_length="2" ] Pokémon ex en juego.
@@ -10131,6 +10580,7 @@ B3b
 B4
 B4a
 B4b SP
+C1
 Obtén al menos [Num:Int id="0" max_length="3" ] punto[Gr:Count p="s" ].
 Inflige al menos [Num:Int id="0" max_length="5" ] punto[Gr:Count p="s" ] de daño.
 Gana al menos [Num:Int id="0" max_length="3" ] partida[Gr:Count p="s" ].
@@ -10138,6 +10588,9 @@ A
 Serie A
 B
 Serie B
+C
+Serie C
+Extraordinarios
 Evento elección mágica
 Objetos
 Accesorios
@@ -10171,6 +10624,7 @@ Encantos de Paldea
 Aura Pulsante
 Megavariocolor
 Objetos raros
+Sobre de mejora del segundo aniversario\ncon 1 carta garantizada de rareza [Mst:Rarity v="RARITY_MSID_SSASR" ]
 Moneda Meowth
 Fundas Meowth
 Tapete Meowth
@@ -10601,6 +11055,8 @@ Polvo iris[C:Nbsp ]×1000
 [Mst:CardCharacterName v="CARD_NAME_1163" ] (058/P-B)
 [Mst:CardCharacterName v="CARD_NAME_811" ] (059/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1204" ] (060/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1149" ] (061/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1191" ] (062/P-B)
 [Mst:CardCharacterName v="CARD_NAME_993" ] (026/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1001" ] (027/P-B)
 [Mst:CardCharacterName v="CARD_NAME_130" ] (028/P-B)
@@ -10680,11 +11136,77 @@ Calcetines de Recluta del Team Rocket
 [Mst:CardCharacterName v="CARD_NAME_1342" ] (090/P-B)
 [Mst:CardCharacterName v="CARD_NAME_1343" ] (091/P-B)
 [Mst:CardCharacterName v="CARD_NAME_152" ] (092/P-B)
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101390_MEGAGEKKOUGA" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101400_CHILI_DOOH" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101410_PremiumSet03" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101620_MEGAGEKKOUGA" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101630_CHILI_DOOH" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101640_PremiumSet03" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100920_MEGAGEKKOUGA" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100930_CHILI_DOOH" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100940_PremiumSet03" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100950_MEGAGEKKOUGA" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100960_CHILI_DOOH" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100970_PremiumSet03" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101120_PremiumSet03" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101130_MEGAGEKKOUGA" ]
+[Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101140_CHILI_DOOH" ]
+[Mst:CardCharacterName v="CARD_NAME_94" ] (001/P-C)
+[Mst:CardCharacterName v="CARD_NAME_1422" ] (002/P-C)
+[Mst:CardCharacterName v="CARD_NAME_1399" ] (003/P-C)
+[Mst:CardCharacterName v="CARD_NAME_814" ] (004/P-C)
+[Mst:CardCharacterName v="CARD_NAME_815" ] (005/P-C)
+[Mst:CardCharacterName v="CARD_NAME_547" ] (006/P-C)
+[Mst:CardCharacterName v="CARD_NAME_548" ] (007/P-C)
+[Mst:CardCharacterName v="CARD_NAME_1400" ] (008/P-C)
+[Mst:CardCharacterName v="CARD_NAME_1423" ] (009/P-C)
 [Mst:PeripheralGoodsName v="PeripheralGoods_COIN_101050_TEAM_ROCKET" ]
 [Mst:PeripheralGoodsName v="PeripheralGoods_PLAYMAT_100860_TEAM_ROCKET" ]
 [Mst:PeripheralGoodsName v="PeripheralGoods_DECKSHIELD_100860_TEAM_ROCKET" ]
 [Mst:PeripheralGoodsName v="PeripheralGoods_BOARD_101510_TEAM_ROCKET" ]
 [Mst:PeripheralGoodsName v="PeripheralGoods_FILE_101310_TEAM_ROCKET" ]
+[Mst:PackName v="PACK_NAME_A1_1_02" ]
+[Mst:PackName v="PACK_NAME_A1_2_02" ]
+[Mst:PackName v="PACK_NAME_A1_3_02" ]
+[Mst:PackName v="PACK_NAME_A1a_1_01" ]
+[Mst:PackName v="PACK_NAME_A2_1_01" ]
+[Mst:PackName v="PACK_NAME_A2_2_01" ]
+[Mst:PackName v="PACK_NAME_A2a_1_01" ]
+[Mst:PackName v="PACK_NAME_A2b_1_01" ]
+[Mst:PackName v="PACK_NAME_A3_1_01" ]
+[Mst:PackName v="PACK_NAME_A3_2_01" ]
+[Mst:PackName v="PACK_NAME_A3a_1_01" ]
+[Mst:PackName v="PACK_NAME_A3b_1_01" ]
+[Mst:PackName v="PACK_NAME_A4_1_01" ]
+[Mst:PackName v="PACK_NAME_A4_2_01" ]
+[Mst:PackName v="PACK_NAME_A4a_1_01" ]
+[Mst:PackName v="PACK_NAME_B1_1_01" ]
+[Mst:PackName v="PACK_NAME_B1_2_01" ]
+[Mst:PackName v="PACK_NAME_B1_3_01" ]
+[Mst:PackName v="PACK_NAME_B1a_1_01" ]
+[Mst:PackName v="PACK_NAME_B2_1_01" ]
+[Mst:PackName v="PACK_NAME_B2a_1_01" ]
+[Mst:PackName v="PACK_NAME_B2b_1_01" ]
+[Mst:PackName v="PACK_NAME_B3_1_01" ]
+[Mst:PackName v="PACK_NAME_B3a_1_01" ]
+[Mst:PackName v="PACK_NAME_B4_1_01" ]
+[Mst:PackName v="PACK_NAME_B3b_1_01" ]
+[Mst:PackName v="PACK_NAME_B4a_1_01" ]
+[Mst:CardCharacterName v="CARD_NAME_456" ] (069/P-B)
+[Mst:CardCharacterName v="CARD_NAME_534" ] (070/P-B)
+[Mst:CardCharacterName v="CARD_NAME_39" ] (077/P-B)
+[Mst:CardCharacterName v="CARD_NAME_639" ] (078/P-B)
+[Mst:CardCharacterName v="CARD_NAME_452" ] (085/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1312" ] (086/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1345" ] (093/P-B)
+[Mst:CardCharacterName v="CARD_NAME_1183" ] (094/P-B)
+[Mst:CardCharacterName v="CARD_NAME_33" ] (101/P-B)
+[Mst:CardCharacterName v="CARD_NAME_583" ] (102/P-B)
+[Mst:CardCharacterName v="CARD_NAME_21" ] (060/P-A)
+[Mst:CardCharacterName v="CARD_NAME_87" ] (061/P-A)
+[Mst:CardCharacterName v="CARD_NAME_198" ] (062/P-A)
+[Mst:CardCharacterName v="CARD_NAME_830" ] (063/P-A)
+[Mst:CardCharacterName v="CARD_NAME_831" ] (064/P-A)
 Pokélingotes
 Pokélingotes + accesorios
 Pokélingotes + extras
@@ -10746,6 +11268,12 @@ Pokélingote (de pago) - oferta estival[C:Nbsp ]×200
 Pokélingote (de pago)[C:Nbsp ]×115 + accesorios [Text:CardName v="KAMITSURE" ]
 Pokélingote (de pago)[C:Nbsp]×115 + accesorios [Text:CardName v="HOOPA" ]
 Pokélingote (de pago)[C:Nbsp ]×115 + accesorios [Text:CardName v="THUNDER" ], [Text:CardName v="FREEZER" ] y [Text:CardName v="FIRE" ]
+Pokélingote (de pago) - segundo aniversario ×100
+Pokélingote (de pago) - segundo aniversario ×200
+Pokélingote (de pago) ×115 + accesorios [Text:CardName v="PIKACHU" ] y amigos
+Pokélingote (de pago)[C:Nbsp ]×5 + 55 Pokélingotes (sin coste) extra. ¡Ofertón!
+Pokélingote (de pago)[C:Nbsp ]×35: ¡oferta de impulso para el nuevo sobre de mejora!
+Pokélingote (de pago)[C:Nbsp ]×35
 Pokélingotes
 Cupones
 Especiales
@@ -10758,6 +11286,9 @@ Evento botín bis
 Elección mágica bis
 Cartas de promoción
 Team Rocket
+[Mst:Rarity v="RARITY_MSID_SSASR" ] garantizada
+Se puede usar para abrir sobres extraordinarios.
+Reloj de arena extraordinario
 1 carta garantizada de rareza [Mst:Rarity case="lower" v="RARITY_MSID_RR" ] o superior
 [Mst:PackName v="PACK_NAME_PROMO_A_1"]
 [Mst:PackName v="PACK_NAME_PROMO_A_2"]
@@ -10765,6 +11296,7 @@ Team Rocket
 [Mst:PackName v="PACK_NAME_PROMO_A_4"]
 [Mst:PackName v="PACK_NAME_PROMO_A_5"]
 [Mst:PackName v="PACK_NAME_PROMO_A_6"]
+[Mst:PackName v="PACK_NAME_PROMO_A_7"]
 [Mst:PackName v="PACK_NAME_PROMO_A_8"]
 [Mst:PackName v="PACK_NAME_PROMO_A_9"]
 [Mst:PackName v="PACK_NAME_PROMO_A_10"]
@@ -10938,6 +11470,18 @@ Mira las cartas de la mano de tu rival y pon tantos Pokémon Básicos que encuen
 Una vez durante el turno de cada jugador, ese jugador puede lanzar [Num:Int id="0" max_length="2" ][C:Nbsp ]moneda[Gr:Count p="s" ref="0" ]. Si [Gr:Count p="en todas sale" one="sale" two="en las dos sale" ] cara, ese jugador roba cartas hasta tener [Num:Int id="1" max_length="2" ] carta[Gr:Count p="s" ref="1" ] en su mano.
 Lanza 1[C:Nbsp ]moneda hasta que salga cruz. Por cada cara, pon un Pokémon aleatorio que tenga "Team Rocket" en su nombre de tu baraja en tu mano.
 El Pokémon Activo de tu rival pasa a estar [Text:SpecialCondition id="0" ]. Lanza 1[C:Nbsp ]moneda. Si sale cruz, tu Pokémon Activo también pasa a estar [Text:SpecialCondition id="0" ].
+Elige 1 de tus Pokémon, y luego lanza 1[C:Nbsp ]moneda hasta que salga cruz. Por cada cara, cura [Num:Int id="0" max_length="3" ][C:Nbsp ]puntos de daño a ese Pokémon.
+Cura [Num:Int id="0" max_length="3" ][C:Nbsp ]puntos de daño a 1 de tus Pokémon que tenga alguna Energía unida a él. Si has curado algún punto de daño de esta manera, descarta [Num:Int id="1" max_length="2" ] Energía[Gr:Count p="s" ref="1" ] aleatoria[Gr:Count p="s" ref="1" ] de ese Pokémon.
+Tu Pokémon Activo se recupera de todas las Condiciones Especiales.
+Los ataques de los Pokémon de tu rival hacen [C:Nbh ][Num:Int id="0" max_length="3" ][C:Nbsp ]puntos de daño al Pokémon Básico al que esté unida esta carta.
+Los ataques del [Text:CardName id="0" ] al que esté unida esta carta hacen [Ctrl:NoBreak ]+[Num:Int id="1" max_length="3" ][C:Nbsp ]puntos[/Ctrl:NoBreak] de daño al Pokémon Activo de tu rival.
+Durante este turno, los ataques de tu [Text:CardName id="0" ], tu [Text:CardName id="1" ] o tu [Text:CardName id="2" ] hacen [Ctrl:NoBreak ]+[Num:Int id="3" max_length="3" ] puntos[/Ctrl:NoBreak] de daño a los Pokémon de tu rival.
+Puedes usar esta carta solo si tienes [Text:CardName id="0" ], [Text:CardName id="1" ], [Text:CardName id="2" ] o [Text:CardName id="3" ] en juego.\n\nCambia 1 de los Pokémon en Banca de tu rival por el Pokémon que esté en el Puesto Activo.
+Mira las [Num:Int id="0" max_length="2" ] primeras cartas de tu baraja y pon [Num:Int id="1" max_length="2" ] de ellas en tu mano. Pon el resto de nuevo en tu baraja y barájalas todas.
+Une [Num:Int id="1" max_length="2" ] Energía[Gr:Count p="s" ref="1" ][C:Nbsp ][Img:Element id="0" ] de tu área de Energía a 1 de tus [Text:CardName id="2" ] o [Text:CardName id="3" ].
+Puedes usar esta carta solo si tienes [Num:Int id="0" max_length="1" ] o más Pokémon de diferentes tipos en juego.\n\nCambia tu Pokémon Activo por 1 de tus Pokémon en Banca.
+Una vez durante el turno de cada jugador, ese jugador puede usar este efecto. Lanza 1[C:Nbsp ]moneda. Si sale cara, roba [Num:Int id="0" max_length="2" ] carta[Gr:Count p="s" ref="0" ].
+Mueve todas las Energías[C:Nbsp ][Img:Element id="1" ] de 1 de tus Pokémon[C:Nbsp ][Img:Element id="0" ] en Banca a tu [Text:CardName id="2" ] en el Puesto Activo.
 Herramienta Pokémon
 Objeto (Fósil)
 Objeto
@@ -11077,6 +11621,8 @@ Gana la partida sin que tu rival consiga ningún punto.
 [Mst:SoloRandomBattleGroupName]
 [Mst:SoloRandomBattleName]
 [Mst:SpecialConditionType]
+[Mst:SpecialPackTicketDescription]
+[Mst:SpecialPackTicketName]
 [Mst:StageType]
 [Mst:StageTypePokemon]
 [Mst:SubPackName]
@@ -11098,6 +11644,10 @@ Energía de sobre recuperada.
 Recibirás una notificación cuando hayas recuperado toda tu energía mágica.
 Energía mágica recuperada por completo.
 ¡Has recuperado toda tu energía mágica!
+¡Puedes abrir tu sobre extraordinario semanal!
+Te avisaremos cuando recuperes la energía extraordinaria.
+Energía extraordinaria recuperada.
+¡Se ha recuperado tu energía extraordinaria!
 Tasa de aparición para la 1.ª carta
 Tasa de aparición para las cartas de la 1.ª a la 3.ª
 Tasa de aparición para las cartas de la 1.ª a la 4.ª
@@ -11107,6 +11657,7 @@ Tasa de aparición para la 3.ª carta
 Tasa de aparición para la 4.ª carta
 Tasa de aparición para la 5.ª carta
 Tasa de aparición para la 6.ª carta
+Posibles primeras cartas
 Sobre esta aplicación
 Crear nuevo
 Límite de álbumes alcanzado
@@ -11254,6 +11805,7 @@ Empezaste tú
 Empezó tu rival
 Carta más\nvaliosa
 Ninguna
+Ver baraja
 Carta más\nvaliosa
 Toca para continuar
 Carta de tu rival
@@ -11275,7 +11827,8 @@ No has obtenido ninguna recompensa.
 Recompensa inicial
 Recompensa aleatoria
 Puntos de experiencia
-Se ha[Gr:Count p="n" ] enviado [Num:Int id="0" max_length="0" visible="0" ][Gr:Count s="el sobre de promoción" p="los sobres de promoción" ]\na "Regalos".
+Recompensa por victoria
+Se ha[Gr:Count p="n" ] enviado a "Regalos" [Num:Int id="0" max_length="0" visible="0" ][Gr:Count s="un sobre" p="los sobres" ] que has\nobtenido.
 Registro
 VS. [Str:PlayerName id="0" ]
 Empate
@@ -11489,6 +12042,7 @@ Chequeo Pokémon: Dormido
 Chequeo Pokémon: Quemado
 Lanzamiento de moneda: Confuso
 El primer lanzamiento de moneda será cara.
+Lanza [Num:Int id="0" max_length="2" ][C:Nbsp ]moneda[Gr:Count p="s" ref="0" ] más.
 Esperando a tu rival...
 ¡Cara!
 ¡Cruz!
@@ -11745,6 +12299,12 @@ No hay ningún Pokémon cuya Energía se\npueda mover.
 Elige un Pokémon cuya Energía unida quieras\nmover.
 ¿Confirmas el movimiento de Energía?
 Evita todo el daño y todos los efectos de los\nataques usados por los Pokémon del rival.
+Los ataques de [Text:CardName id="0" ], [Text:CardName id="1" ]\ny [Text:CardName id="2" ] hacen +[Num:Int id="3" max_length="3" ][C:Nbsp ]puntos\nde daño a los Pokémon del rival.
+[Text:AttackName id="0" ] hace [C:Nbh ][Num:Int id="1" max_length="3" ][C:Nbsp ]puntos de daño.
+Lanza [Num:Int id="1" max_length="2" ][C:Nbsp ]moneda[Gr:Count p="s" ref="1" ] más para\n[Text:AttackName id="0" ].
+Elige a qué [Num:Int id="1" visible="0" max_length="1" ]Pokémon quieres unir [Num:Int id="0" visible="0" max_length="1" ]Energía[Gr:Count p="s" ref="0" ].
+Lanza 1 moneda cuando quede Fuera de\nCombate. Si sale cara, tu rival no puede\nobtener ningún punto por ello.
+Los ataques de [Text:CardName id="0" ]\nhacen +[Num:Int id="1" max_length="3" ][C:Nbsp ]puntos de daño al Pokémon\nActivo del rival.
 Pon un Pokémon Básico en el Puesto Activo.
 Solo puedes elegir Pokémon Básicos.
 Pon un Pokémon en juego.
@@ -11953,6 +12513,11 @@ Puede tener hasta [Num:Int id="0" max_length="2" ] cartas de Herramienta Pokémo
 Si se lanza cualquier moneda para un efecto de la carta de Entrenador del jugador, puede volver a lanzar esas monedas de nuevo.
 Se elige [Num:Int id="1" max_length="2" ][C:Nbsp ]ve[Gr:Count s="z" p="ces" ref="1" ] más a un Pokémon del rival para el ataque [Text:AttackName id="0" ].
 Al final del próximo turno del rival, deja Fuera de Combate [Num:Int id="0" visible="0" max_length="1" ][Gr:Count s="al" p="a los" ] Pokémon [Gr:Count s="del" p="de los" ] puesto[Gr:Count p="s" ref="0" ] elegido[Gr:Count p="s" ref="0" ].
+Los ataques de [Text:CardName id="0" ], [Text:CardName id="1" ] y [Text:CardName id="2" ] hacen [Ctrl:NoBreak ]+[Num:Int id="3" max_length="3" ] puntos[/Ctrl:NoBreak] de daño a los Pokémon del rival.
+[Text:AttackName id="0" ] hace [C:Nbh ][Num:Int id="1" max_length="3" ][C:Nbsp ]puntos de daño.
+Lanza [Num:Int id="1" max_length="2" ][C:Nbsp ]moneda[Gr:Count p="s" ref="1" ] más para [Text:AttackName id="0" ].
+Lanza 1 moneda cuando quede Fuera de Combate. Si sale cara, tu rival no puede obtener ningún punto por ello.
+Los ataques de [Text:CardName id="0" ] hacen +[Num:Int id="1" max_length="3" ][C:Nbsp ]puntos de daño al Pokémon Activo del rival.
 Pila de descartes de tu rival
 Tu pila de descartes
 No hay cartas descartadas.
@@ -11991,6 +12556,7 @@ Desliza la carta hacia arriba para enviarla.
 [Str:NickName]
 [Str:PlayerCode]
 [Str:PlayerName]
+-/[Num:Int id="0" max_length="3" zero_padding="3"]
 [Num:Int id="0" max_length="3"]<size=24><space=0.15em><voffset=3.3><scale=1.8>-</scale></size></voffset>
 [Num:Int id="0" max_length="3" ]<size=24><space=0.08em><voffset=5>+</size></voffset>
 [Num:Int id="0" max_length="4" ]+
@@ -12055,6 +12621,7 @@ Coste de Retirada
 Serie
 Subtipo de carta
 Obtener efecto visual
+???
 JAP
 ES-ES
 ING
@@ -12078,6 +12645,7 @@ Esta carta no puede conseguirse mediante\nsobres de mejora.
 No tienes ningún efecto visual.
 Vista previa no disponible. No tienes esta carta\nactualmente.
 No puedes tener más de [Num:Int id="0" max_length="3" ] cartas en tu lista de\ndeseadas.
+Esta carta no puede añadirse a tu lista de\ndeseadas.
 ¡Prueba a mantener la carta pulsada!
 ¡La quiero!
 Se cerrará la aplicación.\n¿Quieres continuar?
@@ -12258,7 +12826,7 @@ Vale
 Cancelar
 Vale
 Eliminar baraja
-Esta baraja está marcada como favorita.\n¿Quieres eliminarla?\nLas cartas permanecerán en tu colección.
+Esta baraja está configurada de la siguiente forma.\n¿Seguro que quieres eliminarla permanentemente?\nLas cartas permanecerán en tu colección.\n\n• Esta baraja está marcada como favorita.\nSi la eliminas, dejará de serlo.
 Cancelar
 Vale
 Eliminar baraja
@@ -12287,6 +12855,21 @@ No se han podido añadir las cartas a la lista de\ndeseadas por haber alcanzado 
 Vale
 Esta baraja no puede compartirse con un\ncódigo 2D, ya que no cumple una o más de las\nsiguientes condiciones:\n\n• Contener exactamente 20 cartas.\n• Incluir al menos un Pokémon Básico.\n• Contener solo cartas que tengas actualmente.\n• Tener Energía seleccionada.
 Vale
+Esta baraja se está usando en tu perfil como tu\nbaraja predilecta. Si se cambian los ajustes de\npublicación, se quitará de tu perfil.\n¿Te parece bien?
+Cancelar
+Vale
+Cambiar ajustes de publicación
+Esta baraja se está usando como tu baraja\npredilecta. Si se guarda en un estado inutilizable,\nse eliminará de tu perfil.
+Cancelar
+Vale
+Esta baraja está configurada de la siguiente forma.\n¿Seguro que quieres eliminarla permanentemente?\nLas cartas permanecerán en tu colección.\n\n• Esta baraja se está usando en tu perfil como tu\nbaraja predilecta. Al eliminarla, también se quitará\nde tu perfil.
+Cancelar
+Vale
+Eliminar baraja
+Esta baraja está configurada de la siguiente forma.\n¿Seguro que quieres eliminarla permanentemente?\nLas cartas permanecerán en tu colección.\n\n• Esta baraja se está usando en tu perfil como tu\nbaraja predilecta. Al eliminarla, también se quitará\nde tu perfil.\n\n• Esta baraja está marcada como favorita.\nSi la eliminas, dejará de serlo.
+Cancelar
+Vale
+Eliminar baraja
 Eliminar esta baraja
 Ver todas las cartas de la baraja
 Copiar esta baraja
@@ -12305,6 +12888,9 @@ Accesorios
 Copiar
 Cancelar
 Editar
+Privada
+Pública
+Solo amigos
 Guardar
 Modificar
 No se ha seleccionado uno o más tipos de\nEnergía necesarios para usar los ataques de\nesta baraja.
@@ -12320,11 +12906,17 @@ Crear nueva baraja
 Crear a partir de baraja temática
 Crear una copia de una baraja
 Escanear código
+Ir a Barajas de la comunidad
 Elige qué baraja copiar
 Editar
 Edición en curso
 Guardar
 Mis barajas
+Privada
+Pública
+Visible solo para amigos
+Otros jugadores podrán ver las barajas que has\ncreado si las haces públicas.
+Ajustes de publicación
 Selecciona hasta dos tipos.
 Cancelar
 Autocreación
@@ -12399,6 +12991,7 @@ Has creado la baraja.
 Has creado una copia de la baraja.
 Has eliminado la baraja.
 No hay barajas.
+Carta inutilizable.
 Código 2D
 Cancelar
 Copiar
@@ -12407,6 +13000,7 @@ El evento ha finalizado.\nSe va a regresar al menú "Partidas".
 Vale
 Guía
 Sobres de promoción
+Detalles del evento
 Misiones
 Tienda
 Información sobre el evento
@@ -12420,6 +13014,9 @@ Los eventos emblema son eventos donde puedes\nbatirte contra otros jugadores par
 Hay varios tipos de eventos emblema con distintos\nobjetivos: ganar un número concreto de partidas,\nganar varias partidas consecutivas, etc.\nPara más información sobre el tipo de un evento\nen curso, comprueba los avisos de ese evento.
 En los eventos botín puedes jugar partidas contra\ntoda clase de barajas y quizá obtener sobres de\npromoción al ganar.\nEn estos sobres puede haber cartas especiales.\nNota: Los sobres de promoción y las cartas de\nla imagen son solo un ejemplo.
 Necesitarás energía de evento para participar en\npartidas de evento.\nLa energía de evento se recupera con el paso del\ntiempo o al usar relojes de arena de eventos.
+Las partidas limitadas son eventos donde puedes\nenfrentarte a otros jugadores usando barajas que\nrespeten unas reglas especiales determinadas para\nobtener diversas recompensas y ganar el mayor\nnúmero posible de partidas.
+Las reglas especiales varían según el evento.\nAntes de crear una baraja, asegúrate de verificar\nlas reglas especiales pertinentes en la pantalla del\nevento y las pantallas de selección de baraja.
+Hay varios tipos de partidas limitadas, con distintos\nobjetivos: ganar un número concreto de partidas,\nganar varias partidas consecutivas, etc.\nPuedes ver qué tipo de evento está en curso\ncomprobando las noticias sobre dicho evento.
 Evoluciona de [Mst:CardCharacterName ]
 <line-indent=140>Cuando tu Pokémon [Img:ex ] queda [Ctrl:Bold ]Fuera de Combate[/Ctrl:Bold], tu rival consigue [Ctrl:Bold ]2[/Ctrl:Bold] puntos.
 Regla ex
@@ -12551,7 +13148,7 @@ También puedes crear una baraja usando la\nfunción "Autocreación".\n\nBasta c
 Puedes cambiar, además, el tapete, las fundas y\nla monedas que uses.\n\nSe pueden obtener de varias formas, como por\nejemplo completando misiones o en la tienda.
 Cuando quieras ver esta explicación de nuevo,\ntoca este icono.\n\nPara más información, consulta "Pistas para\nEntrenadores".
 Las barajas de préstamo son un tipo de baraja que\nte permite tomar prestado un set de 20 cartas\npara usarlo en partidas.
-Estas barajas se consiguen principalmente\nal completar misiones de baraja.\n\nPuedes ver las barajas de préstamo que hayas\nobtenido en el menú de barajas.
+Las barajas de préstamo se otorgan de forma\nautomática, y aquellas utilizables se actualizan\nperiódicamente.
 Una baraja de préstamo solo puede usarse un\nnúmero de veces concreto.
 Puedes usar barajas temáticas para crear barajas\ncómodamente.
 Si eliges una baraja temática al crear una baraja,\nse creará una con las cartas que tengas.\n\nPara completar una baraja temática, debes tener\ntodas las cartas necesarias de dicha baraja.
@@ -12594,6 +13191,14 @@ Tu amigo podrá encontrar la carta en "Regalos".
 Se ha añadido una función a la lista de amigos para\nmarcar tus amigos favoritos. Estos se mostrarán\nen la parte superior de dicha lista para que te\nresulte más fácil encontrarlos, por ejemplo, a la\nhora de intercambiar.
 Toca "Favoritos" en la parte superior derecha de\nla lista de amigos para marcar un amigo como\nfavorito.
 Basta con elegir los amigos que quieres marcar\ncomo favoritos. \nNota: Tus amigos no sabrán que los has marcado\ncomo favoritos.
+Puedes usar energía extraordinaria para abrir un\nsobre extraordinario solo una vez por semana.
+Te avisaremos cuando tu energía extraordinaria se\nhaya recuperado y puedas abrir un sobre\nextraordinario.\n\n¡Procura abrir tu sobre una vez por semana!
+Si usas relojes de arena extraordinarios, puedes\nabrir un sobre extraordinario aunque no tengas\nenergía extraordinaria.
+"Barajas de la comunidad" es una función donde\npuedes ver barajas creadas por amigos y jugadores\nde todo el mundo.
+"Populares" muestra aquellas barajas en boga que\njugadores de todas partes están usando con\nfrecuencia últimamente.
+En "Amigos" puedes ver las barajas predilectas que\nhayan publicado tus amigos.
+Puedes tocar una baraja que suscite tu interés para\nver todas las cartas que contiene.
+Puedes crear una baraja con las cartas que posees.\nGuarda la baraja en la pantalla de edición de baraja\ntocando "Editar esta baraja".
 Aquí puedes ver todas las cartas que has\nconseguido.
 Se han desbloqueado los álbumes.
 Elige tu portada favorita y muestra tus\ncartas en el álbum.
@@ -12639,7 +13244,7 @@ En el modo individual puedes jugar contra\nla IA, que usa barajas de distintos t
 Prueba suerte en una partida individual.
 Hay partidas de práctica de diversos niveles\nde dificultad. Empecemos por el fácil.
 Si ganas, podrás conseguir recompensas\ncomo puntos de experiencia u objetos.
-Comencemos con una partida contra esta\nbaraja Ivysaur.
+Comencemos con esta partida.
 Existe también una función que juega la\npartida por ti automáticamente.
 Puede activarse con este botón. Pruébalo\ncuando quieras jugar de forma distendida.
 La función de partida automática (Auto)\ntambién puede activarse durante la partida.
@@ -12657,6 +13262,7 @@ En los encuentros clasificatorios podrás medir\ntu pericia en partidas contra j
 Aquí se muestran todos los efectos visuales y\nobjetos que puedes obtener mediante canjes.
 Puedes enviar cartas a amigos.
 Aquí termina el tutorial sobre compartir.\n¡Ya puedes compartir cartas con tus amigos!
+Aquí puedes ver barajas de amigos y jugadores\nde todo el mundo.
 Puedes ver cómo queda un efecto visual en una\ncarta en "Mis cartas". También puedes ver cómo\nluce en movimiento durante las partidas.
 Puedes obtener los efectos visuales que prefieras.\nLas condiciones para obtenerlos varían según la\ncarta.
 Si consigues un cierto número de cartas repetidas,\npuedes obtener automáticamente efectos visuales\npara esa carta en cuestión.\nNota: Esto no vale para todas las cartas.
@@ -12747,8 +13353,10 @@ Detalles
 Ver otros sobres de mejora
 Cartas no registradas en su índice de cartas
 Cartas que puedes compartir
+Lista de deseadas de la otra parte
 Su índice de cartas ya está completo.
 No tienes ninguna de sus cartas no registradas.
+No hay cartas.
 Solo puedes compartir cartas de ciertas rarezas.
 Elige qué carta compartir
 Carta compartida.
@@ -12760,6 +13368,26 @@ Puedes compartir con el mismo amigo\nuna vez al día.
 Puedes jugar cualquier cantidad de cartas de Objeto durante tu turno.
 Partidas
 Comunidad
+Restricciones de baraja
+Nota: Ciertas cartas pueden usarse independientemente\nde las restricciones.
+Selecciona aquí las expansiones admitidas.
+Restricciones de expansión
+Nota: Ciertas cartas pueden usarse independientemente\nde las restricciones, que solo se aplican a Pokémon.
+Selecciona aquí las rarezas admitidas.
+Restricciones de rareza
+Todas las barajas
+Restablecer
+Con restricciones de expansión
+Con restricciones de rareza
+Configuración de las reglas
+Restricciones de cartas
+Restricciones de baraja
+Solo "Mis barajas"
+Sin restricciones de expansión
+Sin restricciones de rareza
+Vale
+PROMO
+Solo barajas de préstamo
 Barajas
 Mis barajas
 Barajas temáticas
@@ -12778,6 +13406,21 @@ Encuentro privado
 Encuentro al azar
 Encuentro de evento
 Versus
+Aquí puedes jugar con gente que conozcas usando un\ncódigo 2D o contraseña compartidos.
+Encuentro privado
+Configuradas
+Invitar
+Se generará automáticamente
+Contraseña
+Notas:\n- Si estableces reglas, se generará automáticamente una\ncontraseña.\n- Se generará un código 2D tras tocar "Empezar".
+Ajustes de encuentro privado
+Escribe una contraseña
+Configuración de las reglas
+Empezar
+Participar
+Participar
+Contraseña
+Código 2D
 Con contraseña
 Con código 2D
 Menú de encuentro privado
@@ -12787,12 +13430,14 @@ Evento
 Próximamente
 Novedad
 Individual
+Barajas de la comunidad
 [Num:Int id="0" max_length="0" visible="0" ]Evento[Gr:Count p="s" ] en curso
 ¡Termina pronto!
 [Num:Int id="0" max_length="0" visible="0" ][Gr:Count s="Evento" p="Eventos" ] en curso
 ¡Termina pronto!
 ¡Evento en curso!
 ¡Termina pronto!
+Sobres de promoción añadidos
 Individual
 Versus
 La fecha ha cambiado.\nSe va a regresar a la pantalla del título.
@@ -12803,6 +13448,10 @@ Se ha actualizado el estado.\nSe va a regresar a la pantalla del título.
 Vale
 Próximamente.
 Vale
+Si las reglas se fijan solamente para las barajas de\npréstamo, se restablecerán las restricciones de\ncarta.
+Cancelar
+Vale
+Confirmar restricciones de baraja
 Si marcas una vitrina como favorita, podrás verla cuando quieras en la pantalla de inicio. Puedes cambiar los ajustes en "Vitrinas".
 Si marcas un álbum como favorito, podrás verlo cuando quieras en la pantalla de inicio. Puedes cambiar los ajustes en "Álbumes".
 Vitrinas
@@ -12827,6 +13476,7 @@ Vale
 Se desbloqueará dentro de:
 Cómo se desbloquea
 Comunidad
+Se han establecido reglas, por lo que se generará\nautomáticamente una contraseña.
 Elecciones mágicas
 Elección especial\ndisponible
 Elección Chansey\ndisponible
@@ -12852,6 +13502,14 @@ Toca para continuar
 Emblema
 Toca para continuar
 ¡Genial!
+¿Quieres registrar ahora la baraja con la baraja\ntemática que has adquirido?\n\nNota: Puedes registrar barajas a partir de barajas\ntemáticas tocando "Crear nueva" en "Mis barajas".
+Cancelar
+Registrar
+Registrar baraja
+No se ha registrado la baraja porque no tienes\nespacio para más barajas.\n\nPuedes registrar barajas a partir de barajas\ntemáticas tocando "Crear nueva" en "Mis barajas".
+Vale
+El juego se cerró mientras se registraba una baraja\ntemática.\n\nPuedes registrar barajas a partir de barajas\ntemáticas tocando "Crear nueva" en "Mis barajas".
+Vale
 ¡Entrenadores completados!
 ¡Rareza completada!
 ¡[Num:Int id="0" max_length="3" ] carta[Gr:Count p="s" ref="0" ]\nregistrada[Gr:Count p="s" ref="0" ]!
@@ -12922,11 +13580,13 @@ Obtener efecto visual
 Siguiente
 ¡Enhorabuena!\n¡Has conseguido todas las\ncartas [Text:Char v="DIAMOND" ] de esta expansión!
 ¡Enhorabuena!\n¡Has conseguido todas las\ncartas de esta expansión!
+¡Enhorabuena!\n¡Has conseguido todas las cartas\nde rareza [Mst:Rarity v="RARITY_MSID_SA" ] de esta expansión!
 Vale
 ¡[Num:Int id="0" max_length="4" ] carta[Gr:Count p="s" ] distinta[Gr:Count p="s" ]!
 ¡Completada!
 Registradas:
 ¡Coleccionadas!
+¡Falta[Gr:Count p="n" ] [Num:Int id="0" max_length="3" ] carta[Gr:Count p="s" ref="0" ]!
 Añadir
 Añadir a álbum
 Añadir a vitrina
@@ -12934,6 +13594,7 @@ Sin seleccionar
 Selección efectuada
 Pokémon ex
 Pokémon ex Megaevolución
+Dos tipos
 Con habilidad
 Sin habilidad
 Marcar todo
@@ -13103,6 +13764,7 @@ Misiones recomendadas
 Tiempo limitado
 Has completado tus misiones diarias.
 Has completado todas las misiones disponibles.
+¡Has completado las misiones de evento de esta semana! Espera a que se desbloqueen las próximas misiones.
 Completar
 Completar
 Completada
@@ -13110,6 +13772,7 @@ Completada
 Has recogido todas las recompensas
 Completar todas
 Colecciones\ntemáticas
+Desbloqueo dentro de:
 Vale
 ¡Enhorabuena! Has completado una misión.\n¿Qué tal si pruebas con otras?
 Colecciona cartas con alguno de estos requisitos.
@@ -13127,6 +13790,8 @@ Puntos abresobres
 Se ha alcanzado el límite de puntos abresobres.
 Canje de puntos abresobres
 Canjeable
+Viernes
+Sábado
 Puntos abresobres insuficientes.
 Canjear
 Tienes
@@ -13139,8 +13804,10 @@ Al abrir un sobre, los siguientes pasos se llevarán a cabo en orden (más detal
 • No se seleccionará un sobre normal si se cumplen las condiciones para la generación del sobre de mejora de esta clase.\n• En su lugar se seleccionará el sobre de mejora de esta clase.\n• La tasa de selección será igual a las tasas de aparición de un sobre normal.\n• Consulta la sección "Atención" para obtener más información sobre las condiciones en la generación de sobres.
 • No se seleccionará un sobre normal ni un sobre normal +1 carta si se cumplen las condiciones para la generación del sobre de mejora de esta clase.\n• En su lugar se seleccionará el sobre de mejora de esta clase.\n• La tasa de selección será igual a la combinación de las de un sobre normal y un sobre normal +1 carta.\n• Consulta la sección "Atención" para obtener más información sobre las condiciones en la generación de sobres.
 Tasas de aparición
+Contenido del sobre extraordinario
 Tasas de aparición
 Atención
+???
 [Mst:PackTableName id="0" ]
 Mantén pulsado
 Se ha alcanzado el límite de puntos abresobres.\nCanjéalos por cartas en el canje de puntos\nabresobres.
@@ -13151,6 +13818,8 @@ Traza una línea para abrir
 Sobre n.º [Num:Int id="0" max_length="2" ]
 Toca el sobre de mejora para abrirlo
 Este sobre de mejora ya no está disponible y no se\npuede obtener.
+Este sobre extraordinario ya no está disponible y\nno se puede obtener.
+Vale
 Vale
 Los Pokélingotes sin coste se usarán primero.
 ¿Quieres usar objetos y reducir el\ntiempo de espera para abrir sobres?
@@ -13158,6 +13827,7 @@ Los Pokélingotes sin coste se usarán primero.
 Tiempo hasta poder abrir un sobre de mejora
 Tiempo hasta poder abrir diez sobres de mejora
 ¡Es hora de abrir un sobre de mejora!
+¡Puedes abrir un sobre extraordinario!
 Tiempo hasta poder abrir un sobre de mejora
 Tiempo hasta poder abrir diez sobres de mejora
 Reducir en 2 horas el tiempo hasta poder abrir\nun sobre cuesta 1 Pokélingote.
@@ -13168,6 +13838,17 @@ Siguiente
 Sobre n.º [Num:Int id="0" max_length="2" ]
 Resultado
 Elige una expansión
+Tienes suficiente energía extraordinaria para abrir\ntu sobre extraordinario semanal.\n¿Quieres hacerlo ahora?
+Cancelar
+Vale
+No tienes relojes de arena extraordinarios\nsuficientes. Puedes conseguirlos, por ejemplo,\nal completar misiones.
+Relojes de arena extraordinarios necesarios:
+Vale
+Objetos insuficientes
+Se puede abrir
+Siguiente apertura:
+¿Quieres consumir [Num:Int id="0" max_length="3" ] reloj[Gr:Count p="es" id="2" ] de arena\nextraordinario[Gr:Count p="s" id="2" ] para abrir [Num:Int id="1" max_length="2" ] sobre[Gr:Count p="s" ref="1" ]?
+Contenido posible
 ¡Puedes abrir un sobre de mejora!
 Este sobre de mejora ya no está disponible.
 Puedes usar objetos para abrir un sobre ahora
@@ -13205,6 +13886,8 @@ Vale
 Para usar una Herramienta Pokémon, únela a un Pokémon. Solo puedes unir una Herramienta Pokémon a cada Pokémon, y esta permanecerá unida.
 No se ha podido recoger porque has alcanzado\nel límite del inventario para este objeto.
 No se ha podido recoger porque el período\nde recogida ha finalizado.
+No se ha podido recoger porque no se ha\ndesbloqueado la función "Barajas".\n\nDicha función se desbloquea tras completar el\napartado 06 de la guía sobre partidas.
+Vale
 Vale
 Vale
 Recoger
@@ -13242,6 +13925,9 @@ Otros
 Por fecha de obtención de emblemas
 Ordenar
 Emblemas
+No es posible usar ese apodo.
+Vale
+Error
 No puedes usar ese nombre para el perfil.
 Vale
 Error
@@ -13256,6 +13942,10 @@ Quitar
 Quitar todas las cartas deseadas
 Has escogido un nombre de perfil el [Date:DateTime format="d" id="0" max_length="10" ].\nTienes que esperar 30 días para poder cambiarlo.
 Vale
+Vale
+Cancelar
+Máximo 14 caracteres.
+Crea un apodo
 Cancelar
 Cancelar
 Máximo 14 caracteres.
@@ -13281,8 +13971,15 @@ Vale
 Sin etiquetar
 Escoge tu selección personal
 Escoge tu selección personal
+Vale
+No se puede escoger
+Visible para amigos
+Privada
+Escoge tu baraja predilecta
+Barajas
 Pídele a tu amigo que escanee este código. Se puede escanear\ncon la cámara si accedes a "Comunidad" y, luego, "Amigos".
 Selección personal
+Baraja predilecta
 ID de amigo
 Privado
 Privada
@@ -13303,8 +14000,11 @@ Solicitud de amistad cancelada.
 Solicitud de amistad rechazada.
 Puedes escoger un máximo de tres emblemas.
 Puedes seleccionar hasta tres cartas.
+No puedes seleccionar barajas privadas.
+No se ha podido escoger la baraja al no\ncumplir las condiciones.
 Esta cuenta no está en uso actualmente.
 Sin seleccionar
+Crear un apodo
 Sin etiquetar
 Ver lista de deseadas
 Ninguna
@@ -13337,6 +14037,7 @@ Desactivada
 Activada
 ¡A jugar!
 ¡A jugar!
+Sobres de promoción añadidos
 No disponible
 Recomendada
 Recuperar
@@ -13353,6 +14054,14 @@ Máximo [Num:Int id="0" max_length="2" ] turnos.
 Victoria al conseguir [Num:Int id="0" max_length="1" ] [Gr:Count s="punto" p="puntos" ].
 Límite de tiempo por turno: [Num:Int id="0" max_length="2" ] segundos.
 Sin límite de tiempo por turno.
+Solo "Mis barajas"
+Solo barajas de préstamo
+Expansiones utilizables:
+Rarezas utilizables:
+Las siguientes cartas están libres de restricciones, excepto las restricciones de baraja.
+Reglas
+Regla [Num:Int id="0" max_length="3" ]
+Regla especial [Num:Int id="0" max_length="3" ]
 Regla 1
 Regla 2
 Regla 3
@@ -13387,6 +14096,7 @@ Elige una expansión
 Mis barajas
 Recomendada
 Barajas de préstamo
+Nueva recompensa: sobre de promoción
 En los niveles difícil y avanzado, no podrás ver\nlos detalles de la baraja de tu rival hasta ganarle\nal menos una vez.
 Has desbloqueado una nueva partida.\n¡Pruébala cuando quieras!
 Vale
@@ -13394,6 +14104,7 @@ Vale
 Cómo se desbloquea
 ¡Nueva partida disponible!
 Se ha seleccionado una baraja de préstamo.
+Has desbloqueado una nueva partida.
 ¡Termina pronto!
 Fácil
 Normal
@@ -13413,6 +14124,9 @@ Principiante
 Competitiva
 Distendida
 No es posible usar esa contraseña.
+Vale
+Error
+No es posible participar.
 Vale
 Error
 ¡A jugar!
@@ -13436,6 +14150,10 @@ Buscando rival...
 Nv. [Num:Int id="0" max_length="3" ]
 Principiante
 Competente
+¿Quieres abandonar la partida?
+Cancelar
+Abandonar partida
+Vale
 En el modo versus te enfrentarás a otros\njugadores. Recomendamos jugar partidas\nindividuales antes de probar el modo versus.
 No se han encontrado rivales.\n\nComprueba si estás usando la última versión de la\naplicación.
 Se va dar por finalizada una partida que había\nquedado a medias. Esta partida contará como\nuna derrota.
@@ -13445,8 +14163,13 @@ Error de emparejamiento
 Ajustes de contraseña
 Escribir una contraseña
 Generar automáticamente
+El historial está vacío.
+Historial de partidas
 Contraseña generada.
 Contraseña copiada.
+Detalles
+Reglas
+Con restricciones
 Principiante
 Competitiva
 Distendida
@@ -13460,7 +14183,9 @@ Encuentro privado
 Aquí puedes elegir tu modalidad y divertirte\njugando con gente de todo el mundo.
 Encuentro al azar
 Escanear código
+Historial
 Mostrar código
+Mostrar código 2D
 A los jugadores que ya han participado en\ntemporadas de encuentros clasificatorios\nanteriores se les asigna una puntuación basada\nen la que obtuvieron en la temporada más reciente\nque hayan disputado.
 Vale
 Inicio de la temporada
@@ -13508,6 +14233,7 @@ Puntos perdidos
 Bajada de rango
 Subida de rango
 Puntos por racha
+VS.
 Victoria
 Historial de partidas
 Toca para continuar
@@ -13721,6 +14447,18 @@ Solicitud de amistad rechazada.
 Has alcanzado el límite de solicitudes de amistad.
 Esta persona no puede recibir más solicitudes\nde amistad.
 Esta persona ya está en tu lista de amigos.
+Copiar baraja
+Editar esta baraja
+Esta baraja se ha guardado en "Mis barajas".
+No se ha podido copiar al no haber espacio en\n"Mis barajas".
+No se ha podido mostrar ninguna baraja.\nInténtalo de nuevo más tarde.
+Ninguno de tus amigos tiene una baraja predilecta.
+Falta[Gr:Count p="n" ] [Num:Int id="0" max_length="2" ] carta[Gr:Count p="s" ref="0" ]
+Creable
+Clasificación de barajas populares
+Populares
+Amigos
+Barajas de la comunidad
 Notation under the Act on Specified\nCommercial Transactions
 Solo puedes jugar una carta de Estadio durante tu turno.\nColócala al lado del Puesto Activo y descártala si entra\nen juego otro Estadio. No se puede jugar un Estadio con\nel mismo nombre.
 La aplicación se va a reiniciar para regresar\na la pantalla del título.
@@ -13775,6 +14513,7 @@ Activar/Desactivar todas
 Recuperación de energía de sobre
 Recuperación de energía mágica
 Noticias importantes
+Recuperación de energía extraordinaria
 Restablecer ajustes
 30 FPS
 60 FPS
@@ -13794,7 +14533,10 @@ Notificaciones
 Sonido
 Sistema
 Intercambio
+Lista de deseadas
 Activar/Desactivar vibración
+Eliminación automática
+Si obtienes una de tus cartas deseadas, dicha carta se\neliminará automáticamente de tu lista de deseadas.
 Se ha copiado el ID de usuario.
 Inventario
 Tienda
@@ -14105,6 +14847,7 @@ Los términos de uso se han actualizado.\n\nPor favor, lee los términos actuali
 La política de privacidad se ha actualizado.\n\nPor favor, lee la política actualizada y acéptala de\nnuevo.
 El juego se ha cerrado mientras se abría un sobre,\npero has conseguido las cartas.\n\nPuedes verlas en "Mis cartas" si las ordenas por\nfecha de obtención de cartas.
 El juego se ha cerrado, pero has conseguido los\nobjetos.\n\nPuedes verlos si accedes al menú principal y, luego,\n"Inventario".
+¿Quieres descargar los datos mientras juegas?\n\nSe recomienda conectarse a una red Wi-Fi para\nrealizar la descarga.\n(Puedes descargarlos después, si lo prefieres).\n\nTamaño de la descarga: [Num:Int id="0" max_length="5" ][C:Nbsp ]MB
 Cancelar
 Vale
 Vale
@@ -14135,6 +14878,8 @@ Vale
 Vale
 Vale
 Vale
+Vale
+Más tarde
 Vale
 Finalizar compras
 Finalizar compras
@@ -14230,12 +14975,17 @@ Efecto visual
 Expansión
 Marcos dorados
 Detalles del intercambio
+Su índice de cartas ya está completo.
+No tienes ninguna de sus cartas no registradas.
 No hay cartas.
+Ver otros sobres de mejora
 Puedes recibir una carta de la misma rareza de la otra\nparte.
 Puedes intercambiar una carta de la misma rareza que\naquella que recibas.
 Vale
 Elige qué carta intercambiar
 Mensaje de la otra parte
+Cartas que puedes intercambiar
+Cartas no registradas en su índice de cartas
 Lista de deseadas de la otra parte
 PROMO
 No intercambiable
@@ -14375,6 +15125,7 @@ Se necesita un efecto visual para el intercambio.
 Se necesita un marco dorado para el intercambio.
 Quita el marco dorado.
 Quita el efecto visual.
+No tienes suficiente polvo iris.
 Vale
 Si no alcanzas un acuerdo, recuperarás la energía de intercambio consumida y se te devolverán tanto los objetos como la carta.
 Has ofrecido la carta. Mientras la estés ofreciendo, no se mostrará en "Mis cartas" y tampoco podrás usarla.
