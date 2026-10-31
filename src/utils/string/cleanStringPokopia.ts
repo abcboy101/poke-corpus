@@ -36,7 +36,7 @@ export function preprocessStringPokopia(s: string) {
 
 export function postprocessStringPokopia(s: string, language: LanguageKey, ti: TextInfo) {
   const makeRuby = (base: string, ruby: string) => `<ruby>${base}<rp>(</rp><rt>${ruby}</rt><rp>)</rp></ruby>`;
-  const grammar: Record<string, Record<string, string[] | undefined> | string[] | undefined> = {
+  const grammar: Record<string, Partial<Record<LanguageKey, string[] | undefined>> | string[] | undefined> = {
     // Definite/indefinite articles
     dart: {
       en: ["", "the"],
@@ -84,7 +84,7 @@ export function postprocessStringPokopia(s: string, language: LanguageKey, ti: T
     esye:     ["", "y", "e"],
   } as const;
 
-  s = (s
+  return (s
     // Formatting
     .replaceAll(/(<\$cdef\((\d+)\)>)(.*?)(<\/color>)/g, (_, start: string, value: string, children: string, end: string) => ti.as({ kind: 'var', start, className: 'color', style: `color: var(--color-${value})`, children, end })) // font color
     .replaceAll('</color>', ti.func()) // font color (reset)
@@ -101,7 +101,7 @@ export function postprocessStringPokopia(s: string, language: LanguageKey, ti: T
     // Grammar
     .replaceAll(/(<fcap>)?<(dart|iart|fra|frdedef|frde|frque|frdemdet|itdi|itsu|ita|itin|ited|itad|itdemdet|accdart|acciart|esde|esa|esye|esou|frstgind)\b[^>]*>/g, (code, fcap: string | undefined, tag: string) => {
       const entry = grammar[tag] ?? [];
-      const forms = Array.isArray(entry) ? entry : (entry[language] ?? []);
+      const forms = [...Array.isArray(entry) ? entry : (entry[language] ?? [])];
       const space = tag !== 'frstgind'; // only French stage indirect includes a space already
       for (let i = 0; i < forms.length; i++) {
         if (forms[i].length === 0)
@@ -149,5 +149,4 @@ export function postprocessStringPokopia(s: string, language: LanguageKey, ti: T
     // Variables
     .replaceAll(/<(?!ko\b)([^>]+)>/g, (start: string, tag: string) => ti.var(`<${(/^[^;()>]+/.exec(tag) ?? '')[0]}>`)(start)) // pass <ko> through
   );
-  return s;
 }
