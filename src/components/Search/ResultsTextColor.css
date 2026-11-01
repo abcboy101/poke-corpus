@@ -215,11 +215,10 @@
 
 
 /* Pokopia */
-/* TODO: replace with exact colors */
 .collection-pokopia {
-  --color-9: lightgray;
-  --color-27: orange;
-  --color-28: orange;
-  --color-29: orange;
-  --color-224: orange;
+  --color-9: #CFCFCF;
+  --color-27: #FF9A00;
+  --color-28: #56C82A;
+  --color-29: #FF80C4;
+  --color-224: #F26000;
 }
